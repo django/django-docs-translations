@@ -1,0 +1,513 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-02 21:26\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../index.txt:6
+# f224bfff5c5e43a8a73682c6441af71f
+msgid "Django documentation"
+msgstr ""
+
+#: ../../index.txt:9
+# 9852ff40d60047c8b48118cfe5733f04
+msgid "Everything you need to know about Django."
+msgstr ""
+
+#: ../../index.txt:11
+# 2257f6ea838d45b0bde504883438b480
+msgid "Getting help"
+msgstr ""
+
+#: ../../index.txt:13
+# 8c2703026d944c21a5b5fcaf8502f240
+msgid "Having trouble? We'd like to help!"
+msgstr ""
+
+#: ../../index.txt:15
+# 767fdfd378474216bbfb523c8fc5d374
+msgid "Try the :doc:`FAQ <faq/index>` -- it's got answers to many common questions."
+msgstr ""
+
+#: ../../index.txt:17
+# d1a2ff80ae2b4d51906fa793f844ad92
+msgid "Looking for specific information? Try the :ref:`genindex`, :ref:`modindex` or the :doc:`detailed table of contents <contents>`."
+msgstr ""
+
+#: ../../index.txt:20
+# 02cfe5801a7346e4bd92f6fdb06f773f
+msgid "Search for information in the `archives of the django-users mailing list`_, or `post a question`_."
+msgstr ""
+
+#: ../../index.txt:23
+# e7407475d3f84d31ba049aa716b6fbaa
+msgid "Ask a question in the `#django IRC channel`_, or search the `IRC logs`_ to see if it's been asked before."
+msgstr ""
+
+#: ../../index.txt:26
+# 6cae2f4169e7403193649c71a29a8051
+msgid "Report bugs with Django in our `ticket tracker`_."
+msgstr ""
+
+#: ../../index.txt:35
+# 5d0887739dc046ac876468de55f7a77a
+msgid "First steps"
+msgstr ""
+
+#: ../../index.txt:37
+# 32639a47963840c6bd8a3bf300fe9e05
+msgid "Are you new to Django or to programming? This is the place to start!"
+msgstr ""
+
+#: ../../index.txt:39
+# 2c035df5fb4f421db169100966644899
+msgid "**From scratch:** :doc:`Overview <intro/overview>` | :doc:`Installation <intro/install>`"
+msgstr ""
+
+#: ../../index.txt:43
+# ae4132431b4641c0bd659c9468f1dd7c
+msgid "**Tutorial:** :doc:`Part 1 <intro/tutorial01>` | :doc:`Part 2 <intro/tutorial02>` | :doc:`Part 3 <intro/tutorial03>` | :doc:`Part 4 <intro/tutorial04>` | :doc:`Part 5 <intro/tutorial05>` | :doc:`Part 6 <intro/tutorial06>`"
+msgstr ""
+
+#: ../../index.txt:51
+# ba6e068f9a064e0b8bf4dde49198bcdb
+msgid "**Advanced Tutorials:** :doc:`How to write reusable apps <intro/reusable-apps>` | :doc:`Writing your first patch for Django <intro/contributing>`"
+msgstr ""
+
+#: ../../index.txt:56
+# 3ededb84348846158c0b65a9b5690180
+msgid "The model layer"
+msgstr ""
+
+#: ../../index.txt:58
+# 81754d2e6cef4bbf8ee2f70ae02f4096
+msgid "Django provides an abstraction layer (the \"models\") for structuring and manipulating the data of your Web application. Learn more about it below:"
+msgstr ""
+
+#: ../../index.txt:61
+# 21267665e61b40a2a8487a04f5874c21
+msgid "**Models:** :doc:`Model syntax <topics/db/models>` | :doc:`Field types <ref/models/fields>` | :doc:`Meta options <ref/models/options>`"
+msgstr ""
+
+#: ../../index.txt:66
+# 800eb995e5354cffaad250eeac86021c
+msgid "**QuerySets:** :doc:`Executing queries <topics/db/queries>` | :doc:`QuerySet method reference <ref/models/querysets>`"
+msgstr ""
+
+#: ../../index.txt:70
+# e8b95d3e3bac48f583929d9110fbe72d
+msgid "**Model instances:** :doc:`Instance methods <ref/models/instances>` | :doc:`Accessing related objects <ref/models/relations>`"
+msgstr ""
+
+#: ../../index.txt:74
+# 7aee072983604e3080e1aa866c4d7a57
+msgid "**Advanced:** :doc:`Managers <topics/db/managers>` | :doc:`Raw SQL <topics/db/sql>` | :doc:`Transactions <topics/db/transactions>` | :doc:`Aggregation <topics/db/aggregation>` | :doc:`Custom fields <howto/custom-model-fields>` | :doc:`Multiple databases <topics/db/multi-db>`"
+msgstr ""
+
+#: ../../index.txt:82
+# 14d46a6e57b244cca09a944fc03c4503
+msgid "**Other:** :doc:`Supported databases <ref/databases>` | :doc:`Legacy databases <howto/legacy-databases>` | :doc:`Providing initial data <howto/initial-data>` | :doc:`Optimize database access <topics/db/optimization>`"
+msgstr ""
+
+#: ../../index.txt:89
+# e8207a157fba40e6a5bd4b56c188ae76
+msgid "The view layer"
+msgstr ""
+
+#: ../../index.txt:91
+# 42fbba9736f24befaa333b609d7f6f68
+msgid "Django has the concept of \"views\" to encapsulate the logic responsible for processing a user's request and for returning the response. Find all you need to know about views via the links below:"
+msgstr ""
+
+#: ../../index.txt:95
+# 962d3e15fd4b44949fece7f15286cccd
+msgid "**The basics:** :doc:`URLconfs <topics/http/urls>` | :doc:`View functions <topics/http/views>` | :doc:`Shortcuts <topics/http/shortcuts>` | :doc:`Decorators <topics/http/decorators>`"
+msgstr ""
+
+#: ../../index.txt:101
+# 2e44d6507c6d495ea21b8b3bb034c1b9
+msgid "**Reference:** :doc:`Built-in Views <ref/views>` | :doc:`Request/response objects <ref/request-response>` | :doc:`TemplateResponse objects <ref/template-response>`"
+msgstr ""
+
+#: ../../index.txt:106
+# 404f728574c34ee39545156c5f77f6de
+msgid "**File uploads:** :doc:`Overview <topics/http/file-uploads>` | :doc:`File objects <ref/files/file>` | :doc:`Storage API <ref/files/storage>` | :doc:`Managing files <topics/files>` | :doc:`Custom storage <howto/custom-file-storage>`"
+msgstr ""
+
+#: ../../index.txt:113
+# 38a989e46dfb4c3c8ff1575438cf7818
+msgid "**Class-based views:** :doc:`Overview <topics/class-based-views/index>` | :doc:`Built-in display views <topics/class-based-views/generic-display>` | :doc:`Built-in editing views <topics/class-based-views/generic-editing>` | :doc:`Using mixins <topics/class-based-views/mixins>` | :doc:`API reference <ref/class-based-views/index>` | :doc:`Flattened index<ref/class-based-views/flattened-index>`"
+msgstr ""
+
+#: ../../index.txt:121
+# ad60635fd25e419f9bffc0d540bb6e41
+msgid "**Advanced:** :doc:`Generating CSV <howto/outputting-csv>` | :doc:`Generating PDF <howto/outputting-pdf>`"
+msgstr ""
+
+#: ../../index.txt:125
+# 994b9c1fb39d47f2b75a441baf9b10dc
+msgid "**Middleware:** :doc:`Overview <topics/http/middleware>` | :doc:`Built-in middleware classes <ref/middleware>`"
+msgstr ""
+
+#: ../../index.txt:130
+# c0bf4fa12bca4677b222cc8957a4d3e2
+msgid "The template layer"
+msgstr ""
+
+#: ../../index.txt:132
+# 42be807e22bb4e0dae8249dd6d490ecc
+msgid "The template layer provides a designer-friendly syntax for rendering the information to be presented to the user. Learn how this syntax can be used by designers and how it can be extended by programmers:"
+msgstr ""
+
+#: ../../index.txt:136
+# fdf98c063f2c4b7b8dcd1c2316af182d
+msgid "**For designers:** :doc:`Syntax overview <topics/templates>` | :doc:`Built-in tags and filters <ref/templates/builtins>` | :doc:`Web design helpers <ref/contrib/webdesign>` | :doc:`Humanization <ref/contrib/humanize>`"
+msgstr ""
+
+#: ../../index.txt:142
+# 2c21b8f6f0534c62a83b1075835635ca
+msgid "**For programmers:** :doc:`Template API <ref/templates/api>` | :doc:`Custom tags and filters <howto/custom-template-tags>`"
+msgstr ""
+
+#: ../../index.txt:147
+# e66fbaae7838411a8d2a07608fdce0b2
+msgid "Forms"
+msgstr ""
+
+#: ../../index.txt:149
+# 5902b592aa304998a47dec81bbb2a647
+msgid "Django provides a rich framework to facilitate the creation of forms and the manipulation of form data."
+msgstr ""
+
+#: ../../index.txt:152
+# 379a1c516f054cba9f8e7c9b090f5d3b
+msgid "**The basics:** :doc:`Overview <topics/forms/index>` | :doc:`Form API <ref/forms/api>` | :doc:`Built-in fields <ref/forms/fields>` | :doc:`Built-in widgets <ref/forms/widgets>`"
+msgstr ""
+
+#: ../../index.txt:158
+# 8a2eb84dc7f4465e99f0a878fae4d1f7
+msgid "**Advanced:** :doc:`Forms for models <topics/forms/modelforms>` | :doc:`Integrating media <topics/forms/media>` | :doc:`Formsets <topics/forms/formsets>` | :doc:`Customizing validation <ref/forms/validation>`"
+msgstr ""
+
+#: ../../index.txt:164
+# d655a447cbf445b1bd836753f3c23045
+msgid "**Extras:** :doc:`Form preview <ref/contrib/formtools/form-preview>` | :doc:`Form wizard <ref/contrib/formtools/form-wizard>`"
+msgstr ""
+
+#: ../../index.txt:169
+# a54b33e245c14204b4a81621c6d1a40b
+msgid "The development process"
+msgstr ""
+
+#: ../../index.txt:171
+# f4926413d70c45c4b8c7d49843349c56
+msgid "Learn about the various components and tools to help you in the development and testing of Django applications:"
+msgstr ""
+
+#: ../../index.txt:174
+# 2a22d3b97f004071b159502619061194
+msgid "**Settings:** :doc:`Overview <topics/settings>` | :doc:`Full list of settings <ref/settings>`"
+msgstr ""
+
+#: ../../index.txt:178
+# 211f41e3d06a4d98849d7f8a67b3d2a9
+msgid "**Exceptions:** :doc:`Overview <ref/exceptions>`"
+msgstr ""
+
+#: ../../index.txt:181
+# d4b2e9239d4341689218ba51db3495a3
+msgid "**django-admin.py and manage.py:** :doc:`Overview <ref/django-admin>` | :doc:`Adding custom commands <howto/custom-management-commands>`"
+msgstr ""
+
+#: ../../index.txt:185
+# 3493cde345764619b1d23a413098800e
+msgid "**Testing:** :doc:`Introduction <topics/testing/index>` | :doc:`Writing and running tests <topics/testing/overview>` | :doc:`Advanced topics <topics/testing/advanced>` | :doc:`Doctests <topics/testing/doctests>`"
+msgstr ""
+
+#: ../../index.txt:191
+# 8303c2af21214b379abe373f642bc6f7
+msgid "**Deployment:** :doc:`Overview <howto/deployment/index>` | :doc:`WSGI servers <howto/deployment/wsgi/index>` | :doc:`FastCGI/SCGI/AJP <howto/deployment/fastcgi>` | :doc:`Deploying static files <howto/static-files/deployment>` | :doc:`Tracking code errors by email <howto/error-reporting>`"
+msgstr ""
+
+#: ../../index.txt:199
+# cbfd0e705133443ea43845509e587835
+msgid "The admin"
+msgstr ""
+
+#: ../../index.txt:201
+# 8a2a83f400114f37905e09b8435eede3
+msgid "Find all you need to know about the automated admin interface, one of Django's most popular features:"
+msgstr ""
+
+#: ../../index.txt:204
+# 2aa5222f5eb0402e8587e2ad76bfc577
+msgid ":doc:`Admin site <ref/contrib/admin/index>`"
+msgstr ""
+
+#: ../../index.txt:205
+# 296a6fd2ad7544e48231173d73b40678
+msgid ":doc:`Admin actions <ref/contrib/admin/actions>`"
+msgstr ""
+
+#: ../../index.txt:206
+# 7f5e3d248bce462aaace9c6cd894e0d3
+msgid ":doc:`Admin documentation generator<ref/contrib/admin/admindocs>`"
+msgstr ""
+
+#: ../../index.txt:209
+# 814504c71998436abde1e33a43fa55dd
+msgid "Security"
+msgstr ""
+
+#: ../../index.txt:211
+# dd9c964fa1014f839dbe23b04f427768
+msgid "Security is a topic of paramount importance in the development of Web applications and Django provides multiple protection tools and mechanisms:"
+msgstr ""
+
+#: ../../index.txt:214
+# 14f407df222546a39d8ac7ded862538c
+msgid ":doc:`Security overview <topics/security>`"
+msgstr ""
+
+#: ../../index.txt:215
+# f9ea2c1c60f5496eb7a378b22f4c141f
+msgid ":doc:`Clickjacking protection <ref/clickjacking>`"
+msgstr ""
+
+#: ../../index.txt:216
+# 49d6ac077cf841c1a2055cf1ab71cef5
+msgid ":doc:`Cross Site Request Forgery protection <ref/contrib/csrf>`"
+msgstr ""
+
+#: ../../index.txt:217
+# bfc0661dad48443cbacea93ddc5fc87c
+msgid ":doc:`Cryptographic signing <topics/signing>`"
+msgstr ""
+
+#: ../../index.txt:220
+# 2dbcc5ad500d4391b242a4b63a3c09da
+msgid "Internationalization and localization"
+msgstr ""
+
+#: ../../index.txt:222
+# 13980fab24a14595929678be019ccac9
+msgid "Django offers a robust internationalization and localization framework to assist you in the development of applications for multiple languages and world regions:"
+msgstr ""
+
+#: ../../index.txt:226
+# 87654337ad804b568fce76cd4cd0bbd0
+msgid ":doc:`Overview <topics/i18n/index>` | :doc:`Internationalization <topics/i18n/translation>` | :ref:`Localization <how-to-create-language-files>`"
+msgstr ""
+
+#: ../../index.txt:229
+# b4ec6932d62c4c3780d5c59320406490
+msgid ":doc:`\"Local flavor\" <ref/contrib/localflavor>`"
+msgstr ""
+
+#: ../../index.txt:230
+# 1d11200d91644aa7bdccbb6367b4ac69
+msgid ":doc:`Time zones </topics/i18n/timezones>`"
+msgstr ""
+
+#: ../../index.txt:233
+# 73105b426c4340bc9ad099c1ffb7909e
+msgid "Python compatibility"
+msgstr ""
+
+#: ../../index.txt:235
+# d24a2c4d5f0340d093c3145365ee0aa5
+msgid "Django aims to be compatible with multiple different flavors and versions of Python:"
+msgstr ""
+
+#: ../../index.txt:238
+# 092695387e6e4f7ab9f70dfd124940e4
+msgid ":doc:`Jython support <howto/jython>`"
+msgstr ""
+
+#: ../../index.txt:239
+# 2b3b7af0e23d4f939aa12d2f2c4c7712
+msgid ":doc:`Python 3 compatibility <topics/python3>`"
+msgstr ""
+
+#: ../../index.txt:242
+# efd0b8abdb2c45259e95a23151cc7a82
+msgid "Geographic framework"
+msgstr ""
+
+#: ../../index.txt:244
+# 5fde0115162c49398e03eea3ac3e5b47
+msgid ":doc:`GeoDjango <ref/contrib/gis/index>` intends to be a world-class geographic Web framework. Its goal is to make it as easy as possible to build GIS Web applications and harness the power of spatially enabled data."
+msgstr ""
+
+#: ../../index.txt:249
+# cdb3848dc18f47a0978c5656a9c2ee95
+msgid "Common Web application tools"
+msgstr ""
+
+#: ../../index.txt:251
+# 25fd3a14d76d4f2db074b267a2ce3f7b
+msgid "Django offers multiple tools commonly needed in the development of Web applications:"
+msgstr ""
+
+#: ../../index.txt:254
+# 85071aa28fb044728ec8fa734f7251d1
+msgid ":doc:`Authentication <topics/auth/index>`"
+msgstr ""
+
+#: ../../index.txt:255
+# 82c4a64737744852a891df148ec406a6
+msgid ":doc:`Caching <topics/cache>`"
+msgstr ""
+
+#: ../../index.txt:256
+# 6152dd84ccb84573bd5778000c2406bc
+msgid ":doc:`Logging <topics/logging>`"
+msgstr ""
+
+#: ../../index.txt:257
+# cb7ec6b319df4bceb6658f034b31ef9e
+msgid ":doc:`Sending emails <topics/email>`"
+msgstr ""
+
+#: ../../index.txt:258
+# 18c42629a19848e0a3506b5c5d8b3b19
+msgid ":doc:`Syndication feeds (RSS/Atom) <ref/contrib/syndication>`"
+msgstr ""
+
+#: ../../index.txt:259
+# 1c0883c1b4814c489774538ccf8fa9b9
+msgid ":doc:`Comments <ref/contrib/comments/index>`, :doc:`comment moderation <ref/contrib/comments/moderation>` and :doc:`custom comments <ref/contrib/comments/custom>`"
+msgstr ""
+
+#: ../../index.txt:260
+# 51b0b2d999d44a6aa8694e6763241878
+msgid ":doc:`Pagination <topics/pagination>`"
+msgstr ""
+
+#: ../../index.txt:261
+# 402bc0223ac446a6ad37e1bfaf6065c5
+msgid ":doc:`Messages framework <ref/contrib/messages>`"
+msgstr ""
+
+#: ../../index.txt:262
+# 2c0c8c90b75f4f3a9fef852017a49c4f
+msgid ":doc:`Serialization <topics/serialization>`"
+msgstr ""
+
+#: ../../index.txt:263
+# a7dae77b7a38484d801d6ea878794895
+msgid ":doc:`Sessions <topics/http/sessions>`"
+msgstr ""
+
+#: ../../index.txt:264
+# 1717a10bf499445e8dd0c54e650afb3a
+msgid ":doc:`Sitemaps <ref/contrib/sitemaps>`"
+msgstr ""
+
+#: ../../index.txt:265
+# f7a48eaeb648475e97737626a05bf297
+msgid ":doc:`Static files management <ref/contrib/staticfiles>`"
+msgstr ""
+
+#: ../../index.txt:266
+# f00917210d6e4a78a0a10b3b670b714c
+msgid ":doc:`Data validation <ref/validators>`"
+msgstr ""
+
+#: ../../index.txt:269
+# 293312dde1ad4642a5740e97bf3be3bf
+msgid "Other core functionalities"
+msgstr ""
+
+#: ../../index.txt:271
+# 1ce3f98b17db4faa877a36bb2fa7032c
+msgid "Learn about some other core functionalities of the Django framework:"
+msgstr ""
+
+#: ../../index.txt:273
+# dce4510d0b2e4879a0950b4b35a1aa4f
+msgid ":doc:`Conditional content processing <topics/conditional-view-processing>`"
+msgstr ""
+
+#: ../../index.txt:274
+# 1836bdd1f5ca4a309862d2d4a2a59d11
+msgid ":doc:`Content types and generic relations <ref/contrib/contenttypes>`"
+msgstr ""
+
+#: ../../index.txt:275
+# 3190232aa6c24b1ba4368b4093569779
+msgid ":doc:`Databrowse <ref/contrib/databrowse>`"
+msgstr ""
+
+#: ../../index.txt:276
+# 73ca41cb5e5b4a8f9dbf06e42fa60e50
+msgid ":doc:`Flatpages <ref/contrib/flatpages>`"
+msgstr ""
+
+#: ../../index.txt:277
+# 27ea216f2858469ca663618ebb9cd6bd
+msgid ":doc:`Redirects <ref/contrib/redirects>`"
+msgstr ""
+
+#: ../../index.txt:278
+# 10acf0bcbd434508af4077d81d95285a
+msgid ":doc:`Signals <topics/signals>`"
+msgstr ""
+
+#: ../../index.txt:279
+# 6fb64eec309c4209bae823712961cce2
+msgid ":doc:`The sites framework <ref/contrib/sites>`"
+msgstr ""
+
+#: ../../index.txt:280
+# 1052701a8d1d47febd0f675c2ab1df22
+msgid ":doc:`Unicode in Django <ref/unicode>`"
+msgstr ""
+
+#: ../../index.txt:283
+# bc17aefe16e044f38921137ddccfdce0
+msgid "The Django open-source project"
+msgstr ""
+
+#: ../../index.txt:285
+# a4d46ddf84674dfe9ae788c1c26e17b1
+msgid "Learn about the development process for the Django project itself and about how you can contribute:"
+msgstr ""
+
+#: ../../index.txt:288
+# 7c741857eb0e419181027bc9a5a8f342
+msgid "**Community:** :doc:`How to get involved <internals/contributing/index>` | :doc:`The release process <internals/release-process>` | :doc:`Team of committers <internals/committers>` | :doc:`The Django source code repository <internals/git>` | :doc:`Security policies <internals/security>`"
+msgstr ""
+
+#: ../../index.txt:295
+# 3285c44cfc854b28a62b40f4bb954405
+msgid "**Design philosophies:** :doc:`Overview <misc/design-philosophies>`"
+msgstr ""
+
+#: ../../index.txt:298
+# 4dce9c18520f448e9327e582cd6acbc2
+msgid "**Documentation:** :doc:`About this documentation <internals/contributing/writing-documentation>`"
+msgstr ""
+
+#: ../../index.txt:301
+# 826b2fe9c583417fb9c28f73eee6468e
+msgid "**Third-party distributions:** :doc:`Overview <misc/distributions>`"
+msgstr ""
+
+#: ../../index.txt:304
+# c4fcd028136d41b6885b3d1aae10e13b
+msgid "**Django over time:** :doc:`API stability <misc/api-stability>` | :doc:`Release notes and upgrading instructions <releases/index>` | :doc:`Deprecation Timeline <internals/deprecation>`"
+msgstr ""
+
