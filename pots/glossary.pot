@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django 1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-02 21:26\n"
+"POT-Creation-Date: 2013-06-08 14:28\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,99 +17,154 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../glossary.txt:5
-# e3e3c10531fc4969be64966bc4daaacb
+# 75345d58ef994ec8aaffc6d0b448e37f
 msgid "Glossary"
 msgstr ""
 
+#: ../../glossary.txt:8
+# db00465fc5384bd3b22fa75cae761109
+msgid "field"
+msgstr ""
+
 #: ../../glossary.txt:10
-# d5926288f678443b938661088c4c3d3d
+# 75be40eca55741acbab91389f3284c0a
 msgid "An attribute on a :term:`model`; a given field usually maps directly to a single database column."
 msgstr ""
 
 #: ../../glossary.txt:13
 #: ../../glossary.txt:24
-# d693a8d2932c46e8bc04ab14765633c3
-# e7ad44ee46f6490491ca9497fd9f32a9
+# afcf0d90f5924d1caaea93539864002f
+# c29759aad00c4dce808a4ee1b4d19a16
 msgid "See :doc:`/topics/db/models`."
 msgstr ""
 
+#: ../../glossary.txt:14
+# cfa796662b6145cea80e9044b973c31b
+msgid "generic view"
+msgstr ""
+
 #: ../../glossary.txt:16
-# f80ece3d28c34cdd8aec8152ff5ae06d
+# a621a50900a74cf5bceaf1bf9dee9f8b
 msgid "A higher-order :term:`view` function that provides an abstract/generic implementation of a common idiom or pattern found in view development."
 msgstr ""
 
 #: ../../glossary.txt:19
-# 5ecf0bdbcb1d4afab85f4952679a9f9b
+# e0c581e550e84e129fece8a96fe7b21f
 msgid "See :doc:`/topics/class-based-views/index`."
 msgstr ""
 
+#: ../../glossary.txt:20
+# a2beb00beb194cadb559e60b023fbf04
+msgid "model"
+msgstr ""
+
 #: ../../glossary.txt:22
-# 29c299ad1f984e7faf695c8694225833
+# a5182859d39541758a305baf0e45c1dc
 msgid "Models store your application's data."
 msgstr ""
 
+#: ../../glossary.txt:25
+# 38760254d8c24e278c2db9f160f16f01
+msgid "MTV"
+msgstr ""
+
 #: ../../glossary.txt:27
-# 5871ead6b2c0496b84059674b7ea542a
+# 8b9189bfd25d44c4bc2b2cbf36e6f7b5
 msgid "\"Model-template-view\"; a software pattern, similar in style to MVC, but a better description of the way Django does things."
 msgstr ""
 
 #: ../../glossary.txt:30
-# 24f05a5050fb4b5fba23f6566f40579a
+# 6044c514eebb45f99ed2873598fa28dd
 msgid "See :ref:`the FAQ entry <faq-mtv>`."
 msgstr ""
 
+#: ../../glossary.txt:31
+# 9e4d3af304f0460b9a00b59ab8f777af
+msgid "MVC"
+msgstr ""
+
 #: ../../glossary.txt:33
-# c5547846f5d94f9da91d05764504d93f
+# a5a925879a7848d087af7ea472b5d31d
 msgid "`Model-view-controller`__; a software pattern. Django :ref:`follows MVC to some extent <faq-mtv>`."
 msgstr ""
 
+#: ../../glossary.txt:37
+# eb35a6ce0d5646d798bb75c58b9dd64a
+msgid "project"
+msgstr ""
+
 #: ../../glossary.txt:39
-# f58972d41430478b983b2d9ef2f65317
+# 4a4c9d335c7b4c63a1fe7706b64e28b6
 msgid "A Python package -- i.e. a directory of code -- that contains all the settings for an instance of Django. This would include database configuration, Django-specific options and application-specific settings."
 msgstr ""
 
+#: ../../glossary.txt:43
+# e2d19e48adc84d20bc3a65321f5d3923
+msgid "property"
+msgstr ""
+
 #: ../../glossary.txt:45
-# e429392d45f04c98bbe05422718151b8
+# ae75001b187c4be9ad96323154b96a1d
 msgid "Also known as \"managed attributes\", and a feature of Python since version 2.2. This is a neat way to implement attributes whose usage resembles attribute access, but whose implementation uses method calls."
 msgstr ""
 
 #: ../../glossary.txt:49
-# b381dedbfa094b499a538719140fda31
+# 5a18a861fbde49678b81303b8cf937c9
 msgid "See :func:`property`."
 msgstr ""
 
+#: ../../glossary.txt:50
+# c619f70f5c9d499d85a0036a59da4223
+msgid "queryset"
+msgstr ""
+
 #: ../../glossary.txt:52
-# ce79af6631314ebfa3708055b691d04a
+# fcaba229f198442f9aa56359da8293c0
 msgid "An object representing some set of rows to be fetched from the database."
 msgstr ""
 
 #: ../../glossary.txt:54
-# ac07800ca5ed4fc1b740d1476f45b846
+# 3336bf1d7b774160b70f0d116e942a9c
 msgid "See :doc:`/topics/db/queries`."
 msgstr ""
 
+#: ../../glossary.txt:55
+# 06a7f59cf8b74857b5d019452a0c4a80
+msgid "slug"
+msgstr ""
+
 #: ../../glossary.txt:57
-# e5c195a9de7042a5a51fee280c49d1a2
+# 0e8c09f7deb34ae3b27f29cba3403407
 msgid "A short label for something, containing only letters, numbers, underscores or hyphens. They're generally used in URLs. For example, in a typical blog entry URL:"
 msgstr ""
 
 #: ../../glossary.txt:65
-# fca6fcfff5c140bc8582a1ac0fc2b28b
+# f5dda9f4269e4b5e82e0170da1ea2e0a
 msgid "the last bit (``spring``) is the slug."
 msgstr ""
 
+#: ../../glossary.txt:66
+# 2565fd61bf78493b83061faf063151f0
+msgid "template"
+msgstr ""
+
 #: ../../glossary.txt:68
-# af5b5b367ecb446280ce2536816db80f
+# 97bfcdaa3b0f4ee7b96393fe730cc518
 msgid "A chunk of text that acts as formatting for representing data. A template helps to abstract the presentation of data from the data itself."
 msgstr ""
 
 #: ../../glossary.txt:72
-# 082884b1c0ef4353b300781d9f0f9de7
+# 42f280903f0742afa6b6177e9e1b0843
 msgid "See :doc:`/topics/templates`."
 msgstr ""
 
+#: ../../glossary.txt:73
+# 7b42c248338f43daab802c7d8a8ffeaa
+msgid "view"
+msgstr ""
+
 #: ../../glossary.txt:75
-# a5bbeca362ed482ba6f5f5e541736db1
+# 24a629a9103843538571a2d27014591d
 msgid "A function responsible for rending a page."
 msgstr ""
 
