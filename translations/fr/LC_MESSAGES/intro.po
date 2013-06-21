@@ -3,14 +3,17 @@
 # This file is distributed under the same license as the Django package.
 # 
 # Translators:
+# annoa <annoa.b@gmail.com>, 2013
+# charettes <charette.s@gmail.com>, 2013
+# Christophe kryskool <christophe.chauvet@gmail.com>, 2013
 # claudep <claude@2xlibre.net>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-06-08 14:28\n"
-"PO-Revision-Date: 2013-06-10 19:40+0000\n"
-"Last-Translator: claudep <claude@2xlibre.net>\n"
+"PO-Revision-Date: 2013-06-20 21:20+0000\n"
+"Last-Translator: annoa <annoa.b@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -101,42 +104,42 @@ msgstr "Nous allons vous guider dans votre première contribution d'un correctif
 # 876f282441cf4682825987961d43d2f3
 #: ../../intro/contributing.txt:51
 msgid "Installing Git."
-msgstr "Installation de Git."
+msgstr "installation de Git,"
 
 # ef2283011db648a2b6b6e886a9b781b1
 #: ../../intro/contributing.txt:52
 msgid "How to download a development copy of Django."
-msgstr "Le téléchargement d'une copie de développement de Django."
+msgstr "le téléchargement d'une copie de développement de Django,"
 
 # 6e77c0bb518840e2b35b1c9850672e96
 #: ../../intro/contributing.txt:53
 msgid "Running Django's test suite."
-msgstr "Le lancement de la suite de tests de Django."
+msgstr "le lancement de la suite de tests de Django,"
 
 # 35ed18ae90ce475c82ade26baee4f36d
 #: ../../intro/contributing.txt:54
 msgid "Writing a test for your patch."
-msgstr "L'écriture d'un test pour votre correctif."
+msgstr "l'écriture d'un test pour votre correctif,"
 
 # 9b78e39eb19d450ca8c5cd9fd05de627
 #: ../../intro/contributing.txt:55
 msgid "Writing the code for your patch."
-msgstr "L'écriture du code du correctif."
+msgstr "l'écriture du code du correctif,"
 
 # f28499f5239c4e9fa83018873680580e
 #: ../../intro/contributing.txt:56
 msgid "Testing your patch."
-msgstr "Le test de votre correctif."
+msgstr "le test de votre correctif,"
 
 # c711ed79cfd048f6b3ed3d37c48cb9a8
 #: ../../intro/contributing.txt:57
 msgid "Generating a patch file for your changes."
-msgstr "La génération d'un fichier correctif contenant vos modifications."
+msgstr "la génération d'un fichier correctif contenant vos modifications,"
 
 # 62f851f1156e4ce0a1ca0e4e825f992f
 #: ../../intro/contributing.txt:58
 msgid "Where to look for more information."
-msgstr "Les sources d'informations supplémentaires."
+msgstr "les sources d'informations supplémentaires."
 
 # 2107baf766f14fd0aad7d16b0010e36b
 #: ../../intro/contributing.txt:60
@@ -310,7 +313,7 @@ msgid ""
 " failed. Both of these are considered to be test failures. Meanwhile, ``x`` "
 "and ``s`` indicated expected failures and skipped tests, respectively. Dots "
 "indicate passing tests."
-msgstr "Pendant que la suite de tests de Django s'exécute, vous voyez un flux de caractères représentant le statut de chaque test exécuté. ``E`` indique qu'une erreur est survenue durant le test et ``F`` indique qu'une assertion de test a échoué. Les deux sont considérés comme des échecs. Quant à eux, ``x`` et ``s`` indiquent respectivement des échecs attendus et des tests omis volontairement. Chaque point signifie qu'un test a passé avec succès."
+msgstr "Pendant que la suite de tests de Django s'exécute, vous voyez un flux de caractères représentant le statut de chaque test exécuté. ``E`` indique qu'une erreur est survenue durant le test et ``F`` indique qu'une assertion de test a échoué. Les deux sont considérés comme des échecs. Quant à eux, ``x`` et ``s`` indiquent respectivement des échecs attendus et des tests omis volontairement. Chaque point signifie qu'un test a réussi."
 
 # 006ab8b59a4742788d44ca8f37a77ea3
 #: ../../intro/contributing.txt:175
@@ -329,7 +332,7 @@ msgid ""
 "changes to Django's code, the entire test suite **should** pass. If you get "
 "failures or errors make sure you've followed all of the previous steps "
 "properly. See :ref:`running-unit-tests` for more information."
-msgstr "Lorsque les tests sont terminés, vous devez voir apparaître un message vous informant si la suite de tests a passé ou a échoué. Comme vous n'avez encore pas modifié de code Django, toute la suite de tests **devrait** passer. Si vous obtenez des échecs ou des erreurs, vérifiez que vous avez bien suivi toutes les précédentes étapes. Consultez :ref:`running-unit-tests` pour plus d'informations."
+msgstr "Lorsque les tests sont terminés, vous devez voir apparaître un message vous informant si la suite de tests a réussi ou échoué. Comme vous n'avez encore pas modifié de code Django, toute la suite de tests **devrait** passer. Si vous obtenez des échecs ou des erreurs, vérifiez que vous avez bien suivi toutes les précédentes étapes. Consultez :ref:`running-unit-tests` pour plus d'informations."
 
 # 8576f818805e45709e47699bb906f7f6
 #: ../../intro/contributing.txt:186
@@ -366,7 +369,7 @@ msgid ""
 "you'll need to include tests which ensure that the new features are working "
 "correctly. They too should fail when the new feature is not present, and "
 "then pass once it has been implemented."
-msgstr "Dans la majorité des cas, un correctif doit contenir des tests pour être accepté dans Django. Pour les correctifs de correction de bogue, cela implique la rédaction d'une test de régression pour s'assurer que le bogue ne soit plus réintroduit plus tard dans Django. Un test de régression doit être écrit de façon à échouer tant que le bogue est présent et à passer lorsque le bogue a été corrigé. En ce qui concerne les correctifs contenant de nouvelles fonctionnalités, vous devrez inclure des tests qui assurent que les nouvelles fonctionnalités fonctionnent correctement. Ces tests devraient aussi échouer avant que la fonctionnalité ne soit développée, et passer après qu'elle a été implémentée."
+msgstr "Dans la majorité des cas, un correctif doit contenir des tests pour être accepté dans Django. Pour les correctifs de correction de bogue, cela implique la rédaction d'une test de régression pour s'assurer que le bogue ne soit plus réintroduit plus tard dans Django. Un test de régression doit être écrit de façon à échouer tant que le bogue est présent et à réussir lorsque le bogue a été corrigé. En ce qui concerne les correctifs contenant de nouvelles fonctionnalités, vous devrez inclure des tests qui assurent que les nouvelles fonctionnalités fonctionnent correctement. Ces tests devraient aussi échouer avant que la fonctionnalité ne soit développée, et réussir après qu'elle a été implémentée."
 
 # 32b96357013d4124a813a992c668d703
 #: ../../intro/contributing.txt:214
@@ -380,7 +383,7 @@ msgid ""
 "After all, a regression test that passes regardless of whether a bug is "
 "present is not very helpful at preventing that bug from reoccurring down the"
 " road."
-msgstr "Une bonne manière de faire cela est d'écrire d'abord les nouveaux tests, avant de toucher au code. Ce style de développement est appelé `développement piloté par les tests`__ et peut être appliqué aussi bien à des projets complets qu'à des correctifs individuels. Après avoir écrit les tests, vous les lancez pour être sûr qu'ils échouent effectivement (puisque vous n'avez pas encore corrigé l'erreur ou ajouté de fonctionnalité). Si vos nouveaux tests n'échouent pas, vous devez les corriger jusqu'à ce qu'ils échouent. Après tout, un test de régression qui passe que le bogue soit présent ou non n'est pas très utile pour éviter que ce bogue ne réapparaisse à l'avenir."
+msgstr "Une bonne manière de faire cela est d'écrire d'abord les nouveaux tests, avant de toucher au code. Ce style de développement est appelé `développement piloté par les tests`__ et peut être appliqué aussi bien à des projets complets qu'à des correctifs individuels. Après avoir écrit les tests, vous les lancez pour être sûr qu'ils échouent effectivement (puisque vous n'avez pas encore corrigé l'erreur ou ajouté la fonctionnalité). Si vos nouveaux tests n'échouent pas, vous devez les corriger jusqu'à ce qu'ils échouent. Après tout, un test de régression qui passe que le bogue soit présent ou non n'est pas très utile pour éviter que ce bogue ne réapparaisse à l'avenir."
 
 # d9122636e36e47499d87223795522cb4
 #: ../../intro/contributing.txt:223
@@ -390,7 +393,7 @@ msgstr "Entrons maintenant dans le vif du sujet."
 # 57303baaee5d485c8fa131d7ba27885e
 #: ../../intro/contributing.txt:228
 msgid "Writing some tests for ticket #17549"
-msgstr "Écriture de tests pour le ticket "
+msgstr "Écriture de tests pour le ticket #17549"
 
 # f5896159c96148c9b2661275dc8d114a
 #: ../../intro/contributing.txt:230
@@ -402,7 +405,7 @@ msgstr "Le `ticket #17549`__ décrit la nouvelle petite fonctionnalité suivante
 msgid ""
 "It's useful for URLField to give you a way to open the URL; otherwise you "
 "might as well use a CharField."
-msgstr "Il est utile de pouvoir ouvrir l'URL d'un champ URLField ; sinon autant utiliser un "
+msgstr "Il est utile de pouvoir ouvrir l'URL d'un champ URLField ; sinon autant utiliser un CharField."
 
 # 12af7f2d4a4442afbc064094352f085b
 #: ../../intro/contributing.txt:235
@@ -457,7 +460,7 @@ msgstr "Dive Into Python (un livre en ligne gratuit pour les développeurs débu
 msgid ""
 "After reading those, if you want something a little meatier to sink your "
 "teeth into, there's always the `Python unittest documentation`__."
-msgstr "Après ces lectures, si vous aimeriez un peu plus de matière à digérer, vous pouvez toujours parcourir la `documentation Python de unittest`__."
+msgstr "Après ces lectures, si vous désirez un peu plus de matière à digérer, vous pouvez toujours parcourir la `documentation Python de unittest`__."
 
 # 7b0415887283419d854b212b87963be3
 #: ../../intro/contributing.txt:296
@@ -481,7 +484,7 @@ msgid ""
 "each of the test methods we added. If all of the tests passed, then you'll "
 "want to make sure that you added the new test shown above to the appropriate"
 " folder and class."
-msgstr "Si les tests se sont déroulés correctement, vous devriez voir trois échecs correspondant aux méthodes de test que nous avons ajoutées. Si tous les tests ont passé, vous devez alors vérifier si vous avez bien ajouté les nouveaux tests ci-dessus dans le bon répertoire et la bonne classe."
+msgstr "Si les tests se sont déroulés correctement, vous devriez voir trois échecs correspondant aux méthodes de test que nous avons ajoutées. Si tous les tests ont réussi, vous devriez alors vérifier que vous avez bien ajouté les nouveaux tests ci-dessus dans le bon répertoire et la bonne classe."
 
 # f7f38fcde2f748a98b0f16ca7cd09dfc
 #: ../../intro/contributing.txt:312
@@ -520,7 +523,7 @@ msgid ""
 "wrote earlier pass, so we can see whether the code we wrote above is working"
 " correctly. To run the tests in the ``admin_widgets`` folder, ``cd`` into "
 "the Django ``tests/`` directory and run::"
-msgstr "Après avoir terminé de modifier Django, nous devons être sûrs que les tests précédemment écrits passent avec succès, afin de constater que le code que nous venons d'écrire fonctionne correctement. Pour lancer les tests du dossier ``admin_widgets``, placez-vous dans le répertoire ``tests/`` de Django et lancez ::"
+msgstr "Après avoir terminé de modifier Django, nous devons être sûrs que les tests précédemment écrits réussissent, afin de vérifier que le code que nous venons d'écrire fonctionne correctement. Pour lancer les tests du dossier ``admin_widgets``, placez-vous dans le répertoire ``tests/`` de Django et lancez ::"
 
 # 0de53a18c6be475aa73c4bfd76969a2b
 #: ../../intro/contributing.txt:345
@@ -543,7 +546,7 @@ msgid ""
 "Re-run the tests and everything should pass. If it doesn't, make sure you "
 "correctly modified the ``AdminURLFieldWidget`` class as shown above and "
 "copied the new tests correctly."
-msgstr "Relancez les tests et tout devrait passer. Si ce n'est pas le cas, assurez-vous d'avoir bien modifié la classe ``AdminURLFieldWidget`` tel qu'indiqué ci-dessus et que vous avez copié les tests correctement."
+msgstr "Relancez les tests et tout devrait réussir. Si ce n'est pas le cas, assurez-vous d'avoir bien modifié la classe ``AdminURLFieldWidget`` tel qu'indiqué ci-dessus et que vous avez copié les tests correctement."
 
 # 46ee5cbf39dc4624a3dde61df9b6b219
 #: ../../intro/contributing.txt:363
@@ -610,7 +613,7 @@ msgid ""
 "Now it's time to generate a patch file that can be uploaded to Trac or "
 "applied to another copy of Django. To get a look at the content of your "
 "patch, run the following command::"
-msgstr "C'est maintenant le moment de générer un fichier correctif qui pourra être envoyé à Trac ou appliqué à une autre copie de Django. Pour jeter ou œil sur le correctif, lancez la commande suivante ::"
+msgstr "C'est maintenant le moment de générer un fichier correctif qui pourra être envoyé à Trac ou appliqué à une autre copie de Django. Pour jeter un œil sur le correctif, lancez la commande suivante ::"
 
 # 1a6339f9be554f20a379168ac3611f26
 #: ../../intro/contributing.txt:409
@@ -657,7 +660,7 @@ msgstr "Félicitations, vous avez produit votre tout premier correctif pour Djan
 msgid ""
 "Since we never committed our changes locally, perform the following to get "
 "your git branch back to a good starting point::"
-msgstr "Comme nous n'avons pas commité localement nos modifications, effectuez ce qui suite pour faire revenir votre branche git à un bon point de départ ::"
+msgstr "Comme nous n'avons pas commité localement nos modifications, effectuez ce qui suit pour faire revenir votre branche git à un bon point de départ ::"
 
 # 07378490899e4e98a90abb52b7281fd8
 #: ../../intro/contributing.txt:529
@@ -679,7 +682,7 @@ msgid ""
 "/submitting-patches>`. It covers Trac etiquette, how to claim tickets for "
 "yourself, expected coding style for patches, and many other important "
 "details."
-msgstr "Il est important de lire la documentation de Django sur l':doc:`appropriation de tickets et la soumissions de correctifs </internals/contributing/writing-code/submitting-patches>`. Cela comprend les règles de comportement sur Trac, la façon de vous assigner un ticket, le style du code des correctifs et encore bien d'autres détails importants."
+msgstr "Il est important de lire la documentation de Django sur l':doc:`appropriation de tickets et la soumission de correctifs </internals/contributing/writing-code/submitting-patches>`. Cela comprend les règles de comportement sur Trac, la façon de vous assigner un ticket, le style attendu du code des correctifs et encore bien d'autres détails importants."
 
 # 2b55eedbd9f14dd8a5c861231c483ad8
 #: ../../intro/contributing.txt:539
@@ -702,7 +705,7 @@ msgstr "Après cela, si vous êtes toujours avide de plus d'informations sur la 
 # f9c54c9471ec4cbfa8762521d981935d
 #: ../../intro/contributing.txt:550
 msgid "Finding your first real ticket"
-msgstr "Recherche du premier vrai ticket"
+msgstr "Recherche de votre premier vrai ticket"
 
 # 3b90152ada0e4b3bae386cd59cc53cc9
 #: ../../intro/contributing.txt:552
@@ -801,7 +804,7 @@ msgstr "Avant de pouvoir utiliser Django, il vous faut l’installer. Le :doc:`g
 # 5bef229885b048f5ae1f248668a1e935
 #: ../../intro/install.txt:10
 msgid "Install Python"
-msgstr "Installer Python"
+msgstr "Installation de Python"
 
 # f326433d443a4b279fcb856d24b75246
 #: ../../intro/install.txt:12
@@ -831,12 +834,12 @@ msgstr "Si vous utilisez Jython_ (une implémentation de Python pour machine Jav
 msgid ""
 "You can verify that Python is installed by typing ``python`` from your "
 "shell; you should see something like::"
-msgstr "Vous pouvez vérifier que Python est installé en tapant ``python`` dans votre shell ; vous devriez voir quelque chose qui ressemble à ::"
+msgstr "Vous pouvez vérifier que Python est installé en saisissant ``python`` dans votre shell ; vous devriez voir quelque chose qui ressemble à ::"
 
 # 933e5b67d14a40caa90e2d7a546b16df
 #: ../../intro/install.txt:38
 msgid "Set up a database"
-msgstr "Configurer une base de données"
+msgstr "Configuration d'une base de données"
 
 # b493b736ff6f4bcfa50cd0fe6bad26e0
 #: ../../intro/install.txt:40
@@ -850,7 +853,7 @@ msgstr "Cette étape n'est nécessaire que si vous souhaitez travailler avec un 
 # 2f5a1946f114427d8538cbe729016127
 #: ../../intro/install.txt:45
 msgid "Remove any old versions of Django"
-msgstr "Désinstaller toute version plus ancienne de Django"
+msgstr "Désinstallation de toute version plus ancienne de Django"
 
 # c8cd0695154f43fda8393dab7625e696
 #: ../../intro/install.txt:47
@@ -863,7 +866,7 @@ msgstr "Si vous mettez à jour votre installation de Django depuis une version p
 # b45706c87e334232b94440cbc67edd10
 #: ../../intro/install.txt:52
 msgid "Install Django"
-msgstr "Installer Django"
+msgstr "Installation de Django"
 
 # dd5b1d46bd734cbf8a52b9cc9f62bdd5
 #: ../../intro/install.txt:54
@@ -986,14 +989,14 @@ msgstr "Déployez-le"
 msgid ""
 "Next, run the Django command-line utility to create the database tables "
 "automatically:"
-msgstr "Ensuite, lancez l'utilitaire en ligne de commande pour créer les tables de données automatiquement :"
+msgstr "Ensuite, lancez l'utilitaire en ligne de commande pour créer les tables de la base de données automatiquement :"
 
 # 76277e2d606e471687970c3004f32853
 #: ../../intro/overview.txt:56
 msgid ""
 "The :djadmin:`syncdb` command looks at all your available models and creates"
 " tables in your database for whichever tables don't already exist."
-msgstr "La commande :djadmin:`syncdb` examine tous vos modèles disponibles et crée les tables correspondantes dans votre base de données pour toutes celles qui n'existent pas encore."
+msgstr "La commande :djadmin:`syncdb` examine tous les modèles disponibles et crée les tables correspondantes dans votre base de données pour toutes celles qui n'existent pas encore."
 
 # 3242039228b7460c87a1541fb2b4fd69
 #: ../../intro/overview.txt:60
@@ -1006,7 +1009,7 @@ msgid ""
 "With that, you've got a free, and rich, :doc:`Python API "
 "</topics/db/queries>` to access your data. The API is created on the fly, no"
 " code generation necessary:"
-msgstr "Dès lors, vous avez accès à une :doc:`API Python </topics/db/queries>` riche et ouverte pour manipuler vos données. L'API est générée à la volée, sans avoir besoin d'écrire du code :"
+msgstr "Dès lors, vous avez gratuitement accès à une :doc:`API Python </topics/db/queries>` riche pour manipuler vos données. L'API est générée à la volée, sans avoir besoin d'écrire du code :"
 
 # 951aac57c8c84ac1aaad547219062d07
 #: ../../intro/overview.txt:138
@@ -1039,7 +1042,7 @@ msgid ""
 " admin sites up and running as fast as possible, so your staff (or clients) "
 "can start populating data. Then, develop the way data is presented to the "
 "public."
-msgstr "Un schéma habituel lors de la création d'une application Django est de créer les modèles et de mettre en place l'administration aussi vite que possible, pour que votre équipe (ou clients) puisse commencer à saisir les données. Ensuite, le développement de la couche de présentation publique des données peut avancer à son rythme."
+msgstr "Un schéma habituel lors de la création d'une application Django est de créer les modèles et de mettre en place les sites d'administration aussi vite que possible, pour que votre équipe (ou clients) puisse commencer à saisir les données. Ensuite, le développement de la couche de présentation publique des données peut avancer à son rythme."
 
 # 781867c57636487286cc343e79d00c74
 #: ../../intro/overview.txt:172
@@ -1118,7 +1121,7 @@ msgid ""
 "Generally, a view retrieves data according to the parameters, loads a "
 "template and renders the template with the retrieved data. Here's an example"
 " view for ``year_archive`` from above::"
-msgstr "Généralement, une vue récupère des données d'après les paramètres, charge un template et affiche le template avec les données récupérées. Voici un exemple de vue pour l'exemple précédent ``year_archive``::"
+msgstr "Généralement, une vue récupère des données d'après les paramètres, charge un gabarit (template) et affiche le gabarit avec les données récupérées. Voici un exemple de vue pour l'exemple précédent ``year_archive``::"
 
 # 04b03a8f8c424f9ba212ae4a7b7870e7
 #: ../../intro/overview.txt:230
@@ -1126,17 +1129,17 @@ msgid ""
 "This example uses Django's :doc:`template system </topics/templates>`, which"
 " has several powerful features but strives to stay simple enough for non-"
 "programmers to use."
-msgstr "Cet exemple utilise le :doc:`système de templates </topics/templates>` de Django qui a plusieurs fonctions puissantes mais s'efforce de rester assez simple à l'utilisation pour les non-programmeurs."
+msgstr "Cet exemple utilise le :doc:`système de gabarits </topics/templates>` de Django qui a plusieurs fonctions puissantes mais s'efforce de rester assez simple à l'utilisation pour les non-programmeurs."
 
 # c357ee4e7ea844aaaca9294de7bd99a7
 #: ../../intro/overview.txt:235
 msgid "Design your templates"
-msgstr "Élaborez vos templates"
+msgstr "Élaboration de vos gabarits"
 
 # 1092b733d7f543e0b35d1ae0f5be1727
 #: ../../intro/overview.txt:237
 msgid "The code above loads the ``news/year_archive.html`` template."
-msgstr "Le code ci-dessus charge le template ``news/year_archive.html``."
+msgstr "Le code ci-dessus charge le gabarit ``news/year_archive.html``."
 
 # 964b01d06e8c4a2396fe1a11751248ec
 #: ../../intro/overview.txt:239
@@ -1152,7 +1155,7 @@ msgstr "L'algorithme de recherche des templates de Django vous permet de minimis
 msgid ""
 "Let's say the ``news/year_archive.html`` template was found. Here's what "
 "that might look like:"
-msgstr "Admettons que le template ``news/article_detail.html`` a été trouvé. Voilà à quoi il pourrait ressembler :"
+msgstr "Admettons que le gabarit ``news/article_detail.html`` a été trouvé. Voilà à quoi il pourrait ressembler :"
 
 # 986a508dc39c403f85c70f3d7f7dd597
 #: ../../intro/overview.txt:263
@@ -1161,7 +1164,7 @@ msgid ""
 "means \"Output the value of the article's headline attribute.\" But dots "
 "aren't used only for attribute lookup: They also can do dictionary-key "
 "lookup, index lookup and function calls."
-msgstr "Les variables sont entourées par deux accolades. ``{{ article.headline }}`` veut dire « Afficher la valeur de l'attribut titre de l'article ». Mais les points ne sont pas utilisés uniquement pour l'utilisation des attributs : ils peuvent aussi être utilisés pour la recherche des clés de dictionnaires, d'index, ou pour appeler des fonctions."
+msgstr "Les variables sont entourées par des accolades doubles. ``{{ article.headline }}`` veut dire « Afficher la valeur de l'attribut titre (headline) de l'article ». Mais les points ne sont pas utilisés uniquement pour la recherche des attributs : ils peuvent aussi être utilisés pour la recherche des clés de dictionnaires, d'index, ou pour l'appel des fonctions."
 
 # 1885de916a2c4682a964137b78c862b8
 #: ../../intro/overview.txt:268
@@ -1171,7 +1174,7 @@ msgid ""
 "filter the value of a variable. In this case, the date filter formats a "
 "Python datetime object in the given format (as found in PHP's date "
 "function)."
-msgstr "Notez que ``{{ article.pub_date|date:\"F j, Y\" }}`` utilise des « tuyaux » de type Unix (le caractère \"|\"). On appelle cela un filtre de template, c'est un moyen de filtrer la valeur d'une variable. Dans le cas présent, le filtre date formate un objet datetime Python dans le format donné (comme dans la fonction PHP date)."
+msgstr "Notez que ``{{ article.pub_date|date:\"F j, Y\" }}`` utilise des « tuyaux » de type Unix (le caractère « | » (pipe)). On appelle cela un filtre de gabarit, c'est un moyen de filtrer la valeur d'une variable. Dans le cas présent, le filtre « date » formate un objet Python de type « datetime » dans le format fourni (comme dans la fonction « date » de PHP)."
 
 # 69e43cdb22f742a1b3436321010bc32a
 #: ../../intro/overview.txt:273
@@ -1191,14 +1194,14 @@ msgid ""
 "with the following blocks.\" In short, that lets you dramatically cut down "
 "on redundancy in templates: each template has to define only what's unique "
 "to that template."
-msgstr "Enfin, Django utilise le concept d'« héritage de templates » : c'est ce que fait ``{% extends \"base.html\" %}``. Cela veut dire « Charge premièrement le template nommé 'base', qui a défini certains blocs, et remplit ces blocs avec le contenu qui suit. ». Pour résumer, cela vous permet de diminuer significativement la redondance dans les templates : chaque template ne doit définir que ce qui est unique à ce template."
+msgstr "Enfin, Django utilise le concept « d'héritage de gabarits » : c'est ce que fait l'instruction ``{% extends \"base.html\" %}``. Cela veut dire « Charge dans un premier temps le gabarit nommé \"base\", qui a défini un ensemble de blocs, et remplit ces blocs avec le contenu qui suit. ». Pour résumer, cela vous permet de diminuer significativement la redondance dans les gabarits : chaque gabarit ne doit définir que ce qui est unique à ce gabarit."
 
 # 37b4b7446964474c8f6b09d5845249b1
 #: ../../intro/overview.txt:284
 msgid ""
 "Here's what the \"base.html\" template, including the use of :doc:`static "
 "files </howto/static-files/index>`, might look like:"
-msgstr "Voici à quoi le template « base.html » pourrait ressembler, y compris l'utilisation de :doc:`fichiers statiques </howto/static-files/index>` :"
+msgstr "Voici à quoi le gabarit « base.html » pourrait ressembler, y compris l'utilisation de :doc:`fichiers statiques </howto/static-files/index>` :"
 
 # f62b0b0a64d64ae19721c4319a6e6ea3
 #: ../../intro/overview.txt:300
@@ -1206,7 +1209,7 @@ msgid ""
 "Simplistically, it defines the look-and-feel of the site (with the site's "
 "logo), and provides \"holes\" for child templates to fill. This makes a site"
 " redesign as easy as changing a single file -- the base template."
-msgstr "De façon simplifiée, il définit l'aspect général de votre site (avec le logo) et positionne des « trous » que les templates enfants peuvent remplir. De cette façon, le changement de style d'un site devient un jeu d'enfant : il suffit de changer un seul fichier, le template de base."
+msgstr "De façon simplifiée, il définit l'aspect général de votre site (avec le logo) et positionne des « trous » que les gabarits enfants peuvent remplir. De cette façon, le changement de style d'un site devient un jeu d'enfant : il suffit de changer un seul fichier, le gabarit de base."
 
 # 363b0dfbab85411789cd1d3051f7b874
 #: ../../intro/overview.txt:304
@@ -1215,7 +1218,7 @@ msgid ""
 "templates, while reusing child templates. Django's creators have used this "
 "technique to create strikingly different cell-phone editions of sites -- "
 "simply by creating a new base template."
-msgstr "Cela vous permet aussi de créer plusieurs versions d'un site, avec des templates de base différents, tout en réutilisant les templates enfants. Les créateurs de Django ont utilisé cette technique pour créer des versions très différentes de leurs sites à destination des téléphones portables, en créant simplement un nouveau template de base."
+msgstr "Cela vous permet aussi de créer plusieurs versions d'un site, avec des gabarits de base différents, tout en réutilisant les gabarits enfants. Les créateurs de Django ont utilisé cette technique pour créer des versions très différentes de leurs sites à destination des téléphones portables, en créant simplement un nouveau gabarit de base."
 
 # 5907ba450f4c40b3ad2d0ffcecbcd293
 #: ../../intro/overview.txt:309
@@ -1227,7 +1230,7 @@ msgid ""
 "another database abstraction layer, you can read XML files, you can read "
 "files off disk, or anything you want. Each piece of Django -- models, views,"
 " templates -- is decoupled from the next."
-msgstr "Notez que vous n'avez pas à utiliser le système de templates de Django si vous en préférez un autre. Bien que le système de templates de Django soit particulièrement bien intégré avec la couche modèle de Django, rien ne vous force à l'utiliser. Vous n'êtes pas non plus obligé d'utiliser l'API de base de données de Django. Il est possible d'utiliser une autre couche d'abstraction de base de données, à partir de fichiers XML, de fichiers sur le disque ou toute autre solution. Chaque partie de Django ­— modèles, vues, templates — est séparée des autres."
+msgstr "Notez que vous n'avez pas à utiliser le système de gabarits de Django si vous en préférez un autre. Bien que le système de gabarits de Django soit particulièrement bien intégré avec la couche modèle de Django, rien ne vous force à l'utiliser. Vous n'êtes pas non plus obligé d'utiliser l'API de base de données de Django. Il est possible d'utiliser une autre couche d'abstraction de base de données, de lire des fichiers XML, des fichiers sur le disque ou toute autre solution. Chaque partie de Django ­— modèles, vues, gabarits — est découplée des autres."
 
 # 0f880cab6a9e4d05bc5edb02a98e1f20
 #: ../../intro/overview.txt:318
@@ -1246,7 +1249,7 @@ msgstr "Ceci n'était qu'un rapide coup d'œil sur les fonctions de Django. En v
 msgid ""
 "A :doc:`caching framework </topics/cache>` that integrates with memcached or"
 " other backends."
-msgstr "Un :doc:`système de cache </topics/cache>` qui s'intègre avec memcached ou d'autres moteurs."
+msgstr "Un :doc:`système de cache </topics/cache>` qui s'intègre avec « memcached » ou d'autres moteurs."
 
 # 877c575046304f0ebbd63e0155cdfd46
 #: ../../intro/overview.txt:326
@@ -1273,7 +1276,7 @@ msgstr "Pour vous, les étapes suivantes sont probablement de `télécharger Dja
 # 478481b8b9ec4b0fba65cdfe476d3052
 #: ../../intro/reusable-apps.txt:3
 msgid "Advanced tutorial: How to write reusable apps"
-msgstr ""
+msgstr "Tutoriel avancé : concevoir des applications réutilisables"
 
 # 5b1194ab18dd42b9955a60bd1e13a203
 #: ../../intro/reusable-apps.txt:5
@@ -1408,7 +1411,7 @@ msgstr ""
 # aec1faf6a3ff4f74bad8c87b45361783
 #: ../../intro/reusable-apps.txt:113
 msgid "Packaging your app"
-msgstr ""
+msgstr "Empaqueter votre application"
 
 # c89d2846600c44bf8f1c364eee894a10
 #: ../../intro/reusable-apps.txt:115
@@ -1687,7 +1690,7 @@ msgstr "Cela consistera en deux parties :"
 # ed4f71b6741d4ba787b0d8ec9023a2da
 #: ../../intro/tutorial01.txt:12
 msgid "A public site that lets people view polls and vote in them."
-msgstr "Un site public qui permet à des gens de voir les sondages et de voter."
+msgstr "Un site public qui permet à des gens de voir les sondages et d'y répondre."
 
 # 678115f7cdd84252a18cd2959e43746b
 #: ../../intro/tutorial01.txt:13
@@ -1748,14 +1751,14 @@ msgid ""
 "establishes a Django :term:`project` -- a collection of settings for an "
 "instance of Django, including database configuration, Django-specific "
 "options and application-specific settings."
-msgstr "Si c’est la première fois que vous utilisez Django, vous devrez vous occuper de quelques éléments de configuration initiaux. Plus précisément, vous devrez lancer la génération automatique de code qui mettra en place un :term:`projet` Django – un ensemble de règlages particuliers à une instance de Django, qui comprendra la configuration de la base de données, des options spécifiques à Django et d’autres propres à l’application."
+msgstr "Si c’est la première fois que vous utilisez Django, vous devrez vous occuper de quelques éléments de configuration initiaux. Plus précisément, vous devrez lancer la génération automatique de code qui mettra en place un :term:`projet` Django – un ensemble de réglages particuliers à une instance de Django, qui comprend la configuration de la base de données, des options spécifiques à Django et d’autres propres à l’application."
 
 # 38e6e70f7397479083d3fb7243f667fe
 #: ../../intro/tutorial01.txt:53
 msgid ""
 "From the command line, ``cd`` into a directory where you'd like to store "
 "your code, then run the following command:"
-msgstr "Depuis un terminal en ligne de commande, ``cd`` dans un répertoire dans lequel vous souhaitez conserver votre code, puis lancez la commande suivante :"
+msgstr "Depuis un terminal en ligne de commande, déplacez-vous à l'aide de la commande ``cd`` dans un répertoire dans lequel vous souhaitez conserver votre code, puis lancez la commande suivante :"
 
 # 9ad73fec37364df181c363cbb63b315e
 #: ../../intro/tutorial01.txt:60
@@ -1771,7 +1774,7 @@ msgid ""
 "components. In particular, this means you should avoid using names like "
 "``django`` (which will conflict with Django itself) or ``test`` (which "
 "conflicts with a built-in Python package)."
-msgstr "Vous devez éviter de nommer vos projets en utilisant des noms réservés de Python ou des noms de composants de Django. Cela signifie en particulier que vous devez éviter d’utiliser le nom ``django`` (qui entrerait en conflit avec Django lui-même) ou ``test`` (qui entrerait en conflit avec un composant intégré de Python)."
+msgstr "Vous devez éviter de nommer vos projets en utilisant des noms réservés de Python ou des noms de composants de Django. Cela signifie en particulier que vous devez éviter d’utiliser des noms comme ``django`` (qui entrerait en conflit avec Django lui-même) ou ``test`` (qui entrerait en conflit avec un composant intégré de Python)."
 
 # 78e028a4b11d44f6a6b7fb3a2fdfed20
 #: ../../intro/tutorial01.txt:72
@@ -1823,7 +1826,7 @@ msgid ""
 ":file:`manage.py`: A command-line utility that lets you interact with this "
 "Django project in various ways. You can read all the details about "
 ":file:`manage.py` in :doc:`/ref/django-admin`."
-msgstr ":file:`manage.py` : un utilitaire en ligne de commande qui vous permet d'interagir avec ce projet Django de différentes façons. Vous pouvez lire les détails sur :file:`manage.py` dans :doc:`/ref/django-admin`."
+msgstr ":file:`manage.py` : un utilitaire en ligne de commande qui vous permet d'interagir avec ce projet Django de différentes façons. Vous trouverez toutes les informations nécessaires sur :file:`manage.py` dans :doc:`/ref/django-admin`."
 
 # a7b9b41ca3d94caea470867d6aef1c78
 #: ../../intro/tutorial01.txt:109
@@ -1839,14 +1842,14 @@ msgid ""
 ":file:`mysite/__init__.py`: An empty file that tells Python that this "
 "directory should be considered a Python package. (Read `more about "
 "packages`_ in the official Python docs if you're a Python beginner.)"
-msgstr ":file:`mysite/__init__.py` : un fichier vide qui indique à Python que ce répertoire doit être considéré comme un paquet. (Lisez `informations sur les paquets`_ (en) dans la documentation officielle de Python si vous êtes un débutant de ce langage)."
+msgstr ":file:`mysite/__init__.py` : un fichier vide qui indique à Python que ce répertoire doit être considéré comme un paquet (lisez `informations sur les paquets`_ (en) dans la documentation officielle de Python si vous êtes débutant avec ce langage)."
 
 # 5480b6f1de1a4bf28d2902341c70b4f0
 #: ../../intro/tutorial01.txt:117
 msgid ""
 ":file:`mysite/settings.py`: Settings/configuration for this Django project."
 "  :doc:`/topics/settings` will tell you all about how settings work."
-msgstr ":file:`mysite/settings.py` : réglages et configuration de ce projet Django. :doc:`/topics/settings` vous en apprendra plus sur le fonctionnement des réglages."
+msgstr ":file:`mysite/settings.py` : réglages et configuration de ce projet Django. :doc:`/topics/settings` vous apprendra tout sur le fonctionnement des réglages."
 
 # 033277ace8604b05baa8c2356425063c
 #: ../../intro/tutorial01.txt:121
@@ -1862,7 +1865,7 @@ msgid ""
 ":file:`mysite/wsgi.py`: An entry-point for WSGI-compatible webservers to "
 "serve your project. See :doc:`/howto/deployment/wsgi/index` for more "
 "details."
-msgstr ":file:`mysite/wsgi.py` : un point d'entrée pour les serveurs Web compatibles WSGI pour déployer votre projet. Voir :doc:`/howto/deployment/wsgi/index` pour plus de détails."
+msgstr ":file:`mysite/wsgi.py` : un point d'entrée pour les serveurs Web compatibles WSGI afin de déployer votre projet. Voir :doc:`/howto/deployment/wsgi/index` pour plus de détails."
 
 # f704f0953ae042c4bde135dc6aa1feee
 #: ../../intro/tutorial01.txt:131
@@ -1875,7 +1878,7 @@ msgid ""
 "Let's verify this worked. Change into the outer :file:`mysite` directory, if"
 " you haven't already, and run the command ``python manage.py runserver``. "
 "You'll see the following output on the command line:"
-msgstr "Vérifions que tout fonctionne comme prévu. Déplacez-vous dans le répertoire :file:`mysite` si ce n'est pas déjà fait, et lancez la commande ``python manage.py runserver``. Vous verrez les messages suivants défiler :"
+msgstr "Vérifions que tout fonctionne comme prévu. Déplacez-vous dans le répertoire :file:`mysite` si ce n'est pas déjà fait, et lancez la commande ``python manage.py runserver``. Vous verrez apparaître les messages suivants :"
 
 # 6696bac7b2904cd4917f008a01b7d62c
 #: ../../intro/tutorial01.txt:147
@@ -1907,7 +1910,7 @@ msgstr "Maintenant que le serveur tourne, allez à l'adresse http://127.0.0.1:80
 msgid ""
 "By default, the :djadmin:`runserver` command starts the development server "
 "on the internal IP at port 8000."
-msgstr "Par défaut, la commande :djadmin:`runserver` démarre le serveur de développement sur le port interne 8000."
+msgstr "Par défaut, la commande :djadmin:`runserver` démarre le serveur de développement sur l'IP interne sur le port 8000."
 
 # a73897f38d504b15a219ce1a02d3a5da
 #: ../../intro/tutorial01.txt:165
@@ -1929,12 +1932,12 @@ msgstr "Si vous voulez changer l'IP du serveur, passez-la comme paramètre avec 
 msgid ""
 "Full docs for the development server can be found in the "
 ":djadmin:`runserver` reference."
-msgstr "La documentation complète du serveur de développement est dans la référence de :djadmin:`runserver`."
+msgstr "La documentation complète du serveur de développement se trouve dans la référence de :djadmin:`runserver`."
 
 # 36572d887ad54213b354ce1a3f69bd22
 #: ../../intro/tutorial01.txt:185
 msgid "Database setup"
-msgstr "Mise en place de la base de données"
+msgstr "Configuration de la base de données"
 
 # 5f530a40924a4f73b79ce586f16fd6fc
 #: ../../intro/tutorial01.txt:187
@@ -1943,7 +1946,7 @@ msgid ""
 "module-level variables representing Django settings. Change the following "
 "keys in the :setting:`DATABASES` ``'default'`` item to match your database "
 "connection settings."
-msgstr "Maintenant, éditez :file:`mysite/settings.py`. C'est un module Python tout à fait normal, avec des variables de module qui représentent des règlages de Django. Changez les règlages ci-dessous dans l'élément ``'default'`` de :setting:`DATABASES` pour indiquer les paramètres de connexion de votre base de données."
+msgstr "Maintenant, ouvrez le fichier  :file:`mysite/settings.py`. C'est un module Python tout à fait normal, avec des variables de module qui représentent des réglages de Django. Modifiez les clés suivantes dans l'élément ``'default'`` de :setting:`DATABASES` pour les faire correspondre aux paramètres de connexion de votre base de données."
 
 # 96b8aa4bb93046ac91357ce4007cd52c
 #: ../../intro/tutorial01.txt:192
@@ -1963,14 +1966,14 @@ msgid ""
 "should be the full absolute path, including filename, of that file. If the "
 "file doesn't exist, it will automatically be created when you synchronize "
 "the database for the first time (see below)."
-msgstr ":setting:`NAME` -- Le nom de votre base de données. Si vous utilisez SQLite, la base de données sera un fichier sur votre ordinateur. Dans ce cas, :setting:`NAME` doit être le chemin absolu complet de celui-ci, y compris le nom de fichier. Si ce fichier n'existe pas, il sera créé automatiquement lorsque vous synchroniserez la base de données (voir ci-dessous)."
+msgstr ":setting:`NAME` -- Le nom de votre base de données. Si vous utilisez SQLite, la base de données est un fichier sur votre ordinateur. Dans ce cas, :setting:`NAME` doit être le chemin absolu complet de celui-ci, y compris le nom de fichier. Si ce fichier n'existe pas, il sera créé automatiquement lorsque vous synchroniserez la base de données pour la première fois (voir ci-dessous)."
 
 # 339ed93827dd485183c55de66f2b9142
 #: ../../intro/tutorial01.txt:205
 msgid ""
 "When specifying the path, always use forward slashes, even on Windows (e.g. "
 "``C:/homes/user/mysite/sqlite3.db``)."
-msgstr "Lorsque vous spécifiez le chemin, utilisez toujours des barres obliques classiques, même sous Windows (par exemple ``C:/homes/user/mysite/sqlite3.db``)."
+msgstr "Lorsque vous spécifiez le chemin, utilisez toujours des barres obliques vers la droite, même sous Windows (par exemple ``C:/homes/user/mysite/sqlite3.db``)."
 
 # 1faf9617956a4e1ebf0a5bccbba7051a
 #: ../../intro/tutorial01.txt:208
@@ -1980,7 +1983,7 @@ msgstr ":setting:`USER` -- Le nom d'utilisateur pour votre base de données (inu
 # 190996e042c74c939b7902701e6271a2
 #: ../../intro/tutorial01.txt:210
 msgid ":setting:`PASSWORD` -- Your database password (not used for SQLite)."
-msgstr ":setting:`PASSWORD` -- Le mot de passe pour votre base de données (inutile pour SQLite)"
+msgstr ":setting:`PASSWORD` -- Le mot de passe pour votre base de données (inutile pour SQLite)."
 
 # b62f17f52a18447bb3b62da5b27dfc65
 #: ../../intro/tutorial01.txt:213
@@ -2006,7 +2009,7 @@ msgid ""
 "If you're using PostgreSQL or MySQL, make sure you've created a database by "
 "this point. Do that with \"``CREATE DATABASE database_name;``\" within your "
 "database's interactive prompt."
-msgstr "Si vous utilisez PostgreSQL ou MySQL, assurez-vous maintenant d'avoir créé la base de données. Faites-le avec ``CREATE DATABASE nom_de_la_base;`` dans le shell de votre base de données."
+msgstr "Si vous utilisez PostgreSQL ou MySQL, assurez-vous maintenant d'avoir créé la base de données. Faites-le avec ``CREATE DATABASE nom_de_la_base;`` dans le shell interactif de votre base de données."
 
 # b4875116151b4c6892fe7b72f44e2460
 #: ../../intro/tutorial01.txt:229
@@ -2020,7 +2023,7 @@ msgstr "Si vous utilisez SQLite, vous n'avez rien à créer à l'avance - le fic
 msgid ""
 "While you're editing :file:`settings.py`, set :setting:`TIME_ZONE` to your "
 "time zone. The default value is the Central time zone in the U.S. (Chicago)."
-msgstr "En éditant :file:`settings.py`, définissez :setting:`TIME_ZONE` selon votre fuseau horaire. La valeur par défaut est le fuseau horaire central des États-Unis (Chicago)."
+msgstr "Puisque vous modifiez :file:`settings.py`, définissez également :setting:`TIME_ZONE` selon votre fuseau horaire. La valeur par défaut est le fuseau horaire central des États-Unis (Chicago)."
 
 # edc92731cd21476bbee6e10df5a02e57
 #: ../../intro/tutorial01.txt:235
@@ -2029,7 +2032,7 @@ msgid ""
 "file. That holds the names of all Django applications that are activated in "
 "this Django instance. Apps can be used in multiple projects, and you can "
 "package and distribute them for use by others in their projects."
-msgstr "Notez également le règlage :setting:`INSTALLED_APPS` vers la fin du fichier. Cette variable contient le nom des applications Django qui sont actives dans cette instance de Django. Les applications peuvent être utilisées dans des projets différents, et vous pouvez empaqueter et distribuer les vôtres pour que d'autres les utilisent dans leurs projets."
+msgstr "Notez également le paramètre :setting:`INSTALLED_APPS` vers la fin du fichier. Cette variable contient le nom des applications Django qui sont actives dans cette instance de Django. Les applications peuvent être utilisées dans de multiples projets, et vous pouvez empaqueter et distribuer les vôtres pour que d'autres les utilisent dans leurs projets."
 
 # f165c68b397f41668ee9241522f4a89f
 #: ../../intro/tutorial01.txt:240
@@ -2046,37 +2049,37 @@ msgstr ":mod:`django.contrib.auth` -- Un système d'authentification."
 # 0b7c8ae25b114ac4a3eb8f0302bf30e1
 #: ../../intro/tutorial01.txt:245
 msgid ":mod:`django.contrib.contenttypes` -- A framework for content types."
-msgstr ":mod:`django.contrib.contenttypes` -- Un  framework pour les types de contenu (content-types)."
+msgstr ":mod:`django.contrib.contenttypes` -- Une structure pour les types de contenu (content types)."
 
 # 4f8ae0f76c624853ba1eef75a2842549
 #: ../../intro/tutorial01.txt:247
 msgid ":mod:`django.contrib.sessions` -- A session framework."
-msgstr ":mod:`django.contrib.sessions` -- Un framework de sessions."
+msgstr ":mod:`django.contrib.sessions` -- Un cadre pour les sessions."
 
 # 316c11670e85456187998c5509df7967
 #: ../../intro/tutorial01.txt:249
 msgid ""
 ":mod:`django.contrib.sites` -- A framework for managing multiple sites with "
 "one Django installation."
-msgstr ":mod:`django.contrib.sites` -- Un framework pour gérer des sites multiples avec une seule installation de Django."
+msgstr ":mod:`django.contrib.sites` -- Une structure pour prendre en charge des sites multiples avec une seule installation de Django."
 
 # 6c292e8341e84e59bca4c82fd4d94397
 #: ../../intro/tutorial01.txt:252
 msgid ":mod:`django.contrib.messages` -- A messaging framework."
-msgstr ":mod:`django.contrib.messages` -- Un framework de messages."
+msgstr ":mod:`django.contrib.messages` -- Un cadre pour l'envoi de messages."
 
 # 1b13e00ea514466db4972385e4b96ae5
 #: ../../intro/tutorial01.txt:254
 msgid ""
 ":mod:`django.contrib.staticfiles` -- A framework for managing static files."
-msgstr ":mod:`django.contrib.staticfiles` -- Un framework de gestion des fichiers statiques."
+msgstr ":mod:`django.contrib.staticfiles` -- Une structure pour la prise en charge des fichiers statiques."
 
 # e3b2ccf31ac340ab994364c68c2f5878
 #: ../../intro/tutorial01.txt:257
 msgid ""
 "These applications are included by default as a convenience for the common "
 "case."
-msgstr "Ces applications sont incluses par défaut parce qu'elles sont celles qui sont le plus communément utilisées."
+msgstr "Ces applications sont incluses par défaut par commodité parce que ce sont les plus communément utilisées."
 
 # 4e24bdded54746a1981c35baa6d4b182
 #: ../../intro/tutorial01.txt:259
@@ -2103,7 +2106,7 @@ msgid ""
 "If you're interested, run the command-line client for your database and type"
 " ``\\dt`` (PostgreSQL), ``SHOW TABLES;`` (MySQL), or ``.schema`` (SQLite) to"
 " display the tables Django created."
-msgstr "Si vous le souhaitez, lancez le client de ligne de commande de votre base de données, et tapez ``\\dt`` (PostgreSQL), ``SHOW TABLES;`` (MySQL) ou ``.schema`` (SQLite) pour afficher les tables que Django a créées."
+msgstr "Si vous le souhaitez, lancez le client de ligne de commande de votre base de données, et saisissez ``\\dt`` (PostgreSQL), ``SHOW TABLES;`` (MySQL) ou ``.schema`` (SQLite) pour afficher les tables que Django a créées."
 
 # d7f1440ace844b00919d7d28d15e2ca8
 #: ../../intro/tutorial01.txt:280
@@ -2114,7 +2117,7 @@ msgid ""
 ":setting:`INSTALLED_APPS` before running :djadmin:`syncdb`. The "
 ":djadmin:`syncdb` command will only create tables for apps in "
 ":setting:`INSTALLED_APPS`."
-msgstr "Comme il a été indiqué ci-dessus, les applications incluses par défaut sont les plus communes, mais tout le monde n'en a pas forcément besoin. Si vous n'avez pas besoin d'une d'entre elles (ou de toutes), vous êtes libre de commenter ou effacer les lignes concernées du règlage :setting:`INSTALLED_APPS` avant de lancer :djadmin:`syncdb`. La commande :djadmin:`syncdb` ne créera que les tables nécessaires aux applications listées dans :setting:`INSTALLED_APPS`."
+msgstr "Comme il a été indiqué ci-dessus, les applications incluses par défaut sont les plus communes, mais tout le monde n'en a pas forcément besoin. Si vous n'avez pas besoin d'une d'entre elles (ou de toutes), vous êtes libre de commenter ou effacer les lignes concernées du paramètre :setting:`INSTALLED_APPS` avant de lancer :djadmin:`syncdb`. La commande :djadmin:`syncdb` ne créera que les tables nécessaires aux applications listées dans :setting:`INSTALLED_APPS`."
 
 # 636ef0ecec644992826cc39140783ca9
 #: ../../intro/tutorial01.txt:290
@@ -2161,13 +2164,13 @@ msgstr "Vos applications peuvent se trouver à n'importe quel endroit de votre `
 msgid ""
 "To create your app, make sure you're in the same directory as "
 ":file:`manage.py` and type this command:"
-msgstr "Pour créer votre application, assurez-vous d'être dans le même répertoire que :file:`manage.py` et entrez cette commande :"
+msgstr "Pour créer votre application, assurez-vous d'être dans le même répertoire que :file:`manage.py` et saisissez cette commande :"
 
 # ff62881eca30429ab4e9b1168b31d86c
 #: ../../intro/tutorial01.txt:319
 msgid ""
 "That'll create a directory :file:`polls`, which is laid out like this::"
-msgstr "Cela va créer un répertoire :file:`polls`, qui se présente de la façon suivante ::"
+msgstr "Cela va créer un répertoire :file:`polls`, qui est structuré de la façon suivante ::"
 
 # 09143c72805140fba2c9731787fa84d3
 #: ../../intro/tutorial01.txt:327
@@ -2179,7 +2182,7 @@ msgstr "Cette structure de répertoire accueillera l'application de sondage."
 msgid ""
 "The first step in writing a database Web app in Django is to define your "
 "models -- essentially, your database layout, with additional metadata."
-msgstr "La première étape dans l'écriture d'une application Web utilisant une base de données dans Django est la définition des modèles -- essentiellement, votre schéma de base de données, avec quelques métadonnées supplémentaires."
+msgstr "La première étape dans l'écriture d'une application Web utilisant une base de données dans Django est la définition de vos modèles -- essentiellement, votre schéma de base de données, avec quelques métadonnées supplémentaires."
 
 # 6ed4b2904a3749129041a3371109340f
 #: ../../intro/tutorial01.txt:334
@@ -2231,7 +2234,7 @@ msgid ""
 "``question`` or ``pub_date`` ) is the field's name, in machine-friendly "
 "format. You'll use this value in your Python code, and your database will "
 "use it as the column name."
-msgstr "Le nom de chaque instance de :class:`~django.db.models.Field` (par exemple, ``question`` ou ``pub_date``) est le nom du champ en interne. Vous l'utiliserez dans votre code Python et votre base de données l'utilisera comme nom de colonne."
+msgstr "Le nom de chaque instance de :class:`~django.db.models.Field` (par exemple, ``question`` ou ``pub_date``) est le nom du champ en interne dans vos programmes. Vous l'utiliserez dans votre code Python et votre base de données l'utilisera comme nom de colonne."
 
 # 52fc2fc4682e490888092d9bfbbe89cd
 #: ../../intro/tutorial01.txt:371
@@ -2243,7 +2246,7 @@ msgid ""
 "readable name. In this example, we've only defined a human-readable name for"
 " ``Poll.pub_date``. For all other fields in this model, the field's machine-"
 "readable name will suffice as its human-readable name."
-msgstr "Vous pouvez utiliser le premier paramètre de position (facultatif) d'un :class:`~django.db.models.Field` pour donner un nom plus lisible au champ. C'est utilisé par le système d'introspection de Django, et aussi pour la documentation. Si ce paramètre est absent, Django utilisera le nom du champ interne. Dans l'exemple, nous n'avons défini qu'un seul nom plus lisible, pour ``Poll.pub_date``. Pour tous les autres champs, nous avons considéré que le nom interne était suffisamment lisible."
+msgstr "Vous pouvez utiliser le premier paramètre de position (facultatif) d'un :class:`~django.db.models.Field` pour donner un nom plus lisible au champ. Celui-ci est utilisé un peu partout par le système d'introspection de Django, et aussi pour la documentation. Si ce paramètre est absent, Django utilise le nom du champ interne. Dans l'exemple, nous n'avons défini qu'un seul nom plus lisible, pour ``Poll.pub_date``. Pour tous les autres champs, nous avons considéré que le nom interne était suffisamment lisible."
 
 # c0b5440a5a314386a6f45d80e0ac6a8e
 #: ../../intro/tutorial01.txt:379
@@ -2252,7 +2255,7 @@ msgid ""
 ":class:`~django.db.models.CharField`, for example, requires that you give it"
 " a :attr:`~django.db.models.CharField.max_length`. That's used not only in "
 "the database schema, but in validation, as we'll soon see."
-msgstr "Certaines classes :class:`~django.db.models.Field` ont des paramètres obligatoires. La classe :class:`~django.db.models.CharField`, par exemple, a besoin d'un attribut :attr:`~django.db.models.CharField.max_length`. Ce n'est pas seulement utilisé dans le schéma de base de données, mais également pour valider les champs, comme nous allons voir prochainement."
+msgstr "Certaines classes :class:`~django.db.models.Field` possèdent des paramètres obligatoires. La classe :class:`~django.db.models.CharField`, par exemple, a besoin d'un attribut :attr:`~django.db.models.CharField.max_length`. Ce n'est pas seulement utilisé dans le schéma de base de la base de données, mais également pour valider les champs, comme nous allons voir prochainement."
 
 # c1c366ba6a0d4c16b4ddcbdc4baa78a7
 #: ../../intro/tutorial01.txt:384
@@ -2286,14 +2289,14 @@ msgstr "Ce petit morceau de code décrivant les modèles fournit beaucoup d'info
 # e18e8d4bb06049a5b422da49c3b34372
 #: ../../intro/tutorial01.txt:401
 msgid "Create a database schema (``CREATE TABLE`` statements) for this app."
-msgstr "Créer un schéma de base de données (les instructions ``CREATE TABLE``) pour cette application."
+msgstr "Créer un schéma de base de données (instructions ``CREATE TABLE``) pour cette application."
 
 # 2695268dfe0d41dca1126680b031d45d
 #: ../../intro/tutorial01.txt:402
 msgid ""
 "Create a Python database-access API for accessing ``Poll`` and ``Choice`` "
 "objects."
-msgstr "Créer une API Python d'accès aux bases de données pour accéder aux objets sondages (``Poll``) et votes (``Choices``)."
+msgstr "Créer une API Python d'accès à la base de données pour accéder aux objets sondages (``Poll``) et votes (``Choices``)."
 
 # 111dbd1597d84726b371d1655eb87d32
 #: ../../intro/tutorial01.txt:404
@@ -2352,7 +2355,7 @@ msgstr "Les noms de tables sont générés automatiquement en combinant le nom d
 #: ../../intro/tutorial01.txt:464
 msgid ""
 "Primary keys (IDs) are added automatically. (You can override this, too.)"
-msgstr "Les clés primaires (ID) sont ajoutées automatiquement (vous pouvez modifier ceci également)."
+msgstr "Des clés primaires (ID) sont ajoutées automatiquement (vous pouvez modifier ceci également)."
 
 # 17888421dbff49ebaf44d514f4b4c0d2
 #: ../../intro/tutorial01.txt:466
@@ -2376,7 +2379,7 @@ msgid ""
 "quoting of field names -- e.g., using double quotes or single quotes. The "
 "author of this tutorial runs PostgreSQL, so the example output is in "
 "PostgreSQL syntax."
-msgstr "Ce que vous voyez est adapté à la base de données que vous utilisez. Ainsi, des champs spécifiques à celle-ci comme ``auto_increment`` (MySQL), ``serial`` (PostgreSQL) ou ``integer primary key`` (SQLite) sont gérés pour vous automatiquement. Tout comme pour les guillemets autour des noms de champs (simples ou doubles). L'auteur de ce tutoriel utilise PostgreSQL, donc la sortie donnée en exemple correspond à la syntaxe de PostgreSQL."
+msgstr "Ce que vous voyez est adapté à la base de données que vous utilisez. Ainsi, des champs spécifiques à celle-ci comme ``auto_increment`` (MySQL), ``serial`` (PostgreSQL) ou ``integer primary key`` (SQLite) sont pris en charge pour vous automatiquement. Tout comme pour les guillemets autour des noms de champs (simples ou doubles). L'auteur de ce tutoriel utilise PostgreSQL, donc la sortie donnée en exemple correspond à la syntaxe de PostgreSQL."
 
 # 352dd828f34d468680ea3bea8d3e31be
 #: ../../intro/tutorial01.txt:479
@@ -2386,19 +2389,19 @@ msgid ""
 "is required. If you wanted to, you could copy and paste this SQL into your "
 "database prompt. However, as we will see shortly, Django provides an easier "
 "way of committing the SQL to the database."
-msgstr "La commande :djadmin:`sql` n'exécute pas ces instructions dans votre base de données - elle se contente de l'afficher à l'écran de façon à vous permettre de voir ce que Django pense nécessaire. Si vous le voulez, vous pourriez copier et coller cette sortie dans le shell de votre client de base de données. Toutefois, comme nous allons le voir bientôt, Django fournit un moyen plus facile d'envoyer ces commandes à la base de données."
+msgstr "En réalité, la commande :djadmin:`sql` n'exécute pas ces instructions dans votre base de données - elle se contente de les afficher à l'écran de façon à vous permettre de voir ce que Django pense nécessaire. Si vous le voulez, vous pourriez copier et coller cette sortie dans le shell de votre client de base de données. Toutefois, comme nous allons le voir bientôt, Django fournit un moyen plus facile d'envoyer ces commandes à la base de données."
 
 # 7349110ab58b493d93162b935449d49e
 #: ../../intro/tutorial01.txt:485
 msgid "If you're interested, also run the following commands:"
-msgstr "Si cela vous intéresse, vous pouvez aussi utiliser les commandes suivantes :"
+msgstr "Si cela vous intéresse, vous pouvez aussi exécuter les commandes suivantes :"
 
 # 8fa7a7bf5a134a4db0ecb978379fab43
 #: ../../intro/tutorial01.txt:487
 msgid ""
 ":djadmin:`python manage.py validate <validate>` -- Checks for any errors in "
 "the construction of your models."
-msgstr ":djadmin:`python manage.py validate <validate>` -- Vérifie qu'il n'y a pas d'erreurs dans vos modèles."
+msgstr ":djadmin:`python manage.py validate <validate>` -- Vérifie qu'il n'y a pas d'erreurs dans la construction de vos modèles."
 
 # 89cf0faa02354b83abb01199e9abf680
 #: ../../intro/tutorial01.txt:490
@@ -2454,14 +2457,14 @@ msgid ""
 "any apps you've added to your project since the last time you ran syncdb. "
 ":djadmin:`syncdb` can be called as often as you like, and it will only ever "
 "create the tables that don't exist."
-msgstr "La commande :djadmin:`syncdb` exécute les instructions SQL de :djadmin:`sqlall` dans votre base de données, pour toutes les applications de :setting:`INSTALLED_APPS` qui n'existent pas encore dans celle-ci. Cela crée toutes les tables, les données initiales et les index pour toutes les applications que vous avez ajoutées à votre projet depuis la dernière fois que vous avez fait un ``syncdb``. :djadmin:`syncdb` peut être appelée aussi souvent que vous le souhaitez, et ne fera que créer les tables qui n'existent pas encore."
+msgstr "La commande :djadmin:`syncdb` exécute les instructions SQL de :djadmin:`sqlall` dans votre base de données, pour toutes les applications de :setting:`INSTALLED_APPS` qui n'existent pas encore dans celle-ci. Cela crée toutes les tables, les données initiales et les index pour toutes les applications que vous avez ajoutées à votre projet depuis la dernière exécution de ``syncdb``. :djadmin:`syncdb` peut être appelée aussi souvent que vous le souhaitez, et ne fera que créer les tables qui n'existent pas encore."
 
 # 1877eab9fc9c4a77866e3893d904ef1b
 #: ../../intro/tutorial01.txt:521
 msgid ""
 "Read the :doc:`django-admin.py documentation </ref/django-admin>` for full "
 "information on what the ``manage.py`` utility can do."
-msgstr "Lisez la :doc:`documentation de django-admin.py </ref/django-admin>` pour avoir toutes les informations sur ce que ``manage.py`` peut faire."
+msgstr "Lisez la :doc:`documentation de django-admin.py </ref/django-admin>` pour obtenir toutes les informations sur ce que l'utilitaire ``manage.py`` peut faire."
 
 # 33568de0dfce4ea79b862c13340b5a4a
 #: ../../intro/tutorial01.txt:525
@@ -2473,7 +2476,7 @@ msgstr "Jouer avec l'interface de programmation (API)"
 msgid ""
 "Now, let's hop into the interactive Python shell and play around with the "
 "free API Django gives you. To invoke the Python shell, use this command:"
-msgstr "Maintenant, utilisons un shell interactif Python pour jouer avec l'API que Django met à votre disposition. Pour lancer un shell Python, utilisez cette commande :"
+msgstr "Maintenant, utilisons un shell interactif Python pour jouer avec l'API que Django met gratuitement à votre disposition. Pour lancer un shell Python, utilisez cette commande :"
 
 # ecb1c235b3154be6ba0d613a92b081cc
 #: ../../intro/tutorial01.txt:534
@@ -2491,7 +2494,7 @@ msgid ""
 "``DJANGO_SETTINGS_MODULE`` environment variable to ``mysite.settings`` and "
 "run ``python`` from the same directory :file:`manage.py` is in (or ensure "
 "that directory is on the Python path, so that ``import mysite`` works)."
-msgstr "Si vous préférez ne pas utiliser :file:`manage.py`, pas de problème. Définissez la variable d'environnement ``DJANGO_SETTINGS_MODULE`` à ``mysite.settings`` et exécutez ``python`` dans le même répertoire que :file:`manage.py` (ou assurez-vous que le répertoire est dans le chemin Python afin que ``import mysite`` fonctionne)."
+msgstr "Si vous préférez ne pas utiliser :file:`manage.py`, pas de problème. Définissez la variable d'environnement ``DJANGO_SETTINGS_MODULE`` à ``mysite.settings`` et exécutez ``python`` dans le même répertoire que celui où se trouve :file:`manage.py` (ou assurez-vous que ce répertoire est dans le chemin Python afin que ``import mysite`` fonctionne)."
 
 # 0b9d990d8e52496eb493d85dc39a4810
 #: ../../intro/tutorial01.txt:545
@@ -2571,7 +2574,7 @@ msgid ""
 "respectively. If you aren't familiar with time zone handling in Python, you "
 "can learn more in the :doc:`time zone support docs "
 "</topics/i18n/timezones>`."
-msgstr "Notez l'ajout de ``import datetime`` et de ``from django.utils import timezone``, pour référencer respectivement le module :mod:`datetime` standard de Python et les utilitaires de Django liés aux fuseaux horaires de :mod:`django.utils.timezone`. Si vous n'êtes pas habitué à la gestion des fuseaux horaires avec Python, vous pouvez en savoir plus en consultant la :doc:`documentation sur les fuseaux horaires </topics/i18n/timezones>`."
+msgstr "Notez l'ajout de ``import datetime`` et de ``from django.utils import timezone``, pour référencer respectivement le module :mod:`datetime` standard de Python et les utilitaires de Django liés aux fuseaux horaires de :mod:`django.utils.timezone`. Si vous n'êtes pas habitué à la gestion des fuseaux horaires avec Python, vous pouvez en apprendre plus en consultant la :doc:`documentation sur les fuseaux horaires </topics/i18n/timezones>`."
 
 # 8173eea8c22b406a96d9591b2de49424
 #: ../../intro/tutorial01.txt:646
@@ -2595,7 +2598,7 @@ msgstr "Pour plus d'informations sur les relations entre modèles, consultez :do
 msgid ""
 "When you're comfortable with the API, read :doc:`part 2 of this tutorial "
 "</intro/tutorial02>` to get Django's automatic admin working."
-msgstr "Lorsque vous êtes familiarisé avec l'API, lisez la :doc:`partie 2 de ce tutoriel </intro/tutorial02>` pour faire fonctionner l'interface d'administration automatique de Django."
+msgstr "Lorsque vous serez familiarisé avec l'API, lisez la :doc:`partie 2 de ce tutoriel </intro/tutorial02>` pour faire fonctionner l'interface d'administration automatique de Django."
 
 # 161b79a180314947ad9f25e97beab3f3
 #: ../../intro/tutorial02.txt:3
@@ -2652,14 +2655,14 @@ msgstr "Le site d’administration de Django n’est pas activé par défaut –
 msgid ""
 "Uncomment ``\"django.contrib.admin\"`` in the :setting:`INSTALLED_APPS` "
 "setting."
-msgstr "Décommentez ``\"django.contrib.admin\"`` dans le réglage :setting:`INSTALLED_APPS`."
+msgstr "Décommentez ``\"django.contrib.admin\"`` dans le paramètre :setting:`INSTALLED_APPS`."
 
 # dfa68ab5d62d4874801833d2d639e55d
 #: ../../intro/tutorial02.txt:32
 msgid ""
 "Run ``python manage.py syncdb``. Since you have added a new application to "
 ":setting:`INSTALLED_APPS`, the database tables need to be updated."
-msgstr "Lancez ``python manage.py syncdb``. Puisque vous avez ajouté une nouvelle application à :setting:`INSTALLED_APPS`, les tables de la base de données ont besoin d’être mises à jour."
+msgstr "Lancez ``python manage.py syncdb``. Puisque vous avez ajouté une nouvelle application dans :setting:`INSTALLED_APPS`, les tables de la base de données ont besoin d’être mises à jour."
 
 # 051565329257486ea59403dc094fe95e
 #: ../../intro/tutorial02.txt:35
@@ -2669,7 +2672,7 @@ msgid ""
 "URLconf; we'll dig into URLconfs in the next tutorial. For now, all you need"
 " to know is that it maps URL roots to applications. In the end, you should "
 "have a ``urls.py`` file that looks like this:"
-msgstr "Éditez votre fichier ``mysite/urls.py`` et décommentez les lignes qui se rapportent à l'admin (il y a trois lignes à décommenter). Ce fichier est une URLconf ; nous creuserons le sujet des URLconfs dans le prochain tutoriel. Pour l’instant, tout ce que vous avez besoin de savoir est qu’il définit la racine des URL de vos applications. À la fin, vous devriez avoir un fichier ``urls.py`` qui ressemble à ceci :"
+msgstr "Éditez votre fichier ``mysite/urls.py`` et décommentez les lignes qui se rapportent à l'admin (il y a trois lignes à décommenter). Ce fichier est une URLconf ; nous creuserons le sujet des URLconfs dans le prochain tutoriel. Pour l’instant, tout ce que vous avez besoin de savoir est qu’il fait correspondre les racines des URL à vos applications. Vous devriez avoir finalement un fichier ``urls.py`` qui ressemble à ceci :"
 
 # fb072fb1277942e7a862d7613ee785d4
 #: ../../intro/tutorial02.txt:61
@@ -2711,7 +2714,7 @@ msgid ""
 "then you're probably using a version of Django that doesn't match this "
 "tutorial version. You'll want to either switch to the older tutorial or the "
 "newer Django version."
-msgstr "il est alors probable que vous utilisiez une version de Django qui ne correspond pas à la version de ce tutoriel. Consultez alors une version plus ancienne de ce tutoriel ou installez une version plus récente de Django."
+msgstr "il est alors probable que vous utilisez une version de Django qui ne correspond pas à la version de ce tutoriel. Consultez alors une version plus ancienne de ce tutoriel ou installez une version plus récente de Django."
 
 # 653227aab5f342179dd4bf93a5735526
 #: ../../intro/tutorial02.txt:94
@@ -2732,7 +2735,7 @@ msgstr "Maintenant, essayez de vous identifier (vous avez créé un compte super
 msgid ""
 "You should see a few types of editable content, including groups, users and "
 "sites. These are core features Django ships with by default."
-msgstr "Vous devriez voir quelques types de contenu éditable, y compris les groupes, les utilisateurs et les sites. Ce sont des caractéristiques du noyau que Django intègre par défaut."
+msgstr "Vous devriez voir quelques types de contenu modifiable, y compris les groupes, les utilisateurs et les sites. Ce sont des caractéristiques du noyau que Django intègre par défaut."
 
 # 76d9dd6327da48c185898d3059fe89a8
 #: ../../intro/tutorial02.txt:108
@@ -2758,7 +2761,7 @@ msgid ""
 "You'll need to restart the development server to see your changes. Normally,"
 " the server auto-reloads code every time you modify a file, but the action "
 "of creating a new file doesn't trigger the auto-reloading logic."
-msgstr "Vous aurez besoin de redémarrer le serveur de développement pour voir vos changements. Normalement, le serveur redémarre automatiquement à chaque fois que vous modifiez un fichier, mais la création d'un nouveau fichier ne déclenche pas ce redémarrage."
+msgstr "Vous aurez besoin de redémarrer le serveur de développement pour voir vos modifications. Normalement, le serveur redémarre automatiquement à chaque fois que vous modifiez un fichier, mais la création d'un nouveau fichier ne déclenche pas ce redémarrage."
 
 # 01402fbf67e94eb9bbe4781c3a861143
 #: ../../intro/tutorial02.txt:126
@@ -2770,7 +2773,7 @@ msgstr "Exploration des fonctionnalités de l'interface d'administration"
 msgid ""
 "Now that we've registered ``Poll``, Django knows that it should be displayed"
 " on the admin index page:"
-msgstr "Maintenant que nous avons inscrit ``Poll`` dans l'interface d'administration, Django sait qu'il doit être affiché sur la page d'index :"
+msgstr "Maintenant que nous avons inscrit ``Poll`` dans l'interface d'administration, Django sait que cela doit apparaître sur la page d'index :"
 
 # 52c8620bd2454697979427c3e6564d0e
 #: ../../intro/tutorial02.txt:134
@@ -2778,7 +2781,7 @@ msgid ""
 "Click \"Polls.\" Now you're at the \"change list\" page for polls. This page"
 " displays all the polls in the database and lets you choose one to change "
 "it. There's the \"What's up?\" poll we created in the first tutorial:"
-msgstr "Cliquez sur « Polls ». À présent, vous êtes sur la page « liste » des sondages. Cette page affiche tous les sondages de la base de données et vous permet d'en choisir un pour le modifier. Il y a le sondage « Quoi de neuf ? » que nous avons créé dans le premier tutoriel :"
+msgstr "Cliquez sur « Polls ». À présent, vous êtes sur la page « liste pour modification » des sondages. Cette page affiche tous les sondages de la base de données et vous permet d'en choisir un pour le modifier. Il y a le sondage « Quoi de neuf ? » que nous avons créé dans le premier tutoriel :"
 
 # 2cf55607c66c4307bce70607ad094a50
 #: ../../intro/tutorial02.txt:141
@@ -2802,7 +2805,7 @@ msgid ""
 ":class:`~django.db.models.CharField`) correspond to the appropriate HTML "
 "input widget. Each type of field knows how to display itself in the Django "
 "admin."
-msgstr "Les différents types de champs du modèle (:class:`~django.db.models.DateTimeField`, :class:`~django.db.models.CharField`) correspondent au widget d'entrée HTML approprié. Chaque type de champ sait comment s'afficher dans l'interface d'administration de Django."
+msgstr "Les différents types de champs du modèle (:class:`~django.db.models.DateTimeField`, :class:`~django.db.models.CharField`) correspondent au composant graphique d'entrée HTML approprié. Chaque type de champ sait comment s'afficher dans l'interface d'administration de Django."
 
 # 364f76f6afe5446bb3a72dd4a93402d1
 #: ../../intro/tutorial02.txt:155
@@ -2822,7 +2825,7 @@ msgstr "La partie inférieure de la page vous propose une série d'opérations 
 msgid ""
 "Save -- Saves changes and returns to the change-list page for this type of "
 "object."
-msgstr "Enregistrer -- Enregistre les modifications et retourne à la page de la liste de ce type d'objet."
+msgstr "Enregistrer -- Enregistre les modifications et retourne à la page liste pour modification de ce type d'objet."
 
 # f29827d3be5a4674b73bc185269c5f3e
 #: ../../intro/tutorial02.txt:164
@@ -2841,7 +2844,7 @@ msgstr "Enregistrer et ajouter un nouveau -- Enregistre les modifications et cha
 # 2f0dd23ab7ee42a18091374b01dbb331
 #: ../../intro/tutorial02.txt:170
 msgid "Delete -- Displays a delete confirmation page."
-msgstr "Supprimer -- Affiche la page de confirmation de la suppression."
+msgstr "Supprimer -- Affiche une page de confirmation de la suppression."
 
 # e6b4019497814d9288685b12661dfbd8
 #: ../../intro/tutorial02.txt:172
@@ -2850,7 +2853,7 @@ msgid ""
 "the poll in Tutorial 1, it probably means you forgot to set the correct "
 "value for the :setting:`TIME_ZONE` setting. Change it, reload the page and "
 "check that the correct value appears."
-msgstr "Si la valeur de « Date de publication » ne correspond pas à l'heure à laquelle vous avez créé ce sondage dans le tutoriel 1, vous avez probablement oublié de définir la valeur correcte du réglage :setting:`TIME_ZONE`. Modifiez-le, rechargez la page et vérifiez que la bonne valeur s'affiche."
+msgstr "Si la valeur de « Date de publication » ne correspond pas à l'heure à laquelle vous avez créé ce sondage dans le tutoriel 1, vous avez probablement oublié de définir la valeur correcte du paramètre :setting:`TIME_ZONE`. Modifiez-le, rechargez la page et vérifiez que la bonne valeur s'affiche."
 
 # baa70f22fcce4a1abb7d08abd1220c97
 #: ../../intro/tutorial02.txt:177
@@ -2860,7 +2863,7 @@ msgid ""
 "in the upper right. You'll see a page listing all changes made to this "
 "object via the Django admin, with the timestamp and username of the person "
 "who made the change:"
-msgstr "Changez la « Date de publication » en cliquant sur les raccourcis « Aujourd'hui » et « Maintenant ». Puis cliquez sur « Enregistrer et continuer les modifications ». Ensuite, cliquez sur « Historique » en haut à droite de la page. Vous verrez une page listant toutes les modifications effectuées sur cet objet via l'interface d'administration de Django, accompagnées des date et heure, ainsi que du nom de l'utilisateur qui a fait ce changement :"
+msgstr "Modifiez la « Date de publication » en cliquant sur les raccourcis « Aujourd'hui » et « Maintenant ». Puis cliquez sur « Enregistrer et continuer les modifications ». Ensuite, cliquez sur « Historique » en haut à droite de la page. Vous verrez une page listant toutes les modifications effectuées sur cet objet via l'interface d'administration de Django, accompagnées des date et heure, ainsi que du nom de l'utilisateur qui a fait ce changement :"
 
 # b9b8b04ebbf04b86aa5a00783181451b
 #: ../../intro/tutorial02.txt:186
@@ -2890,7 +2893,7 @@ msgid ""
 "You'll follow this pattern -- create a model admin object, then pass it as "
 "the second argument to ``admin.site.register()`` -- any time you need to "
 "change the admin options for an object."
-msgstr "Vous suivrez cette méthode -- c'est-à-dire créer un objet d'administration de modèle, puis le passer en tant que deuxième paramètre de ``admin.site.register()`` -- à chaque fois que vous aurez besoin de changer les options d'administration pour un objet."
+msgstr "Vous suivrez cette méthode -- c'est-à-dire créer un objet d'administration de modèle, puis le transmettre en tant que deuxième paramètre de ``admin.site.register()`` -- à chaque fois que vous aurez besoin de modifier les options d'administration pour un objet."
 
 # f15048f7085a43afb84427a3a29140ab
 #: ../../intro/tutorial02.txt:206
@@ -2911,7 +2914,7 @@ msgstr "Ce n'est pas spécialement impressionnant avec seulement deux champs, ma
 msgid ""
 "And speaking of forms with dozens of fields, you might want to split the "
 "form up into fieldsets::"
-msgstr "Et en parlant de formulaires avec des dizaines de champs, il peut être utile de partager le formulaire en plusieurs sous-ensembles ::"
+msgstr "Et en parlant de formulaires avec des dizaines de champs, il peut être utile de partager le formulaire en plusieurs sous-ensembles (fieldsets) ::"
 
 # dc662d3beb0f4ec08276ded4584a8a1a
 #: ../../intro/tutorial02.txt:226
@@ -2967,7 +2970,7 @@ msgid ""
 "the database. Django knows that a :class:`~django.db.models.ForeignKey` "
 "should be represented in the admin as a ``<select>`` box. In our case, only "
 "one poll exists at this point."
-msgstr "Dans ce formulaire, le champ « Poll » est une boîte de sélection contenant tous les sondages de la base de données. Django sait qu'une instance de :class:`~django.db.models.ForeignKey` doit être représentée dans l'interface d'administration par une boîte ``<select>``. Dans notre cas, seul un sondage existe à ce stade."
+msgstr "Dans ce formulaire, le champ « Poll » est une boîte de sélection contenant tous les sondages de la base de données. Django sait qu'une :class:`~django.db.models.ForeignKey` doit être représentée dans l'interface d'administration par une boîte ``<select>``. Dans notre cas, seul un sondage existe à ce stade."
 
 # 9e7156c5118749cf80a5a6819a70b637
 #: ../../intro/tutorial02.txt:272
@@ -2978,7 +2981,7 @@ msgid ""
 "you add a poll in that window and click \"Save,\" Django will save the poll "
 "to the database and dynamically add it as the selected choice on the \"Add "
 "choice\" form you're looking at."
-msgstr "Notez également le lien « Add another » à côté de « Poll ». Chaque objet avec une relation ``ForeignKey`` vers un autre reçoit automatiquement ce lien. Quand vous cliquez sur « Add another », vous obtenez une fenêtre popup contenant le formulaire « Add poll ». Si vous ajoutez un sondage dans cette fenêtre et que vous cliquez sur « Enregistrer », Django enregistre le sondage dans la base de données et l'ajoute dynamiquement comme choix sélectionné dans le formulaire « Add choice » que vous étiez en train de remplir."
+msgstr "Notez également le lien « Add another » à côté de « Poll ». Chaque objet avec une relation ``ForeignKey`` vers un autre reçoit automatiquement cet outil. Quand vous cliquez sur « Add another », vous obtenez une fenêtre surgissante contenant le formulaire « Add poll ». Si vous ajoutez un sondage dans cette fenêtre et que vous cliquez sur « Enregistrer », Django enregistre le sondage dans la base de données et l'ajoute dynamiquement comme choix sélectionné dans le formulaire « Add choice » que vous étiez en train de remplir."
 
 # 329114e0a4974e8eae746870e50f6cd5
 #: ../../intro/tutorial02.txt:279
@@ -2986,21 +2989,21 @@ msgid ""
 "But, really, this is an inefficient way of adding ``Choice`` objects to the "
 "system. It'd be better if you could add a bunch of Choices directly when you"
 " create the ``Poll`` object. Let's make that happen."
-msgstr "Mais franchement, c'est une manière inefficace d'ajouter des objets ``Choice`` dans le système. Il serait préférable d'ajouter un groupe de choix « Choices » directement lorsque vous créez l'objet « Poll ». Faisons de cette façon."
+msgstr "Mais franchement, c'est une manière inefficace d'ajouter des objets ``Choice`` dans le système. Il serait préférable d'ajouter un groupe de choix « Choices » directement lorsque vous créez l'objet « Poll ». Essayons de cette façon."
 
 # ac41d80ed0e84721acaeb1508c33c153
 #: ../../intro/tutorial02.txt:283
 msgid ""
 "Remove the ``register()`` call for the ``Choice`` model. Then, edit the "
 "``Poll`` registration code to read::"
-msgstr "Enlevez l'appel ``register()`` pour le modèle ``Choice``. Puis, éditez le code d'inscription de ``Poll`` comme ceci ::"
+msgstr "Enlevez l'appel ``register()`` pour le modèle ``Choice``. Puis, modifiez le code d'inscription de ``Poll`` comme ceci ::"
 
 # 73c81d20af2b4d76b396a94301fd3a2f
 #: ../../intro/tutorial02.txt:302
 msgid ""
 "This tells Django: \"``Choice`` objects are edited on the ``Poll`` admin "
 "page. By default, provide enough fields for 3 choices.\""
-msgstr "Ça dit à Django : « les objets ``Choice`` sont édités dans la page d'administration de ``Poll``. Par défaut, fournir assez de champs pour 3 choix »."
+msgstr "Cela indique à Django : « les objets ``Choice`` sont édités dans la page d'administration de ``Poll``. Par défaut, fournir assez de place pour 3 choix »."
 
 # de612a9cd5504aecb3fa093843b5474f
 #: ../../intro/tutorial02.txt:305
@@ -3025,7 +3028,7 @@ msgid ""
 " remove the added slot, you can click on the X to the top right of the added"
 " slot. Note that you can't remove the original three slots. This image shows"
 " an added slot:"
-msgstr "Au bas des trois emplacements actuels, vous voyez un lien « Add another Choice ». Si vous cliquez dessus, un nouvel emplacement apparaît. Si vous souhaitez l'enlever à nouveau, vous pouvez cliquer sur le X en haut à droite de l'emplacement. Notez que vous ne pouvez pas enlever les trois emplacements de départ. Cette image montre l'emplacement ajouté :"
+msgstr "Au bas des trois emplacements actuels, vous pouvez trouver un lien « Add another Choice ». Si vous cliquez dessus, un nouvel emplacement apparaît. Si vous souhaitez supprimer l'emplacement ajouté, vous pouvez cliquer sur le X en haut à droite de l'emplacement. Notez que vous ne pouvez pas enlever les trois emplacements de départ. Cette image montre l'emplacement ajouté :"
 
 # 78a7db4dd1294fe18099186021a61143
 #: ../../intro/tutorial02.txt:322
@@ -3034,14 +3037,14 @@ msgid ""
 " fields for entering related ``Choice`` objects. For that reason, Django "
 "offers a tabular way of displaying inline related objects; you just need to "
 "change the ``ChoiceInline`` declaration to read::"
-msgstr "Un petit problème cependant. Ça prend beaucoup de place d'afficher tous les champs pour saisir les objets ``Choice`` liés. C'est pour cette raison que Django offre une alternative d'affichage en ligne des objets liés ; il suffit de modifier la déclaration ``ChoiceInline`` comme ceci :"
+msgstr "Un petit problème cependant. Cela prend beaucoup de place d'afficher tous les champs pour saisir les objets ``Choice`` liés. C'est pour cette raison que Django offre une alternative d'affichage en tableau des objets liés ; il suffit de modifier la déclaration ``ChoiceInline`` comme ceci :"
 
 # 6e3415f8d6a243f296a9f6594e1387ae
 #: ../../intro/tutorial02.txt:330
 msgid ""
 "With that ``TabularInline`` (instead of ``StackedInline``), the related "
 "objects are displayed in a more compact, table-based format:"
-msgstr "Avec ce ``TabularInline`` (au lieu de ``StackedInline``), les objets liés sont affichés dans un format plus compact, comme un tableau :"
+msgstr "Avec ce ``TabularInline`` (au lieu de ``StackedInline``), les objets liés sont affichés dans un format plus compact, tel qu'un tableau :"
 
 # 7ddeae1edc834d549837e821394cd650
 #: ../../intro/tutorial02.txt:336
@@ -3049,7 +3052,7 @@ msgid ""
 "Note that there is an extra \"Delete?\" column that allows removing rows "
 "added using the \"Add Another Choice\" button and rows that have already "
 "been saved."
-msgstr "Remarquez la colonne supplémentaire « Delete? » qui permet d'enlever des lignes ajoutées par le bouton « Add Another Choice » ainsi que les lignes déjà enregistrées."
+msgstr "Remarquez la colonne supplémentaire « Delete? » qui permet de supprimer des lignes ajoutées à l'aide du bouton « Add Another Choice » ainsi que les lignes déjà enregistrées."
 
 # 8067ae7085364628bfaf6a709e9a6d97
 #: ../../intro/tutorial02.txt:340
@@ -3061,7 +3064,7 @@ msgstr "Personnalisation de la liste pour modification de l'interface d'administ
 msgid ""
 "Now that the Poll admin page is looking good, let's make some tweaks to the "
 "\"change list\" page -- the one that displays all the polls in the system."
-msgstr "Maintenant que la page d'administration des sondage « Poll » présente un peu mieux, améliorons la page de « liste pour modification » -- celle qui affiche tous les sondages du système."
+msgstr "Maintenant que la page d'administration des sondage « Poll » présente un peu mieux, améliorons la page « liste pour modification » -- celle qui affiche tous les sondages du système."
 
 # 5716fe5b47ae4486b9fb1a58189f5e57
 #: ../../intro/tutorial02.txt:345
@@ -3075,19 +3078,19 @@ msgid ""
 " be more helpful if we could display individual fields. To do that, use the "
 "``list_display`` admin option, which is a tuple of field names to display, "
 "as columns, on the change list page for the object::"
-msgstr "Par défaut, Django affiche le ``str()`` de chaque objet. Mais parfois, il serait plus utile d'afficher des champs individuels. Dans ce but, utilisez l'option ``list_display``, qui est un tuple de noms de champs à afficher, en colonnes, sur la page de liste pour modification de l'objet ::"
+msgstr "Par défaut, Django affiche le ``str()`` de chaque objet. Mais parfois, il serait plus utile d'afficher des champs particuliers. Dans ce but, utilisez l'option ``list_display``, qui est un tuple de noms de champs à afficher, en colonnes, sur la page liste pour modification de l'objet ::"
 
 # 0197d1d490bc411182128574872eb106
 #: ../../intro/tutorial02.txt:359
 msgid ""
 "Just for good measure, let's also include the ``was_published_recently`` "
 "custom method from Tutorial 1::"
-msgstr "Juste pour la démonstration, incluons également la méthode ``was_published_today`` du tutoriel 1 ::"
+msgstr "Juste pour la démonstration, incluons également la méthode personnalisée``was_published_today`` du tutoriel 1 ::"
 
 # dd5cca3ce0e24eeb89b6c56bba52bae4
 #: ../../intro/tutorial02.txt:366
 msgid "Now the poll change list page looks like this:"
-msgstr "À présent, la page de liste pour modification des sondages ressemble à ceci :"
+msgstr "À présent, la page liste pour modification des sondages ressemble à ceci :"
 
 # 9b4cf4fedb234ea48b74d3ff9ed45519
 #: ../../intro/tutorial02.txt:371
@@ -3105,14 +3108,14 @@ msgstr "Vous pouvez cliquer sur les en-têtes de colonne pour trier selon ces va
 msgid ""
 "You can improve that by giving that method (in :file:`polls/models.py`) a "
 "few attributes, as follows::"
-msgstr "Vous pouvez améliorer cela en donnant à cette méthode (dans :file:`polls/models.py`) quelques attributs, comme ceci ::"
+msgstr "Vous pouvez améliorer cela en fournissant à cette méthode (dans :file:`polls/models.py`) quelques attributs, comme ceci ::"
 
 # ea5958c26ae44ad5a0c188568186b14e
 #: ../../intro/tutorial02.txt:389
 msgid ""
 "Edit your :file:`polls/admin.py` file again and add an improvement to the "
 "Poll change list page: Filters. Add the following line to ``PollAdmin``::"
-msgstr "Modifiez encore une fois le fichier :file:`polls/admin.py` et améliorez la page de liste pour modification de sondages en y ajoutant des filtres. Ajoutez la ligne suivante à ``PollAdmin``::"
+msgstr "Modifiez encore une fois le fichier :file:`polls/admin.py` et améliorez la page liste pour modification de sondages en y ajoutant des filtres. Ajoutez la ligne suivante à ``PollAdmin``::"
 
 # 476e5a846503407185d3ffcc20e3ccfe
 #: ../../intro/tutorial02.txt:394
@@ -3128,7 +3131,7 @@ msgid ""
 "on. Because ``pub_date`` is a :class:`~django.db.models.DateTimeField`, "
 "Django knows to give appropriate filter options: \"Any date,\" \"Today,\" "
 "\"Past 7 days,\" \"This month,\" \"This year.\""
-msgstr "Le type de filtre affiché dépend du type de champ à filtrer. Comme ``pub_date`` est un champ :class:`~django.db.models.DateTimeField`, Django sait donner les options de filtrage correspondant : « Toutes les dates », « Aujourd'hui », « Les 7 derniers jours », « Ce mois-ci », « Cette année »."
+msgstr "Le type de filtre affiché dépend du type de champ à filtrer. Comme ``pub_date`` est un champ :class:`~django.db.models.DateTimeField`, Django sait fournir des options de filtrage appropriées : « Toutes les dates », « Aujourd'hui », « Les 7 derniers jours », « Ce mois-ci », « Cette année »."
 
 # 5157f351c36d4ff9ba14e1aa26b5e283
 #: ../../intro/tutorial02.txt:405
@@ -3142,14 +3145,14 @@ msgid ""
 "search terms, Django will search the ``question`` field. You can use as many"
 " fields as you'd like -- although because it uses a ``LIKE`` query behind "
 "the scenes, keep it reasonable, to keep your database happy."
-msgstr "Cela ajoute une boîte de recherche en haut de la liste pour modification. Quand quelqu'un saisit des termes de recherche, Django va rechercher dans le champ ``question``. Vous pouvez indiquer autant de champs que vous le désirez -- bien qu'en raison de l'emploi d'une requête ``LIKE`` en arrière-plan, il ne faut pas exagérer si l'on ne veut pas se fâcher avec la base de données."
+msgstr "Cela ajoute une boîte de recherche en haut de la liste pour modification. Quand quelqu'un saisit des termes de recherche, Django va rechercher dans le champ ``question``. Vous pouvez indiquer autant de champs que vous le désirez -- néanmoins, en raison de l'emploi d'une requête ``LIKE`` en arrière-plan, il ne faut pas exagérer si l'on ne veut pas se fâcher avec la base de données."
 
 # d20820b67fb240ab859067082f457e5b
 #: ../../intro/tutorial02.txt:414
 msgid ""
 "Finally, because ``Poll`` objects have dates, it'd be convenient to be able "
 "to drill down by date. Add this line::"
-msgstr "Enfin, parce que les objets ``Poll`` ont des dates, il serait pratique de pouvoir les sélectionner par date. Ajoutez cette ligne ::"
+msgstr "Enfin, parce que les objets ``Poll`` possèdent des dates, il serait pratique de pouvoir les sélectionner par date. Ajoutez cette ligne ::"
 
 # 41fc5791244743ba96b2d777237627d4
 #: ../../intro/tutorial02.txt:419
@@ -3157,7 +3160,7 @@ msgid ""
 "That adds hierarchical navigation, by date, to the top of the change list "
 "page. At top level, it displays all available years. Then it drills down to "
 "months and, ultimately, days."
-msgstr "Cela ajoute une navigation hiérarchique, par date, en haut de la page de liste pour modification. Au premier niveau, il affiche toutes les années disponibles. Puis il affine le classement en mois et, finalement, en jours."
+msgstr "Cela ajoute une navigation hiérarchique, par date, en haut de la page liste pour modification. Au premier niveau, il affiche toutes les années disponibles. Puis il affine le classement au mois et, finalement, au jours."
 
 # aaf0a9214aa04ae597938313c5ff33ba
 #: ../../intro/tutorial02.txt:423
@@ -3166,7 +3169,7 @@ msgid ""
 "The default is to display 100 items per page. Change-list pagination, search"
 " boxes, filters, date-hierarchies and column-header-ordering all work "
 "together like you think they should."
-msgstr "C'est maintenant le bon moment de noter que les listes pour modification vous laissent une grande liberté de pagination. Par défaut, 100 éléments sont affichés par page. La pagination des listes pour modification, les boîtes de recherche, les filtres, les hiérarchies calendaires et le tri selon l'en-tête de colonne, tout fonctionne ensemble pour une utilisation optimale."
+msgstr "C'est maintenant le bon moment de noter que les listes pour modification vous laissent une grande liberté de mise en page. Par défaut, 100 éléments sont affichés par page. La pagination des listes pour modification, les boîtes de recherche, les filtres, les hiérarchies calendaires et le tri selon l'en-tête de colonne, tout fonctionne ensemble pour une utilisation optimale."
 
 # 4fd2532ada124515a41361641ffe016c
 #: ../../intro/tutorial02.txt:429
@@ -3186,12 +3189,12 @@ msgid ""
 "That's easy to change, though, using Django's template system. The Django "
 "admin is powered by Django itself, and its interfaces use Django's own "
 "template system."
-msgstr "Toutefois, c'est facile à modifier en utilisant le système de templates de Django. Le site d'administration de Django est fait en Django lui-même, et ses interfaces utilisent le système de templates propre à Django."
+msgstr "Toutefois, c'est facile à modifier en utilisant le système de gabarits de Django. Le site d'administration de Django est fait en Django lui-même, et ses interfaces utilisent le système de gabarits propre à Django."
 
 # 292fa5d927f144ad84c9de5128400374
 #: ../../intro/tutorial02.txt:441
 msgid "Customizing your *project's* templates"
-msgstr "Personnalisation des templates de votre *projet*"
+msgstr "Personnalisation des gabarits de votre *projet*"
 
 # 1745f90e395e499ab7d3501920e9c0eb
 #: ../../intro/tutorial02.txt:443
@@ -4768,7 +4771,7 @@ msgstr "Heureusement, il y a un petit bogue dans l'application ``polls``, tout p
 msgid ""
 "You can see this in the Admin; create a poll whose date lies in the future; "
 "you'll see that the ``Poll`` change list claims it was published recently."
-msgstr "Vous pouvez constatez cela dans l'interface d'administration ; créez un sondage dont la date est dans le futur ; vous verrez dans la liste des sondages que celui-ci est marqué comme publié récemment."
+msgstr "Vous pouvez constatez cela dans l'interface d'administration ; créez un sondage dont la date est dans le futur ; vous verrez dans la liste pour modification des sondages que celui-ci est marqué comme publié récemment."
 
 # f5ea89bf1226419d883e8c894662a977
 #: ../../intro/tutorial05.txt:140
