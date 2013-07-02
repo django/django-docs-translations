@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-02 21:26\n"
-"PO-Revision-Date: 2013-06-21 17:00+0000\n"
+"PO-Revision-Date: 2013-07-02 16:38+0000\n"
 "Last-Translator: claudep <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -34,7 +34,7 @@ msgid ""
 "seen on intranet sites, with single sign-on solutions such as IIS and "
 "Integrated Windows Authentication or Apache and `mod_authnz_ldap`_, `CAS`_, "
 "`Cosign`_, `WebAuth`_, `mod_auth_sspi`_, etc."
-msgstr "Ce document présente la procédure pour utiliser des sources d'authentification externes (pour lesquelles le serveur Web définit la variable d'environnement ``REMOTE_USER``) dans vos applications Django. Ce type de solution d'authentification est typique des sites intranet, avec des solutions d'authentification centralisée comme IIS et Integrated Windows Authentication ou Apache et "
+msgstr "Ce document présente la procédure pour utiliser des sources d'authentification externes (pour lesquelles le serveur Web définit la variable d'environnement ``REMOTE_USER``) dans vos applications Django. Ce type de solution d'authentification est typique des sites intranet, avec des solutions d'authentification centralisée comme IIS et Integrated Windows Authentication ou Apache et `mod_authnz_ldap`_, `CAS`_, `Cosign`_, `WebAuth`_, `mod_auth_sspi`_, etc."
 
 # c7d5403190ea421b9f3b4f49fca67ff3
 #: ../../howto/auth-remote-user.txt:20
@@ -477,7 +477,7 @@ msgstr "L'héritage direct de la classe :class:`BaseCommand` exige que vous impl
 msgid ""
 "All attributes can be set in your derived class and can be used in "
 ":class:`BaseCommand`'s :ref:`subclasses<ref-basecommand-subclasses>`."
-msgstr "Tous les attributs peuvent être définis dans votre sous-classe et peuvent être utilisés dans les :ref:sous-classes<ref-basecommand-subclasses>` de :class:`BaseCommand`."
+msgstr "Tous les attributs peuvent être définis dans votre sous-classe et peuvent être utilisés dans les :ref:`sous-classes<ref-basecommand-subclasses>` de :class:`BaseCommand`."
 
 # 3c40b6f1efc743da893fc0dd773b5350
 #: ../../howto/custom-management-commands.txt:193
@@ -2096,7 +2096,7 @@ msgstr "Une autre option possible est de s'occuper manuellement dans le code du 
 msgid ""
 "To mark the output as a safe string, use "
 ":func:`django.utils.safestring.mark_safe`."
-msgstr "Pour marquer le résultat comme une chaîne sûre, utilisez "
+msgstr "Pour marquer le résultat comme une chaîne sûre, utilisez :func:`django.utils.safestring.mark_safe`."
 
 # 3203ab80669943e8b4d4a2332a4501a4
 #: ../../howto/custom-template-tags.txt:285
@@ -2756,7 +2756,7 @@ msgid ""
 "passed to the template tag. Like in Python, the values for keyword arguments"
 " are set using the equal sign (\"``=``\") and must be provided after the "
 "positional arguments. For example:"
-msgstr "Puis, dans le gabarit, n'importe quel nombre de paramètres séparés par des espaces peuvent être transmis à la balise de gabarit. Comme en Python, les valeurs des paramètres mots-clés sont définis par le signe égal (« ``=`` ») et doivent être placés après les paramètres positionnels. Par exemple :"
+msgstr "Puis, dans le gabarit, n'importe quel nombre de paramètres séparés par des espaces peuvent être transmis à la balise de gabarit. Comme en Python, les valeurs des paramètres mots-clés sont définis par le signe égal (``=``) et doivent être placés après les paramètres positionnels. Par exemple :"
 
 # 8caafc4e6bbb4fcab77e87b46903ba6d
 #: ../../howto/custom-template-tags.txt:831
@@ -5694,7 +5694,7 @@ msgstr "Envoyer votre code vers le serveur de déploiement."
 msgid ""
 "On the server, run :djadmin:`collectstatic` to copy all the static files "
 "into :setting:`STATIC_ROOT`."
-msgstr "Sur le serveur, lancer :djadmin:`collectstatic` pour copier tous les fichiers statiques dans "
+msgstr "Sur le serveur, lancer :djadmin:`collectstatic` pour copier tous les fichiers statiques dans :setting:`STATIC_ROOT`."
 
 # 5bdd698a60e44920b7326e4b4068ee84
 #: ../../howto/static-files/deployment.txt:36
@@ -5879,7 +5879,7 @@ msgstr "Configuration des fichiers statiques"
 msgid ""
 "Make sure that ``django.contrib.staticfiles`` is included in your "
 ":setting:`INSTALLED_APPS`."
-msgstr "Assurez-vous que ``django.contrib.staticfiles`` est inclus dans votre réglage "
+msgstr "Assurez-vous que ``django.contrib.staticfiles`` est inclus dans votre réglage  :setting:`INSTALLED_APPS`."
 
 # 0da15f5257ee4453b2036aedfb038417
 #: ../../howto/static-files/index.txt:17
