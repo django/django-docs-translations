@@ -2750,52 +2750,82 @@ msgid "If you want to run the full suite of tests, you'll need to install a numb
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:141
-# ad320e9451ae4b7fb435a08992044a68
-msgid "PyYAML_"
+# 801f2474c67c4b57b0283007d39076a3
+msgid "PIL_"
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:142
-# 32c3f285a4d84e4ab06b9a895aac85e4
-msgid "Markdown_"
+# b9d98b8958574a8196b33f05f4db827c
+msgid "py-bcrypt_"
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:143
-# da36ad9e598949c8b1928648e18fe463
-msgid "Textile_"
+# bb5251d871e64b2e99741bfcf78310a4
+msgid "PyYAML_"
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:144
-# 2393011c5644496caa9f78cb5e33a1c7
-msgid "Docutils_"
+# e6f76c9eed3e43c2ab9ca3197371a7ec
+msgid "Markdown_"
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:145
-# 8cad145512f8448681953a2adbdf4e1d
-msgid "setuptools_"
+# dfbe30be83a84a17b4ef581dd1cd0c86
+msgid "Textile_"
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:146
-# b9c016c3ffc446a884ddecaa71a408c2
-msgid "memcached_, plus a :ref:`supported Python binding <memcached>`"
+# 2a2308d14f344b7a87e89cb8f29d13ff
+msgid "Docutils_"
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:147
-# d405ec8a39dc4364970f5bd182cea863
-msgid "gettext_ (:ref:`gettext_on_windows`)"
+# 43d73d4a715f4acbb1bba7ef182285ec
+msgid "pytz_"
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:148
-# b41aff8884fb487898610b6ca76db618
-msgid "selenium_ (if also using Python >= 2.6)"
+# 0377a498dede414f98c9670b821428b8
+msgid "setuptools_"
+msgstr ""
+
+#: ../../internals/contributing/writing-code/unit-tests.txt:149
+# 2cbe2f47e1654921b63917a664e2b620
+msgid "memcached_, plus a :ref:`supported Python binding <memcached>`"
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:150
-# cda98930d6464eeab5c181abb1c3d92c
-msgid "If you want to test the memcached cache backend, you'll also need to define a :setting:`CACHES` setting that points at your memcached instance."
+# 7fa74e510fdf4c43a72999ecff43b037
+msgid "gettext_ (:ref:`gettext_on_windows`)"
+msgstr ""
+
+#: ../../internals/contributing/writing-code/unit-tests.txt:151
+# 640cfebf3f15404baa10354eb3a5f9fe
+msgid "selenium_"
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:153
-# 873ea61899454e4ead8bc5144c2cb2de
+# 67064aa7479e4e519eb2d2bb23c7a213
+msgid "You can find these dependencies in `pip requirements files`_ inside the ``tests/requirements`` directory of the Django source tree and install them like so::"
+msgstr ""
+
+#: ../../internals/contributing/writing-code/unit-tests.txt:159
+# fd16dbfaba534136b156bbc8e9be84d6
+msgid "You can also install the database adapter(s) of your choice using ``oracle.txt``, ``mysql.txt``, or ``postgres.txt``."
+msgstr ""
+
+#: ../../internals/contributing/writing-code/unit-tests.txt:162
+# bd89270dbba24ffaacb71f544da08d68
+msgid "If you want to test the memcached cache backend, you'll also need to define a :setting:`CACHES` setting that points at your memcached instance."
+msgstr ""
+
+#: ../../internals/contributing/writing-code/unit-tests.txt:165
+# 402e6230d03b4e38a1fe2bb83326c242
+msgid "To run the GeoDjango tests, you will need to :doc:`setup a spatial database and install the Geospatial libraries</ref/contrib/gis/install/index>`."
+msgstr ""
+
+#: ../../internals/contributing/writing-code/unit-tests.txt:168
+# 0c13f72650874fbdb8307f41287efc43
 msgid "Each of these dependencies is optional. If you're missing any of them, the associated tests will be skipped."
 msgstr ""
 
@@ -4761,8 +4791,13 @@ msgstr ""
 msgid "Post a public entry on `the official Django development blog`_, describing the issue and its resolution in detail, pointing to the relevant patches and new releases, and crediting the reporter of the issue (if the reporter wishes to be publicly identified)."
 msgstr ""
 
-#: ../../internals/security.txt:112
-# 8c91d778145340018dd6e7c26e831e96
+#: ../../internals/security.txt:109
+# b383f35634a34e829c1c35cd5d20ffae
+msgid "Post a notice to the `django-announce`_ mailing list that links to the blog post."
+msgstr ""
+
+#: ../../internals/security.txt:116
+# 29fbc8dcced34c47b97331e1ad29c08e
 msgid "If a reported issue is believed to be particularly time-sensitive -- due to a known exploit in the wild, for example -- the time between advance notification and public disclosure may be shortened considerably."
 msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django 1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-08 14:28\n"
+"POT-Creation-Date: 2013-08-23 14:23\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -496,8 +496,8 @@ msgid "Our example object"
 msgstr ""
 
 #: ../../howto/custom-model-fields.txt:31
-# 50604e53c025418baf6f452c4eb67f26
-msgid "Creating custom fields requires a bit of attention to detail. To make things easier to follow, we'll use a consistent example throughout this document: wrapping a Python object representing the deal of cards in a hand of Bridge_. Don't worry, you don't have know how to play Bridge to follow this example. You only need to know that 52 cards are dealt out equally to four players, who are traditionally called *north*, *east*, *south* and *west*.  Our class looks something like this::"
+# 2a0fc13836a2447ab4a859d41401b12c
+msgid "Creating custom fields requires a bit of attention to detail. To make things easier to follow, we'll use a consistent example throughout this document: wrapping a Python object representing the deal of cards in a hand of Bridge_. Don't worry, you don't have to know how to play Bridge to follow this example. You only need to know that 52 cards are dealt out equally to four players, who are traditionally called *north*, *east*, *south* and *west*.  Our class looks something like this::"
 msgstr ""
 
 #: ../../howto/custom-model-fields.txt:53
@@ -741,18 +741,22 @@ msgid "If you're handling custom Python types, such as our ``Hand`` class, we ne
 msgstr ""
 
 #: ../../howto/custom-model-fields.txt:252
-#: ../../howto/custom-model-fields.txt:342
-#: ../../howto/custom-model-fields.txt:474
-#: ../../howto/custom-model-fields.txt:645
-# 54da3a0ba3c14f86b71502a9ccc8676a
-# b11d1142f2f34970be392d532d57ca82
-# c8fac25313b74ec9b27bdbfa275aa35a
-# 57e4cd6190734a9881e8eaf693290e4b
-msgid "For example::"
+# 75eca2e546c94db69d2bcfd366cb071a
+msgid "For example, on Python 2::"
 msgstr ""
 
 #: ../../howto/custom-model-fields.txt:263
-# 09581206514e4598bee36f816c8e9942
+# 4601422ac5fc4c47bbf6f1bd076cbf59
+msgid "On Python 3, in lieu of setting the ``__metaclass__`` attribute, add ``metaclass`` to the class definition::"
+msgstr ""
+
+#: ../../howto/custom-model-fields.txt:269
+# 61ed3a3e86e447858f3994db625fc22e
+msgid "If you want your code to work on Python 2 & 3, you can use :func:`six.with_metaclass`::"
+msgstr ""
+
+#: ../../howto/custom-model-fields.txt:277
+# 203c3e3e3f2d4ad6a1c8029e7195d101
 msgid "This ensures that the :meth:`.to_python` method, documented below, will always be called when the attribute is initialized."
 msgstr ""
 
@@ -786,8 +790,13 @@ msgstr ""
 msgid "As always, you should document your field type, so users will know what it is. In addition to providing a docstring for it, which is useful for developers, you can also allow users of the admin app to see a short description of the field type via the :doc:`django.contrib.admindocs </ref/contrib/admin/admindocs>` application. To do this simply provide descriptive text in a ``description`` class attribute of your custom field. In the above example, the description displayed by the ``admindocs`` application for a ``HandField`` will be 'A hand of cards (bridge style)'."
 msgstr ""
 
-#: ../../howto/custom-model-fields.txt:304
-# 600eb44e4a8c4a3bafd4ace118f361c9
+#: ../../howto/custom-model-fields.txt:317
+# c64445dc4e604be6bd01f88d0d3899b0
+msgid "In the :mod:`django.contrib.admindocs` display, the field description is interpolated with ``field.__dict__`` which allows the description to incorporate arguments of the field. For example, the description for :class:`~django.db.models.CharField` is::"
+msgstr ""
+
+#: ../../howto/custom-model-fields.txt:325
+# 3ab2b255cad240dd8d01b26899521c78
 msgid "Useful methods"
 msgstr ""
 
@@ -821,8 +830,17 @@ msgstr ""
 msgid "If you aim to build a database-agnostic application, you should account for differences in database column types. For example, the date/time column type in PostgreSQL is called ``timestamp``, while the same column in MySQL is called ``datetime``. The simplest way to handle this in a :meth:`.db_type` method is to check the ``connection.settings_dict['ENGINE']`` attribute."
 msgstr ""
 
-#: ../../howto/custom-model-fields.txt:351
-# 6ea5c89062704ec6a913232952f6b9ed
+#: ../../howto/custom-model-fields.txt:363
+#: ../../howto/custom-model-fields.txt:495
+#: ../../howto/custom-model-fields.txt:666
+# c9b8b02bb69544e894472c45764fc22b
+# 5bfa76362c47424b9259872f69d39595
+# 4603ac2bd7cf430f9e7790920bd12c05
+msgid "For example::"
+msgstr ""
+
+#: ../../howto/custom-model-fields.txt:372
+# 13d1b3c1e9ae46edaf7444874bc390ad
 msgid "The :meth:`.db_type` method is only called by Django when the framework constructs the ``CREATE TABLE`` statements for your application -- that is, when you first create your tables. It's not called at any other time, so it can afford to execute slightly complex code, such as the ``connection.settings_dict`` check in the above example."
 msgstr ""
 
@@ -2681,6 +2699,11 @@ msgstr ""
 msgid "You could also replace the Django WSGI application with a custom WSGI application that later delegates to the Django WSGI application, if you want to combine a Django application with a WSGI application of another framework."
 msgstr ""
 
+#: ../../howto/deployment/wsgi/index.txt:77
+# a96fa397382c41aaa99331c3bc7520a4
+msgid "Some third-party WSGI middleware do not call ``close`` on the response object after handling a request — most notably Sentry's error reporting middleware up to version 2.0.7. In those cases the :data:`~django.core.signals.request_finished` signal isn't sent. This can result in idle connections to database and memcache servers."
+msgstr ""
+
 #: ../../howto/deployment/wsgi/modwsgi.txt:3
 # d46e0fb26ea4454a8e2f17645a372874
 msgid "How to use Django with Apache and mod_wsgi"
@@ -2707,8 +2730,8 @@ msgid "Basic configuration"
 msgstr ""
 
 #: ../../howto/deployment/wsgi/modwsgi.txt:27
-# 4b7cb5c127bc4e24af762cd4e441f24b
-msgid "Once you've got mod_wsgi installed and activated, edit your Apache server's ``httpd.conf`` file and add"
+# 088683759f4f454aacb8883ab042ed20
+msgid "Once you've got mod_wsgi installed and activated, edit your Apache server's ``httpd.conf`` file and add the following. If you are using a version of Apache older than 2.4, replace ``Require all granted`` with ``Allow from all``."
 msgstr ""
 
 #: ../../howto/deployment/wsgi/modwsgi.txt:42
@@ -2911,8 +2934,13 @@ msgstr ""
 msgid "The uWSGI wiki describes several `installation procedures`_. Using pip, the Python package manager, you can install any uWSGI version with a single command. For example:"
 msgstr ""
 
-#: ../../howto/deployment/wsgi/uwsgi.txt:38
-# b9eb526de989448aab10122c2cd5289c
+#: ../../howto/deployment/wsgi/uwsgi.txt:39
+# 1b9fff75938a4f168a03c9ef369e4abd
+msgid "Some distributions, including Debian and Ubuntu, ship an outdated version of uWSGI that does not conform to the WSGI specification. Versions prior to 1.2.6 do not call ``close`` on the response object after handling a request. In those cases the :data:`~django.core.signals.request_finished` signal isn't sent. This can result in idle connections to database and memcache servers."
+msgstr ""
+
+#: ../../howto/deployment/wsgi/uwsgi.txt:47
+# 2d62df840539450491876f1a63153c40
 msgid "uWSGI model"
 msgstr ""
 
@@ -2976,9 +3004,9 @@ msgstr ""
 msgid "Example ini configuration file usage::"
 msgstr ""
 
-#: ../../howto/deployment/wsgi/uwsgi.txt:103
-# 41c90fa97ecd4792b7ba1f745be584e0
-msgid "See the uWSGI docs on `managing the uWSGI process`_ for information on starting, stoping and reloading the uWSGI workers."
+#: ../../howto/deployment/wsgi/uwsgi.txt:112
+# 56654794dca9414ba4219d23b33080fb
+msgid "See the uWSGI docs on `managing the uWSGI process`_ for information on starting, stopping and reloading the uWSGI workers."
 msgstr ""
 
 #: ../../howto/error-reporting.txt:2
@@ -4046,8 +4074,8 @@ msgid "See the documentation for the :setting:`STATICFILES_FINDERS` setting for 
 msgstr ""
 
 #: ../../howto/static-files/index.txt:68
-# 19d2a7ad213b4be797427922cefa8d3a
-msgid "Now we *might* be able to get away with putting our static files directly in ``my_app/static/`` (rather than creating another ``my_app`` subdirectory), but it would actually be a bad idea. Django will use the last static file it finds whose name matches, and if you had a static file with the same name in a *different* application, Django would be unable to distinguish between them. We need to be able to point Django at the right one, and the easiest way to ensure this is by *namespacing* them. That is, by putting those static files inside *another* directory named for the application itself."
+# 993d6ef40098428e9071e1ed69548083
+msgid "Now we *might* be able to get away with putting our static files directly in ``my_app/static/`` (rather than creating another ``my_app`` subdirectory), but it would actually be a bad idea. Django will use the first static file it finds whose name matches, and if you had a static file with the same name in a *different* application, Django would be unable to distinguish between them. We need to be able to point Django at the right one, and the easiest way to ensure this is by *namespacing* them. That is, by putting those static files inside *another* directory named for the application itself."
 msgstr ""
 
 #: ../../howto/static-files/index.txt:80
@@ -4225,5 +4253,10 @@ msgstr ""
 #: ../../howto/upgrade-version.txt:89
 # 4c9ee4f137bd4c4eacd12cc24d06206f
 msgid "When you are sufficiently confident your app works with the new version of Django, you're ready to go ahead and :doc:`deploy </howto/deployment/index>` your upgraded Django project."
+msgstr ""
+
+#: ../../howto/upgrade-version.txt:93
+# 5c8e7bfe182e4b35addbac79a08fd9c8
+msgid "If you are using caching provided by Django, you should consider clearing your cache after upgrading. Otherwise you may run into problems, for example, if you are caching pickled objects as these objects are not guaranteed to be pickle-compatible across Django versions. A past instance of incompatibility was caching pickled :class:`~django.http.HttpResponse` objects, either directly or indirectly via the :func:`~django.views.decorators.cache.cache_page` decorator."
 msgstr ""
 

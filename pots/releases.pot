@@ -6869,7 +6869,17 @@ msgstr ""
 msgid "Prior to Django 1.3, inactive users were able to request a password reset email and reset their password. In Django 1.3 inactive users will receive the same message as a nonexistent account."
 msgstr ""
 
+#: ../../releases/1.3.txt:656
+# 5bfbd03dc24c4f2c9ab96399e3766464
+msgid "Password reset view now accepts ``from_email``"
+msgstr ""
+
 #: ../../releases/1.3.txt:658
+# d7b62fbe6fe34966acc948d82e14f53f
+msgid "The :func:`django.contrib.auth.views.password_reset` view now accepts a ``from_email`` parameter, which is passed to the ``password_reset_form``'s ``save()`` method as a keyword argument. If you are using this view with a custom password reset form, then you will need to ensure your form's ``save()`` method accepts this keyword argument."
+msgstr ""
+
+#: ../../releases/1.3.txt:667
 #: ../../releases/1.3-alpha-1.txt:273
 # d745411feb854ef099aa83dc8955230d
 # a7ddd1ac09e54d69a2e5d99f96970a18
@@ -7554,6 +7564,316 @@ msgstr ""
 #: ../../releases/1.3.2.txt:7
 # 7114a9f86c884e608432a2b6aac58c3c
 msgid "This is the second security release in the Django 1.3 series, fixing several security issues in Django 1.3. Django 1.3.2 is a recommended upgrade for all users of Django 1.3."
+msgstr ""
+
+#: ../../releases/1.3.3.txt:3
+# 4b36d575de1f4bc4983c2837d31f5ece
+msgid "Django 1.3.3 release notes"
+msgstr ""
+
+#: ../../releases/1.3.3.txt:5
+# 54793bf95d654221b84a6431341c2f85
+msgid "*August 1, 2012*"
+msgstr ""
+
+#: ../../releases/1.3.3.txt:7
+# c49ce47fd0254a89a14d43236e65a362
+msgid "Following Monday's security release of :doc:`Django 1.3.2 </releases/1.3.2>`, we began receiving reports that one of the fixes applied was breaking Python 2.4 compatibility for Django 1.3. Since Python 2.4 is a supported Python version for that release series, this release fixes compatibility with Python 2.4."
+msgstr ""
+
+#: ../../releases/1.3.4.txt:3
+# f15006c83f304e7898af562fd17697cf
+msgid "Django 1.3.4 release notes"
+msgstr ""
+
+#: ../../releases/1.3.4.txt:5
+#: ../../releases/1.4.2.txt:5
+# 1307af908ad245099042b09f42ad9137
+# 6d6700fd08fb458aa53298a02da89adb
+msgid "*October 17, 2012*"
+msgstr ""
+
+#: ../../releases/1.3.4.txt:7
+# 81710f70d54b49a3b965ad47396a8016
+msgid "This is the fourth release in the Django 1.3 series."
+msgstr ""
+
+#: ../../releases/1.3.4.txt:10
+#: ../../releases/1.3.5.txt:17
+#: ../../releases/1.3.6.txt:14
+#: ../../releases/1.4.2.txt:10
+#: ../../releases/1.4.3.txt:17
+#: ../../releases/1.4.4.txt:15
+# c2c5e7c91883440c91deec074ac5f082
+# 38722677702748d98011bde0f38dd658
+# df1f5f562553472c9454ac6838fe2fc0
+# 01738b7db45d49c39f8c256439ff5143
+# e0e047421e2c4258abd7998e58259ac9
+# 28f93ac6edcc44e69a3fae4366971b5b
+msgid "Host header poisoning"
+msgstr ""
+
+#: ../../releases/1.3.4.txt:12
+#: ../../releases/1.4.2.txt:12
+# 26cd0f84f3ee4e13b0e491bf5a6d0fec
+# e6bb8ddee89243679b97bc4fd2083ffe
+msgid "Some parts of Django -- independent of end-user-written applications -- make use of full URLs, including domain name, which are generated from the HTTP Host header. Some attacks against this are beyond Django's ability to control, and require the web server to be properly configured; Django's documentation has for some time contained notes advising users on such configuration."
+msgstr ""
+
+#: ../../releases/1.3.4.txt:18
+#: ../../releases/1.4.2.txt:18
+# 9ebd08d2a0304f0cb880b3f9ac5e884b
+# 2006abaf3dc94c70b6e9fa44e41b5a35
+msgid "Django's own built-in parsing of the Host header is, however, still vulnerable, as was reported to us recently. The Host header parsing in Django 1.3.3 and Django 1.4.1 -- specifically, ``django.http.HttpRequest.get_host()`` -- was incorrectly handling username/password information in the header. Thus, for example, the following Host header would be accepted by Django when running on \"validsite.com\"::"
+msgstr ""
+
+#: ../../releases/1.3.4.txt:27
+#: ../../releases/1.4.2.txt:27
+# 9ae03ff1dc544f1f89d1dcf37ca34f68
+# d26a41678dea4d15ad4d47b4cc4f883d
+msgid "Using this, an attacker can cause parts of Django -- particularly the password-reset mechanism -- to generate and display arbitrary URLs to users."
+msgstr ""
+
+#: ../../releases/1.3.4.txt:30
+#: ../../releases/1.4.2.txt:30
+# 0cd630bcef694131abd2a1a435da81d4
+# 887959a270cf4311b03388e8f3fe0621
+msgid "To remedy this, the parsing in ``HttpRequest.get_host()`` is being modified; Host headers which contain potentially dangerous content (such as username/password pairs) now raise the exception :exc:`django.core.exceptions.SuspiciousOperation`."
+msgstr ""
+
+#: ../../releases/1.3.4.txt:35
+#: ../../releases/1.4.2.txt:35
+# f960481a333747178f3eea7557510ce4
+# 47aa663d0df746d9b892500a0c7ad06c
+msgid "Details of this issue were initially posted online as a `security advisory`_."
+msgstr ""
+
+#: ../../releases/1.3.5.txt:3
+# 041afb02ee84414a9839bd336f7f5306
+msgid "Django 1.3.5 release notes"
+msgstr ""
+
+#: ../../releases/1.3.5.txt:5
+#: ../../releases/1.4.3.txt:5
+# b5144577eeb74c3c9207a2f2b6954afe
+# cc36afb35e144f128879eb5c2daceb13
+msgid "*December 10, 2012*"
+msgstr ""
+
+#: ../../releases/1.3.5.txt:7
+# e58a67627c684361b881981966fbf257
+msgid "Django 1.3.5 addresses two security issues present in previous Django releases in the 1.3 series."
+msgstr ""
+
+#: ../../releases/1.3.5.txt:10
+#: ../../releases/1.4.3.txt:10
+# d0d601338b094097b12ccab0e4ab1d93
+# c5e5fa79b87447a6b81064cb3842ed58
+msgid "Please be aware that this security release is slightly different from previous ones. Both issues addressed here have been dealt with in prior security updates to Django. In one case, we have received ongoing reports of problems, and in the other we've chosen to take further steps to tighten up Django's code in response to independent discovery of potential problems from multiple sources."
+msgstr ""
+
+#: ../../releases/1.3.5.txt:19
+#: ../../releases/1.4.3.txt:19
+# 584950abed4040df98c96154925d316c
+# 3390d1aa9bbb43368d2fe846ba0c78ec
+msgid "Several earlier Django security releases focused on the issue of poisoning the HTTP Host header, causing Django to generate URLs pointing to arbitrary, potentially-malicious domains."
+msgstr ""
+
+#: ../../releases/1.3.5.txt:23
+#: ../../releases/1.4.3.txt:23
+# 7f1bac8d48234f948a71250679b1c7ea
+# 9d061323e4d94db7bb18d5f728eeef66
+msgid "In response to further input received and reports of continuing issues following the previous release, we're taking additional steps to tighten Host header validation. Rather than attempt to accommodate all features HTTP supports here, Django's Host header validation attempts to support a smaller, but far more common, subset:"
+msgstr ""
+
+#: ../../releases/1.3.5.txt:29
+#: ../../releases/1.4.3.txt:29
+# 8529a19d9d8a4f62812990cf75c74df4
+# 92a2e115a04e4664bd7c6d42053417a6
+msgid "Hostnames must consist of characters [A-Za-z0-9] plus hyphen ('-') or dot ('.')."
+msgstr ""
+
+#: ../../releases/1.3.5.txt:31
+#: ../../releases/1.4.3.txt:31
+# 0749f5ee3afe48e09dc8073dbbd02c39
+# 2706299ee18b427898089abce2968508
+msgid "IP addresses -- both IPv4 and IPv6 -- are permitted."
+msgstr ""
+
+#: ../../releases/1.3.5.txt:32
+#: ../../releases/1.4.3.txt:32
+# f167643e07584dc8ae8d9485a40d2e0f
+# a1574bafe2a747da9d68ccf4c9f1bdd0
+msgid "Port, if specified, is numeric."
+msgstr ""
+
+#: ../../releases/1.3.5.txt:34
+#: ../../releases/1.4.3.txt:34
+# 6ddefe28b92c4886932aa494d974b5b6
+# 4a34ba430c5e4201ac118b70303ab982
+msgid "Any deviation from this will now be rejected, raising the exception :exc:`django.core.exceptions.SuspiciousOperation`."
+msgstr ""
+
+#: ../../releases/1.3.5.txt:38
+#: ../../releases/1.4.3.txt:38
+# 5f6cbe27b0a843fbb935853a6e6add3c
+# 19ec3cd8486b43a7a9a365963435bc8b
+msgid "Redirect poisoning"
+msgstr ""
+
+#: ../../releases/1.3.5.txt:40
+#: ../../releases/1.4.3.txt:40
+# 036875b18003429a84cd3dc07dbf2c08
+# abf8615b366246528d9eb8a14eb85be8
+msgid "Also following up on a previous issue: in July of this year, we made changes to Django's HTTP redirect classes, performing additional validation of the scheme of the URL to redirect to (since, both within Django's own supplied applications and many third-party applications, accepting a user-supplied redirect target is a common pattern)."
+msgstr ""
+
+#: ../../releases/1.3.5.txt:46
+#: ../../releases/1.4.3.txt:46
+# 936e9d8cdf66420480a45f81e784fdc7
+# 89965a39e2694c6ba21883fabb99e849
+msgid "Since then, two independent audits of the code turned up further potential problems. So, similar to the Host-header issue, we are taking steps to provide tighter validation in response to reported problems (primarily with third-party applications, but to a certain extent also within Django itself). This comes in two parts:"
+msgstr ""
+
+#: ../../releases/1.3.5.txt:52
+#: ../../releases/1.4.3.txt:52
+# 1421d6f28ef64ee3aa7aa720c44a704b
+# 6c31a0df71a14d08a878f56523527cd7
+msgid "1. A new utility function, ``django.utils.http.is_safe_url``, is added; this function takes a URL and a hostname, and checks that the URL is either relative, or if absolute matches the supplied hostname. This function is intended for use whenever user-supplied redirect targets are accepted, to ensure that such redirects cannot lead to arbitrary third-party sites."
+msgstr ""
+
+#: ../../releases/1.3.5.txt:58
+#: ../../releases/1.4.3.txt:58
+# 8587dcc05f0f40228fbc08f9e64bc886
+# d0b1c56b022742a990e49a5ddc242df0
+msgid "2. All of Django's own built-in views -- primarily in the authentication system -- which allow user-supplied redirect targets now use ``is_safe_url`` to validate the supplied URL."
+msgstr ""
+
+#: ../../releases/1.3.6.txt:3
+# 1ea5e4cbbc9346de913f37096b4d2eb2
+msgid "Django 1.3.6 release notes"
+msgstr ""
+
+#: ../../releases/1.3.6.txt:5
+#: ../../releases/1.4.4.txt:5
+# 53e7401963654e869114278a46c7287c
+# 64fd26020de944f6b2c97a396c0151a1
+msgid "*February 19, 2013*"
+msgstr ""
+
+#: ../../releases/1.3.6.txt:7
+# 2974298800cb4a9ba7d2cfd2567a3ef4
+msgid "Django 1.3.6 fixes four security issues present in previous Django releases in the 1.3 series."
+msgstr ""
+
+#: ../../releases/1.3.6.txt:10
+# af1114d45e2548a79f54fab05ef91515
+msgid "This is the sixth bugfix/security release in the Django 1.3 series."
+msgstr ""
+
+#: ../../releases/1.3.6.txt:16
+#: ../../releases/1.4.4.txt:17
+# e4e9f26699934ba8ab15268e32c1b8ec
+# 2d6fdb916f84440e84132150b163adef
+msgid "Some parts of Django -- independent of end-user-written applications -- make use of full URLs, including domain name, which are generated from the HTTP Host header. Django's documentation has for some time contained notes advising users on how to configure webservers to ensure that only valid Host headers can reach the Django application. However, it has been reported to us that even with the recommended webserver configurations there are still techniques available for tricking many common webservers into supplying the application with an incorrect and possibly malicious Host header."
+msgstr ""
+
+#: ../../releases/1.3.6.txt:25
+# 7ae2d2a844134c6499154d9fb536042f
+msgid "For this reason, Django 1.3.6 adds a new setting, ``ALLOWED_HOSTS``, which should contain an explicit list of valid host/domain names for this site. A request with a Host header not matching an entry in this list will raise ``SuspiciousOperation`` if ``request.get_host()`` is called. For full details see the documentation for the :setting:`ALLOWED_HOSTS` setting."
+msgstr ""
+
+#: ../../releases/1.3.6.txt:31
+# 08da3f5bd5374df6874440839f8cd867
+msgid "The default value for this setting in Django 1.3.6 is ``['*']`` (matching any host), for backwards-compatibility, but we strongly encourage all sites to set a more restrictive value."
+msgstr ""
+
+#: ../../releases/1.3.6.txt:35
+#: ../../releases/1.4.4.txt:36
+# 2cae293e3bed46b5b67eb8a9aea59a4f
+# a222395b274440cdbfde8db87d0c3748
+msgid "This host validation is disabled when ``DEBUG`` is ``True`` or when running tests."
+msgstr ""
+
+#: ../../releases/1.3.6.txt:39
+#: ../../releases/1.4.4.txt:40
+# f0cccee7a1e449a5be1033d67374c7cf
+# 64b6e59e72734a9fa426c8011b035d06
+msgid "XML deserialization"
+msgstr ""
+
+#: ../../releases/1.3.6.txt:41
+# fbac38290c4b4a7bbbb8fe07ecacf67f
+msgid "The XML parser in the Python standard library is vulnerable to a number of attacks via external entities and entity expansion. Django uses this parser for deserializing XML-formatted database fixtures. The fixture deserializer is not intended for use with untrusted data, but in order to err on the side of safety in Django 1.3.6 the XML deserializer refuses to parse an XML document with a DTD (DOCTYPE definition), which closes off these attack avenues."
+msgstr ""
+
+#: ../../releases/1.3.6.txt:48
+#: ../../releases/1.4.4.txt:49
+# ed6d6c1a8853499194602e5ac7f01bf0
+# e3067840a43e46fc81f5a4ee854f9b6b
+msgid "These issues in the Python standard library are CVE-2013-1664 and CVE-2013-1665. More information available `from the Python security team`_."
+msgstr ""
+
+#: ../../releases/1.3.6.txt:51
+#: ../../releases/1.4.4.txt:52
+# 6800a9e905bd4bc4b5d942b0598f4ecd
+# 37261c0dc54943b0ae9a73e92434aa40
+msgid "Django's XML serializer does not create documents with a DTD, so this should not cause any issues with the typical round-trip from ``dumpdata`` to ``loaddata``, but if you feed your own XML documents to the ``loaddata`` management command, you will need to ensure they do not contain a DTD."
+msgstr ""
+
+#: ../../releases/1.3.6.txt:60
+#: ../../releases/1.4.4.txt:61
+# 0941aeac322447e3b9b0c40f436e2fd9
+# 705a67305bd9406b816e763b25c3762e
+msgid "Formset memory exhaustion"
+msgstr ""
+
+#: ../../releases/1.3.6.txt:62
+#: ../../releases/1.4.4.txt:63
+# b0c8f6aeea5f46c7b75696b32bed810c
+# 66d4e727d4734a0a932c3d2972444701
+msgid "Previous versions of Django did not validate or limit the form-count data provided by the client in a formset's management form, making it possible to exhaust a server's available memory by forcing it to create very large numbers of forms."
+msgstr ""
+
+#: ../../releases/1.3.6.txt:67
+# 70943b91cd6347e394cb4dae5687e045
+msgid "In Django 1.3.6, all formsets have a strictly-enforced maximum number of forms (1000 by default, though it can be set higher via the ``max_num`` formset factory argument)."
+msgstr ""
+
+#: ../../releases/1.3.6.txt:73
+#: ../../releases/1.4.4.txt:74
+# 8f6a699dc7104eafa8880e7a65e31e75
+# 45ac2100d24f4ee79cbb544899bb188c
+msgid "Admin history view information leakage"
+msgstr ""
+
+#: ../../releases/1.3.6.txt:75
+# 0f0cbff415c543259a8e6b3cf1a68694
+msgid "In previous versions of Django, an admin user without change permission on a model could still view the unicode representation of instances via their admin history log. Django 1.3.6 now limits the admin history log view for an object to users with change permission for that model."
+msgstr ""
+
+#: ../../releases/1.3.7.txt:3
+# 19e5827f177448a7b37fc4f1959c5958
+msgid "Django 1.3.7 release notes"
+msgstr ""
+
+#: ../../releases/1.3.7.txt:5
+#: ../../releases/1.4.5.txt:5
+# 252acee7488c4a78bebddb79358baa3b
+# 27989ee2c4b7473da2fcf48861289f03
+msgid "*February 20, 2013*"
+msgstr ""
+
+#: ../../releases/1.3.7.txt:7
+# ba21f5c1a3794a68a0388be2a6ccee0b
+msgid "Django 1.3.7 corrects a packaging problem with yesterday's :doc:`1.3.6 release </releases/1.3.6>`."
+msgstr ""
+
+#: ../../releases/1.3.7.txt:10
+#: ../../releases/1.4.5.txt:10
+# cc063ffb10884e7b94afb7b084dabd5d
+# 9e25aa06a8b343a0b060b3ef89cb7ca2
+msgid "The release contained stray ``.pyc`` files that caused \"bad magic number\" errors when running with some versions of Python. This releases corrects this, and also fixes a bad documentation link in the project template ``settings.py`` file generated by ``manage.py startproject``."
 msgstr ""
 
 #: ../../releases/1.4.txt:3
@@ -10367,84 +10687,183 @@ msgstr ""
 msgid "This is the second security release in the Django 1.4 series."
 msgstr ""
 
-#: ../../releases/1.4.2.txt:10
-# 5dcb3931a1b04c409ccd851be4181565
-msgid "Host header poisoning"
-msgstr ""
-
-#: ../../releases/1.4.2.txt:12
-# af644c266378459286cea58f8fce9065
-msgid "Some parts of Django -- independent of end-user-written applications -- make use of full URLs, including domain name, which are generated from the HTTP Host header. Some attacks against this are beyond Django's ability to control, and require the web server to be properly configured; Django's documentation has for some time contained notes advising users on such configuration."
-msgstr ""
-
-#: ../../releases/1.4.2.txt:18
-# dcb5b45ce77546d8b693c6916e53026f
-msgid "Django's own built-in parsing of the Host header is, however, still vulnerable, as was reported to us recently. The Host header parsing in Django 1.3.3 and Django 1.4.1 -- specifically, django.http.HttpRequest.get_host() -- was incorrectly handling username/password information in the header. Thus, for example, the following Host header would be accepted by Django when running on \"validsite.com\"::"
-msgstr ""
-
-#: ../../releases/1.4.2.txt:27
-# 863a3767f5284d59be80dffdb1a52e63
-msgid "Using this, an attacker can cause parts of Django -- particularly the password-reset mechanism -- to generate and display arbitrary URLs to users."
-msgstr ""
-
-#: ../../releases/1.4.2.txt:30
-# 914f6ea6e8a64d9ba71a591b73a589b3
-msgid "To remedy this, the parsing in HttpRequest.get_host() is being modified; Host headers which contain potentially dangerous content (such as username/password pairs) now raise the exception django.core.exceptions.SuspiciousOperation"
-msgstr ""
-
-#: ../../releases/1.4.2.txt:34
-# fb9e10484b0c43d3bea2dd26da9deb5d
-msgid "Details of this issue were initially posted online as a `security advisory`_."
-msgstr ""
-
-#: ../../releases/1.4.2.txt:41
-# 4cf2eee5b0344a19b85267b72a1a56ca
+#: ../../releases/1.4.2.txt:42
+# 51566d8273ca4390a9971b5b5f48da0a
 msgid "The newly introduced :class:`~django.db.models.GenericIPAddressField` constructor arguments have been adapted to match those of all other model fields. The first two keyword arguments are now verbose_name and name."
 msgstr ""
 
-#: ../../releases/1.4.2.txt:46
-# 1e4f590bfc6e406f9de1dc4e40fe65cb
+#: ../../releases/1.4.2.txt:47
+#: ../../releases/1.4.4.txt:83
+# 6023b6a4b6cf4a93b5c42d0930221050
+# 98a241aaab5444a0a54ad17d7664cec5
 msgid "Other bugfixes and changes"
 msgstr ""
 
-#: ../../releases/1.4.2.txt:48
-# 961aa95b44b14a69811c515106febef5
+#: ../../releases/1.4.2.txt:49
+# b7c6776b49d340a9a50c5cfb010bcbfe
 msgid "Subclass HTMLParser only for appropriate Python versions (#18239)."
 msgstr ""
 
-#: ../../releases/1.4.2.txt:49
-# dc1557333d5d4e7c81510c6155cbdb9d
+#: ../../releases/1.4.2.txt:50
+# df0629995ac14e609473387291582ff6
 msgid "Added batch_size argument to qs.bulk_create() (#17788)."
 msgstr ""
 
-#: ../../releases/1.4.2.txt:50
-# 47102a55d59a4691ac422a9f231e7c6e
+#: ../../releases/1.4.2.txt:51
+# 0b9f63711b2e4afa9803c5b4be71033f
 msgid "Fixed a small regression in the admin filters where wrongly formatted dates passed as url parameters caused an unhandled ValidationError (#18530)."
 msgstr ""
 
-#: ../../releases/1.4.2.txt:51
-# cee3f8c9f5ad473e80d4e7411562ee92
+#: ../../releases/1.4.2.txt:52
+# 928ee446aa5645129c2c87ec69e42a7f
 msgid "Fixed an endless loop bug when accessing permissions in templates (#18979)"
 msgstr ""
 
-#: ../../releases/1.4.2.txt:52
-# a843907b67b945819b17d9a0ec52eb84
+#: ../../releases/1.4.2.txt:53
+# 30f4517f9494409b85b3efa9ea0a676c
 msgid "Fixed some Python 2.5 compatibility issues"
 msgstr ""
 
-#: ../../releases/1.4.2.txt:53
-# 26d7a273bf6d4667a53bec5c7d3fc0c2
+#: ../../releases/1.4.2.txt:54
+# 3a20de4e214049b89065e2f0e10ec258
 msgid "Fixed an issue with quoted filenames in Content-Disposition header (#19006)"
 msgstr ""
 
-#: ../../releases/1.4.2.txt:54
-# 347badc7447748a798644eccde229e1a
+#: ../../releases/1.4.2.txt:55
+# 2450b20ceb0e434ca4a6c0b78741b176
 msgid "Made the context option in ``trans`` and ``blocktrans`` tags accept literals wrapped in single quotes (#18881)."
 msgstr ""
 
-#: ../../releases/1.4.2.txt:55
-# ad32e4b4c10d494cb436c0b15dbbc86d
+#: ../../releases/1.4.2.txt:56
+#: ../../releases/1.4.4.txt:88
+# 98673c67f8174c7dbbab2db1b387924b
+# 9a1670adcee84d3aa219bbe8e1e009da
 msgid "Numerous documentation improvements and fixes."
+msgstr ""
+
+#: ../../releases/1.4.3.txt:3
+# 5f8c37cdd0794dae93dbcc9ef88bd434
+msgid "Django 1.4.3 release notes"
+msgstr ""
+
+#: ../../releases/1.4.3.txt:7
+# f125851c0ef84c969c9c994bb9f5f013
+msgid "Django 1.4.3 addresses two security issues present in previous Django releases in the 1.4 series."
+msgstr ""
+
+#: ../../releases/1.4.4.txt:3
+# 591f34bdef00458a877b151b9babf1cd
+msgid "Django 1.4.4 release notes"
+msgstr ""
+
+#: ../../releases/1.4.4.txt:7
+# 5466b42270d243aaa083b8cdeab53f63
+msgid "Django 1.4.4 fixes four security issues present in previous Django releases in the 1.4 series, as well as several other bugs and numerous documentation improvements."
+msgstr ""
+
+#: ../../releases/1.4.4.txt:11
+# 933fefa87aa048b9991244bd1f66030c
+msgid "This is the fourth bugfix/security release in the Django 1.4 series."
+msgstr ""
+
+#: ../../releases/1.4.4.txt:26
+# 502dcfe230e14588ae4ac9e5cd9d6fe2
+msgid "For this reason, Django 1.4.4 adds a new setting, ``ALLOWED_HOSTS``, containing an explicit list of valid host/domain names for this site. A request with a Host header not matching an entry in this list will raise ``SuspiciousOperation`` if ``request.get_host()`` is called. For full details see the documentation for the :setting:`ALLOWED_HOSTS` setting."
+msgstr ""
+
+#: ../../releases/1.4.4.txt:32
+# be37c01771fd4080adb0e0f9364fed30
+msgid "The default value for this setting in Django 1.4.4 is ``['*']`` (matching any host), for backwards-compatibility, but we strongly encourage all sites to set a more restrictive value."
+msgstr ""
+
+#: ../../releases/1.4.4.txt:42
+# fe6e53a72ba84867a94722891badd858
+msgid "The XML parser in the Python standard library is vulnerable to a number of attacks via external entities and entity expansion. Django uses this parser for deserializing XML-formatted database fixtures. This deserializer is not intended for use with untrusted data, but in order to err on the side of safety in Django 1.4.4 the XML deserializer refuses to parse an XML document with a DTD (DOCTYPE definition), which closes off these attack avenues."
+msgstr ""
+
+#: ../../releases/1.4.4.txt:68
+# e66f0c2bea7e4e2c81b4c1555fc2a840
+msgid "In Django 1.4.4, all formsets have a strictly-enforced maximum number of forms (1000 by default, though it can be set higher via the ``max_num`` formset factory argument)."
+msgstr ""
+
+#: ../../releases/1.4.4.txt:76
+# 5d0c2b3748e444cf904d48581acac112
+msgid "In previous versions of Django, an admin user without change permission on a model could still view the unicode representation of instances via their admin history log. Django 1.4.4 now limits the admin history log view for an object to users with change permission for that model."
+msgstr ""
+
+#: ../../releases/1.4.4.txt:85
+# e850af2de5794502a2655d450f594a6b
+msgid "Prevented transaction state from leaking from one request to the next (#19707)."
+msgstr ""
+
+#: ../../releases/1.4.4.txt:86
+# 5deaa200b25c47d9974bdd2088615a37
+msgid "Changed a SQL command syntax to be MySQL 4 compatible (#19702)."
+msgstr ""
+
+#: ../../releases/1.4.4.txt:87
+# db89893f9eee4f7281616ae79ce0168d
+msgid "Added backwards-compatibility with old unsalted MD5 passwords (#18144)."
+msgstr ""
+
+#: ../../releases/1.4.5.txt:3
+# e7f94d3147e04ede90e1011982c9e9c7
+msgid "Django 1.4.5 release notes"
+msgstr ""
+
+#: ../../releases/1.4.5.txt:7
+# 201b08e8521c47a3b0fbc18eed8aff73
+msgid "Django 1.4.5 corrects a packaging problem with yesterday's :doc:`1.4.4 release </releases/1.4.4>`."
+msgstr ""
+
+#: ../../releases/1.4.6.txt:3
+# 884e630fb59645809c9025e4bf2dd330
+msgid "Django 1.4.6 release notes"
+msgstr ""
+
+#: ../../releases/1.4.6.txt:5
+#: ../../releases/1.5.2.txt:5
+# 4e6da3d7ea114ff0859100134dd6d769
+# 6a4b86dcdeba45859830d977d1b6b1b2
+msgid "*August 13, 2013*"
+msgstr ""
+
+#: ../../releases/1.4.6.txt:7
+# d159461e9cf44ea98900f3c93b82c3c1
+msgid "Django 1.4.6 fixes one security issue present in previous Django releases in the 1.4 series, as well as one other bug."
+msgstr ""
+
+#: ../../releases/1.4.6.txt:10
+# 36969143aadb4a52a57b0cfa446da453
+msgid "This is the sixth bugfix/security release in the Django 1.4 series."
+msgstr ""
+
+#: ../../releases/1.4.6.txt:13
+#: ../../releases/1.5.2.txt:10
+# 82c88832ee214acea90ae3398dec6f37
+# 270461818dfd4c36bb6177c537cc65dc
+msgid "Mitigated possible XSS attack via user-supplied redirect URLs"
+msgstr ""
+
+#: ../../releases/1.4.6.txt:15
+#: ../../releases/1.5.2.txt:12
+# fda80fa32ffe4a52a0d5dadb23249529
+# b8ab02069b0d4fdf9661e54760d8cc37
+msgid "Django relies on user input in some cases (e.g. :func:`django.contrib.auth.views.login`, :mod:`django.contrib.comments`, and :doc:`i18n </topics/i18n/index>`) to redirect the user to an \"on success\" URL. The security checks for these redirects (namely ``django.util.http.is_safe_url()``) didn't check if the scheme is ``http(s)`` and as such allowed ``javascript:...`` URLs to be entered. If a developer relied on ``is_safe_url()`` to provide safe redirect targets and put such a URL into a link, he could suffer from a XSS attack. This bug doesn't affect Django currently, since we only put this URL into the ``Location`` response header and browsers seem to ignore JavaScript there."
+msgstr ""
+
+#: ../../releases/1.4.6.txt:27
+#: ../../releases/1.5.2.txt:31
+# 46bf65c723df4f9786136fb3119b8b9e
+# 2ba1da3a75ce4c7583bac2e4bb1e509d
+msgid "Bugfixes"
+msgstr ""
+
+#: ../../releases/1.4.6.txt:29
+#: ../../releases/1.5.2.txt:60
+# 3f2cdc41274c4c33964a4d3fbac5b262
+# 5c1ffd2c89384142b6b2245286e478f0
+msgid "Fixed an obscure bug with the :func:`~django.test.utils.override_settings` decorator. If you hit an ``AttributeError: 'Settings' object has no attribute '_original_allowed_hosts'`` exception, it's probably fixed (#20636)."
 msgstr ""
 
 #: ../../releases/1.5.txt:3
@@ -11253,8 +11672,13 @@ msgid "Django used to send the :data:`~django.core.signals.request_finished` sig
 msgstr ""
 
 #: ../../releases/1.5.txt:442
-# dbcc9b1b269b4c4089123eb625a79144
-msgid "This signal is now sent after the content is fully consumed by the WSGI gateway. This might be backwards incompatible if you rely on the signal being fired before sending the response content to the client. If you do, you should consider using a middleware instead."
+# aa1d90e937b94d93984bcff7c50cdaa4
+msgid "This signal is now sent after the content is fully consumed by the WSGI gateway. This might be backwards incompatible if you rely on the signal being fired before sending the response content to the client. If you do, you should consider using :doc:`middleware </topics/http/middleware>` instead."
+msgstr ""
+
+#: ../../releases/1.5.txt:449
+# 36df3085aff649a8b8f051bf62d29ff8
+msgid "Some WSGI servers and middleware do not always call ``close`` on the response object after handling a request, most notably uWSGI prior to 1.2.6 and Sentry's error reporting middleware up to 2.0.7. In those cases the ``request_finished`` signal isn't sent at all. This can result in idle connections to database and memcache servers."
 msgstr ""
 
 #: ../../releases/1.5.txt:448
@@ -12130,6 +12554,96 @@ msgstr ""
 #: ../../releases/1.5.1.txt:25
 # 76a404708f6d40e19661d349ba202e2c
 msgid "Prevented filtering on password hashes in the user admin (`#20078`__)."
+msgstr ""
+
+#: ../../releases/1.5.2.txt:3
+# d2ccbee857c74ce2b9440a09d325553a
+msgid "Django 1.5.2 release notes"
+msgstr ""
+
+#: ../../releases/1.5.2.txt:7
+# 6bc734d56f1f43a9a0e78c26d24104ac
+msgid "This is Django 1.5.2, a bugfix and security release for Django 1.5."
+msgstr ""
+
+#: ../../releases/1.5.2.txt:24
+# 5025483ee3fa442ea78402607cfedc89
+msgid "XSS vulnerability in :mod:`django.contrib.admin`"
+msgstr ""
+
+#: ../../releases/1.5.2.txt:26
+# fdc43e58013247509957ee2e733c6b72
+msgid "If a :class:`~django.db.models.URLField` is used in Django 1.5, it displays the current value of the field and a link to the target on the admin change page. The display routine of this widget was flawed and allowed for XSS."
+msgstr ""
+
+#: ../../releases/1.5.2.txt:33
+# cb84fad6585c40b28e680e3e2608ceb9
+msgid "Fixed a crash with :meth:`~django.db.models.query.QuerySet.prefetch_related` (#19607) as well as some ``pickle`` regressions with ``prefetch_related`` (#20157 and #20257)."
+msgstr ""
+
+#: ../../releases/1.5.2.txt:36
+# c24682c8a35c41a29ec7736ae579b9ef
+msgid "Fixed a regression in :mod:`django.contrib.gis` in the Google Map output on Python 3 (#20773)."
+msgstr ""
+
+#: ../../releases/1.5.2.txt:38
+# 368f216f95a243aab96f7642775ea00e
+msgid "Made ``DjangoTestSuiteRunner.setup_databases`` properly handle aliases for the default database (#19940) and prevented ``teardown_databases`` from attempting to tear down aliases (#20681)."
+msgstr ""
+
+#: ../../releases/1.5.2.txt:41
+# f6c65b0a92a940bb9e29fe47c498327d
+msgid "Fixed the ``django.core.cache.backends.memcached.MemcachedCache`` backend's ``get_many()`` method on Python 3 (#20722)."
+msgstr ""
+
+#: ../../releases/1.5.2.txt:43
+# 1c9030e9d12a4ce5ac7c2e2f6b579dcf
+msgid "Fixed :mod:`django.contrib.humanize` translation syntax errors. Affected languages: Mexican Spanish, Mongolian, Romanian, Turkish (#20695)."
+msgstr ""
+
+#: ../../releases/1.5.2.txt:45
+# ec7554db09b4436693fd268070c733ce
+msgid "Added support for wheel packages (#19252)."
+msgstr ""
+
+#: ../../releases/1.5.2.txt:46
+# 77d4d8cc9279415babdf7fc17c86661e
+msgid "The CSRF token now rotates when a user logs in."
+msgstr ""
+
+#: ../../releases/1.5.2.txt:47
+# 0000008653ce4efba5309478cf49a334
+msgid "Some Python 3 compatibility fixes including #20212 and #20025."
+msgstr ""
+
+#: ../../releases/1.5.2.txt:48
+# 01e5f9b83c114550ab9fd3e6a4d24442
+msgid "Fixed some rare cases where :meth:`~django.db.models.query.QuerySet.get` exceptions recursed infinitely (#20278)."
+msgstr ""
+
+#: ../../releases/1.5.2.txt:50
+# ba5057251d10488f88d290576ac0ba4f
+msgid ":djadmin:`makemessages` no longer crashes with ``UnicodeDecodeError`` (#20354)."
+msgstr ""
+
+#: ../../releases/1.5.2.txt:52
+# 4142eca257804b39b785f7595c16111a
+msgid "Fixed ``geojson`` detection with Spatialite."
+msgstr ""
+
+#: ../../releases/1.5.2.txt:53
+# 9469f8186e344c51a3d4ad45328d14bd
+msgid ":meth:`~django.test.TestCase.assertContains` once again works with binary content (#20237)."
+msgstr ""
+
+#: ../../releases/1.5.2.txt:55
+# ae2f930e45314d3db1625ea150a4407f
+msgid "Fixed :class:`~django.db.models.ManyToManyField` if it has a unicode ``name`` parameter (#20207)."
+msgstr ""
+
+#: ../../releases/1.5.2.txt:57
+# 4879334d50114b82a2fc2538faf6627a
+msgid "Ensured that the WSGI request's path is correctly based on the ``SCRIPT_NAME`` environment variable or the :setting:`FORCE_SCRIPT_NAME` setting, regardless of whether or not either has a trailing slash (#20169)."
 msgstr ""
 
 #: ../../releases/index.txt:3

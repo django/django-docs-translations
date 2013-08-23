@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django 1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-08 14:28\n"
+"POT-Creation-Date: 2013-08-23 14:23\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,8 +62,8 @@ msgid "So, to handle situations like this, the Django authentication system lets
 msgstr ""
 
 #: ../../topics/auth/customizing.txt:40
-# 77fd01f07324425b9cb55205c9717920
-msgid "See the `authentication backend reference <authentication-backends-reference>` for information on the authentication backends included with Django."
+# 504ff3c35fce494a895598260f2069b0
+msgid "See the :ref:`authentication backend reference <authentication-backends-reference>` for information on the authentication backends included with Django."
 msgstr ""
 
 #: ../../topics/auth/customizing.txt:45
@@ -487,8 +487,8 @@ msgid "Returns ``False`` if :meth:`~django.contrib.auth.models.AbstractBaseUser.
 msgstr ""
 
 #: ../../topics/auth/customizing.txt:603
-# d7167a9d3e464e3faa8bbb4b48429646
-msgid "You should also define a custom manager for your ``User`` model. If your ``User`` model defines ``username`` and ``email`` fields the same as Django's default ``User``, you can just install Django's :class:`~django.contrib.auth.models.UserManager`; however, if your ``User`` model defines different fields, you will need to define a custom manager that extends :class:`~django.contrib.auth.models.BaseUserManager` providing two additional methods:"
+# c15486348ad44c7eb401115eaf0c9360
+msgid "You should also define a custom manager for your ``User`` model. If your ``User`` model defines ``username``, ``email``, ``is_staff``, ``is_active``, ``is_superuser``, ``last_login``, and ``date_joined`` fields the same as Django's default ``User``, you can just install Django's :class:`~django.contrib.auth.models.UserManager`; however, if your ``User`` model defines different fields, you will need to define a custom manager that extends :class:`~django.contrib.auth.models.BaseUserManager` providing two additional methods:"
 msgstr ""
 
 #: ../../topics/auth/customizing.txt:615
@@ -1109,9 +1109,9 @@ msgstr ""
 msgid "This example shows how you might use both :func:`~django.contrib.auth.authenticate()` and :func:`~django.contrib.auth.login()`::"
 msgstr ""
 
-#: ../../topics/auth/default.txt:312
-# df76cf6a2c8e4e0abb1a637dcde56ecf
-msgid "When you're manually logging a user in, you *must* call :func:`~django.contrib.auth.authenticate()` before you call :func:`~django.contrib.auth.login()`. :func:`~django.contrib.auth.authenticate()` sets an attribute on the :class:`~django.contrib.auth.models.User` noting which authentication backend successfully authenticated that user (see the :ref:`backends documentation <authentication-backends>` for details), and this information is needed later during the login process. An error will be raise if you try to login a user object retrieved from the database directly."
+#: ../../topics/auth/default.txt:313
+# 293570d80b4349f3a06b8b89f2a01d15
+msgid "When you're manually logging a user in, you *must* call :func:`~django.contrib.auth.authenticate()` before you call :func:`~django.contrib.auth.login()`. :func:`~django.contrib.auth.authenticate()` sets an attribute on the :class:`~django.contrib.auth.models.User` noting which authentication backend successfully authenticated that user (see the :ref:`backends documentation <authentication-backends>` for details), and this information is needed later during the login process. An error will be raised if you try to login a user object retrieved from the database directly."
 msgstr ""
 
 #: ../../topics/auth/default.txt:324
@@ -1357,8 +1357,92 @@ msgstr ""
 msgid "See :doc:`the URL documentation </topics/http/urls>` for details on using named URL patterns."
 msgstr ""
 
-#: ../../topics/auth/default.txt:574
-# 07d9bf9afdee4c39a89b0eb7fd9bf256
+#: ../../topics/auth/default.txt:575
+#: ../../topics/auth/default.txt:690
+#: ../../topics/auth/default.txt:738
+#: ../../topics/auth/default.txt:756
+#: ../../topics/auth/default.txt:787
+#: ../../topics/auth/default.txt:814
+#: ../../topics/auth/default.txt:898
+#: ../../topics/auth/default.txt:917
+#: ../../topics/auth/default.txt:959
+#: ../../topics/auth/default.txt:985
+# a6109747deae445c95c9fb376b9cc3e2
+# 618d3929291a4023ba5cff9fe6a8fa02
+# 4eb9fe93a9ee47358c576313f7dfd24d
+# e4de17d59a794498b1f104d2ada353ec
+# af956a759a6e4fa79510a2cc3d106a7f
+# 7445fa86231f474f9ee48edb6a9170e2
+# 2fa8d932978e413f94b9ebaee80106bc
+# 2cecd05e1d5d423abce8cbfef3bb8b3f
+# 725b02a5e1bc46638f1962d076b6cba1
+# 074d3769e77a42a3b8211d178d9462a5
+msgid "**Optional arguments:**"
+msgstr ""
+
+#: ../../topics/auth/default.txt:577
+# 0b839611d132457780769be068dd4e30
+msgid "``template_name``: The name of a template to display for the view used to log the user in. Defaults to :file:`registration/login.html`."
+msgstr ""
+
+#: ../../topics/auth/default.txt:580
+# 2b34ee2323734dad8c7b9b192cafb711
+msgid "``redirect_field_name``: The name of a ``GET`` field containing the URL to redirect to after login. Overrides ``next`` if the given ``GET`` parameter is passed."
+msgstr ""
+
+#: ../../topics/auth/default.txt:584
+# b26343a2dd1642ac85519059626699dc
+msgid "``authentication_form``: A callable (typically just a form class) to use for authentication. Defaults to :class:`~django.contrib.auth.forms.AuthenticationForm`."
+msgstr ""
+
+#: ../../topics/auth/default.txt:588
+#: ../../topics/auth/default.txt:702
+#: ../../topics/auth/default.txt:725
+#: ../../topics/auth/default.txt:743
+#: ../../topics/auth/default.txt:770
+#: ../../topics/auth/default.txt:793
+#: ../../topics/auth/default.txt:844
+#: ../../topics/auth/default.txt:904
+#: ../../topics/auth/default.txt:937
+#: ../../topics/auth/default.txt:964
+# dbc2c7ded5fd463193ef8be94682aee4
+# dbdb42b2fb9f4da88424b38cf8662bd0
+# c725183d78ea42208548d5aa65fdf74b
+# ade6ebe6159442df8b81a5bc322a6cf9
+# 71d9abea63d24f668d77e566c7ef82df
+# 0549ab6b2bfa46e1ac41a1a8019ea0bd
+# 4301001a11ce45c8a4bb2b36d71bcd4c
+# 3687e4099b174052ab170b17d466f858
+# c70c07a498b344c2b48a8428b86cc076
+# b5c8b571cc5f41b082cf95247dd7ba55
+msgid "``current_app``: A hint indicating which application contains the current view. See the :ref:`namespaced URL resolution strategy <topics-http-reversing-url-namespaces>` for more information."
+msgstr ""
+
+#: ../../topics/auth/default.txt:592
+#: ../../topics/auth/default.txt:706
+#: ../../topics/auth/default.txt:729
+#: ../../topics/auth/default.txt:747
+#: ../../topics/auth/default.txt:774
+#: ../../topics/auth/default.txt:797
+#: ../../topics/auth/default.txt:848
+#: ../../topics/auth/default.txt:908
+#: ../../topics/auth/default.txt:941
+#: ../../topics/auth/default.txt:968
+# 58d68c8d17e74bcab9d0f66f3de54a90
+# f73a501083394d96af6d65723a3901a5
+# b272f6df13b34fb5970a49727566a8f4
+# 428996d3f3e54c6aa5f063c62f57f35c
+# c57fc9cf4bc9469eb199a60be2fa1dd4
+# e6aaea64c59340c79dd2dc249026bad2
+# 6bb70e2c853048e0a18a14cbef570bca
+# b0655d40c56440db89f810d3da377fd1
+# 2ac198023ff548e89ede5f41084dc0a5
+# 39a40128114c410ea83397077e7d9676
+msgid "``extra_context``: A dictionary of context data that will be added to the default context data passed to the template."
+msgstr ""
+
+#: ../../topics/auth/default.txt:595
+# 8b1adb933876412fa78e49acf26d5d6f
 msgid "Here's what ``django.contrib.auth.views.login`` does:"
 msgstr ""
 
@@ -3338,9 +3422,9 @@ msgstr ""
 msgid "Thus, when (for example) the :class:`django.template.loaders.app_directories.Loader` template loader is enabled in :setting:`TEMPLATE_LOADERS`, a template location could be: /path/to/project/books/templates/books/publisher_list.html"
 msgstr ""
 
-#: ../../topics/class-based-views/generic-display.txt:137
-# 958ec39fd24e410384862cc9ef68abf9
-msgid "This template will be rendered against a context containing a variable called ``object_list`` that contains all the publisher objects. A very simple template might look like the following::"
+#: ../../topics/class-based-views/generic-display.txt:144
+# bf096dbb6d294c0497dcfdec97cf5148
+msgid "This template will be rendered against a context containing a variable called ``object_list`` that contains all the publisher objects. A very simple template might look like the following:"
 msgstr ""
 
 #: ../../topics/class-based-views/generic-display.txt:152
@@ -3378,19 +3462,19 @@ msgstr ""
 msgid "Adding extra context"
 msgstr ""
 
-#: ../../topics/class-based-views/generic-display.txt:194
-# 451ad102486f44c79c199bfb50e2a08a
-msgid "Often you simply need to present some extra information beyond that provided by the generic view. For example, think of showing a list of all the books on each publisher detail page. The :class:`~django.views.generic.detail.DetailView` generic view provides the publisher to the context, but how do we get additional information in that template."
-msgstr ""
-
 #: ../../topics/class-based-views/generic-display.txt:201
-# 868646fb558c4168ba43c073a32dcebb
-msgid "However, there is; you can subclass :class:`~django.views.generic.detail.DetailView` and provide your own implementation of the ``get_context_data`` method. The default implementation of this that comes with :class:`~django.views.generic.detail.DetailView` simply adds in the object being displayed to the template, but you can override it to send more::"
+# 040231337a06475fb284b5df513acac2
+msgid "Often you simply need to present some extra information beyond that provided by the generic view. For example, think of showing a list of all the books on each publisher detail page. The :class:`~django.views.generic.detail.DetailView` generic view provides the publisher to the context, but how do we get additional information in that template?"
 msgstr ""
 
-#: ../../topics/class-based-views/generic-display.txt:225
-# 5927a70fef3847de9428e4f20b2f91fe
-msgid "Generally, get_context_data will merge the context data of all parent classes with those of the current class. To preserve this behavior in your own classes where you want to alter the context, you should be sure to call get_context_data on the super class. When no two classes try to define the same key, this will give the expected results. However if any class attempts to override a key after parent classes have set it (after the call to super), any children of that class will also need to explictly set it after super if they want to be sure to override all parents. If you're having trouble, review the method resolution order of your view."
+#: ../../topics/class-based-views/generic-display.txt:208
+# 1e7a914df8b04ce493592701bb383698
+msgid "The answer is to subclass :class:`~django.views.generic.detail.DetailView` and provide your own implementation of the ``get_context_data`` method. The default implementation simply adds the object being displayed to the template, but you can override it to send more::"
+msgstr ""
+
+#: ../../topics/class-based-views/generic-display.txt:229
+# 7d54890326114135a2e58d121a1f995b
+msgid "Generally, ``get_context_data`` will merge the context data of all parent classes with those of the current class. To preserve this behavior in your own classes where you want to alter the context, you should be sure to call ``get_context_data`` on the super class. When no two classes try to define the same key, this will give the expected results. However if any class attempts to override a key after parent classes have set it (after the call to super), any children of that class will also need to explictly set it after super if they want to be sure to override all parents. If you're having trouble, review the method resolution order of your view."
 msgstr ""
 
 #: ../../topics/class-based-views/generic-display.txt:238
@@ -3483,9 +3567,9 @@ msgstr ""
 msgid "The last common pattern we'll look at involves doing some extra work before or after calling the generic view."
 msgstr ""
 
-#: ../../topics/class-based-views/generic-display.txt:372
-# d2d5a55cf9234239b37897a89809e78f
-msgid "Imagine we had a ``last_accessed`` field on our ``Author`` object that we were using to keep track of the last time anybody looked at that author::"
+#: ../../topics/class-based-views/generic-display.txt:376
+# 1fd22d6015fd4a97b6e3f92ba46cfd9f
+msgid "Imagine we had a ``last_accessed`` field on our ``Author`` model that we were using to keep track of the last time anybody looked at that author::"
 msgstr ""
 
 #: ../../topics/class-based-views/generic-display.txt:384
@@ -4172,29 +4256,29 @@ msgstr ""
 msgid "One way to do this is to combine :class:`ListView` with :class:`~django.views.generic.detail.SingleObjectMixin`, so that the queryset for the paginated list of books can hang off the publisher found as the single object. In order to do this, we need to have two different querysets:"
 msgstr ""
 
-#: ../../topics/class-based-views/mixins.txt:289
-# 17b34f16849b46b3ab91c288786a1095
-msgid "**Publisher queryset for use in get_object**"
+#: ../../topics/class-based-views/mixins.txt:291
+# b4914d5a825f4e1c839e2f908fcfeb34
+msgid "**``Publisher`` queryset for use in ``get_object``**"
 msgstr ""
 
 #: ../../topics/class-based-views/mixins.txt:289
-# d7a9f179dccf42b1bb20c94214b2c059
-msgid "We'll set that up directly when we call ``get_object()``."
+# cbbf59b13d5643a5a816f561ce0eed25
+msgid "We'll set the ``model`` attribute on the view and rely on the default implementation of ``get_object()`` to fetch the correct ``Publisher`` object."
 msgstr ""
 
-#: ../../topics/class-based-views/mixins.txt:293
-# 72cda689b3c340419d9144e8451c14fa
-msgid "**Book queryset for use by ListView**"
+#: ../../topics/class-based-views/mixins.txt:298
+# b76d9ed5049047a5a6c18b0f613c2ff6
+msgid "**``Book`` queryset for use by ``ListView``**"
 msgstr ""
 
-#: ../../topics/class-based-views/mixins.txt:292
-# c452e3abea1b46c79c38c33252fa1226
-msgid "We'll figure that out ourselves in ``get_queryset()`` so we can take into account the ``Publisher`` we're looking at."
+#: ../../topics/class-based-views/mixins.txt:294
+# bcf36363164848429b8fa2e8bc6341d8
+msgid "The default implementation of ``get_queryset`` uses the ``model`` attribute to construct the queryset. This conflicts with our use of this attribute for ``get_object`` so we'll override that method and have it return the queryset of ``Book`` objects linked to the ``Publisher`` we're looking at."
 msgstr ""
 
-#: ../../topics/class-based-views/mixins.txt:297
-# 737d3314b3f94457a354cb12693bc131
-msgid "We have to think carefully about ``get_context_data()``. Since both :class:`~django.views.generic.detail.SingleObjectMixin` and :class:`ListView` will put things in the context data under the value of ``context_object_name`` if it's set, we'll instead explictly ensure the Publisher is in the context data. :class:`ListView` will add in the suitable ``page_obj`` and ``paginator`` for us providing we remember to call ``super()``."
+#: ../../topics/class-based-views/mixins.txt:302
+# 889ed186071d4d0baefa7cc826ab8d0f
+msgid "We have to think carefully about ``get_context_data()``. Since both :class:`~django.views.generic.detail.SingleObjectMixin` and :class:`ListView` will put things in the context data under the value of ``context_object_name`` if it's set, we'll instead explictly ensure the ``Publisher`` is in the context data. :class:`ListView` will add in the suitable ``page_obj`` and ``paginator`` for us providing we remember to call ``super()``."
 msgstr ""
 
 #: ../../topics/class-based-views/mixins.txt:306
@@ -4202,14 +4286,14 @@ msgstr ""
 msgid "Now we can write a new ``PublisherDetail``::"
 msgstr ""
 
-#: ../../topics/class-based-views/mixins.txt:324
-# 3cdf0121bb27474ba0ada373f3bd8687
-msgid "Notice how we set ``self.object`` within ``get_queryset()`` so we can use it again later in ``get_context_data()``. If you don't set ``template_name``, the template will default to the normal :class:`ListView` choice, which in this case would be ``\"books/book_list.html\"`` because it's a list of books; :class:`ListView` knows nothing about :class:`~django.views.generic.detail.SingleObjectMixin`, so it doesn't have any clue this view is anything to do with a Publisher."
+#: ../../topics/class-based-views/mixins.txt:334
+# d65b616df7654a38907f086ee6156ede
+msgid "Notice how we set ``self.object`` within ``get()`` so we can use it again later in ``get_context_data()`` and ``get_queryset()``. If you don't set ``template_name``, the template will default to the normal :class:`ListView` choice, which in this case would be ``\"books/book_list.html\"`` because it's a list of books; :class:`ListView` knows nothing about :class:`~django.views.generic.detail.SingleObjectMixin`, so it doesn't have any clue this view is anything to do with a ``Publisher``."
 msgstr ""
 
-#: ../../topics/class-based-views/mixins.txt:335
-# 767a3c6151984fce9b6ba8bb56233a3d
-msgid "The ``paginate_by`` is deliberately small in the example so you don't have to create lots of books to see the pagination working! Here's the template you'd want to use::"
+#: ../../topics/class-based-views/mixins.txt:343
+# 83fda4de093e474aa71dfdd8d76f6af7
+msgid "The ``paginate_by`` is deliberately small in the example so you don't have to create lots of books to see the pagination working! Here's the template you'd want to use:"
 msgstr ""
 
 #: ../../topics/class-based-views/mixins.txt:368
@@ -10294,8 +10378,8 @@ msgid "``can_delete``"
 msgstr ""
 
 #: ../../topics/forms/formsets.txt:326
-# 36850eadddc84afd97de7afaadcbdc3f
-msgid "Lets you create a formset with the ability to delete::"
+# df951525b79e47ea866fffbe22d7d6dd
+msgid "Lets you create a formset with the ability to select forms for deletion::"
 msgstr ""
 
 #: ../../topics/forms/formsets.txt:346
@@ -10303,8 +10387,13 @@ msgstr ""
 msgid "Similar to ``can_order`` this adds a new field to each form named ``DELETE`` and is a ``forms.BooleanField``. When data comes through marking any of the delete fields you can access them with ``deleted_forms``::"
 msgstr ""
 
-#: ../../topics/forms/formsets.txt:373
-# 6ba9cdb5bcb74c2c88c5a44b1266240d
+#: ../../topics/forms/formsets.txt:372
+# 83930c1858b84ca3bce8f217e535be0b
+msgid "If you are using a :class:`ModelFormSet<django.forms.models.BaseModelFormSet>`, model instances for deleted forms will be deleted when you call ``formset.save()``. On the other hand, if you are using a plain ``FormSet``, it's up to you to handle ``formset.deleted_forms``, perhaps in your formset's ``save()`` method, as there's no general notion of what it means to delete a form."
+msgstr ""
+
+#: ../../topics/forms/formsets.txt:380
+# 495397656fa34a17bd9ce662614f2752
 msgid "Adding additional fields to a formset"
 msgstr ""
 
@@ -11348,28 +11437,93 @@ msgid "With these models, the ``ModelForm`` subclasses above would be roughly eq
 msgstr ""
 
 #: ../../topics/forms/modelforms.txt:195
-# 43156735ea434f5abfabc8af054f13df
-msgid "The ``is_valid()`` method and ``errors``"
+# 2fb29fbcea134be49d136562b8dcee5f
+msgid "Validation on a ``ModelForm``"
 msgstr ""
 
 #: ../../topics/forms/modelforms.txt:197
-# a838aba12b96436d8a73ae6a293b024f
-msgid "The first time you call ``is_valid()`` or access the ``errors`` attribute of a ``ModelForm`` triggers :ref:`form validation <form-and-field-validation>` as well as :ref:`model validation <validating-objects>`. This has the side-effect of cleaning the model you pass to the ``ModelForm`` constructor. For instance, calling ``is_valid()`` on your form will convert any date fields on your model to actual date objects. If form validation fails, only some of the updates may be applied. For this reason, you'll probably want to avoid reusing the model instance passed to the form, especially if validation fails."
+# ffb8e0ba43ac4e25808d066815e9d9f6
+msgid "There are two main steps involved in validating a ``ModelForm``:"
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:199
+# d9c3edf0b46c46a2b8a3a804ea67bc31
+msgid ":ref:`Validating the form <form-and-field-validation>`"
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:200
+# 776ee07b845c464788db8091496a935f
+msgid ":ref:`Validating the model instance <validating-objects>`"
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:202
+# 7da92d2016154b4aac6e0ef97c14e735
+msgid "Just like normal form validation, model form validation is triggered implicitly when calling :meth:`~django.forms.Form.is_valid()` or accessing the :attr:`~django.forms.Form.errors` attribute and explicitly when calling ``full_clean()``, although you will typically not use the latter method in practice."
 msgstr ""
 
 #: ../../topics/forms/modelforms.txt:208
-# 589cc78a9613429cb5411dbd87f88d24
+# f0637f5c08a744d8927b6259fe868268
+msgid "``Model`` validation (:meth:`Model.full_clean() <django.db.models.Model.full_clean()>`) is triggered from within the form validation step, right after the form's ``clean()`` method is called."
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:214
+# 6900aa14e3d94533893536b029066a6a
+msgid "The cleaning process modifies the model instance passed to the ``ModelForm`` constructor in various ways. For instance, any date fields on the model are converted into actual date objects. Failed validation may leave the underlying model instance in an inconsistent state and therefore it's not recommended to reuse it."
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:223
+# 022a8b434d22428d959489e9febd1710
+msgid "Overriding the clean() method"
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:225
+# 4ced26285af9461eb7e9ba7c338c6c6f
+msgid "You can override the ``clean()`` method on a model form to provide additional validation in the same way you can on a normal form."
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:228
+# 3ee9a48c9cdf4bf28a6cd6609ab3d9d7
+msgid "A model form instance bound to a model object will contain an ``instance`` attribute that gives its methods access to that specific model instance."
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:233
+# a57e07b30ce74d448a1010a3a6deb618
+msgid "The ``ModelForm.clean()`` method sets a flag that makes the :ref:`model validation <validating-objects>` step validate the uniqueness of model fields that are marked as ``unique``, ``unique_together`` or ``unique_for_date|month|year``."
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:238
+# 4aa211e7d7d740558924fad73f6b953b
+msgid "If you would like to override the ``clean()`` method and maintain this validation, you must call the parent class's ``clean()`` method."
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:242
+# 99fa2437390e4bd99c5b08630a25bc27
+msgid "Interaction with model validation"
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:244
+# c8d8dcde70a141a0a0202ebf08e11a02
+msgid "As part of the validation process, ``ModelForm`` will call the ``clean()`` method of each field on your model that has a corresponding field on your form. If you have excluded any model fields, validation will not be run on those fields. See the :doc:`form validation </ref/forms/validation>` documentation for more on how field cleaning and validation work."
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:250
+# 998403ebce814a77b4011a7e56058237
+msgid "The model's ``clean()`` method will be called before any uniqueness checks are made. See :ref:`Validating objects <validating-objects>` for more information on the model's ``clean()`` hook."
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:255
+# 529a9441af014bee95621ab25596e374
 msgid "The ``save()`` method"
 msgstr ""
 
-#: ../../topics/forms/modelforms.txt:210
-# 6228a23f92ed4d17a77cf128e783b03b
-msgid "Every form produced by ``ModelForm`` also has a ``save()`` method. This method creates and saves a database object from the data bound to the form. A subclass of ``ModelForm`` can accept an existing model instance as the keyword argument ``instance``; if this is supplied, ``save()`` will update that instance. If it's not supplied, ``save()`` will create a new instance of the specified model:"
+#: ../../topics/forms/modelforms.txt:257
+# 5528c4b2532c4302b6cf310e87d643bb
+msgid "Every ``ModelForm`` also has a ``save()`` method. This method creates and saves a database object from the data bound to the form. A subclass of ``ModelForm`` can accept an existing model instance as the keyword argument ``instance``; if this is supplied, ``save()`` will update that instance. If it's not supplied, ``save()`` will create a new instance of the specified model:"
 msgstr ""
 
-#: ../../topics/forms/modelforms.txt:231
-# 9bae8293f4cd414194ad9ac367c652fe
-msgid "Note that if the form :ref:`hasn't been validated <modelform-is-valid-and-errors>`, calling ``save()`` will do so by checking ``form.errors``. A ``ValueError`` will be raised if the data in the form doesn't validate -- i.e., if ``form.errors`` evaluates to ``True``."
+#: ../../topics/forms/modelforms.txt:277
+# bdf1f4a75fd147dd986f5c29d86a3886
+msgid "Note that if the form :ref:`hasn't been validated <validation-on-modelform>`, calling ``save()`` will do so by checking ``form.errors``. A ``ValueError`` will be raised if the data in the form doesn't validate -- i.e., if ``form.errors`` evaluates to ``True``."
 msgstr ""
 
 #: ../../topics/forms/modelforms.txt:236
@@ -11382,14 +11536,14 @@ msgstr ""
 msgid "Another side effect of using ``commit=False`` is seen when your model has a many-to-many relation with another model. If your model has a many-to-many relation and you specify ``commit=False`` when you save a form, Django cannot immediately save the form data for the many-to-many relation. This is because it isn't possible to save many-to-many data for an instance until the instance exists in the database."
 msgstr ""
 
-#: ../../topics/forms/modelforms.txt:252
-# 180b0b7465c746ca808e5345849f26c7
-msgid "To work around this problem, every time you save a form using ``commit=False``, Django adds a ``save_m2m()`` method to your ``ModelForm`` subclass. After you've manually saved the instance produced by the form, you can invoke ``save_m2m()`` to save the many-to-many form data. For example::"
+#: ../../topics/forms/modelforms.txt:298
+# 504b2a3174b44b328f9dd5f1977f41b9
+msgid "To work around this problem, every time you save a form using ``commit=False``, Django adds a ``save_m2m()`` method to your ``ModelForm`` subclass. After you've manually saved the instance produced by the form, you can invoke ``save_m2m()`` to save the many-to-many form data. For example:"
 msgstr ""
 
-#: ../../topics/forms/modelforms.txt:272
-# cf26b1b3a2b147698bb61f12f5ff56c0
-msgid "Calling ``save_m2m()`` is only required if you use ``save(commit=False)``. When you use a simple ``save()`` on a form, all data -- including many-to-many data -- is saved without the need for any additional method calls. For example::"
+#: ../../topics/forms/modelforms.txt:320
+# 2b0bc69269b744a2be9d5f519a2e1be1
+msgid "Calling ``save_m2m()`` is only required if you use ``save(commit=False)``. When you use a simple ``save()`` on a form, all data -- including many-to-many data -- is saved without the need for any additional method calls. For example:"
 msgstr ""
 
 #: ../../topics/forms/modelforms.txt:284
@@ -11777,14 +11931,14 @@ msgstr ""
 msgid "As you can see, the view logic of a model formset isn't drastically different than that of a \"normal\" formset. The only difference is that we call ``formset.save()`` to save the data into the database. (This was described above, in :ref:`saving-objects-in-the-formset`.)"
 msgstr ""
 
-#: ../../topics/forms/modelforms.txt:758
-# 78cb7f1544354b789072ad1ea6104df4
-msgid "Overiding ``clean()`` on a ``model_formset``"
+#: ../../topics/forms/modelforms.txt:777
+# 2814fd46144640c8bfaebe3467863a9d
+msgid "Overriding ``clean()`` on a ``ModelFormSet``"
 msgstr ""
 
-#: ../../topics/forms/modelforms.txt:760
-# cbe0d350bae54324ac8bb37d8e8c459a
-msgid "Just like with ``ModelForms``, by default the ``clean()`` method of a ``model_formset`` will validate that none of the items in the formset violate the unique constraints on your model (either ``unique``, ``unique_together`` or ``unique_for_date|month|year``).  If you want to override the ``clean()`` method on a ``model_formset`` and maintain this validation, you must call the parent class's ``clean`` method::"
+#: ../../topics/forms/modelforms.txt:779
+# 4c64ff9950aa4ec5a0a48964ca5d28b5
+msgid "Just like with ``ModelForms``, by default the ``clean()`` method of a ``ModelFormSet`` will validate that none of the items in the formset violate the unique constraints on your model (either ``unique``, ``unique_together`` or ``unique_for_date|month|year``).  If you want to override the ``clean()`` method on a ``ModelFormSet`` and maintain this validation, you must call the parent class's ``clean`` method::"
 msgstr ""
 
 #: ../../topics/forms/modelforms.txt:775
@@ -11867,8 +12021,18 @@ msgstr ""
 msgid ":ref:`Manually rendered can_delete and can_order <manually-rendered-can-delete-and-can-order>`."
 msgstr ""
 
-#: ../../topics/forms/modelforms.txt:892
-# 917bd253d39047ec9d39f7d786ff1df2
+#: ../../topics/forms/modelforms.txt:913
+# c499033f496b488ca37068c187598fcc
+msgid "Overriding ``clean()`` on an ``InlineFormSet``"
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:915
+# 5c4880f4e5f44cf1ba36251bb1b65373
+msgid "See :ref:`model-formsets-overriding-clean`, but subclass :class:`~models.BaseInlineFormSet` rather than :class:`~models.BaseModelFormSet`."
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:920
+# 00a213ee89c64e51a3bb99b6b09196d8
 msgid "More than one foreign key to the same model"
 msgstr ""
 
@@ -12358,8 +12522,8 @@ msgid "The data you return will get fed into the subsequent upload handlers' ``r
 msgstr ""
 
 #: ../../topics/http/file-uploads.txt:372
-# 51bb1836bccb4cfc8c9c7c1603241615
-msgid "Return ``None`` from ``receive_data_chunk`` to sort-circuit remaining upload handlers from getting this chunk.. This is useful if you're storing the uploaded data yourself and don't want future handlers to store a copy of the data."
+# 1fd1af986fd34bb6837867ca109e6fbd
+msgid "Return ``None`` from ``receive_data_chunk`` to short-circuit remaining upload handlers from getting this chunk. This is useful if you're storing the uploaded data yourself and don't want future handlers to store a copy of the data."
 msgstr ""
 
 #: ../../topics/http/file-uploads.txt:377
@@ -12888,7 +13052,22 @@ msgid "It's recommended to leave the :setting:`SESSION_COOKIE_HTTPONLY` setting 
 msgstr ""
 
 #: ../../topics/http/sessions.txt:127
-# f70ca135146a461491f83feefa132edd
+# b55e0fd754314d9b96736494031628cb
+msgid "**If the SECRET_KEY is not kept secret and you are using the** :class:`~django.contrib.sessions.serializers.PickleSerializer`, **this can lead to arbitrary remote code execution.**"
+msgstr ""
+
+#: ../../topics/http/sessions.txt:131
+# b7cb31484f79407796d18aa8f57c6c22
+msgid "An attacker in possession of the :setting:`SECRET_KEY` can not only generate falsified session data, which your site will trust, but also remotely execute arbitrary code, as the data is serialized using pickle."
+msgstr ""
+
+#: ../../topics/http/sessions.txt:135
+# a6e704404bf140fd941d486e01795beb
+msgid "If you use cookie-based sessions, pay extra care that your secret key is always kept completely secret, for any system which might be remotely accessible."
+msgstr ""
+
+#: ../../topics/http/sessions.txt:139
+# 54801e8ff1bc41859e17b3708fa770ff
 msgid "**The session data is signed but not encrypted**"
 msgstr ""
 
@@ -13007,9 +13186,9 @@ msgstr ""
 msgid "If ``value`` is an integer, the session will expire after that many seconds of inactivity. For example, calling ``request.session.set_expiry(300)`` would make the session expire in 5 minutes."
 msgstr ""
 
-#: ../../topics/http/sessions.txt:243
-# fe811d805d2d470e9daf8a675a8950b5
-msgid "If ``value`` is a ``datetime`` or ``timedelta`` object, the session will expire at that specific date/time."
+#: ../../topics/http/sessions.txt:255
+# d852b0f6b5a94cec88df31e20a189d65
+msgid "If ``value`` is a ``datetime`` or ``timedelta`` object, the session will expire at that specific date/time. Note that ``datetime`` and ``timedelta`` values are only serializable if you are using the :class:`~django.contrib.sessions.serializers.PickleSerializer`."
 msgstr ""
 
 #: ../../topics/http/sessions.txt:246
@@ -13067,8 +13246,53 @@ msgstr ""
 msgid "Removes expired sessions from the session store. This class method is called by :djadmin:`clearsessions`."
 msgstr ""
 
-#: ../../topics/http/sessions.txt:292
-# a3f7eb8bcfc5487ba36aff23baeb2e53
+#: ../../topics/http/sessions.txt:308
+# c33067a4595446edb4b412cc88be1876
+msgid "Session serialization"
+msgstr ""
+
+#: ../../topics/http/sessions.txt:312
+# f4fd945f65d746d388c326e36e8042e5
+msgid "Before version 1.6, Django defaulted to using :mod:`pickle` to serialize session data before storing it in the backend. If you're using the :ref:`signed cookie session backend<cookie-session-backend>` and :setting:`SECRET_KEY` is known by an attacker, the attacker could insert a string into his session which, when unpickled, executes arbitrary code on the server. The technique for doing so is simple and easily available on the internet. Although the cookie session storage signs the cookie-stored data to prevent tampering, a :setting:`SECRET_KEY` leak immediately escalates to a remote code execution vulnerability."
+msgstr ""
+
+#: ../../topics/http/sessions.txt:322
+# 3d8bd208fc364c159d018579de1e87f2
+msgid "This attack can be mitigated by serializing session data using JSON rather than :mod:`pickle`. To facilitate this, Django 1.5.3 introduced a new setting, :setting:`SESSION_SERIALIZER`, to customize the session serialization format. For backwards compatibility, this setting defaults to using :class:`django.contrib.sessions.serializers.PickleSerializer` in Django 1.5.x, but, for security hardening, defaults to :class:`django.contrib.sessions.serializers.JSONSerializer` in Django 1.6. If you upgrade and switch from pickle to JSON, sessions created before the upgrade will be lost. Even with the caveats described in :ref:`custom-serializers`, we highly recommend using JSON serialization *especially if you are using the cookie backend*."
+msgstr ""
+
+#: ../../topics/http/sessions.txt:335
+# c3efd2bb6e294eb3ad9595dfc1a005c5
+msgid "Bundled Serializers"
+msgstr ""
+
+#: ../../topics/http/sessions.txt:339
+# 20f8bd1a878e4e13894ddb5a152d8600
+msgid "A wrapper around the JSON serializer from :mod:`django.core.signing`. Can only serialize basic data types. See the :ref:`custom-serializers` section for more details."
+msgstr ""
+
+#: ../../topics/http/sessions.txt:345
+# 164ffedf64744e1bbe94268c23bbfda0
+msgid "Supports arbitrary Python objects, but, as described above, can lead to a remote code execution vulnerability if :setting:`SECRET_KEY` becomes known by an attacker."
+msgstr ""
+
+#: ../../topics/http/sessions.txt:352
+# 59264c1ccca84e42b649bf0ec11a5d87
+msgid "Write Your Own Serializer"
+msgstr ""
+
+#: ../../topics/http/sessions.txt:354
+# 3ad5fac0a59247ca89cc8fbb265d4e50
+msgid "Note that unlike :class:`~django.contrib.sessions.serializers.PickleSerializer`, the :class:`~django.contrib.sessions.serializers.JSONSerializer` cannot handle arbitrary Python data types. As is often the case, there is a trade-off between convenience and security. If you wish to store more advanced data types including ``datetime`` and ``Decimal`` in JSON backed sessions, you will need to write a custom serializer (or convert such values to a JSON serializable object before storign them in ``request.session``). While serializing these values is fairly straightforward (``django.core.serializers.json.DateTimeAwareJSONEncoder`` may be helpful), writing a decoder that can reliably get back the same thing that you put in is more fragile. For example, you run the risk of returning a ``datetime`` that was actually a string that just happened to be in the same format chosen for ``datetime``\\s)."
+msgstr ""
+
+#: ../../topics/http/sessions.txt:368
+# 1f08cdea1b624398a308db4b0dc14dab
+msgid "Your serializer class must implement two methods, ``dumps(self, obj)`` and ``loads(self, data)``, to serialize and deserialize the dictionary of session data, respectively."
+msgstr ""
+
+#: ../../topics/http/sessions.txt:373
+# 71d6644fb1a3450e9e4e53244eb4c78a
 msgid "Session object guidelines"
 msgstr ""
 
@@ -13432,9 +13656,9 @@ msgstr ""
 msgid "Technical details"
 msgstr ""
 
-#: ../../topics/http/sessions.txt:626
-# 02fba2f85f9a47bc8c79aca002f4db66
-msgid "The session dictionary should accept any pickleable Python object. See the :mod:`pickle` module for more information."
+#: ../../topics/http/sessions.txt:708
+# 2ade1dad22b74532b0a4989dfe9a42a7
+msgid "The session dictionary accepts any :mod:`json` serializable value when using :class:`~django.contrib.sessions.serializers.JSONSerializer` or any pickleable Python object when using :class:`~django.contrib.sessions.serializers.PickleSerializer`. See the :mod:`pickle` module for more information."
 msgstr ""
 
 #: ../../topics/http/sessions.txt:629
@@ -13762,8 +13986,8 @@ msgid "``get_list_or_404``"
 msgstr ""
 
 #: ../../topics/http/shortcuts.txt:277
-# f1106e545a864fd380768e86b63ecc18
-msgid "Returns the result of :meth:`~django.db.models.query.QuerySet.filter()` on a given model manager, raising :class:`~django.http.Http404` if the resulting list is empty."
+# 6320d0c21c2b4d1ba008203f8473f2db
+msgid "Returns the result of :meth:`~django.db.models.query.QuerySet.filter()` on a given model manager cast to a list, raising :class:`~django.http.Http404` if the resulting list is empty."
 msgstr ""
 
 #: ../../topics/http/shortcuts.txt:285
@@ -14192,8 +14416,8 @@ msgid "The :func:`django.conf.urls.url` function can take an optional third argu
 msgstr ""
 
 #: ../../topics/http/urls.txt:409
-# 4135cd382dc748d7afe1334d473b7e1c
-msgid "In this example, for a request to ``/blog/2005/``, Django will call ``blog.views.year_archive(year='2005', foo='bar')``."
+# 1ba5e7f9d9ac49ec87dd46e6dc9ee526
+msgid "In this example, for a request to ``/blog/2005/``, Django will call ``blog.views.year_archive(request, year='2005', foo='bar')``."
 msgstr ""
 
 #: ../../topics/http/urls.txt:412
@@ -16659,18 +16883,18 @@ msgid "The script should be run from one of two places:"
 msgstr ""
 
 #: ../../topics/i18n/translation.txt:1202
-# 629817c7c99044e99bdf0db143c62f4a
-msgid "The root directory of your Django project."
+# 3a888af221a84f3683d0f00a0da33a60
+msgid "The root directory of your Django project (the one that contains ``manage.py``)."
 msgstr ""
 
-#: ../../topics/i18n/translation.txt:1203
-# 38ea054ac47641f79f73445d1dafd6b3
-msgid "The root directory of your Django app."
+#: ../../topics/i18n/translation.txt:1204
+# af24ec620dcd49e6bd8ac616d8d72a1c
+msgid "The root directory of one of your Django apps."
 msgstr ""
 
-#: ../../topics/i18n/translation.txt:1205
-# 5337b28b4e6f4f99836733d4e3a43fc9
-msgid "The script runs over your project source tree or your application source tree and pulls out all strings marked for translation. It creates (or updates) a message file in the directory ``locale/LANG/LC_MESSAGES``. In the ``de`` example, the file will be ``locale/de/LC_MESSAGES/django.po``."
+#: ../../topics/i18n/translation.txt:1206
+# 09539d6f7b274a43a587254b88fcdf84
+msgid "The script runs over your project source tree or your application source tree and pulls out all strings marked for translation (see :ref:`how-django-discovers-translations` and be sure :setting:`LOCALE_PATHS` is configured correctly). It creates (or updates) a message file in the directory ``locale/LANG/LC_MESSAGES``. In the ``de`` example, the file will be ``locale/de/LC_MESSAGES/django.po``."
 msgstr ""
 
 #: ../../topics/i18n/translation.txt:1210
@@ -16983,19 +17207,19 @@ msgstr ""
 msgid "Behind the scenes, Django has a very flexible model of deciding which language should be used -- installation-wide, for a particular user, or both."
 msgstr ""
 
-#: ../../topics/i18n/translation.txt:1513
-# d1cb69364aca477fb846d414f2f19a55
-msgid "To set an installation-wide language preference, set :setting:`LANGUAGE_CODE`. Django uses this language as the default translation -- the final attempt if no other translator finds a translation."
+#: ../../topics/i18n/translation.txt:1516
+# 5317796cdf29421b84e893956b28a84a
+msgid "To set an installation-wide language preference, set :setting:`LANGUAGE_CODE`. Django uses this language as the default translation -- the final attempt if no better matching translation is found through one of the methods employed by the locale middleware (see below)."
 msgstr ""
 
-#: ../../topics/i18n/translation.txt:1517
-# b52a0c5eb3ce4e0fa84571e00085aebc
-msgid "If all you want to do is run Django with your native language, and a language file is available for it, all you need to do is set :setting:`LANGUAGE_CODE`."
+#: ../../topics/i18n/translation.txt:1521
+# c56ac54e07094a6cb44cb47a89e68ca1
+msgid "If all you want is to run Django with your native language all you need to do is set :setting:`LANGUAGE_CODE` and make sure the corresponding :term:`message files <message file>` and their compiled versions (``.mo``) exist."
 msgstr ""
 
-#: ../../topics/i18n/translation.txt:1520
-# 6aa60ee2e4b94087b13bb3a5c4f6971f
-msgid "If you want to let each individual user specify which language he or she prefers, use ``LocaleMiddleware``. ``LocaleMiddleware`` enables language selection based on data from the request. It customizes content for each user."
+#: ../../topics/i18n/translation.txt:1525
+# a77aa6f3e9404a32b8b14955c0155db7
+msgid "If you want to let each individual user specify which language he or she prefers, then you also need to use use the ``LocaleMiddleware``. ``LocaleMiddleware`` enables language selection based on data from the request. It customizes content for each user."
 msgstr ""
 
 #: ../../topics/i18n/translation.txt:1524
@@ -19526,8 +19750,13 @@ msgstr ""
 msgid "Here are a couple of example settings::"
 msgstr ""
 
-#: ../../topics/settings.txt:20
-# 07f106c83ab44ce4a5a8a2fe3ea5b36a
+#: ../../topics/settings.txt:22
+# 869af768671d4c37995c932a76ec79f2
+msgid "If you set :setting:`DEBUG` to ``False``, you also need to properly set the :setting:`ALLOWED_HOSTS` setting."
+msgstr ""
+
+#: ../../topics/settings.txt:25
+# ca5f537399de49a3927ce258b0e93ea2
 msgid "Because a settings file is a Python module, the following apply:"
 msgstr ""
 
@@ -20166,8 +20395,13 @@ msgstr ""
 msgid "By default, the ``Signer`` class uses the :setting:`SECRET_KEY` setting to generate signatures. You can use a different secret by passing it to the ``Signer`` constructor::"
 msgstr ""
 
-#: ../../topics/signing.txt:80
-# b06926d67f764a4fb9178262782f94bb
+#: ../../topics/signing.txt:79
+# 2386b4a21deb4121a5e267a609382422
+msgid "Returns a signer which uses ``key`` to generate signatures and ``sep`` to separate values."
+msgstr ""
+
+#: ../../topics/signing.txt:83
+# b7c8449670f24f03988dad7140ac614d
 msgid "Using the salt argument"
 msgstr ""
 
@@ -20196,8 +20430,18 @@ msgstr ""
 msgid "``TimestampSigner`` is a subclass of :class:`~Signer` that appends a signed timestamp to the value. This allows you to confirm that a signed value was created within a specified period of time::"
 msgstr ""
 
-#: ../../topics/signing.txt:130
-# 20b690763c1f4baaa8ae1f0da7661036
+#: ../../topics/signing.txt:134
+# e0bf9c3671e341299ccfebd75cba78bf
+msgid "Sign ``value`` and append current timestamp to it."
+msgstr ""
+
+#: ../../topics/signing.txt:138
+# d3861c14b61e4161b7d19e4fa066b1ba
+msgid "Checks if ``value`` was signed less than ``max_age`` seconds ago, otherwise raises ``SignatureExpired``."
+msgstr ""
+
+#: ../../topics/signing.txt:142
+# 383d47f36a314e17b68eae1c5d2286ab
 msgid "Protecting complex data structures"
 msgstr ""
 
@@ -20206,14 +20450,14 @@ msgstr ""
 msgid "If you wish to protect a list, tuple or dictionary you can do so using the signing module's ``dumps`` and ``loads`` functions. These imitate Python's pickle module, but use JSON serialization under the hood. JSON ensures that even if your :setting:`SECRET_KEY` is stolen an attacker will not be able to execute arbitrary commands by exploiting the pickle format.::"
 msgstr ""
 
-#: ../../topics/signing.txt:147
-# 9bde9e53cffd40b1a3428824fff0a5bb
-msgid "Returns URL-safe, sha1 signed base64 compressed JSON string."
+#: ../../topics/signing.txt:159
+# 535484c128b74384915bfe7747c92f2b
+msgid "Returns URL-safe, sha1 signed base64 compressed JSON string. Serialized object is signed using :class:`~TimestampSigner`."
 msgstr ""
 
-#: ../../topics/signing.txt:151
-# 71283ee4f13c4f95b687594745b78e04
-msgid "Reverse of dumps(), raises ``BadSignature`` if signature fails."
+#: ../../topics/signing.txt:164
+# ac5be39ba43249e19c094e46f56ce502
+msgid "Reverse of ``dumps()``, raises ``BadSignature`` if signature fails. Checks ``max_age`` (in seconds) if given."
 msgstr ""
 
 #: ../../topics/templates.txt:3
@@ -20257,8 +20501,8 @@ msgid "A template contains **variables**, which get replaced with values when th
 msgstr ""
 
 #: ../../topics/templates.txt:47
-# c2e5f320fcac422dbdc6dfb6d13e01a3
-msgid "Below is a minimal template that illustrates a few basics. Each element will be explained later in this document.::"
+# de2229a32a3a401981efa9eeb32ac8a6
+msgid "Below is a minimal template that illustrates a few basics. Each element will be explained later in this document."
 msgstr ""
 
 #: ../../topics/templates.txt:69
@@ -21821,8 +22065,8 @@ msgid "Simulate GET and POST requests on a URL and observe the response -- every
 msgstr ""
 
 #: ../../topics/testing/overview.txt:365
-# ec60a663eeea4492a8e32b3b6ad46c6d
-msgid "Test that the correct view is executed for a given URL."
+# 0f41ba10004442679f2f1bd7ca68ec90
+msgid "See the chain of redirects (if any) and check the URL and status code at each step."
 msgstr ""
 
 #: ../../topics/testing/overview.txt:367
@@ -21835,9 +22079,9 @@ msgstr ""
 msgid "Note that the test client is not intended to be a replacement for Selenium_ or other \"in-browser\" frameworks. Django's test client has a different focus. In short:"
 msgstr ""
 
-#: ../../topics/testing/overview.txt:374
-# bccc5dae1ebf431e824d159ad7b8d426
-msgid "Use Django's test client to establish that the correct view is being called and that the view is collecting the correct context data."
+#: ../../topics/testing/overview.txt:375
+# f784bd7be44b4c6db03ecc4131a301e1
+msgid "Use Django's test client to establish that the correct template is being rendered and that the template is passed the correct context data."
 msgstr ""
 
 #: ../../topics/testing/overview.txt:377

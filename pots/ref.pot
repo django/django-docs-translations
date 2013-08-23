@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django 1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-08 14:28\n"
+"POT-Creation-Date: 2013-08-23 14:23\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -5622,8 +5622,8 @@ msgid "The name of the foreign key on the model. In most cases this will be deal
 msgstr ""
 
 #: ../../ref/contrib/admin/index.txt:1588
-# 555f6f67f19e4dd2b7e3553dcd460ea6
-msgid "This defaults to ``BaseInlineFormSet``. Using your own formset can give you many possibilities of customization. Inlines are built around :ref:`model formsets <model-formsets>`."
+# 39fa2d5d766d426e930ed2f773e9c819
+msgid "This defaults to :class:`~django.forms.models.BaseInlineFormSet`. Using your own formset can give you many possibilities of customization. Inlines are built around :ref:`model formsets <model-formsets>`."
 msgstr ""
 
 #: ../../ref/contrib/admin/index.txt:1594
@@ -5677,8 +5677,8 @@ msgid "Specifies whether or not inline objects can be deleted in the inline. Def
 msgstr ""
 
 #: ../../ref/contrib/admin/index.txt:1656
-# fd01ce59840842398f3e11b51f00a0b7
-msgid "Returns a ``BaseInlineFormSet`` class for use in admin add/change views. See the example for :class:`ModelAdmin.get_formsets`."
+# 909cae79a6a64bee80187d8fdc0bdc1d
+msgid "Returns a :class:`~django.forms.models.BaseInlineFormSet` class for use in admin add/change views. See the example for :class:`ModelAdmin.get_formsets`."
 msgstr ""
 
 #: ../../ref/contrib/admin/index.txt:1660
@@ -5951,8 +5951,13 @@ msgstr ""
 msgid "Path to a custom template that will be used by the admin site main index view."
 msgstr ""
 
-#: ../../ref/contrib/admin/index.txt:1974
-# a247b998ff4848c7835d8e87ec2eab64
+#: ../../ref/contrib/admin/index.txt:1975
+# 1fec892fe45844619d850ecc333a3a32
+msgid "Path to a custom template that will be used by the admin site app index view."
+msgstr ""
+
+#: ../../ref/contrib/admin/index.txt:1979
+# abfa6a155d9c4c40b81f0ef0cc3bf733
 msgid "Path to a custom template that will be used by the admin site login view."
 msgstr ""
 
@@ -6403,8 +6408,8 @@ msgid "Always returns ``False``. This is a way of differentiating :class:`~djang
 msgstr ""
 
 #: ../../ref/contrib/auth.txt:114
-# f0220a652d884195a0f19e9ea2857b3b
-msgid "Always returns ``True`` (as opposed to ``AnonymousUser.is_authenticated()`` which always returns ``False``). This is a way to tell if the user has been authenticated. This does not imply any permissions, and doesn't check if the user is active - it only indicates that ``request.user`` has been populated by the :class:`~django.contrib.auth.middleware.AuthenticationMiddleware` with a :class:`~django.contrib.auth.models.User` object representing the currently logged-in user."
+# 82709495b1ca4f95b5be74aaba50d346
+msgid "Always returns ``True`` (as opposed to ``AnonymousUser.is_authenticated()`` which always returns ``False``). This is a way to tell if the user has been authenticated. This does not imply any permissions, and doesn't check if the user is active or has a valid session. Even though normally you will call this method on ``request.user`` to find out whether it has been populated by the :class:`~django.contrib.auth.middleware.AuthenticationMiddleware` (representing the currently logged-in user), you should know this method returns ``True`` for any :class:`~django.contrib.auth.models.User` instance."
 msgstr ""
 
 #: ../../ref/contrib/auth.txt:125
@@ -8405,8 +8410,8 @@ msgid "Returns a ``GenericInlineFormSet`` using :func:`~django.forms.models.mode
 msgstr ""
 
 #: ../../ref/contrib/contenttypes.txt:500
-# cb4564684bdd4010a36a6b94e8a4a30e
-msgid "You must provide ``ct_field`` and ``object_id`` if they different from the defaults, ``content_type`` and ``object_id`` respectively. Other parameters are similar to those documented in :func:`~django.forms.models.modelformset_factory` and :func:`~django.forms.models.inlineformset_factory`."
+# bdea560bcf5542b285f912538b6968bd
+msgid "You must provide ``ct_field`` and ``fk_field`` if they are different from the defaults, ``content_type`` and ``object_id`` respectively. Other parameters are similar to those documented in :func:`~django.forms.models.modelformset_factory` and :func:`~django.forms.models.inlineformset_factory`."
 msgstr ""
 
 #: ../../ref/contrib/csrf.txt:3
@@ -9249,8 +9254,13 @@ msgstr ""
 msgid "You can also set it up as a \"catchall\" pattern. In this case, it is important to place the pattern at the end of the other urlpatterns::"
 msgstr ""
 
-#: ../../ref/contrib/flatpages.txt:88
-# 8b872d401eec4b91a5c9be6937be09cf
+#: ../../ref/contrib/flatpages.txt:90
+# 38d14ca8cc1c4963b548d581f80ef902
+msgid "If you set :setting:`APPEND_SLASH` to ``False``, you must remove the slash in the catchall pattern or flatpages without a trailing slash will not be matched."
+msgstr ""
+
+#: ../../ref/contrib/flatpages.txt:94
+# 1746914dd9f64dc2838f26d4f5cf2c2e
 msgid "Another common setup is to use flat pages for a limited set of known pages and to hard code the urls, so you can reference them with the :ttag:`url` template tag::"
 msgstr ""
 
@@ -9728,8 +9738,8 @@ msgid "This template expects a ``wizard`` object that has various items attached
 msgstr ""
 
 #: ../../ref/contrib/formtools/form-wizard.txt:168
-# 871d322d6f9b4670bb83f553ff08f68f
-msgid "``form`` -- The :class:`~django.forms.Form` or :class:`~django.forms.formset.BaseFormSet` instance for the current step (either empty or with errors)."
+# b7e2a7a161184c69bc84e226bb6a2836
+msgid "``form`` -- The :class:`~django.forms.Form` or :class:`~django.forms.formsets.BaseFormSet` instance for the current step (either empty or with errors)."
 msgstr ""
 
 #: ../../ref/contrib/formtools/form-wizard.txt:172
@@ -18817,13 +18827,13 @@ msgid "The \"local flavor\" add-ons"
 msgstr ""
 
 #: ../../ref/contrib/localflavor.txt:9
-# 1ac26fd0656649ed9d26a14ab6930109
-msgid "Historically, Django has shipped with ``django.contrib.localflavor`` -- assorted pieces of code that are useful for particular countries or cultures. Starting with Django 1.5, we've started the process of moving the code to outside packages (i.e., packages distributed separately from Django), for easier maintenance and to trim the size of Django's codebase."
+# 8d0d8d7de8784cebbc5b01a0a9653b92
+msgid "Historically, Django has shipped with ``django.contrib.localflavor`` -- assorted pieces of code that are useful for particular countries or cultures. Starting with Django 1.5, we've started the process of moving the code to an external package (i.e., a package distributed separately from Django), for easier maintenance and to trim the size of Django's codebase."
 msgstr ""
 
 #: ../../ref/contrib/localflavor.txt:15
-# e7a2c9105c54412aa20653dd2477fb59
-msgid "The localflavor packages are named ``django-localflavor-*``, where the asterisk is an `ISO 3166 country code`_. For example: ``django-localflavor-us`` is the localflavor package for the U.S.A."
+# 031357067c6946289a34d9f80979d30f
+msgid "The new localflavor package is named ``django-localflavor``, with a main module called ``localflavor`` and many subpackages using an `ISO 3166 country code`_. For example: ``localflavor.us`` is the localflavor package for the U.S.A."
 msgstr ""
 
 #: ../../ref/contrib/localflavor.txt:19
@@ -18846,19 +18856,19 @@ msgstr ""
 msgid "How to migrate"
 msgstr ""
 
-#: ../../ref/contrib/localflavor.txt:45
-# 3b92f14c65ec4948aabd24a600d8d945
-msgid "If you've used the old ``django.contrib.localflavor`` package, follow these two easy steps to update your code:"
+#: ../../ref/contrib/localflavor.txt:46
+# a246b9aefdc841009612c8773f1b0d21
+msgid "If you've used the old ``django.contrib.localflavor`` package or one of the temporary ``django-localflavor-*`` releases, follow these two easy steps to update your code:"
 msgstr ""
 
-#: ../../ref/contrib/localflavor.txt:48
-# 2012f7203c7640cfaa2cd7f020ebc6b0
-msgid "Install the appropriate third-party ``django-localflavor-*`` package(s). Go to https://github.com/django/ and find the package for your country."
+#: ../../ref/contrib/localflavor.txt:50
+# 053241f008824c74a91ccce3acd7d55b
+msgid "Install the third-party ``django-localflavor`` package from PyPI."
 msgstr ""
 
-#: ../../ref/contrib/localflavor.txt:51
-# 671371167b1d4cc2997e7e77daba8dd9
-msgid "Change your app's import statements to reference the new packages."
+#: ../../ref/contrib/localflavor.txt:52
+# 7bfb0e4d07d940f8b967770b5447e3f2
+msgid "Change your app's import statements to reference the new package."
 msgstr ""
 
 #: ../../ref/contrib/localflavor.txt:53
@@ -18871,9 +18881,9 @@ msgstr ""
 msgid "...to this::"
 msgstr ""
 
-#: ../../ref/contrib/localflavor.txt:61
-# b154c29780164c3da64d37e21038c313
-msgid "The code in the new packages is the same (it was copied directly from Django), so you don't have to worry about backwards compatibility in terms of functionality. Only the imports have changed."
+#: ../../ref/contrib/localflavor.txt:62
+# ab21705b8cdb41bdabd3376a054c5dad
+msgid "The code in the new package is the same (it was copied directly from Django), so you don't have to worry about backwards compatibility in terms of functionality. Only the imports have changed."
 msgstr ""
 
 #: ../../ref/contrib/localflavor.txt:68
@@ -18896,263 +18906,43 @@ msgstr ""
 msgid "Supported countries"
 msgstr ""
 
-#: ../../ref/contrib/localflavor.txt:82
-# 8b58606792c146f5aba0365dec79daad
-msgid "The following countries have django-localflavor- packages."
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:84
-# 639a395642434f189c1b11c59b2080a0
-msgid "Argentina: https://github.com/django/django-localflavor-ar"
+#: ../../ref/contrib/localflavor.txt:83
+# 967caab83a704e9184e120f937861aa5
+msgid "See the official documentation for more information:"
 msgstr ""
 
 #: ../../ref/contrib/localflavor.txt:85
-# b7e5bdb5d8d344fc8ccb5afee691706c
-msgid "Australia: https://github.com/django/django-localflavor-au"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:86
-# 712866ad9dec443e90f2acf74c837ad4
-msgid "Austria: https://github.com/django/django-localflavor-at"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:87
-# 1a42d1b5ea864fa0a4f7eb5801280e02
-msgid "Belgium: https://github.com/django/django-localflavor-be"
+# 73b13a059b6d4de3805638d070682e85
+msgid "https://django-localflavor.readthedocs.org/"
 msgstr ""
 
 #: ../../ref/contrib/localflavor.txt:88
-# 627435fbb5cb4ac4922f0a23038b93c9
-msgid "Brazil: https://github.com/django/django-localflavor-br"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:89
-# b6a13efbf1b5426bae672ec41d514549
-msgid "Canada: https://github.com/django/django-localflavor-ca"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:90
-# 5d9330cbb29e4a54aa62810f6279eced
-msgid "Chile: https://github.com/django/django-localflavor-cl"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:91
-# de6e6644dd1f4513866c38f95e0e1ea6
-msgid "China: https://github.com/django/django-localflavor-cn"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:92
-# ef5c56f409954774ae3335ddbebfb1d4
-msgid "Colombia: https://github.com/django/django-localflavor-co"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:93
-# 77c8799268ad48a5ad588321b2786e9b
-msgid "Croatia: https://github.com/django/django-localflavor-cr"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:94
-# c4a61a8206dd40ffbf2e5ddbd0735898
-msgid "Czech Republic: https://github.com/django/django-localflavor-cz"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:95
-# e173b996589d49cf933bef752da0b6f7
-msgid "Ecuador: https://github.com/django/django-localflavor-ec"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:96
-# 0881e00b71b24558837537cb8723f3e4
-msgid "Finland: https://github.com/django/django-localflavor-fi"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:97
-# 0a8780179079482a8db60411f00f727e
-msgid "France: https://github.com/django/django-localflavor-fr"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:98
-# b7699afa9a2249cf8932c775851fc3f4
-msgid "Germany: https://github.com/django/django-localflavor-de"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:99
-# f54f3475ac664e018ffb7628c5ff3936
-msgid "Greece: https://github.com/spapas/django-localflavor-gr"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:100
-# 72da45d454544bf8bea5da7d38332874
-msgid "Hong Kong: https://github.com/django/django-localflavor-hk"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:101
-# 79ab3e2f4d3f452fbd86ed7e46ac6793
-msgid "Iceland: https://github.com/django/django-localflavor-is"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:102
-# 8fb3688542f84ebb8958993b2db51f1e
-msgid "India: https://github.com/django/django-localflavor-in"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:103
-# 024c1dda00744cf3a3db33758b639c38
-msgid "Indonesia: https://github.com/django/django-localflavor-id"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:104
-# 3727079ffaf84486a6a1da5e1fc8ba2b
-msgid "Ireland: https://github.com/django/django-localflavor-ie"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:105
-# 443979dbba8b42c3829344d0acce3aad
-msgid "Israel: https://github.com/django/django-localflavor-il"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:106
-# 1ce4e35e15e84d5ba3a5bfa85051887f
-msgid "Italy: https://github.com/django/django-localflavor-it"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:107
-# e30bf4009ab140feabb0cd1b049bfd66
-msgid "Japan: https://github.com/django/django-localflavor-jp"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:108
-# e2ce3f8dff874e41b0f15bfb6268c1fe
-msgid "Kuwait: https://github.com/django/django-localflavor-kw"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:109
-# 80e28b987f9942d1997798bdd8437b97
-msgid "Lithuania: https://github.com/simukis/django-localflavor-lt"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:110
-# cb41dc8c8103408ba9765b9e33f5d194
-msgid "Macedonia: https://github.com/django/django-localflavor-mk"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:111
-# 8c4c1f5587a74f74a4ada20bac84eac9
-msgid "Mexico: https://github.com/django/django-localflavor-mx"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:112
-# 69cbd16f355a423191d2eccfeaaf2c62
-msgid "The Netherlands: https://github.com/django/django-localflavor-nl"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:113
-# 8453a2789dd749ad957dbafe07ed7504
-msgid "Norway: https://github.com/django/django-localflavor-no"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:114
-# 61a4a73f10e74d82a0a9db7697135725
-msgid "Peru: https://github.com/django/django-localflavor-pe"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:115
-# acf5e90143c544498e7a4bee2a7fce5c
-msgid "Poland: https://github.com/django/django-localflavor-pl"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:116
-# 3a21ab13bd4b4bc6b7183ab5e758ef90
-msgid "Portugal: https://github.com/django/django-localflavor-pt"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:117
-# e87f89a5bccf441f9688ca028bbbb3d5
-msgid "Paraguay: https://github.com/django/django-localflavor-py"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:118
-# f49174c30af747689602769c630bfdb8
-msgid "Romania: https://github.com/django/django-localflavor-ro"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:119
-# 6f547fbc77944dcb8c7723f1b584d9d3
-msgid "Russia: https://github.com/django/django-localflavor-ru"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:120
-# fe66b6fb66c74f128c119d0dc0034815
-msgid "Slovakia: https://github.com/django/django-localflavor-sk"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:121
-# 571970f671214138a4c4090ec2845fe0
-msgid "Slovenia: https://github.com/django/django-localflavor-si"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:122
-# 25f46312b3194afe91f5bb4a29306194
-msgid "South Africa: https://github.com/django/django-localflavor-za"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:123
-# d330f03dc2d848938dbfbf355b5b1d2c
-msgid "Spain: https://github.com/django/django-localflavor-es"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:124
-# 1dd34309b41040a7b5cea63e09ab5e10
-msgid "Sweden: https://github.com/django/django-localflavor-se"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:125
-# dfcea730b3ff4352a461884611a7bd6f
-msgid "Switzerland: https://github.com/django/django-localflavor-ch"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:126
-# e3b180bd793b4903aec2720bf3a1db2a
-msgid "Turkey: https://github.com/django/django-localflavor-tr"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:127
-# 0183a32ae87547ca8060fd27f690ba6f
-msgid "United Kingdom: https://github.com/django/django-localflavor-gb"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:128
-# 39ee1aaa8a5749f49e0b0387a2955fc2
-msgid "United States of America: https://github.com/django/django-localflavor-us"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:129
-# 57bb7b9314b74f0f894edb5167766487
-msgid "Uruguay: https://github.com/django/django-localflavor-uy"
-msgstr ""
-
-#: ../../ref/contrib/localflavor.txt:132
-# a7c1cd07537a432da0b37c5156a2d4c5
+# e4fb19eca70e4e2aa59fb88e2d4cda6a
 msgid "django.contrib.localflavor.generic"
 msgstr ""
 
-#: ../../ref/contrib/localflavor.txt:134
-# f94f92a013a746499ba11d359375ca17
-msgid "The ``django.contrib.localflavor.generic`` package, which hasn't been removed from Django yet, contains useful code that is not specific to one particular country or culture. Currently, it defines date, datetime and split datetime input fields based on those from :doc:`forms </topics/forms/index>`, but with non-US default formats. Here's an example of how to use them::"
+#: ../../ref/contrib/localflavor.txt:90
+# 98a2b163bbff480c86f6b799d12610ef
+msgid "The ``django.contrib.localflavor.generic`` package, which hasn't been removed from Django 1.5 yet, contains useful code that is not specific to one particular country or culture. Currently, it defines date, datetime and split datetime input fields based on those from :doc:`forms </topics/forms/index>`, but with non-US default formats. Here's an example of how to use them::"
 msgstr ""
 
-#: ../../ref/contrib/localflavor.txt:147
-# 34daf8e0b61a4680bcfdfd246501e55a
+#: ../../ref/contrib/localflavor.txt:102
+# a579a7c8dc204327b55dde4f5462aad1
+msgid "Of course the same package can also be found in the ``django-localflavor`` packages and it's recommended to use that instead."
+msgstr ""
+
+#: ../../ref/contrib/localflavor.txt:106
+# e317276d51c24c898cc9069b9fd3e1e0
 msgid "Internationalization of localflavors"
 msgstr ""
 
-#: ../../ref/contrib/localflavor.txt:149
-# d90be32a0e834ca190d51cb34a28f33f
-msgid "To activate translations for a newly-created ``localflavor`` application, you must include the application's name (e.g. ``django_localflavor_jp``) in the :setting:`INSTALLED_APPS` setting, so the internationalization system can find the catalog, as explained in :ref:`how-django-discovers-translations`."
+#: ../../ref/contrib/localflavor.txt:108
+# 7283491b4d7c49f995e17b74f9da5227
+msgid "To activate translations for the ``localflavor`` application, you must include the application's name in the :setting:`INSTALLED_APPS` setting, so the internationalization system can find the catalog, as explained in :ref:`how-django-discovers-translations`."
 msgstr ""
 
-#: ../../ref/contrib/localflavor.txt:154
-# 826c4fbb31624773b5e85da80e5e95ce
+#: ../../ref/contrib/localflavor.txt:113
+# 8ae07ece9a474fc2a1f3b81c2e83697c
 msgid "If you're still using the legacy ``localflavor`` application, you must include :mod:`django.contrib.localflavor` in :setting:`INSTALLED_APPS` (that will raise a ``DeprecationWarning``)."
 msgstr ""
 
@@ -19301,8 +19091,8 @@ msgid "The messages framework can use different backends to store temporary mess
 msgstr ""
 
 #: ../../ref/contrib/messages.txt:57
-# fb21bac755ee48a4a4d168d5743b0a9f
-msgid "Django provides three built-in storage classes:"
+# 985cad022636446fb0735b7f40bbe409
+msgid "Django provides three built-in storage classes in :mod:`django.contrib.messages`:"
 msgstr ""
 
 #: ../../ref/contrib/messages.txt:61
@@ -20735,8 +20525,8 @@ msgid "The list of finder backends that know how to find static files in various
 msgstr ""
 
 #: ../../ref/contrib/staticfiles.txt:106
-# f66c3f93be884a3ebd82d73c59e2304d
-msgid "The default will find files stored in the :setting:`STATICFILES_DIRS` setting (using ``django.contrib.staticfiles.finders.FileSystemFinder``) and in a ``static`` subdirectory of each app (using ``django.contrib.staticfiles.finders.AppDirectoriesFinder``)"
+# 533f038aa54c40569f524022e3d6707d
+msgid "The default will find files stored in the :setting:`STATICFILES_DIRS` setting (using ``django.contrib.staticfiles.finders.FileSystemFinder``) and in a ``static`` subdirectory of each app (using ``django.contrib.staticfiles.finders.AppDirectoriesFinder``). If multiple files with the same name are present, the first file that is found will be used."
 msgstr ""
 
 #: ../../ref/contrib/staticfiles.txt:111
@@ -21162,8 +20952,8 @@ msgid "Instances of :class:`~django.contrib.syndication.views.Feed` classes are 
 msgstr ""
 
 #: ../../ref/contrib/syndication.txt:52
-# f5f450bdf554447db9e8d110af40976a
-msgid "This simple example, taken from `chicagocrime.org`_, describes a feed of the latest five news items::"
+# 98f7d14592144e25b600b316eb788bb8
+msgid "This simple example, taken from a hypothetical police beat news site describes a feed of the latest five news items::"
 msgstr ""
 
 #: ../../ref/contrib/syndication.txt:77
@@ -21236,14 +21026,14 @@ msgstr ""
 msgid "The framework also supports more complex feeds, via arguments."
 msgstr ""
 
-#: ../../ref/contrib/syndication.txt:160
-# 017dd49f4d18423484728711ccb8cf4a
-msgid "For example, `chicagocrime.org`_ offers an RSS feed of recent crimes for every police beat in Chicago. It'd be silly to create a separate :class:`~django.contrib.syndication.views.Feed` class for each police beat; that would violate the :ref:`DRY principle <dry>` and would couple data to programming logic. Instead, the syndication framework lets you access the arguments passed from your :doc:`URLconf </topics/http/urls>` so feeds can output items based on information in the feed's URL."
+#: ../../ref/contrib/syndication.txt:158
+# 98ec268b143f451e8963ee537dfd6e46
+msgid "For example, a website could offer an RSS feed of recent crimes for every police beat in a city. It'd be silly to create a separate :class:`~django.contrib.syndication.views.Feed` class for each police beat; that would violate the :ref:`DRY principle <dry>` and would couple data to programming logic. Instead, the syndication framework lets you access the arguments passed from your :doc:`URLconf </topics/http/urls>` so feeds can output items based on information in the feed's URL."
 msgstr ""
 
-#: ../../ref/contrib/syndication.txt:168
-# 167ade4c59b44208aabc4f367d10cebd
-msgid "On chicagocrime.org, the police-beat feeds are accessible via URLs like this:"
+#: ../../ref/contrib/syndication.txt:166
+# 97ec0a1f0e464620aa2451a79eaf41d5
+msgid "The police beat feeds could be accessible via URLs like this:"
 msgstr ""
 
 #: ../../ref/contrib/syndication.txt:170
@@ -21988,8 +21778,8 @@ msgid "Storage engines"
 msgstr ""
 
 #: ../../ref/databases.txt:154
-# 3b71481e860a41009820512e896d7cf6
-msgid "MySQL has several `storage engines`_ (previously called table types). You can change the default storage engine in the server configuration."
+# 6d9c5af0125b4702a307316fad57584d
+msgid "MySQL has several `storage engines`_. You can change the default storage engine in the server configuration."
 msgstr ""
 
 #: ../../ref/databases.txt:157
@@ -22512,8 +22302,8 @@ msgid "Threaded option"
 msgstr ""
 
 #: ../../ref/databases.txt:658
-# 3075011ab67445559b4b7c38bfce6fb4
-msgid "If you plan to run Django in a multithreaded environment (e.g. Apache in Windows using the default MPM module), then you **must** set the ``threaded`` option of your Oracle database configuration to True::"
+# 3c99bb6521744e38a90119a9741a8d68
+msgid "If you plan to run Django in a multithreaded environment (e.g. Apache using the the default MPM module on any modern operating system), then you **must** set the ``threaded`` option of your Oracle database configuration to True::"
 msgstr ""
 
 #: ../../ref/databases.txt:666
@@ -22917,9 +22707,9 @@ msgstr ""
 
 #: ../../ref/django-admin.txt:233
 #: ../../ref/django-admin.txt:1072
-# 7b2de9813f1b458db8c7e17cd37ef258
-# 150f44bee9284691b82ea4eea4e769c1
-msgid "--no-initial-data"
+# 2110afaa5a59467596ad5c633de31a8b
+# 854bda3f02cd4852a57f12828e0fa0a2
+msgid "``--no-initial-data``"
 msgstr ""
 
 #: ../../ref/django-admin.txt:237
@@ -25448,8 +25238,23 @@ msgstr ""
 msgid "Use this method to render the raw value of this field as it would be rendered by a ``Widget``::"
 msgstr ""
 
-#: ../../ref/forms/api.txt:689
-# 3c3b24fa300c4ee68e7ba6fb1fc66cf0
+#: ../../ref/forms/api.txt:688
+# e9ff2b4315514c009000aebc6aec12ba
+msgid "Use this property to render the ID of this field. For example, if you are manually constructing a ``<label>`` in your template (despite the fact that :meth:`~BoundField.label_tag` will do this for you):"
+msgstr ""
+
+#: ../../ref/forms/api.txt:696
+# dd1d772a7828429bb4bc71c9cef50b00
+msgid "By default, this will be the field's name prefixed by ``id_`` (\"``id_my_field``\" for the example above). You may modify the ID by setting :attr:`~django.forms.Widget.attrs` on the field's widget. For example, declaring a field like this::"
+msgstr ""
+
+#: ../../ref/forms/api.txt:703
+# 813c0b9cf4824939b6b73755be3fe0a8
+msgid "and using the template above, would render something like:"
+msgstr ""
+
+#: ../../ref/forms/api.txt:712
+# daf8e2cd1ce24786b9a8938a138d74cd
 msgid "Binding uploaded files to a form"
 msgstr ""
 
@@ -26866,8 +26671,8 @@ msgid "See :ref:`model-formsets` for example usage."
 msgstr ""
 
 #: ../../ref/forms/models.txt:44
-# c4f20c2332b045358a7fb734c391ddf4
-msgid "Returns an ``InlineFormSet`` using :func:`modelformset_factory` with defaults of ``formset=BaseInlineFormSet``, ``can_delete=True``, and ``extra=3``."
+# 5e84b49a6c274d9686a078fbfd6c66c8
+msgid "Returns an ``InlineFormSet`` using :func:`modelformset_factory` with defaults of ``formset=``:class:`~django.forms.models.BaseInlineFormSet`, ``can_delete=True``, and ``extra=3``."
 msgstr ""
 
 #: ../../ref/forms/models.txt:48
@@ -27260,13 +27065,18 @@ msgstr ""
 msgid "Django will then include the extra attributes in the rendered output:"
 msgstr ""
 
-#: ../../ref/forms/widgets.txt:169
-# 4488d47d27ae4e1c9d8247c9e98152f6
-msgid "Styling widget classes"
+#: ../../ref/forms/widgets.txt:165
+# 3b7e893c537b48828d0773f4738160c7
+msgid "You can also set the HTML ``id`` using :attr:`~Widget.attrs`. See :attr:`BoundField.id_for_label` for an example."
 msgstr ""
 
 #: ../../ref/forms/widgets.txt:171
-# 0173827b813c4cf1b83367d1a3476403
+# f07cf52426684a228cd07b14337933ae
+msgid "Styling widget classes"
+msgstr ""
+
+#: ../../ref/forms/widgets.txt:173
+# 74fb9357098e4b1b86373739ea295922
 msgid "With widgets, it is possible to add media (``css`` and ``javascript``) and more deeply customize their appearance and behavior."
 msgstr ""
 
@@ -27517,9 +27327,18 @@ msgstr ""
 #: ../../ref/forms/widgets.txt:427
 #: ../../ref/forms/widgets.txt:444
 #: ../../ref/forms/widgets.txt:461
-# 798a0ac5aa7c48ab9c5070d4c047ee92
-# 07a8f019fe04454fb60e883cf6ffb11a
-# f3cbacfc5dd14d2588e57891e01364b0
+# 4652aa73ca874b3e9ef3ba4d980b7d6e
+# b074a0fd346d4670af77e53aaa7b18a8
+# a36f0b2d35c540879f1b5bc2f755dc23
+msgid "Takes same arguments as :class:`TextInput`, with one more optional argument:"
+msgstr ""
+
+#: ../../ref/forms/widgets.txt:431
+#: ../../ref/forms/widgets.txt:448
+#: ../../ref/forms/widgets.txt:465
+# 55a118b311794966a7c644a734b0c73e
+# 315277c685924a48aa76d04a939c365b
+# da09b78db83046c09525079463289c16
 msgid "The format in which this field's initial value will be displayed."
 msgstr ""
 
@@ -27801,8 +27620,8 @@ msgid "Adds a few conveniences for perfectionists:"
 msgstr ""
 
 #: ../../ref/middleware.txt:39
-# 28bb84dae42549329b5790df6fb938aa
-msgid "Forbids access to user agents in the :setting:`DISALLOWED_USER_AGENTS` setting, which should be a list of strings."
+# a4c5f994a9a64d82a88373a6cba34690
+msgid "Forbids access to user agents in the :setting:`DISALLOWED_USER_AGENTS` setting, which should be a list of compiled regular expression objects."
 msgstr ""
 
 #: ../../ref/middleware.txt:42
@@ -28238,8 +28057,8 @@ msgid "This is enforced at the database level and by model validation. If you tr
 msgstr ""
 
 #: ../../ref/models/fields.txt:272
-# 7cd10bfd5c5c431b8ef29f2dfcf9f8a8
-msgid "This option is valid on all field types except :class:`ManyToManyField` and :class:`FileField`."
+# 9122e6a4f64549cca31b3f5545f64489
+msgid "This option is valid on all field types except :class:`ManyToManyField`, :class:`OneToOneField`, and :class:`FileField`."
 msgstr ""
 
 #: ../../ref/models/fields.txt:275
@@ -29031,8 +28850,8 @@ msgid "``ManyToManyField``"
 msgstr ""
 
 #: ../../ref/models/fields.txt:1120
-# fb484f5d62034a5993232fdc1116df6c
-msgid "A many-to-many relationship. Requires a positional argument: the class to which the model is related. This works exactly the same as it does for :class:`ForeignKey`, including all the options regarding :ref:`recursive <recursive-relationships>` and :ref:`lazy <lazy-relationships>` relationships."
+# 2271f25c8dd4413995c6437b4d207c41
+msgid "A many-to-many relationship. Requires a positional argument: the class to which the model is related, which works exactly the same as it does for :class:`ForeignKey`, including :ref:`recursive <recursive-relationships>` and :ref:`lazy <lazy-relationships>` relationships."
 msgstr ""
 
 #: ../../ref/models/fields.txt:1125
@@ -29723,8 +29542,8 @@ msgid "For every :class:`~django.db.models.DateField` and :class:`~django.db.mod
 msgstr ""
 
 #: ../../ref/models/instances.txt:664
-# 12a600a943e0494ea0d43a51c3827ffc
-msgid "Both methods accept optional keyword arguments, which should be in the format described in :ref:`Field lookups <field-lookups>`."
+# d11a35301391450581bd780886276661
+msgid "Both of these methods will perform their queries using the default manager for the model. If you need to emulate filtering used by a custom manager, or want to perform one-off custom filtering, both methods also accept optional keyword arguments, which should be in the format described in :ref:`Field lookups <field-lookups>`."
 msgstr ""
 
 #: ../../ref/models/instances.txt:667
@@ -30108,8 +29927,8 @@ msgid "The ``query`` attribute is an opaque object. It represents the internals 
 msgstr ""
 
 #: ../../ref/models/querysets.txt:113
-# 9b9fe88959a64a5889c39afa044aafc2
-msgid "Pickles of QuerySets are only valid for the version of Django that was used to generate them. If you generate a pickle using Django version N, there is no guarantee that pickle will be readable with Django version N+1. Pickles should not be used as part of a long-term archival strategy."
+# 44fb1305e41047abaa5667119543548b
+msgid "Pickles of ``QuerySets`` are only valid for the version of Django that was used to generate them. If you generate a pickle using Django version N, there is no guarantee that pickle will be readable with Django version N+1. Pickles should not be used as part of a long-term archival strategy."
 msgstr ""
 
 #: ../../ref/models/querysets.txt:122
@@ -30295,18 +30114,33 @@ msgstr ""
 msgid "Be cautious when ordering by fields in related models if you are also using :meth:`distinct()`. See the note in :meth:`distinct` for an explanation of how related model ordering can change the expected results."
 msgstr ""
 
-#: ../../ref/models/querysets.txt:302
-# c12752bd3cad46bd81b08b8db687f1ba
-msgid "It is permissible to specify a multi-valued field to order the results by (for example, a :class:`~django.db.models.ManyToManyField` field). Normally this won't be a sensible thing to do and it's really an advanced usage feature. However, if you know that your queryset's filtering or available data implies that there will only be one ordering piece of data for each of the main items you are selecting, the ordering may well be exactly what you want to do. Use ordering on multi-valued fields with care and make sure the results are what you expect."
+#: ../../ref/models/querysets.txt:303
+# b3bc53ff0ef149f4a8ca012c3d23ef8f
+msgid "It is permissible to specify a multi-valued field to order the results by (for example, a :class:`~django.db.models.ManyToManyField` field, or the reverse relation of a :class:`~django.db.models.ForeignKey` field)."
 msgstr ""
 
-#: ../../ref/models/querysets.txt:311
-# d63d349528634bb59f676c304f768c58
-msgid "There's no way to specify whether ordering should be case sensitive. With respect to case-sensitivity, Django will order results however your database backend normally orders them."
+#: ../../ref/models/querysets.txt:307
+# c153b0bc60014a8b99a22b65995d885c
+msgid "Consider this case::"
 msgstr ""
 
 #: ../../ref/models/querysets.txt:315
-# 8dfb01e3c84a41c480d1a326681fb92f
+# 7876a4577338465b8caf5985f1263c51
+msgid "Here, there could potentially be multiple ordering data for each ``Event``; each ``Event`` with multiple ``children`` will be returned multiple times into the new ``QuerySet`` that ``order_by()`` creates. In other words, using ``order_by()`` on the ``QuerySet`` could return more items than you were working on to begin with - which is probably neither expected nor useful."
+msgstr ""
+
+#: ../../ref/models/querysets.txt:322
+# fae191faab2c49b5abf3cc3522162f75
+msgid "Thus, take care when using multi-valued field to order the results. **If** you can be sure that there will only be one ordering piece of data for each of the items you're ordering, this approach should not present problems. If not, make sure the results are what you expect."
+msgstr ""
+
+#: ../../ref/models/querysets.txt:327
+# 70443e1fa06440e99a37daa0aba4e1bb
+msgid "There's no way to specify whether ordering should be case sensitive. With respect to case-sensitivity, Django will order results however your database backend normally orders them."
+msgstr ""
+
+#: ../../ref/models/querysets.txt:331
+# 1cae9d739bda4ca093c23851ae661137
 msgid "If you don't want any ordering to be applied to a query, not even the default ordering, call :meth:`order_by()` with no parameters."
 msgstr ""
 
@@ -30385,9 +30219,9 @@ msgstr ""
 msgid "This ability to specify field names is only available in PostgreSQL."
 msgstr ""
 
-#: ../../ref/models/querysets.txt:396
-# d7cab4aef9e34f6892abee5bf2bd0738
-msgid "When you specify field names, you *must* provide an ``order_by()`` in the QuerySet, and the fields in ``order_by()`` must start with the fields in ``distinct()``, in the same order."
+#: ../../ref/models/querysets.txt:412
+# c36900de24a84098a9c195d140c32f6b
+msgid "When you specify field names, you *must* provide an ``order_by()`` in the ``QuerySet``, and the fields in ``order_by()`` must start with the fields in ``distinct()``, in the same order."
 msgstr ""
 
 #: ../../ref/models/querysets.txt:400
@@ -30655,9 +30489,9 @@ msgstr ""
 msgid "This has a similar purpose to ``select_related``, in that both are designed to stop the deluge of database queries that is caused by accessing related objects, but the strategy is quite different."
 msgstr ""
 
-#: ../../ref/models/querysets.txt:752
-# 6583d51169f24d8ba6278871f2f40297
-msgid "``select_related`` works by creating a SQL join and including the fields of the related object in the SELECT statement. For this reason, ``select_related`` gets the related objects in the same database query. However, to avoid the much larger result set that would result from joining across a 'many' relationship, ``select_related`` is limited to single-valued relationships - foreign key and one-to-one."
+#: ../../ref/models/querysets.txt:768
+# 153813708d304afabb29304fa7683065
+msgid "``select_related`` works by creating a SQL join and including the fields of the related object in the ``SELECT`` statement. For this reason, ``select_related`` gets the related objects in the same database query. However, to avoid the much larger result set that would result from joining across a 'many' relationship, ``select_related`` is limited to single-valued relationships - foreign key and one-to-one."
 msgstr ""
 
 #: ../../ref/models/querysets.txt:759
@@ -30670,38 +30504,53 @@ msgstr ""
 msgid "For example, suppose you have these models::"
 msgstr ""
 
-#: ../../ref/models/querysets.txt:780
-# b38272d13f384b37b7ca2309d14c10c1
-msgid "and run this code::"
+#: ../../ref/models/querysets.txt:796
+# 2eff45a989f5492da3aa300b5d72ab8b
+msgid "and run::"
 msgstr ""
 
-#: ../../ref/models/querysets.txt:785
-# 9a24ea0312234697838c3b91a3a47b36
-msgid "The problem with this code is that it will run a query on the Toppings table for **every** item in the Pizza ``QuerySet``.  Using ``prefetch_related``, this can be reduced to two:"
+#: ../../ref/models/querysets.txt:801
+# 075bae43161340e5aa6473901863f4e3
+msgid "The problem with this is that every time ``Pizza.__unicode__()`` asks for ``self.toppings.all()`` it has to query the database, so ``Pizza.objects.all()`` will run a query on the Toppings table for **every** item in the Pizza ``QuerySet``."
 msgstr ""
 
-#: ../../ref/models/querysets.txt:791
-# c1d532d2680d48a0ae73b16acb7922cd
-msgid "All the relevant toppings will be fetched in a single query, and used to make ``QuerySets`` that have a pre-filled cache of the relevant results. These ``QuerySets`` are then used in the ``self.toppings.all()`` calls."
-msgstr ""
-
-#: ../../ref/models/querysets.txt:795
-# 06804db921e44452910a0004c16ad9fd
-msgid "The additional queries are executed after the QuerySet has begun to be evaluated and the primary query has been executed. Note that the result cache of the primary QuerySet and all specified related objects will then be fully loaded into memory, which is often avoided in other cases - even after a query has been executed in the database, QuerySet normally tries to make uses of chunking between the database to avoid loading all objects into memory before you need them."
-msgstr ""
-
-#: ../../ref/models/querysets.txt:803
-# 3706af8c813b46099d361ba9a275a263
-msgid "Also remember that, as always with QuerySets, any subsequent chained methods which imply a different database query will ignore previously cached results, and retrieve data using a fresh database query. So, if you write the following:"
+#: ../../ref/models/querysets.txt:806
+# d385a800a80e4daba4ab7c595cf1decd
+msgid "We can reduce to just two queries using ``prefetch_related``:"
 msgstr ""
 
 #: ../../ref/models/querysets.txt:810
-# 40cbbb92126c4996825904911af8aabb
-msgid "...then the fact that ``pizza.toppings.all()`` has been prefetched will not help you - in fact it hurts performance, since you have done a database query that you haven't used. So use this feature with caution!"
+# ed1866a7a3ab48bbaaa5566d175945c5
+msgid "This implies a ``self.toppings.all()`` for each ``Pizza``; now each time ``self.toppings.all()`` is called, instead of having to go to the database for the items, it will find them in a prefetched ``QuerySet`` cache that was populated in a single query."
 msgstr ""
 
-#: ../../ref/models/querysets.txt:814
-# b494c5c53d734b14a5ebc1a627106467
+#: ../../ref/models/querysets.txt:815
+# 9614e6968f78475ba240a5df130142f9
+msgid "That is, all the relevant toppings will have been fetched in a single query, and used to make ``QuerySets`` that have a pre-filled cache of the relevant results; these ``QuerySets`` are then used in the ``self.toppings.all()`` calls."
+msgstr ""
+
+#: ../../ref/models/querysets.txt:819
+# 965f5da0aa7043fab2ad6685562286a9
+msgid "The additional queries in ``prefetch_related()`` are executed after the ``QuerySet`` has begun to be evaluated and the primary query has been executed."
+msgstr ""
+
+#: ../../ref/models/querysets.txt:822
+# b12d34cbae2748ec98b610017029280b
+msgid "Note that the result cache of the primary ``QuerySet`` and all specified related objects will then be fully loaded into memory. This changes the typical behavior of ``QuerySets``, which normally try to avoid loading all objects into memory before they are needed, even after a query has been executed in the database."
+msgstr ""
+
+#: ../../ref/models/querysets.txt:830
+# 9896c396c2c84cf99c92cd7443dd9dd8
+msgid "Remember that, as always with ``QuerySets``, any subsequent chained methods which imply a different database query will ignore previously cached results, and retrieve data using a fresh database query. So, if you write the following:"
+msgstr ""
+
+#: ../../ref/models/querysets.txt:838
+# ed5f53069a004ea6925f0ee0492c8ffb
+msgid "...then the fact that ``pizza.toppings.all()`` has been prefetched will not help you. The ``prefetch_related('toppings')`` implied ``pizza.toppings.all()``, but ``pizza.toppings.filter()`` is a new and different query. The prefetched cache can't help here; in fact it hurts performance, since you have done a database query that you haven't used. So use this feature with caution!"
+msgstr ""
+
+#: ../../ref/models/querysets.txt:845
+# 1f66c66661e74a599eb5274e27b7b36a
 msgid "You can also use the normal join syntax to do related fields of related fields. Suppose we have an additional model to the example above::"
 msgstr ""
 
@@ -30745,9 +30594,9 @@ msgstr ""
 msgid "While ``prefetch_related`` supports prefetching ``GenericForeignKey`` relationships, the number of queries will depend on the data. Since a ``GenericForeignKey`` can reference data in multiple tables, one query per table referenced is needed, rather than one query for all the items. There could be additional queries on the ``ContentType`` table if the relevant rows have not already been fetched."
 msgstr ""
 
-#: ../../ref/models/querysets.txt:864
-# 913b2ce65e0b494c97f909fdcf4b0f8f
-msgid "``prefetch_related`` in most cases will be implemented using a SQL query that uses the 'IN' operator. This means that for a large QuerySet a large 'IN' clause could be generated, which, depending on the database, might have performance problems of its own when it comes to parsing or executing the SQL query. Always profile for your use case!"
+#: ../../ref/models/querysets.txt:895
+# e61cfaa8aa634923bdc6da9edce18638
+msgid "``prefetch_related`` in most cases will be implemented using a SQL query that uses the 'IN' operator. This means that for a large ``QuerySet`` a large 'IN' clause could be generated, which, depending on the database, might have performance problems of its own when it comes to parsing or executing the SQL query. Always profile for your use case!"
 msgstr ""
 
 #: ../../ref/models/querysets.txt:870
@@ -31117,9 +30966,9 @@ msgstr ""
 msgid "get_or_create"
 msgstr ""
 
-#: ../../ref/models/querysets.txt:1300
-# bea69a007ffb4b5ebacc3cf391c5a782
-msgid "A convenience method for looking up an object with the given kwargs, creating one if necessary."
+#: ../../ref/models/querysets.txt:1331
+# 718b271e8d514702802dec3bab27675e
+msgid "A convenience method for looking up an object with the given ``kwargs``, creating one if necessary."
 msgstr ""
 
 #: ../../ref/models/querysets.txt:1303
@@ -31127,9 +30976,9 @@ msgstr ""
 msgid "Returns a tuple of ``(object, created)``, where ``object`` is the retrieved or created object and ``created`` is a boolean specifying whether a new object was created."
 msgstr ""
 
-#: ../../ref/models/querysets.txt:1307
-# 19012fb211a849a7b4398af95aec1f8f
-msgid "This is meant as a shortcut to boilerplatish code and is mostly useful for data-import scripts. For example::"
+#: ../../ref/models/querysets.txt:1338
+# 71bf53e3ae4d4ab9b211929b666429bf
+msgid "This is meant as a shortcut to boilerplatish code. For example::"
 msgstr ""
 
 #: ../../ref/models/querysets.txt:1316
@@ -31157,13 +31006,23 @@ msgstr ""
 msgid "The ``get_or_create()`` method has similar error behavior to :meth:`create()` when you're using manually specified primary keys. If an object needs to be created and the key already exists in the database, an :exc:`~django.db.IntegrityError` will be raised."
 msgstr ""
 
-#: ../../ref/models/querysets.txt:1356
-# 9b0fcf3449244c32870d6ed3c914f45a
-msgid "Finally, a word on using ``get_or_create()`` in Django views. As mentioned earlier, ``get_or_create()`` is mostly useful in scripts that need to parse data and create new records if existing ones aren't available. But if you need to use ``get_or_create()`` in a view, please make sure to use it only in ``POST`` requests unless you have a good reason not to. ``GET`` requests shouldn't have any effect on data; use ``POST`` whenever a request to a page has a side effect on your data. For more, see `Safe methods`_ in the HTTP spec."
+#: ../../ref/models/querysets.txt:1386
+# e0baf348add044f59cbcecff03305e7b
+msgid "This method is atomic assuming correct usage, correct database configuration, and correct behavior of the underlying database. However, if uniqueness is not enforced at the database level for the ``kwargs`` used in a ``get_or_create`` call (see :attr:`~django.db.models.Field.unique` or :attr:`~django.db.models.Options.unique_together`), this method is prone to a race-condition which can result in multiple rows with the same parameters being inserted simultaneously."
 msgstr ""
 
-#: ../../ref/models/querysets.txt:1367
-# 200741b6c81545db8b6212d1d894ec50
+#: ../../ref/models/querysets.txt:1394
+# 4ce3804511a248c8a0d01317ac8deb63
+msgid "If you are using MySQL, be sure to use the ``READ COMMITTED`` isolation level rather than ``REPEATABLE READ`` (the default), otherwise you may see cases where ``get_or_create`` will raise an :exc:`~django.db.IntegrityError` but the object won't appear in a subsequent :meth:`~django.db.models.query.QuerySet.get` call."
+msgstr ""
+
+#: ../../ref/models/querysets.txt:1400
+# eaf69c7d10674eacb941bf2345e1e104
+msgid "Finally, a word on using ``get_or_create()`` in Django views: please make sure to use it only in ``POST`` requests unless you have a good reason not to ``GET`` requests shouldn't have any effect on data; use ``POST`` whenever a request to a page as a side effect on your data. For more, see `Safe methods`_ in the HTTP spec."
+msgstr ""
+
+#: ../../ref/models/querysets.txt:1409
+# 14046fe911f248d0ba73cf4ae1fc674b
 msgid "bulk_create"
 msgstr ""
 
@@ -32089,8 +31948,13 @@ msgstr ""
 msgid "Adds the specified model objects to the related object set."
 msgstr ""
 
-#: ../../ref/models/relations.txt:49
-# ccd5987a868e4aa48b5ec9e2583d5dab
+#: ../../ref/models/relations.txt:47
+# 0a8d20ca7b52433998496768c4773091
+msgid "In the example above, ``e.save()`` is called to perform the update. Using ``add()`` with a many-to-many relationship, however, will not call any ``save()`` methods, but rather create the relationships using :meth:`QuerySet.bulk_create() <django.db.models.query.QuerySet.bulk_create>`. If you need to execute some custom logic when a relationship is created, listen to the :data:`~django.db.models.signals.m2m_changed` signal."
+msgstr ""
+
+#: ../../ref/models/relations.txt:57
+# 5a8c9e67833748b3bf10f5ef499b32b6
 msgid "Creates a new object, saves it and puts it in the related object set. Returns the newly created object::"
 msgstr ""
 
@@ -32109,8 +31973,13 @@ msgstr ""
 msgid "Removes the specified model objects from the related object set::"
 msgstr ""
 
-#: ../../ref/models/relations.txt:85
-# a7babbddb2a94f31a4f8899e02663f1e
+#: ../../ref/models/relations.txt:93
+# 25c4d890b0e64da99f071138ea93ae2b
+msgid "Similar to :meth:`add()`, ``e.save()`` is called in the example above to perform the update. Using ``remove()`` with a many-to-many relationship, however, will delete the relationships using :meth:`QuerySet.delete()<django.db.models.query.QuerySet.delete>` which means no model ``save()`` methods are called; listen to the :data:`~django.db.models.signals.m2m_changed` signal if you wish to execute custom code when a relationship is deleted."
+msgstr ""
+
+#: ../../ref/models/relations.txt:101
+# 09fca46efc744419a1d03597b7659f8c
 msgid "For :class:`~django.db.models.ForeignKey` objects, this method only exists if ``null=True``. If the related field can't be set to ``None`` (``NULL``), then an object can't be removed from a relation without being added to another. In the above example, removing ``e`` from ``b.entry_set()`` is equivalent to doing ``e.blog = None``, and because the ``blog`` :class:`~django.db.models.ForeignKey` doesn't have ``null=True``, this is invalid."
 msgstr ""
 
@@ -32358,13 +32227,13 @@ msgid "With the exception of ``CONTENT_LENGTH`` and ``CONTENT_TYPE``, as given a
 msgstr ""
 
 #: ../../ref/request-response.txt:172
-# 78d3f67f0c28471593f8f16e5d89e401
-msgid "A ``django.contrib.auth.models.User`` object representing the currently logged-in user. If the user isn't currently logged in, ``user`` will be set to an instance of ``django.contrib.auth.models.AnonymousUser``. You can tell them apart with ``is_authenticated()``, like so::"
+# d04d03e4a2f14f3991bba1e4eb76f827
+msgid "An object of type :setting:`AUTH_USER_MODEL` representing the currently logged-in user. If the user isn't currently logged in, ``user`` will be set to an instance of :class:`django.contrib.auth.models.AnonymousUser`. You can tell them apart with :meth:`~django.contrib.auth.models.User.is_authenticated`, like so::"
 msgstr ""
 
-#: ../../ref/request-response.txt:182
-# 998814e866bd4bfe81714cec8c60f667
-msgid "``user`` is only available if your Django installation has the ``AuthenticationMiddleware`` activated. For more, see :doc:`/topics/auth/index`."
+#: ../../ref/request-response.txt:183
+# da4c5c2bca0c4fca8a66d9a8db21728f
+msgid "``user`` is only available if your Django installation has the :class:`~django.contrib.auth.middleware.AuthenticationMiddleware` activated. For more, see :doc:`/topics/auth/index`."
 msgstr ""
 
 #: ../../ref/request-response.txt:188
@@ -32597,8 +32466,18 @@ msgstr ""
 msgid "Like :meth:`items()`, except it includes all values, as a list, for each member of the dictionary. For example::"
 msgstr ""
 
-#: ../../ref/request-response.txt:510
-# ffc436cca87743a6973c1d3107c2ba33
+#: ../../ref/request-response.txt:509
+# fadfc4aa6c2d4807bfb393f98fb17af2
+msgid "Returns a list of values for the given key and removes them from the dictionary. Raises ``KeyError`` if the key does not exist. For example::"
+msgstr ""
+
+#: ../../ref/request-response.txt:518
+# ebef76d764e346888e644004bbc85e34
+msgid "Removes an arbitrary member of the dictionary (since there's no concept of ordering), and returns a two value tuple containing the key and a list of all values for the key. Raises ``KeyError`` when called on an empty dictionary. For example::"
+msgstr ""
+
+#: ../../ref/request-response.txt:531
+# f40a1be102614c8399fd1cc0b942912e
 msgid "Returns ``dict`` representation of ``QueryDict``. For every (key, list) pair in ``QueryDict``, ``dict`` will have (key, item), where item is one element of the list, using same logic as :meth:`QueryDict.__getitem__()`::"
 msgstr ""
 
@@ -33907,13 +33786,18 @@ msgstr ""
 msgid "It is also important to remember that when running with :setting:`DEBUG` turned on, Django will remember every SQL query it executes. This is useful when you're debugging, but it'll rapidly consume memory on a production server."
 msgstr ""
 
-#: ../../ref/settings.txt:829
-# 9720ba258803499094407009b4d5a7fb
-msgid "DEBUG_PROPAGATE_EXCEPTIONS"
+#: ../../ref/settings.txt:826
+# 1142b94a7cae4998b934485f0285eba2
+msgid "Finally, if :setting:`DEBUG` is ``False``, you also need to properly set the :setting:`ALLOWED_HOSTS` setting. Failing to do so will result in all requests being returned as \"Bad Request (400)\"."
 msgstr ""
 
 #: ../../ref/settings.txt:833
-# a7dbc2d6de59480598cb0a3fd98321b7
+# 84fd49d3182b485ca105764d1cbd17a9
+msgid "DEBUG_PROPAGATE_EXCEPTIONS"
+msgstr ""
+
+#: ../../ref/settings.txt:837
+# 3b23fd5d54904c108c05b11cf4a5c86e
 msgid "If set to True, Django's normal exception handling of view functions will be suppressed, and exceptions will propagate upwards.  This can be useful for some test setups, and should never be used on a live site."
 msgstr ""
 
@@ -34393,13 +34277,38 @@ msgstr ""
 msgid "Default: ``'en-us'``"
 msgstr ""
 
-#: ../../ref/settings.txt:1226
-# 6e3692f27f704a678fd1d76b306500ab
-msgid "A string representing the language code for this installation. This should be in standard :term:`language format<language code>`. For example, U.S. English is ``\"en-us\"``. See :doc:`/topics/i18n/index`."
+#: ../../ref/settings.txt:1230
+# 9a16aa386825413dafcfa6f38bfd2801
+msgid "A string representing the language code for this installation. This should be in standard :term:`language ID format <language code>`. For example, U.S. English is ``\"en-us\"``. See also the `list of language identifiers`_ and :doc:`/topics/i18n/index`."
 msgstr ""
 
-#: ../../ref/settings.txt:1233
-# 9ae0902731554a9db32aced8ba12c2ee
+#: ../../ref/settings.txt:1235
+# 47f445fec8ba4feaadfa130fd33838e5
+msgid ":setting:`USE_I18N` must be active for this setting to have any effect."
+msgstr ""
+
+#: ../../ref/settings.txt:1237
+# 57c6f0bb088d44ab84e4cd82f9cd6181
+msgid "It serves two purposes:"
+msgstr ""
+
+#: ../../ref/settings.txt:1239
+# 48d1d66eef24486ab29a24e0ad9051a6
+msgid "If the locale middleware isn't in use, it decides which translation is served to all users."
+msgstr ""
+
+#: ../../ref/settings.txt:1241
+# 7d3f822204f449b8a7d9053a08b6e127
+msgid "If the locale middleware is active, it provides the fallback translation when no translation exist for a given literal to the user's preferred language."
+msgstr ""
+
+#: ../../ref/settings.txt:1244
+# c6e530ea562049d1b1ccc53bedb7bfc2
+msgid "See :ref:`how-django-discovers-language-preference` for more details."
+msgstr ""
+
+#: ../../ref/settings.txt:1251
+# 45c113016b834b7f92bc5b84650c122d
 msgid "LANGUAGE_COOKIE_NAME"
 msgstr ""
 
@@ -34975,9 +34884,9 @@ msgstr ""
 msgid "Default: ``django.contrib.sessions.backends.db``"
 msgstr ""
 
-#: ../../ref/settings.txt:1802
-# eaad8792f3e34fb189d752f790df3ebb
-msgid "Controls where Django stores session data. Valid values are:"
+#: ../../ref/settings.txt:1822
+# 52605c3616124534b7b2ca33217d6624
+msgid "Controls where Django stores session data. Included engines are:"
 msgstr ""
 
 #: ../../ref/settings.txt:1804
@@ -35040,8 +34949,43 @@ msgstr ""
 msgid "Whether to save the session data on every request. See :doc:`/topics/http/sessions`."
 msgstr ""
 
-#: ../../ref/settings.txt:1847
-# 03bc556a51a947279d563996f326fe56
+#: ../../ref/settings.txt:1867
+# a2c7b4e4e8d743f68d4320baecf1a5e5
+msgid "SESSION_SERIALIZER"
+msgstr ""
+
+#: ../../ref/settings.txt:1871
+# 317ad47873624e0a8ee92bd3bf2abcf3
+msgid "Default: ``'django.contrib.sessions.serializers.PickleSerializer'``"
+msgstr ""
+
+#: ../../ref/settings.txt:1873
+# 46ea5f6d1b8f4c22a73131dedd761585
+msgid "Full import path of a serializer class to use for serializing session data. Included serializers are:"
+msgstr ""
+
+#: ../../ref/settings.txt:1876
+# caf38816fad74636bca265bcc156ce8e
+msgid "``'django.contrib.sessions.serializers.PickleSerializer'``"
+msgstr ""
+
+#: ../../ref/settings.txt:1877
+# 7a63fdae728c4fe483ae66414c60c7c9
+msgid "``'django.contrib.sessions.serializers.JSONSerializer'``"
+msgstr ""
+
+#: ../../ref/settings.txt:1879
+# 774b81523cdf4153947d00125b694efb
+msgid "See :ref:`session_serialization` for details, including a warning regarding possible remote code execution when using :class:`~django.contrib.sessions.serializers.PickleSerializer`."
+msgstr ""
+
+#: ../../ref/settings.txt:1883
+# 303018e6250c44909fda6b820a6cc7a1
+msgid "In Django 1.5.3, the default in newly created projects using :djadmin:`django-admin.py startproject <startproject>` is :class:`django.contrib.sessions.serializers.JSONSerializer`, and the global default will switch to this class in Django 1.6."
+msgstr ""
+
+#: ../../ref/settings.txt:1891
+# 041e581459a84d2490355b6e278ca3e7
 msgid "SHORT_DATE_FORMAT"
 msgstr ""
 
@@ -35911,8 +35855,8 @@ msgid "``pk_set``"
 msgstr ""
 
 #: ../../ref/signals.txt:257
-# 82686cffa2bb4d85a43cf6271a7efac7
-msgid "For the ``pre_add``, ``post_add``, ``pre_remove`` and ``post_remove`` actions, this is a list of primary key values that have been added to or removed from the relation."
+# b0435f1bbaab4815913ae174c478b958
+msgid "For the ``pre_add``, ``post_add``, ``pre_remove`` and ``post_remove`` actions, this is a set of primary key values that have been added to or removed from the relation."
 msgstr ""
 
 #: ../../ref/signals.txt:261
@@ -35968,8 +35912,8 @@ msgid "``Topping`` (the class of the objects added to the ``Pizza``)"
 msgstr ""
 
 #: ../../ref/signals.txt:310
-# 9d5bc031033b4cc0b272c51e693d9536
-msgid "``[t.id]`` (since only ``Topping t`` was added to the relation)"
+# ce617bf199db42cb9625a6f611494633
+msgid "``set([t.id])`` (since only ``Topping t`` was added to the relation)"
 msgstr ""
 
 #: ../../ref/signals.txt:312
@@ -36010,8 +35954,8 @@ msgid "``Pizza`` (the class of the objects removed from the ``Topping``)"
 msgstr ""
 
 #: ../../ref/signals.txt:337
-# ce18d46b5a574365b1aa25001ba78790
-msgid "``[p.id]`` (since only ``Pizza p`` was removed from the relation)"
+# 55785a3f11a34b0cbac44da84bd5a728
+msgid "``set([p.id])`` (since only ``Pizza p`` was removed from the relation)"
 msgstr ""
 
 #: ../../ref/signals.txt:344
@@ -36154,9 +36098,9 @@ msgstr ""
 msgid "Sent when Django finishes processing an HTTP request."
 msgstr ""
 
-#: ../../ref/signals.txt:452
-# 39e8eea073054ff3ba8ed430e69f012d
-msgid "When a view returns a :ref:`streaming response <httpresponse-streaming>`, this signal is sent only after the entire response is consumed by the client (strictly speaking, by the WSGI gateway)."
+#: ../../ref/signals.txt:459
+# 347cc2a9acb1458fac0edacb8edbd205
+msgid "Some WSGI servers and middleware do not always call ``close`` on the response object after handling a request, most notably uWSGI prior to 1.2.6 and Sentry's error reporting middleware up to 2.0.7. In those cases this signal isn't sent at all. This can result in idle connections to database and memcache servers."
 msgstr ""
 
 #: ../../ref/signals.txt:465
@@ -40959,8 +40903,13 @@ msgstr ""
 msgid "Choosing between ``__str__()`` and ``__unicode__()``"
 msgstr ""
 
-#: ../../ref/unicode.txt:243
-# ec7439ed4c4a4c478566199def3859ef
+#: ../../ref/unicode.txt:245
+# efd05309ce8841db8afb8ea8f8c7b328
+msgid "If you are on Python 3, you can skip this section because you'll always create ``__str__()`` rather than ``__unicode__()``. If you'd like compatibility with Python 2, you can decorate your model class with :func:`~django.utils.encoding.python_2_unicode_compatible`."
+msgstr ""
+
+#: ../../ref/unicode.txt:250
+# 687eeebc5df1469fa0581f7a2b6e3013
 msgid "One consequence of using Unicode by default is that you have to take some care when printing data from the model."
 msgstr ""
 
@@ -41922,8 +41871,8 @@ msgid "Atom1Feed"
 msgstr ""
 
 #: ../../ref/utils.txt:444
-# 150890726fbc4b84ad2f62ea8b0802f9
-msgid "Spec: http://www.atomenabled.org/developers/syndication/atom-format-spec.php"
+# 370e942753b04faab66fa093cc4e320e
+msgid "Spec: http://tools.ietf.org/html/rfc4287"
 msgstr ""
 
 #: ../../ref/utils.txt:447
@@ -41932,7 +41881,37 @@ msgid "``django.utils.functional``"
 msgstr ""
 
 #: ../../ref/utils.txt:454
-# 4bdb98e148d741178fbdefdd57657e2a
+# 88902497243745ee91c46ec1dd5d8236
+msgid "The ``@cached_property`` decorator caches the result of a method with a single ``self`` argument as a property. The cached result will persist as long as the instance does, so if the instance is passed around and the function subsequently invoked, the cached result will be returned."
+msgstr ""
+
+#: ../../ref/utils.txt:459
+# f8ddc2c9db41473a857ec81a8f3776cc
+msgid "Consider a typical case, where a view might need to call a model's method to perform some computation, before placing the model instance into the context, where the template might invoke the method once more::"
+msgstr ""
+
+#: ../../ref/utils.txt:477
+# 29feff216ff34ea1a5b9dd830f0a58b5
+msgid "Here, ``friends()`` will be called twice. Since the instance ``person`` in the view and the template are the same, ``@cached_property`` can avoid that::"
+msgstr ""
+
+#: ../../ref/utils.txt:489
+# 780dd374d8b2442387ccecaae3e7e400
+msgid "Note that as the method is now a property, in Python code it will need to be invoked appropriately::"
+msgstr ""
+
+#: ../../ref/utils.txt:495
+# f3e2adaec4394710879e4ea32fd3ae81
+msgid "The cached value can be treated like an ordinary attribute of the instance::"
+msgstr ""
+
+#: ../../ref/utils.txt:503
+# 051589c1cfd54e9f90133f2b8a324908
+msgid "As well as offering potential performance advantages, ``@cached_property`` can ensure that an attribute's value does not change unexpectedly over the life of an instance. This could occur with a method whose computation is based on ``datetime.now()``, or simply if a change were saved to the database by some other process in the brief interval between subsequent invocations of a method on the same instance."
+msgstr ""
+
+#: ../../ref/utils.txt:512
+# e00781aaae9e40e39b969fcf0678132d
 msgid "Django offers many utility functions (particularly in ``django.utils``) that take a string as their first argument and do something to that string. These functions are used by template filters as well as directly in other code."
 msgstr ""
 
