@@ -243,13 +243,8 @@ msgstr ""
 msgid "By default, a ``HEAD`` request will be delegated to ``get()``. If you need to handle ``HEAD`` requests in a different way than ``GET``, you can override the ``head()`` method. See :ref:`supporting-other-http-methods` for an example."
 msgstr ""
 
-#: ../../ref/class-based-views/base.txt:82
-# 6f10578c5f854ed89f80bc9fda6e84dd
-msgid "The default implementation also sets ``request``, ``args`` and ``kwargs`` as instance variables, so any method on the view can know the full details of the request that was made to invoke the view."
-msgstr ""
-
-#: ../../ref/class-based-views/base.txt:88
-# 65383377900e4c69b1cd059d26e39ce5
+#: ../../ref/class-based-views/base.txt:84
+# 08f53772e1644d63bab5d7e4b623e799
 msgid "If the view was called with a HTTP method it doesn't support, this method is called instead."
 msgstr ""
 
@@ -27315,15 +27310,6 @@ msgstr ""
 msgid "Date input as a simple text box: ``<input type='text' ...>``"
 msgstr ""
 
-#: ../../ref/forms/widgets.txt:423
-#: ../../ref/forms/widgets.txt:440
-#: ../../ref/forms/widgets.txt:457
-# ff4dec3e93394de58eab891e70e104a6
-# a204077629c443cd8c2f0027e709b39a
-# 72eb50b2af934559b46c6b89c4e67329
-msgid "Takes same arguments as :class:`TextInput`, with one more optional argument:"
-msgstr ""
-
 #: ../../ref/forms/widgets.txt:427
 #: ../../ref/forms/widgets.txt:444
 #: ../../ref/forms/widgets.txt:461
@@ -40616,11 +40602,6 @@ msgstr ""
 #: ../../ref/templates/builtins.txt:2369
 # 25438e0af92e4f928c4e5af27c6379ac
 msgid "It is also able to consume standard context variables, e.g. assuming a ``user_stylesheet`` variable is passed to the template:"
-msgstr ""
-
-#: ../../ref/templates/builtins.txt:2377
-# a593f1f509454bd5bc314684ea60807a
-msgid "If you'd like to retrieve a static URL without displaying it, you can use a slightly different call::"
 msgstr ""
 
 #: ../../ref/templates/builtins.txt:2390

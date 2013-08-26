@@ -1517,29 +1517,8 @@ msgstr ""
 msgid "**URL name:** ``logout``"
 msgstr ""
 
-#: ../../topics/auth/default.txt:669
-#: ../../topics/auth/default.txt:703
-#: ../../topics/auth/default.txt:714
-#: ../../topics/auth/default.txt:738
-#: ../../topics/auth/default.txt:758
-#: ../../topics/auth/default.txt:835
-#: ../../topics/auth/default.txt:847
-#: ../../topics/auth/default.txt:882
-#: ../../topics/auth/default.txt:901
-# 0996309a0ef04bdfadba53bdb963ff44
-# f342ca55629f4d5ab80cb0aa1cac7fef
-# 70a8e1acaa1c4318aabca74088a2cad3
-# 6e0940b4e65647c08adb4e0f28139af4
-# b32ff417d68c495ab348e4921af48513
-# f38c4d59e15747ff8542157164482205
-# beaab7620689413e96e83a0778c82864
-# e04988af79ba4e60a6595f9f67578c60
-# 2696b6b04d72462388127b83e38339f8
-msgid "**Optional arguments:**"
-msgstr ""
-
-#: ../../topics/auth/default.txt:671
-# 3a969b2e88d142aa881b0ab3307d011e
+#: ../../topics/auth/default.txt:692
+# e6d14b545f50450f961c7949e799fd8c
 msgid "``next_page``: The URL to redirect to after logout."
 msgstr ""
 
@@ -11691,33 +11670,8 @@ msgstr ""
 msgid "the ``author`` field would be rendered first. If we wanted the title field to be rendered first, we could specify the following ``ModelForm``::"
 msgstr ""
 
-#: ../../topics/forms/modelforms.txt:474
-# 0f01a308224745d2ad53c2827bbad48d
-msgid "Overriding the clean() method"
-msgstr ""
-
-#: ../../topics/forms/modelforms.txt:476
-# 045afc8b7451484a829f78eb233d7ad2
-msgid "You can override the ``clean()`` method on a model form to provide additional validation in the same way you can on a normal form."
-msgstr ""
-
-#: ../../topics/forms/modelforms.txt:479
-# 999518cffaac40328aab803f2eac09c4
-msgid "In this regard, model forms have two specific characteristics when compared to forms:"
-msgstr ""
-
-#: ../../topics/forms/modelforms.txt:482
-# 357cb5a05f494000bd0cd53d336bd43c
-msgid "By default the ``clean()`` method validates the uniqueness of fields that are marked as ``unique``, ``unique_together`` or ``unique_for_date|month|year`` on the model.  Therefore, if you would like to override the ``clean()`` method and maintain the default validation, you must call the parent class's ``clean()`` method."
-msgstr ""
-
-#: ../../topics/forms/modelforms.txt:488
-# 2417d2b29e624b77a054e955ea77ded0
-msgid "Also, a model form instance bound to a model object will contain a ``self.instance`` attribute that gives model form methods access to that specific model instance."
-msgstr ""
-
-#: ../../topics/forms/modelforms.txt:493
-# 60d0ada79ea94b00b94b6f0d9282ddae
+#: ../../topics/forms/modelforms.txt:522
+# 10f7710da2ec45028fe93e5cfd67996d
 msgid "Form inheritance"
 msgstr ""
 
@@ -11761,18 +11715,8 @@ msgstr ""
 msgid "Chances are these notes won't affect you unless you're trying to do something tricky with subclassing."
 msgstr ""
 
-#: ../../topics/forms/modelforms.txt:531
-# d2cc476ce33a4dbbb044d44e6f73e848
-msgid "Interaction with model validation"
-msgstr ""
-
-#: ../../topics/forms/modelforms.txt:533
-# f493e771a2ee42018233624e8a3a535a
-msgid "As part of its validation process, ``ModelForm`` will call the ``clean()`` method of each field on your model that has a corresponding field on your form. If you have excluded any model fields, validation will not be run on those fields. See the :doc:`form validation </ref/forms/validation>` documentation for more on how field cleaning and validation work. Also, your model's ``clean()`` method will be called before any uniqueness checks are made. See :ref:`Validating objects <validating-objects>` for more information on the model's ``clean()`` hook."
-msgstr ""
-
-#: ../../topics/forms/modelforms.txt:545
-# b86d1e69f24744f4a5e8bb288abe673d
+#: ../../topics/forms/modelforms.txt:562
+# 0047fcddfe8d4f46a5aec460d94a9a14
 msgid "ModelForm factory function"
 msgstr ""
 
