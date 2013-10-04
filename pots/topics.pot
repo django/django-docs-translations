@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Django 1.5\n"
+"Project-Id-Version: Django 1.5.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-23 14:23\n"
+"POT-Creation-Date: 2013-10-04 09:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -331,6 +331,11 @@ msgstr ""
 msgid "This dotted pair describes the name of the Django app (which must be in your :setting:`INSTALLED_APPS`), and the name of the Django model that you wish to use as your User model."
 msgstr ""
 
+#: ../../topics/auth/customizing.txt:406
+# 2ff36687594e44f39b4ed7ebf2a668a4
+msgid "Warning"
+msgstr ""
+
 #: ../../topics/auth/customizing.txt:408
 # 479c1cdd57dc4ed8a1013273d8f03e27
 msgid "Changing :setting:`AUTH_USER_MODEL` has a big effect on your database structure. It changes the tables that are available, and it will affect the construction of foreign keys and many-to-many relationships. If you intend to set :setting:`AUTH_USER_MODEL`, you should set it before running ``manage.py syncdb`` for the first time."
@@ -364,6 +369,11 @@ msgstr ""
 #: ../../topics/auth/customizing.txt:449
 # 38474557ab574309a3afe8f41e88058a
 msgid "Specifying a custom User model"
+msgstr ""
+
+#: ../../topics/auth/customizing.txt:451
+# 5c2f568041074f2c836d7613a3568942
+msgid "Model design considerations"
 msgstr ""
 
 #: ../../topics/auth/customizing.txt:453
@@ -412,8 +422,8 @@ msgid "In the following example, the field ``identifier`` is used as the identif
 msgstr ""
 
 #: ../../topics/auth/customizing.txt:505
-# c2a48da712b8478fae44526a4925a518
-msgid "A list of the field names that *must* be provided when creating a user via the :djadmin:`createsuperuser` management command. The user will be prompted to supply a value for each of these fields. It should include any field for which :attr:`~django.db.models.Field.blank` is ``False`` or undefined, but may include additional fields you want prompted for when a user is created interactively. However, it will not work for :class:`~django.db.models.ForeignKey` fields."
+# 4753e322cb7146f7aa4e8a67f0cc8f23
+msgid "A list of the field names that will be prompted for when creating a user via the :djadmin:`createsuperuser` management command. The user will be prompted to supply a value for each of these fields. It must include any field for which :attr:`~django.db.models.Field.blank` is ``False`` or undefined and may include additional fields you want prompted for when a user is created interactively. However, it will not work for :class:`~django.db.models.ForeignKey` fields. ``REQUIRED_FIELDS`` has no effect in other parts of Django, like creating a user in the admin."
 msgstr ""
 
 #: ../../topics/auth/customizing.txt:513
@@ -722,8 +732,13 @@ msgstr ""
 msgid "Returns ``True`` if the user has any permissions in the given package (the Django app label). If the user is inactive, this method will always return ``False``."
 msgstr ""
 
-#: ../../topics/auth/customizing.txt:823
-# f4a26df56c0e43f2a8acde50b673e741
+#: ../../topics/auth/customizing.txt:824
+# 0ce7fbfe64dc4f2bab18478725f729c1
+msgid "ModelBackend"
+msgstr ""
+
+#: ../../topics/auth/customizing.txt:826
+# b0b0e89272d4474b8b5d0c78b59080d6
 msgid "If you don't include the :class:`~django.contrib.auth.models.PermissionsMixin`, you must ensure you don't invoke the permissions methods on ``ModelBackend``. ``ModelBackend`` assumes that certain fields are available on your user model. If your User model doesn't provide  those fields, you will receive database errors when you check permissions."
 msgstr ""
 
@@ -1107,6 +1122,11 @@ msgstr ""
 #: ../../topics/auth/default.txt:291
 # 168bdc9d1fc44fc8ba3ad2ce6fafb612
 msgid "This example shows how you might use both :func:`~django.contrib.auth.authenticate()` and :func:`~django.contrib.auth.login()`::"
+msgstr ""
+
+#: ../../topics/auth/default.txt:311
+# 16fae940efa742ed9c28c8243191fd22
+msgid "Calling ``authenticate()`` first"
 msgstr ""
 
 #: ../../topics/auth/default.txt:313
@@ -1870,8 +1890,13 @@ msgstr ""
 msgid "The currently logged-in user and his/her permissions are made available in the :doc:`template context </ref/templates/api>` when you use :class:`~django.template.RequestContext`."
 msgstr ""
 
-#: ../../topics/auth/default.txt:973
-# 35a2b5a29e2d4d3a9016fc12f0e1ea74
+#: ../../topics/auth/default.txt:1055
+# b46c78d29a0c41deac967974cb80858a
+msgid "Technicality"
+msgstr ""
+
+#: ../../topics/auth/default.txt:1057
+# 32766844a771465a91e673d359b134aa
 msgid "Technically, these variables are only made available in the template context if you use :class:`~django.template.RequestContext` *and* your :setting:`TEMPLATE_CONTEXT_PROCESSORS` setting contains ``\"django.contrib.auth.context_processors.auth\"``, which is default. For more, see the :ref:`RequestContext docs <subclassing-context-requestcontext>`."
 msgstr ""
 
@@ -2211,9 +2236,19 @@ msgstr ""
 msgid "That's it -- now your Django install will use Bcrypt as the default storage algorithm."
 msgstr ""
 
+#: ../../topics/auth/passwords.txt:103
+# 0221f94c8f8c4c1aa61a818572c0723f
+msgid "Password truncation with BCryptPasswordHasher"
+msgstr ""
+
 #: ../../topics/auth/passwords.txt:105
 # 29b247dde2e54cc2b3225245bb7646b9
 msgid "The designers of bcrypt truncate all passwords at 72 characters which means that ``bcrypt(password_with_100_chars) == bcrypt(password_with_100_chars[:72])``. ``BCryptPasswordHasher`` does not have any special handling and thus is also subject to this hidden password length limit. The practical ramification of this truncation is pretty marginal as the average user does not have a password greater than 72 characters in length and even being truncated at 72 the compute powered required to brute force bcrypt in any useful amount of time is still astronomical."
+msgstr ""
+
+#: ../../topics/auth/passwords.txt:114
+# 709df45d12df4d6bb27e63d8721011d4
+msgid "Other bcrypt implementations"
 msgstr ""
 
 #: ../../topics/auth/passwords.txt:116
@@ -2546,44 +2581,39 @@ msgstr ""
 msgid "Cache arguments"
 msgstr ""
 
-#: ../../topics/cache.txt:340
-# c91a1c8599054723815b82ddc65cfa2b
-msgid "In addition to the defining the engine and name of the each cache backend, each cache backend can be given additional arguments to control caching behavior. These arguments are provided as additional keys in the :setting:`CACHES` setting. Valid arguments are as follows:"
+#: ../../topics/cache.txt:344
+# a8042c5a9bc54e038ee442bf9e8154f8
+msgid "Each cache backend can be given additional arguments to control caching behavior. These arguments are provided as additional keys in the :setting:`CACHES` setting. Valid arguments are as follows:"
 msgstr ""
 
-#: ../../topics/cache.txt:345
-# 52766dc891634bff948524806929df47
-msgid ":setting:`TIMEOUT <CACHES-TIMEOUT>`: The default timeout, in seconds, to use for the cache. This argument defaults to 300 seconds (5 minutes)."
+#: ../../topics/cache.txt:348
+# 8359d999430148978839f8b03db9f4a3
+msgid ":setting:`TIMEOUT <CACHES-TIMEOUT>`: The default timeout, in seconds, to use for the cache. This argument defaults to ``300`` seconds (5 minutes)."
 msgstr ""
 
-#: ../../topics/cache.txt:349
-# daa2cb5a6ec045fa994462028354a158
-msgid ":setting:`OPTIONS <CACHES-OPTIONS>`: Any options that should be passed to cache backend. The list options understood by each backend vary with each backend."
-msgstr ""
-
-#: ../../topics/cache.txt:353
-# df741f99239f40679291d479a7a93bc4
-msgid "Cache backends that implement their own culling strategy (i.e., the ``locmem``, ``filesystem`` and ``database`` backends) will honor the following options:"
+#: ../../topics/cache.txt:352
+# 4d62a3d4d5d348b9a2f9833d3a884d8d
+msgid ":setting:`OPTIONS <CACHES-OPTIONS>`: Any options that should be passed to the cache backend. The list of valid options will vary with each backend, and cache backends backed by a third-party library will pass their options directly to the underlying cache library."
 msgstr ""
 
 #: ../../topics/cache.txt:357
-# 435297452f064e708688b12d104c5952
-msgid "``MAX_ENTRIES``: the maximum number of entries allowed in the cache before old values are deleted. This argument defaults to ``300``."
+# 15f23646ef3d48a7abacf52bc5cc3738
+msgid "Cache backends that implement their own culling strategy (i.e., the ``locmem``, ``filesystem`` and ``database`` backends) will honor the following options:"
 msgstr ""
 
 #: ../../topics/cache.txt:361
-# 457254783d984a47a590eac74a669608
-msgid "``CULL_FREQUENCY``: The fraction of entries that are culled when ``MAX_ENTRIES`` is reached. The actual ratio is ``1/CULL_FREQUENCY``, so set ``CULL_FREQUENCY``: to ``2`` to cull half of the entries when ``MAX_ENTRIES`` is reached."
+# 36d3760ab6ee4b82bf36036e364d2a75
+msgid "``MAX_ENTRIES``: The maximum number of entries allowed in the cache before old values are deleted. This argument defaults to ``300``."
 msgstr ""
 
-#: ../../topics/cache.txt:366
-# c7186614a8aa455b88a16223e32f9e76
-msgid "A value of ``0`` for ``CULL_FREQUENCY`` means that the entire cache will be dumped when ``MAX_ENTRIES`` is reached. This makes culling *much* faster at the expense of more cache misses."
+#: ../../topics/cache.txt:365
+# 457e09ef92304d5a960e82765a1a8660
+msgid "``CULL_FREQUENCY``: The fraction of entries that are culled when ``MAX_ENTRIES`` is reached. The actual ratio is ``1 / CULL_FREQUENCY``, so set ``CULL_FREQUENCY`` to ``2`` to cull half the entries when ``MAX_ENTRIES`` is reached. This argument should be an integer and defaults to ``3``."
 msgstr ""
 
 #: ../../topics/cache.txt:371
-# b4d00212697144aa94cde78f0d1cb397
-msgid "Cache backends backed by a third-party library will pass their options directly to the underlying cache library. As a result, the list of valid options depends on the library in use."
+# 442f5220e0d64cd4a5a0b3a1dad3f5f3
+msgid "A value of ``0`` for ``CULL_FREQUENCY`` means that the entire cache will be dumped when ``MAX_ENTRIES`` is reached. On some backends (``database`` in particular) this makes culling *much* faster at the expense of more cache misses."
 msgstr ""
 
 #: ../../topics/cache.txt:375
@@ -3251,9 +3281,9 @@ msgstr ""
 msgid "``django.middleware.http.ConditionalGetMiddleware`` adds support for modern browsers to conditionally GET responses based on the ``ETag`` and ``Last-Modified`` headers."
 msgstr ""
 
-#: ../../topics/cache.txt:1148
-# 8a2d59befe694d4f81fec12630f87e8e
-msgid ":class:`django.middleware.gzip.GZipMiddleware` compresses responses for all modern browsers, saving bandwidth and transfer time."
+#: ../../topics/cache.txt:1149
+# 46443bced99e42109776eb1c06cfb5cf
+msgid ":class:`django.middleware.gzip.GZipMiddleware` compresses responses for all modern browsers, saving bandwidth and transfer time. Be warned, however, that compression techniques like ``GZipMiddleware`` are subject to attacks. See the warning in :class:`~django.middleware.gzip.GZipMiddleware` for details."
 msgstr ""
 
 #: ../../topics/cache.txt:1152
@@ -4541,8 +4571,8 @@ msgid "Using the decorators with other HTTP methods"
 msgstr ""
 
 #: ../../topics/conditional-view-processing.txt:148
-# e467485320844134bb4704d26175154e
-msgid "The ``condition`` decorator is useful for more than only ``GET`` and ``HEAD`` requests (``HEAD`` requests are the same as ``GET`` in this situation). It can be used also to be used to provide checking for ``POST``, ``PUT`` and ``DELETE`` requests. In these situations, the idea isn't to return a \"not modified\" response, but to tell the client that the resource they are trying to change has been altered in the meantime."
+# 4bf518abc7e84523a35bd559c4f3fb0c
+msgid "The ``condition`` decorator is useful for more than only ``GET`` and ``HEAD`` requests (``HEAD`` requests are the same as ``GET`` in this situation). It can also be used to provide checking for ``POST``, ``PUT`` and ``DELETE`` requests. In these situations, the idea isn't to return a \"not modified\" response, but to tell the client that the resource they are trying to change has been altered in the meantime."
 msgstr ""
 
 #: ../../topics/conditional-view-processing.txt:155
@@ -5626,6 +5656,11 @@ msgstr ""
 msgid "If this attribute is set on the *default* manager for a model (only the default manager is considered in these situations), Django will use that class whenever it needs to automatically create a manager for the class.  Otherwise, it will use :class:`django.db.models.Manager`."
 msgstr ""
 
+#: ../../topics/db/managers.txt:356
+# ee6d986da6ae4aba8c3e16932426e30a
+msgid "Historical Note"
+msgstr ""
+
 #: ../../topics/db/managers.txt:358
 # f68c2eaf4a5f410dba38fe8020f5dae3
 msgid "Given the purpose for which it's used, the name of this attribute (``use_for_related_fields``) might seem a little odd. Originally, the attribute only controlled the type of manager used for related field access, which is where the name came from. As it became clear the concept was more broadly useful, the name hasn't been changed. This is primarily so that existing code will :doc:`continue to work </misc/api-stability>` in future Django versions."
@@ -6370,6 +6405,11 @@ msgstr ""
 msgid "It's also important that you pass through the arguments that can be passed to the model method -- that's what the ``*args, **kwargs`` bit does. Django will, from time to time, extend the capabilities of built-in model methods, adding new arguments. If you use ``*args, **kwargs`` in your method definitions, you are guaranteed that your code will automatically support those arguments when they are added."
 msgstr ""
 
+#: ../../topics/db/models.txt:768
+# 8babb9bd55d84a1c8ca798ab707f9716
+msgid "Overridden model methods are not called on bulk operations"
+msgstr ""
+
 #: ../../topics/db/models.txt:770
 # 6eb16d88194a4ffc8e5f73bb1075b406
 msgid "Note that the :meth:`~Model.delete()` method for an object is not necessarily called when :ref:`deleting objects in bulk using a QuerySet<topics-db-queries-delete>`. To ensure customized delete logic gets executed, you can use :data:`~django.db.models.signals.pre_delete` and/or :data:`~django.db.models.signals.post_delete` signals."
@@ -6925,6 +6965,11 @@ msgstr ""
 msgid "An example"
 msgstr ""
 
+#: ../../topics/db/multi-db.txt:206
+# d01c17bd0eb349a3842152d609b47171
+msgid "Example purposes only!"
+msgstr ""
+
 #: ../../topics/db/multi-db.txt:208
 # 293176d0f8e64d78a21b57c6c530c1d2
 msgid "This example is intended as a demonstration of how the router infrastructure can be used to alter database usage. It intentionally ignores some complex issues in order to demonstrate how routers are used."
@@ -7301,8 +7346,8 @@ msgid "...including:"
 msgstr ""
 
 #: ../../topics/db/optimization.txt:39
-# 497593a41c0a4622a7c4bea1758a87a7
-msgid "Indexes. This is a number one priority, *after* you have determined from profiling what indexes should be added. Use :attr:`django.db.models.Field.db_index` to add these from Django."
+# b4681d70b9ed464a950f3261c21b40db
+msgid "Indexes. This is a number one priority, *after* you have determined from profiling what indexes should be added. Use :attr:`django.db.models.Field.db_index` or :attr:`Meta.index_together <django.db.models.Options.index_together>` to add these from Django."
 msgstr ""
 
 #: ../../topics/db/optimization.txt:43
@@ -8030,6 +8075,11 @@ msgstr ""
 #: ../../topics/db/queries.txt:395
 # c1a43a78e7b844c1b0c32f3e809b9e31
 msgid "translates (roughly) into the following SQL::"
+msgstr ""
+
+#: ../../topics/db/queries.txt:399
+# 98977629159c47e69ca9e4052efbfc2b
+msgid "How this is possible"
 msgstr ""
 
 #: ../../topics/db/queries.txt:401
@@ -8845,6 +8895,11 @@ msgstr ""
 #: ../../topics/db/sql.txt:44
 # d8c0d8ea603e4aca9ec9dc2213e6f03f
 msgid "Of course, this example isn't very exciting -- it's exactly the same as running ``Person.objects.all()``. However, ``raw()`` has a bunch of other options that make it very powerful."
+msgstr ""
+
+#: ../../topics/db/sql.txt:48
+# dc8d87aad25648158bec7a8f0d2555bc
+msgid "Model table names"
 msgstr ""
 
 #: ../../topics/db/sql.txt:50
@@ -10441,6 +10496,13 @@ msgstr ""
 msgid "Working with forms"
 msgstr ""
 
+#: ../../topics/forms/index.txt:5
+#: ../../topics/templates.txt:5
+# 3e8390d7cf58446f8fdcbfbc113aa1ef
+# 40895fca2e8b4855b8c0b581a2845197
+msgid "About this document"
+msgstr ""
+
 #: ../../topics/forms/index.txt:7
 # e8f689ca413b45b28a5ab24ce6187862
 msgid "This document provides an introduction to Django's form handling features. For a more detailed look at specific areas of the forms API, see :doc:`/ref/forms/api`, :doc:`/ref/forms/fields`, and :doc:`/ref/forms/validation`."
@@ -10705,6 +10767,11 @@ msgstr ""
 msgid "If your form includes uploaded files, be sure to include ``enctype=\"multipart/form-data\"`` in the ``form`` element. If you wish to write a generic template that will work whether or not the form has files, you can use the :meth:`~django.forms.Form.is_multipart` attribute on the form::"
 msgstr ""
 
+#: ../../topics/forms/index.txt:208
+# b5971edfe37c4c73b4b560a15404917f
+msgid "Forms and Cross Site Request Forgery protection"
+msgstr ""
+
 #: ../../topics/forms/index.txt:210
 # 25d4398296a2425d869f5eea0462f065
 msgid "Django ships with an easy-to-use :doc:`protection against Cross Site Request Forgeries </ref/contrib/csrf>`. When submitting a form via POST with CSRF protection enabled you must use the :ttag:`csrf_token` template tag as in the preceding example. However, since CSRF protection is not directly tied to forms in templates, this tag is omitted from the following examples in this document."
@@ -10910,6 +10977,11 @@ msgstr ""
 msgid "This is where Django media definitions come in. Django allows you to associate different media files with the forms and widgets that require that media. For example, if you want to use a calendar to render DateFields, you can define a custom Calendar widget. This widget can then be associated with the CSS and JavaScript that is required to render the calendar. When the Calendar widget is used on a form, Django is able to identify the CSS and JavaScript files that are required, and provide the list of file names in a form suitable for easy inclusion on your Web page."
 msgstr ""
 
+#: ../../topics/forms/media.txt:19
+# f7c08e7b5385417cb77afb7831583234
+msgid "Media and Django Admin"
+msgstr ""
+
 #: ../../topics/forms/media.txt:21
 # 5648a52ba9884901bbbd2aeea6d6ec4d
 msgid "The Django Admin application defines a number of customized widgets for calendars, filtered selections, and so on. These widgets define media requirements, and the Django Admin uses the custom widgets in place of the Django defaults. The Admin templates will only include those media files that are required to render the widgets on any given page."
@@ -10918,6 +10990,11 @@ msgstr ""
 #: ../../topics/forms/media.txt:28
 # 77e7323ca8c4494aaaf102c4cf7deb49
 msgid "If you like the widgets that the Django Admin application uses, feel free to use them in your own application! They're all stored in ``django.contrib.admin.widgets``."
+msgstr ""
+
+#: ../../topics/forms/media.txt:32
+# 62bf59c1594a4fcc8aa75542d99de44e
+msgid "Which JavaScript toolkit?"
 msgstr ""
 
 #: ../../topics/forms/media.txt:34
@@ -11141,8 +11218,8 @@ msgid "If you're building a database-driven app, chances are you'll have forms t
 msgstr ""
 
 #: ../../topics/forms/modelforms.txt:20
-# 9c1854174c6e4f5cb65968ed97588f5d
-msgid "For this reason, Django provides a helper class that let you create a ``Form`` class from a Django model."
+# 30ff20074e8c4fe599d623c5d0ddde2f
+msgid "For this reason, Django provides a helper class that lets you create a ``Form`` class from a Django model."
 msgstr ""
 
 #: ../../topics/forms/modelforms.txt:42
@@ -12946,8 +13023,8 @@ msgid "Once your cache is configured, you've got two choices for how to store da
 msgstr ""
 
 #: ../../topics/http/sessions.txt:77
-# 3caa5bb342f74a769fc64aa3e8407600
-msgid "Set :setting:`SESSION_ENGINE` to ``\"django.contrib.sessions.backends.cache\"`` for a simple caching session store. Session data will be stored directly your cache. However, session data may not be persistent: cached data can be evicted if the cache fills up or if the cache server is restarted."
+# 4aacb59730424acd9aeabf87092282e7
+msgid "Set :setting:`SESSION_ENGINE` to ``\"django.contrib.sessions.backends.cache\"`` for a simple caching session store. Session data will be stored directly in your cache. However, session data may not be persistent: cached data can be evicted if the cache fills up or if the cache server is restarted."
 msgstr ""
 
 #: ../../topics/http/sessions.txt:83
@@ -13030,9 +13107,9 @@ msgstr ""
 msgid "**No freshness guarantee**"
 msgstr ""
 
-#: ../../topics/http/sessions.txt:140
-# a10f2d1445324fe1b26ca6429af1c7d1
-msgid "Note also that while the MAC can guarantee the authenticity of the data (that it was generated by your site, and not someone else), and the integrity of the data (that it is all there and correct), it cannot guarantee freshness i.e. that you are being sent back the last thing you sent to the client. This means that for some uses of session data, the cookie backend might open you up to `replay attacks`_. Cookies will only be detected as 'stale' if they are older than your :setting:`SESSION_COOKIE_AGE`."
+#: ../../topics/http/sessions.txt:152
+# 72af9363662b49d8af351d3544346c40
+msgid "Note also that while the MAC can guarantee the authenticity of the data (that it was generated by your site, and not someone else), and the integrity of the data (that it is all there and correct), it cannot guarantee freshness i.e. that you are being sent back the last thing you sent to the client. This means that for some uses of session data, the cookie backend might open you up to `replay attacks`_. Unlike other session backends which keep a server-side record of each session and invalidate it when a user logs out, cookie-based sessions are not invalidated when a user logs out. Thus if an attacker steals a user's cookie, he can use that cookie to login as that user even if the user logs out. Cookies will only be detected as 'stale' if they are older than your :setting:`SESSION_COOKIE_AGE`."
 msgstr ""
 
 #: ../../topics/http/sessions.txt:149
@@ -13195,9 +13272,9 @@ msgstr ""
 msgid "Session serialization"
 msgstr ""
 
-#: ../../topics/http/sessions.txt:312
-# f4fd945f65d746d388c326e36e8042e5
-msgid "Before version 1.6, Django defaulted to using :mod:`pickle` to serialize session data before storing it in the backend. If you're using the :ref:`signed cookie session backend<cookie-session-backend>` and :setting:`SECRET_KEY` is known by an attacker, the attacker could insert a string into his session which, when unpickled, executes arbitrary code on the server. The technique for doing so is simple and easily available on the internet. Although the cookie session storage signs the cookie-stored data to prevent tampering, a :setting:`SECRET_KEY` leak immediately escalates to a remote code execution vulnerability."
+#: ../../topics/http/sessions.txt:316
+# b0568f41e8d243a98bf203ab630a86cc
+msgid "Before version 1.6, Django defaulted to using :mod:`pickle` to serialize session data before storing it in the backend. If you're using the :ref:`signed cookie session backend<cookie-session-backend>` and :setting:`SECRET_KEY` is known by an attacker (there isn't an inherent vulnerability in Django that would cause it to leak), the attacker could insert a string into his session which, when unpickled, executes arbitrary code on the server. The technique for doing so is simple and easily available on the internet. Although the cookie session storage signs the cookie-stored data to prevent tampering, a :setting:`SECRET_KEY` leak immediately escalates to a remote code execution vulnerability."
 msgstr ""
 
 #: ../../topics/http/sessions.txt:322
@@ -13210,9 +13287,19 @@ msgstr ""
 msgid "Bundled Serializers"
 msgstr ""
 
-#: ../../topics/http/sessions.txt:339
-# 20f8bd1a878e4e13894ddb5a152d8600
-msgid "A wrapper around the JSON serializer from :mod:`django.core.signing`. Can only serialize basic data types. See the :ref:`custom-serializers` section for more details."
+#: ../../topics/http/sessions.txt:344
+# 9edce26db94943a88456c59a575bf2fa
+msgid "A wrapper around the JSON serializer from :mod:`django.core.signing`. Can only serialize basic data types."
+msgstr ""
+
+#: ../../topics/http/sessions.txt:347
+# 9082cf0429ee41c6acd5d012496eff58
+msgid "In addition, as JSON supports only string keys, note that using non-string keys in ``request.session`` won't work as expected::"
+msgstr ""
+
+#: ../../topics/http/sessions.txt:358
+# 41d75bd410b24844ab147f356912e5d2
+msgid "See the :ref:`custom-serializers` section for more details on limitations of JSON serialization."
 msgstr ""
 
 #: ../../topics/http/sessions.txt:345
@@ -14329,8 +14416,18 @@ msgstr ""
 msgid "In this example, the ``/credit/reports/`` URL will be handled by the ``credit.views.report()`` Django view."
 msgstr ""
 
-#: ../../topics/http/urls.txt:372
-# 6fbe305d81554328a036cd1750062338
+#: ../../topics/http/urls.txt:369
+# 1606e1fb9ec04ef6845bbcf046908ebe
+msgid "This can be used to remove redundancy from URLconfs where a single pattern prefix is used repeatedly. For example, consider this URLconf::"
+msgstr ""
+
+#: ../../topics/http/urls.txt:381
+# 7c329abb34824b489418c0109879c4e3
+msgid "We can improve this by stating the common path prefix only once and grouping the suffixes that differ::"
+msgstr ""
+
+#: ../../topics/http/urls.txt:398
+# 6c3c0ca5a40344a5a588677a942de093
 msgid "Captured parameters"
 msgstr ""
 
@@ -14369,8 +14466,13 @@ msgstr ""
 msgid "This technique is used in the :doc:`syndication framework </ref/contrib/syndication>` to pass metadata and options to views."
 msgstr ""
 
-#: ../../topics/http/urls.txt:418
-# 14a5c3d18f8c48a8a28745ebb2c27d2d
+#: ../../topics/http/urls.txt:442
+# c84cdd281786430daee81a653658a1c6
+msgid "Dealing with conflicts"
+msgstr ""
+
+#: ../../topics/http/urls.txt:444
+# 2dc23efc875d4b4bb2662a8a65163b10
 msgid "It's possible to have a URL pattern which captures named keyword arguments, and also passes arguments with the same names in its dictionary of extra arguments. When this happens, the arguments in the dictionary will be used instead of the arguments captured in the URL."
 msgstr ""
 
@@ -14799,6 +14901,11 @@ msgstr ""
 #: ../../topics/http/views.txt:44
 # 2cc8a8d6a25249758b7da82c3d04dedd
 msgid "The view returns an :class:`~django.http.HttpResponse` object that contains the generated response. Each view function is responsible for returning an :class:`~django.http.HttpResponse` object. (There are exceptions, but we'll get to those later.)"
+msgstr ""
+
+#: ../../topics/http/views.txt:49
+# 9cdf987625cf46069ac330034505c31b
+msgid "Django's Time Zone"
 msgstr ""
 
 #: ../../topics/http/views.txt:51
@@ -16406,8 +16513,28 @@ msgstr ""
 msgid "``{% blocktrans %}`` also supports :ref:`contextual markers<contextual-markers>` using the ``context`` keyword:"
 msgstr ""
 
+#: ../../topics/i18n/translation.txt:641
+# 97aa370c90c44b26a4b4de0d77711deb
+msgid "String literals passed to tags and filters"
+msgstr ""
+
 #: ../../topics/i18n/translation.txt:643
-# b7a6ad081a2148179a82828c1cd89212
+# 93d789cf6d384cd986a1b80bd426bba3
+msgid "You can translate string literals passed as arguments to tags and filters by using the familiar ``_()`` syntax::"
+msgstr ""
+
+#: ../../topics/i18n/translation.txt:648
+# fe0eda6896ce4c87bceffd6b8859f3bf
+msgid "In this case, both the tag and the filter will see the translated string, so they don't need to be aware of translations."
+msgstr ""
+
+#: ../../topics/i18n/translation.txt:652
+# 51e4d8833e7f495c936755d73ad0356d
+msgid "In this example, the translation infrastructure will be passed the string ``\"yes,no\"``, not the individual strings ``\"yes\"`` and ``\"no\"``. The translated string will need to contain the comma so that the filter parsing code knows how to split up the arguments. For example, a German translator might translate the string ``\"yes,no\"`` as ``\"ja,nein\"`` (keeping the comma intact)."
+msgstr ""
+
+#: ../../topics/i18n/translation.txt:662
+# 45125e0f1d514dcc8b59e7bef93d74a2
 msgid "Comments for translators in templates"
 msgstr ""
 
@@ -16476,23 +16603,8 @@ msgstr ""
 msgid "These tags also require a ``{% load i18n %}``."
 msgstr ""
 
-#: ../../topics/i18n/translation.txt:749
-# 63ce3b23ffee4bfcaad49d8afde83e2d
-msgid "Translation hooks are also available within any template block tag that accepts constant strings. In those cases, just use ``_()`` syntax to specify a translation string::"
-msgstr ""
-
-#: ../../topics/i18n/translation.txt:755
-# b47033e5835d4259b106aa83638de341
-msgid "In this case, both the tag and the filter will see the already-translated string, so they don't need to be aware of translations."
-msgstr ""
-
-#: ../../topics/i18n/translation.txt:759
-# c7ae6304e7064dadb72636b5c58dfebd
-msgid "In this example, the translation infrastructure will be passed the string ``\"yes,no\"``, not the individual strings ``\"yes\"`` and ``\"no\"``. The translated string will need to contain the comma so that the filter parsing code knows how to split up the arguments. For example, a German translator might translate the string ``\"yes,no\"`` as ``\"ja,nein\"`` (keeping the comma intact)."
-msgstr ""
-
-#: ../../topics/i18n/translation.txt:766
-# da1086deb78b4b5eaf846ae80a2de9ab
+#: ../../topics/i18n/translation.txt:768
+# bd7049e8b0d94db08e9c038adb8a2440
 msgid "You can also retrieve information about any of the available languages using provided template tags and filters. To get information about a single language, use the ``{% get_language_info %}`` tag::"
 msgstr ""
 
@@ -16777,7 +16889,12 @@ msgid "Once the string literals of an application have been tagged for later tra
 msgstr ""
 
 #: ../../topics/i18n/translation.txt:1161
-# 8f7821e38a3d4c30b0794f3f86be6037
+# 2534d9c5294c4cc995f8add26430717d
+msgid "Locale restrictions"
+msgstr ""
+
+#: ../../topics/i18n/translation.txt:1163
+# eed1841dfb79473bbee439404c4ae70e
 msgid "Django does not support localizing your application into a locale for which Django itself has not been translated. In this case, it will ignore your translation files. If you were to try this and Django supported it, you would inevitably see a mixture of translated strings (from your application) and English strings (from Django itself). If you want to support a locale for your application that is not already part of Django, you'll need to make at least a minimal translation of the Django core."
 msgstr ""
 
@@ -16802,7 +16919,12 @@ msgid "Django comes with a tool, :djadmin:`django-admin.py makemessages <makemes
 msgstr ""
 
 #: ../../topics/i18n/translation.txt:1185
-# c3c2f359ee7c4e508eb5a4a1fbee46a6
+# 5ba0efc6dfd4458d804835749b661ef5
+msgid "Gettext utilities"
+msgstr ""
+
+#: ../../topics/i18n/translation.txt:1187
+# 16b7b1a55a8c435a9fd3865e7268ccd3
 msgid "The ``makemessages`` command (and ``compilemessages`` discussed later) use commands from the GNU gettext toolset: ``xgettext``, ``msgfmt``, ``msgmerge`` and ``msguniq``."
 msgstr ""
 
@@ -16856,13 +16978,25 @@ msgstr ""
 msgid "When :ref:`creating message files from JavaScript source code <creating-message-files-from-js-code>` you need to use the special 'djangojs' domain, **not** ``-e js``."
 msgstr ""
 
-#: ../../topics/i18n/translation.txt:1230
-# db843ad578c74bd290fea313067c318c
+#: ../../topics/i18n/translation.txt:1233
+# a66da27ed88e432cac3ea61539f7e6fd
+msgid "No gettext?"
+msgstr ""
+
+#: ../../topics/i18n/translation.txt:1235
+# 754179482db5450da99016c8317d274f
 msgid "If you don't have the ``gettext`` utilities installed, :djadmin:`makemessages` will create empty files. If that's the case, either install the ``gettext`` utilities or just copy the English message file (``locale/en/LC_MESSAGES/django.po``) if available and use it as a starting point; it's just an empty translation file."
 msgstr ""
 
-#: ../../topics/i18n/translation.txt:1238
-# 3b5f07d8517c42fda19d834b9f2abd12
+#: ../../topics/i18n/translation.txt:1241
+#: ../../topics/i18n/translation.txt:1313
+# cbc152f4e22e48d7b1e50004b95863e9
+# 5f69b8cb9f284db884822b294144fcfd
+msgid "Working on Windows?"
+msgstr ""
+
+#: ../../topics/i18n/translation.txt:1243
+# 67d29d15b33c4447ae049aedcdce1a86
 msgid "If you're using Windows and need to install the GNU gettext utilities so :djadmin:`makemessages` works, see :ref:`gettext_on_windows` for more information."
 msgstr ""
 
@@ -16906,8 +17040,13 @@ msgstr ""
 msgid "Long messages are a special case. There, the first string directly after the ``msgstr`` (or ``msgid``) is an empty string. Then the content itself will be written over the next few lines as one string per line. Those strings are directly concatenated. Don't forget trailing spaces within the strings; otherwise, they'll be tacked together without whitespace!"
 msgstr ""
 
-#: ../../topics/i18n/translation.txt:1279
-# 72c4264398f5443e8ee70c394cadc860
+#: ../../topics/i18n/translation.txt:1282
+# ac0afe6516a6487c905462ce5eeae06e
+msgid "Mind your charset"
+msgstr ""
+
+#: ../../topics/i18n/translation.txt:1284
+# 19ca543e78fa4fc4a9503354b05c8461
 msgid "When creating a PO file with your favorite text editor, first edit the charset line (search for ``\"CHARSET\"``) and set it to the charset you'll be using to edit the content. Due to the way the ``gettext`` tools work internally and because we want to allow non-ASCII source strings in Django's core and your applications, you **must** use UTF-8 as the encoding for your PO file. This means that everybody will be using the same encoding, which is important when Django processes the PO files."
 msgstr ""
 
@@ -16941,8 +17080,13 @@ msgstr ""
 msgid "If you're using Windows and need to install the GNU gettext utilities so :djadmin:`django-admin.py compilemessages <compilemessages>` works see :ref:`gettext_on_windows` for more information."
 msgstr ""
 
-#: ../../topics/i18n/translation.txt:1316
-# 939e995cba2049f6a3ac2c13a83ee914
+#: ../../topics/i18n/translation.txt:1319
+# db8bc984ced545e88f4bf1021851a6d2
+msgid ".po files: Encoding and BOM usage."
+msgstr ""
+
+#: ../../topics/i18n/translation.txt:1321
+# 906b375b184e4585ae0790d56451b060
 msgid "Django only supports ``.po`` files encoded in UTF-8 and without any BOM (Byte Order Mark) so if your text editor adds such marks to the beginning of files by default then you will need to reconfigure it."
 msgstr ""
 
@@ -17401,9 +17545,19 @@ msgstr ""
 msgid "Get Python at http://www.python.org. If you're running Linux or Mac OS X, you probably already have it installed."
 msgstr ""
 
+#: ../../topics/install.txt:18
+# 10dc5b7156f24c1abe16dc713ba128f0
+msgid "Django on Jython"
+msgstr ""
+
 #: ../../topics/install.txt:20
 # 3e35c0264cbb45db85e703f6829b27f7
 msgid "If you use Jython_ (a Python implementation for the Java platform), you'll need to follow a few additional steps. See :doc:`/howto/jython` for details."
+msgstr ""
+
+#: ../../topics/install.txt:25
+# cc6ead7bd6f64eb69c766f08a30d4a70
+msgid "Python on Windows"
 msgstr ""
 
 #: ../../topics/install.txt:27
@@ -17626,6 +17780,11 @@ msgstr ""
 msgid "If you're using Linux, Mac OS X or some other flavor of Unix, enter the command ``sudo python setup.py install`` at the shell prompt. If you're using Windows, start a command shell with administrator privileges and run the command ``python setup.py install``. This will install Django in your Python installation's ``site-packages`` directory."
 msgstr ""
 
+#: ../../topics/install.txt:247
+# 828de36aa7884bc9b2b85394ab6a6283
+msgid "Removing an old version"
+msgstr ""
+
 #: ../../topics/install.txt:249
 # ebfd095ea351470d983cb105ff31996e
 msgid "If you use this installation technique, it is particularly important that you :ref:`remove any existing installations<removing-old-versions-of-django>` of Django first. Otherwise, you can end up with a broken installation that includes files from previous versions that have since been removed from Django."
@@ -17634,6 +17793,11 @@ msgstr ""
 #: ../../topics/install.txt:263
 # b10824e81fa04dc6b3a560f49c25122b
 msgid "Installing the development version"
+msgstr ""
+
+#: ../../topics/install.txt:265
+# e624e61b042349a694f6680c328ea615
+msgid "Tracking Django development"
 msgstr ""
 
 #: ../../topics/install.txt:267
@@ -18035,8 +18199,13 @@ msgid "In order to configure logging, you use :setting:`LOGGING` to define a dic
 msgstr ""
 
 #: ../../topics/logging.txt:221
-# 62a81005894d47bebed82155299266a9
-msgid "Prior to Django 1.5, the :setting:`LOGGING` setting overwrote the :ref:`default Django logging configuration <default-logging-configuration>`. From Django 1.5 forward, the project's logging configuration is merged with Django's defaults, hence you can decide if you want to add to, or replace the existing configuration. To completely override the default configuration, set the ``disable_existing_loggers`` key to True in the :setting:`LOGGING` dictConfig. Alternatively you can redefine some or all of the loggers."
+# a59bc4d532ea4a8c86e2a2ee6aa99c9d
+msgid "Prior to Django 1.5, the :setting:`LOGGING` setting always overwrote the :ref:`default Django logging configuration <default-logging-configuration>`. From Django 1.5 forward, it is possible to get the project's logging configuration merged with Django's defaults, hence you can decide if you want to add to, or replace the existing configuration."
+msgstr ""
+
+#: ../../topics/logging.txt:227
+# f538e0da16474a6384729c268bb1022a
+msgid "If the ``disable_existing_loggers`` key in the :setting:`LOGGING` dictConfig is set to ``True`` (which is the default) the default configuration is completely overridden. Alternatively you can redefine some or all of the loggers by setting ``disable_existing_loggers`` to ``False``."
 msgstr ""
 
 #: ../../topics/logging.txt:229
@@ -18590,8 +18759,8 @@ msgid "Django uses the *Python 2/3 Compatible Source* strategy. Of course, you'r
 msgstr ""
 
 #: ../../topics/python3.txt:28
-# 851a43cb3da048d4a5a8371367a74c1e
-msgid "Writing compatible code is much easier if you target Python ≥ 2.6. Django 1.5 introduces compatibility tools such as :mod:`django.utils.six`. For convenience, forwards-compatible aliases were introduced in Django 1.4.2. If your application takes advantage of these tools, it will require Django ≥ 1.4.2."
+# f9c01bb9656e4866abd69be431e67b3d
+msgid "Writing compatible code is much easier if you target Python ≥ 2.6. Django 1.5 introduces compatibility tools such as :mod:`django.utils.six`, which is a customized version of the :mod:`six module <six>`. For convenience, forwards-compatible aliases were introduced in Django 1.4.2. If your application takes advantage of these tools, it will require Django ≥ 1.4.2."
 msgstr ""
 
 #: ../../topics/python3.txt:34
@@ -18980,8 +19149,8 @@ msgid "six_ is the canonical compatibility library for supporting Python 2 and 3
 msgstr ""
 
 #: ../../topics/python3.txt:328
-# 4180072ac5164dbfa670ad27c0b0f061
-msgid ":mod:`six` is bundled with Django as of version 1.4.2. You can import it as :mod:`django.utils.six`."
+# 632cb41db57c4baeb120b76ea6f0ac72
+msgid "A :mod:`customized version of six <django.utils.six>` is bundled with Django as of version 1.4.2. You can import it as ``django.utils.six``."
 msgstr ""
 
 #: ../../topics/python3.txt:331
@@ -19025,8 +19194,8 @@ msgid "Moved modules"
 msgstr ""
 
 #: ../../topics/python3.txt:364
-# a46eeeacfb71420f89fbca0cc3fd9286
-msgid "Some modules were renamed in Python 3. The :mod:`django.utils.six.moves <six.moves>` module provides a compatible location to import them."
+# 40c8d003ac004dd2b15937c4fe8393e0
+msgid "Some modules were renamed in Python 3. The ``django.utils.six.moves`` module (based on the :mod:`six.moves module <six.moves>`) provides a compatible location to import them."
 msgstr ""
 
 #: ../../topics/python3.txt:367
@@ -19049,14 +19218,14 @@ msgstr ""
 msgid "This is a last resort solution when :mod:`six` doesn't provide an appropriate function."
 msgstr ""
 
-#: ../../topics/python3.txt:392
-# 711158a9a31c466cbe5dec3562cbd29a
-msgid "Customizations of six"
+#: ../../topics/python3.txt:393
+# 71af908f71ca4d5f953674dd9a32d81c
+msgid "Django customized version of six"
 msgstr ""
 
-#: ../../topics/python3.txt:394
-# b60ee0041d4d4cc9bc599024faec411f
-msgid "The version of six bundled with Django includes a few extras."
+#: ../../topics/python3.txt:395
+# d6afe46a58854b0db4ef380f94cdc2ac
+msgid "The version of six bundled with Django (``django.utils.six``) includes a few extras."
 msgstr ""
 
 #: ../../topics/python3.txt:398
@@ -20139,6 +20308,11 @@ msgstr ""
 msgid "The ability to pass a list of signals was added."
 msgstr ""
 
+#: ../../topics/signals.txt:139
+# 20a44add59484d97a28fff9ee80e772b
+msgid "Where should this code live?"
+msgstr ""
+
 #: ../../topics/signals.txt:141
 # c80048eb29f14df6b89363115c19a87f
 msgid "You can put signal handling and registration code anywhere you like. However, you'll need to make sure that the module it's in gets imported early on so that the signal handling gets registered before any signals need to be sent. This makes your app's ``models.py`` a good place to put registration of signal handlers."
@@ -20475,7 +20649,12 @@ msgid "Use a dot (``.``) to access attributes of a variable."
 msgstr ""
 
 #: ../../topics/templates.txt:92
-# 56f409f8c88843d6bdbc4cb3d418e482
+# 02f0d94fffc34900b397b149c2d9163f
+msgid "Behind the scenes"
+msgstr ""
+
+#: ../../topics/templates.txt:94
+# bbab87ccc4584d75a74d3c4c61a8ab1f
 msgid "Technically, when the template system encounters a dot, it tries the following lookups, in this order:"
 msgstr ""
 
@@ -21533,6 +21712,11 @@ msgstr ""
 msgid "Doctests use Python's standard :mod:`doctest` module, which searches your docstrings for statements that resemble a session of the Python interactive interpreter. A full explanation of how :mod:`doctest` works is out of the scope of this document; read Python's official documentation for the details."
 msgstr ""
 
+#: ../../topics/testing/doctests.txt:10
+# 098fca5c739b4f87a9ee89bc975515ec
+msgid "What's a **docstring**?"
+msgstr ""
+
 #: ../../topics/testing/doctests.txt:12
 # cbb68df9e7c24cc4b694d738f51b00cf
 msgid "A good explanation of docstrings (and some guidelines for using them effectively) can be found in :pep:`257`:"
@@ -21718,6 +21902,11 @@ msgstr ""
 msgid "Django's unit tests use a Python standard library module: :mod:`unittest`. This module defines tests in class-based approach."
 msgstr ""
 
+#: ../../topics/testing/overview.txt:22
+# 2099f7d172744961a38ff97053ccf4eb
+msgid "unittest2"
+msgstr ""
+
 #: ../../topics/testing/overview.txt:24
 # 5610ddbcd98a45398235d2c2aadcf8a6
 msgid "Python 2.7 introduced some major changes to the unittest library, adding some extremely useful features. To ensure that every Django project can benefit from these new features, Django ships with a copy of unittest2_, a copy of the Python 2.7 unittest library, backported for Python 2.5 compatibility."
@@ -21843,6 +22032,11 @@ msgstr ""
 msgid "If you do not want to wait for the currently running test to finish, you can press ``Ctrl-C`` a second time and the test run will halt immediately, but not gracefully. No details of the tests run before the interruption will be reported, and any test databases created by the run will not be destroyed."
 msgstr ""
 
+#: ../../topics/testing/overview.txt:171
+# 1b1c9ff5c85646778203ca785ebd4e42
+msgid "Test with warnings enabled"
+msgstr ""
+
 #: ../../topics/testing/overview.txt:173
 # be42711e0b28437a9d3bb2173491b995
 msgid "It's a good idea to run your tests with Python warnings enabled: ``python -Wall manage.py test``. The ``-Wall`` flag tells Python to display deprecation warnings. Django, like many other Python libraries, uses these warnings to flag when features are going away. It also might flag areas in your code that aren't strictly wrong but could benefit from a better implementation."
@@ -21876,6 +22070,11 @@ msgstr ""
 #: ../../topics/testing/overview.txt:207
 # f09ba33856074b74a36748b129039e93
 msgid "For fine-grained control over the character encoding of your test database, use the :setting:`TEST_CHARSET` option. If you're using MySQL, you can also use the :setting:`TEST_COLLATION` option to control the particular collation used by the test database. See the :doc:`settings documentation </ref/settings>` for details of these advanced settings."
+msgstr ""
+
+#: ../../topics/testing/overview.txt:214
+# 226903371c524a6086507489d2802373
+msgid "Finding data from your production database when running tests?"
 msgstr ""
 
 #: ../../topics/testing/overview.txt:216
@@ -22158,8 +22357,13 @@ msgstr ""
 msgid "...will send the HTTP header ``HTTP_X_REQUESTED_WITH`` to the details view, which is a good way to test code paths that use the :meth:`django.http.HttpRequest.is_ajax()` method."
 msgstr ""
 
-#: ../../topics/testing/overview.txt:501
-# 0de4649460d54fb8ba0c0c2513bf3bed
+#: ../../topics/testing/overview.txt:500
+# 5906b85787c44eb9982ff5844481d80b
+msgid "CGI specification"
+msgstr ""
+
+#: ../../topics/testing/overview.txt:502
+# cc5c45bda1ac4257af7c5be2d0be3c73
 msgid "The headers sent via ``**extra`` should follow CGI_ specification. For example, emulating a different \"Host\" header as sent in the HTTP request from the browser to the server should be passed as ``HTTP_HOST``."
 msgstr ""
 
@@ -22788,8 +22992,13 @@ msgstr ""
 msgid "Fixtures with other names can always be installed manually using the :djadmin:`manage.py loaddata<loaddata>` command."
 msgstr ""
 
-#: ../../topics/testing/overview.txt:1247
-# ccbb2fd189524a6eac9bc077675f578b
+#: ../../topics/testing/overview.txt:1246
+# d9917d96a81d423bac00dd1e5d88982d
+msgid "Initial SQL data and testing"
+msgstr ""
+
+#: ../../topics/testing/overview.txt:1248
+# afb6b7e36d8f4fdf98a1c078132abbd3
 msgid "Django provides a second way to insert initial data into models -- the :ref:`custom SQL hook <initial-sql>`. However, this technique *cannot* be used to provide initial data for testing purposes. Django's test framework flushes the contents of the test database after each test; as a result, any data added using the custom SQL hook will be lost."
 msgstr ""
 

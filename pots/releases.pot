@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Django 1.5\n"
+"Project-Id-Version: Django 1.5.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-08 14:28\n"
+"POT-Creation-Date: 2013-10-04 09:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4584,6 +4584,17 @@ msgstr ""
 msgid "All contrib apps use a ``csrf_protect`` decorator to protect the view. This requires the use of the ``csrf_token`` template tag in the template. If you have used custom templates for contrib views, you MUST READ THE UPGRADE INSTRUCTIONS to fix those templates."
 msgstr ""
 
+#: ../../releases/1.2.txt:441
+#: ../../releases/1.2.txt:869
+#: ../../releases/1.2-alpha-1.txt:38
+#: ../../releases/1.2-alpha-1.txt:206
+# c497d08ab75c4ecf960d474a89291d37
+# 171bd7d4349f45e3b385598f64f3b6ec
+# 0e7eb19aa6ab400b9c514a6ab329a723
+# 6f1c02ea76674af7bb78bf00df4c467d
+msgid "Documentation removed"
+msgstr ""
+
 #: ../../releases/1.2.txt:443
 #: ../../releases/1.2.txt:871
 #: ../../releases/1.2-alpha-1.txt:40
@@ -8655,8 +8666,12 @@ msgid "Error report filtering"
 msgstr ""
 
 #: ../../releases/1.4.txt:510
-# e041e41a6d9b4384b398fee3f8e10cec
-msgid "We added two function decorators, :func:`sensitive_variables` and :func:`sensitive_post_parameters`, to allow designating the local variables and POST parameters that may contain sensitive information and should be filtered out of error reports."
+#: ../../releases/1.4-alpha-1.txt:340
+#: ../../releases/1.4-beta-1.txt:378
+# 16e40dddf5bd4171a5a0ca15ba4ef33c
+# cbd1b93d0135465281566529332536d6
+# bf97d11303ac43028e83b71179e6a25e
+msgid "We added two function decorators, :func:`~django.views.decorators.debug.sensitive_variables` and :func:`~django.views.decorators.debug.sensitive_post_parameters`, to allow designating the local variables and POST parameters that may contain sensitive information and should be filtered out of error reports."
 msgstr ""
 
 #: ../../releases/1.4.txt:515
@@ -10079,17 +10094,10 @@ msgstr ""
 msgid "We've made various improvements to our CSRF features, including the :func:`~django.views.decorators.csrf.ensure_csrf_cookie` decorator which can help with AJAX heavy sites, protection for PUT and DELETE requests, and the :setting:`CSRF_COOKIE_SECURE` and :setting:`CSRF_COOKIE_PATH` settings which can improve the security and usefulness of the CSRF protection. See the :doc:`CSRF docs </ref/contrib/csrf>` for more information."
 msgstr ""
 
-#: ../../releases/1.4-alpha-1.txt:340
-#: ../../releases/1.4-beta-1.txt:378
-# ab7c6e0b32ab42d98cd5bc38ee7f69b1
-# c94fdd2bf7934774acfbde784362e5ec
-msgid "Two new function decorators, :func:`sensitive_variables` and :func:`sensitive_post_parameters`, were added to allow designating the local variables and POST parameters which may contain sensitive information and should be filtered out of error reports."
-msgstr ""
-
-#: ../../releases/1.4-alpha-1.txt:345
-#: ../../releases/1.4-beta-1.txt:383
-# d055d265b3e142e6bcbe01be19aa2ad2
-# 34ee9d0c0ce64a5d8afb9431c8c2b919
+#: ../../releases/1.4-alpha-1.txt:346
+#: ../../releases/1.4-beta-1.txt:384
+# 66355765ff35471b8d38259d45a6d108
+# ccc1ff9462b64199b2fa4cb8045acf5d
 msgid "All POST parameters are now systematically filtered out of error reports for certain views (``login``, ``password_reset_confirm``, ``password_change``, and ``add_view`` in :mod:`django.contrib.auth.views`, as well as ``user_change_password`` in the admin app) to prevent the leaking of sensitive information such as user passwords."
 msgstr ""
 
@@ -10859,6 +10867,94 @@ msgstr ""
 # 3f2cdc41274c4c33964a4d3fbac5b262
 # 5c1ffd2c89384142b6b2245286e478f0
 msgid "Fixed an obscure bug with the :func:`~django.test.utils.override_settings` decorator. If you hit an ``AttributeError: 'Settings' object has no attribute '_original_allowed_hosts'`` exception, it's probably fixed (#20636)."
+msgstr ""
+
+#: ../../releases/1.4.7.txt:3
+# 8cf4eba648774910878a35aee031794f
+msgid "Django 1.4.7 release notes"
+msgstr ""
+
+#: ../../releases/1.4.7.txt:5
+#: ../../releases/1.5.3.txt:5
+# 09bb7cad40244ee0af9eefda71e07e8f
+# e4e202b9534a4acbb9f9dcac542b87e4
+msgid "*September 10, 2013*"
+msgstr ""
+
+#: ../../releases/1.4.7.txt:7
+# ccecc6c2e9664ed486d1f204fcd001d8
+msgid "Django 1.4.7 fixes one security issue present in previous Django releases in the 1.4 series."
+msgstr ""
+
+#: ../../releases/1.4.7.txt:11
+#: ../../releases/1.5.3.txt:12
+# 677c748b1b184afdadbec59889d88e56
+# d47c142871d74acc94490e69cee92851
+msgid "Directory traversal vulnerability in :ttag:`ssi` template tag"
+msgstr ""
+
+#: ../../releases/1.4.7.txt:13
+#: ../../releases/1.5.3.txt:14
+# 2732af36bde546c2b1ef59dd11606f73
+# 64aed61f49274cbb965ecb7689102cef
+msgid "In previous versions of Django it was possible to bypass the :setting:`ALLOWED_INCLUDE_ROOTS` setting used for security with the :ttag:`ssi` template tag by specifying a relative path that starts with one of the allowed roots. For example, if ``ALLOWED_INCLUDE_ROOTS = (\"/var/www\",)`` the following would be possible:"
+msgstr ""
+
+#: ../../releases/1.4.7.txt:23
+#: ../../releases/1.5.3.txt:24
+# 0098b604356a4bb9a537ed9cda60fdbf
+# c610cd45331d4d118b00e6295b56cb53
+msgid "In practice this is not a very common problem, as it would require the template author to put the :ttag:`ssi` file in a user-controlled variable, but it's possible in principle."
+msgstr ""
+
+#: ../../releases/1.4.8.txt:3
+# d58bf20db80845e7b1a375cdeec6d3ec
+msgid "Django 1.4.8 release notes"
+msgstr ""
+
+#: ../../releases/1.4.8.txt:5
+#: ../../releases/1.5.4.txt:5
+# 652411731a834e2c84bf7822a0b94816
+# 625be3e903374dd28f3903f7d6e2a140
+msgid "*September 14, 2013*"
+msgstr ""
+
+#: ../../releases/1.4.8.txt:7
+# a8698d08017c4761a8ee9e469eea17f6
+msgid "Django 1.4.8 fixes two security issues present in previous Django releases in the 1.4 series."
+msgstr ""
+
+#: ../../releases/1.4.8.txt:11
+#: ../../releases/1.5.4.txt:11
+# 7a32d26bc5074791a27a2dd37af98449
+# 138b5f69e4e045638805a2edf59c5a08
+msgid "Denial-of-service via password hashers"
+msgstr ""
+
+#: ../../releases/1.4.8.txt:13
+#: ../../releases/1.5.4.txt:13
+# 3963d31f0ec84ca39879c6db7328e378
+# d4c1f50946324baca4355f030912fa5a
+msgid "In previous versions of Django, no limit was imposed on the plaintext length of a password. This allowed a denial-of-service attack through submission of bogus but extremely large passwords, tying up server resources performing the (expensive, and increasingly expensive with the length of the password) calculation of the corresponding hash."
+msgstr ""
+
+#: ../../releases/1.4.8.txt:19
+# 4b2ce542788f492c887279f593187894
+msgid "As of 1.4.8, Django's authentication framework imposes a 4096-byte limit on passwords and will fail authentication with any submitted password of greater length."
+msgstr ""
+
+#: ../../releases/1.4.8.txt:24
+#: ../../releases/1.5.4.txt:24
+# 8878456900044bd39188d51c60499630
+# db2defcc7788421ca7ac86ad617a8a2d
+msgid "Corrected usage of :func:`~django.views.decorators.debug.sensitive_post_parameters` in :mod:`django.contrib.auth`’s admin"
+msgstr ""
+
+#: ../../releases/1.4.8.txt:26
+#: ../../releases/1.5.4.txt:26
+# bb505ba0aa9941879c6f30a4a73c292e
+# 88a537729d064347a3ae307592d540bb
+msgid "The decoration of the ``add_view`` and ``user_change_password`` user admin views with :func:`~django.views.decorators.debug.sensitive_post_parameters` did not include :func:`~django.utils.decorators.method_decorator` (required since the views are methods) resulting in the decorator not being properly applied. This usage has been fixed and :func:`~django.views.decorators.debug.sensitive_post_parameters` will now throw an exception if it's improperly used."
 msgstr ""
 
 #: ../../releases/1.5.txt:3
@@ -12641,6 +12737,51 @@ msgstr ""
 msgid "Ensured that the WSGI request's path is correctly based on the ``SCRIPT_NAME`` environment variable or the :setting:`FORCE_SCRIPT_NAME` setting, regardless of whether or not either has a trailing slash (#20169)."
 msgstr ""
 
+#: ../../releases/1.5.3.txt:3
+# 10782e825b324055ab3fc9055221d691
+msgid "Django 1.5.3 release notes"
+msgstr ""
+
+#: ../../releases/1.5.3.txt:7
+# 6c36f51127ae40c4927c62a38a68ef51
+msgid "This is Django 1.5.3, the third release in the Django 1.5 series. It addresses one security issue and also contains an opt-in feature to enhance the security of :mod:`django.contrib.sessions`."
+msgstr ""
+
+#: ../../releases/1.5.3.txt:29
+# 1907fc29e80e4a13862b1919596bd315
+msgid "Mitigating a remote-code execution vulnerability in :mod:`django.contrib.sessions`"
+msgstr ""
+
+#: ../../releases/1.5.3.txt:31
+# 688249fe69c942cfaaaf9f84367f5c6e
+msgid ":mod:`django.contrib.sessions` currently uses :mod:`pickle` to serialize session data before storing it in the backend. If you're using the :ref:`signed cookie session backend<cookie-session-backend>` and :setting:`SECRET_KEY` is known by an attacker (there isn't an inherent vulnerability in Django that would cause it to leak), the attacker could insert a string into his session which, when unpickled, executes arbitrary code on the server. The technique for doing so is simple and easily available on the internet. Although the cookie session storage signs the cookie-stored data to prevent tampering, a :setting:`SECRET_KEY` leak immediately escalates to a remote code execution vulnerability."
+msgstr ""
+
+#: ../../releases/1.5.3.txt:42
+# f8750228d99e4a34877f1b8f964f6b0e
+msgid "This attack can be mitigated by serializing session data using JSON rather than :mod:`pickle`. To facilitate this, Django 1.5.3 introduces a new setting, :setting:`SESSION_SERIALIZER`, to customize the session serialization format. For backwards compatibility, this setting defaults to using :mod:`pickle`. While JSON serialization does not support all Python objects like :mod:`pickle` does, we highly recommend switching to JSON-serialized values. Also, as JSON requires string keys, you will likely run into problems if you are using non-string keys in ``request.session``. See the :ref:`session_serialization` documentation for more details."
+msgstr ""
+
+#: ../../releases/1.5.4.txt:3
+# adfd164eb68d47f69cf7b47197c885f1
+msgid "Django 1.5.4 release notes"
+msgstr ""
+
+#: ../../releases/1.5.4.txt:7
+# 74b584aa6a5048158ad08f12adbe2fcc
+msgid "This is Django 1.5.4, the fourth release in the Django 1.5 series. It addresses two security issues and one bug."
+msgstr ""
+
+#: ../../releases/1.5.4.txt:19
+# 16b63ea314f44488873c9348c5d4c05a
+msgid "As of 1.5.4, Django's authentication framework imposes a 4096-byte limit on passwords, and will fail authentication with any submitted password of greater length."
+msgstr ""
+
+#: ../../releases/1.5.4.txt:37
+# 2ec772cb06ed43a195b8810b0d569986
+msgid "Fixed a bug that prevented a ``QuerySet`` that uses :meth:`~django.db.models.query.QuerySet.prefetch_related` from being pickled and unpickled more than once (the second pickling attempt raised an exception) (#21102)."
+msgstr ""
+
 #: ../../releases/index.txt:3
 # 6ee9eba4e717463ba9c526f280b5b334
 msgid "Release notes"
@@ -12696,13 +12837,795 @@ msgstr ""
 msgid "Pre-1.0 releases"
 msgstr ""
 
-#: ../../releases/index.txt:88
-# d61c33085ab74b2c8871f7aa91bfe330
+#: ../../releases/index.txt:102
+# 6f5b36069d704df1a52b0ecb0ac65453
+msgid "Security releases"
+msgstr ""
+
+#: ../../releases/index.txt:104
+# b86cf670ad9f4c8bafd7b5633d795c65
+msgid "Whenever a security issue is disclosed via :doc:`Django's security policies </internals/security>`, appropriate release notes are now added to all affected release series."
+msgstr ""
+
+#: ../../releases/index.txt:108
+# d8d6119babb649cc92d75f4096ec7974
+msgid "Additionally, :doc:`an archive of disclosed security issues </releases/security>` is maintained."
+msgstr ""
+
+#: ../../releases/index.txt:112
+# 7276cc412e3240b49f631905f167fc01
 msgid "Development releases"
 msgstr ""
 
 #: ../../releases/index.txt:90
 # ad51ae1373514f4cbcf301990668c56c
 msgid "These notes are retained for historical purposes. If you are upgrading between formal Django releases, you don't need to worry about these notes."
+msgstr ""
+
+#: ../../releases/security.txt:5
+# f762226f5e0047be8e6239df78b3e029
+msgid "Archive of security issues"
+msgstr ""
+
+#: ../../releases/security.txt:7
+# 7df9be3a86a640faab8b788ffd403949
+msgid "Django's development team is strongly committed to responsible reporting and disclosure of security-related issues, as outlined in :doc:`Django's security policies </internals/security>`."
+msgstr ""
+
+#: ../../releases/security.txt:11
+# 9a552a1464b24783b8aba536559a5a57
+msgid "As part of that commitment, we maintain the following historical list of issues which have been fixed and disclosed. For each issue, the list below includes the date, a brief description, the `CVE identifier <http://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures>`_ if applicable, a list of affected versions, a link to the full disclosure and links to the appropriate patch(es)."
+msgstr ""
+
+#: ../../releases/security.txt:18
+# ebe6889dbbcb423f97cc0be4e3b416a2
+msgid "Some important caveats apply to this information:"
+msgstr ""
+
+#: ../../releases/security.txt:20
+# 52aca159a14f4c768564593d547b423a
+msgid "Lists of affected versions include only those versions of Django which had stable, security-supported releases at the time of disclosure. This means older versions (whose security support had expired) and versions which were in pre-release (alpha/beta/RC) states at the time of disclosure may have been affected, but are not listed."
+msgstr ""
+
+#: ../../releases/security.txt:27
+# 58da4f8ccdf840fe977f956459023de2
+msgid "The Django project has on occasion issued security advisories, pointing out potential security problems which can arise from improper configuration or from other issues outside of Django itself. Some of these advisories have received CVEs; when that is the case, they are listed here, but as they have no accompanying patches or releases, only the description, disclosure and CVE will be listed."
+msgstr ""
+
+#: ../../releases/security.txt:37
+# 91eb481404874a53b17cb8d1b16dcfa7
+msgid "Issues prior to Django's security process"
+msgstr ""
+
+#: ../../releases/security.txt:39
+# 2f3f6bfab56c4a849f2058421f69f09b
+msgid "Some security issues were handled before Django had a formalized security process in use. For these, new releases may not have been issued at the time and CVEs may not have been assigned."
+msgstr ""
+
+#: ../../releases/security.txt:45
+# 49043a2039044ee28cdbfae0accaab02
+msgid "August 16, 2006 - CVE-2007-0404"
+msgstr ""
+
+#: ../../releases/security.txt:47
+# 944d4523934f486d8b19e07adf925a9a
+msgid "`CVE-2007-0404 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-0404&cid=3>`_: Filename validation issue in translation framework. `Full description <https://www.djangoproject.com/weblog/2006/aug/16/compilemessages/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:50
+#: ../../releases/security.txt:64
+#: ../../releases/security.txt:80
+#: ../../releases/security.txt:95
+#: ../../releases/security.txt:110
+#: ../../releases/security.txt:124
+#: ../../releases/security.txt:136
+#: ../../releases/security.txt:148
+#: ../../releases/security.txt:159
+#: ../../releases/security.txt:171
+#: ../../releases/security.txt:184
+#: ../../releases/security.txt:197
+#: ../../releases/security.txt:209
+#: ../../releases/security.txt:222
+#: ../../releases/security.txt:234
+#: ../../releases/security.txt:246
+#: ../../releases/security.txt:258
+#: ../../releases/security.txt:270
+#: ../../releases/security.txt:285
+#: ../../releases/security.txt:298
+#: ../../releases/security.txt:311
+#: ../../releases/security.txt:324
+#: ../../releases/security.txt:337
+#: ../../releases/security.txt:350
+#: ../../releases/security.txt:362
+#: ../../releases/security.txt:374
+#: ../../releases/security.txt:386
+#: ../../releases/security.txt:399
+#: ../../releases/security.txt:411
+#: ../../releases/security.txt:421
+#: ../../releases/security.txt:433
+#: ../../releases/security.txt:446
+# 399882da492842459c1d3bf4e2d32dc4
+# 29eac3825f91468e89341639adacf1d2
+# ce379459394843f78f321cd0e37a6f60
+# 8b1d09f5254a471394f99df43339338e
+# 1bf979d6d57d4459a4a19e26b56e5951
+# 169200dcc6ed485aa48d86f30fc1a8e3
+# 1137886a4b5146eb8802f8a0d209aafd
+# 1efab31b7ddf49a89e24a2baf3a1b941
+# e229a99fbd6f4240adad571dcd789b61
+# 42819339e5594d4891c7b5b0298c84d9
+# 8e6a6bce47d34e5f9baca150781f1139
+# ece27d8cef564af9bc37c59b260d5a83
+# f79dc5d7653e424d9126e58f0c7fd2ca
+# bdd640045c014f05bce8ed4fdad7b6bf
+# d9de7fb4f2a64593bedf297ef6c7506c
+# 2b1c17cadf774f5e969cc134a3fc9c78
+# 115e7d4f166841bc8ca4a41d2c29017d
+# 89759491020e445f8929455b8aa9cd06
+# d37bcba252a2499cbcac925dcf07a419
+# 264d73912c214ca198c7811ed308970f
+# 8df32c9aa2d24c86be6ea1d688314d6f
+# f438a19b427a4103beaad51827702219
+# 1c2b33b96a664dc9a1ccef7c0498d988
+# be3e6f828ce74834893c87b4de382a4e
+# 0f9dcb18decd4998acbddcd255d28c33
+# 263c18351e084ec0ad1ee35acc56351e
+# fb349d57644e411bb714488637ce29b1
+# 0de54190811c43e28e31565f0bc038b0
+# a7d65470e8814d61b2f6fb5f96cd7de0
+# 644fc677bea242b3a617c5693e806320
+# 0d10e5c4b04b491880ee3d79cb586e70
+# bf3dcc9d8c0a4bc4bd88e6cd2ce51ca9
+msgid "Versions affected"
+msgstr ""
+
+#: ../../releases/security.txt:52
+# 4ba67050d62244d08acbc03222f0bb18
+msgid "Django 0.90 `(patch) <https://github.com/django/django/commit/518d406e53>`__"
+msgstr ""
+
+#: ../../releases/security.txt:54
+# 53596a113e9449278b1efd1cc91cfdb8
+msgid "Django 0.91 `(patch) <https://github.com/django/django/commit/518d406e53>`__"
+msgstr ""
+
+#: ../../releases/security.txt:56
+# cea1c1ab3e8f45a696965ffe0a826062
+msgid "Django 0.95 `(patch) <https://github.com/django/django/commit/a132d411c6>`__ (released January 21 2007)"
+msgstr ""
+
+#: ../../releases/security.txt:59
+# 4f7eb0c628984058992dbda969bdc445
+msgid "January 21, 2007 - CVE-2007-0405"
+msgstr ""
+
+#: ../../releases/security.txt:61
+# d9cb68fe55ec4a21bd75327ae50a6582
+msgid "`CVE-2007-0405 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-0405&cid=3>`_: Apparent \"caching\" of authenticated user. `Full description <https://www.djangoproject.com/weblog/2007/jan/21/0951/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:66
+# f70ac01a51914c05b96a85958efb0e7e
+msgid "Django 0.95 `(patch) <https://github.com/django/django/commit/e89f0a6558>`__"
+msgstr ""
+
+#: ../../releases/security.txt:69
+# dd19ae3f8b9d4f6e8ed23503be7d8759
+msgid "Issues under Django's security process"
+msgstr ""
+
+#: ../../releases/security.txt:71
+# d7d6ad34f51c4e3fb59c514d492cf174
+msgid "All other security issues have been handled under versions of Django's security process. These are listed below."
+msgstr ""
+
+#: ../../releases/security.txt:75
+# aa7231d409274643b8dc826e95f00506
+msgid "October 26, 2007 - CVE-2007-5712"
+msgstr ""
+
+#: ../../releases/security.txt:77
+# 18b02ef75b5b484eb948f465e852cf4e
+msgid "`CVE-2007-5712 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-5712&cid=3>`_: Denial-of-service via arbitrarily-large ``Accept-Language`` header. `Full description <https://www.djangoproject.com/weblog/2007/oct/26/security-fix/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:82
+# ede3f87803d443c79f5dcdecb94f4666
+msgid "Django 0.91 `(patch) <https://github.com/django/django/commit/8bc36e726c9e8c75c681d3ad232df8e882aaac81>`__"
+msgstr ""
+
+#: ../../releases/security.txt:84
+# 3b36a604c9554e3d9bcbf082c5165870
+msgid "Django 0.95 `(patch) <https://github.com/django/django/commit/412ed22502e11c50dbfee854627594f0e7e2c234>`__"
+msgstr ""
+
+#: ../../releases/security.txt:86
+# 097b6758a3f04c42b6cbe9c1c693adc2
+msgid "Django 0.96 `(patch) <https://github.com/django/django/commit/7dd2dd08a79e388732ce00e2b5514f15bd6d0f6f>`__"
+msgstr ""
+
+#: ../../releases/security.txt:90
+# 3b15c2f073774299af928d3b8756d77f
+msgid "May 14, 2008 - CVE-2008-2302"
+msgstr ""
+
+#: ../../releases/security.txt:92
+# 5ed9ec183c654fa4aad420c8f55de9ed
+msgid "`CVE-2008-2302 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-2302&cid=3>`_: XSS via admin login redirect. `Full description <https://www.djangoproject.com/weblog/2008/may/14/security/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:97
+# b6d39570d44b4083a33de9b223a10a63
+msgid "Django 0.91 `(patch) <https://github.com/django/django/commit/50ce7fb57d>`__"
+msgstr ""
+
+#: ../../releases/security.txt:99
+# 03d39a1dbe194811986946672d6406e4
+msgid "Django 0.95 `(patch) <https://github.com/django/django/commit/50ce7fb57d>`__"
+msgstr ""
+
+#: ../../releases/security.txt:101
+# d8c6561997ca4b0faf974b7463500a08
+msgid "Django 0.96 `(patch) <https://github.com/django/django/commit/7791e5c050>`__"
+msgstr ""
+
+#: ../../releases/security.txt:105
+# f365c59de2dc410ab5c5bb2360b789c7
+msgid "September 2, 2008 - CVE-2008-3909"
+msgstr ""
+
+#: ../../releases/security.txt:107
+# d2675470d1e84b509493541866a5e475
+msgid "`CVE-2008-3909 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-3909&cid=3>`_: CSRF via preservation of POST data during admin login. `Full description <https://www.djangoproject.com/weblog/2008/sep/02/security/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:112
+# 42252974ba9b48169c09827576177a2d
+msgid "Django 0.91 `(patch) <https://github.com/django/django/commit/44debfeaa4473bd28872c735dd3d9afde6886752>`__"
+msgstr ""
+
+#: ../../releases/security.txt:114
+# 772c0ef5cc83468cacdb1da888923a6c
+msgid "Django 0.95 `(patch) <https://github.com/django/django/commit/aee48854a164382c655acb9f18b3c06c3d238e81>`__"
+msgstr ""
+
+#: ../../releases/security.txt:116
+# d83a7dd28afb42508d14971f4d3f824c
+msgid "Django 0.96 `(patch) <https://github.com/django/django/commit/7e0972bded362bc4b851c109df2c8a6548481a8e>`__"
+msgstr ""
+
+#: ../../releases/security.txt:119
+# cf555bb59f4a4886a3b0ee3204255538
+msgid "July 28, 2009 - CVE-2009-2659"
+msgstr ""
+
+#: ../../releases/security.txt:121
+# a4baaa56ac364c2b8bbc7bec36cfec58
+msgid "`CVE-2009-2659 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-2659&cid=3>`_: Directory-traversal in development server media handler. `Full description <https://www.djangoproject.com/weblog/2009/jul/28/security/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:126
+# 974bff1822ff4ba0a0d301cdac5128f3
+msgid "Django 0.96 `(patch) <https://github.com/django/django/commit/da85d76fd6>`__"
+msgstr ""
+
+#: ../../releases/security.txt:128
+# b1bc77f2ec58461eb4dbad456022085d
+msgid "Django 1.0 `(patch) <https://github.com/django/django/commit/df7f917b7f>`__"
+msgstr ""
+
+#: ../../releases/security.txt:131
+# 9b3365ef0ee9418b87fd5eba0745de3c
+msgid "October 9, 2009 - CVE-2009-3965"
+msgstr ""
+
+#: ../../releases/security.txt:133
+# db9542ae08c343cfad1a096071249bfc
+msgid "`CVE-2009-3965 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-3695&cid=3>`_: Denial-of-service via pathological regular expression performance. `Full description <https://www.djangoproject.com/weblog/2009/oct/09/security/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:138
+# 2cfc2da1457445c3b4f3c77cdc48b5e4
+msgid "Django 1.0 `(patch) <https://github.com/django/django/commit/594a28a904>`__"
+msgstr ""
+
+#: ../../releases/security.txt:140
+# f7cfa5c220594f4ca1c37a6ee7d49668
+msgid "Django 1.1 `(patch) <https://github.com/django/django/commit/e3e992e18b>`__"
+msgstr ""
+
+#: ../../releases/security.txt:143
+# 102352c05423492d9ab200ef791d5700
+msgid "September 8, 2010 - CVE-2010-3082"
+msgstr ""
+
+#: ../../releases/security.txt:145
+# 992b9418c21a44559b7d424ab16928f1
+msgid "`CVE-2010-3082 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-3082&cid=3>`_: XSS via trusting unsafe cookie value. `Full description <https://www.djangoproject.com/weblog/2010/sep/08/security-release/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:150
+# cec302f69c744dac953aff13956cad08
+msgid "Django 1.2 `(patch) <https://github.com/django/django/commit/7f84657b6b>`__"
+msgstr ""
+
+#: ../../releases/security.txt:154
+# 99cd58a29b624bd6b26ef7715d3d7002
+msgid "December 22, 2010 - CVE-2010-4534"
+msgstr ""
+
+#: ../../releases/security.txt:156
+# 01b2b2b78b994eb985739b21c117d7df
+msgid "`CVE-2010-4534 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-4534&cid=3>`_: Information leakage in administrative interface. `Full description <https://www.djangoproject.com/weblog/2010/dec/22/security/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:161
+# 637a0194281c4dc3b822beb221c6ba43
+msgid "Django 1.1 `(patch) <https://github.com/django/django/commit/17084839fd>`__"
+msgstr ""
+
+#: ../../releases/security.txt:163
+# 0f26601fb6a241389123d9995aeda55a
+msgid "Django 1.2 `(patch) <https://github.com/django/django/commit/85207a245b>`__"
+msgstr ""
+
+#: ../../releases/security.txt:166
+# f9977364e62b4711be57cf7546b2b234
+msgid "December 22, 2010 - CVE-2010-4535"
+msgstr ""
+
+#: ../../releases/security.txt:168
+# b348cff1a0b346509597e40a63887b40
+msgid "`CVE-2010-4535 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-4535&cid=2>`_: Denial-of-service in password-reset mechanism. `Full description <https://www.djangoproject.com/weblog/2010/dec/22/security/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:173
+# edac35752ce547cd9b9c8dfa5cf10ada
+msgid "Django 1.1 `(patch) <https://github.com/django/django/commit/7f8dd9cbac>`__"
+msgstr ""
+
+#: ../../releases/security.txt:175
+# 2f3c5aa32623496b8579265f033a8df1
+msgid "Django 1.2 `(patch) <https://github.com/django/django/commit/d5d8942a16>`__"
+msgstr ""
+
+#: ../../releases/security.txt:179
+# 508121c1420f499e83eb19108fa45253
+msgid "February 8, 2011 - CVE-2011-0696"
+msgstr ""
+
+#: ../../releases/security.txt:181
+# 578a5f3d49b74a5aaa045d9ffba603ea
+msgid "`CVE-2011-0696 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-0696&cid=2>`_: CSRF via forged HTTP headers. `Full description <https://www.djangoproject.com/weblog/2011/feb/08/security/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:186
+# fdbb1c829aed4d99a99c9a4a6c2f6ba6
+msgid "Django 1.1 `(patch) <https://github.com/django/django/commit/408c5c873c>`__"
+msgstr ""
+
+#: ../../releases/security.txt:188
+# 60db7ee19527403f997797ff29dccaad
+msgid "Django 1.2 `(patch) <https://github.com/django/django/commit/818e70344e>`__"
+msgstr ""
+
+#: ../../releases/security.txt:192
+# 98c796883b7249099f587416792cff9b
+msgid "February 8, 2011 - CVE-2011-0697"
+msgstr ""
+
+#: ../../releases/security.txt:194
+# 14c5e69782634bf39aa1fd66a6bdd315
+msgid "`CVE-2011-0697 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-0697&cid=2>`_: XSS via unsanitized names of uploaded files. `Full description <https://www.djangoproject.com/weblog/2011/feb/08/security/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:199
+# bdfca55ba642466ca72199cbf51d1354
+msgid "Django 1.1 `(patch) <https://github.com/django/django/commit/1966786d2d>`__"
+msgstr ""
+
+#: ../../releases/security.txt:201
+# 526fb969b567412ea4f77c8d0a597c5f
+msgid "Django 1.2 `(patch) <https://github.com/django/django/commit/1f814a9547>`__"
+msgstr ""
+
+#: ../../releases/security.txt:204
+# d1f54afd451e476b94dc7efebd9fd6a3
+msgid "February 8, 2011 - CVE-2011-0698"
+msgstr ""
+
+#: ../../releases/security.txt:206
+# 958ea293bc264509bd11c1461d7a0dee
+msgid "`CVE-2011-0698 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-0698&cid=2>`_: Directory-traversal on Windows via incorrect path-separator handling. `Full description <https://www.djangoproject.com/weblog/2011/feb/08/security/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:211
+# df9bdec6b3d14dbfa79dfee8436f7400
+msgid "Django 1.1 `(patch) <https://github.com/django/django/commit/570a32a047>`__"
+msgstr ""
+
+#: ../../releases/security.txt:213
+# d4968884fcd143188dcfac9466697bee
+msgid "Django 1.2 `(patch) <https://github.com/django/django/commit/194566480b>`__"
+msgstr ""
+
+#: ../../releases/security.txt:217
+# ef42d1b2edc045a78329587ac055bd4a
+msgid "September 9, 2011 - CVE-2011-4136"
+msgstr ""
+
+#: ../../releases/security.txt:219
+# 0ef73971a2fb4f46a98707053c29e324
+msgid "`CVE-2011-4136 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-4136&cid=2>`_: Session manipulation when using memory-cache-backed session. `Full description <https://www.djangoproject.com/weblog/2011/sep/09/security-releases-issued/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:224
+# 8df7879aecec4ca18bfd42a70ed48725
+msgid "Django 1.2 `(patch) <https://github.com/django/django/commit/ac7c3a110f>`__"
+msgstr ""
+
+#: ../../releases/security.txt:226
+# a6df3fdf5eb64713a8b226a81e94c723
+msgid "Django 1.3 `(patch) <https://github.com/django/django/commit/fbe2eead2f>`__"
+msgstr ""
+
+#: ../../releases/security.txt:229
+# 5f6de53c24d04527893c6ee7aa6543ac
+msgid "September 9, 2011 - CVE-2011-4137"
+msgstr ""
+
+#: ../../releases/security.txt:231
+# caa58b25ffac453280ef29795cbd92d8
+msgid "`CVE-2011-4137 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-4137&cid=2>`_: Denial-of-service via via ``URLField.verify_exists``. `Full description <https://www.djangoproject.com/weblog/2011/sep/09/security-releases-issued/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:236
+# 6db273a58acc4013b7af90897e1fd029
+msgid "Django 1.2 `(patch) <https://github.com/django/django/commit/7268f8af86>`__"
+msgstr ""
+
+#: ../../releases/security.txt:238
+# e7ba097e4c2a4d248b6ced08c0849dd0
+msgid "Django 1.3 `(patch) <https://github.com/django/django/commit/1a76dbefdf>`__"
+msgstr ""
+
+#: ../../releases/security.txt:241
+# 27bda37540d74f858a22016970484577
+msgid "September 9, 2011 - CVE-2011-4138"
+msgstr ""
+
+#: ../../releases/security.txt:243
+# bb14b965b59e4e90aa6eb853689023f6
+msgid "`CVE-2011-4138 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-4138&cid=2>`_: Information leakage/arbitrary request issuance via ``URLField.verify_exists``. `Full description <https://www.djangoproject.com/weblog/2011/sep/09/security-releases-issued/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:248
+# 8731044391c341f58c9eeea5768020ca
+msgid "Django 1.2: `(patch) <https://github.com/django/django/commit/7268f8af86>`__"
+msgstr ""
+
+#: ../../releases/security.txt:250
+# 325dccc21edb4f1f9ee2dc24f19eb00d
+msgid "Django 1.3: `(patch) <https://github.com/django/django/commit/1a76dbefdf>`__"
+msgstr ""
+
+#: ../../releases/security.txt:253
+# 36cbfedfeb9841989d0899bfe4149a38
+msgid "September 9, 2011 - CVE-2011-4139"
+msgstr ""
+
+#: ../../releases/security.txt:255
+# f15c5b8b0ae54d419786c4284b022a6e
+msgid "`CVE-2011-4139 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-4139&cid=2>`_: ``Host`` header cache poisoning. `Full description <https://www.djangoproject.com/weblog/2011/sep/09/security-releases-issued/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:260
+# a7d76451cbcf4d6ba33038a78851c22b
+msgid "Django 1.2 `(patch) <https://github.com/django/django/commit/c613af4d64>`__"
+msgstr ""
+
+#: ../../releases/security.txt:262
+# c029a50096ee4b40ab16180be0031580
+msgid "Django 1.3 `(patch) <https://github.com/django/django/commit/2f7fadc38e>`__"
+msgstr ""
+
+#: ../../releases/security.txt:265
+# edbd91a064a04152b0ede71dc2181365
+msgid "September 9, 2011 - CVE-2011-4140"
+msgstr ""
+
+#: ../../releases/security.txt:267
+# e1f34089a2054855ac68f461ff856b63
+msgid "`CVE-2011-4140 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-4140&cid=2>`_: Potential CSRF via ``Host`` header.  `Full description <https://www.djangoproject.com/weblog/2011/sep/09/security-releases-issued/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:272
+# 0bcf7c0933894132a1e8c66f12986087
+msgid "This notification was an advisory only, so no patches were issued."
+msgstr ""
+
+#: ../../releases/security.txt:274
+# 12953d0a9126454c8ac2196be453a1e7
+msgid "Django 1.2"
+msgstr ""
+
+#: ../../releases/security.txt:276
+# eca3a283a6dc4ce88ca850dcfb610060
+msgid "Django 1.3"
+msgstr ""
+
+#: ../../releases/security.txt:280
+# 9ec1bc780c9d443bb6384f35b10af849
+msgid "July 30, 2012 - CVE-2012-3442"
+msgstr ""
+
+#: ../../releases/security.txt:282
+# fccf45dd87624e6ebcbeba806410b242
+msgid "`CVE-2012-3442 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-3442&cid=2>`_: XSS via failure to validate redirect scheme. `Full description <https://www.djangoproject.com/weblog/2012/jul/30/security-releases-issued/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:287
+# 09e55493eb2d4126a14f9fa944aa2971
+msgid "Django 1.3: `(patch) <https://github.com/django/django/commit/4dea4883e6c50d75f215a6b9bcbd95273f57c72d>`__"
+msgstr ""
+
+#: ../../releases/security.txt:289
+# 6f579c3670c5408faaf32649f604c33b
+msgid "Django 1.4: `(patch) <https://github.com/django/django/commit/e34685034b60be1112160e76091e5aee60149fa1>`__"
+msgstr ""
+
+#: ../../releases/security.txt:293
+# 4dfd0ad87ad047b9bc8ad33ec95729aa
+msgid "July 30, 2012 - CVE-2012-3443"
+msgstr ""
+
+#: ../../releases/security.txt:295
+# d442514237744911a4270178f4351bc8
+msgid "`CVE-2012-3443 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-3443&cid=2>`_: Denial-of-service via compressed image files. `Full description <https://www.djangoproject.com/weblog/2012/jul/30/security-releases-issued/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:300
+# d9bc74dd80864ba38341590e48cbd1c2
+msgid "Django 1.3: `(patch) <https://github.com/django/django/commit/b2eb4787a0fff9c9993b78be5c698e85108f3446>`__"
+msgstr ""
+
+#: ../../releases/security.txt:302
+# 3386d0db405148c7a858066ebe85ef3e
+msgid "Django 1.4: `(patch) <https://github.com/django/django/commit/c14f325c4eef628bc7bfd8873c3a72aeb0219141>`__"
+msgstr ""
+
+#: ../../releases/security.txt:306
+# 043173401fd146948ad8385a5a8a9f8b
+msgid "July 30, 2012 - CVE-2012-3444"
+msgstr ""
+
+#: ../../releases/security.txt:308
+# 9912ef65e0324cecb2cfa709b1e4f3a4
+msgid "`CVE-2012-3444 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-3444&cid=2>`_: Denial-of-service via large image files. `Full description <https://www.djangoproject.com/weblog/2012/jul/30/security-releases-issued/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:313
+# 506c74e18a4f441b8d94d6a9353f4dba
+msgid "Django 1.3 `(patch) <https://github.com/django/django/commit/9ca0ff6268eeff92d0d0ac2c315d4b6a8e229155>`__"
+msgstr ""
+
+#: ../../releases/security.txt:315
+# bbadb958c1c94672b54cde464bde8011
+msgid "Django 1.4 `(patch) <https://github.com/django/django/commit/da33d67181b53fe6cc737ac1220153814a1509f6>`__"
+msgstr ""
+
+#: ../../releases/security.txt:319
+# 6e58b69d6ee542148c38a2ab461d99d9
+msgid "October 17, 2012 - CVE-2012-4520"
+msgstr ""
+
+#: ../../releases/security.txt:321
+# d7f7b04a5f734baa95b3e5a05c337e56
+msgid "`CVE-2012-4520 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-4520&cid=2>`_: ``Host`` header poisoning. `Full description <https://www.djangoproject.com/weblog/2012/oct/17/security/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:326
+# 90dbe0c0be5e4128893ec3a628781592
+msgid "Django 1.3 `(patch) <https://github.com/django/django/commit/b45c377f8f488955e0c7069cad3f3dd21910b071>`__"
+msgstr ""
+
+#: ../../releases/security.txt:328
+# d1d3e3a129ba4fa7b38885d872761190
+msgid "Django 1.4 `(patch) <https://github.com/django/django/commit/92d3430f12171f16f566c9050c40feefb830a4a3>`__"
+msgstr ""
+
+#: ../../releases/security.txt:332
+# fd485d265f9f419e90ba5b36a0876e67
+msgid "December 10, 2012 - No CVE 1"
+msgstr ""
+
+#: ../../releases/security.txt:334
+# fba613ddec8f4b7c8ae7a3a155f786e3
+msgid "Additional hardening of ``Host`` header handling. `Full description <https://www.djangoproject.com/weblog/2012/dec/10/security/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:339
+# ba330af096c94081b3e032a0d54de05a
+msgid "Django 1.3 `(patch) <https://github.com/django/django/commit/2da4ace0bc1bc1d79bf43b368cb857f6f0cd6b1b>`__"
+msgstr ""
+
+#: ../../releases/security.txt:341
+# b4c04b80f22d49698a419445ae4178cc
+msgid "Django 1.4 `(patch) <https://github.com/django/django/commit/319627c184e71ae267d6b7f000e293168c7b6e09>`__"
+msgstr ""
+
+#: ../../releases/security.txt:345
+# ad7c4594f95544a6b3e8d99b33e8ee9f
+msgid "December 10, 2012 - No CVE 2"
+msgstr ""
+
+#: ../../releases/security.txt:347
+# e7a544f357834cbfaab5fe15dab72af8
+msgid "Additional hardening of redirect validation. `Full description <https://www.djangoproject.com/weblog/2012/dec/10/security/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:352
+# 812e28c653164ee7bd25f1f14f274b06
+msgid "Django 1.3: `(patch) <https://github.com/django/django/commit/1515eb46daa0897ba5ad5f0a2db8969255f1b343>`__"
+msgstr ""
+
+#: ../../releases/security.txt:354
+# 7acdaf71a8a848549a9db0a50b7ac429
+msgid "Django 1.4: `(patch) <https://github.com/django/django/commit/b2ae0a63aeec741f1e51bac9a95a27fd635f9652>`__"
+msgstr ""
+
+#: ../../releases/security.txt:357
+# 8b33d2128296483bac68a2b46ac1d986
+msgid "February 19, 2013 - No CVE"
+msgstr ""
+
+#: ../../releases/security.txt:359
+# e5696d8c213b4416aef4ff0b789ef00c
+msgid "Additional hardening of ``Host`` header handling. `Full description <https://www.djangoproject.com/weblog/2013/feb/19/security/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:364
+# e4a2c947dbe84ffba95781eee4e4e75d
+msgid "Django 1.3 `(patch) <https://github.com/django/django/commit/27cd872e6e36a81d0bb6f5b8765a1705fecfc253>`__"
+msgstr ""
+
+#: ../../releases/security.txt:366
+# e5adc5d1f6f747b6ae22756e67c26ab0
+msgid "Django 1.4 `(patch) <https://github.com/django/django/commit/9936fdb11d0bbf0bd242f259bfb97bbf849d16f8>`__"
+msgstr ""
+
+#: ../../releases/security.txt:369
+# b27d472dd6c7493e94bd7b85981c983d
+msgid "February 19, 2013 - CVE-2013-1664/1665"
+msgstr ""
+
+#: ../../releases/security.txt:371
+# 662b67d03edd4cf887c98db0dfa39082
+msgid "`CVE-2013-1664 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-1664&cid=2>`_ and `CVE-2013-1665 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-1665&cid=2>`_: Entity-based attacks against Python XML libraries. `Full description <https://www.djangoproject.com/weblog/2013/feb/19/security/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:376
+# 915fe474fb864984ac9c618e189b55bf
+msgid "Django 1.3 `(patch) <https://github.com/django/django/commit/d19a27066b2247102e65412aa66917aff0091112>`__"
+msgstr ""
+
+#: ../../releases/security.txt:378
+# 65bc5a7f1b9445feb7988e3b3ed68224
+msgid "Django 1.4 `(patch) <https://github.com/django/django/commit/1c60d07ba23e0350351c278ad28d0bd5aa410b40>`__"
+msgstr ""
+
+#: ../../releases/security.txt:381
+# 9271930f351245cb92b13b039fae6daa
+msgid "February 19, 2013 - CVE-2013-0305"
+msgstr ""
+
+#: ../../releases/security.txt:383
+# 91926853fa9d40ddb540bd791cde276d
+msgid "`CVE-2013-0305 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-0305&cid=2>`_: Information leakage via admin history log.  `Full description <https://www.djangoproject.com/weblog/2013/feb/19/security/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:388
+# 8ad1e429b4914636a2a15a0ccbabd9af
+msgid "Django 1.3 `(patch) <https://github.com/django/django/commit/d3a45e10c8ac8268899999129daa27652ec0da35>`__"
+msgstr ""
+
+#: ../../releases/security.txt:390
+# 0b7e2c8bd11644aa8eedfee8c5f293c5
+msgid "Django 1.4 `(patch) <https://github.com/django/django/commit/0e7861aec73702f7933ce2a93056f7983939f0d6>`__"
+msgstr ""
+
+#: ../../releases/security.txt:394
+# ae07019b840b4af9b95e4f9a37ddc701
+msgid "February 19, 2013 - CVE-2013-0306"
+msgstr ""
+
+#: ../../releases/security.txt:396
+# 96ccb2bd19564f16ba95c2ff36807e45
+msgid "`CVE-2013-0306 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-0306&cid=2>`_: Denial-of-service via formset ``max_num`` bypass. `Full description <https://www.djangoproject.com/weblog/2013/feb/19/security/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:401
+# a5653ace699048d0b696c623fe727359
+msgid "Django 1.3 `(patch) <https://github.com/django/django/commit/d7094bbce8cb838f3b40f504f198c098ff1cf727>`__"
+msgstr ""
+
+#: ../../releases/security.txt:403
+# cadb52a73a0f496e80dc2229401d30aa
+msgid "Django 1.4 `(patch) <https://github.com/django/django/commit/0cc350a896f70ace18280410eb616a9197d862b0>`__"
+msgstr ""
+
+#: ../../releases/security.txt:406
+# 4a07a5fe6a554e50806e3bfdcd2c75b2
+msgid "August 13, 2013 - Awaiting CVE 1"
+msgstr ""
+
+#: ../../releases/security.txt:408
+# 4287b04a5c2c4fc084e5b8e319b73ba5
+msgid "(CVE not yet issued): XSS via admin trusting ``URLField`` values. `Full description <https://www.djangoproject.com/weblog/2013/aug/13/security-releases-issued/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:413
+# 7d8e9452d5b643d1b706393d6d82605e
+msgid "Django 1.5 `(patch) <https://github.com/django/django/commit/90363e388c61874add3f3557ee654a996ec75d78>`__"
+msgstr ""
+
+#: ../../releases/security.txt:416
+# 2038378b4f1641b78a0eb394dc5bf404
+msgid "August 13, 2013 - Awaiting CVE 2"
+msgstr ""
+
+#: ../../releases/security.txt:418
+# 778384e048594d3ca1f37a1bd2b94b8f
+msgid "(CVE not yet issued): Possible XSS via unvalidated URL redirect schemes. `Full description <https://www.djangoproject.com/weblog/2013/aug/13/security-releases-issued/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:423
+# d7d4ab69a026428da2d665d6085f0440
+msgid "Django 1.4 `(patch) <https://github.com/django/django/commit/ec67af0bd609c412b76eaa4cc89968a2a8e5ad6a>`__"
+msgstr ""
+
+#: ../../releases/security.txt:425
+# 0ae7fdbfee6f4c738620c7a3fd354815
+msgid "Django 1.5 `(patch) <https://github.com/django/django/commit/1a274ccd6bc1afbdac80344c9b6e5810c1162b5f>`__"
+msgstr ""
+
+#: ../../releases/security.txt:428
+# 45866e6fad014d9c8985437ce51a7fd4
+msgid "September 10, 2013 - CVE-2013-4315"
+msgstr ""
+
+#: ../../releases/security.txt:430
+# 2db2da9612f544ce9740af937f4aba28
+msgid "`CVE-2013-4315 <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-4315&cid=2>`_ Directory-traversal via ``ssi`` template tag. `Full description <https://www.djangoproject.com/weblog/2013/sep/10/security-releases-issued/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:435
+# ea548268fe5d40a99522dd7678e9782d
+msgid "Django 1.4 `(patch) <https://github.com/django/django/commit/87d2750b39f6f2d54b7047225521a44dcd37e896>`__"
+msgstr ""
+
+#: ../../releases/security.txt:437
+# 782617866f1e45e186935df285a70066
+msgid "Django 1.5 `(patch) <https://github.com/django/django/commit/988b61c550d798f9a66d17ee0511fb7a9a7f33ca>`__"
+msgstr ""
+
+#: ../../releases/security.txt:441
+# 2db7fe6961e74174a5d837574a9c23c1
+msgid "September 14, 2013 - CVE-2013-1443"
+msgstr ""
+
+#: ../../releases/security.txt:443
+# c218092fa04147179026024054ae976c
+msgid "CVE-2013-1443: Denial-of-service via large passwords. `Full description <https://www.djangoproject.com/weblog/2013/sep/15/security/>`__"
+msgstr ""
+
+#: ../../releases/security.txt:448
+# 463422f225be406fa4e7dff11f781a64
+msgid "Django 1.4 `(patch <https://github.com/django/django/commit/3f3d887a6844ec2db743fee64c9e53e04d39a368>`__ and `Python compatibility fix) <https://github.com/django/django/commit/6903d1690a92aa040adfb0c8eb37cf62e4206714>`__"
+msgstr ""
+
+#: ../../releases/security.txt:450
+# 3dd37987ddac4a988504f47fc0172498
+msgid "Django 1.5 `(patch) <https://github.com/django/django/commit/22b74fa09d7ccbc8c52270d648a0da7f3f0fa2bc>`__"
 msgstr ""
 

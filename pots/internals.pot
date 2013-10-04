@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Django 1.5\n"
+"Project-Id-Version: Django 1.5.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-08 14:28\n"
+"POT-Creation-Date: 2013-10-04 09:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1382,17 +1382,27 @@ msgid "Start with these easy tasks to discover Django's development process."
 msgstr ""
 
 #: ../../internals/contributing/new-contributors.txt:13
-# de46660adc974de5b44e532976aec370
-msgid "**Triage tickets**"
+# fb694ecd075c4583b8e615a854ee13b8
+msgid "**Sign the Contributor License Agreement**"
 msgstr ""
 
 #: ../../internals/contributing/new-contributors.txt:15
-# bbe157cbcba84357906cc8d255dae8d6
-msgid "If an `unreviewed ticket`_ reports a bug, try and reproduce it. If you can reproduce it and it seems valid, make a note that you confirmed the bug and accept the ticket. Make sure the ticket is filed under the correct component area. Consider writing a patch that adds a test for the bug's behavior, even if you don't fix the bug itself. See more at :ref:`how-can-i-help-with-triaging`"
+# 5261b379046445b8bc5464a966a395e5
+msgid "The code that you write belongs to you or your employer. If your contribution is more than one or two lines of code, you need to sign the `CLA`_. See the `Contributor License Agreement FAQ`_ for a more thorough explanation."
+msgstr ""
+
+#: ../../internals/contributing/new-contributors.txt:20
+# 28ab9eca60c74e8983599752101f7a7d
+msgid "**Triage tickets**"
 msgstr ""
 
 #: ../../internals/contributing/new-contributors.txt:22
-# 04257b71d4724f67a0c00ff3f5a3bc95
+# ec3f674687dc4b748f29319f159aec5f
+msgid "If an `unreviewed ticket`_ reports a bug, try and reproduce it. If you can reproduce it and it seems valid, make a note that you confirmed the bug and accept the ticket. Make sure the ticket is filed under the correct component area. Consider writing a patch that adds a test for the bug's behavior, even if you don't fix the bug itself. See more at :ref:`how-can-i-help-with-triaging`"
+msgstr ""
+
+#: ../../internals/contributing/new-contributors.txt:29
+# 70ac4142747f42b8aaf28e700ff0678d
 msgid "**Look for tickets that are accepted and review patches to build familiarity with the codebase and the process**"
 msgstr ""
 
@@ -2675,8 +2685,8 @@ msgid "If you're using a backend that isn't SQLite, you will need to provide oth
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:68
-# a5e60c076a7f446ea9e94ae7f874b085
-msgid "The :setting:`USER` option for each of your databases needs to specify an existing user account for the database."
+# 5d35dd5b45ae41abb66058db7fe0db14
+msgid "The :setting:`USER` option needs to specify an existing user account for the database."
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:71
@@ -3164,8 +3174,28 @@ msgstr ""
 msgid "Note that the committer is likely to squash the review commit into the previous commit when committing the code."
 msgstr ""
 
-#: ../../internals/contributing/writing-code/working-with-git.txt:246
-# 4b586c99bed642fbb0113a150f20e404
+#: ../../internals/contributing/writing-code/working-with-git.txt:247
+# de1e22aca3cf4138a28adad990639ee1
+msgid "Working on a patch"
+msgstr ""
+
+#: ../../internals/contributing/writing-code/working-with-git.txt:249
+# e16e5a60d1e849bfbd624fc224451db3
+msgid "One of the ways that developers can contribute to Django is by reviewing patches. Those patches will typically exist as pull requests on GitHub and can be easily integrated into your local repository::"
+msgstr ""
+
+#: ../../internals/contributing/writing-code/working-with-git.txt:256
+# ffe27243537842c49e3ada2155251507
+msgid "This will create a new branch and then apply the changes from the pull request to it. At this point you can run the tests or do anything else you need to do to investigate the quality of the patch."
+msgstr ""
+
+#: ../../internals/contributing/writing-code/working-with-git.txt:260
+# 794061072a754588bb134d50dca35fe8
+msgid "For more detail on working with pull requests see the :ref:`guidelines for committers <handling-pull-requests>`."
+msgstr ""
+
+#: ../../internals/contributing/writing-code/working-with-git.txt:264
+# d51f88bc31934cd1bacddc62e2af7c7d
 msgid "Summary"
 msgstr ""
 
@@ -4139,6 +4169,11 @@ msgstr ""
 msgid "Feature-development branches"
 msgstr ""
 
+#: ../../internals/git.txt:97
+# 45a67cf26d4b437ca409f0455e8ae865
+msgid "Historical information"
+msgstr ""
+
 #: ../../internals/git.txt:99
 # 2d18a413b3524a1aa276da5501fb32ed
 msgid "Since Django moved to Git in 2012, anyone can clone the repository and create his own branches, alleviating the need for official branches in the source code repository."
@@ -4806,8 +4841,13 @@ msgstr ""
 msgid "Additionally, if we have reason to believe that an issue reported to us affects other frameworks or tools in the Python/web ecosystem, we may privately contact and discuss those issues with the appropriate maintainers, and coordinate our own disclosure and resolution with theirs."
 msgstr ""
 
-#: ../../internals/security.txt:126
-# 6135a700981d4dfd9ed5c8513d7b1be4
+#: ../../internals/security.txt:129
+# e2207f5451bb4bd69ff3276940cb3609
+msgid "The Django team also maintains an :doc:`archive of security issues disclosed in Django</releases/security>`."
+msgstr ""
+
+#: ../../internals/security.txt:136
+# be8a57b92a5a4492be4d0ca1e5b401e3
 msgid "Who receives advance notification"
 msgstr ""
 

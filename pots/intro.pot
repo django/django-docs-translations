@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Django 1.5\n"
+"Project-Id-Version: Django 1.5.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-08 14:28\n"
+"POT-Creation-Date: 2013-10-04 09:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,6 +54,13 @@ msgstr ""
 #: ../../intro/contributing.txt:31
 # c34b753b99134773aee4f871eb07fe7a
 msgid "For the most part though, this tutorial tries to explain as much as possible, so that it can be of use to the widest audience."
+msgstr ""
+
+#: ../../intro/contributing.txt:34
+#: ../../intro/tutorial01.txt:35
+# 55afd5586fc44471a970a292e7c64c07
+# 4c2ab5c084874611a876d29aee3332c2
+msgid "Where to get help:"
 msgstr ""
 
 #: ../../intro/contributing.txt:36
@@ -289,6 +296,11 @@ msgstr ""
 #: ../../intro/contributing.txt:275
 # e0ce4e43d83b490d9b47079ef344b2a6
 msgid "The new tests check to see that the ``render`` method we'll be adding works correctly in a couple different situations."
+msgstr ""
+
+#: ../../intro/contributing.txt:278
+# edfbf530b56e44d8a7960177453a8114
+msgid "But this testing thing looks kinda hard..."
 msgstr ""
 
 #: ../../intro/contributing.txt:280
@@ -550,6 +562,11 @@ msgstr ""
 msgid "Get Python at http://www.python.org. If you're running Linux or Mac OS X, you probably already have it installed."
 msgstr ""
 
+#: ../../intro/install.txt:22
+# 4c96b4d6e4094e3d91fca32ac0edde6a
+msgid "Django on Jython"
+msgstr ""
+
 #: ../../intro/install.txt:24
 # b16ad799f68b4acdaa46a54ab4c3dbf5
 msgid "If you use Jython_ (a Python implementation for the Java platform), you'll need to follow a few additional steps. See :doc:`/howto/jython` for details."
@@ -603,6 +620,11 @@ msgstr ""
 #: ../../intro/install.txt:64
 # 2b68d5da741840a085cb8d890c066c1b
 msgid ":ref:`Install the latest development version <installing-development-version>`. This is best for users who want the latest-and-greatest features and aren't afraid of running brand-new code."
+msgstr ""
+
+#: ../../intro/install.txt:68
+# 99098268416347baa2079a6fc9ffe626
+msgid "Always refer to the documentation that corresponds to the version of Django you're using!"
 msgstr ""
 
 #: ../../intro/install.txt:71
@@ -890,6 +912,11 @@ msgstr ""
 msgid "Let's say you were starting a new project that needed a polls app like the one we've been working on. How do you make this app reusable? Luckily, you're well on the way already. In :doc:`Tutorial 3 </intro/tutorial03>`, we saw how we could decouple polls from the project-level URLconf using an ``include``. In this tutorial, we'll take further steps to make the app easy to use in new projects and ready to publish for others to install and use."
 msgstr ""
 
+#: ../../intro/reusable-apps.txt:35
+# 888fe34937f5410292cb919e8edbda2f
+msgid "Package? App?"
+msgstr ""
+
 #: ../../intro/reusable-apps.txt:37
 # 59a0bffbe7c6465292d37c3c365f565b
 msgid "A Python `package <http://docs.python.org/tutorial/modules.html#packages>`_ provides a way of grouping related Python code for easy reuse. A package contains one or more files of Python code (also known as \"modules\")."
@@ -935,9 +962,9 @@ msgstr ""
 msgid "Installing some prerequisites"
 msgstr ""
 
-#: ../../intro/reusable-apps.txt:101
-# c1c9ef66e36b498aa6bb84ba2866bea3
-msgid "The current state of Python packaging is a bit muddled with various tools. For this tutorial, we're going to use distribute_ to build our package. It's a community-maintained fork of the older ``setuptools`` project. We'll also be using `pip`_ to uninstall it after we're finished. You should install these two packages now. If you need help, you can refer to :ref:`how to install Django with pip<installing-official-release>`. You can install ``distribute`` the same way."
+#: ../../intro/reusable-apps.txt:102
+# db8a8ddf707f45ffbd86e5da205eddba
+msgid "The current state of Python packaging is a bit muddled with various tools. For this tutorial, we're going to use distribute_ to build our package. It's a community-maintained fork of the older ``setuptools`` project. We'll also be using `pip`_ to install and uninstall it. You should install these two packages now. If you need help, you can refer to :ref:`how to install Django with pip<installing-official-release>`. You can install ``distribute`` the same way."
 msgstr ""
 
 #: ../../intro/reusable-apps.txt:113
@@ -955,8 +982,13 @@ msgstr ""
 msgid "First, create a parent directory for ``polls``, outside of your Django project. Call this directory ``django-polls``."
 msgstr ""
 
-#: ../../intro/reusable-apps.txt:124
-# 0365e971d3374294b66c59cc32ad68d6
+#: ../../intro/reusable-apps.txt:123
+# d3d8d0f07811494495062738d4877640
+msgid "Choosing a name for your app"
+msgstr ""
+
+#: ../../intro/reusable-apps.txt:125
+# 3b32ab38b5d047f48aecbec31d10dd4d
 msgid "When choosing a name for your package, check resources like PyPI to avoid naming conflicts with existing packages. It's often useful to prepend ``django-`` to your module name when creating a package to distribute. This helps others looking for Django apps identify your app as Django specific."
 msgstr ""
 
@@ -980,8 +1012,13 @@ msgstr ""
 msgid "5. Next we'll create a ``setup.py`` file which provides details about how to build and install the app.  A full explanation of this file is beyond the scope of this tutorial, but the `distribute docs <http://packages.python.org/distribute/setuptools.html>`_ have a good explanation. Create a file ``django-polls/setup.py`` with the following contents::"
 msgstr ""
 
-#: ../../intro/reusable-apps.txt:212
-# 7c6cc3de92b1462b8c945fc9aaa4e8f2
+#: ../../intro/reusable-apps.txt:211
+# 426f0c31633941a496ef9b708fdd27f8
+msgid "I thought you said we were going to use ``distribute``?"
+msgstr ""
+
+#: ../../intro/reusable-apps.txt:213
+# 2e8714ea1f9649438e23cdc63d540a4c
 msgid "Distribute is a drop-in replacement for ``setuptools``. Even though we appear to import from ``setuptools``, since we have ``distribute`` installed, it will override the import."
 msgstr ""
 
@@ -1020,29 +1057,24 @@ msgstr ""
 msgid "Since we moved the ``polls`` directory out of the project, it's no longer working. We'll now fix this by installing our new ``django-polls`` package."
 msgstr ""
 
-#: ../../intro/reusable-apps.txt:253
-# 893246d521d6467bafcee5b17b10290e
+#: ../../intro/reusable-apps.txt:252
+# 6960ca1829ce4f0887a30960abd74729
+msgid "Installing as a user library"
+msgstr ""
+
+#: ../../intro/reusable-apps.txt:254
+# f3376aa94d744999adbb3c847f178031
 msgid "The following steps install ``django-polls`` as a user library. Per-user installs have a lot of advantages over installing the package system-wide, such as being usable on systems where you don't have administrator access as well as preventing the package from affecting system services and other users of the machine. Python 2.6 added support for user libraries, so if you are using an older version this won't work, but Django 1.5 requires Python 2.6 or newer anyway."
 msgstr ""
 
-#: ../../intro/reusable-apps.txt:261
-# 101b61a608a5453b86ba2a7efaecacdf
+#: ../../intro/reusable-apps.txt:262
+# bdf24081ab924dd78256eb0864cf8e7d
 msgid "Note that per-user installations can still affect the behavior of system tools that run as that user, so ``virtualenv`` is a more robust solution (see below)."
 msgstr ""
 
-#: ../../intro/reusable-apps.txt:265
-# 2dafdee3a5c842c6b7017031c36923cb
-msgid "Inside ``django-polls/dist``, untar the new package ``django-polls-0.1.tar.gz`` (e.g. ``tar xzvf django-polls-0.1.tar.gz``). If you're using Windows, you can download the command-line tool bsdtar_ to do this, or you can use a GUI-based tool such as 7-zip_."
-msgstr ""
-
-#: ../../intro/reusable-apps.txt:270
-# a35d380b5c2d45aebfec8e56e18ddbc8
-msgid "Change into the directory created in step 1 (e.g. ``cd django-polls-0.1``)."
-msgstr ""
-
-#: ../../intro/reusable-apps.txt:272
-# 03c2d890417e407f92a079d6028c413c
-msgid "If you're using GNU/Linux, Mac OS X or some other flavor of Unix, enter the command ``python setup.py install --user`` at the shell prompt.  If you're using Windows, start up a command shell and run the command ``setup.py install --user``."
+#: ../../intro/reusable-apps.txt:266
+# 091ea07fd09c4cdb9aba0da330128f7b
+msgid "To install the package, use pip (you already :ref:`installed it <installing-reusable-apps-prerequisites>`, right?)::"
 msgstr ""
 
 #: ../../intro/reusable-apps.txt:277
@@ -1050,9 +1082,9 @@ msgstr ""
 msgid "With luck, your Django project should now work correctly again. Run the server again to confirm this."
 msgstr ""
 
-#: ../../intro/reusable-apps.txt:280
-# ea0c6206268743d48a3d2096edae3439
-msgid "To uninstall the package, use pip (you already :ref:`installed it <installing-reusable-apps-prerequisites>`, right?)::"
+#: ../../intro/reusable-apps.txt:274
+# 396c7f925f0a4780ab7762285f12b85e
+msgid "To uninstall the package, use pip::"
 msgstr ""
 
 #: ../../intro/reusable-apps.txt:290
@@ -1190,6 +1222,11 @@ msgstr ""
 msgid "You'll need to avoid naming projects after built-in Python or Django components. In particular, this means you should avoid using names like ``django`` (which will conflict with Django itself) or ``test`` (which conflicts with a built-in Python package)."
 msgstr ""
 
+#: ../../intro/tutorial01.txt:70
+# e1047ce453c341169b2498ad53678392
+msgid "Where should this code live?"
+msgstr ""
+
 #: ../../intro/tutorial01.txt:72
 # 78e028a4b11d44f6a6b7fb3a2fdfed20
 msgid "If your background is in plain old PHP (with no use of modern frameworks), you're probably used to putting code under the Web server's document root (in a place such as ``/var/www``). With Django, you don't do that. It's not a good idea to put any of this Python code within your Web server's document root, because it risks the possibility that people may be able to view your code over the Web. That's not good for security."
@@ -1205,6 +1242,13 @@ msgstr ""
 msgid "Let's look at what :djadmin:`startproject` created::"
 msgstr ""
 
+#: ../../intro/tutorial01.txt:92
+#: ../../intro/tutorial02.txt:80
+# 73172ee8ffc347ad92de9ab50aa6b2c6
+# 731503d39a724975878048968bbaeb44
+msgid "Doesn't match what you see?"
+msgstr ""
+
 #: ../../intro/tutorial01.txt:94
 # 323bec7b7515447fa4f7faeec19a7f58
 msgid "The default project layout recently changed. If you're seeing a \"flat\" layout (with no inner :file:`mysite/` directory), you're probably using a version of Django that doesn't match this tutorial version.  You'll want to either switch to the older tutorial or the newer Django version."
@@ -1216,8 +1260,8 @@ msgid "These files are:"
 msgstr ""
 
 #: ../../intro/tutorial01.txt:101
-# bcf199eeff1b4afe99a49361177b51b8
-msgid "The outer :file:`mysite/` directory is just a container for your project. Its name doesn't matter to Django; you can rename it to anything you like."
+# 8461f0e7bb0f4897b0968acae32ae776
+msgid "The outer :file:`mysite/` root directory is just a container for your project. Its name doesn't matter to Django; you can rename it to anything you like."
 msgstr ""
 
 #: ../../intro/tutorial01.txt:105
@@ -1226,8 +1270,8 @@ msgid ":file:`manage.py`: A command-line utility that lets you interact with thi
 msgstr ""
 
 #: ../../intro/tutorial01.txt:109
-# a7b9b41ca3d94caea470867d6aef1c78
-msgid "The inner :file:`mysite/` directory is the actual Python package for your project. Its name is the Python package name you'll need to use to import anything inside it (e.g. ``import mysite.settings``)."
+# cfa57af71ce6470ba46e2355b4e4af00
+msgid "The inner :file:`mysite/` directory is the actual Python package for your project. Its name is the Python package name you'll need to use to import anything inside it (e.g. ``mysite.urls``)."
 msgstr ""
 
 #: ../../intro/tutorial01.txt:113
@@ -1273,6 +1317,11 @@ msgstr ""
 #: ../../intro/tutorial01.txt:156
 # 17c720d22b44405ea06d692b6099da0b
 msgid "Now that the server's running, visit http://127.0.0.1:8000/ with your Web browser. You'll see a \"Welcome to Django\" page, in pleasant, light-blue pastel. It worked!"
+msgstr ""
+
+#: ../../intro/tutorial01.txt:160
+# dab28784a2ca4f0189db8bd76e368288
+msgid "Changing the port"
 msgstr ""
 
 #: ../../intro/tutorial01.txt:162
@@ -1415,6 +1464,11 @@ msgstr ""
 msgid "If you're interested, run the command-line client for your database and type ``\\dt`` (PostgreSQL), ``SHOW TABLES;`` (MySQL), or ``.schema`` (SQLite) to display the tables Django created."
 msgstr ""
 
+#: ../../intro/tutorial01.txt:278
+# 1822f77dc8a445f0a3674f7a6db82bd1
+msgid "For the minimalists"
+msgstr ""
+
 #: ../../intro/tutorial01.txt:280
 # d7f1440ace844b00919d7d28d15e2ca8
 msgid "Like we said above, the default applications are included for the common case, but not everybody needs them. If you don't need any or all of them, feel free to comment-out or delete the appropriate line(s) from :setting:`INSTALLED_APPS` before running :djadmin:`syncdb`. The :djadmin:`syncdb` command will only create tables for apps in :setting:`INSTALLED_APPS`."
@@ -1433,6 +1487,11 @@ msgstr ""
 #: ../../intro/tutorial01.txt:295
 # f65117c16cb840bcb0090eb12fd68aa8
 msgid "Each application you write in Django consists of a Python package, somewhere on your `Python path`_, that follows a certain convention. Django comes with a utility that automatically generates the basic directory structure of an app, so you can focus on writing code rather than creating directories."
+msgstr ""
+
+#: ../../intro/tutorial01.txt:300
+# a11565e258ff4757b06d579e72c7f7bf
+msgid "Projects vs. apps"
 msgstr ""
 
 #: ../../intro/tutorial01.txt:302
@@ -1463,6 +1522,19 @@ msgstr ""
 #: ../../intro/tutorial01.txt:329
 # 2bbc63aff26142ee934277dc56426cc2
 msgid "The first step in writing a database Web app in Django is to define your models -- essentially, your database layout, with additional metadata."
+msgstr ""
+
+#: ../../intro/tutorial01.txt:332
+#: ../../intro/tutorial01.txt:406
+#: ../../intro/tutorial02.txt:9
+#: ../../intro/tutorial03.txt:10
+#: ../../intro/tutorial03.txt:434
+# 2bd57febb74a408bbd4570dd4b148640
+# faed19a2340a4473bb6b9b05f8d3e68a
+# e01accdee33b4ef3b19a49b0cf88c896
+# 7eaa188879f147f8981682897232f1e2
+# 04bdc95fb9b74720bdded77d333b34b9
+msgid "Philosophy"
 msgstr ""
 
 #: ../../intro/tutorial01.txt:334
@@ -1665,6 +1737,11 @@ msgstr ""
 msgid "We're using this instead of simply typing \"python\", because :file:`manage.py` sets the ``DJANGO_SETTINGS_MODULE`` environment variable, which gives Django the Python import path to your :file:`mysite/settings.py` file."
 msgstr ""
 
+#: ../../intro/tutorial01.txt:538
+# 47306229d4b34d5f8ecf41a2d827e960
+msgid "Bypassing manage.py"
+msgstr ""
+
 #: ../../intro/tutorial01.txt:540
 # 3878532f9d964449b6fb67ad8a32a45a
 msgid "If you'd rather not use :file:`manage.py`, no problem. Just set the ``DJANGO_SETTINGS_MODULE`` environment variable to ``mysite.settings`` and run ``python`` from the same directory :file:`manage.py` is in (or ensure that directory is on the Python path, so that ``import mysite`` works)."
@@ -1681,27 +1758,37 @@ msgid "Once you're in the shell, explore the :doc:`database API </topics/db/quer
 msgstr ""
 
 #: ../../intro/tutorial01.txt:588
-# 41e18bc37f0d40f1aff98813f17a7291
-msgid "Wait a minute. ``<Poll: Poll object>`` is, utterly, an unhelpful representation of this object. Let's fix that by editing the polls model (in the ``polls/models.py`` file) and adding a :meth:`~django.db.models.Model.__unicode__` method to both ``Poll`` and ``Choice``::"
+# 3ff6f0b5004b429381bcabbc84fa2250
+msgid "Wait a minute. ``<Poll: Poll object>`` is, utterly, an unhelpful representation of this object. Let's fix that by editing the polls model (in the ``polls/models.py`` file) and adding a :meth:`~django.db.models.Model.__unicode__` method to both ``Poll`` and ``Choice``. On Python 3, simply replace ``__unicode__`` by ``__str__`` in the following example::"
 msgstr ""
 
-#: ../../intro/tutorial01.txt:604
-# 21163d5b9ef84a29bb5ac7f72ee55080
-msgid "It's important to add :meth:`~django.db.models.Model.__unicode__` methods to your models, not only for your own sanity when dealing with the interactive prompt, but also because objects' representations are used throughout Django's automatically-generated admin."
+#: ../../intro/tutorial01.txt:605
+# e0aae80baa81449aa258648e3e176e35
+msgid "It's important to add :meth:`~django.db.models.Model.__unicode__` methods (or :meth:`~django.db.models.Model.__str__` on Python 3) to your models, not only for your own sanity when dealing with the interactive prompt, but also because objects' representations are used throughout Django's automatically-generated admin."
 msgstr ""
 
-#: ../../intro/tutorial01.txt:612
-# fed25f8d754644ecb6876e4a9de4508a
-msgid "If you're familiar with Python, you might be in the habit of adding :meth:`~django.db.models.Model.__str__` methods to your classes, not :meth:`~django.db.models.Model.__unicode__` methods. We use :meth:`~django.db.models.Model.__unicode__` here because Django models deal with Unicode by default. All data stored in your database is converted to Unicode when it's returned."
+#: ../../intro/tutorial01.txt:611
+# d1c6b3a95f9746f5a09fc5467f0ad8b8
+msgid ":meth:`~django.db.models.Model.__unicode__` or             :meth:`~django.db.models.Model.__str__`?"
 msgstr ""
 
-#: ../../intro/tutorial01.txt:619
-# 63dab0bd74894ec5bb2e577fa6b2f13f
-msgid "Django models have a default :meth:`~django.db.models.Model.__str__` method that calls :meth:`~django.db.models.Model.__unicode__` and converts the result to a UTF-8 bytestring. This means that ``unicode(p)`` will return a Unicode string, and ``str(p)`` will return a normal string, with characters encoded as UTF-8."
+#: ../../intro/tutorial01.txt:614
+# 221132452eba45b1b8971c8b28e90331
+msgid "On Python 3, things are simpler, just use :meth:`~django.db.models.Model.__str__` and forget about :meth:`~django.db.models.Model.__unicode__`."
+msgstr ""
+
+#: ../../intro/tutorial01.txt:618
+# 533a8f1767c54676ba723b2f7a2cb235
+msgid "If you're familiar with Python 2, you might be in the habit of adding :meth:`~django.db.models.Model.__str__` methods to your classes, not :meth:`~django.db.models.Model.__unicode__` methods. We use :meth:`~django.db.models.Model.__unicode__` here because Django models deal with Unicode by default. All data stored in your database is converted to Unicode when it's returned."
 msgstr ""
 
 #: ../../intro/tutorial01.txt:625
-# 1b4e214d0c654527a868795dc181912e
+# 28a4d48f3a86431e968854e353d2abde
+msgid "Django models have a default :meth:`~django.db.models.Model.__str__` method that calls :meth:`~django.db.models.Model.__unicode__` and converts the result to a UTF-8 bytestring. This means that ``unicode(p)`` will return a Unicode string, and ``str(p)`` will return a normal string, with characters encoded as UTF-8."
+msgstr ""
+
+#: ../../intro/tutorial01.txt:631
+# 63de1b795199499eb18a2e6969f854d0
 msgid "If all of this is gibberish to you, just remember to add :meth:`~django.db.models.Model.__unicode__` methods to your models. With any luck, things should Just Work for you."
 msgstr ""
 
@@ -2165,6 +2252,11 @@ msgstr ""
 msgid "Now copy the template ``admin/base_site.html`` from within the default Django admin template directory in the source code of Django itself (``django/contrib/admin/templates``) into an ``admin`` subdirectory of whichever directory you're using in :setting:`TEMPLATE_DIRS`. For example, if your :setting:`TEMPLATE_DIRS` includes ``'/path/to/mysite/templates'``, as above, then copy ``django/contrib/admin/templates/admin/base_site.html`` to ``/path/to/mysite/templates/admin/base_site.html``. Don't forget that ``admin`` subdirectory."
 msgstr ""
 
+#: ../../intro/tutorial02.txt:464
+# 5ba50bae04964fe98040d37156042e6f
+msgid "Where are the Django source files?"
+msgstr ""
+
 #: ../../intro/tutorial02.txt:466
 # 210906ce62ca48d896a2237fc22f69fa
 msgid "If you have difficulty finding where the Django source files are located on your system, run the following command:"
@@ -2238,11 +2330,6 @@ msgstr ""
 #: ../../intro/tutorial03.txt:5
 # ab8271c79cc74a20a24a0c3848c8b1ff
 msgid "This tutorial begins where :doc:`Tutorial 2 </intro/tutorial02>` left off. We're continuing the Web-poll application and will focus on creating the public interface -- \"views.\""
-msgstr ""
-
-#: ../../intro/tutorial03.txt:10
-# 16adaa7d4101479bb87fad5cca0d8800
-msgid "Philosophy"
 msgstr ""
 
 #: ../../intro/tutorial03.txt:12
@@ -2436,8 +2523,8 @@ msgid "Now let's add a few more views to ``polls/views.py``. These views are sli
 msgstr ""
 
 #: ../../intro/tutorial03.txt:185
-# 73ffa2b84c484cdbb2d4f57e0ff03fcf
-msgid "Wire these news views into the ``polls.urls`` module by adding the following :func:`~django.conf.urls.url` calls::"
+# 9288a407282d406bb079361b7c059aa3
+msgid "Wire these new views into the ``polls.urls`` module by adding the following :func:`~django.conf.urls.url` calls::"
 msgstr ""
 
 #: ../../intro/tutorial03.txt:203
@@ -2525,6 +2612,11 @@ msgstr ""
 msgid "Django's :setting:`TEMPLATE_LOADERS` setting contains a list of callables that know how to import templates from various sources. One of the defaults is :class:`django.template.loaders.app_directories.Loader` which looks for a \"templates\" subdirectory in each of the :setting:`INSTALLED_APPS` - this is how Django knows to find the polls templates even though we didn't modify :setting:`TEMPLATE_DIRS`, as we did in :ref:`Tutorial 2 <ref-customizing-your-projects-templates>`."
 msgstr ""
 
+#: ../../intro/tutorial03.txt:297
+# 5732ed12dffa45e4bcf8f2ff48f057f3
+msgid "Organizing templates"
+msgstr ""
+
 #: ../../intro/tutorial03.txt:299
 # be7f0f167f1b4233bf7b84ced9216a13
 msgid "We *could* have all our templates together, in one big templates directory, and it would work perfectly well. However, this template belongs to the polls application, so unlike the admin template we created in the previous tutorial, we'll put this one in the application's template directory (``polls/templates``) rather than the project's (``templates``). We'll discuss in more detail in the :doc:`reusable apps tutorial </intro/reusable-apps>` *why* we do this."
@@ -2533,6 +2625,11 @@ msgstr ""
 #: ../../intro/tutorial03.txt:307
 # 7698609b855a4a759a4ae3cca2b03891
 msgid "Within the ``templates`` directory you have just created, create another directory called ``polls``, and within that create a file called ``index.html``. In other words, your template should be at ``polls/templates/polls/index.html``. Because of how the ``app_directories`` template loader works as described above, you can refer to this template within Django simply as ``polls/index.html``."
+msgstr ""
+
+#: ../../intro/tutorial03.txt:314
+# adeda0ac9b3e46b2bbba3f79a07cc50a
+msgid "Template namespacing"
 msgstr ""
 
 #: ../../intro/tutorial03.txt:316
@@ -2571,8 +2668,8 @@ msgid "It's a very common idiom to load a template, fill a context and return an
 msgstr ""
 
 #: ../../intro/tutorial03.txt:379
-# 9ec8d48ccadd4b4f9ce7ef3702e0f6ba
-msgid "Note that once we've done this in all these views, we no longer need to import :mod:`~django.template.loader`, :class:`~django.template.Context` and :class:`~django.http.HttpResponse` (you'll want to keep ``HttpResponse`` if you still have the stub methods for ``detail``, ``results``, and ``vote``)."
+# ff4db0ce56c54315ba8e69d74af4d315
+msgid "Note that once we've done this in all these views, we no longer need to import :mod:`~django.template.loader`, :class:`~django.template.RequestContext` and :class:`~django.http.HttpResponse` (you'll want to keep ``HttpResponse`` if you still have the stub methods for ``detail``, ``results``, and ``vote``)."
 msgstr ""
 
 #: ../../intro/tutorial03.txt:384
@@ -2650,8 +2747,13 @@ msgstr ""
 msgid "You normally won't have to bother with writing 404 views. If you don't set ``handler404``, the built-in view :func:`django.views.defaults.page_not_found` is used by default. Optionally, you can create a ``404.html`` template in the root of your template directory. The default 404 view will then use that template for all 404 errors when :setting:`DEBUG` is set to ``False`` (in your settings module). If you do create the template, add at least some dummy content like \"Page not found\"."
 msgstr ""
 
-#: ../../intro/tutorial03.txt:471
-# 270995401af642eb8d6a2c469d911c5f
+#: ../../intro/tutorial03.txt:473
+# ef9f587f082d438b95b9d0b517b5e697
+msgid "If :setting:`DEBUG` is set to ``False``, all responses will be \"Bad Request (400)\" unless you specify the proper :setting:`ALLOWED_HOSTS` as well (something like ``['localhost', '127.0.0.1']`` for local development)."
+msgstr ""
+
+#: ../../intro/tutorial03.txt:478
+# 2012e51f1fda463784e0a961955dc4b1
 msgid "A couple more things to note about 404 views:"
 msgstr ""
 
@@ -2928,6 +3030,11 @@ msgstr ""
 #: ../../intro/tutorial04.txt:190
 # 96eaa8defb4a4a378b7f58dd487b229f
 msgid "Read on for details."
+msgstr ""
+
+#: ../../intro/tutorial04.txt:192
+# 1479bd62c1c84b2dbc33222fe6a08574
+msgid "Why the code-shuffle?"
 msgstr ""
 
 #: ../../intro/tutorial04.txt:194
@@ -3633,6 +3740,11 @@ msgstr ""
 #: ../../intro/tutorial06.txt:38
 # 945402fe2d324171913bdedf03cf4831
 msgid "Within the ``static`` directory you have just created, create another directory called ``polls`` and within that create a file called ``style.css``. In other words, your stylesheet should be at ``polls/static/polls/style.css``. Because of how the ``AppDirectoriesFinder`` staticfile finder works, you can refer to this static file in Django simply as ``polls/style.css``, similar to how you reference the path for templates."
+msgstr ""
+
+#: ../../intro/tutorial06.txt:45
+# fb543314f091475992569550ba743df6
+msgid "Static file namespacing"
 msgstr ""
 
 #: ../../intro/tutorial06.txt:47

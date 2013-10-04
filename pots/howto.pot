@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Django 1.5\n"
+"Project-Id-Version: Django 1.5.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-23 14:23\n"
+"POT-Creation-Date: 2013-10-04 09:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,12 +91,22 @@ msgid "Methods"
 msgstr ""
 
 #: ../../howto/auth-remote-user.txt:92
-# 6912f3ffcabe4ab084ed865f45ca9f62
+# 613cbf1b0fd547008c9893ef88766481
+msgid "The username passed as ``remote_user`` is considered trusted. This method simply returns the ``User`` object with the given username, creating a new ``User`` object if :attr:`~RemoteUserBackend.create_unknown_user` is ``True``."
+msgstr ""
+
+#: ../../howto/auth-remote-user.txt:97
+# 7ad7b876f4984173b0e538c50b77f2b0
+msgid "Returns ``None`` if :attr:`~RemoteUserBackend.create_unknown_user` is ``False`` and a ``User`` object with the given username is not found in the database."
+msgstr ""
+
+#: ../../howto/auth-remote-user.txt:103
+# eee7da766d1f4974b77ee491f7bdb4c7
 msgid "Performs any cleaning on the ``username`` (e.g. stripping LDAP DN information) prior to using it to get or create a :class:`~django.contrib.auth.models.User` object.  Returns the cleaned username."
 msgstr ""
 
-#: ../../howto/auth-remote-user.txt:99
-# 78c5410b0695413580241fd2ad26cca5
+#: ../../howto/auth-remote-user.txt:110
+# cfb4c3c408924a618eda11de8774ff4a
 msgid "Configures a newly created user.  This method is called immediately after a new user is created, and can be used to perform custom setup actions, such as setting the user's groups based on attributes in an LDAP directory. Returns the user object."
 msgstr ""
 
@@ -235,6 +245,11 @@ msgstr ""
 msgid "The ``closepoll.py`` module has only one requirement -- it must define a class ``Command`` that extends :class:`BaseCommand` or one of its :ref:`subclasses<ref-basecommand-subclasses>`."
 msgstr ""
 
+#: ../../howto/custom-management-commands.txt:38
+# 97a43481df46461f8549057c9ba63419
+msgid "Standalone scripts"
+msgstr ""
+
 #: ../../howto/custom-management-commands.txt:40
 # b24038c7f6004e03999800466aff371f
 msgid "Custom management commands are especially useful for running standalone scripts or for scripts that are periodically executed from the UNIX crontab or from Windows scheduled tasks control panel."
@@ -273,6 +288,11 @@ msgstr ""
 #: ../../howto/custom-management-commands.txt:117
 # dad06e8f3acc48cba50878cb3b06c74c
 msgid "In addition to being able to add custom command line options, all :doc:`management commands</ref/django-admin>` can accept some default options such as :djadminopt:`--verbosity` and :djadminopt:`--traceback`."
+msgstr ""
+
+#: ../../howto/custom-management-commands.txt:121
+# 4068e2f0967643b5bcda27eccba95806
+msgid "Management commands and locales"
 msgstr ""
 
 #: ../../howto/custom-management-commands.txt:123
@@ -360,6 +380,11 @@ msgstr ""
 msgid ":class:`BaseCommand` has a few methods that can be overridden but only the :meth:`~BaseCommand.handle` method must be implemented."
 msgstr ""
 
+#: ../../howto/custom-management-commands.txt:237
+# b89015d562a94310a76719515bb239f1
+msgid "Implementing a constructor in a subclass"
+msgstr ""
+
 #: ../../howto/custom-management-commands.txt:239
 # cb223e72b1e944cba8dc2e8f72453887
 msgid "If you implement ``__init__`` in your subclass of :class:`BaseCommand`, you must call :class:`BaseCommand`'s ``__init__``."
@@ -373,6 +398,11 @@ msgstr ""
 #: ../../howto/custom-management-commands.txt:257
 # c6719d131f2b47efb6d304462634a569
 msgid "Try to execute this command, performing model validation if needed (as controlled by the attribute :attr:`requires_model_validation`). If the command raises a :class:`CommandError`, intercept it and print it sensibly to stderr."
+msgstr ""
+
+#: ../../howto/custom-management-commands.txt:263
+# 9f34563c87ba44938d071541b962760e
+msgid "Calling a management command in your code"
 msgstr ""
 
 #: ../../howto/custom-management-commands.txt:265
@@ -1194,6 +1224,11 @@ msgstr ""
 msgid "To be a valid tag library, the module must contain a module-level variable named ``register`` that is a ``template.Library`` instance, in which all the tags and filters are registered. So, near the top of your module, put the following:"
 msgstr ""
 
+#: ../../howto/custom-template-tags.txt:68
+# 51a5eb2bd00a42b282ce51162325517e
+msgid "Behind the scenes"
+msgstr ""
+
 #: ../../howto/custom-template-tags.txt:70
 # e72f532b837147b88858efb428cb083a
 msgid "For a ton of examples, read the source code for Django's default filters and tags. They're in ``django/template/defaultfilters.py`` and ``django/template/defaulttags.py``, respectively."
@@ -1967,6 +2002,11 @@ msgstr ""
 msgid "Here's how you'd use this new version of the tag:"
 msgstr ""
 
+#: ../../howto/custom-template-tags.txt:1018
+# 293467654a6b444bb6c4a45e72566774
+msgid "Variable scope in context"
+msgstr ""
+
 #: ../../howto/custom-template-tags.txt:1020
 # e80b01d790684b0eba2a824bc6902cfc
 msgid "Any variable set in the context will only be available in the same ``block`` of the template in which it was assigned. This behavior is intentional; it provides a scope for variables so that they don't conflict with context in other blocks."
@@ -2097,6 +2137,15 @@ msgstr ""
 msgid "Although :doc:`WSGI</howto/deployment/wsgi/index>` is the preferred deployment platform for Django, many people use shared hosting, on which protocols such as FastCGI, SCGI or AJP are the only viable options."
 msgstr ""
 
+#: ../../howto/deployment/fastcgi.txt:11
+#: ../../howto/deployment/fastcgi.txt:61
+#: ../../howto/deployment/fastcgi.txt:335
+# 72d9b73f299a48dd9730fccc911985a8
+# 5f96c3d324aa44bb87906f6aff0e97e2
+# 3145b072f7ba4d26980e368111d7ed4c
+msgid "Note"
+msgstr ""
+
 #: ../../howto/deployment/fastcgi.txt:13
 # 082188865a1c4f7fab23a7488cb48ab8
 msgid "This document primarily focuses on FastCGI. Other protocols, such as SCGI and AJP, are also supported, through the ``flup`` Python package. See the Protocols_ section below for specifics about SCGI and AJP."
@@ -2110,6 +2159,11 @@ msgstr ""
 #: ../../howto/deployment/fastcgi.txt:22
 # 3f2402bff3cc41729a21815ff429b6d1
 msgid "Like WSGI, FastCGI allows code to stay in memory, allowing requests to be served with no startup time. While e.g. :doc:`mod_wsgi</howto/deployment/wsgi/modwsgi>` can either be configured embedded in the Apache Web server process or as a separate daemon process, a FastCGI process never runs inside the Web server process, always in a separate, persistent process."
+msgstr ""
+
+#: ../../howto/deployment/fastcgi.txt:31
+# 0fc4361c2d5b484280d25396705521eb
+msgid "Why run code in a separate process?"
 msgstr ""
 
 #: ../../howto/deployment/fastcgi.txt:33
@@ -2190,6 +2244,11 @@ msgstr ""
 #: ../../howto/deployment/fastcgi.txt:109
 # 0f390436a2ee4ef69c23dc28c2a88c94
 msgid "Running a preforked server on a Unix domain socket::"
+msgstr ""
+
+#: ../../howto/deployment/fastcgi.txt:113
+# f751bc9d06984660b935403fcff1d779
+msgid "Socket security"
 msgstr ""
 
 #: ../../howto/deployment/fastcgi.txt:115
@@ -2502,6 +2561,11 @@ msgstr ""
 #: ../../howto/deployment/wsgi/apache-auth.txt:53
 # 5c941c0c641c463a94324c549d5c0278
 msgid "The ``WSGIAuthUserScript`` directive tells mod_wsgi to execute the ``check_password`` function in specified wsgi script, passing the user name and password that it receives from the prompt. In this example, the ``WSGIAuthUserScript`` is the same as the ``WSGIScriptAlias`` that defines your application :doc:`that is created by django-admin.py startproject </howto/deployment/wsgi/index>`."
+msgstr ""
+
+#: ../../howto/deployment/wsgi/apache-auth.txt:60
+# c8a7916361db48e0b58e4d6100ab3bb5
+msgid "Using Apache 2.2 with authentication"
 msgstr ""
 
 #: ../../howto/deployment/wsgi/apache-auth.txt:62
@@ -3160,7 +3224,12 @@ msgid "To systematically hide all local variables of a function from error logs,
 msgstr ""
 
 #: ../../howto/error-reporting.txt:168
-# 61ff2e7d7563424da2ef7dff04394ef8
+# 844430242d72456d8a86842331c9ef5e
+msgid "When using mutiple decorators"
+msgstr ""
+
+#: ../../howto/error-reporting.txt:170
+# 3150cc9ee1914dbd8b1d7df7aebf5466
 msgid "If the variable you want to hide is also a function argument (e.g. '``user``' in the following example), and if the decorated function has mutiple decorators, then make sure to place ``@sensitive_variables`` at the top of the decorator chain. This way it will also hide the function argument as it gets passed through the other decorators::"
 msgstr ""
 
@@ -3354,6 +3423,11 @@ msgstr ""
 msgid "Note that if you have multiple SQL data files, there's no guarantee of the order in which they're executed. The only thing you can assume is that, by the time your custom data files are executed, all the database tables already will have been created."
 msgstr ""
 
+#: ../../howto/initial-data.txt:136
+# b0e3700d481741038b5ec58a8693e652
+msgid "Initial SQL data and testing"
+msgstr ""
+
 #: ../../howto/initial-data.txt:138
 # 6eddbd2be90a41f28f50d91200f03f11
 msgid "This technique *cannot* be used to provide initial data for testing purposes. Django's test framework flushes the contents of the test database after each test; as a result, any data added using the custom SQL hook will be lost."
@@ -3382,6 +3456,11 @@ msgstr ""
 #: ../../howto/jython.txt:3
 # 5ecf6067a2df498588cc4775756e4ae4
 msgid "Running Django on Jython"
+msgstr ""
+
+#: ../../howto/jython.txt:7
+# 373d43ebee8c4138871d15042ffae30c
+msgid "Python 2.6 support"
 msgstr ""
 
 #: ../../howto/jython.txt:9
@@ -4043,6 +4122,11 @@ msgstr ""
 msgid "Store your static files in a folder called ``static`` in your app. For example ``my_app/static/my_app/myimage.jpg``."
 msgstr ""
 
+#: ../../howto/static-files/index.txt:38
+# b2416dbb32264676ae6d6f64c9ed3cd8
+msgid "Serving the files"
+msgstr ""
+
 #: ../../howto/static-files/index.txt:40
 # a82d0377270a4384a34f4732ba979d08
 msgid "In addition to these configuration steps, you'll also need to actually serve the static files."
@@ -4071,6 +4155,11 @@ msgstr ""
 #: ../../howto/static-files/index.txt:63
 # fc7344d7a70a4cfd9ab0a979b64f6c22
 msgid "See the documentation for the :setting:`STATICFILES_FINDERS` setting for details on how ``staticfiles`` finds your files."
+msgstr ""
+
+#: ../../howto/static-files/index.txt:66
+# 1ee6651774354691bacdfcec14b87f16
+msgid "Static file namespacing"
 msgstr ""
 
 #: ../../howto/static-files/index.txt:68
@@ -4216,8 +4305,8 @@ msgid "Installation"
 msgstr ""
 
 #: ../../howto/upgrade-version.txt:48
-# f4ce367d01b24710ad24b1309ef50fc9
-msgid "Once you're ready, it is time to :doc:`install the new Django version </topics/install>`. If you are using virtualenv_ and it is a major upgrade, you might want to set up a new environment will all the dependencies first."
+# a486d21f865141849cc4586e7f225454
+msgid "Once you're ready, it is time to :doc:`install the new Django version </topics/install>`. If you are using virtualenv_ and it is a major upgrade, you might want to set up a new environment with all the dependencies first."
 msgstr ""
 
 #: ../../howto/upgrade-version.txt:52

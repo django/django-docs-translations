@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Django 1.5\n"
+"Project-Id-Version: Django 1.5.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-23 14:23\n"
+"POT-Creation-Date: 2013-10-04 09:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2039,6 +2039,11 @@ msgstr ""
 msgid "Uses a default ``template_name_suffix`` of ``_archive_today``."
 msgstr ""
 
+#: ../../ref/class-based-views/generic-date-based.txt:564
+# 65e817410d924f59adb985ccdc17cc94
+msgid "Where is the example template for ``TodayArchiveView``?"
+msgstr ""
+
 #: ../../ref/class-based-views/generic-date-based.txt:566
 # 76189799f1124aba92c8bb95bca11a66
 msgid "This view uses by default the same template as the :class:`~DayArchiveView`, which is in the previous example. If you need a different template, set the ``template_name`` attribute to be the name of the new template."
@@ -2365,6 +2370,11 @@ msgstr ""
 msgid "A class-based view is deployed into a URL pattern using the :meth:`~django.views.generic.base.View.as_view()` classmethod::"
 msgstr ""
 
+#: ../../ref/class-based-views/index.txt:32
+# 20257d8e85bc460b8c23e6b8301a56ef
+msgid "Thread safety with view arguments"
+msgstr ""
+
 #: ../../ref/class-based-views/index.txt:34
 # 28119601a48541d6aa8fb81045d442fe
 msgid "Arguments passed to a view are shared between every instance of a view. This means that you shouldn't use a list, dictionary, or any other mutable object as an argument to a view. If you do and the shared object is modified, the actions of one user visiting your view could have an effect on subsequent users visiting the same view."
@@ -2411,7 +2421,12 @@ msgid "Date-based mixins"
 msgstr ""
 
 #: ../../ref/class-based-views/mixins-date-based.txt:8
-# 163fa71771014f5d946eb2419708003f
+# 723704a1f59b4bc5b7b90545125a1677
+msgid "All the date formatting attributes in these mixins use :func:`~time.strftime` format characters. Do not try to use the format characters from the :ttag:`now` template tag as they are not compatible."
+msgstr ""
+
+#: ../../ref/class-based-views/mixins-date-based.txt:13
+# b38d6160b31d4530b62fe4f9efce42d8
 msgid "YearMixin"
 msgstr ""
 
@@ -3217,6 +3232,11 @@ msgstr ""
 #: ../../ref/class-based-views/mixins-simple.txt:24
 # c1a2149e2080477fa1562e934dea77b6
 msgid "The template context of all class-based generic views include a ``view`` variable that points to the ``View`` instance."
+msgstr ""
+
+#: ../../ref/class-based-views/mixins-simple.txt:27
+# 89d27b3896bf4f01943c25d1ea01a1b4
+msgid "Use ``alters_data`` where appropriate"
 msgstr ""
 
 #: ../../ref/class-based-views/mixins-simple.txt:29
@@ -4278,6 +4298,11 @@ msgstr ""
 msgid "The ``ModelAdmin`` class is the representation of a model in the admin interface. These are stored in a file named ``admin.py`` in your application. Let's take a look at a very simple example of the ``ModelAdmin``::"
 msgstr ""
 
+#: ../../ref/contrib/admin/index.txt:83
+# f27fe01b7ce74185896d97aa0f00f560
+msgid "Do you need a ``ModelAdmin`` object at all?"
+msgstr ""
+
 #: ../../ref/contrib/admin/index.txt:85
 # 0f25fce9e8b54e2784e1339955d027c2
 msgid "In the preceding example, the ``ModelAdmin`` class doesn't define any custom values (yet). As a result, the default admin interface will be provided. If you are happy with the default admin interface, you don't need to define a ``ModelAdmin`` object at all -- you can register the model class without providing a ``ModelAdmin`` description. The preceding example could be simplified to::"
@@ -4521,6 +4546,15 @@ msgstr ""
 #: ../../ref/contrib/admin/index.txt:190
 # 7a9f1ea9da7446c4bb6415784cfddd28
 msgid "To display multiple fields on the same line, wrap those fields in their own tuple. In this example, the ``url`` and ``title`` fields will display on the same line and the ``content`` field will be displayed below them in its own line::"
+msgstr ""
+
+#: ../../ref/contrib/admin/index.txt:198
+#: ../../ref/contrib/admin/index.txt:326
+#: ../../ref/contrib/index.txt:13
+# e505043ed2794219a96bf363264e41d7
+# 4b8007eee2ca400faec1d2483bc65325
+# 08c00612d57646859c76a34a988a1dff
+msgid "Note"
 msgstr ""
 
 #: ../../ref/contrib/admin/index.txt:200
@@ -8259,6 +8293,11 @@ msgstr ""
 msgid "Give your model a :class:`~django.contrib.contenttypes.generic.GenericForeignKey`, and pass it the names of the two fields described above. If these fields are named \"content_type\" and \"object_id\", you can omit this -- those are the default field names :class:`~django.contrib.contenttypes.generic.GenericForeignKey` will look for."
 msgstr ""
 
+#: ../../ref/contrib/contenttypes.txt:306
+# ab9a8677d88b4482bfb401280f146b02
+msgid "Primary key type compatibility"
+msgstr ""
+
 #: ../../ref/contrib/contenttypes.txt:308
 # b869e413bb6d48898f07b3d6374d5e9f
 msgid "The \"object_id\" field doesn't have to be the same type as the primary key fields on the related models, but their primary key values must be coercible to the same type as the \"object_id\" field by its :meth:`~django.db.models.Field.get_db_prep_value` method."
@@ -8279,6 +8318,11 @@ msgstr ""
 msgid "There is no one-size-fits-all solution for which field type is best. You should evaluate the models you expect to be pointing to and determine which solution will be most effective for your use case."
 msgstr ""
 
+#: ../../ref/contrib/contenttypes.txt:329
+# 2c05885c21ca4a6f9f27b0a418ef461f
+msgid "Serializing references to ``ContentType`` objects"
+msgstr ""
+
 #: ../../ref/contrib/contenttypes.txt:331
 # 0513f4bad5144f21a840971aa0d57ab5
 msgid "If you're serializing data (for example, when generating :class:`~django.test.TestCase.fixtures`) from a model that implements generic relations, you should probably be using a natural key to uniquely identify related :class:`~django.contrib.contenttypes.models.ContentType` objects. See :ref:`natural keys<topics-serialization-natural-keys>` and :djadminopt:`dumpdata --natural <--natural>` for more information."
@@ -8294,8 +8338,13 @@ msgstr ""
 msgid "Due to the way :class:`~django.contrib.contenttypes.generic.GenericForeignKey` is implemented, you cannot use such fields directly with filters (``filter()`` and ``exclude()``, for example) via the database API. Because a :class:`~django.contrib.contenttypes.generic.GenericForeignKey` isn't a normal field object, these examples will *not* work::"
 msgstr ""
 
-#: ../../ref/contrib/contenttypes.txt:363
-# 8a83f8acc12a4f81b7abd652545e48bf
+#: ../../ref/contrib/contenttypes.txt:362
+# c1b5fbf5b8dc4279a935d93c02122433
+msgid "Likewise, :class:`~django.contrib.contenttypes.generic.GenericForeignKey`\\s does not appear in :class:`~django.forms.ModelForm`\\s."
+msgstr ""
+
+#: ../../ref/contrib/contenttypes.txt:366
+# 3faceffae15c4ca7976cbf67ab95229d
 msgid "Reverse generic relations"
 msgstr ""
 
@@ -9030,10 +9079,8 @@ msgid "Databrowse"
 msgstr ""
 
 #: ../../ref/contrib/databrowse.txt:8
-#: ../../ref/contrib/markup.txt:8
-# c910921cc8744cf981e7a9a8e8ac36f7
-# b7805c6382b5488e8086180cc4a8e387
-msgid "This module has been deprecated."
+# 8affaa64d2404199af7300d62fa223c0
+msgid "This module has been deprecated. It's available as a `third-party package <https://pypi.python.org/pypi/django-databrowse>`_."
 msgstr ""
 
 #: ../../ref/contrib/databrowse.txt:11
@@ -9303,13 +9350,18 @@ msgstr ""
 msgid "The middleware only gets activated for 404s -- not for 500s or responses of any other status code."
 msgstr ""
 
-#: ../../ref/contrib/flatpages.txt:139
-# bee5be4930f240be9248e22eaa974ac1
-msgid "Because the ``FlatpageFallbackMiddleware`` is applied only after URL resolution has failed and produced a 404, the response it returns will not apply any :ref:`view middleware <view-middleware>` methods. Only requests which are successfully routed to a view via normal URL resolution apply view middleware."
+#: ../../ref/contrib/flatpages.txt:143
+# 51259c38c97b46b2b43d263a9e479bb7
+msgid "Flatpages will not apply view middleware"
 msgstr ""
 
 #: ../../ref/contrib/flatpages.txt:145
-# 39f0c41700ef428db54cc360bd0eb702
+# 60c1ee71c75b481eac0bb4fb772f27d1
+msgid "Because the ``FlatpageFallbackMiddleware`` is applied only after URL resolution has failed and produced a 404, the response it returns will not apply any :ref:`view middleware <view-middleware>` methods. Only requests which are successfully routed to a view via normal URL resolution apply view middleware."
+msgstr ""
+
+#: ../../ref/contrib/flatpages.txt:151
+# 29eef6e723bf485d8dc606a77f09ef68
 msgid "Note that the order of :setting:`MIDDLEWARE_CLASSES` matters. Generally, you can put :class:`~django.contrib.flatpages.middleware.FlatpageFallbackMiddleware` at the end of the list. This means it will run first when processing the response, and ensures that any other response-processing middlewares see the real flatpage response rather than the 404."
 msgstr ""
 
@@ -9320,8 +9372,13 @@ msgstr ""
 msgid "For more on middleware, read the :doc:`middleware docs </topics/http/middleware>`."
 msgstr ""
 
-#: ../../ref/contrib/flatpages.txt:157
-# cc20e1121fbe45f9afb81c2e5883208b
+#: ../../ref/contrib/flatpages.txt:161
+# 771e1b21219c4bf1991cb4884c7fb81d
+msgid "Ensure that your 404 template works"
+msgstr ""
+
+#: ../../ref/contrib/flatpages.txt:163
+# 1d00299d01aa4788a8fa911cb8889a48
 msgid "Note that the :class:`~django.contrib.flatpages.middleware.FlatpageFallbackMiddleware` only steps in once another view has successfully produced a 404 response. If another view or middleware class attempts to produce a 404 but ends up raising an exception instead, the response will become an HTTP 500 (\"Internal Server Error\") and the :class:`~django.contrib.flatpages.middleware.FlatpageFallbackMiddleware` will not attempt to serve a flat page."
 msgstr ""
 
@@ -9354,8 +9411,13 @@ msgstr ""
 msgid "Flatpages are represented by a standard :doc:`Django model </topics/db/models>`, which lives in `django/contrib/flatpages/models.py`_. You can access flatpage objects via the :doc:`Django database API </topics/db/queries>`."
 msgstr ""
 
-#: ../../ref/contrib/flatpages.txt:194
-# 0b13c58507c9460a81f2d48e3b8ecede
+#: ../../ref/contrib/flatpages.txt:198
+# 984a0bf407cf486ead3dd2acab6af491
+msgid "Check for duplicate flatpage URLs."
+msgstr ""
+
+#: ../../ref/contrib/flatpages.txt:200
+# 7ba385ae505a43dc94c9b03d2d516229
 msgid "If you add or modify flatpages via your own code, you will likely want to check for duplicate flatpage URLs within the same site. The flatpage form used in the admin performs this validation check, and can be imported from ``django.contrib.flatpages.forms.FlatPageForm`` and used in your own views."
 msgstr ""
 
@@ -14133,6 +14195,11 @@ msgstr ""
 msgid "Finally, there are :func:`fromstr` and :func:`fromfile` factory methods, which return a :class:`GEOSGeometry` object from an input string or a file::"
 msgstr ""
 
+#: ../../ref/contrib/gis/geos.txt:80
+# 25ce7b238f65474e96cd3e0ec3c69f02
+msgid "My logs are filled with GEOS-related errors"
+msgstr ""
+
 #: ../../ref/contrib/gis/geos.txt:82
 # e42deb85686140718ee0045cf5c830a7
 msgid "You find many ``TypeError`` or ``AttributeError`` exceptions filling your Web server's log files. This generally means that you are creating GEOS objects at the top level of some of your Python modules. Then, due to a race condition in the garbage collector, your module is garbage collected before the GEOS object. To prevent this, create :class:`GEOSGeometry` objects inside the local scope of your functions/methods."
@@ -14754,6 +14821,11 @@ msgstr ""
 msgid "Returns the number of interior rings in this geometry."
 msgstr ""
 
+#: ../../ref/contrib/gis/geos.txt:658
+# bb5c65dcbae1434993a81a5f9203c0ea
+msgid "Comparing Polygons"
+msgstr ""
+
 #: ../../ref/contrib/gis/geos.txt:660
 # b7290f051e784fdd81c84dad2db435f3
 msgid "Note that it is possible to compare ``Polygon`` objects directly with ``<`` or ``>``, but as the comparison is made through Polygon's :class:`LineString`, it does not mean much (but is consistent and quick). You can always force the comparison with the :attr:`~GEOSGeometry.area` property::"
@@ -15155,6 +15227,11 @@ msgstr ""
 msgid "3.0, 2.4, 2.3"
 msgstr ""
 
+#: ../../ref/contrib/gis/install/geolibs.txt:21
+# 9dfbe5961a64426d87a895840fe7319c
+msgid "Install GDAL"
+msgstr ""
+
 #: ../../ref/contrib/gis/install/geolibs.txt:23
 # 5fd3c9b5ec7645c8a089ce0fbf35e7c7
 msgid "While :ref:`gdalbuild` is technically not required, it is *recommended*. Important features of GeoDjango (including the :ref:`ref-layermapping`, geometry reprojection, and the geographic admin) depend on its functionality."
@@ -15444,6 +15521,11 @@ msgstr ""
 #: ../../ref/contrib/gis/install/index.txt:22
 # ebae5f0f4fbc40708c69729a8975f131
 msgid ":ref:`windows`"
+msgstr ""
+
+#: ../../ref/contrib/gis/install/index.txt:24
+# 9ea19904353e4b899a608b87fa3c0fb1
+msgid "Use the Source"
 msgstr ""
 
 #: ../../ref/contrib/gis/install/index.txt:26
@@ -18055,6 +18137,11 @@ msgstr ""
 msgid "GeoDjango's ORM will automatically wrap geometry values in transformation SQL, allowing the developer to work at a higher level of abstraction::"
 msgstr ""
 
+#: ../../ref/contrib/gis/tutorial.txt:664
+# be876e2a88224ca9be37f860b2b9605b
+msgid "Raw queries"
+msgstr ""
+
 #: ../../ref/contrib/gis/tutorial.txt:666
 # 1665888d5020496c9c99358c7592a19c
 msgid "When using :doc:`raw queries </topics/db/sql>`, you should generally wrap your geometry fields with the ``asText()`` SQL function (or ``ST_AsText`` for PostGIS) so that the field value will be recognized by GEOS::"
@@ -18948,6 +19035,11 @@ msgstr ""
 msgid "django.contrib.markup"
 msgstr ""
 
+#: ../../ref/contrib/markup.txt:8
+# 1da3bd02f7614b83b17ddaa4244e2f12
+msgid "This module has been deprecated."
+msgstr ""
+
 #: ../../ref/contrib/markup.txt:11
 # e7f61cc4fbb64a94bbb8d96c944b3c6a
 msgid "Django provides template filters that implement the following markup languages:"
@@ -19479,8 +19571,15 @@ msgstr ""
 msgid "This sets the minimum message that will be saved in the message storage. See `Message levels`_ above for more details."
 msgstr ""
 
-#: ../../ref/contrib/messages.txt:332
-# 482b038b8840408195582dc6e39cb956
+#: ../../ref/contrib/messages.txt:333
+#: ../../ref/contrib/messages.txt:375
+# c05c99879e7b48d9a2827bb5881fd86c
+# a7f4b248a4c241fdbdb054373c778d5c
+msgid "Important"
+msgstr ""
+
+#: ../../ref/contrib/messages.txt:335
+# 5e614e2d5cce490fb521967f1083cf29
 msgid "If you override ``MESSAGE_LEVEL`` in your settings file and rely on any of the built-in constants, you must import the constants module directly to avoid the potential for circular imports, e.g.::"
 msgstr ""
 
@@ -20062,6 +20161,11 @@ msgstr ""
 #: ../../ref/contrib/sitemaps.txt:433
 # 0bd843f97d53448c9bf48478be7747aa
 msgid ":func:`ping_google` raises the exception ``django.contrib.sitemaps.SitemapNotFound`` if it cannot determine your sitemap URL."
+msgstr ""
+
+#: ../../ref/contrib/sitemaps.txt:437
+# d74dbf6cfdaf4ea9a9013af112c63038
+msgid "Register with Google first!"
 msgstr ""
 
 #: ../../ref/contrib/sitemaps.txt:439
@@ -20695,9 +20799,9 @@ msgstr ""
 msgid "Example usage::"
 msgstr ""
 
-#: ../../ref/contrib/staticfiles.txt:253
-# ee9d1f1948d84e21a696755bb17df203
-msgid "Use the ``--insecure`` option to force serving of static files with the :doc:`staticfiles </ref/contrib/staticfiles>` app even if the :setting:`DEBUG` setting is ``False``. By using this you acknowledge the fact that it's **grossly inefficient** and probably **insecure**. This is only intended for local development, should **never be used in production** and is only available if the :doc:`staticfiles </ref/contrib/staticfiles>` app is in your project's :setting:`INSTALLED_APPS` setting."
+#: ../../ref/contrib/staticfiles.txt:255
+# 93b79e0a1aad451f95aa1d4ae0463e95
+msgid "Use the ``--insecure`` option to force serving of static files with the :doc:`staticfiles </ref/contrib/staticfiles>` app even if the :setting:`DEBUG` setting is ``False``. By using this you acknowledge the fact that it's **grossly inefficient** and probably **insecure**. This is only intended for local development, should **never be used in production** and is only available if the :doc:`staticfiles </ref/contrib/staticfiles>` app is in your project's :setting:`INSTALLED_APPS` setting. :djadmin:`runserver` ``--insecure`` doesn't work with :class:`~django.contrib.staticfiles.storage.CachedStaticFilesStorage`."
 msgstr ""
 
 #: ../../ref/contrib/staticfiles.txt:266
@@ -21722,6 +21826,11 @@ msgstr ""
 msgid "In this configuration, Django still ensures that :ref:`delete() <topics-db-queries-delete>` and :ref:`update() <topics-db-queries-update>` queries run inside a single transaction, so that either all the affected objects are changed or none of them are."
 msgstr ""
 
+#: ../../ref/databases.txt:95
+# 23ae45da7ae94a5da2d393e8a5a73e07
+msgid "This is database-level autocommit"
+msgstr ""
+
 #: ../../ref/databases.txt:97
 # e606cb90c82d4ad1a2034dd1fe015243
 msgid "This functionality is not the same as the :ref:`autocommit <topics-db-transactions-autocommit>` decorator. That decorator is a Django-level implementation that commits automatically after data changing operations. The feature enabled using the :setting:`OPTIONS` option provides autocommit behavior at the database adapter level. It commits after *every* operation."
@@ -21783,8 +21892,8 @@ msgid "Until MySQL 5.5.4, the default engine was MyISAM_ [#]_. The main drawback
 msgstr ""
 
 #: ../../ref/databases.txt:162
-# 6a497f22a6cc46869bbcc8757185c6b6
-msgid "Since MySQL 5.5.5, the default storage engine is InnoDB_. This engine is fully transactional and supports foreign key references. It's probably the best choice at this point."
+# d9b8e86bdf354b51aaf618e1cf50960e
+msgid "Since MySQL 5.5.5, the default storage engine is InnoDB_. This engine is fully transactional and supports foreign key references. It's probably the best choice at this point. However, note that the the InnoDB autoincrement counter is lost on a MySQL restart because it does not remember the ``AUTO_INCREMENT`` value, instead recreating it as \"max(id)+1\". This may result in an inadvertent reuse of :class:`~django.db.models.AutoField` values."
 msgstr ""
 
 #: ../../ref/databases.txt:166
@@ -22277,7 +22386,12 @@ msgid "RESOURCE WITH ADMIN OPTION"
 msgstr ""
 
 #: ../../ref/databases.txt:623
-# fd3a8629b53049e7a1179e19f879ac72
+# 8ed77d75587a4986add54533a0ec9e2d
+msgid "The Oracle database backend uses the ``SYS.DBMS_LOB`` package, so your user will require execute permissions on it. It's normally accessible to all users by default, but in case it is not, you'll need to grant permissions like so:"
+msgstr ""
+
+#: ../../ref/databases.txt:634
+# 3b86531f707846a5aabe36e88877e5af
 msgid "Your Django settings.py file should look something like this for Oracle::"
 msgstr ""
 
@@ -22887,6 +23001,11 @@ msgstr ""
 #: ../../ref/django-admin.txt:407
 # 396016ae80304cf5abc769ef0c0c2e08
 msgid "Note that if two fixtures with the same name but different fixture type are discovered (for example, if ``mydata.json`` and ``mydata.xml.gz`` were found in the same fixture directory), fixture installation will be aborted, and any data installed in the call to ``loaddata`` will be removed from the database."
+msgstr ""
+
+#: ../../ref/django-admin.txt:413
+# 5fd002c5d15346929f1ad88ddb061023
+msgid "MySQL with MyISAM and fixtures"
 msgstr ""
 
 #: ../../ref/django-admin.txt:415
@@ -23595,6 +23714,11 @@ msgstr ""
 msgid "Use this command when you've added new applications to your project and want to install them in the database. This includes any apps shipped with Django that might be in :setting:`INSTALLED_APPS` by default. When you start a new project, run this command to install the default apps."
 msgstr ""
 
+#: ../../ref/django-admin.txt:1044
+# e93b8d668b2d4ae9ab6a863371deb96c
+msgid "Syncdb will not alter existing tables"
+msgstr ""
+
 #: ../../ref/django-admin.txt:1046
 # 1c51111903774161aa0cfe0b2c0e3a42
 msgid "``syncdb`` will only create tables for models which have not yet been installed. It will *never* issue ``ALTER TABLE`` statements to match changes made to a model class after installation. Changes to model classes and database schemas often involve some form of ambiguity and, in those cases, Django would have to guess at the correct changes to make. There is a risk that critical data would be lost in the process."
@@ -24283,8 +24407,18 @@ msgstr ""
 msgid "Examples::"
 msgstr ""
 
-#: ../../ref/django-admin.txt:1534
-# 89232f1bd32c4f3bb9f4280cdca88e16
+#: ../../ref/django-admin.txt:1533
+# 2b6cbc657ae2490b95682d5af514a1c6
+msgid "Note that command options that take no arguments are passed as keywords with ``True`` or ``False``::"
+msgstr ""
+
+#: ../../ref/django-admin.txt:1538
+# 75ed6bdabe3b4969956d80f7817f2d1f
+msgid "Command options which take multiple options are passed a list::"
+msgstr ""
+
+#: ../../ref/django-admin.txt:1543
+# d3b7e07716c74bc0b11e55b59d3b3b58
 msgid "Output redirection"
 msgstr ""
 
@@ -24524,8 +24658,8 @@ msgid "The ``File`` Class"
 msgstr ""
 
 #: ../../ref/files/file.txt:14
-# b3e80d8e437948bb8f52cb194c5382c4
-msgid "The :class:`File` is a thin wrapper around Python's built-in file object with some Django-specific additions. Internally, Django uses this class any time it needs to represent a file."
+# 5d491ddfeebd432ea85e1dec5b552867
+msgid "The :class:`File` class is a thin wrapper around Python's :py:ref:`built-in file object<bltin-file-objects>` with some Django-specific additions. Internally, Django uses this class when it needs to represent a file."
 msgstr ""
 
 #: ../../ref/files/file.txt:18
@@ -24534,8 +24668,8 @@ msgid ":class:`File` objects have the following attributes and methods:"
 msgstr ""
 
 #: ../../ref/files/file.txt:22
-# c367a48d0c664d2f9e911ed876211c3b
-msgid "The name of file including the relative path from :setting:`MEDIA_ROOT`."
+# 42b22897f672427eb6f96fefa29b261b
+msgid "The name of the file including the relative path from :setting:`MEDIA_ROOT`."
 msgstr ""
 
 #: ../../ref/files/file.txt:27
@@ -24544,8 +24678,8 @@ msgid "The size of the file in bytes."
 msgstr ""
 
 #: ../../ref/files/file.txt:31
-# 3f842012e8164349b933bfd4b99a92f4
-msgid "The underlying Python ``file`` object passed to :class:`~django.core.files.File`."
+# d9d276c35b1d4ed387dc90558beab316
+msgid "The underlying :py:ref:`built-in file object<bltin-file-objects>` that this class wraps."
 msgstr ""
 
 #: ../../ref/files/file.txt:36
@@ -24554,8 +24688,8 @@ msgid "The read/write mode for the file."
 msgstr ""
 
 #: ../../ref/files/file.txt:40
-# e3f7ae773fce4d958a680c281ebc0f9c
-msgid "Open or reopen the file (which by definition also does ``File.seek(0)``). The ``mode`` argument allows the same values as Python's standard ``open()``."
+# 3fd01dfcd50a437a8062d96954ef57f1
+msgid "Open or reopen the file (which also does ``File.seek(0)``). The ``mode`` argument allows the same values as Python's built-in :func:`python:open()`."
 msgstr ""
 
 #: ../../ref/files/file.txt:44
@@ -24589,8 +24723,8 @@ msgid "Returns ``True`` if the file is large enough to require multiple chunks t
 msgstr ""
 
 #: ../../ref/files/file.txt:72
-# 462cbda727734512bd8207710b50b62b
-msgid "Writes the specified content string to the file. Depending on the storage system behind the scenes, this content might not be fully committed until ``close()`` is called on the file."
+# e62e61f838d44deda830a474d17fefa7
+msgid "Writes the specified content string to the file. Depending on the storage system behind the scenes, this content might not be fully committed until :func:`close()` is called on the file."
 msgstr ""
 
 #: ../../ref/files/file.txt:78
@@ -24599,8 +24733,8 @@ msgid "Close the file."
 msgstr ""
 
 #: ../../ref/files/file.txt:80
-# c495af31b4114dccad5e25031f88601a
-msgid "In addition to the listed methods, :class:`~django.core.files.File` exposes the following attributes and methods of the underlying ``file`` object: ``encoding``, ``fileno``, ``flush``, ``isatty``, ``newlines``, ``read``, ``readinto``, ``readlines``, ``seek``, ``softspace``, ``tell``, ``truncate``, ``writelines``, ``xreadlines``."
+# 5da233293f6044238a5dc24237f67fcb
+msgid "In addition to the listed methods, :class:`~django.core.files.File` exposes the following attributes and methods of its ``file`` object: ``encoding``, ``fileno``, ``flush``, ``isatty``, ``newlines``, ``read``, ``readinto``, ``readlines``, ``seek``, ``softspace``, ``tell``, ``truncate``, ``writelines``, ``xreadlines``."
 msgstr ""
 
 #: ../../ref/files/file.txt:89
@@ -24639,8 +24773,8 @@ msgid "Additional methods on files attached to objects"
 msgstr ""
 
 #: ../../ref/files/file.txt:132
-# 7f630f471bd54eb1ac308138c8007005
-msgid "Any :class:`File` that's associated with an object (as with ``Car.photo``, below) will also have a couple of extra methods:"
+# 9e7179f10d9d4f6d88cf939323ba0d6f
+msgid "Any :class:`File` that is associated with an object (as with ``Car.photo``, below) will also have a couple of extra methods:"
 msgstr ""
 
 #: ../../ref/files/file.txt:137
@@ -24649,8 +24783,8 @@ msgid "Saves a new file with the file name and contents provided. This will not 
 msgstr ""
 
 #: ../../ref/files/file.txt:145
-# 64be3478b3c447bfaa747abaaa75c36a
-msgid "are the same as this one line::"
+# 68cb52ebd8454c2994081ee5eced8d1a
+msgid "are equivalent to::"
 msgstr ""
 
 #: ../../ref/files/file.txt:149
@@ -24796,6 +24930,11 @@ msgstr ""
 #: ../../ref/forms/api.txt:3
 # eb85d97515e64c1eb21631136158ae53
 msgid "The Forms API"
+msgstr ""
+
+#: ../../ref/forms/api.txt:7
+# 9b9c55f2954d4816930879252f30d6b7
+msgid "About this document"
 msgstr ""
 
 #: ../../ref/forms/api.txt:9
@@ -26810,6 +26949,11 @@ msgstr ""
 msgid "There is an example of modifying ``self._errors`` in the following section."
 msgstr ""
 
+#: ../../ref/forms/validation.txt:147
+# 7286734c32da41a4904150465d8a2669
+msgid "What's in a name?"
+msgstr ""
+
 #: ../../ref/forms/validation.txt:149
 # e9ef7759b3a843f8aa87b1ec3f946e00
 msgid "You may be wondering why is this attribute called ``_errors`` and not ``errors``. Normal Python practice is to prefix a name with an underscore if it's not for external usage. In this case, you are subclassing the ``Form`` class, so you are essentially writing new internals. In effect, you are given permission to access some of the internals of ``Form``."
@@ -26841,8 +26985,8 @@ msgid "Using validators"
 msgstr ""
 
 #: ../../ref/forms/validation.txt:178
-# 7700b74b757f4acfb8a0438da0695e83
-msgid "Django's form (and model) fields support use of simple utility functions and classes known as validators. These can be passed to a field's constructor, via the field's ``validators`` argument, or defined on the Field class itself with the ``default_validators`` attribute."
+# 863a29e6b79b4cf2a4a701bb35a3ff2f
+msgid "Django's form (and model) fields support use of simple utility functions and classes known as validators. A validator is merely a callable object or function that takes a value and simply returns nothing if the value is valid or raises a :exc:`~django.core.exceptions.ValidationError` if not. These can be passed to a field's constructor, via the field's ``validators`` argument, or defined on the :class:`~django.forms.Field` class itself with the ``default_validators`` attribute."
 msgstr ""
 
 #: ../../ref/forms/validation.txt:183
@@ -26860,8 +27004,13 @@ msgstr ""
 msgid "is equivalent to::"
 msgstr ""
 
-#: ../../ref/forms/validation.txt:205
-# 732c28ab078e43878d5af8ebe28bfae5
+#: ../../ref/forms/validation.txt:206
+# 2a9baf8f56bb47f091bb58e9db07a942
+msgid "Common cases such as validating against an email or a regular expression can be handled using existing validator classes available in Django. For example, ``validators.validate_slug`` is an instance of a :class:`~django.core.validators.RegexValidator` constructed with the first argument being the pattern: ``^[-a-zA-Z0-9_]+$``. See the section on :doc:`writing validators </ref/validators>` to see a list of what is already available and for an example of how to write a validator."
+msgstr ""
+
+#: ../../ref/forms/validation.txt:215
+# 4333d931bdc54d7ca2ef9f3eca5359a4
 msgid "Form field default cleaning"
 msgstr ""
 
@@ -27660,8 +27809,13 @@ msgstr ""
 msgid "GZip middleware"
 msgstr ""
 
-#: ../../ref/middleware.txt:93
-# 7268127b39bd42fdb13beb6c4a50b3d9
+#: ../../ref/middleware.txt:95
+# d657be0caaa84ef58a4a983e8894241f
+msgid "Security researchers recently revealed that when compression techniques (including ``GZipMiddleware``) are used on a website, the site becomes exposed to a number of possible attacks. These approaches can be used to compromise, amongst other things, Django's CSRF protection. Before using ``GZipMiddleware`` on your site, you should consider very carefully whether you are subject to these attacks. If you're in *any* doubt about whether you're affected, you should avoid using ``GZipMiddleware``. For more details, see the `the BREACH paper (PDF)`_ and `breachattack.com`_."
+msgstr ""
+
+#: ../../ref/middleware.txt:107
+# 301580c636bc46dbb1e06527af2b9609
 msgid "Compresses content for browsers that understand GZip compression (all modern browsers)."
 msgstr ""
 
@@ -28185,6 +28339,13 @@ msgstr ""
 msgid "If you are writing an application that must be portable to multiple database backends, you should be aware that there are restrictions on ``max_length`` for some backends. Refer to the :doc:`database backend notes </ref/databases>` for details."
 msgstr ""
 
+#: ../../ref/models/fields.txt:389
+#: ../../ref/models/fields.txt:910
+# ed604a9abb2547269822f1d45df01f72
+# 7c5410e4e82e4d01a3fc5b86b1a35bcc
+msgid "MySQL users"
+msgstr ""
+
 #: ../../ref/models/fields.txt:391
 # 4986d139e9964b55acb351bc010277d0
 msgid "If you are using this field with MySQLdb 1.2.2 and the ``utf8_bin`` collation (which is *not* the default), there are some issues to be aware of. Refer to the :ref:`MySQL database notes <mysql-collation>` for details."
@@ -28268,6 +28429,11 @@ msgstr ""
 #: ../../ref/models/fields.txt:488
 # dd65113502e34ef9b61e93f32f6dc203
 msgid "A :class:`CharField` that checks that the value is a valid email address."
+msgstr ""
+
+#: ../../ref/models/fields.txt:490
+# 0bc003e4b32341cabe5af153d9be6b0e
+msgid "Incompliance to RFCs"
 msgstr ""
 
 #: ../../ref/models/fields.txt:492
@@ -28534,6 +28700,11 @@ msgstr ""
 #: ../../ref/models/fields.txt:754
 # 2750f612fc5345328786b81f0ee53c1e
 msgid "A floating-point number represented in Python by a ``float`` instance."
+msgstr ""
+
+#: ../../ref/models/fields.txt:760
+# b97c1704851946b0b756ced68b302ba3
+msgid "``FloatField`` vs. ``DecimalField``"
 msgstr ""
 
 #: ../../ref/models/fields.txt:762
@@ -29597,6 +29768,11 @@ msgstr ""
 msgid "If your database table name is an SQL reserved word, or contains characters that aren't allowed in Python variable names -- notably, the hyphen -- that's OK. Django quotes column and table names behind the scenes."
 msgstr ""
 
+#: ../../ref/models/options.txt:64
+# fc65ff47bb2742949757feb672560a6e
+msgid "Use lowercase table names for MySQL"
+msgstr ""
+
 #: ../../ref/models/options.txt:66
 # 831c5b85936547518d7aa851d309b3dd
 msgid "It is strongly advised that you use lowercase table names when you override the table name via ``db_table``, particularly if you are using the MySQL backend. See the :ref:`MySQL notes <mysql-notes>` for more details."
@@ -29685,6 +29861,11 @@ msgstr ""
 #: ../../ref/models/options.txt:170
 # 6c5702720cdd44b3ac02789957852f85
 msgid "The related objects also get two methods, ``get_next_in_order()`` and ``get_previous_in_order()``, which can be used to access those objects in their proper order. Assuming the ``Answer`` objects are ordered by ``id``::"
+msgstr ""
+
+#: ../../ref/models/options.txt:180
+# 68f54ad280b14140a327ef6525a1255c
+msgid "Changing order_with_respect_to"
 msgstr ""
 
 #: ../../ref/models/options.txt:182
@@ -29910,6 +30091,11 @@ msgstr ""
 #: ../../ref/models/querysets.txt:106
 # bf571ce5159446fc8c63527f4a2d8b99
 msgid "The ``query`` attribute is an opaque object. It represents the internals of the query construction and is not part of the public API. However, it is safe (and fully supported) to pickle and unpickle the attribute's contents as described here."
+msgstr ""
+
+#: ../../ref/models/querysets.txt:111
+# 306cdaf37b9840209cf7d2d12bb7aa63
+msgid "You can't share pickles between versions"
 msgstr ""
 
 #: ../../ref/models/querysets.txt:113
@@ -31003,8 +31189,8 @@ msgid "If you are using MySQL, be sure to use the ``READ COMMITTED`` isolation l
 msgstr ""
 
 #: ../../ref/models/querysets.txt:1400
-# eaf69c7d10674eacb941bf2345e1e104
-msgid "Finally, a word on using ``get_or_create()`` in Django views: please make sure to use it only in ``POST`` requests unless you have a good reason not to ``GET`` requests shouldn't have any effect on data; use ``POST`` whenever a request to a page as a side effect on your data. For more, see `Safe methods`_ in the HTTP spec."
+# 853a65e9654d486dae9b8e10d212a903
+msgid "Finally, a word on using ``get_or_create()`` in Django views: please make sure to use it only in ``POST`` requests unless you have a good reason not to ``GET`` requests shouldn't have any effect on data; use ``POST`` whenever a request to a page has a side effect on your data. For more, see `Safe methods`_ in the HTTP spec."
 msgstr ""
 
 #: ../../ref/models/querysets.txt:1409
@@ -31346,8 +31532,13 @@ msgstr ""
 msgid "SQL equivalents::"
 msgstr ""
 
-#: ../../ref/models/querysets.txt:1732
-# 4c1e11e1e52647d8979adc0088ba3c51
+#: ../../ref/models/querysets.txt:1772
+# a5a1e7e7bcf440ec9faa268a445fb37b
+msgid "MySQL comparisons"
+msgstr ""
+
+#: ../../ref/models/querysets.txt:1774
+# 6276074afb174085a80bb219c780d6a1
 msgid "In MySQL, a database table's \"collation\" setting determines whether ``exact`` comparisons are case-sensitive. This is a database setting, *not* a Django setting. It's possible to configure your MySQL tables to use case-sensitive comparisons, but some trade-offs are involved. For more information about this, see the :ref:`collation section <mysql-collation>` in the :doc:`databases </ref/databases>` documentation."
 msgstr ""
 
@@ -31399,8 +31590,23 @@ msgstr ""
 msgid "Note this will match ``'Beatles Blog'``, ``'beatles blog'``, ``'BeAtLes BLoG'``, etc."
 msgstr ""
 
-#: ../../ref/models/querysets.txt:1759
-# e82917b991404b6eb7d6ea7cd0eb18c4
+#: ../../ref/models/querysets.txt:1799
+#: ../../ref/models/querysets.txt:1824
+#: ../../ref/models/querysets.txt:1846
+#: ../../ref/models/querysets.txt:1978
+#: ../../ref/models/querysets.txt:1999
+#: ../../ref/models/querysets.txt:2020
+# da1c157503e04550a22eb6d60cf87034
+# f74502bbb407446fb96513d8589e5eb3
+# c2c879fcf4604c0cbcdaf6172a62fa0e
+# 1c7a0aded3814897a6b9588e20449561
+# 22032bd0f6af4c978674a25ba523ffb9
+# c7cd18903d5f4c1d86a9cc25a7924d33
+msgid "SQLite users"
+msgstr ""
+
+#: ../../ref/models/querysets.txt:1801
+# 18078e519f9b4eba96881fd0bc51c609
 msgid "When using the SQLite backend and Unicode (non-ASCII) strings, bear in mind the :ref:`database note <sqlite-string-matching>` about string comparisons. SQLite does not do case-insensitive matching for Unicode strings."
 msgstr ""
 
@@ -31468,13 +31674,20 @@ msgstr ""
 msgid "This example will raise an exception, since the inner query is trying to extract two field values, where only one is expected::"
 msgstr ""
 
-#: ../../ref/models/querysets.txt:1852
-# b56507d864fc481d8ae5d7390e480864
+#: ../../ref/models/querysets.txt:1892
+#: ../../ref/request-response.txt:842
+# a08d4ecae42c41249b9be4e74c577997
+# 415aa64b0d1c4ed9bbbc1e8bc75074c8
+msgid "Performance considerations"
+msgstr ""
+
+#: ../../ref/models/querysets.txt:1894
+# f57206af9c564ffe93804320a11d1c61
 msgid "Be cautious about using nested queries and understand your database server's performance characteristics (if in doubt, benchmark!). Some database backends, most notably MySQL, don't optimize nested queries very well. It is more efficient, in those cases, to extract a list of values and then pass that into the second query. That is, execute two queries instead of one::"
 msgstr ""
 
-#: ../../ref/models/querysets.txt:1863
-# 723b7b781a6b45f4bc0d9bb78753e9c2
+#: ../../ref/models/querysets.txt:1905
+# e6bd0fca70334bdfa876240b75f1035f
 msgid "Note the ``list()`` call around the Blog ``QuerySet`` to force execution of the first query. Without it, a nested query would be executed, because :ref:`querysets-are-lazy`."
 msgstr ""
 
@@ -34228,8 +34441,13 @@ msgstr ""
 msgid "A tuple of strings designating all applications that are enabled in this Django installation. Each string should be a full Python path to a Python package that contains a Django application, as created by :djadmin:`django-admin.py startapp <startapp>`."
 msgstr ""
 
-#: ../../ref/settings.txt:1200
-# 4903e5d56b7a4b44a38a781310c78a88
+#: ../../ref/settings.txt:1202
+# 6bba8bd963f944588e390f4fba677cad
+msgid "App names must be unique"
+msgstr ""
+
+#: ../../ref/settings.txt:1204
+# d3eb61c3a9d14f33b21b2194a29632e9
 msgid "The application names (that is, the final dotted part of the path to the module containing ``models.py``) defined in :setting:`INSTALLED_APPS` *must* be unique. For example, you can't include both ``django.contrib.auth`` and ``myproject.auth`` in INSTALLED_APPS."
 msgstr ""
 
@@ -35866,8 +36084,8 @@ msgid "and then did something like this::"
 msgstr ""
 
 #: ../../ref/signals.txt:291
-# f73680527a194bf09391898d7f831915
-msgid "the arguments sent to a :data:`m2m_changed` handler (``topppings_changed`` in the example above) would be:"
+# 2591cf424dd142cd83f715e3d71d9fa3
+msgid "the arguments sent to a :data:`m2m_changed` handler (``toppings_changed`` in the example above) would be:"
 msgstr ""
 
 #: ../../ref/signals.txt:297
@@ -36405,8 +36623,8 @@ msgid "TemplateResponse objects"
 msgstr ""
 
 #: ../../ref/template-response.txt:142
-# f72d489c968e4cc4abb88348e2cf1337
-msgid "TemplateResponse is a subclass of :class:`~django.template.response.SimpleTemplateResponse` that uses a :class:`~django.template.RequestContext` instead of a :class:`~django.template.Context`."
+# 199c165452164a91be9e0eaa44402b5a
+msgid "``TemplateResponse`` is a subclass of :class:`~django.template.response.SimpleTemplateResponse` that uses a :class:`~django.template.RequestContext` instead of a :class:`~django.template.Context`."
 msgstr ""
 
 #: ../../ref/template-response.txt:152
@@ -36419,8 +36637,13 @@ msgstr ""
 msgid "An :class:`~django.http.HttpRequest` instance."
 msgstr ""
 
-#: ../../ref/template-response.txt:184
-# a5e135d3d3b34b9c8ba28f0b7bf6605d
+#: ../../ref/template-response.txt:163
+# c2e9601028384032b811caa37ea9c407
+msgid "A dictionary of values to add to the template context. By default, this is an empty dictionary. :class:`~django.template.Context` objects are also accepted as ``context`` values. If you pass a :class:`~django.template.Context` instance or subclass, it will be used instead of creating a new :class:`~django.template.RequestContext`."
+msgstr ""
+
+#: ../../ref/template-response.txt:186
+# 025db46f5bb94f9eb6ec866f8160dba5
 msgid "``current_app``"
 msgstr ""
 
@@ -36619,8 +36842,13 @@ msgstr ""
 msgid "The easiest way to create a ``Template`` object is by instantiating it directly. The class lives at :class:`django.template.Template`. The constructor takes one argument -- the raw template code::"
 msgstr ""
 
-#: ../../ref/templates/api.txt:77
-# f274203dd41a48cc90eb6bcab0f7021e
+#: ../../ref/templates/api.txt:78
+# db59a004d35d4601a58ba973067a9897
+msgid "Behind the scenes"
+msgstr ""
+
+#: ../../ref/templates/api.txt:80
+# 6261cd75337d48c48d302974a296837c
 msgid "The system only parses your raw template code once -- when you create the ``Template`` object. From then on, it's stored internally as a \"node\" structure for performance."
 msgstr ""
 
@@ -36759,13 +36987,18 @@ msgstr ""
 msgid "If :setting:`TEMPLATE_STRING_IF_INVALID` contains a ``'%s'``, the format marker will be replaced with the name of the invalid variable."
 msgstr ""
 
-#: ../../ref/templates/api.txt:256
-# 9df4ab04745c4afdb52a24a48d2bcafa
-msgid "While :setting:`TEMPLATE_STRING_IF_INVALID` can be a useful debugging tool, it is a bad idea to turn it on as a 'development default'."
+#: ../../ref/templates/api.txt:257
+# 877b4700da744dabbf8e4431b3bb79c9
+msgid "For debug purposes only!"
 msgstr ""
 
 #: ../../ref/templates/api.txt:259
-# 07e7e5f789f94251a5fefa6c5baf0fdc
+# 73d4a0ba4c0f4be48e7b31aef3adcff9
+msgid "While :setting:`TEMPLATE_STRING_IF_INVALID` can be a useful debugging tool, it is a bad idea to turn it on as a 'development default'."
+msgstr ""
+
+#: ../../ref/templates/api.txt:262
+# 6b22a8113a054c15a1952129bb6c977e
 msgid "Many templates, including those in the Admin site, rely upon the silence of the template system when a non-existent variable is encountered. If you assign a value other than ``''`` to :setting:`TEMPLATE_STRING_IF_INVALID`, you will experience rendering problems with these templates and sites."
 msgstr ""
 
@@ -36839,8 +37072,13 @@ msgstr ""
 msgid "Each processor is applied in order. That means, if one processor adds a variable to the context and a second processor adds a variable with the same name, the second will override the first. The default processors are explained below."
 msgstr ""
 
-#: ../../ref/templates/api.txt:390
-# 3a8bf7872c124a4aaabbec4a4cb08b5d
+#: ../../ref/templates/api.txt:391
+# 7cf8937619804013a15e47a46fdb10f3
+msgid "When context processors are applied"
+msgstr ""
+
+#: ../../ref/templates/api.txt:393
+# 7d080bf941aa4848b9359657b7db24dd
 msgid "When you use ``RequestContext``, the variables you supply directly are added first, followed any variables supplied by context processors. This means that a context processor may overwrite a variable you've supplied, so take care to avoid variable names which overlap with those supplied by your context processors."
 msgstr ""
 
@@ -37088,8 +37326,13 @@ msgstr ""
 msgid "When Django finds a template that exists, it stops looking."
 msgstr ""
 
-#: ../../ref/templates/api.txt:595
-# ce58618552f14f6aaeae3a567a55dc6b
+#: ../../ref/templates/api.txt:598
+# a292d2965d364fcca25566465728b138
+msgid "Tip"
+msgstr ""
+
+#: ../../ref/templates/api.txt:600
+# 3e6f8a0e72ff4769ac090db05cf5c982
 msgid "You can use ``select_template()`` for super-flexible \"templatability.\" For example, if you've written a news story and want some stories to have custom templates, use something like ``select_template(['story_%s_detail.html' % story.id, 'story_detail.html'])``. That'll allow you to use a custom template for an individual story, with a fallback template for stories that don't have custom templates."
 msgstr ""
 
@@ -38668,8 +38911,13 @@ msgstr ""
 msgid "Uses a similar format as PHP's ``date()`` function (http://php.net/date) with some differences."
 msgstr ""
 
-#: ../../ref/templates/builtins.txt:1204
-# ed4e9da2b29941cb9d098f6e0c9dbe5d
+#: ../../ref/templates/builtins.txt:1205
+# 11020ed38b0d42e19daea458d4d7be90
+msgid "These format characters are not used in Django outside of templates. They were designed to be compatible with PHP to ease transitioning for designers."
+msgstr ""
+
+#: ../../ref/templates/builtins.txt:1208
+# 9a7f764c26a647e8abd44adabde6faa3
 msgid "Available format strings:"
 msgstr ""
 
@@ -39453,8 +39701,13 @@ msgstr ""
 msgid "If ``value`` is 123456789, the output would be ``117.7 MB``."
 msgstr ""
 
-#: ../../ref/templates/builtins.txt:1456
-# cd43260362bf4379ac2a83694509f3bb
+#: ../../ref/templates/builtins.txt:1458
+# 60b0ae2daa6440f8a6017fcc353a5f82
+msgid "File sizes and SI units"
+msgstr ""
+
+#: ../../ref/templates/builtins.txt:1460
+# 601dd0283a7545aba08e13556f27da1b
 msgid "Strictly speaking, ``filesizeformat`` does not conform to the International System of Units which recommends using KiB, MiB, GiB, etc. when byte sizes are calculated in powers of 1024 (which is the case here). Instead, Django uses traditional unit names (KB, MB, GB, etc.) corresponding to names that are more commonly used."
 msgstr ""
 
@@ -40331,9 +40584,9 @@ msgstr ""
 msgid "urlize"
 msgstr ""
 
-#: ../../ref/templates/builtins.txt:2167
-# a138443ddd97468b9f506783d0e54f07
-msgid "Converts URLs in text into clickable links."
+#: ../../ref/templates/builtins.txt:2171
+# 67e6648d82ad4827b4e184102dd3e481
+msgid "Converts URLs and email addresses in text into clickable links."
 msgstr ""
 
 #: ../../ref/templates/builtins.txt:2169
@@ -40366,8 +40619,13 @@ msgstr ""
 msgid "If ``value`` is ``\"Check out www.djangoproject.com\"``, the output will be ``\"Check out <a href=\"http://www.djangoproject.com\" rel=\"nofollow\">www.djangoproject.com</a>\"``."
 msgstr ""
 
-#: ../../ref/templates/builtins.txt:2196
-# ebadeabd981d46cb899b822cd71b88d8
+#: ../../ref/templates/builtins.txt:2200
+# daf9bb76a8ad4adda64a0b6d5df888b5
+msgid "In addition to web links, ``urlize`` also converts email addresses into ``mailto:`` links. If ``value`` is ``\"Send questions to foo@example.com\"``, the output will be ``\"Send questions to <a href=\"mailto:foo@example.com\">foo@example</a>\"``."
+msgstr ""
+
+#: ../../ref/templates/builtins.txt:2205
+# be542174ce12458ababbc6f8239773a2
 msgid "The ``urlize`` filter also takes an optional parameter ``autoescape``. If ``autoescape`` is ``True``, the link text and URLs will be escaped using Django's built-in :tfilter:`escape` filter. The default value for ``autoescape`` is ``True``."
 msgstr ""
 
@@ -40381,9 +40639,9 @@ msgstr ""
 msgid "urlizetrunc"
 msgstr ""
 
-#: ../../ref/templates/builtins.txt:2211
-# 5d7309ea9fce468790508c430b95313e
-msgid "Converts URLs into clickable links just like urlize_, but truncates URLs longer than the given character limit."
+#: ../../ref/templates/builtins.txt:2220
+# ae7556003c804786b171d5cfae9efdff
+msgid "Converts URLs and email addresses into clickable links just like urlize_, but truncates URLs longer than the given character limit."
 msgstr ""
 
 #: ../../ref/templates/builtins.txt:2214
@@ -40724,6 +40982,11 @@ msgstr ""
 msgid "See also :doc:`Python 3 compatibility </topics/python3>`."
 msgstr ""
 
+#: ../../ref/unicode.txt:71
+# 6613a0c8cf5448598e62543a993ef6d4
+msgid "Warning"
+msgstr ""
+
 #: ../../ref/unicode.txt:73
 # 445a8a133be8498d8992b2c4f1fb3943
 msgid "A bytestring does not carry any information with it about its encoding. For that reason, we have to make an assumption, and Django assumes that all bytestrings are in UTF-8."
@@ -41057,6 +41320,11 @@ msgstr ""
 #: ../../ref/urlresolvers.txt:44
 # 2cde1e1a77e5419d8d98ca15a7cc4a6b
 msgid "``args`` and ``kwargs`` cannot be passed to ``reverse()`` at the same time."
+msgstr ""
+
+#: ../../ref/urlresolvers.txt:46
+# 27f33258825b4a1ea7f2234356b8c07d
+msgid "Make sure your views are all correct."
 msgstr ""
 
 #: ../../ref/urlresolvers.txt:48
