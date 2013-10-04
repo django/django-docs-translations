@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-08 14:28\n"
-"PO-Revision-Date: 2013-06-20 21:20+0000\n"
-"Last-Translator: annoa <annoa.b@gmail.com>\n"
+"POT-Creation-Date: 2013-10-04 09:46+0200\n"
+"PO-Revision-Date: 2013-10-04 16:00+0000\n"
+"Last-Translator: claudep <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -78,6 +78,12 @@ msgid ""
 "For the most part though, this tutorial tries to explain as much as "
 "possible, so that it can be of use to the widest audience."
 msgstr "Mais pour la plus grande partie, ce tutoriel vise à expliquer le plus possible de choses pour qu'il puisse convenir au plus grand nombre."
+
+# 55afd5586fc44471a970a292e7c64c07
+# 4c2ab5c084874611a876d29aee3332c2
+#: ../../intro/contributing.txt:34 ../../intro/tutorial01.txt:35
+msgid "Where to get help:"
+msgstr "Où obtenir de l'aide :"
 
 # 5159d63b8f284e8aa99227c2d16569dc
 #: ../../intro/contributing.txt:36
@@ -252,7 +258,7 @@ msgid ""
 "Navigate into Django's root directory (that's the one that contains "
 "``django``, ``docs``, ``tests``, ``AUTHORS``, etc.). You can then check out "
 "the older revision of Django that we'll be using in the tutorial below::"
-msgstr "Placez-vous dans le répertoire racine de Django (celui qui contient `django``, ``docs``, ``tests``, ``AUTHORS``, etc.). Vous pouvez ensuite extraire l'ancienne révision de Django qui nous sera utile pour le tutorial ci-dessous ::"
+msgstr "Placez-vous dans le répertoire racine de Django (celui qui contient `django``, ``docs``, ``tests``, ``AUTHORS``, etc.). Vous pouvez ensuite extraire l'ancienne révision de Django qui nous sera utile pour le tutoriel ci-dessous ::"
 
 # cc434395e66441e680b6d231dad51933
 #: ../../intro/contributing.txt:136
@@ -431,6 +437,11 @@ msgid ""
 "The new tests check to see that the ``render`` method we'll be adding works "
 "correctly in a couple different situations."
 msgstr "Les nouveaux tests vérifient si la méthode ``render`` que nous allons ajouter fonctionne correctement dans plusieurs situations différentes."
+
+# edfbf530b56e44d8a7960177453a8114
+#: ../../intro/contributing.txt:278
+msgid "But this testing thing looks kinda hard..."
+msgstr "Mais cette histoire de tests semble plutôt compliquée…"
 
 # 89ce5106d1dc4294ac1444e9f4724082
 #: ../../intro/contributing.txt:280
@@ -822,6 +833,11 @@ msgid ""
 "you probably already have it installed."
 msgstr "Python peut être obtenu sur http://www.python.org. Si vous utilisez Linux ou Mac OS X, il est probablement déjà installé sur votre système."
 
+# 4c96b4d6e4094e3d91fca32ac0edde6a
+#: ../../intro/install.txt:22
+msgid "Django on Jython"
+msgstr "Django sur Jython"
+
 # b16ad799f68b4acdaa46a54ab4c3dbf5
 #: ../../intro/install.txt:24
 msgid ""
@@ -896,6 +912,13 @@ msgid ""
 "version>`. This is best for users who want the latest-and-greatest features "
 "and aren't afraid of running brand-new code."
 msgstr ":ref:`Installer la dernière version de développement <installing-development-version>`. C'est la meilleure solution pour ceux qui souhaitent les fonctions les plus récentes et qui ne craignent pas d'utiliser un code récent."
+
+# 99098268416347baa2079a6fc9ffe626
+#: ../../intro/install.txt:68
+msgid ""
+"Always refer to the documentation that corresponds to the version of Django "
+"you're using!"
+msgstr "Consultez toujours la documentation correspondant à la version de Django que vous utilisez !"
 
 # 1b2e9311154549a18e7b15e741598e34
 #: ../../intro/install.txt:71
@@ -1148,7 +1171,7 @@ msgid ""
 "among templates. In your Django settings, you specify a list of directories "
 "to check for templates with :setting:`TEMPLATE_DIRS`. If a template doesn't "
 "exist in the first directory, it checks the second, and so on."
-msgstr "L'algorithme de recherche des templates de Django vous permet de minimiser la redondance parmi les templates. Dans vos paramètres de Django, vous indiquez une liste des dossiers contenant potentiellement des templates avec :setting:`TEMPLATE_DIRS`. Si un template n'existe pas dans le premier dossier, Django vérifie le second, etc."
+msgstr "L'algorithme de recherche des gabarits de Django vous permet de minimiser la redondance parmi les gabarits. Dans vos paramètres de Django, vous indiquez une liste des dossiers contenant potentiellement des gabarits avec :setting:`TEMPLATE_DIRS`. Si un gabarit n'existe pas dans le premier dossier, Django vérifie le second, etc."
 
 # 3d23396035934b9e9b2eb6b69a9c1cc3
 #: ../../intro/overview.txt:244
@@ -1174,7 +1197,7 @@ msgid ""
 "filter the value of a variable. In this case, the date filter formats a "
 "Python datetime object in the given format (as found in PHP's date "
 "function)."
-msgstr "Notez que ``{{ article.pub_date|date:\"F j, Y\" }}`` utilise des « tuyaux » de type Unix (le caractère « | » (pipe)). On appelle cela un filtre de gabarit, c'est un moyen de filtrer la valeur d'une variable. Dans le cas présent, le filtre « date » formate un objet Python de type « datetime » dans le format fourni (comme dans la fonction « date » de PHP)."
+msgstr "Notez que ``{{ article.pub_date|date:\"F j, Y\" }}`` utilise des « tuyaux » de type Unix (le caractère «|» (pipe)). On appelle cela un filtre de gabarit, c'est un moyen de filtrer la valeur d'une variable. Dans le cas présent, le filtre « date » formate un objet Python de type « datetime » dans le format fourni (comme dans la fonction « date » de PHP)."
 
 # 69e43cdb22f742a1b3436321010bc32a
 #: ../../intro/overview.txt:273
@@ -1183,7 +1206,7 @@ msgid ""
 ":ref:`custom template filters <howto-writing-custom-template-filters>`. You "
 "can write :doc:`custom template tags </howto/custom-template-tags>`, which "
 "run custom Python code behind the scenes."
-msgstr "Vous pouvez enchaîner autant de filtres que vous le voulez. Vous pouvez écrire vos :ref:`propres filtres de templates <howto-writing-custom-template-filters>`. Vous pouvez écrire des :doc:`balises de templates personnalisées </howto/custom-template-tags>` qui utilisent du code Python en arrière-plan."
+msgstr "Vous pouvez enchaîner autant de filtres que vous le voulez. Vous pouvez écrire vos :ref:`propres filtres de gabarits <howto-writing-custom-template-filters>`. Vous pouvez écrire des :doc:`balises de gabarits personnalisées </howto/custom-template-tags>` qui utilisent du code Python en arrière-plan."
 
 # d4bce6405a4d439d90c9c851478427b0
 #: ../../intro/overview.txt:278
@@ -1284,19 +1307,19 @@ msgid ""
 "This advanced tutorial begins where :doc:`Tutorial 6 </intro/tutorial06>` "
 "left off. We'll be turning our Web-poll into a standalone Python package you"
 " can reuse in new projects and share with other people."
-msgstr ""
+msgstr "Ce tutoriel avancé commence là où le :doc:`tutoriel 6 </intro/tutorial06>` s'est arrêté. Nous allons transformer notre application de sondage Web en un paquet Python autonome qu'il sera possible de réutiliser dans de nouveaux projets et de partager avec d'autres personnes."
 
 # 7d7eb71682c245b69c376afc5ad1b611
 #: ../../intro/reusable-apps.txt:9
 msgid ""
 "If you haven't recently completed Tutorials 1–6, we encourage you to review "
 "these so that your example project matches the one described below."
-msgstr ""
+msgstr "Si vous n'avez pas récemment suivi les tutoriels 1-6, nous vous encourageons à les parcourir à nouveau afin que votre exemple de projet corresponde à celui qui est décrit ci-dessous."
 
 # 32b34af0033e45428d664bc1dd25f89d
 #: ../../intro/reusable-apps.txt:13
 msgid "Reusability matters"
-msgstr ""
+msgstr "Importance du recyclage"
 
 # dbbf9351fe5c4cbfad3ac2619de73230
 #: ../../intro/reusable-apps.txt:15
@@ -1304,7 +1327,7 @@ msgid ""
 "It's a lot of work to design, build, test and maintain a web application. "
 "Many Python and Django projects share common problems. Wouldn't it be great "
 "if we could save some of this repeated work?"
-msgstr ""
+msgstr "C'est un gros travail de concevoir, construire, tester et maintenir une application Web. Beaucoup de projets Python et Django ont des problématiques communes. Ne serait-il pas merveilleux si nous pouvions économiser un peu de ce travail répétitif ?"
 
 # 916bc068494d446d8f039b78f92bb213
 #: ../../intro/reusable-apps.txt:19
@@ -1317,7 +1340,7 @@ msgid ""
 "Python package. This means that you can take existing Python packages or "
 "Django apps and compose them into your own web project. You only need to "
 "write the parts that make your project unique."
-msgstr ""
+msgstr "Le recyclage de code est un principe de vie en Python. Le site `Python Package Index (PyPI) <http://guide.python-distribute.org/contributing.html#pypi-info>`_ recense une très large variété de paquets qu'il est possible d'utiliser dans ses propres programmes Python. Parcourez le site `Django Packages <http://www.djangopackages.com>`_ pour trouver des applications réutilisables qu'il est possible d'intégrer dans votre projet. Django lui-même n'est qu'un paquet Python. Cela signifie que vous pouvez prendre des paquets Python ou des applications Django existantes et les intégrer dans votre propre projet Web. Vous n'avez plus qu'à écrire les parties qui font de votre projet un projet unique."
 
 # abb7d0e0efe4410ab708f116a4c20d42
 #: ../../intro/reusable-apps.txt:28
@@ -1328,7 +1351,12 @@ msgid ""
 " saw how we could decouple polls from the project-level URLconf using an "
 "``include``. In this tutorial, we'll take further steps to make the app easy"
 " to use in new projects and ready to publish for others to install and use."
-msgstr ""
+msgstr "Disons que vous débutez un nouveau projet qui nécessite une application de sondage telle que celle sur laquelle nous avons travaillé. Comme pouvez-vous recycler cette application ? Heureusement, vous êtes déjà sur la bonne voie. Dans le :doc:`tutoriel 3 </intro/tutorial03>`, nous avons vu comment découpler les sondages de l'URLconf de base du projet en utilisant un ``include``. Dans ce tutoriel, nous irons un peu plus loin pour rendre l'application simple à utiliser dans de nouveaux projets et prête à être publiée pour que d'autres puissent l'installer et l'exploiter."
+
+# 888fe34937f5410292cb919e8edbda2f
+#: ../../intro/reusable-apps.txt:35
+msgid "Package? App?"
+msgstr "Paquet ? Application ?"
 
 # 59a0bffbe7c6465292d37c3c365f565b
 #: ../../intro/reusable-apps.txt:37
@@ -1336,7 +1364,7 @@ msgid ""
 "A Python `package <http://docs.python.org/tutorial/modules.html#packages>`_ "
 "provides a way of grouping related Python code for easy reuse. A package "
 "contains one or more files of Python code (also known as \"modules\")."
-msgstr ""
+msgstr "Un `paquet <http://docs.python.org/tutorial/modules.html#packages>`_ Python permet de regrouper du code Python pour qu'il puisse être facilement réutilisé. Un paquet contient un ou plusieurs fichiers de code Python (aussi connus sous le nom de « modules »)."
 
 # e7379c2470c34d31afabdc096ec26f82
 #: ../../intro/reusable-apps.txt:41
@@ -1344,7 +1372,7 @@ msgid ""
 "A package can be imported with ``import foo.bar`` or ``from foo import "
 "bar``. For a directory (like ``polls``) to form a package, it must contain a"
 " special file ``__init__.py``, even if this file is empty."
-msgstr ""
+msgstr "Un paquet peut être importé avec ``import foo.bar`` ou ``from foo import bar``. Pour qu'un répertoire (comme ``polls``) constitue un paquet, il doit contenir un fichier spécial ``__init__.py``, même si ce dernier est vide."
 
 # 2807538d8ab44921a77381dd8ef31d61
 #: ../../intro/reusable-apps.txt:45
@@ -1352,7 +1380,7 @@ msgid ""
 "A Django *app* is just a Python package that is specifically intended for "
 "use in a Django project. An app may also use common Django conventions, such"
 " as having a ``models.py`` file."
-msgstr ""
+msgstr "Une *application* Django n'est qu'un paquet Python qui est spécialement prévu pour fonctionner dans un projet Django. Une application peut aussi utiliser des conventions Django partagées, comme la présence d'un fichier ``models.py``."
 
 # dbef079509b9445087f8026f0c520777
 #: ../../intro/reusable-apps.txt:49
@@ -1360,17 +1388,17 @@ msgid ""
 "Later on we use the term *packaging* to describe the process of making a "
 "Python package easy for others to install. It can be a little confusing, we "
 "know."
-msgstr ""
+msgstr "Par la suite, nous utilisons le terme *empaquetage* (packaging) pour décrire le processus de création d'un paquet Python facile à installer par tout le monde. Cela peut prêter à confusion, effectivement."
 
 # 5ddcef6bde504a56b86ac87133c1a0ec
 #: ../../intro/reusable-apps.txt:54
 msgid "Your project and your reusable app"
-msgstr ""
+msgstr "Votre projet et votre application recyclable"
 
 # 7ecb8ea0c6ac45cbbb367ee587153300
 #: ../../intro/reusable-apps.txt:56
 msgid "After the previous tutorials, our project should look like this::"
-msgstr ""
+msgstr "Après les tutoriels précédents, notre projet devrait ressembler à ceci ::"
 
 # 88f8d9d01da64d8a90917b0b9aef2ff8
 #: ../../intro/reusable-apps.txt:85
@@ -1381,7 +1409,7 @@ msgid ""
 " the project and application: everything that is part of the polls "
 "application is in ``polls``. It makes the application self-contained and "
 "easier to drop into a new project."
-msgstr ""
+msgstr "Vous avez créé ``mysite/templates`` dans le :doc:`tutoriel 2 </intro/tutorial02>` et ``polls/templates`` dans le :doc:`tutoriel 3 </intro/tutorial03>`. Il est peut-être maintenant plus facile de comprendre pourquoi nous avons séparé les répertoires de gabarits du projet de ceux de l'application : tout ce qui fait partie de l'application de sondage se trouve dans ``polls``. L'application forme un tout par elle-même et est ainsi plus facile à intégrer dans un nouveau projet."
 
 # cf7564fa46c647278ad37edf2693c858
 #: ../../intro/reusable-apps.txt:92
@@ -1389,29 +1417,29 @@ msgid ""
 "The ``polls`` directory could now be copied into a new Django project and "
 "immediately reused. It's not quite ready to be published though. For that, "
 "we need to package the app to make it easy for others to install."
-msgstr ""
+msgstr "Le répertoire ``polls`` pourrait maintenant être copié dans un nouveau projet Django pour être immédiatement utilisé. L'application n'est cependant pas encore tout à fait prête pour être publiée. Pour cela, il faut encore empaqueter l'application afin que d'autres puissent facilement l'installer."
 
 # 8cfe28f9fd9c4c0cbf6eb4825ab9e69d
 #: ../../intro/reusable-apps.txt:99
 msgid "Installing some prerequisites"
-msgstr ""
+msgstr "Installation de quelques prérequis"
 
-# c1c9ef66e36b498aa6bb84ba2866bea3
-#: ../../intro/reusable-apps.txt:101
+# db8a8ddf707f45ffbd86e5da205eddba
+#: ../../intro/reusable-apps.txt:102
 msgid ""
 "The current state of Python packaging is a bit muddled with various tools. "
 "For this tutorial, we're going to use distribute_ to build our package. It's"
 " a community-maintained fork of the older ``setuptools`` project. We'll also"
-" be using `pip`_ to uninstall it after we're finished. You should install "
-"these two packages now. If you need help, you can refer to :ref:`how to "
-"install Django with pip<installing-official-release>`. You can install "
-"``distribute`` the same way."
-msgstr ""
+" be using `pip`_ to install and uninstall it. You should install these two "
+"packages now. If you need help, you can refer to :ref:`how to install Django"
+" with pip<installing-official-release>`. You can install ``distribute`` the "
+"same way."
+msgstr "L'état actuel de la construction de paquets Python est un peu embrouillé par l'utilisation de plusieurs outils. Dans ce tutoriel, nous allons utiliser distribute_ pour construire nos paquets. Il s'agit d'un dérivé maintenu par la communauté du projet plus ancien ``setuptools``. Nous utiliserons aussi `pip`_ pour l'installer et le désinstaller. Vous devriez installer maintenant ces deux paquets. Si vous avez besoin d'aide, vous pouvez vous référer à :ref:`comment installer Django avec pip<installing-official-release>`. Vous pouvez installer ``distribute`` de la même manière."
 
 # aec1faf6a3ff4f74bad8c87b45361783
 #: ../../intro/reusable-apps.txt:113
 msgid "Packaging your app"
-msgstr "Empaqueter votre application"
+msgstr "Empaquetage de l'application"
 
 # c89d2846600c44bf8f1c364eee894a10
 #: ../../intro/reusable-apps.txt:115
@@ -1419,28 +1447,33 @@ msgid ""
 "Python *packaging* refers to preparing your app in a specific format that "
 "can be easily installed and used. Django itself is packaged very much like "
 "this. For a small app like polls, this process isn't too difficult."
-msgstr ""
+msgstr "L'*empaquetage* Python se réfère à la préparation d'une application dans un format spécifique qui peut être facilement installé et utilisé. Django lui-même est empaqueté de manière très semblable. Pour une petite application comme la nôtre, ce processus n'est pas trop difficile."
 
 # bd3bd2bcfd5347dbbcaac6dd39cf40ae
 #: ../../intro/reusable-apps.txt:119
 msgid ""
 "First, create a parent directory for ``polls``, outside of your Django "
 "project. Call this directory ``django-polls``."
-msgstr ""
+msgstr "Premièrement, créez un répertoire parent pour ``polls``, en dehors de votre projet Django. Nommez ce répertoire ``django-polls``."
 
-# 0365e971d3374294b66c59cc32ad68d6
-#: ../../intro/reusable-apps.txt:124
+# d3d8d0f07811494495062738d4877640
+#: ../../intro/reusable-apps.txt:123
+msgid "Choosing a name for your app"
+msgstr "Choix d'un nom pour votre application"
+
+# 3b32ab38b5d047f48aecbec31d10dd4d
+#: ../../intro/reusable-apps.txt:125
 msgid ""
 "When choosing a name for your package, check resources like PyPI to avoid "
 "naming conflicts with existing packages. It's often useful to prepend "
 "``django-`` to your module name when creating a package to distribute. This "
 "helps others looking for Django apps identify your app as Django specific."
-msgstr ""
+msgstr "Au moment de choisir un nom pour votre paquet, consultez les ressources comme PyPI pour éviter des conflits de nom avec des paquets existants. Il est souvent utile de préfixer votre nom de module avec ``django-`` lors de la création d'un paquet à distribuer. Les personnes qui cherchent des applications Django peuvent ainsi identifier plus facilement votre application comme étant spécifique à Django."
 
 # a1bd0371fac34fc4956d9f9e6606800f
 #: ../../intro/reusable-apps.txt:130
 msgid "Move the ``polls`` directory into the ``django-polls`` directory."
-msgstr ""
+msgstr "Déplacez le répertoire ``polls`` dans le répertoire ``django-polls``."
 
 # df723478701d440d9b739b45df4307a7
 #: ../../intro/reusable-apps.txt:132
@@ -1457,7 +1490,7 @@ msgid ""
 "distributed under the BSD license; however, you're free to pick your own "
 "license. Just be aware that your licensing choice will affect who is able to"
 " use your code."
-msgstr ""
+msgstr "4. Créez un fichier ``django-polls/LICENSE``. Le choix d'une licence n'est pas dans le thème de ce tutoriel, mais nous vous rendons attentif au fait que du code publié sans licence est *inutile*. Django et de nombreuses applications compatibles Django sont distribués sous licence BSD ; vous êtes bien sûr libre d'utiliser la licence de votre choix. Sachez seulement que le choix de la licence a un impact sur la quantité d'utilisateurs potentiels de votre code."
 
 # 4ac126dbc2ea41859a842299ecc20f34
 #: ../../intro/reusable-apps.txt:171
@@ -1468,15 +1501,20 @@ msgid ""
 "<http://packages.python.org/distribute/setuptools.html>`_ have a good "
 "explanation. Create a file ``django-polls/setup.py`` with the following "
 "contents::"
-msgstr ""
+msgstr "5. Ensuite, nous allons créer un fichier ``setup.py`` qui fournit des détails sur la façon de construire et d'installer l'application. Nous ne nous lancerons pas dans une explication détaillée de ce fichier, mais vous trouverez plus d'informations dans la `documentation de distribute <http://packages.python.org/distribute/setuptools.html>`_. Créez un fichier ``django-polls/setup.py`` avec le contenu suivant ::"
 
-# 7c6cc3de92b1462b8c945fc9aaa4e8f2
-#: ../../intro/reusable-apps.txt:212
+# 426f0c31633941a496ef9b708fdd27f8
+#: ../../intro/reusable-apps.txt:211
+msgid "I thought you said we were going to use ``distribute``?"
+msgstr "Je pensais que vous aviez dit que nous allions utiliser ``distribute``?"
+
+# 2e8714ea1f9649438e23cdc63d540a4c
+#: ../../intro/reusable-apps.txt:213
 msgid ""
 "Distribute is a drop-in replacement for ``setuptools``. Even though we "
 "appear to import from ``setuptools``, since we have ``distribute`` "
 "installed, it will override the import."
-msgstr ""
+msgstr "Distribute est un remplaçant « module pour module » de ``setuptools``. Même s'il paraît que nous importons de ``setuptools``, comme ``distribute`` est installé, il va surcharger l'importation."
 
 # ffbaf20f50ff41cca2023fb010c44947
 #: ../../intro/reusable-apps.txt:216
@@ -1487,7 +1525,7 @@ msgid ""
 "details. To include the templates, the ``README.rst`` and our ``LICENSE`` "
 "file, create a file ``django-polls/MANIFEST.in`` with the following "
 "contents::"
-msgstr ""
+msgstr "Seuls des modules et paquets Python sont inclus par défaut dans le paquet. Pour ajouter des fichiers supplémentaires, nous devrons créer un fichier ``MANIFEST.in``. La documentation de ``distribute`` mentionnée à l'étape précédente présente ce fichier en détails. Pour inclure les gabarits et les fichiers ``README.rst`` et ``LICENSE``, créez un fichier ``django-polls/MANIFEST.in`` avec le contenu suivant ::"
 
 # ec8cd6340eac4db3a91235129220b0cc
 #: ../../intro/reusable-apps.txt:228
@@ -1495,7 +1533,7 @@ msgid ""
 "It's optional, but recommended, to include detailed documentation with your "
 "app. Create an empty directory ``django-polls/docs`` for future "
 "documentation. Add an additional line to ``django-polls/MANIFEST.in``::"
-msgstr ""
+msgstr "Il est facultatif, mais recommandé, d'inclure de la documentation détaillée dans votre application. Créez un répertoire vide ``django-polls/docs`` en prévision de contenu documentaire. Ajoutez une ligne supplémentaire dans ``django-polls/MANIFEST.in``::"
 
 # 9ee4bd920d4d4eeeb924fa9aa32587bb
 #: ../../intro/reusable-apps.txt:234
@@ -1503,7 +1541,7 @@ msgid ""
 "Note that the ``docs`` directory won't be included in your package unless "
 "you add some files to it. Many Django apps also provide their documentation "
 "online through sites like `readthedocs.org <http://readthedocs.org>`_."
-msgstr ""
+msgstr "Notez que le répertoire ``docs`` ne sera pas inclus dans votre paquet tant que vous n'y ajoutez pas de fichier. Beaucoup d'applications Django offrent aussi un version en ligne de leur documentation par le moyen de sites comme `readthedocs.org <http://readthedocs.org>`_."
 
 # 79195f66f25a492a9818469b57f0c28b
 #: ../../intro/reusable-apps.txt:238
@@ -1511,29 +1549,34 @@ msgid ""
 "Try building your package with ``python setup.py sdist`` (run from inside "
 "``django-polls``). This creates a directory called ``dist`` and builds your "
 "new package, ``django-polls-0.1.tar.gz``."
-msgstr ""
+msgstr "Essayez de construire votre paquet avec ``python setup.py sdist`` (lancé depuis ``django-polls``). Cela va créer un répertoire nommé ``dist`` et construire votre nouveau paquet, ``django-polls-0.1.tar.gz``."
 
 # bbe7d7a0a4a043a19f9a2ecdc569f8ba
 #: ../../intro/reusable-apps.txt:242
 msgid ""
 "For more information on packaging, see `The Hitchhiker's Guide to Packaging "
 "<http://guide.python-distribute.org/quickstart.html>`_."
-msgstr ""
+msgstr "Pour plus d'informations sur l'empaquetage, consultez (en anglais) `The Hitchhiker's Guide to Packaging <http://guide.python-distribute.org/quickstart.html>`_."
 
 # 1ebcaf9e15df465c9b2fedd5f315b79a
 #: ../../intro/reusable-apps.txt:246
 msgid "Using your own package"
-msgstr ""
+msgstr "Utilisation de son propre paquet"
 
 # 10d8f80670404c7195c4c71bf4be01d4
 #: ../../intro/reusable-apps.txt:248
 msgid ""
 "Since we moved the ``polls`` directory out of the project, it's no longer "
 "working. We'll now fix this by installing our new ``django-polls`` package."
-msgstr ""
+msgstr "Comme nous avons déplacé le répertoire ``polls`` hors du projet, celui-ci ne fonctionne plus. Nous allons maintenant corriger ça en installant notre nouveau paquet ``django-polls``."
 
-# 893246d521d6467bafcee5b17b10290e
-#: ../../intro/reusable-apps.txt:253
+# 6960ca1829ce4f0887a30960abd74729
+#: ../../intro/reusable-apps.txt:252
+msgid "Installing as a user library"
+msgstr "Installation en tant que bibliothèque utilisateur"
+
+# f3376aa94d744999adbb3c847f178031
+#: ../../intro/reusable-apps.txt:254
 msgid ""
 "The following steps install ``django-polls`` as a user library. Per-user "
 "installs have a lot of advantages over installing the package system-wide, "
@@ -1542,82 +1585,63 @@ msgid ""
 "users of the machine. Python 2.6 added support for user libraries, so if you"
 " are using an older version this won't work, but Django 1.5 requires Python "
 "2.6 or newer anyway."
-msgstr ""
+msgstr "Les étapes suivantes installent ``django-polls`` comme une bibliothèque utilisateur. Les installations « utilisateur » comportent bien des avantages sur l'installation de paquets au niveau système, comme de pouvoir être utilisables sur des systèmes dont vous n'êtes pas administrateur ou pour éviter que le paquet ne perturbe des services du système ou d'autres utilisateurs de la machine. Python 2.6 a apporté la prise en charge des bibliothèques utilisateurs, cela ne fonctionnera donc pas si vous utilisez une version plus ancienne, mais de toute manière, Django 1.5 nécessite une version 2.6 ou plus récente de Python."
 
-# 101b61a608a5453b86ba2a7efaecacdf
-#: ../../intro/reusable-apps.txt:261
+# bdf24081ab924dd78256eb0864cf8e7d
+#: ../../intro/reusable-apps.txt:262
 msgid ""
 "Note that per-user installations can still affect the behavior of system "
 "tools that run as that user, so ``virtualenv`` is a more robust solution "
 "(see below)."
-msgstr ""
+msgstr "Notez que les installations « utilisateur » peuvent tout de même influencer le comportement d'outils système qui tournent sous l'identité de cet utilisateur, il est donc plus robuste d'utiliser ``virtualenv`` (voir ci-dessous)."
 
-# 2dafdee3a5c842c6b7017031c36923cb
-#: ../../intro/reusable-apps.txt:265
+# 091ea07fd09c4cdb9aba0da330128f7b
+#: ../../intro/reusable-apps.txt:266
 msgid ""
-"Inside ``django-polls/dist``, untar the new package ``django-"
-"polls-0.1.tar.gz`` (e.g. ``tar xzvf django-polls-0.1.tar.gz``). If you're "
-"using Windows, you can download the command-line tool bsdtar_ to do this, or"
-" you can use a GUI-based tool such as 7-zip_."
-msgstr ""
-
-# a35d380b5c2d45aebfec8e56e18ddbc8
-#: ../../intro/reusable-apps.txt:270
-msgid ""
-"Change into the directory created in step 1 (e.g. ``cd django-polls-0.1``)."
-msgstr ""
-
-# 03c2d890417e407f92a079d6028c413c
-#: ../../intro/reusable-apps.txt:272
-msgid ""
-"If you're using GNU/Linux, Mac OS X or some other flavor of Unix, enter the "
-"command ``python setup.py install --user`` at the shell prompt.  If you're "
-"using Windows, start up a command shell and run the command ``setup.py "
-"install --user``."
-msgstr ""
+"To install the package, use pip (you already :ref:`installed it <installing-"
+"reusable-apps-prerequisites>`, right?)::"
+msgstr "Pour installer le paquet, utilisez pip (vous l'avez déjà :ref:`installé <installing-reusable-apps-prerequisites>`, n'est-ce pas ?) ::"
 
 # f1dfee06ea7342dd8df465c7b9740d01
 #: ../../intro/reusable-apps.txt:277
 msgid ""
 "With luck, your Django project should now work correctly again. Run the "
 "server again to confirm this."
-msgstr ""
+msgstr "Si tout va bien, votre projet Django devrait de nouveau fonctionner correctement. Lancez à nouveau le serveur pour le vérifier."
 
-# ea0c6206268743d48a3d2096edae3439
-#: ../../intro/reusable-apps.txt:280
-msgid ""
-"To uninstall the package, use pip (you already :ref:`installed it "
-"<installing-reusable-apps-prerequisites>`, right?)::"
-msgstr ""
+# 396c7f925f0a4780ab7762285f12b85e
+#: ../../intro/reusable-apps.txt:274
+msgid "To uninstall the package, use pip::"
+msgstr "Pour désinstaller le paquet, utilisez pip ::"
 
 # 08b365d830cf43fd8128ae2d74873460
 #: ../../intro/reusable-apps.txt:290
 msgid "Publishing your app"
-msgstr ""
+msgstr "Publication de l'application"
 
 # 5409b61c246e4cef9a03ae062eb7ada1
 #: ../../intro/reusable-apps.txt:292
 msgid ""
 "Now that we've packaged and tested ``django-polls``, it's ready to share "
 "with the world! If this wasn't just an example, you could now:"
-msgstr ""
+msgstr "Après avoir empaqueté et testé ``django-polls``, il est prêt à être partagé avec le monde entier ! Si ce n'était pas qu'un exemple, vous pourriez maintenant :"
 
 # 4617770fc10a482180d0aa60b452ea4e
 #: ../../intro/reusable-apps.txt:295
 msgid "Email the package to a friend."
-msgstr ""
+msgstr "Envoyer le paquet à un ami par courriel."
 
 # 16a55412aba44e27a5b8d4d29832e0eb
 #: ../../intro/reusable-apps.txt:297
 msgid "Upload the package on your Web site."
-msgstr ""
+msgstr "Envoyer le paquet sur votre site Web."
 
 # 0c575133a695490bb1eafb3ae866f916
 #: ../../intro/reusable-apps.txt:299
 msgid ""
 "Post the package on a public repository, such as `The Python Package Index "
 "(PyPI) <http://guide.python-distribute.org/contributing.html#pypi-info>`_."
-msgstr ""
+msgstr "Publier le paquet dans un dépôt public, tel que le `Python Package Index (PyPI) <http://guide.python-distribute.org/contributing.html#pypi-info>`_."
 
 # dcbe4c4c30bd4d2a81cf7af46f066a7f
 #: ../../intro/reusable-apps.txt:302
@@ -1627,33 +1651,33 @@ msgid ""
 "package-index-pypi>`_ section of The Hitchhiker's Guide to Packaging. One "
 "detail this guide mentions is choosing the license under which your code is "
 "distributed."
-msgstr ""
+msgstr "Pour plus d'informations sur PyPI, consultez la section `Quickstart <http://guide.python-distribute.org/quickstart.html#register-your-package-with-the-python-package-index-pypi>`_ du « Hitchhiker's Guide to Packaging ». Un des aspects abordés par ce guide est le choix de la licence pour la distribution de votre code."
 
 # c5b673a035a84e55bc734269db6d78e1
 #: ../../intro/reusable-apps.txt:308
 msgid "Installing Python packages with virtualenv"
-msgstr ""
+msgstr "Installation de paquets Python avec virtualenv"
 
 # 02914e3f1e6a47b88d87d22a8a181a55
 #: ../../intro/reusable-apps.txt:310
 msgid ""
 "Earlier, we installed the polls app as a user library. This has some "
 "disadvantages:"
-msgstr ""
+msgstr "Précédemment, nous avons installé l'application de sondage comme bibliothèque utilisateur. Cela comporte quelques désavantages :"
 
 # 17a82e59125943fbb5bfea0b5c6afffb
 #: ../../intro/reusable-apps.txt:313
 msgid ""
 "Modifying the user libraries can affect other Python software on your "
 "system."
-msgstr ""
+msgstr "La modification de bibliothèques utilisateurs peut influencer d'autres logiciels Python sur votre système."
 
 # 7e636312da014c5fbd82d38f0e47b7ab
 #: ../../intro/reusable-apps.txt:315
 msgid ""
 "You won't be able to run multiple versions of this package (or others with "
 "the same name)."
-msgstr ""
+msgstr "Vous ne pourrez pas faire fonctionner plusieurs versions de ce paquet en parallèle (ou avec d'autres portant le même nom)."
 
 # c4fe2c9be5d444199f021f58522e95ec
 #: ../../intro/reusable-apps.txt:318
@@ -1663,7 +1687,7 @@ msgid ""
 "<http://www.virtualenv.org/>`_. This tool allows you to maintain multiple "
 "isolated Python environments, each with its own copy of the libraries and "
 "package namespace."
-msgstr ""
+msgstr "Typiquement, ces situations ne se produisent que lorsque vous maintenez plusieurs projets Django. Dans ces cas, la meilleure solution est d'utiliser `virtualenv <http://www.virtualenv.org/>`_. Cet outil permet de maintenir plusieurs environnements Python isolés les uns des autres, ayant chacun leur propre copie des bibliothèques et de l'espace de nom des paquets."
 
 # 1c45406e50564faa82a442f3e9ca419d
 #: ../../intro/tutorial01.txt:3
@@ -1776,6 +1800,11 @@ msgid ""
 "conflicts with a built-in Python package)."
 msgstr "Vous devez éviter de nommer vos projets en utilisant des noms réservés de Python ou des noms de composants de Django. Cela signifie en particulier que vous devez éviter d’utiliser des noms comme ``django`` (qui entrerait en conflit avec Django lui-même) ou ``test`` (qui entrerait en conflit avec un composant intégré de Python)."
 
+# e1047ce453c341169b2498ad53678392
+#: ../../intro/tutorial01.txt:70
+msgid "Where should this code live?"
+msgstr "À quel endroit ce code devrait-il se trouver ?"
+
 # 78e028a4b11d44f6a6b7fb3a2fdfed20
 #: ../../intro/tutorial01.txt:72
 msgid ""
@@ -1799,6 +1828,12 @@ msgstr "Mettez votre code dans un répertoire en dehors de la racine de votre se
 msgid "Let's look at what :djadmin:`startproject` created::"
 msgstr "Voyons ce que :djadmin:`startproject` a créé ::"
 
+# 73172ee8ffc347ad92de9ab50aa6b2c6
+# 731503d39a724975878048968bbaeb44
+#: ../../intro/tutorial01.txt:92 ../../intro/tutorial02.txt:80
+msgid "Doesn't match what you see?"
+msgstr "Cela ne correspond pas à ce que vous voyez ?"
+
 # 323bec7b7515447fa4f7faeec19a7f58
 #: ../../intro/tutorial01.txt:94
 msgid ""
@@ -1813,12 +1848,13 @@ msgstr "La disposition de projet par défaut a récemment changé. Si vous voyez
 msgid "These files are:"
 msgstr "Ces fichiers sont :"
 
-# bcf199eeff1b4afe99a49361177b51b8
+# 8461f0e7bb0f4897b0968acae32ae776
 #: ../../intro/tutorial01.txt:101
 msgid ""
-"The outer :file:`mysite/` directory is just a container for your project. "
-"Its name doesn't matter to Django; you can rename it to anything you like."
-msgstr "Le premier répertoire :file:`mysite/` n'est qu'un contenant pour votre projet. Son nom n'a pas d'importance pour Django ; vous pouvez le renommer comme vous voulez."
+"The outer :file:`mysite/` root directory is just a container for your "
+"project. Its name doesn't matter to Django; you can rename it to anything "
+"you like."
+msgstr "Le premier répertoire racine :file:`mysite/` n'est qu'un contenant pour votre projet. Son nom n'a pas d'importance pour Django ; vous pouvez le renommer comme vous voulez."
 
 # 54896ae52cfb49868dab2945195d4c58
 #: ../../intro/tutorial01.txt:105
@@ -1828,13 +1864,13 @@ msgid ""
 ":file:`manage.py` in :doc:`/ref/django-admin`."
 msgstr ":file:`manage.py` : un utilitaire en ligne de commande qui vous permet d'interagir avec ce projet Django de différentes façons. Vous trouverez toutes les informations nécessaires sur :file:`manage.py` dans :doc:`/ref/django-admin`."
 
-# a7b9b41ca3d94caea470867d6aef1c78
+# cfa57af71ce6470ba46e2355b4e4af00
 #: ../../intro/tutorial01.txt:109
 msgid ""
 "The inner :file:`mysite/` directory is the actual Python package for your "
 "project. Its name is the Python package name you'll need to use to import "
-"anything inside it (e.g. ``import mysite.settings``)."
-msgstr "Le sous-répertoire :file:`mysite/` correspond au paquet Python de votre projet. C'est le nom du paquet Python que vous devrez utiliser pour importer ce qu'il contient (par ex. ``import mysite.settings``)."
+"anything inside it (e.g. ``mysite.urls``)."
+msgstr "Le sous-répertoire :file:`mysite/` correspond au paquet Python de votre projet. C'est le nom du paquet Python que vous devrez utiliser pour importer ce qu'il contient (par ex. ``mysite.urls``)."
 
 # 58436384bcea48458353bb3d5b92513d
 #: ../../intro/tutorial01.txt:113
@@ -1905,6 +1941,11 @@ msgid ""
 "pastel. It worked!"
 msgstr "Maintenant que le serveur tourne, allez à l'adresse http://127.0.0.1:8000 avec votre navigateur Web. Vous verrez une page avec le message « Welcome to Django » sur un joli fond bleu pastel. Ça marche !"
 
+# dab28784a2ca4f0189db8bd76e368288
+#: ../../intro/tutorial01.txt:160
+msgid "Changing the port"
+msgstr "Modification du port"
+
 # c28c1469868b4ce99b389240cac4915f
 #: ../../intro/tutorial01.txt:162
 msgid ""
@@ -1946,7 +1987,7 @@ msgid ""
 "module-level variables representing Django settings. Change the following "
 "keys in the :setting:`DATABASES` ``'default'`` item to match your database "
 "connection settings."
-msgstr "Maintenant, ouvrez le fichier  :file:`mysite/settings.py`. C'est un module Python tout à fait normal, avec des variables de module qui représentent des réglages de Django. Modifiez les clés suivantes dans l'élément ``'default'`` de :setting:`DATABASES` pour les faire correspondre aux paramètres de connexion de votre base de données."
+msgstr "Maintenant, ouvrez le fichier  :file:`mysite/settings.py`. C'est un module Python tout à fait normal, avec des variables de module qui représentent des réglages de Django. Modifiez les clés suivantes dans l'élément ``'default'`` de :setting:`DATABASES` pour les faire correspondre aux réglages de connexion de votre base de données."
 
 # 96b8aa4bb93046ac91357ce4007cd52c
 #: ../../intro/tutorial01.txt:192
@@ -2032,7 +2073,7 @@ msgid ""
 "file. That holds the names of all Django applications that are activated in "
 "this Django instance. Apps can be used in multiple projects, and you can "
 "package and distribute them for use by others in their projects."
-msgstr "Notez également le paramètre :setting:`INSTALLED_APPS` vers la fin du fichier. Cette variable contient le nom des applications Django qui sont actives dans cette instance de Django. Les applications peuvent être utilisées dans de multiples projets, et vous pouvez empaqueter et distribuer les vôtres pour que d'autres les utilisent dans leurs projets."
+msgstr "Notez également le réglage :setting:`INSTALLED_APPS` vers la fin du fichier. Cette variable contient le nom des applications Django qui sont actives dans cette instance de Django. Les applications peuvent être utilisées dans de multiples projets, et vous pouvez empaqueter et distribuer les vôtres pour que d'autres les utilisent dans leurs projets."
 
 # f165c68b397f41668ee9241522f4a89f
 #: ../../intro/tutorial01.txt:240
@@ -2108,6 +2149,11 @@ msgid ""
 " display the tables Django created."
 msgstr "Si vous le souhaitez, lancez le client de ligne de commande de votre base de données, et saisissez ``\\dt`` (PostgreSQL), ``SHOW TABLES;`` (MySQL) ou ``.schema`` (SQLite) pour afficher les tables que Django a créées."
 
+# 1822f77dc8a445f0a3674f7a6db82bd1
+#: ../../intro/tutorial01.txt:278
+msgid "For the minimalists"
+msgstr "Pour les minimalistes"
+
 # d7f1440ace844b00919d7d28d15e2ca8
 #: ../../intro/tutorial01.txt:280
 msgid ""
@@ -2117,7 +2163,7 @@ msgid ""
 ":setting:`INSTALLED_APPS` before running :djadmin:`syncdb`. The "
 ":djadmin:`syncdb` command will only create tables for apps in "
 ":setting:`INSTALLED_APPS`."
-msgstr "Comme il a été indiqué ci-dessus, les applications incluses par défaut sont les plus communes, mais tout le monde n'en a pas forcément besoin. Si vous n'avez pas besoin d'une d'entre elles (ou de toutes), vous êtes libre de commenter ou effacer les lignes concernées du paramètre :setting:`INSTALLED_APPS` avant de lancer :djadmin:`syncdb`. La commande :djadmin:`syncdb` ne créera que les tables nécessaires aux applications listées dans :setting:`INSTALLED_APPS`."
+msgstr "Comme il a été indiqué ci-dessus, les applications incluses par défaut sont les plus communes, mais tout le monde n'en a pas forcément besoin. Si vous n'avez pas besoin d'une d'entre elles (ou de toutes), vous êtes libre de commenter ou effacer les lignes concernées du réglage :setting:`INSTALLED_APPS` avant de lancer :djadmin:`syncdb`. La commande :djadmin:`syncdb` ne créera que les tables nécessaires aux applications listées dans :setting:`INSTALLED_APPS`."
 
 # 636ef0ecec644992826cc39140783ca9
 #: ../../intro/tutorial01.txt:290
@@ -2139,6 +2185,11 @@ msgid ""
 "with a utility that automatically generates the basic directory structure of"
 " an app, so you can focus on writing code rather than creating directories."
 msgstr "Chaque application que vous écrivez avec Django est en fait un paquet Python, quelque part dans votre `chemin de recherche Python`_, qui respecte certaines conventions. Django est livré avec un utilitaire qui génère automatiquement la structure des répertoires de base d'une application, ce qui vous permet de vous concentrer sur l'écriture du code, plutôt que sur la création de répertoires."
+
+# a11565e258ff4757b06d579e72c7f7bf
+#: ../../intro/tutorial01.txt:300
+msgid "Projects vs. apps"
+msgstr "Projets vs applications"
 
 # 9fec427a0658467a91c916d45f3cb10d
 #: ../../intro/tutorial01.txt:302
@@ -2183,6 +2234,17 @@ msgid ""
 "The first step in writing a database Web app in Django is to define your "
 "models -- essentially, your database layout, with additional metadata."
 msgstr "La première étape dans l'écriture d'une application Web utilisant une base de données dans Django est la définition de vos modèles -- essentiellement, votre schéma de base de données, avec quelques métadonnées supplémentaires."
+
+# 2bd57febb74a408bbd4570dd4b148640
+# faed19a2340a4473bb6b9b05f8d3e68a
+# e01accdee33b4ef3b19a49b0cf88c896
+# 7eaa188879f147f8981682897232f1e2
+# 04bdc95fb9b74720bdded77d333b34b9
+#: ../../intro/tutorial01.txt:332 ../../intro/tutorial01.txt:406
+#: ../../intro/tutorial02.txt:9 ../../intro/tutorial03.txt:10
+#: ../../intro/tutorial03.txt:434
+msgid "Philosophy"
+msgstr "Philosophie"
 
 # 6ed4b2904a3749129041a3371109340f
 #: ../../intro/tutorial01.txt:334
@@ -2487,6 +2549,11 @@ msgid ""
 " file."
 msgstr "Nous utilisons celle-ci au lieu de simplement taper « python », parce que :file:`manage.py` définit la variable d'environnement ``DJANGO_SETTINGS_MODULE``, qui indique à Django le chemin d'importation Python vers votre fichier :file:`mysite/settings.py`."
 
+# 47306229d4b34d5f8ecf41a2d827e960
+#: ../../intro/tutorial01.txt:538
+msgid "Bypassing manage.py"
+msgstr "Se passer de manage.py"
+
 # 3878532f9d964449b6fb67ad8a32a45a
 #: ../../intro/tutorial01.txt:540
 msgid ""
@@ -2510,38 +2577,55 @@ msgid ""
 "</topics/db/queries>`::"
 msgstr "Une fois dans le shell, explorez l':doc:`API de base de données </topics/db/queries>`::"
 
-# 41e18bc37f0d40f1aff98813f17a7291
+# 3ff6f0b5004b429381bcabbc84fa2250
 #: ../../intro/tutorial01.txt:588
 msgid ""
 "Wait a minute. ``<Poll: Poll object>`` is, utterly, an unhelpful "
 "representation of this object. Let's fix that by editing the polls model (in"
 " the ``polls/models.py`` file) and adding a "
 ":meth:`~django.db.models.Model.__unicode__` method to both ``Poll`` and "
-"``Choice``::"
-msgstr "Une seconde. ``<Poll: Poll object>`` n'est, à l'évidence, pas une représentation de cet objet très utile. On va arranger cela en éditant le modèle des sondages (dans le fichier ``polls/models.py``) et en ajoutant une méthode :meth:`~django.db.models.Model.__unicode__` à ``Poll`` et à ``Choice``::"
+"``Choice``. On Python 3, simply replace ``__unicode__`` by ``__str__`` in "
+"the following example::"
+msgstr "Une seconde. ``<Poll: Poll object>`` n'est, à l'évidence, pas une représentation de cet objet très utile. On va arranger cela en éditant le modèle des sondages (dans le fichier ``polls/models.py``) et en ajoutant une méthode :meth:`~django.db.models.Model.__unicode__` à ``Poll`` et à ``Choice``. Avec Python 3, remplacez simplement ``__unicode__`` par ``__str__`` dans l'exemple suivant ::"
 
-# 21163d5b9ef84a29bb5ac7f72ee55080
-#: ../../intro/tutorial01.txt:604
+# e0aae80baa81449aa258648e3e176e35
+#: ../../intro/tutorial01.txt:605
 msgid ""
-"It's important to add :meth:`~django.db.models.Model.__unicode__` methods to"
-" your models, not only for your own sanity when dealing with the interactive"
-" prompt, but also because objects' representations are used throughout "
-"Django's automatically-generated admin."
-msgstr "Il est important d'ajouter des méthodes  :meth:`~django.db.models.Model.__unicode__` à vos modèles, non seulement parce que c'est plus pratique lorsque vous utilisez le shell interactif, mais aussi parce que la représentation des objets est très utilisée dans l'interface d'administration automatique de Django."
+"It's important to add :meth:`~django.db.models.Model.__unicode__` methods "
+"(or :meth:`~django.db.models.Model.__str__` on Python 3) to your models, not"
+" only for your own sanity when dealing with the interactive prompt, but also"
+" because objects' representations are used throughout Django's "
+"automatically-generated admin."
+msgstr "Il est important d'ajouter des méthodes  :meth:`~django.db.models.Model.__unicode__` (ou :meth:`~django.db.models.Model.__str__` avec Python 3) à vos modèles, non seulement parce que c'est plus pratique lorsque vous utilisez le shell interactif, mais aussi parce que la représentation des objets est très utilisée dans l'interface d'administration automatique de Django."
 
-# fed25f8d754644ecb6876e4a9de4508a
-#: ../../intro/tutorial01.txt:612
+# d1c6b3a95f9746f5a09fc5467f0ad8b8
+#: ../../intro/tutorial01.txt:611
 msgid ""
-"If you're familiar with Python, you might be in the habit of adding "
+":meth:`~django.db.models.Model.__unicode__` or             "
+":meth:`~django.db.models.Model.__str__`?"
+msgstr ":meth:`~django.db.models.Model.__unicode__` ou :meth:`~django.db.models.Model.__str__`?"
+
+# 221132452eba45b1b8971c8b28e90331
+#: ../../intro/tutorial01.txt:614
+msgid ""
+"On Python 3, things are simpler, just use "
+":meth:`~django.db.models.Model.__str__` and forget about "
+":meth:`~django.db.models.Model.__unicode__`."
+msgstr "Avec Python 3, les choses sont plus simples ; utilisez uniquement :meth:`~django.db.models.Model.__str__` et oubliez :meth:`~django.db.models.Model.__unicode__`."
+
+# 533a8f1767c54676ba723b2f7a2cb235
+#: ../../intro/tutorial01.txt:618
+msgid ""
+"If you're familiar with Python 2, you might be in the habit of adding "
 ":meth:`~django.db.models.Model.__str__` methods to your classes, not "
 ":meth:`~django.db.models.Model.__unicode__` methods. We use "
 ":meth:`~django.db.models.Model.__unicode__` here because Django models deal "
 "with Unicode by default. All data stored in your database is converted to "
 "Unicode when it's returned."
-msgstr "Si vous êtes familier de Python, vous avez peut-être l'habitude d'ajouter des méthodes :meth:`~django.db.models.Model.__str__` à vos classes, plutôt que :meth:`~django.db.models.Model.__unicode__`. Nous utilisons cette dernière parce que les modèles de Django utilisent Unicode par défaut. Toute l'information stockée dans votre base de données est convertie en Unicode avant de vous être retournée."
+msgstr "Si Python 2 vous est familier, vous avez peut-être l'habitude d'ajouter des méthodes :meth:`~django.db.models.Model.__str__` à vos classes, plutôt que :meth:`~django.db.models.Model.__unicode__`. Nous utilisons cette dernière parce que les modèles de Django utilisent Unicode par défaut. Toute l'information stockée dans votre base de données est convertie en Unicode avant de vous être renvoyée."
 
-# 63dab0bd74894ec5bb2e577fa6b2f13f
-#: ../../intro/tutorial01.txt:619
+# 28a4d48f3a86431e968854e353d2abde
+#: ../../intro/tutorial01.txt:625
 msgid ""
 "Django models have a default :meth:`~django.db.models.Model.__str__` method "
 "that calls :meth:`~django.db.models.Model.__unicode__` and converts the "
@@ -2550,8 +2634,8 @@ msgid ""
 "encoded as UTF-8."
 msgstr "Les modèles Django ont une méthode :meth:`~django.db.models.Model.__str__` par défaut, qui appelle :meth:`~django.db.models.Model.__unicode__` et convertit le résultat en chaîne d'octets UTF-8. Cela signifie que ``unicode(p)`` renverra une chaîne Unicode, et ``str(p)`` renverra une chaîne normale, avec les caractères encodés en UTF-8."
 
-# 1b4e214d0c654527a868795dc181912e
-#: ../../intro/tutorial01.txt:625
+# 63de1b795199499eb18a2e6969f854d0
+#: ../../intro/tutorial01.txt:631
 msgid ""
 "If all of this is gibberish to you, just remember to add "
 ":meth:`~django.db.models.Model.__unicode__` methods to your models. With any"
@@ -2655,7 +2739,7 @@ msgstr "Le site d’administration de Django n’est pas activé par défaut –
 msgid ""
 "Uncomment ``\"django.contrib.admin\"`` in the :setting:`INSTALLED_APPS` "
 "setting."
-msgstr "Décommentez ``\"django.contrib.admin\"`` dans le paramètre :setting:`INSTALLED_APPS`."
+msgstr "Décommentez ``\"django.contrib.admin\"`` dans le réglage :setting:`INSTALLED_APPS`."
 
 # dfa68ab5d62d4874801833d2d639e55d
 #: ../../intro/tutorial02.txt:32
@@ -2753,7 +2837,7 @@ msgid ""
 "Just one thing to do: we need to tell the admin that ``Poll`` objects have "
 "an admin interface. To do this, create a file called :file:`admin.py` in "
 "your ``polls`` directory, and edit it to look like this::"
-msgstr "Juste une chose à faire : il faut indiquer à l'admin que les objets ``Poll`` ont une interface d'administration. Pour ceci, créez un fichier :file:`admin.py` dans votre répertoire ``polls``, et éditez-le de la manière suivante ::"
+msgstr "Juste une chose à faire : il faut indiquer à admin que les objets ``Poll`` ont une interface d'administration. Pour ceci, créez un fichier :file:`admin.py` dans votre répertoire ``polls``, et éditez-le de la manière suivante ::"
 
 # 9484a56585624042ad647eef29efe852
 #: ../../intro/tutorial02.txt:121
@@ -2853,7 +2937,7 @@ msgid ""
 "the poll in Tutorial 1, it probably means you forgot to set the correct "
 "value for the :setting:`TIME_ZONE` setting. Change it, reload the page and "
 "check that the correct value appears."
-msgstr "Si la valeur de « Date de publication » ne correspond pas à l'heure à laquelle vous avez créé ce sondage dans le tutoriel 1, vous avez probablement oublié de définir la valeur correcte du paramètre :setting:`TIME_ZONE`. Modifiez-le, rechargez la page et vérifiez que la bonne valeur s'affiche."
+msgstr "Si la valeur de « Date de publication » ne correspond pas à l'heure à laquelle vous avez créé ce sondage dans le tutoriel 1, vous avez probablement oublié de définir la valeur correcte du réglage :setting:`TIME_ZONE`. Modifiez-le, rechargez la page et vérifiez que la bonne valeur s'affiche."
 
 # baa70f22fcce4a1abb7d08abd1220c97
 #: ../../intro/tutorial02.txt:177
@@ -3203,7 +3287,7 @@ msgid ""
 "live anywhere on your filesystem that Django can access. (Django runs as "
 "whatever user your server runs.) However, keeping your templates within the "
 "project is a good convention to follow."
-msgstr "Créez un répertoire ``templates`` dans le répertoire de votre projet. Les templates peuvent se trouver à n'importe quel endroit du système de fichiers, pourvu qu'ils soient accessibles par Django (Django utilise le même utilisateur que votre serveur). Cependant, par convention, il est recommandé de conserver les templates à l'intérieur du projet."
+msgstr "Créez un répertoire s'appelant ``templates`` dans le répertoire de votre projet. Les gabarits peuvent se trouver à n'importe quel endroit du système de fichiers, pourvu qu'ils soient accessibles par Django (Django utilise le même utilisateur que celui qui a démarré votre serveur). Cependant, par convention, il est recommandé de conserver les gabarits à l'intérieur du projet."
 
 # 25468e6dd696421a86c8f3bc5da2118d
 #: ../../intro/tutorial02.txt:448
@@ -3223,21 +3307,26 @@ msgid ""
 "as above, then copy ``django/contrib/admin/templates/admin/base_site.html`` "
 "to ``/path/to/mysite/templates/admin/base_site.html``. Don't forget that "
 "``admin`` subdirectory."
-msgstr "À présent, copiez le template ``admin/base_site.html`` depuis le répertoire par défaut des templates de l'interface d'administration de Django dans le code source de Django (``django/contrib/admin/templates``) vers un sous-répertoire ``admin`` se trouvant dans le répertoire que vous avez défini dans :setting:`TEMPLATE_DIRS`. Par exemple, si votre :setting:`TEMPLATE_DIRS` contient ``'/chemin/vers/mestemplates'``, copiez ``django/contrib/admin/templates/admin/base_site.html`` vers ``/chemin/vers/mestemplates/admin/base_site.html``. N'oubliez pas le sous-répertoire ``admin``."
+msgstr "À présent, copiez le gabarit ``admin/base_site.html`` depuis le répertoire par défaut des gabarits de l'interface d'administration de Django dans le code source de Django (``django/contrib/admin/templates``) vers un sous-répertoire ``admin`` se trouvant dans le répertoire que vous avez défini dans :setting:`TEMPLATE_DIRS`. Par exemple, si votre :setting:`TEMPLATE_DIRS` contient ``'/chemin/vers/mestemplates'``, copiez ``django/contrib/admin/templates/admin/base_site.html`` vers ``/chemin/vers/mestemplates/admin/base_site.html``. N'oubliez pas le sous-répertoire ``admin``."
+
+# 5ba50bae04964fe98040d37156042e6f
+#: ../../intro/tutorial02.txt:464
+msgid "Where are the Django source files?"
+msgstr "Où se trouvent les fichiers sources de Django ?"
 
 # 210906ce62ca48d896a2237fc22f69fa
 #: ../../intro/tutorial02.txt:466
 msgid ""
 "If you have difficulty finding where the Django source files are located on "
 "your system, run the following command:"
-msgstr "Si vous ne savez pas où les fichiers source Django se trouvent sur votre système, lancez la commande suivante :"
+msgstr "Si vous ne savez pas où les fichiers source de Django se trouvent sur votre système, lancez la commande suivante :"
 
 # f6cec04afd8d4e419675e3c3e0d02c30
 #: ../../intro/tutorial02.txt:477
 msgid ""
 "Then, just edit the file and replace the generic Django text with your own "
 "site's name as you see fit."
-msgstr "Ensuite, éditez simplement le fichier et remplacez le texte générique de Django par le nom de votre propre site."
+msgstr "Ensuite, éditez simplement le fichier et remplacez comme bon vous semble le texte générique de Django par le nom de votre propre site."
 
 # a96dc26e4d3c48d48edb549709d994a4
 #: ../../intro/tutorial02.txt:480
@@ -3248,7 +3337,7 @@ msgid ""
 "language will be evaluated to produce the final HTML page. Don't worry if "
 "you can't make any sense of the template right now -- we'll delve into "
 "Django's templating language in Tutorial 3."
-msgstr "Ce fichier template contient beaucoup de texte comme ``{% block branding %}`` et ``{{ title }}``. Les balises ``{%`` et ``{{`` font partie du langage de template de Django. Lorsque Django génère ``admin/base_site.html``, le langage de template est évalué afin de produire la page HTML finale. Ne vous souciez pas de chercher à tout comprendre le contenu du template dans l'immédiat, nous aborderons le langage de template de Django dans le 3ème tutoriel."
+msgstr "Ce fichier gabarit contient beaucoup de texte comme ``{% block branding %}`` et ``{{ title }}``. Les balises ``{%`` et ``{{`` font partie du langage de gabarit de Django. Lorsque Django génère ``admin/base_site.html``, le langage de gabarit est évalué afin de produire la page HTML finale. Ne vous souciez pas de chercher à tout comprendre le contenu du gabarit dans l'immédiat, nous aborderons le langage de gabarit de Django dans le 3ème tutoriel."
 
 # 50df6c0f1cc24c9c811da1bfb8decd57
 #: ../../intro/tutorial02.txt:487
@@ -3257,12 +3346,12 @@ msgid ""
 "override a template, just do the same thing you did with ``base_site.html`` "
 "-- copy it from the default directory into your custom directory, and make "
 "changes."
-msgstr "Notez que tous les templates de l'interface d'administration par défaut de Django peuvent être remplacés. Pour remplacer un template, faites simplement la même chose qu'avec ``base_site.html``, copiez-le depuis le répertoire par défaut dans votre répertoire ad hoc, et faites les modifications nécessaires."
+msgstr "Notez que tous les gabarits de l'interface d'administration par défaut de Django peuvent être remplacés. Pour remplacer un gabarit, faites simplement la même chose qu'avec ``base_site.html``, copiez-le depuis le répertoire par défaut dans votre répertoire personnalisé, et faites les modifications nécessaires."
 
 # 2eb5ad21a356474ab362739b56bcbca5
 #: ../../intro/tutorial02.txt:493
 msgid "Customizing your *application's* templates"
-msgstr "Personnalisation des templates de votre *application*"
+msgstr "Personnalisation des gabarits de votre *application*"
 
 # 18f81ac0dfbc4f50a4a1424d72fba003
 #: ../../intro/tutorial02.txt:495
@@ -3272,7 +3361,7 @@ msgid ""
 "that, by default, Django automatically looks for a ``templates/`` "
 "subdirectory within each application package, for use as a fallback (don't "
 "forget that ``django.contrib.admin`` is an application)."
-msgstr "Les lecteurs avisés demanderont : mais si :setting:`TEMPLATE_DIRS` était vide par défaut, comment Django trouvait-il les templates par défaut de l'interface d'administration ? La réponse est que, par défaut, Django regarde automatiquement dans un éventuel sous-répertoire ``templates/`` à l'intérieur de chaque paquet d'application, pour l'utiliser en dernier recours (n'oubliez pas que ``django.contrib.admin`` est une application)."
+msgstr "Les lecteurs avisés demanderont : mais si :setting:`TEMPLATE_DIRS` était vide par défaut, comment Django trouvait-il les gabarits par défaut de l'interface d'administration ? La réponse est que, par défaut, Django regarde automatiquement dans un éventuel sous-répertoire ``templates/`` à l'intérieur de chaque paquet d'application, pour l'utiliser en dernier recours (n'oubliez pas que ``django.contrib.admin`` est aussi une application)."
 
 # 5eb2cfc0eaa1439ea4091c08107ea311
 #: ../../intro/tutorial02.txt:501
@@ -3283,19 +3372,19 @@ msgid ""
 " more sensible to modify the *application's* templates, rather than those in"
 " the *project*. That way, you could include the polls application in any new"
 " project and be assured that it would find the custom templates it needed."
-msgstr "Notre application de sondage n'est pas très complexe et ne nécessite par de templates d'administration personnalisés. Mais si elle devenait plus sophistiquée et qu'il faille modifier les templates standards de l'administration de Django pour certaines fonctionnalités, il serait plus logique de modifier les templates de l'*application*, et non pas ceux du *projet*. De cette façon, vous pourriez inclure l'application « polls » dans tout nouveau projet en étant certain que Django trouve les templates personnalisés nécessaires."
+msgstr "Notre application de sondage n'est pas très compliquée et ne nécessite pas de gabarits d'administration personnalisés. Mais si elle devenait plus sophistiquée et qu'il faille modifier les gabarits standards de l'administration de Django pour certaines fonctionnalités, il serait plus logique de modifier les gabarits de l'*application*, et non pas ceux du *projet*. De cette façon, vous pourriez inclure l'application « polls » dans tout nouveau projet en étant certain que Django trouve les gabarits personnalisés nécessaires."
 
 # b4780dd7b3144ca2be9023e230d4bec4
 #: ../../intro/tutorial02.txt:508
 msgid ""
 "See the :ref:`template loader documentation <template-loaders>` for more "
 "information about how Django finds its templates."
-msgstr "Lisez la :ref:`documentation sur les chargeurs de templates <template-loaders>` pour des informations complètes sur la manière dont Django trouve ses templates."
+msgstr "Lisez la :ref:`documentation sur le chargeur de gabarits <template-loaders>` pour des informations complètes sur la manière dont Django trouve ses gabarits."
 
 # afb58535338a4a8a887d97e6cfce46b2
 #: ../../intro/tutorial02.txt:512
 msgid "Customize the admin index page"
-msgstr "Personnaliser la page d'accueil de l'interface d'administration"
+msgstr "Personnalisation de la page d'accueil de l'interface d'administration"
 
 # 1b2d14eaa8ac4387b8025236254a08ef
 #: ../../intro/tutorial02.txt:514
@@ -3324,7 +3413,7 @@ msgid ""
 "to object-specific admin pages in whatever way you think is best. Again, "
 "don't worry if you can't understand the template language -- we'll cover "
 "that in more detail in Tutorial 3."
-msgstr "Le template à personnaliser est ``admin/index.html`` (faites la même chose qu'avec ``admin/base_site.html`` dans la précédente section -- copiez-le depuis le répertoire par défaut vers votre répertoire de templates personnel). Éditez le fichier, et vous verrez qu'il utilise une variable de template appelée ``app_list``. Cette variable contient toutes les applications Django installées et inscrites. Au lieu d'utiliser ça, vous pouvez écrire en dur les liens vers les pages d'administration spécifiques aux objets de la manière qui vous convient. Encore une fois, n'essayez pas de tout comprendre le contenu du template, nous aborderons ce sujet plus en détails dans le prochain tutoriel."
+msgstr "Le gabarit à personnaliser est ``admin/index.html`` (faites la même chose qu'avec ``admin/base_site.html`` dans la précédente section -- copiez-le depuis le répertoire par défaut vers votre répertoire de gabarits personnel). Éditez le fichier, et vous verrez qu'il utilise une variable de gabarit appelée ``app_list``. Cette variable contient toutes les applications Django installées et inscrites. À la place, vous pouvez écrire en dur les liens vers les pages d'administration spécifiques aux objets de la manière qui vous convient. Encore une fois, n'essayez pas de tout comprendre le contenu du gabarit, nous aborderons ce sujet plus en détails dans le prochain tutoriel."
 
 # 76c44e88d71a4260a5b5ba9b74beb906
 #: ../../intro/tutorial02.txt:531
@@ -3346,18 +3435,13 @@ msgid ""
 "public interface -- \"views.\""
 msgstr "Ce tutoriel commence là où le :doc:`tutoriel 2 </intro/tutorial02>` s’achève. Nous continuons l’application de sondage Web et allons nous focaliser sur la création de l’interface publique – les « vues »."
 
-# 16adaa7d4101479bb87fad5cca0d8800
-#: ../../intro/tutorial03.txt:10
-msgid "Philosophy"
-msgstr "Philosophie"
-
 # 7d9c8ae43562487290fc783380d9c899
 #: ../../intro/tutorial03.txt:12
 msgid ""
 "A view is a \"type\" of Web page in your Django application that generally "
 "serves a specific function and has a specific template. For example, in a "
 "blog application, you might have the following views:"
-msgstr "Une vue est un « type » de page Web dans votre application Django qui sert généralement à une fonction précise et possède un template spécifique. Par exemple, dans une application de blog, vous pouvez avoir les vues suivantes :"
+msgstr "Une vue est un « type » de page Web dans votre application Django qui sert généralement à une fonction précise et possède un gabarit spécifique. Par exemple, dans une application de blog, vous pouvez avoir les vues suivantes :"
 
 # 2ee07530367c4e0fbeb0ca70a6582338
 #: ../../intro/tutorial03.txt:16
@@ -3374,14 +3458,14 @@ msgstr "La page de « détail » d’un billet – lien permanent vers un seul
 msgid ""
 "Year-based archive page -- displays all months with entries in the given "
 "year."
-msgstr "La page d’archives pour une année – affiche tous les mois avec des billets pour une année donnée."
+msgstr "La page d’archives pour une année – affiche tous les mois contenant des billets pour une année donnée."
 
 # e544f8bf8ca849d5aa11afbb2ad94ba5
 #: ../../intro/tutorial03.txt:23
 msgid ""
 "Month-based archive page -- displays all days with entries in the given "
 "month."
-msgstr "La page d’archives pour un mois – affiche tous les jours avec des billets pour un mois donné."
+msgstr "La page d’archives pour un mois – affiche tous les jours contenant des billets pour un mois donné."
 
 # 28ec0b63ed744e04ab64ccda0172ceb9
 #: ../../intro/tutorial03.txt:26
@@ -3391,7 +3475,7 @@ msgstr "La page d’archives pour un jour – affiche tous les billets pour un j
 # a18403c519c14f108d1cc3ece95987f5
 #: ../../intro/tutorial03.txt:28
 msgid "Comment action -- handles posting comments to a given entry."
-msgstr "Actions de commentaire – gère l’écriture de commentaires sur un billet donné."
+msgstr "Action de commentaire – gère l’écriture de commentaires sur un billet donné."
 
 # a046314273c2446a8b7c49b051934188
 #: ../../intro/tutorial03.txt:30
@@ -3413,7 +3497,7 @@ msgstr "La page de détail d’un sondage – affiche la question d’un sondage
 # b57cf131cd174f9eb6e6eb14d87b18d4
 #: ../../intro/tutorial03.txt:37
 msgid "Poll \"results\" page -- displays results for a particular poll."
-msgstr "La page des résultats d’un sondage – affiche les résultats d’un sondage en particulier."
+msgstr "La page des résultats d’un sondage – affiche les résultats d’un sondage particulier."
 
 # d20ae3aad91b44d5abc7dbec5e66348b
 #: ../../intro/tutorial03.txt:39
@@ -3463,7 +3547,7 @@ msgstr "Ce tutoriel fournit des instructions de base sur l'utilisation des URLco
 # 895491977d2d47129cb241c0726fb2b6
 #: ../../intro/tutorial03.txt:62
 msgid "Write your first view"
-msgstr "Écriture d'une vue"
+msgstr "Écriture d'une première vue"
 
 # 4e92c84f2d53429981e9be23b63a9e32
 #: ../../intro/tutorial03.txt:64
@@ -3514,7 +3598,7 @@ msgid ""
 "The :func:`~django.conf.urls.url` function is passed four arguments, two "
 "required: ``regex`` and ``view``, and two optional: ``kwargs``, and "
 "``name``. At this point, it's worth reviewing what these arguments are for."
-msgstr "La fonction :func:`~django.conf.urls.url`reçoit quatre paramètres, dont deux sont obligatoires : ``regex`` et ``view``, et deux facultatifs : ``kwargs`` et ``name``. À ce stade, il vaut la peine d'examiner le rôle de chacun de ces paramètres."
+msgstr "La fonction :func:`~django.conf.urls.url` reçoit quatre paramètres, dont deux sont obligatoires : ``regex`` et ``view``, et deux facultatifs : ``kwargs`` et ``name``. À ce stade, il est interessant d'examiner le rôle de chacun de ces paramètres."
 
 # 4f33b3d71f5045d283337d93edc8d1a7
 #: ../../intro/tutorial03.txt:120
@@ -3539,7 +3623,7 @@ msgid ""
 "``http://www.example.com/myapp/``, the URLconf will look for ``myapp/``. In "
 "a request to ``http://www.example.com/myapp/?page=3``, the URLconf will also"
 " look for ``myapp/``."
-msgstr "Notez que ces expressions régulières ne cherchent pas dans les paramètres GET et POST, ni dans le nom de domaine. Par exemple, dans une requête vers ``http://www.example.com/myapp/``, l'URLconf va chercher ``/myapp/``. Dans une requête vers ``http://www.example.com/myapp/?page=3``, l'URLconf va aussi chercher ``/myapp/``."
+msgstr "Notez que ces expressions régulières ne cherchent pas dans les paramètres GET et POST, ni dans le nom de domaine. Par exemple, dans une requête vers ``http://www.example.com/myapp/``, l'URLconf va chercher ``myapp/``. Dans une requête vers ``http://www.example.com/myapp/?page=3``, l'URLconf va aussi chercher ``myapp/``."
 
 # 8171c7599a204a55b86cc6d51e745a3f
 #: ../../intro/tutorial03.txt:134
@@ -3551,7 +3635,7 @@ msgid ""
 "need to know how to capture simple patterns. In fact, complex regexes can "
 "have poor lookup performance, so you probably shouldn't rely on the full "
 "power of regexes."
-msgstr "Si vous avez besoin d'aide avec les expressions régulières, jetez un oeil à l'`article Wikipedia <http://fr.wikipedia.org/wiki/Expression_rationnelle>`_ et à la documentation du module Python :mod:`re`. À noter aussi le livre « Mastering Regular Expressions » écrit par Jeffrey Friedl est remarquable. En pratique, il n'y a cependant pas besoin d'être un expert des expressions régulières, car il suffit de savoir capturer des motifs simples. En fait, les expressions complexes risquent de pénaliser les performances, et il faut plutôt éviter de faire appel à tout le potentiel des expressions régulières."
+msgstr "Si vous avez besoin d'aide avec les expressions régulières, jetez un oeil à l'`article Wikipedia <http://fr.wikipedia.org/wiki/Expression_rationnelle>`_ et à la documentation du module Python :mod:`re`. À noter aussi que le livre « Mastering Regular Expressions », écrit par Jeffrey Friedl, est remarquable. En pratique, il n'y a cependant pas besoin d'être un expert des expressions régulières, car il suffit de savoir capturer des motifs simples. En fait, les expressions complexes risquent de pénaliser les performances, et il faut plutôt éviter de faire appel à tout le potentiel des expressions régulières."
 
 # cdfc6f34356d42cb9e94c7f77eb6ae8c
 #: ../../intro/tutorial03.txt:141
@@ -3575,7 +3659,7 @@ msgid ""
 "arguments. If the regex uses simple captures, values are passed as "
 "positional arguments; if it uses named captures, values are passed as "
 "keyword arguments. We'll give an example of this in a bit."
-msgstr "Lorsque Django trouve une expression régulière qui correspond, il appelle la fonction de vue spécifiée, avec un objet :class:`~django.http.HttpRequest` comme premier paramètre et toute valeur « capturée » par l'expression régulière comme autres paramètres. Si l'expression régulière utilise des captures simples, les valeurs sont passées comme paramètres positionnels ; si ce sont des captures nommées, les valeurs sont passées comme paramètres mots-clés. Nous montrerons cela par un exemple un peu plus loin."
+msgstr "Lorsque Django trouve une expression régulière qui correspond, il appelle la fonction de vue spécifiée, avec un objet :class:`~django.http.HttpRequest` comme premier paramètre et toutes valeurs « capturées » par l'expression régulière comme autres paramètres. Si l'expression régulière utilise des captures simples, les valeurs sont passées comme paramètres positionnels ; si ce sont des captures nommées, les valeurs sont passées comme paramètres nommés. Nous montrerons cela par un exemple un peu plus loin."
 
 # b29d04eb73c948de8590a15ae1d64fe1
 #: ../../intro/tutorial03.txt:158
@@ -3587,7 +3671,7 @@ msgstr "Paramètre d':func:`~django.conf.urls.url` : kwargs"
 msgid ""
 "Arbitrary keyword arguments can be passed in a dictionary to the target "
 "view. We aren't going to use this feature of Django in the tutorial."
-msgstr "Des paramètres mots-clés arbitraires peuvent être transmises par un dictionnaire à la vue ciblée. Nous n'allons pas exploiter cette fonctionnalité dans ce tutoriel."
+msgstr "Des paramètres nommés arbitraires peuvent être transmis dans un dictionnaire vers la vue cible. Nous n'allons pas exploiter cette fonctionnalité dans ce tutoriel."
 
 # ae19eae9517d4e5fb9a7fc0c9d659358
 #: ../../intro/tutorial03.txt:164
@@ -3601,7 +3685,7 @@ msgid ""
 "especially templates. This powerful feature allows you to make  global "
 "changes to the url patterns of your project while only touching a single "
 "file."
-msgstr "Le nommage des URL permet de les référencer de manière non ambiguë depuis d'autres portions de code Django, en particulier dans les templates. Cette fonctionnalité puissante permet d'effectuer des changements fondamentaux dans les modèles d'URL de votre projet en ne modifiant qu'un seul fichier."
+msgstr "Le nommage des URL permet de les référencer de manière non ambiguë depuis d'autres portions de code Django, en particulier dans les gabarits. Cette fonctionnalité puissante permet d'effectuer des changements globaux dans les modèles d'URL de votre projet en ne modifiant qu'un seul fichier."
 
 # 95249b35511749b98a66c84ce03ea874
 #: ../../intro/tutorial03.txt:171
@@ -3615,12 +3699,12 @@ msgid ""
 "slightly different, because they take an argument::"
 msgstr "Ajoutons maintenant quelques vues supplémentaires dans ``polls/views.py``. Ces vues sont légèrement différentes, car elles acceptent un paramètre ::"
 
-# 73ffa2b84c484cdbb2d4f57e0ff03fcf
+# 9288a407282d406bb079361b7c059aa3
 #: ../../intro/tutorial03.txt:185
 msgid ""
-"Wire these news views into the ``polls.urls`` module by adding the following"
-" :func:`~django.conf.urls.url` calls::"
-msgstr "Liez ces vues avec leurs URL dans le module ``polls.urls`` en ajoutant les appels :func:`~django.conf.urls.url` suivants ::"
+"Wire these new views into the ``polls.urls`` module by adding the following "
+":func:`~django.conf.urls.url` calls::"
+msgstr "Liez ces nouvelles vues avec leurs URL dans le module ``polls.urls`` en ajoutant les appels :func:`~django.conf.urls.url` suivants ::"
 
 # 4ea61ca79ee345e88c7559e6f0947e3c
 #: ../../intro/tutorial03.txt:203
@@ -3629,7 +3713,7 @@ msgid ""
 "method and display whatever ID you provide in the URL. Try "
 "\"/polls/34/results/\" and \"/polls/34/vote/\" too -- these will display the"
 " placeholder results and voting pages."
-msgstr "Ouvrez votre navigateur à l'adresse « /polls/34/ ». La méthode ``detail()`` sera exécutée et affichera l'ID indiqué dans l'URL. Essayez aussi « /polls/34/results/ » et « /polls/34/vote/ », elles afficheront les pages modèles de résultats et de votes."
+msgstr "Ouvrez votre navigateur à l'adresse « /polls/34/ ». La méthode ``detail()`` sera exécutée et affichera l'ID fourni dans l'URL. Essayez aussi « /polls/34/results/ » et « /polls/34/vote/ », elles afficheront les pages modèles de résultats et de votes."
 
 # 86c57c69ba1449bfb8f4c3c1ed9d0cd7
 #: ../../intro/tutorial03.txt:208
@@ -3645,7 +3729,7 @@ msgid ""
 "encounters :func:`~django.conf.urls.include`, it chops off whatever part of "
 "the URL matched up to that point and sends the remaining string to the "
 "included URLconf for further processing."
-msgstr "Lorsque quelqu'un demande une page de votre site Web, par exemple « /polls/34/ », Django charge le module Python ``mysite.urls`` parce qu'il est mentionné dans le réglage :setting:`ROOT_URLCONF`. Il trouve la variable nommée ``urlpatterns`` et parcourt dans l'ordre les expressions régulières. Les fonctions :func:`~django.conf.urls.include` ne font que référencer d'autres URLconf. Remarquez que les expressions dans les fonctions :func:`~django.conf.urls.include` ne sont pas terminées par ``$`` (marque de fin de chaîne), mais plutôt par une barre oblique. À chaque occurrence de :func:`~django.conf.urls.include`, Django retire de l'URL la partie correspondant à l'expression régulière et passe le reste à l'URLconf indiqué pour la suite du traitement."
+msgstr "Lorsque quelqu'un demande une page de votre site Web, par exemple « /polls/34/ », Django charge le module Python ``mysite.urls`` parce qu'il est mentionné dans le réglage :setting:`ROOT_URLCONF`. Il trouve la variable nommée ``urlpatterns`` et parcourt dans l'ordre les expressions régulières. Les fonctions :func:`~django.conf.urls.include` utilisées ne font que référencer d'autres URLconf. Remarquez que les expressions dans les fonctions :func:`~django.conf.urls.include` ne sont pas terminées par ``$`` (marque de fin de chaîne), mais plutôt par une barre oblique. À chaque occurrence de :func:`~django.conf.urls.include`, Django retire de l'URL la partie correspondant à l'expression régulière et passe le reste à l'URLconf indiqué pour la suite du traitement."
 
 # cf23bac5302a4808bef275beaf2d0050
 #: ../../intro/tutorial03.txt:220
@@ -3684,7 +3768,7 @@ msgid ""
 "and sends it as an argument to the view function; ``?P<poll_id>`` defines "
 "the name that will be used to identify the matched pattern; and ``\\d+`` is "
 "a regular expression to match a sequence of digits (i.e., a number)."
-msgstr "La partie ``poll_id='34'`` vient de ``(?P<poll_id>\\d+)``. Utiliser les parenthèses autour d'un motif « capture » le texte correspondant à ce motif et l'envoie en tant que paramètre à la fonction de la vue ; ``?P<poll_id>`` définit le nom qui va être utilisé pour identifier le motif trouvé, et ``\\d+`` est une expression régulière pour chercher une suite de chiffres (c'est-à-dire un nombre)."
+msgstr "La partie ``poll_id='34'`` vient de ``(?P<poll_id>\\d+)``. En utilisant des parenthèses autour d'un motif, cela « capture » le texte correspondant à ce motif et l'envoie en tant que paramètre à la fonction de la vue ; le terme ``?P<poll_id>`` définit le nom qui va être utilisé pour identifier le motif trouvé, et ``\\d+`` est une expression régulière pour chercher une suite de chiffres (c'est-à-dire un nombre)."
 
 # 8d6e5594b6fd401f96dcc61c1a75a8f3
 #: ../../intro/tutorial03.txt:243
@@ -3703,7 +3787,7 @@ msgstr "Mais ne le faites pas. C'est stupide."
 # d891f8427a9f4ac099cc1b06f564928f
 #: ../../intro/tutorial03.txt:253
 msgid "Write views that actually do something"
-msgstr "Écriture de vues qui font des choses réelles"
+msgstr "Écriture de vues qui font réellement des choses"
 
 # 943953cfb3ad4d889be197e3284b5509
 #: ../../intro/tutorial03.txt:255
@@ -3721,14 +3805,14 @@ msgid ""
 "system such as Django's -- or a third-party Python template system -- or "
 "not. It can generate a PDF file, output XML, create a ZIP file on the fly, "
 "anything you want, using whatever Python libraries you want."
-msgstr "Votre vue peut lire des entrées depuis une base de données, ou pas. Elle peut utiliser un système de templates comme celui de Django -- ou un système de templates tiers -- ou pas. Elle peut générer un fichier PDF, produire de l'XML, créer un fichier ZIP à la volée, tout ce que vous voulez, en utilisant les bibliothèques Python que vous voulez."
+msgstr "Votre vue peut lire des entrées depuis une base de données, ou pas. Elle peut utiliser un système de gabarits comme celui de Django -- ou un système de gabarits tiers -- ou pas. Elle peut générer un fichier PDF, produire de l'XML, créer un fichier ZIP à la volée, tout ce que vous voulez, en utilisant les bibliothèques Python que vous voulez."
 
 # 504f3c26b71d4345a36dbdbc75eafa8e
 #: ../../intro/tutorial03.txt:265
 msgid ""
 "All Django wants is that :class:`~django.http.HttpResponse`. Or an "
 "exception."
-msgstr "Voilà tout ce que veut Django : :class:`~django.http.HttpResponse`. Ou une exception."
+msgstr "Voilà tout ce que veut Django : :class:`~django.http.HttpResponse` ou une exception."
 
 # dabf15d0324b410883c74ba91338cad6
 #: ../../intro/tutorial03.txt:267
@@ -3737,7 +3821,7 @@ msgid ""
 "covered in :doc:`Tutorial 1 </intro/tutorial01>`. Here's one stab at the "
 "``index()`` view, which displays the latest 5 poll questions in the system, "
 "separated by commas, according to publication date::"
-msgstr "Parce que c'est pratique, nous allons utiliser l'API de base de données de Django, que nous avons vu dans le :doc:`tutoriel 1 </intro/tutorial01>`. Voici une ébauche de vue ``index()``, qui affiche les 5 derniers sondages, séparés par des virgules et ordonnés par date de publication ::"
+msgstr "Parce que c'est pratique, nous allons utiliser l'API de base de données de Django, que nous avons vu dans le :doc:`tutoriel 1 </intro/tutorial01>`. Voici une ébauche de vue ``index()``, qui affiche les 5 derniers sondages, séparés par des virgules et classés par date de publication ::"
 
 # fa4bd85f92c5447fa8934ee43679eaad
 #: ../../intro/tutorial03.txt:281
@@ -3746,14 +3830,14 @@ msgid ""
 " If you want to change the way the page looks, you'll have to edit this "
 "Python code. So let's use Django's template system to separate the design "
 "from Python by creating a template that the view can use."
-msgstr "Cependant, il y a un problème : le design de la la page est codé en dur dans la vue. Si vous voulez changer le style de la page, vous devrez éditer votre code python. Nous allons donc utiliser le système de templates de Django pour séparer le design du code Python en créant un template que la vue pourra utiliser."
+msgstr "Cependant, il y a un problème : l'allure de la page est codée en dur dans la vue. Si vous voulez changer le style de la page, vous devrez modifier votre code python. Nous allons donc utiliser le système de gabarits de Django pour séparer le style du code Python en créant un gabarit que la vue pourra utiliser."
 
 # b81baca46d4c429a916c68e1f2483f0d
 #: ../../intro/tutorial03.txt:286
 msgid ""
 "First, create a directory called ``templates`` in your ``polls`` directory. "
 "Django will look for templates in there."
-msgstr "Tout d'abord, créez un répertoire nommé ``templates`` dans votre répertoire ``polls``. C'est là que Django va chercher les templates."
+msgstr "Tout d'abord, créez un répertoire nommé ``templates`` dans votre répertoire ``polls``. C'est là que Django recherche les gabarits."
 
 # 9c25d2e536184edcb15878960d19d4e8
 #: ../../intro/tutorial03.txt:289
@@ -3765,7 +3849,12 @@ msgid ""
 "is how Django knows to find the polls templates even though we didn't modify"
 " :setting:`TEMPLATE_DIRS`, as we did in :ref:`Tutorial 2 <ref-customizing-"
 "your-projects-templates>`."
-msgstr "Le réglage :setting:`TEMPLATE_LOADERS` de Django contient une liste de classes qui savent comment importer des templates de différentes sources. L'une de ces classes par défaut est :class:`django.template.loaders.app_directories.Loader` qui cherche dans un sous-répertoire « templates » de chaque application dans :setting:`INSTALLED_APPS`. C'est ainsi que Django sait où trouver les templates de l'application polls même si nous n'avons pas touché à :setting:`TEMPLATE_DIRS`, comme nous l'avions fait dans le :ref:`tutoriel 2 <ref-customizing-your-projects-templates>`."
+msgstr "Le réglage :setting:`TEMPLATE_LOADERS` de Django contient une liste de classes qui savent comment importer des gabarits à partir de différentes sources. L'une de ces classes par défaut est :class:`django.template.loaders.app_directories.Loader` qui recherche dans un sous-répertoire « templates » de chaque application incluses dans :setting:`INSTALLED_APPS`. C'est ainsi que Django sait où trouver les gabarits de l'application polls même si nous n'avons pas touché à :setting:`TEMPLATE_DIRS`, comme nous l'avions fait dans le :ref:`tutoriel 2 <ref-customizing-your-projects-templates>`."
+
+# 5732ed12dffa45e4bcf8f2ff48f057f3
+#: ../../intro/tutorial03.txt:297
+msgid "Organizing templates"
+msgstr "Organisation des gabarits"
 
 # be7f0f167f1b4233bf7b84ced9216a13
 #: ../../intro/tutorial03.txt:299
@@ -3777,7 +3866,7 @@ msgid ""
 "(``polls/templates``) rather than the project's (``templates``). We'll "
 "discuss in more detail in the :doc:`reusable apps tutorial </intro/reusable-"
 "apps>` *why* we do this."
-msgstr "Nous *pourrions* placer tous nos templates à seul endroit et tout fonctionnerait très bien. Cependant, ce template appartient à l'application polls. Contrairement au template admin que nous avons créé lors du tutoriel précédent, nous placerons celui-ci dans le répertoire de templates de l'application (``polls/templates``)  plutôt que dans celui du projet (``templates``). Nous aborderons plus en détails les raisons de ces choix dans le :doc:`tutoriel sur les applications réutilisables </intro/reusable-apps>`."
+msgstr "Nous *pourrions* placer tous nos gabarits à seul endroit et tout fonctionnerait très bien. Cependant, ce gabarit appartient à l'application polls. Contrairement au gabarit admin que nous avons créé lors du tutoriel précédent, nous placerons celui-ci dans le répertoire des gabarits de l'application (``polls/templates``)  plutôt que dans celui du projet (``templates``). Nous aborderons plus en détails les raisons de ces choix dans le :doc:`tutoriel sur les applications réutilisables </intro/reusable-apps>`."
 
 # 7698609b855a4a759a4ae3cca2b03891
 #: ../../intro/tutorial03.txt:307
@@ -3788,7 +3877,12 @@ msgid ""
 "``polls/templates/polls/index.html``. Because of how the ``app_directories``"
 " template loader works as described above, you can refer to this template "
 "within Django simply as ``polls/index.html``."
-msgstr "Dans le répertoire ``templates`` que vous venez de créer, créez un autre répertoire nommé `polls`` dans lequel vous placez un nouveau fichier ``index.html``. Autrement dit, le chemin de votre template doit être  ``polls/templates/polls/index.html``. Conformément au fonctionnement du chargeur de template ``app_directories`` (cf. explication ci-dessus), vous pouvez désigner ce template dans Django un employant la syntaxe "
+msgstr "Dans le répertoire ``templates`` que vous venez de créer, créez un autre répertoire nommé `polls`` dans lequel vous placez un nouveau fichier ``index.html``. Autrement dit, le chemin de votre gabarit doit être  ``polls/templates/polls/index.html``. Conformément au fonctionnement du chargeur de gabarit ``app_directories`` (cf. explication ci-dessus), vous pouvez désigner ce gabarit dans Django tout simplement par ``polls/index.html``."
+
+# adeda0ac9b3e46b2bbba3f79a07cc50a
+#: ../../intro/tutorial03.txt:314
+msgid "Template namespacing"
+msgstr "Espace de noms des gabarits"
 
 # caa8d545a7934db9b7dc343695975371
 #: ../../intro/tutorial03.txt:316
@@ -3801,19 +3895,19 @@ msgid ""
 "them. We need to be able to point Django at the right one, and the easiest "
 "way to ensure this is by *namespacing* them. That is, by putting those "
 "templates inside *another* directory named for the application itself."
-msgstr "Il serait maintenant *possible* de placer directement nos templates dans ``polls/templates`` (plutôt que dans un sous-répertoire ``polls``), mais ce serait une mauvaise idée. Django choisit le premier template qu'il trouve pour un nom donné et dans le cas où vous avez un template de même nom dans une *autre* application, Django ne fera pas la différence. Il faut pouvoir indiquer à Django le bon template, et la manière la plus simple de faire cela est d'utiliser des espaces de noms. C'est-à-dire que nous plaçons ces templates dans un *autre* répertoire portant le nom de l'application."
+msgstr "Il serait aussi *possible* de placer directement nos gabarits dans ``polls/templates`` (plutôt que dans un sous-répertoire ``polls``), mais ce serait une mauvaise idée. Django choisit le premier gabarit qu'il trouve pour un nom donné et dans le cas où vous avez un gabarit de même nom dans une *autre* application, Django ne fera pas la différence. Il faut pouvoir indiquer à Django le bon gabarit, et la manière la plus simple de faire cela est d'utiliser des espaces de noms. C'est-à-dire que nous plaçons ces gabarits dans un *autre* répertoire portant le nom de l'application."
 
 # 1cffc24e7f5e4ce099365cc4ecbdb413
 #: ../../intro/tutorial03.txt:325
 msgid "Put the following code in that template:"
-msgstr "Insérez le code suivant dans ce template :"
+msgstr "Insérez le code suivant dans ce gabarit :"
 
 # bcd2309c2cdc426786dcedf007ef98f3
 #: ../../intro/tutorial03.txt:339
 msgid ""
 "Now let's update our ``index`` view in ``polls/views.py`` to use the "
 "template::"
-msgstr "Mettons maintenant à jour notre vue ``index`` dans ``polls/views.py`` pour qu'elle utilise le template ::"
+msgstr "Mettons maintenant à jour notre vue ``index`` dans ``polls/views.py`` pour qu'elle utilise le gabarit ::"
 
 # 0da4bb92e1224af3ae86318cf530bebb
 #: ../../intro/tutorial03.txt:354
@@ -3821,7 +3915,7 @@ msgid ""
 "That code loads the template called  ``polls/index.html`` and passes it a "
 "context. The context is a dictionary mapping template variable names to "
 "Python objects."
-msgstr "Ce code charge le template appelé ``polls/index.html`` et lui fournit un contexte. Ce contexte est un dictionnaire qui fait correspondre des objets Python à des noms de variables de template."
+msgstr "Ce code charge le gabarit appelé ``polls/index.html`` et lui fournit un contexte. Ce contexte est un dictionnaire qui fait correspondre des objets Python à des noms de variables de gabarit."
 
 # 2e30d3da6364418daa872b833733518c
 #: ../../intro/tutorial03.txt:358
@@ -3843,16 +3937,17 @@ msgid ""
 ":class:`~django.http.HttpResponse` object with the result of the rendered "
 "template. Django provides a shortcut. Here's the full ``index()`` view, "
 "rewritten::"
-msgstr "Il est très courant de charger un template, remplir un contexte et renvoyer un objet :class:`~django.http.HttpResponse` avec le résultat du template interprété. Django fournit un raccourci. Voici la vue ``index()`` complète, réécrite ::"
+msgstr "Il est très courant de charger un gabarit, remplir un contexte et renvoyer un objet :class:`~django.http.HttpResponse` avec le résultat du gabarit\ninterprété. Django fournit un raccourci. Voici la vue ``index()`` complète, réécrite ::"
 
-# 9ec8d48ccadd4b4f9ce7ef3702e0f6ba
+# ff4db0ce56c54315ba8e69d74af4d315
 #: ../../intro/tutorial03.txt:379
 msgid ""
 "Note that once we've done this in all these views, we no longer need to "
-"import :mod:`~django.template.loader`, :class:`~django.template.Context` and"
-" :class:`~django.http.HttpResponse` (you'll want to keep ``HttpResponse`` if"
-" you still have the stub methods for ``detail``, ``results``, and ``vote``)."
-msgstr "Notez que lorsque nous avons fait ceci dans toutes nos vues, nous n'avons plus à importer :mod:`~django.template.loader`, :class:`~django.template.Context` et :class:`~django.http.HttpResponse` (il faut conserver ``HttpResponse`` tant que les méthodes initiales pour ``detail``, ``results`` et ``vote`` sont présentes)."
+"import :mod:`~django.template.loader`, "
+":class:`~django.template.RequestContext` and "
+":class:`~django.http.HttpResponse` (you'll want to keep ``HttpResponse`` if "
+"you still have the stub methods for ``detail``, ``results``, and ``vote``)."
+msgstr "Notez que lorsque nous avons fait ceci dans toutes nos vues, nous n'avons plus à importer :mod:`~django.template.loader`, :class:`~django.template.RequestContext` et :class:`~django.http.HttpResponse` (il faut conserver ``HttpResponse`` tant que les méthodes initiales pour ``detail``, ``results`` et ``vote`` sont présentes)."
 
 # f01f37c5930b4d0cbe71fb6068863183
 #: ../../intro/tutorial03.txt:384
@@ -3862,7 +3957,7 @@ msgid ""
 "as its optional third argument. It returns an "
 ":class:`~django.http.HttpResponse` object of the given template rendered "
 "with the given context."
-msgstr "La fonction :func:`~django.shortcuts.render` prend comme premier paramètre l'objet requête, un nom de template comme deuxième paramètre et un dictionnaire comme troisième paramètre facultatif. Elle retourne un objet :class:`~django.http.HttpResponse` composé par le template interprété avec le contexte donné."
+msgstr "La fonction :func:`~django.shortcuts.render` prend comme premier paramètre l'objet requête, un nom de gabarit comme deuxième paramètre et un dictionnaire comme troisième paramètre facultatif. Elle retourne un objet :class:`~django.http.HttpResponse` composé par le gabarit interprété avec le contexte donné."
 
 # a113aeb3cd55464cad2f800a27da1b10
 #: ../../intro/tutorial03.txt:390
@@ -3889,7 +3984,7 @@ msgid ""
 "We'll discuss what you could put in that ``polls/detail.html`` template a "
 "bit later, but if you'd like to quickly get the above example working, a "
 "file containing just::"
-msgstr "Nous parlerons un peu plus tard de ce que pouvez mettre dans le template ``polls/detail.html``, mais si vous voulez avoir rapidement un exemple qui fonctionne, écrivez simplement ceci ::"
+msgstr "Nous parlerons un peu plus tard de ce que pourriez mettre dans le gabarit ``polls/detail.html``, mais si vous voulez avoir rapidement un exemple qui fonctionne, écrivez simplement ceci ::"
 
 # 607c72d9772f49429ef4fe1f98732439
 #: ../../intro/tutorial03.txt:413
@@ -3917,7 +4012,7 @@ msgid ""
 "which it passes to the :meth:`~django.db.models.query.QuerySet.get` function"
 " of the model's manager. It raises :exc:`~django.http.Http404` if the object"
 " doesn't exist."
-msgstr "La fonction :func:`~django.shortcuts.get_object_or_404` prend un modèle Django comme premier paramètre et un nombre arbitraire de paramètres mots-clés, qu'il passe à la méthode :meth:`~django.db.models.query.QuerySet.get` du manager du modèle. Elle lève une exception :exc:`~django.http.Http404` si l'objet n'existe pas."
+msgstr "La fonction :func:`~django.shortcuts.get_object_or_404` prend un modèle Django comme premier paramètre et un nombre arbitraire de paramètres mots-clés, qu'il transmet à la méthode :meth:`~django.db.models.query.QuerySet.get` du gestionnaire du modèle. Elle lève une exception :exc:`~django.http.Http404` si l'objet n'existe pas."
 
 # ecfaa70b282f422ba0ddce24639d088a
 #: ../../intro/tutorial03.txt:436
@@ -3927,7 +4022,7 @@ msgid ""
 ":exc:`~django.core.exceptions.ObjectDoesNotExist` exceptions at a higher "
 "level, or having the model API raise :exc:`~django.http.Http404` instead of "
 ":exc:`~django.core.exceptions.ObjectDoesNotExist`?"
-msgstr "Pourquoi utiliser une fonction auxiliaire :func:`~django.shortcuts.get_object_or_404` plutôt que d'intercepter automatiquement une exception :exc:`~django.core.exceptions.ObjectDoesNotExist` à un plus haut niveau, ou laisser l'API modèles lever une exception :exc:`~django.http.Http404` à la place de :exc:`~django.core.exceptions.ObjectDoesNotExist` ?"
+msgstr "Pourquoi utiliser une fonction auxiliaire :func:`~django.shortcuts.get_object_or_404` plutôt que d'intercepter automatiquement une exception :exc:`~django.core.exceptions.ObjectDoesNotExist` à un plus haut niveau, ou laisser l'API modèle lever une exception :exc:`~django.http.Http404` à la place de :exc:`~django.core.exceptions.ObjectDoesNotExist` ?"
 
 # cce02d9b700946dab86c85245dad6c2c
 #: ../../intro/tutorial03.txt:442
@@ -3975,10 +4070,18 @@ msgid ""
 "errors when :setting:`DEBUG` is set to ``False`` (in your settings module). "
 "If you do create the template, add at least some dummy content like \"Page "
 "not found\"."
-msgstr "Vous n'avez normalement pas à vous occuper d'écrire des vues 404. Si vous ne définissez pas ``handler404``, la vue intégrée :func:`django.views.defaults.page_not_found` est utilisée par défaut. Vous avez la possibilité de créer un template ``404.html`` à la racine de votre répertoire de templates. La vue 404 par défaut va utiliser ce template pour toutes les erreurs 404 lorsque :setting:`DEBUG` est défini à ``False`` (dans votre module settings). Si vous créez ce template, placez-y au minimum un contenu simple du genre « Page non trouvée »."
+msgstr "Vous n'avez normalement pas à vous occuper d'écrire des vues 404. Si vous ne définissez pas ``handler404``, la vue intégrée :func:`django.views.defaults.page_not_found` est utilisée par défaut. Vous avez la possibilité de créer un gabarit ``404.html`` à la racine de votre répertoire de gabarits. La vue 404 par défaut va alors utiliser ce gabarit pour toutes les erreurs 404 si la variable :setting:`DEBUG` est définie à ``False`` (dans le module settings). Si vous créez ce gabarit, placez-y au minimum un contenu simple du genre « Page non trouvée »."
 
-# 270995401af642eb8d6a2c469d911c5f
-#: ../../intro/tutorial03.txt:471
+# ef9f587f082d438b95b9d0b517b5e697
+#: ../../intro/tutorial03.txt:473
+msgid ""
+"If :setting:`DEBUG` is set to ``False``, all responses will be \"Bad Request"
+" (400)\" unless you specify the proper :setting:`ALLOWED_HOSTS` as well "
+"(something like ``['localhost', '127.0.0.1']`` for local development)."
+msgstr "Si :setting:`DEBUG` est défini à ``False``, toutes les réponses seront \"Bad Request (400)\" tant que vous ne renseignez pas correctement :setting:`ALLOWED_HOSTS` (quelque chose comme ``['localhost', '127.0.0.1']`` pour du développement local)."
+
+# 2012e51f1fda463784e0a961955dc4b1
+#: ../../intro/tutorial03.txt:478
 msgid "A couple more things to note about 404 views:"
 msgstr "Quelques éléments supplémentaires à savoir sur les vues 404 :"
 
@@ -3988,7 +4091,7 @@ msgid ""
 "If :setting:`DEBUG` is set to ``True`` (in your settings module) then your "
 "404 view will never be used (and thus the ``404.html`` template will never "
 "be rendered) because the traceback will be displayed instead."
-msgstr "Si :setting:`DEBUG` est défini à ``True`` (dans votre module settings), votre vue 404 ne sera jamais utilisée (ni le template ``404.html``) et le détail d'erreur sera affiché en lieu et place."
+msgstr "Si :setting:`DEBUG` est défini à ``True`` (dans le module settings), votre vue 404 ne sera jamais utilisée (ni le gabarit ``404.html``) et le détail des erreurs sera affiché en lieu et place."
 
 # 080760c86495442497ba52fbc88e9eaf
 #: ../../intro/tutorial03.txt:477
@@ -4015,12 +4118,12 @@ msgstr "De la même façon, l'URLconf racine peut définir une variable ``handle
 msgid ""
 "Likewise, you should create a ``500.html`` template at the root of your "
 "template directory and add some content like \"Something went wrong\"."
-msgstr "Sur le même principe, vous devriez créer un template ``500.html`` à la racine du répertoire de templates et le compléter avec du contenu du genre « Quelque chose s'est mal passé »."
+msgstr "Sur le même principe, vous devriez créer un gabarit ``500.html`` à la racine du répertoire de gabarits et le compléter avec du contenu du genre « Quelque chose s'est mal passé »."
 
 # 7544357774fc4c298480b06d9ed6d27f
 #: ../../intro/tutorial03.txt:491
 msgid "Use the template system"
-msgstr "Utilisation du système de templates"
+msgstr "Utilisation du système de gabarits"
 
 # 0f0627ad348f47a5bd826e7bda5372ce
 #: ../../intro/tutorial03.txt:493
@@ -4028,7 +4131,7 @@ msgid ""
 "Back to the ``detail()`` view for our poll application. Given the context "
 "variable ``poll``, here's what the ``polls/detail.html`` template might look"
 " like:"
-msgstr "Revenons à la vue ``detail()`` de notre application de sondage. Étant donné la variable de contexte ``poll``, voici à quoi le template ``polls/detail.html`` pourrait ressembler :"
+msgstr "Revenons à la vue ``detail()`` de notre application de sondage. Étant donné la variable de contexte ``poll``, voici à quoi le gabarit ``polls/detail.html`` pourrait ressembler :"
 
 # 769067354d7e4cef9ff55642b0219fc8
 #: ../../intro/tutorial03.txt:506
@@ -4038,7 +4141,7 @@ msgid ""
 "lookup on the object ``poll``. Failing that, it tries an attribute lookup --"
 " which works, in this case. If attribute lookup had failed, it would've "
 "tried a list-index lookup."
-msgstr "Le système de templates utilise une syntaxe d'accès aux attributs de variables par points. Dans cet exemple avec ``{{ poll.question }}``, Django commence par rechercher un dictionnaire dans l'objet ``poll``. En cas d'échec, il cherche un attribut -- qui fonctionne dans ce cas. Si la recherche d'attribut n'avait pas fonctionné, Django aurait essayé une recherche d'index sur une liste."
+msgstr "Le système de gabarits utilise une syntaxe d'accès aux attributs de variables à l'aide de points. Dans cet exemple avec ``{{ poll.question }}``, Django commence par rechercher un dictionnaire dans l'objet ``poll``. En cas d'échec, il cherche un attribut -- qui fonctionne dans ce cas. Si la recherche d'attribut n'avait pas fonctionné, Django aurait essayé une recherche d'index sur une liste."
 
 # d04f33247fd24d73b6957dc7fade38fd
 #: ../../intro/tutorial03.txt:512
@@ -4053,19 +4156,19 @@ msgstr "L'appel de méthode a lieu dans la boucle :ttag:`{% for %}<for>` : ``po
 #: ../../intro/tutorial03.txt:517
 msgid ""
 "See the :doc:`template guide </topics/templates>` for more about templates."
-msgstr "Voir le :doc:`guide des templates </topics/templates>` pour plus d'informations sur les templates."
+msgstr "Voir le :doc:`guide des gabarits </topics/templates>` pour plus d'informations sur les gabarits."
 
 # de36a281603b4ec29d8e014be4ab9ccc
 #: ../../intro/tutorial03.txt:520
 msgid "Removing hardcoded URLs in templates"
-msgstr "Suppression des URL codés en dur dans les templates"
+msgstr "Suppression des URL codés en dur dans les gabarits"
 
 # 825bf23b2c034cc98ae76c3eb2d275bc
 #: ../../intro/tutorial03.txt:522
 msgid ""
 "Remember, when we wrote the link to a poll in the ``polls/index.html`` "
 "template, the link was partially hardcoded like this:"
-msgstr "Rappelez-vous, lorsque nous avons ajouté le lien vers le sondage dans le template ``polls/index.html``, le lien a été partiellement codé en dur comme ceci :"
+msgstr "Rappelez-vous, lorsque nous avons ajouté le lien vers le sondage dans le gabarit ``polls/index.html``, le lien a été partiellement codé en dur comme ceci :"
 
 # 90329e1e36094a7fbd8440a2d91df270
 #: ../../intro/tutorial03.txt:529
@@ -4076,7 +4179,7 @@ msgid ""
 "functions in the ``polls.urls`` module, you can remove a reliance on "
 "specific URL paths defined in your url configurations by using the ``{% url "
 "%}`` template tag:"
-msgstr "Le problème de cette approche codée en dur et fortement couplée est qu'il devient fastidieux de modifier les URL dans des projets qui ont beaucoup de templates. Cependant, comme vous avez défini le paramètre « name » dans les fonctions :func:`~django.conf.urls.url` du module ``polls.urls``, vous pouvez supprimer la dépendance de chemins d'URL spécifiques définis dans les configurations d'URL en utilisant la balise de template ``{% url %}`` :"
+msgstr "Le problème de cette approche codée en dur et fortement couplée est qu'il devient fastidieux de modifier les URL dans des projets qui ont beaucoup de gabarits. Cependant, comme vous avez défini le paramètre « name » dans les fonctions :func:`~django.conf.urls.url` du module ``polls.urls``, vous pouvez supprimer la dépendance en chemins d'URL spécifiques définis dans les configurations d'URL en utilisant la balise de gabarit ``{% url %}`` :"
 
 # 40d3cc8111624b2495b79eee0a96f289
 #: ../../intro/tutorial03.txt:541
@@ -4085,7 +4188,7 @@ msgid ""
 "detail poll.id %}`` (without quotes) does, that means you're using a version"
 " of Django < 1.5. In this case, add the following declaration at the top of "
 "your template:"
-msgstr "Si ``{% url 'detail' poll.id %}`` (avec guillemets) ne fonctionne pas, mais que ``{% url detail poll.id %}`` (sans guillemets) fonctionne, cela signifie que vous utilisez une version de Django < 1.5, auquel cas vous devez ajouter la déclaration suivante au sommet de votre template :"
+msgstr "Si ``{% url 'detail' poll.id %}`` (avec guillemets) ne fonctionne pas, mais que ``{% url detail poll.id %}`` (sans guillemet) fonctionne, cela signifie que vous utilisez une version de Django < 1.5, auquel cas vous devez ajouter la déclaration suivante au sommet de votre gabarit :"
 
 # 849b7994ecc747ebbb69c3f593bb2cef
 #: ../../intro/tutorial03.txt:550
@@ -4101,7 +4204,7 @@ msgid ""
 "If you want to change the URL of the polls detail view to something else, "
 "perhaps to something like ``polls/specifics/12/`` instead of doing it in the"
 " template (or templates) you would change it in ``polls/urls.py``::"
-msgstr "Si vous souhaitez modifier l'URL de détail des sondages, par exemple sur le modèle ``polls/specifics/12/``, il suffit de faire la modification dans ``polls/urls.py`` au lieu de devoir toucher au contenu du ou des templates ::"
+msgstr "Si vous souhaitez modifier l'URL de détail des sondages, par exemple sur le modèle ``polls/specifics/12/``, il suffit de faire la modification dans ``polls/urls.py`` au lieu de devoir toucher au contenu du ou des gabarits ::"
 
 # dd758e7dfecf42e5b00f32db44a65a22
 #: ../../intro/tutorial03.txt:569
@@ -4117,7 +4220,7 @@ msgid ""
 " view, and so might an app on the same project that is for a blog. How does "
 "one make it so that Django knows which app view to create for a url when "
 "using the ``{% url %}`` template tag?"
-msgstr "Le projet du tutoriel ne contient qu'une seule application, ``polls``. Dans des projets Django réels, il peut y avoir cinq, dix, vingt applications ou plus. Comment Django arrive-t-il à différencier les noms d'URL entre elles ? Par exemple, l'application ``polls`` possède une vue ``detail`` et il se peut tout à fait qu'une autre application du même projet en possède aussi une. Comment peut-on indiquer à Django quelle vue d'application il doit appeler pour une URL lors de l'utilisation de la balise de template ``{% url %}`` ?"
+msgstr "Le projet du tutoriel ne contient qu'une seule application, ``polls``. Dans des projets Django réels, il peut y avoir cinq, dix, vingt applications ou plus. Comment Django arrive-t-il à différencier les noms d'URL entre elles ? Par exemple, l'application ``polls`` possède une vue ``detail`` et il se peut tout à fait qu'une autre application du même projet en possède aussi une. Comment peut-on indiquer à Django quelle vue d'application il doit appeler pour une URL lors de l'utilisation de la balise de gabarit ``{% url %}`` ?"
 
 # 798d0cca0d1d4b12bc4df092930570bc
 #: ../../intro/tutorial03.txt:578
@@ -4130,7 +4233,7 @@ msgstr "La réponse est donnée par l'ajout d'espaces de noms à votre URLconf r
 # bfbc26032ff74a8eac3b92541429e61b
 #: ../../intro/tutorial03.txt:592
 msgid "Now change your ``polls/index.html`` template from:"
-msgstr "Modifiez maintenant la partie suivante du template `polls/index.html`` :"
+msgstr "Modifiez maintenant la partie suivante du gabarit `polls/index.html`` :"
 
 # 06ea39e1a2334b60ac7a6cf7b5d62ae1
 #: ../../intro/tutorial03.txt:598
@@ -4156,7 +4259,7 @@ msgid ""
 "This tutorial begins where :doc:`Tutorial 3 </intro/tutorial03>` left off. "
 "We're continuing the Web-poll application and will focus on simple form "
 "processing and cutting down our code."
-msgstr "Ce tutoriel commence là où le :doc:`tutoriel 3 </intro/tutorial03>` s’achève. Nous continuons l’application de sondage Web et allons nous focaliser sur la gestion des formulaires et sur la réduction du code."
+msgstr "Ce tutoriel commence là où le :doc:`tutoriel 3 </intro/tutorial03>` s’achève. Nous continuons l’application de sondage Web et allons nous focaliser sur la gestion de formulaire simple et sur la réduction du code."
 
 # 5b2e67ac293449159847d8ab0be4eb81
 #: ../../intro/tutorial04.txt:10
@@ -4168,7 +4271,7 @@ msgstr "Écriture d'un formulaire simple"
 msgid ""
 "Let's update our poll detail template (\"polls/detail.html\") from the last "
 "tutorial, so that the template contains an HTML ``<form>`` element:"
-msgstr "Nous allons mettre à jour le template de la page de détail (« polls/details.html ») du tutoriel précédent, de manière à ce que le template contienne une balise HTML ``<form>`` :"
+msgstr "Nous allons mettre à jour le gabarit de la page de détail (« polls/details.html ») du tutoriel précédent, de manière à ce que le gabarit contienne une balise HTML ``<form>`` :"
 
 # 313baa0645c24eda8afc1236f57bb79d
 #: ../../intro/tutorial04.txt:30
@@ -4183,7 +4286,7 @@ msgid ""
 "``name`` of each radio button is ``\"choice\"``. That means, when somebody "
 "selects one of the radio buttons and submits the form, it'll send the POST "
 "data ``choice=3``. This is the basic concept of HTML forms."
-msgstr "Ce template affiche un bouton radio pour chaque choix de sondage. L'attribut ``value`` de chaque bouton radio correspond à l'ID du vote choisi. Le nom (``name``) de chaque bouton radio est ``\"choice\"``. Cela signifie que lorsque quelqu'un sélectionne l'un des boutons radio et valide le formulaire, les données POST ``choice=3`` seront envoyées. Ce sont les concepts de base des formulaires HTML."
+msgstr "Ce gabarit affiche un bouton radio pour chaque choix de sondage. L'attribut ``value`` de chaque bouton radio correspond à l'ID du vote choisi. Le nom ``name`` de chaque bouton radio est ``\"choice\"``. Cela signifie que lorsque quelqu'un sélectionne l'un des boutons radio et valide le formulaire, les données POST ``choice=3`` seront envoyées. Ce sont les concepts de base des formulaires HTML."
 
 # 5e42e62ea1414603b70db4379a628fad
 #: ../../intro/tutorial04.txt:38
@@ -4212,7 +4315,7 @@ msgid ""
 "system for protecting against it. In short, all POST forms that are targeted"
 " at internal URLs should use the :ttag:`{% csrf_token %}<csrf_token>` "
 "template tag."
-msgstr "Comme nous créons un formulaire POST (qui modifie potentiellement des données), il faut se préoccuper des attaques inter-sites. Heureusement, vous ne devez pas réfléchir trop longtemps car Django offre un moyen très simple à utiliser pour s'en protéger. En bref, tous les formulaires POST destinés à des URL internes doivent utiliser la balise de template :ttag:`{% csrf_token %}<csrf_token>`."
+msgstr "Comme nous créons un formulaire POST (qui modifie potentiellement des données), il faut se préoccuper des attaques inter-sites. Heureusement, vous ne devez pas réfléchir trop longtemps car Django offre un moyen très simple à utiliser pour s'en protéger. En bref, tous les formulaires POST destinés à des URL internes doivent utiliser la balise de gabarit :ttag:`{% csrf_token %}<csrf_token>`."
 
 # 9662e8e3984e4814b4542962378bfd17
 #: ../../intro/tutorial04.txt:55
@@ -4233,7 +4336,7 @@ msgstr "Nous avions également créé une implémentation rudimentaire de la fon
 #: ../../intro/tutorial04.txt:87
 msgid ""
 "This code includes a few things we haven't covered yet in this tutorial:"
-msgstr "Ce code contient quelques points encore non traités dans ce tutoriel :"
+msgstr "Ce code contient quelques points encore non abordés dans ce tutoriel :"
 
 # 3fc5408eae5a4f82a38e7d82f0c800c7
 #: ../../intro/tutorial04.txt:89
@@ -4261,7 +4364,7 @@ msgid ""
 "``choice`` wasn't provided in POST data. The above code checks for "
 ":exc:`~exceptions.KeyError` and redisplays the poll form with an error "
 "message if ``choice`` isn't given."
-msgstr "``request.POST['choice']`` lèvera une exception :exc:`~exceptions.KeyError` si ``choice`` n'est pas spécifié dans les données POST. Le code ci-dessus vérifie qu'une exception :exc:`~exceptions.KeyError` n'est pas levée et réaffiche le formulaire de sondage avec un message d'erreur si ``choice`` n'est pas rempli."
+msgstr "``request.POST['choice']`` lèvera une exception :exc:`~exceptions.KeyError` si ``choice`` n'est pas spécifié dans les données POST. Le code ci-dessus vérifie qu'une exception :exc:`~exceptions.KeyError` n'est pas levée et réaffiche le formulaire de sondage avec un message d'erreur si ``choice`` n'est pas fourni."
 
 # 4a2cb0bce0004507b655ebb57115f91e
 #: ../../intro/tutorial04.txt:106
@@ -4293,7 +4396,7 @@ msgid ""
 "portion of the URL pattern that points to that view. In this case, using the"
 " URLconf we set up in Tutorial 3, this "
 ":func:`~django.core.urlresolvers.reverse` call will return a string like ::"
-msgstr "Dans cet exemple, nous utilisons la fonction :func:`~django.core.urlresolvers.reverse` dans le constructeur de :class:`~django.http.HttpResponseRedirect`. Cette fonction nous évite de coder en dur une URL dans une vue. On lui donne en paramètre la vue vers laquelle nous voulons rediriger et la partie variable de l'URL qui pointe vers cette vue. Dans ce cas, en utilisant l'URLconf défini dans la partie 3 de ce tutoriel, l'appel de la fonction :func:`~django.core.urlresolvers.reverse` va renvoyer une chaîne de caractères ::"
+msgstr "Dans cet exemple, nous utilisons la fonction :func:`~django.core.urlresolvers.reverse` dans le constructeur de :class:`~django.http.HttpResponseRedirect`. Cette fonction nous évite de coder en dur une URL dans une vue. On lui donne en paramètre la vue vers laquelle nous voulons rediriger ainsi que la partie variable de l'URL qui pointe vers cette vue. Dans ce cas, en utilisant l'URLconf défini dans la partie 3 de ce tutoriel, l'appel de la fonction :func:`~django.core.urlresolvers.reverse` va renvoyer la chaîne de caractères ::"
 
 # 48908193b86844e29d9cead123fa1620
 #: ../../intro/tutorial04.txt:129
@@ -4324,12 +4427,12 @@ msgid ""
 "This is almost exactly the same as the ``detail()`` view from :doc:`Tutorial"
 " 3 </intro/tutorial03>`. The only difference is the template name. We'll fix"
 " this redundancy later."
-msgstr "C'est presque exactement la même que la vue ``detail()`` du :doc:`tutoriel 3</intro/tutorial03>`. La seule différence est le nom du template. Nous éliminerons cette redondance plus tard."
+msgstr "C'est presque exactement la même que la vue ``detail()`` du :doc:`tutoriel 3</intro/tutorial03>`. La seule différence est le nom du gabarit. Nous éliminerons cette redondance plus tard."
 
 # 5491beda068841029a0b1e14dc53dce3
 #: ../../intro/tutorial04.txt:147
 msgid "Now, create a ``polls/results.html`` template:"
-msgstr "Écrivons maintenant le template ``polls/results.html`` :"
+msgstr "Écrivons maintenant le gabarit ``polls/results.html`` :"
 
 # 40edbbca914d4020b754072e5254b72c
 #: ../../intro/tutorial04.txt:161
@@ -4360,7 +4463,7 @@ msgid ""
 "from the database according to a parameter passed in the URL, loading a "
 "template and returning the rendered template. Because this is so common, "
 "Django provides a shortcut, called the \"generic views\" system."
-msgstr "Ces vues représentent un cas classique du développement Web : récupérer les données depuis la base de données suivant un paramètre contenu dans l'URL, charger un template et renvoyer le template interprété. Ce cas est tellement classique que Django propose un raccourci, appelé le système de « vues génériques »."
+msgstr "Ces vues représentent un cas classique du développement Web : récupérer les données depuis la base de données suivant un paramètre contenu dans l'URL, charger un gabarit et renvoyer le gabarit interprété. Ce cas est tellement classique que Django propose un raccourci, appelé le système de « vues génériques »."
 
 # b5e8c3d72bf246b6ab9fb1676180a3ca
 #: ../../intro/tutorial04.txt:177
@@ -4396,6 +4499,11 @@ msgstr "Introduire de nouvelles vues basées sur les vues génériques de Django
 #: ../../intro/tutorial04.txt:190
 msgid "Read on for details."
 msgstr "Lisez la suite pour plus de détails."
+
+# 1479bd62c1c84b2dbc33222fe6a08574
+#: ../../intro/tutorial04.txt:192
+msgid "Why the code-shuffle?"
+msgstr "Pourquoi ces changements de code ?"
 
 # e02b02cb992846c0a334b070ddcba6ab
 #: ../../intro/tutorial04.txt:194
@@ -4433,7 +4541,7 @@ msgid ""
 "Next, we're going to remove our old ``index``, ``detail``, and ``results`` "
 "views and use Django's generic views instead. To do so, open the "
 "``polls/views.py`` file and change it like so::"
-msgstr "Ensuite, nous allons enlever les anciennes vues ``index``, ``detail`` et ``results`` et utiliser à la place des vues génériques de Django. Pour cela, ouvrez le fichier ``polls/views.py`` et modifiez-le de cette façon ::"
+msgstr "Ensuite, nous allons supprimer les anciennes vues ``index``, ``detail`` et ``results`` et utiliser à la place des vues génériques de Django. Pour cela, ouvrez le fichier ``polls/views.py`` et modifiez-le de cette façon ::"
 
 # 5e4fdf1c95d44aeea14974b5e7a408f2
 #: ../../intro/tutorial04.txt:253
@@ -4472,7 +4580,7 @@ msgid ""
 "that the results view and the detail view have a different appearance when "
 "rendered, even though they're both a "
 ":class:`~django.views.generic.detail.DetailView` behind the scenes."
-msgstr "Par défaut, la vue générique :class:`~django.views.generic.detail.DetailView` utilise un template appelé ``<nom app>/<nom modèle>_detail.html``. Dans notre cas, elle va utiliser le template ``\"polls/poll_detail.html\"``. L'attribut ``template_name`` est utilisé pour signifier à Django d'utiliser un nom de template spécifique plutôt que le nom de template par défaut. Nous avons aussi indiqué le paramètre ``template_name`` pour la vue de liste ``results``, ce qui permet de différencier l'apparence du rendu des vues « results » et « detail », même s'il s'agit dans les deux cas de vues :class:`~django.views.generic.detail.DetailView` à la base."
+msgstr "Par défaut, la vue générique :class:`~django.views.generic.detail.DetailView` utilise un gabarit appelé ``<nom app>/<nom modèle>_detail.html``. Dans notre cas, elle va utiliser le gabarit ``\"polls/poll_detail.html\"``. L'attribut ``template_name`` est utilisé pour signifier à Django d'utiliser un nom de gabarit spécifique plutôt que le nom de gabarit par défaut. Nous avons aussi indiqué le paramètre ``template_name`` pour la vue de liste ``results``, ce qui permet de différencier l'apparence du rendu des vues « results » et « detail », même s'il s'agit dans les deux cas de vues :class:`~django.views.generic.detail.DetailView` à la base."
 
 # e393a07194df44e4903dee3ad5dd09f1
 #: ../../intro/tutorial04.txt:277
@@ -4481,7 +4589,7 @@ msgid ""
 "uses a default template called ``<app name>/<model name>_list.html``; we use"
 " ``template_name`` to tell :class:`~django.views.generic.list.ListView` to "
 "use our existing ``\"polls/index.html\"`` template."
-msgstr "De la même façon, la vue générique :class:`~django.views.generic.list.ListView` utilise par défaut un template appelé ``<nom app>/<nom modèle>_list.html`` ; nous utilisons  ``template_name`` pour indiquer à :class:`~django.views.generic.list.ListView` d'utiliser notre template existant ``\"polls/index.html\"``."
+msgstr "De la même façon, la vue générique :class:`~django.views.generic.list.ListView` utilise par défaut un gabarit appelé ``<nom app>/<nom modèle>_list.html`` ; nous utilisons  ``template_name`` pour indiquer à :class:`~django.views.generic.list.ListView` d'utiliser notre gabarit existant ``\"polls/index.html\"``."
 
 # e6d206ddffa94824871421ae04d5a781
 #: ../../intro/tutorial04.txt:283
@@ -4497,7 +4605,7 @@ msgid ""
 "approach, you could change your templates to match the new default context "
 "variables -- but it's a lot easier to just tell Django to use the variable "
 "you want."
-msgstr "Dans les parties précédentes de ce tutoriel, les templates ont été renseignés avec un contexte qui contenait les variables de contexte ``poll`` et ``latest_poll_list``. Pour ``DetailView``, la variable ``poll`` est fournie automatiquement ; comme nous utilisons un modèle nommé ``Poll``, Django sait donner un nom approprié à la variable de contexte. Cependant, pour ``ListView``, la variable de contexte générée automatiquement s'appelle ``poll_list``. Pour changer cela, nous fournissons l'attribut ``context_object_name`` pour indiquer que nous souhaitons plutôt la nommer ``latest_poll_list``. Il serait aussi possible de modifier les templates en utilisant les nouveaux nom de variables par défaut, mais il est beaucoup plus simple d'indiquer à Django les noms de variables que nous souhaitons."
+msgstr "Dans les parties précédentes de ce tutoriel, les gabarits ont été renseignés avec un contexte qui contenait les variables de contexte ``poll`` et ``latest_poll_list``. Pour ``DetailView``, la variable ``poll`` est fournie automatiquement ; puisque nous utilisons un modèle nommé ``Poll``, Django sait donner un nom approprié à la variable de contexte. Cependant, pour ``ListView``, la variable de contexte générée automatiquement s'appelle ``poll_list``. Pour changer cela, nous fournissons l'attribut ``context_object_name`` pour indiquer que nous souhaitons plutôt la nommer ``latest_poll_list``. Il serait aussi possible de modifier les gabarits en utilisant les nouveaux nom de variables par défaut, mais il est beaucoup plus simple d'indiquer à Django les noms de variables que nous souhaitons."
 
 # 64f63f09593e4935bea8a7e4be7e9322
 #: ../../intro/tutorial04.txt:295
@@ -4534,7 +4642,7 @@ msgstr "Ce tutoriel commence là où le :doc:`tutoriel 4 </intro/tutorial04>` s'
 # 15832cdaa9db4fd9a26bc44e7184d7dd
 #: ../../intro/tutorial05.txt:10
 msgid "Introducing automated testing"
-msgstr "Introduction des tests automatisés"
+msgstr "Introduction aux tests automatisés"
 
 # 1bc36ed745b94856a6f76b859f091dfd
 #: ../../intro/tutorial05.txt:13
@@ -4544,7 +4652,7 @@ msgstr "Que sont les tests automatisés ?"
 # f0734e9f9bbf4216b540ea39f54749c0
 #: ../../intro/tutorial05.txt:15
 msgid "Tests are simple routines that check the operation of your code."
-msgstr "Les tests sont des routines simples qui vérifient le fonctionnement de votre code."
+msgstr "Les tests sont de simples routines qui vérifient le fonctionnement de votre code."
 
 # f8fdaf3f7e7b4af09aa99693946f694e
 #: ../../intro/tutorial05.txt:17
@@ -4556,7 +4664,7 @@ msgid ""
 "from the kind of testing you did earlier in :doc:`Tutorial 1 "
 "</intro/tutorial01>`, using the shell to examine the behavior of a method, "
 "or running the application and entering data to check how it behaves."
-msgstr "Les tests peuvent se faire à différents niveaux. Certains tests s'appliquent à un petit détail - *est-ce que tel modèle renvoie les valeurs attendues ?*, alors que d'autres examinent le fonctionnement global du logiciel - *est-ce qu'une suite d'activités d'un utilisateur sur le site produit le résultat désiré ?* C'est le même genre de test qui a été pratiqué précédemment dans le :doc:`tutoriel 1 </intro/tutorial01>`, en utilisant le shell pour examiner le comportement d'une méthode ou de lancer l'application et de saisir des données pour contrôler son comportement."
+msgstr "Les tests peuvent se faire à différents niveaux. Certains tests s'appliquent à un petit détail - *est-ce que telle méthode d'un modèle renvoie les valeurs attendues ?*, alors que d'autres examinent le fonctionnement global du logiciel - *est-ce qu'une suite d'activités d'un utilisateur sur le site produit le résultat désiré ?* C'est le même genre de test qui a été pratiqué précédemment dans le :doc:`tutoriel 1 </intro/tutorial01>`, en utilisant le shell pour examiner le comportement d'une méthode ou de lancer l'application et de saisir des données pour contrôler son comportement."
 
 # eccbcfe7b283419b8b064115b26da535
 #: ../../intro/tutorial05.txt:25
@@ -4566,7 +4674,7 @@ msgid ""
 "changes to your app, you can check that your code still works as you "
 "originally intended, without having to perform time consuming manual "
 "testing."
-msgstr "Ce qui est différent dans les tests *automatisés*, c'est que le travail du test est fait pour vous par le système. Vous créez une fois un ensemble de tests, puis au fur et à mesure des modifications de votre application, vous pouvez contrôler que votre code fonctionne toujours tel qu'il devrait, sans devoir effectuer des tests manuels fastidieux."
+msgstr "Ce qui est différent dans les tests *automatisés*, c'est que le travail du test est fait pour vous par le système. Vous créez une seule fois un ensemble de tests, puis au fur et à mesure des modifications de votre application, vous pouvez contrôler que votre code fonctionne toujours tel qu'il devrait, sans devoir effectuer des tests manuels fastidieux."
 
 # cd7a1dfecb334ac7822d50dbaebe7620
 #: ../../intro/tutorial05.txt:31
@@ -4602,7 +4710,7 @@ msgid ""
 "Up to a certain point, 'checking that it seems to work' will be a "
 "satisfactory test. In a more sophisticated application, you might have "
 "dozens of complex interactions between components."
-msgstr "Jusqu'à un certain point, « contrôler que cela fonctionne apparemment » est un test satisfaisant. Dans une application plus sophistiquée, vous pouvez rencontrer des dizaines d'interactions complexes entre les différentes composants."
+msgstr "Jusqu'à un certain point, « contrôler que cela fonctionne apparemment » est un test satisfaisant. Dans une application plus sophistiquée, vous pouvez rencontrer des dizaines d'interactions complexes entre les différents composants."
 
 # 65f03d3b9cb74fa395cf5a98ca478347
 #: ../../intro/tutorial05.txt:51
@@ -4612,7 +4720,7 @@ msgid ""
 "mean running through your code's functionality with twenty different "
 "variations of your test data just to make sure you haven't broken something "
 "- not a good use of your time."
-msgstr "Une modification dans n'importe lequel de ces composants pourrait avoir des conséquences inattendues sur le comportement de l'application. Contrôler que « cela semble marcher » pourrait signifier la vérification de vingt combinaisons différentes de données de test simplement pour être sûr que vous n'avez rien cassé, ce qui n'est pas un bon usage de votre temps."
+msgstr "Une modification dans n'importe lequel de ces composants pourrait avoir des conséquences inattendues sur le comportement de l'application. Contrôler que « cela semble marcher » pourrait signifier la vérification de vingt combinaisons différentes de données de test simplement pour être sûr que vous n'avez rien cassé - vous avez certainement mieux à faire."
 
 # 1937bef684a64b7399521123300ab05e
 #: ../../intro/tutorial05.txt:57
@@ -4620,7 +4728,7 @@ msgid ""
 "That's especially true when automated tests could do this for you in "
 "seconds. If something's gone wrong, tests will also assist in identifying "
 "the code that's causing the unexpected behavior."
-msgstr "C'est particulièrement vrai lorsque les tests automatisés pourraient faire cela pour vous en quelques secondes. Si quelque chose se passe mal, les tests vous aideront à identifier le code qui produit le comportement inapproprié."
+msgstr "C'est particulièrement vrai alors que des tests automatisés pourraient faire cela pour vous en quelques secondes. Si quelque chose se passe mal, les tests vous aideront à identifier le code qui produit le comportement inapproprié."
 
 # 03f0c596bf454bcb89199addc5a98322
 #: ../../intro/tutorial05.txt:61
@@ -4628,7 +4736,7 @@ msgid ""
 "Sometimes it may seem a chore to tear yourself away from your productive, "
 "creative programming work to face the unglamorous and unexciting business of"
 " writing tests, particularly when you know your code is working properly."
-msgstr "Parfois, le fait de laisser de côté votre travail de programmation productif et créatif pour affronter la tâche ingrate et peu motivante de l'écriture de tests peut ressembler à une corvée, spécialement lorsque vous savez que votre code fonctionne correctement."
+msgstr "Parfois, le fait de laisser de côté votre productif et créatif travail de programmation pour affronter la tâche ingrate et peu motivante de l'écriture de tests, peut ressembler à une corvée, spécialement lorsque vous savez que votre code fonctionne correctement."
 
 # 079e9465c92e444a89cefc874c73e486
 #: ../../intro/tutorial05.txt:65
@@ -4655,7 +4763,7 @@ msgid ""
 "Without tests, the purpose or intended behavior of an application might be "
 "rather opaque. Even when it's your own code, you will sometimes find "
 "yourself poking around in it trying to find out what exactly it's doing."
-msgstr "Sans tests, le but ou le comportement attendu d'une application pourrait rester obscur. Même quand il s'agit de votre propre code, vous vous retrouverez parfois à fouiner un peu partout pour trouver la raison de tel ou tel fonctionnement."
+msgstr "Sans tests, le but ou le comportement attendu d'une application pourrait rester obscur. Même quand il s'agit de votre propre code, vous vous retrouverez parfois à fouiner un peu partout pour retrouver ce qu'il fait au juste."
 
 # ebe76679f61b41da990ef6434de52d8b
 #: ../../intro/tutorial05.txt:78
@@ -4705,7 +4813,7 @@ msgstr "Les points précédents sont écrits du point de vue d'un développeur i
 # 8bf07000da34418496fc8504f89de827
 #: ../../intro/tutorial05.txt:103
 msgid "Basic testing strategies"
-msgstr "Stratégies de tests"
+msgstr "Stratégies élémentaires pour les tests"
 
 # 1ec49b665b9e4396a25ed3300d46db9b
 #: ../../intro/tutorial05.txt:105
@@ -4764,14 +4872,14 @@ msgid ""
 "if the ``Poll`` was published within the last day (which is correct) but "
 "also if the ``Poll``'s ``pub_date`` field is in the future (which certainly "
 "isn't)."
-msgstr "Heureusement, il y a un petit bogue dans l'application ``polls``, tout prêt à être corrigé : la méthode ``Poll.was_published_recently()`` renvoie ``True`` si l'objet ``Poll`` a été publié durant le jour précédent (ce qui est correct), mais également si le champ ``pub_date`` de ``Poll`` est dans le futur (ce qui n'est évidemment pas juste)."
+msgstr "Heureusement, il y a un petit bogue dans l'application ``polls``, tout prêt à être corrigé : la méthode ``Poll.was_published_recently()`` renvoie ``True`` si l'objet ``Poll`` a été publié au cours des dernières 24 heures (ce qui est correct), mais également si le champ ``pub_date`` de ``Poll`` est dans le futur (ce qui n'est évidemment pas juste)."
 
 # fc180066e53749cbba63a590553b988a
 #: ../../intro/tutorial05.txt:137
 msgid ""
 "You can see this in the Admin; create a poll whose date lies in the future; "
 "you'll see that the ``Poll`` change list claims it was published recently."
-msgstr "Vous pouvez constatez cela dans l'interface d'administration ; créez un sondage dont la date est dans le futur ; vous verrez dans la liste pour modification des sondages que celui-ci est marqué comme publié récemment."
+msgstr "Vous pouvez constater cela dans l'interface d'administration ; créez un sondage dont la date est dans le futur ; vous verrez dans la liste pour modification des sondages que celui-ci est marqué comme publié récemment."
 
 # f5ea89bf1226419d883e8c894662a977
 #: ../../intro/tutorial05.txt:140
@@ -4786,7 +4894,7 @@ msgstr "Étant donné que ce qui est dans le futur n'est pas « récent », c'
 # 4c1907f519574da69bcebf2ad057b1fd
 #: ../../intro/tutorial05.txt:154
 msgid "Create a test to expose the bug"
-msgstr "Création d'un test pour démontrer le bogue"
+msgstr "Création d'un test pour révéler le bogue"
 
 # edd2f1833be74a219bf6bede5ddfeb89
 #: ../../intro/tutorial05.txt:156
@@ -4908,7 +5016,7 @@ msgstr "puis lancez à nouveau le test ::"
 msgid ""
 "After identifying a bug, we wrote a test that exposes it and corrected the "
 "bug in the code so our test passes."
-msgstr "Après avoir identifié un bogue, nous avons écrit un test qui l'expose et nous avons corrigé l'erreur dans le code pour que notre test réussisse."
+msgstr "Après avoir identifié un bogue, nous avons écrit un test qui le révèle et nous avons corrigé l'erreur dans le code pour que notre test réussisse."
 
 # 5c194f569b15436dbc7516b7993b4d19
 #: ../../intro/tutorial05.txt:257
@@ -5028,7 +5136,7 @@ msgid ""
 " Note that this method *does not* setup a test database, so the following "
 "will be run against the existing database and the output may differ slightly"
 " depending on what polls you already created."
-msgstr ":meth:`~django.test.utils.setup_test_environment` installe un moteur de rendu de template qui va nous permettre d'examiner certains attributs supplémentaires des réponses, tels que ``response.context`` qui n'est normalement pas disponible. Notez que cette méthode *ne crée pas* de base de données de test, ce qui signifie que ce qui suit va être appliqué à la base de données existante et que par conséquent, le résultat peut légèrement différer en fonction des sondages que vous avez déjà créés."
+msgstr ":meth:`~django.test.utils.setup_test_environment` installe un moteur de rendu de gabarit qui va nous permettre d'examiner certains attributs supplémentaires des réponses, tels que ``response.context`` qui n'est normalement pas disponible. Notez que cette méthode *ne crée pas* de base de données de test, ce qui signifie que ce qui suit va être appliqué à la base de données existante et que par conséquent, le résultat peut légèrement différer en fonction des sondages que vous avez déjà créés."
 
 # 98b215cfabc940d2b418a0db0ca6dcbc
 #: ../../intro/tutorial05.txt:337
@@ -5036,7 +5144,7 @@ msgid ""
 "Next we need to import the test client class (later in ``tests.py`` we will "
 "use the :class:`django.test.TestCase` class, which comes with its own "
 "client, so this won't be required)::"
-msgstr "Ensuite, il est nécessaire d'importer la classe du client de test (plus loin dans ``tests.py``, nous utiliserons la classe :class:`django.test.TestCase` qui apporte son propre client, ce qui évitera cette étape) ::"
+msgstr "Ensuite, il est nécessaire d'importer la classe Client de test (plus loin dans ``tests.py``, nous utiliserons la classe :class:`django.test.TestCase` qui apporte son propre client, ce qui évitera cette étape) ::"
 
 # 66be16e4e9714648b53afdb1d8797965
 #: ../../intro/tutorial05.txt:345
@@ -5060,7 +5168,7 @@ msgstr "La liste des sondages montre aussi les sondages pas encore publiés (c'e
 msgid ""
 "In :doc:`Tutorial 4 </intro/tutorial04>` we introduced a class-based view, "
 "based on :class:`~django.views.generic.list.ListView`::"
-msgstr "Dans le :doc:`tutoriel 4 </intro/tutorial04>`, nous avons introduit une vue basée sur une classe, basée sur :class:`~django.views.generic.list.ListView` ::"
+msgstr "Dans le :doc:`tutoriel 4 </intro/tutorial04>`, nous avons introduit une vue basée sur la classe :class:`~django.views.generic.list.ListView` ::"
 
 # 4b2bb8a78c6f4f3ba86e6b7a899f13cf
 #: ../../intro/tutorial05.txt:392
@@ -5104,7 +5212,7 @@ msgid ""
 "published are listed.  You don't want to have to do that *every single time "
 "you make any change that might affect this* - so let's also create a test, "
 "based on our shell session above."
-msgstr "Vous pouvez maintenant vérifier vous-même que tout fonctionne comme prévu en lançant runserver et en accédant au site depuis votre navigateur. Créez des sondages avec des dates dans le passé et dans le futur et vérifiez que seuls ceux qui ont été publiés apparaissent dans la liste. Mais vous ne voulez pas faire ce travail de test manuel *chaque fois que vous effectuez une modification qui pourrait affecter ce comportement*, créons donc aussi un test basé sur le contenu de notre session shell précédente."
+msgstr "Vous pouvez maintenant vérifier vous-même que tout fonctionne comme prévu en lançant la commande runserver et en accédant au site depuis votre navigateur. Créez des sondages avec des dates dans le passé et dans le futur et vérifiez que seuls ceux qui ont été publiés apparaissent dans la liste. Mais vous ne voulez pas faire ce travail de test manuel *chaque fois que vous effectuez une modification qui pourrait affecter ce comportement*, créons donc aussi un test basé sur le contenu de notre session shell précédente."
 
 # 2672985039be41e6b4453fe2bcd1a348
 #: ../../intro/tutorial05.txt:426
@@ -5169,7 +5277,7 @@ msgstr "Et ainsi de suite. En pratique, nous utilisons les tests pour raconter d
 # b682a461dedf409891584c525fcd690c
 #: ../../intro/tutorial05.txt:521
 msgid "Testing the ``DetailView``"
-msgstr "Test de "
+msgstr "Test de  ``DetailView``"
 
 # 955dd138849342c38591331e956d2616
 #: ../../intro/tutorial05.txt:523
@@ -5198,7 +5306,7 @@ msgid ""
 "We ought to add a similar ``get_queryset`` method to ``ResultsView`` and "
 "create a new test class for that view. It'll be very similar to what we have"
 " just created; in fact there will be a lot of repetition."
-msgstr "Nous devrions ajouter une telle méthode ``get_queryset`` à ``ResultsView`` et créer une nouvelle classe de test pour cette vue. Elle sera très semblable à celle que nous venons de créer ; en fait, il y aura beaucoup de répétition."
+msgstr "Nous devrions ajouter une méthode ``get_queryset`` similaire à ``ResultsView`` et créer une nouvelle classe de test pour cette vue. Elle sera très semblable à celle que nous venons de créer ; en fait, il y aura beaucoup de répétition."
 
 # 94767f1ddba341ccae378e1a1a6e5024
 #: ../../intro/tutorial05.txt:566
@@ -5209,7 +5317,7 @@ msgid ""
 "such ``Polls``. Our tests would create a ``Poll`` without ``Choices`` and "
 "then test that it's not published, as well as create a similar ``Poll`` "
 "*with* ``Choices``, and test that it *is* published."
-msgstr "Nous pourrions aussi améliorer notre application d'autres manières, tout en ajoutant des tests durant le développement. Par exemple, il est stupide de pouvoir publié des sondages sur le site sans choix. Nos vues pourraient donc vérifier cela et exclure de tels sondages. Les tests créeraient un sondage sans choix et testeraient qu'il n'est pas publié ; de même, il s'agirait de créer un sondage *avec* des choix et tester qu'il *est* bien publié."
+msgstr "Nous pourrions aussi améliorer notre application d'autres manières, en ajoutant des tests au fur et à mesure. Par exemple, il est stupide de pouvoir publier des sondages sur le site sans choix. Nos vues pourraient donc vérifier cela et exclure de tels sondages. Les tests créeraient un sondage sans choix et testeraient qu'il n'est pas publié ; de même, il s'agirait de créer un sondage *avec* des choix et tester qu'il *est* bien publié."
 
 # 03a5aca0c1c3423c8bf864fceab3c2ce
 #: ../../intro/tutorial05.txt:573
@@ -5219,7 +5327,7 @@ msgid ""
 "the software to accomplish this should be accompanied by a test, whether you"
 " write the test first and then make the code pass the test, or work out the "
 "logic in your code first and then write a test to prove it."
-msgstr "Peut-être que les utilisateurs connectés dans l'interface d'administration pourraient être autorisés à voir les sondages non publiés, mais pas les visiteurs ordinaires. C'est toujours le même principe, tout ce qui est ajouté au logiciel devrait être accompagné par un test, que ce soit en écrivant d'abord le test puis en écrivant le code pour faire passer le test, ou en travaillant d'abord sur la logique du code et en écrivant ensuite le test pour prouver le bon fonctionnement."
+msgstr "Peut-être que les utilisateurs connectés dans l'interface d'administration pourraient être autorisés à voir les sondages non publiés, mais pas les visiteurs ordinaires. C'est toujours le même principe, tout ce qui est ajouté au logiciel devrait être accompagné par un test, que ce soit en écrivant d'abord le test puis en écrivant le code pour réussir le test, ou en travaillant d'abord sur la logique du code et en écrivant ensuite le test pour prouver le bon fonctionnement."
 
 # dfaf176d99524237822beecab7b1611a
 #: ../../intro/tutorial05.txt:579
@@ -5340,7 +5448,7 @@ msgstr "Une bonne façon de détecter des parties d'application non couvertes pa
 msgid ""
 ":doc:`Testing Django applications </topics/testing/index>` has comprehensive"
 " information about testing."
-msgstr ":doc:`Tester les applications Django </topics/testing/index>` contient des informations complètes au sujet des tests."
+msgstr ":doc:`Django et les tests </topics/testing/index>` contient des informations complètes au sujet des tests."
 
 # e24c143a1ad14e74858693b51986da6a
 #: ../../intro/tutorial05.txt:644
@@ -5354,7 +5462,7 @@ msgstr "Pour des détails complets sur les tests, consultez :doc:`Django et les 
 msgid ""
 "When you're comfortable with testing Django views, read :doc:`part 6 of this"
 " tutorial</intro/tutorial06>` to learn about static files management."
-msgstr "Lorsque vous êtes à l'aise avec les tests des vues Django, lisez la :doc:`6ème partie de ce tutoriel</intro/tutorial06>` pour en savoir plus sur la gestion des fichiers statiques."
+msgstr "Lorsque vous êtes à l'aise avec les tests de vues Django, lisez la :doc:`6ème partie de ce tutoriel</intro/tutorial06>` pour en savoir plus sur la gestion des fichiers statiques."
 
 # 493c711099984697ae7459d5c1816265
 #: ../../intro/tutorial06.txt:3
@@ -5407,7 +5515,7 @@ msgid ""
 "First, create a directory called ``static`` in your ``polls`` directory. "
 "Django will look for static files there, similarly to how Django finds "
 "templates inside ``polls/templates/``."
-msgstr "Commencez par créer un répertoire nommé ``static`` dans votre répertoire ``polls``. C'est là que Django va chercher les fichiers statiques, sur le même principe que la recherche de templates dans ``polls/templates/``."
+msgstr "Commencez par créer un répertoire nommé ``static`` dans votre répertoire ``polls``. C'est là que Django va chercher les fichiers statiques, sur le même principe que la recherche de gabarits dans ``polls/templates/``."
 
 # d8ffd4b13d1a473391eedd29528068f8
 #: ../../intro/tutorial06.txt:31
@@ -5430,7 +5538,12 @@ msgid ""
 "``AppDirectoriesFinder`` staticfile finder works, you can refer to this "
 "static file in Django simply as ``polls/style.css``, similar to how you "
 "reference the path for templates."
-msgstr "À l'intérieur du répertoire ``static`` que vous venez de créer, créez un autre répertoire nommé ``polls`` dans lequel vous placez un fichier ``style.css``. Autrement dit, votre feuille de style devrait se trouver à ``polls/static/polls/style.css``. En raison du fonctionnement de ``AppDirectoriesFinder``, vous pouvez vous référez à ce fichier depuis Django avec la syntaxe ``polls/style.css``, sur le même principe utilisé pour se référer aux chemins de templates."
+msgstr "À l'intérieur du répertoire ``static`` que vous venez de créer, créez un autre répertoire nommé ``polls`` dans lequel vous placez un fichier ``style.css``. Autrement dit, votre feuille de style devrait se trouver à ``polls/static/polls/style.css``. En raison du fonctionnement de ``AppDirectoriesFinder``, vous pouvez vous référez à ce fichier depuis Django avec la syntaxe ``polls/style.css``, sur le même principe utilisé pour se référer aux chemins de gabarits."
+
+# fb543314f091475992569550ba743df6
+#: ../../intro/tutorial06.txt:45
+msgid "Static file namespacing"
+msgstr "Espaces de noms des fichiers statiques"
 
 # c26ca7a2a236481aa21d6a3e6155cebf
 #: ../../intro/tutorial06.txt:47
@@ -5444,7 +5557,7 @@ msgid ""
 "one, and the easiest way to ensure this is by *namespacing* them. That is, "
 "by putting those static files inside *another* directory named for the "
 "application itself."
-msgstr "Tout comme pour les templates, nous *pourrions* plus simplement placer nos fichiers statiques directement dans ``polls/static`` (au lieu de créer un sous-répertoire ``polls``), mais ce serait une mauvaise idée. Django choisit le premier fichier statique correspondant au nom recherché, et si vous aviez un fichier de même nom dans une *autre* application, Django ne pourrait pas les distinguer. Nous devons pouvoir indiquer à Django le bon fichier et le moyen le plus simple de s'en assurer est d'utiliser les *espaces de noms*. C'est-à-dire en plaçant ces fichiers statiques dans un *autre* sous-répertoire nommé d'après l'application."
+msgstr "Tout comme pour les gabarits, nous *pourrions* plus simplement placer nos fichiers statiques directement dans ``polls/static`` (au lieu de créer un sous-répertoire ``polls``), mais ce serait une mauvaise idée. Django choisit le premier fichier statique trouvé  correspondant au nom recherché, et si vous aviez un fichier de même nom dans une *autre* application, Django ne pourrait pas les distinguer. Nous devons pouvoir indiquer à Django le bon fichier et le moyen le plus simple de s'en assurer est d'utiliser les *espaces de noms*. C'est-à-dire en plaçant ces fichiers statiques dans un *autre* sous-répertoire nommé d'après l'application."
 
 # 42d6cb413d094623b9fce838d0c96087
 #: ../../intro/tutorial06.txt:57
@@ -5457,7 +5570,7 @@ msgstr "Écrivez le code suivant dans cette feuille de style (``polls/static/pol
 #: ../../intro/tutorial06.txt:65
 msgid ""
 "Next, add the following at the top of ``polls/templates/polls/index.html``:"
-msgstr "Ensuite, ajoutez le contenu ci-dessous au sommet de ``polls/templates/polls/index.html`` :"
+msgstr "Ensuite, ajoutez le contenu ci-dessous au début de ``polls/templates/polls/index.html`` :"
 
 # aa98b3a0f2474cbdade6f20c4dd20e27
 #: ../../intro/tutorial06.txt:73
@@ -5465,7 +5578,7 @@ msgid ""
 "``{% load staticfiles %}`` loads the :ttag:`{% static %} <staticfiles-"
 "static>` template tag from the ``staticfiles`` template library. The ``{% "
 "static %}`` template tag generates the absolute URL of the static file."
-msgstr "``{% load staticfiles %}`` charge la balise de template :ttag:`{% static %} <staticfiles-static>` qui provient de la bibliothèque de balises de template de ``staticfiles``. La balise de template ``{% static %}`` génère l'URL absolue du fichier statique."
+msgstr "``{% load staticfiles %}`` charge la balise de gabarit :ttag:`{% static %} <staticfiles-static>` qui provient de la bibliothèque de balises de gabarit de ``staticfiles``. La balise de gabarit ``{% static %}`` génère l'URL absolue du fichier statique."
 
 # ab4c76bbfb01483c907027ffc1c5b4e8
 #: ../../intro/tutorial06.txt:77
@@ -5510,7 +5623,7 @@ msgid ""
 "other, because then you can change :setting:`STATIC_URL` (used by the "
 ":ttag:`static` template tag to generate its URLs) without having to modify a"
 " bunch of paths in your static files as well."
-msgstr "Bien sûr, la balise de template ``{% static %}`` n'est pas disponible dans les fichiers statiques comme votre feuille de style, puisqu'ils ne sont pas générés par Django. Vous devriez toujours utiliser des **chemins relatifs** pour lier vos fichiers statiques entre eux, car vous pouvez ensuite modifier :setting:`STATIC_URL` (utilisé par la balise de template :ttag:`static` pour générer les URL) sans devoir modifier tous les chemins dans les fichiers statiques."
+msgstr "Bien sûr, la balise de gabarit ``{% static %}`` n'est pas disponible dans les fichiers statiques comme votre feuille de style, puisqu'ils ne sont pas générés par Django. Vous devriez toujours utiliser des **chemins relatifs** pour lier vos fichiers statiques entre eux, car vous pouvez ensuite modifier :setting:`STATIC_URL` (utilisé par la balise de gabarit :ttag:`static` pour générer les URL) sans devoir modifier tous les chemins dans les fichiers statiques."
 
 # ee553981012b40e9bbd014607356f6c8
 #: ../../intro/tutorial06.txt:109
@@ -5520,7 +5633,7 @@ msgid ""
 "files/index>` and :doc:`the staticfiles reference "
 "</ref/contrib/staticfiles>`. :doc:`Deploying static files </howto/static-"
 "files/deployment>` discusses how to use static files on a real server."
-msgstr "Ce sont les **bases**. Pour plus de détails sur les réglages et les autres fonctionnalités inclues dans le module, lisez le :doc:`manuel des fichiers statiques </howto/static-files/index>` et la  :doc:`référence des fichiers statiques </ref/contrib/staticfiles>`.  La section :doc:`déploiement des fichiers statiques </howto/static-files/deployment>` aborde l'utilisation des fichiers statiques sur un serveur réel."
+msgstr "Ce sont les **bases**. Pour plus de détails sur les réglages et les autres fonctionnalités inclues dans le module, lisez le :doc:`manuel des fichiers statiques </howto/static-files/index>` et la  :doc:`référence des fichiers statiques </ref/contrib/staticfiles>`.  La section :doc:`déploiement des fichiers statiques </howto/static-files/deployment>` aborde l'utilisation des fichiers statiques sur un vrai serveur."
 
 # 9dfb1ddd056448c082fa7e5bebee65bd
 #: ../../intro/tutorial06.txt:119
@@ -5536,7 +5649,7 @@ msgid ""
 "If you are familiar with Python packaging and interested in learning how to "
 "turn polls into a \"reusable app\", check out :doc:`Advanced tutorial: How "
 "to write reusable apps</intro/reusable-apps>`."
-msgstr "Si vous êtes à l'aise avec la création de paquets Python et intéressé à apprendre comment faire de l'application de sondage une « application réutilisable », consultez  :doc:`Tutoriel avancé : comment écrire des applications réutilisables </intro/reusable-apps>`."
+msgstr "Si vous êtes à l'aise avec la création de paquets Python et intéressé à apprendre comment faire de l'application de sondage une « application réutilisable », consultez le :doc:`Tutoriel avancé : comment écrire des applications réutilisables </intro/reusable-apps>`."
 
 # 534397eb70f0486d848e025640da73d7
 #: ../../intro/whatsnext.txt:3
@@ -5563,7 +5676,7 @@ msgid ""
 "Well, we've always been big fans of learning by doing. At this point you "
 "should know enough to start a project of your own and start fooling around. "
 "As you need to learn new tricks, come back to the documentation."
-msgstr "Nous avons toujours été partisans de l'apprentissage par l'action. À ce stade, vous devriez en savoir assez pour commencer votre propre projet en explorant la technologie. Dès que vous ressentez le besoin d'apprendre de nouveaux concepts, revenez à cette documentation."
+msgstr "Nous avons toujours été partisans de l'apprentissage par l'action. À ce stade, vous devriez en savoir assez pour commencer votre propre projet en explorant la technologie. Dès que vous ressentez le besoin d'apprendre de nouveaux concepts, revenez à la documentation."
 
 # 332f06e622f64fd29e746cec45302fa9
 #: ../../intro/whatsnext.txt:16
@@ -5571,7 +5684,7 @@ msgid ""
 "We've put a lot of effort into making Django's documentation useful, easy to"
 " read and as complete as possible. The rest of this document explains more "
 "about how the documentation works so that you can get the most out of it."
-msgstr "Nous avons fait consacré beaucoup d'énergie pour rendre la documentation de Django utile, facile à lire et aussi complète que possible. La suite de ce document explique un peu plus comment est structurée cette documentation afin que vous puissiez en tirer le meilleur parti."
+msgstr "Nous avons consacré beaucoup d'énergie pour rendre la documentation de Django utile, facile à lire et aussi complète que possible. La suite de ce document explique un peu plus comment est structurée cette documentation afin que vous puissiez en tirer le meilleur parti."
 
 # 25219b9865234515bbf1816b940cc880
 #: ../../intro/whatsnext.txt:20
@@ -5579,7 +5692,7 @@ msgid ""
 "(Yes, this is documentation about documentation. Rest assured we have no "
 "plans to write a document about how to read the document about "
 "documentation.)"
-msgstr "(Oui, c'est un documentation sur la documentation. Soyez assuré que nous n'avons aucun projet d'écrire un document sur la manière de lire le document au sujet de la documentation.)"
+msgstr "(Oui, c'est une documentation sur la documentation. Soyez assuré que nous n'avons aucun projet d'écrire un document sur la manière de lire le document au sujet de la documentation.)"
 
 # 91cfe52726854622922c10c16054816c
 #: ../../intro/whatsnext.txt:24
@@ -5628,7 +5741,7 @@ msgid ""
 ":doc:`model system </topics/db/index>`, :doc:`template engine "
 "</topics/templates>`, :doc:`forms framework </topics/forms/index>`, and much"
 " more."
-msgstr "Les :doc:`guides thématiques </topics/index>`, d'un autre côté, traitent en profondeur de domaines spécifiques de Django. Il existe des guides complets sur le :doc:`système des modèles</topics/db/index>`, le :doc:`moteur de templates </topics/templates>`, l':doc:`architecture des formulaires </topics/forms/index>`, et bien plus encore."
+msgstr "Les :doc:`guides thématiques </topics/index>`, d'un autre côté, traitent en profondeur de domaines spécifiques de Django. Il existe des guides complets sur le :doc:`système des modèles</topics/db/index>`, le :doc:`moteur de gabarits </topics/templates>`, l':doc:`architecture des formulaires </topics/forms/index>`, et bien plus encore."
 
 # 03982d5718914ddd8fe794044a9c8a8c
 #: ../../intro/whatsnext.txt:49
@@ -5646,7 +5759,7 @@ msgid ""
 "common \"How do I ...?\" questions. Here you'll find information about "
 ":doc:`generating PDFs with Django </howto/outputting-pdf>`, :doc:`writing "
 "custom template tags </howto/custom-template-tags>`, and more."
-msgstr "Le développement Web est à large spectre, mais pas profond (les problématiques recouvrent de nombreux domaines). Nous avons rédigé un ensemble de :doc:`marches à suivre </howto/index>` qui répondent aux « Comment dois-je faire pour... ? » les plus courants. Vous trouverez là des informations sur :doc:`la génération de PDF avec Django </howto/outputting-pdf>`, :doc:`l'écriture de balises de template personnalisées </howto/custom-template-tags>`, et d'autres sujets encore."
+msgstr "Le développement Web est à large spectre, mais pas profond (les problématiques recouvrent de nombreux domaines). Nous avons rédigé un ensemble de :doc:`marches à suivre </howto/index>` qui répondent aux « Comment dois-je faire pour... ? » les plus courants. Vous trouverez là des informations sur :doc:`la génération de PDF avec Django </howto/outputting-pdf>`, :doc:`l'écriture de balises de gabarits personnalisées </howto/custom-template-tags>`, et d'autres sujets encore."
 
 # 018a9e7e16bf4d30a055c1cdaf587238
 #: ../../intro/whatsnext.txt:59
@@ -5663,7 +5776,7 @@ msgid ""
 "learn. Instead, details about individual classes, functions, methods, and "
 "modules are kept in the :doc:`reference </ref/index>`. This is where you'll "
 "turn to find the details of a particular function or whathaveyou."
-msgstr "Les guides et les marches à suivre ne traitent pas de chaque classe, fonction ou méthode disponible dans Django, car ce serait décourageant pour ceux qui cherchent à apprendre. Par contre, tous les détails sur les classes, fonctions, méthodes et modules sont décrits dans la the :doc:`référence </ref/index>`. C'est là que vous devrez chercher pour obtenir les détails sur une fonction particulière ou tout autre objet."
+msgstr "Les guides et les marches à suivre ne traitent pas de chaque classe, fonction ou méthode disponible dans Django, car ce serait décourageant pour ceux qui cherchent à apprendre. Par contre, tous les détails sur les classes, fonctions, méthodes et modules sont donnés dans la :doc:`référence </ref/index>`. C'est là que vous devrez chercher pour obtenir des détails sur une fonction particulière ou tout autre objet."
 
 # 1d48ba03c7c94a35a03fe32c7746a191
 #: ../../intro/whatsnext.txt:69
@@ -5673,7 +5786,7 @@ msgid ""
 "and :doc:`internals documentation </internals/index>` for those who want to "
 "add code to Django itself, and a :doc:`few other things that simply don't "
 "fit elsewhere </misc/index>`."
-msgstr "Pour finir, il existe encore une documentation « spécialisée » qui n'est habituellement pas destinée à la majorité des développeurs. Ceci inclut les :doc:`notes de publication </releases/index>` et de la :doc:`documentation interne </internals/index>` pour ceux qui se destinent à ajouter du code dans Django lui-même, ainsi que :doc:`quelques autres documents </misc/index>` qui n'entrent dans aucune autre catégorie."
+msgstr "Pour finir, il existe aussi une documentation « spécialisée » qui n'est habituellement pas destinée à la majorité des développeurs. Ceci inclut les :doc:`notes de publication </releases/index>` et de la :doc:`documentation interne </internals/index>` pour ceux qui se destinent à ajouter du code dans Django lui-même, ainsi que :doc:`quelques autres documents </misc/index>` qui n'entrent dans aucune autre catégorie."
 
 # 7403d1b0727640fa8629ec6a98f20c93
 #: ../../intro/whatsnext.txt:77
@@ -5749,7 +5862,7 @@ msgid ""
 "corrections and additions, and they discuss the latest Django features, "
 "which may only be available to users of the Django development version. (See"
 " \"Differences between versions\" below.)"
-msgstr "La version la plus récente de la documentation de Django se trouve à l'adresse https://docs.djangoproject.com/en/dev/. Ces pages HTML sont générées automatiquement à partir des fichiers texte dans le gestionnaire de versions. Cela signifie qu'ils reflètent la toute dernière version de Django, comprenant les toutes dernières corrections et ajouts, et qu'ils abordent les fonctionnalités les plus récentes de Django, qui ne sont parfois disponibles que pour ceux qui utilisent la version de développement de Django (voir « Différences entre versions » ci-dessous)."
+msgstr "La version la plus récente de la documentation de Django se trouve à l'adresse https://docs.djangoproject.com/en/dev/. Ces pages HTML sont générées automatiquement à partir des fichiers texte dans le gestionnaire de versions. Cela signifie qu'elles reflètent la toute dernière version de Django, comprenant les toutes dernières corrections et ajouts, et qu'elles abordent les fonctionnalités les plus récentes de Django, qui ne sont parfois disponibles que pour ceux qui utilisent la version de développement de Django (voir « Différences entre versions » ci-dessous)."
 
 # 0a70d683016c499fae08f9c050195320
 #: ../../intro/whatsnext.txt:117
