@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-04 09:46+0200\n"
-"PO-Revision-Date: 2013-10-04 16:00+0000\n"
+"PO-Revision-Date: 2013-10-17 19:30+0000\n"
 "Last-Translator: claudep <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -7918,7 +7918,7 @@ msgstr ""
 # 4e1768fac73b4b2691ed98a0bb5ee782
 #: ../../ref/contrib/auth.txt:2 ../../ref/django-admin.txt:1184
 msgid "``django.contrib.auth``"
-msgstr ""
+msgstr "``django.contrib.auth``"
 
 # 67af21c1650e4242981adce66a1cc5a6
 #: ../../ref/contrib/auth.txt:4
@@ -7927,12 +7927,12 @@ msgid ""
 " authentication system. For more details on the usage of these components or"
 " how to customize authentication and authorization see the "
 ":doc:`authentication topic guide </topics/auth/index>`."
-msgstr ""
+msgstr "Ce document présente le matériel de référence d'API des composants du système d'authentification de Django. Pour plus de détails sur l'utilisation de ces composants et sur la manière de personnaliser l'authentification et l'autorisation, consultez le :doc:`guide thématique sur l'authentification </topics/auth/index>`."
 
 # 37d87ddb98284eb38b539f134a7ff90a
 #: ../../ref/contrib/auth.txt:12
 msgid "User"
-msgstr ""
+msgstr "Utilisateur (modèle ``User``)"
 
 # df8819550bba4772afdf7448eb3bad95
 # 4a7f5d67d8e8418580d7bcfb2c7ce406
@@ -7946,25 +7946,25 @@ msgstr "Champs"
 #: ../../ref/contrib/auth.txt:19
 msgid ""
 ":class:`~django.contrib.auth.models.User` objects have the following fields:"
-msgstr ""
+msgstr "Les objets :class:`~django.contrib.auth.models.User` possèdent les champs suivants :"
 
 # 760aaf3409104b0ca8a6b1980844c542
 #: ../../ref/contrib/auth.txt:24
 msgid ""
 "Required. 30 characters or fewer. Usernames may contain alphanumeric, ``_``,"
 " ``@``, ``+``, ``.`` and ``-`` characters."
-msgstr ""
+msgstr "Obligatoire. Au maximum 30 caractères. Les noms d'utilisateur peuvent contenir des caractères alphanumériques (``_``, ``@``, ``+``, ``.`` et ``-``)."
 
 # 9426252101b14672a124d107947ca120
 # 5ad4ecbe175d4320a47e4eecca21d291
 #: ../../ref/contrib/auth.txt:29 ../../ref/contrib/auth.txt:33
 msgid "Optional. 30 characters or fewer."
-msgstr ""
+msgstr "Facultatif. Au maximum 30 caractères."
 
 # d2b2a387897b4056be7da0ef63dd8816
 #: ../../ref/contrib/auth.txt:37
 msgid "Optional. Email address."
-msgstr ""
+msgstr "Facultatif. Adresse électronique."
 
 # 78c15738295f43e29d5c85f0b76c1493
 #: ../../ref/contrib/auth.txt:41
@@ -7973,24 +7973,24 @@ msgid ""
 " the raw password.) Raw passwords can be arbitrarily long and can contain "
 "any character. See the :doc:`password documentation "
 "</topics/auth/passwords>`."
-msgstr ""
+msgstr "Obligatoire. Une empreinte avec métadonnées du mot de passe (Django ne stocke pas le mot de passe en clair). La longueur des mots de passe réels n'est pas limitée, ni les caractères qu'ils contiennent. Voir la :doc:`documentation sur les mots de passe </topics/auth/passwords>`."
 
 # 72ab605bd5b6430ca97d04251301d490
 #: ../../ref/contrib/auth.txt:48
 msgid ""
 "Many-to-many relationship to :class:`~django.contrib.auth.models.Group`"
-msgstr ""
+msgstr "Une relation plusieurs-à-plusieurs vers :class:`~django.contrib.auth.models.Group`."
 
 # 17caeffcc58645b89bd27968b19cf771
 #: ../../ref/contrib/auth.txt:52
 msgid ""
 "Many-to-many relationship to :class:`~django.contrib.auth.models.Permission`"
-msgstr ""
+msgstr "Une relation plusieurs-à-plusieurs vers :class:`~django.contrib.auth.models.Permission`."
 
 # 7965a58c9dfd4f80b5a66febce4e1ca6
 #: ../../ref/contrib/auth.txt:56
 msgid "Boolean. Designates whether this user can access the admin site."
-msgstr ""
+msgstr "Valeur booléenne. Indique si cet utilisateur peut accéder au site d'administration."
 
 # 37d631ca8d094e50b9d8a00f40b1d7d1
 #: ../../ref/contrib/auth.txt:60
@@ -7999,7 +7999,7 @@ msgid ""
 "We recommend that you set this flag to ``False`` instead of deleting "
 "accounts; that way, if your applications have any foreign keys to users, the"
 " foreign keys won't break."
-msgstr ""
+msgstr "Valeur booléenne. Indique si cet utilisateur doit être considéré comme actif. Nous recommandons de définir ce drapeau à ``False`` au lieu de supprimer le compte ; ainsi, si vos applications comportent des clés étrangères vers des utilisateurs, les clés étrangères ne seront pas cassées."
 
 # 8d7d429b2fa94b2d86551d34d243ed4d
 #: ../../ref/contrib/auth.txt:65
@@ -8015,28 +8015,28 @@ msgid ""
 ":meth:`~django.contrib.auth.models.User.has_perm` and the authentication in "
 "the Django admin. All of those functions/methods will return ``False`` for "
 "inactive users."
-msgstr ""
+msgstr "Ceci ne détermine pas forcément si l'utilisateur peut se connecter ou non. Les moteurs d'authentification ne sont pas obligés de vérifier le drapeau ``is_active``, et les moteurs par défaut ne le font pas. Si vous souhaitez refuser une connexion en raison de la valeur ``False`` de ``is_active``, c'est à vous de le faire dans votre propre vue de connexion ou dans votre propre moteur d'authentification. Toutefois, le formulaire :class:`~django.contrib.auth.forms.AuthenticationForm` utilisé par la vue :func:`~django.contrib.auth.views.login` (valeur par défaut) *effectue* lui ce contrôle, comme le font les méthodes de contrôle des permissions telles que :meth:`~django.contrib.auth.models.User.has_perm` ainsi que l'authentification dans le site d'administration de Django. Toutes ces méthodes/fonctions renvoient ``False`` pour les utilisateurs inactifs."
 
 # f2983d7dcbbb4be8bfd18ae7dc71d181
 #: ../../ref/contrib/auth.txt:79
 msgid ""
 "Boolean. Designates that this user has all permissions without explicitly "
 "assigning them."
-msgstr ""
+msgstr "Valeur booléenne. Indique que cet utilisateur possède toutes les permissions sans avoir besoin de les lui attribuer explicitement."
 
 # ac01b009b4aa4a1bae11079241b63896
 #: ../../ref/contrib/auth.txt:84
 msgid ""
 "A datetime of the user's last login. Is set to the current date/time by "
 "default."
-msgstr ""
+msgstr "Horodatage de la dernière connexion de l'utilisateur. Défini par défaut à la date/heure actuelle."
 
 # e91ccb92953243d58f4f2ac024c85f81
 #: ../../ref/contrib/auth.txt:89
 msgid ""
 "A datetime designating when the account was created. Is set to the current "
 "date/time by default when the account is created."
-msgstr ""
+msgstr "Horodatage indiquant la date de création du compte. Défini par défaut à la date/heure du moment où le compte a été créé."
 
 # e1725d92189b494798ef5f00678d8055
 # 2870c61b11a94e498169ab9d91ddc232
@@ -8059,7 +8059,7 @@ msgid ""
 "Returns the username for the user. Since the User model can be swapped out, "
 "you should use  this method instead of referencing the username attribute "
 "directly."
-msgstr ""
+msgstr "Renvoie le nom d'utilisateur de cet utilisateur. Comme le modèle ``User`` peut être substitué, il est préférable d'utiliser cette méthode plutôt que de référencer directement l'attribut ``username``."
 
 # 3c7cd6a614ef4f60a302a1cdda7be032
 #: ../../ref/contrib/auth.txt:105
@@ -8069,7 +8069,7 @@ msgid ""
 ":class:`~django.contrib.auth.models.AnonymousUser` objects. Generally, you "
 "should prefer using "
 ":meth:`~django.contrib.auth.models.User.is_authenticated()` to this method."
-msgstr ""
+msgstr "Renvoie toujours ``False``. C'est une façon de différencier les objets :class:`~django.contrib.auth.models.User` des objets :class:`~django.contrib.auth.models.AnonymousUser`. Généralement, il vaut mieux utiliser :meth:`~django.contrib.auth.models.User.is_authenticated()` que cette méthode."
 
 # 82709495b1ca4f95b5be74aaba50d346
 #: ../../ref/contrib/auth.txt:114
@@ -8082,14 +8082,14 @@ msgid ""
 " the :class:`~django.contrib.auth.middleware.AuthenticationMiddleware` "
 "(representing the currently logged-in user), you should know this method "
 "returns ``True`` for any :class:`~django.contrib.auth.models.User` instance."
-msgstr ""
+msgstr "Renvoie toujours ``True`` (contrairement à ``AnonymousUser.is_authenticated()`` qui renvoie toujours ``False``). C'est une façon de savoir si l'utilisateur a été authentifié. Aucune permission n'est prise en compte et il n'y a pas de contrôle sur le drapeau ``is_active`` de l'utilisateur ou sur la validité de la session. Même si cette méthode est généralement appelée sur ``request.user`` afin de déterminer s'il a été défini par :class:`~django.contrib.auth.middleware.AuthenticationMiddleware` (représentant l'utilisateur actuellement connecté), vuos devez savoir que cette méthode renvoie ``True`` pour toute instance de :class:`~django.contrib.auth.models.User`."
 
 # cedaae58213e40739f189156b0a3a58a
 #: ../../ref/contrib/auth.txt:125
 msgid ""
 "Returns the :attr:`~django.contrib.auth.models.User.first_name` plus the "
 ":attr:`~django.contrib.auth.models.User.last_name`, with a space in between."
-msgstr ""
+msgstr "Renvoie :attr:`~django.contrib.auth.models.User.first_name` et :attr:`~django.contrib.auth.models.User.last_name` séparés par une espace."
 
 # 2bd1fe0963934f2b9c5c87a0e2c51c0b
 #: ../../ref/contrib/auth.txt:131
@@ -8097,14 +8097,14 @@ msgid ""
 "Sets the user's password to the given raw string, taking care of the "
 "password hashing. Doesn't save the :class:`~django.contrib.auth.models.User`"
 " object."
-msgstr ""
+msgstr "Définit le mot de passe de l'utilisateur à la chaîne brute indiquée, en se chargeant du hachage du mot de passe. L'objet :class:`~django.contrib.auth.models.User` n'est pas enregistré par cette méthode."
 
 # c3ea0cbfc1e84e75a72bb3dd056e36a3
 #: ../../ref/contrib/auth.txt:137
 msgid ""
 "Returns ``True`` if the given raw string is the correct password for the "
 "user. (This takes care of the password hashing in making the comparison.)"
-msgstr ""
+msgstr "Renvoie ``True`` si la chaîne brute transmise est le mot de passe correct de cet utilisateur (cette méthode se charge du hachage du mot de passe en vue de la comparaison)."
 
 # 5eb1518ecaee4d58bbe200bf4134fc0b
 #: ../../ref/contrib/auth.txt:143
@@ -8114,14 +8114,14 @@ msgid ""
 ":meth:`~django.contrib.auth.models.User.check_password()` for this user will"
 " never return ``True``. Doesn't save the "
 ":class:`~django.contrib.auth.models.User` object."
-msgstr ""
+msgstr "Marque l'utilisateur comme n'ayant pas de mot de passe défini. Ce n'est pas la même chose que de définir une chaîne vide comme mot de passe. :meth:`~django.contrib.auth.models.User.check_password()` ne renvoie jamais ``True`` pour cet utilisateur. L'objet :class:`~django.contrib.auth.models.User` n'est pas enregistré par cette méthode."
 
 # 4f53853c09714d439faf10f65aa1ea34
 #: ../../ref/contrib/auth.txt:149
 msgid ""
 "You may need this if authentication for your application takes place against"
 " an existing external source such as an LDAP directory."
-msgstr ""
+msgstr "Cela peut être utile si le processus d'authentification de votre application se fait par une source externe existante telle qu'un annuaire LDAP."
 
 # 8c44d74f8f6b46b2a777f4b0ef45714e
 #: ../../ref/contrib/auth.txt:154
@@ -8129,35 +8129,35 @@ msgid ""
 "Returns ``False`` if "
 ":meth:`~django.contrib.auth.models.User.set_unusable_password()` has been "
 "called for this user."
-msgstr ""
+msgstr "Renvoie ``False`` si :meth:`~django.contrib.auth.models.User.set_unusable_password()` a été appelée pour cet utilisateur."
 
 # b6ad255e82954da8bc46fab085568e89
 #: ../../ref/contrib/auth.txt:160
 msgid ""
 "Returns a set of permission strings that the user has, through his/her "
 "groups."
-msgstr ""
+msgstr "Renvoie l'ensemble des permissions (chaînes) que l'utilisateur obtient au travers des groupes auxquels il appartient. "
 
 # 755a602aa61c459c9d8efe02f9b8ef15
 #: ../../ref/contrib/auth.txt:163
 msgid ""
 "If ``obj`` is passed in, only returns the group permissions for this "
 "specific object."
-msgstr ""
+msgstr "Si ``obj`` est transmis, ne renvoie que les permissions de groupe liées à cet objet spécifique."
 
 # e844d67780114f26bb5898ef35250fa6
 #: ../../ref/contrib/auth.txt:168
 msgid ""
 "Returns a set of permission strings that the user has, both through group "
 "and user permissions."
-msgstr ""
+msgstr "Renvoie l'ensemble des permissions (chaînes) que l'utilisateur obtient directement ou au travers des groupes auxquels il appartient. "
 
 # 96bf9dce13c14a8fb1a771ad06ea1d8d
 #: ../../ref/contrib/auth.txt:171
 msgid ""
 "If ``obj`` is passed in, only returns the permissions for this specific "
 "object."
-msgstr ""
+msgstr "Si ``obj`` est transmis, ne renvoie que les permissions liées à cet objet spécifique."
 
 # bf6a614ccf9448e59f714a60a60d7e03
 #: ../../ref/contrib/auth.txt:176
@@ -8166,14 +8166,14 @@ msgid ""
 "the format ``\"<app label>.<permission codename>\"``. (see documentation on "
 ":ref:`permissions <topic-authorization>`). If the user is inactive, this "
 "method will always return ``False``."
-msgstr ""
+msgstr "Renvoie ``True`` si l'utilisateur possède la permission indiquée, où ``perm`` est au format ``\"<étiquette application>.<code permission>\"`` (voir la documentation sur les :ref:`permissions <topic-authorization>`). Si l'utilisateur est inactif, cette méthode renvoie toujours ``False``."
 
 # 49fce19747cc468f8c67670f44a64f80
 #: ../../ref/contrib/auth.txt:181
 msgid ""
 "If ``obj`` is passed in, this method won't check for a permission for the "
 "model, but for this specific object."
-msgstr ""
+msgstr "Si ``obj`` est transmis, cette méthode ne contrôle pas la permission au niveau du modèle, mais pour l'objet indiqué."
 
 # af4fb102cd884e1f909b72867ff40804
 #: ../../ref/contrib/auth.txt:186
@@ -8181,14 +8181,14 @@ msgid ""
 "Returns ``True`` if the user has each of the specified permissions, where "
 "each perm is in the format ``\"<app label>.<permission codename>\"``. If the"
 " user is inactive, this method will always return ``False``."
-msgstr ""
+msgstr "Renvoie ``True`` si l'utilisateur possède toutes les permissions indiquées, où chaque permission est au format ``\"<étiquette application>.<code permission>\"``. Si l'utilisateur est inactif, cette méthode renvoie toujours ``False``."
 
 # b68a64435c30424bbadb1f5115d6fa36
 #: ../../ref/contrib/auth.txt:191
 msgid ""
 "If ``obj`` is passed in, this method won't check for permissions for the "
 "model, but for the specific object."
-msgstr ""
+msgstr "Si ``obj`` est transmis, cette méthode ne contrôle pas les permissions au niveau du modèle, mais pour l'objet indiqué."
 
 # 9c4d207aed94478d841d4a6f7c08c2e7
 #: ../../ref/contrib/auth.txt:196
@@ -8196,14 +8196,14 @@ msgid ""
 "Returns ``True`` if the user has any permissions in the given package (the "
 "Django app label). If the user is inactive, this method will always return "
 "``False``."
-msgstr ""
+msgstr "Renvoie ``True`` si l'utilisateur possède au moins une permission dans le module indiqué (l'étiquette d'application Django). Si l'utilisateur est inactif, cette méthode renvoie toujours ``False``."
 
 # c277d7cdcf30420c89e780e46681e366
 #: ../../ref/contrib/auth.txt:202
 msgid ""
 "Sends an email to the user. If ``from_email`` is ``None``, Django uses the "
 ":setting:`DEFAULT_FROM_EMAIL`."
-msgstr ""
+msgstr "Envoie un courriel à l'utilisateur. Si ``from_email`` vaut ``None``, Django utilise :setting:`DEFAULT_FROM_EMAIL`."
 
 # 6df6ec74864f4321a8970961b43479a0
 # da2febdf05c5477a91d497774c38652d
@@ -8222,12 +8222,12 @@ msgid ""
 "``django.contrib.auth.models.SiteProfileNotAvailable`` if the current site "
 "doesn't allow profiles, or :exc:`django.core.exceptions.ObjectDoesNotExist` "
 "if the user does not have a profile."
-msgstr ""
+msgstr "Renvoie un profil spécifique au site pour cet utilisateur. Génère ``django.contrib.auth.models.SiteProfileNotAvailable`` si le site actuel ne gère pas les profils ou :exc:`django.core.exceptions.ObjectDoesNotExist` si l'utilisateur ne possède pas de profil."
 
 # 53412f56a9eb4822a798c03a29ae2334
 #: ../../ref/contrib/auth.txt:220
 msgid "Manager methods"
-msgstr ""
+msgstr "Méthodes du gestionnaire"
 
 # 71d845e3c80b41d0a1be4e5874fb1918
 #: ../../ref/contrib/auth.txt:224
@@ -8235,13 +8235,13 @@ msgid ""
 "The :class:`~django.contrib.auth.models.User` model has a custom manager "
 "that has the following helper methods (in addition to the methods provided "
 "by :class:`~django.contrib.auth.models.BaseUserManager`):"
-msgstr ""
+msgstr "Le modèle :class:`~django.contrib.auth.models.User` possède un gestionnaire personnalisé comportant les méthodes utilitaires suivantes (en plus de celles fournies par :class:`~django.contrib.auth.models.BaseUserManager`) :"
 
 # 47734b7065bd4542b3d88d3040c6c986
 #: ../../ref/contrib/auth.txt:235
 msgid ""
 "Creates, saves and returns a :class:`~django.contrib.auth.models.User`."
-msgstr ""
+msgstr "Crée, enregistre et renvoie un objet :class:`~django.contrib.auth.models.User`."
 
 # b1f96e126acf4793b4bb81a526f8b25c
 #: ../../ref/contrib/auth.txt:237
@@ -8252,7 +8252,7 @@ msgid ""
 "automatically converted to lowercase, and the returned "
 ":class:`~django.contrib.auth.models.User` object will have "
 ":attr:`~django.contrib.auth.models.User.is_active` set to ``True``."
-msgstr ""
+msgstr "Les attributs :attr:`~django.contrib.auth.models.User.username` et :attr:`~django.contrib.auth.models.User.password` sont définis en fonction des paramètres transmis. La partie domaine de :attr:`~django.contrib.auth.models.User.email` est automatiquement convertie en minuscules et l'attribut :attr:`~django.contrib.auth.models.User.is_active` de l'objet :class:`~django.contrib.auth.models.User` renvoyé sera défini à ``True``."
 
 # 61d6692c71284bddbfa96490f2c07d44
 #: ../../ref/contrib/auth.txt:244
@@ -8260,7 +8260,7 @@ msgid ""
 "If no password is provided, "
 ":meth:`~django.contrib.auth.models.User.set_unusable_password()` will be "
 "called."
-msgstr ""
+msgstr "Si aucun mot de passe n'est indiqué, :meth:`~django.contrib.auth.models.User.set_unusable_password()` est appelée."
 
 # 9d08aa8f7bb84526a53a11e3fb6d84ec
 #: ../../ref/contrib/auth.txt:248
@@ -8268,25 +8268,25 @@ msgid ""
 "The ``extra_fields`` keyword arguments are passed through to the "
 ":class:`~django.contrib.auth.models.User`'s ``__init__`` method to allow "
 "setting arbitrary fields on a :ref:`custom User model <auth-custom-user>`."
-msgstr ""
+msgstr "Les paramètres nommés ``extra_fields`` sont directement transmis à la méthode ``__init__`` de :class:`~django.contrib.auth.models.User` pour permettre de définir n'importe quel valeur de champ d'un :ref:`modèle d'utilisateur personnalisé <auth-custom-user>`."
 
 # 1e071a7b3a12440a9f32235f27dc5dd0
 #: ../../ref/contrib/auth.txt:253
 msgid ""
 "See :ref:`Creating users <topics-auth-creating-users>` for example usage."
-msgstr ""
+msgstr "Voir :ref:`Création d'utilisateurs <topics-auth-creating-users>` pour un exemple d'utilisation."
 
 # ff709bafdd074c288ec63b5995d25ca4
 #: ../../ref/contrib/auth.txt:257
 msgid ""
 "Same as :meth:`create_user`, but sets :attr:`~models.User.is_staff` and "
 ":attr:`~models.User.is_superuser` to ``True``."
-msgstr ""
+msgstr "Identique à :meth:`create_user`, mais définit :attr:`~models.User.is_staff` et :attr:`~models.User.is_superuser` à ``True``."
 
 # 80ffddec3c094163915990f7b71dff1d
 #: ../../ref/contrib/auth.txt:262
 msgid "Anonymous users"
-msgstr ""
+msgstr "Utilisateurs anonymes"
 
 # 120996598a404439911f21d34efb4fc2
 #: ../../ref/contrib/auth.txt:266
@@ -8294,46 +8294,46 @@ msgid ""
 ":class:`django.contrib.auth.models.AnonymousUser` is a class that implements"
 " the :class:`django.contrib.auth.models.User` interface, with these "
 "differences:"
-msgstr ""
+msgstr ":class:`django.contrib.auth.models.AnonymousUser` est une classe qui implémente l'interface :class:`django.contrib.auth.models.User`, avec les différences suivantes :"
 
 # 9b11d0ccea16469da3ee5a7bf6c684cd
 #: ../../ref/contrib/auth.txt:270
 msgid ":ref:`id <automatic-primary-key-fields>` is always ``None``."
-msgstr ""
+msgstr ":ref:`id <automatic-primary-key-fields>` est toujours ``None``."
 
 # 4f7f04539eca444598410dab1204b768
 #: ../../ref/contrib/auth.txt:271
 msgid ""
 ":attr:`~django.contrib.auth.models.User.is_staff` and "
 ":attr:`~django.contrib.auth.models.User.is_superuser` are always ``False``."
-msgstr ""
+msgstr ":attr:`~django.contrib.auth.models.User.is_staff` et :attr:`~django.contrib.auth.models.User.is_superuser` sont toujours ``False``."
 
 # 73a573fb18b44477a735a751ed160a95
 #: ../../ref/contrib/auth.txt:274
 msgid ""
 ":attr:`~django.contrib.auth.models.User.is_active` is always ``False``."
-msgstr ""
+msgstr ":attr:`~django.contrib.auth.models.User.is_active` est toujours ``False``."
 
 # 0d4c67421fc64e149b6cddb4716ac0f4
 #: ../../ref/contrib/auth.txt:275
 msgid ""
 ":attr:`~django.contrib.auth.models.User.groups` and "
 ":attr:`~django.contrib.auth.models.User.user_permissions` are always empty."
-msgstr ""
+msgstr ":attr:`~django.contrib.auth.models.User.groups` et :attr:`~django.contrib.auth.models.User.user_permissions` sont toujours vides."
 
 # ec1ead8c1167447895f3028949e1b3bd
 #: ../../ref/contrib/auth.txt:278
 msgid ""
 ":meth:`~django.contrib.auth.models.User.is_anonymous()` returns ``True`` "
 "instead of ``False``."
-msgstr ""
+msgstr ":meth:`~django.contrib.auth.models.User.is_anonymous()` renvoie ``True`` au lieu de ``False``."
 
 # ae47ea19c13642a2b4f89b95931edc1e
 #: ../../ref/contrib/auth.txt:280
 msgid ""
 ":meth:`~django.contrib.auth.models.User.is_authenticated()` returns "
 "``False`` instead of ``True``."
-msgstr ""
+msgstr ":meth:`~django.contrib.auth.models.User.is_authenticated()` renvoie ``False`` au lieu de ``True``."
 
 # 99ee6f9003604391961cb28a2b2e951f
 #: ../../ref/contrib/auth.txt:282
@@ -8343,7 +8343,7 @@ msgid ""
 ":meth:`~django.db.models.Model.save` and "
 ":meth:`~django.db.models.Model.delete()` raise "
 ":exc:`~exceptions.NotImplementedError`."
-msgstr ""
+msgstr ":meth:`~django.contrib.auth.models.User.set_password()`, :meth:`~django.contrib.auth.models.User.check_password()`, :meth:`~django.db.models.Model.save` et :meth:`~django.db.models.Model.delete()` génèrent l'exception :exc:`~exceptions.NotImplementedError`."
 
 # 0f1e8e47d1df453fbd2dc55ec365b72b
 #: ../../ref/contrib/auth.txt:288
@@ -8351,36 +8351,36 @@ msgid ""
 "In practice, you probably won't need to use "
 ":class:`~django.contrib.auth.models.AnonymousUser` objects on your own, but "
 "they're used by Web requests, as explained in the next section."
-msgstr ""
+msgstr "En pratique, vous n'aurez probablement jamais besoin d'utiliser directement des objets :class:`~django.contrib.auth.models.AnonymousUser` vous-même, mais ils sont utilisés dans les requêtes Web, comme expliqué dans la section suivante."
 
 # 1cc0b0dc384f46cd96c661ea39a816b0
 #: ../../ref/contrib/auth.txt:293
 msgid "Permission"
-msgstr ""
+msgstr "Permission"
 
 # 5c0eb6f125154e2d9da9e4f6a421d353
 #: ../../ref/contrib/auth.txt:300
 msgid ""
 ":class:`~django.contrib.auth.models.Permission` objects have the following "
 "fields:"
-msgstr ""
+msgstr "Les objets :class:`~django.contrib.auth.models.Permission` possèdent les champs suivants :"
 
 # 28079fd2b54345c5bd175523fd384dd7
 #: ../../ref/contrib/auth.txt:305
 msgid "Required. 50 characters or fewer. Example: ``'Can vote'``."
-msgstr ""
+msgstr "Obligatoire. 50 caractères au maximum. Exemple : ``'Can vote'``."
 
 # e6bb3f6320e64cedbedb20784196cd9d
 #: ../../ref/contrib/auth.txt:309
 msgid ""
 "Required. A reference to the ``django_content_type`` database table, which "
 "contains a record for each installed Django model."
-msgstr ""
+msgstr "Obligatoire. Une référence à la table de base de données ``django_content_type``, qui contient un enregistrement pour chaque modèle Django installé."
 
 # 9d6e27422fe54260b5979d931fc7ed62
 #: ../../ref/contrib/auth.txt:314
 msgid "Required. 100 characters or fewer. Example: ``'can_vote'``."
-msgstr ""
+msgstr "Obligatoire. 100 caractères au maximum. Exemple : ``'can_vote'``."
 
 # 67466618c0d649cdaa5010069aef4be8
 #: ../../ref/contrib/auth.txt:319
@@ -8388,49 +8388,49 @@ msgid ""
 ":class:`~django.contrib.auth.models.Permission` objects have the standard "
 "data-access methods like any other :doc:`Django model "
 "</ref/models/instances>`."
-msgstr ""
+msgstr "Les objets :class:`~django.contrib.auth.models.Permission` possèdent les mêmes méthodes d'accès aux données que tout autre :doc:`modèle Django </ref/models/instances>`."
 
 # 307490f6e3ab4e638753df6554ecfd24
 #: ../../ref/contrib/auth.txt:323
 msgid "Group"
-msgstr ""
+msgstr "Groupe"
 
 # 3a0a6f0ebcea417396010072759975f9
 #: ../../ref/contrib/auth.txt:330
 msgid ""
 ":class:`~django.contrib.auth.models.Group` objects have the following "
 "fields:"
-msgstr ""
+msgstr "Les objets :class:`~django.contrib.auth.models.Group` possèdent les champs suivants :"
 
 # d6e6724c40f646769e4f39f82d0c0b22
 #: ../../ref/contrib/auth.txt:334
 msgid ""
 "Required. 80 characters or fewer. Any characters are permitted. Example: "
 "``'Awesome Users'``."
-msgstr ""
+msgstr "Obligatoire. 80 caractères au maximum. Tous les caractères sont autorisés. Exemple : ``'Utilisateurs fantastiques'``."
 
 # e438c8cf3b7341eeb46685bf92d42a0c
 #: ../../ref/contrib/auth.txt:339
 msgid ""
 "Many-to-many field to :class:`~django.contrib.auth.models.Permission`::"
-msgstr ""
+msgstr "Une relation plusieurs-à-plusieurs vers :class:`~django.contrib.auth.models.Permission`."
 
 # baa0c0cb752840c981a37305a8bcfb90
 #: ../../ref/contrib/auth.txt:349
 msgid "Login and logout signals"
-msgstr ""
+msgstr "Signaux de connexion et de déconnexion"
 
 # 63f288dbb0d6449c98aaefb651bcaa72
 #: ../../ref/contrib/auth.txt:353
 msgid ""
 "The auth framework uses the following :doc:`signals </topics/signals>` that "
 "can be used for notification when a user logs in or out."
-msgstr ""
+msgstr "L'infrastructure d'authentification définit les :doc:`signaux </topics/signals>` suivants qui peuvent être utilisés comme notification lorsqu'un utilisateur se connecte ou se déconnecte."
 
 # 6ecc455901f34d5095c19dc3a530f1e6
 #: ../../ref/contrib/auth.txt:358
 msgid "Sent when a user logs in successfully."
-msgstr ""
+msgstr "Envoyé lorsqu'un utilisateur se connecte avec succès."
 
 # 898a81485e9e426a86617743a0118e79
 # 2f3e8790de024541b5cf2413d80f8eb0
@@ -8461,7 +8461,7 @@ msgstr ""
 #: ../../ref/signals.txt:506 ../../ref/signals.txt:527
 #: ../../ref/signals.txt:558
 msgid "Arguments sent with this signal:"
-msgstr ""
+msgstr "Paramètres envoyés avec ce signal :"
 
 # eaed5c987c124103a72e54e4d4e41409
 # 68f80aad1361462390456c43b560ea79
@@ -8500,12 +8500,12 @@ msgstr ""
 #: ../../ref/signals.txt:478 ../../ref/signals.txt:509
 #: ../../ref/signals.txt:530 ../../ref/signals.txt:563
 msgid "``sender``"
-msgstr ""
+msgstr "``sender``"
 
 # 182dcb0cfea34c7483fad71b8f390bf9
 #: ../../ref/contrib/auth.txt:363
 msgid "The class of the user that just logged in."
-msgstr ""
+msgstr "La classe de l'utilisateur qui vient de se connecter."
 
 # a8b4f4d8ce5544e8bb3d70f8bb178d71
 # 4358042e216e482e8ba57b67abfb8548
@@ -8526,52 +8526,52 @@ msgstr "``request``"
 # 12ecff39cfe5475ab8b9aef9fc1d8195
 #: ../../ref/contrib/auth.txt:366 ../../ref/contrib/auth.txt:380
 msgid "The current :class:`~django.http.HttpRequest` instance."
-msgstr ""
+msgstr "L'instance :class:`~django.http.HttpRequest` actuelle."
 
 # 799a77cb083d404686150981c8b3a798
 # 7867aa3eba7444f8aa841c4886bb4a30
 #: ../../ref/contrib/auth.txt:368 ../../ref/contrib/auth.txt:383
 msgid "``user``"
-msgstr ""
+msgstr "``user``"
 
 # d17952cad88e497d88f8c08d26c64010
 #: ../../ref/contrib/auth.txt:369
 msgid "The user instance that just logged in."
-msgstr ""
+msgstr "L'instance utilisateur qui vient de se connecter."
 
 # ee13442dbf1e4d01884e7676bbaf0a12
 #: ../../ref/contrib/auth.txt:373
 msgid "Sent when the logout method is called."
-msgstr ""
+msgstr "Envoyé lorsque la méthode ``logout`` est appelée."
 
 # a4cce12102db4335af36a7e4a95113d0
 #: ../../ref/contrib/auth.txt:376
 msgid ""
 "As above: the class of the user that just logged out or ``None`` if the user"
 " was not authenticated."
-msgstr ""
+msgstr "Comme ci-dessus : la classe de l'utilisateur qui vient de se déconnecter ou ``None`` si l'utilisateur n'était pas authentifié."
 
 # d8fd7c78cb1d4e1aaa9a413fa357a86f
 #: ../../ref/contrib/auth.txt:383
 msgid ""
 "The user instance that just logged out or ``None`` if the user was not "
 "authenticated."
-msgstr ""
+msgstr "L'instance de l'utilisateur qui vient de se déconnecter ou ``None`` si l'utilisateur n'était pas authentifié."
 
 # 1a18547f280b482892139f6355d9c6d1
 #: ../../ref/contrib/auth.txt:390
 msgid "Sent when the user failed to login successfully"
-msgstr ""
+msgstr "Envoyé lorsque le processus de connexion d'un utilisateur a échoué."
 
 # d25d0611e6194c0ea93919c5d4282f14
 #: ../../ref/contrib/auth.txt:393
 msgid "The name of the module used for authentication."
-msgstr ""
+msgstr "Le nom du module utilisé pour l'authentification."
 
 # 2bedda964ecc46ceb82383bb9bc25cb1
 #: ../../ref/contrib/auth.txt:398
 msgid "``credentials``"
-msgstr ""
+msgstr "``credentials``"
 
 # 792da3c4d75843a68e24dd0bc06b5e45
 #: ../../ref/contrib/auth.txt:396
@@ -8580,12 +8580,12 @@ msgid ""
 "passed to :func:`~django.contrib.auth.authenticate()` or your own custom "
 "authentication backend. Credentials matching a set of 'sensitive' patterns, "
 "(including password) will not be sent in the clear as part of the signal."
-msgstr ""
+msgstr "Un dictionnaire de paramètres nommés contenant les données d'authentification qui ont été transmises à :func:`~django.contrib.auth.authenticate()` ou à votre propre moteur d'authentification. Les données d'authentification correspondant à certains motifs «  sensibles » (par ex. « password ») ne sont pas transmis en clair dans les paramètres du signal."
 
 # 92635f69fd9d434f886b00e9952d29f0
 #: ../../ref/contrib/auth.txt:404
 msgid "Authentication backends"
-msgstr ""
+msgstr "Moteurs d'authentification"
 
 # bf5f80a12fab4432bc1171b7093a0e4f
 #: ../../ref/contrib/auth.txt:409
@@ -8595,18 +8595,18 @@ msgid ""
 "backends, see the :ref:`Other authentication sources section "
 "<authentication-backends>` of the :doc:`User authentication guide "
 "</topics/auth/index>`."
-msgstr ""
+msgstr "Cette section présente les moteurs d'authentification livrés avec Django. Pour de plus amples informations sur la manière de les utiliser et sur l'écriture de vos propres moteurs d'authentification, consultez la section :ref:`Autres sources d'authentification <authentication-backends>` du :doc:`Guide d'authentification des utilisateurs </topics/auth/index>`."
 
 # e3192b169c604e33be2b11f64c6c3342
 #: ../../ref/contrib/auth.txt:417
 msgid "Available authentication backends"
-msgstr ""
+msgstr "Moteurs d'authentification disponibles"
 
 # 650bf21117ed48ba91964c38d4342bd4
 #: ../../ref/contrib/auth.txt:419
 msgid ""
 "The following backends are available in :mod:`django.contrib.auth.backends`:"
-msgstr ""
+msgstr "Les moteurs suivants sont disponibles dans :mod:`django.contrib.auth.backends`:"
 
 # 0bdbbd301b7c4a6bb39d62a3bd7fde29
 #: ../../ref/contrib/auth.txt:423
@@ -8616,7 +8616,7 @@ msgid ""
 "Django's default user model, the user identifier is the username, for custom"
 " user models it is the field specified by USERNAME_FIELD (see "
 ":doc:`Customizing Users and authentication </topics/auth/customizing>`)."
-msgstr ""
+msgstr "Il s'agit du moteur d'authentification utilisé par défaut par Django. Il effectue l'authentification sur la base de l'identifiant d'un utilisateur et de son mot de passe. Pour le modèle d'utilisateur par défaut de Django, l'identifiant de l'utilisateur est le nom d'utilisateur (``username``), pour les modèles d'utilisateur personnalisés, c'est le champ contenu dans ``USERNAME_FIELD`` (voir :doc:`Personnalisation des utilisateurs et de l'authentification </topics/auth/customizing>`)."
 
 # 412a865303334e0486bc92395afefbd3
 #: ../../ref/contrib/auth.txt:430
@@ -8624,7 +8624,7 @@ msgid ""
 "It also handles the default permissions model as defined for "
 ":class:`~django.contrib.auth.models.User` and "
 ":class:`~django.contrib.auth.models.PermissionsMixin`."
-msgstr ""
+msgstr "Il gère également le modèle de permissions par défaut tel que défini pour :class:`~django.contrib.auth.models.User` et :class:`~django.contrib.auth.models.PermissionsMixin`."
 
 # ae2801c8cdd74443824ae33c98514a0c
 #: ../../ref/contrib/auth.txt:436
@@ -8634,7 +8634,7 @@ msgid ""
 ":attr:`request.META['REMOTE_USER'] <django.http.HttpRequest.META>`.  See the"
 " :doc:`Authenticating against REMOTE_USER </howto/auth-remote-user>` "
 "documentation."
-msgstr ""
+msgstr "Utilisez ce moteur pour profiter de processus d'authentification externes à Django. Le processus d'authentification utilise les noms d'utilisateur se trouvant dans :attr:`request.META['REMOTE_USER'] <django.http.HttpRequest.META>`. Consultez la documentation sur l':doc:`authentification par REMOTE_USER </howto/auth-remote-user>`."
 
 # 3773c42f50984b859e468ef2222b5620
 #: ../../ref/contrib/comments/custom.txt:3
@@ -12270,7 +12270,7 @@ msgstr ""
 # b5109c1c6e484c31b5aac5fc55074a5d
 #: ../../ref/contrib/flatpages.txt:269 ../../ref/contrib/flatpages.txt:287
 msgid "For example:"
-msgstr ""
+msgstr "Par exemple :"
 
 # 993f55d5d4b44435bb2dc5e2fc49d1f9
 #: ../../ref/contrib/flatpages.txt:275
@@ -12544,7 +12544,7 @@ msgstr ""
 #: ../../ref/contrib/formtools/form-wizard.txt:38
 #: ../../ref/django-admin.txt:37 ../../ref/request-response.txt:547
 msgid "Usage"
-msgstr ""
+msgstr "Utilisation"
 
 # d156fc432fdd4934b365cc658c139b85
 #: ../../ref/contrib/formtools/form-wizard.txt:40
@@ -13543,42 +13543,42 @@ msgstr ""
 # 694eb810814249d192e20926aa9ddec1
 #: ../../ref/contrib/gis/db-api.txt:5
 msgid "GeoDjango Database API"
-msgstr ""
+msgstr "API de base de données GeoDjango"
 
 # 5e7ea371fb104514bd486b7464cafddb
 #: ../../ref/contrib/gis/db-api.txt:10
 msgid "Spatial Backends"
-msgstr ""
+msgstr "Moteurs de base de données spatiales"
 
 # a8711b2a530944258ed6e4f26ee13965
 #: ../../ref/contrib/gis/db-api.txt:15
 msgid "GeoDjango currently provides the following spatial database backends:"
-msgstr ""
+msgstr "GeoDjango propose actuellement les moteurs de base de données spatiales suivants :"
 
 # 0c68d0ef06c345adabacda315db91204
 #: ../../ref/contrib/gis/db-api.txt:17
 msgid "``django.contrib.gis.db.backends.postgis``"
-msgstr ""
+msgstr "``django.contrib.gis.db.backends.postgis``"
 
 # 5f4012ae7c3845c0b8265fb8b7b1fba6
 #: ../../ref/contrib/gis/db-api.txt:18
 msgid "``django.contrib.gis.db.backends.mysql``"
-msgstr ""
+msgstr "``django.contrib.gis.db.backends.mysql``"
 
 # fb9f763a57534096a9ba219fe0c1ea41
 #: ../../ref/contrib/gis/db-api.txt:19
 msgid "``django.contrib.gis.db.backends.oracle``"
-msgstr ""
+msgstr "``django.contrib.gis.db.backends.oracle``"
 
 # f6705f44010c4de5804c73fc118fb646
 #: ../../ref/contrib/gis/db-api.txt:20
 msgid "``django.contrib.gis.db.backends.spatialite``"
-msgstr ""
+msgstr "``django.contrib.gis.db.backends.spatialite``"
 
 # 9b4ecd8404ca40f4b6c1bb7a6c71e5a4
 #: ../../ref/contrib/gis/db-api.txt:28
 msgid "MySQL Spatial Limitations"
-msgstr ""
+msgstr "Limitations spatiales de MySQL"
 
 # 1e732a2007d04905b321d2f1c38f0e39
 #: ../../ref/contrib/gis/db-api.txt:30
@@ -13587,7 +13587,7 @@ msgid ""
 "calls minimum bounding rectangles, or MBR).  Specifically, `MySQL does not "
 "conform to the OGC standard <http://dev.mysql.com/doc/refman/5.1/en"
 "/functions-for-testing-spatial-relations-between-geometric-objects.html>`_:"
-msgstr ""
+msgstr "Les extensions spatiales de MySQL ne prennent en charge que les opérations de rectangle englobant (ce que MySQL appelle « minimum bounding rectangle » ou MBR). Spécifiquement, `MySQL ne se conforme pas au standard OGC <http://dev.mysql.com/doc/refman/5.1/en/functions-for-testing-spatial-relations-between-geometric-objects.html>`_ :"
 
 # f23451217f4146f2ae764cd4a588d671
 #: ../../ref/contrib/gis/db-api.txt:34
@@ -13596,7 +13596,7 @@ msgid ""
 "``Crosses``, ``Disjoint``, ``Intersects``, ``Overlaps``, ``Touches``, "
 "``Within``] according to the specification.  Those that are implemented "
 "return the same result as the corresponding MBR-based functions."
-msgstr ""
+msgstr "Actuellement, MySQL n'implémente pas ces fonctions [``Contains``, ``Crosses``, ``Disjoint``, ``Intersects``, ``Overlaps``, ``Touches``, ``Within``] en accord avec la spécification. Celles qui sont implémentées renvoient le même résultat que les fonctions correspondantes qui agissent sur le MBR."
 
 # fcaa34eb47914b4ca6b35b54e307be0d
 #: ../../ref/contrib/gis/db-api.txt:40
@@ -13605,7 +13605,7 @@ msgid ""
 "contains>` are available in GeoDjango when using MySQL, the results returned"
 " are really equivalent to what would be returned when using "
 ":lookup:`bbcontains` on a different spatial backend."
-msgstr ""
+msgstr "En d'autres termes, même si les requêtes spatiales telles que :lookup:`contains <gis-contains>` sont disponibles dans GeoDjango en utilisant MySQL, les résultats renvoyés sont tout à fait équivalentes à ce que renverrait :lookup:`bbcontains` avec un autre moteur spatial."
 
 # ae8d51a9b476439dbb6382f182e64b6b
 #: ../../ref/contrib/gis/db-api.txt:47
@@ -13615,26 +13615,26 @@ msgid ""
 "you have to choose between fast spatial lookups and the integrity of your "
 "data -- MyISAM tables do not support transactions or foreign key "
 "constraints."
-msgstr ""
+msgstr "Les vrais index spatiaux (R-trees) ne sont pris en charge qu'avec les tables MyISAM de MySQL. [#fnmysqlidx]_ En d'autres termes, lorsque vous utilisez les extensions spatiales de MySQL, vous devez choisir entre des requêtes spatiales rapides et l'intégrité de vos données (les tables MyISAM ne gérant pas les transactions ni les contraintes de clé étrangère)."
 
 # cb0fe84e093540b082502e9f829033b0
 #: ../../ref/contrib/gis/db-api.txt:54
 msgid "Creating and Saving Geographic Models"
-msgstr ""
+msgstr "Création et enregistrement de modèles géographiques"
 
 # 1dc70d236bb343449e0129cbc96f488f
 #: ../../ref/contrib/gis/db-api.txt:55
 msgid ""
 "Here is an example of how to create a geometry object (assuming the "
 "``Zipcode`` model)::"
-msgstr ""
+msgstr "Voici un exemple de la manière dont il faut créer un objet géométrique (en supposant que le modèle ``Zipcode`` existe) ::"
 
 # 2fe2c7687360448bafeac011c5e603b5
 #: ../../ref/contrib/gis/db-api.txt:62
 msgid ""
 ":class:`~django.contrib.gis.geos.GEOSGeometry` objects may also be used to "
 "save geometric models::"
-msgstr ""
+msgstr "Les objets :class:`~django.contrib.gis.geos.GEOSGeometry` peuvent aussi être utilisés pour enregistrer des modèles géométriques ::"
 
 # 1ca04c8bf30a4149a04d40cc75085f1f
 #: ../../ref/contrib/gis/db-api.txt:69
@@ -13643,7 +13643,7 @@ msgid ""
 " different SRID value) than that of the field, then it will be implicitly "
 "transformed into the SRID of the model's field, using the spatial database's"
 " transform procedure::"
-msgstr ""
+msgstr "De plus, si l'objet ``GEOSGeometry`` est dans un autre système de coordonnées (sa valeur SRID est différente) que celui du champ, il sera implicitement converti dans le SRID du champ du modèle, en utilisant la procédure de transformation de la base de données spatiale ::"
 
 # f237e092dfdb4854bb9c3cf1e35faa79
 #: ../../ref/contrib/gis/db-api.txt:81
@@ -13654,14 +13654,14 @@ msgid ""
 "GDAL). Essentially, if the input is not a ``GEOSGeometry`` object, the "
 "geometry field will attempt to create a ``GEOSGeometry`` instance from the "
 "input."
-msgstr ""
+msgstr "Ainsi, les paramètres de géométrie peuvent être transmis en utilisant un objet ``GEOSGeometry``, une syntaxe WKT (Well Known Text [#fnwkt]_), HEXEWKB (spécifique à PostGIS, un objet géométrique WKB en hexadécimal [#fnewkb]_), et GeoJSON [#fngeojson]_ (nécessite GDAL). En fait, si la donnée n'est pas un objet ``GEOSGeometry``, le champ géométrique essaie de créer une instance ``GEOSGeometry`` à partir des données fournies."
 
 # 26c14f80ce834713b733aedf6b2a285a
 #: ../../ref/contrib/gis/db-api.txt:87
 msgid ""
 "For more information creating :class:`~django.contrib.gis.geos.GEOSGeometry`"
 " objects, refer to the :ref:`GEOS tutorial <geos-tutorial>`."
-msgstr ""
+msgstr "Pour plus d'informations sur la création d'objets :class:`~django.contrib.gis.geos.GEOSGeometry`, consultez le :ref:`tutoriel GEOSl <geos-tutorial>`."
 
 # 385317c8d0674a84b9627ea27b19ec6c
 # a31eb907010b4c3e9cca858da2b00b79
@@ -13682,7 +13682,7 @@ msgid ""
 "(e.g. :class:`~django.db.models.CharField`) may be chained with those on "
 "geographic fields.  Thus, geographic queries take the following general form"
 " (assuming  the ``Zipcode`` model used in the :ref:`ref-gis-model-api`)::"
-msgstr ""
+msgstr "Les types de recherches GeoDjango peuvent être utilisés avec toute méthode de gestionnaire comme ``filter()``, ``exclude()``, etc. Cependant, les types de recherches spécifiques à GeoDjango ne sont disponibles que pour les champs géométriques. Les filtres sur les champs « normaux » (par ex. :class:`~django.db.models.CharField`) peuvent être enchaînés avec d'autres sur les champs géographiques. Ainsi, les requêtes géographiques ont la forme générale suivante (en prenant comme exemple le modèle ``Zipcode`` utilisé dans l':ref:`ref-gis-model-api`) ::"
 
 # c911aaa936094693bc95246e6714bbf0
 #: ../../ref/contrib/gis/db-api.txt:110
@@ -13691,14 +13691,14 @@ msgid ""
 "contains>` is the spatial lookup type, and ``pnt`` is the parameter (which "
 "may be a :class:`~django.contrib.gis.geos.GEOSGeometry` object or a string "
 "of GeoJSON , WKT, or HEXEWKB)."
-msgstr ""
+msgstr "Dans ce cas, ``poly`` est le champ géographique, :lookup:`contains <gis-contains>` est le type de recherche spatiale et ``pnt`` est le paramètre (qui pourrait être un objet :class:`~django.contrib.gis.geos.GEOSGeometry` ou une chaîne GeoJSON , WKT ou HEXEWKB)."
 
 # 71192f5b5c4547bf8e402485545abe6a
 #: ../../ref/contrib/gis/db-api.txt:115
 msgid ""
 "A complete reference can be found in the :ref:`spatial lookup reference "
 "<spatial-lookups>`."
-msgstr ""
+msgstr "Une référence complète peut être consultée dans la :ref:`référence sur les recherches spatiales <spatial-lookups>`."
 
 # f7965775c58e4f23b5d602d5b5049979
 #: ../../ref/contrib/gis/db-api.txt:120
@@ -13706,12 +13706,12 @@ msgid ""
 "GeoDjango constructs spatial SQL with the :class:`GeoQuerySet`, a subclass "
 "of :class:`~django.db.models.query.QuerySet`.  The :class:`GeoManager` "
 "instance attached to your model is what enables use of :class:`GeoQuerySet`."
-msgstr ""
+msgstr "GeoDjango construit le code SQL spatial à l'aide des objets :class:`GeoQuerySet`, une sous-classe de :class:`~django.db.models.query.QuerySet`. L'instance :class:`GeoManager`liée à votre modèle est ce qui permet d'utiliser :class:`GeoQuerySet`."
 
 # d38e90e3e25b4a098f63924b49c20339
 #: ../../ref/contrib/gis/db-api.txt:128
 msgid "Distance Queries"
-msgstr ""
+msgstr "Requêtes de distance"
 
 # ef038b2680144b068953f61e7d266618
 # 75f8697f405a45b4b96d6c5b8d9cef12
@@ -13727,14 +13727,14 @@ msgid ""
 "coordinate system may have to be expressed differently because of "
 "limitations in PostGIS.  Please see the :ref:`selecting-an-srid` section in "
 "the :ref:`ref-gis-model-api` documentation for more details."
-msgstr ""
+msgstr "Les calculs de distance sur des données spatiales sont complexes, parce que malheureusement, la Terre n'est pas plate. Certaines requêtes de distance avec des champs dans un système de coordonnées géographiques doivent parfois être exprimées différemment en raison de limites dans PostGIS. Pour plus de détails, consultez la section :ref:`selecting-an-srid` dans la documentation :ref:`ref-gis-model-api`."
 
 # d0bd1cd184e344d5bd721ffdb967d913
 # 18b85693b0e2431e8928b688c220545d
 #: ../../ref/contrib/gis/db-api.txt:141
 #: ../../ref/contrib/gis/geoquerysets.txt:510
 msgid "Distance Lookups"
-msgstr ""
+msgstr "Recherches de distance"
 
 # b771e13de62a4784b12fe0ca51582f72
 # c7d6bceacb2644a392c2f6d59ab80c0d
@@ -13761,66 +13761,66 @@ msgstr ""
 #: ../../ref/contrib/gis/geoquerysets.txt:1088
 #: ../../ref/contrib/gis/geoquerysets.txt:1165
 msgid "*Availability*: PostGIS, Oracle, SpatiaLite"
-msgstr ""
+msgstr "*Disponibilité* : PostGIS, Oracle, SpatiaLite"
 
 # 31beb3d1c9c74bd6aa7975c9cd8cff63
 #: ../../ref/contrib/gis/db-api.txt:144
 msgid "The following distance lookups are available:"
-msgstr ""
+msgstr "Les recherches de distance suivantes sont disponibles :"
 
 # 781730973c0a445cabdd6bc47d2e3aa4
 # 4b6fb846eaf94a0c94223f111affaec9
 #: ../../ref/contrib/gis/db-api.txt:146 ../../ref/contrib/gis/db-api.txt:246
 msgid ":lookup:`distance_lt`"
-msgstr ""
+msgstr ":lookup:`distance_lt`"
 
 # 5998aeb92e74417a931ea02f0fe62a15
 # 70723609858944a9a1e412437e2c73af
 #: ../../ref/contrib/gis/db-api.txt:147 ../../ref/contrib/gis/db-api.txt:247
 msgid ":lookup:`distance_lte`"
-msgstr ""
+msgstr ":lookup:`distance_lte`"
 
 # 032e2d6ba69743eb898e174ff13ca44a
 # f861243825e8429cb56467eb25b676bd
 #: ../../ref/contrib/gis/db-api.txt:148 ../../ref/contrib/gis/db-api.txt:244
 msgid ":lookup:`distance_gt`"
-msgstr ""
+msgstr ":lookup:`distance_gt`"
 
 # 799dcbba824b4e378a3f6db0e8290685
 # d68b98ec2f754ec7b4983279e23c4a39
 #: ../../ref/contrib/gis/db-api.txt:149 ../../ref/contrib/gis/db-api.txt:245
 msgid ":lookup:`distance_gte`"
-msgstr ""
+msgstr ":lookup:`distance_gte`"
 
 # 9fb7ede823b84f0b96acb71d7a149d8b
 # 146dcc05d6b94fd5a6ff179e0d442405
 #: ../../ref/contrib/gis/db-api.txt:150 ../../ref/contrib/gis/db-api.txt:248
 msgid ":lookup:`dwithin`"
-msgstr ""
+msgstr ":lookup:`dwithin`"
 
 # 7c205d0530f14c03ae93e48dfa2f1d7f
 #: ../../ref/contrib/gis/db-api.txt:154
 msgid ""
 "For *measuring*, rather than querying on distances, use the "
 ":meth:`GeoQuerySet.distance` method."
-msgstr ""
+msgstr "Pour des *mensurations*, au lieu d'interroger sur les distances, utilisez la méthode :meth:`GeoQuerySet.distance`."
 
 # c73c863c257744e0b4c10e8e209aea00
 #: ../../ref/contrib/gis/db-api.txt:157
 msgid "Distance lookups take a tuple parameter comprising:"
-msgstr ""
+msgstr "Les recherches de distance acceptent un paramètre sous forme de tuple comprenant :"
 
 # 70574103bcce4124a468a4f80a49729d
 #: ../../ref/contrib/gis/db-api.txt:159
 msgid "A geometry to base calculations from; and"
-msgstr ""
+msgstr "Un objet géométrique sur lequel baser les calculs ; et"
 
 # c7792800f0534139b798cfa7147e4446
 #: ../../ref/contrib/gis/db-api.txt:160
 msgid ""
 "A number or :class:`~django.contrib.gis.measure.Distance` object containing "
 "the distance."
-msgstr ""
+msgstr "Un nombre ou un objet :class:`~django.contrib.gis.measure.Distance` contenant la distance."
 
 # 31e9b78ad7254ec3be666174f2c4a77a
 #: ../../ref/contrib/gis/db-api.txt:162
@@ -13829,7 +13829,7 @@ msgid ""
 " expressed in any units (the SQL generated will use units converted to those"
 " of the field); otherwise, numeric parameters are assumed to be in the units"
 " of the field."
-msgstr ""
+msgstr "Si un objet :class:`~django.contrib.gis.measure.Distance` est utilisé, il peut être exprimé dans n'importe quelle unité (le code SQL généré utilisera des unités converties dans celles du champ) ; sinon, les paramètres numériques sont supposés être dans la même unité que celle du champ."
 
 # a6f2b862d9374f10bfc22ea67a6c2c23
 #: ../../ref/contrib/gis/db-api.txt:169
@@ -13840,7 +13840,7 @@ msgid ""
 "[#fndistsphere14]_. Thus, geographic distance lookups on traditional PostGIS"
 " geometry columns are only allowed on :class:`PointField` model fields using"
 " a point for the geometry parameter."
-msgstr ""
+msgstr "Pour les utilisateurs des versions 1.4 et plus anciennes de PostGIS, la routine ``ST_Distance_Sphere`` est utilisée par défaut pour calculer les distances avec les systèmes de coordonnées géographiques (par ex. WGS84), et celle-ci ne peut être appliquée que sur des objets de type point [#fndistsphere14]_. Ainsi, les recherches de distance géographiques sur les colonnes géométriques traditionnelles de PostGIS ne sont autorisées que sur les champs de modèle :class:`PointField` en utilisant un point comme paramètre géométrique."
 
 # 5079d019d4d04cd78d60e4d98cb6d7eb
 #: ../../ref/contrib/gis/db-api.txt:178
@@ -13850,7 +13850,7 @@ msgid ""
 " these queries may take a long time, as great-circle distances must be "
 "calculated on the fly for *every* row in the query.  This is because the "
 "spatial index on traditional geometry fields cannot be used."
-msgstr ""
+msgstr "Dans PostGIS 1.5, ``ST_Distance_Sphere`` ne restreint *plus* les types géométriques sur lesquels les requêtes de distance géographiques sont appliquées [#fndistsphere15]_. Cependant, ces requêtes peuvent être très lentes, car les distances de grand cercle doivent être calculées à la volée pour *chaque* ligne de la requête. La raison en est que l'index spatial des champs géométriques traditionnels ne peut pas être exploité."
 
 # 58eb14e5360b44f9ad62a129565de379
 #: ../../ref/contrib/gis/db-api.txt:184
@@ -13860,7 +13860,7 @@ msgid ""
 "they are able to use their spatial index in distance queries. You can tell "
 "GeoDjango to use a geography column by setting ``geography=True`` in your "
 "field definition."
-msgstr ""
+msgstr "Pour de bien meilleures performances concernant les requêtes de distance WGS84, évaluez la possibilité d'utiliser plutôt des :ref:`colonnes de type géographique <geography-type>` dans votre base de données car leur index spatial peut être exploité dans les requêtes de distance. Vous pouvez indiquer à GeoDjango de créer des colonnes géographiques en définissant ``geography=True`` dans la définition du champ."
 
 # 99cfc5a396c94d3f9c7c3fa51d0245bb
 #: ../../ref/contrib/gis/db-api.txt:190
@@ -13868,29 +13868,29 @@ msgid ""
 "For example, let's say we have a ``SouthTexasCity`` model (from the "
 "`GeoDjango distance tests`__ ) on a *projected* coordinate system valid for "
 "cities in southern Texas::"
-msgstr ""
+msgstr "Par exemple, si l'on dispose d'un modèle ``SouthTexasCity`` (exemple tiré des `tests de distance de GeoDjango`__) avec un système de coordonnées *projeté* valide pour les villes du sud du Texas ::"
 
 # 3ddb81ba562a4eb8bf79a31a9f71dada
 #: ../../ref/contrib/gis/db-api.txt:203
 msgid "Then distance queries may be performed as follows::"
-msgstr ""
+msgstr "Les requêtes de distance suivantes pourraient être effectuées ::"
 
 # 582105d9c878415092c10ebfff1ad77c
 #: ../../ref/contrib/gis/db-api.txt:222
 msgid "Compatibility Tables"
-msgstr ""
+msgstr "Tableaux de compatibilité"
 
 # 88c05ae32eca495ebf97ce0e41693c41
 #: ../../ref/contrib/gis/db-api.txt:229
 msgid ""
 "The following table provides a summary of what spatial lookups are available"
 " for each spatial database backend."
-msgstr ""
+msgstr "Le tableau suivant indique en résumé quelles sont les recherches spatiales disponibles pour chaque moteur de base de données spatiale. "
 
 # da20a2c5674141a7910184abcc5943ff
 #: ../../ref/contrib/gis/db-api.txt:233
 msgid "Lookup Type"
-msgstr ""
+msgstr "Type de recherche"
 
 # 6027198b07044578be951f16df7fb48e
 # fb0b1bfaf7814393932171c80a977128
@@ -13973,7 +13973,7 @@ msgstr "Oracle"
 # eaa5d743f4034eb9bf4e59c40b5f1cc9
 #: ../../ref/contrib/gis/db-api.txt:233
 msgid "MySQL [#]_"
-msgstr ""
+msgstr "MySQL [#]_"
 
 # 4796920d339f49d3a373db3b590711db
 # 9afc9c634dd64fa9ac67d6fe573d062e
@@ -14007,12 +14007,12 @@ msgstr ""
 #: ../../ref/contrib/gis/geoquerysets.txt:608
 #: ../../ref/contrib/gis/testing.txt:107
 msgid "SpatiaLite"
-msgstr ""
+msgstr "SpatiaLite"
 
 # 715ddecc7e8341e9ab5964ccd99a5b4d
 #: ../../ref/contrib/gis/db-api.txt:235
 msgid ":lookup:`bbcontains`"
-msgstr ""
+msgstr ":lookup:`bbcontains`"
 
 # 28883e1d7c914b078425d8a2c4217f8c
 # 16c91f82cf4b4fc9a8241fae69b6081f
@@ -14231,58 +14231,58 @@ msgstr ""
 #: ../../ref/contrib/gis/db-api.txt:306 ../../ref/contrib/gis/db-api.txt:307
 #: ../../ref/contrib/gis/db-api.txt:307 ../../ref/contrib/gis/db-api.txt:307
 msgid "X"
-msgstr ""
+msgstr "X"
 
 # 5e0f5849f9f14d80b29567b942e69e38
 # c663b1358ce243269b782b9332b767c4
 #: ../../ref/contrib/gis/db-api.txt:236
 #: ../../ref/contrib/gis/model-api.txt:214
 msgid ":lookup:`bboverlaps`"
-msgstr ""
+msgstr ":lookup:`bboverlaps`"
 
 # 4df2ef248115469e92e342f346bf649d
 #: ../../ref/contrib/gis/db-api.txt:237
 msgid ":lookup:`contained`"
-msgstr ""
+msgstr ":lookup:`contained`"
 
 # 1a899e764cbe49b0be4c3596f5383134
 #: ../../ref/contrib/gis/db-api.txt:238
 msgid ":lookup:`contains <gis-contains>`"
-msgstr ""
+msgstr ":lookup:`contains <gis-contains>`"
 
 # 2def8f5dc5394e4aa876be2fdb2fdaa0
 #: ../../ref/contrib/gis/db-api.txt:239
 msgid ":lookup:`contains_properly`"
-msgstr ""
+msgstr ":lookup:`contains_properly`"
 
 # c8ed438bdcf94d50a34fc13540e51a55
 # 74cf276fa89a4eb185bfd4921df2072e
 #: ../../ref/contrib/gis/db-api.txt:240
 #: ../../ref/contrib/gis/model-api.txt:215
 msgid ":lookup:`coveredby`"
-msgstr ""
+msgstr ":lookup:`coveredby`"
 
 # 14ab49eb56804ea0a19bf62758257812
 # aaa05a84a3f34c1abead9549a8cf4348
 #: ../../ref/contrib/gis/db-api.txt:241
 #: ../../ref/contrib/gis/model-api.txt:216
 msgid ":lookup:`covers`"
-msgstr ""
+msgstr ":lookup:`covers`"
 
 # addb398504f740fd9ca5f39b06d771b8
 #: ../../ref/contrib/gis/db-api.txt:242
 msgid ":lookup:`crosses`"
-msgstr ""
+msgstr ":lookup:`crosses`"
 
 # 6f743677409746958f834999af07b8b6
 #: ../../ref/contrib/gis/db-api.txt:243
 msgid ":lookup:`disjoint`"
-msgstr ""
+msgstr ":lookup:`disjoint`"
 
 # 195e444252f748bd9fd8885cf9926bd9
 #: ../../ref/contrib/gis/db-api.txt:249
 msgid ":lookup:`equals`"
-msgstr ""
+msgstr ":lookup:`equals`"
 
 # 36c6bf0f996a47039c80fd7d60ec8568
 #: ../../ref/contrib/gis/db-api.txt:250
@@ -14294,72 +14294,72 @@ msgstr ":lookup:`exact`"
 #: ../../ref/contrib/gis/db-api.txt:251
 #: ../../ref/contrib/gis/model-api.txt:217
 msgid ":lookup:`intersects`"
-msgstr ""
+msgstr ":lookup:`intersects`"
 
 # 5a5ef88916ea4d15b3ad6f5e7a8d0672
 #: ../../ref/contrib/gis/db-api.txt:252
 msgid ":lookup:`overlaps`"
-msgstr ""
+msgstr ":lookup:`overlaps`"
 
 # 8ba518b4449948469a7fbfe1c832e6e8
 #: ../../ref/contrib/gis/db-api.txt:253
 msgid ":lookup:`relate`"
-msgstr ""
+msgstr ":lookup:`relate`"
 
 # 8c8bdb65c0b842f8b64b7fe2ee8c6dc6
 #: ../../ref/contrib/gis/db-api.txt:254
 msgid ":lookup:`same_as`"
-msgstr ""
+msgstr ":lookup:`same_as`"
 
 # 00205b0637a24ed7a224326f1cca2284
 #: ../../ref/contrib/gis/db-api.txt:255
 msgid ":lookup:`touches`"
-msgstr ""
+msgstr ":lookup:`touches`"
 
 # 0cd6b50960c84528804987a99b9b081b
 #: ../../ref/contrib/gis/db-api.txt:256
 msgid ":lookup:`within`"
-msgstr ""
+msgstr ":lookup:`within`"
 
 # f5563571c7e34e4aa23f9a0303ae31f7
 #: ../../ref/contrib/gis/db-api.txt:257
 msgid ":lookup:`left`"
-msgstr ""
+msgstr ":lookup:`left`"
 
 # c08837b76b1846c5b0dc7e018db6000b
 #: ../../ref/contrib/gis/db-api.txt:258
 msgid ":lookup:`right`"
-msgstr ""
+msgstr ":lookup:`right`"
 
 # efdcb56f1a924b5a8da8fa0b0121ca74
 #: ../../ref/contrib/gis/db-api.txt:259
 msgid ":lookup:`overlaps_left`"
-msgstr ""
+msgstr ":lookup:`overlaps_left`"
 
 # c2f458acdf3740c8baa221fb06ee3b61
 #: ../../ref/contrib/gis/db-api.txt:260
 msgid ":lookup:`overlaps_right`"
-msgstr ""
+msgstr ":lookup:`overlaps_right`"
 
 # fd824a939b69490d8f0e853a4cd920a8
 #: ../../ref/contrib/gis/db-api.txt:261
 msgid ":lookup:`overlaps_above`"
-msgstr ""
+msgstr ":lookup:`overlaps_above`"
 
 # 3296a42a3f244f8bbcacad69a0a65834
 #: ../../ref/contrib/gis/db-api.txt:262
 msgid ":lookup:`overlaps_below`"
-msgstr ""
+msgstr ":lookup:`overlaps_below`"
 
 # 94d2c1bcdd054b8ca0e6ff9b81808ecb
 #: ../../ref/contrib/gis/db-api.txt:263
 msgid ":lookup:`strictly_above`"
-msgstr ""
+msgstr ":lookup:`strictly_above`"
 
 # 7835ff1d42014d47ae8c3a82fe51d791
 #: ../../ref/contrib/gis/db-api.txt:264
 msgid ":lookup:`strictly_below`"
-msgstr ""
+msgstr ":lookup:`strictly_below`"
 
 # 196d5cfe7abb47fa88f2d1bdfeb69f75
 # dfa704a8968044aca9f9d8ccb8a2d8ef
@@ -14376,162 +14376,162 @@ msgid ""
 "The following table provides a summary of what :class:`GeoQuerySet` methods "
 "are available on each spatial backend.  Please note that MySQL does not "
 "support any of these methods, and is thus excluded from the table."
-msgstr ""
+msgstr "Le tableau suivant indique en résumé quelles méthodes :class:`GeoQuerySet` sont disponibles pour chae moteur de base de données spatiale. Notez que MySQL n'en prend en charge aucune et qu'il est donc exclu du tableau."
 
 # 2918e3f50b204d5686948d03b3ceb865
 #: ../../ref/contrib/gis/db-api.txt:276
 msgid "Method"
-msgstr ""
+msgstr "Méthode"
 
 # f11bfff4bb964f63be944f611c83381b
 #: ../../ref/contrib/gis/db-api.txt:278
 msgid ":meth:`GeoQuerySet.area`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.area`"
 
 # fd42636aae9446648f4b6021fccd5a46
 #: ../../ref/contrib/gis/db-api.txt:279
 msgid ":meth:`GeoQuerySet.centroid`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.centroid`"
 
 # 880b0153a8894c2aa2d5d9bab0241f5b
 #: ../../ref/contrib/gis/db-api.txt:280
 msgid ":meth:`GeoQuerySet.collect`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.collect`"
 
 # 9e510e4f4982437687f088b071b2bf55
 #: ../../ref/contrib/gis/db-api.txt:281
 msgid ":meth:`GeoQuerySet.difference`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.difference`"
 
 # 2324a94707c44284b2c2df76043b0d59
 #: ../../ref/contrib/gis/db-api.txt:282
 msgid ":meth:`GeoQuerySet.distance`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.distance`"
 
 # ed65ead95da6453197d93c0212d6ff42
 #: ../../ref/contrib/gis/db-api.txt:283
 msgid ":meth:`GeoQuerySet.envelope`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.envelope`"
 
 # 5de35ec9d68d4b8cb1486b5908eb3340
 #: ../../ref/contrib/gis/db-api.txt:284
 msgid ":meth:`GeoQuerySet.extent`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.extent`"
 
 # 0130994acca54b3bab304eddbc98374b
 #: ../../ref/contrib/gis/db-api.txt:285
 msgid ":meth:`GeoQuerySet.extent3d`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.extent3d`"
 
 # 2b7b0cfe7e054db098c2e2bdb1ac7392
 #: ../../ref/contrib/gis/db-api.txt:286
 msgid ":meth:`GeoQuerySet.force_rhr`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.force_rhr`"
 
 # 6d36dfdccaf74979a9fa0fd8f2864386
 #: ../../ref/contrib/gis/db-api.txt:287
 msgid ":meth:`GeoQuerySet.geohash`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.geohash`"
 
 # af80aad307084c87b6c64d6471b37479
 #: ../../ref/contrib/gis/db-api.txt:288
 msgid ":meth:`GeoQuerySet.geojson`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.geojson`"
 
 # bb098c5ffbf048b7985009db095b616f
 #: ../../ref/contrib/gis/db-api.txt:289
 msgid ":meth:`GeoQuerySet.gml`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.gml`"
 
 # 19e599b0f1bd4c798a35db1c66dd1e9f
 #: ../../ref/contrib/gis/db-api.txt:290
 msgid ":meth:`GeoQuerySet.intersection`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.intersection`"
 
 # d60ab99df68747b19b4603e9a7c8c16d
 #: ../../ref/contrib/gis/db-api.txt:291
 msgid ":meth:`GeoQuerySet.kml`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.kml`"
 
 # 082bfd2177314405b0ebf7197bff4648
 #: ../../ref/contrib/gis/db-api.txt:292
 msgid ":meth:`GeoQuerySet.length`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.length`"
 
 # 3ef0d58d26014832bbda881b61994cae
 #: ../../ref/contrib/gis/db-api.txt:293
 msgid ":meth:`GeoQuerySet.make_line`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.make_line`"
 
 # 57f7140702984d67a20cfe6fe9647ea8
 #: ../../ref/contrib/gis/db-api.txt:294
 msgid ":meth:`GeoQuerySet.mem_size`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.mem_size`"
 
 # 3399da3781634abaadcf5ae67de291f4
 #: ../../ref/contrib/gis/db-api.txt:295
 msgid ":meth:`GeoQuerySet.num_geom`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.num_geom`"
 
 # 6f03557d415643e49b8eba7626cabc1d
 #: ../../ref/contrib/gis/db-api.txt:296
 msgid ":meth:`GeoQuerySet.num_points`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.num_points`"
 
 # 5685df1274734055b41c13e6d45ad4f1
 #: ../../ref/contrib/gis/db-api.txt:297
 msgid ":meth:`GeoQuerySet.perimeter`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.perimeter`"
 
 # b4d2a82341184d97b0d6a8a36a605956
 #: ../../ref/contrib/gis/db-api.txt:298
 msgid ":meth:`GeoQuerySet.point_on_surface`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.point_on_surface`"
 
 # 415cd3fe6ae346b792fcbeb7147ea6de
 #: ../../ref/contrib/gis/db-api.txt:299
 msgid ":meth:`GeoQuerySet.reverse_geom`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.reverse_geom`"
 
 # 0a8272370f08481793b7a634114ee2f9
 #: ../../ref/contrib/gis/db-api.txt:300
 msgid ":meth:`GeoQuerySet.scale`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.scale`"
 
 # 4d5335f4f2294c3e87ab83a16a7fa16a
 #: ../../ref/contrib/gis/db-api.txt:301
 msgid ":meth:`GeoQuerySet.snap_to_grid`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.snap_to_grid`"
 
 # 71ac768ecce44257894077f29a1b83a3
 #: ../../ref/contrib/gis/db-api.txt:302
 msgid ":meth:`GeoQuerySet.svg`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.svg`"
 
 # 78409b22e7e5493a860341280bc942e6
 #: ../../ref/contrib/gis/db-api.txt:303
 msgid ":meth:`GeoQuerySet.sym_difference`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.sym_difference`"
 
 # e1d0ad20453c461fb9a064eb564465ed
 #: ../../ref/contrib/gis/db-api.txt:304
 msgid ":meth:`GeoQuerySet.transform`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.transform`"
 
 # 67c58ec3c3e04519a8a272fbd20ba89c
 #: ../../ref/contrib/gis/db-api.txt:305
 msgid ":meth:`GeoQuerySet.translate`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.translate`"
 
 # cfde1931fa2648be8cf907196687a36d
 #: ../../ref/contrib/gis/db-api.txt:306
 msgid ":meth:`GeoQuerySet.union`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.union`"
 
 # 6b2e394bcf2848569d2a195202279744
 #: ../../ref/contrib/gis/db-api.txt:307
 msgid ":meth:`GeoQuerySet.unionagg`"
-msgstr ""
+msgstr ":meth:`GeoQuerySet.unionagg`"
 
 # 0b4f1db35f29485b8e877c7eab21e1a0
 # 34781bbdc91647d79ea1acf9ff87bf5c
@@ -14562,7 +14562,7 @@ msgid ""
 "Specification For SQL <http://www.opengis.org/docs/99-049.pdf>`_, Document "
 "99-049 (May 5, 1999), at  Ch. 3.2.5, p. 3-11 (SQL Textual Representation of "
 "Geometry)."
-msgstr ""
+msgstr "*Voir* Open Geospatial Consortium, Inc., `OpenGIS Simple Feature Specification For SQL <http://www.opengis.org/docs/99-049.pdf>`_, Document 99-049 (5 mai 1999), au Ch. 3.2.5, p. 3-11 (SQL Textual Representation of Geometry)."
 
 # 9dbba9aca23a463cbbf641c0daf8009c
 #: ../../ref/contrib/gis/db-api.txt:312
@@ -14570,7 +14570,7 @@ msgid ""
 "*See* `PostGIS EWKB, EWKT and Canonical Forms "
 "<http://postgis.refractions.net/documentation/manual-1.5/ch04.html#EWKB_EWKT>`_,"
 " PostGIS documentation at Ch. 4.1.2."
-msgstr ""
+msgstr "*Voir* PostGIS EWKB, EWKT et formes canoniques <http://postgis.refractions.net/documentation/manual-1.5/ch04.html#EWKB_EWKT>`_, documentation de PostGIS au Ch. 4.1.2."
 
 # a22bc9e9d78c43d3ba1343491ca176c3
 #: ../../ref/contrib/gis/db-api.txt:313
@@ -14578,7 +14578,7 @@ msgid ""
 "*See* Howard Butler, Martin Daly, Allan Doyle, Tim Schaub, & Christopher "
 "Schmidt, `The GeoJSON Format Specification <http://geojson.org/geojson-"
 "spec.html>`_, Revision 1.0 (June 16, 2008)."
-msgstr ""
+msgstr "*Voir* Howard Butler, Martin Daly, Allan Doyle, Tim Schaub, & Christopher Schmidt, `The GeoJSON Format Specification <http://geojson.org/geojson-spec.html>`_, révision 1.0 (16 juin 2008)."
 
 # 5a71d93335184b0980899b11b1c08e9c
 #: ../../ref/contrib/gis/db-api.txt:314
@@ -14586,7 +14586,7 @@ msgid ""
 "*See* `PostGIS 1.4 documentation "
 "<http://postgis.refractions.net/documentation/manual-1.4/ST_Distance_Sphere.html>`_"
 " on ``ST_distance_sphere``."
-msgstr ""
+msgstr "*Voir* la `documentation de PostGIS 1.4 <http://postgis.refractions.net/documentation/manual-1.4/ST_Distance_Sphere.html>`_ pour ``ST_distance_sphere``."
 
 # 872af8f56e9247a0be35f296e1a9ce79
 #: ../../ref/contrib/gis/db-api.txt:315
@@ -14594,14 +14594,14 @@ msgid ""
 "*See* `PostGIS 1.5 documentation "
 "<http://postgis.refractions.net/documentation/manual-1.5/ST_Distance_Sphere.html>`_"
 " on ``ST_distance_sphere``."
-msgstr ""
+msgstr "*Voir* la `documentation de PostGIS 1.5 <http://postgis.refractions.net/documentation/manual-1.5/ST_Distance_Sphere.html>`_ pour ``ST_distance_sphere``."
 
 # 50a2db534a994279bcae71f435779858
 #: ../../ref/contrib/gis/db-api.txt:316
 msgid ""
 "*See* `Creating Spatial Indexes <http://dev.mysql.com/doc/refman/5.1/en"
 "/creating-spatial-indexes.html>`_ in the MySQL 5.1 Reference Manual:"
-msgstr ""
+msgstr "*Voir* `Création d'index spatiaux <http://dev.mysql.com/doc/refman/5.1/en/creating-spatial-indexes.html>`_ dans le manuel de référence de MySQL 5.1 :"
 
 # 007bad05b0684c32892d8c456e146c8a
 #: ../../ref/contrib/gis/db-api.txt:319
@@ -14610,12 +14610,12 @@ msgid ""
 "engines that support nonspatial indexing of spatial columns, the engine "
 "creates a B-tree index. A B-tree index on spatial values will be useful for "
 "exact-value lookups, but not for range scans."
-msgstr ""
+msgstr "Pour les tables MyISAM, ``SPATIAL INDEX`` crée un index R-tree. Pour les moteurs de stockage qui prennent en charge les index non spatiaux sur les colonnes spatiales, le moteur crée un index B-tree. Un index B-tree sur des valeurs spatiales est utile pour les recherches par valeur exacte, mais pas pour les recherches sur des intervalles."
 
 # dcf638d9cabc4ff39d05e0893646fcf4
 #: ../../ref/contrib/gis/db-api.txt:324
 msgid "Refer :ref:`mysql-spatial-limitations` section for more details."
-msgstr ""
+msgstr "Référez-vous à la section :ref:`mysql-spatial-limitations` pour plus de détails."
 
 # 493e83103f8249b699862a1979cd7131
 #: ../../ref/contrib/gis/deployment.txt:3
@@ -31234,31 +31234,31 @@ msgstr ""
 # 0adf4d440d954c888321e892b58722ca
 #: ../../ref/exceptions.txt:3
 msgid "Django Exceptions"
-msgstr ""
+msgstr "Exceptions de Django"
 
 # 507345f33a9a461fadede1227379e470
 #: ../../ref/exceptions.txt:6
 msgid ""
 "Django raises some Django specific exceptions as well as many standard "
 "Python exceptions."
-msgstr ""
+msgstr "Django génère certaines exceptions qui lui sont propres tout comme beaucoup d'exceptions Python standards."
 
 # e40e8a506b9b4d80965c72308b0c7fec
 #: ../../ref/exceptions.txt:10
 msgid "Django-specific Exceptions"
-msgstr ""
+msgstr "Exceptions spécifiques à Django"
 
 # 7efc0e36ed834579be409d5ffb6cc744
 #: ../../ref/exceptions.txt:16
 msgid "ObjectDoesNotExist and DoesNotExist"
-msgstr ""
+msgstr "ObjectDoesNotExist et DoesNotExist"
 
 # de9e5ca6a7ca49f3976c915d079b4bf0
 #: ../../ref/exceptions.txt:20
 msgid ""
 "The :exc:`DoesNotExist` exception is raised when an object is not found for "
 "the given parameters of a query."
-msgstr ""
+msgstr "L'exception :exc:`DoesNotExist` est générée lorsqu'aucun objet ne correspond aux paramètres donnés d'une requête."
 
 # 6c1d620f370344e896d28ba4b412792d
 #: ../../ref/exceptions.txt:23
@@ -31267,19 +31267,19 @@ msgid ""
 ":exc:`DoesNotExist` is a subclass of the base :exc:`ObjectDoesNotExist` "
 "exception that is provided on every model class as a way of identifying the "
 "specific type of object that could not be found."
-msgstr ""
+msgstr ":exc:`ObjectDoesNotExist` est défini dans :mod:`django.core.exceptions`. :exc:`DoesNotExist` est une sous-classe de l'exception de base :exc:`ObjectDoesNotExist` et est présente pour chaque classe de modèle afin de pouvoir identifier précisément le type d'objet qui n'a pas été trouvé."
 
 # 0d567175a68e43cd95269db58df9c1aa
 #: ../../ref/exceptions.txt:28
 msgid ""
 "See :meth:`~django.db.models.query.QuerySet.get()` for further information "
 "on :exc:`ObjectDoesNotExist` and :exc:`DoesNotExist`."
-msgstr ""
+msgstr "Consultez :meth:`~django.db.models.query.QuerySet.get()` pour plus d'informations sur les exceptions :exc:`ObjectDoesNotExist` et :exc:`DoesNotExist`."
 
 # 126e568b32f246b1b2a67c592f2b5662
 #: ../../ref/exceptions.txt:32
 msgid "MultipleObjectsReturned"
-msgstr ""
+msgstr "MultipleObjectsReturned"
 
 # 4b63d439f27f44cc8bf079add45fa644
 #: ../../ref/exceptions.txt:35
@@ -31289,18 +31289,18 @@ msgid ""
 " this exception is provided in :mod:`django.core.exceptions`; each model "
 "class contains a subclassed version that can be used to identify the "
 "specific object type that has returned multiple objects."
-msgstr ""
+msgstr "L'exception :exc:`MultipleObjectsReturned` est générée par une requête lorsqu'un seul objet est attendu mais que la requête renvoie plusieurs objets. Une version de base de cette exception se trouve dans :mod:`django.core.exceptions`; chaque classe de modèle contient une version héritant de cette exception permettant d'identifier précisément le type d'objets renvoyés à plusieurs."
 
 # 9d24ece8f4404010b8c9b06abe701d2b
 #: ../../ref/exceptions.txt:41
 msgid ""
 "See :meth:`~django.db.models.query.QuerySet.get()` for further information."
-msgstr ""
+msgstr "Voir :meth:`~django.db.models.query.QuerySet.get()` pour plus d'informations."
 
 # 4fc044ed05424d80bac8627da480ea59
 #: ../../ref/exceptions.txt:44
 msgid "SuspiciousOperation"
-msgstr ""
+msgstr "SuspiciousOperation"
 
 # e70e9b08f5aa44b09eb9f3b0eeb9082c
 #: ../../ref/exceptions.txt:47
@@ -31308,48 +31308,48 @@ msgid ""
 "The :exc:`SuspiciousOperation` exception is raised when a user has performed"
 " an operation that should be considered suspicious from a security "
 "perspective, such as tampering with a session cookie."
-msgstr ""
+msgstr "L'exception :exc:`SuspiciousOperation` est générée lorsqu'un utilisateur effectue une opération considérée comme douteuse selon des critères de sécurité, comme lors de manipulations d'un cookie de session."
 
 # 8e12fd0618d841228723db72cc8622bc
 #: ../../ref/exceptions.txt:52
 msgid "PermissionDenied"
-msgstr ""
+msgstr "PermissionDenied"
 
 # 54950dedec3043728381c6bde1df52d8
 #: ../../ref/exceptions.txt:55
 msgid ""
 "The :exc:`PermissionDenied` exception is raised when a user does not have "
 "permission to perform the action requested."
-msgstr ""
+msgstr "L'exception :exc:`PermissionDenied` est générée lorsqu'un utilisateur ne possède pas la permission d'effectuer l'action demandée."
 
 # 5040cb3e4ada45518c459064b60e2be9
 #: ../../ref/exceptions.txt:59
 msgid "ViewDoesNotExist"
-msgstr ""
+msgstr "ViewDoesNotExist"
 
 # 1d60332238bc4a95afad6eb707d38e9e
 #: ../../ref/exceptions.txt:62
 msgid ""
 "The :exc:`ViewDoesNotExist` exception is raised by "
 ":mod:`django.core.urlresolvers` when a requested view does not exist."
-msgstr ""
+msgstr "L'exception :exc:`ViewDoesNotExist` est générée par :mod:`django.core.urlresolvers` lorsqu'une vue demandée n'existe pas."
 
 # 24aa8cfd8da6420cac6d235409ef2eb4
 #: ../../ref/exceptions.txt:66
 msgid "MiddlewareNotUsed"
-msgstr ""
+msgstr "MiddlewareNotUsed"
 
 # 303eafce11ca449db3335c5ec43cf459
 #: ../../ref/exceptions.txt:69
 msgid ""
 "The :exc:`MiddlewareNotUsed` exception is raised when a middleware is not "
 "used in the server configuration."
-msgstr ""
+msgstr "L'exception :exc:`MiddlewareNotUsed` est générée lorsqu'un middleware n'est pas utilisé dans la configuration du serveur."
 
 # 8ae27694436f43308aee50b4bd8c0a2d
 #: ../../ref/exceptions.txt:73
 msgid "ImproperlyConfigured"
-msgstr ""
+msgstr "ImproperlyConfigured"
 
 # 7f632db8fcfb49088e86b2fb5a68b32b
 #: ../../ref/exceptions.txt:76
@@ -31357,61 +31357,61 @@ msgid ""
 "The :exc:`ImproperlyConfigured` exception is raised when Django is somehow "
 "improperly configured -- for example, if a value in ``settings.py`` is "
 "incorrect or unparseable."
-msgstr ""
+msgstr "L'exception :exc:`ImproperlyConfigured` est générée lorsque la configuration de Django contient une erreur, par exemple si une valeur de ``settings.py`` n'est pas correcte ou ne peut pas être lue correctement."
 
 # 843945d4123248c8b493ccbfca0b4566
 #: ../../ref/exceptions.txt:81
 msgid "FieldError"
-msgstr ""
+msgstr "FieldError"
 
 # c0358f08aa464a54b226e64e6ce44fbe
 #: ../../ref/exceptions.txt:84
 msgid ""
 "The :exc:`FieldError` exception is raised when there is a problem with a "
 "model field. This can happen for several reasons:"
-msgstr ""
+msgstr "L'exception :exc:`FieldError` est générée lorsqu'il y a un problème avec un champ de modèle. Ceci peut arriver pour plusieurs raisons :"
 
 # fb06f2aaa6e947a0bfbddcf40962ab90
 #: ../../ref/exceptions.txt:87
 msgid ""
 "A field in a model clashes with a field of the same name from an abstract "
 "base class"
-msgstr ""
+msgstr "Un champ de modèle est en conflit avec un champ de même nom provenant d'une classe de base abstraite."
 
 # 69e8819db67849c9bcbdc039542e2f18
 #: ../../ref/exceptions.txt:89
 msgid "An infinite loop is caused by ordering"
-msgstr ""
+msgstr "Un ordre de tri provoque une boucle sans fin."
 
 # f3f836b56e4a4dfbac0a30951891fcf0
 #: ../../ref/exceptions.txt:90
 msgid "A keyword cannot be parsed from the filter parameters"
-msgstr ""
+msgstr "Un mot-clé ne peut pas être lu dans les paramètres d'un filtre."
 
 # 0fca80834f6a4e65aa63fe3dda1d8663
 #: ../../ref/exceptions.txt:91
 msgid "A field cannot be determined from a keyword in the query parameters"
-msgstr ""
+msgstr "Il n'est pas possible de faire correspondre un paramètre nommé d'une requête avec un champ."
 
 # 183ba472782c44a58225449405b230a4
 #: ../../ref/exceptions.txt:93
 msgid "A join is not permitted on the specified field"
-msgstr ""
+msgstr "Une jointure n'est pas autorisée sur le champ indiqué."
 
 # 6f1b7817363b4eca925e44224ff7ebf8
 #: ../../ref/exceptions.txt:94
 msgid "A field name is invalid"
-msgstr ""
+msgstr "Un nom de champ n'est pas valide."
 
 # 3aa3bf3e6fd14316a1dd4a80c7ad819d
 #: ../../ref/exceptions.txt:95
 msgid "A query contains invalid order_by arguments"
-msgstr ""
+msgstr "Une requête contient des paramètres ``order_by`` non conformes."
 
 # c5474683129448188585b6d430b6d5f8
 #: ../../ref/exceptions.txt:98
 msgid "ValidationError"
-msgstr ""
+msgstr "ValidationError"
 
 # 14dd807ca21540e5882a2175b7ea079b
 #: ../../ref/exceptions.txt:101
@@ -31420,12 +31420,12 @@ msgid ""
 " field validation. For more information about validation, see :doc:`Form and"
 " Field Validation </ref/forms/validation>`, :ref:`Model Field Validation "
 "<validating-objects>` and the :doc:`Validator Reference </ref/validators>`."
-msgstr ""
+msgstr "L'exception :exc:`ValidationError` est générée lorsque des données font échouer la validation de formulaire ou de champ de modèle. Pour plus d'informations sur la validation, consultez :doc:`Validation des formulaires et des champs </ref/forms/validation>`, :ref:`Validation des champs de modèle <validating-objects>` et :doc:`Référence de la validation </ref/validators>`."
 
 # 14a114ff32e545cdb598391354fde755
 #: ../../ref/exceptions.txt:110
 msgid "NoReverseMatch"
-msgstr ""
+msgstr "NoReverseMatch"
 
 # 29529f1bb21f4f4f9ce0d39ba94e8912
 #: ../../ref/exceptions.txt:113
@@ -31433,12 +31433,12 @@ msgid ""
 "The :exc:`NoReverseMatch` exception is raised by "
 ":mod:`django.core.urlresolvers` when a matching URL in your URLconf cannot "
 "be identified based on the parameters supplied."
-msgstr ""
+msgstr "L'exception :exc:`NoReverseMatch` est générée par :mod:`django.core.urlresolvers` lorsqu'aucune URL contenue dans votre configuration d'URL ne correspond aux paramètres fournis."
 
 # fa18269e152e49fabd9d95dec0b8448f
 #: ../../ref/exceptions.txt:120
 msgid "Database Exceptions"
-msgstr ""
+msgstr "Exceptions de base de données"
 
 # 25ec881f70a147c28262071be1e09115
 #: ../../ref/exceptions.txt:122
@@ -31447,7 +31447,7 @@ msgid ""
 ":exc:`IntegrityError` so that your Django code has a guaranteed common "
 "implementation of these classes. These database exceptions are provided in "
 ":mod:`django.db`."
-msgstr ""
+msgstr "Django adapte les exceptions de base de données standard :exc:`DatabaseError` et :exc:`IntegrityError` afin que votre code Django puisse compter sur une implémentation commune de ces classes. Ces exceptions de base de données se trouvent dans :mod:`django.db`."
 
 # 89bdd915b8274b2c9aca4ad22b98f57b
 #: ../../ref/exceptions.txt:130
@@ -31455,31 +31455,31 @@ msgid ""
 "The Django wrappers for database exceptions behave exactly the same as the "
 "underlying database exceptions. See :pep:`249`, the Python Database API "
 "Specification v2.0, for further information."
-msgstr ""
+msgstr "Les adaptateurs Django de ces exceptions de base de données se comportent exactement de la même manière que leurs exceptions sous-jacentes. Consultez la :pep:`249`, la version 2.0 de la spécification Python d'API de base de données,  pour de plus amples informations."
 
 # 154ceca576554178ae953314d7827d1f
 #: ../../ref/exceptions.txt:136
 msgid ""
 "Raised to prevent deletion of referenced objects when using "
 ":attr:`django.db.models.PROTECT`. Subclass of :exc:`IntegrityError`."
-msgstr ""
+msgstr "Cette exception est générée pour empêcher la suppression d'objets référencés lors de l'utilisation de :attr:`django.db.models.PROTECT`. Il s'agit d'une sous-classe de :exc:`IntegrityError`."
 
 # c9b527d9b92f4bfd88cd4789924f38c7
 #: ../../ref/exceptions.txt:142
 msgid "Http Exceptions"
-msgstr ""
+msgstr "Exceptions Http"
 
 # 4e06e182d5bf41a58d5773514b00f8f5
 #: ../../ref/exceptions.txt:146
 msgid ""
 "The :exc:`UnreadablePostError` is raised when a user cancels an upload. It "
 "is available from :mod:`django.http`."
-msgstr ""
+msgstr "L'exception :exc:`UnreadablePostError` est générée lorsqu'un utilisateur annule un envoi de fichier. Elle est disponible dans :mod:`django.http`."
 
 # 83ba67cc6cbd4d348264d40d5450e629
 #: ../../ref/exceptions.txt:152
 msgid "Transaction Exceptions"
-msgstr ""
+msgstr "Exceptions de transaction"
 
 # 6be2f19549db47d98bdef7e6963b51f5
 #: ../../ref/exceptions.txt:156
@@ -31487,12 +31487,12 @@ msgid ""
 "The :exc:`TransactionManagementError` is raised for any and all problems "
 "related to database transactions. It is available from "
 ":mod:`django.db.transaction`."
-msgstr ""
+msgstr "L'exception :exc:`TransactionManagementError` est générée lors de tout problème survenant en lien avec les transactions de bases de données. Elle est disponible dans :mod:`django.db.transaction`."
 
 # 0505e8f3e236419cab2adc2b24e8573b
 #: ../../ref/exceptions.txt:161
 msgid "Python Exceptions"
-msgstr ""
+msgstr "Exceptions Python"
 
 # 02068b6cf8ea4f3cad75a10918e9fc6b
 #: ../../ref/exceptions.txt:163
@@ -31500,7 +31500,7 @@ msgid ""
 "Django raises built-in Python exceptions when appropriate as well. See the "
 "Python documentation for further information on the built-in "
 ":mod:`exceptions`."
-msgstr ""
+msgstr "Django génère également des exceptions intégrées de Python le cas échéant. Consultez la documentation de Python pour plus d'informations concernant les :mod:`exceptions` intégrées. "
 
 # b15308217fa54a528158b05ccec5834d
 #: ../../ref/files/file.txt:2
@@ -46489,7 +46489,7 @@ msgstr "IGNORABLE_404_STARTS"
 # ff960f7d67c74cdaa8e2cead0907489b
 #: ../../ref/signals.txt:3
 msgid "Signals"
-msgstr ""
+msgstr "Signaux"
 
 # 29d2718cd67c47c790a94c168bd280ec
 #: ../../ref/signals.txt:5
