@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-04 09:46+0200\n"
-"PO-Revision-Date: 2013-10-17 19:30+0000\n"
+"PO-Revision-Date: 2013-10-31 09:50+0000\n"
 "Last-Translator: claudep <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 # 6ac72cf41e54438ea6b403859e0d60b3
 #: ../../ref/class-based-views/base.txt:3
 msgid "Base views"
-msgstr "Base views"
+msgstr "Vues de base"
 
 # 437847fb58f140149619ccdf95babef7
 #: ../../ref/class-based-views/base.txt:5
@@ -32,7 +32,7 @@ msgid ""
 "used by themselves or inherited from. They may not provide all the "
 "capabilities required for projects, in which case there are Mixins and "
 "Generic class-based views."
-msgstr ""
+msgstr "Les trois classes suivantes fournissent la plupart des fonctionnalités nécessaires à la création de vues Django. Vous pouvez les considérer comme des vues *parentes* qui peuvent être utilisées telles quelles ou comme classe parente. Elles ne contiennent pas toutes les fonctionnalités requises par les projets, c'est pour cela qu'il y a des vues basées sur des classes de type ``Mixin`` et d'autres génériques."
 
 # 6763ea6f5ec54fe79cb036361cf2be76
 #: ../../ref/class-based-views/base.txt:11
@@ -55,7 +55,7 @@ msgstr "View"
 msgid ""
 "The master class-based base view. All other class-based views inherit from "
 "this base class."
-msgstr ""
+msgstr "La principale vue basée sur des classes. Toutes les autres héritent de cette classe de base."
 
 # bdd9dc4c1b554df0b5acc066d7e5d4ad
 # 0bfdf4d591f74eeab5f7dbd407c767dd
@@ -68,7 +68,7 @@ msgstr ""
 #: ../../ref/class-based-views/generic-display.txt:26
 #: ../../ref/class-based-views/generic-display.txt:86
 msgid "**Method Flowchart**"
-msgstr ""
+msgstr "**Index des méthodes**"
 
 # b5cfecd8282147d8878bd6bb2d0e7d66
 #: ../../ref/class-based-views/base.txt:26
@@ -78,12 +78,12 @@ msgstr ":meth:`dispatch()`"
 # 973822d3632a4c9aa2f1e4287ac42c14
 #: ../../ref/class-based-views/base.txt:27
 msgid ":meth:`http_method_not_allowed()`"
-msgstr ""
+msgstr ":meth:`http_method_not_allowed()`"
 
 # b77302ebb0a94b849ffb35859504fc10
 #: ../../ref/class-based-views/base.txt:28
 msgid ":meth:`options()`"
-msgstr ""
+msgstr ":meth:`options()`"
 
 # 24000b1a5c85472da0187c94bead5cd7
 # 7bde75ab4d57480b9541e1c070c88f76
@@ -116,7 +116,7 @@ msgstr ""
 #: ../../ref/class-based-views/generic-editing.txt:145
 #: ../../ref/class-based-views/generic-editing.txt:186
 msgid "**Example views.py**::"
-msgstr ""
+msgstr "**Exemple de fichier views.py**::"
 
 # 4dc156eb2abf41aeb9b44f417dc02469
 # 8c76f6c2c1634e3d8fe58849ce97960e
@@ -141,7 +141,7 @@ msgstr ""
 #: ../../ref/class-based-views/generic-display.txt:55
 #: ../../ref/class-based-views/generic-display.txt:114
 msgid "**Example urls.py**::"
-msgstr ""
+msgstr "**Exemple de fichier urls.py**::"
 
 # fff154509daa426284c2a02e6428cb44
 # 9a00725b748a40d2a90051a56f14a2ba
@@ -156,7 +156,7 @@ msgstr ""
 #: ../../ref/class-based-views/generic-editing.txt:175
 #: ../../ref/class-based-views/mixins-simple.txt:46
 msgid "**Attributes**"
-msgstr ""
+msgstr "**Attributs**"
 
 # 2cc5976ab3864ab19225b08699d9b4fb
 #: ../../ref/class-based-views/base.txt:54
@@ -229,19 +229,19 @@ msgstr "Valeur par défaut ::"
 #: ../../ref/class-based-views/mixins-simple.txt:12
 #: ../../ref/class-based-views/mixins-simple.txt:76
 msgid "**Methods**"
-msgstr ""
+msgstr "**Méthodes**"
 
 # b2dbacd843e849d4b7ecc698e026758a
 #: ../../ref/class-based-views/base.txt:64
 msgid "Returns a callable view that takes a request and returns a response::"
-msgstr ""
+msgstr "Renvoie une vue exécutable acceptant une requête et renvoyant une réponse ::"
 
 # cd74153b93aa4cd6ad56785a44677b70
 #: ../../ref/class-based-views/base.txt:70
 msgid ""
 "The ``view`` part of the view -- the method that accepts a ``request`` "
 "argument plus arguments, and returns a HTTP response."
-msgstr ""
+msgstr "La partie ``view`` de la vue, la méthode qui accepte un paramètre ``request`` ainsi que d'autres paramètres et qui renvoie une réponse HTTP."
 
 # 90033d3d8a5448859745372b89dcc57a
 #: ../../ref/class-based-views/base.txt:73
@@ -249,7 +249,7 @@ msgid ""
 "The default implementation will inspect the HTTP method and attempt to "
 "delegate to a method that matches the HTTP method; a ``GET`` will be "
 "delegated to ``get()``, a ``POST`` to ``post()``, and so on."
-msgstr ""
+msgstr "L'implémentation par défaut examine la méthode HTTP et essaie de déléguer l'exécution à une méthode qui correspond à la méthode HTTP ; une requête ``GET`` sera déléguée à ``get()``, une requête ``POST`` à ``post()``, et ainsi de suite."
 
 # d41bad6aca3640b99a3bdc953b153383
 #: ../../ref/class-based-views/base.txt:77
@@ -258,42 +258,42 @@ msgid ""
 "to handle ``HEAD`` requests in a different way than ``GET``, you can "
 "override the ``head()`` method. See :ref:`supporting-other-http-methods` for"
 " an example."
-msgstr ""
+msgstr "Par défaut, une requête ``HEAD`` sera déléguée à ``get()``. Si vous avez besoin de traiter différemment les requêtes ``HEAD``, vous pouvez surcharger la méthode ``head()``. Voir l'exemple dans :ref:`supporting-other-http-methods`."
 
 # 08f53772e1644d63bab5d7e4b623e799
 #: ../../ref/class-based-views/base.txt:84
 msgid ""
 "If the view was called with a HTTP method it doesn't support, this method is"
 " called instead."
-msgstr ""
+msgstr "Si la vue a été appelée par une méthode HTTP qu'elle ne prend pas en charge, c'est cette méthode qui sera appelée."
 
 # 2b1e538a93bf451792450078920e7d99
 #: ../../ref/class-based-views/base.txt:91
 msgid ""
 "The default implementation returns ``HttpResponseNotAllowed`` with a list of"
 " allowed methods in plain text."
-msgstr ""
+msgstr "L'implémentation par défaut renvoie ``HttpResponseNotAllowed`` avec une liste de méthodes autorisées en texte brut."
 
 # 096ed1805642437ba1fc3b6d4369c62d
 #: ../../ref/class-based-views/base.txt:96
 msgid ""
 "Handles responding to requests for the OPTIONS HTTP verb.  Returns a list of"
 " the allowed HTTP method names for the view."
-msgstr ""
+msgstr "Traite la réponse aux requêtes du verbe HTTP OPTIONS. Renvoie une liste des noms de méthodes HTTP autorisées pour la vue."
 
 # c0577a4edf9543c2b1803056fb01be23
 # afed096610c742ac8e1971fe38e38136
 #: ../../ref/class-based-views/base.txt:100
 #: ../../ref/class-based-views/flattened-index.txt:30
 msgid "TemplateView"
-msgstr ""
+msgstr "TemplateView"
 
 # 0ce55f3cf8bb4eaf97f4092e1ea915e4
 #: ../../ref/class-based-views/base.txt:104
 msgid ""
 "Renders a given template, with the context containing parameters captured in"
 " the URL."
-msgstr ""
+msgstr "Effectue le rendu d'un gabarit donné, avec le contexte contenant les paramètres capturés dans l'URL."
 
 # 08d2d709683b481499170420ce106db0
 # 605359d967674bed95b7d9e34ab8f3fd
@@ -328,7 +328,7 @@ msgstr ""
 #: ../../ref/class-based-views/generic-editing.txt:122
 #: ../../ref/class-based-views/generic-editing.txt:163
 msgid "**Ancestors (MRO)**"
-msgstr ""
+msgstr "**Ancêtres (MRO)**"
 
 # 91e9cf298eb6462ca4c1680cabd144fa
 # 95fce9368ef344bb95d04211dd47841e
@@ -347,7 +347,7 @@ msgstr ""
 #: ../../ref/class-based-views/generic-editing.txt:124
 #: ../../ref/class-based-views/generic-editing.txt:165
 msgid "This view inherits methods and attributes from the following views:"
-msgstr ""
+msgstr "Cette vue hérite des méthodes et des attributs des vues suivantes :"
 
 # df72ec46166c40d08ceaaae5c1e16b4a
 # 9c656ba9073b4312be51567bceb35a58
@@ -378,7 +378,7 @@ msgstr ""
 #: ../../ref/class-based-views/generic-editing.txt:127
 #: ../../ref/class-based-views/generic-editing.txt:168
 msgid ":class:`django.views.generic.base.TemplateResponseMixin`"
-msgstr ""
+msgstr ":class:`django.views.generic.base.TemplateResponseMixin`"
 
 # 02a93599abac42e6b41dd5f6d3bf0578
 # 88782c9a950744138c46af301bc36460
@@ -415,7 +415,7 @@ msgstr ""
 #: ../../ref/class-based-views/generic-editing.txt:173
 #: ../../ref/class-based-views/mixins-editing.txt:182
 msgid ":class:`django.views.generic.base.View`"
-msgstr ""
+msgstr ":class:`django.views.generic.base.View`"
 
 # daa0eec03bfa497f9960c41e60b53507
 # f9e09df1ffc34a759abe8ebf5b4a68b4
@@ -426,7 +426,7 @@ msgstr ""
 #: ../../ref/class-based-views/generic-display.txt:28
 #: ../../ref/class-based-views/generic-display.txt:88
 msgid ":meth:`~django.views.generic.base.View.dispatch()`"
-msgstr ""
+msgstr ":meth:`~django.views.generic.base.View.dispatch()`"
 
 # 3caa91d9f6c14228a4f3e0b553b5376f
 # 0213785390e749d39e890fb7e60e7728
@@ -437,12 +437,12 @@ msgstr ""
 #: ../../ref/class-based-views/generic-display.txt:29
 #: ../../ref/class-based-views/generic-display.txt:89
 msgid ":meth:`~django.views.generic.base.View.http_method_not_allowed()`"
-msgstr ""
+msgstr ":meth:`~django.views.generic.base.View.http_method_not_allowed()`"
 
 # ab28e314a96c42e8beb6dd2fc1923e32
 #: ../../ref/class-based-views/base.txt:123
 msgid ":meth:`~django.views.generic.base.ContextMixin.get_context_data()`"
-msgstr ""
+msgstr ":meth:`~django.views.generic.base.ContextMixin.get_context_data()`"
 
 # 001146feea254171876dad569f5229b4
 # 8d24c4a6f09a41f1b1612bc75a32d30a
@@ -465,14 +465,14 @@ msgstr ""
 #: ../../ref/class-based-views/mixins-multiple-object.txt:143
 #: ../../ref/class-based-views/mixins-single-object.txt:85
 msgid "**Context**"
-msgstr ""
+msgstr "**Contexte**"
 
 # 780534bf504f4e43b1d8cad0910ac736
 #: ../../ref/class-based-views/base.txt:152
 msgid ""
 "``params``: The dictionary of keyword arguments captured from the URL "
 "pattern that served the view."
-msgstr ""
+msgstr "``params``: le dictionnaire de paramètres nommés capturés par le motif d'URL qui a servi à appeler cette vue."
 
 # 1017dbb7c3cb4911a68aed30a48fdc6d
 # 1c00f823c11e40478e40c97e89d4aedc
@@ -4762,7 +4762,7 @@ msgstr ""
 #: ../../ref/contrib/admin/admindocs.txt:51
 #: ../../ref/contrib/staticfiles.txt:367 ../../ref/contrib/webdesign.txt:19
 msgid "Template tags"
-msgstr ""
+msgstr "Balises de gabarit"
 
 # df4afcca86064605bb46d9454c12d60e
 #: ../../ref/contrib/admin/admindocs.txt:51
@@ -4772,7 +4772,7 @@ msgstr ""
 # 3d4efaf8b2c44d17b287094d2139220b
 #: ../../ref/contrib/admin/admindocs.txt:52
 msgid "Template filters"
-msgstr ""
+msgstr "Filtres de gabarit"
 
 # 85f320e2086e4e7f9d6ac7a1acbc2c8a
 #: ../../ref/contrib/admin/admindocs.txt:52
@@ -17604,7 +17604,7 @@ msgstr ""
 # 27f517871ef04435b424bd8333efa06f
 #: ../../ref/contrib/gis/geoquerysets.txt:1059
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Divers"
 
 # 33800182141549499f3b6a146a99da98
 #: ../../ref/contrib/gis/geoquerysets.txt:1062
@@ -23499,7 +23499,7 @@ msgstr ""
 # 5d312b415a994f3fa92394505b784c79
 #: ../../ref/contrib/index.txt:3
 msgid "``contrib`` packages"
-msgstr ""
+msgstr "Paquets ``contrib``"
 
 # 82a1163ca951433aaf9f4bc81ca8ba6a
 #: ../../ref/contrib/index.txt:5
@@ -23507,7 +23507,7 @@ msgid ""
 "Django aims to follow Python's `\"batteries included\" philosophy`_. It "
 "ships with a variety of extra, optional tools that solve common Web-"
 "development problems."
-msgstr ""
+msgstr "Django cherche à poursuivre la `philosophie de Python « piles incluses »`_. Il est livré avec une palette d'outils supplémentaires et facultatifs qui s'attellent à résoudre des problèmes courants du développement Web."
 
 # cd9946bf724644648ee592b619f8b1ce
 #: ../../ref/contrib/index.txt:9
@@ -23515,7 +23515,7 @@ msgid ""
 "This code lives in ``django/contrib`` in the Django distribution. This "
 "document gives a rundown of the packages in ``contrib``, along with any "
 "dependencies those packages have."
-msgstr ""
+msgstr "Ce code se trouve dans ``django/contrib`` dans la distribution de Django. Ce document présente un résumé de chaque paquet dans ``contrib``, ainsi que les éventuelles dépendances de ces paquets."
 
 # c6bd788a1f664413ab955c84ebc0b354
 #: ../../ref/contrib/index.txt:15
@@ -23524,12 +23524,12 @@ msgid ""
 "models or template tags -- you'll need to add the package name (e.g., "
 "``'django.contrib.admin'``) to your :setting:`INSTALLED_APPS` setting and "
 "re-run ``manage.py syncdb``."
-msgstr ""
+msgstr "Pour la plupart de ces compléments, mais plus particulièrement pour ceux qui contiennent des modèles ou des balises de gabarit, il est nécessaire d'ajouter le nom du paquet (par ex. ``'django.contrib.admin'``) dans le réglage :setting:`INSTALLED_APPS` puis de relancer ``manage.py syncdb``."
 
 # d8ae0b59ed5c41e8acbc2bfe82ad58a3
 #: ../../ref/contrib/index.txt:46
 msgid "admin"
-msgstr ""
+msgstr "admin"
 
 # 371af94d68464556997cd0fbdbe3fc29
 #: ../../ref/contrib/index.txt:48
@@ -23537,167 +23537,167 @@ msgid ""
 "The automatic Django administrative interface. For more information, see "
 ":doc:`Tutorial 2 </intro/tutorial02>` and the :doc:`admin documentation "
 "</ref/contrib/admin/index>`."
-msgstr ""
+msgstr "L'interface d'administration automatique de Django. Pour plus d'informations, consultez la :doc:`partie 2 du tutoriel </intro/tutorial02>` et la :doc:`documentation du site d'administration </ref/contrib/admin/index>`."
 
 # f691e93797ba49fea2f6a4a8e16ebbc5
 #: ../../ref/contrib/index.txt:52
 msgid "Requires the auth_ and contenttypes_ contrib packages to be installed."
-msgstr ""
+msgstr "Nécessite que les paquets auth_ et contenttypes_ soient aussi installés."
 
 # 65fbdeb06356496e8acc803cef8ad883
 #: ../../ref/contrib/index.txt:55
 msgid "auth"
-msgstr ""
+msgstr "auth"
 
 # 15dff8d95a474ed3a5013f05df56b0e3
 #: ../../ref/contrib/index.txt:57
 msgid "Django's authentication framework."
-msgstr ""
+msgstr "L'infrastructure d'authentification de Django."
 
 # 92f6f77d9c3c423eafdbfbb59f36c5c3
 #: ../../ref/contrib/index.txt:59
 msgid "See :doc:`/topics/auth/index`."
-msgstr ""
+msgstr "Voir :doc:`/topics/auth/index`."
 
 # 2a99724bba1148fc9c5741a76ec151c0
 #: ../../ref/contrib/index.txt:62
 msgid "comments"
-msgstr ""
+msgstr "comments"
 
 # 19ab66628fe84d1084c26a0397aea4bb
 #: ../../ref/contrib/index.txt:64
 msgid ""
 "A simple yet flexible comments system. See "
 ":doc:`/ref/contrib/comments/index`."
-msgstr ""
+msgstr "Un système de commentaires simple et souple. Voir :doc:`/ref/contrib/comments/index`."
 
 # 046b3ccc05b2471f91c41921f7f71809
 #: ../../ref/contrib/index.txt:67
 msgid "contenttypes"
-msgstr ""
+msgstr "contenttypes"
 
 # 6b7df5610bba4935ac707f293569bce1
 #: ../../ref/contrib/index.txt:69
 msgid ""
 "A light framework for hooking into \"types\" of content, where each "
 "installed Django model is a separate content type."
-msgstr ""
+msgstr "Une infrastructure légère pour gérer des « types » de contenu, où chaque modèle Django installé est un type de contenu différent."
 
 # 2d13a5a494984251bf2c4553cb42ce30
 #: ../../ref/contrib/index.txt:72
 msgid "See the :doc:`contenttypes documentation </ref/contrib/contenttypes>`."
-msgstr ""
+msgstr "Voir la :doc:`documentation des types de contenu </ref/contrib/contenttypes>`."
 
 # ee795b7cc12041b895d2f58f8f3b0c21
 #: ../../ref/contrib/index.txt:75
 msgid "csrf"
-msgstr ""
+msgstr "csrf"
 
 # f22cd28b2a2b4e0abe06d99324b682ce
 #: ../../ref/contrib/index.txt:77
 msgid "A middleware for preventing Cross Site Request Forgeries"
-msgstr ""
+msgstr "Un intergiciel pour prévenir les attaques de type Cross Site Request Forgeries."
 
 # 53509892880248b28dc6e49983cf29a9
 #: ../../ref/contrib/index.txt:79
 msgid "See the :doc:`csrf documentation </ref/contrib/csrf>`."
-msgstr ""
+msgstr "Voir la :doc:`documentation de csrf </ref/contrib/csrf>`."
 
 # 72565269146440b0a0ad31f37c969401
 #: ../../ref/contrib/index.txt:82
 msgid "flatpages"
-msgstr ""
+msgstr "flatpages"
 
 # 5d5cf56861294fd39a3453cc7ca90795
 #: ../../ref/contrib/index.txt:84
 msgid "A framework for managing simple \"flat\" HTML content in a database."
-msgstr ""
+msgstr "Une infrastructure pour la gestion de contenu HTML « à plat » (flat) dans la base de données."
 
 # f1bb50b489004955bd53b9ed27673280
 #: ../../ref/contrib/index.txt:86
 msgid "See the :doc:`flatpages documentation </ref/contrib/flatpages>`."
-msgstr ""
+msgstr "Voir la :doc:`documentation de flatpages </ref/contrib/flatpages>`."
 
 # 71ee601fa6404275ae924296335e949e
 #: ../../ref/contrib/index.txt:88
 msgid "Requires the sites_ contrib package to be installed as well."
-msgstr ""
+msgstr "Nécessite que le paquet contribué sites_ soit aussi installé."
 
 # b29c7513eda84bf3aa0e0914cae6e6a0
 #: ../../ref/contrib/index.txt:91
 msgid "formtools"
-msgstr ""
+msgstr "formtools"
 
 # 05b071a8b20c4b8ab0f1ad7848eeed08
 #: ../../ref/contrib/index.txt:93
 msgid "A set of high-level abstractions for Django forms (django.forms)."
-msgstr ""
+msgstr "Un ensemble d'abstractions de haut niveau pour les formulaires Django (django.forms)."
 
 # 48f7089b729940d7a2ca0951f8830608
 #: ../../ref/contrib/index.txt:96
 msgid "django.contrib.formtools.preview"
-msgstr ""
+msgstr "django.contrib.formtools.preview"
 
 # 1e0159acfbd246cc87e9a5d1e2a094ec
 #: ../../ref/contrib/index.txt:98
 msgid "An abstraction of the following workflow:"
-msgstr ""
+msgstr "Une abstraction du scénario suivant :"
 
 # 29650b67219848ecb5134e86991da318
 #: ../../ref/contrib/index.txt:102
 msgid ""
 "See the :doc:`form preview documentation </ref/contrib/formtools/form-"
 "preview>`."
-msgstr ""
+msgstr "Voir la :doc:`documentation sur l'aperçu des formulaires </ref/contrib/formtools/form-preview>`."
 
 # 9b1e67e707914d66b86d1f3b1e8f03bb
 #: ../../ref/contrib/index.txt:105
 msgid "django.contrib.formtools.wizard"
-msgstr ""
+msgstr "django.contrib.formtools.wizard"
 
 # 2280834977924d2d8003825544fdf572
 #: ../../ref/contrib/index.txt:107
 msgid "Splits forms across multiple Web pages."
-msgstr ""
+msgstr "Distribue des formulaires sur plusieurs pages Web."
 
 # bd7c0bebc44b4c6bbc58ef19ceb81a0a
 #: ../../ref/contrib/index.txt:109
 msgid ""
 "See the :doc:`form wizard documentation </ref/contrib/formtools/form-"
 "wizard>`."
-msgstr ""
+msgstr "Voir la :doc:`documentation sur l'assistant de formulaires </ref/contrib/formtools/form-wizard>`."
 
 # 767c30b5aea74ae6991a6ac967abacb3
 #: ../../ref/contrib/index.txt:112
 msgid "gis"
-msgstr ""
+msgstr "gis"
 
 # 2444b4c298ec4fccad4544d9ed5f1a83
 #: ../../ref/contrib/index.txt:114
 msgid ""
 "A world-class geospatial framework built on top of Django, that enables "
 "storage, manipulation and display of spatial data."
-msgstr ""
+msgstr "Une infrastructure géospatiale de classe mondiale bâtie sur Django et permettant le stockage, la manipulation et l'affichage de données spatiales."
 
 # b7a3f5df766f4f998b916647b1ab43ba
 #: ../../ref/contrib/index.txt:117
 msgid "See the :doc:`/ref/contrib/gis/index` documentation for more."
-msgstr ""
+msgstr "Voir la documentation de :doc:`/ref/contrib/gis/index` pour plus de détails."
 
 # 3dee9de9bd194202940995b1cc8eeb57
 #: ../../ref/contrib/index.txt:120
 msgid "humanize"
-msgstr ""
+msgstr "humanize"
 
 # 31c5eac0a9474f60b8cc0f409ccc15a9
 #: ../../ref/contrib/index.txt:124
 msgid "See the :doc:`humanize documentation </ref/contrib/humanize>`."
-msgstr ""
+msgstr "Voir la :doc:`documentation de humanize </ref/contrib/humanize>`."
 
 # 5473f67f7abf411abbc2e9cdb87f502d
 #: ../../ref/contrib/index.txt:127
 msgid "localflavor"
-msgstr ""
+msgstr "localflavor"
 
 # d86cde7c9f7f482db1d569b1d5cd2def
 #: ../../ref/contrib/index.txt:129
@@ -23706,81 +23706,81 @@ msgid ""
 "particular country or culture. For example, "
 "``django.contrib.localflavor.us.forms`` contains a ``USZipCodeField`` that "
 "you can use to validate U.S. zip codes."
-msgstr ""
+msgstr "Un ensemble de code Django divers spécifiquement utiles pour un pays ou une culture particulière. Par exemple, ``django.contrib.localflavor.us.forms`` contient un champ ``USZipCodeField`` que l'on peut utiliser pour valider des codes postaux des États-Unis."
 
 # 1350f49d88f243daae8632c2c383bffa
 #: ../../ref/contrib/index.txt:133
 msgid "See the :doc:`localflavor documentation </ref/contrib/localflavor>`."
-msgstr ""
+msgstr "Voir la :doc:`documentation de localflavor </ref/contrib/localflavor>`."
 
 # 62648be1e849432786a8d937d3078a99
 #: ../../ref/contrib/index.txt:136
 msgid "markup"
-msgstr ""
+msgstr "markup"
 
 # 2bcd4d898edb4af4ada000dd94a531df
 #: ../../ref/contrib/index.txt:138
 msgid ""
 "A collection of template filters that implement common markup languages"
-msgstr ""
+msgstr "Un ensemble de filtres de gabarit donnant accès à des langages de balisage courants."
 
 # 9c26081b876943d4b2f7575ea0ffe22f
 # 4e1e0956ee7d4d38bb2568e7c6053981
 #: ../../ref/contrib/index.txt:140 ../../ref/templates/builtins.txt:2342
 msgid "See the :doc:`markup documentation </ref/contrib/markup>`."
-msgstr ""
+msgstr "Voir la :doc:`documentation de markup </ref/contrib/markup>`."
 
 # 4f1e5d7b282a4df9a8ac05e3ed628f6d
 #: ../../ref/contrib/index.txt:143
 msgid "messages"
-msgstr ""
+msgstr "messages"
 
 # 5865cd1079044309a47edbfc0114299e
 #: ../../ref/contrib/index.txt:145
 msgid ""
 "A framework for storing and retrieving temporary cookie- or session-based "
 "messages"
-msgstr ""
+msgstr "Une infrastructure pour le stockage et la récupération de messages temporaires, basée sur les cookies ou sur les sessions."
 
 # 06d3d9f74cec4de9a0a95e3a8bbc2576
 #: ../../ref/contrib/index.txt:148
 msgid "See the :doc:`messages documentation </ref/contrib/messages>`."
-msgstr ""
+msgstr "Voir la :doc:`documentation de messages </ref/contrib/messages>`."
 
 # 5999c4519b704a3a80d61533ed3ed761
 #: ../../ref/contrib/index.txt:151
 msgid "redirects"
-msgstr ""
+msgstr "redirects"
 
 # 3007f00ce71f41b991ab2f5e3d449313
 #: ../../ref/contrib/index.txt:153
 msgid "A framework for managing redirects."
-msgstr ""
+msgstr "Une infrastructure pour gérer les redirections."
 
 # 15d3abd53b8b4e18a234d3609abee39a
 #: ../../ref/contrib/index.txt:155
 msgid "See the :doc:`redirects documentation </ref/contrib/redirects>`."
-msgstr ""
+msgstr "Voir la :doc:`documentation de redirects </ref/contrib/redirects>`."
 
 # 29bb8977a599404fa531015dc2e4f52e
 #: ../../ref/contrib/index.txt:158
 msgid "sessions"
-msgstr ""
+msgstr "sessions"
 
 # 1c10c0361085445e8fc8a8843af63c30
 #: ../../ref/contrib/index.txt:160
 msgid "A framework for storing data in anonymous sessions."
-msgstr ""
+msgstr "Une infrastructure pour le stockage de données dans des sessions anonymes."
 
 # ae2eda401f3b49e18dcba6cb67b4e002
 #: ../../ref/contrib/index.txt:162
 msgid "See the :doc:`sessions documentation </topics/http/sessions>`."
-msgstr ""
+msgstr "Voir la :doc:`documentation sur les sessions </topics/http/sessions>`."
 
 # 8f71c46941b7402681e4c9963a18a1bf
 #: ../../ref/contrib/index.txt:165
 msgid "sites"
-msgstr ""
+msgstr "sites"
 
 # d8ef1ced10654dcda4cf92e3d0bc8d94
 #: ../../ref/contrib/index.txt:167
@@ -23788,73 +23788,73 @@ msgid ""
 "A light framework that lets you operate multiple Web sites off of the same "
 "database and Django installation. It gives you hooks for associating objects"
 " to one or more sites."
-msgstr ""
+msgstr "Une infrastructure légère permettant de faire fonctionner plusieurs sites Web sur une même base de données et installation Django. Elle fournit des méthodes pour associer des objets à un ou plusieurs sites."
 
 # 1dc7387996334509abe237d07bcbef91
 #: ../../ref/contrib/index.txt:171
 msgid "See the :doc:`sites documentation </ref/contrib/sites>`."
-msgstr ""
+msgstr "Voir la :doc:`documentation de sites </ref/contrib/sites>`."
 
 # e26aebf1f9cf418f973251cdcb8b5225
 #: ../../ref/contrib/index.txt:174
 msgid "sitemaps"
-msgstr ""
+msgstr "sitemaps"
 
 # 371d0e9cb67b49e6b3c2b5de1eb967be
 #: ../../ref/contrib/index.txt:176
 msgid "A framework for generating Google sitemap XML files."
-msgstr ""
+msgstr "Une infrastructure pour générer des fichiers XML de type « Google sitemap » (cartographie de site)."
 
 # 445be9a2721d4f36b0442675bb685925
 #: ../../ref/contrib/index.txt:178
 msgid "See the :doc:`sitemaps documentation </ref/contrib/sitemaps>`."
-msgstr ""
+msgstr "Voir la :doc:`documentation de sitemaps </ref/contrib/sitemaps>`."
 
 # e8ad188a3fc94e8ca21f28e127f27a82
 #: ../../ref/contrib/index.txt:181
 msgid "syndication"
-msgstr ""
+msgstr "syndication"
 
 # 59d3a3f9c5874c2b9963d1e5e570c8f7
 #: ../../ref/contrib/index.txt:183
 msgid ""
 "A framework for generating syndication feeds, in RSS and Atom, quite easily."
-msgstr ""
+msgstr "Une infrastructure pour générer des flux de syndication en format RSS et Atom, de manière très simple."
 
 # cb8f1cb20cb846708393068a237aaf81
 #: ../../ref/contrib/index.txt:185
 msgid "See the :doc:`syndication documentation </ref/contrib/syndication>`."
-msgstr ""
+msgstr "Voir la :doc:`documentation de syndication </ref/contrib/syndication>`."
 
 # 44cf2dd8a9604a26920a1755f136f25d
 #: ../../ref/contrib/index.txt:188
 msgid "webdesign"
-msgstr ""
+msgstr "webdesign"
 
 # 885433ac72804f2ca955d6c55a321dd8
 #: ../../ref/contrib/index.txt:190
 msgid ""
 "Helpers and utilities targeted primarily at Web *designers* rather than Web "
 "*developers*."
-msgstr ""
+msgstr "Utilitaires visant principalement les *concepteurs* Web plutôt que les *développeurs* Web."
 
 # acad822c72f84728ad82cf2ad9b2ed2f
 #: ../../ref/contrib/index.txt:193
 msgid ""
 "See the :doc:`Web design helpers documentation </ref/contrib/webdesign>`."
-msgstr ""
+msgstr "Voir la :doc:`documentation sur les utilitaires de conception Web </ref/contrib/webdesign>`."
 
 # dbd8523cd8004227a6a8dd0e9fcef442
 #: ../../ref/contrib/index.txt:196
 msgid "Other add-ons"
-msgstr ""
+msgstr "Autres compléments"
 
 # 8011cec057e14992b0ba099fd21c8df6
 #: ../../ref/contrib/index.txt:198
 msgid ""
 "If you have an idea for functionality to include in ``contrib``, let us "
 "know! Code it up, and post it to the `django-users mailing list`_."
-msgstr ""
+msgstr "Si vous avez des idées sur des fonctionnalités susceptibles d'être incluses dans ``contrib``, faites-le nous savoir ! Rédigez le code et écrivez à la `liste de diffusion django-users`_."
 
 # 5de63c83ea92463b86cb40e5ac87a0c4
 #: ../../ref/contrib/localflavor.txt:3
@@ -31903,7 +31903,7 @@ msgstr ""
 # 9b9c55f2954d4816930879252f30d6b7
 #: ../../ref/forms/api.txt:7
 msgid "About this document"
-msgstr ""
+msgstr "À propos de ce document"
 
 # a061ac6d71114a85af81d18d5c86fc77
 #: ../../ref/forms/api.txt:9
@@ -46361,7 +46361,7 @@ msgstr "Voir aussi :setting:`TIME_ZONE`, :setting:`USE_I18N` et :setting:`USE_L1
 msgid ""
 "The default :file:`settings.py` file created by :djadmin:`django-admin.py "
 "startproject <startproject>` includes ``USE_TZ = True`` for convenience."
-msgstr "Le fichier :file:`settings.py` créé par défaut par :djadmin:`django-admin.py startproject <startproject>` définit ``USE_L10N = True`` par commodité."
+msgstr "Le fichier :file:`settings.py` créé par défaut par :djadmin:`django-admin.py startproject <startproject>` définit ``USE_TZ = True`` par commodité."
 
 # 8423197483bd4da9a172647399ebabe7
 #: ../../ref/settings.txt:2240

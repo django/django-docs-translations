@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-04 09:46+0200\n"
-"PO-Revision-Date: 2013-10-04 15:30+0000\n"
+"PO-Revision-Date: 2013-10-09 13:20+0000\n"
 "Last-Translator: claudep <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -4936,19 +4936,19 @@ msgid ""
 "when you're first setting up an app. There's a couple of ways you can have "
 "Django automatically create this data: you can provide `initial data via "
 "fixtures`_, or you can provide `initial data as SQL`_."
-msgstr "Il est parfois utile de pré-remplir la base de données avec des données fixes au moment de la première configuration d'une application. Il existe plusieurs façons pour que Django crée automatiquement ces données : vous pouvez fournir des `données initiales via des fixtures`_ ou alors fournir des `données initiales en SQL`_."
+msgstr "Il est parfois utile de pré-remplir la base de données avec des données fixes au moment de la première configuration d'une application. Il existe plusieurs façons pour que Django crée automatiquement ces données : vous pouvez fournir des `données initiales via des instantanés`_ ou alors fournir des `données initiales en SQL`_."
 
 # 04216fe24a8d49bd8ccabf80e5e61abf
 #: ../../howto/initial-data.txt:10
 msgid ""
 "In general, using a fixture is a cleaner method since it's database-"
 "agnostic, but initial SQL is also quite a bit more flexible."
-msgstr "En général, l'utilisation d'une fixture est une méthode plus propre car elle est indépendante de la base de données ; par contre, le SQL initial est de son côté bien plus souple."
+msgstr "En général, l'utilisation d'un instantané est une méthode plus propre car elle est indépendante de la base de données ; par contre, le SQL initial est de son côté bien plus souple."
 
 # dca288fb9296474a89f261a6cef6046c
 #: ../../howto/initial-data.txt:19
 msgid "Providing initial data with fixtures"
-msgstr "Données initiales par les fixtures"
+msgstr "Données initiales par les instantanés"
 
 # d25a970e92484cc99d3540f40b1cce92
 #: ../../howto/initial-data.txt:21
@@ -4960,19 +4960,19 @@ msgid ""
 "XML, YAML, or JSON documents. The :doc:`serialization documentation "
 "</topics/serialization>` has more details about each of these supported "
 ":ref:`serialization formats <serialization-formats>`."
-msgstr "Une fixture est un ensemble de données que Django peut importer dans une base de données. La façon la plus directe de créer une fixture si vous avez déjà les données dans votre base est d'utiliser la commande :djadmin:`manage.py dumpdata <dumpdata>`. Sinon, vous pouvez aussi créer des fixtures manuellement ; elles peuvent être écrites sous forme de documents XML, YAML ou JSON. La :doc:`documentation sur la sérialisation </topics/serialization>` contient plus de détails sur chacun de ces :ref:`formats de sérialisation <serialization-formats>`."
+msgstr "Un instantané (fixture en anglais) est un ensemble de données que Django peut importer dans une base de données. La façon la plus directe de créer un instantané si vous avez déjà les données dans votre base est d'utiliser la commande :djadmin:`manage.py dumpdata <dumpdata>`. Sinon, vous pouvez aussi créer des instantanés manuellement ; ils peuvent être écrits sous forme de documents XML, YAML ou JSON. La :doc:`documentation sur la sérialisation </topics/serialization>` contient plus de détails sur chacun de ces :ref:`formats de sérialisation <serialization-formats>`."
 
 # eb90758f0594488bab2cac9343301255
 #: ../../howto/initial-data.txt:29
 msgid ""
 "As an example, though, here's what a fixture for a simple ``Person`` model "
 "might look like in JSON:"
-msgstr "Comme exemple, voici à quoi pourrait ressembler une fixture pour un simple modèle ``Person`` en JSON :"
+msgstr "Comme exemple, voici à quoi pourrait ressembler un instantané pour un simple modèle ``Person`` en JSON :"
 
 # 204a7309ee4848bb8f52791834b14b9a
 #: ../../howto/initial-data.txt:53
 msgid "And here's that same fixture as YAML:"
-msgstr "Et voici la même fixture en YAML :"
+msgstr "Et voici le même instantané en YAML :"
 
 # 080f879d505944778c19dcd103cbd50e
 #: ../../howto/initial-data.txt:68
@@ -4988,12 +4988,12 @@ msgid ""
 " from the fixture and re-loaded into the database. Note this means that if "
 "you change one of the rows created by a fixture and then run "
 ":djadmin:`loaddata` again, you'll wipe out any changes you've made."
-msgstr "Le chargement des données est simple : il suffit d'appeler :djadmin:`manage.py loaddata <loaddata>` ``<nom_fixture>``, où ``<nom_fixture>`` est le nom du fichier fixture que vous avez créé. Lors de chaque lancement de :djadmin:`loaddata`, les données de la fixture sont lues et rechargées dans la base de données. Notez que cela signifie que si vous modifiez l'un des objets créés par la fixture et que vous relancez :djadmin:`loaddata`, vous écraserez toute modification effectuée en base de données."
+msgstr "Le chargement des données est simple : il suffit d'appeler :djadmin:`manage.py loaddata <loaddata>` ``<nom_instantané>``, où ``<nom_instantané>`` est le nom du fichier instantané que vous avez créé. Lors de chaque lancement de :djadmin:`loaddata`, les données de l'instantané sont lues et rechargées dans la base de données. Notez que cela signifie que si vous modifiez l'un des objets créés par l'instantané et que vous relancez :djadmin:`loaddata`, vous écraserez toute modification effectuée en base de données."
 
 # 08ef674af0d24cb6910929ce7244d2e9
 #: ../../howto/initial-data.txt:78
 msgid "Automatically loading initial data fixtures"
-msgstr "Chargement automatique des fixtures de données initiales"
+msgstr "Chargement automatique des instantanés de données initiales"
 
 # 9aab9bf0b54b42028d1a057bbba1b75c
 #: ../../howto/initial-data.txt:80
@@ -5003,12 +5003,12 @@ msgid ""
 "convenient, but be careful: remember that the data will be refreshed *every "
 "time* you run :djadmin:`syncdb`. So don't use ``initial_data`` for data "
 "you'll want to edit."
-msgstr "Si vous créez une fixture nommée ``initial_data.[xml/yaml/json]``, celle-ci sera chargée à chaque lancement de :djadmin:`syncdb`. C'est très pratique, mais il faut rester prudent : rappelez-vous que les données seront réinstallées à *chaque fois* que vous lancez :djadmin:`syncdb`. N'utilisez donc pas ``initial_data`` pour des données que vous souhaitez modifier en base de données."
+msgstr "Si vous créez un instantané nommé ``initial_data.[xml/yaml/json]``, celui-ci sera chargé à chaque lancement de :djadmin:`syncdb`. C'est très pratique, mais il faut rester prudent : rappelez-vous que les données seront réinstallées à *chaque fois* que vous lancez :djadmin:`syncdb`. N'utilisez donc pas ``initial_data`` pour des données que vous souhaitez modifier en base de données."
 
 # 46fc5a6c14c34469bea058e6adc0180b
 #: ../../howto/initial-data.txt:86
 msgid "Where Django finds fixture files"
-msgstr "Emplacements de recherche des fixtures"
+msgstr "Emplacements de recherche des instantanés"
 
 # fe685a1ab50147fcb02c001120844734
 #: ../../howto/initial-data.txt:88
@@ -5016,7 +5016,7 @@ msgid ""
 "By default, Django looks in the ``fixtures`` directory inside each app for "
 "fixtures. You can set the :setting:`FIXTURE_DIRS` setting to a list of "
 "additional directories where Django should look."
-msgstr "Par défaut, Django recherche des fixtures dans un répertoire ``fixtures`` pour chaque application. Vous pouvez définir le réglage :setting:`FIXTURE_DIRS` à une liste de répertoires supplémentaires dans lesquels Django doit chercher."
+msgstr "Par défaut, Django recherche des instantanés dans un répertoire ``fixtures`` pour chaque application. Vous pouvez définir le réglage :setting:`FIXTURE_DIRS` à une liste de répertoires supplémentaires dans lesquels Django doit chercher."
 
 # 4a64226f962d4b4780e24dd5e637fb0e
 #: ../../howto/initial-data.txt:92
@@ -5024,14 +5024,14 @@ msgid ""
 "When running :djadmin:`manage.py loaddata <loaddata>`, you can also specify "
 "an absolute path to a fixture file, which overrides searching the usual "
 "directories."
-msgstr "Quand vous lancez :djadmin:`manage.py loaddata <loaddata>`, vous pouvez aussi indiquer un chemin absolu vers un fichier fixture, ce qui remplace la recherche dans les répertoires habituels."
+msgstr "Quand vous lancez :djadmin:`manage.py loaddata <loaddata>`, vous pouvez aussi indiquer un chemin absolu vers un fichier instantané, ce qui remplace la recherche dans les répertoires habituels."
 
 # 35b8afd3e34740c9a6cd28f9406bea16
 #: ../../howto/initial-data.txt:98
 msgid ""
 "Fixtures are also used by the :ref:`testing framework <topics-testing-"
 "fixtures>` to help set up a consistent test environment."
-msgstr "Les fixtures sont aussi employées par l':ref:`infrastructure de test <topics-testing-fixtures>` pour aider à la préparation d'environnements de tests cohérents."
+msgstr "Les instantanés sont aussi employés par l':ref:`infrastructure de test <topics-testing-fixtures>` pour aider à la préparation d'environnements de tests cohérents."
 
 # adaf0257b1674df4ac45d7daf9c96093
 #: ../../howto/initial-data.txt:104
@@ -5108,7 +5108,7 @@ msgid ""
 "If you require data for a test case, you should add it using either a "
 ":ref:`test fixture <topics-testing-fixtures>`, or programatically add it "
 "during the ``setUp()`` of your test case."
-msgstr "Si vous avez besoin de données pour un cas de test, vous devez les ajouter en utilisant soit une :ref:`fixture de test <topics-testing-fixtures>`, soit de manière programmée dans la méthode ``setUp()`` de votre cas de test."
+msgstr "Si vous avez besoin de données pour un cas de test, vous devez les ajouter en utilisant soit un :ref:`instantané de test <topics-testing-fixtures>`, soit de manière programmée dans la méthode ``setUp()`` de votre cas de test."
 
 # 5d221db5680349f7808236df1bd5d247
 #: ../../howto/initial-data.txt:148
