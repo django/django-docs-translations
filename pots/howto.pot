@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-02 15:07+0100\n"
+"POT-Creation-Date: 2013-11-23 14:56+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -346,8 +346,8 @@ msgid "Subclassing the :class:`BaseCommand` class requires that you implement th
 msgstr ""
 
 #: ../../howto/custom-management-commands.txt:195
-# 82e3c819a9174d0483870fdb3d8fb4f2
-msgid "All attributes can be set in your derived class and can be used in :class:`BaseCommand`'s :ref:`subclasses<ref-basecommand-subclasses>`."
+# 9c67864b03c847e082718fd119121ea6
+msgid "All attributes can be set in your derived class and can be used in :class:`BaseCommand`’s :ref:`subclasses<ref-basecommand-subclasses>`."
 msgstr ""
 
 #: ../../howto/custom-management-commands.txt:200
@@ -416,8 +416,8 @@ msgid "Implementing a constructor in a subclass"
 msgstr ""
 
 #: ../../howto/custom-management-commands.txt:269
-# 8011219b40724589b44f0022f34f20c0
-msgid "If you implement ``__init__`` in your subclass of :class:`BaseCommand`, you must call :class:`BaseCommand`'s ``__init__``."
+# 5f6ea44afd0f43f692d8a107c8207895
+msgid "If you implement ``__init__`` in your subclass of :class:`BaseCommand`, you must call :class:`BaseCommand`’s ``__init__``."
 msgstr ""
 
 #: ../../howto/custom-management-commands.txt:281
@@ -3676,8 +3676,8 @@ msgid "Filtering sensitive information"
 msgstr ""
 
 #: ../../howto/error-reporting.txt:122
-# f13f9e5a469c488ea4118cb5e70460b9
-msgid "Error reports are really helpful for debugging errors, so it is generally useful to record as much relevant information about those errors as possible. For example, by default Django records the `full traceback`_ for the exception raised, each `traceback frame`_'s local variables, and the :class:`~django.http.HttpRequest`'s :ref:`attributes<httprequest-attributes>`."
+# 8f3596ee87ee4b6ca16b9a15fb251a32
+msgid "Error reports are really helpful for debugging errors, so it is generally useful to record as much relevant information about those errors as possible. For example, by default Django records the `full traceback`_ for the exception raised, each `traceback frame`_’s local variables, and the :class:`~django.http.HttpRequest`’s :ref:`attributes<httprequest-attributes>`."
 msgstr ""
 
 #: ../../howto/error-reporting.txt:128
@@ -3706,8 +3706,8 @@ msgid "When using mutiple decorators"
 msgstr ""
 
 #: ../../howto/error-reporting.txt:168
-# cb8a61f5db134666a705a5a1f63c1fa0
-msgid "If the variable you want to hide is also a function argument (e.g. '``user``' in the following example), and if the decorated function has mutiple decorators, then make sure to place ``@sensitive_variables`` at the top of the decorator chain. This way it will also hide the function argument as it gets passed through the other decorators::"
+# e657abad8dbf4d2888049a66856f03e3
+msgid "If the variable you want to hide is also a function argument (e.g. '``user``’ in the following example), and if the decorated function has mutiple decorators, then make sure to place ``@sensitive_variables`` at the top of the decorator chain. This way it will also hide the function argument as it gets passed through the other decorators::"
 msgstr ""
 
 #: ../../howto/error-reporting.txt:182
@@ -3741,8 +3741,8 @@ msgid "All :func:`sensitive_variables` and :func:`sensitive_post_parameters` do 
 msgstr ""
 
 #: ../../howto/error-reporting.txt:236
-# 121e862fba634f26bef21cd698b8a28c
-msgid "You may also control in a more granular way which filter to use within any given view by setting the ``HttpRequest``'s ``exception_reporter_filter`` attribute::"
+# b2fc3845b63740b6a9392cedaff6aa6e
+msgid "You may also control in a more granular way which filter to use within any given view by setting the ``HttpRequest``’s ``exception_reporter_filter`` attribute::"
 msgstr ""
 
 #: ../../howto/error-reporting.txt:247

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-02 15:07+0100\n"
+"POT-Creation-Date: 2013-11-23 14:56+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -471,9 +471,24 @@ msgstr ""
 msgid "Constructs the target URL for redirection."
 msgstr ""
 
-#: ../../ref/class-based-views/base.txt:246
-# bb4a1f1e8d2642a1bd392c27ba99ffe4
-msgid "The default implementation uses :attr:`url` as a starting string, performs expansion of ``%`` parameters in that string, as well as the appending of query string if requested by :attr:`query_string`. Subclasses may implement any behavior they wish, as long as the method returns a redirect-ready URL string."
+#: ../../ref/class-based-views/base.txt:248
+# 1d88b94928f34ac99dc0d0f9efdaaa44
+msgid "The signature of this method was changed to include ``*args``."
+msgstr ""
+
+#: ../../ref/class-based-views/base.txt:250
+# 8f7833b4736d40bda878dc2699e8bf72
+msgid "The default implementation uses :attr:`url` as a starting string and performs expansion of ``%`` named parameters in that string using the named groups captured in the URL."
+msgstr ""
+
+#: ../../ref/class-based-views/base.txt:254
+# 15a92f2e854243b09dcf398121cb00b9
+msgid "If :attr:`url` is not set, ``get_redirect_url()`` tries to reverse the :attr:`pattern_name` using what was captured in the URL (both named and unnamed groups are used)."
+msgstr ""
+
+#: ../../ref/class-based-views/base.txt:258
+# 5b401ae190874f20898dbe4355255426
+msgid "If requested by :attr:`query_string`, it will also append the query string to the generated URL. Subclasses may implement any behavior they wish, as long as the method returns a redirect-ready URL string."
 msgstr ""
 
 #: ../../ref/class-based-views/flattened-index.txt:3
@@ -2163,8 +2178,8 @@ msgid "**Example myapp/article_detail.html**:"
 msgstr ""
 
 #: ../../ref/class-based-views/generic-date-based.txt:621
-# eba0641e325a4668be2d5f47db89e17e
-msgid "All of the generic views listed above have matching ``Base`` views that only differ in that the they do not include the :class:`~django.views.generic.detail.SingleObjectTemplateResponseMixin`:"
+# ff61f79940774e78b1becc6650fe6039
+msgid "All of the generic views listed above have matching ``Base`` views that only differ in that they do not include the :class:`~django.views.generic.list.MultipleObjectTemplateResponseMixin` (for the archive views) or :class:`~django.views.generic.detail.SingleObjectTemplateResponseMixin` (for the :class:`DateDetailView`):"
 msgstr ""
 
 #: ../../ref/class-based-views/generic-display.txt:3
@@ -2783,8 +2798,8 @@ msgid "A mixin class providing common behavior for all date-based views."
 msgstr ""
 
 #: ../../ref/class-based-views/mixins-date-based.txt:232
-# 95548733fb2241b89de6e4b2a42e7893
-msgid "The name of the ``DateField`` or ``DateTimeField`` in the ``QuerySet``'s model that the date-based archive should use to determine the list of objects to display on the page."
+# c8f3dce4697449a2bc1cbbbca2fa02a2
+msgid "The name of the ``DateField`` or ``DateTimeField`` in the ``QuerySet``’s model that the date-based archive should use to determine the list of objects to display on the page."
 msgstr ""
 
 #: ../../ref/class-based-views/mixins-date-based.txt:236
@@ -5702,8 +5717,8 @@ msgid "The embedded jQuery has been upgraded from 1.4.2 to 1.9.1."
 msgstr ""
 
 #: ../../ref/contrib/admin/index.txt:1592
-# 55ecada449b047d18903a89b85e7cc3b
-msgid "The :class:`ModelAdmin` class requires jQuery by default, so there is no need to add jQuery to your ``ModelAdmin``'s list of media resources unless you have a specifc need. For example, if you require the jQuery library to be in the global namespace (for example when using third-party jQuery plugins) or if you need a newer version of jQuery, you will have to include your own copy."
+# 2eaa284e3df44277a98e31ca97b68d39
+msgid "The :class:`ModelAdmin` class requires jQuery by default, so there is no need to add jQuery to your ``ModelAdmin``’s list of media resources unless you have a specifc need. For example, if you require the jQuery library to be in the global namespace (for example when using third-party jQuery plugins) or if you need a newer version of jQuery, you will have to include your own copy."
 msgstr ""
 
 #: ../../ref/contrib/admin/index.txt:1598
@@ -6845,8 +6860,8 @@ msgid "If no password is provided, :meth:`~django.contrib.auth.models.User.set_u
 msgstr ""
 
 #: ../../ref/contrib/auth.txt:261
-# 2329bfa94a43493f909d5315f9c07c2f
-msgid "The ``extra_fields`` keyword arguments are passed through to the :class:`~django.contrib.auth.models.User`'s ``__init__`` method to allow setting arbitrary fields on a :ref:`custom User model <auth-custom-user>`."
+# 6cf65847e73f4a07948f67a6ea8293f5
+msgid "The ``extra_fields`` keyword arguments are passed through to the :class:`~django.contrib.auth.models.User`’s ``__init__`` method to allow setting arbitrary fields on a :ref:`custom User model <auth-custom-user>`."
 msgstr ""
 
 #: ../../ref/contrib/auth.txt:266
@@ -8097,8 +8112,8 @@ msgid "Now, suppose that we want the following steps to be applied whenever a ne
 msgstr ""
 
 #: ../../ref/contrib/comments/moderation.txt:57
-# 6aeffacd786446ccb7bd125d26996cc3
-msgid "If the ``Entry``'s ``enable_comments`` field is ``False``, the comment will simply be disallowed (i.e., immediately deleted)."
+# cbab6c00f1924b52ae5481efa7a414f3
+msgid "If the ``Entry``’s ``enable_comments`` field is ``False``, the comment will simply be disallowed (i.e., immediately deleted)."
 msgstr ""
 
 #: ../../ref/contrib/comments/moderation.txt:60
@@ -22689,8 +22704,8 @@ msgid "compilemessages"
 msgstr ""
 
 #: ../../ref/django-admin.txt:122
-# 686451eb823b46b79410d1401228cb22
-msgid "Compiles .po files created with ``makemessages`` to .mo files for use with the builtin gettext support. See :doc:`/topics/i18n/index`."
+# d6defd28f46d4f858d905573505e5ce6
+msgid "Compiles .po files created :djadmin:`makemessages` to .mo files for use with the builtin gettext support. See :doc:`/topics/i18n/index`."
 msgstr ""
 
 #: ../../ref/django-admin.txt:125
@@ -22796,8 +22811,8 @@ msgid "If no application name is provided, all installed applications will be du
 msgstr ""
 
 #: ../../ref/django-admin.txt:203
-# f17a450439614207a0ef598f3ac9c92d
-msgid "The output of ``dumpdata`` can be used as input for ``loaddata``."
+# 96b03487a0c54f068e5f95ded8ff606b
+msgid "The output of ``dumpdata`` can be used as input for :djadmin:`loaddata`."
 msgstr ""
 
 #: ../../ref/django-admin.txt:205
@@ -23044,8 +23059,8 @@ msgid "Note that the order in which fixture files are processed is undefined. Ho
 msgstr ""
 
 #: ../../ref/django-admin.txt:445
-# 95b68e264c3f4bc8b6e194ab28fb4307
-msgid "The ``dumpdata`` command can be used to generate input for ``loaddata``."
+# 84d8410b2dde4bf2a0fdc83ed2169f1d
+msgid "The :djadmin:`dumpdata` command can be used to generate input for ``loaddata``."
 msgstr ""
 
 #: ../../ref/django-admin.txt:448
@@ -23099,8 +23114,8 @@ msgid "makemessages"
 msgstr ""
 
 #: ../../ref/django-admin.txt:487
-# f683a8c047d6472faaf1da0139138509
-msgid "Runs over the entire source tree of the current directory and pulls out all strings marked for translation. It creates (or updates) a message file in the conf/locale (in the django tree) or locale (for project and application) directory. After making changes to the messages files you need to compile them with ``compilemessages`` for use with the builtin gettext support. See the :ref:`i18n documentation <how-to-create-language-files>` for details."
+# fdc4a3234fa84cedad9417cadee65fb5
+msgid "Runs over the entire source tree of the current directory and pulls out all strings marked for translation. It creates (or updates) a message file in the conf/locale (in the django tree) or locale (for project and application) directory. After making changes to the messages files you need to compile them with :djadmin:`compilemessages` for use with the builtin gettext support. See the :ref:`i18n documentation <how-to-create-language-files>` for details."
 msgstr ""
 
 #: ../../ref/django-admin.txt:496
@@ -23169,8 +23184,8 @@ msgid "Use the ``--no-wrap`` option to disable breaking long message lines into 
 msgstr ""
 
 #: ../../ref/django-admin.txt:575
-# cba42556530e47d5922dc7fd06150623
-msgid "Use the ``--no-location`` option to not write '``#: filename:line``' comment lines in language files. Note that using this option makes it harder for technically skilled translators to understand each message's context."
+# f344d82faa0646759b29f13b6cc7414d
+msgid "Use the ``--no-location`` option to not write '``#: filename:line``’ comment lines in language files. Note that using this option makes it harder for technically skilled translators to understand each message's context."
 msgstr ""
 
 #: ../../ref/django-admin.txt:583
@@ -23394,8 +23409,8 @@ msgid "The development server automatically reloads Python code for each request
 msgstr ""
 
 #: ../../ref/django-admin.txt:738
-# c43faaf8b29e428fa90604f2f493d0b6
-msgid "When you start the server, and each time you change Python code while the server is running, the server will validate all of your installed models. (See the ``validate`` command below.) If the validator finds errors, it will print them to standard output, but it won't stop the server."
+# 0353a4c5f4d94a019401810f39302b0f
+msgid "When you start the server, and each time you change Python code while the server is running, the server will validate all of your installed models. (See the :djadmin:`validate` command below.) If the validator finds errors, it will print them to standard output, but it won't stop the server."
 msgstr ""
 
 #: ../../ref/django-admin.txt:743
@@ -23583,8 +23598,8 @@ msgid "Prints the CREATE TABLE and initial-data SQL statements for the given app
 msgstr ""
 
 #: ../../ref/django-admin.txt:898
-# c6d9ef75748e42c989c1ee1670311f34
-msgid "Refer to the description of ``sqlcustom`` for an explanation of how to specify initial data."
+# fac5340a2a0d47c199b0e43cba56f3a3
+msgid "Refer to the description of :djadmin:`sqlcustom` for an explanation of how to specify initial data."
 msgstr ""
 
 #: ../../ref/django-admin.txt:905
@@ -23894,8 +23909,8 @@ msgid "testserver <fixture fixture ...>"
 msgstr ""
 
 #: ../../ref/django-admin.txt:1196
-# d3ad1b1fd4e44cdd9b731544a68f19ef
-msgid "Runs a Django development server (as in ``runserver``) using data from the given fixture(s)."
+# 1b107403309c4251b7a5e26996c87778
+msgid "Runs a Django development server (as in :djadmin:`runserver`) using data from the given fixture(s)."
 msgstr ""
 
 #: ../../ref/django-admin.txt:1199
@@ -23914,13 +23929,13 @@ msgid "Create a test database, as described in :ref:`the-test-database`."
 msgstr ""
 
 #: ../../ref/django-admin.txt:1206
-# 5ac39245c14f4cd8860a0fd29469426c
-msgid "Populate the test database with fixture data from the given fixtures. (For more on fixtures, see the documentation for ``loaddata`` above.)"
+# baa7ebb5c91d4245a21e73ddb771e926
+msgid "Populate the test database with fixture data from the given fixtures. (For more on fixtures, see the documentation for :djadmin:`loaddata` above.)"
 msgstr ""
 
 #: ../../ref/django-admin.txt:1208
-# f43df87a1f2144bdac3e038e087e108f
-msgid "Runs the Django development server (as in ``runserver``), pointed at this newly created test database instead of your production database."
+# 5572a4131bda44fd94dbddb58a0e8d04
+msgid "Runs the Django development server (as in :djadmin:`runserver`), pointed at this newly created test database instead of your production database."
 msgstr ""
 
 #: ../../ref/django-admin.txt:1211
@@ -23934,18 +23949,18 @@ msgid "When you're writing :doc:`unit tests </topics/testing/overview>` of how y
 msgstr ""
 
 #: ../../ref/django-admin.txt:1217
-# 2cdffe3fdfad44f49ad975efc39bf401
-msgid "Let's say you're developing your Django application and have a \"pristine\" copy of a database that you'd like to interact with. You can dump your database to a fixture (using the ``dumpdata`` command, explained above), then use ``testserver`` to run your Web application with that data. With this arrangement, you have the flexibility of messing up your data in any way, knowing that whatever data changes you're making are only being made to a test database."
+# fd50c931db2940d18e30c56aef6a31f9
+msgid "Let's say you're developing your Django application and have a \"pristine\" copy of a database that you'd like to interact with. You can dump your database to a fixture (using the :djadmin:`dumpdata` command, explained above), then use ``testserver`` to run your Web application with that data. With this arrangement, you have the flexibility of messing up your data in any way, knowing that whatever data changes you're making are only being made to a test database."
 msgstr ""
 
 #: ../../ref/django-admin.txt:1225
-# df13a0b635144d4ba32302792517c0a3
-msgid "Note that this server does *not* automatically detect changes to your Python source code (as ``runserver`` does). It does, however, detect changes to templates."
+# 485c2385da0d4eb4aa6d09b35cdda142
+msgid "Note that this server does *not* automatically detect changes to your Python source code (as :djadmin:`runserver` does). It does, however, detect changes to templates."
 msgstr ""
 
 #: ../../ref/django-admin.txt:1231
-# 1d43f39bb32a4b5b8cfd8b7cf0b6d838
-msgid "Use ``--addrport`` to specify a different port, or IP address and port, from the default of ``127.0.0.1:8000``. This value follows exactly the same format and serves exactly the same function as the argument to the ``runserver`` command."
+# d7041637227f42efb1e81704cc49ce69
+msgid "Use ``--addrport`` to specify a different port, or IP address and port, from the default of ``127.0.0.1:8000``. This value follows exactly the same format and serves exactly the same function as the argument to the :djadmin:`runserver` command."
 msgstr ""
 
 #: ../../ref/django-admin.txt:1237
@@ -24010,9 +24025,9 @@ msgstr ""
 msgid "createsuperuser"
 msgstr ""
 
-#: ../../ref/django-admin.txt:1300
-# 78f0bae5870d421fa8e76dcdb885cb74
-msgid "Creates a superuser account (a user who has all permissions). This is useful if you need to create an initial superuser account but did not do so during ``syncdb``, or if you need to programmatically generate superuser accounts for your site(s)."
+#: ../../ref/django-admin.txt:1301
+# da0adb1abadf4cce975a66fe6619394f
+msgid "Creates a superuser account (a user who has all permissions). This is useful if you need to create an initial superuser account but did not do so during :djadmin:`syncdb`, or if you need to programmatically generate superuser accounts for your site(s)."
 msgstr ""
 
 #: ../../ref/django-admin.txt:1305
@@ -27226,7 +27241,12 @@ msgid "The Form subclass's ``clean()`` method. This method can perform any valid
 msgstr ""
 
 #: ../../ref/forms/validation.txt:83
-# e122683acec94d199b857acb71dcef28
+# 0777ec4608f848758691f0bda02e8e85
+msgid "Since the field validation methods have been run by the time ``clean()`` is called, you also have access to the form's errors attribute which contains all the errors raised by cleaning of individual fields."
+msgstr ""
+
+#: ../../ref/forms/validation.txt:87
+# 0a6db38030b5458da73c12d640f7e2c0
 msgid "Note that any errors raised by your ``Form.clean()`` override will not be associated with any field in particular. They go into a special \"field\" (called ``__all__``), which you can access via the ``non_field_errors()`` method if you need to. If you want to attach errors to a specific field in the form, you will need to access the ``_errors`` attribute on the form, which is :ref:`described later <modifying-field-errors>`."
 msgstr ""
 
@@ -27235,9 +27255,9 @@ msgstr ""
 msgid "Also note that there are special considerations when overriding the ``clean()`` method of a ``ModelForm`` subclass. (see the :ref:`ModelForm documentation <overriding-modelform-clean-method>` for more information)"
 msgstr ""
 
-#: ../../ref/forms/validation.txt:96
-# 837417a259784c34987d925d65191300
-msgid "These methods are run in the order given above, one field at a time.  That is, for each field in the form (in the order they are declared in the form definition), the ``Field.clean()`` method (or its override) is run, then ``clean_<fieldname>()``. Finally, once those two methods are run for every field, the ``Form.clean()`` method, or its override, is executed."
+#: ../../ref/forms/validation.txt:100
+# e0bc1dd4181c491a8c4258cca952c71c
+msgid "These methods are run in the order given above, one field at a time.  That is, for each field in the form (in the order they are declared in the form definition), the ``Field.clean()`` method (or its override) is run, then ``clean_<fieldname>()``. Finally, once those two methods are run for every field, the ``Form.clean()`` method, or its override, is executed whether or not the previous methods have raised errors."
 msgstr ""
 
 #: ../../ref/forms/validation.txt:102
@@ -27245,19 +27265,9 @@ msgstr ""
 msgid "Examples of each of these methods are provided below."
 msgstr ""
 
-#: ../../ref/forms/validation.txt:104
-# 911feba3c0c84eadb47b7c000268dbbc
-msgid "As mentioned, any of these methods can raise a ``ValidationError``. For any field, if the ``Field.clean()`` method raises a ``ValidationError``, any field-specific cleaning method is not called. However, the cleaning methods for all remaining fields are still executed."
-msgstr ""
-
 #: ../../ref/forms/validation.txt:109
-# 87984db6ec3d4a20825433bfec20994d
-msgid "The ``clean()`` method for the ``Form`` class or subclass is always run. If that method raises a ``ValidationError``, ``cleaned_data`` will be an empty dictionary."
-msgstr ""
-
-#: ../../ref/forms/validation.txt:113
-# eb9a57778f6e4cdd99c646b7bfe1caff
-msgid "The previous paragraph means that if you are overriding ``Form.clean()``, you should iterate through ``self.cleaned_data.items()``, possibly considering the ``_errors`` dictionary attribute on the form as well. In this way, you will already know which fields have passed their individual validation requirements."
+# 846ac4b5315c48e69010cabfc1967552
+msgid "As mentioned, any of these methods can raise a ``ValidationError``. For any field, if the ``Field.clean()`` method raises a ``ValidationError``, any field-specific cleaning method is not called. However, the cleaning methods for all remaining fields are still executed."
 msgstr ""
 
 #: ../../ref/forms/validation.txt:121
@@ -28734,8 +28744,8 @@ msgid "``BigIntegerField``"
 msgstr ""
 
 #: ../../ref/models/fields.txt:359
-# 49824e79be9d4731861dab73c55e735f
-msgid "A 64 bit integer, much like an :class:`IntegerField` except that it is guaranteed to fit numbers from -9223372036854775808 to 9223372036854775807. The default form widget for this field is a :class:`~django.forms.TextInput`."
+# 13693a9fa9064754b59181536943ed49
+msgid "A 64 bit integer, much like an :class:`IntegerField` except that it is guaranteed to fit numbers from ``-9223372036854775808`` to ``9223372036854775807``. The default form widget for this field is a :class:`~django.forms.TextInput`."
 msgstr ""
 
 #: ../../ref/models/fields.txt:364
@@ -28886,9 +28896,9 @@ msgstr ""
 msgid "The number of decimal places to store with the number."
 msgstr ""
 
-#: ../../ref/models/fields.txt:499
-# 658e9c60431b4e029eb9185f0cd86201
-msgid "For example, to store numbers up to 999 with a resolution of 2 decimal places, you'd use::"
+#: ../../ref/models/fields.txt:500
+# bd1c60d9f8384d75b0c990dcdef41faf
+msgid "For example, to store numbers up to ``999`` with a resolution of 2 decimal places, you'd use::"
 msgstr ""
 
 #: ../../ref/models/fields.txt:504
@@ -29222,9 +29232,9 @@ msgstr ""
 msgid "By default, :class:`ImageField` instances are created as ``varchar(100)`` columns in your database. As with other fields, you can change the maximum length using the :attr:`~CharField.max_length` argument."
 msgstr ""
 
-#: ../../ref/models/fields.txt:840
-# 83b413ca4998473ba92db166ab284976
-msgid "An integer. The default form widget for this field is a :class:`~django.forms.TextInput`."
+#: ../../ref/models/fields.txt:841
+# 9235408fe41846039ae0ab15d791b5c8
+msgid "An integer. Values from ``-2147483648`` to ``2147483647`` are safe in all databases supported by Django. The default form widget for this field is a :class:`~django.forms.TextInput`."
 msgstr ""
 
 #: ../../ref/models/fields.txt:848
@@ -29257,9 +29267,9 @@ msgstr ""
 msgid "``PositiveIntegerField``"
 msgstr ""
 
-#: ../../ref/models/fields.txt:896
-# df685b51280b4e079aed50b9387d9a59
-msgid "Like an :class:`IntegerField`, but must be either positive or zero (``0``). The value ``0`` is accepted for backward compatibility reasons."
+#: ../../ref/models/fields.txt:898
+# 7e665453195b48d9b05ddd28b7d8d962
+msgid "Like an :class:`IntegerField`, but must be either positive or zero (``0``). Values from ``0`` to ``2147483647`` are safe in all databases supported by Django. The value ``0`` is accepted for backward compatibility reasons."
 msgstr ""
 
 #: ../../ref/models/fields.txt:900
@@ -29267,9 +29277,9 @@ msgstr ""
 msgid "``PositiveSmallIntegerField``"
 msgstr ""
 
-#: ../../ref/models/fields.txt:904
-# 6f9a6df036d94bf78e94d03bcdf1326e
-msgid "Like a :class:`PositiveIntegerField`, but only allows values under a certain (database-dependent) point. Values up to 32767 are safe in all databases supported by Django."
+#: ../../ref/models/fields.txt:907
+# fbf2aabe247d48baaee0931bbd0edfde
+msgid "Like a :class:`PositiveIntegerField`, but only allows values under a certain (database-dependent) point. Values from ``0`` to ``32767`` are safe in all databases supported by Django."
 msgstr ""
 
 #: ../../ref/models/fields.txt:913
@@ -29297,9 +29307,9 @@ msgstr ""
 msgid "``SmallIntegerField``"
 msgstr ""
 
-#: ../../ref/models/fields.txt:933
-# a5c34e91181244768f87b1483ef919bf
-msgid "Like an :class:`IntegerField`, but only allows values under a certain (database-dependent) point. Values from -32768 to 32767 are safe in all databases supported by Django."
+#: ../../ref/models/fields.txt:936
+# 7f74f8d11e4742acba226deb638ce0d4
+msgid "Like an :class:`IntegerField`, but only allows values under a certain (database-dependent) point. Values from ``-32768`` to ``32767``` are safe in all databases supported by Django."
 msgstr ""
 
 #: ../../ref/models/fields.txt:938
@@ -30353,8 +30363,8 @@ msgid "``get_latest_by``"
 msgstr ""
 
 #: ../../ref/models/options.txt:98
-# 86567fb9bedc4cfe9b3077938480a339
-msgid "The name of an orderable field in the model, typically a :class:`DateField`, :class:`DateTimeField`, or :class:`IntegerField`. This specifies the default field to use in your model :class:`Manager`'s :meth:`~django.db.models.query.QuerySet.latest` and :meth:`~django.db.models.query.QuerySet.earliest` methods."
+# 982c237904f24daabc76fb8120bfcf8e
+msgid "The name of an orderable field in the model, typically a :class:`DateField`, :class:`DateTimeField`, or :class:`IntegerField`. This specifies the default field to use in your model :class:`Manager`’s :meth:`~django.db.models.query.QuerySet.latest` and :meth:`~django.db.models.query.QuerySet.earliest` methods."
 msgstr ""
 
 #: ../../ref/models/options.txt:108
@@ -35520,18 +35530,13 @@ msgid "Generally, the default value should suffice. Only set this setting if you
 msgstr ""
 
 #: ../../ref/settings.txt:1328
-# 57890879f19942fd81fd3ae81d0bccec
-msgid "If you define a custom :setting:`LANGUAGES` setting, it's OK to mark the languages as translation strings (as in the default value referred to above) -- but use a \"dummy\" ``gettext()`` function, not the one in ``django.utils.translation``. You should *never* import ``django.utils.translation`` from within your settings file, because that module in itself depends on the settings, and that would cause a circular import."
+# 6dee031ad8704d48b8d2762fb70471fb
+msgid "If you define a custom :setting:`LANGUAGES` setting, you can mark the language names as translation strings using the :func:`~django.utils.translation.ugettext_lazy` function."
 msgstr ""
 
-#: ../../ref/settings.txt:1336
-# 7e85b1d9633d44e2ac9922e1b3c45973
-msgid "The solution is to use a \"dummy\" ``gettext()`` function. Here's a sample settings file::"
-msgstr ""
-
-#: ../../ref/settings.txt:1346
-# 7aee26936f6c44498eb0ddd976176579
-msgid "With this arrangement, ``django-admin.py makemessages`` will still find and mark these strings for translation, but the translation won't happen at runtime -- so you'll have to remember to wrap the languages in the *real* ``gettext()`` in any code that uses :setting:`LANGUAGES` at runtime."
+#: ../../ref/settings.txt:1332
+# 4a2ced45da1d40a6820bc0f120dbfa35
+msgid "Here's a sample settings file::"
 msgstr ""
 
 #: ../../ref/settings.txt:1354
@@ -35979,9 +35984,9 @@ msgstr ""
 msgid "TEMPLATE_LOADERS"
 msgstr ""
 
-#: ../../ref/settings.txt:1763
-# cfea2449c8064a2ebc3de47f555e6496
-msgid "A tuple of template loader classes, specified as strings. Each ``Loader`` class knows how to import templates from a particular source. Optionally, a tuple can be used instead of a string. The first item in the tuple should be the ``Loader``'s module, subsequent items are passed to the ``Loader`` during initialization. See :doc:`/ref/templates/api`."
+#: ../../ref/settings.txt:1753
+# 44ba4a077d244fd2ad25f6f328bd6343
+msgid "A tuple of template loader classes, specified as strings. Each ``Loader`` class knows how to import templates from a particular source. Optionally, a tuple can be used instead of a string. The first item in the tuple should be the ``Loader``’s module, subsequent items are passed to the ``Loader`` during initialization. See :doc:`/ref/templates/api`."
 msgstr ""
 
 #: ../../ref/settings.txt:1772
@@ -36855,9 +36860,9 @@ msgstr ""
 msgid "If the :doc:`staticfiles</ref/contrib/staticfiles>` contrib app is enabled (default) the :djadmin:`collectstatic` management command will collect static files into this directory. See the howto on :doc:`managing static files</howto/static-files/index>` for more details about usage."
 msgstr ""
 
-#: ../../ref/settings.txt:2537
-# ce64b063569b4041af18f7a0c3118033
-msgid "This should be an (initially empty) destination directory for collecting your static files from their permanent locations into one directory for ease of deployment; it is **not** a place to store your static files permanently. You should do that in directories that will be found by :doc:`staticfiles</ref/contrib/staticfiles>`'s :setting:`finders<STATICFILES_FINDERS>`, which by default, are ``'static/'`` app sub-directories and any directories you include in :setting:`STATICFILES_DIRS`)."
+#: ../../ref/settings.txt:2527
+# f8877635063f4f1d87b9041c6a156640
+msgid "This should be an (initially empty) destination directory for collecting your static files from their permanent locations into one directory for ease of deployment; it is **not** a place to store your static files permanently. You should do that in directories that will be found by :doc:`staticfiles</ref/contrib/staticfiles>`’s :setting:`finders<STATICFILES_FINDERS>`, which by default, are ``'static/'`` app sub-directories and any directories you include in :setting:`STATICFILES_DIRS`)."
 msgstr ""
 
 #: ../../ref/settings.txt:2549
@@ -39368,8 +39373,8 @@ msgid "... and will use the one it finds first."
 msgstr ""
 
 #: ../../ref/templates/api.txt:680
-# a96a979b046a462f85167630d2ffc26e
-msgid "The order of :setting:`INSTALLED_APPS` is significant! For example, if you want to customize the Django admin, you might choose to override the standard ``admin/base_site.html`` template, from ``django.contrib.admin``, with your own ``admin/base_site.html`` in ``myproject.polls``. You must then make sure that your ``myproject.polls`` comes *before* ``django.contrib.admin`` in :setting:`INSTALLED_APPS`, otherwise ``django.contrib.admin``'s will be loaded first and yours will be ignored."
+# bc7f78cc8c6740b1a2bada65b96a0f32
+msgid "The order of :setting:`INSTALLED_APPS` is significant! For example, if you want to customize the Django admin, you might choose to override the standard ``admin/base_site.html`` template, from ``django.contrib.admin``, with your own ``admin/base_site.html`` in ``myproject.polls``. You must then make sure that your ``myproject.polls`` comes *before* ``django.contrib.admin`` in :setting:`INSTALLED_APPS`, otherwise ``django.contrib.admin``’s will be loaded first and yours will be ignored."
 msgstr ""
 
 #: ../../ref/templates/api.txt:688

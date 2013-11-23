@@ -6637,8 +6637,8 @@ msgid "Deleting a model doesn't delete associated files"
 msgstr ""
 
 #: ../../releases/1.3.txt:362
-# 0bf3412f6db54ef9a047e03178df34d7
-msgid "In earlier Django versions, when a model instance containing a :class:`~django.db.models.FileField` was deleted, :class:`~django.db.models.FileField` took it upon itself to also delete the file from the backend storage. This opened the door to several data-loss scenarios, including rolled-back transactions and fields on different models referencing the same file. In Django 1.3, when a model is deleted the :class:`~django.db.models.FileField`'s ``delete()`` method won't be called. If you need cleanup of orphaned files, you'll need to handle it yourself (for instance, with a custom management command that can be run manually or scheduled to run periodically via e.g. cron)."
+# bc7c60ba54b940f3bcacf989a9bf1b48
+msgid "In earlier Django versions, when a model instance containing a :class:`~django.db.models.FileField` was deleted, :class:`~django.db.models.FileField` took it upon itself to also delete the file from the backend storage. This opened the door to several data-loss scenarios, including rolled-back transactions and fields on different models referencing the same file. In Django 1.3, when a model is deleted the :class:`~django.db.models.FileField`’s ``delete()`` method won't be called. If you need cleanup of orphaned files, you'll need to handle it yourself (for instance, with a custom management command that can be run manually or scheduled to run periodically via e.g. cron)."
 msgstr ""
 
 #: ../../releases/1.3.txt:374
@@ -6892,8 +6892,8 @@ msgid "Password reset view now accepts ``from_email``"
 msgstr ""
 
 #: ../../releases/1.3.txt:656
-# 0f4c4177daaf484599d4eb330c4f35cb
-msgid "The :func:`django.contrib.auth.views.password_reset` view now accepts a ``from_email`` parameter, which is passed to the ``password_reset_form``'s ``save()`` method as a keyword argument. If you are using this view with a custom password reset form, then you will need to ensure your form's ``save()`` method accepts this keyword argument."
+# 0bb27299c35642cc8cc193cf3f102494
+msgid "The :func:`django.contrib.auth.views.password_reset` view now accepts a ``from_email`` parameter, which is passed to the ``password_reset_form``’s ``save()`` method as a keyword argument. If you are using this view with a custom password reset form, then you will need to ensure your form's ``save()`` method accepts this keyword argument."
 msgstr ""
 
 #: ../../releases/1.3.txt:665
@@ -10688,6 +10688,28 @@ msgstr ""
 msgid "This is the first security release in the Django 1.4 series, fixing several security issues in Django 1.4. Django 1.4.1 is a recommended upgrade for all users of Django 1.4."
 msgstr ""
 
+#: ../../releases/1.4.10.txt:3
+# 65f0fd34978546989e22c37698d5bd1f
+msgid "Django 1.4.10 release notes"
+msgstr ""
+
+#: ../../releases/1.4.10.txt:5
+#: ../../releases/1.6.txt:23
+# d21828a790484a6190b4226798d2bef6
+# c90fe1b560cd42298529c952193ef7eb
+msgid "*November 6, 2013*"
+msgstr ""
+
+#: ../../releases/1.4.10.txt:7
+# d589f859d57e4024ba491e66a766c37b
+msgid "Django 1.4.10 fixes a Python-compatibility bug in the 1.4 series."
+msgstr ""
+
+#: ../../releases/1.4.10.txt:12
+# 69de93a297c5408790656e32233821a8
+msgid "Django 1.4.9 inadvertently introduced issues with Python 2.5 compatibility. Django 1.4.10 restores Python 2.5 compatibility. This was issue #21362 in Django's Trac."
+msgstr ""
+
 #: ../../releases/1.4.2.txt:3
 # 6d8e03dc2be2422e993fc26713655c31
 msgid "Django 1.4.2 release notes"
@@ -12346,7 +12368,12 @@ msgstr ""
 msgid ":meth:`BoundField.label_tag <django.forms.BoundField.label_tag>` now escapes its ``contents`` argument. To avoid the HTML escaping, use :func:`django.utils.safestring.mark_safe` on the argument before passing it."
 msgstr ""
 
-#: ../../releases/1.5.txt:714
+#: ../../releases/1.5.txt:713
+# 5ea431323e7642f983c3919b9cd284e6
+msgid "Accessing reverse one-to-one relations fetched via :meth:`~django.db.models.query.QuerySet.select_related` now raises :exc:`~django.core.exceptions.DoesNotExist` instead of returning ``None``."
+msgstr ""
+
+#: ../../releases/1.5.txt:718
 #: ../../releases/1.5-alpha-1.txt:576
 #: ../../releases/1.5-beta-1.txt:626
 # 70da3c81c8af45989343f570cb287cfb
@@ -12862,8 +12889,8 @@ msgid "This behavior introduced as a security hardening measure in Django 1.5.2 
 msgstr ""
 
 #: ../../releases/1.5.5.txt:28
-# 55fdece26ddd419a84ee70f9b4695292
-msgid "Fixed a Python 3 incompatability in ``django.utils.text.unescape_entities()`` (#21185)."
+# 17145b378c634356b31c6d3c4fc7833d
+msgid "Fixed a Python 3 incompatibility in ``django.utils.text.unescape_entities()`` (#21185)."
 msgstr ""
 
 #: ../../releases/1.5.5.txt:30
@@ -12882,8 +12909,8 @@ msgid "The undocumented ``django.core.servers.basehttp.WSGIServerException`` has
 msgstr ""
 
 #: ../../releases/1.6.txt:3
-# 541f8cd4ba31422ead63afc19fc8153c
-msgid "Django 1.6 release notes - UNDER DEVELOPMENT"
+# 55393fd9301541679be6b90a545a647b
+msgid "Django 1.6 release notes"
 msgstr ""
 
 #: ../../releases/1.6.txt:7
@@ -13111,9 +13138,9 @@ msgstr ""
 msgid "For custom management commands: Verification of the presence of valid settings in commands that ask for it by using the :attr:`~django.core.management.BaseCommand.can_import_settings` internal option is now performed independently from handling of the locale that should be active during the execution of the command. The latter can now be influenced by the new :attr:`~django.core.management.BaseCommand.leave_locale_alone` internal option. See :ref:`management-commands-and-locales` for more details."
 msgstr ""
 
-#: ../../releases/1.6.txt:200
-# f6d27a0d2aa34fd3b1a1e4a6b4a1c19c
-msgid "The :attr:`~django.views.generic.edit.DeletionMixin.success_url` of :class:`~django.views.generic.edit.DeletionMixin` is now interpolated with its ``object``\\'s ``__dict__``."
+#: ../../releases/1.6.txt:202
+# b5d289b41ad64c039073a1fcfde958dc
+msgid "The :attr:`~django.views.generic.edit.DeletionMixin.success_url` of :class:`~django.views.generic.edit.DeletionMixin` is now interpolated with its ``object``’s ``__dict__``."
 msgstr ""
 
 #: ../../releases/1.6.txt:204
@@ -13291,9 +13318,9 @@ msgstr ""
 msgid "Formsets now have a :meth:`~django.forms.formsets.BaseFormSet.total_error_count` method."
 msgstr ""
 
-#: ../../releases/1.6.txt:343
-# 3877605fbfd441548c87632e13b5a392
-msgid ":class:`~django.forms.ModelForm` fields can now override error messages defined in model fields by using the :attr:`~django.forms.Field.error_messages` argument of a ``Field``'s constructor. To take advantage of this new feature with your custom fields, :ref:`see the updated recommendation <raising-validation-error>` for raising a ``ValidationError``."
+#: ../../releases/1.6.txt:345
+# 7393f88e643f4f18865afb2821d7888e
+msgid ":class:`~django.forms.ModelForm` fields can now override error messages defined in model fields by using the :attr:`~django.forms.Field.error_messages` argument of a ``Field``’s constructor. To take advantage of this new feature with your custom fields, :ref:`see the updated recommendation <raising-validation-error>` for raising a ``ValidationError``."
 msgstr ""
 
 #: ../../releases/1.6.txt:350
@@ -13748,33 +13775,88 @@ msgstr ""
 msgid "Historically, :mod:`django.contrib.sessions` used :mod:`pickle` to serialize session data before storing it in the backend. If you're using the :ref:`signed cookie session backend<cookie-session-backend>` and :setting:`SECRET_KEY` is known by an attacker (there isn't an inherent vulnerability in Django that would cause it to leak), the attacker could insert a string into his session which, when unpickled, executes arbitrary code on the server. The technique for doing so is simple and easily available on the internet. Although the cookie session storage signs the cookie-stored data to prevent tampering, a :setting:`SECRET_KEY` leak immediately escalates to a remote code execution vulnerability."
 msgstr ""
 
-#: ../../releases/1.6.txt:801
-# 1b5095ef1a454d19ac67c54b61b4de3e
-msgid "This attack can be mitigated by serializing session data using JSON rather than :mod:`pickle`. To facilitate this, Django 1.5.3 introduced a new setting, :setting:`SESSION_SERIALIZER`, to customize the session serialization format. For backwards compatibility, this setting defaulted to using :mod:`pickle` in Django 1.5.3, but we've changed the default to JSON in 1.6. If you upgrade and switch from pickle to JSON, sessions created before the upgrade will be lost. While JSON serialization does not support all Python objects like :mod:`pickle` does, we highly recommend using JSON-serialized sessions. Also, as JSON requires string keys, you will likely run into problems if you are using non-string keys in ``request.session``. See the :ref:`session_serialization` documentation for more details."
+#: ../../releases/1.6.txt:803
+# d8dc6725f7b447b59e4c12ff159dadcb
+msgid "This attack can be mitigated by serializing session data using JSON rather than :mod:`pickle`. To facilitate this, Django 1.5.3 introduced a new setting, :setting:`SESSION_SERIALIZER`, to customize the session serialization format. For backwards compatibility, this setting defaulted to using :mod:`pickle` in Django 1.5.3, but we've changed the default to JSON in 1.6. If you upgrade and switch from pickle to JSON, sessions created before the upgrade will be lost. While JSON serialization does not support all Python objects like :mod:`pickle` does, we highly recommend using JSON-serialized sessions. Be aware of the following when checking your code to determine if JSON serialization will work for your application:"
+msgstr ""
+
+#: ../../releases/1.6.txt:814
+# 7f7ab81fba4e40cf9265115403a7f782
+msgid "JSON requires string keys, so you will likely run into problems if you are using non-string keys in ``request.session``."
 msgstr ""
 
 #: ../../releases/1.6.txt:816
-# 23b5bd7a47b94f7cad582343d9b20e01
-msgid "The ``django.db.models.query.EmptyQuerySet`` can't be instantiated any more - it is only usable as a marker class for checking if :meth:`~django.db.models.query.QuerySet.none` has been called: ``isinstance(qs.none(), EmptyQuerySet)``"
+# 144130d34ac64fbea48e1f30cf2c99b2
+msgid "Setting session expiration by passing ``datetime`` values to :meth:`~django.contrib.sessions.backends.base.SessionBase.set_expiry` will not work as ``datetime`` values are not serializable in JSON. You can use integer values instead."
 msgstr ""
 
 #: ../../releases/1.6.txt:821
-# 68211a94ae5e4f64a47786700c2829e5
-msgid "If your CSS/Javascript code used to access HTML input widgets by type, you should review it as ``type='text'`` widgets might be now output as ``type='email'``, ``type='url'`` or ``type='number'`` depending on their corresponding field type."
+# 7f7213c86ab3411f84a27351cc32c00c
+msgid "See the :ref:`session_serialization` documentation for more details."
+msgstr ""
+
+#: ../../releases/1.6.txt:824
+# e2a47866edf442ceb1bc923da451cdc4
+msgid "Object Relational Mapper changes"
 msgstr ""
 
 #: ../../releases/1.6.txt:826
-# 176e8fe6f1744ff4aaf1e2380aa5c2f7
-msgid "Form field's :attr:`~django.forms.Field.error_messages` that contain a placeholder should now always use a named placeholder (``\"Value '%(value)s' is too big\"`` instead of ``\"Value '%s' is too big\"``). See the corresponding field documentation for details about the names of the placeholders. The changes in 1.6 particularly affect :class:`~django.forms.DecimalField` and :class:`~django.forms.ModelMultipleChoiceField`."
+# 60e1c22d445a40a297b80d25eec6b2a9
+msgid "Django 1.6 contains many changes to the ORM. These changes fall mostly in three categories:"
+msgstr ""
+
+#: ../../releases/1.6.txt:829
+# d3216fd427e147f7a84f34efff4db384
+msgid "Bug fixes (e.g. proper join clauses for generic relations, query combining, join promotion, and join trimming fixes)"
+msgstr ""
+
+#: ../../releases/1.6.txt:831
+# 5e75ad6c05b1465fbcd9051699c96395
+msgid "Preparation for new features. For example the ORM is now internally ready for multicolumn foreign keys."
 msgstr ""
 
 #: ../../releases/1.6.txt:833
-# c32a0bd984f44f7e838c632a72647ec9
+# 206ecb1d176b48c6bcf2f2f31ea6d64b
+msgid "General cleanup."
+msgstr ""
+
+#: ../../releases/1.6.txt:835
+# f642e154287d4cd58d98fef2fa2b749b
+msgid "These changes can result in some compatibility problems. For example, some queries will now generate different table aliases. This can affect :meth:`QuerySet.extra() <django.db.models.query.QuerySet.extra>`. In addition some queries will now produce different results. An example is :meth:`exclude(condition) <django.db.models.query.QuerySet.exclude>` where the condition is a complex one (referencing multijoins inside :class:`Q objects <django.db.models.Q>`). In many cases the affected queries didn't produce correct results in Django 1.5 but do now. Unfortunately there are also cases that produce different results, but neither Django 1.5 nor 1.6 produce correct results."
+msgstr ""
+
+#: ../../releases/1.6.txt:846
+# 927b95c507ce433e82e9c168dbe86e0a
+msgid "Finally, there have been many changes to the ORM internal APIs."
+msgstr ""
+
+#: ../../releases/1.6.txt:851
+# 92e79584ea944ce090c4b1a7efe19e20
+msgid "The ``django.db.models.query.EmptyQuerySet`` can't be instantiated any more - it is only usable as a marker class for checking if :meth:`~django.db.models.query.QuerySet.none` has been called: ``isinstance(qs.none(), EmptyQuerySet)``"
+msgstr ""
+
+#: ../../releases/1.6.txt:856
+# 54110e0d832d42d7b590a7d7f61e6585
+msgid "If your CSS/Javascript code used to access HTML input widgets by type, you should review it as ``type='text'`` widgets might be now output as ``type='email'``, ``type='url'`` or ``type='number'`` depending on their corresponding field type."
+msgstr ""
+
+#: ../../releases/1.6.txt:861
+# b8f7b851c0d441ce955ecc0b8f1026a6
+msgid "Form field's :attr:`~django.forms.Field.error_messages` that contain a placeholder should now always use a named placeholder (``\"Value '%(value)s' is too big\"`` instead of ``\"Value '%s' is too big\"``). See the corresponding field documentation for details about the names of the placeholders. The changes in 1.6 particularly affect :class:`~django.forms.DecimalField` and :class:`~django.forms.ModelMultipleChoiceField`."
+msgstr ""
+
+#: ../../releases/1.6.txt:868
+# 9c9e707c19d44d46beafaa4bbf8fdce8
 msgid "Some :attr:`~django.forms.Field.error_messages` for :class:`~django.forms.IntegerField`, :class:`~django.forms.EmailField`, :class:`~django.forms.IPAddressField`, :class:`~django.forms.GenericIPAddressField`, and :class:`~django.forms.SlugField` have been suppressed because they duplicated error messages already provided by validators tied to the fields."
 msgstr ""
 
-#: ../../releases/1.6.txt:841
-# 3b960013574d4560852b79195622ebd4
+#: ../../releases/1.6.txt:876
+# b98d18fb5305457792ec7c7d57fc05fe
+msgid "Due to a change in the form validation workflow, :class:`~django.forms.TypedChoiceField` ``coerce`` method should always return a value present in the ``choices`` field attribute. That limitation should be lift again in Django 1.7."
+msgstr ""
+
+#: ../../releases/1.6.txt:881
+# 81f1ce5bb65a463688c98dc28b76c020
 msgid "There have been changes in the way timeouts are handled in cache backends. Explicitly passing in ``timeout=None`` no longer results in using the default timeout. It will now set a non-expiring timeout. Passing 0 into the memcache backend no longer uses the default timeout, and now will set-and-expire-immediately the value."
 msgstr ""
 
@@ -13838,8 +13920,13 @@ msgstr ""
 msgid "The undocumented ``django.core.servers.basehttp.WSGIServerException`` has been removed. Use ``socket.error`` provided by the standard library instead. This change was also released in Django 1.5.5."
 msgstr ""
 
-#: ../../releases/1.6.txt:915
-# 589fbc5ffb604ab9b15f679350c6c317
+#: ../../releases/1.6.txt:954
+# 51e9857e41d44f12801185b56b75a372
+msgid "The signature of :meth:`django.views.generic.base.RedirectView.get_redirect_url` has changed and now accepts positional arguments as well (``*args, **kwargs``). Any unnamed captured group will now be passed to ``get_redirect_url()`` which may result in a ``TypeError`` if you don't update the signature of your custom method."
+msgstr ""
+
+#: ../../releases/1.6.txt:961
+# 44d0f5d330f94adf9eac620fb8d16fef
 msgid "Features deprecated in 1.6"
 msgstr ""
 
@@ -14101,6 +14188,76 @@ msgstr ""
 #: ../../releases/1.6.txt:1122
 # 5fff4d22c9d64e6ea6ed65e40409ff51
 msgid "Help text of these fields will need to be handled either by applications, custom form fields or widgets, just like happens with the rest of the model field types."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:3
+# 3eca7edf02004bfd932f94196afb5b0f
+msgid "Django 1.6.1 release notes"
+msgstr ""
+
+#: ../../releases/1.6.1.txt:5
+# 275d3e64858b477d8132484c631cf1c0
+msgid "*Under development*"
+msgstr ""
+
+#: ../../releases/1.6.1.txt:7
+# b14f90dc56b9428d822dadd0fc370513
+msgid "This is Django 1.6.1, a bugfix release for Django 1.6."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:9
+# 109bc3015fa046a28a3b45b30af48718
+msgid "..."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:12
+# 261314399aa14bc8b464caed94b64dd0
+msgid "Bug fixes"
+msgstr ""
+
+#: ../../releases/1.6.1.txt:14
+# c4815cb33e3542f38bc0caf94f598fc8
+msgid "Fixed ``BCryptSHA256PasswordHasher`` with py-bcrypt and Python 3 (#21398)."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:15
+# 22f1c0e27745485c86d0b11256906774
+msgid "Fixed a regression that prevented a ``ForeignKey`` with a hidden reverse manager (``related_name`` ending with '+') from being used as a lookup for ``prefetch_related`` (#21410)."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:18
+# 46f1ef7ea1a0428fbbf763af40d84b84
+msgid "Fixed :meth:`Queryset.datetimes<django.db.models.query.QuerySet.datetimes>` raising ``AttributeError`` in some situations (#21432)."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:20
+# 224f7f399283419f80fa55a2e8f57e47
+msgid "Fixed :class:`~django.contrib.auth.backends.ModelBackend` raising ``UnboundLocalError`` if :func:`~django.contrib.auth.get_user_model` raised an error (#21439)."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:23
+# 87ba0c0e1b5b451e85711756dcb646db
+msgid "Fixed a regression that prevented editable ``GenericRelation`` subclasses from working in ``ModelForms``."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:25
+# e200f95f838142778501a7ee1f4b12c1
+msgid "Fixed ``django.contrib.humanize`` translations where the unicode sequence for the non-breaking space was returned verbatim (#21415)."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:27
+# 82bc3e94299547cfb4d58d764c36d585
+msgid "Fixed :djadmin:`loaddata` error when fixture file name contained any dots non related to file extensions (#21457)."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:29
+# f2f4dff00da24b7d874ec462260b8297
+msgid "Fixed display of inline instances in formsets when parent has 0 for primary key (#21472)."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:31
+# c31206fce8d2424396fff089fdd84379
+msgid "Fixed a regression where custom querysets for foreign keys were overwritten if ``ModelAdmin`` had ordering set (#21405)."
 msgstr ""
 
 #: ../../releases/index.txt:3

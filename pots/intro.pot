@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-02 15:07+0100\n"
+"POT-Creation-Date: 2013-11-23 14:56+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -963,8 +963,8 @@ msgid "Installing some prerequisites"
 msgstr ""
 
 #: ../../intro/reusable-apps.txt:102
-# 5682ac4b0fe149aeb27b41bf0a6fec4e
-msgid "The current state of Python packaging is a bit muddled with various tools. For this tutorial, we're going to use distribute_ to build our package. It's a community-maintained fork of the older ``setuptools`` project. We'll also be using `pip`_ to install and uninstall it. You should install these two packages now. If you need help, you can refer to :ref:`how to install Django with pip<installing-official-release>`. You can install ``distribute`` the same way."
+# 5cf3538263624b04ac6d0fd768904a91
+msgid "The current state of Python packaging is a bit muddled with various tools. For this tutorial, we're going to use setuptools_ to build our package. It's the recommended packaging tool (merged with the ``distribute`` fork). We'll also be using `pip`_ to install and uninstall it. You should install these two packages now. If you need help, you can refer to :ref:`how to install Django with pip<installing-official-release>`. You can install ``setuptools`` the same way."
 msgstr ""
 
 #: ../../intro/reusable-apps.txt:114
@@ -1003,32 +1003,22 @@ msgid "Create a file ``django-polls/README.rst`` with the following contents::"
 msgstr ""
 
 #: ../../intro/reusable-apps.txt:165
-# ae8313839e5b413689879660410e1bf3
-msgid "4. Create a ``django-polls/LICENSE`` file. Choosing a license is beyond the scope of this tutorial, but suffice it to say that code released publicly without a license is *useless*. Django and many Django-compatible apps are distributed under the BSD license; however, you're free to pick your own license. Just be aware that your licensing choice will affect who is able to use your code."
+# 2aa2fc955efc4626a7dd4c35bad72cf7
+msgid "Create a ``django-polls/LICENSE`` file. Choosing a license is beyond the scope of this tutorial, but suffice it to say that code released publicly without a license is *useless*. Django and many Django-compatible apps are distributed under the BSD license; however, you're free to pick your own license. Just be aware that your licensing choice will affect who is able to use your code."
 msgstr ""
 
 #: ../../intro/reusable-apps.txt:172
-# db71e74aa196411a8be175ccdf559fbf
-msgid "5. Next we'll create a ``setup.py`` file which provides details about how to build and install the app.  A full explanation of this file is beyond the scope of this tutorial, but the `distribute docs <http://packages.python.org/distribute/setuptools.html>`_ have a good explanation. Create a file ``django-polls/setup.py`` with the following contents::"
+# 83b16608bca94e7db54ed59696cd0406
+msgid "Next we'll create a ``setup.py`` file which provides details about how to build and install the app. A full explanation of this file is beyond the scope of this tutorial, but the `setuptools docs <http://packages.python.org/setuptools/setuptools.html>`_ have a good explanation. Create a file ``django-polls/setup.py`` with the following contents::"
 msgstr ""
 
-#: ../../intro/reusable-apps.txt:211
-# 8e80a3f4a1824f89a1d4cc531efbca00
-msgid "I thought you said we were going to use ``distribute``?"
+#: ../../intro/reusable-apps.txt:212
+# b4957d929029461b9703ad13293b5b33
+msgid "Only Python modules and packages are included in the package by default. To include additional files, we'll need to create a ``MANIFEST.in`` file. The setuptools docs referred to in the previous step discuss this file in more details. To include the templates, the ``README.rst`` and our ``LICENSE`` file, create a file ``django-polls/MANIFEST.in`` with the following contents::"
 msgstr ""
 
-#: ../../intro/reusable-apps.txt:213
-# f459b72ed30747fdb7bcf35549ee2a92
-msgid "Distribute is a drop-in replacement for ``setuptools``. Even though we appear to import from ``setuptools``, since we have ``distribute`` installed, it will override the import."
-msgstr ""
-
-#: ../../intro/reusable-apps.txt:217
-# cbbc6cbe90054af29b5f2979ca13686d
-msgid "Only Python modules and packages are included in the package by default. To include additional files, we'll need to create a ``MANIFEST.in`` file. The distribute docs referred to in the previous step discuss this file in more details. To include the templates, the ``README.rst`` and our ``LICENSE`` file, create a file ``django-polls/MANIFEST.in`` with the following contents::"
-msgstr ""
-
-#: ../../intro/reusable-apps.txt:229
-# 6cc3321bc6734a319353b1ba32732f3b
+#: ../../intro/reusable-apps.txt:224
+# 54c6a0be76e24d6595a9284030d5473f
 msgid "It's optional, but recommended, to include detailed documentation with your app. Create an empty directory ``django-polls/docs`` for future documentation. Add an additional line to ``django-polls/MANIFEST.in``::"
 msgstr ""
 
@@ -3198,8 +3188,8 @@ msgid "We identify a bug"
 msgstr ""
 
 #: ../../intro/tutorial05.txt:132
-# 4b0ca4d3ff2a4b4ebb0f8473bb420e5e
-msgid "Fortunately, there's a little bug in the ``polls`` application for us to fix right away: the ``Poll.was_published_recently()`` method returns ``True`` if the ``Poll`` was published within the last day (which is correct) but also if the ``Poll``'s ``pub_date`` field is in the future (which certainly isn't)."
+# 89e365f36ea441ff8bd3ad0f430fa470
+msgid "Fortunately, there's a little bug in the ``polls`` application for us to fix right away: the ``Poll.was_published_recently()`` method returns ``True`` if the ``Poll`` was published within the last day (which is correct) but also if the ``Poll``’s ``pub_date`` field is in the future (which certainly isn't)."
 msgstr ""
 
 #: ../../intro/tutorial05.txt:137

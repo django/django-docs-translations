@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-02 15:07+0100\n"
+"POT-Creation-Date: 2013-11-23 14:56+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,8 +72,8 @@ msgid "Specifying authentication backends"
 msgstr ""
 
 #: ../../topics/auth/customizing.txt:47
-# c439fd4cc6b04262b1f075ac7ff174fb
-msgid "Behind the scenes, Django maintains a list of \"authentication backends\" that it checks for authentication. When somebody calls :func:`django.contrib.auth.authenticate()` -- as described in :ref:`How to log a user in <how-to-log-a-user-in>` above -- Django tries authenticating across all of its authentication backends. If the first authentication method fails, Django tries the second one, and so on, until all backends have been attempted."
+# 1bf5a30512e14c309c93411f5ed3743c
+msgid "Behind the scenes, Django maintains a list of \"authentication backends\" that it checks for authentication. When somebody calls :func:`django.contrib.auth.authenticate()` -- as described in :ref:`How to log a user in <how-to-log-a-user-in>` -- Django tries authenticating across all of its authentication backends. If the first authentication method fails, Django tries the second one, and so on, until all backends have been attempted."
 msgstr ""
 
 #: ../../topics/auth/customizing.txt:54
@@ -2613,8 +2613,8 @@ msgid "Local-memory caching"
 msgstr ""
 
 #: ../../topics/cache.txt:278
-# 0b01d44baa7b4692ba55a8ce8040a11e
-msgid "If you want the speed advantages of in-memory caching but don't have the capability of running Memcached, consider the local-memory cache backend. This cache is multi-process and thread-safe. To use it, set :setting:`BACKEND <CACHES-BACKEND>` to ``\"django.core.cache.backends.locmem.LocMemCache\"``. For example::"
+# 88a73c323043482993cc4a6fbc2ca4d8
+msgid "This is the default cache if another is not specified in your settings file. If you want the speed advantages of in-memory caching but don't have the capability of running Memcached, consider the local-memory cache backend. This cache is multi-process and thread-safe. To use it, set :setting:`BACKEND <CACHES-BACKEND>` to ``\"django.core.cache.backends.locmem.LocMemCache\"``. For example::"
 msgstr ""
 
 #: ../../topics/cache.txt:291
@@ -4382,8 +4382,8 @@ msgid "``Book`` queryset for use by :class:`~django.views.generic.list.ListView`
 msgstr ""
 
 #: ../../topics/class-based-views/mixins.txt:290
-# 6597de82e2f644e49535aa9c2ce5df25
-msgid "Since we have access to the ``Publisher`` whose books we want to list, we simply override ``get_queryset()`` and use the ``Publisher``'s :ref:`reverse foreign key manager<backwards-related-objects>`."
+# 94b421b2b4e34dc39e173147f62e6f88
+msgid "Since we have access to the ``Publisher`` whose books we want to list, we simply override ``get_queryset()`` and use the ``Publisher``’s :ref:`reverse foreign key manager<backwards-related-objects>`."
 msgstr ""
 
 #: ../../topics/class-based-views/mixins.txt:300
@@ -5596,8 +5596,8 @@ msgid "Modifying initial Manager QuerySets"
 msgstr ""
 
 #: ../../topics/db/managers.txt:103
-# 468336a088fc4f1f98765f6ee4c9dfce
-msgid "A ``Manager``'s base ``QuerySet`` returns all objects in the system. For example, using this model::"
+# aad0486eec2f497a879315ba9223fd3b
+msgid "A ``Manager``’s base ``QuerySet`` returns all objects in the system. For example, using this model::"
 msgstr ""
 
 #: ../../topics/db/managers.txt:112
@@ -5606,8 +5606,8 @@ msgid "...the statement ``Book.objects.all()`` will return all books in the data
 msgstr ""
 
 #: ../../topics/db/managers.txt:114
-# 723923dc6f4a43639fee7518b16a25be
-msgid "You can override a ``Manager``\\'s base ``QuerySet`` by overriding the ``Manager.get_queryset()`` method. ``get_queryset()`` should return a ``QuerySet`` with the properties you require."
+# 3c3822f506ba4c718cc5e5293eb40a39
+msgid "You can override a ``Manager``’s base ``QuerySet`` by overriding the ``Manager.get_queryset()`` method. ``get_queryset()`` should return a ``QuerySet`` with the properties you require."
 msgstr ""
 
 #: ../../topics/db/managers.txt:118
@@ -8545,8 +8545,8 @@ msgid "Each :class:`~django.db.models.query.QuerySet` contains a cache to minimi
 msgstr ""
 
 #: ../../topics/db/queries.txt:724
-# bb731bad437d4fc388f83e9649ae18a0
-msgid "In a newly created :class:`~django.db.models.query.QuerySet`, the cache is empty. The first time a :class:`~django.db.models.query.QuerySet` is evaluated -- and, hence, a database query happens -- Django saves the query results in the :class:`~django.db.models.query.QuerySet`\\'s cache and returns the results that have been explicitly requested (e.g., the next element, if the :class:`~django.db.models.query.QuerySet` is being iterated over). Subsequent evaluations of the :class:`~django.db.models.query.QuerySet` reuse the cached results."
+# e1d63d7e418d454fa61eef5e394cbe44
+msgid "In a newly created :class:`~django.db.models.query.QuerySet`, the cache is empty. The first time a :class:`~django.db.models.query.QuerySet` is evaluated -- and, hence, a database query happens -- Django saves the query results in the :class:`~django.db.models.query.QuerySet`’s cache and returns the results that have been explicitly requested (e.g., the next element, if the :class:`~django.db.models.query.QuerySet` is being iterated over). Subsequent evaluations of the :class:`~django.db.models.query.QuerySet` reuse the cached results."
 msgstr ""
 
 #: ../../topics/db/queries.txt:733
@@ -9315,8 +9315,8 @@ msgid "Declaring tablespaces for indexes"
 msgstr ""
 
 #: ../../topics/db/tablespaces.txt:32
-# 260b8c4efbd94e2197677a53794b1381
-msgid "You can pass the :attr:`~django.db.models.Field.db_tablespace` option to a ``Field`` constructor to specify an alternate tablespace for the ``Field``'s column index. If no index would be created for the column, the option is ignored."
+# 21da1cde64db41e2aaba580b63b5e109
+msgid "You can pass the :attr:`~django.db.models.Field.db_tablespace` option to a ``Field`` constructor to specify an alternate tablespace for the ``Field``’s column index. If no index would be created for the column, the option is ignored."
 msgstr ""
 
 #: ../../topics/db/tablespaces.txt:37
@@ -10437,8 +10437,8 @@ msgid "``attachments``: A list of attachments to put on the message. These can b
 msgstr ""
 
 #: ../../topics/email.txt:258
-# 2dfc1f1adedc45aa860a4fdca494b22e
-msgid "``headers``: A dictionary of extra headers to put on the message. The keys are the header name, values are the header values. It's up to the caller to ensure header names and values are in the correct format for an email message."
+# d35631a3977640e6ab838b14824adc37
+msgid "``headers``: A dictionary of extra headers to put on the message. The keys are the header name, values are the header values. It's up to the caller to ensure header names and values are in the correct format for an email message. The corresponding attribute is ``extra_headers``."
 msgstr ""
 
 #: ../../topics/email.txt:263
@@ -12403,8 +12403,8 @@ msgid "Set the ``fields`` attribute to the special value ``'__all__'`` to indica
 msgstr ""
 
 #: ../../topics/forms/modelforms.txt:395
-# be9714a62ba9491f8e84c2d9f94f787a
-msgid "Set the ``exclude`` attribute of the ``ModelForm``'s inner ``Meta`` class to a list of fields to be excluded from the form."
+# 6a84ec8137f24403bc762f17ce67d1d9
+msgid "Set the ``exclude`` attribute of the ``ModelForm``’s inner ``Meta`` class to a list of fields to be excluded from the form."
 msgstr ""
 
 #: ../../topics/forms/modelforms.txt:405
@@ -12695,8 +12695,8 @@ msgid "Specifying widgets to use in the form with ``widgets``"
 msgstr ""
 
 #: ../../topics/forms/modelforms.txt:770
-# 8b71b29971934ee8bccab1042fe6010a
-msgid "Using the ``widgets`` parameter, you can specify a dictionary of values to customize the ``ModelForm``'s widget class for a particular field. This works the same way as the ``widgets`` dictionary on the inner ``Meta`` class of a ``ModelForm`` works::"
+# c80c959a36fc40d7bcca114556ebc2b0
+msgid "Using the ``widgets`` parameter, you can specify a dictionary of values to customize the ``ModelForm``’s widget class for a particular field. This works the same way as the ``widgets`` dictionary on the inner ``Meta`` class of a ``ModelForm`` works::"
 msgstr ""
 
 #: ../../topics/forms/modelforms.txt:779
@@ -12794,8 +12794,13 @@ msgstr ""
 msgid "Just like with ``ModelForms``, by default the ``clean()`` method of a ``ModelFormSet`` will validate that none of the items in the formset violate the unique constraints on your model (either ``unique``, ``unique_together`` or ``unique_for_date|month|year``).  If you want to override the ``clean()`` method on a ``ModelFormSet`` and maintain this validation, you must call the parent class's ``clean`` method::"
 msgstr ""
 
-#: ../../topics/forms/modelforms.txt:925
-# 5f232e5b347144bcab0556145a72176b
+#: ../../topics/forms/modelforms.txt:924
+# 822816a539c54eb18935e04c70626714
+msgid "Also note that by the time you reach this step, individual model instances have already been created for each ``Form``. Modifying a value in ``form.cleaned_data`` is not sufficient to affect the saved value. If you wish to modify a value in ``ModelFormSet.clean()`` you must modify ``form.instance``::"
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:943
+# 8f1a07fa7d4f4cec803f35f62f5250aa
 msgid "Using a custom queryset"
 msgstr ""
 
@@ -14542,8 +14547,8 @@ msgid "Subdomains within a site are able to set cookies on the client for the wh
 msgstr ""
 
 #: ../../topics/http/sessions.txt:659
-# 5dedcdd174f043328d09fa062d79ea09
-msgid "For example, an attacker could log into ``good.example.com`` and get a valid session for his account. If the attacker has control over ``bad.example.com``, he can use it to send his session key to you since a subdomain is permitted to set cookies on `*.example.com``. When you visit ``good.example.com``, you'll be logged in as the attacker and might inadvertently enter your sensitive personal data (e.g. credit card info) into the attackers account."
+# 267a54b96ab14a9091cc03c58b28ef06
+msgid "For example, an attacker could log into ``good.example.com`` and get a valid session for his account. If the attacker has control over ``bad.example.com``, he can use it to send his session key to you since a subdomain is permitted to set cookies on ``*.example.com``. When you visit ``good.example.com``, you'll be logged in as the attacker and might inadvertently enter your sensitive personal data (e.g. credit card info) into the attackers account."
 msgstr ""
 
 #: ../../topics/http/sessions.txt:666
@@ -14859,8 +14864,8 @@ msgid "``klass``"
 msgstr ""
 
 #: ../../topics/http/shortcuts.txt:242
-# 165abc84cbed4c8c9aca4ee5650b2830
-msgid "A :class:`~django.db.models.Model`, :class:`~django.db.models.Manager` or :class:`~django.db.models.query.QuerySet` instance from which to get the object."
+# 2a03e70b739d449bb38ee876ee3d0131
+msgid "A :class:`~django.db.models.Model` class, a :class:`~django.db.models.Manager`, or a :class:`~django.db.models.query.QuerySet` instance from which to get the object."
 msgstr ""
 
 #: ../../topics/http/shortcuts.txt:248
@@ -14882,8 +14887,33 @@ msgstr ""
 msgid "The following example gets the object with the primary key of 1 from ``MyModel``::"
 msgstr ""
 
-#: ../../topics/http/shortcuts.txt:271
-# a59f10650e1b4d49a55f87002e214705
+#: ../../topics/http/shortcuts.txt:272
+# 5e7534903ae84fb0975cff2efa7c4a75
+msgid "The most common use case is to pass a :class:`~django.db.models.Model`, as shown above. However, you can also pass a :class:`~django.db.models.query.QuerySet` instance::"
+msgstr ""
+
+#: ../../topics/http/shortcuts.txt:279
+# 7a26d9314bfe40a68cfd4c891230cd04
+msgid "The above example is a bit contrived since it's equivalent to doing::"
+msgstr ""
+
+#: ../../topics/http/shortcuts.txt:283
+# 1c8b0176c7d143ef9b679468da32e2bc
+msgid "but it can be useful if you are passed the ``queryset`` variable from somewhere else."
+msgstr ""
+
+#: ../../topics/http/shortcuts.txt:286
+# e5559d4903314230a5f2a4253b320b7d
+msgid "Finally, you can also use a :class:`~django.db.models.Manager`. This is useful for example if you have a :ref:`custom manager<custom-managers>`::"
+msgstr ""
+
+#: ../../topics/http/shortcuts.txt:292
+# a7128a0f3f094793ad6a6b679a67c539
+msgid "You can also use :class:`related managers<django.db.models.fields.related.RelatedManager>`::"
+msgstr ""
+
+#: ../../topics/http/shortcuts.txt:298
+# c3b42a1f706844f98d2b4933cc548977
 msgid "Note: As with ``get()``, a :class:`~django.core.exceptions.MultipleObjectsReturned` exception will be raised if more than one object is found."
 msgstr ""
 
@@ -16271,8 +16301,8 @@ msgid "locale name"
 msgstr ""
 
 #: ../../topics/i18n/index.txt:67
-# 4aa4ec22509f483795c7ebc0943d044c
-msgid "A locale name, either a language specification of the form ``ll`` or a combined language and country specification of the form ``ll_CC``. Examples: ``it``, ``de_AT``, ``es``, ``pt_BR``. The language part is always is lower case and the country part in upper case. The separator is an underscore."
+# 62eb26ef9ae74da9b9f84f5828526243
+msgid "A locale name, either a language specification of the form ``ll`` or a combined language and country specification of the form ``ll_CC``. Examples: ``it``, ``de_AT``, ``es``, ``pt_BR``. The language part is always in lower case and the country part in upper case. The separator is an underscore."
 msgstr ""
 
 #: ../../topics/i18n/index.txt:72
@@ -17814,23 +17844,8 @@ msgstr ""
 msgid "Once the string literals of an application have been tagged for later translation, the translation themselves need to be written (or obtained). Here's how that works."
 msgstr ""
 
-#: ../../topics/i18n/translation.txt:1198
-# ce6ad39257564626ab0d3171c455e560
-msgid "Locale restrictions"
-msgstr ""
-
-#: ../../topics/i18n/translation.txt:1200
-# ba938ca7881f44a6a5c30786529988c3
-msgid "Django does not support localizing your application into a locale for which Django itself has not been translated. In this case, it will ignore your translation files. If you were to try this and Django supported it, you would inevitably see a mixture of translated strings (from your application) and English strings (from Django itself). If you want to support a locale for your application that is not already part of Django, you'll need to make at least a minimal translation of the Django core."
-msgstr ""
-
-#: ../../topics/i18n/translation.txt:1208
-# 9bdd7e0287d640cb9185c29c39b6d7fd
-msgid "A good starting point is to copy the Django English ``.po`` file and to translate at least some :term:`translation strings <translation string>`."
-msgstr ""
-
-#: ../../topics/i18n/translation.txt:1212
-# 9905a944d7554019b2eed4326a1ad726
+#: ../../topics/i18n/translation.txt:1197
+# ea302419597343019e51dd37b8fa247c
 msgid "Message files"
 msgstr ""
 
@@ -18321,28 +18336,18 @@ msgstr ""
 msgid "This example restricts languages that are available for automatic selection to German and English (and any sublanguage, like de-ch or en-us)."
 msgstr ""
 
-#: ../../topics/i18n/translation.txt:1641
-# c2466e83c7fd43f9abc2f76bd67a890f
-msgid "If you define a custom :setting:`LANGUAGES` setting, as explained in the previous bullet, it's OK to mark the languages as translation strings -- but use a \"dummy\" ``ugettext()`` function, not the one in ``django.utils.translation``. You should *never* import ``django.utils.translation`` from within your settings file, because that module in itself depends on the settings, and that would cause a circular import."
+#: ../../topics/i18n/translation.txt:1626
+# a6ded48074c1410585d35b445fc1df4b
+msgid "If you define a custom :setting:`LANGUAGES` setting, as explained in the previous bullet, you can mark the language names as translation strings -- but use :func:`~django.utils.translation.ugettext_lazy` instead of :func:`~django.utils.translation.ugettext` to avoid a circular import."
 msgstr ""
 
-#: ../../topics/i18n/translation.txt:1649
-# 3fe82cea0ef3485b9b671a672da7963c
-msgid "The solution is to use a \"dummy\" ``ugettext()`` function. Here's a sample settings file::"
+#: ../../topics/i18n/translation.txt:1631
+# cde9adf4d87c45529b6225f9fdde8a93
+msgid "Here's a sample settings file::"
 msgstr ""
 
-#: ../../topics/i18n/translation.txt:1659
-# 54a63656a4c8436586fe2c513ddb8b4c
-msgid "With this arrangement, :djadmin:`django-admin.py makemessages <makemessages>` will still find and mark these strings for translation, but the translation won't happen at runtime -- so you'll have to remember to wrap the languages in the *real* ``ugettext()`` in any code that uses :setting:`LANGUAGES` at runtime."
-msgstr ""
-
-#: ../../topics/i18n/translation.txt:1665
-# 73477445b24b4d78ad31945d81e0d414
-msgid "The ``LocaleMiddleware`` can only select languages for which there is a Django-provided base translation. If you want to provide translations for your application that aren't already in the set of translations in Django's source tree, you'll want to provide at least a basic one as described in the :ref:`Locale restrictions<locale-restrictions>` note."
-msgstr ""
-
-#: ../../topics/i18n/translation.txt:1672
-# 0b01da35b95c4776a950b2e5114da817
+#: ../../topics/i18n/translation.txt:1640
+# 436a674e353c41ca90f114fa2daa98f0
 msgid "Once ``LocaleMiddleware`` determines the user's preference, it makes this preference available as ``request.LANGUAGE_CODE`` for each :class:`~django.http.HttpRequest`. Feel free to read this value in your view code. Here's a simple example::"
 msgstr ""
 
