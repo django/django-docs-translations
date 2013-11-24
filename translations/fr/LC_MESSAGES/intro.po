@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-02 15:07+0100\n"
-"PO-Revision-Date: 2013-11-03 17:20+0000\n"
+"POT-Creation-Date: 2013-11-23 14:56+0100\n"
+"PO-Revision-Date: 2013-11-24 19:20+0000\n"
 "Last-Translator: claudep <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -1424,17 +1424,17 @@ msgstr "Le répertoire ``polls`` pourrait maintenant être copié dans un nouvea
 msgid "Installing some prerequisites"
 msgstr "Installation de quelques prérequis"
 
-# 5682ac4b0fe149aeb27b41bf0a6fec4e
+# 5cf3538263624b04ac6d0fd768904a91
 #: ../../intro/reusable-apps.txt:102
 msgid ""
 "The current state of Python packaging is a bit muddled with various tools. "
-"For this tutorial, we're going to use distribute_ to build our package. It's"
-" a community-maintained fork of the older ``setuptools`` project. We'll also"
-" be using `pip`_ to install and uninstall it. You should install these two "
-"packages now. If you need help, you can refer to :ref:`how to install Django"
-" with pip<installing-official-release>`. You can install ``distribute`` the "
-"same way."
-msgstr "L'état actuel de la construction de paquets Python est un peu embrouillé par l'utilisation de plusieurs outils. Dans ce tutoriel, nous allons utiliser distribute_ pour construire nos paquets. Il s'agit d'un dérivé maintenu par la communauté du projet plus ancien ``setuptools``. Nous utiliserons aussi `pip`_ pour l'installer et le désinstaller. Vous devriez installer maintenant ces deux paquets. Si vous avez besoin d'aide, vous pouvez vous référer à :ref:`comment installer Django avec pip<installing-official-release>`. Vous pouvez installer ``distribute`` de la même manière."
+"For this tutorial, we're going to use setuptools_ to build our package. It's"
+" the recommended packaging tool (merged with the ``distribute`` fork). We'll"
+" also be using `pip`_ to install and uninstall it. You should install these "
+"two packages now. If you need help, you can refer to :ref:`how to install "
+"Django with pip<installing-official-release>`. You can install "
+"``setuptools`` the same way."
+msgstr "L'état actuel de la construction de paquets Python est un peu embrouillé par l'utilisation de plusieurs outils. Dans ce tutoriel, nous allons utiliser setuptools_ pour construire nos paquets. C'est l'outil d'empaquetage que nous recommandons (fusionné avec le dérivé ``distribute``). Nous utiliserons aussi `pip`_ pour l'installer et le désinstaller. Vous devriez installer maintenant ces deux paquets. Si vous avez besoin d'aide, vous pouvez vous référer à :ref:`comment installer Django avec pip<installing-official-release>`. Vous pouvez installer ``setuptools`` de la même manière."
 
 # f62c3ef2caad487f9fe41a759683738b
 #: ../../intro/reusable-apps.txt:114
@@ -1481,54 +1481,41 @@ msgid ""
 "Create a file ``django-polls/README.rst`` with the following contents::"
 msgstr "Créez un fichier ``django-polls/README.rst`` contenant ceci ::"
 
-# ae8313839e5b413689879660410e1bf3
+# 2aa2fc955efc4626a7dd4c35bad72cf7
 #: ../../intro/reusable-apps.txt:165
 msgid ""
-"4. Create a ``django-polls/LICENSE`` file. Choosing a license is beyond the "
+"Create a ``django-polls/LICENSE`` file. Choosing a license is beyond the "
 "scope of this tutorial, but suffice it to say that code released publicly "
 "without a license is *useless*. Django and many Django-compatible apps are "
 "distributed under the BSD license; however, you're free to pick your own "
 "license. Just be aware that your licensing choice will affect who is able to"
 " use your code."
-msgstr "4. Créez un fichier ``django-polls/LICENSE``. Le choix d'une licence n'est pas dans le thème de ce tutoriel, mais nous vous rendons attentif au fait que du code publié sans licence est *inutile*. Django et de nombreuses applications compatibles Django sont distribués sous licence BSD ; vous êtes bien sûr libre d'utiliser la licence de votre choix. Sachez seulement que le choix de la licence a un impact sur la quantité d'utilisateurs potentiels de votre code."
+msgstr "Créez un fichier ``django-polls/LICENSE``. Le choix d'une licence n'est pas dans le thème de ce tutoriel, mais nous vous rendons attentif au fait que du code publié sans licence est *inutile*. Django et de nombreuses applications compatibles Django sont distribués sous licence BSD ; vous êtes bien sûr libre d'utiliser la licence de votre choix. Sachez seulement que le choix de la licence a un impact sur la quantité d'utilisateurs potentiels de votre code."
 
-# db71e74aa196411a8be175ccdf559fbf
+# 83b16608bca94e7db54ed59696cd0406
 #: ../../intro/reusable-apps.txt:172
 msgid ""
-"5. Next we'll create a ``setup.py`` file which provides details about how to"
-" build and install the app.  A full explanation of this file is beyond the "
-"scope of this tutorial, but the `distribute docs "
-"<http://packages.python.org/distribute/setuptools.html>`_ have a good "
+"Next we'll create a ``setup.py`` file which provides details about how to "
+"build and install the app. A full explanation of this file is beyond the "
+"scope of this tutorial, but the `setuptools docs "
+"<http://packages.python.org/setuptools/setuptools.html>`_ have a good "
 "explanation. Create a file ``django-polls/setup.py`` with the following "
 "contents::"
-msgstr "5. Ensuite, nous allons créer un fichier ``setup.py`` qui fournit des détails sur la façon de construire et d'installer l'application. Nous ne nous lancerons pas dans une explication détaillée de ce fichier, mais vous trouverez plus d'informations dans la `documentation de distribute <http://packages.python.org/distribute/setuptools.html>`_. Créez un fichier ``django-polls/setup.py`` avec le contenu suivant ::"
+msgstr "Ensuite, nous allons créer un fichier ``setup.py`` qui fournit des détails sur la façon de construire et d'installer l'application. Nous ne nous lancerons pas dans une explication détaillée de ce fichier, mais vous trouverez plus d'informations dans la `documentation de setuptools <http://packages.python.org/setuptools/setuptools.html>`_. Créez un fichier ``django-polls/setup.py`` avec le contenu suivant ::"
 
-# 8e80a3f4a1824f89a1d4cc531efbca00
-#: ../../intro/reusable-apps.txt:211
-msgid "I thought you said we were going to use ``distribute``?"
-msgstr "Je pensais que vous aviez dit que nous allions utiliser ``distribute``?"
-
-# f459b72ed30747fdb7bcf35549ee2a92
-#: ../../intro/reusable-apps.txt:213
-msgid ""
-"Distribute is a drop-in replacement for ``setuptools``. Even though we "
-"appear to import from ``setuptools``, since we have ``distribute`` "
-"installed, it will override the import."
-msgstr "Distribute est un remplaçant « module pour module » de ``setuptools``. Même s'il paraît que nous importons de ``setuptools``, comme ``distribute`` est installé, il va surcharger l'importation."
-
-# cbbc6cbe90054af29b5f2979ca13686d
-#: ../../intro/reusable-apps.txt:217
+# b4957d929029461b9703ad13293b5b33
+#: ../../intro/reusable-apps.txt:212
 msgid ""
 "Only Python modules and packages are included in the package by default. To "
 "include additional files, we'll need to create a ``MANIFEST.in`` file. The "
-"distribute docs referred to in the previous step discuss this file in more "
+"setuptools docs referred to in the previous step discuss this file in more "
 "details. To include the templates, the ``README.rst`` and our ``LICENSE`` "
 "file, create a file ``django-polls/MANIFEST.in`` with the following "
 "contents::"
-msgstr "Seuls des modules et paquets Python sont inclus par défaut dans le paquet. Pour ajouter des fichiers supplémentaires, nous devrons créer un fichier ``MANIFEST.in``. La documentation de ``distribute`` mentionnée à l'étape précédente présente ce fichier en détails. Pour inclure les gabarits et les fichiers ``README.rst`` et ``LICENSE``, créez un fichier ``django-polls/MANIFEST.in`` avec le contenu suivant ::"
+msgstr "Seuls des modules et paquets Python sont inclus par défaut dans le paquet. Pour ajouter des fichiers supplémentaires, nous devrons créer un fichier ``MANIFEST.in``. La documentation de ``setuptools`` mentionnée à l'étape précédente présente ce fichier en détails. Pour inclure les gabarits et les fichiers ``README.rst`` et ``LICENSE``, créez un fichier ``django-polls/MANIFEST.in`` avec le contenu suivant ::"
 
-# 6cc3321bc6734a319353b1ba32732f3b
-#: ../../intro/reusable-apps.txt:229
+# 54c6a0be76e24d6595a9284030d5473f
+#: ../../intro/reusable-apps.txt:224
 msgid ""
 "It's optional, but recommended, to include detailed documentation with your "
 "app. Create an empty directory ``django-polls/docs`` for future "
@@ -2019,7 +2006,7 @@ msgid ""
 "bindings <database-installation>`, and change the following keys in the "
 ":setting:`DATABASES` ``'default'`` item to match your database connection "
 "settings:"
-msgstr "Si vous souhaitez utiliser une autre base de données, installez le :ref:`connecteur de base de données approprié, et changez les clés suivantes dans l'élément ``'default'`` de :setting:`DATABASES` pour indiquer les paramètres de connexion de votre base de données :"
+msgstr "Si vous souhaitez utiliser une autre base de données, installez le :ref:`connecteur de base de données <database-installation>` approprié, et changez les clés suivantes dans l'élément ``'default'`` de :setting:`DATABASES` pour indiquer les paramètres de connexion de votre base de données :"
 
 # 7254c473c3da4e4f93f88ede6adb81fb
 #: ../../intro/tutorial01.txt:209
@@ -2039,7 +2026,7 @@ msgid ""
 "should be the full absolute path, including filename, of that file. The "
 "default value, ``os.path.join(BASE_DIR, 'db.sqlite3')``, will store the file"
 " in your project directory."
-msgstr ":setting:`NAME` -- Le nom de votre base de données. Si vous utilisez SQLite, la base de données sera un fichier sur votre ordinateur. Dans ce cas, :setting:`NAME doit être le chemin absolu complet de celui-ci, y compris le nom de fichier. La valeur par défaut, ``os.path.join(BASE_DIR, 'db.sqlite3')``, stocke ce fichier dans le répertoire de votre projet."
+msgstr ":setting:`NAME` -- Le nom de votre base de données. Si vous utilisez SQLite, la base de données sera un fichier sur votre ordinateur. Dans ce cas, :setting:`NAME` doit être le chemin absolu complet de celui-ci, y compris le nom de fichier. La valeur par défaut, ``os.path.join(BASE_DIR, 'db.sqlite3')``, stocke ce fichier dans le répertoire de votre projet."
 
 # fadedc8b801a44569ca24bdada4c3371
 #: ../../intro/tutorial01.txt:222
@@ -4743,15 +4730,15 @@ msgstr "Écriture du premier test"
 msgid "We identify a bug"
 msgstr "Un bogue a été trouvé"
 
-# 4b0ca4d3ff2a4b4ebb0f8473bb420e5e
+# 89e365f36ea441ff8bd3ad0f430fa470
 #: ../../intro/tutorial05.txt:132
 msgid ""
 "Fortunately, there's a little bug in the ``polls`` application for us to fix"
 " right away: the ``Poll.was_published_recently()`` method returns ``True`` "
 "if the ``Poll`` was published within the last day (which is correct) but "
-"also if the ``Poll``'s ``pub_date`` field is in the future (which certainly "
+"also if the ``Poll``’s ``pub_date`` field is in the future (which certainly "
 "isn't)."
-msgstr "Heureusement, il y a un petit bogue dans l'application ``polls``, tout prêt à être corrigé : la méthode ``Poll.was_published_recently()`` renvoie ``True`` si l'objet ``Poll`` a été publié au cours des dernières 24 heures (ce qui est correct), mais également si le champ ``pub_date`` de ``Poll`` est dans le futur (ce qui n'est évidemment pas juste)."
+msgstr "Heureusement, il y a un petit bogue dans l'application ``polls``, tout prêt à être corrigé : la méthode ``Poll.was_published_recently()`` renvoie ``True`` si l'objet ``Poll`` a été publié durant le jour précédent (ce qui est correct), mais également si le champ ``pub_date`` de ``Poll`` est dans le futur (ce qui n'est évidemment pas juste)."
 
 # 9345a4a581a941938600256c3fcc61e2
 #: ../../intro/tutorial05.txt:137

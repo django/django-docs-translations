@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-02 15:07+0100\n"
-"PO-Revision-Date: 2013-11-05 10:00+0000\n"
+"POT-Creation-Date: 2013-11-23 14:56+0100\n"
+"PO-Revision-Date: 2013-11-24 19:20+0000\n"
 "Last-Translator: claudep <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -510,11 +510,11 @@ msgid ""
 ":meth:`~BaseCommand.handle` method."
 msgstr "L'héritage direct de la classe :class:`BaseCommand` exige que vous implémentiez la méthode :meth:`~BaseCommand.handle`."
 
-# 82e3c819a9174d0483870fdb3d8fb4f2
+# 9c67864b03c847e082718fd119121ea6
 #: ../../howto/custom-management-commands.txt:195
 msgid ""
 "All attributes can be set in your derived class and can be used in "
-":class:`BaseCommand`'s :ref:`subclasses<ref-basecommand-subclasses>`."
+":class:`BaseCommand`’s :ref:`subclasses<ref-basecommand-subclasses>`."
 msgstr "Tous les attributs peuvent être définis dans votre sous-classe et peuvent être utilisés dans les :ref:`sous-classes<ref-basecommand-subclasses>` de :class:`BaseCommand`."
 
 # ef7faae288be40e08fd7c66db712bdcf
@@ -614,11 +614,11 @@ msgstr ":class:`BaseCommand` contient quelques méthodes qui peuvent être surch
 msgid "Implementing a constructor in a subclass"
 msgstr "Implémentation d'un constructeur dans une sous-classe"
 
-# 8011219b40724589b44f0022f34f20c0
+# 5f6ea44afd0f43f692d8a107c8207895
 #: ../../howto/custom-management-commands.txt:269
 msgid ""
 "If you implement ``__init__`` in your subclass of :class:`BaseCommand`, you "
-"must call :class:`BaseCommand`'s ``__init__``."
+"must call :class:`BaseCommand`’s ``__init__``."
 msgstr "Si vous implémentez ``__init__`` dans votre sous-classe de :class:`BaseCommand`, vous devez appeler la méthode ``__init__`` de :class:`BaseCommand`."
 
 # 2b6c64b747374c98a35df808f95d8abc
@@ -5358,14 +5358,14 @@ msgstr "Filtrage de rapports d'erreur"
 msgid "Filtering sensitive information"
 msgstr "Filtrage des informations sensibles"
 
-# f13f9e5a469c488ea4118cb5e70460b9
+# 8f3596ee87ee4b6ca16b9a15fb251a32
 #: ../../howto/error-reporting.txt:122
 msgid ""
 "Error reports are really helpful for debugging errors, so it is generally "
 "useful to record as much relevant information about those errors as "
 "possible. For example, by default Django records the `full traceback`_ for "
-"the exception raised, each `traceback frame`_'s local variables, and the "
-":class:`~django.http.HttpRequest`'s :ref:`attributes<httprequest-"
+"the exception raised, each `traceback frame`_’s local variables, and the "
+":class:`~django.http.HttpRequest`’s :ref:`attributes<httprequest-"
 "attributes>`."
 msgstr "Les rapports d'erreur sont vraiment utiles pour déboguer les erreurs, il est donc généralement utile de récolter le maximum d'informations à leur sujet. Par défaut, Django récolte une `trace complète`_ de l'exception levée, les variables locales de chaque `contexte de trace`_ et les :ref:`attributs<httprequest-attributes>` de l'objet :class:`~django.http.HttpRequest`."
 
@@ -5410,11 +5410,11 @@ msgstr "Pour masquer systématiquement toutes les variables locales d'une foncti
 msgid "When using mutiple decorators"
 msgstr "Utilisation de plusieurs décorateurs"
 
-# cb8a61f5db134666a705a5a1f63c1fa0
+# e657abad8dbf4d2888049a66856f03e3
 #: ../../howto/error-reporting.txt:168
 msgid ""
 "If the variable you want to hide is also a function argument (e.g. "
-"'``user``' in the following example), and if the decorated function has "
+"'``user``’ in the following example), and if the decorated function has "
 "mutiple decorators, then make sure to place ``@sensitive_variables`` at the "
 "top of the decorator chain. This way it will also hide the function argument"
 " as it gets passed through the other decorators::"
@@ -5478,11 +5478,11 @@ msgid ""
 ":setting:`DEFAULT_EXCEPTION_REPORTER_FILTER` setting::"
 msgstr "Tout ce que font :func:`sensitive_variables` et :func:`sensitive_post_parameters`, c'est respectivement annoter la fonction décorée avec les noms des varaibles sensibles et annoter l'objet ``HttpRequest`` avec les noms des paramètres POST sensibles, afin que ces informations sensibles puissent être plus tard filtrées des rapports lorsqu'une erreur se produit. Le vrai filtrage est effectué par le filtre de rapport d'erreur par défaut de Django, :class:`django.views.debug.SafeExceptionReporterFilter`. Ce filtre utilise les annotations des décorateurs pour remplacer les valeurs correspondantes par des étoiles (`**********`) au moment de la production du rapport d'erreur. Si vous souhaitez surcharger ou personnaliser ce comportement par défaut pour tout votre site, vous devez définir votre propre classe de filtre et indiquer à Django de l'utiliser par le moyen du réglage :setting:`DEFAULT_EXCEPTION_REPORTER_FILTER`::"
 
-# 121e862fba634f26bef21cd698b8a28c
+# b2fc3845b63740b6a9392cedaff6aa6e
 #: ../../howto/error-reporting.txt:236
 msgid ""
 "You may also control in a more granular way which filter to use within any "
-"given view by setting the ``HttpRequest``'s ``exception_reporter_filter`` "
+"given view by setting the ``HttpRequest``’s ``exception_reporter_filter`` "
 "attribute::"
 msgstr "Vous pouvez aussi contrôler d'une manière plus fine le filtre qu'une vue données doit utiliser en définissant l'attribut ``exception_reporter_filter`` de l'objet ``HttpRequest``."
 
