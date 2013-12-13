@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-23 14:56+0100\n"
-"PO-Revision-Date: 2013-11-24 19:40+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"PO-Revision-Date: 2013-12-08 20:50+0000\n"
+"Last-Translator: claudep <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13903,7 +13903,7 @@ msgid ""
 "GeoDjango constructs spatial SQL with the :class:`GeoQuerySet`, a subclass "
 "of :class:`~django.db.models.query.QuerySet`.  The :class:`GeoManager` "
 "instance attached to your model is what enables use of :class:`GeoQuerySet`."
-msgstr "GeoDjango construit le code SQL spatial à l'aide des objets :class:`GeoQuerySet`, une sous-classe de :class:`~django.db.models.query.QuerySet`. L'instance :class:`GeoManager`liée à votre modèle est ce qui permet d'utiliser :class:`GeoQuerySet`."
+msgstr "GeoDjango construit le code SQL spatial à l'aide des objets :class:`GeoQuerySet`, une sous-classe de :class:`~django.db.models.query.QuerySet`. L'instance :class:`GeoManager` liée à votre modèle est ce qui permet d'utiliser :class:`GeoQuerySet`."
 
 # ffc26d3232584347a21f09967bdb3afb
 #: ../../ref/contrib/gis/db-api.txt:128
@@ -28222,7 +28222,7 @@ msgstr ""
 # 055448b789a04df7aa38b0d62d4e0248
 #: ../../ref/databases.txt:444
 msgid "Savepoints"
-msgstr ""
+msgstr "Points de sauvegarde (« savepoints »)"
 
 # d3705ab064b74b0095aff255e18a3117
 #: ../../ref/databases.txt:446
@@ -31470,13 +31470,13 @@ msgstr "Django génère certaines exceptions qui lui sont propres tout comme bea
 # 06dd7df960aa4af79508ef29bf219c14
 #: ../../ref/exceptions.txt:10
 msgid "Django Core Exceptions"
-msgstr ""
+msgstr "Exceptions principales de Django"
 
 # 4d571e743b6a471fa2b7af6bd83924ae
 #: ../../ref/exceptions.txt:15
 msgid ""
 "Django core exception classes are defined in :mod:`django.core.exceptions`."
-msgstr ""
+msgstr "Les classes d'exceptions principales de Django sont définies dans :mod:`django.core.exceptions`."
 
 # c9c19b35617848d3a10ecc6c1d060951
 #: ../../ref/exceptions.txt:18
@@ -31491,7 +31491,7 @@ msgid ""
 "as an attribute of each model class to identify the class of object that "
 "could not be found and to allow you to catch a particular model class with "
 "``try/except``."
-msgstr ""
+msgstr "L'exception ``DoesNotExist`` est générée lorsqu'un objet est introuvable en fonction des paramètres donnés d'une requête. Django fournit une exception ``DoesNotExist`` comme attribut de chaque classe de modèle afin d'identifier la classe d'objet qui n'a pas pu être trouvé et pour permettre d'intercepter une classe de modèle particulière avec ``try/except``."
 
 # c230ba90d45748a5bb882e872741c411
 #: ../../ref/exceptions.txt:29
@@ -31499,7 +31499,7 @@ msgid ""
 "The base class for ``DoesNotExist`` exceptions; a ``try/except`` for "
 "``ObjectDoesNotExist`` will catch ``DoesNotExist`` exceptions for all "
 "models."
-msgstr ""
+msgstr "La classe de base des exceptions ``DoesNotExist``; une clause ``try/except`` avec ``ObjectDoesNotExist`` intercepte les exceptions ``DoesNotExist`` de tous les modèles."
 
 # 2f87fd47b6454ceab1f5436e5ba4e8ba
 #: ../../ref/exceptions.txt:33
@@ -31541,47 +31541,47 @@ msgid ""
 " an operation that should be considered suspicious from a security "
 "perspective, such as tampering with a session cookie. Subclasses of "
 "SuspiciousOperation include:"
-msgstr ""
+msgstr "L'exception :exc:`SuspiciousOperation` est générée lorsqu'un utilisateur effectue une opération considérée comme douteuse selon des critères de sécurité, comme lors de manipulations d'un cookie de session. Les sous-classes de ``SuspiciousOperation`` comprennent :"
 
 # 90963ff6efbf42fea84024c825e58ed5
 #: ../../ref/exceptions.txt:57
 msgid "DisallowedHost"
-msgstr ""
+msgstr "DisallowedHost"
 
 # ccc855f17ab548088caf810eb588987f
 #: ../../ref/exceptions.txt:58
 msgid "DisallowedModelAdminLookup"
-msgstr ""
+msgstr "DisallowedModelAdminLookup"
 
 # 88f1673eb134420085d4ca76f6b66214
 #: ../../ref/exceptions.txt:59
 msgid "DisallowedRedirect"
-msgstr ""
+msgstr "DisallowedRedirect"
 
 # c9f80d96a6a74303ae36ae12e745d3e1
 #: ../../ref/exceptions.txt:60
 msgid "InvalidSessionKey"
-msgstr ""
+msgstr "InvalidSessionKey"
 
 # 06143e7b41fb414192687c4751a05983
 #: ../../ref/exceptions.txt:61
 msgid "SuspiciousFileOperation"
-msgstr ""
+msgstr "SuspiciousFileOperation"
 
 # 53313647870e44b1aaf728f17d7d9443
 #: ../../ref/exceptions.txt:62
 msgid "SuspiciousMultipartForm"
-msgstr ""
+msgstr "SuspiciousMultipartForm"
 
 # 5c6e837d91994685b37d30a10c01ace6
 #: ../../ref/exceptions.txt:63
 msgid "SuspiciousSession"
-msgstr ""
+msgstr "SuspiciousSession"
 
 # bc9d41ed35634d1ca69407d03a4c1bd8
 #: ../../ref/exceptions.txt:64
 msgid "WizardViewCookieModified"
-msgstr ""
+msgstr "WizardViewCookieModified"
 
 # 49e4db2cf3a54f01a12ea628fd563a4d
 #: ../../ref/exceptions.txt:66
@@ -31590,7 +31590,7 @@ msgid ""
 "logged at the ``Error`` level and results in a "
 ":class:`~django.http.HttpResponseBadRequest`. See the :doc:`logging "
 "documentation </topics/logging/>` for more information."
-msgstr ""
+msgstr "Si une exception ``SuspiciousOperation`` atteint le niveau du gestionnaire WSGI, elle est journalisée au niveau ``Error`` et produit une exception :class:`~django.http.HttpResponseBadRequest`. Consultez la :doc:`documentation de la journalisation </topics/logging/>` pour plus d'informations."
 
 # 35fb37b140a64648a449fcdcc2cd08f6
 #: ../../ref/exceptions.txt:72
@@ -31707,18 +31707,18 @@ msgstr "L'exception :exc:`ValidationError` est générée lorsque des données f
 # 8a0d6a4823c84cb88a6234e0513cd8de
 #: ../../ref/exceptions.txt:130
 msgid "URL Resolver exceptions"
-msgstr ""
+msgstr "Exceptions du résolveur d'URL"
 
 # aa933ef1780a431b903ca12795921cc2
 #: ../../ref/exceptions.txt:132
 msgid ""
 "URL Resolver exceptions are defined in :mod:`django.core.urlresolvers`."
-msgstr ""
+msgstr "Les exceptions du résolveur d'URL sont définies dans :mod:`django.core.urlresolvers`."
 
 # bd72dbe4b3b64568b2b0627827f694d6
 #: ../../ref/exceptions.txt:135
 msgid "Resolver404"
-msgstr ""
+msgstr "Resolver404"
 
 # 80933ec6ff6843e1b938b5247da3db44
 #: ../../ref/exceptions.txt:138
@@ -31727,7 +31727,7 @@ msgid ""
 ":func:`django.core.urlresolvers.resolve()` if the path passed to "
 "``resolve()`` doesn't map to a view. It's a subclass of "
 ":class:`django.http.Http404`"
-msgstr ""
+msgstr "L'exception :exc:`Resolver404` est générée par :func:`django.core.urlresolvers.resolve()` si le chemin transmis à ``resolve()`` ne correspond à aucune vue. C'est une sous-classe de :class:`django.http.Http404`."
 
 # 929d79de6373450882f4fd7ed1ec1bf7
 #: ../../ref/exceptions.txt:144
@@ -31750,14 +31750,14 @@ msgstr "Exceptions de base de données"
 # afd8f946d1334442b3369efb20e3d84e
 #: ../../ref/exceptions.txt:156
 msgid "Database exceptions are provided in :mod:`django.db`."
-msgstr ""
+msgstr "Les exceptions de base de données sont définies dans :mod:`django.db`."
 
 # 8a270636270e498a85b1090f7e1bcd7a
 #: ../../ref/exceptions.txt:158
 msgid ""
 "Django wraps the standard database exceptions so that your Django code has a"
 " guaranteed common implementation of these classes."
-msgstr ""
+msgstr "Django adapte les exceptions de base de données standard afin que votre code Django puisse compter sur une implémentation commune de ces classes."
 
 # f2baf742423a4db9920a8fa0d66d41a7
 #: ../../ref/exceptions.txt:171
@@ -31775,14 +31775,14 @@ msgid ""
 "information provided. (Note that this attribute is available under both "
 "Python 2 and Python 3, although :pep:`3134` normally only applies to Python "
 "3.)"
-msgstr ""
+msgstr "Se conformant à :pep:`3134`, un attribut ``__cause__`` est défini avec l'exception de base de données sous-jacente, permettant ainsi d'avoir accès à d'éventuelles informations complémentaires (notez que cet attribut est disponible aussi bien avec Python 2 que Python 3, même si :pep:`3134` ne s'applique normalement qu'à Python 3)."
 
 # 614849c5111c4831aab37db9e5644aaf
 #: ../../ref/exceptions.txt:183
 msgid ""
 "Previous versions of Django only wrapped ``DatabaseError`` and "
 "``IntegrityError``, and did not provide ``__cause__``."
-msgstr ""
+msgstr "Les versions précédentes de Django n'adaptaient que les exceptions ``DatabaseError`` et ``IntegrityError`` et ne définissaient pas l'attribut ``__cause__``."
 
 # 49c8aaee127a4873ac5fee91e3180be0
 #: ../../ref/exceptions.txt:188
@@ -31790,7 +31790,7 @@ msgid ""
 "Raised to prevent deletion of referenced objects when using "
 ":attr:`django.db.models.PROTECT`. :exc:`models.ProtectedError` is a subclass"
 " of :exc:`IntegrityError`."
-msgstr ""
+msgstr "Cette exception est générée pour empêcher la suppression d'objets référencés lors de l'utilisation de :attr:`django.db.models.PROTECT`. :exc:`models.ProtectedError` est une sous-classe de :exc:`IntegrityError`."
 
 # 745f5c8fbbe74ed09e4774d62b535ea1
 #: ../../ref/exceptions.txt:195
@@ -31800,13 +31800,13 @@ msgstr "Exceptions Http"
 # 44391e1fcf8d4efd8d24153a952b48cc
 #: ../../ref/exceptions.txt:197
 msgid "Http exceptions are provided in :mod:`django.http`."
-msgstr ""
+msgstr "Les exceptions HTTP sont définies dans :mod:`django.http`."
 
 # c2e0a1cd7fe540b0860579561c824dd0
 #: ../../ref/exceptions.txt:201
 msgid ""
 "The :exc:`UnreadablePostError` is raised when a user cancels an upload."
-msgstr ""
+msgstr "L'exception :exc:`UnreadablePostError` est générée lorsqu'un utilisateur annule un envoi de fichier."
 
 # d55025d3e1ea46e2b129cb0330a168c3
 #: ../../ref/exceptions.txt:206
@@ -31816,14 +31816,14 @@ msgstr "Exceptions de transaction"
 # aa619f3425564a98aa603b25e7db4ac3
 #: ../../ref/exceptions.txt:208
 msgid "Transaction exceptions are defined in :mod:`django.db.transaction`."
-msgstr ""
+msgstr "Les exceptions de transactions sont définies dans :mod:`django.db.transaction`."
 
 # 10340124bc3c48d7af66e19ecb462d00
 #: ../../ref/exceptions.txt:212
 msgid ""
 "The :exc:`TransactionManagementError` is raised for any and all problems "
 "related to database transactions."
-msgstr ""
+msgstr "L'exception :exc:`TransactionManagementError` est générée lors de tout problème survenant en lien avec les transactions de bases de données."
 
 # 137c28b3a2424a73b913c364a8f4c3c1
 #: ../../ref/exceptions.txt:216
@@ -36485,7 +36485,7 @@ msgstr ""
 # d7e07798cdd544e7848b6786448442d9
 #: ../../ref/middleware.txt:202
 msgid "Transaction middleware"
-msgstr ""
+msgstr "Intergiciel de transaction"
 
 # 63a4de8fbd2048b1b7a2aee7c48033f1
 #: ../../ref/middleware.txt:211
@@ -48545,7 +48545,7 @@ msgstr ""
 # 7611e38fcf3b414e9f55a9174acd17b9
 #: ../../ref/settings.txt:2764
 msgid "Logging"
-msgstr ""
+msgstr "Journalisation"
 
 # a1d79190d7984308a5258561786a954d
 #: ../../ref/settings.txt:2765
@@ -57638,12 +57638,12 @@ msgstr ""
 # 5c87e344637e45dea97e94acc95f943a
 #: ../../ref/validators.txt:3
 msgid "Validators"
-msgstr ""
+msgstr "Validateurs"
 
 # 71b8c3511be8420189ec0a7457666eb8
 #: ../../ref/validators.txt:9
 msgid "Writing validators"
-msgstr ""
+msgstr "Écriture de validateurs"
 
 # 7e0e2b34be21408f909ee2695c8d225d
 #: ../../ref/validators.txt:11
@@ -57652,31 +57652,31 @@ msgid ""
 ":exc:`~django.core.exceptions.ValidationError` if it doesn't meet some "
 "criteria. Validators can be useful for re-using validation logic between "
 "different types of fields."
-msgstr ""
+msgstr "Un validateur est un exécutable acceptant une valeur et générant :exc:`~django.core.exceptions.ValidationError` si celle-ci ne répond pas à certains critères. Les validateurs peuvent être utiles pour réutiliser la logique de validation entre différents types de champs."
 
 # e84aaf7a2cab4bf2ad19f54c8d95d6f9
 #: ../../ref/validators.txt:16
 msgid "For example, here's a validator that only allows even numbers::"
-msgstr ""
+msgstr "Par exemple, voici un validateur qui n'autorise que les nombres pairs ::"
 
 # 159bc9553bc4438aad0645205fc62a7e
 #: ../../ref/validators.txt:24
 msgid ""
 "You can add this to a model field via the field's "
 ":attr:`~django.db.models.Field.validators` argument::"
-msgstr ""
+msgstr "Vous pouvez l'ajouter à un champ de modèle via le paramètre :attr:`~django.db.models.Field.validators` du champ ::"
 
 # bd4ba99923cd484f9f3d23327b53ea14
 #: ../../ref/validators.txt:32
 msgid ""
 "Because values are converted to Python before validators are run, you can "
 "even use the same validator with forms::"
-msgstr ""
+msgstr "Comme les valeurs sont converties en Python avant que les validateurs ne soient exécutés, vous pouvez même utiliser les mêmes validateurs avec les formulaires ::"
 
 # ee58687f246a4b10a516981f7bb2b08e
 #: ../../ref/validators.txt:41
 msgid "How validators are run"
-msgstr ""
+msgstr "Exécution des validateurs"
 
 # 0373254b7bbf497b97ce85a175db655d
 #: ../../ref/validators.txt:43
@@ -57689,12 +57689,12 @@ msgid ""
 "that are included in your form. See the :doc:`ModelForm documentation "
 "</topics/forms/modelforms>` for information on how model validation "
 "interacts with forms."
-msgstr ""
+msgstr "Consultez la :doc:`validation des formulaires </ref/forms/validation>` pour plus d'informations sur la manière dont les validateurs sont exécutés dans les formulaires, et :ref:`validation d'objets <validating-objects>` sur leur manière d'être exécutés pour les modèles. Notez que les validateurs ne sont pas exécutés automatiquement lorsque vous enregistrez un modèle, mais si vous utilisez un formulaire :class:`~django.forms.ModelForm`, celui-ci applique les validateurs sur tous les champs inclus dans le formulaire. Consultez la :doc:`documentation des ModelForm </topics/forms/modelforms>` pour plus d'informations sur la manière dont la validation des modèles interagit avec les formulaires."
 
 # a3d47d155038423e92f6ad5e7e710c8a
 #: ../../ref/validators.txt:53
 msgid "Built-in validators"
-msgstr ""
+msgstr "Validateurs intégrés"
 
 # 0404b85a6856451ba808964677626948
 #: ../../ref/validators.txt:55
@@ -57703,29 +57703,29 @@ msgid ""
 "validators for use with model and form fields. They're used internally but "
 "are available for use with your own fields, too. They can be used in "
 "addition to, or in lieu of custom ``field.clean()`` methods."
-msgstr ""
+msgstr "Le module :mod:`django.core.validators` contient une collection de validateurs exécutables à destination des champs de modèles et de formulaires. Ils sont utilisés en interne mais sont aussi à disposition pour vos propres champs. Ils peuvent être employés en plus ou à la place de méthodes ``field.clean()`` personnalisées."
 
 # fbe8ca2f8c374b8f847d7e23c2955ca3
 #: ../../ref/validators.txt:61
 msgid "``RegexValidator``"
-msgstr ""
+msgstr "``RegexValidator``"
 
 # ed9433b74e1c4ed294cafed9a799fb3c
 #: ../../ref/validators.txt:64
 msgid ""
 "If not ``None``, overrides :attr:`regex`. Can be a regular expression string"
 " or a pre-compiled regular expression."
-msgstr ""
+msgstr "Si différent de ``None``, surcharge :attr:`regex`. Cela peut être une chaîne d'expression régulière ou une expression régulière précompilée."
 
 # 6b3de73700134d90b62fa4b565befbab
 #: ../../ref/validators.txt:66
 msgid "If not ``None``, overrides :attr:`.message`."
-msgstr ""
+msgstr "Si différent de ``None``, surcharge :attr:`message`."
 
 # 3a92fa4c54124c61a9aea15644447295
 #: ../../ref/validators.txt:67
 msgid "If not ``None``, overrides :attr:`code`."
-msgstr ""
+msgstr "Si différent de ``None``, surcharge :attr:`code`."
 
 # 690738e479474c289ca0f64498f9a380
 #: ../../ref/validators.txt:71
@@ -57735,151 +57735,151 @@ msgid ""
 ":exc:`~django.core.exceptions.ValidationError` with :attr:`message` and "
 ":attr:`code` if no match is found. By default, matches any string (including"
 " an empty string)."
-msgstr ""
+msgstr "Le motif d'expression régulière à appliquer à la valeur ``value`` fournie, ou une expression régulière précompilée. Génère une exception :exc:`~django.core.exceptions.ValidationError` avec :attr:`message` et :attr:`code` si aucune correspondance n'est trouvée. Par défaut, correspond à n'importe quelle chaîne (y compris une chaîne vide)."
 
 # f4667954000f4a82be2cb530f7bee7b1
 #: ../../ref/validators.txt:79
 msgid ""
 "The error message used by :exc:`~django.core.exceptions.ValidationError` if "
 "validation fails. Defaults to ``\"Enter a valid value\"``."
-msgstr ""
+msgstr "Le message d'erreur utilisé par :exc:`~django.core.exceptions.ValidationError` si la validation échoue. La valeur par défaut est ``\"Saisissez une valeur valide\"``."
 
 # d14b502937e94fd8a0c45a8e4df55d6b
 #: ../../ref/validators.txt:85
 msgid ""
 "The error code used by :exc:`~django.core.exceptions.ValidationError` if "
 "validation fails. Defaults to ``\"invalid\"``."
-msgstr ""
+msgstr "Le code d'erreur utilisé par :exc:`~django.core.exceptions.ValidationError` si la validation échoue. La valeur par défaut est ``\"invalid\"``."
 
 # 75e8331155074e72b72e03ef271488b3
 #: ../../ref/validators.txt:89
 msgid "``URLValidator``"
-msgstr ""
+msgstr "``URLValidator``"
 
 # 21b0e32f69014480922a024da2105661
 #: ../../ref/validators.txt:92
 msgid ""
 "A :class:`RegexValidator` that ensures a value looks like a URL, and raises "
 "an error code of ``'invalid'`` if it doesn't."
-msgstr ""
+msgstr "Un :class:`RegexValidator` s'assurant qu'une valeur réponde aux critères d'une URL, et générant un code d'erreur ``'invalid'`` dans le cas contraire."
 
 # 66159ec8456443d584f8a28c492f29f0
 #: ../../ref/validators.txt:96
 msgid "``validate_email``"
-msgstr ""
+msgstr "``validate_email``"
 
 # 4a6d73717baa41deb6b2855f9871dcb8
 #: ../../ref/validators.txt:99
 msgid ""
 "An ``EmailValidator`` instance that ensures a value looks like an email "
 "address."
-msgstr ""
+msgstr "Une instance de ``EmailValidator`` s'assurant qu'une valeur réponde aux critères d'une adresse électronique."
 
 # b5542efb683c490189df1630550e6adc
 #: ../../ref/validators.txt:103
 msgid "``validate_slug``"
-msgstr ""
+msgstr "``validate_slug``"
 
 # 66e8e9eb99a04c5b865c33b592c5fcd5
 #: ../../ref/validators.txt:106
 msgid ""
 "A :class:`RegexValidator` instance that ensures a value consists of only "
 "letters, numbers, underscores or hyphens."
-msgstr ""
+msgstr "Une instance de :class:`RegexValidator` s'assurant qu'une valeur ne soit composée que de lettres, de chiffres, de soulignements ou de tirets."
 
 # ddac3e71fe0d46d48104a6315573fe7c
 #: ../../ref/validators.txt:110
 msgid "``validate_ipv4_address``"
-msgstr ""
+msgstr "``validate_ipv4_address``"
 
 # fa9da110f8dc44899aec751cda652c30
 #: ../../ref/validators.txt:113
 msgid ""
 "A :class:`RegexValidator` instance that ensures a value looks like an IPv4 "
 "address."
-msgstr ""
+msgstr "Une instance de :class:`RegexValidator` s'assurant qu'une valeur réponde aux critères d'une adresse IPv4."
 
 # dd934a3703c7456c916153d88fe40469
 #: ../../ref/validators.txt:117
 msgid "``validate_ipv6_address``"
-msgstr ""
+msgstr "``validate_ipv6_address``"
 
 # 878f1dce67b1403ea7ea30cdde482274
 #: ../../ref/validators.txt:121
 msgid "Uses ``django.utils.ipv6`` to check the validity of an IPv6 address."
-msgstr ""
+msgstr "Utilise ``django.utils.ipv6`` pour vérifier la validité d'une adresse IPv6."
 
 # ef974d9f1df94abbae1368928875ec04
 #: ../../ref/validators.txt:124
 msgid "``validate_ipv46_address``"
-msgstr ""
+msgstr "``validate_ipv46_address``"
 
 # 2c217756e3df4c199075d1398b41ad2a
 #: ../../ref/validators.txt:128
 msgid ""
 "Uses both ``validate_ipv4_address`` and ``validate_ipv6_address`` to ensure "
 "a value is either a valid IPv4 or IPv6 address."
-msgstr ""
+msgstr "Utilise à la fois ``validate_ipv4_address`` et ``validate_ipv6_address`` pour s'assurer qu'une valeur soit une adresse IPv4 ou IPv6 valide."
 
 # 87af519d98fe4e4ab8f651189c6f7814
 #: ../../ref/validators.txt:132
 msgid "``validate_comma_separated_integer_list``"
-msgstr ""
+msgstr "``validate_comma_separated_integer_list``"
 
 # dd5421c8626b4e1d9a29b96ee10d1548
 #: ../../ref/validators.txt:135
 msgid ""
 "A :class:`RegexValidator` instance that ensures a value is a comma-separated"
 " list of integers."
-msgstr ""
+msgstr "Une instance de :class:`RegexValidator` s'assurant qu'une valeur contienne une liste de nombres entiers séparés par des virgules."
 
 # e178534824ed4359b52a47ec0ec30e34
 #: ../../ref/validators.txt:139
 msgid "``MaxValueValidator``"
-msgstr ""
+msgstr "``MaxValueValidator``"
 
 # 77f87d6b414d4a84a34b7aec7634cf5e
 #: ../../ref/validators.txt:142
 msgid ""
 "Raises a :exc:`~django.core.exceptions.ValidationError` with a code of "
 "``'max_value'`` if ``value`` is greater than ``max_value``."
-msgstr ""
+msgstr "Génère une exception :exc:`~django.core.exceptions.ValidationError` avec le code ``'max_value'`` si la valeur ``value`` est plus grande que ``max_value``."
 
 # 4bf7bdee99ec4e468887ab94c190d1f2
 #: ../../ref/validators.txt:146
 msgid "``MinValueValidator``"
-msgstr ""
+msgstr "``MinValueValidator``"
 
 # d9cf117980bc4420b5a1d6fd3f79cfca
 #: ../../ref/validators.txt:149
 msgid ""
 "Raises a :exc:`~django.core.exceptions.ValidationError` with a code of "
 "``'min_value'`` if ``value`` is less than ``min_value``."
-msgstr ""
+msgstr "Génère une exception :exc:`~django.core.exceptions.ValidationError` avec le code ``'min_value'`` si la valeur ``value`` est plus petite que ``min_value``."
 
 # c687562921944c39ad19376d3e7bf11a
 #: ../../ref/validators.txt:153
 msgid "``MaxLengthValidator``"
-msgstr ""
+msgstr "``MaxLengthValidator``"
 
 # 08e72abecbf04ec18f2ac0cc0c383227
 #: ../../ref/validators.txt:156
 msgid ""
 "Raises a :exc:`~django.core.exceptions.ValidationError` with a code of "
 "``'max_length'`` if the length of ``value`` is greater than ``max_length``."
-msgstr ""
+msgstr "Génère une exception :exc:`~django.core.exceptions.ValidationError` avec le code ``'max_length'`` si la longueur de la valeur ``value`` est plus grande que ``max_length``."
 
 # bcf199028d7a4438960515f73436a81b
 #: ../../ref/validators.txt:160
 msgid "``MinLengthValidator``"
-msgstr ""
+msgstr "``MinLengthValidator``"
 
 # ee2634a5e1974eb48d116739c3efc97e
 #: ../../ref/validators.txt:163
 msgid ""
 "Raises a :exc:`~django.core.exceptions.ValidationError` with a code of "
 "``'min_length'`` if the length of ``value`` is less than ``min_length``."
-msgstr ""
+msgstr "Génère une exception :exc:`~django.core.exceptions.ValidationError` avec le code ``'min_length'`` si la longueur de la valeur ``value`` est plus petite que ``min_length``."
 
 # aa3f7e8e93b84259884acbfa7988cf6a
 #: ../../ref/views.txt:3

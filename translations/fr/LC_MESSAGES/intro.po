@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-23 14:56+0100\n"
-"PO-Revision-Date: 2013-11-24 19:20+0000\n"
-"Last-Translator: claudep <claude@2xlibre.net>\n"
+"PO-Revision-Date: 2013-12-13 21:50+0000\n"
+"Last-Translator: annoa <annoa.b@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -824,7 +824,7 @@ msgid ""
 "Being a Python Web framework, Django requires Python. It works with Python "
 "2.6, 2.7, 3.2 or 3.3. All these versions of Python include a lightweight "
 "database called SQLite_ so you won't need to set up a database just yet."
-msgstr "Django est un framework Python, il a donc besoin de Python. Django fonctionne avec Python 2.6, 2.7, 3.2 ou 3.3. Ces versions de Python incluent une base de données légère appelée SQLite_, il n'est donc pas nécessaire de configurer de base de données pour le moment."
+msgstr "Django est un framework Python, il a donc besoin de Python. Django fonctionne avec Python 2.6, 2.7, 3.2 ou 3.3. Ces versions de Python incluent une base de données légère appelée SQLite_, il n'est donc pas nécessaire de configurer une base de données pour le moment."
 
 # 1a680e2750dd45b6a7b637fcb32111e2
 #: ../../intro/install.txt:18
@@ -1733,7 +1733,7 @@ msgid ""
 "be aware that your code may need to differ from what is in the tutorial and "
 "you should continue using the tutorial only if you know what you are doing "
 "with Python 3.x."
-msgstr "Ce didacticiel est écrit pour Django |version| et Python 2.x. Si la version de Django ne correspond pas, référez-vous au didacticiel correspondant à votre version de Django en utilisant le sélecteur de version au bas de cette page, ou mettez à jour Django à la version la plus récente. Si vous utilisez Python 3.x, sachez que votre code peut devoir être différent de celui du didacticiel. Ne suivez ce didacticiel avec Python 3.x que si vous êtes bien au fait des différences entre Python 2.x et Python 3.x."
+msgstr "Ce didacticiel est écrit pour Django |version| et Python 2.x. Si la version de Django ne correspond pas, référez-vous au didacticiel correspondant à votre version de Django en utilisant le sélecteur de version au bas de cette page, ou mettez à jour Django à la version la plus récente. Si vous utilisez Python 3.x, sachez que votre code peut devoir être différent de celui du didacticiel. Ne suivez ce didacticiel en utilisant Python 3.x que si vous êtes bien au fait des différences entre Python 2.x et Python 3.x."
 
 # 5bf427e3ecf24a60b0c655ff6cfd3341
 #: ../../intro/tutorial01.txt:33
@@ -1858,7 +1858,7 @@ msgid ""
 "The inner :file:`mysite/` directory is the actual Python package for your "
 "project. Its name is the Python package name you'll need to use to import "
 "anything inside it (e.g. ``mysite.urls``)."
-msgstr "Le sous-répertoire :file:`mysite/` correspond au paquet Python de votre projet. C'est le nom du paquet Python que vous devrez utiliser pour importer ce qu'il contient (par ex. ``mysite.urls``)."
+msgstr "Le sous-répertoire :file:`mysite/` correspond au paquet Python effectif de votre projet. C'est le nom du paquet Python que vous devrez utiliser pour importer ce qu'il contient (par ex. ``mysite.urls``)."
 
 # 4b32d3e3f4804c18bfbf411a62143fb6
 #: ../../intro/tutorial01.txt:114
@@ -2056,7 +2056,7 @@ msgstr "Si vous utilisez SQLite, vous n'avez rien à créer à l'avance - le fic
 msgid ""
 "While you're editing :file:`mysite/settings.py`, set :setting:`TIME_ZONE` to"
 " your time zone."
-msgstr "En éditant :file:`mysite/settings.py`, définissez :setting:`TIME_ZONE` selon votre fuseau horaire."
+msgstr "Puisque vous êtes en train d'éditer :file:`mysite/settings.py`, définissez :setting:`TIME_ZONE` selon votre fuseau horaire."
 
 # 628f513858a7430d87663e0d501a0fcc
 #: ../../intro/tutorial01.txt:237
@@ -2181,7 +2181,7 @@ msgstr "Chaque application que vous écrivez avec Django est en fait un paquet P
 # d67cf5917f4e4feeb3c1cb3e070195a0
 #: ../../intro/tutorial01.txt:302
 msgid "Projects vs. apps"
-msgstr "Projets vs applications"
+msgstr "Projets vs. applications"
 
 # 81710d58d6554c1d95d8690bc0c60152
 #: ../../intro/tutorial01.txt:304
@@ -2802,7 +2802,7 @@ msgid ""
 "Just one thing to do: we need to tell the admin that ``Poll`` objects have "
 "an admin interface. To do this, open the :file:`polls/admin.py` file, and "
 "edit it to look like this::"
-msgstr "Juste une chose à faire : il faut indiquer à l'admin que les objets ``Poll`` ont une interface d'administration. Pour ceci, ouvrez le fichier :file:`polls/admin.py` et éditez-le de la manière suivante ::"
+msgstr "Juste une chose à faire : il faut indiquer à la page d'administration que les objets ``Poll`` ont une interface d'administration. Pour ceci, ouvrez le fichier :file:`polls/admin.py` et éditez-le de la manière suivante ::"
 
 # 8a55c17a30b24fe78176eb1d60819088
 #: ../../intro/tutorial02.txt:90
@@ -3250,7 +3250,7 @@ msgid ""
 "template ``admin/base_site.html`` from within the default Django admin "
 "template directory in the source code of Django itself "
 "(``django/contrib/admin/templates``) into that directory."
-msgstr "Créez maintenant dans ``templates`` un répertoire nommé ``admin`` et copiez-y le gabarit  ``admin/base_site.html`` à partir du répertoire des gabarits d'administration dans le code source de Django (``django/contrib/admin/templates``)."
+msgstr "Créez maintenant dans ``templates`` un répertoire nommé ``admin`` et copiez-y le gabarit  ``admin/base_site.html`` à partir du répertoire par défaut des gabarits d'administration dans le code source de Django (``django/contrib/admin/templates``)."
 
 # 0b450b1c88e9445990c83ddd3f88b71d
 #: ../../intro/tutorial02.txt:426
@@ -3890,7 +3890,7 @@ msgid ""
 ":class:`~django.template.RequestContext` and "
 ":class:`~django.http.HttpResponse` (you'll want to keep ``HttpResponse`` if "
 "you still have the stub methods for ``detail``, ``results``, and ``vote``)."
-msgstr "Notez que lorsque nous avons fait ceci dans toutes nos vues, nous n'avons plus à importer :mod:`~django.template.loader`, :class:`~django.template.RequestContext` et :class:`~django.http.HttpResponse` (il faut conserver ``HttpResponse`` tant que les méthodes initiales pour ``detail``, ``results`` et ``vote`` sont présentes)."
+msgstr "Notez qu'à partir du moment où nous avons fait ceci dans toutes nos vues, nous n'avons plus à importer :mod:`~django.template.loader`, :class:`~django.template.RequestContext` et :class:`~django.http.HttpResponse` (il faut conserver ``HttpResponse`` tant que les méthodes initiales pour ``detail``, ``results`` et ``vote`` sont présentes)."
 
 # e0f5f386b39445c18122f4fd939a3e85
 #: ../../intro/tutorial03.txt:384
@@ -4530,7 +4530,7 @@ msgid ""
 "</intro/tutorial01>`, using the :djadmin:`shell` to examine the behavior of "
 "a method, or running the application and entering data to check how it "
 "behaves."
-msgstr "Les tests peuvent se faire à différents niveaux. Certains tests s'appliquent à un petit détail (*est-ce que tel modèle renvoie les valeurs attendues ?*), alors que d'autres examinent le fonctionnement global du logiciel (*est-ce qu'une suite d'activités d'un utilisateur sur le site produit le résultat désiré ?*). C'est le même genre de test qui a été pratiqué précédemment dans le :doc:`tutoriel 1 </intro/tutorial01>`, en utilisant le :djadmin:`shell` pour examiner le comportement d'une méthode ou de lancer l'application et de saisir des données pour contrôler son comportement."
+msgstr "Les tests peuvent se faire à différents niveaux. Certains tests s'appliquent à un petit détail (*est-ce que tel modèle renvoie les valeurs attendues ?*), alors que d'autres examinent le fonctionnement global du logiciel (*est-ce qu'une suite d'actions d'un utilisateur sur le site produit le résultat désiré ?*). C'est le même genre de test qui a été pratiqué précédemment dans le :doc:`tutoriel 1 </intro/tutorial01>`, en utilisant le :djadmin:`shell` pour examiner le comportement d'une méthode ou en lançant l'application et en saisissant des données pour contrôler son comportement."
 
 # c00a5c6a2a664ef2a49d87905ac000ec
 #: ../../intro/tutorial05.txt:25
@@ -4738,7 +4738,7 @@ msgid ""
 "if the ``Poll`` was published within the last day (which is correct) but "
 "also if the ``Poll``’s ``pub_date`` field is in the future (which certainly "
 "isn't)."
-msgstr "Heureusement, il y a un petit bogue dans l'application ``polls``, tout prêt à être corrigé : la méthode ``Poll.was_published_recently()`` renvoie ``True`` si l'objet ``Poll`` a été publié durant le jour précédent (ce qui est correct), mais également si le champ ``pub_date`` de ``Poll`` est dans le futur (ce qui n'est évidemment pas juste)."
+msgstr "Heureusement, il y a un petit bogue dans l'application ``polls``, tout prêt à être corrigé : la méthode ``Poll.was_published_recently()`` renvoie ``True`` si l'objet ``Poll`` a été publié durant les jours précédents (ce qui est correct), mais également si le champ ``pub_date`` de ``Poll`` est dans le futur (ce qui n'est évidemment pas juste)."
 
 # 9345a4a581a941938600256c3fcc61e2
 #: ../../intro/tutorial05.txt:137
@@ -5528,7 +5528,7 @@ msgid ""
 "decided you'd like to keep using Django. We've only just scratched the "
 "surface with this intro (in fact, if you've read every single word, you've "
 "read about 5% of the overall documentation)."
-msgstr "Vous avez donc lu toute la :doc:`documentation d'introduction </intro/index>` et vous avez décidé de continuer à utiliser Django. Nous n'avons fait qu'effleurer la surface dans cette introduction (même en ayant lu chaque mot de l'introduction, vous n'avez parcouru qu'environ 5 % ode toute la documentation)."
+msgstr "Vous avez donc lu toute la :doc:`documentation d'introduction </intro/index>` et vous avez décidé de continuer à utiliser Django. Nous n'avons fait qu'effleurer la surface dans cette introduction (même en ayant lu chaque mot de l'introduction, vous n'avez parcouru qu'environ 5 % de toute la documentation)."
 
 # b3f8ef52c081448ba9e138e0102d9dee
 #: ../../intro/whatsnext.txt:10
