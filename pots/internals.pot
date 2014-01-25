@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-23 14:56+0100\n"
+"POT-Creation-Date: 2014-01-25 16:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -777,18 +777,18 @@ msgid "Check that someone hasn't already filed the bug or feature request by `se
 msgstr ""
 
 #: ../../internals/contributing/bugs-and-features.txt:20
-# 7317db6d0437490aa63874fb709610ce
-msgid "Don't use the ticket system to ask support questions. Use the `django-users`_ list or the `#django`_ IRC channel for that."
+# ae0d0ec649dd4648a80412d9078663a9
+msgid "Don't use the ticket system to ask support questions. Use the |django-users| list or the `#django`_ IRC channel for that."
 msgstr ""
 
 #: ../../internals/contributing/bugs-and-features.txt:23
-# 4f4a155ca6614c94a415ed643cf08cea
-msgid "Don't reopen issues that have been marked \"wontfix\" by a core developer. This mark means that the decision has been made that we can't or won't fix this particular issue. If you're not sure why, please ask on `django-developers`_."
+# e1cb2969e99f48748dbd6cb952f832f4
+msgid "Don't reopen issues that have been marked \"wontfix\" by a core developer. This mark means that the decision has been made that we can't or won't fix this particular issue. If you're not sure why, please ask on |django-developers|."
 msgstr ""
 
 #: ../../internals/contributing/bugs-and-features.txt:28
-# a8a738477094422a8b7d0230e9d5c78d
-msgid "Don't use the ticket tracker for lengthy discussions, because they're likely to get lost. If a particular ticket is controversial, please move the discussion to `django-developers`_."
+# 92d8a629c79845198092eefa5ef22a0b
+msgid "Don't use the ticket tracker for lengthy discussions, because they're likely to get lost. If a particular ticket is controversial, please move the discussion to |django-developers|."
 msgstr ""
 
 #: ../../internals/contributing/bugs-and-features.txt:35
@@ -807,8 +807,8 @@ msgid "**Do** read the :doc:`FAQ </faq/index>` to see if your issue might be a w
 msgstr ""
 
 #: ../../internals/contributing/bugs-and-features.txt:45
-# 4979df3e54dd454a8cbeb13e3e8f3889
-msgid "**Do** ask on `django-users`_ or `#django`_ *first* if you're not sure if what you're seeing is a bug."
+# c8d0bdda2a45438e98fba25d36113124
+msgid "**Do** ask on |django-users| or `#django`_ *first* if you're not sure if what you're seeing is a bug."
 msgstr ""
 
 #: ../../internals/contributing/bugs-and-features.txt:48
@@ -817,8 +817,8 @@ msgid "**Do** write complete, reproducible, specific bug reports. You must inclu
 msgstr ""
 
 #: ../../internals/contributing/bugs-and-features.txt:55
-# c5492c7b55894d4d995607f84e940871
-msgid "**Don't** post to `django-developers`_ just to announce that you have filed a bug report. All the tickets are mailed to another list, `django-updates`_, which is tracked by developers and interested community members; we see them as they are filed."
+# 8322eea1cd97412eb1d77227d48cacdc
+msgid "**Don't** post to |django-developers| just to announce that you have filed a bug report. All the tickets are mailed to another list, |django-updates|, which is tracked by developers and interested community members; we see them as they are filed."
 msgstr ""
 
 #: ../../internals/contributing/bugs-and-features.txt:60
@@ -876,9 +876,9 @@ msgstr ""
 msgid "Make sure the feature actually requires changes in Django's core. If your idea can be developed as an independent application or module — for instance, you want to support another database engine — we'll probably suggest that you to develop it independently. Then, if your project gathers sufficient community support, we may consider it for inclusion in Django."
 msgstr ""
 
-#: ../../internals/contributing/bugs-and-features.txt:104
-# b4966d9c00de403396ecfbfc65ccb49d
-msgid "First request the feature on the `django-developers`_ list, not in the ticket tracker. It'll get read more closely if it's on the mailing list. This is even more important for large-scale feature requests. We like to discuss any big changes to Django's core on the mailing list before actually working on them."
+#: ../../internals/contributing/bugs-and-features.txt:102
+# 2ac610c56cb74e9bbd544cbfa60b8ba4
+msgid "First request the feature on the |django-developers| list, not in the ticket tracker. It'll get read more closely if it's on the mailing list. This is even more important for large-scale feature requests. We like to discuss any big changes to Django's core on the mailing list before actually working on them."
 msgstr ""
 
 #: ../../internals/contributing/bugs-and-features.txt:110
@@ -891,9 +891,9 @@ msgstr ""
 msgid "Explain *why* you'd like the feature. In some cases this is obvious, but since Django is designed to help real developers get real work done, you'll need to explain it, if it isn't obvious why the feature would be useful."
 msgstr ""
 
-#: ../../internals/contributing/bugs-and-features.txt:119
-# 13ad56a770654b6da0a42e61fe6e9016
-msgid "If core developers agree on the feature, then it's appropriate to create a ticket. Include a link the discussion on `django-developers`_ in the ticket description."
+#: ../../internals/contributing/bugs-and-features.txt:117
+# 786668d4023b410fb4a73997b10c6059
+msgid "If core developers agree on the feature, then it's appropriate to create a ticket. Include a link the discussion on |django-developers| in the ticket description."
 msgstr ""
 
 #: ../../internals/contributing/bugs-and-features.txt:123
@@ -911,9 +911,9 @@ msgstr ""
 msgid "How we make decisions"
 msgstr ""
 
-#: ../../internals/contributing/bugs-and-features.txt:135
-# 3539570360a54865886856f5beec3afb
-msgid "Whenever possible, we strive for a rough consensus. To that end, we'll often have informal votes on `django-developers`_ about a feature. In these votes we follow the voting style invented by Apache and used on Python itself, where votes are given as +1, +0, -0, or -1. Roughly translated, these votes mean:"
+#: ../../internals/contributing/bugs-and-features.txt:133
+# 02f85c1a19e040e7808d457ee72c5d97
+msgid "Whenever possible, we strive for a rough consensus. To that end, we'll often have informal votes on |django-developers| about a feature. In these votes we follow the voting style invented by Apache and used on Python itself, where votes are given as +1, +0, -0, or -1. Roughly translated, these votes mean:"
 msgstr ""
 
 #: ../../internals/contributing/bugs-and-features.txt:140
@@ -936,9 +936,9 @@ msgstr ""
 msgid "-1: \"I strongly disagree and would be very unhappy to see the idea turn into reality.\""
 msgstr ""
 
-#: ../../internals/contributing/bugs-and-features.txt:149
-# eac879ad25414e52aef8aa0db8795621
-msgid "Although these votes on `django-developers`_ are informal, they'll be taken very seriously. After a suitable voting period, if an obvious consensus arises we'll follow the votes."
+#: ../../internals/contributing/bugs-and-features.txt:147
+# 3913f5ca750a4c158826ee14fbb85880
+msgid "Although these votes on |django-developers| are informal, they'll be taken very seriously. After a suitable voting period, if an obvious consensus arises we'll follow the votes."
 msgstr ""
 
 #: ../../internals/contributing/bugs-and-features.txt:153
@@ -976,9 +976,9 @@ msgstr ""
 msgid "Since this process allows any core committer to veto a proposal, any \"-1\" votes (or BDFL vetos) should be accompanied by an explanation that explains what it would take to convert that \"-1\" into at least a \"+0\"."
 msgstr ""
 
-#: ../../internals/contributing/bugs-and-features.txt:176
-# a21a1519be724fdcb936a1094837cf6d
-msgid "Whenever possible, these formal votes should be announced and held in public on the `django-developers`_ mailing list. However, overly sensitive or contentious issues -- including, most notably, votes on new core committers -- may be held in private."
+#: ../../internals/contributing/bugs-and-features.txt:174
+# 6f96f948273a46c3991813a360367009
+msgid "Whenever possible, these formal votes should be announced and held in public on the |django-developers| mailing list. However, overly sensitive or contentious issues -- including, most notably, votes on new core committers -- may be held in private."
 msgstr ""
 
 #: ../../internals/contributing/committing-code.txt:3
@@ -1127,13 +1127,13 @@ msgid "Never change the published history of django/django branches! **Never for
 msgstr ""
 
 #: ../../internals/contributing/committing-code.txt:133
-# 6cb0361c83e741f187ae34b853ffc699
-msgid "For any medium-to-big changes, where \"medium-to-big\" is according to your judgment, please bring things up on the `django-developers`_ mailing list before making the change."
+# d62290c6e9d34f609d6cff63374310f1
+msgid "For any medium-to-big changes, where \"medium-to-big\" is according to your judgment, please bring things up on the |django-developers| mailing list before making the change."
 msgstr ""
 
 #: ../../internals/contributing/committing-code.txt:137
-# a469d8668e77410cbe7b71a349dcbc72
-msgid "If you bring something up on `django-developers`_ and nobody responds, please don't take that to mean your idea is great and should be implemented immediately because nobody contested it. Django's lead developers don't have a lot of time to read mailing-list discussions immediately, so you may have to wait a couple of days before getting a response."
+# df98c82ca677416c807bd53f48bbbf4b
+msgid "If you bring something up on |django-developers| and nobody responds, please don't take that to mean your idea is great and should be implemented immediately because nobody contested it. Django's lead developers don't have a lot of time to read mailing-list discussions immediately, so you may have to wait a couple of days before getting a response."
 msgstr ""
 
 #: ../../internals/contributing/committing-code.txt:144
@@ -1252,8 +1252,8 @@ msgid "Use git revert -- this will make a reverse commit, but the original commi
 msgstr ""
 
 #: ../../internals/contributing/committing-code.txt:239
-# 71d24f84dc164519afe8d27847819d0d
-msgid "If the original author can't be reached (within a reasonable amount of time -- a day or so) and the problem is severe -- crashing bug, major test failures, etc -- then ask for objections on the `django-developers`_ mailing list then revert if there are none."
+# 4a5c428378eb4db883d08713ffca8cab
+msgid "If the original author can't be reached (within a reasonable amount of time -- a day or so) and the problem is severe -- crashing bug, major test failures, etc -- then ask for objections on the |django-developers| mailing list then revert if there are none."
 msgstr ""
 
 #: ../../internals/contributing/committing-code.txt:244
@@ -1262,8 +1262,8 @@ msgid "If the problem is small (a feature commit after feature freeze, say), wai
 msgstr ""
 
 #: ../../internals/contributing/committing-code.txt:247
-# 40900090f91542e18b98ccd5bc868cb3
-msgid "If there's a disagreement between the committer and the reverter-to-be then try to work it out on the `django-developers`_ mailing list. If an agreement can't be reached then it should be put to a vote."
+# 1b725d96ad0c4e86aacbb7c82843c63a
+msgid "If there's a disagreement between the committer and the reverter-to-be then try to work it out on the |django-developers| mailing list. If an agreement can't be reached then it should be put to a vote."
 msgstr ""
 
 #: ../../internals/contributing/committing-code.txt:252
@@ -1292,8 +1292,8 @@ msgid "Django is a community that lives on its volunteers. As it keeps growing, 
 msgstr ""
 
 #: ../../internals/contributing/index.txt:9
-# 218d936800e04c5cb7de151d13fa7641
-msgid "Join the `django-users`_ mailing list and answer questions. This mailing list has a huge audience, and we really want to maintain a friendly and helpful atmosphere. If you're new to the Django community, you should read the `posting guidelines`_."
+# a330caa4e80e4745a6a04cba2dd47035
+msgid "Join the |django-users| mailing list and answer questions. This mailing list has a huge audience, and we really want to maintain a friendly and helpful atmosphere. If you're new to the Django community, you should read the `posting guidelines`_."
 msgstr ""
 
 #: ../../internals/contributing/index.txt:14
@@ -1322,8 +1322,8 @@ msgid ":doc:`Report bugs <bugs-and-features>` in our `ticket tracker`_."
 msgstr ""
 
 #: ../../internals/contributing/index.txt:34
-# 9f609f618b48464cbe721e19f34f1587
-msgid "Join the `django-developers`_ mailing list and share your ideas for how to improve Django. We're always open to suggestions."
+# 542e3c41ce684041a7c6e93c4fcb471a
+msgid "Join the |django-developers| mailing list and share your ideas for how to improve Django. We're always open to suggestions."
 msgstr ""
 
 #: ../../internals/contributing/index.txt:37
@@ -1612,8 +1612,8 @@ msgid "**This ticket I care about has been ignored for days/weeks/months! What c
 msgstr ""
 
 #: ../../internals/contributing/new-contributors.txt:140
-# 4a2f75a0f22b49de873d567d3111ff46
-msgid "First off, it's not personal. Django is entirely developed by volunteers (even the core developers), and sometimes folks just don't have time. The best thing to do is to send a gentle reminder to the django-developers mailing list asking for review on the ticket, or to bring it up in the #django-dev IRC channel."
+# 7080c6db3bd240a48fa9e85dd85975e3
+msgid "First off, it's not personal. Django is entirely developed by volunteers (even the core developers), and sometimes folks just don't have time. The best thing to do is to send a gentle reminder to the |django-developers| mailing list asking for review on the ticket, or to bring it up in the #django-dev IRC channel."
 msgstr ""
 
 #: ../../internals/contributing/new-contributors.txt:146
@@ -2057,8 +2057,8 @@ msgid "wontfix"
 msgstr ""
 
 #: ../../internals/contributing/triaging-tickets.txt:309
-# 5ecb178ca8644194a716cabcb884548c
-msgid "Used when a core developer decides that this request is not appropriate for consideration in Django. This is usually chosen after discussion in the `django-developers`_ mailing list. Feel free to start or join in discussions of \"wontfix\" tickets on the django-developers_ mailing list, but please do not reopen tickets closed as \"wontfix\" by a :doc:`core developer</internals/committers>`."
+# 27a79a6e40db4de8848c41cec133b229
+msgid "Used when a core developer decides that this request is not appropriate for consideration in Django. This is usually chosen after discussion in the |django-developers| mailing list. Feel free to start or join in discussions of \"wontfix\" tickets on the |django-developers| mailing list, but please do not reopen tickets closed as \"wontfix\" by a :doc:`core developer</internals/committers>`."
 msgstr ""
 
 #: ../../internals/contributing/triaging-tickets.txt:319
@@ -2092,8 +2092,8 @@ msgid "Used when the ticket does not contain enough information to replicate the
 msgstr ""
 
 #: ../../internals/contributing/triaging-tickets.txt:330
-# 33b48511031a4bba9be559e3cff7a93d
-msgid "If you believe that the ticket was closed in error -- because you're still having the issue, or it's popped up somewhere else, or the triagers have made a mistake -- please reopen the ticket and provide further information. Again, please do not reopen tickets that have been marked as \"wontfix\" by core developers and bring the issue to django-developers_ instead."
+# cdf79b5ff2a84522838e717fda9ec4a0
+msgid "If you believe that the ticket was closed in error -- because you're still having the issue, or it's popped up somewhere else, or the triagers have made a mistake -- please reopen the ticket and provide further information. Again, please do not reopen tickets that have been marked as \"wontfix\" by core developers and bring the issue to |django-developers| instead."
 msgstr ""
 
 #: ../../internals/contributing/triaging-tickets.txt:339
@@ -2127,8 +2127,8 @@ msgid "Closing \"Unreviewed\" tickets as \"invalid\", \"worksforme\" or \"duplic
 msgstr ""
 
 #: ../../internals/contributing/triaging-tickets.txt:356
-# 81c78fcf4d2c468ab3888ada8441b947
-msgid "Closing \"Unreviewed\" tickets as \"needsinfo\" when the description is too sparse to be actionnable, or when they're feature requests requiring a discussion on `django-developers`_."
+# 2cf4c15c95ea40089051bae06a5c14a4
+msgid "Closing \"Unreviewed\" tickets as \"needsinfo\" when the description is too sparse to be actionnable, or when they're feature requests requiring a discussion on |django-developers|."
 msgstr ""
 
 #: ../../internals/contributing/triaging-tickets.txt:360
@@ -2152,8 +2152,8 @@ msgid "Checking that old tickets are still valid. If a ticket hasn't seen any ac
 msgstr ""
 
 #: ../../internals/contributing/triaging-tickets.txt:372
-# f63f8770303d4bc2bb603535c9b232bb
-msgid "Identifying trends and themes in the tickets. If there are a lot of bug reports about a particular part of Django, it may indicate we should consider refactoring that part of the code. If a trend is emerging, you should raise it for discussion (referencing the relevant tickets) on `django-developers`_."
+# b2e6eada73934777988e0972d392b51c
+msgid "Identifying trends and themes in the tickets. If there are a lot of bug reports about a particular part of Django, it may indicate we should consider refactoring that part of the code. If a trend is emerging, you should raise it for discussion (referencing the relevant tickets) on |django-developers|."
 msgstr ""
 
 #: ../../internals/contributing/triaging-tickets.txt:378
@@ -2187,13 +2187,13 @@ msgid "Please **don't** promote your own tickets to \"Ready for checkin\". You m
 msgstr ""
 
 #: ../../internals/contributing/triaging-tickets.txt:406
-# f4eb38976fb841cf9c12a0f91dd385f6
-msgid "Please **don't** reverse a decision that has been made by a :doc:`core developer</internals/committers>`. If you disagree with a decision that has been made, please post a message to `django-developers`_."
+# 202123b475184eb1bcee94213e4e2213
+msgid "Please **don't** reverse a decision that has been made by a :doc:`core developer</internals/committers>`. If you disagree with a decision that has been made, please post a message to |django-developers|."
 msgstr ""
 
 #: ../../internals/contributing/triaging-tickets.txt:410
-# 9769751449d644a0b7f9c8c31ef00f08
-msgid "If you're unsure if you should be making a change, don't make the change but instead leave a comment with your concerns on the ticket, or post a message to `django-developers`_. It's okay to be unsure, but your input is still valuable."
+# 52fe1e16289c4ce3a090a75ef36ce99c
+msgid "If you're unsure if you should be making a change, don't make the change but instead leave a comment with your concerns on the ticket, or post a message to |django-developers|. It's okay to be unsure, but your input is still valuable."
 msgstr ""
 
 #: ../../internals/contributing/writing-code/coding-style.txt:3
@@ -2645,8 +2645,8 @@ msgid "A \"non-trivial\" patch is one that is more than a simple bug fix. It's a
 msgstr ""
 
 #: ../../internals/contributing/writing-code/submitting-patches.txt:155
-# 54e7bd918bc84559b0087ac5c80d040c
-msgid "If you provide a non-trivial patch, include evidence that alternatives have been discussed on `django-developers`_."
+# 913c841240314f0abafc2a8c55eb5b14
+msgid "If you provide a non-trivial patch, include evidence that alternatives have been discussed on |django-developers|."
 msgstr ""
 
 #: ../../internals/contributing/writing-code/submitting-patches.txt:158
@@ -2725,8 +2725,8 @@ msgid "We appreciate any and all contributions to the test suite!"
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:15
-# bf9ea9fd601546d89dee2ed2c77efbb7
-msgid "The Django tests all use the testing infrastructure that ships with Django for testing applications. See :doc:`Testing Django applications </topics/testing/overview>` for an explanation of how to write new tests."
+# c2ba2b44c2834c6abf1880060cb4697d
+msgid "The Django tests all use the testing infrastructure that ships with Django for testing applications. See :doc:`/topics/testing/overview` for an explanation of how to write new tests."
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:22
@@ -2860,37 +2860,42 @@ msgid "docutils_"
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:141
-# 7f45980b008245f293980ffbd19689a0
-msgid "Pillow_"
+# 3ec11c31e5474e39bd9c23610522c6af
+msgid "numpy_"
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:142
-# 273f897d1fc04794a16d2cfa700e1341
-msgid "PyYAML_"
+# b9f11bc8f4ff42ff8f5d3914fe6ccbdc
+msgid "Pillow_"
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:143
-# b96a6fdc1e1340f386ab487c24719725
-msgid "pytz_"
+# db93e764697c402abe510273d32a31b3
+msgid "PyYAML_"
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:144
-# 95e66daf0a5e4788913170caedac28be
-msgid "setuptools_"
+# 7b48b96a17a44073924072ae147c61c5
+msgid "pytz_"
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:145
-# a73dfc3e4c794df687c682c97cfb5a41
-msgid "memcached_, plus a :ref:`supported Python binding <memcached>`"
+# ba5016ff7adc42858b32b76c4b8374ef
+msgid "setuptools_"
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:146
-# 5ead865dedbd4f49a054d96222815e37
-msgid "gettext_ (:ref:`gettext_on_windows`)"
+# 427a79d98c3a4d71b98c9565ed84b522
+msgid "memcached_, plus a :ref:`supported Python binding <memcached>`"
 msgstr ""
 
 #: ../../internals/contributing/writing-code/unit-tests.txt:147
-# 8eebcff5a24d455fa8f9392d17baeca3
+# c9c9cac4d4c64f5f9c3d352073697945
+msgid "gettext_ (:ref:`gettext_on_windows`)"
+msgstr ""
+
+#: ../../internals/contributing/writing-code/unit-tests.txt:148
+# 5d5aa73dcd31441abcebca2fb3069d79
 msgid "selenium_"
 msgstr ""
 
@@ -3735,232 +3740,7 @@ msgid "This document outlines when various pieces of Django will be removed or a
 msgstr ""
 
 #: ../../internals/deprecation.txt:11
-# 35daad4bc5ce4de3a6c912ae78b7e2a8
-msgid "1.4"
-msgstr ""
-
-#: ../../internals/deprecation.txt:13
-# 46fdc1bfa8b147ad87f5bd4eed028f46
-msgid "See the :doc:`Django 1.2 release notes</releases/1.2>` for more details on these changes."
-msgstr ""
-
-#: ../../internals/deprecation.txt:16
-# 596e6d5674704478b60fc3bcadb400ae
-msgid "``CsrfResponseMiddleware`` and ``CsrfMiddleware`` will be removed.  Use the ``{% csrf_token %}`` template tag inside forms to enable CSRF protection. ``CsrfViewMiddleware`` remains and is enabled by default."
-msgstr ""
-
-#: ../../internals/deprecation.txt:20
-# ca1b3a7fd0e94c4d82b2928f42f8cda1
-msgid "The old imports for CSRF functionality (``django.contrib.csrf.*``), which moved to core in 1.2, will be removed."
-msgstr ""
-
-#: ../../internals/deprecation.txt:23
-# 9c76aaefdcd7459aa53cb2281ccd81d4
-msgid "The ``django.contrib.gis.db.backend`` module will be removed in favor of the specific backends."
-msgstr ""
-
-#: ../../internals/deprecation.txt:26
-# 499a873eea3345f5a15ff7d9ae912361
-msgid "``SMTPConnection`` will be removed in favor of a generic Email backend API."
-msgstr ""
-
-#: ../../internals/deprecation.txt:28
-# ed2516a5f4b64abbb60ca62e35cffe12
-msgid "The many to many SQL generation functions on the database backends will be removed."
-msgstr ""
-
-#: ../../internals/deprecation.txt:31
-# 785c1f8623684c299a182d3986c89c9a
-msgid "The ability to use the ``DATABASE_*`` family of top-level settings to define database connections will be removed."
-msgstr ""
-
-#: ../../internals/deprecation.txt:34
-# 4bd9d480cd654eaca45d4e141d5fa026
-msgid "The ability to use shorthand notation to specify a database backend (i.e., ``sqlite3`` instead of ``django.db.backends.sqlite3``) will be removed."
-msgstr ""
-
-#: ../../internals/deprecation.txt:38
-# 39c2d4edebe04d42b200ddfb2628c511
-msgid "The ``get_db_prep_save``, ``get_db_prep_value`` and ``get_db_prep_lookup`` methods will have to support multiple databases."
-msgstr ""
-
-#: ../../internals/deprecation.txt:41
-# d1b3e87a7a044bdc9d9638e086e2166f
-msgid "The ``Message`` model (in ``django.contrib.auth``), its related manager in the ``User`` model (``user.message_set``), and the associated methods (``user.message_set.create()`` and ``user.get_and_delete_messages()``), will be removed.  The :doc:`messages framework </ref/contrib/messages>` should be used instead. The related ``messages`` variable returned by the auth context processor will also be removed. Note that this means that the admin application will depend on the messages context processor."
-msgstr ""
-
-#: ../../internals/deprecation.txt:51
-# 0c361783d340406794840cb5a4a286e0
-msgid "Authentication backends will need to support the ``obj`` parameter for permission checking. The ``supports_object_permissions`` attribute will no longer be checked and can be removed from custom backends."
-msgstr ""
-
-#: ../../internals/deprecation.txt:55
-# a375541d06ea4126affd5d23e58635a2
-msgid "Authentication backends will need to support the ``AnonymousUser`` class being passed to all methods dealing with permissions.  The ``supports_anonymous_user`` variable will no longer be checked and can be removed from custom backends."
-msgstr ""
-
-#: ../../internals/deprecation.txt:60
-# 4e03ace9f9c94824abb1be120969cc97
-msgid "The ability to specify a callable template loader rather than a ``Loader`` class will be removed, as will the ``load_template_source`` functions that are included with the built in template loaders for backwards compatibility."
-msgstr ""
-
-#: ../../internals/deprecation.txt:65
-# 6c5093f5569a4ec4b7e856b6af7861bd
-msgid "``django.utils.translation.get_date_formats()`` and ``django.utils.translation.get_partial_date_formats()``. These functions will be removed; use the locale-aware ``django.utils.formats.get_format()`` to get the appropriate formats."
-msgstr ""
-
-#: ../../internals/deprecation.txt:70
-# 66a4829da4e647b7a8a09894680bf6aa
-msgid "In ``django.forms.fields``, the constants: ``DEFAULT_DATE_INPUT_FORMATS``, ``DEFAULT_TIME_INPUT_FORMATS`` and ``DEFAULT_DATETIME_INPUT_FORMATS`` will be removed. Use ``django.utils.formats.get_format()`` to get the appropriate formats."
-msgstr ""
-
-#: ../../internals/deprecation.txt:76
-# c0523ac096c14297a4ac77854484b46f
-msgid "The ability to use a function-based test runner will be removed, along with the ``django.test.simple.run_tests()`` test runner."
-msgstr ""
-
-#: ../../internals/deprecation.txt:79
-# 5975b88d6f174242a385c009bb2c70a7
-msgid "The ``views.feed()`` view and ``feeds.Feed`` class in ``django.contrib.syndication`` will be removed. The class-based view ``views.Feed`` should be used instead."
-msgstr ""
-
-#: ../../internals/deprecation.txt:83
-# d19a13cf9b4e47b9b61409bf509cb78e
-msgid "``django.core.context_processors.auth``.  This release will remove the old method in favor of the new method in ``django.contrib.auth.context_processors.auth``."
-msgstr ""
-
-#: ../../internals/deprecation.txt:87
-# eb47618a0d714cb3be29e3b4f0870370
-msgid "The ``postgresql`` database backend will be removed, use the ``postgresql_psycopg2`` backend instead."
-msgstr ""
-
-#: ../../internals/deprecation.txt:90
-# 08bfe5d55db94f93ae0995f0314a76a6
-msgid "The ``no`` language code will be removed and has been replaced by the ``nb`` language code."
-msgstr ""
-
-#: ../../internals/deprecation.txt:93
-# c8e2854d8f7e425aa4dd59190f6c67c9
-msgid "Authentication backends will need to define the boolean attribute ``supports_inactive_user`` until version 1.5 when it will be assumed that all backends will handle inactive users."
-msgstr ""
-
-#: ../../internals/deprecation.txt:97
-# c3f42d60c93b453199ea29b2c79569cc
-msgid "``django.db.models.fields.XMLField`` will be removed. This was deprecated as part of the 1.3 release. An accelerated deprecation schedule has been used because the field hasn't performed any role beyond that of a simple ``TextField`` since the removal of oldforms. All uses of ``XMLField`` can be replaced with ``TextField``."
-msgstr ""
-
-#: ../../internals/deprecation.txt:103
-# 3d50fda32158426eb275ca1b099880f6
-msgid "The undocumented ``mixin`` parameter to the ``open()`` method of ``django.core.files.storage.Storage`` (and subclasses) will be removed."
-msgstr ""
-
-#: ../../internals/deprecation.txt:108
-# 43510ff0545748448a75f045c8930e42
-msgid "1.5"
-msgstr ""
-
-#: ../../internals/deprecation.txt:110
-# 1793dbc208db4c3aa1589a454976369e
-msgid "See the :doc:`Django 1.3 release notes</releases/1.3>` for more details on these changes."
-msgstr ""
-
-#: ../../internals/deprecation.txt:113
-# 7aa8521cd2124b13ad38b84b2bf43974
-msgid "Starting Django without a :setting:`SECRET_KEY` will result in an exception rather than a ``DeprecationWarning``. (This is accelerated from the usual deprecation path; see the :doc:`Django 1.4 release notes</releases/1.4>`.)"
-msgstr ""
-
-#: ../../internals/deprecation.txt:117
-# c0c17d2a016b49978ea80ab6deb0bbdc
-msgid "The ``mod_python`` request handler will be removed. The ``mod_wsgi`` handler should be used instead."
-msgstr ""
-
-#: ../../internals/deprecation.txt:120
-# 03cc3044ea504138b11ba57d0adf849a
-msgid "The ``template`` attribute on :class:`~django.test.client.Response` objects returned by the :ref:`test client <test-client>` will be removed. The :attr:`~django.test.client.Response.templates` attribute should be used instead."
-msgstr ""
-
-#: ../../internals/deprecation.txt:125
-# 087914bc3a3d4af9ab5b9f3b7ad11ca9
-msgid "The ``django.test.simple.DjangoTestRunner`` will be removed. Instead use a unittest-native class.  The features of the ``django.test.simple.DjangoTestRunner`` (including fail-fast and Ctrl-C test termination) can currently be provided by the unittest-native :class:`~unittest.TextTestRunner`."
-msgstr ""
-
-#: ../../internals/deprecation.txt:131
-# fb5f3403dd0342ddb6c6c036b2c63818
-msgid "The undocumented function ``django.contrib.formtools.utils.security_hash`` will be removed, instead use ``django.contrib.formtools.utils.form_hmac``"
-msgstr ""
-
-#: ../../internals/deprecation.txt:135
-# e911aaee9ee0409589db774b6c5de3d3
-msgid "The function-based generic view modules will be removed in favor of their class-based equivalents, outlined :doc:`here </topics/class-based-views/index>`."
-msgstr ""
-
-#: ../../internals/deprecation.txt:139
-# 3db976e3be234f908023ca02ed226344
-msgid "The ``django.core.servers.basehttp.AdminMediaHandler`` will be removed.  In its place use ``django.contrib.staticfiles.handlers.StaticFilesHandler``."
-msgstr ""
-
-#: ../../internals/deprecation.txt:143
-# 6534015746f9448b988b9eb1a544a8d1
-msgid "The template tags library ``adminmedia`` and the template tag ``{% admin_media_prefix %}`` will be removed in favor of the generic static files handling. (This is faster than the usual deprecation path; see the :doc:`Django 1.4 release notes</releases/1.4>`.)"
-msgstr ""
-
-#: ../../internals/deprecation.txt:148
-# cf4e680641804da190d8e95392888f05
-msgid "The :ttag:`url` and :ttag:`ssi` template tags will be modified so that the first argument to each tag is a template variable, not an implied string. In 1.4, this behavior is provided by a version of the tag in the ``future`` template tag library."
-msgstr ""
-
-#: ../../internals/deprecation.txt:153
-# aa8181e67bd741ba819de3216fe6f2a6
-msgid "The ``reset`` and ``sqlreset`` management commands will be removed."
-msgstr ""
-
-#: ../../internals/deprecation.txt:155
-# f506f98d920349a79a24441de2bdf2e9
-msgid "Authentication backends will need to support an inactive user being passed to all methods dealing with permissions. The ``supports_inactive_user`` attribute will no longer be checked and can be removed from custom backends."
-msgstr ""
-
-#: ../../internals/deprecation.txt:160
-# 9472e1799b83441081591e5508a49506
-msgid ":meth:`~django.contrib.gis.geos.GEOSGeometry.transform` will raise a :class:`~django.contrib.gis.geos.GEOSException` when called on a geometry with no SRID value."
-msgstr ""
-
-#: ../../internals/deprecation.txt:164
-# 14491858ab4c4131b1671ad56eef7bd5
-msgid "``django.http.CompatCookie`` will be removed in favor of ``django.http.SimpleCookie``."
-msgstr ""
-
-#: ../../internals/deprecation.txt:167
-# d60f1d5ed5794eff9c4cac0d25d390fa
-msgid "``django.core.context_processors.PermWrapper`` and ``django.core.context_processors.PermLookupDict`` will be removed in favor of the corresponding ``django.contrib.auth.context_processors.PermWrapper`` and ``django.contrib.auth.context_processors.PermLookupDict``, respectively."
-msgstr ""
-
-#: ../../internals/deprecation.txt:173
-# 2c9fd186aadc425a8810c79866366bc4
-msgid "The :setting:`MEDIA_URL` or :setting:`STATIC_URL` settings will be required to end with a trailing slash to ensure there is a consistent way to combine paths in templates."
-msgstr ""
-
-#: ../../internals/deprecation.txt:177
-# a944003e413f469c9477d486dbf67597
-msgid "``django.db.models.fields.URLField.verify_exists`` will be removed. The feature was deprecated in 1.3.1 due to intractable security and performance issues and will follow a slightly accelerated deprecation timeframe."
-msgstr ""
-
-#: ../../internals/deprecation.txt:182
-# 17e02c0ccc664d97944b1dae05ed766a
-msgid "Translations located under the so-called *project path* will be ignored during the translation building process performed at runtime. The :setting:`LOCALE_PATHS` setting can be used for the same task by including the filesystem path to a ``locale`` directory containing non-app-specific translations in its value."
-msgstr ""
-
-#: ../../internals/deprecation.txt:188
-# 1d755a8fd7e44f279436e4d5d8132ef1
-msgid "The Markup contrib app will no longer support versions of Python-Markdown library earlier than 2.1. An accelerated timeline was used as this was a security related deprecation."
-msgstr ""
-
-#: ../../internals/deprecation.txt:192
-# 22f795e8bdc1415387cdb2d549b407c7
-msgid "The ``CACHE_BACKEND`` setting will be removed. The cache backend(s) should be specified in the :setting:`CACHES` setting."
-msgstr ""
-
-#: ../../internals/deprecation.txt:196
-# 62044597d9454467962327de2c9493e4
+# 9b341cd2a6404819bc2ad922067fe443
 msgid "1.6"
 msgstr ""
 
@@ -4937,8 +4717,8 @@ msgid "For a new version release (e.g. 1.5, 1.6), update the default stable vers
 msgstr ""
 
 #: ../../internals/howto-release-django.txt:313
-# f41af39e75cf42518535ac622b22ca2f
-msgid "Post the release announcement to the django-announce, django-developers and django-users mailing lists. This should include links to the announcement blog post and the release notes."
+# 42d62388129547e2bed09d672bf6eb1e
+msgid "Post the release announcement to the |django-announce|, |django-developers| and |django-users| mailing lists. This should include links to the announcement blog post and the release notes."
 msgstr ""
 
 #: ../../internals/howto-release-django.txt:318
@@ -5039,6 +4819,151 @@ msgstr ""
 #: ../../internals/index.txt:10
 # d45efa92f4774919bb294a6be6f6ae3e
 msgid "Elsewhere in the Django documentation, coverage of a feature is a sort of a contract: once an API is in the official documentation, we consider it \"stable\" and don't change it without a good reason. APIs covered here, however, are considered \"internal-only\": we reserve the right to change these internals if we must."
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:3
+# b73202f2ba024080a137036305aa94a5
+msgid "Mailing lists"
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:13
+# b82235ff2d744e8fbdb6a452881ae9b2
+msgid "Django has several official mailing lists on Google Groups that are open to anyone."
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:19
+# 3fb17ab583f54e98bfc3746ccab4250b
+msgid "``django-users``"
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:21
+# d4786b78a07f4049b4fd1d85c42ab981
+msgid "This is the right place if you are looking to ask any question regarding the installation, usage, or debugging of Django."
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:25
+# 327f78e6379e49fc86933bc4a29a0e07
+msgid "If it's the first time you send an email to this list, your email must be accepted first so don't worry if :ref:`your message does not appear <message-does-not-appear-on-django-users>` instantly."
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:29
+# a5e4f5220bfd42a08521be3fe730517b
+msgid "`django-users mailing archive`_"
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:30
+# aa1369ef7bae457ab2e92f04f18ccbb4
+msgid "`django-users subscription email address`_"
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:31
+# 302832f58c8a4d71a9cb58a28eaba4b7
+msgid "`django-users posting email`_"
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:40
+# 4aba466370794cba86d8629037f5bd66
+msgid "``django-core-mentorship``"
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:42
+# 2ee4c45d278c4ece81ceae5bc10a1a02
+msgid "The Django Core Development Mentorship list is intended to provide a welcoming introductory environment for developers interested in contributing to core Django development."
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:46
+# 7b1e1e37d23247dab81eae5f5ef54148
+msgid "`django-core-mentorship mailing archive`_"
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:47
+# d779af09f6b84c28ac91d216c4409511
+msgid "`django-core-mentorship subscription email address`_"
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:48
+# dfff209e68f346a3bb66930fed6938b6
+msgid "`django-core-mentorship posting email`_"
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:57
+# fe6a454e08494b97b12d5bdf0538b7d6
+msgid "``django-developers``"
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:59
+# 911e279eacb841d4aed4e341d61548c3
+msgid "The discussion about the development of Django itself takes place here."
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:62
+# 17c7a9b7a27a408d845b5dd5970e987e
+msgid "Please make use of :ref:`django-users mailing list <django-users-mailing-list>` if you want to ask for tech support, doing so in this list is inappropriate."
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:66
+# 489604a77a37402190ba45f13c63c73c
+msgid "`django-developers mailing archive`_"
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:67
+# 361dbb58bfe942de835b3162037fa92a
+msgid "`django-developers subscription email address`_"
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:68
+# c2ddde0e60454a3bb7ac49baaf9c6e61
+msgid "`django-developers posting email`_"
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:77
+# a5c29618b84648048e4142ce5d80b39e
+msgid "``django-announce``"
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:79
+# 9a978047bcf1468499d69e1fa369f74e
+msgid "A (very) low-traffic list for announcing new releases of Django and important bugfixes."
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:82
+# 18d2abe562484c61a685d0804290df17
+msgid "`django-announce mailing archive`_"
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:83
+# 76815358e3b04409b6e16b06f097645f
+msgid "`django-announce subscription email address`_"
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:84
+# 20d46f1fb5b649bd984b664aea88aceb
+msgid "`django-announce posting email`_"
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:93
+# 663f6e7aad5e44b984dd99167362462e
+msgid "``django-updates``"
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:95
+# e40803d6d05f47d1b8ea20aa27b4f1ce
+msgid "All the ticket updates are mailed automatically to this list, which is tracked by developers and interested community members."
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:98
+# 8347f700435540f3aff6f9176b78e9fe
+msgid "`django-updates mailing archive`_"
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:99
+# 9ae21999e41d46e8a9aa7fbf9027de2e
+msgid "`django-updates subscription email address`_"
+msgstr ""
+
+#: ../../internals/mailing-lists.txt:100
+# 5b9dc6b21e79439a955f3ba096633cb3
+msgid "`django-updates posting email`_"
 msgstr ""
 
 #: ../../internals/release-process.txt:3
@@ -5239,12 +5164,32 @@ msgid "Documentation fixes will be applied to master, and, if easily backported,
 msgstr ""
 
 #: ../../internals/release-process.txt:138
-# f5877df9a2c94c7697e787ca6ec74fb3
-msgid "Release process"
+# 78e91f0d4f3a412ba561e27105617b11
+msgid "Long-term support (LTS) releases"
 msgstr ""
 
 #: ../../internals/release-process.txt:140
-# bc1b87fe160243b9930adaec083f1e42
+# fd6addb78fe141b59c5a5f771f4bc55e
+msgid "Additionally, the Django team will occasionally designate certain releases to be \"Long-term support\" (LTS) releases. LTS releases will get security fixes applied for a guaranteed period of time, typically 3+ years, regardless of the pace of releases afterwards."
+msgstr ""
+
+#: ../../internals/release-process.txt:145
+# 23dd8341599e4c938f7067fae660dbf0
+msgid "The follow releases have been designated for long-term support:"
+msgstr ""
+
+#: ../../internals/release-process.txt:147
+# 1bf6b83afb14426783eb35bcf84397c1
+msgid "Django 1.4, supported until at least March 2015."
+msgstr ""
+
+#: ../../internals/release-process.txt:152
+# 16f6baadc0b64194880d600bb658f745
+msgid "Release process"
+msgstr ""
+
+#: ../../internals/release-process.txt:154
+# faff1c95452a49afb7912e41f1e33135
 msgid "Django uses a time-based release schedule, with minor (i.e. 1.6, 1.7, etc.) releases every nine months, or more, depending on features."
 msgstr ""
 
@@ -5449,7 +5394,12 @@ msgid "The two most recent Django release series receive security support. For e
 msgstr ""
 
 #: ../../internals/security.txt:61
-# 4349b944db2e42ea9b184c1a2671759e
+# 54a70a4a1e5e4a3e9a2deec7cd84129e
+msgid ":ref:`Long-term support (LTS) releases <lts-releases>` will receive security updates for a specified period."
+msgstr ""
+
+#: ../../internals/security.txt:64
+# dd34e1a9f6ba413d849bc7c29159088d
 msgid "When new releases are issued for security reasons, the accompanying notice will include a list of affected versions. This list is comprised solely of *supported* versions of Django: older versions may also be affected, but we do not investigate to determine that, and will not issue patches or new releases for those versions."
 msgstr ""
 
@@ -5513,9 +5463,9 @@ msgstr ""
 msgid "Post a public entry on `the official Django development blog`_, describing the issue and its resolution in detail, pointing to the relevant patches and new releases, and crediting the reporter of the issue (if the reporter wishes to be publicly identified)."
 msgstr ""
 
-#: ../../internals/security.txt:111
-# 47c90aa9f2934643ad13968b61c9a928
-msgid "Post a notice to the `django-announce`_ mailing list that links to the blog post."
+#: ../../internals/security.txt:114
+# 6128e762ea33448ba5eb37355723b326
+msgid "Post a notice to the |django-announce| mailing list that links to the blog post."
 msgstr ""
 
 #: ../../internals/security.txt:118

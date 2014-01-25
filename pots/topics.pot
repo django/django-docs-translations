@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-23 14:56+0100\n"
+"POT-Creation-Date: 2014-01-25 16:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -432,8 +432,8 @@ msgid "For example, here is the partial definition for a ``User`` model that def
 msgstr ""
 
 #: ../../topics/auth/customizing.txt:533
-# eb83c2161a75430b85d303c1269588c7
-msgid "``REQUIRED_FIELDS`` must contain all required fields on your User model, but should *not* contain the ``USERNAME_FIELD``."
+# 75d60c81aaf343fc84bcb52bd43373a9
+msgid "``REQUIRED_FIELDS`` must contain all required fields on your ``User`` model, but should *not* contain the ``USERNAME_FIELD`` or ``password`` as these fields will always be prompted for."
 msgstr ""
 
 #: ../../topics/auth/customizing.txt:538
@@ -872,8 +872,8 @@ msgid "User objects"
 msgstr ""
 
 #: ../../topics/auth/default.txt:24
-# dd263f84c89e45679c75ef39cb18902b
-msgid ":class:`~django.contrib.auth.models.User` objects are the core of the authentication system. They typically represent the people interacting with your site and are used to enable things like restricting access, registering user profiles, associating content with creators etc. Only one class of user exists in Django's authentication framework, i.e., 'superusers' or admin 'staff' users are just user objects with special attributes set, not different classes of user objects."
+# a9abac1c180145c9a5c661d50148a0a7
+msgid ":class:`~django.contrib.auth.models.User` objects are the core of the authentication system. They typically represent the people interacting with your site and are used to enable things like restricting access, registering user profiles, associating content with creators etc. Only one class of user exists in Django's authentication framework, i.e., :attr:`'superusers' <django.contrib.auth.models.User.is_superuser>` or admin :attr:`'staff' <django.contrib.auth.models.User.is_staff>` users are just user objects with special attributes set, not different classes of user objects."
 msgstr ""
 
 #: ../../topics/auth/default.txt:32
@@ -881,29 +881,29 @@ msgstr ""
 msgid "The primary attributes of the default user are:"
 msgstr ""
 
-#: ../../topics/auth/default.txt:34
-# 755bd072e7e34be1bf0277ff5088c671
-msgid "username"
-msgstr ""
-
 #: ../../topics/auth/default.txt:35
-# c848609d3ef74c528f919f6172437144
-msgid "password"
+# b78c86dce41c47a99b62de787b5d6182
+msgid ":attr:`~django.contrib.auth.models.User.username`"
 msgstr ""
 
 #: ../../topics/auth/default.txt:36
-# 40899fd979c8401f89391d5c42e8b0ef
-msgid "email"
+# 0c4e4aad6b7c491fbdcfcf88b4c806be
+msgid ":attr:`~django.contrib.auth.models.User.password`"
 msgstr ""
 
 #: ../../topics/auth/default.txt:37
-# 2248476f0dab4ddbbadec721b900b128
-msgid "first name"
+# 8eee7dbe6ef540d0866d15439f0aea2f
+msgid ":attr:`~django.contrib.auth.models.User.email`"
 msgstr ""
 
 #: ../../topics/auth/default.txt:38
-# 53601958f0944245abd589c62776b38a
-msgid "last name"
+# 0b52fa4602294363891cbc42fdff139b
+msgid ":attr:`~django.contrib.auth.models.User.first_name`"
+msgstr ""
+
+#: ../../topics/auth/default.txt:39
+# 05915e0a15b049299a0db8d74f4ca067
+msgid ":attr:`~django.contrib.auth.models.User.last_name`"
 msgstr ""
 
 #: ../../topics/auth/default.txt:40
@@ -1106,8 +1106,18 @@ msgstr ""
 msgid "The permission can then be assigned to a :class:`~django.contrib.auth.models.User` via its ``user_permissions`` attribute or to a :class:`~django.contrib.auth.models.Group` via its ``permissions`` attribute."
 msgstr ""
 
-#: ../../topics/auth/default.txt:254
-# 322e1ce62701415e9b26e6b7ee6ad329
+#: ../../topics/auth/default.txt:253
+# 019c053c90864159b95ea85d043cca00
+msgid "Permission caching"
+msgstr ""
+
+#: ../../topics/auth/default.txt:255
+# 705ef1e45c5a4331afe677632a1c9bdc
+msgid "The :class:`~django.contrib.auth.backends.ModelBackend` caches permissions on the ``User`` object after the first time they need to be fetched for a permissions check. This is typically fine for the request-response cycle since permissions are not typically checked immediately after they are added (in the admin, for example). If you are adding permissions and checking them immediately afterward, in a test or view for example, the easiest solution is to re-fetch the ``User`` from the database. For example::"
+msgstr ""
+
+#: ../../topics/auth/default.txt:288
+# 9ec374c7bcad4a13abea15c29104a7f6
 msgid "Authentication in Web requests"
 msgstr ""
 
@@ -9040,13 +9050,13 @@ msgid "The ``raw()`` manager method can be used to perform raw SQL queries that 
 msgstr ""
 
 #: ../../topics/db/sql.txt:26
-# 9b65cfceaf0040a9830431b752a8ff75
-msgid "This method method takes a raw SQL query, executes it, and returns a ``django.db.models.query.RawQuerySet`` instance. This ``RawQuerySet`` instance can be iterated over just like an normal QuerySet to provide object instances."
+# 1327d6ac201c45e7aecc940a36e3f87b
+msgid "This method takes a raw SQL query, executes it, and returns a ``django.db.models.query.RawQuerySet`` instance. This ``RawQuerySet`` instance can be iterated over just like a normal QuerySet to provide object instances."
 msgstr ""
 
 #: ../../topics/db/sql.txt:30
-# 3eb424fadebd4b058d49e7c098223159
-msgid "This is best illustrated with an example. Suppose you've got the following model::"
+# aad21aa8217642009153e7d7183fd444
+msgid "This is best illustrated with an example. Suppose you have the following model::"
 msgstr ""
 
 #: ../../topics/db/sql.txt:37
@@ -9125,8 +9135,8 @@ msgid "``raw()`` supports indexing, so if you need only the first result you can
 msgstr ""
 
 #: ../../topics/db/sql.txt:110
-# 1675ade05bd24ff0b43150994e480447
-msgid "However, the indexing and slicing are not performed at the database level. If you have a big amount of ``Person`` objects in your database, it is more efficient to limit the query at the SQL level::"
+# 11f95d9fa8534caaa2c174b26d0b5462
+msgid "However, the indexing and slicing are not performed at the database level. If you have a large number of ``Person`` objects in your database, it is more efficient to limit the query at the SQL level::"
 msgstr ""
 
 #: ../../topics/db/sql.txt:117
@@ -10695,8 +10705,8 @@ msgid "The second approach is to use the ``open()`` and ``close()`` methods on t
 msgstr ""
 
 #: ../../topics/email.txt:563
-# 8b3fc968da944bc18e5bea22b8396cdd
-msgid "Testing email sending"
+# 475fb5927f7e4d8388c7137986d3d9ed
+msgid "Configuring email for development"
 msgstr ""
 
 #: ../../topics/email.txt:565
@@ -10705,13 +10715,13 @@ msgid "There are times when you do not want Django to send emails at all. For ex
 msgstr ""
 
 #: ../../topics/email.txt:571
-# 1f5a711d269c4878909421d4a42e73e8
-msgid "The easiest way to test your project's use of email is to use the ``console`` email backend. This backend redirects all email to stdout, allowing you to inspect the content of mail."
+# 9146668796a6431cb1f0ccd2e054b2e4
+msgid "The easiest way to configure email for local development is to use the :ref:`console <topic-email-console-backend>` email backend. This backend redirects all email to stdout, allowing you to inspect the content of mail."
 msgstr ""
 
 #: ../../topics/email.txt:575
-# dc43f1f21b0d41babebadb7dfd3086ce
-msgid "The ``file`` email backend can also be useful during development -- this backend dumps the contents of every SMTP connection to a file that can be inspected at your leisure."
+# a875167a411240419f2f743101419385
+msgid "The :ref:`file <topic-email-file-backend>` email backend can also be useful during development -- this backend dumps the contents of every SMTP connection to a file that can be inspected at your leisure."
 msgstr ""
 
 #: ../../topics/email.txt:579
@@ -10720,13 +10730,13 @@ msgid "Another approach is to use a \"dumb\" SMTP server that receives the email
 msgstr ""
 
 #: ../../topics/email.txt:585
-# c1d934e5a3f84739bdaf8fd256b868a1
-msgid "This command will start a simple SMTP server listening on port 1025 of localhost. This server simply prints to standard output all email headers and the email body. You then only need to set the :setting:`EMAIL_HOST` and :setting:`EMAIL_PORT` accordingly, and you are set."
+# 4a3a33b5fc8943c0b3de10eda4432864
+msgid "This command will start a simple SMTP server listening on port 1025 of localhost. This server simply prints to standard output all email headers and the email body. You then only need to set the :setting:`EMAIL_HOST` and :setting:`EMAIL_PORT` accordingly. For a more detailed discussion of SMTP server options, see the Python documentation for the :mod:`smtpd` module."
 msgstr ""
 
-#: ../../topics/email.txt:590
-# b244d2fc9abf49a391ff774388c3fdc3
-msgid "For a more detailed discussion of testing and processing of emails locally, see the Python documentation for the :mod:`smtpd` module."
+#: ../../topics/email.txt:591
+# 7783497c2c5647a1b7749bbbc9de3935
+msgid "For information about unit-testing the sending of emails in your application, see the :ref:`topics-testing-email` section of the testing documentation."
 msgstr ""
 
 #: ../../topics/files.txt:3
@@ -12674,8 +12684,28 @@ msgstr ""
 msgid "If you want to return a formset that doesn't include *any* pre-existing instances of the model, you can specify an empty QuerySet::"
 msgstr ""
 
-#: ../../topics/forms/modelforms.txt:752
-# 6c3a5bdfa89b46e6a89abd47ae4c4cab
+#: ../../topics/forms/modelforms.txt:751
+# b73a60da4d124a35a1a5157358d50c21
+msgid "Changing the ``form``"
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:753
+# 958408ddde9d485b8c7bd3e86597ca0a
+msgid "By default, when you use ``modelformset_factory``, a model form will be created using :func:`~django.forms.models.modelform_factory`. Often, it can be useful to specify a custom model form. For example, you can create a custom model form that has custom validation::"
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:767
+# e7f94c46b6ff4da9855b34afd8aaf82a
+msgid "Then, pass your model form to the factory function::"
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:771
+# 7126c85c435943b8a12f55b34c7e9da1
+msgid "It is not always necessary to define a custom model form. The ``modelformset_factory`` function has several arguments which are passed through to ``modelform_factory``, which are described below."
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:776
+# eee400c776de496eb005b911d78e1aad
 msgid "Controlling which fields are used with ``fields`` and ``exclude``"
 msgstr ""
 
@@ -12749,8 +12779,13 @@ msgstr ""
 msgid "This gives you the ability to attach data to the instances before saving them to the database. If your formset contains a ``ManyToManyField``, you'll also need to call ``formset.save_m2m()`` to ensure the many-to-many relationships are saved properly."
 msgstr ""
 
-#: ../../topics/forms/modelforms.txt:842
-# 13f81034cd8b46e788b26a23fffcb5a2
+#: ../../topics/forms/modelforms.txt:865
+# 622435dc559640fdaba12774450bd7c3
+msgid "While calling ``formset.save(commit=False)`` does not save new or changed objects to the database, it *does* delete objects that have been marked for deletion. This behavior will be corrected in Django 1.7."
+msgstr ""
+
+#: ../../topics/forms/modelforms.txt:872
+# 00f7146add5141b4a9073a68a97645b5
 msgid "Limiting the number of editable objects"
 msgstr ""
 
@@ -13054,8 +13089,13 @@ msgstr ""
 msgid "When Django handles a file upload, the file data ends up placed in :attr:`request.FILES <django.http.HttpRequest.FILES>` (for more on the ``request`` object see the documentation for :doc:`request and response objects </ref/request-response>`). This document explains how files are stored on disk and in memory, and how to customize the default behavior."
 msgstr ""
 
-#: ../../topics/http/file-uploads.txt:14
-# 3165c243aa8d435497c78debf63ec62a
+#: ../../topics/http/file-uploads.txt:15
+# 818143f5f22341729b55d59f202abf9d
+msgid "There are security risks if you are accepting uploaded content from untrusted users! See the security guide's topic on :ref:`user-uploaded-content-security` for mitigation details."
+msgstr ""
+
+#: ../../topics/http/file-uploads.txt:20
+# 9f8981ea98a648c5a5c3e425bb27a816
 msgid "Basic file uploads"
 msgstr ""
 
@@ -13379,9 +13419,9 @@ msgstr ""
 msgid "Custom file upload handlers **must** define the following methods:"
 msgstr ""
 
-#: ../../topics/http/file-uploads.txt:380
-# eddc838ec5734c0899008159a9987d96
-msgid "``FileUploadHandler.receive_data_chunk(self, raw_data, start)``"
+#: ../../topics/http/file-uploads.txt:386
+# 5ee58c2a37fd4141846bf160ee1dcf21
+msgid "``FileUploadHandler.receive_data_chunk(raw_data, start)``"
 msgstr ""
 
 #: ../../topics/http/file-uploads.txt:363
@@ -13414,9 +13454,9 @@ msgstr ""
 msgid "If you raise a ``StopUpload`` or a ``SkipFile`` exception, the upload will abort or the file will be completely skipped."
 msgstr ""
 
-#: ../../topics/http/file-uploads.txt:387
-# 07b70b84e81043b5a25d8235546fdba7
-msgid "``FileUploadHandler.file_complete(self, file_size)``"
+#: ../../topics/http/file-uploads.txt:393
+# d42ab1de40204a119e979c617ca0ab0c
+msgid "``FileUploadHandler.file_complete(file_size)``"
 msgstr ""
 
 #: ../../topics/http/file-uploads.txt:383
@@ -13459,9 +13499,9 @@ msgstr ""
 msgid "The default is 64*2\\ :sup:`10` bytes, or 64 KB."
 msgstr ""
 
-#: ../../topics/http/file-uploads.txt:425
-# bc51bdac2fd5470fa808d5462f7b9a42
-msgid "``FileUploadHandler.new_file(self, field_name, file_name, content_type, content_length, charset)``"
+#: ../../topics/http/file-uploads.txt:431
+# 7b0707eeb3a34c2f97455a00901eebf0
+msgid "``FileUploadHandler.new_file(field_name, file_name, content_type, content_length, charset)``"
 msgstr ""
 
 #: ../../topics/http/file-uploads.txt:408
@@ -13499,9 +13539,9 @@ msgstr ""
 msgid "This method may raise a ``StopFutureHandlers`` exception to prevent future handlers from handling this file."
 msgstr ""
 
-#: ../../topics/http/file-uploads.txt:428
-# 7e706fcdd98044ab8d726ae3432dfea6
-msgid "``FileUploadHandler.upload_complete(self)``"
+#: ../../topics/http/file-uploads.txt:434
+# 88895c866efb4b9997207d6bf1655ca9
+msgid "``FileUploadHandler.upload_complete()``"
 msgstr ""
 
 #: ../../topics/http/file-uploads.txt:428
@@ -13509,9 +13549,9 @@ msgstr ""
 msgid "Callback signaling that the entire upload (all files) has completed."
 msgstr ""
 
-#: ../../topics/http/file-uploads.txt:446
-# 2b087887cce044f18129c110a7926fea
-msgid "``FileUploadHandler.handle_raw_input(self, input_data, META, content_length, boundary, encoding)``"
+#: ../../topics/http/file-uploads.txt:454
+# 3255c68c93234a7d9c00413d61a6350c
+msgid "``FileUploadHandler.handle_raw_input(input_data, META, content_length, boundary, encoding)``"
 msgstr ""
 
 #: ../../topics/http/file-uploads.txt:431
@@ -14542,8 +14582,8 @@ msgid "Session security"
 msgstr ""
 
 #: ../../topics/http/sessions.txt:655
-# 49d5e1530a1a4d80bcd78a0d24205a91
-msgid "Subdomains within a site are able to set cookies on the client for the whole domain. This makes session fixation possible if all subdomains are not controlled by trusted users (or, are at least unable to set cookies)."
+# 82c23d8cff8b40efa609600040e1b036
+msgid "Subdomains within a site are able to set cookies on the client for the whole domain. This makes session fixation possible if cookies are permitted from subdomains not controlled by trusted users."
 msgstr ""
 
 #: ../../topics/http/sessions.txt:659
@@ -14611,10 +14651,15 @@ msgstr ""
 msgid ":func:`render()` is the same as a call to :func:`render_to_response()` with a `context_instance` argument that forces the use of a :class:`~django.template.RequestContext`."
 msgstr ""
 
-#: ../../topics/http/shortcuts.txt:28
-#: ../../topics/http/shortcuts.txt:100
-#: ../../topics/http/shortcuts.txt:239
-#: ../../topics/http/shortcuts.txt:285
+#: ../../topics/http/shortcuts.txt:27
+# 294f70989d1b42559e2b2aeaf0bba33d
+msgid "Django does not provide a shortcut function which returns a :class:`~django.template.response.TemplateResponse` because the constructor of :class:`~django.template.response.TemplateResponse` offers the same level of convenience as :func:`render()`."
+msgstr ""
+
+#: ../../topics/http/shortcuts.txt:33
+#: ../../topics/http/shortcuts.txt:105
+#: ../../topics/http/shortcuts.txt:244
+#: ../../topics/http/shortcuts.txt:317
 #: ../../topics/pagination.txt:137
 # 11fb73393f204723b4014154a0814a5d
 # 5b442fe0d36947769b6d92357fbe6e21
@@ -15153,8 +15198,8 @@ msgid "The URLconf doesn't look at the request method. In other words, all reque
 msgstr ""
 
 #: ../../topics/http/urls.txt:182
-# 68c2ec261e7f43bdba1910febd8f1f84
-msgid "Notes on capturing text in URLs"
+# b16687eb017f4fc0b044dbb727896e1c
+msgid "Captured arguments are always strings"
 msgstr ""
 
 #: ../../topics/http/urls.txt:184
@@ -15167,8 +15212,13 @@ msgstr ""
 msgid "...the ``year`` argument to ``news.views.year_archive()`` will be a string, not an integer, even though the ``\\d{4}`` will only match integer strings."
 msgstr ""
 
-#: ../../topics/http/urls.txt:193
-# 4f047ba023964f05b12ba23329e9916a
+#: ../../topics/http/urls.txt:194
+# 33215bc60d474ed480ff91eb2d3bbf76
+msgid "Specifying defaults for view arguments"
+msgstr ""
+
+#: ../../topics/http/urls.txt:196
+# 54d91e9d53b04b5390afc16b999d9442
 msgid "A convenient trick is to specify default parameters for your views' arguments. Here's an example URLconf and view::"
 msgstr ""
 
@@ -15774,6 +15824,11 @@ msgstr ""
 msgid "For example, the Django Admin is deployed as instances of :class:`~django.contrib.admin.AdminSite`.  ``AdminSite`` objects have a ``urls`` attribute: A 3-tuple that contains all the patterns in the corresponding admin site, plus the application namespace ``'admin'``, and the name of the admin instance. It is this ``urls`` attribute that you ``include()`` into your projects ``urlpatterns`` when you deploy an Admin instance."
 msgstr ""
 
+#: ../../topics/http/urls.txt:884
+# 2feef3df97ab408cb9322edf7f89b824
+msgid "Be sure to pass a tuple to ``include()``. If you simply pass three arguments: ``include(help_patterns, 'bar', 'foo')``, Django won't throw an error but due to the signature of ``include()``, ``'bar'`` will be the instance namespace and ``'foo'`` will be the application namespace instead of vice versa."
+msgstr ""
+
 #: ../../topics/http/views.txt:3
 # c7167eeb5539464992e3b8ff9d90fbf9
 msgid "Writing views"
@@ -16025,8 +16080,8 @@ msgid "Format localization"
 msgstr ""
 
 #: ../../topics/i18n/formatting.txt:10
-# 6d3b521bb916432795377e79c7bfb388
-msgid "Django's formatting system is capable to display dates, times and numbers in templates using the format specified for the current :term:`locale <locale name>`. It also handles localized input in forms."
+# 6b1197f93048464cae182e862c8b928c
+msgid "Django's formatting system is capable of displaying dates, times and numbers in templates using the format specified for the current :term:`locale <locale name>`. It also handles localized input in forms."
 msgstr ""
 
 #: ../../topics/i18n/formatting.txt:13
@@ -16919,8 +16974,18 @@ msgstr ""
 msgid "If you really need to do the conversion yourself, you must ensure the datetime is converted to the appropriate time zone first. Usually, this will be the current timezone::"
 msgstr ""
 
-#: ../../topics/i18n/timezones.txt:654
-# db11fc1cd9f844fea3e3e4ffc17da1ae
+#: ../../topics/i18n/timezones.txt:652
+# 379edde8621a487ba7a5f00fe34cbc2d
+msgid "**I get an error** \"``Are time zone definitions for your database and pytz installed?``\" **pytz is installed, so I guess the problem is my database?**"
+msgstr ""
+
+#: ../../topics/i18n/timezones.txt:655
+# f55db3149fe54a1d81eda7b61b066af5
+msgid "If you are using MySQL, see the :ref:`mysql-time-zone-definitions` section of the MySQL notes for instructions on loading time zone definitions."
+msgstr ""
+
+#: ../../topics/i18n/timezones.txt:661
+# 1c68fcd8d96543f2b51ab7abe528b5a5
 msgid "**I have a string** ``\"2012-02-21 10:28:45\"`` **and I know it's in the** ``\"Europe/Helsinki\"`` **time zone. How do I turn that into an aware datetime?**"
 msgstr ""
 
@@ -17145,18 +17210,18 @@ msgid "In this example the number of objects is passed to the translation langua
 msgstr ""
 
 #: ../../topics/i18n/translation.txt:209
-# 002c240f57cb463daef5a82247848515
-msgid "Lets see a slightly more complex usage example::"
+# e6c22dc1592b497085bea4bff41170c8
+msgid "Note that pluralization is complicated and works differently in each language. Comparing ``count`` to 1 isn't always the correct rule. This code looks sophisticated, but will produce incorrect results for some languages::"
 msgstr ""
 
-#: ../../topics/i18n/translation.txt:229
-# 017af3f00ed748958b555c5b0a1af5f1
-msgid "Here we reuse localizable, hopefully already translated literals (contained in the ``verbose_name`` and ``verbose_name_plural`` model ``Meta`` options) for other parts of the sentence so all of it is consistently based on the cardinality of the elements at play."
+#: ../../topics/i18n/translation.txt:231
+# 1a95014825614a29a4cefddfffbdb7bc
+msgid "Don't try to implement your own singular-or-plural logic, it won't be correct. In a case like this, consider something like the following::"
 msgstr ""
 
-#: ../../topics/i18n/translation.txt:238
-# 85a73bf9972d42ab920fbd513b36b1b8
-msgid "When using this technique, make sure you use a single name for every extrapolated variable included in the literal. In the example above note how we used the ``name`` Python variable in both translation strings. This example would fail::"
+#: ../../topics/i18n/translation.txt:247
+# f32a20fc69f14a1fa78a2de3bbebd205
+msgid "When using ``ungettext()``, make sure you use a single name for every extrapolated variable included in the literal. In the examples above, note how we used the ``name`` Python variable in both translation strings. This example, besides being incorrect in some languages as noted above, would fail::"
 msgstr ""
 
 #: ../../topics/i18n/translation.txt:258
@@ -17384,9 +17449,9 @@ msgstr ""
 msgid "In case a template var (``myvar`` above) is passed to the tag, the tag will first resolve such variable to a string at run-time and then look up that string in the message catalogs."
 msgstr ""
 
-#: ../../topics/i18n/translation.txt:558
-# 7f11ccb1ba924406a2ccf2db2f45520c
-msgid "It's not possible to mix a template variable inside a string within ``{% trans %}``. If your translations require strings with variables (placeholders), use ``{% blocktrans %}`` instead."
+#: ../../topics/i18n/translation.txt:563
+# 10367b3b505d4e20a8adab31977dd039
+msgid "It's not possible to mix a template variable inside a string within ``{% trans %}``. If your translations require strings with variables (placeholders), use :ttag:`{% blocktrans %}<blocktrans>` instead."
 msgstr ""
 
 #: ../../topics/i18n/translation.txt:563
@@ -18532,42 +18597,12 @@ msgid "If you are developing a simple project or something you don't plan to dep
 msgstr ""
 
 #: ../../topics/install.txt:90
-# efee1e07514643b09cbb7c4a4fbf32a3
-msgid "In addition to the officially supported databases, there are backends provided by 3rd parties that allow you to use other databases with Django:"
-msgstr ""
-
-#: ../../topics/install.txt:93
-# dc607c8fd68947b8bcd6df672489a84a
-msgid "`Sybase SQL Anywhere`_"
+# 6a8f2e84b3b04f5e9c8d451b25783e3d
+msgid "In addition to the officially supported databases, there are :ref:`backends provided by 3rd parties <third-party-notes>` that allow you to use other databases with Django."
 msgstr ""
 
 #: ../../topics/install.txt:94
-# e58c41a8914446fb95d603bd548774d4
-msgid "`IBM DB2`_"
-msgstr ""
-
-#: ../../topics/install.txt:95
-# 12af5cf0ddb048d5aa9cc0217d84e9dc
-msgid "`Microsoft SQL Server 2005`_"
-msgstr ""
-
-#: ../../topics/install.txt:96
-# 5609d7d8d034451aaf9524d7dbb7024e
-msgid "Firebird_"
-msgstr ""
-
-#: ../../topics/install.txt:97
-# a8c1c3ae2f4d433eb78ed514fb6124c6
-msgid "ODBC_"
-msgstr ""
-
-#: ../../topics/install.txt:99
-# 64778127823a4dc39d01d35b30e31bff
-msgid "The Django versions and ORM features supported by these unofficial backends vary considerably. Queries regarding the specific capabilities of these unofficial backends, along with any support queries, should be directed to the support channels provided by each 3rd party project."
-msgstr ""
-
-#: ../../topics/install.txt:104
-# a6f91959a6714d7b8e7480ec16fbb864
+# 769884bb6aa1461fb93d2599b7bfa1c7
 msgid "In addition to a database backend, you'll need to make sure your Python database bindings are installed."
 msgstr ""
 
@@ -19249,9 +19284,24 @@ msgstr ""
 msgid "Logging is configured as soon as settings have been loaded (either manually using :func:`~django.conf.settings.configure` or when at least one setting is accessed). Since the loading of settings is one of the first things that Django does, you can be certain that loggers are always ready for use in your project code."
 msgstr ""
 
-#: ../../topics/logging.txt:245
-# f82af13539664c4e97773b4829ab7550
-msgid "The full documentation for `dictConfig format`_ is the best source of information about logging configuration dictionaries. However, to give you a taste of what is possible, here is an example of a fairly complex logging setup, configured using :func:`logging.config.dictConfig`::"
+#: ../../topics/logging.txt:243
+# 45f0bb10425c42c89ab58a154259d690
+msgid "The full documentation for `dictConfig format`_ is the best source of information about logging configuration dictionaries. However, to give you a taste of what is possible, here are a couple examples."
+msgstr ""
+
+#: ../../topics/logging.txt:247
+# f4e1a05a1af44523aa8f670e8bd9a678
+msgid "First, here's a simple configuration which writes all request logging from the :ref:`django-request-logger` logger to a local file::"
+msgstr ""
+
+#: ../../topics/logging.txt:269
+# a107693bc26f43d2bc1717755aec440a
+msgid "If you use this example, be sure to change the ``'filename'`` path to a location that's writable by the user that's running the Django application."
+msgstr ""
+
+#: ../../topics/logging.txt:272
+# 0d7cd1e6a63342dca3947a7d05f26f90
+msgid "Second, here's an example of a fairly complex logging setup, configured using :func:`logging.config.dictConfig`::"
 msgstr ""
 
 #: ../../topics/logging.txt:302
@@ -19421,9 +19471,9 @@ msgstr ""
 msgid "``django.db.backends``"
 msgstr ""
 
-#: ../../topics/logging.txt:426
-# 54df5093773d4b3092bfd06a84dd4dcc
-msgid "Messages relating to the interaction of code with the database. For example, every SQL statement executed by a request is logged at the ``DEBUG`` level to this logger."
+#: ../../topics/logging.txt:453
+# 42ddcfe9269142009cf6cf014d8f1207
+msgid "Messages relating to the interaction of code with the database. For example, every application-level SQL statement executed by a request is logged at the ``DEBUG`` level to this logger."
 msgstr ""
 
 #: ../../topics/logging.txt:432
@@ -19446,8 +19496,13 @@ msgstr ""
 msgid "For performance reasons, SQL logging is only enabled when ``settings.DEBUG`` is set to ``True``, regardless of the logging level or handlers that are installed."
 msgstr ""
 
-#: ../../topics/logging.txt:441
-# f37c7986d4504d088a85d6764e382dfa
+#: ../../topics/logging.txt:467
+# 1020c406f65b4e62a9c1941e3bab79f8
+msgid "This logging does not include framework-level initialization (e.g. ``SET TIMEZONE``) or transaction management queries (e.g. ``BEGIN``, ``COMMIT``, and ``ROLLBACK``). Turn on query logging in your database if you wish the view all database queries."
+msgstr ""
+
+#: ../../topics/logging.txt:473
+# e71e65e7d7d8491f86b0cffcb1f2ac0b
 msgid "``django.security.*``"
 msgstr ""
 
@@ -20529,7 +20584,47 @@ msgid "Similar to the :ref:`CSRF limitations <csrf-limitations>` requiring a sit
 msgstr ""
 
 #: ../../topics/security.txt:209
-# f8242b10d06845919dd38dd0f1740671
+# 3a75e7e161414f6fa14a061fcc724e09
+msgid "User-uploaded content"
+msgstr ""
+
+#: ../../topics/security.txt:212
+# 1592a965c70445249a08296aae30fc99
+msgid "Consider :ref:`serving static files from a cloud service or CDN <staticfiles-from-cdn>` to avoid some of these issues."
+msgstr ""
+
+#: ../../topics/security.txt:215
+# 3703459198a540cdb49440776ece3f2a
+msgid "If your site accepts file uploads, it is strongly advised that you limit these uploads in your Web server configuration to a reasonable size in order to prevent denial of service (DOS) attacks. In Apache, this can be easily set using the LimitRequestBody_ directive."
+msgstr ""
+
+#: ../../topics/security.txt:220
+# e332364197ef4361b93712b033e84e3c
+msgid "If you are serving your own static files, be sure that handlers like Apache's ``mod_php``, which would execute static files as code, are disabled. You don't want users to be able to execute arbitrary code by uploading and requesting a specially crafted file."
+msgstr ""
+
+#: ../../topics/security.txt:225
+# d01b953c2905478c8511ddaf984aef50
+msgid "Django's media upload handling poses some vulnerabilities when that media is served in ways that do not follow security best practices. Specifically, an HTML file can be uploaded as an image if that file contains a valid PNG header followed by malicious HTML. This file will pass verification of the libraries that Django uses for :class:`~django.db.models.ImageField` image processing (PIL or Pillow). When this file is subsequently displayed to a user, it may be displayed as HTML depending on the type and configuration of your web server."
+msgstr ""
+
+#: ../../topics/security.txt:234
+# b1773002cffc43ee835d2fd474041190
+msgid "No bulletproof technical solution exists at the framework level to safely validate all user uploaded file content, however, there are some other steps you can take to mitigate these attacks:"
+msgstr ""
+
+#: ../../topics/security.txt:238
+# 5b34dbd67b604960a37efa4e58c65593
+msgid "One class of attacks can be prevented by always serving user uploaded content from a distinct Top Level Domain (TLD). This prevents any exploit blocked by `same-origin policy`_ protections such as cross site scripting. For example, if your site runs on ``example.com``, you would want to serve uploaded content (the :setting:`MEDIA_URL` setting) from something like ``usercontent-example.com``. It's *not* sufficient to serve content from a subdomain like ``usercontent.example.com``."
+msgstr ""
+
+#: ../../topics/security.txt:246
+# 817703df61634886ba4f323a9a57b32d
+msgid "Beyond this, applications may choose to define a whitelist of allowable file extensions for user uploaded files and configure the web server to only serve such files."
+msgstr ""
+
+#: ../../topics/security.txt:255
+# 9158b48a82f74133b470fc21bcd2a40f
 msgid "Additional security topics"
 msgstr ""
 
@@ -20553,13 +20648,8 @@ msgstr ""
 msgid "Django does not throttle requests to authenticate users. To protect against brute-force attacks against the authentication system, you may consider deploying a Django plugin or Web server module to throttle these requests."
 msgstr ""
 
-#: ../../topics/security.txt:222
-# b89c4aef36ab4aad9ce3f4b36430d510
-msgid "If your site accepts file uploads, it is strongly advised that you limit these uploads in your Web server configuration to a reasonable size in order to prevent denial of service (DOS) attacks. In Apache, this can be easily set using the LimitRequestBody_ directive."
-msgstr ""
-
-#: ../../topics/security.txt:226
-# ed20fe8f9a5b4c37beb5e44d1df8916d
+#: ../../topics/security.txt:268
+# be93c0147c874b6c945d638f4370050f
 msgid "Keep your :setting:`SECRET_KEY` a secret."
 msgstr ""
 
@@ -21985,9 +22075,9 @@ msgstr ""
 msgid "Loop over each item in an array.  For example, to display a list of athletes provided in ``athlete_list``::"
 msgstr ""
 
-#: ../../topics/templates.txt:237
-# 827b43aa00254f6fbbfb6be2e49b9157
-msgid ":ttag:`if` and ``else``"
+#: ../../topics/templates.txt:242
+# 37512d8a0e514a5db66a76741f7c0d08
+msgid ":ttag:`if`, ``elif``, and ``else``"
 msgstr ""
 
 #: ../../topics/templates.txt:215
@@ -21995,9 +22085,9 @@ msgstr ""
 msgid "Evaluates a variable, and if that variable is \"true\" the contents of the block are displayed::"
 msgstr ""
 
-#: ../../topics/templates.txt:224
-# 4d19f4be1b4a48cca6e4a204807a77b8
-msgid "In the above, if ``athlete_list`` is not empty, the number of athletes will be displayed by the ``{{ athlete_list|length }}`` variable."
+#: ../../topics/templates.txt:226
+# 04f075568a764e4b8abc8e83433dc3a8
+msgid "In the above, if ``athlete_list`` is not empty, the number of athletes will be displayed by the ``{{ athlete_list|length }}`` variable. Otherwise, if ``athlete_in_locker_room_list`` is not empty, the message \"Athletes should be out...\" will be displayed. If both lists are empty, \"No athletes.\" will be displayed."
 msgstr ""
 
 #: ../../topics/templates.txt:227
@@ -22731,84 +22821,64 @@ msgid "Run the test suite."
 msgstr ""
 
 #: ../../topics/testing/advanced.txt:366
-# 50bb46345b5046bfa94787c72c540eed
-msgid "``test_labels`` is a list of strings describing the tests to be run. A test label can take one of four forms:"
+# e1cf2cf95b0c42559186869b5e9d917d
+msgid "``test_labels`` allows you to specify which tests to run and supports several formats (see :meth:`DiscoverRunner.build_suite` for a list of supported formats)."
 msgstr ""
 
-#: ../../topics/testing/advanced.txt:369
-# f720197443d54c23a5785042c25a5e5f
-msgid "``path.to.test_module.TestCase.test_method`` -- Run a single test method in a test case."
-msgstr ""
-
-#: ../../topics/testing/advanced.txt:371
-# 1ded2a1964a943cb81a07721c8e0139f
-msgid "``path.to.test_module.TestCase`` -- Run all the test methods in a test case."
-msgstr ""
-
-#: ../../topics/testing/advanced.txt:373
-# abed680e57e34e38b8abbbf9e161db60
-msgid "``path.to.module`` -- Search for and run all tests in the named Python package or module."
-msgstr ""
-
-#: ../../topics/testing/advanced.txt:375
-# 8a683f66a9a0459fbfa7d6d703b2d9e6
-msgid "``path/to/directory`` -- Search for and run all tests below the named directory."
-msgstr ""
-
-#: ../../topics/testing/advanced.txt:378
-# ebcf9dde23e0479aa3e56cdad8a3f45c
-msgid "If ``test_labels`` has a value of ``None``, the test runner will search for tests in all files below the current directory whose names match its ``pattern`` (see above)."
-msgstr ""
-
-#: ../../topics/testing/advanced.txt:382
-#: ../../topics/testing/advanced.txt:409
-# a322419b05744c5693a619e58513b276
-# 8fc3d19ba2c749afa9b9a7e5258f4e71
+#: ../../topics/testing/advanced.txt:370
+#: ../../topics/testing/advanced.txt:402
+# 884d6379d6da42cfae73a698db8f34ac
+# a427d0fed13e45f28824b97bf05ca9f7
 msgid "``extra_tests`` is a list of extra ``TestCase`` instances to add to the suite that is executed by the test runner. These extra tests are run in addition to those discovered in the modules listed in ``test_labels``."
 msgstr ""
 
-#: ../../topics/testing/advanced.txt:386
-# 5e0301911aa04d7cab71ad35d978d2e6
+#: ../../topics/testing/advanced.txt:374
+# 910313e1f2804784bfdd920313a0e869
 msgid "This method should return the number of tests that failed."
 msgstr ""
 
-#: ../../topics/testing/advanced.txt:390
-# 7a7d728b1d4a4192ac17666a7164fc06
+#: ../../topics/testing/advanced.txt:378
+# a8adedd4331f47d397ba013db55a6563
 msgid "Sets up the test environment by calling :func:`~django.test.utils.setup_test_environment` and setting :setting:`DEBUG` to ``False``."
 msgstr ""
 
-#: ../../topics/testing/advanced.txt:396
-# bcd298576cdd4d119ad6d33ef40445cd
+#: ../../topics/testing/advanced.txt:384
+# 0f5bc0f807e6439281331392d6a9e2cf
 msgid "Constructs a test suite that matches the test labels provided."
 msgstr ""
 
+#: ../../topics/testing/advanced.txt:386
+# 28bc275709914d1a96ae53eed9e95f0f
+msgid "``test_labels`` is a list of strings describing the tests to be run. A test label can take one of four forms:"
+msgstr ""
+
+#: ../../topics/testing/advanced.txt:389
+# a32f4a0bf5ed4198b14d54d08085ee6b
+msgid "``path.to.test_module.TestCase.test_method`` -- Run a single test method in a test case."
+msgstr ""
+
+#: ../../topics/testing/advanced.txt:391
+# f985417039a64e5bb05fccd6df63bf05
+msgid "``path.to.test_module.TestCase`` -- Run all the test methods in a test case."
+msgstr ""
+
+#: ../../topics/testing/advanced.txt:393
+# 77bd4e4f64844e8fa407e2b89589fed5
+msgid "``path.to.module`` -- Search for and run all tests in the named Python package or module."
+msgstr ""
+
+#: ../../topics/testing/advanced.txt:395
+# 6b82fc8ae52b4a0e9a3c1f36de5766bb
+msgid "``path/to/directory`` -- Search for and run all tests below the named directory."
+msgstr ""
+
 #: ../../topics/testing/advanced.txt:398
-# ec2b6041c9e444c987ac4eea3b1fc47a
-msgid "``test_labels`` is a list of strings describing the tests to be run. A test label can take one of three forms:"
-msgstr ""
-
-#: ../../topics/testing/advanced.txt:401
-# bb0a7bdd22774db1966ae4c64818b9ae
-msgid "``app.TestCase.test_method`` -- Run a single test method in a test case."
-msgstr ""
-
-#: ../../topics/testing/advanced.txt:403
-# 898023ba477848358eab805c13e1b1d1
-msgid "``app.TestCase`` -- Run all the test methods in a test case."
-msgstr ""
-
-#: ../../topics/testing/advanced.txt:404
-# 7b83fae885574258a2a89f5d0801911a
-msgid "``app`` -- Search for and run all tests in the named application."
+# eef079c8cde44fdb9bd03bf7ead398fb
+msgid "If ``test_labels`` has a value of ``None``, the test runner will search for tests in all files below the current directory whose names match its ``pattern`` (see above)."
 msgstr ""
 
 #: ../../topics/testing/advanced.txt:406
-# 5da01b11dd5d44d785ec36a00dd781c4
-msgid "If ``test_labels`` has a value of ``None``, the test runner should run search for tests in all the applications in :setting:`INSTALLED_APPS`."
-msgstr ""
-
-#: ../../topics/testing/advanced.txt:413
-# 0f27d0cce7644fd88df0b42977e216ee
+# eb706c7846e141949d006654fe9d4c74
 msgid "Returns a ``TestSuite`` instance ready to be run."
 msgstr ""
 
@@ -22992,13 +23062,8 @@ msgstr ""
 msgid "The best part is, it's really easy."
 msgstr ""
 
-#: ../../topics/testing/index.txt:32
-# ab4d1af9119846fa9171d12260649e35
-msgid "Where to go from here"
-msgstr ""
-
-#: ../../topics/testing/index.txt:34
-# 8f3d96e381b7445caaca17d2bf9e76fa
+#: ../../topics/testing/index.txt:25
+# 2cef9b94547d42fe9d6506be43e2d15c
 msgid "The preferred way to write tests in Django is using the :mod:`unittest` module built in to the Python standard library. This is covered in detail in the :doc:`overview` document."
 msgstr ""
 
@@ -23008,13 +23073,13 @@ msgid "You can also use any *other* Python test framework; Django provides an AP
 msgstr ""
 
 #: ../../topics/testing/overview.txt:3
-# a343c03f2c1340afae78ca4dc0a66bee
-msgid "Testing Django applications"
+# 748c7eebbf1e450bb103279d6541beb0
+msgid "Writing and running tests"
 msgstr ""
 
 #: ../../topics/testing/overview.txt:10
-# 652111a1de4f4f88bf06ffcdac6b1bcd
-msgid "The :doc:`testing tutorial </intro/tutorial05>` and the :doc:`advanced testing topics </topics/testing/advanced>`."
+# 2710ec4c5ba045769f6ee1f14490a0bb
+msgid "The :doc:`testing tutorial </intro/tutorial05>`, the :doc:`testing tools reference </topics/testing/tools>`, and the :doc:`advanced testing topics </topics/testing/advanced>`."
 msgstr ""
 
 #: ../../topics/testing/overview.txt:13
@@ -23974,11 +24039,11 @@ msgstr ""
 msgid "Tests should not depend on this behavior, but for legacy tests that do, the :attr:`~TransactionTestCase.reset_sequences` attribute can be used until the test has been properly updated."
 msgstr ""
 
-#: ../../topics/testing/overview.txt:964
-#: ../../topics/testing/overview.txt:994
-# b3a6205d0d9a4fada76da0318ca9d0f8
-# bf565533e31844f8b568ab0d977cea33
-msgid "The order in which tests are run has changed. See `Order in which tests are executed`_."
+#: ../../topics/testing/tools.txt:644
+#: ../../topics/testing/tools.txt:673
+# 62f484508c9d48ea91e29c389a950faa
+# 4cb534943c4543f6b5c55ae0a6cae073
+msgid "The order in which tests are run has changed. See :ref:`order-of-tests`."
 msgstr ""
 
 #: ../../topics/testing/overview.txt:967

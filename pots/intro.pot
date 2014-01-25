@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-23 14:56+0100\n"
+"POT-Creation-Date: 2014-01-25 16:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,8 +64,8 @@ msgid "Where to get help:"
 msgstr ""
 
 #: ../../intro/contributing.txt:36
-# aad28df850a246a8a09df6116c538edb
-msgid "If you're having trouble going through this tutorial, please post a message to `django-developers`__ or drop by `#django-dev on irc.freenode.net`__ to chat with other Django users who might be able to help."
+# 7aa6a45f214540deb9e6952365dd88fd
+msgid "If you're having trouble going through this tutorial, please post a message to |django-developers| or drop by `#django-dev on irc.freenode.net`__ to chat with other Django users who might be able to help."
 msgstr ""
 
 #: ../../intro/contributing.txt:46
@@ -288,9 +288,9 @@ msgstr ""
 msgid "In order to resolve this ticket, we'll add a ``render`` method to the ``AdminURLFieldWidget`` in order to display a clickable link above the input widget. Before we make those changes though, we're going to write a couple tests to verify that our modification functions correctly and continues to function correctly in the future."
 msgstr ""
 
-#: ../../intro/contributing.txt:242
-# 46012f5af3c84b99ac596d69eb0f894b
-msgid "Navigate to Django's ``tests/admin_widgets/`` folder and open the ``tests.py`` file. Add the following code on line 269 right before the ``AdminFileWidgetTest`` class::"
+#: ../../intro/contributing.txt:241
+# 655cc6c5696b4eee9dbd1958a77902d6
+msgid "Navigate to Django's ``tests/regressiontests/admin_widgets/`` folder and open the ``tests.py`` file. Add the following code on line 269 right before the ``AdminFileWidgetTest`` class::"
 msgstr ""
 
 #: ../../intro/contributing.txt:276
@@ -308,9 +308,9 @@ msgstr ""
 msgid "If you've never had to deal with tests before, they can look a little hard to write at first glance. Fortunately, testing is a *very* big subject in computer programming, so there's lots of information out there:"
 msgstr ""
 
-#: ../../intro/contributing.txt:285
-# 7aa4b37faaf54692a60de90935e082bb
-msgid "A good first look at writing tests for Django can be found in the documentation on :doc:`Testing Django applications </topics/testing/overview>`."
+#: ../../intro/contributing.txt:284
+# f105acc8853f4e2d877695dea100fd4f
+msgid "A good first look at writing tests for Django can be found in the documentation on :doc:`/topics/testing/overview`."
 msgstr ""
 
 #: ../../intro/contributing.txt:287
@@ -903,8 +903,8 @@ msgid "It's a lot of work to design, build, test and maintain a web application.
 msgstr ""
 
 #: ../../intro/reusable-apps.txt:19
-# b1cddd62c5964dc78e1cbdcbf5871d0f
-msgid "Reusability is the way of life in Python. `The Python Package Index (PyPI) <http://guide.python-distribute.org/contributing.html#pypi-info>`_ has a vast range of packages you can use in your own Python programs. Check out `Django Packages <http://www.djangopackages.com>`_ for existing reusable apps you could incorporate in your project. Django itself is also just a Python package. This means that you can take existing Python packages or Django apps and compose them into your own web project. You only need to write the parts that make your project unique."
+# 07771cad6ff84282b09bafdae07c190d
+msgid "Reusability is the way of life in Python. `The Python Package Index (PyPI) <http://guide.python-distribute.org/contributing.html#pypi-info>`_ has a vast range of packages you can use in your own Python programs. Check out `Django Packages <https://www.djangopackages.com>`_ for existing reusable apps you could incorporate in your project. Django itself is also just a Python package. This means that you can take existing Python packages or Django apps and compose them into your own web project. You only need to write the parts that make your project unique."
 msgstr ""
 
 #: ../../intro/reusable-apps.txt:28
@@ -993,7 +993,12 @@ msgid "When choosing a name for your package, check resources like PyPI to avoid
 msgstr ""
 
 #: ../../intro/reusable-apps.txt:131
-# 613e52b2a0bf401e9d27715bce46397f
+# 6add107644a040d6becc3fd2d4274c7b
+msgid "The application names (that is, the final dotted part of the path to the module containing ``models.py``) defined in :setting:`INSTALLED_APPS` *must* be unique. Avoid using the same name as any of the Django :doc:`contrib packages </ref/contrib/index>`, for example ``auth``, ``admin`` or ``messages``."
+msgstr ""
+
+#: ../../intro/reusable-apps.txt:138
+# e17ee3aab90448fc82620787b308cd59
 msgid "Move the ``polls`` directory into the ``django-polls`` directory."
 msgstr ""
 
@@ -1007,9 +1012,9 @@ msgstr ""
 msgid "Create a ``django-polls/LICENSE`` file. Choosing a license is beyond the scope of this tutorial, but suffice it to say that code released publicly without a license is *useless*. Django and many Django-compatible apps are distributed under the BSD license; however, you're free to pick your own license. Just be aware that your licensing choice will affect who is able to use your code."
 msgstr ""
 
-#: ../../intro/reusable-apps.txt:172
-# 83b16608bca94e7db54ed59696cd0406
-msgid "Next we'll create a ``setup.py`` file which provides details about how to build and install the app. A full explanation of this file is beyond the scope of this tutorial, but the `setuptools docs <http://packages.python.org/setuptools/setuptools.html>`_ have a good explanation. Create a file ``django-polls/setup.py`` with the following contents::"
+#: ../../intro/reusable-apps.txt:179
+# fd28c93aa7a1443caa4d3cc2e16483c8
+msgid "Next we'll create a ``setup.py`` file which provides details about how to build and install the app. A full explanation of this file is beyond the scope of this tutorial, but the `setuptools docs <http://pythonhosted.org/setuptools/setuptools.html>`_ have a good explanation. Create a file ``django-polls/setup.py`` with the following contents::"
 msgstr ""
 
 #: ../../intro/reusable-apps.txt:212
@@ -1022,9 +1027,9 @@ msgstr ""
 msgid "It's optional, but recommended, to include detailed documentation with your app. Create an empty directory ``django-polls/docs`` for future documentation. Add an additional line to ``django-polls/MANIFEST.in``::"
 msgstr ""
 
-#: ../../intro/reusable-apps.txt:235
-# 0fd5d6a26db44553a62f95852499faea
-msgid "Note that the ``docs`` directory won't be included in your package unless you add some files to it. Many Django apps also provide their documentation online through sites like `readthedocs.org <http://readthedocs.org>`_."
+#: ../../intro/reusable-apps.txt:237
+# 99f21d9241414267a5adcf6dded45004
+msgid "Note that the ``docs`` directory won't be included in your package unless you add some files to it. Many Django apps also provide their documentation online through sites like `readthedocs.org <https://readthedocs.org>`_."
 msgstr ""
 
 #: ../../intro/reusable-apps.txt:239
@@ -1183,8 +1188,8 @@ msgid "See :doc:`How to install Django </topics/install>` for advice on how to r
 msgstr ""
 
 #: ../../intro/tutorial01.txt:38
-# 1f15bd1cd0ef4dce9e6d24f089e180b7
-msgid "If you're having trouble going through this tutorial, please post a message to `django-users`__ or drop by `#django on irc.freenode.net`__ to chat with other Django users who might be able to help."
+# 939b8f767cbd4b1a84c3ea131e7a1baf
+msgid "If you're having trouble going through this tutorial, please post a message to |django-users| or drop by `#django on irc.freenode.net`__ to chat with other Django users who might be able to help."
 msgstr ""
 
 #: ../../intro/tutorial01.txt:46
@@ -2803,8 +2808,8 @@ msgid "A quick rundown:"
 msgstr ""
 
 #: ../../intro/tutorial04.txt:32
-# e83da0da2b0c4bb2aea2a603cd93c08c
-msgid "The above template displays a radio button for each poll choice. The ``value`` of each radio button is the associated poll choice's ID. The ``name`` of each radio button is ``\"choice\"``. That means, when somebody selects one of the radio buttons and submits the form, it'll send the POST data ``choice=3``. This is the basic concept of HTML forms."
+# 0c03ee92a1924c2ab78c3508f9cde1e8
+msgid "The above template displays a radio button for each poll choice. The ``value`` of each radio button is the associated poll choice's ID. The ``name`` of each radio button is ``\"choice\"``. That means, when somebody selects one of the radio buttons and submits the form, it'll send the POST data ``choice=#`` where # is the ID of the selected choice. This is the basic concept of HTML forms."
 msgstr ""
 
 #: ../../intro/tutorial04.txt:38
@@ -2992,9 +2997,9 @@ msgstr ""
 msgid "The :class:`~django.views.generic.detail.DetailView` generic view expects the primary key value captured from the URL to be called ``\"pk\"``, so we've changed ``poll_id`` to ``pk`` for the generic views."
 msgstr ""
 
-#: ../../intro/tutorial04.txt:269
-# 039d60292ac54e39bb6e787c65a634ca
-msgid "By default, the :class:`~django.views.generic.detail.DetailView` generic view uses a template called ``<app name>/<model name>_detail.html``. In our case, it'll use the template ``\"polls/poll_detail.html\"``. The ``template_name`` attribute is used to tell Django to use a specific template name instead of the autogenerated default template name. We also specify the ``template_name`` for the ``results`` list view -- this ensures that the results view and the detail view have a different appearance when rendered, even though they're both a :class:`~django.views.generic.detail.DetailView` behind the scenes."
+#: ../../intro/tutorial04.txt:270
+# 8cc3701c33634bcfb3dfa330cf15def6
+msgid "By default, the :class:`~django.views.generic.detail.DetailView` generic view uses a template called ``<app name>/<model name>_detail.html``. In our case, it would use the template ``\"polls/poll_detail.html\"``. The ``template_name`` attribute is used to tell Django to use a specific template name instead of the autogenerated default template name. We also specify the ``template_name`` for the ``results`` list view -- this ensures that the results view and the detail view have a different appearance when rendered, even though they're both a :class:`~django.views.generic.detail.DetailView` behind the scenes."
 msgstr ""
 
 #: ../../intro/tutorial04.txt:279
@@ -3593,8 +3598,8 @@ msgid "A good way to spot untested parts of your application is to check code co
 msgstr ""
 
 #: ../../intro/tutorial05.txt:635
-# 14bf8b5abd4441b7a23f663aa9a13978
-msgid ":doc:`Testing Django applications </topics/testing/index>` has comprehensive information about testing."
+# cc97b636a68a45d0b6f80c6d207e07c3
+msgid ":doc:`Testing in Django </topics/testing/index>` has comprehensive information about testing."
 msgstr ""
 
 #: ../../intro/tutorial05.txt:644
@@ -3878,8 +3883,8 @@ msgid "We encourage you to help improve the docs by submitting changes, correcti
 msgstr ""
 
 #: ../../intro/whatsnext.txt:126
-# 37c16c2909e540389f366bd7242102e3
-msgid "Note, however, that tickets should explicitly relate to the documentation, rather than asking broad tech-support questions. If you need help with your particular Django setup, try the `django-users mailing list`_ or the `#django IRC channel`_ instead."
+# 864b10cdad0f4d85823a829df4b4d9ed
+msgid "Note, however, that tickets should explicitly relate to the documentation, rather than asking broad tech-support questions. If you need help with your particular Django setup, try the |django-users| mailing list or the `#django IRC channel`_ instead."
 msgstr ""
 
 #: ../../intro/whatsnext.txt:136

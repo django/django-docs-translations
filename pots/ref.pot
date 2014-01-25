@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-23 14:56+0100\n"
+"POT-Creation-Date: 2014-01-25 16:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -323,7 +323,14 @@ msgid ":class:`django.views.generic.base.TemplateResponseMixin`"
 msgstr ""
 
 #: ../../ref/class-based-views/base.txt:114
-#: ../../ref/class-based-views/base.txt:172
+#: ../../ref/class-based-views/mixins-multiple-object.txt:44
+# 4bcf4504b171483fa17fd63b4708f624
+# bb880d22a7464dbfbea2b3e7b34930c0
+msgid ":class:`django.views.generic.base.ContextMixin`"
+msgstr ""
+
+#: ../../ref/class-based-views/base.txt:115
+#: ../../ref/class-based-views/base.txt:173
 #: ../../ref/class-based-views/generic-date-based.txt:42
 #: ../../ref/class-based-views/generic-date-based.txt:109
 #: ../../ref/class-based-views/generic-date-based.txt:225
@@ -409,9 +416,9 @@ msgstr ""
 msgid "**Context**"
 msgstr ""
 
-#: ../../ref/class-based-views/base.txt:149
-# d2ac62d3e4db4311b172da3b9b4b8b2b
-msgid "``params``: The dictionary of keyword arguments captured from the URL pattern that served the view."
+#: ../../ref/class-based-views/base.txt:150
+# 4ee71bc1761a4dcbb7782191f2b17371
+msgid "Populated (through :class:`~django.views.generic.base.ContextMixin`) with the keyword arguments captured from the URL pattern that served the view."
 msgstr ""
 
 #: ../../ref/class-based-views/base.txt:153
@@ -3182,11 +3189,6 @@ msgstr ""
 #: ../../ref/class-based-views/mixins-multiple-object.txt:39
 # 47388684e8b14997b357c61ebbbcb0ef
 msgid "Note that ``page`` *must* be either a valid page number or the value ``last``; any other value for ``page`` will result in a 404 error."
-msgstr ""
-
-#: ../../ref/class-based-views/mixins-multiple-object.txt:44
-# 884727c060494fe18a07a6c8243c214c
-msgid ":class:`django.views.generic.base.ContextMixin`"
 msgstr ""
 
 #: ../../ref/class-based-views/mixins-multiple-object.txt:50
@@ -6732,8 +6734,13 @@ msgstr ""
 msgid "Returns the :attr:`~django.contrib.auth.models.User.first_name` plus the :attr:`~django.contrib.auth.models.User.last_name`, with a space in between."
 msgstr ""
 
-#: ../../ref/contrib/auth.txt:133
-# 0b47b4e9f5f6406b9acb10b8e15bf494
+#: ../../ref/contrib/auth.txt:135
+# 303992e073d94dfe9a3bca663acdbbe9
+msgid "Returns the :attr:`~django.contrib.auth.models.User.first_name`."
+msgstr ""
+
+#: ../../ref/contrib/auth.txt:139
+# 612cfd73eb304ef8b1848b4712d589fe
 msgid "Sets the user's password to the given raw string, taking care of the password hashing. Doesn't save the :class:`~django.contrib.auth.models.User` object."
 msgstr ""
 
@@ -10435,8 +10442,8 @@ msgid "``OSMGeoAdmin``"
 msgstr ""
 
 #: ../../ref/contrib/gis/admin.txt:69
-# 2593e45e50014c85bab4808ce3a3f552
-msgid "A subclass of :class:`GeoModelAdmin` that uses a spherical mercator projection with `OpenStreetMap <http://openstreetmap.org/>`_ street data tiles. See the :ref:`OSMGeoAdmin introduction <osmgeoadmin-intro>` in the tutorial for a usage example."
+# 17f03716fc8249af80cae5a6c0049847
+msgid "A subclass of :class:`GeoModelAdmin` that uses a spherical mercator projection with `OpenStreetMap <http://www.openstreetmap.org/>`_ street data tiles. See the :ref:`OSMGeoAdmin introduction <osmgeoadmin-intro>` in the tutorial for a usage example."
 msgstr ""
 
 #: ../../ref/contrib/gis/commands.txt:5
@@ -11842,13 +11849,23 @@ msgid "This is the default widget used by all GeoDjango form fields. ``template_
 msgstr ""
 
 #: ../../ref/contrib/gis/forms-api.txt:159
-# debc3cdb0b024afabba4f68609ce99cb
+# 127a115e43c341d79e7d877f9572ed62
+msgid "``OpenLayersWidget`` and :class:`OSMWidget` use the ``openlayers.js`` file hosted on the ``openlayers.org`` Web site. This works for basic usage during development, but isn't appropropriate for a production deployment as ``openlayers.org/api/`` has no guaranteed uptime and runs on a slow server. You are therefore advised to subclass these widgets in order to specify your own version of the ``openlayers.js`` file in the ``js`` property of the inner ``Media`` class (see :ref:`assets-as-a-static-definition`). You can host a copy of ``openlayers.js`` `tailored to your needs`_ on your own server or refer to a copy from a content-delivery network like http://cdnjs.com/. This will also allow you to serve the JavaScript file(s) using the ``https`` protocol if needed."
+msgstr ""
+
+#: ../../ref/contrib/gis/forms-api.txt:173
+# 74d82f246a554853a8ee5963d21d7182
 msgid "``OSMWidget``"
 msgstr ""
 
 #: ../../ref/contrib/gis/forms-api.txt:163
 # 1354f374b0ae4fbca808940a3f4793d1
 msgid "This widget uses an OpenStreetMap base layer (Mapnik) to display geographic objects on. ``template_name`` is ``gis/openlayers-osm.html``."
+msgstr ""
+
+#: ../../ref/contrib/gis/forms-api.txt:181
+# cf124646e44949b7b142f4aefc392a87
+msgid "The :class:`OpenLayersWidget` note about JavaScript file hosting above also applies here. See also this `FAQ answer`_ about ``https`` access to map tiles."
 msgstr ""
 
 #: ../../ref/contrib/gis/gdal.txt:5
@@ -14820,8 +14837,8 @@ msgid "Returns a `KML`__ (Keyhole Markup Language) representation of the geometr
 msgstr ""
 
 #: ../../ref/contrib/gis/geos.txt:313
-# 6d901595fe344d9b8ad4a25c6976fd27
-msgid "Returns an :class:`~django.contrib.gis.gdal.OGRGeometry` object correspondg to the GEOS geometry."
+# 82a0581077e54225ba139977572f759e
+msgid "Returns an :class:`~django.contrib.gis.gdal.OGRGeometry` object corresponding to the GEOS geometry."
 msgstr ""
 
 #: ../../ref/contrib/gis/geos.txt:324
@@ -15050,8 +15067,8 @@ msgid "Returns a :class:`~django.contrib.gis.gdal.SpatialReference` object corre
 msgstr ""
 
 #: ../../ref/contrib/gis/geos.txt:568
-# 452e690ebbe5410c8594266f363afc05
-msgid "Transforms the geometry according to the given coordinate transformation paramter (``ct``), which may be an integer SRID, spatial reference WKT string, a PROJ.4 string, a :class:`~django.contrib.gis.gdal.SpatialReference` object, or a :class:`~django.contrib.gis.gdal.CoordTransform` object. By default, the geometry is transformed in-place and nothing is returned. However if the ``clone`` keyword is set, then the geometry is not modified and a transformed clone of the geometry is returned instead."
+# 9cd2eafead974581b06300273cf96010
+msgid "Transforms the geometry according to the given coordinate transformation parameter (``ct``), which may be an integer SRID, spatial reference WKT string, a PROJ.4 string, a :class:`~django.contrib.gis.gdal.SpatialReference` object, or a :class:`~django.contrib.gis.gdal.CoordTransform` object. By default, the geometry is transformed in-place and nothing is returned. However if the ``clone`` keyword is set, then the geometry is not modified and a transformed clone of the geometry is returned instead."
 msgstr ""
 
 #: ../../ref/contrib/gis/geos.txt:582
@@ -17479,8 +17496,8 @@ msgid "Alias for :class:`Area` class."
 msgstr ""
 
 #: ../../ref/contrib/gis/measure.txt:178
-# befa9e7665194760a3c2705ddd7db4f5
-msgid "`Robert Coup <http://koordinates.com/>`_ is the initial author of the measure objects, and was inspired by Brian Beck's work in `geopy <http://code.google.com/p/geopy/>`_ and Geoff Biggs' PhD work on dimensioned units for robotics."
+# e19e34077e9b403abbf4b94e1087cc64
+msgid "`Robert Coup <https://koordinates.com/>`_ is the initial author of the measure objects, and was inspired by Brian Beck's work in `geopy <http://code.google.com/p/geopy/>`_ and Geoff Biggs' PhD work on dimensioned units for robotics."
 msgstr ""
 
 #: ../../ref/contrib/gis/model-api.txt:5
@@ -17714,8 +17731,8 @@ msgid "``GeoRSSSitemap``"
 msgstr ""
 
 #: ../../ref/contrib/gis/sitemaps.txt:26
-# cda057c51ca64a43bfc4206ef35bf417
-msgid "Google, Inc., `What is a Geo Sitemap? <http://support.google.com/webmasters/bin/answer.py?answer=94555>`_."
+# c0a8df9913f44c0192cec5d616ec666a
+msgid "Google, Inc., `What is a Geo Sitemap? <https://support.google.com/webmasters/answer/94555>`_."
 msgstr ""
 
 #: ../../ref/contrib/gis/testing.txt:3
@@ -19098,8 +19115,8 @@ msgid "Other add-ons"
 msgstr ""
 
 #: ../../ref/contrib/index.txt:179
-# e6603ea7f4fe4d789e95078e6f9e99d4
-msgid "If you have an idea for functionality to include in ``contrib``, let us know! Code it up, and post it to the `django-users mailing list`_."
+# c370d5e58d4442daa13744c02ed34c02
+msgid "If you have an idea for functionality to include in ``contrib``, let us know! Code it up, and post it to the |django-users| mailing list."
 msgstr ""
 
 #: ../../ref/contrib/messages.txt:3
@@ -21944,8 +21961,18 @@ msgstr ""
 msgid "This port is still in alpha. In particular, it doesn't support binary data, making it impossible to use :class:`django.db.models.BinaryField`."
 msgstr ""
 
-#: ../../ref/databases.txt:281
-# d3c38d06af73445284169f4195011479
+#: ../../ref/databases.txt:283
+# c8253009d1f646e2ac51a751ba84eb52
+msgid "Time zone definitions"
+msgstr ""
+
+#: ../../ref/databases.txt:285
+# a5fce9159b524f7f9882e2882fb25951
+msgid "If you plan on using Django's :doc:`timezone support </topics/i18n/timezones>`, use `mysql_tzinfo_to_sql`_ to load time zone tables into the MySQL database. This needs to be done just once for your MySQL server, not per database."
+msgstr ""
+
+#: ../../ref/databases.txt:292
+# fea5f5807a5142719f6d914c03cc4a89
 msgid "Creating your database"
 msgstr ""
 
@@ -22523,9 +22550,9 @@ msgstr ""
 msgid "In addition to the officially supported databases, there are backends provided by 3rd parties that allow you to use other databases with Django:"
 msgstr ""
 
-#: ../../ref/databases.txt:826
-# f3643c2b05ba4705890f0198b9f3096a
-msgid "`Sybase SQL Anywhere`_"
+#: ../../ref/databases.txt:837
+# 4de3278f2a654d1480868e352778a8b5
+msgid "`SAP SQL Anywhere`_"
 msgstr ""
 
 #: ../../ref/databases.txt:827
@@ -22533,9 +22560,9 @@ msgstr ""
 msgid "`IBM DB2`_"
 msgstr ""
 
-#: ../../ref/databases.txt:828
-# 748b278f7ff44c86bc678fe1a4ea982a
-msgid "`Microsoft SQL Server 2005`_"
+#: ../../ref/databases.txt:839
+# aa86423f4a024784a0bf8e2ef2d4b368
+msgid "`Microsoft SQL Server`_"
 msgstr ""
 
 #: ../../ref/databases.txt:829
@@ -23138,13 +23165,8 @@ msgstr ""
 msgid "Use the :djadminopt:`--locale` option (or its shorter version ``-l``) to specify the locale(s) to process."
 msgstr ""
 
-#: ../../ref/django-admin.txt:526
-# 442a5adfecd942f4a789dc1dafa72cbb
-msgid "You can also use commas to separate multiple locales::"
-msgstr ""
-
-#: ../../ref/django-admin.txt:537
-# 03bccc59d0ed40e2902d68d78f65ac48
+#: ../../ref/django-admin.txt:530
+# 98941ecde97342818481c241a5c61df5
 msgid "Use the ``--domain`` or ``-d`` option to change the domain of the messages files. Currently supported:"
 msgstr ""
 
@@ -25080,8 +25102,8 @@ msgid "The :class:`~django.core.files.storage.FileSystemStorage` class implement
 msgstr ""
 
 #: ../../ref/files/storage.txt:41
-# 9e6023689c70425e8a4138b04cf2a9e9
-msgid "The ``FileSystemStorage.delete()`` method will not raise raise an exception if the given file name does not exist."
+# c5f40acda16049f49278406fcfe2fbd7
+msgid "The ``FileSystemStorage.delete()`` method will not raise an exception if the given file name does not exist."
 msgstr ""
 
 #: ../../ref/files/storage.txt:45
@@ -25300,12 +25322,32 @@ msgid "Note that if a :class:`~django.forms.Field` defines :attr:`~Form.initial`
 msgstr ""
 
 #: ../../ref/forms/api.txt:169
-# e027dd852d3b4ba5860a100199341c00
-msgid "Accessing \"clean\" data"
+# fe5d844d504c40219b1e31fe49ef74f8
+msgid "Accessing the fields from the form"
 msgstr ""
 
 #: ../../ref/forms/api.txt:173
-# e3d8e5f5e9db4c3aa91cb4fb716d30ea
+# e7a078d2a878444caf9564bd755ac6ea
+msgid "You can access the fields of :class:`Form` instance from its ``fields`` attribute::"
+msgstr ""
+
+#: ../../ref/forms/api.txt:184
+# 4c41384254ab43baa4082807aa3fbb81
+msgid "You can alter the field of :class:`Form` instance to change the way it is presented in the form::"
+msgstr ""
+
+#: ../../ref/forms/api.txt:193
+# 25ad19639a1840f4af846208d9784391
+msgid "Beware not to alter the ``base_fields`` attribute because this modification will influence all subsequent ``ContactForm`` instances within the same Python process::"
+msgstr ""
+
+#: ../../ref/forms/api.txt:203
+# 2829dbb88a08454b8cbd06e5c1e6e451
+msgid "Accessing \"clean\" data"
+msgstr ""
+
+#: ../../ref/forms/api.txt:207
+# 49d89dcd5cda44c6b566e6f89b3970c6
 msgid "Each field in a :class:`Form` class is responsible not only for validating data, but also for \"cleaning\" it -- normalizing it to a consistent format. This is a nice feature, because it allows data for a particular field to be input in a variety of ways, always resulting in consistent output."
 msgstr ""
 
@@ -29007,9 +29049,11 @@ msgstr ""
 msgid "Optional. A storage object, which handles the storage and retrieval of your files. See :doc:`/topics/files` for details on how to provide this object."
 msgstr ""
 
-#: ../../ref/models/fields.txt:587
-# 050d5a6cd2fb45faa6c0c5b0a924d9f7
-msgid "The default form widget for this field is a :class:`~django.forms.FileInput`."
+#: ../../ref/models/fields.txt:588
+#: ../../ref/models/fields.txt:837
+# 5c37ecbbe3404c6780046f54fb30f48f
+# 6a8807f652f34568a9d3078cc9f90f86
+msgid "The default form widget for this field is a :class:`~django.forms.ClearableFileInput`."
 msgstr ""
 
 #: ../../ref/models/fields.txt:589
@@ -29421,14 +29465,14 @@ msgstr ""
 msgid ":class:`ForeignKey` accepts an extra set of arguments -- all optional -- that define the details of how the relation works."
 msgstr ""
 
-#: ../../ref/models/fields.txt:1059
-# d4f814d987014281ba4f90823c3f5078
-msgid "A dictionary of lookup arguments and values (see :doc:`/topics/db/queries`) that limit the available admin or ModelForm choices for this object. Use this with functions from the Python ``datetime`` module to limit choices of objects by date. For example::"
+#: ../../ref/models/fields.txt:1066
+# 53a1afeca8ae4d0fa145be15b37ee131
+msgid "A dictionary of lookup arguments and values (see :doc:`/topics/db/queries`) that limit the available admin or :class:`ModelForm <django.forms.ModelForm>` choices for this object. For example::"
 msgstr ""
 
-#: ../../ref/models/fields.txt:1066
-# 81c8e0963aa9454cb9de38d4e925891f
-msgid "only allows the choice of related objects with a ``pub_date`` before the current date to be chosen."
+#: ../../ref/models/fields.txt:1072
+# 1306a3f7d66a4ae5b00831c9eea31cbd
+msgid "causes the corresponding field on the ``ModelForm`` to list only ``Users`` that have ``is_staff=True``."
 msgstr ""
 
 #: ../../ref/models/fields.txt:1069
@@ -31857,8 +31901,8 @@ msgid "If you are using MySQL, be sure to use the ``READ COMMITTED`` isolation l
 msgstr ""
 
 #: ../../ref/models/querysets.txt:1461
-# 19e3ba673d524311a396e288baa6aef1
-msgid "Finally, a word on using ``get_or_create()`` in Django views: please make sure to use it only in ``POST`` requests unless you have a good reason not to ``GET`` requests shouldn't have any effect on data; use ``POST`` whenever a request to a page has a side effect on your data. For more, see `Safe methods`_ in the HTTP spec."
+# 9252247072be49bc95eba0fe88563854
+msgid "Finally, a word on using ``get_or_create()`` in Django views. Please make sure to use it only in ``POST`` requests unless you have a good reason not to. ``GET`` requests shouldn't have any effect on data. Instead, use ``POST`` whenever a request to a page has a side effect on your data. For more, see `Safe methods`_ in the HTTP spec."
 msgstr ""
 
 #: ../../ref/models/querysets.txt:1471
@@ -31911,8 +31955,13 @@ msgstr ""
 msgid "If the model's primary key is an :class:`~django.db.models.AutoField` it does not retrieve and set the primary key attribute, as ``save()`` does."
 msgstr ""
 
-#: ../../ref/models/querysets.txt:1527
-# 3724a4721c654ac2970baf800eb53cd2
+#: ../../ref/models/querysets.txt:1526
+# c6ada61f916544a0bff62fa08ef91a10
+msgid "It does not work with many-to-many relationships."
+msgstr ""
+
+#: ../../ref/models/querysets.txt:1528
+# f5db29f26de04cfabd3cebddc4d84df5
 msgid "The ``batch_size`` parameter controls how many objects are created in single query. The default is to create all objects in one batch, except for SQLite where the default is such that at maximum 999 variables per query is used."
 msgstr ""
 
@@ -35649,8 +35698,13 @@ msgstr ""
 msgid "Example: ``\"http://media.example.com/\"``"
 msgstr ""
 
-#: ../../ref/settings.txt:1455
-# 0b5a4a2ab05c436b8829a31c2b4241c8
+#: ../../ref/settings.txt:1445
+# 22b355a03c0d4adfba296de22b4ca9ba
+msgid "There are security risks if you are accepting uploaded content from untrusted users! See the security guide's topic on :ref:`user-uploaded-content-security` for mitigation details."
+msgstr ""
+
+#: ../../ref/settings.txt:1451
+# 8ee8678a1726454aa6ff2528086cde4b
 msgid ":setting:`MEDIA_URL` and :setting:`STATIC_URL` must have different values. See :setting:`MEDIA_ROOT` for more details."
 msgstr ""
 
@@ -36925,14 +36979,9 @@ msgstr ""
 msgid "In case you want to refer to files in one of the locations with an additional namespace, you can **optionally** provide a prefix as ``(prefix, path)`` tuples, e.g.::"
 msgstr ""
 
-#: ../../ref/settings.txt:2599
-# 3758f904661647539569741fcfddfd07
-msgid "Example:"
-msgstr ""
-
-#: ../../ref/settings.txt:2601
-# cc2d6bb480694cfd9c9855dd2a5ff707
-msgid "Assuming you have :setting:`STATIC_URL` set ``'/static/'``, the :djadmin:`collectstatic` management command would collect the \"stats\" files in a ``'downloads'`` subdirectory of :setting:`STATIC_ROOT`."
+#: ../../ref/settings.txt:2595
+# e99ea96b17464411af49bceb96bd0e7b
+msgid "For example, assuming you have :setting:`STATIC_URL` set to ``'/static/'``, the :djadmin:`collectstatic` management command would collect the \"stats\" files in a ``'downloads'`` subdirectory of :setting:`STATIC_ROOT`."
 msgstr ""
 
 #: ../../ref/settings.txt:2605
@@ -39464,9 +39513,9 @@ msgstr ""
 msgid "context_instance"
 msgstr ""
 
-#: ../../ref/templates/api.txt:767
-# 328e05dff31a487796c2223896c8dc38
-msgid "An instance of ``Context`` or a subclass (e.g., an instance of ``RequestContext``) to use as the template's context. This can also be passed as the third positional argument."
+#: ../../ref/templates/api.txt:769
+# 96e777c625204675920fbbc27c13fe7c
+msgid "An instance of :class:`~django.template.Context` or a subclass (e.g., an instance of :class:`~django.template.RequestContext`) to use as the template's context. This can also be passed as the third positional argument."
 msgstr ""
 
 #: ../../ref/templates/api.txt:771
@@ -40624,8 +40673,18 @@ msgid "url"
 msgstr ""
 
 #: ../../ref/templates/builtins.txt:999
-# b98ec47394fd4ef7a8b3c48c7f44dac5
-msgid "Returns an absolute path reference (a URL without the domain name) matching a given view function and optional parameters. This is a way to output links without violating the DRY principle by having to hard-code URLs in your templates::"
+# 7b03b9a3541245c18c750a05798e0311
+msgid "Returns an absolute path reference (a URL without the domain name) matching a given view function and optional parameters."
+msgstr ""
+
+#: ../../ref/templates/builtins.txt:1004
+# 0e9ba63c50ff43e2b83e4a48c6b873eb
+msgid "Any special characters in the resulting path will be encoded using :func:`~django.utils.encoding.iri_to_uri`."
+msgstr ""
+
+#: ../../ref/templates/builtins.txt:1007
+# 618ec138b36446b1af690fec4a595bb3
+msgid "This is a way to output links without violating the DRY principle by having to hard-code URLs in your templates::"
 msgstr ""
 
 #: ../../ref/templates/builtins.txt:1006
@@ -40673,13 +40732,18 @@ msgstr ""
 msgid "If you'd like to retrieve a URL without displaying it, you can use a slightly different call::"
 msgstr ""
 
-#: ../../ref/templates/builtins.txt:1055
-# ebba59baf7ba4d0684a79a220738f09c
-msgid "This ``{% url ... as var %}`` syntax will *not* cause an error if the view is missing. In practice you'll use this to link to views that are optional::"
+#: ../../ref/templates/builtins.txt:1060
+# 726cde5c529d401ba8178c6428322c99
+msgid "The scope of the variable created by the  ``as var`` syntax is the ``{% block %}`` in which the ``{% url %}`` tag appears."
 msgstr ""
 
 #: ../../ref/templates/builtins.txt:1063
-# 7fdef9a6b37c4ae2a14f2b0eddf9e8e6
+# 68ad5a329df04b5894547931da5cd62d
+msgid "This ``{% url ... as var %}`` syntax will *not* cause an error if the view is missing. In practice you'll use this to link to views that are optional::"
+msgstr ""
+
+#: ../../ref/templates/builtins.txt:1071
+# e48487e9562b475a8a9664257762f0c1
 msgid "If you'd like to retrieve a namespaced URL, specify the fully qualified name::"
 msgstr ""
 
@@ -42809,9 +42873,9 @@ msgstr ""
 msgid "get_static_prefix"
 msgstr ""
 
-#: ../../ref/templates/builtins.txt:2457
-# 85da630507274d058a3ce9816e2e9145
-msgid "If you're not using :class:`~django.template.RequestContext`, or if you need more control over exactly where and how :setting:`STATIC_URL` is injected into the template, you can use the :ttag:`get_static_prefix` template tag instead::"
+#: ../../ref/templates/builtins.txt:2465
+# dff10d2264364f059dd9337825ae41b4
+msgid "You should prefer the :ttag:`static` template tag, but if you need more control over exactly where and how :setting:`STATIC_URL` is injected into the template, you can use the :ttag:`get_static_prefix` template tag::"
 msgstr ""
 
 #: ../../ref/templates/builtins.txt:2465

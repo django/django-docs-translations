@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-02 15:07+0100\n"
+"POT-Creation-Date: 2014-01-25 16:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13875,9 +13875,9 @@ msgstr ""
 msgid ":class:`~django.db.models.GenericIPAddressField` will now only allow ``blank`` values if ``null`` values are also allowed. Creating a ``GenericIPAddressField`` where ``blank`` is allowed but ``null`` is not will trigger a model validation error because ``blank`` values are always stored as ``null``. Previously, storing a ``blank`` value in a field which did not allow ``null`` would cause a database exception at runtime."
 msgstr ""
 
-#: ../../releases/1.6.txt:863
-# 5adf9c06b1004b3e87d5319801bee726
-msgid "If a :class:`~django.core.urlresolvers.NoReverseMatch` exception is raised from a method when rendering a template, it is not silenced. For example, ``{{ obj.view_href }}`` will cause template rendering to fail if ``view_href()`` raises ``NoReverseMatch``. There is no change to the ``{% url %}`` tag, it causes template rendering to fail like always when ``NoReverseMatch`` is raised."
+#: ../../releases/1.6.txt:903
+# 3df588a767f5492297ac995301fe83f3
+msgid "If a :class:`~django.core.urlresolvers.NoReverseMatch` exception is raised from a method when rendering a template, it is not silenced. For example, ``{{ obj.view_href }}`` will cause template rendering to fail if ``view_href()`` raises ``NoReverseMatch``. There is no change to the :ttag:`{% url %}<url>` tag, it causes template rendering to fail like always when ``NoReverseMatch`` is raised."
 msgstr ""
 
 #: ../../releases/1.6.txt:870
@@ -14196,18 +14196,13 @@ msgid "Django 1.6.1 release notes"
 msgstr ""
 
 #: ../../releases/1.6.1.txt:5
-# 275d3e64858b477d8132484c631cf1c0
-msgid "*Under development*"
+# d37cacf44a7e48b2b78737a8056a6a31
+msgid "*December 12, 2013*"
 msgstr ""
 
 #: ../../releases/1.6.1.txt:7
-# b14f90dc56b9428d822dadd0fc370513
-msgid "This is Django 1.6.1, a bugfix release for Django 1.6."
-msgstr ""
-
-#: ../../releases/1.6.1.txt:9
-# 109bc3015fa046a28a3b45b30af48718
-msgid "..."
+# a1ef965c78bd437ab1f0a0259ef0c776
+msgid "This is Django 1.6.1, a bugfix release for Django 1.6. In addition to the bug fixes listed below, translations submitted since the 1.6 release are also included."
 msgstr ""
 
 #: ../../releases/1.6.1.txt:12
@@ -14236,18 +14231,23 @@ msgid "Fixed :class:`~django.contrib.auth.backends.ModelBackend` raising ``Unbou
 msgstr ""
 
 #: ../../releases/1.6.1.txt:23
-# 87ba0c0e1b5b451e85711756dcb646db
-msgid "Fixed a regression that prevented editable ``GenericRelation`` subclasses from working in ``ModelForms``."
+# 0a6176286fe44c949ec3b25984b4fc69
+msgid "Fixed a regression that prevented editable ``GenericRelation`` subclasses from working in ``ModelForms`` (#21428)."
 msgstr ""
 
 #: ../../releases/1.6.1.txt:25
-# e200f95f838142778501a7ee1f4b12c1
+# 867e656b1fc5429b93361fabd6e72b89
+msgid "Added missing ``to_python`` method for ``ModelMultipleChoiceField`` which is required in Django 1.6 to properly detect changes from initial values (#21568)."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:28
+# b66b8cc8a8ef45dc8e9f96e32f16b374
 msgid "Fixed ``django.contrib.humanize`` translations where the unicode sequence for the non-breaking space was returned verbatim (#21415)."
 msgstr ""
 
-#: ../../releases/1.6.1.txt:27
-# 82bc3e94299547cfb4d58d764c36d585
-msgid "Fixed :djadmin:`loaddata` error when fixture file name contained any dots non related to file extensions (#21457)."
+#: ../../releases/1.6.1.txt:30
+# 1e833f00f3ec42cbb99828c00803bf25
+msgid "Fixed :djadmin:`loaddata` error when fixture file name contained any dots not related to file extensions (#21457) or when fixture path was relative but located in a subdirectory (#21551)."
 msgstr ""
 
 #: ../../releases/1.6.1.txt:29
@@ -14258,6 +14258,96 @@ msgstr ""
 #: ../../releases/1.6.1.txt:31
 # c31206fce8d2424396fff089fdd84379
 msgid "Fixed a regression where custom querysets for foreign keys were overwritten if ``ModelAdmin`` had ordering set (#21405)."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:37
+# e2f3295a39f04cf28ae374c04d7c7de1
+msgid "Removed mention of a feature in the ``--locale``/``-l`` option of the ``makemessages`` and ``compilemessages`` commands that never worked as promised: Support of multiple locale names separated by commas. It's still possible to specify multiple locales in one run by using the option multiple times (#21488, #17181)."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:42
+# 56f8526434bc493b8dd1412ee2d67a60
+msgid "Fixed a regression that unnecessarily triggered settings configuration when importing ``get_wsgi_application`` (#21486)."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:44
+# 1d8117e3868d4add9842961f3bd49dd0
+msgid "Fixed test client ``logout()`` method when using the cookie-based session backend (#21448)."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:46
+# 98acb5e7f0e3452b919f5bb59171b600
+msgid "Fixed a crash when a ``GeometryField`` uses a non-geometric widget (#21496)."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:47
+# 457d003df58d4a14bc4d2d69820b3ba1
+msgid "Fixed password hash upgrade when changing the iteration count (#21535)."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:48
+# 72c617eb955747f8b9ee8ecd6a9b80be
+msgid "Fixed a bug in the debug view when the URLconf only contains one element (#21530)."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:50
+# 5a976932a63c43db9c6bdf7ed4878030
+msgid "Re-added missing search result count and reset link in changelist admin view (#21510)."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:52
+# 167613666de84692a4b4bd32366e1509
+msgid "The current language is no longer saved to the session by ``LocaleMiddleware`` on every response, but rather only after a logout (#21473)."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:54
+# 47b73737418b4f898f9a2f99b68076f0
+msgid "Fixed a crash when executing ``runserver`` on non-English systems and when the formatted date in its output contained non-ASCII characters (#21358)."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:56
+# aa54f0f948d9467db47a70e8f2ba1192
+msgid "Fixed a crash in the debug view after an exception occurred on Python ≥ 3.3 (#21443)."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:58
+# 546ccf65e53a4cbbb7fabe9fc5e122f2
+msgid "Fixed a crash in :class:`~django.db.models.ImageField` on some platforms (Homebrew and RHEL6 reported) (#21355)."
+msgstr ""
+
+#: ../../releases/1.6.1.txt:60
+# e176dc4cecbb44a2b37f3ba6307e3b44
+msgid "Fixed a regression when using generic relations in ``ModelAdmin.list_filter`` (#21431)."
+msgstr ""
+
+#: ../../releases/1.6.2.txt:3
+# b14a0dcf393f4fba98d8b7f1c230d384
+msgid "Django 1.6.2 release notes"
+msgstr ""
+
+#: ../../releases/1.6.2.txt:5
+# 76029493500a4d2a869873bfd5ce6228
+msgid "*Under development*"
+msgstr ""
+
+#: ../../releases/1.6.2.txt:7
+# a230f1436659445bb23bb650538e8938
+msgid "This is Django 1.6.2, a bugfix release for Django 1.6."
+msgstr ""
+
+#: ../../releases/1.6.2.txt:12
+# 7e478899ce034166b3552c7dbe0c0176
+msgid "Prevented the base geometry object of a prepared geometry to be garbage collected, which could lead to crash Django (#21662)."
+msgstr ""
+
+#: ../../releases/1.6.2.txt:15
+# b756f158e4444772961752c8f91ace64
+msgid "Fixed a crash when executing the :djadmin:`changepassword` command when the user object representation contained non-ASCII characters (#21627)."
+msgstr ""
+
+#: ../../releases/1.6.2.txt:18
+# be848929741047f88db5cc3739130d1a
+msgid "The :djadmin:`collectstatic` command will raise an error rather than default to using the current working directory if :setting:`STATIC_ROOT` is not set. Combined with the ``--clear`` option, the previous behavior could wipe anything below the current working directory."
 msgstr ""
 
 #: ../../releases/index.txt:3
