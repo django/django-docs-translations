@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Christophe kryskool <christophe.chauvet@gmail.com>, 2013
-# claudep <claude@2xlibre.net>, 2013
+# claudep <claude@2xlibre.net>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-23 14:56+0100\n"
-"PO-Revision-Date: 2013-12-08 20:50+0000\n"
+"POT-Creation-Date: 2014-01-25 16:31+0100\n"
+"PO-Revision-Date: 2014-01-27 13:00+0000\n"
 "Last-Translator: claudep <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -350,6 +350,13 @@ msgstr "Cette vue hérite des méthodes et des attributs des vues suivantes :"
 msgid ":class:`django.views.generic.base.TemplateResponseMixin`"
 msgstr ":class:`django.views.generic.base.TemplateResponseMixin`"
 
+# 4bcf4504b171483fa17fd63b4708f624
+# bb880d22a7464dbfbea2b3e7b34930c0
+#: ../../ref/class-based-views/base.txt:114
+#: ../../ref/class-based-views/mixins-multiple-object.txt:44
+msgid ":class:`django.views.generic.base.ContextMixin`"
+msgstr ":class:`django.views.generic.base.ContextMixin`"
+
 # 4166c1151abe4a49b442d66c44a5b0ea
 # bc93b83a291e410fa984151f970de4fa
 # 597f0cfe71ec4660bb8fc1f6cff173b2
@@ -367,8 +374,8 @@ msgstr ":class:`django.views.generic.base.TemplateResponseMixin`"
 # 9dd61bca5e1445a0bb8705f812a0aa85
 # 2f0593580d52485aaaca61c21e47873b
 # 1d4c3df7059648eaa09ce12b4dbc4323
-#: ../../ref/class-based-views/base.txt:114
-#: ../../ref/class-based-views/base.txt:172
+#: ../../ref/class-based-views/base.txt:115
+#: ../../ref/class-based-views/base.txt:173
 #: ../../ref/class-based-views/generic-date-based.txt:42
 #: ../../ref/class-based-views/generic-date-based.txt:109
 #: ../../ref/class-based-views/generic-date-based.txt:225
@@ -437,24 +444,24 @@ msgstr ":meth:`~django.views.generic.base.ContextMixin.get_context_data()`"
 msgid "**Context**"
 msgstr "**Contexte**"
 
-# d2ac62d3e4db4311b172da3b9b4b8b2b
-#: ../../ref/class-based-views/base.txt:149
+# 4ee71bc1761a4dcbb7782191f2b17371
+#: ../../ref/class-based-views/base.txt:150
 msgid ""
-"``params``: The dictionary of keyword arguments captured from the URL "
-"pattern that served the view."
-msgstr "``params``: le dictionnaire de paramètres nommés capturés par le motif d'URL qui a servi à appeler cette vue."
+"Populated (through :class:`~django.views.generic.base.ContextMixin`) with "
+"the keyword arguments captured from the URL pattern that served the view."
+msgstr ""
 
 # 87469abcc3bd4aeab08ea1c23b40e150
 # 1393f9eafaae4ce4a8ae9bb2a308c69c
 #: ../../ref/class-based-views/base.txt:153
 #: ../../ref/class-based-views/flattened-index.txt:51
 msgid "RedirectView"
-msgstr ""
+msgstr "RedirectView"
 
 # a30f9814ef4247c4bc8c3e9a6ea9a6be
 #: ../../ref/class-based-views/base.txt:157
 msgid "Redirects to a given URL."
-msgstr "Redirection vers l'URL donnée"
+msgstr "Redirection vers l'URL donnée."
 
 # e7f930892d6f44008fa9726b8fa05bcb
 #: ../../ref/class-based-views/base.txt:159
@@ -464,31 +471,31 @@ msgid ""
 "interpolation is *always* done (even if no arguments are passed in), any "
 "``\"%\"`` characters in the URL must be written as ``\"%%\"`` so that Python"
 " will convert them to a single percent sign on output."
-msgstr ""
+msgstr "L'URL donnée peut contenir des chaînes de format de type dictionnaire, qui seront interpolées par les paramètres capturés dans l'URL. Comme l'interpolation par mot-clé a *toujours* lieu (même si aucun paramètre n'est capturé), tout caractère ``\"%\"`` dans l'URL doit être doublé (``\"%%\"``) de sorte que Python convertit ces séquences en caractère pourcent unique lors de l'affichage."
 
 # af07ca39441f4a60bb48e0845516eaeb
 #: ../../ref/class-based-views/base.txt:165
 msgid ""
 "If the given URL is ``None``, Django will return an ``HttpResponseGone`` "
 "(410)."
-msgstr ""
+msgstr "Si l'URL indiquée vaut ``None``, Django renvoie une réponse ``HttpResponseGone`` (410)."
 
 # c79844ab40ec45a3b1827780185050a9
 #: ../../ref/class-based-views/base.txt:170
 msgid "This view inherits methods and attributes from the following view:"
-msgstr ""
+msgstr "Cette vue hérite des méthodes et des attributs de la vue suivante :"
 
 # 02f644c405bf42879f618cf44b6b0cd7
 #: ../../ref/class-based-views/base.txt:178
 msgid ":meth:`get_redirect_url()`"
-msgstr ""
+msgstr ":meth:`get_redirect_url()`"
 
 # 1893953d25d847aaaf3e0af48c0da310
 #: ../../ref/class-based-views/base.txt:216
 msgid ""
 "The URL to redirect to, as a string. Or ``None`` to raise a 410 (Gone) HTTP "
 "error."
-msgstr ""
+msgstr "L'URL vers laquelle rediriger, sous forme textuelle. Ou ``None`` pour générer une erreur HTTP 410 (Gone)."
 
 # 205c1ddb92284133858e98f859c7d7cf
 #: ../../ref/class-based-views/base.txt:223
@@ -504,7 +511,7 @@ msgid ""
 "HTTP status code returned. If ``True``, then the redirect will use status "
 "code 301. If ``False``, then the redirect will use status code 302. By "
 "default, ``permanent`` is ``True``."
-msgstr ""
+msgstr "Indique si la redirection doit être permanente. La seule différence est le code de statut HTTP qui est renvoyé. Si ``True``, la redirection produit un code de statut 301. Si ``False``, la redirection produit un code de statut 302. Par défaut, ``permanent`` vaut ``True``."
 
 # 41555e396b0b46c8a719a08a612d427d
 #: ../../ref/class-based-views/base.txt:235
@@ -512,12 +519,12 @@ msgid ""
 "Whether to pass along the GET query string to the new location. If ``True``,"
 " then the query string is appended to the URL. If ``False``, then the query "
 "string is discarded. By default, ``query_string`` is ``False``."
-msgstr ""
+msgstr "Indique s'il faut transférer la chaîne de requête GET vers le nouvel emplacement. Si ``True``, la chaîne de requête est ajoutée à l'URL. Si ``False``, la chaîne de requête n'est pas considérée. Par défaut, ``query_string`` vaut ``False``."
 
 # 82514fd4fc37446fa0ed3732aa95381e
 #: ../../ref/class-based-views/base.txt:244
 msgid "Constructs the target URL for redirection."
-msgstr ""
+msgstr "Construit l'URL cible de la redirection."
 
 # 1d88b94928f34ac99dc0d0f9efdaaa44
 #: ../../ref/class-based-views/base.txt:248
@@ -551,7 +558,7 @@ msgstr ""
 # e2938ead06df4d9885282c66bdfcf9b9
 #: ../../ref/class-based-views/flattened-index.txt:3
 msgid "Class-based generic views - flattened index"
-msgstr ""
+msgstr "Vues génériques fondées sur les classes - index général"
 
 # c91576c45e2c4a15a7e3bdfffd81e5f4
 #: ../../ref/class-based-views/flattened-index.txt:5
@@ -561,7 +568,7 @@ msgid ""
 "from the class tree are represented under that view. For the reference "
 "documentation organized by the class which defines the behavior, see :doc"
 ":`Class-based views</ref/class-based-views/index>`"
-msgstr ""
+msgstr "Cet index présente une autre organisation de la documentation de référence des vues fondées sur les classes. Pour chaque vue, les attributs et méthodes réels de l'arborescence de classe sont représentés sous la vue. Pour consulter une documentation de référence organisée par la classe définissant le comportement, voir :doc:`Vues fondées sur les classes</ref/class-based-views/index>`."
 
 # ac933933caa9466da642563ac1f3f0e2
 #: ../../ref/class-based-views/flattened-index.txt:12
@@ -601,7 +608,7 @@ msgstr "Vues génériques simples"
 #: ../../ref/class-based-views/flattened-index.txt:498
 #: ../../ref/class-based-views/flattened-index.txt:544
 msgid "**Attributes** (with optional accessor):"
-msgstr ""
+msgstr "**Attributs** (avec accesseur facultatif) :"
 
 # b12e4cdad24d4dc4b6b930e0bb847093
 # 07702a4deb974cd7b13eda83de3f35c8
@@ -636,7 +643,7 @@ msgstr ""
 #: ../../ref/class-based-views/flattened-index.txt:507
 #: ../../ref/class-based-views/flattened-index.txt:552
 msgid ":attr:`~django.views.generic.base.View.http_method_names`"
-msgstr ""
+msgstr ":attr:`~django.views.generic.base.View.http_method_names`"
 
 # 5d91f7895dfb401685c83d822fbd850b
 # 1c9cd09943e34c3cbbfe65d812bff468
@@ -671,7 +678,7 @@ msgstr ""
 #: ../../ref/class-based-views/flattened-index.txt:523
 #: ../../ref/class-based-views/flattened-index.txt:569
 msgid ":meth:`~django.views.generic.base.View.as_view`"
-msgstr ""
+msgstr ":meth:`~django.views.generic.base.View.as_view`"
 
 # 4393a09e2edb401fa18eafea6da57a30
 # 9e4ced7ede49445fa684d675113638a2
@@ -706,7 +713,7 @@ msgstr ""
 #: ../../ref/class-based-views/flattened-index.txt:524
 #: ../../ref/class-based-views/flattened-index.txt:570
 msgid ":meth:`~django.views.generic.base.View.dispatch`"
-msgstr ""
+msgstr ":meth:`~django.views.generic.base.View.dispatch`"
 
 # 500ce37ed7fb4cebb9de22614ad9fdd5
 # e2e9c251c9994712bf93926a0052efd7
@@ -739,7 +746,7 @@ msgstr ""
 #: ../../ref/class-based-views/flattened-index.txt:535
 #: ../../ref/class-based-views/flattened-index.txt:578
 msgid "``head()``"
-msgstr ""
+msgstr "``head()``"
 
 # 6da4845c2ad247569a95af146e6d92f8
 # a6d7412610c243fd9e22496d1b426196
@@ -774,7 +781,7 @@ msgstr ""
 #: ../../ref/class-based-views/flattened-index.txt:536
 #: ../../ref/class-based-views/flattened-index.txt:579
 msgid ":meth:`~django.views.generic.base.View.http_method_not_allowed`"
-msgstr ""
+msgstr ":meth:`~django.views.generic.base.View.http_method_not_allowed`"
 
 # 75046d4563774a96b880751f9e880700
 # ad30ebba596d4ff0834e5801e3af2f7d
@@ -805,7 +812,7 @@ msgstr ""
 #: ../../ref/class-based-views/flattened-index.txt:502
 #: ../../ref/class-based-views/flattened-index.txt:547
 msgid ":attr:`~django.views.generic.base.TemplateResponseMixin.content_type`"
-msgstr ""
+msgstr ":attr:`~django.views.generic.base.TemplateResponseMixin.content_type`"
 
 # 352696c55efa42d99058496bc53324f9
 # 13b2ec4a969a41fcbede8866d504e545
@@ -838,7 +845,7 @@ msgstr ""
 msgid ""
 ":attr:`~django.views.generic.base.TemplateResponseMixin.response_class` "
 "[:meth:`~django.views.generic.base.TemplateResponseMixin.render_to_response`]"
-msgstr ""
+msgstr ":attr:`~django.views.generic.base.TemplateResponseMixin.response_class` [:meth:`~django.views.generic.base.TemplateResponseMixin.render_to_response`]"
 
 # 71f0e41f0c8140f8955e75db713550c9
 # 6f0be5e3ee09459ab7ebca9546653cc2
@@ -871,7 +878,7 @@ msgstr ""
 msgid ""
 ":attr:`~django.views.generic.base.TemplateResponseMixin.template_name` "
 "[:meth:`~django.views.generic.base.TemplateResponseMixin.get_template_names`]"
-msgstr ""
+msgstr ":attr:`~django.views.generic.base.TemplateResponseMixin.template_name` [:meth:`~django.views.generic.base.TemplateResponseMixin.get_template_names`]"
 
 # 7b3ffbbec7574ce7ae1b5796880e1821
 # ca97ce05d9694f089172e262c5002972
@@ -900,12 +907,12 @@ msgstr ""
 #: ../../ref/class-based-views/generic-display.txt:36
 #: ../../ref/class-based-views/generic-display.txt:104
 msgid "``get()``"
-msgstr ""
+msgstr "``get()``"
 
 # 0f793ecb242049ef814b708875d20b47
 #: ../../ref/class-based-views/flattened-index.txt:45
 msgid ":meth:`~django.views.generic.base.ContextMixin.get_context_data`"
-msgstr ""
+msgstr ":meth:`~django.views.generic.base.ContextMixin.get_context_data`"
 
 # 7863edfebf1a46978152784af3fb8bc8
 # b517a159f46043279513ba00ec4f474e
@@ -935,22 +942,22 @@ msgstr ""
 #: ../../ref/class-based-views/flattened-index.txt:580
 msgid ""
 ":meth:`~django.views.generic.base.TemplateResponseMixin.render_to_response`"
-msgstr ""
+msgstr ":meth:`~django.views.generic.base.TemplateResponseMixin.render_to_response`"
 
 # 1f164c1d4448434ebd069569323accc8
 #: ../../ref/class-based-views/flattened-index.txt:57
 msgid ":attr:`~django.views.generic.base.RedirectView.permanent`"
-msgstr ""
+msgstr ":attr:`~django.views.generic.base.RedirectView.permanent`"
 
 # 3c57f57f86c142e883f7eca513942726
 #: ../../ref/class-based-views/flattened-index.txt:58
 msgid ":attr:`~django.views.generic.base.RedirectView.query_string`"
-msgstr ""
+msgstr ":attr:`~django.views.generic.base.RedirectView.query_string`"
 
 # 3e118ba087804308ab811f8aac1def71
 #: ../../ref/class-based-views/flattened-index.txt:59
 msgid ":attr:`~django.views.generic.base.RedirectView.url`"
-msgstr ""
+msgstr ":attr:`~django.views.generic.base.RedirectView.url`"
 
 # 27c2dd74ece64a01b827f527315f12b1
 # 74511a1723e9426ab7ef35b8bb8c5a5a
@@ -962,7 +969,7 @@ msgstr "``delete()``"
 # bfbcf14be191429b939b2302e0491ff7
 #: ../../ref/class-based-views/flattened-index.txt:67
 msgid ":meth:`~django.views.generic.base.RedirectView.get_redirect_url`"
-msgstr ""
+msgstr ":meth:`~django.views.generic.base.RedirectView.get_redirect_url`"
 
 # ca98059ee987495c99857c5564df7c96
 #: ../../ref/class-based-views/flattened-index.txt:70
@@ -988,14 +995,14 @@ msgstr "``put()``"
 # 3d7b05e98c324adfbab5ce13364f2ea0
 #: ../../ref/class-based-views/flattened-index.txt:75
 msgid "Detail Views"
-msgstr ""
+msgstr "Vues de détail"
 
 # 48a0f3f1639e4fdf9ae017666510503d
 # 6830d05bc32f4620b9afeb53fe2bed1e
 #: ../../ref/class-based-views/flattened-index.txt:78
 #: ../../ref/class-based-views/generic-display.txt:9
 msgid "DetailView"
-msgstr ""
+msgstr "DetailView"
 
 # 4b8cc0789f304cd1bd750492eabb1ece
 # 94c271dc313744e1a8f4c81a6819d055
@@ -1066,7 +1073,7 @@ msgstr ":attr:`~django.views.generic.detail.SingleObjectMixin.queryset` [:meth:`
 msgid ""
 ":attr:`~django.views.generic.detail.SingleObjectMixin.slug_field` "
 "[:meth:`~django.views.generic.detail.SingleObjectMixin.get_slug_field`]"
-msgstr ""
+msgstr ":attr:`~django.views.generic.detail.SingleObjectMixin.slug_field` [:meth:`~django.views.generic.detail.SingleObjectMixin.get_slug_field`]"
 
 # c3e4038247194230be78a23ed0dd62b7
 # 7827d6806e98475c9dd7dcf1f0467564
@@ -1079,7 +1086,7 @@ msgstr ""
 #: ../../ref/class-based-views/flattened-index.txt:269
 #: ../../ref/class-based-views/flattened-index.txt:560
 msgid ":attr:`~django.views.generic.detail.SingleObjectMixin.slug_url_kwarg`"
-msgstr ""
+msgstr ":attr:`~django.views.generic.detail.SingleObjectMixin.slug_url_kwarg`"
 
 # 4c6940f50fae47b8bc38d87e0548ba0c
 # 63084cdd4879457c8d8a5d55984d7b4d
@@ -1107,7 +1114,7 @@ msgstr ":attr:`~django.views.generic.detail.SingleObjectTemplateResponseMixin.te
 #: ../../ref/class-based-views/flattened-index.txt:563
 msgid ""
 ":attr:`~django.views.generic.detail.SingleObjectTemplateResponseMixin.template_name_suffix`"
-msgstr ""
+msgstr ":attr:`~django.views.generic.detail.SingleObjectTemplateResponseMixin.template_name_suffix`"
 
 # 106d194f7bb242778d3d4e336e2d05b3
 # 48d5aa80d82a41a9b0edf2834dc731eb
@@ -1135,7 +1142,7 @@ msgstr ":meth:`~django.views.generic.detail.SingleObjectMixin.get_object`"
 # 270b39109e9747e3907d5cf9b553def3
 #: ../../ref/class-based-views/flattened-index.txt:108
 msgid "List Views"
-msgstr "Liste des vues"
+msgstr "Vues de liste"
 
 # 53b5be2fca944f7f8d98db5f1638d5d9
 # 13185ec98010408d856060b15f9886be
@@ -1352,7 +1359,7 @@ msgstr ":meth:`~django.views.generic.list.MultipleObjectMixin.paginate_queryset`
 # 04c6c8e4022e45fcb637ec7432222285
 #: ../../ref/class-based-views/flattened-index.txt:142
 msgid "Editing views"
-msgstr "Edition des vues"
+msgstr "Vues d'édition"
 
 # bd030b455894470f8d1e1befa355ca1c
 # 9b78f5eb613f4c748e2f8dfdf2de256e
@@ -1511,7 +1518,7 @@ msgstr ":attr:`~django.views.generic.edit.DeletionMixin.success_url` [:meth:`~dj
 # fa2e4e5abfa1452d8de25e0a9020f7fc
 #: ../../ref/class-based-views/flattened-index.txt:289
 msgid "Date-based views"
-msgstr ""
+msgstr "Vues basées sur les dates"
 
 # 6eb285d67a4b40a498c214d3a47faea2
 # 93ee81b5fd7f4c09a79cbe1f80fdb259
@@ -1792,21 +1799,21 @@ msgstr "DateDetailView"
 # 8c680d3a4d134a3c809987d532332865
 #: ../../ref/class-based-views/generic-date-based.txt:3
 msgid "Generic date views"
-msgstr "Vues date générique"
+msgstr "Vues génériques basées sur les dates"
 
 # 080a0c4fdfd043c4b86989507170a933
 #: ../../ref/class-based-views/generic-date-based.txt:7
 msgid ""
 "Date-based generic views, provided in :mod:`django.views.generic.dates`, are"
 " views for displaying drilldown pages for date-based data."
-msgstr ""
+msgstr "Les vues génériques basées sur les dates, définies dans :mod:`django.views.generic.dates`, sont des vues destinées à afficher des pages énumérant en détails des données en fonction de leur date."
 
 # 33c2ca4ffb0a488c977189bae22404c5
 #: ../../ref/class-based-views/generic-date-based.txt:12
 msgid ""
 "Some of the examples on this page assume that an ``Article`` model has been "
 "defined as follows in ``myapp/models.py``::"
-msgstr "Quelques uns des exemples de catte page parte du principe que le modèle ``Article`` a été défini en suivant les indications de ``myapp/models.py``::"
+msgstr "Quelques exemples de cette page se basent sur le modèle ``Article`` défini comme suit dans ``myapp/models.py``::"
 
 # b607224c4b4047018ab065a35a3ee5d8
 #: ../../ref/class-based-views/generic-date-based.txt:30
@@ -1814,7 +1821,7 @@ msgid ""
 "A top-level index page showing the \"latest\" objects, by date. Objects with"
 " a date in the *future* are not included unless you set ``allow_future`` to "
 "``True``."
-msgstr ""
+msgstr "Une page de sommaire de premier niveau affichant les « derniers » objets par date. Les objets ayant une date dans le *futur* ne sont pas inclus, sauf si ``allow_future`` est défini à ``True``."
 
 # 3fd82cd1eea04c19ae8840eda01df7dd
 # 8efc147f5da5408b9ec4a7b7fef394b5
@@ -1898,7 +1905,7 @@ msgid ""
 ":class:`django.views.generic.list.MultipleObjectMixin` (via "
 ":class:`django.views.generic.dates.BaseDateListView`), the template's "
 "context will be:"
-msgstr ""
+msgstr "En plus du contexte fourni par :class:`django.views.generic.list.MultipleObjectMixin` (via :class:`django.views.generic.dates.BaseDateListView`), le contexte de gabarit sera :"
 
 # fd88618b252145848f62977399271e0a
 #: ../../ref/class-based-views/generic-date-based.txt:51
@@ -1908,7 +1915,7 @@ msgid ""
 "``queryset``, represented as "
 ":class:`datetime.datetime<python:datetime.datetime>` objects, in descending "
 "order."
-msgstr ""
+msgstr "``date_list``: un objet :meth:`DateQuerySet<django.db.models.query.QuerySet.dates>` contenant toutes les années possédant des objets disponibles en fonction de ``queryset``, représentés sous forme d'objets :class:`datetime.datetime<python:datetime.datetime>` dans l'ordre chronologique inverse."
 
 # b4f34c94f3f34f8e8fa71019fe5f4ae9
 # 4d9efb3a56874c4a8f72209bea18804a
@@ -1930,12 +1937,12 @@ msgstr "**Notes**"
 # 2b5a24cafbd345d8adcca5c9f18dac01
 #: ../../ref/class-based-views/generic-date-based.txt:60
 msgid "Uses a default ``context_object_name`` of ``latest``."
-msgstr ""
+msgstr "La valeur par défaut de ``context_object_name`` est ``latest``."
 
 # 531a7b0f61db4be08a7c8597fae98443
 #: ../../ref/class-based-views/generic-date-based.txt:61
 msgid "Uses a default ``template_name_suffix`` of ``_archive``."
-msgstr ""
+msgstr "La valeur par défaut de ``template_name_suffix`` est ``_archive``."
 
 # f67700df19af4e0fa7f9658d662fa0a4
 #: ../../ref/class-based-views/generic-date-based.txt:62
@@ -1943,7 +1950,7 @@ msgid ""
 "Defaults to providing ``date_list`` by year, but this can be altered to "
 "month or day using the attribute ``date_list_period``. This also applies to "
 "all subclass views."
-msgstr ""
+msgstr "Le comportement par défaut est de fournir ``date_list`` par année, mais il est possible aussi d'utiliser des mois ou des jours en modifiant l'attribut ``date_list_period``. Cela s'applique également à toutes les sous-classes de cette vue."
 
 # 505fc375dc5545c9b4e7dc4b488bc660
 # 58654ebb35d34a809b76ce15061d3908
@@ -1973,12 +1980,12 @@ msgstr ""
 # 01d4a79960df4436b815885ce6ee8847
 #: ../../ref/class-based-views/generic-date-based.txt:79
 msgid "**Example myapp/article_archive.html**:"
-msgstr "**Exemple myapp/article_archive.html**:"
+msgstr "**Exemple de myapp/article_archive.html**:"
 
 # cfe40b70320c43148c3b7d988574bbb9
 #: ../../ref/class-based-views/generic-date-based.txt:89
 msgid "This will output all articles."
-msgstr "Ceci récupèrera tous les articles."
+msgstr "Ceci affiche tous les articles."
 
 # d5baf258ca304011a007d5f6009c4b8a
 #: ../../ref/class-based-views/generic-date-based.txt:96
@@ -1986,7 +1993,7 @@ msgid ""
 "A yearly archive page showing all available months in a given year. Objects "
 "with a date in the *future* are not displayed unless you set "
 "``allow_future`` to ``True``."
-msgstr ""
+msgstr "Une page d'archives annuelles affichant tous les mois disponibles d'une année donnée. Les objets ayant une date dans le *futur* ne sont pas inclus, sauf si ``allow_future`` est défini à ``True``."
 
 # 8722e89170ac42a2b4b4a136cf9f0c2f
 #: ../../ref/class-based-views/generic-date-based.txt:104
@@ -3715,11 +3722,6 @@ msgid ""
 "Note that ``page`` *must* be either a valid page number or the value "
 "``last``; any other value for ``page`` will result in a 404 error."
 msgstr ""
-
-# 884727c060494fe18a07a6c8243c214c
-#: ../../ref/class-based-views/mixins-multiple-object.txt:44
-msgid ":class:`django.views.generic.base.ContextMixin`"
-msgstr ":class:`django.views.generic.base.ContextMixin`"
 
 # 4fb28d3aa453429f9d9c9ffa76c7bdfe
 #: ../../ref/class-based-views/mixins-multiple-object.txt:50
@@ -8481,8 +8483,13 @@ msgid ""
 ":attr:`~django.contrib.auth.models.User.last_name`, with a space in between."
 msgstr "Renvoie :attr:`~django.contrib.auth.models.User.first_name` et :attr:`~django.contrib.auth.models.User.last_name` séparés par une espace."
 
-# 0b47b4e9f5f6406b9acb10b8e15bf494
-#: ../../ref/contrib/auth.txt:133
+# 303992e073d94dfe9a3bca663acdbbe9
+#: ../../ref/contrib/auth.txt:135
+msgid "Returns the :attr:`~django.contrib.auth.models.User.first_name`."
+msgstr ""
+
+# 612cfd73eb304ef8b1848b4712d589fe
+#: ../../ref/contrib/auth.txt:139
 msgid ""
 "Sets the user's password to the given raw string, taking care of the "
 "password hashing. Doesn't save the :class:`~django.contrib.auth.models.User`"
@@ -13540,22 +13547,22 @@ msgstr ""
 # ee4b01955d414d329712054e588271f1
 #: ../../ref/contrib/gis/admin.txt:5
 msgid "GeoDjango's admin site"
-msgstr ""
+msgstr "Site d'administration de GeoDjango"
 
 # 48d8d641c67f4bbfa597eb612970b31d
 #: ../../ref/contrib/gis/admin.txt:12
 msgid "``GeoModelAdmin``"
-msgstr ""
+msgstr "``GeoModelAdmin``"
 
 # c78ef93a1bb44c559495fa73f9478683
 #: ../../ref/contrib/gis/admin.txt:18
 msgid "The default center longitude."
-msgstr ""
+msgstr "La longitude par défaut du centre."
 
 # bdfa64f580c54db693e1047554fadf7f
 #: ../../ref/contrib/gis/admin.txt:22
 msgid "The default center latitude."
-msgstr ""
+msgstr "La latitude par défaut du centre."
 
 # a134bf6259924d1ab1d54016fbe1cc87
 #: ../../ref/contrib/gis/admin.txt:26
@@ -13614,12 +13621,12 @@ msgstr ""
 msgid "``OSMGeoAdmin``"
 msgstr "``OSMGeoAdmin``"
 
-# 2593e45e50014c85bab4808ce3a3f552
+# 17f03716fc8249af80cae5a6c0049847
 #: ../../ref/contrib/gis/admin.txt:69
 msgid ""
 "A subclass of :class:`GeoModelAdmin` that uses a spherical mercator "
-"projection with `OpenStreetMap <http://openstreetmap.org/>`_ street data "
-"tiles. See the :ref:`OSMGeoAdmin introduction <osmgeoadmin-intro>` in the "
+"projection with `OpenStreetMap <http://www.openstreetmap.org/>`_ street data"
+" tiles. See the :ref:`OSMGeoAdmin introduction <osmgeoadmin-intro>` in the "
 "tutorial for a usage example."
 msgstr ""
 
@@ -15142,8 +15149,24 @@ msgid ""
 "``template_name`` is ``gis/openlayers.html``."
 msgstr ""
 
-# debc3cdb0b024afabba4f68609ce99cb
+# 127a115e43c341d79e7d877f9572ed62
 #: ../../ref/contrib/gis/forms-api.txt:159
+msgid ""
+"``OpenLayersWidget`` and :class:`OSMWidget` use the ``openlayers.js`` file "
+"hosted on the ``openlayers.org`` Web site. This works for basic usage during"
+" development, but isn't appropropriate for a production deployment as "
+"``openlayers.org/api/`` has no guaranteed uptime and runs on a slow server. "
+"You are therefore advised to subclass these widgets in order to specify your"
+" own version of the ``openlayers.js`` file in the ``js`` property of the "
+"inner ``Media`` class (see :ref:`assets-as-a-static-definition`). You can "
+"host a copy of ``openlayers.js`` `tailored to your needs`_ on your own "
+"server or refer to a copy from a content-delivery network like "
+"http://cdnjs.com/. This will also allow you to serve the JavaScript file(s) "
+"using the ``https`` protocol if needed."
+msgstr ""
+
+# 74d82f246a554853a8ee5963d21d7182
+#: ../../ref/contrib/gis/forms-api.txt:173
 msgid "``OSMWidget``"
 msgstr ""
 
@@ -15152,6 +15175,14 @@ msgstr ""
 msgid ""
 "This widget uses an OpenStreetMap base layer (Mapnik) to display geographic "
 "objects on. ``template_name`` is ``gis/openlayers-osm.html``."
+msgstr ""
+
+# cf124646e44949b7b142f4aefc392a87
+#: ../../ref/contrib/gis/forms-api.txt:181
+msgid ""
+"The :class:`OpenLayersWidget` note about JavaScript file hosting above also "
+"applies here. See also this `FAQ answer`_ about ``https`` access to map "
+"tiles."
 msgstr ""
 
 # d6504ab27c594a84af9beaf8597a0277
@@ -18730,11 +18761,11 @@ msgid ""
 "this restriction is not enforced."
 msgstr ""
 
-# 6d901595fe344d9b8ad4a25c6976fd27
+# 82a0581077e54225ba139977572f759e
 #: ../../ref/contrib/gis/geos.txt:313
 msgid ""
-"Returns an :class:`~django.contrib.gis.gdal.OGRGeometry` object correspondg "
-"to the GEOS geometry."
+"Returns an :class:`~django.contrib.gis.gdal.OGRGeometry` object "
+"corresponding to the GEOS geometry."
 msgstr ""
 
 # d5d616cf9f9e4f67848779ff8c073d5f
@@ -19052,11 +19083,11 @@ msgid ""
 "corresponding to the SRID of the geometry or ``None``."
 msgstr ""
 
-# 452e690ebbe5410c8594266f363afc05
+# 9cd2eafead974581b06300273cf96010
 #: ../../ref/contrib/gis/geos.txt:568
 msgid ""
 "Transforms the geometry according to the given coordinate transformation "
-"paramter (``ct``), which may be an integer SRID, spatial reference WKT "
+"parameter (``ct``), which may be an integer SRID, spatial reference WKT "
 "string, a PROJ.4 string, a "
 ":class:`~django.contrib.gis.gdal.SpatialReference` object, or a "
 ":class:`~django.contrib.gis.gdal.CoordTransform` object. By default, the "
@@ -20402,7 +20433,7 @@ msgstr ""
 #: ../../ref/contrib/gis/install/index.txt:239
 #: ../../ref/contrib/gis/install/index.txt:400
 msgid "Python"
-msgstr ""
+msgstr "Python"
 
 # c29a493630a4422cb1e2d0d2201f7202
 #: ../../ref/contrib/gis/install/index.txt:241
@@ -20778,7 +20809,7 @@ msgstr ""
 # 60575a205941478a926982ad2d33af07
 #: ../../ref/contrib/gis/install/postgis.txt:5
 msgid "Installing PostGIS"
-msgstr ""
+msgstr "Installation de PostGIS"
 
 # 8636131db9e9444ab51bbcc2c0890a9d
 #: ../../ref/contrib/gis/install/postgis.txt:7
@@ -20787,14 +20818,14 @@ msgid ""
 "spatial database. :ref:`geosbuild`, :ref:`proj4` and :ref:`gdalbuild` should"
 " be installed prior to building PostGIS. You might also need additional "
 "libraries, see `PostGIS requirements`_."
-msgstr ""
+msgstr "`PostGIS`__ ajoute la prise en charge des objets géographiques à PostgreSQL, pour en faire une base de données spatiale. :ref:`geosbuild`, :ref:`proj4` et :ref:`gdalbuild` devraient être installés avant de compiler PostGIS. Vous aurez peut-être besoin d'autres bibliothèques, voir `exigences PostGIS"
 
 # 7dec576a2dea45cabeda32b38bc75c3b
 #: ../../ref/contrib/gis/install/postgis.txt:14
 msgid ""
 "The `psycopg2`_ module is required for use as the database adaptor when "
 "using GeoDjango with PostGIS."
-msgstr ""
+msgstr "Le module `psycopg2`_ est obligatoire comme adaptateur de base de données lors de l'utilisation de GeoDjango avec PostGIS."
 
 # f21000cb4108408ba524966aeec937fb
 #: ../../ref/contrib/gis/install/postgis.txt:20
@@ -20804,22 +20835,22 @@ msgid ""
 "psycopg2 (x.x matching the PostgreSQL version you want to install). Please "
 "also consult platform-specific instructions if you are on :ref:`macosx` or "
 ":ref:`windows`."
-msgstr ""
+msgstr "Sur Debian/Ubuntu, il est conseillé d'installer les paquets suivants : postgresql-x.x, postgresql-x.x-postgis, postgresql-server-dev-x.x, python-psycopg2 (où x.x correspond à la version de PostgreSQL que vous souhaitez installer). Veuillez consultez également les instructions spécifiques à votre plate-forme si vous travaillez avec :ref:`macosx` ou :ref:`windows`."
 
 # a0571acec12440248df0aebeede6cf52
 #: ../../ref/contrib/gis/install/postgis.txt:29
 msgid "First download the source archive, and extract::"
-msgstr ""
+msgstr "Commencez par télécharger l'archive des sources et décompressez-la ::"
 
 # 53663c947e304b93bf6a8b4db5f9e9d7
 #: ../../ref/contrib/gis/install/postgis.txt:35
 msgid "Next, configure, make and install PostGIS::"
-msgstr ""
+msgstr "Puis, lancez les opérations « configure », « make » et « install » de PostGIS ::"
 
 # db2dd77e33e344519e58f781c1742542
 #: ../../ref/contrib/gis/install/postgis.txt:39
 msgid "Finally, make and install::"
-msgstr ""
+msgstr "Pour terminer, lancez « make » et « install » ::"
 
 # 0f1d3b3584d3462b844827c7b068f0d2
 #: ../../ref/contrib/gis/install/postgis.txt:47
@@ -20827,36 +20858,36 @@ msgid ""
 "GeoDjango does not automatically create a spatial database.  Please consult "
 "the section on :ref:`spatialdb_template91` or "
 ":ref:`spatialdb_template_earlier` for more information."
-msgstr ""
+msgstr "GeoDjango ne crée pas automatiquement de base de données spatiale. Consultez la section sur :ref:`spatialdb_template91` ou :ref:`spatialdb_template_earlier` pour plus d'informations."
 
 # 929e22e3d2e2442d8b6d86b35552e24d
 #: ../../ref/contrib/gis/install/postgis.txt:54
 msgid "Post-installation"
-msgstr ""
+msgstr "Après l'installation"
 
 # fee19956628f4954a5d92c90d0ae2033
 #: ../../ref/contrib/gis/install/postgis.txt:60
 msgid "Creating a spatial database with PostGIS 2.0 and PostgreSQL 9.1+"
-msgstr ""
+msgstr "Création d'une base de données spatiale avec PostGIS 2.0 et PostgreSQL 9.1+"
 
 # df8a04f981894224ba07d703314ecc9a
 #: ../../ref/contrib/gis/install/postgis.txt:62
 msgid ""
 "PostGIS 2 includes an extension for Postgres 9.1+ that can be used to enable"
 " spatial functionality::"
-msgstr ""
+msgstr "PostGIS 2 contient une extension pour Postgres 9.1+ pouvant être utilisée pour activer les fonctions spatiales ::"
 
 # 39b5bba4d8b445d795cf987ae6c7231a
 #: ../../ref/contrib/gis/install/postgis.txt:70
 msgid ""
 "No PostGIS topology functionalities are yet available from GeoDjango, so the"
 " creation of the ``postgis_topology`` extension is entirely optional."
-msgstr ""
+msgstr "Aucune fonctionnalité topologique PostGIS n'est pour l'instant disponible dans GeoDjango, l'installation de l'extension ``postgis_topology`` est donc totalement facultative."
 
 # 1dc12f3c43f74e13ae294333dddd1954
 #: ../../ref/contrib/gis/install/postgis.txt:76
 msgid "Creating a spatial database template for earlier versions"
-msgstr ""
+msgstr "Création d'un modèle de base de données spatiale pour les versions précédentes"
 
 # 62c42c1164c64a4eb87035cb0e3e7ee0
 #: ../../ref/contrib/gis/install/postgis.txt:78
@@ -20864,7 +20895,7 @@ msgid ""
 "If you have an earlier version of PostGIS or PostgreSQL, the CREATE "
 "EXTENSION isn't available and you need to create the spatial database using "
 "the following instructions."
-msgstr ""
+msgstr "Si vous disposez d'une version plus ancienne de PostGIS ou de PostgreSQL, la commande ``CREATE EXTENSION`` n'est pas disponible et vous devez créer la base de données spatiale au moyen des instructions suivantes."
 
 # 324c4cfdaf3f454f9b7dd2c4e04ce78c
 #: ../../ref/contrib/gis/install/postgis.txt:82
@@ -20873,7 +20904,7 @@ msgid ""
 "additional SQL must be loaded to enable spatial functionality.  Because of "
 "the steps in this process, it's better to create a database template that "
 "can be reused later."
-msgstr ""
+msgstr "La création d'une base de données spatiale avec PostGIS est différente du processus habituel car du code SQL supplémentaire doit être chargé pour activer les fonctions spatiales. En raison des étapes induites par ce processus, il est conseillé de créer un modèle de base de données qui peut ensuite être réutilisé."
 
 # edd40bc08300433988e7ff157d309d1f
 #: ../../ref/contrib/gis/install/postgis.txt:87
@@ -20881,7 +20912,7 @@ msgid ""
 "First, you need to be able to execute the commands as a privileged database "
 "user.  For example, you can use the following to become the ``postgres`` "
 "user::"
-msgstr ""
+msgstr "Vous devez d'abord être autorisé à exécuter les commandes comme utilisateur privilégié de base de données. Par exemple, vous pouvez faire ce qui suit pour vous connecter en tant qu'utilisateur ``postgres``::"
 
 # 8c9090e5deb242f1ade7dfa672a5e200
 #: ../../ref/contrib/gis/install/postgis.txt:94
@@ -20891,7 +20922,7 @@ msgid ""
 "versions 1.3 and below use ``<pg_sharedir>/contrib/lwpostgis.sql``; whereas "
 "version 1.4 uses ``<sharedir>/contrib/postgis.sql`` and version 1.5 uses "
 "``<sharedir>/contrib/postgis-1.5/postgis.sql``."
-msgstr ""
+msgstr "L'emplacement *et* le nom des fichiers SQL PostGIS (par ex. dans ``POSTGIS_SQL_PATH`` ci-dessous) dépend de la version de PostGIS. Les versions 1.3 et précédentes de PostGIS utilisent ``<rép_partagé_pg>/contrib/lwpostgis.sql``; alors que la version 1.4 utilise ``<rép_partagé>/contrib/postgis.sql`` et la version 1.5 utilise ``<rép_partagé>/contrib/postgis-1.5/postgis.sql``."
 
 # 736cb49ef9c34df0897bb069edc41f80
 #: ../../ref/contrib/gis/install/postgis.txt:100
@@ -20899,7 +20930,7 @@ msgid ""
 "To complicate matters, Debian/Ubuntu distributions have their own separate "
 "directory naming system that might change with time. In this case, use the "
 ":download:`create_template_postgis-debian.sh` script."
-msgstr ""
+msgstr "Pour compliquer les choses, les distributions Debian/Ubuntu ont leur propre système de nommage de répertoires qui peut changer avec le temps. Dans ce cas, utilisez le script :download:`create_template_postgis-debian.sh`."
 
 # fa2bbad4a5c04a448768c737133696b1
 #: ../../ref/contrib/gis/install/postgis.txt:104
@@ -20907,73 +20938,73 @@ msgid ""
 "The example below assumes PostGIS 1.5, thus you may need to modify "
 "``POSTGIS_SQL_PATH`` and the name of the SQL file for the specific version "
 "of PostGIS you are using."
-msgstr ""
+msgstr "L'exemple ci-dessous se base sur la version 1.5, il est donc possible que vous deviez modifier ``POSTGIS_SQL_PATH`` et le nom du fichier SQL pour la version spécifique de PostGIS que vous utilisez."
 
 # b92f1dc7af3d4083871da638ecd1d8b4
 #: ../../ref/contrib/gis/install/postgis.txt:108
 msgid ""
 "Once you're a database super user, then you may execute the following "
 "commands to create a PostGIS spatial database template::"
-msgstr ""
+msgstr "Une fois que vous êtes devenu super-utilisateur de la base de données, vous pouvez exécuter les commandes suivantes pour créer un modèle de base de données spatiale PostGIS ::"
 
 # e97f318951094ec0a3dd929403eb5ba2
 #: ../../ref/contrib/gis/install/postgis.txt:125
 msgid ""
 "These commands may be placed in a shell script for later use; for "
 "convenience the following scripts are available:"
-msgstr ""
+msgstr "Ces commandes peuvent être placées dans un script shell pour être réutilisées ; par commodité, les scripts suivants sont disponibles :"
 
 # 8476262d2b21403b8d940069e58a36a8
 #: ../../ref/contrib/gis/install/postgis.txt:129
 msgid "PostGIS version"
-msgstr ""
+msgstr "Version de PostGIS"
 
 # fe1466a9814146b3ba1d33d7002a87c5
 #: ../../ref/contrib/gis/install/postgis.txt:129
 msgid "Bash shell script"
-msgstr ""
+msgstr "Script shell bash"
 
 # 9341441e3c694e8eae7946b4218346e9
 #: ../../ref/contrib/gis/install/postgis.txt:131
 msgid "1.3"
-msgstr ""
+msgstr "1.3"
 
 # 2a491fe3548244f9a16767c06180d962
 #: ../../ref/contrib/gis/install/postgis.txt:131
 msgid ":download:`create_template_postgis-1.3.sh`"
-msgstr ""
+msgstr ":download:`create_template_postgis-1.3.sh`"
 
 # 32ed2ca285cf4fbba6b93694a543cab4
 #: ../../ref/contrib/gis/install/postgis.txt:132
 msgid ":download:`create_template_postgis-1.4.sh`"
-msgstr ""
+msgstr ":download:`create_template_postgis-1.4.sh`"
 
 # ab45dd63287449baa114fbfd30a01c09
 #: ../../ref/contrib/gis/install/postgis.txt:133
 msgid "1.5"
-msgstr ""
+msgstr "1.5"
 
 # 325c32de492443ed94d56898f3ae0ddd
 #: ../../ref/contrib/gis/install/postgis.txt:133
 msgid ":download:`create_template_postgis-1.5.sh`"
-msgstr ""
+msgstr ":download:`create_template_postgis-1.5.sh`"
 
 # 04f27c8d3b0d4bf9bc7a30a02d1a7460
 #: ../../ref/contrib/gis/install/postgis.txt:134
 msgid "Debian/Ubuntu"
-msgstr ""
+msgstr "Debian/Ubuntu"
 
 # cb8c165d77074ed4b76deedcc2ca7281
 #: ../../ref/contrib/gis/install/postgis.txt:134
 msgid ":download:`create_template_postgis-debian.sh`"
-msgstr ""
+msgstr ":download:`create_template_postgis-debian.sh`"
 
 # fc0882524c89422bab29ce5da9f5ad88
 #: ../../ref/contrib/gis/install/postgis.txt:137
 msgid ""
 "Afterwards, you may create a spatial database by simply specifying "
 "``template_postgis`` as the template to use (via the ``-T`` option)::"
-msgstr ""
+msgstr "Après cela, vous pouvez créer une base de données spatiale en indiquant simplement ``template_postgis`` comme modèle à utiliser (via l'option ``-T``) ::"
 
 # 1802667d0d394c69b2a7362565bf2c5f
 #: ../../ref/contrib/gis/install/postgis.txt:144
@@ -20981,7 +21012,7 @@ msgid ""
 "While the ``createdb`` command does not require database super-user "
 "privileges, it must be executed by a database user that has permissions to "
 "create databases. You can create such a user with the following command::"
-msgstr ""
+msgstr "Même si la commande ``createdb`` n'exige pas que vous soyez super-utilisateur, elle doit être lancée par un utilisateur de base de données ayant les droits de créer des bases de données. Vous pouvez créer un tel utilisateur avec la commande suivante ::"
 
 # 1574faaaa8c543c8aba1c2dcf5ab2d1e
 #: ../../ref/contrib/gis/install/postgis.txt:151
@@ -22081,14 +22112,14 @@ msgstr "Renvoie le nom d'attribut d'unité d'aire correspondant au nom complet d
 msgid "Alias for :class:`Area` class."
 msgstr "Alias de la classe :class:`Area`."
 
-# befa9e7665194760a3c2705ddd7db4f5
+# e19e34077e9b403abbf4b94e1087cc64
 #: ../../ref/contrib/gis/measure.txt:178
 msgid ""
-"`Robert Coup <http://koordinates.com/>`_ is the initial author of the "
+"`Robert Coup <https://koordinates.com/>`_ is the initial author of the "
 "measure objects, and was inspired by Brian Beck's work in `geopy "
 "<http://code.google.com/p/geopy/>`_ and Geoff Biggs' PhD work on dimensioned"
 " units for robotics."
-msgstr "`Robert Coup <http://koordinates.com/>`_ est l'auteur initial des objets de mesure et a été inspiré par le travail de Brian Beck dans `geopy <http://code.google.com/p/geopy/>`_ et par celui de Geoff Biggs dans son doctorat sur les unités dimensionnées pour la robotique."
+msgstr ""
 
 # f5e2317171654ef8a2bca89641be9e00
 #: ../../ref/contrib/gis/model-api.txt:5
@@ -22440,11 +22471,11 @@ msgstr ""
 msgid "``GeoRSSSitemap``"
 msgstr ""
 
-# cda057c51ca64a43bfc4206ef35bf417
+# c0a8df9913f44c0192cec5d616ec666a
 #: ../../ref/contrib/gis/sitemaps.txt:26
 msgid ""
 "Google, Inc., `What is a Geo Sitemap? "
-"<http://support.google.com/webmasters/bin/answer.py?answer=94555>`_."
+"<https://support.google.com/webmasters/answer/94555>`_."
 msgstr ""
 
 # 50cd519371584aa287f6c61543a6a6e3
@@ -24153,12 +24184,12 @@ msgstr "Voir la :doc:`documentation sur les utilitaires de conception Web </ref/
 msgid "Other add-ons"
 msgstr "Autres compléments"
 
-# e6603ea7f4fe4d789e95078e6f9e99d4
+# c370d5e58d4442daa13744c02ed34c02
 #: ../../ref/contrib/index.txt:179
 msgid ""
 "If you have an idea for functionality to include in ``contrib``, let us "
-"know! Code it up, and post it to the `django-users mailing list`_."
-msgstr "Si vous avez des idées sur des fonctionnalités susceptibles d'être incluses dans ``contrib``, faites-le nous savoir ! Rédigez le code et écrivez à la `liste de diffusion django-users`_."
+"know! Code it up, and post it to the |django-users| mailing list."
+msgstr ""
 
 # ff6ca1814b884043a970462cefe7ae5c
 #: ../../ref/contrib/messages.txt:3
@@ -27997,8 +28028,22 @@ msgid ""
 "making it impossible to use :class:`django.db.models.BinaryField`."
 msgstr ""
 
-# d3c38d06af73445284169f4195011479
-#: ../../ref/databases.txt:281
+# c8253009d1f646e2ac51a751ba84eb52
+#: ../../ref/databases.txt:283
+msgid "Time zone definitions"
+msgstr ""
+
+# a5fce9159b524f7f9882e2882fb25951
+#: ../../ref/databases.txt:285
+msgid ""
+"If you plan on using Django's :doc:`timezone support "
+"</topics/i18n/timezones>`, use `mysql_tzinfo_to_sql`_ to load time zone "
+"tables into the MySQL database. This needs to be done just once for your "
+"MySQL server, not per database."
+msgstr ""
+
+# fea5f5807a5142719f6d914c03cc4a89
+#: ../../ref/databases.txt:292
 msgid "Creating your database"
 msgstr ""
 
@@ -28831,20 +28876,20 @@ msgid ""
 "provided by 3rd parties that allow you to use other databases with Django:"
 msgstr "En plus des bases de données prises en charge officiellement, il existe des moteurs externes à Django qui permettent d'utiliser d'autres bases de données avec Django :"
 
-# f3643c2b05ba4705890f0198b9f3096a
-#: ../../ref/databases.txt:826
-msgid "`Sybase SQL Anywhere`_"
-msgstr "`Sybase SQL Anywhere`_"
+# 4de3278f2a654d1480868e352778a8b5
+#: ../../ref/databases.txt:837
+msgid "`SAP SQL Anywhere`_"
+msgstr ""
 
 # 038607e02be74a1aa122923acc504b8b
 #: ../../ref/databases.txt:827
 msgid "`IBM DB2`_"
 msgstr "`IBM DB2`_"
 
-# 748b278f7ff44c86bc678fe1a4ea982a
-#: ../../ref/databases.txt:828
-msgid "`Microsoft SQL Server 2005`_"
-msgstr "`Microsoft SQL Server 2005`_"
+# aa86423f4a024784a0bf8e2ef2d4b368
+#: ../../ref/databases.txt:839
+msgid "`Microsoft SQL Server`_"
+msgstr ""
 
 # 8a36a3c5be944c938c467e888cef3c05
 #: ../../ref/databases.txt:829
@@ -29679,13 +29724,8 @@ msgid ""
 "specify the locale(s) to process."
 msgstr ""
 
-# 442a5adfecd942f4a789dc1dafa72cbb
-#: ../../ref/django-admin.txt:526
-msgid "You can also use commas to separate multiple locales::"
-msgstr ""
-
-# 03bccc59d0ed40e2902d68d78f65ac48
-#: ../../ref/django-admin.txt:537
+# 98941ecde97342818481c241a5c61df5
+#: ../../ref/django-admin.txt:530
 msgid ""
 "Use the ``--domain`` or ``-d`` option to change the domain of the messages "
 "files. Currently supported:"
@@ -32105,11 +32145,11 @@ msgid ""
 " all the public methods thereof."
 msgstr ""
 
-# 9e6023689c70425e8a4138b04cf2a9e9
+# c5f40acda16049f49278406fcfe2fbd7
 #: ../../ref/files/storage.txt:41
 msgid ""
-"The ``FileSystemStorage.delete()`` method will not raise raise an exception "
-"if the given file name does not exist."
+"The ``FileSystemStorage.delete()`` method will not raise an exception if the"
+" given file name does not exist."
 msgstr ""
 
 # a5e336af47a64fa18464343b4722a794
@@ -32432,13 +32472,40 @@ msgid ""
 "latter gets precedence::"
 msgstr ""
 
-# e027dd852d3b4ba5860a100199341c00
+# fe5d844d504c40219b1e31fe49ef74f8
 #: ../../ref/forms/api.txt:169
+msgid "Accessing the fields from the form"
+msgstr ""
+
+# e7a078d2a878444caf9564bd755ac6ea
+#: ../../ref/forms/api.txt:173
+msgid ""
+"You can access the fields of :class:`Form` instance from its ``fields`` "
+"attribute::"
+msgstr ""
+
+# 4c41384254ab43baa4082807aa3fbb81
+#: ../../ref/forms/api.txt:184
+msgid ""
+"You can alter the field of :class:`Form` instance to change the way it is "
+"presented in the form::"
+msgstr ""
+
+# 25ad19639a1840f4af846208d9784391
+#: ../../ref/forms/api.txt:193
+msgid ""
+"Beware not to alter the ``base_fields`` attribute because this modification "
+"will influence all subsequent ``ContactForm`` instances within the same "
+"Python process::"
+msgstr ""
+
+# 2829dbb88a08454b8cbd06e5c1e6e451
+#: ../../ref/forms/api.txt:203
 msgid "Accessing \"clean\" data"
 msgstr ""
 
-# e3d8e5f5e9db4c3aa91cb4fb716d30ea
-#: ../../ref/forms/api.txt:173
+# 49d89dcd5cda44c6b566e6f89b3970c6
+#: ../../ref/forms/api.txt:207
 msgid ""
 "Each field in a :class:`Form` class is responsible not only for validating "
 "data, but also for \"cleaning\" it -- normalizing it to a consistent format."
@@ -33660,7 +33727,7 @@ msgstr ""
 #: ../../ref/forms/fields.txt:808 ../../ref/forms/widgets.txt:434
 #: ../../ref/forms/widgets.txt:521 ../../ref/forms/widgets.txt:748
 msgid "Takes one optional argument:"
-msgstr ""
+msgstr "Accepte un paramètre facultatif :"
 
 # 3f879fd239cb40598ddca61186ecc44f
 # 7e2224333f164888b5c7e3fdb970f0ae
@@ -37348,12 +37415,13 @@ msgid ""
 "files. See :doc:`/topics/files` for details on how to provide this object."
 msgstr "Facultatif. Un objet de stockage, qui prend en charge l'enregistrement et la récupération des fichiers. Consultez :doc:`/topics/files` pour plus de détails sur la manière de fournir un tel objet."
 
-# 050d5a6cd2fb45faa6c0c5b0a924d9f7
-#: ../../ref/models/fields.txt:587
+# 5c37ecbbe3404c6780046f54fb30f48f
+# 6a8807f652f34568a9d3078cc9f90f86
+#: ../../ref/models/fields.txt:588 ../../ref/models/fields.txt:837
 msgid ""
 "The default form widget for this field is a "
-":class:`~django.forms.FileInput`."
-msgstr "Le composant de formulaire par défaut de ce champ est un :class:`~django.forms.FileInput`."
+":class:`~django.forms.ClearableFileInput`."
+msgstr ""
 
 # 09a2ebe0f9d4415e885296012f97541e
 #: ../../ref/models/fields.txt:589
@@ -37965,21 +38033,20 @@ msgid ""
 "that define the details of how the relation works."
 msgstr "Le champ :class:`ForeignKey` accepte un ensemble supplémentaire de paramètres (tous facultatifs) qui définissent les détails du fonctionnement de la relation."
 
-# d4f814d987014281ba4f90823c3f5078
-#: ../../ref/models/fields.txt:1059
-msgid ""
-"A dictionary of lookup arguments and values (see :doc:`/topics/db/queries`) "
-"that limit the available admin or ModelForm choices for this object. Use "
-"this with functions from the Python ``datetime`` module to limit choices of "
-"objects by date. For example::"
-msgstr "Un dictionnaire de paramètres et de valeurs de recherche (voir :doc:`/topics/db/queries`) qui limite les choix disponibles dans l'interface d'administration ou les ``ModelForm`` de cet objet. Utilisez-le avec des fonctions du module Python ``datetime`` pour limiter les choix d'objets par date. Par exemple ::"
-
-# 81c8e0963aa9454cb9de38d4e925891f
+# 53a1afeca8ae4d0fa145be15b37ee131
 #: ../../ref/models/fields.txt:1066
 msgid ""
-"only allows the choice of related objects with a ``pub_date`` before the "
-"current date to be chosen."
-msgstr "restreint uniquement le choix à des objets liés ayant leur champ ``pub_date`` avant la date actuelle."
+"A dictionary of lookup arguments and values (see :doc:`/topics/db/queries`) "
+"that limit the available admin or :class:`ModelForm "
+"<django.forms.ModelForm>` choices for this object. For example::"
+msgstr ""
+
+# 1306a3f7d66a4ae5b00831c9eea31cbd
+#: ../../ref/models/fields.txt:1072
+msgid ""
+"causes the corresponding field on the ``ModelForm`` to list only ``Users`` "
+"that have ``is_staff=True``."
+msgstr ""
 
 # 8fe43aef70c34fc6b764fefcb39be4a1
 #: ../../ref/models/fields.txt:1069
@@ -41635,14 +41702,14 @@ msgid ""
 ":meth:`~django.db.models.query.QuerySet.get` call."
 msgstr ""
 
-# 19e3ba673d524311a396e288baa6aef1
+# 9252247072be49bc95eba0fe88563854
 #: ../../ref/models/querysets.txt:1461
 msgid ""
-"Finally, a word on using ``get_or_create()`` in Django views: please make "
+"Finally, a word on using ``get_or_create()`` in Django views. Please make "
 "sure to use it only in ``POST`` requests unless you have a good reason not "
-"to ``GET`` requests shouldn't have any effect on data; use ``POST`` whenever"
-" a request to a page has a side effect on your data. For more, see `Safe "
-"methods`_ in the HTTP spec."
+"to. ``GET`` requests shouldn't have any effect on data. Instead, use "
+"``POST`` whenever a request to a page has a side effect on your data. For "
+"more, see `Safe methods`_ in the HTTP spec."
 msgstr ""
 
 # b9bb3b6186f7403eaaf810d8a919d0cc
@@ -41714,8 +41781,13 @@ msgid ""
 "does not retrieve and set the primary key attribute, as ``save()`` does."
 msgstr ""
 
-# 3724a4721c654ac2970baf800eb53cd2
-#: ../../ref/models/querysets.txt:1527
+# c6ada61f916544a0bff62fa08ef91a10
+#: ../../ref/models/querysets.txt:1526
+msgid "It does not work with many-to-many relationships."
+msgstr ""
+
+# f5db29f26de04cfabd3cebddc4d84df5
+#: ../../ref/models/querysets.txt:1528
 msgid ""
 "The ``batch_size`` parameter controls how many objects are created in single"
 " query. The default is to create all objects in one batch, except for SQLite"
@@ -43550,7 +43622,7 @@ msgstr ""
 # a97bef3fcb114f93ab819c16058162e2
 #: ../../ref/request-response.txt:348
 msgid "The size, in bytes, of the uploaded file."
-msgstr ""
+msgstr "La taille en octets du fichier téléversé."
 
 # 5631cbcfe7784406b761090e3bd91b12
 #: ../../ref/request-response.txt:355
@@ -46428,8 +46500,16 @@ msgstr "URL qui gère les fichiers médias servis à partir de :setting:`MEDIA_R
 msgid "Example: ``\"http://media.example.com/\"``"
 msgstr "Exemple : ``\"http://media.example.com/\"``"
 
-# 0b5a4a2ab05c436b8829a31c2b4241c8
-#: ../../ref/settings.txt:1455
+# 22b355a03c0d4adfba296de22b4ca9ba
+#: ../../ref/settings.txt:1445
+msgid ""
+"There are security risks if you are accepting uploaded content from "
+"untrusted users! See the security guide's topic on :ref:`user-uploaded-"
+"content-security` for mitigation details."
+msgstr "Il existe des risques de sécurité si vous acceptez du contenu téléversé de la part d'utilisateurs non fiables. Consultez le sujet :ref:`user-uploaded-content-security` du guide de sécurité pour des détails sur les mesures de réduction des risques."
+
+# 8ee8678a1726454aa6ff2528086cde4b
+#: ../../ref/settings.txt:1451
 msgid ""
 ":setting:`MEDIA_URL` and :setting:`STATIC_URL` must have different values. "
 "See :setting:`MEDIA_ROOT` for more details."
@@ -48048,16 +48128,11 @@ msgid ""
 "path)`` tuples, e.g.::"
 msgstr ""
 
-# 3758f904661647539569741fcfddfd07
-#: ../../ref/settings.txt:2599
-msgid "Example:"
-msgstr ""
-
-# cc2d6bb480694cfd9c9855dd2a5ff707
-#: ../../ref/settings.txt:2601
+# e99ea96b17464411af49bceb96bd0e7b
+#: ../../ref/settings.txt:2595
 msgid ""
-"Assuming you have :setting:`STATIC_URL` set ``'/static/'``, the "
-":djadmin:`collectstatic` management command would collect the \"stats\" "
+"For example, assuming you have :setting:`STATIC_URL` set to ``'/static/'``, "
+"the :djadmin:`collectstatic` management command would collect the \"stats\" "
 "files in a ``'downloads'`` subdirectory of :setting:`STATIC_ROOT`."
 msgstr ""
 
@@ -48335,22 +48410,22 @@ msgstr ""
 # e0d7faa13d0d481e8f542f89cc840d43
 #: ../../ref/settings.txt:2715
 msgid ":setting:`FILE_UPLOAD_HANDLERS`"
-msgstr ""
+msgstr ":setting:`FILE_UPLOAD_HANDLERS`"
 
 # e8c1e42c5b524aa88fdbd1f706cd6cea
 #: ../../ref/settings.txt:2716
 msgid ":setting:`FILE_UPLOAD_MAX_MEMORY_SIZE`"
-msgstr ""
+msgstr ":setting:`FILE_UPLOAD_MAX_MEMORY_SIZE`"
 
 # b8742022e08948338f11d81be79333e3
 #: ../../ref/settings.txt:2717
 msgid ":setting:`FILE_UPLOAD_PERMISSIONS`"
-msgstr ""
+msgstr ":setting:`FILE_UPLOAD_PERMISSIONS`"
 
 # a0e4cd0c94464410bd0897552d747355
 #: ../../ref/settings.txt:2718
 msgid ":setting:`FILE_UPLOAD_TEMP_DIR`"
-msgstr ""
+msgstr ":setting:`FILE_UPLOAD_TEMP_DIR`"
 
 # e1b72183d8d24e198021efe331949038
 #: ../../ref/settings.txt:2719
@@ -51131,12 +51206,13 @@ msgstr ""
 msgid "context_instance"
 msgstr ""
 
-# 328e05dff31a487796c2223896c8dc38
-#: ../../ref/templates/api.txt:767
+# 96e777c625204675920fbbc27c13fe7c
+#: ../../ref/templates/api.txt:769
 msgid ""
-"An instance of ``Context`` or a subclass (e.g., an instance of "
-"``RequestContext``) to use as the template's context. This can also be "
-"passed as the third positional argument."
+"An instance of :class:`~django.template.Context` or a subclass (e.g., an "
+"instance of :class:`~django.template.RequestContext`) to use as the "
+"template's context. This can also be passed as the third positional "
+"argument."
 msgstr ""
 
 # a5bac313c0724a99a50a7bcdad42ede2
@@ -52600,14 +52676,26 @@ msgstr "``#}``"
 msgid "url"
 msgstr "url"
 
-# b98ec47394fd4ef7a8b3c48c7f44dac5
+# 7b03b9a3541245c18c750a05798e0311
 #: ../../ref/templates/builtins.txt:999
 msgid ""
 "Returns an absolute path reference (a URL without the domain name) matching "
-"a given view function and optional parameters. This is a way to output links"
-" without violating the DRY principle by having to hard-code URLs in your "
-"templates::"
-msgstr "Renvoie un référence de chemin absolu (une URL sans le nom de domaine) correspondant à une fonction de vue et des paramètres facultatifs. C'est une façon d'afficher des liens sans trahir le principe DRY (ne pas se répéter) en devant figer des URL dans les gabarits ::"
+"a given view function and optional parameters."
+msgstr ""
+
+# 0e9ba63c50ff43e2b83e4a48c6b873eb
+#: ../../ref/templates/builtins.txt:1004
+msgid ""
+"Any special characters in the resulting path will be encoded using "
+":func:`~django.utils.encoding.iri_to_uri`."
+msgstr ""
+
+# 618ec138b36446b1af690fec4a595bb3
+#: ../../ref/templates/builtins.txt:1007
+msgid ""
+"This is a way to output links without violating the DRY principle by having "
+"to hard-code URLs in your templates::"
+msgstr ""
 
 # f314f296f65640909f08ec0fa1258830
 #: ../../ref/templates/builtins.txt:1006
@@ -52675,15 +52763,22 @@ msgid ""
 "slightly different call::"
 msgstr "Si vous aimeriez récupérer une URL sans l'afficher, vous pouvez effectuer un appel un peu différent ::"
 
-# ebba59baf7ba4d0684a79a220738f09c
-#: ../../ref/templates/builtins.txt:1055
+# 726cde5c529d401ba8178c6428322c99
+#: ../../ref/templates/builtins.txt:1060
+msgid ""
+"The scope of the variable created by the  ``as var`` syntax is the ``{% "
+"block %}`` in which the ``{% url %}`` tag appears."
+msgstr ""
+
+# 68ad5a329df04b5894547931da5cd62d
+#: ../../ref/templates/builtins.txt:1063
 msgid ""
 "This ``{% url ... as var %}`` syntax will *not* cause an error if the view "
 "is missing. In practice you'll use this to link to views that are optional::"
 msgstr "Cette syntaxe ``{% url ... as var %}`` ne produira *pas* d'erreur si la vue est manquante. En pratique, vous allez utiliser cela pour des liens vers des vues qui sont facultatives ::"
 
-# 7fdef9a6b37c4ae2a14f2b0eddf9e8e6
-#: ../../ref/templates/builtins.txt:1063
+# e48487e9562b475a8a9664257762f0c1
+#: ../../ref/templates/builtins.txt:1071
 msgid ""
 "If you'd like to retrieve a namespaced URL, specify the fully qualified "
 "name::"
@@ -55145,14 +55240,13 @@ msgstr "L'application contribuée :mod:`staticfiles<django.contrib.staticfiles>`
 msgid "get_static_prefix"
 msgstr "get_static_prefix"
 
-# 85da630507274d058a3ce9816e2e9145
-#: ../../ref/templates/builtins.txt:2457
+# dff10d2264364f059dd9337825ae41b4
+#: ../../ref/templates/builtins.txt:2465
 msgid ""
-"If you're not using :class:`~django.template.RequestContext`, or if you need"
-" more control over exactly where and how :setting:`STATIC_URL` is injected "
-"into the template, you can use the :ttag:`get_static_prefix` template tag "
-"instead::"
-msgstr "Si vous n'employez pas :class:`~django.template.RequestContext` ou que vous avez besoin de plus de contrôle sur l'endroit et la façon d'injecter :setting:`STATIC_URL` dans le gabarit, vous pouvez utiliser :ttag:`get_static_prefix` à la place ::"
+"You should prefer the :ttag:`static` template tag, but if you need more "
+"control over exactly where and how :setting:`STATIC_URL` is injected into "
+"the template, you can use the :ttag:`get_static_prefix` template tag::"
+msgstr ""
 
 # 623aba5ae4ab41729d91b30c161df716
 #: ../../ref/templates/builtins.txt:2465
@@ -57884,19 +57978,19 @@ msgstr "Génère une exception :exc:`~django.core.exceptions.ValidationError` av
 # aa3f7e8e93b84259884acbfa7988cf6a
 #: ../../ref/views.txt:3
 msgid "Built-in Views"
-msgstr ""
+msgstr "Vues intégrées"
 
 # 7447b411e424471487110bd451b8625d
 #: ../../ref/views.txt:8
 msgid ""
 "Several of Django's built-in views are documented in "
 ":doc:`/topics/http/views` as well as elsewhere in the documentation."
-msgstr ""
+msgstr "Plusieurs vues intégrées de Django sont documentées dans :doc:`/topics/http/views` ainsi qu'à divers autres endroits de la documentation."
 
 # 094e4c05171c466c83bb7aa0f0815451
 #: ../../ref/views.txt:12
 msgid "Serving files in development"
-msgstr ""
+msgstr "Service des fichiers durant le développement"
 
 # 73b006c3c0f94a8daea7baab7d84e24f
 #: ../../ref/views.txt:16
@@ -57917,7 +58011,7 @@ msgid ""
 "built-in handling for user-uploaded files, but you can have Django serve "
 "your :setting:`MEDIA_ROOT` by appending something like this to your "
 "URLconf::"
-msgstr ""
+msgstr "L'exemple le plus probable concerne les fichiers téléversés par les utilisateurs dans :setting:`MEDIA_ROOT`. ``django.contrib.staticfiles`` est prévu pour les fichiers statiques en ne comporte pas de gestion intégrée pour les fichiers téléversés par les utilisateurs, mais vous pouvez demander à Django de servir le contenu de :setting:`MEDIA_ROOT` an ajoutant quelque chose comme ceci à votre configuration d'URL ::"
 
 # e4e3cfc849ec434893bb811776524673
 #: ../../ref/views.txt:39
@@ -57926,7 +58020,7 @@ msgid ""
 "``'/media/'``. This will call the :func:`~django.views.static.serve` view, "
 "passing in the path from the URLconf and the (required) ``document_root`` "
 "parameter."
-msgstr ""
+msgstr "Notez que cet extrait suppose que votre réglage :setting:`MEDIA_URL` contient la valeur ``'/media/'``. Ce code appelle la vue :func:`~django.views.static.serve` en lui transmettant le chemin capturé par la configuration d'URL et le paramètre (obligatoire) ``document_root``."
 
 # 81e4b3efa6304ed1be9a37cf741c5b6e
 #: ../../ref/views.txt:44

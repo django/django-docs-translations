@@ -5,16 +5,16 @@
 # Translators:
 # AmirAmazigh Amazigh <amirouche.boubekki@gmail.com>, 2013
 # annoa <annoa.b@gmail.com>, 2013
-# claudep <claude@2xlibre.net>, 2013
+# claudep <claude@2xlibre.net>, 2013-2014
 # sylvaingd <sylvain.grodes@gmail.com>, 2013
 # hf, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-23 14:56+0100\n"
-"PO-Revision-Date: 2013-12-13 23:00+0000\n"
-"Last-Translator: annoa <annoa.b@gmail.com>\n"
+"POT-Creation-Date: 2014-01-25 16:31+0100\n"
+"PO-Revision-Date: 2014-01-26 17:40+0000\n"
+"Last-Translator: claudep <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -93,7 +93,7 @@ msgid ""
 "If your authentication mechanism uses a custom HTTP header and not "
 "``REMOTE_USER``, you can subclass ``RemoteUserMiddleware`` and set the "
 "``header`` attribute to the desired ``request.META`` key.  For example::"
-msgstr "Si votre mécanisme d'authentification utilise un en-tête HTTP personnalisé à la place de ``REMOTE_USER``, vous pouvez créer une sous-classe de ``RemoteUserMiddleware`` et définir l'attribut `header`` à la clé de ``request.META`` correspondante. Par exemple ::"
+msgstr "Si votre mécanisme d'authentification utilise un en-tête HTTP personnalisé à la place de ``REMOTE_USER``, vous pouvez créer une sous-classe de ``RemoteUserMiddleware`` et définir l'attribut `header`` à la clé de ``request.META`` désirée. Par exemple ::"
 
 # 83d6a2076dbe4e3e95a3ad7aaa4d91d3
 #: ../../howto/auth-remote-user.txt:71
@@ -120,7 +120,7 @@ msgid ""
 "``True`` or ``False``.  Determines whether or not a "
 ":class:`~django.contrib.auth.models.User` object is created if not already "
 "in the database.  Defaults to ``True``."
-msgstr "``True`` ou ``False``. Détermine si un objet :class:`~django.contrib.auth.models.User` est créé s'il n'est pas trouvé dans la base de données. La valeur par défaut est ``True``."
+msgstr "``True`` ou ``False``. Détermine si un objet :class:`~django.contrib.auth.models.User` est créé ou pas s'il n'est pas trouvé dans la base de données. La valeur par défaut est ``True``."
 
 # 44295a05443e4ab88c33c5edb252caeb
 # 7b86a5b2ca834f7dbb77717cad20e967
@@ -182,7 +182,7 @@ msgstr "Si vous avez besoin de fournir un stockage de fichiers personnalisé, ty
 msgid ""
 "Your custom storage system must be a subclass of "
 "``django.core.files.storage.Storage``::"
-msgstr "Votre système de stockage personnalisé doit être une sous-classe de "
+msgstr "Votre système de stockage personnalisé doit être une sous-classe de ``django.core.files.storage.Storage``::"
 
 # ae4e078ca7c642928c661a6a69fb0af4
 #: ../../howto/custom-file-storage.txt:18
@@ -259,7 +259,7 @@ msgid ""
 " uses to open the file. This must return a ``File`` object, though in most "
 "cases, you'll want to return some subclass here that implements logic "
 "specific to the backend storage system."
-msgstr "Appelée par ``Storage.open()``, c'est le mécanisme utilisé par la classe de stockage pour ouvrir un fichier. Elle doit renvoyer un objet ``File``, même si dans la plupart des cas, elle renverra plutôt une sous-classe qui implémentera la logique particulière du moteur de stockage."
+msgstr "Appelée par ``Storage.open()``, c'est le mécanisme utilisé par la classe de stockage pour ouvrir un fichier. Elle doit renvoyer un objet ``File``, même si dans la plupart des cas, elle renverra plutôt une sous-classe qui implémente la logique particulière du moteur de stockage."
 
 # 92bc10048154495c9cda4fd7f943fab8
 #: ../../howto/custom-file-storage.txt:60
@@ -292,7 +292,7 @@ msgid ""
 "The code provided on ``Storage`` retains only alpha-numeric characters, "
 "periods and underscores from the original filename, removing everything "
 "else."
-msgstr "Le code fourni par ``Storage`` ne retient que les caractères alphanumériques, les points et les soulignements du nom de fichier original, supprimant tout le reste."
+msgstr "Le code fourni par ``Storage`` ne conserve que les caractères alphanumériques, les points et les soulignements du nom de fichier original, supprimant tout le reste."
 
 # def9ba0ca8c14ef09d0e243350784936
 #: ../../howto/custom-file-storage.txt:81
@@ -483,7 +483,7 @@ msgid ""
 "Review the code of your command and the code it calls for behavioral "
 "differences when locales are changed and evaluate its impact on predictable "
 "behavior of your command."
-msgstr "Révisez le code de votre commande et le code qu'elle appelle quant à des différences de comportement lorsque les locales sont modifiées et évaluez l'impact potentiel sur le comportement prévisible de votre commande."
+msgstr "Passez en revue le code de votre commande et le code qu'elle appelle quant à des différences de comportement lorsque les locales sont modifiées et évaluez l'impact potentiel sur le comportement prévisible de votre commande."
 
 # 91e86be900dc4efe809ac597339e5a5c
 #: ../../howto/custom-management-commands.txt:178
@@ -532,7 +532,7 @@ msgid ""
 "A boolean indicating whether the command needs to be able to import Django "
 "settings; if ``True``, ``execute()`` will verify that this is possible "
 "before proceeding. Default value is ``True``."
-msgstr "Une valeur booléenne indiquant si la commande doit pouvoir importer les réglages Django. Si ``True``, ``execute()`` vérifiera que c'est bel et bien possible avant de continuer. La valeur par défaut est "
+msgstr "Une valeur booléenne indiquant si la commande doit pouvoir importer les réglages Django. Si ``True``, ``execute()`` vérifiera que c'est bel et bien possible avant de continuer. La valeur par défaut est  ``True``."
 
 # 891b0a11f9344a05a6c23991809b9ad7
 #: ../../howto/custom-management-commands.txt:214
@@ -554,7 +554,7 @@ msgid ""
 "A boolean indicating whether the command outputs SQL statements; if "
 "``True``, the output will automatically be wrapped with ``BEGIN;`` and "
 "``COMMIT;``. Default value is ``False``."
-msgstr "Une valeur booléenne indiquant si la commande affiche des commandes SQL ; si ``True``, le contenu en sortie est automatiquement entouré des instructions ``BEGIN;`` et ``COMMIT;``. La valeur par défaut est "
+msgstr "Une valeur booléenne indiquant si la commande affiche des commandes SQL ; si ``True``, le contenu en sortie est automatiquement entouré des instructions ``BEGIN;`` et ``COMMIT;``. La valeur par défaut est ``False``."
 
 # eba99c5ecbfb456984361b229ef81202
 #: ../../howto/custom-management-commands.txt:232
@@ -637,7 +637,7 @@ msgid ""
 "controlled by the attribute :attr:`requires_model_validation`). If the "
 "command raises a :class:`CommandError`, intercept it and print it sensibly "
 "to stderr."
-msgstr "Essaie d'exécuter cette commande en effectuant la validation des modèles au besoin (selon la valeur de l'attribut :attr:`requires_model_validation`). Si la commande lève une erreur :class:`CommandError`, elle l'intercepte et l'affiche proprement à destination de ``stderr``."
+msgstr "Essaie d'exécuter cette commande en effectuant la validation des modèles au besoin (selon la valeur de l'attribut :attr:`requires_model_validation`). Si la commande lève une erreur :class:`CommandError`, elle l'intercepte et l'affiche proprement à destination de stderr."
 
 # c37b5362d17c426ea07d523780fed032
 #: ../../howto/custom-management-commands.txt:293
@@ -743,7 +743,7 @@ msgstr "Exceptions des commandes"
 #: ../../howto/custom-management-commands.txt:361
 msgid ""
 "Exception class indicating a problem while executing a management command."
-msgstr "Classe d'exception indiquant qu'un problème est survenu lors de l'exécution de la commande de gestion."
+msgstr "Classe d'exception indiquant qu'un problème est survenu lors de l'exécution d'une commande de gestion."
 
 # f234fe2ca348436ba93744418ee913c9
 #: ../../howto/custom-management-commands.txt:364
@@ -793,7 +793,7 @@ msgid ""
 " obscure column types, such as geographic polygons or even user-created "
 "types such as `PostgreSQL custom types`_, you can define your own Django "
 "``Field`` subclasses."
-msgstr "Les types de champs intégrés de Django ne gèrent pas tous les types possibles de colonnes de bases de données, mais seulement les plus courants comme ``VARCHAR`` et ``INTEGER``. Pour les types de colonnes moins usités, comme les polygones géographiques ou même les types utilisateurs du style des `types PostgreSQL personnalisés`_, vous pouvez définir vos propres sous-classes de ``Field``."
+msgstr "Les types de champs intégrés de Django ne gèrent pas tous les types possibles de colonnes de bases de données, mais seulement les plus courants comme ``VARCHAR`` et ``INTEGER``. Pour des types de colonnes moins usités, comme les polygones géographiques ou même des types définis par les utilisateurs du style des `types PostgreSQL personnalisés`_, vous pouvez définir vos propres sous-classes de ``Field``."
 
 # 51de9315f3f94d75ba4890d22d4289d4
 #: ../../howto/custom-model-fields.txt:24
@@ -857,7 +857,7 @@ msgstr "Il se peut que vous vouliez uniquement profiter de types personnalisés 
 # ac85095525614f3da4eabc7d10c0291a
 #: ../../howto/custom-model-fields.txt:79
 msgid "Background theory"
-msgstr "Théorie de fond"
+msgstr "Contexte théorique"
 
 # 086152c39d1b47b19573fe61deabe072
 #: ../../howto/custom-model-fields.txt:82
@@ -901,7 +901,7 @@ msgid ""
 " -- say, all the *north* cards first, then the *east*, *south* and *west* "
 "cards. So ``Hand`` objects can be saved to text or character columns in the "
 "database."
-msgstr "Pour notre exemple ``Hand``, nous pourrions convertir les données des cartes en une chaîne de 104 caractères en concaténant toutes les cartes dans un ordre prédéterminé, par exemple d'abord toutes les cartes *nord*, puis toutes les cartes *est*, *sud* et *ouest*. Ainsi les objets ``Hand`` peuvent être enregistrés dans des colonnes texte ou caractère de la base de données."
+msgstr "Pour notre exemple ``Hand``, nous pourrions convertir les données des cartes en une chaîne de 104 caractères en concaténant toutes les cartes dans un ordre prédéterminé, par exemple d'abord toutes les cartes *nord*, puis toutes les cartes *est*, *sud* et *ouest*. Ainsi les objets ``Hand`` peuvent être enregistrés dans des colonnes texte ou caractères de la base de données."
 
 # 49bfef6c35cb4bddb8bf613ceb7ec978
 #: ../../howto/custom-model-fields.txt:106
@@ -919,7 +919,7 @@ msgid ""
 "``Field``. We'll get into the precise details of what ``Field`` can do later"
 " on; for now, suffice it to say that everything descends from ``Field`` and "
 "then customizes key pieces of the class behavior."
-msgstr "Tous les champs Django (et lorsque nous parlons de *champs* dans ce document, nous parlons toujours de champs de modèles et non pas de :doc:`champs de formulaires </ref/forms/fields>`) sont des sous-classes de :class:`django.db.models.Field`. La plupart des informations que Django conserve sur un champ sont communs à tous les champs (nom, texte d'aide, unicité, etc.). Le stockage de toutes ces informations est géré par ``Field``. Nous verrons plus précisément de que peut faire ``Field`` un peu plus tard ; pour l'instant, contentons-nous de savoir que tout hérite de ``Field`` et personnalise les éléments clés du comportement de la classe."
+msgstr "Tous les champs Django (et lorsque nous parlons de *champs* dans ce document, nous parlons toujours de champs de modèles et non pas de :doc:`champs de formulaires </ref/forms/fields>`) sont des sous-classes de :class:`django.db.models.Field`. La plupart des informations que Django conserve sur un champ sont communs à tous les champs (nom, texte d'aide, unicité, etc.). Le stockage de toutes ces informations est géré par ``Field``. Nous verrons plus précisément ce que peut faire ``Field`` un peu plus tard ; pour l'instant, contentons-nous de savoir que tout hérite de ``Field`` et personnalise les éléments clés du comportement de la classe."
 
 # e8eb8f4483db4bf88fab2779496f6654
 #: ../../howto/custom-model-fields.txt:119
@@ -961,7 +961,7 @@ msgid ""
 "The second class is the ``Field`` subclass. This is the class that knows how"
 " to convert your first class back and forth between its permanent storage "
 "form and the Python form."
-msgstr "La seconde classe est la sous-classe de ``Field``. C'est la classe qui sait comment convertir votre première classe sous forme utile pour le stockage et vice versa."
+msgstr "La seconde classe est la sous-classe de ``Field``. C'est la classe qui sait comment convertir votre première classe de sa forme utile pour le stockage vers sa forme Python et vice versa."
 
 # 0c8b33dfa3eb4018b66be3f86b5f9955
 #: ../../howto/custom-model-fields.txt:146
@@ -976,7 +976,7 @@ msgid ""
 "new field is most similar to. Can you subclass an existing Django field and "
 "save yourself some work? If not, you should subclass the "
 ":class:`~django.db.models.Field` class, from which everything is descended."
-msgstr "Lors de la planification de votre sous-classe de :class:`~django.db.models.Field`, réfléchissez d'abord à quelle classe :class:`~django.db.models.Field` existante votre nouveau champ ressemble le plus. Serait-il possible d'hériter d'un champ Django existant et d'économiser un peu de travail ? Si non, vous devrez hériter de la classe :class:`~django.db.models.Field` qui est la base de toutes les autres."
+msgstr "Lors de la planification de votre sous-classe de :class:`~django.db.models.Field`, réfléchissez d'abord à quelle classe :class:`~django.db.models.Field` existante votre nouveau champ ressemble le plus. Serait-il possible d'hériter d'un champ Django existant et d'économiser un peu de travail ? Si non, vous devrez hériter de la classe :class:`~django.db.models.Field` qui est le parent de toutes les autres."
 
 # c5027e87e71d4d67b1971d4895842464
 #: ../../howto/custom-model-fields.txt:154
@@ -985,7 +985,7 @@ msgid ""
 " are specific to your case from the common arguments and passing the latter "
 "to the ``__init__()`` method of :class:`~django.db.models.Field` (or your "
 "parent class)."
-msgstr "L'initialisation du nouveau champ consiste à séparer tout paramètre qui est spécifique au champ des paramètres standards, et de transmettre ces derniers à la méthode ``__init__()`` de :class:`~django.db.models.Field` (ou d'une autre classe parente)."
+msgstr "L'initialisation du nouveau champ consiste à séparer tout paramètre qui est spécifique à votre champ, des paramètres standards, et de transmettre ces derniers à la méthode ``__init__()`` de :class:`~django.db.models.Field` (ou d'une autre classe parente)."
 
 # 12e6eca0ce7f4a9885a76dbd253e8bc2
 #: ../../howto/custom-model-fields.txt:159
@@ -1080,7 +1080,7 @@ msgstr ":attr:`~django.db.models.Field.db_index`"
 msgid ""
 "``rel``: Used for related fields (like :class:`ForeignKey`). For advanced "
 "use only."
-msgstr "``rel``: utilisé pour les champs de liaison (comme :class:`ForeignKey`). Uniquement pour utilisation avancée."
+msgstr "``rel``: utilisé pour les champs de liaison (comme :class:`ForeignKey`). Uniquement pour une utilisation avancée."
 
 # bda04ac6159f4a3fa60d3bb6bfe754b8
 #: ../../howto/custom-model-fields.txt:211
@@ -1144,7 +1144,7 @@ msgid ""
 "``auto_created``: ``True`` if the field was automatically created, as for "
 "the :class:`~django.db.models.OneToOneField` used by model inheritance. For "
 "advanced use only."
-msgstr "``auto_created``: vaut ``True`` si le champ a été créé automatiquement, comme pour le champ :class:`~django.db.models.OneToOneField` utilisé dans un contexte d'héritage de modèles. Pour utilisation avancée uniquement."
+msgstr "``auto_created``: vaut ``True`` si le champ a été créé automatiquement, comme pour le champ :class:`~django.db.models.OneToOneField` utilisé dans un contexte d'héritage de modèles. Pour une utilisation avancée uniquement."
 
 # f55a144a65ca4b84b524286a33db0999
 #: ../../howto/custom-model-fields.txt:229
@@ -1211,7 +1211,7 @@ msgstr "Ceci garantit que la méthode :meth:`.to_python` documentée ci-dessous 
 # 7df28faba5b04e86af4e4207b650ee95
 #: ../../howto/custom-model-fields.txt:281
 msgid "ModelForms and custom fields"
-msgstr "Champs personnalisés et "
+msgstr "Champs personnalisés et ModelForms"
 
 # 4e0dfba59fb44c21a24ca5a1781ba079
 #: ../../howto/custom-model-fields.txt:283
@@ -1241,7 +1241,7 @@ msgid ""
 " value. This may require writing a custom form field, and/or implementing "
 "the :meth:`.formfield` method on your field to return a form field class "
 "whose `to_python()` returns the correct datatype."
-msgstr "C'est pour cela que vous devez garantir que le champ de formulaire utilisé pour représenter votre champ personnalisé effectue toute validation de saisie et nettoyage de donnée nécessaire pour convertir les saisies utilisateurs des formulaires en valeurs de champ de modèle compatible avec `to_python()`. Cela peut parfois nécessiter l'écriture d'un champ de formulaire spécialisé ou l'implémentation de la méthode :meth:`.formfield` de votre champ qui renverra une classe de champ de formulaire dont la méthode `to_python()` renvoie le type de donnée correct."
+msgstr "C'est pour cela que vous devez garantir que le champ de formulaire utilisé pour représenter votre champ personnalisé effectue toute validation de saisie et nettoyage de donnée nécessaire pour convertir les saisies utilisateurs des formulaires en valeurs de champ de modèle compatible avec `to_python()`. Cela peut parfois nécessiter l'écriture d'un champ de formulaire spécialisé et/ou l'implémentation de la méthode :meth:`.formfield` de votre champ qui renverra une classe de champ de formulaire dont la méthode `to_python()` renvoie le type de donnée correct."
 
 # 830951f38a0843fa8a85530132fc3d37
 #: ../../howto/custom-model-fields.txt:304
@@ -2286,8 +2286,39 @@ msgid ""
 "anything either way."
 msgstr "Il n'y a pas besoin de se préoccuper du drapeau ``is_safe`` dans ce cas (même si on pourrait le définir sans dommages). Chaque fois que vous gérez manuellement la question de l'échappement automatique et que vous renvoyez une chaîne sûre, le drapeau ``is_safe`` ne change rien, quelle que soit sa valeur."
 
-# 56de71744f724ccbbb8e79e454c7152a
-#: ../../howto/custom-template-tags.txt:344
+# c9ef59dfbea44db48f7df5ddc035f64b
+#: ../../howto/custom-template-tags.txt:341
+msgid "Avoiding XSS vulnerabilities when reusing built-in filters"
+msgstr "Risque de vulnérabilités XSS lors de la réutilisation de filtres intégrés"
+
+# 7c475cba5c694c32874dcdf3a4d1b988
+#: ../../howto/custom-template-tags.txt:343
+msgid ""
+"Be careful when reusing Django's built-in filters. You'll need to pass "
+"``autoescape=True`` to the filter in order to get the proper autoescaping "
+"behavior and avoid a cross-site script vulnerability."
+msgstr "Soyez prudent lorsque vous réutilisez des filtres intégrés de Django. Il est nécessaire de passer ``autoescape=True`` au filtre afin d'obtenir le bon comportement d'échappement automatique et d'éviter ainsi une éventuelle vulnérabilité de script inter-site."
+
+# a22bfb3cf110498e8ce2a0a8eb24e35a
+#: ../../howto/custom-template-tags.txt:347
+msgid ""
+"For example, if you wanted to write a custom filter called "
+"``urlize_and_linebreaks`` that combined the :tfilter:`urlize` and "
+":tfilter:`linebreaksbr` filters, the filter would look like::"
+msgstr "Par exemple, si vous voulez écrire un filtre personnalisé nommé ``urlize_and_linebreaks`` qui combine les filtres :tfilter:`urlize` et :tfilter:`linebreaksbr`, le filtre pourrait ressembler à ceci ::"
+
+# 250e94dc7f3742a6a4c6cd7e98b99932
+#: ../../howto/custom-template-tags.txt:357
+msgid "Then:"
+msgstr "Puis :"
+
+# d82431f546e54e32b5bc4febdebdce01
+#: ../../howto/custom-template-tags.txt:363
+msgid "would be equivalent to:"
+msgstr "serait équivalent à :"
+
+# ae65717d1edd44c78a86df4a0d9754a3
+#: ../../howto/custom-template-tags.txt:372
 msgid "Filters and time zones"
 msgstr "Filtres et fuseaux horaires"
 
@@ -5776,128 +5807,24 @@ msgstr "Les données SQL spécifiques au moteur de base de données sont exécut
 msgid "Running Django on Jython"
 msgstr "Fonctionnement de Django sur Jython"
 
-# bf8df78390724bc29befdbf9212718c9
+# cfe57b0ee803439f80c9ae6f43a49a4e
 #: ../../howto/jython.txt:7
-msgid "Python 2.6 support"
-msgstr "Prise en charge de Python 2.6"
-
-# 172f4d70d23848cbbd381965c5b9276b
-#: ../../howto/jython.txt:9
 msgid ""
-"Django 1.5 has dropped support for Python 2.5. Therefore, you have to use a "
-"Jython 2.7 alpha release if you want to use Django 1.5 with Jython. Please "
-"use Django 1.4 if you want to keep using Django on a stable Jython version."
-msgstr "Django 1.5 a abandonné la prise en charge de Python 2.5. Vous devez donc utiliser une version alpha de Jython 2.7 si vous voulez utiliser Django 1.5 avec Jython. Utilisez Django 1.4 si vous voulez continuer d'utiliser Django sur une version stable de Jython."
+"As of January 2014, the latest release of `django-jython`_ supports Django "
+"1.3 which is no longer supported (receiving fixes or security updates) by "
+"the Django Project. We therefore recommend that you do not try to run Django"
+" on Jython at this time."
+msgstr "En date de janvier 2014, la publication la plus récente de `django-jython`_ prend en charge Django 1.3 qui n'est lui-même plus pris en charge (plus de corrections ni de mises à jour de sécurité) par le projet Django. C'est pourquoi nous recommandons de ne pas faire fonctionner Django sur Jython tant que la situation ne change pas."
 
-# 251adf3da5e54d8e88208a5be4d73f39
-#: ../../howto/jython.txt:14
+# 6f2a2ef9eab644549c233410e785e141
+#: ../../howto/jython.txt:12
 msgid ""
-"Jython_ is an implementation of Python that runs on the Java platform (JVM)."
-" Django runs cleanly on Jython version 2.5 or later, which means you can "
-"deploy Django on any Java platform."
-msgstr "Jython_ est une implémentation de Python qui tourne sur une plate-forme Java (JVM). Django fonctionne proprement sur les versions 2.5 ou plus récentes de Jython, ce qui signifie que vous pouvez déployer Django sur toute plate-forme Java."
-
-# 8d6d0bdedfa04a8e90d517c1410e72e9
-#: ../../howto/jython.txt:18
-msgid ""
-"This document will get you up and running with Django on top of Jython."
-msgstr "Ce document vous guide dans la configuration de Django au-dessus de Jython."
-
-# 7efec668d5e5490a8c2f7161fe2a6347
-#: ../../howto/jython.txt:23
-msgid "Installing Jython"
-msgstr "Installation de Jython"
-
-# 288262dc7b544715bc1dafc06f8e98cb
-#: ../../howto/jython.txt:25
-msgid ""
-"Django works with Jython versions 2.5b3 and higher. Download Jython at "
-"http://www.jython.org/."
-msgstr "Django fonctionne sur les versions 2.5b3 ou plus récentes de Jython. Téléchargez Jython à l'adresse http://www.jython.org/."
-
-# 7ff65ad2965045fe9db43c9145e931ad
-#: ../../howto/jython.txt:29
-msgid "Creating a servlet container"
-msgstr "Création d'un conteneur servlet"
-
-# e05b96cdae64480784f0210154925a02
-#: ../../howto/jython.txt:31
-msgid ""
-"If you just want to experiment with Django, skip ahead to the next section; "
-"Django includes a lightweight Web server you can use for testing, so you "
-"won't need to set up anything else until you're ready to deploy Django in "
-"production."
-msgstr "Si vous voulez simplement expérimenter Django, passez à la section suivante ; Django contient un serveur Web allégé que vous pouvez utiliser pour des tests, vous n'avez donc pas besoin de configurer d'autres choses tant que vous ne vous apprêtez pas à déployer Django en production."
-
-# 614e0ede59e04cc6b5fb92e28efbddc1
-#: ../../howto/jython.txt:35
-msgid ""
-"If you want to use Django on a production site, use a Java servlet "
-"container, such as `Apache Tomcat`_. Full JavaEE applications servers such "
-"as `GlassFish`_ or `JBoss`_ are also OK, if you need the extra features they"
-" include."
-msgstr "Si vous souhaitez utiliser Django sur un site de production, utilisez un conteneur de servlet Java, comme `Apache Tomcat`_. Des serveurs d'applications JavaEE complets tels que `GlassFish`_ ou `JBoss`_ conviennent aussi, si vous avez besoin des fonctionnalités supplémentaires qu'ils apportent."
-
-# 6bc66fe186034efbb63cf8be5382e2cc
-#: ../../howto/jython.txt:44
-msgid "Installing Django"
-msgstr "Installation de Django"
-
-# ca23b0ab1b8544aa8c450a46ceed5a18
-#: ../../howto/jython.txt:46
-msgid ""
-"The next step is to install Django itself. This is exactly the same as "
-"installing Django on standard Python, so see :ref:`removing-old-versions-of-"
-"django` and :ref:`install-django-code` for instructions."
-msgstr "L'étape suivante est d'installer Django lui-même. La procédure est identique à celle qui prévaut pour du Python standard, consultez donc :ref:`removing-old-versions-of-django` et :ref:`install-django-code` pour plus d'instructions."
-
-# 8fda63ccedcf4f2b8795be2f6a8c96c7
-#: ../../howto/jython.txt:52
-msgid "Installing Jython platform support libraries"
-msgstr "Installation des bibliothèques de prise en charge de la plate-forme Jython"
-
-# 18329c1da27e40798c9d3bc94e7f030f
-#: ../../howto/jython.txt:54
-msgid ""
-"The `django-jython`_ project contains database backends and management "
-"commands for Django/Jython development. Note that the builtin Django "
-"backends won't work on top of Jython."
-msgstr "Le projet `django-jython`_ contient les moteurs de base de données et les commandes de gestion pour le développement de Django/Jython. Notez que les moteurs intégrés à Django ne fonctionnent pas avec Jython."
-
-# 9ded5288bf6d49fe84472a94ca253775
-#: ../../howto/jython.txt:60
-msgid ""
-"To install it, follow the `installation instructions`_ detailed on the "
-"project Web site. Also, read the `database backends`_ documentation there."
-msgstr "Pour l'installer, suivez les `instructions d'installation`_ détaillées sur le site Web du projet. Lisez aussi la documentation sur les `moteurs de base de données`_ au même endroit."
-
-# 0b6406b02f484ac08ff8388428b8ab72
-#: ../../howto/jython.txt:67
-msgid "Differences with Django on Jython"
-msgstr "Différences avec Django sur Jython"
-
-# b1bc2e2f6aa447f58e79913caf484d48
-#: ../../howto/jython.txt:71
-msgid ""
-"At this point, Django on Jython should behave nearly identically to Django "
-"running on standard Python. However, are a few differences to keep in mind:"
-msgstr "À ce stade, Django sur Jython devrait fonctionner de manière quasi identique à une configuration de Django sur du Python standard. Cependant, voici quelques différences à garder en tête :"
-
-# eccb66173b8b486dba7461c606b8f363
-#: ../../howto/jython.txt:74
-msgid ""
-"Remember to use the ``jython`` command instead of ``python``. The "
-"documentation uses ``python`` for consistency, but if you're using Jython "
-"you'll want to mentally replace ``python`` with ``jython`` every time it "
-"occurs."
-msgstr "Rappelez-vous d'utiliser la commande ``jython`` au lieu de ``python``. La documentation utilise ``python`` par cohérence, mais si vous utilisez Jython, vous devrez faire l'effort mental de remplacer ``python`` par ``jython`` là où c'est nécessaire."
-
-# 53d524eb0d4745f483a01d5061a4d249
-#: ../../howto/jython.txt:79
-msgid ""
-"Similarly, you'll need to use the ``JYTHONPATH`` environment variable "
-"instead of ``PYTHONPATH``."
-msgstr "De même, vous devrez utiliser la variable d'environnement ``JYTHONPATH`` au lieu de ``PYTHONPATH``."
+"The django-jython project is `seeking contributors`_ to help update its code"
+" for newer versions of Django. You can select an older version of this "
+"documentation to see the instructions we had for using Django with Jython. "
+"If django-jython is updated and please `file a ticket`_ and we'll be happy "
+"to update our documentation accordingly."
+msgstr "Le projet django-jython `recherche des contributeurs`_ pour aider à mettre à jour son code pour des versions plus récentes de Django. Vous pouvez sélectionner une version plus ancienne de cette documentation pour consulter les instructions qui étaient fournies pour utiliser Django avec Jython. Si django-jython devait être mis à jour, merci de `le signaler dans un ticket`_ et nous serons heureux de mettre à jour notre documentation de manière appropriée."
 
 # 1e86636262ad46d0a518270ff77ebeb0
 #: ../../howto/jython.txt:5
@@ -5913,11 +5840,6 @@ msgstr "Java"
 #: ../../howto/jython.txt:5
 msgid "JVM"
 msgstr "JVM"
-
-# f486b06223c4422496e79b93bbd5e68f
-#: ../../howto/jython.txt:69
-msgid "JYTHONPATH"
-msgstr "JYTHONPATH"
 
 # 86aef2c93698488fbb62f28110eb77b2
 #: ../../howto/legacy-databases.txt:3
