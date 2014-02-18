@@ -1,0 +1,1577 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-08 14:28\n"
+"PO-Revision-Date: 2014-02-10 13:23+0500\n"
+"Last-Translator: Vitaliy Dorokhin <seryimysh@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: ru_RU\n"
+
+# a74ce1c742ab41968bd89f77098df030
+#: ../../faq/admin.txt:2
+msgid "FAQ: The admin"
+msgstr "ЧаВо: Административный интерфейс"
+
+# 841089d09dd14d358dbbd08d37a446d3
+#: ../../faq/admin.txt:5
+msgid ""
+"I can't log in. When I enter a valid username and password, it just brings "
+"up the login page again, with no error messages."
+msgstr ""
+"Я не могу войти в систему. Когда я ввожу правильные имя пользователя и "
+"пароль, система просто возвращает меня на стартовую страницу, не выводя "
+"сообщений об ошибке. "
+
+# 0046061242854adfb0f41f9e6bc8d10a
+#: ../../faq/admin.txt:7
+msgid ""
+"The login cookie isn't being set correctly, because the domain of the cookie "
+"sent out by Django doesn't match the domain in your browser. Try these two "
+"things:"
+msgstr ""
+
+# 3502b78265c945d6ab471c04bbcbcc41
+#: ../../faq/admin.txt:11
+msgid ""
+"Set the :setting:`SESSION_COOKIE_DOMAIN` setting in your admin config file "
+"to match your domain. For example, if you're going to \"http://www.example."
+"com/admin/\" in your browser, in \"myproject.settings\" you should set :"
+"setting:`SESSION_COOKIE_DOMAIN` = 'www.example.com'."
+msgstr ""
+
+# e06268c4d254444a8c8dc7b3ba2c269f
+#: ../../faq/admin.txt:16
+msgid ""
+"Some browsers (Firefox?) don't like to accept cookies from domains that "
+"don't have dots in them. If you're running the admin site on \"localhost\" "
+"or another domain that doesn't have a dot in it, try going to \"localhost."
+"localdomain\" or \"127.0.0.1\". And set :setting:`SESSION_COOKIE_DOMAIN` "
+"accordingly."
+msgstr ""
+
+# 4af4cb88102542bd9cfcc2f3e0ecd7b2
+#: ../../faq/admin.txt:23
+msgid ""
+"I can't log in. When I enter a valid username and password, it brings up the "
+"login page again, with a \"Please enter a correct username and password\" "
+"error."
+msgstr ""
+
+# 42c89f74252548d8a7219ad2f943e1e2
+#: ../../faq/admin.txt:25
+msgid ""
+"If you're sure your username and password are correct, make sure your user "
+"account has :attr:`~django.contrib.auth.models.User.is_active` and :attr:"
+"`~django.contrib.auth.models.User.is_staff` set to True. The admin site only "
+"allows access to users with those two fields both set to True."
+msgstr ""
+
+# 7f1410d0ac784b5eae6df9110808b00c
+#: ../../faq/admin.txt:31
+msgid "How can I prevent the cache middleware from caching the admin site?"
+msgstr ""
+
+# 53fc0d9f7e004472a901f28c64a86431
+#: ../../faq/admin.txt:33
+msgid ""
+"Set the :setting:`CACHE_MIDDLEWARE_ANONYMOUS_ONLY` setting to ``True``. See "
+"the :doc:`cache documentation </topics/cache>` for more information."
+msgstr ""
+
+# d6c2b9b112874a17bcf52b2fcfb80d94
+#: ../../faq/admin.txt:37
+msgid ""
+"How do I automatically set a field's value to the user who last edited the "
+"object in the admin?"
+msgstr ""
+
+# a5f12a2f0112425cb0679a3e6cde8025
+#: ../../faq/admin.txt:39
+msgid ""
+"The :class:`~django.contrib.admin.ModelAdmin` class provides customization "
+"hooks that allow you to transform an object as it saved, using details from "
+"the request. By extracting the current user from the request, and "
+"customizing the :meth:`~django.contrib.admin.ModelAdmin.save_model` hook, "
+"you can update an object to reflect the user that edited it. See :ref:`the "
+"documentation on ModelAdmin methods <model-admin-methods>` for an example."
+msgstr ""
+
+# 7c8c19bab5144e0aba0d3c288ac62138
+#: ../../faq/admin.txt:47
+msgid ""
+"How do I limit admin access so that objects can only be edited by the users "
+"who created them?"
+msgstr ""
+
+# c2fb5763c7b4462c924f4f2f5bd438be
+#: ../../faq/admin.txt:49
+msgid ""
+"The :class:`~django.contrib.admin.ModelAdmin` class also provides "
+"customization hooks that allow you to control the visibility and editability "
+"of objects in the admin. Using the same trick of extracting the user from "
+"the request, the :meth:`~django.contrib.admin.ModelAdmin.queryset` and :meth:"
+"`~django.contrib.admin.ModelAdmin.has_change_permission` can be used to "
+"control the visibility and editability of objects in the admin."
+msgstr ""
+
+# bf1b06f7778246ffb4d378841dd36d4c
+#: ../../faq/admin.txt:57
+msgid ""
+"My admin-site CSS and images showed up fine using the development server, "
+"but they're not displaying when using mod_wsgi."
+msgstr ""
+
+# a8a8120043a14ccf8fff61a8f4e002c3
+#: ../../faq/admin.txt:59
+msgid ""
+"See :ref:`serving the admin files <serving-the-admin-files>` in the \"How to "
+"use Django with mod_wsgi\" documentation."
+msgstr ""
+
+# 4b87419a8b6e4672aa2ea4b37595ff03
+#: ../../faq/admin.txt:63
+msgid ""
+"My \"list_filter\" contains a ManyToManyField, but the filter doesn't "
+"display."
+msgstr ""
+
+# 3ece72828d694affb20a1d12e9db75e4
+#: ../../faq/admin.txt:65
+msgid ""
+"Django won't bother displaying the filter for a ``ManyToManyField`` if there "
+"are fewer than two related objects."
+msgstr ""
+
+# adf067a34fd444609ed85f7d1d8ca7e0
+#: ../../faq/admin.txt:68
+msgid ""
+"For example, if your :attr:`~django.contrib.admin.ModelAdmin.list_filter` "
+"includes :doc:`sites </ref/contrib/sites>`, and there's only one site in "
+"your database, it won't display a \"Site\" filter. In that case, filtering "
+"by site would be meaningless."
+msgstr ""
+
+# 92c3cd39364e463ab25ad2f1f86167cb
+#: ../../faq/admin.txt:74
+msgid "Some objects aren't appearing in the admin."
+msgstr ""
+
+# 8ab7cb1835524ce8aa876a4b3ac3ea7d
+#: ../../faq/admin.txt:76
+msgid ""
+"Inconsistent row counts may be caused by missing foreign key values or a "
+"foreign key field incorrectly set to :attr:`null=False <django.db.models."
+"Field.null>`. If you have a record with a :class:`~django.db.models."
+"ForeignKey` pointing to a non-existent object and that foreign key is "
+"included is :attr:`~django.contrib.admin.ModelAdmin.list_display`, the "
+"record will not be shown in the admin changelist because the Django model is "
+"declaring an integrity constraint that is not implemented at the database "
+"level."
+msgstr ""
+
+# 924e72b5acf74209a35e320b0f6706e6
+#: ../../faq/admin.txt:86
+msgid "How can I customize the functionality of the admin interface?"
+msgstr ""
+
+# a7f89950d8544a7c857af6f1c4d0030b
+#: ../../faq/admin.txt:88
+msgid ""
+"You've got several options. If you want to piggyback on top of an add/change "
+"form that Django automatically generates, you can attach arbitrary "
+"JavaScript modules to the page via the model's class Admin :ref:`js "
+"parameter <modeladmin-media-definitions>`. That parameter is a list of URLs, "
+"as strings, pointing to JavaScript modules that will be included within the "
+"admin form via a ``<script>`` tag."
+msgstr ""
+
+# f6e62833670d464da6f24323aeccec93
+#: ../../faq/admin.txt:95
+msgid ""
+"If you want more flexibility than simply tweaking the auto-generated forms, "
+"feel free to write custom views for the admin. The admin is powered by "
+"Django itself, and you can write custom views that hook into the "
+"authentication system, check permissions and do whatever else they need to "
+"do."
+msgstr ""
+
+# bba0bb1bd46148a2a5b642b5ddf801ae
+#: ../../faq/admin.txt:100
+msgid ""
+"If you want to customize the look-and-feel of the admin interface, read the "
+"next question."
+msgstr ""
+
+# 30a94171eed443cdb91a0307e5b45558
+#: ../../faq/admin.txt:104
+msgid "The dynamically-generated admin site is ugly! How can I change it?"
+msgstr ""
+
+# 285a9b8479544d359b2b43cc598df845
+#: ../../faq/admin.txt:106
+msgid ""
+"We like it, but if you don't agree, you can modify the admin site's "
+"presentation by editing the CSS stylesheet and/or associated image files. "
+"The site is built using semantic HTML and plenty of CSS hooks, so any "
+"changes you'd like to make should be possible by editing the stylesheet."
+msgstr ""
+
+# 431af9c4b6b74841b10b3ff0aee0a5f1
+#: ../../faq/admin.txt:112
+msgid "What browsers are supported for using the admin?"
+msgstr ""
+
+# a14465adad1e422eb1f24ba139557ddd
+#: ../../faq/admin.txt:114
+msgid ""
+"The admin provides a fully-functional experience to `YUI's A-grade`_ "
+"browsers, with the notable exception of IE6, which is not supported."
+msgstr ""
+
+# 311fa52f801b4f4ebd985a8e88b0ae9b
+#: ../../faq/admin.txt:117
+msgid ""
+"There *may* be minor stylistic differences between supported browsers—for "
+"example, some browsers may not support rounded corners. These are considered "
+"acceptable variations in rendering."
+msgstr ""
+
+# ccdb84de8f24434690a5131b64314d38
+#: ../../faq/contributing.txt:2
+msgid "FAQ: Contributing code"
+msgstr ""
+
+# 8849622adf9d49dca7f957c971940cb2
+#: ../../faq/contributing.txt:5
+msgid "How can I get started contributing code to Django?"
+msgstr ""
+
+# d9bab22300b8480384f24a68dee5edc8
+#: ../../faq/contributing.txt:7
+msgid ""
+"Thanks for asking! We've written an entire document devoted to this "
+"question. It's titled :doc:`Contributing to Django </internals/contributing/"
+"index>`."
+msgstr ""
+
+# 08ec16e5ddf54356b14169caca8c17e8
+#: ../../faq/contributing.txt:11
+msgid ""
+"I submitted a bug fix in the ticket system several weeks ago. Why are you "
+"ignoring my patch?"
+msgstr ""
+
+# 92b6156ac27147fc935f1f9754043bae
+#: ../../faq/contributing.txt:13
+msgid "Don't worry: We're not ignoring you!"
+msgstr ""
+
+# 8dbc58d2d2e940dbbd3ab2b12d3a017a
+#: ../../faq/contributing.txt:15
+msgid ""
+"It's important to understand there is a difference between \"a ticket is "
+"being ignored\" and \"a ticket has not been attended to yet.\" Django's "
+"ticket system contains hundreds of open tickets, of various degrees of "
+"impact on end-user functionality, and Django's developers have to review and "
+"prioritize."
+msgstr ""
+
+# 9d130ae2352d444099f2ed6cd6b07479
+#: ../../faq/contributing.txt:20
+msgid ""
+"On top of that: the people who work on Django are all volunteers. As a "
+"result, the amount of time that we have to work on the framework is limited "
+"and will vary from week to week depending on our spare time. If we're busy, "
+"we may not be able to spend as much time on Django as we might want."
+msgstr ""
+
+# dd8d487516274659baf9152682577481
+#: ../../faq/contributing.txt:25
+msgid ""
+"The best way to make sure tickets do not get hung up on the way to checkin "
+"is to make it dead easy, even for someone who may not be intimately familiar "
+"with that area of the code, to understand the problem and verify the fix:"
+msgstr ""
+
+# df4f9c1bd9fc4fef851bc0b1a14a997b
+#: ../../faq/contributing.txt:29
+msgid ""
+"Are there clear instructions on how to reproduce the bug? If this touches a "
+"dependency (such as PIL), a contrib module, or a specific database, are "
+"those instructions clear enough even for someone not familiar with it?"
+msgstr ""
+
+# 737fc017be4f4e6eab9d46e73f3a84fc
+#: ../../faq/contributing.txt:34
+msgid ""
+"If there are several patches attached to the ticket, is it clear what each "
+"one does, which ones can be ignored and which matter?"
+msgstr ""
+
+# 61c934382dd3451aa90faaedb3322efc
+#: ../../faq/contributing.txt:37
+msgid ""
+"Does the patch include a unit test? If not, is there a very clear "
+"explanation why not? A test expresses succinctly what the problem is, and "
+"shows that the patch actually fixes it."
+msgstr ""
+
+# fb24ada2ec0e47ba91c597e11ded063c
+#: ../../faq/contributing.txt:41
+msgid ""
+"If your patch stands no chance of inclusion in Django, we won't ignore it -- "
+"we'll just close the ticket. So if your ticket is still open, it doesn't "
+"mean we're ignoring you; it just means we haven't had time to look at it yet."
+msgstr ""
+
+# 7eafab28d9db44a3abe9c41f38590726
+#: ../../faq/contributing.txt:46
+msgid "When and how might I remind the core team of a patch I care about?"
+msgstr ""
+
+# 0817a4ea40e5453ea149a583ed71c0ac
+#: ../../faq/contributing.txt:48
+msgid ""
+"A polite, well-timed message to the mailing list is one way to get "
+"attention. To determine the right time, you need to keep an eye on the "
+"schedule. If you post your message when the core developers are trying to "
+"hit a feature deadline or manage a planning phase, you're not going to get "
+"the sort of attention you require. However, if you draw attention to a "
+"ticket when the core developers are paying particular attention to bugs -- "
+"just before a bug fixing sprint, or in the lead up to a beta release for "
+"example -- you're much more likely to get a productive response."
+msgstr ""
+
+# c5144d97e9a34a1b9ec41b53db0c4d41
+#: ../../faq/contributing.txt:57
+msgid ""
+"Gentle IRC reminders can also work -- again, strategically timed if "
+"possible. During a bug sprint would be a very good time, for example."
+msgstr ""
+
+# 93072e17417b4919a6032567453c02bf
+#: ../../faq/contributing.txt:60
+msgid ""
+"Another way to get traction is to pull several related tickets together. "
+"When the core developers sit down to fix a bug in an area they haven't "
+"touched for a while, it can take a few minutes to remember all the fine "
+"details of how that area of code works. If you collect several minor bug "
+"fixes together into a similarly themed group, you make an attractive target, "
+"as the cost of coming up to speed on an area of code can be spread over "
+"multiple tickets."
+msgstr ""
+
+# 0ee3347ec7bb44b9a90f828699277582
+#: ../../faq/contributing.txt:67
+msgid ""
+"Please refrain from emailing core developers personally, or repeatedly "
+"raising the same issue over and over. This sort of behavior will not gain "
+"you any additional attention -- certainly not the attention that you need in "
+"order to get your pet bug addressed."
+msgstr ""
+
+# 8d33f78527a143dea97b4fe9ae78bdeb
+#: ../../faq/contributing.txt:73
+msgid "But I've reminded you several times and you keep ignoring my patch!"
+msgstr ""
+
+# 9d130c40749c4706a63293eb6df95dfd
+#: ../../faq/contributing.txt:75
+msgid ""
+"Seriously - we're not ignoring you. If your patch stands no chance of "
+"inclusion in Django, we'll close the ticket. For all the other tickets, we "
+"need to prioritize our efforts, which means that some tickets will be "
+"addressed before others."
+msgstr ""
+
+# 0a676b55f7914b3e9b88dbe778c6a8d3
+#: ../../faq/contributing.txt:80
+msgid ""
+"One of the criteria that is used to prioritize bug fixes is the number of "
+"people that will likely be affected by a given bug. Bugs that have the "
+"potential to affect many people will generally get priority over those that "
+"are edge cases."
+msgstr ""
+
+# 0055e439a75f4f7a903d184da6108558
+#: ../../faq/contributing.txt:85
+msgid ""
+"Another reason that bugs might be ignored for while is if the bug is a "
+"symptom of a larger problem. While we can spend time writing, testing and "
+"applying lots of little patches, sometimes the right solution is to rebuild. "
+"If a rebuild or refactor of a particular component has been proposed or is "
+"underway, you may find that bugs affecting that component will not get as "
+"much attention. Again, this is just a matter of prioritizing scarce "
+"resources. By concentrating on the rebuild, we can close all the little bugs "
+"at once, and hopefully prevent other little bugs from appearing in the "
+"future."
+msgstr ""
+
+# ff4ddde0a353412d80f04f34f0cd7ff3
+#: ../../faq/contributing.txt:94
+msgid ""
+"Whatever the reason, please keep in mind that while you may hit a particular "
+"bug regularly, it doesn't necessarily follow that every single Django user "
+"will hit the same bug. Different users use Django in different ways, "
+"stressing different parts of the code under different conditions. When we "
+"evaluate the relative priorities, we are generally trying to consider the "
+"needs of the entire community, not just the severity for one particular "
+"user. This doesn't mean that we think your problem is unimportant -- just "
+"that in the limited time we have available, we will always err on the side "
+"of making 10 people happy rather than making 1 person happy."
+msgstr ""
+
+# f15bb9c30ea24a75ba0329ef11ca6392
+#: ../../faq/general.txt:2
+msgid "FAQ: General"
+msgstr ""
+
+# aa0fde675c14443aa34a1154cc336a9d
+#: ../../faq/general.txt:5
+msgid "Why does this project exist?"
+msgstr ""
+
+# b1824c187ff042d0be2b0dc28d759c4b
+#: ../../faq/general.txt:7
+msgid ""
+"Django grew from a very practical need: World Online, a newspaper Web "
+"operation, is responsible for building intensive Web applications on "
+"journalism deadlines. In the fast-paced newsroom, World Online often has "
+"only a matter of hours to take a complicated Web application from concept to "
+"public launch."
+msgstr ""
+
+# 3b56b92a7f2d48aca14bd7405c40574f
+#: ../../faq/general.txt:12
+msgid ""
+"At the same time, the World Online Web developers have consistently been "
+"perfectionists when it comes to following best practices of Web development."
+msgstr ""
+
+# 508b56ac9b1d41959830f2fb91c81d18
+#: ../../faq/general.txt:15
+msgid ""
+"In fall 2003, the World Online developers (Adrian Holovaty and Simon "
+"Willison) ditched PHP and began using Python to develop its Web sites. As "
+"they built intensive, richly interactive sites such as Lawrence.com, they "
+"began to extract a generic Web development framework that let them build Web "
+"applications more and more quickly. They tweaked this framework constantly, "
+"adding improvements over two years."
+msgstr ""
+
+# 7135ebc4d503411789436137473da510
+#: ../../faq/general.txt:22
+msgid ""
+"In summer 2005, World Online decided to open-source the resulting software, "
+"Django. Django would not be possible without a whole host of open-source "
+"projects -- `Apache`_, `Python`_, and `PostgreSQL`_ to name a few -- and "
+"we're thrilled to be able to give something back to the open-source "
+"community."
+msgstr ""
+
+# a38f2fe80945431dbf0d19c60ef7cbc4
+#: ../../faq/general.txt:32
+msgid "What does \"Django\" mean, and how do you pronounce it?"
+msgstr ""
+
+# c1728a4838e84c1989cc898e06261090
+#: ../../faq/general.txt:34
+msgid ""
+"Django is named after `Django Reinhardt`_, a gypsy jazz guitarist from the "
+"1930s to early 1950s. To this day, he's considered one of the best "
+"guitarists of all time."
+msgstr ""
+
+# e31b2dd0181b40e29e71885e57965454
+#: ../../faq/general.txt:37
+msgid "Listen to his music. You'll like it."
+msgstr ""
+
+# a0944e05dc5649b7b923f891a7d9fd3a
+#: ../../faq/general.txt:39
+msgid ""
+"Django is pronounced **JANG**-oh. Rhymes with FANG-oh. The \"D\" is silent."
+msgstr ""
+
+# f2d7bbe0fc4d4ba08c301eb3f92ed64e
+#: ../../faq/general.txt:41
+msgid "We've also recorded an `audio clip of the pronunciation`_."
+msgstr ""
+
+# 358167e4add84ced8256b3cdbd0cab75
+#: ../../faq/general.txt:47
+msgid "Is Django stable?"
+msgstr ""
+
+# f08debcd7d8143109a95d21074cb49ef
+#: ../../faq/general.txt:49
+msgid ""
+"Yes, it's quite stable. World Online has been using Django for many years. "
+"Sites built on Django have weathered traffic spikes of over one million hits "
+"an hour."
+msgstr ""
+
+# 9953317ff7d647f7b10f0f25a300356e
+#: ../../faq/general.txt:53
+msgid "Does Django scale?"
+msgstr ""
+
+# c164358a2578458e87cd648970e7f689
+#: ../../faq/general.txt:55
+msgid ""
+"Yes. Compared to development time, hardware is cheap, and so Django is "
+"designed to take advantage of as much hardware as you can throw at it."
+msgstr ""
+
+# 949a5f1e2a374d1a882f06a0090b7a98
+#: ../../faq/general.txt:58
+msgid ""
+"Django uses a \"shared-nothing\" architecture, which means you can add "
+"hardware at any level -- database servers, caching servers or Web/"
+"application servers."
+msgstr ""
+
+# 53312a8c3bad4c8c98854876c658f4d7
+#: ../../faq/general.txt:61
+msgid ""
+"The framework cleanly separates components such as its database layer and "
+"application layer. And it ships with a simple-yet-powerful :doc:`cache "
+"framework </topics/cache>`."
+msgstr ""
+
+# 15b3f557bce74f56b0f9f62c570b7d44
+#: ../../faq/general.txt:66
+msgid "Who's behind this?"
+msgstr ""
+
+# 063fa36a0a6d439f9ea1e4601b93aca0
+#: ../../faq/general.txt:68
+msgid ""
+"Django was originally developed at World Online, the Web department of a "
+"newspaper in Lawrence, Kansas, USA. Django's now run by an international "
+"team of volunteers; you can read all about them over at the :doc:`list of "
+"committers </internals/committers>`"
+msgstr ""
+
+# abd6337d72a948fba2e0b2d84df64057
+#: ../../faq/general.txt:74
+msgid "Which sites use Django?"
+msgstr ""
+
+# 8e1147f397b14a3c8724cbd1b104f4cc
+#: ../../faq/general.txt:76
+msgid ""
+"`DjangoSites.org`_ features a constantly growing list of Django-powered "
+"sites."
+msgstr ""
+
+# 6bc7f1c8030a4991aa67b70f15482b23
+#: ../../faq/general.txt:83
+msgid ""
+"Django appears to be a MVC framework, but you call the Controller the \"view"
+"\", and the View the \"template\". How come you don't use the standard names?"
+msgstr ""
+
+# d7c39b9bf2944761b5ad3a04831b4c61
+#: ../../faq/general.txt:85
+msgid "Well, the standard names are debatable."
+msgstr ""
+
+# 024eb9fa222b4656b943ef57474baa85
+#: ../../faq/general.txt:87
+msgid ""
+"In our interpretation of MVC, the \"view\" describes the data that gets "
+"presented to the user. It's not necessarily *how* the data *looks*, but "
+"*which* data is presented. The view describes *which data you see*, not *how "
+"you see it.* It's a subtle distinction."
+msgstr ""
+
+# be1b2d30bd854cf29df02d17b8e633fe
+#: ../../faq/general.txt:92
+msgid ""
+"So, in our case, a \"view\" is the Python callback function for a particular "
+"URL, because that callback function describes which data is presented."
+msgstr ""
+
+# 05423d8047814a85b1ad6f1a67600d6c
+#: ../../faq/general.txt:95
+msgid ""
+"Furthermore, it's sensible to separate content from presentation -- which is "
+"where templates come in. In Django, a \"view\" describes which data is "
+"presented, but a view normally delegates to a template, which describes "
+"*how* the data is presented."
+msgstr ""
+
+# f5e320d2a1b64d6192074c1b771564f7
+#: ../../faq/general.txt:100
+msgid ""
+"Where does the \"controller\" fit in, then? In Django's case, it's probably "
+"the framework itself: the machinery that sends a request to the appropriate "
+"view, according to the Django URL configuration."
+msgstr ""
+
+# 58d85b8b0bd94134a8ef5de5bd20f1b5
+#: ../../faq/general.txt:104
+msgid ""
+"If you're hungry for acronyms, you might say that Django is a \"MTV\" "
+"framework -- that is, \"model\", \"template\", and \"view.\" That breakdown "
+"makes much more sense."
+msgstr ""
+
+# 3c00b6d7a9a74c5fa0e2b7f95b9a2d4e
+#: ../../faq/general.txt:108
+msgid ""
+"At the end of the day, of course, it comes down to getting stuff done. And, "
+"regardless of how things are named, Django gets stuff done in a way that's "
+"most logical to us."
+msgstr ""
+
+# b15b28ac27b0418698750add3597d3c6
+#: ../../faq/general.txt:113
+msgid "<Framework X> does <feature Y> -- why doesn't Django?"
+msgstr ""
+
+# ffba4677631d45e195fcf7481add42f7
+#: ../../faq/general.txt:115
+msgid ""
+"We're well aware that there are other awesome Web frameworks out there, and "
+"we're not averse to borrowing ideas where appropriate. However, Django was "
+"developed precisely because we were unhappy with the status quo, so please "
+"be aware that \"because <Framework X> does it\" is not going to be "
+"sufficient reason to add a given feature to Django."
+msgstr ""
+
+# cd54682d9a594451ab990e1b150f1ae9
+#: ../../faq/general.txt:122
+msgid ""
+"Why did you write all of Django from scratch, instead of using other Python "
+"libraries?"
+msgstr ""
+
+# 4b9f1cc381c040d2b8ec032d233f3433
+#: ../../faq/general.txt:124
+msgid ""
+"When Django was originally written a couple of years ago, Adrian and Simon "
+"spent quite a bit of time exploring the various Python Web frameworks "
+"available."
+msgstr ""
+
+# 6c08bc9c680b465eb1b8d5ab221bf5c8
+#: ../../faq/general.txt:128
+msgid "In our opinion, none of them were completely up to snuff."
+msgstr ""
+
+# 2a0b0ea6197748ff819c0e072320923e
+#: ../../faq/general.txt:130
+msgid "We're picky. You might even call us perfectionists. (With deadlines.)"
+msgstr ""
+
+# 358fb96ca72d47a28bac51d00cb0fb11
+#: ../../faq/general.txt:132
+msgid ""
+"Over time, we stumbled across open-source libraries that did things we'd "
+"already implemented. It was reassuring to see other people solving similar "
+"problems in similar ways, but it was too late to integrate outside code: "
+"We'd already written, tested and implemented our own framework bits in "
+"several production settings -- and our own code met our needs delightfully."
+msgstr ""
+
+# 557327eeeba94c888f6b5c9e35c921f0
+#: ../../faq/general.txt:138
+msgid ""
+"In most cases, however, we found that existing frameworks/tools inevitably "
+"had some sort of fundamental, fatal flaw that made us squeamish. No tool fit "
+"our philosophies 100%."
+msgstr ""
+
+# 7ac1a303b33b4bdc826001d0217e074f
+#: ../../faq/general.txt:142
+msgid "Like we said: We're picky."
+msgstr ""
+
+# 3be94590b9464b71b14aa96bb48dbd4a
+#: ../../faq/general.txt:144
+msgid ""
+"We've documented our philosophies on the :doc:`design philosophies page </"
+"misc/design-philosophies>`."
+msgstr ""
+
+# 8aa1f1f44e2448a7b09ab13cbba21a5e
+#: ../../faq/general.txt:148
+msgid "Is Django a content-management-system (CMS)?"
+msgstr ""
+
+# 483ac43d32fa42a294170879a99a3386
+#: ../../faq/general.txt:150
+msgid ""
+"No, Django is not a CMS, or any sort of \"turnkey product\" in and of "
+"itself. It's a Web framework; it's a programming tool that lets you build "
+"Web sites."
+msgstr ""
+
+# 8b0a30f112d64b5dbb6c8cda98664edc
+#: ../../faq/general.txt:153
+msgid ""
+"For example, it doesn't make much sense to compare Django to something like "
+"Drupal_, because Django is something you use to *create* things like Drupal."
+msgstr ""
+
+# b1ddfe16a29f4927ae457aa4dc3453a1
+#: ../../faq/general.txt:156
+msgid ""
+"Of course, Django's automatic admin site is fantastic and timesaving -- but "
+"the admin site is one module of Django the framework. Furthermore, although "
+"Django has special conveniences for building \"CMS-y\" apps, that doesn't "
+"mean it's not just as appropriate for building \"non-CMS-y\" apps (whatever "
+"that means!)."
+msgstr ""
+
+# 6c3924cb018943fe86d3168f9ee6c5aa
+#: ../../faq/general.txt:165
+msgid "How can I download the Django documentation to read it offline?"
+msgstr ""
+
+# 8f376cdd35714fcf8f48e470d1d10120
+#: ../../faq/general.txt:167
+msgid ""
+"The Django docs are available in the ``docs`` directory of each Django "
+"tarball release. These docs are in reST (reStructuredText) format, and each "
+"text file corresponds to a Web page on the official Django site."
+msgstr ""
+
+# ec4c4bcf30b84eb0a403a3aca8dfa29f
+#: ../../faq/general.txt:171
+msgid ""
+"Because the documentation is `stored in revision control`_, you can browse "
+"documentation changes just like you can browse code changes."
+msgstr ""
+
+# b08ddb9680634072868e0c533a5da9d3
+#: ../../faq/general.txt:174
+msgid ""
+"Technically, the docs on Django's site are generated from the latest "
+"development versions of those reST documents, so the docs on the Django site "
+"may offer more information than the docs that come with the latest Django "
+"release."
+msgstr ""
+
+# e1199987caf04b62b86770abc8d21df6
+#: ../../faq/general.txt:181
+msgid "Where can I find Django developers for hire?"
+msgstr ""
+
+# 0870b1bcc0e141fb8b7b4c26a9a0d141
+#: ../../faq/general.txt:183
+msgid ""
+"Consult our `developers for hire page`_ for a list of Django developers who "
+"would be happy to help you."
+msgstr ""
+
+# 183f0a280d5f437da072734baaf6cffb
+#: ../../faq/general.txt:186
+msgid ""
+"You might also be interested in posting a job to http://djangogigs.com/ . If "
+"you want to find Django-capable people in your local area, try https://"
+"people.djangoproject.com/ ."
+msgstr ""
+
+# d4a6823d96ba4835832c754e407cbe27
+#: ../../faq/general.txt:193
+msgid "How do I cite Django?"
+msgstr ""
+
+# bbb5269ff00a4e8d932eecf0068b5301
+#: ../../faq/general.txt:195
+msgid ""
+"It's difficult to give an official citation format, for two reasons: "
+"citation formats can vary wildly between publications, and citation "
+"standards for software are still a matter of some debate."
+msgstr ""
+
+# b3a80622e75b4b08808eddb2af1af6c1
+#: ../../faq/general.txt:199
+msgid "For example, `APA style`_,  would dictate something like::"
+msgstr ""
+
+# 1d13b53d15e440888b26b0fed8ed7d16
+#: ../../faq/general.txt:203
+msgid ""
+"However, the only true guide is what your publisher will accept, so get a "
+"copy of those guidelines and fill in the gaps as best you can."
+msgstr ""
+
+# 290fea5dc54b45ff85c98006dfc5fd2b
+#: ../../faq/general.txt:206
+msgid ""
+"If your referencing style guide requires a publisher name, use \"Django "
+"Software Foundation\"."
+msgstr ""
+
+# 81333b4563dd434cbd0c2e7899d63c2f
+#: ../../faq/general.txt:209
+msgid "If you need a publishing location, use \"Lawrence, Kansas\"."
+msgstr ""
+
+# 869d8a62fbe548998b9d2f6ef2949275
+#: ../../faq/general.txt:211
+msgid "If you need a web address, use http://djangoproject.com."
+msgstr ""
+
+# 29187d7d8c77432bb5023fff8ae7ec4f
+#: ../../faq/general.txt:213
+msgid "If you need a name, just use \"Django\", without any tagline."
+msgstr ""
+
+# 1cc8e69a04424c3499f688faf31801a1
+#: ../../faq/general.txt:215
+msgid ""
+"If you need a publication date, use the year of release of the version "
+"you're referencing (e.g., 2013 for v1.5)"
+msgstr ""
+
+# 0cc8f824ea834f9581b2852562bb128e
+#: ../../faq/help.txt:2
+msgid "FAQ: Getting Help"
+msgstr ""
+
+# db8608e9ac7e4b33a7aabbd68c3f952d
+#: ../../faq/help.txt:5
+msgid "How do I do X? Why doesn't Y work? Where can I go to get help?"
+msgstr ""
+
+# c2e27a2615f34c509980b8fb68db3e9c
+#: ../../faq/help.txt:7
+msgid ""
+"If this FAQ doesn't contain an answer to your question, you might want to "
+"try the `django-users mailing list`_. Feel free to ask any question related "
+"to installing, using, or debugging Django."
+msgstr ""
+
+# f5053dded3854141bb1f21aef0a995fd
+#: ../../faq/help.txt:11
+msgid ""
+"If you prefer IRC, the `#django IRC channel`_ on the Freenode IRC network is "
+"an active community of helpful individuals who may be able to solve your "
+"problem."
+msgstr ""
+
+# a8bd44f6b5d344a58c6f4d2c60f6b6d9
+#: ../../faq/help.txt:18
+msgid "Why hasn't my message appeared on django-users?"
+msgstr ""
+
+# 0d1049a0ad7348b1892a0911ba7664f4
+#: ../../faq/help.txt:20
+msgid ""
+"django-users_ has a lot of subscribers. This is good for the community, as "
+"it means many people are available to contribute answers to questions. "
+"Unfortunately, it also means that django-users_ is an attractive target for "
+"spammers."
+msgstr ""
+
+# 455ab272535748ccb2778a3066a3b737
+#: ../../faq/help.txt:25
+msgid ""
+"In order to combat the spam problem, when you join the django-users_ mailing "
+"list, we manually moderate the first message you send to the list. This "
+"means that spammers get caught, but it also means that your first question "
+"to the list might take a little longer to get answered. We apologize for any "
+"inconvenience that this policy may cause."
+msgstr ""
+
+# 471c9bfdaa3046778350e01c379d4226
+#: ../../faq/help.txt:34
+msgid "Nobody on django-users answered my question! What should I do?"
+msgstr ""
+
+# 3abef11aa5d041a79849d5c9c0f119ea
+#: ../../faq/help.txt:36
+msgid ""
+"Try making your question more specific, or provide a better example of your "
+"problem."
+msgstr ""
+
+# b6f008bf899c4e17aa7d431354d915f6
+#: ../../faq/help.txt:39
+msgid ""
+"As with most open-source mailing lists, the folks on django-users_ are "
+"volunteers. If nobody has answered your question, it may be because nobody "
+"knows the answer, it may be because nobody can understand the question, or "
+"it may be that everybody that can help is busy. One thing you might try is "
+"to ask the question on IRC -- visit the `#django IRC channel`_ on the "
+"Freenode IRC network."
+msgstr ""
+
+# c78db657e6dc4b5495e7c0f9fcffbb39
+#: ../../faq/help.txt:46
+msgid ""
+"You might notice we have a second mailing list, called django-developers_ -- "
+"but please don't email support questions to this mailing list. This list is "
+"for discussion of the development of Django itself. Asking a tech support "
+"question there is considered quite impolite."
+msgstr ""
+
+# aadccfb533ee467195cbed07aaa38563
+#: ../../faq/help.txt:54
+msgid "I think I've found a bug! What should I do?"
+msgstr ""
+
+# 1a064aee4c594969a61138122a4eb80e
+#: ../../faq/help.txt:56
+msgid ""
+"Detailed instructions on how to handle a potential bug can be found in our :"
+"ref:`Guide to contributing to Django <reporting-bugs>`."
+msgstr ""
+
+# 8f54cb0e54084938abdca79c5d7a6439
+#: ../../faq/help.txt:60
+msgid "I think I've found a security problem! What should I do?"
+msgstr ""
+
+# 7bd85e4d21fb46a68c6bf6f8ac038d38
+#: ../../faq/help.txt:62
+msgid ""
+"If you think you've found a security problem with Django, please send a "
+"message to security@djangoproject.com. This is a private list only open to "
+"long-time, highly trusted Django developers, and its archives are not "
+"publicly readable."
+msgstr ""
+
+# 46f64eac24aa479b9636af589163e81a
+#: ../../faq/help.txt:66
+msgid ""
+"Due to the sensitive nature of security issues, we ask that if you think you "
+"have found a security problem, *please* don't send a message to one of the "
+"public mailing lists. Django has a :ref:`policy for handling security issues "
+"<reporting-security-issues>`; while a defect is outstanding, we would like "
+"to minimize any damage that could be inflicted through public knowledge of "
+"that defect."
+msgstr ""
+
+# 943941aaedc94e189698a081180e7cfe
+#: ../../faq/index.txt:3
+msgid "Django FAQ"
+msgstr ""
+
+# d749bba798264f7688cfd12359ca8d22
+#: ../../faq/install.txt:2
+msgid "FAQ: Installation"
+msgstr ""
+
+# 0c3e9f0975ac46cc98eda615d1569dde
+#: ../../faq/install.txt:5
+msgid "How do I get started?"
+msgstr ""
+
+# 1bedc95b5dba49d7a8676b2df0420963
+#: ../../faq/install.txt:7
+msgid "`Download the code`_."
+msgstr ""
+
+# ed958328669f459aaba6fa3ee7971603
+#: ../../faq/install.txt:8
+msgid "Install Django (read the :doc:`installation guide </intro/install>`)."
+msgstr ""
+
+# eea8f15fda9e40c186bcae9e3a5cd4d5
+#: ../../faq/install.txt:9
+msgid "Walk through the :doc:`tutorial </intro/tutorial01>`."
+msgstr ""
+
+# 49b37b04c188421095281d3a50a0ceaf
+#: ../../faq/install.txt:10
+msgid ""
+"Check out the rest of the :doc:`documentation </index>`, and `ask "
+"questions`_ if you run into trouble."
+msgstr ""
+
+# da685f1702f0445298f3008e38209218
+#: ../../faq/install.txt:17
+msgid "What are Django's prerequisites?"
+msgstr ""
+
+# e4301dfbeeee463796e961079f8449f4
+#: ../../faq/install.txt:19
+msgid ""
+"Django requires Python, specifically Python 2.6.5 - 2.7.x. No other Python "
+"libraries are required for basic Django usage. Django 1.5 also has "
+"experimental support for Python 3.2.3 and above."
+msgstr ""
+
+# 1c50c378fff74215834117fcc6c28be7
+#: ../../faq/install.txt:23
+msgid ""
+"For a development environment -- if you just want to experiment with Django "
+"-- you don't need to have a separate Web server installed; Django comes with "
+"its own lightweight development server. For a production environment, Django "
+"follows the WSGI spec, :pep:`3333`, which means it can run on a variety of "
+"server platforms. See :doc:`Deploying Django </howto/deployment/index>` for "
+"some popular alternatives. Also, the `server arrangements wiki page`_ "
+"contains details for several deployment strategies."
+msgstr ""
+
+# 7a25941813794e6fbf739760d4613c61
+#: ../../faq/install.txt:31
+msgid ""
+"If you want to use Django with a database, which is probably the case, "
+"you'll also need a database engine. PostgreSQL_ is recommended, because "
+"we're PostgreSQL fans, and MySQL_, `SQLite 3`_, and Oracle_ are also "
+"supported."
+msgstr ""
+
+# 9500c3e1d2c24f30b5d30cece372ef0a
+#: ../../faq/install.txt:43
+msgid ""
+"Do I lose anything by using Python 2.6 versus newer Python versions, such as "
+"Python 2.7?"
+msgstr ""
+
+# 54185db21b304a918a2eb11fdb1a21b9
+#: ../../faq/install.txt:45
+msgid ""
+"Not in the core framework. Currently, Django itself officially supports "
+"Python 2.6 (2.6.5 or higher) and 2.7. However, newer versions of Python are "
+"often faster, have more features, and are better supported. If you use a "
+"newer version of Python you will also have access to some APIs that aren't "
+"available under older versions of Python."
+msgstr ""
+
+# ba6fbfcdb0674f35a09bd20134e6affa
+#: ../../faq/install.txt:51
+msgid ""
+"Third-party applications for use with Django are, of course, free to set "
+"their own version requirements."
+msgstr ""
+
+# e088cadb403d40c9ac7f7e304bd70985
+#: ../../faq/install.txt:54
+msgid ""
+"All else being equal, we recommend that you use the latest 2.x release "
+"(currently Python 2.7). This will let you take advantage of the numerous "
+"improvements and optimizations to the Python language since version 2.6."
+msgstr ""
+
+# f6170a32ff3c4671917c1d394e16e64c
+#: ../../faq/install.txt:58
+msgid ""
+"Generally speaking, we don't recommend running Django on Python 3 yet; see "
+"below for more."
+msgstr ""
+
+# c017452147f2449690b2d81a327f5b5d
+#: ../../faq/install.txt:62
+msgid "What Python version can I use with Django?"
+msgstr ""
+
+# da8b9d356f67407796641e7dda1b60a8
+#: ../../faq/install.txt:65
+msgid "Django version"
+msgstr ""
+
+# 2b518c73dddc48128a3ffca21a337ba4
+#: ../../faq/install.txt:65
+msgid "Python versions"
+msgstr ""
+
+# 54720f87a63b41eca3a7e3e8a55a8bfd
+#: ../../faq/install.txt:67
+msgid "1.0"
+msgstr ""
+
+# 4cea545a60f145aba61bd43878317599
+# 1b10f2e9c6bd4a77af0dc0d486b8fd37
+#: ../../faq/install.txt:67 ../../faq/install.txt:68
+msgid "2.3, 2.4, 2.5, 2.6"
+msgstr ""
+
+# c1c03350971d41c0965034ba2c56cad4
+#: ../../faq/install.txt:68
+msgid "1.1"
+msgstr ""
+
+# 3c11540265dd4aa9a0dd6cbd2e67fedf
+#: ../../faq/install.txt:69
+msgid "1.2"
+msgstr ""
+
+# af680eb9d6484c2aa981f0bbeb90b705
+# 4401bb8faec745b491e881d940ee7956
+#: ../../faq/install.txt:69 ../../faq/install.txt:70
+msgid "2.4, 2.5, 2.6, 2.7"
+msgstr ""
+
+# 5d2516b6c4fc4a9ab9c51d450444e365
+#: ../../faq/install.txt:70
+msgid "1.3"
+msgstr ""
+
+# 78425f4d57ce4aa79af4aefb603e9aee
+#: ../../faq/install.txt:71
+msgid "1.4"
+msgstr ""
+
+# 943a3f12e6724dda9fc13a763372619d
+#: ../../faq/install.txt:71
+msgid "2.5, 2.6, 2.7"
+msgstr ""
+
+# 0828d03678584f00a5bb6e29d066c662
+#: ../../faq/install.txt:72
+msgid "**1.5**"
+msgstr ""
+
+# 1bf148fa978742629a081df9cad02b77
+#: ../../faq/install.txt:72
+msgid "**2.6.5, 2.7** and **3.2.3, 3.3 (experimental)**"
+msgstr ""
+
+# 163518ac9cbc46b8b60bd371e4e60f0d
+#: ../../faq/install.txt:73
+msgid "*1.6 (future)*"
+msgstr ""
+
+# 83a5a4f5173f4339a9b549d4fde8de9f
+#: ../../faq/install.txt:73
+msgid "*2.6.5, 2.7* and *3.2.3, 3.3*"
+msgstr ""
+
+# 56c31c679f6646d0800be6428b8373bb
+#: ../../faq/install.txt:77
+msgid "Can I use Django with Python 3?"
+msgstr ""
+
+# 4c0f152902e8408aaab408d98bc257ae
+#: ../../faq/install.txt:79
+msgid ""
+"Django 1.5 introduces experimental support for Python 3.2.3 and above. "
+"However, we don't yet suggest that you use Django and Python 3 in production."
+msgstr ""
+
+# 240d54f4c71f442a86f6f8d5a8702d0d
+#: ../../faq/install.txt:82
+msgid ""
+"Python 3 support should be considered a \"preview\". It's offered to "
+"bootstrap the transition of the Django ecosystem to Python 3, and to help "
+"you start porting your apps for future Python 3 compatibility. But we're not "
+"yet confident enough to promise stability in production."
+msgstr ""
+
+# a4918870561d4df99ae7b469dcdddb0a
+#: ../../faq/install.txt:87
+msgid ""
+"Our current plan is to make Django 1.6 suitable for general use with Python "
+"3."
+msgstr ""
+
+# 7f9a5cef271e4b5393a26f32bb64a924
+#: ../../faq/install.txt:90
+msgid "Will Django run under shared hosting (like TextDrive or Dreamhost)?"
+msgstr ""
+
+# cecd78f7dcec4df88b69d78eb170de19
+#: ../../faq/install.txt:92
+msgid "See our `Django-friendly Web hosts`_ page."
+msgstr ""
+
+# a097d6de916a4b2e9b0d0f740347d617
+#: ../../faq/install.txt:97
+msgid "Should I use the stable version or development version?"
+msgstr ""
+
+# f6e784d95b1a4865ab709edc25fe5006
+#: ../../faq/install.txt:99
+msgid ""
+"Generally, if you're using code in production, you should be using a stable "
+"release. The Django project publishes a full stable release every nine "
+"months or so, with bugfix updates in between. These stable releases contain "
+"the API that is covered by our backwards compatibility guarantees; if you "
+"write code against stable releases, you shouldn't have any problems "
+"upgrading when the next official version is released."
+msgstr ""
+
+# 52fce73c52a643f9907e22eab9750c35
+#: ../../faq/models.txt:2
+msgid "FAQ: Databases and models"
+msgstr ""
+
+# c9f4c7af75c04cb1b864721ccc4a3baf
+#: ../../faq/models.txt:7
+msgid "How can I see the raw SQL queries Django is running?"
+msgstr ""
+
+# 03bcbe6f24d14cff86a6ee5b4767af69
+#: ../../faq/models.txt:9
+msgid ""
+"Make sure your Django :setting:`DEBUG` setting is set to ``True``. Then, "
+"just do this::"
+msgstr ""
+
+# 20a8c15475844747ae3d264a8b0a2333
+#: ../../faq/models.txt:17
+msgid ""
+"``connection.queries`` is only available if :setting:`DEBUG` is ``True``. "
+"It's a list of dictionaries in order of query execution. Each dictionary has "
+"the following::"
+msgstr ""
+
+# 0bfdeae33fb64185bc661936e4500ff2
+#: ../../faq/models.txt:24
+msgid ""
+"``connection.queries`` includes all SQL statements -- INSERTs, UPDATES, "
+"SELECTs, etc. Each time your app hits the database, the query will be "
+"recorded. Note that the SQL recorded here may be :ref:`incorrectly quoted "
+"under SQLite <sqlite-connection-queries>`."
+msgstr ""
+
+# 66e2927132e24ca2940f5e526b910ca4
+#: ../../faq/models.txt:29
+msgid ""
+"If you are using :doc:`multiple databases</topics/db/multi-db>`, you can use "
+"the same interface on each member of the ``connections`` dictionary::"
+msgstr ""
+
+# 4acfe58923374bd1aff01e8f9ef1f377
+#: ../../faq/models.txt:36
+msgid "Can I use Django with a pre-existing database?"
+msgstr ""
+
+# bf1bc53898b842a0b3b3fb4b8e07de4a
+#: ../../faq/models.txt:38
+msgid ""
+"Yes. See :doc:`Integrating with a legacy database </howto/legacy-databases>`."
+msgstr ""
+
+# 3d5a95e144b940c9b55c18a7103db2ab
+#: ../../faq/models.txt:41
+msgid "If I make changes to a model, how do I update the database?"
+msgstr ""
+
+# 02e5eb446c434177a4f7c5d5d0effbc9
+#: ../../faq/models.txt:43
+msgid ""
+"If you don't mind clearing data, your project's ``manage.py`` utility has a :"
+"djadmin:`flush` option to reset the database to the state it was in "
+"immediately after :djadmin:`syncdb` was executed."
+msgstr ""
+
+# 4811b67d45734668bbed49bf9971e662
+#: ../../faq/models.txt:47
+msgid ""
+"If you do care about deleting data, you'll have to execute the ``ALTER "
+"TABLE`` statements manually in your database."
+msgstr ""
+
+# 779e751a22ae49d297e60fe1e0eaf348
+#: ../../faq/models.txt:50
+msgid ""
+"There are `external projects which handle schema updates <http://www."
+"djangopackages.com/grids/g/database-migration/>`_, of which the current "
+"defacto standard is `south <http://south.aeracode.org/>`_."
+msgstr ""
+
+# 563877bf89244ddfb6160c62f8cf1449
+#: ../../faq/models.txt:55
+msgid "Do Django models support multiple-column primary keys?"
+msgstr ""
+
+# d21ac31f27c34619a2a46271a26de786
+#: ../../faq/models.txt:57
+msgid "No. Only single-column primary keys are supported."
+msgstr ""
+
+# 4471bb4647864f7b9627232fd9b30967
+#: ../../faq/models.txt:59
+msgid ""
+"But this isn't an issue in practice, because there's nothing stopping you "
+"from adding other constraints (using the ``unique_together`` model option or "
+"creating the constraint directly in your database), and enforcing the "
+"uniqueness at that level. Single-column primary keys are needed for things "
+"such as the admin interface to work; e.g., you need a simple way of being "
+"able to specify an object to edit or delete."
+msgstr ""
+
+# 78730dee0f234daebbe2b578e96c5821
+#: ../../faq/models.txt:67
+msgid ""
+"How do I add database-specific options to my CREATE TABLE statements, such "
+"as specifying MyISAM as the table type?"
+msgstr ""
+
+# a49550d565d44f5093f64f86bd2f721c
+#: ../../faq/models.txt:69
+msgid ""
+"We try to avoid adding special cases in the Django code to accommodate all "
+"the database-specific options such as table type, etc. If you'd like to use "
+"any of these options, create an :ref:`SQL initial data file <initial-sql>` "
+"that contains ``ALTER TABLE`` statements that do what you want to do. The "
+"initial data files are executed in your database after the ``CREATE TABLE`` "
+"statements."
+msgstr ""
+
+# 0c9d3b17f4d84615ae3f1cb01eb132b8
+#: ../../faq/models.txt:75
+msgid ""
+"For example, if you're using MySQL and want your tables to use the MyISAM "
+"table type, create an initial data file and put something like this in it::"
+msgstr ""
+
+# 1d8b035ff6694b1d9e80eca95c9fa42b
+#: ../../faq/models.txt:80
+msgid ""
+"As explained in the :ref:`SQL initial data file <initial-sql>` "
+"documentation, this SQL file can contain arbitrary SQL, so you can make any "
+"sorts of changes you need to make."
+msgstr ""
+
+# 4156d052b6254972b2f570d30be953db
+#: ../../faq/models.txt:85
+msgid "Why is Django leaking memory?"
+msgstr ""
+
+# 024d7bb0515e41428c1638f1be54e553
+#: ../../faq/models.txt:87
+msgid ""
+"Django isn't known to leak memory. If you find your Django processes are "
+"allocating more and more memory, with no sign of releasing it, check to make "
+"sure your :setting:`DEBUG` setting is set to ``False``. If :setting:`DEBUG` "
+"is ``True``, then Django saves a copy of every SQL statement it has executed."
+msgstr ""
+
+# 2edc55563cef437aa3510f47882f31d7
+#: ../../faq/models.txt:92
+msgid ""
+"(The queries are saved in ``django.db.connection.queries``. See `How can I "
+"see the raw SQL queries Django is running?`_.)"
+msgstr ""
+
+# b2e080d25a5441339589c7a2098c4635
+#: ../../faq/models.txt:95
+msgid "To fix the problem, set :setting:`DEBUG` to ``False``."
+msgstr ""
+
+# acf3086dc6794a71b62be7e96397a9ee
+#: ../../faq/models.txt:97
+msgid ""
+"If you need to clear the query list manually at any point in your functions, "
+"just call ``reset_queries()``, like this::"
+msgstr ""
+
+# 4dd7e12eaa594449894d49c8adcf6b91
+#: ../../faq/troubleshooting.txt:3
+msgid "Troubleshooting"
+msgstr ""
+
+# de7e67eabbc8426787ddc95666a1a45a
+#: ../../faq/troubleshooting.txt:5
+msgid ""
+"This page contains some advice about errors and problems commonly "
+"encountered during the development of Django applications."
+msgstr ""
+
+# a136ea6b99834bba939178883ef6a3c7
+#: ../../faq/troubleshooting.txt:11
+msgid "Problems running django-admin.py"
+msgstr ""
+
+# 8ec1b9de65f44a3b86130b968fb0d581
+#: ../../faq/troubleshooting.txt:14
+msgid "\"command not found: django-admin.py\""
+msgstr ""
+
+# 8f589a81790d4a67945bf1b639cf622f
+#: ../../faq/troubleshooting.txt:16
+msgid ""
+":doc:`django-admin.py </ref/django-admin>` should be on your system path if "
+"you installed Django via ``python setup.py``. If it's not on your path, you "
+"can find it in ``site-packages/django/bin``, where ``site-packages`` is a "
+"directory within your Python installation. Consider symlinking to :doc:"
+"`django-admin.py </ref/django-admin>` from some place on your path, such as :"
+"file:`/usr/local/bin`."
+msgstr ""
+
+# 12679425c94d46fd9a5b775aaa5e81b9
+#: ../../faq/troubleshooting.txt:24
+msgid "Script name may differ in distribution packages"
+msgstr ""
+
+# 36c6d04bc48a493494881cf128fecd64
+#: ../../faq/troubleshooting.txt:26
+msgid ""
+"If you installed Django using a Linux distribution's package manager (e.g. "
+"``apt-get`` or ``yum``) ``django-admin.py`` may have been renamed to "
+"``django-admin``; use that instead."
+msgstr ""
+
+# 17c6c151928744c6b49c2c8493d83961
+#: ../../faq/troubleshooting.txt:31
+msgid "Mac OS X permissions"
+msgstr ""
+
+# 11550a2e090c4e99b3533df5467b4cce
+#: ../../faq/troubleshooting.txt:33
+msgid ""
+"If you're using Mac OS X, you may see the message \"permission denied\" when "
+"you try to run ``django-admin.py``. This is because, on Unix-based systems "
+"like OS X, a file must be marked as \"executable\" before it can be run as a "
+"program. To do this, open Terminal.app and navigate (using the ``cd`` "
+"command) to the directory where :doc:`django-admin.py </ref/django-admin>` "
+"is installed, then run the command ``sudo chmod +x django-admin.py``."
+msgstr ""
+
+# 8df756dc5995438e90fb4d8757ef2d5a
+#: ../../faq/troubleshooting.txt:41
+msgid "Running virtualenv on Windows"
+msgstr ""
+
+# 7b0b64bc67a143bc8953e2966b3eba09
+#: ../../faq/troubleshooting.txt:43
+msgid ""
+"If you used virtualenv_ to :ref:`install Django <installing-official-"
+"release>` on Windows, you may get an ``ImportError`` when you try to run "
+"``django-admin.py``. This is because Windows does not run the Python "
+"interpreter from your virtual environment unless you invoke it directly. "
+"Instead, prefix all commands that use .py files with ``python`` and use the "
+"full path to the file, like so: ``python C:\\pythonXY\\Scripts\\django-admin."
+"py``."
+msgstr ""
+
+# d236bcbe69f446efb97cf327532bbf20
+#: ../../faq/usage.txt:2
+msgid "FAQ: Using Django"
+msgstr ""
+
+# f41aef6584134a38a1a7d990e81a6e82
+#: ../../faq/usage.txt:5
+msgid "Why do I get an error about importing DJANGO_SETTINGS_MODULE?"
+msgstr ""
+
+# c611b4133ab345c59fdf78e5620616b4
+#: ../../faq/usage.txt:7
+msgid "Make sure that:"
+msgstr ""
+
+# 0c36783c2257452a863e5f3e9f00ff28
+#: ../../faq/usage.txt:9
+msgid ""
+"The environment variable DJANGO_SETTINGS_MODULE is set to a fully-qualified "
+"Python module (i.e. \"mysite.settings\")."
+msgstr ""
+
+# afd7600059ef44c98db18e061f971331
+#: ../../faq/usage.txt:12
+msgid ""
+"Said module is on ``sys.path`` (``import mysite.settings`` should work)."
+msgstr ""
+
+# a7dff7dc95324b99a558e17dc45bbaef
+#: ../../faq/usage.txt:14
+msgid "The module doesn't contain syntax errors (of course)."
+msgstr ""
+
+# 04443e1c9a52419ab410d509c4c4b051
+#: ../../faq/usage.txt:17
+msgid "I can't stand your template language. Do I have to use it?"
+msgstr ""
+
+# 052d3f6cf3004ca49bbb0a5e50f90b5d
+#: ../../faq/usage.txt:19
+msgid ""
+"We happen to think our template engine is the best thing since chunky bacon, "
+"but we recognize that choosing a template language runs close to religion. "
+"There's nothing about Django that requires using the template language, so "
+"if you're attached to ZPT, Cheetah, or whatever, feel free to use those."
+msgstr ""
+
+# 4217414c676249b7966a0a7d22861654
+#: ../../faq/usage.txt:25
+msgid "Do I have to use your model/database layer?"
+msgstr ""
+
+# a3f8d9fccf7542ccab1734acccb8c43f
+#: ../../faq/usage.txt:27
+msgid ""
+"Nope. Just like the template system, the model/database layer is decoupled "
+"from the rest of the framework."
+msgstr ""
+
+# 01b48507b0104be9a86a204d7cf03487
+#: ../../faq/usage.txt:30
+msgid ""
+"The one exception is: If you use a different database library, you won't get "
+"to use Django's automatically-generated admin site. That app is coupled to "
+"the Django database layer."
+msgstr ""
+
+# 0d02b6a1859c4ce2ade0ca4b5161f4ac
+#: ../../faq/usage.txt:35
+msgid "How do I use image and file fields?"
+msgstr ""
+
+# 25db037099d94dd19b0c1acd9c1693ae
+#: ../../faq/usage.txt:37
+msgid ""
+"Using a :class:`~django.db.models.FileField` or an :class:`~django.db.models."
+"ImageField` in a model takes a few steps:"
+msgstr ""
+
+# ff4b1446c45440fc88ecae607a321a05
+#: ../../faq/usage.txt:40
+msgid ""
+"In your settings file, you'll need to define :setting:`MEDIA_ROOT` as the "
+"full path to a directory where you'd like Django to store uploaded files. "
+"(For performance, these files are not stored in the database.) Define :"
+"setting:`MEDIA_URL` as the base public URL of that directory. Make sure that "
+"this directory is writable by the Web server's user account."
+msgstr ""
+
+# db9d87a13e3c4bada2aa3de6eb485571
+#: ../../faq/usage.txt:47
+msgid ""
+"Add the :class:`~django.db.models.FileField` or :class:`~django.db.models."
+"ImageField` to your model, making sure to define the :attr:`~django.db."
+"models.FileField.upload_to` option to tell Django to which subdirectory of :"
+"setting:`MEDIA_ROOT` it should upload files."
+msgstr ""
+
+# a48cedc923fc4f7c8c6e115437623163
+#: ../../faq/usage.txt:53
+msgid ""
+"All that will be stored in your database is a path to the file (relative to :"
+"setting:`MEDIA_ROOT`). You'll most likely want to use the convenience :attr:"
+"`~django.db.models.fields.files.FieldFile.url` attribute provided by Django. "
+"For example, if your :class:`~django.db.models.ImageField` is called "
+"``mug_shot``, you can get the absolute path to your image in a template with "
+"``{{ object.mug_shot.url }}``."
+msgstr ""
+
+# df9bfadea8a545ec906157e0a54cc3f1
+#: ../../faq/usage.txt:62
+msgid "How do I make a variable available to all my templates?"
+msgstr ""
+
+# ff6e9d9dbe264267840a5b5c48caecf4
+#: ../../faq/usage.txt:64
+msgid ""
+"Sometimes your templates just all need the same thing. A common example "
+"would be dynamically-generated menus. At first glance, it seems logical to "
+"simply add a common dictionary to the template context."
+msgstr ""
+
+# 540329b4eb1d4147becf2b59e291407d
+#: ../../faq/usage.txt:68
+msgid ""
+"The correct solution is to use a ``RequestContext``. Details on how to do "
+"this are here: :ref:`subclassing-context-requestcontext`."
+msgstr ""
