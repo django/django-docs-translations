@@ -3,16 +3,16 @@
 # This file is distributed under the same license as the Django package.
 # 
 # Translators:
-# claudep <claude@2xlibre.net>, 2014
-# zyegfryed <zyegfryed@gmail.com>, 2014
-# zyegfryed <zyegfryed@gmail.com>, 2014
+# Claude Paroz <claude@2xlibre.net>, 2014
+# Sébastien Fievet <zyegfryed@gmail.com>, 2014
+# Sébastien Fievet <zyegfryed@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-21 03:15-0500\n"
-"PO-Revision-Date: 2014-05-22 07:33+0000\n"
-"Last-Translator: claudep <claude@2xlibre.net>\n"
+"POT-Creation-Date: 2014-06-30 03:16-0500\n"
+"PO-Revision-Date: 2014-05-23 00:34+0000\n"
+"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,12 +20,12 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-# 6a338c9e664b48c08e7b22f529f0d4a5
+# e9b059a1716b48328ec6d64d80f0cfd9
 #: ../../../../1.6/docs/misc/api-stability.txt:3
 msgid "API stability"
 msgstr "Stabilité de l'API"
 
-# 02f47517709240918c13dec1fcd3279e
+# 3c866d1ca51f4625ba123fc62fd3c997
 #: ../../../../1.6/docs/misc/api-stability.txt:5
 msgid ""
 ":doc:`The release of Django 1.0 </releases/1.0>` comes with a promise of API"
@@ -37,24 +37,24 @@ msgid ""
 "version or versions to which you are upgrading."
 msgstr "Depuis la :doc:`publication de Django 1.0 </releases/1.0>`, un engagement de stabilité d'API et de compatibilité ascendante a été pris. En résumé, cela signifie que le code que vous développez avec une version 1.x de Django continuera à fonctionner avec les publications 1.x futures. Il est parfois nécessaire d'effectuer de petits ajustements lors de la mise à niveau de la version de Django utilisée par votre projet : voir la section des « Changements incompatibles avec les version précédentes » des :doc:`notes de publication </releases/index>` concernant la ou les versions vers lesquelles vous mettez à niveau."
 
-# 54d2b0277d054dccb3bc700353fab38d
+# b895d5317f1c44ccb68bafabd20842ea
 #: ../../../../1.6/docs/misc/api-stability.txt:14
 msgid "What \"stable\" means"
 msgstr "Ce que « stable » signifie"
 
-# 7d7c3873ff0d442988a9f25cc4d9143c
+# 27462ff2694040a38ba94c19be7e7f7f
 #: ../../../../1.6/docs/misc/api-stability.txt:16
 msgid "In this context, stable means:"
 msgstr "Dans ce contexte, stable signifie :"
 
-# ac1966f0c74e438fbeb2f854771c1623
+# 1c73a3dfcc1d4f5997b448b5cbc0f22e
 #: ../../../../1.6/docs/misc/api-stability.txt:18
 msgid ""
 "All the public APIs (everything in this documentation) will not be moved or "
 "renamed without providing backwards-compatible aliases."
 msgstr "Toutes les API publiques (tout ce qui est documenté) ne sera pas déplacé ni renommé sans mettre à disposition des alias rétrocompatibles."
 
-# 521f97508dc5404faf8bd6fa68257ead
+# 3ae7491ba067422c8c2675295095cd17
 #: ../../../../1.6/docs/misc/api-stability.txt:21
 msgid ""
 "If new features are added to these APIs -- which is quite possible -- they "
@@ -62,7 +62,7 @@ msgid ""
 "\"stable\" does not (necessarily) mean \"complete.\""
 msgstr "Si de nouvelles fonctions sont ajoutées à ces API -- ce qui est vraisemblable -- elles ne vont pas casser ni modifier la signification des méthodes existantes. En d'autres termes, « stable » ne signifie pas forcément «  complet »."
 
-# 07cf7acba35b46e0bc4fcfc53ae04404
+# 025aac7b933f40ac941df8d03a3b739f
 #: ../../../../1.6/docs/misc/api-stability.txt:25
 msgid ""
 "If, for some reason, an API declared stable must be removed or replaced, it "
@@ -71,26 +71,26 @@ msgid ""
 "is called."
 msgstr "Si pour une raison ou une autre, une API déclarée stable doit être supprimée ou remplacée, elle sera déclarée obsolète mais restera dans l'API durant au moins deux publications de versions mineures. Des avertissements seront émis lors des appels aux méthodes obsolètes."
 
-# a3f15cd4050e42a5b158586f341ee5ab
+# b3d4142a6a3c40b9897d1ecd75093055
 #: ../../../../1.6/docs/misc/api-stability.txt:30
 msgid ""
 "See :ref:`official-releases` for more details on how Django's version "
 "numbering scheme works, and how features will be deprecated."
 msgstr "Voir :ref:`official-releases` pour plus de détails sur le schéma de numérotation des versions adopté par Django et sur le fonctionnement de la mise en obsolescence des fonctionnalités."
 
-# 726a8b16f6644246968d86b84f278721
+# c4207ba6c5c14e4982409b47476348ef
 #: ../../../../1.6/docs/misc/api-stability.txt:33
 msgid ""
 "We'll only break backwards compatibility of these APIs if a bug or security "
 "hole makes it completely unavoidable."
 msgstr "Nous ne casserons la rétrocompatibilité de ces API que si un bogue ou une faille de sécurité le rend absolument inévitable."
 
-# a8f7a38c013b43a5a8c57f6340b3e234
+# 5741b4c963c347a0b9a98a59a2146fce
 #: ../../../../1.6/docs/misc/api-stability.txt:37
 msgid "Stable APIs"
 msgstr "API stables"
 
-# 21136267384249ea972ee6bd322ce230
+# 96b33c4740234ed49c4537a1745ec856
 #: ../../../../1.6/docs/misc/api-stability.txt:39
 msgid ""
 "In general, everything covered in the documentation -- with the exception of"
@@ -98,24 +98,24 @@ msgid ""
 "stable."
 msgstr "En général, tout ce qui est couvert par la documentation, à l'exception de ce qui se trouve dans la :doc:`zone de documentation interne </internals/index>`, est considéré comme stable."
 
-# da53893e4d964b24bd7d9927bd0dcc8c
+# 5ddf0d8e49eb4c0c8e57c79872c16f5a
 #: ../../../../1.6/docs/misc/api-stability.txt:43
 msgid "Exceptions"
 msgstr "Exceptions"
 
-# 4b63432d694d4e56a738bc39cfbc0f87
+# bc0c6981c6474ab88f75d0a3f24713c1
 #: ../../../../1.6/docs/misc/api-stability.txt:45
 msgid ""
 "There are a few exceptions to this stability and backwards-compatibility "
 "promise."
 msgstr "Il existe quelques exceptions à cet engagement de stabilité et de rétrocompatibilité."
 
-# c2569540eda945918bf5577e2b5e9063
+# 897d8b74bc0c412ea3f9350eb47323f8
 #: ../../../../1.6/docs/misc/api-stability.txt:49
 msgid "Security fixes"
 msgstr "Corrections de sécurité"
 
-# 1e34b10a71c642f39fb26cbe5d124db0
+# 60c19e15abb44a299c6bc739f9755b6f
 #: ../../../../1.6/docs/misc/api-stability.txt:51
 msgid ""
 "If we become aware of a security problem -- hopefully by someone following "
@@ -124,17 +124,17 @@ msgid ""
 "compatibility; security trumps the compatibility guarantee."
 msgstr "Si un problème de sécurité vient à notre connaissance, si possible par quelqu'un respectant notre :ref:`politique de signalement de problèmes de sécurité <reporting-security-issues>`, nous ferons tout notre possible pour le corriger. Cela peut vouloir dire casser la rétrocompatibilité ; la sécurité passe avant la garantie de compatibilité."
 
-# cdae06880f3f414db2e5b83a65ed5c6b
+# 353ce29cd5044cc8978e05b9c5366443
 #: ../../../../1.6/docs/misc/api-stability.txt:57
 msgid "APIs marked as internal"
 msgstr "API marquées comme internes"
 
-# 6dd5f1ea8e664433a32e39beed0e6fe9
+# cbc2ad47d5d24dc083ad935dcb30c9a0
 #: ../../../../1.6/docs/misc/api-stability.txt:59
 msgid "Certain APIs are explicitly marked as \"internal\" in a couple of ways:"
 msgstr "Certaines API sont explicitement déclarées « internes » par plusieurs moyens :"
 
-# 594559c652204e4692f3bca5a55d277e
+# c4a2cda26c214ba1a45f087cc1604a25
 #: ../../../../1.6/docs/misc/api-stability.txt:61
 msgid ""
 "Some documentation refers to internals and mentions them as such. If the "
@@ -142,7 +142,7 @@ msgid ""
 "change it."
 msgstr "Certaines documentations se réfèrent à des éléments internes et le signalent explicitement. Si la documentation dit que quelque chose est interne, nous nous réservons le droit de le modifier."
 
-# bf9829f8a2ae4298a76208d8c9698acf
+# cd00143639584b288f2740050544d645
 #: ../../../../1.6/docs/misc/api-stability.txt:65
 msgid ""
 "Functions, methods, and other objects prefixed by a leading underscore "
@@ -150,12 +150,12 @@ msgid ""
 "private; if any method starts with a single ``_``, it's an internal API."
 msgstr "Des fonctions, des méthodes et d'autres objets préfixés par un soulignement (``_``). C'est la manière standard en Python d'indiquer que quelque chose est privé ; si une méthode commence par un ``_`` unique, il s'agit d'une API interne."
 
-# 63a310a66e6640088e2afbeb2680e79c
+# abdf3eeac7054bc99de0fe4a851f72c2
 #: ../../../../1.6/docs/misc/design-philosophies.txt:3
 msgid "Design philosophies"
 msgstr "Approches conceptuelles"
 
-# 7d120acff38145aab466d4a6543f82ed
+# 0464facf138d4280bb8ccdf1153cb857
 #: ../../../../1.6/docs/misc/design-philosophies.txt:5
 msgid ""
 "This document explains some of the fundamental philosophies Django's "
@@ -163,21 +163,21 @@ msgid ""
 "past and guide the future."
 msgstr "Ce document explique certains concepts fondamentaux que les développeurs de Django ont utilisés lors de la création du système. Son objectif est d'expliquer le passé et d'orienter l'avenir."
 
-# 709eb8455ffc47818dd0ebcd2e13f1e6
+# c97e83e116224570b635ed1df1df59f7
 #: ../../../../1.6/docs/misc/design-philosophies.txt:10
 msgid "Overall"
 msgstr "Vue d'ensemble"
 
-# 6b8e567cf90e48b48627e0216ace922e
-# baf04a1a6aa74bf08fe8d75ad229489e
-# 2978fdbecf964cc59f527a7142a9e1b7
+# f0fb1a3bab304abab9ad70ecd6d672fc
+# 11224e23eb134bb1a6638cb2c6cb0763
+# 3659f69e3cd340f1b31d43bb1023e8ab
 #: ../../../../1.6/docs/misc/design-philosophies.txt:15
 #: ../../../../1.6/docs/misc/design-philosophies.txt:155
 #: ../../../../1.6/docs/misc/design-philosophies.txt:300
 msgid "Loose coupling"
 msgstr "Couplage faible"
 
-# e7beb6ef67a747be976df4de3f6e4ea6
+# fd598479aa8b49269d340a790115a9ec
 #: ../../../../1.6/docs/misc/design-philosophies.txt:19
 msgid ""
 "A fundamental goal of Django's stack is `loose coupling and tight "
@@ -185,7 +185,7 @@ msgid ""
 "each other unless absolutely necessary."
 msgstr "Un objectif fondamental de la pile Django est le `couplage faible et la cohésion forte`_. Les différentes couches du système ne doivent rien « connaître » les unes des autres à moins que cela ne soit absolument nécessaire."
 
-# 33a4d348e5fc4ee199a95877d9088242
+# 411d2eca5b424418b0a96cd9bef4e6d9
 #: ../../../../1.6/docs/misc/design-philosophies.txt:23
 msgid ""
 "For example, the template system knows nothing about Web requests, the "
@@ -193,19 +193,19 @@ msgid ""
 "care which template system a programmer uses."
 msgstr "Par exemple, le système de gabarit ne sait rien des requêtes Web, la couche de base de données ne sait rien à propos de l'affichage des données et le système de vue ne se soucie guère du système de gabarit qu'un programmeur utilise."
 
-# 7992c011cb0944dc8cf97b8181ce1089
+# affaea431b514501a1813ab94ad33acf
 #: ../../../../1.6/docs/misc/design-philosophies.txt:27
 msgid ""
 "Although Django comes with a full stack for convenience, the pieces of the "
 "stack are independent of another wherever possible."
 msgstr "Bien que Django soit livré avec une pile complète pour plus de commodité, les pièces de la pile sont indépendantes les unes des autres autant que possible."
 
-# c41ef6fb032240d8af6725d7d8406194
+# 932bc34d917c417fab289c392b7f133e
 #: ../../../../1.6/docs/misc/design-philosophies.txt:35
 msgid "Less code"
 msgstr "Moins de code"
 
-# 8268bf4c636c407fbe13fa8551d56e32
+# 39e303da3a6d405cbf33c9274c91924a
 #: ../../../../1.6/docs/misc/design-philosophies.txt:37
 msgid ""
 "Django apps should use as little code as possible; they should lack "
@@ -213,12 +213,12 @@ msgid ""
 "capabilities, such as introspection."
 msgstr "Les applications Django doivent utiliser le moins de code possible ; elles doivent être exemptes de code répétitif. Django devrait tirer pleinement parti des capacités dynamiques de Python, comme l'introspection."
 
-# 65f9bcdd18d64bb88c36f3118e224b3b
+# 06410a4d5f4d44a681e825d9b14110df
 #: ../../../../1.6/docs/misc/design-philosophies.txt:44
 msgid "Quick development"
 msgstr "Développement rapide"
 
-# bb45533ea1074779aa299425aa8ab72a
+# 67178fa2ecab49eca617361467f45824
 #: ../../../../1.6/docs/misc/design-philosophies.txt:46
 msgid ""
 "The point of a Web framework in the 21st century is to make the tedious "
@@ -226,38 +226,38 @@ msgid ""
 "Web development."
 msgstr "Le but d'un système Web au 21ème siècle est de rendre rapide les aspects fastidieux du développement Web. Django devrait permettre un développement Web incroyablement rapide."
 
-# 4b365d7e9d654eca8c4175ba3ad9509e
+# a1b52a3f35a24897b3888f516d1ab2b5
 #: ../../../../1.6/docs/misc/design-philosophies.txt:53
 msgid "Don't repeat yourself (DRY)"
 msgstr "Ne vous répétez pas (DRY)"
 
-# 58ba028f48a149c2baf95d6055c83a2d
+# 27098ebe8e4b40fb844b1a09e3af9617
 #: ../../../../1.6/docs/misc/design-philosophies.txt:59
 msgid ""
 "Every distinct concept and/or piece of data should live in one, and only "
 "one, place. Redundancy is bad. Normalization is good."
 msgstr "Chaque concept/portion de données distinct devrait résider en un et un seul endroit. La redondance est mauvaise. La normalisation est bonne."
 
-# f67719878fb94256a47e6f71eceec5a3
+# 85316319845f4c7bb6f8aa6a91b637c4
 #: ../../../../1.6/docs/misc/design-philosophies.txt:62
 msgid ""
 "The framework, within reason, should deduce as much as possible from as "
 "little as possible."
 msgstr "Le système, dans la limite du raisonnable, doit déduire autant que possible d'aussi peu que possible."
 
-# bcf3f9ad64124eefaab072fa4ebf3f8d
+# e3c36492a3094b24a21ea9f4e35057db
 #: ../../../../1.6/docs/misc/design-philosophies.txt:67
 msgid "The `discussion of DRY on the Portland Pattern Repository`__"
 msgstr "La `discussion à propos de DRY sur le Portland Pattern Repository`__"
 
-# a3ec00a81f704ee7b1096d3f8a243e91
-# 669a775870224d1fbc79c734e642170d
+# f0dc4efd58ac4eaab0e74115b2718559
+# 9146b47933ed4c47817f78a00507b809
 #: ../../../../1.6/docs/misc/design-philosophies.txt:74
 #: ../../../../1.6/docs/misc/design-philosophies.txt:95
 msgid "Explicit is better than implicit"
 msgstr "Explicite est meilleur qu'implicite"
 
-# 3dc8f35c9b55485681bc5cc48b14b6b0
+# 6c42a39e8daa4d9b9d812846c1165c70
 #: ../../../../1.6/docs/misc/design-philosophies.txt:76
 msgid ""
 "This is a core Python principle listed in :pep:`20`, and it means Django "
@@ -267,12 +267,12 @@ msgid ""
 "that confuses developers who are trying to learn how to use the feature."
 msgstr "Il s'agit d'un principe de base de Python figurant dans :pep:`20`, et cela signifie que Django ne devrait pas faire trop de « magie ». La magie ne devrait se produire que s'il y a une très bonne raison pour cela. La magie est intéressante uniquement quand elle crée un confort considérable inaccessible par d'autres moyens, et quand elle est appliquée d'une manière qui ne perturbe pas les développeurs qui cherchent à apprendre à utiliser la fonction."
 
-# f30843131cbe462a83956c435eb4b940
+# b90d9058d7724f919e6addf7bef115d0
 #: ../../../../1.6/docs/misc/design-philosophies.txt:85
 msgid "Consistency"
 msgstr "Cohérence"
 
-# d4a766851bb146c19ebb18ec3f071c19
+# c466b007d15d435f89e85da6be2ce7f8
 #: ../../../../1.6/docs/misc/design-philosophies.txt:87
 msgid ""
 "The framework should be consistent at all levels. Consistency applies to "
@@ -280,12 +280,12 @@ msgid ""
 "\"experience\" of using Django)."
 msgstr "Le système doit être cohérent à tous les niveaux. La cohérence s'applique au tout, du bas niveau (le style de codage utilisé par Python) au haut niveau (l'« expérience » d'utilisation de Django)."
 
-# a9839526369d4298876b25b03fd1c879
+# b4ab03941b9143b2af323644a5051a44
 #: ../../../../1.6/docs/misc/design-philosophies.txt:92
 msgid "Models"
 msgstr "Modèles"
 
-# 38c69ea356774ec5b02b75930fa0d95a
+# fbd090226817493080ab935d7ff13775
 #: ../../../../1.6/docs/misc/design-philosophies.txt:97
 msgid ""
 "Fields shouldn't assume certain behaviors based solely on the name of the "
@@ -294,19 +294,19 @@ msgid ""
 " cases, on the type of the field."
 msgstr "Les champs ne doivent pas supposer certains comportements basés uniquement sur le nom du champ. Cela nécessite trop de connaissance du système et est sujet à des erreurs. Au lieu de cela, les comportements doivent être basés sur des paramètres nommés et, dans certains cas, sur le type de champ."
 
-# a267a994c3fa469694d09ad893fbb07c
+# 39709a1c2cd44978b58e082459c02658
 #: ../../../../1.6/docs/misc/design-philosophies.txt:103
 msgid "Include all relevant domain logic"
 msgstr "Inclure toute logique de domaine concerné"
 
-# d999109d3c5045b5a8c11e3211fd9a17
+# 7677ecb915cb4137a40c4f9823502a58
 #: ../../../../1.6/docs/misc/design-philosophies.txt:105
 msgid ""
 "Models should encapsulate every aspect of an \"object,\" following Martin "
 "Fowler's `Active Record`_ design pattern."
 msgstr "Les modèles doivent encapsuler tous les aspects d'un « objet », suivant le modèle de conception `Active Record`_ de Martin Fowler."
 
-# da1f8deec0e14a61810ac07fc2b7afba
+# 08016a229c57402f81f4ba041833eb0d
 #: ../../../../1.6/docs/misc/design-philosophies.txt:108
 msgid ""
 "This is why both the data represented by a model and information about it "
@@ -315,36 +315,36 @@ msgid ""
 "should be stored *in* the model."
 msgstr "C'est pourquoi aussi bien les données représentées par un modèle que les informations à son sujet (son nom lisible, des options comme le tri par défaut, etc.) sont définies dans la classe du modèle ; toutes les informations nécessaires pour comprendre un modèle donné doivent être stockées *dans* le modèle."
 
-# 18940413800241b99a47916bdcde24e0
+# 7081655c3e6c46a1859cf846107a87da
 #: ../../../../1.6/docs/misc/design-philosophies.txt:116
 msgid "Database API"
 msgstr "API de base de données"
 
-# e5c25db2d6e749aca8d5f835ab2895cc
+# a1a5b4925cf94d0892b3b52674cfc510
 #: ../../../../1.6/docs/misc/design-philosophies.txt:118
 msgid "The core goals of the database API are:"
 msgstr "Les objectifs de base de l'API de base de données sont les suivants :"
 
-# 543630fabac640d9b2dc17c9f0a99590
+# 602968b08ffd441eb1055a98ec8c1f32
 #: ../../../../1.6/docs/misc/design-philosophies.txt:121
 msgid "SQL efficiency"
 msgstr "Efficacité SQL"
 
-# 8e6fd7df0c824402918ca98d2421841d
+# 821ac28ba62b4ffb96d9bf8b448082ff
 #: ../../../../1.6/docs/misc/design-philosophies.txt:123
 msgid ""
 "It should execute SQL statements as few times as possible, and it should "
 "optimize statements internally."
 msgstr "Les instructions SQL doivent être exécutées le moins souvent possible, et les instructions doivent être optimisées en interne."
 
-# a688bbba6d9b4a34be8c90eb3cd80aef
+# eeade1646c1349f3a7fffb076e0a9770
 #: ../../../../1.6/docs/misc/design-philosophies.txt:126
 msgid ""
 "This is why developers need to call ``save()`` explicitly, rather than the "
 "framework saving things behind the scenes silently."
 msgstr "C'est pourquoi les développeurs doivent appeler ``save()`` explicitement, au lieu de se baser sur un enregistrement silencieux et en arrière-plan par le système."
 
-# a1ad88fba199411f9404f8b283aa6a38
+# e4639f6da7d14eb690212ea7e44cbe8a
 #: ../../../../1.6/docs/misc/design-philosophies.txt:129
 msgid ""
 "This is also why the ``select_related()`` ``QuerySet`` method exists. It's "
@@ -352,12 +352,12 @@ msgid ""
 "related object.\""
 msgstr "C'est aussi pourquoi la méthode ``select_related()`` de ``QuerySet`` existe. C'est une optimisation facultative des performances pour le cas courant de sélection de « tout objet lié »."
 
-# 34f2c48a38a940a39bf586bb148d4352
+# bdab21a2e2b340999e39e6a2beb94c63
 #: ../../../../1.6/docs/misc/design-philosophies.txt:134
 msgid "Terse, powerful syntax"
 msgstr "Syntaxe succincte mais puissante"
 
-# dcd178ac11fb474ea907b37ed723fec2
+# 3dabc731a874451a8dedcb1f3ef500f4
 #: ../../../../1.6/docs/misc/design-philosophies.txt:136
 msgid ""
 "The database API should allow rich, expressive statements in as little "
@@ -365,25 +365,25 @@ msgid ""
 "objects."
 msgstr "L'API de base de données devrait permettre l'utilisation d'instructions riches et expressives en aussi peu de syntaxe que possible. Elle ne devrait pas compter sur l'importation d'autres modules ou objets utilitaires."
 
-# 9430f05dcb184c2282da51c86bf9eac7
+# 680946499dda48209058a93541e567ab
 #: ../../../../1.6/docs/misc/design-philosophies.txt:139
 msgid ""
 "Joins should be performed automatically, behind the scenes, when necessary."
 msgstr "Les jointures doivent être effectuées automatiquement, en arrière-plan, le cas échéant."
 
-# 57920b1930a748bea663493bf2dbbf2e
+# cda175992e794426a878505c288c66e6
 #: ../../../../1.6/docs/misc/design-philosophies.txt:141
 msgid ""
 "Every object should be able to access every related object, systemwide. This"
 " access should work both ways."
 msgstr "Chaque objet doit être en mesure d'accéder à tous les objets liés, dans tout le système. Cet accès devrait fonctionner dans les deux sens."
 
-# 3264f0558b7048a7aa6bfb75302c0b90
+# baa1261fc021456780c8830c607a2d83
 #: ../../../../1.6/docs/misc/design-philosophies.txt:145
 msgid "Option to drop into raw SQL easily, when needed"
 msgstr "Option pour utiliser facilement du SQL brut, en cas de besoin"
 
-# 437a961bd635415a90e183bcd0ae9920
+# c21fbdc1fc624da59f27eef841b50dbc
 #: ../../../../1.6/docs/misc/design-philosophies.txt:147
 msgid ""
 "The database API should realize it's a shortcut but not necessarily an end-"
@@ -392,19 +392,19 @@ msgid ""
 "calls."
 msgstr "L'API de base de données devrait se rendre compte qu'elle est un raccourci, mais pas nécessairement pleine et entière. Le système devrait rendre facile l'écriture du SQL sur mesure -- des instructions complètes ou simplement des clauses ``WHERE`` sur mesure en tant que paramètres personnalisés dans les appels d'API."
 
-# 8de09621dcd54ef5b7e10c1a321fb931
+# 144042a44b66421095a22196c9b2f048
 #: ../../../../1.6/docs/misc/design-philosophies.txt:152
 msgid "URL design"
 msgstr "Conception des URL"
 
-# 4c6ba46f5e8d4375930dee5a71ebcf0e
+# 9447cf875204479884a2dd73b3eb9d2d
 #: ../../../../1.6/docs/misc/design-philosophies.txt:157
 msgid ""
 "URLs in a Django app should not be coupled to the underlying Python code. "
 "Tying URLs to Python function names is a Bad And Ugly Thing."
 msgstr "Les URL dans une application Django ne devraient pas être couplées au code Python sous-jacent. Lier des URL à des noms de fonctions Python est une mauvaise pratique."
 
-# f96726189f4b4d8b97f4d5a0b39c6e63
+# b7a98d9b620c47e18e6da4ba89de82c5
 #: ../../../../1.6/docs/misc/design-philosophies.txt:160
 msgid ""
 "Along these lines, the Django URL system should allow URLs for the same app "
@@ -412,46 +412,46 @@ msgid ""
 " at ``/stories/``, while another may use ``/news/``."
 msgstr "Sur le même principe, le système d'URL de Django devrait permettre aux URL d'une même application d'être différentes dans des contextes différents. Par exemple, un site pourrait placer des articles sous ``/stories/``, tandis qu'un autre pourrait préférer ``/news/``."
 
-# aa34d9a12d3f43b8aa91a1a2b45a9f63
+# 20fa116536784b0ea991e9e5a28758f7
 #: ../../../../1.6/docs/misc/design-philosophies.txt:165
 msgid "Infinite flexibility"
 msgstr "Flexibilité infinie"
 
-# ed30cced0c4d4d59b6919bf46e4d9c47
+# c739f7b9daee47638b50df6ea4361c71
 #: ../../../../1.6/docs/misc/design-philosophies.txt:167
 msgid ""
 "URLs should be as flexible as possible. Any conceivable URL design should be"
 " allowed."
 msgstr "Les URL devraient être aussi souples que possible. Toute conception d'URL imaginable devrait être possible."
 
-# fffc8b7364404979955b7061b01ae985
+# f2a15ca70abd472fb429c80b37155c11
 #: ../../../../1.6/docs/misc/design-philosophies.txt:171
 msgid "Encourage best practices"
 msgstr "Encourager les bonnes pratiques"
 
-# 845b6ad5a9ab4d458ecc37248959ccf5
+# 2a792054dfc24e46807dac0abd8d4341
 #: ../../../../1.6/docs/misc/design-philosophies.txt:173
 msgid ""
 "The framework should make it just as easy (or even easier) for a developer "
 "to design pretty URLs than ugly ones."
 msgstr "Le système devrait rendre tout aussi facile (voire même plus facile) pour un développeur de concevoir de belles URL que des vilaines."
 
-# fea09cece9fa455194c77a65a778e38a
+# b0389073561b40fcbf42311f2172ffa0
 #: ../../../../1.6/docs/misc/design-philosophies.txt:176
 msgid "File extensions in Web-page URLs should be avoided."
 msgstr "Les extensions de fichier dans les URL de pages Web devraient être évitées."
 
-# 310b1b67faac43db8796434d369c0ed4
+# e4eece9ae7924f57a554f2527cc2495d
 #: ../../../../1.6/docs/misc/design-philosophies.txt:178
 msgid "Vignette-style commas in URLs deserve severe punishment."
 msgstr "L'utilisation abusive de virgules dans les URL devrait être sévèrement punie."
 
-# 497cd69098424618996aa4d3ce517d82
+# 8e484c40395e4f30815b39d6eea8b47b
 #: ../../../../1.6/docs/misc/design-philosophies.txt:183
 msgid "Definitive URLs"
 msgstr "URL définitives"
 
-# 56fbd4fc90ec45f1adc949019c9a8919
+# cca63b69ae5540e2b75d0f35c7f803b0
 #: ../../../../1.6/docs/misc/design-philosophies.txt:187
 msgid ""
 "Technically, ``foo.com/bar`` and ``foo.com/bar/`` are two different URLs, "
@@ -460,22 +460,22 @@ msgid ""
 "so that search-engine robots don't get confused."
 msgstr "Techniquement, ``foo.com/bar`` et ``foo.com/bar/`` sont deux URL différentes, et les robots des moteurs de recherche (et quelques outils d'analyse de trafic Web) les traitent comme des pages distinctes. Django devrait faire un effort pour « normaliser » les URL afin de ne pas semer la confusion pour les robots des moteurs de recherche."
 
-# 6d58c0db942c497c9be753e6ff884ef0
+# f5ed1dc3cce94038be61f3558271308c
 #: ../../../../1.6/docs/misc/design-philosophies.txt:192
 msgid "This is the reasoning behind the :setting:`APPEND_SLASH` setting."
 msgstr "Tel est le raisonnement derrière le réglage :setting:`APPEND_SLASH`."
 
-# b9ec254997e6421d8eaa260ed09f09f8
+# ef68b9c8079c453eb03eae456fb6d4e7
 #: ../../../../1.6/docs/misc/design-philosophies.txt:195
 msgid "Template system"
 msgstr "Système de gabarit"
 
-# 64bc26d94f214c1b81b21f33a90050de
+# 1808e4bf47db4e0d84a40719de4fd57e
 #: ../../../../1.6/docs/misc/design-philosophies.txt:200
 msgid "Separate logic from presentation"
 msgstr "Séparation de la logique et de la présentation"
 
-# e5320573270e4405a92fa1c6ca474737
+# 70c1b3a2fe1e474596b341d6b027bc2c
 #: ../../../../1.6/docs/misc/design-philosophies.txt:202
 msgid ""
 "We see a template system as a tool that controls presentation and "
@@ -483,12 +483,12 @@ msgid ""
 "support functionality that goes beyond this basic goal."
 msgstr "Nous imaginons un système de gabarit comme un outil qui contrôle la présentation et la logique liée à la présentation -- et c'est tout. Le système de gabarit ne devrait pas prendre en charge une fonctionnalité qui va au-delà de cet objectif de base."
 
-# d628164d344c4134aaa98bf77acd7479
+# 9d821899cbb94d879f413c283d5ab121
 #: ../../../../1.6/docs/misc/design-philosophies.txt:207
 msgid "Discourage redundancy"
 msgstr "Prévention de la redondance"
 
-# 134e3b8c2c85499d9278e4f2c16f93fb
+# 33aa39491f294b04b57d69afc44db819
 #: ../../../../1.6/docs/misc/design-philosophies.txt:209
 msgid ""
 "The majority of dynamic Web sites use some sort of common sitewide design --"
@@ -497,19 +497,19 @@ msgid ""
 "duplicate code."
 msgstr "La majorité des sites Web dynamiques utilise des parties entières et communes au design du site -- un en-tête, un pied de page, une barre de navigation, etc. Le système de gabarit de Django devrait faciliter le stockage de ces éléments en un lieu unique, éliminant la duplication de code."
 
-# e07df1ca20574ab7940830c4a1e6aceb
+# bf5d05512bd74c349fc0553a286a532f
 #: ../../../../1.6/docs/misc/design-philosophies.txt:214
 msgid ""
 "This is the philosophy behind :ref:`template inheritance <template-"
 "inheritance>`."
 msgstr "Telle est la philosophie derrière l':ref:`héritage de gabarit <template-inheritance>`."
 
-# 8d38bd7d8cb9445ab3ec7e3619b20236
+# 50595d5a8db44a22a54f0e01776d8dd2
 #: ../../../../1.6/docs/misc/design-philosophies.txt:218
 msgid "Be decoupled from HTML"
 msgstr "Découplement du HTML"
 
-# 02196b8e9592418aaa1bf7e7803bfc40
+# 297a2479142442adad02c22be9e9663a
 #: ../../../../1.6/docs/misc/design-philosophies.txt:220
 msgid ""
 "The template system shouldn't be designed so that it only outputs HTML. It "
@@ -517,12 +517,12 @@ msgid ""
 " text."
 msgstr "Le système de gabarit ne doit pas être conçu de sorte qu'il ne puisse produire que du HTML. Il devrait être tout aussi bon pour la génération d'autres formats texte, ou même du texte brut."
 
-# 576a7f98ab00411684aa6815d711ccc5
+# 18de361ea3ee4e54b742a04ed0cba770
 #: ../../../../1.6/docs/misc/design-philosophies.txt:225
 msgid "XML should not be used for template languages"
 msgstr "XML ne devrait pas être utilisé pour les langages de gabarit"
 
-# f36b8baeb06648be84a0916b31592a9f
+# 21efeafb55d0429b8a872b0518195f38
 #: ../../../../1.6/docs/misc/design-philosophies.txt:229
 msgid ""
 "Using an XML engine to parse templates introduces a whole new world of human"
@@ -530,12 +530,12 @@ msgid ""
 "in template processing."
 msgstr "L'utilisation d'un moteur XML pour analyser les gabarits introduit un vaste potentiel de nouvelles erreurs humaines lors de la modification des gabarits -- et entraîne un niveau inacceptable de surcharge dans le traitement du gabarit."
 
-# 219e2c9717574244b935374582c3e2a1
+# 36556d76ba61435283eadd5e82e3419e
 #: ../../../../1.6/docs/misc/design-philosophies.txt:234
 msgid "Assume designer competence"
 msgstr "Confiance dans la compétence du concepteur"
 
-# a583eee1a8444489aeae0fafab55d49c
+# 0a157e2d63524e2b90fd48b404d4c307
 #: ../../../../1.6/docs/misc/design-philosophies.txt:236
 msgid ""
 "The template system shouldn't be designed so that templates necessarily are "
@@ -544,12 +544,12 @@ msgid ""
 " expects template authors are comfortable editing HTML directly."
 msgstr "Le système de gabarit ne doit pas être conçu de sorte que les gabarits soient nécessairement et convenablement rendus dans les éditeurs WYSIWYG tels que Dreamweaver. C'est une restriction trop importante et ne permettrait pas à la syntaxe d'être aussi agréable qu'elle le devrait. Django pré-suppose que les auteurs de gabarit sont à l'aise avec l'édition directe de HTML."
 
-# 8009af2ea8cf4a478ef5fc79453a4226
+# 23d85b83ca184c6483e1cf21327c8b33
 #: ../../../../1.6/docs/misc/design-philosophies.txt:242
 msgid "Treat whitespace obviously"
 msgstr "Traitement naturel des espaces"
 
-# 6c249b397dcc4103ba46d3cb6aaa3bed
+# 56d89b3897f345f89b1495c7a50ab2f7
 #: ../../../../1.6/docs/misc/design-philosophies.txt:244
 msgid ""
 "The template system shouldn't do magic things with whitespace. If a template"
@@ -558,27 +558,27 @@ msgid ""
 "be displayed."
 msgstr "Le système de gabarit ne doit pas faire de magie avec les espaces. Si un gabarit contient des espaces, le système devrait traiter l'espace blanc comme il traite le texte : tout simplement l'afficher. Tout espace qui n'est pas dans une balise de gabarit doit être affiché."
 
-# f1d00ded55b8401da407b21499cf8484
+# f94c271d3be8465cbc6f391b8144f5dc
 #: ../../../../1.6/docs/misc/design-philosophies.txt:250
 msgid "Don't invent a programming language"
 msgstr "Ne pas inventer un langage de programmation"
 
-# a1bc6c68d22c4b70b8ffcc471b67b116
+# 50b488965dde4101b2464c3e720f0a81
 #: ../../../../1.6/docs/misc/design-philosophies.txt:252
 msgid "The template system intentionally doesn't allow the following:"
 msgstr "Intentionnellement, le système de gabarit ne permet pas les éléments suivants :"
 
-# cf411a97258a4386b3e2f0d0c7db78b7
+# fa6d68c219f54ea8a2372fda92141455
 #: ../../../../1.6/docs/misc/design-philosophies.txt:254
 msgid "Assignment to variables"
 msgstr "L'affectation des variables"
 
-# 7316c2b4a5454ce3a2b017481485a4b7
+# fade9499972e45f9823a73a3695279a7
 #: ../../../../1.6/docs/misc/design-philosophies.txt:255
 msgid "Advanced logic"
 msgstr "La logique avancée"
 
-# 6ff1dfbabf45405e9e7e07be8233a18b
+# 0f1058ffaa7b49e0999d6e96fe9bc28b
 #: ../../../../1.6/docs/misc/design-philosophies.txt:257
 msgid ""
 "The goal is not to invent a programming language. The goal is to offer just "
@@ -586,7 +586,7 @@ msgid ""
 "is essential for making presentation-related decisions."
 msgstr "Le but n'est pas d'inventer un langage de programmation. L'objectif est d'offrir une fonctionnalité juste assez programmatique, comme les conditions et les boucles, ce qui est essentiel pour la prise de décision liée à la présentation."
 
-# f9c8bf36e00d48478adbf22c46b4141a
+# 93a5c6303c8e4120bd52342882062015
 #: ../../../../1.6/docs/misc/design-philosophies.txt:261
 msgid ""
 "The Django template system recognizes that templates are most often written "
@@ -594,65 +594,65 @@ msgid ""
 "knowledge."
 msgstr "Le système de gabarit de Django postule que les gabarits sont le plus souvent écrits par les *concepteurs* et non par les *programmeurs*, et ne devraient donc pas présumer de connaissances en Python."
 
-# a76e10edc3004dde809d611cf8c66aca
+# 17dd4d1c1eb04ae7ba7d8b0b36121c45
 #: ../../../../1.6/docs/misc/design-philosophies.txt:266
 msgid "Safety and security"
 msgstr "Sûreté et sécurité"
 
-# 9f0dcc77225c433194f2e669bfe69896
+# 07211e3654cc4c4289565393e80d33f4
 #: ../../../../1.6/docs/misc/design-philosophies.txt:268
 msgid ""
 "The template system, out of the box, should forbid the inclusion of "
 "malicious code -- such as commands that delete database records."
 msgstr "Nativement, le système de gabarit devrait interdire l'inclusion de code malveillant -- comme les commandes qui suppriment des enregistrements en base de données."
 
-# 5d5d793f6c5e4096bced8798569110cd
+# 3e6dd4630ec74bd2b3abab7b4220e37d
 #: ../../../../1.6/docs/misc/design-philosophies.txt:271
 msgid ""
 "This is another reason the template system doesn't allow arbitrary Python "
 "code."
 msgstr "C'est une raison supplémentaire pour laquelle le système de gabarit ne permet pas d'écrire du code Python arbitraire."
 
-# 7b64834227fd4115ba29ad6c3ac62aa5
+# 100288ec2f5b405081dc467fb3cbb7c1
 #: ../../../../1.6/docs/misc/design-philosophies.txt:274
 msgid "Extensibility"
 msgstr "Extensibilité"
 
-# 279b2a9a14864dc78f2dc2ec8195a8a4
+# 5d20d67aac7d4af3bc3eaa73caf815e5
 #: ../../../../1.6/docs/misc/design-philosophies.txt:276
 msgid ""
 "The template system should recognize that advanced template authors may want"
 " to extend its technology."
 msgstr "Le système de gabarit devrait admettre que les experts en rédaction de gabarits souhaitent vouloir étendre sa technologie."
 
-# 8c9f8d8da1974348b597455748e995f6
+# 58ca6920560340539eb597457683018c
 #: ../../../../1.6/docs/misc/design-philosophies.txt:279
 msgid "This is the philosophy behind custom template tags and filters."
 msgstr "Telle est la philosophie derrière les balises de gabarit et les filtres personnalisés."
 
-# 2f2ca0060c8849ca8469f0808f64fc03
+# 79552d52f2a64ed69878ad7c87917a3d
 #: ../../../../1.6/docs/misc/design-philosophies.txt:282
 msgid "Views"
 msgstr "Vues"
 
-# 4de2a6edc68c4dd19d2f14531d699510
+# 9fc23ee7dbb946da936dc728b8b0eeb1
 #: ../../../../1.6/docs/misc/design-philosophies.txt:285
 msgid "Simplicity"
 msgstr "Simplicité"
 
-# 7f35796429ab4d05b8443ed88f2f9835
+# 70c03944a4cc42acbb6ba8d4d0a6b6cb
 #: ../../../../1.6/docs/misc/design-philosophies.txt:287
 msgid ""
 "Writing a view should be as simple as writing a Python function. Developers "
 "shouldn't have to instantiate a class when a function will do."
 msgstr "La rédaction d'une vue devrait être aussi simple que d'écrire une fonction Python. Les développeurs ne devraient pas avoir besoin d'instancier une classe quand une fonction suffit."
 
-# 548e73d49e55499f8a63099281a5cf7b
+# 415e7403d1924d51883c0e07a4d47fd1
 #: ../../../../1.6/docs/misc/design-philosophies.txt:291
 msgid "Use request objects"
 msgstr "Utilisation des objets de requête"
 
-# ec68631499064268a331caa3925a6d0c
+# dab87427753d4860a0b57af18e809831
 #: ../../../../1.6/docs/misc/design-philosophies.txt:293
 msgid ""
 "Views should have access to a request object -- an object that stores "
@@ -662,19 +662,19 @@ msgid ""
 "views by passing in \"fake\" request objects."
 msgstr "Les vues devraient avoir accès à un objet de requête : un objet qui stocke les métadonnées sur la requête actuelle. L'objet doit être transmis directement à une fonction de vue, et ce n'est pas à la fonction de vue de devoir accéder aux données de la requête depuis une variable globale. Ceci permet de tester les vues de manière légère, propre et facile en leur passant des objets de requête « artificiels »."
 
-# 635567c2237c47de87bee650d2ea4393
+# 847b72ba32d04d4f9932d4f2cf6bdbea
 #: ../../../../1.6/docs/misc/design-philosophies.txt:302
 msgid ""
 "A view shouldn't care about which template system the developer uses -- or "
 "even whether a template system is used at all."
 msgstr "Une vue ne devrait pas se soucier du système de gabarit utilisé par le développeur, ni même si un système de gabarit est réellement utilisé."
 
-# 2bfc62ffbce54d66899c189f02b5cf16
+# a8b55a9c54aa48f8b3e6e271b40e1d42
 #: ../../../../1.6/docs/misc/design-philosophies.txt:306
 msgid "Differentiate between GET and POST"
 msgstr "Différence entre GET et POST"
 
-# 80e9608063b04ea3bef79ed8c65e7ab4
+# e8caaa67fbd64ade80b7dc0acdcb0115
 #: ../../../../1.6/docs/misc/design-philosophies.txt:308
 msgid ""
 "GET and POST are distinct; developers should explicitly use one or the "
@@ -682,52 +682,52 @@ msgid ""
 " data."
 msgstr "GET et POST sont distincts ; les développeurs doivent explicitement utiliser l'un ou l'autre. Le système devrait faciliter la distinction entre les données GET et POST."
 
-# 793a92c9d0f949b5977796a05b914fce
+# 36625ac6ce724112a6dafce632e775b0
 #: ../../../../1.6/docs/misc/design-philosophies.txt:17
 msgid "coupling"
 msgstr "couplage"
 
-# 793a92c9d0f949b5977796a05b914fce
+# 36625ac6ce724112a6dafce632e775b0
 #: ../../../../1.6/docs/misc/design-philosophies.txt:17
 msgid "loose"
 msgstr "faible"
 
-# 25b63b1af0ff44b393d2d4491879da39
+# 6ea97b002dcb4b089cc967f8038d9f8a
 #: ../../../../1.6/docs/misc/design-philosophies.txt:55
 msgid "DRY"
 msgstr "DRY"
 
-# 25b63b1af0ff44b393d2d4491879da39
+# 6ea97b002dcb4b089cc967f8038d9f8a
 #: ../../../../1.6/docs/misc/design-philosophies.txt:55
 msgid "Don't repeat yourself"
 msgstr "Ne pas se répéter"
 
-# 06e3cd8ff4f34ec4a9171efcdb463404
+# e06c54b5529e491da1418003a7b082b9
 #: ../../../../1.6/docs/misc/design-philosophies.txt:185
 msgid "urls"
 msgstr "url"
 
-# 06e3cd8ff4f34ec4a9171efcdb463404
+# e06c54b5529e491da1418003a7b082b9
 #: ../../../../1.6/docs/misc/design-philosophies.txt:185
 msgid "definitive"
 msgstr "définitif"
 
-# 2cc51fab1a004ccf94ac9997c5336780
+# d58a19b707d241dc86f32748815735e6
 #: ../../../../1.6/docs/misc/design-philosophies.txt:227
 msgid "xml"
 msgstr "xml"
 
-# 2cc51fab1a004ccf94ac9997c5336780
+# d58a19b707d241dc86f32748815735e6
 #: ../../../../1.6/docs/misc/design-philosophies.txt:227
 msgid "suckiness of"
 msgstr "mauvaise conception de"
 
-# 85eac4439a924e4ba7574dc99da9392f
+# da26a0a47a584334979462084fd0e619
 #: ../../../../1.6/docs/misc/distributions.txt:3
 msgid "Third-party distributions of Django"
 msgstr "Distributions tierces de Django"
 
-# 6360a595d48e41b2ad77f537d4af4993
+# c1ec71764b2a456ea266b4d6649f7c9f
 #: ../../../../1.6/docs/misc/distributions.txt:5
 msgid ""
 "Many third-party distributors are now providing versions of Django "
@@ -737,7 +737,7 @@ msgid ""
 " database adapters) that Django requires."
 msgstr "Beaucoup de distributeurs tiers fournissent désormais des versions de Django intégrées à leur système de gestion de paquets. Ceux-ci peuvent rendre l'installation et la mise à niveau beaucoup plus facile pour les utilisateurs de Django car l'intégration inclut la possibilité d'installer automatiquement les dépendances (comme les adaptateurs de base de données) dont Django a besoin."
 
-# d258cbbdfe6042f28fa79462c6d4c1e5
+# fad358df483e4ebe93dfbc7473591f48
 #: ../../../../1.6/docs/misc/distributions.txt:11
 msgid ""
 "Typically, these packages are based on the latest stable release of Django, "
@@ -746,7 +746,7 @@ msgid ""
 "<installing-development-version>` from our Git repository."
 msgstr "Typiquement, ces paquets sont basés sur la dernière version stable de Django, donc si vous souhaitez utiliser la version de développement de Django, vous devrez suivre les instructions d':ref:`installation de la version de développement <installing-development-version>` depuis notre dépôt Git."
 
-# fddcc79b065a44a0b4e016e41b0aa945
+# 3613d5984595443faeb9de725589d899
 #: ../../../../1.6/docs/misc/distributions.txt:16
 msgid ""
 "If you're using Linux or a Unix installation, such as OpenSolaris, check "
@@ -756,19 +756,19 @@ msgid ""
 " Party Distributions`_ to help you out."
 msgstr "Si vous utilisez Linux ou une installation Unix comme OpenSolaris, vérifiez auprès de votre distributeur pour savoir s'il intègre déjà un paquet pour Django. Si vous utilisez une distribution Linux et ne savez pas comment savoir si un paquet est disponible, c'est le bon moment pour apprendre. Le wiki Django contient une liste des `distributions tierces`_ pour vous aider."
 
-# daaab6aac941448f94fd6c6c605fd433
+# a3a8f49758774c7ea673226e913e8336
 #: ../../../../1.6/docs/misc/distributions.txt:26
 msgid "For distributors"
 msgstr "Pour les distributeurs"
 
-# 3f8c1b099a274614ad4cbd7723bfb182
+# 69bf2f5e7ecc469f9e3a0c61e1a85d89
 #: ../../../../1.6/docs/misc/distributions.txt:28
 msgid ""
 "If you'd like to package Django for distribution, we'd be happy to help out!"
 " Please join the |django-developers| mailing list and introduce yourself."
 msgstr "Si vous souhaitez créer un paquet Django pour le distribuer, nous serions heureux de vous aider ! S'il vous plaît, rejoignez la liste de diffusion |django-developers| et présentez-vous."
 
-# 919940502ad2437dbfe27923f08b6c59
+# 053cb0c0cab1409d8800f61b4a7d2d67
 #: ../../../../1.6/docs/misc/distributions.txt:31
 msgid ""
 "We also encourage all distributors to subscribe to the |django-announce| "
@@ -776,12 +776,12 @@ msgid ""
 " of Django and important bugfixes."
 msgstr "Nous encourageons également tous les distributeurs à s'abonner à la liste de diffusion  |django-announce|, qui est une liste à (très) faible trafic pour annoncer les nouvelles versions de Django et les corrections de bogues importants."
 
-# ca60aca3027b4c74995e0a7c87334c07
+# 71c9c9829f994c26a9a028fe7aade2c7
 #: ../../../../1.6/docs/misc/index.txt:2
 msgid "Meta-documentation and miscellany"
 msgstr "Méta documentation et divers"
 
-# 911db82b650d4d249d7b11c989259e47
+# 496d4d7d955d47f78ce2380394a595c0
 #: ../../../../1.6/docs/misc/index.txt:4
 msgid ""
 "Documentation that we can't find a more organized place for. Like that "
