@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-06 04:09-0500\n"
-"PO-Revision-Date: 2014-10-06 17:25+0000\n"
+"POT-Creation-Date: 2014-10-31 04:09-0500\n"
+"PO-Revision-Date: 2014-10-31 10:55+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -8940,8 +8940,13 @@ msgid ""
 "results."
 msgstr "Cet exemple permet d'effectuer les requêtes ``Person.authors.all()``, ``Person.editors.all()`` et ``Person.people.all()`` en sachant à quoi vous attendre au niveau des résultats."
 
-# 4d3e2e06ffd9434f8718a90365b6d573
-#: ../../../../1.7/docs/topics/db/managers.txt:172
+# 358306f4d7ec4ae1b992669d4a4129b7
+#: ../../../../1.7/docs/topics/db/managers.txt:175
+msgid "Default managers"
+msgstr "Gestionnaires par défaut"
+
+# fa5996da34364deab00b6d54aaea20c5
+#: ../../../../1.7/docs/topics/db/managers.txt:177
 msgid ""
 "If you use custom ``Manager`` objects, take note that the first ``Manager`` "
 "Django encounters (in the order in which they're defined in the model) has a"
@@ -17470,7 +17475,7 @@ msgid ""
 ":attr:`formset.deleted_objects "
 "<django.forms.models.BaseModelFormSet.deleted_objects>` to actually delete "
 "them::"
-msgstr "Si vous appelez ``formset.save(commit=False)``, les objets ne seront pas supprimés automatiquement. Vous devrez appeler ``delete()`` pour chacun des :attr:`formset.deleted_objects <django.forms.models.BaseModelFormSet.deleted_objects>`` afin que la suppression soit effective ::"
+msgstr "Si vous appelez ``formset.save(commit=False)``, les objets ne seront pas supprimés automatiquement. Vous devrez appeler ``delete()`` pour chacun des :attr:`formset.deleted_objects <django.forms.models.BaseModelFormSet.deleted_objects>` afin que la suppression soit effective ::"
 
 # cb41e82cbdd5408993dee39ed437ec06
 #: ../../../../1.7/docs/topics/forms/formsets.txt:531
@@ -18430,7 +18435,7 @@ msgid ""
 "ensuring that forms are accessible to assistive technology such as screen "
 "reader software. You can also :ref:`customize the way in which labels and "
 "ids are generated <ref-forms-api-configuring-label>`."
-msgstr "Notez que chaque champ de formulaire reçoit un attribut ID défini à ``id_<nom-de-champ>`` qui est référencé par la balise ``label`` correspondante. C'est important pour garantir que les formulaires sont accessibles aux aides techniques du genre logiciel de lecture d'écran. Vous pouvez aussi :ref:`personnaliser la façon dont les éléments ``label`` et ``id`` sont générés <ref-forms-api-configuring-label>`."
+msgstr "Notez que chaque champ de formulaire reçoit un attribut ID défini à ``id_<nom-de-champ>`` qui est référencé par la balise ``label`` correspondante. C'est important pour garantir que les formulaires sont accessibles aux aides techniques du genre logiciel de lecture d'écran. Vous pouvez aussi :ref:`personnaliser la façon dont les éléments label et id sont générés <ref-forms-api-configuring-label>`."
 
 # b5c83282ba4e469bab9aaf6635053f26
 #: ../../../../1.7/docs/topics/forms/index.txt:523
@@ -21782,28 +21787,28 @@ msgid ""
 "equal :setting:`SESSION_COOKIE_AGE`."
 msgstr "Renvoie le nombre de secondes restant jusqu'à l'expiration de la session. Pour les sessions sans expiration particulière (ou celles qui expirent à la fermeture du navigateur), cette valeur sera égale à :setting:`SESSION_COOKIE_AGE`."
 
-# 423ba980babb404297b897be5857e6c8
+# fbd24c7691a546c7b96c2c149305304a
 #: ../../../../1.7/docs/topics/http/sessions.txt:284
 msgid "This function accepts two optional keyword arguments:"
 msgstr "Cette fonction accepte deux paramètres nommés facultatifs :"
 
-# fd82af27fd4f4621970369b8f70ab4f4
+# 5f938ccbc8c54ce98201193125eea78e
 #: ../../../../1.7/docs/topics/http/sessions.txt:286
 msgid ""
 "``modification``: last modification of the session, as a "
 ":class:`~datetime.datetime` object. Defaults to the current time."
 msgstr "``modification``: dernière modification de la session, comme objet :class:`~datetime.datetime`. Par défaut, c'est l'heure actuelle."
 
-# 478172e275f14c42bf73698e917b0024
+# 41f2a29df4ea4d778d12344a616e37d5
 #: ../../../../1.7/docs/topics/http/sessions.txt:288
 msgid ""
 "``expiry``: expiry information for the session, as a "
-":class:`~datetime.datetime` object, an :func:`int` (in seconds), or "
+":class:`~datetime.datetime` object, an :class:`int` (in seconds), or "
 "``None``. Defaults to the value stored in the session by :meth:`set_expiry`,"
 " if there is one, or ``None``."
-msgstr "``expiry``: information d'expiration de la session, comme objet :class:`~datetime.datetime`, valeur :func:`int` (en secondes) ou ``None``. Par défaut, cette valeur est égale à celle stockée dans la session par :meth:`set_expiry`, le cas échéant, sinon ``None``."
+msgstr "``expiry``: information d'expiration de la session, comme objet :class:`~datetime.datetime`, valeur :class:`int` (en secondes) ou ``None``. Par défaut, cette valeur est égale à celle stockée dans la session par :meth:`set_expiry`, le cas échéant, sinon ``None``."
 
-# e4a0e17f3077460f9bd5ebe65a734348
+# 0afe0ef77ac048158879505955e063d0
 #: ../../../../1.7/docs/topics/http/sessions.txt:295
 msgid ""
 "Returns the date this session will expire. For sessions with no custom "
@@ -30076,15 +30081,24 @@ msgid ""
 " to do is use the historical model and iterate over the rows::"
 msgstr "Écrivons une migration simple qui remplit notre nouveau champ ``name`` avec les valeurs combinées de ``first_name`` et ``last_name`` (nous sommes retombés sur nos pieds et avons réalisé que tout le monde n'a pas forcément un nom et un prénom). Tout ce que nous avons à faire est d'utiliser le modèle historique et de parcourir chaque ligne ::"
 
-# 92d50959d4844dca9465a9d9259d6e6f
+# 4cbff369dc824371a96ee30e23fd1037
 #: ../../../../1.7/docs/topics/migrations.txt:418
 msgid ""
 "Once that's done, we can just run ``python manage.py migrate`` as normal and"
 " the data migration will run in place alongside other migrations."
 msgstr "Une fois que c'est fait, il suffit de lancer normalement ``python manage.py migrate`` et la migration de données sera exécutée comme toute autre migration."
 
-# 7f9c549bb8fe4d43a32495c3553f27a8
-#: ../../../../1.7/docs/topics/migrations.txt:421
+# c3b15cb697ff49919e0d736de247bfaf
+#: ../../../../1.7/docs/topics/migrations.txt:423
+msgid ""
+"Be careful when running a migration with :setting:`DEBUG=True <DEBUG>` as "
+"Django :ref:`saves all SQL queries <faq-see-raw-sql-queries>` that are run "
+"which may result in large memory usage. This issue is addressed in Django "
+"1.8 where only 9000 queries are saved."
+msgstr "Soyez prudent lorsque vous lancez une migration avec :setting:`DEBUG=True <DEBUG>` car Django :ref:`enregistre toutes les requêtes SQL <faq-see-raw-sql-queries>` effectuées, ce qui peut conduire à une grosse consommation mémoire. Ce problème est réglé dans Django 1.8 où seules 9000 requêtes sont enregistrées."
+
+# 0b783d25fac2455392c4484cd8c590b1
+#: ../../../../1.7/docs/topics/migrations.txt:428
 msgid ""
 "You can pass a second callable to "
 ":class:`~django.db.migrations.operations.RunPython` to run whatever logic "
@@ -30134,19 +30148,19 @@ msgid ""
 " rolled into :class:`~django.db.migrations.operations.CreateModel`."
 msgstr "Django opère cela en prenant toutes les migrations existantes, extrayant leurs opérations en les plaçant toutes à la suite, puis exécutant un optimiseur pour essayer de réduire au maximum cette liste d'opérations. Par exemple, il sait que :class:`~django.db.migrations.operations.CreateModel` et :class:`~django.db.migrations.operations.DeleteModel` s'annulent l'une l'autre et que :class:`~django.db.migrations.operations.AddField` peut être intégrée dans :class:`~django.db.migrations.operations.CreateModel`."
 
-# 570fb6bd2b5c4b1fab543daa5ec16696
-#: ../../../../1.7/docs/topics/migrations.txt:451
+# 26684824eab144eb9ae0adb11251b7c0
+#: ../../../../1.7/docs/topics/migrations.txt:458
 msgid ""
 "Once the operation sequence has been reduced as much as possible - the "
 "amount possible depends on how closely intertwined your models are and if "
 "you have any :class:`~django.db.migrations.operations.RunSQL` or "
 ":class:`~django.db.migrations.operations.RunPython` operations (which can't "
-"be optimized through) - Django will them write it back out into a new set of"
+"be optimized through) - Django will then write it back out into a new set of"
 " initial migration files."
 msgstr "Une fois que la suite d'opérations a été réduite au minimum, Django écrit le résultat dans une nouvel ensemble de fichiers de migration initiale. Ce nombre minimum dépend de la quantité de dépendances relatives entre les modèles et de la présence d'opérations :class:`~django.db.migrations.operations.RunSQL` ou :class:`~django.db.migrations.operations.RunPython` (qui ne peuvent pas subir d'optimisation)."
 
-# 1547791cc1874ed792a9aeeb9a49ed83
-#: ../../../../1.7/docs/topics/migrations.txt:458
+# 5a0f74279381498d9e3e1414076ec4db
+#: ../../../../1.7/docs/topics/migrations.txt:465
 msgid ""
 "These files are marked to say they replace the previously-squashed "
 "migrations, so they can coexist with the old migration files, and Django "
@@ -30276,8 +30290,9 @@ msgstr "``list``, ``set``, ``tuple``, ``dict``"
 # fc9f83740831489a8ac8a3f1cb0e23a0
 #: ../../../../1.7/docs/topics/migrations.txt:538
 msgid ""
-"``datetime.date``, ``datetime.time``, and ``datetime.datetime`` instances"
-msgstr "Instances ``datetime.date``, ``datetime.time`` et ``datetime.datetime``"
+"``datetime.date``, ``datetime.time``, and ``datetime.datetime`` instances "
+"(include those that are timezone-aware)"
+msgstr "Instances ``datetime.date``, ``datetime.time`` et ``datetime.datetime`` (y compris celles qui contiennent un fuseau horaire)"
 
 # ee047da99a504dfeacd051f051a0d67b
 #: ../../../../1.7/docs/topics/migrations.txt:539
@@ -30308,8 +30323,13 @@ msgid ""
 "deconstruct-method>`)"
 msgstr "Tout objet comportant une méthode ``deconstruct()`` (voir :ref:`ci-dessous <custom-deconstruct-method>`)"
 
-# e62c5d80b85546e5a03a392f09b58c82
-#: ../../../../1.7/docs/topics/migrations.txt:545
+# f86608aa21be45c3b027f89a8407eb0b
+#: ../../../../1.7/docs/topics/migrations.txt:555
+msgid "Support for serializing timezone-aware datetimes was added."
+msgstr "La prise en charge de la sérialisation des objets ``datetime`` avec fuseau horaire a été ajoutée."
+
+# 544b5cfeeeaf405d922ed960549f31c6
+#: ../../../../1.7/docs/topics/migrations.txt:557
 msgid "Django can serialize the following on Python 3 only:"
 msgstr "Les éléments suivants ne peuvent être sérialisés par Django qu'en Python 3 :"
 
@@ -31729,22 +31749,22 @@ msgid ""
 "\"write Python 3 code\" philosophy."
 msgstr "Le préfixe ``u`` de Python 2 est une erreur de syntaxe dans Python 3.2, mais il est de nouveau autorisé dans Python 3 suite à la :pep:`414`. Ainsi, cette transformation est facultative si vous ciblez Python ≥ 3.3. Mais c'est toujours recommandé, selon la philosophie « écrivons du code Python 3 »."
 
-# 696a6ef6732542b38dcb621c1af32814
-# b50830addc4f4f08b6082d6cf1399b06
+# ba0c214846344906b07795af8f4f8c4f
+# cb39a67f05374634a4bc516132034f2d
 #: ../../../../1.7/docs/topics/python3.txt:79
 #: ../../../../1.7/docs/topics/python3.txt:338
 msgid "String handling"
 msgstr "Gestion des chaînes"
 
-# d5c7c60123e74a06b1a49c284b393ac2
+# eede343019a74c8fb3a8e59718c8b4cf
 #: ../../../../1.7/docs/topics/python3.txt:81
 msgid ""
 "Python 2's `unicode`_ type was renamed :class:`str` in Python 3, ``str()`` "
-"was renamed :func:`bytes`, and `basestring`_ disappeared. six_ provides "
+"was renamed :class:`bytes`, and `basestring`_ disappeared. six_ provides "
 ":ref:`tools <string-handling-with-six>` to deal with these changes."
-msgstr "Le type `unicode`_ de Python 2 a été renommé :class:`str` dans Python 3, ``str()`` a été renommé :func:`bytes` et `basestring`_ a disparu. six_ offre des :ref:`outils <string-handling-with-six>` pour s'occuper de ces modifications."
+msgstr "Le type `unicode`_ de Python 2 a été renommé :class:`str` dans Python 3, ``str()`` a été renommé :class:`bytes` et `basestring`_ a disparu. six_ offre des :ref:`outils <string-handling-with-six>` pour s'occuper de ces modifications."
 
-# 91776fb4eb8b48ad8a6ec669d3f9527e
+# 39a692b5831645fe8532a27496bd28fb
 #: ../../../../1.7/docs/topics/python3.txt:86
 msgid ""
 "Django also contains several string related classes and functions in the "
@@ -33788,7 +33808,7 @@ msgstr "En conclusion : utilisez soit ``configure()``, soit ``DJANGO_SETTINGS_M
 # 3c4efc7a3757479f95d23c32a6eb2bd6
 #: ../../../../1.7/docs/topics/settings.txt:273
 msgid ":doc:`The Settings Reference </ref/settings>`"
-msgstr ":doc:`La référence des réglages <ref/settings>`"
+msgstr ":doc:`La référence des réglages </ref/settings>`"
 
 # f16f218e61154cbda95dc19628d438c9
 #: ../../../../1.7/docs/topics/settings.txt:274
@@ -34678,20 +34698,20 @@ msgstr "Si ``value`` vaut ``['a', 'b', 'c', 'd']``, le résultat sera ``4``."
 
 # a419c64cbf844665aba1a2f53bf25511
 #: ../../../../1.7/docs/topics/templates.txt:177
-msgid ":tfilter:`striptags`"
-msgstr ":tfilter:`striptags`"
+msgid ":tfilter:`filesizeformat`"
+msgstr ":tfilter:`filesizeformat`"
 
 # b038832b9cd54715987c03c6e2cb3b64
 #: ../../../../1.7/docs/topics/templates.txt:172
-msgid "Strips all [X]HTML tags. For example::"
-msgstr "Élimine toutes les balises [X]HTML. Par exemple ::"
-
-# cc45f4560796438b8ce108d6d4c04e8a
-#: ../../../../1.7/docs/topics/templates.txt:176
 msgid ""
-"If ``value`` is ``\"<b>Joel</b> <button>is</button> a <span>slug</span>\"``,"
-" the output will be ``\"Joel is a slug\"``."
-msgstr "Si ``value`` vaut ``\"<b>Joël</b> <button>est</button> une <span>limace</span>\"``, le résultat sera ``\"Joël est une limace\"``."
+"Formats the value like a \"human-readable\" file size (i.e. ``'13 KB'``, "
+"``'4.1 MB'``, ``'102 bytes'``, etc). For example::"
+msgstr "Met en forme la valeur sous forme de taille de fichier humainement lisible (par ex. ``'13 Kio'``, ``'4.1 Mio'``, ``'102 octets'``, etc). Par exemple ::"
+
+# 3fb00bd56a574ddb816d84b5a90367c0
+#: ../../../../1.7/docs/topics/templates.txt:177
+msgid "If ``value`` is 123456789, the output would be ``117.7 MB``."
+msgstr "SI ``value`` contient 123456789, le résultat sera ``117.7 Mio``."
 
 # 6d240a5f7e0e43408b546ab6d050a47e
 #: ../../../../1.7/docs/topics/templates.txt:179
@@ -35332,17 +35352,19 @@ msgstr "Bibliothèques de balises et filtres personnalisés"
 #: ../../../../1.7/docs/topics/templates.txt:666
 msgid ""
 "Certain applications provide custom tag and filter libraries. To access them"
-" in a template, use the :ttag:`load` tag::"
-msgstr "Certaines applications contiennent leurs propres bibliothèques de balises et de filtres. Pour y accéder à partir d'un gabarit, utilisez la balise :ttag:`load`::"
+" in a template, ensure the application is in :setting:`INSTALLED_APPS` (we'd"
+" add ``'django.contrib.humanize'`` for this example), and then use the "
+":ttag:`load` tag in a template::"
+msgstr "Certaines applications contiennent leurs propres bibliothèques de balises et de filtres. Pour y accéder à partir d'un gabarit, vérifiez que l'application se trouve dans :setting:`INSTALLED_APPS` (nous aurions ajouté ``'django.contrib.humanize'`` pour cet exemple), puis utilisez la balise :ttag:`load` dans le gabarit ::"
 
 # 6f25294e5b9740a0b0475c4d59e652e7
 #: ../../../../1.7/docs/topics/templates.txt:673
 msgid ""
 "In the above, the :ttag:`load` tag loads the ``humanize`` tag library, which"
-" then makes the ``intcomma`` filter available for use. Consult the "
-"documentation area in your admin to find the list of custom libraries in "
-"your installation."
-msgstr "Ci-dessus, la balise :ttag:`load` charge la bibliothèque de balises ``humanize``, ce qui permet ensuite d'utiliser le filtre ``intcomma`` dans le gabarit. Consultez la section de documentation de votre interface d'administration pour trouver la liste des bibliothèques personnalisées dans votre installation."
+" then makes the ``intcomma`` filter available for use. If you've enabled "
+":mod:`django.contrib.admindocs`, you can consult the documentation area in "
+"your admin to find the list of custom libraries in your installation."
+msgstr "Ci-dessus, la balise :ttag:`load` charge la bibliothèque de balises ``humanize``, ce qui permet ensuite d'utiliser le filtre ``intcomma`` dans le gabarit. Si :mod:`django.contrib.admindocs` est activée, vous pouvez consulter la section de documentation de votre interface d'administration pour trouver la liste des bibliothèques personnalisées dans votre installation."
 
 # 2596857432414c01ae37d336a3bbd0f7
 #: ../../../../1.7/docs/topics/templates.txt:677

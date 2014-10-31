@@ -7,12 +7,13 @@
 # charettes <charette.s@gmail.com>, 2013
 # Christophe kryskool <christophe.chauvet@gmail.com>, 2013
 # Claude Paroz <claude@2xlibre.net>, 2013-2014
+# Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-13 04:09-0500\n"
-"PO-Revision-Date: 2014-09-07 18:10+0000\n"
+"POT-Creation-Date: 2014-10-31 04:09-0500\n"
+"PO-Revision-Date: 2014-10-31 11:03+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -1329,20 +1330,20 @@ msgid ""
 "if we could save some of this repeated work?"
 msgstr "C'est un gros travail de concevoir, construire, tester et maintenir une application Web. Beaucoup de projets Python et Django ont des problématiques communes. Ne serait-il pas merveilleux si nous pouvions économiser un peu de ce travail répétitif ?"
 
-# 1716127a84a844d19db0934684f16594
+# 6d3dffbc38d7472cb3446a7fd55ae1ac
 #: ../../../../1.7/docs/intro/reusable-apps.txt:19
 msgid ""
 "Reusability is the way of life in Python. `The Python Package Index (PyPI) "
-"<http://guide.python-distribute.org/contributing.html#pypi-info>`_ has a "
-"vast range of packages you can use in your own Python programs. Check out "
-"`Django Packages <https://www.djangopackages.com>`_ for existing reusable "
-"apps you could incorporate in your project. Django itself is also just a "
-"Python package. This means that you can take existing Python packages or "
-"Django apps and compose them into your own web project. You only need to "
-"write the parts that make your project unique."
-msgstr "Le recyclage de code est un principe de vie en Python. Le site `Python Package Index (PyPI) <http://guide.python-distribute.org/contributing.html#pypi-info>`_ recense une très large variété de paquets qu'il est possible d'utiliser dans ses propres programmes Python. Parcourez le site `Django Packages <https://www.djangopackages.com>`_ pour trouver des applications réutilisables qu'il est possible d'intégrer dans votre projet. Django lui-même n'est qu'un paquet Python. Cela signifie que vous pouvez prendre des paquets Python ou des applications Django existantes et les composer dans votre propre projet Web. Vous n'avez plus qu'à écrire les parties qui font de votre projet un projet unique."
+"<https://pypi.python.org/pypi>`_ has a vast range of packages you can use in"
+" your own Python programs. Check out `Django Packages "
+"<https://www.djangopackages.com>`_ for existing reusable apps you could "
+"incorporate in your project. Django itself is also just a Python package. "
+"This means that you can take existing Python packages or Django apps and "
+"compose them into your own web project. You only need to write the parts "
+"that make your project unique."
+msgstr "Le recyclage de code est un principe de vie en Python. Le site `Python Package Index (PyPI) <https://pypi.python.org/pypi>`_ recense une très large variété de paquets qu'il est possible d'utiliser dans ses propres programmes Python. Parcourez le site `Django Packages <https://www.djangopackages.com>`_ pour trouver des applications réutilisables qu'il est possible d'intégrer dans votre projet. Django lui-même n'est qu'un paquet Python. Cela signifie que vous pouvez prendre des paquets Python ou des applications Django existantes et les composer dans votre propre projet Web. Vous n'avez plus qu'à écrire les parties qui font de votre projet un projet unique."
 
-# 12b68883a1994798839cdcb37902d600
+# 81c104df53f84012926c706a35ff9585
 #: ../../../../1.7/docs/intro/reusable-apps.txt:28
 msgid ""
 "Let's say you were starting a new project that needed a polls app like the "
@@ -1550,9 +1551,10 @@ msgstr "Essayez de construire votre paquet avec ``python setup.py sdist`` (lanc�
 # ad1026a47a5d4c4ab25ce3db1be2d3fc
 #: ../../../../1.7/docs/intro/reusable-apps.txt:260
 msgid ""
-"For more information on packaging, see `The Hitchhiker's Guide to Packaging "
-"<http://guide.python-distribute.org/quickstart.html>`_."
-msgstr "Pour plus d'informations sur l'empaquetage, consultez (en anglais) `The Hitchhiker's Guide to Packaging <http://guide.python-distribute.org/quickstart.html>`_."
+"For more information on packaging, see Python's `Tutorial on Packaging and "
+"Distributing Projects "
+"<https://packaging.python.org/en/latest/distributing.html>`_."
+msgstr "Pour plus d'informations sur l'empaquetage, consultez (en anglais) le `Tutoriel sur l'empaquetage et la distribution de projets <https://packaging.python.org/en/latest/distributing.html>`_."
 
 # ccaaa1ddf305498d8c6bf398c6ea235f
 #: ../../../../1.7/docs/intro/reusable-apps.txt:264
@@ -1633,22 +1635,14 @@ msgstr "Envoyer le paquet sur votre site Web."
 # 232a343cfa4a4217b032b193c4c194c4
 #: ../../../../1.7/docs/intro/reusable-apps.txt:305
 msgid ""
-"Post the package on a public repository, such as `The Python Package Index "
-"(PyPI) <http://guide.python-distribute.org/contributing.html#pypi-info>`_."
-msgstr "Publier le paquet dans un dépôt public, tel que le `Python Package Index (PyPI) <http://guide.python-distribute.org/contributing.html#pypi-info>`_."
+"Post the package on a public repository, such as `the Python Package Index "
+"(PyPI)`_. `packaging.python.org <https://packaging.python.org>`_ has `a good"
+" tutorial <https://packaging.python.org/en/latest/distributing.html"
+"#uploading-your-project-to-pypi>`_ for doing this."
+msgstr "Publier le paquet dans un dépôt public, tel que le `Python Package Index (PyPI)`_. `packaging.python.org <https://packaging.python.org>`_ dispose d'un `bon tutoriel <https://packaging.python.org/en/latest/distributing.html#uploading-your-project-to-pypi>`_ (en anglais) qui explique comment faire cela."
 
-# 5657d548f5d64bc599d90f1efb547bc8
-#: ../../../../1.7/docs/intro/reusable-apps.txt:308
-msgid ""
-"For more information on PyPI, see the `Quickstart <http://guide.python-"
-"distribute.org/quickstart.html#register-your-package-with-the-python-"
-"package-index-pypi>`_ section of The Hitchhiker's Guide to Packaging. One "
-"detail this guide mentions is choosing the license under which your code is "
-"distributed."
-msgstr "Pour plus d'informations sur PyPI, consultez la section `Quickstart <http://guide.python-distribute.org/quickstart.html#register-your-package-with-the-python-package-index-pypi>`_ du « Hitchhiker's Guide to Packaging ». Un des aspects abordés par ce guide est le choix de la licence pour la distribution de votre code."
-
-# 35a26383ebb14018bed77ee9c134c827
-#: ../../../../1.7/docs/intro/reusable-apps.txt:314
+# 9e4807c4aa5145e38ff8512e490a0913
+#: ../../../../1.7/docs/intro/reusable-apps.txt:311
 msgid "Installing Python packages with virtualenv"
 msgstr "Installation de paquets Python avec virtualenv"
 
@@ -3337,30 +3331,37 @@ msgid ""
 "(``django/contrib/admin/templates``) into that directory."
 msgstr "Créez maintenant dans ``templates`` un répertoire nommé ``admin`` et copiez-y le gabarit  ``admin/base_site.html`` à partir du répertoire par défaut des gabarits d'administration dans le code source de Django (``django/contrib/admin/templates``)."
 
-# 7eadc70ac5764856bbeb1aee0a719f44
+# e617ac63c4f947cfb91fa928bcff6917
 #: ../../../../1.7/docs/intro/tutorial02.txt:501
 msgid "Where are the Django source files?"
 msgstr "Où se trouvent les fichiers sources de Django ?"
 
-# 5b537d4af9fe4ba29496deeb76aaa36e
+# 1ec6678431c94bb7a36f165bde7e38f7
 #: ../../../../1.7/docs/intro/tutorial02.txt:503
 msgid ""
 "If you have difficulty finding where the Django source files are located on "
 "your system, run the following command:"
 msgstr "Si vous ne savez pas où les fichiers source de Django se trouvent sur votre système, lancez la commande suivante :"
 
-# d1419f7782e643638894501da814e9af
+# 03ef4172a9664da8bdbdf3eed183bb18
 #: ../../../../1.7/docs/intro/tutorial02.txt:514
 msgid ""
-"Then, just edit the file and replace ``{{ site_header }}`` with your own "
-"site's name as you see fit. We use this approach to teach you how to "
-"override templates. In an actual project, you would probably use the "
+"Then, just edit the file and replace ``{{ site_header|default:_('Django "
+"administration') }}`` (including the curly braces) with your own site's name"
+" as you see fit. You should end up with a line like:"
+msgstr "Ensuite, éditez simplement le fichier et remplacez ``{{ site_header|default:_('Django administration') }}`` (y compris les accolades) par le nom de votre propre site. Cela devrait donner quelque chose comme :"
+
+# 1560a1a6d5b6479ba234cac641501d1b
+#: ../../../../1.7/docs/intro/tutorial02.txt:523
+msgid ""
+"We use this approach to teach you how to override templates. In an actual "
+"project, you would probably use the "
 ":attr:`django.contrib.admin.AdminSite.site_header` attribute to more easily "
 "make this particular customization."
-msgstr "Puis, modifiez le fichier pour remplacer ``{{ site_header }}`` par votre propre nom de site, comme vous le souhaitez. Nous utilisons cette approche pour vous apprendre comment surcharger des gabarits. Dans un projet réel, vous auriez probablement utilisé l'attribut :attr:`django.contrib.admin.AdminSite.site_header` pour faire cette même modification de manière plus simple."
+msgstr "Nous utilisons cette approche pour vous apprendre comment surcharger des gabarits. Dans un projet réel, vous auriez probablement utilisé l'attribut :attr:`django.contrib.admin.AdminSite.site_header` pour faire cette même modification de manière plus simple."
 
-# 107ed418d6f34b4ca9a38649c739f0c7
-#: ../../../../1.7/docs/intro/tutorial02.txt:520
+# e7a69f64127a43c2b204fbf3e5e6ccf9
+#: ../../../../1.7/docs/intro/tutorial02.txt:528
 msgid ""
 "This template file contains lots of text like ``{% block branding %}`` and "
 "``{{ title }}``. The ``{%`` and ``{{`` tags are part of Django's template "
@@ -3849,24 +3850,24 @@ msgid ""
 "anything you want, using whatever Python libraries you want."
 msgstr "Votre vue peut lire des entrées depuis une base de données, ou pas. Elle peut utiliser un système de gabarits comme celui de Django -- ou un système de gabarits tiers -- ou pas. Elle peut générer un fichier PDF, produire de l'XML, créer un fichier ZIP à la volée, tout ce que vous voulez, en utilisant les bibliothèques Python que vous voulez."
 
-# 316c722ce99c4ff89109721f52d4edb9
+# 012b71fc5edd48499b93eccd4d8984fd
 #: ../../../../1.7/docs/intro/tutorial03.txt:287
 msgid ""
 "All Django wants is that :class:`~django.http.HttpResponse`. Or an "
 "exception."
 msgstr "Voilà tout ce que veut Django : :class:`~django.http.HttpResponse` ou une exception."
 
-# 515afc33487c415ca4f0fce53e4ae841
+# fb137b88c5034ab8b97f82dce5db9a33
 #: ../../../../1.7/docs/intro/tutorial03.txt:289
 msgid ""
 "Because it's convenient, let's use Django's own database API, which we "
-"covered in :doc:`Tutorial 1 </intro/tutorial01>`. Here's one stab at the "
+"covered in :doc:`Tutorial 1 </intro/tutorial01>`. Here's one stab at a new "
 "``index()`` view, which displays the latest 5 poll questions in the system, "
 "separated by commas, according to publication date:"
-msgstr "Parce que c'est pratique, nous allons utiliser l'API de base de données de Django, que nous avons vu dans le :doc:`tutoriel 1 </intro/tutorial01>`. Voici une ébauche de vue ``index()``, qui affiche les 5 derniers sondages, séparés par des virgules et classés par date de publication :"
+msgstr "Parce que c'est pratique, nous allons utiliser l'API de base de données de Django, que nous avons vu dans le :doc:`tutoriel 1 </intro/tutorial01>`. Voici une ébauche d'une nouvelle vue ``index()``, qui affiche les 5 derniers sondages, séparés par des virgules et classés par date de publication :"
 
-# 1b7d09950dbb47b6b237925f67f6a96e
-#: ../../../../1.7/docs/intro/tutorial03.txt:307
+# 5c16813288b84eedba1c20dbd99e4239
+#: ../../../../1.7/docs/intro/tutorial03.txt:309
 msgid ""
 "There's a problem here, though: the page's design is hard-coded in the view."
 " If you want to change the way the page looks, you'll have to edit this "

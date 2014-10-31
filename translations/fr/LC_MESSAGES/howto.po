@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-13 03:09-0500\n"
-"PO-Revision-Date: 2014-09-13 16:09+0000\n"
+"POT-Creation-Date: 2014-10-31 03:09-0500\n"
+"PO-Revision-Date: 2014-10-31 16:20+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -5246,13 +5246,23 @@ msgstr "Ensuite, il faut s'assurer que ce fichier :file:`wsgi.py` contenant l'ap
 msgid ""
 "If multiple Django sites are run in a single mod_wsgi process, all of them "
 "will use the settings of whichever one happens to run first. This can be "
-"solved with a minor edit to ``wsgi.py`` (see comment in the file for "
-"details), or by :ref:`using mod_wsgi daemon mode<daemon-mode>` and ensuring "
-"that each site runs in its own daemon process."
-msgstr "Si plusieurs sites Django sont exécutés dans un seul processus mod_wsgi, ils vont tous utiliser les réglages de celui qui est lancé en premier. Cela peut être corrigé avec une petite modification dans ``wsgi.py`` (voir le commentaire dans le fichier pour les détails), ou en :ref:`utilisant le mode daemon de mod_wsgi<daemon-mode>` et en prenant soin de faire tourner chaque site dans son propre processus daemon."
+"solved by changing::"
+msgstr "Si plusieurs sites Django sont exécutés dans un seul processus mod_wsgi, ils vont tous utiliser les réglages de celui qui est lancé en premier. Cela peut être corrigé en changeant ::"
 
-# 16716ffda05d43f18dc2d88187717f46
-#: ../../../../1.7/docs/howto/deployment/wsgi/modwsgi.txt:72
+# 1775fe6322014240b374dca2ee7baf9b
+#: ../../../../1.7/docs/howto/deployment/wsgi/modwsgi.txt:70
+msgid "in ``wsgi.py``, to::"
+msgstr "dans ``wsgi.py``, en ::"
+
+# eb8f18e9700d4007bb965df880995465
+#: ../../../../1.7/docs/howto/deployment/wsgi/modwsgi.txt:74
+msgid ""
+"or by :ref:`using mod_wsgi daemon mode<daemon-mode>` and ensuring that each "
+"site runs in its own daemon process."
+msgstr "ou en :ref:`utilisant le mode daemon de mod_wsgi<daemon-mode>` et en prenant soin de faire tourner chaque site dans son propre processus daemon."
+
+# 17308474cbc94571b058192769c6cbdd
+#: ../../../../1.7/docs/howto/deployment/wsgi/modwsgi.txt:78
 msgid "Using a virtualenv"
 msgstr "Utilisation de virtualenv"
 
@@ -6013,10 +6023,11 @@ msgid ""
 "database. The most straightforward way of creating a fixture if you've "
 "already got some data is to use the :djadmin:`manage.py dumpdata <dumpdata>`"
 " command. Or, you can write fixtures by hand; fixtures can be written as "
-"XML, YAML, or JSON documents. The :doc:`serialization documentation "
-"</topics/serialization>` has more details about each of these supported "
-":ref:`serialization formats <serialization-formats>`."
-msgstr "Un instantané (fixture en anglais) est un ensemble de données que Django peut importer dans une base de données. La façon la plus directe de créer un instantané si vous avez déjà les données dans votre base est d'utiliser la commande :djadmin:`manage.py dumpdata <dumpdata>`. Sinon, vous pouvez aussi créer des instantanés manuellement ; ils peuvent être écrits sous forme de documents XML, YAML ou JSON. La :doc:`documentation sur la sérialisation </topics/serialization>` contient plus de détails sur chacun de ces :ref:`formats de sérialisation <serialization-formats>`."
+"JSON, XML or YAML (with PyYAML_ installed) documents. The "
+":doc:`serialization documentation </topics/serialization>` has more details "
+"about each of these supported :ref:`serialization formats <serialization-"
+"formats>`."
+msgstr "Un instantané (fixture en anglais) est un ensemble de données que Django peut importer dans une base de données. La façon la plus directe de créer un instantané si vous avez déjà les données dans votre base est d'utiliser la commande :djadmin:`manage.py dumpdata <dumpdata>`. Sinon, vous pouvez aussi créer des instantanés manuellement ; ils peuvent être écrits sous forme de documents JSON, XML ou YAML. La :doc:`documentation sur la sérialisation </topics/serialization>` contient plus de détails sur chacun de ces :ref:`formats de sérialisation <serialization-formats>`."
 
 # 4f677b002dcc48a6aadb2241efe14695
 #: ../../../../1.7/docs/howto/initial-data.txt:29
