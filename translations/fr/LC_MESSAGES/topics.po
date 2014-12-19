@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-31 04:09-0500\n"
-"PO-Revision-Date: 2014-10-31 10:55+0000\n"
+"POT-Creation-Date: 2014-12-18 03:09-0600\n"
+"PO-Revision-Date: 2014-12-19 08:20+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -2746,6 +2746,14 @@ msgstr "**Nom d'URL :** ``password_reset_done``"
 
 # 30f20a41025440acb848a356be59d940
 #: ../../../../1.7/docs/topics/auth/default.txt:1036
+msgid ""
+"If the email address provided does not exist in the system, the user is "
+"inactive, or has an unusable password, the user will still be redirected to "
+"this view but no email will be sent."
+msgstr "Si l'adresse électronique fournie n'existe pas dans le système, si l'utilisateur est inactif ou si son mot de passe est inutilisable, cette vue sera tout de même affichée, mais aucun message ne sera envoyé."
+
+# b94e1f27ac6448288a849bac01897ee3
+#: ../../../../1.7/docs/topics/auth/default.txt:1041
 msgid ""
 "``template_name``: The full name of a template to use. Defaults to "
 ":file:`registration/password_reset_done.html` if not supplied."
@@ -7862,8 +7870,28 @@ msgid ""
 " ``order_by()``, or even additional calls to ``annotate()``."
 msgstr "Au contraire de ``aggregate()``, ``annotate()`` n'est *pas* une clause terminale. Le résultat de la clause ``annotate()`` est un objet ``QuerySet``. Cet objet peut très bien être modifié par une autre opération de type ``QuerySet``, comme par exemple ``filter()``, ``order_by()`` ou même d'autres appels à ``annotate()``."
 
-# 17db353118d94c2d984981b11f8127a5
-#: ../../../../1.7/docs/topics/db/aggregation.txt:183
+# f8c0b5740aca4464bd543c5c4d423866
+#: ../../../../1.7/docs/topics/db/aggregation.txt:182
+msgid "If in doubt, inspect the SQL query!"
+msgstr "En cas de doute, inspectez la requête SQL !"
+
+# d6ff6a73aeb64baeaa3da79469b6199c
+#: ../../../../1.7/docs/topics/db/aggregation.txt:184
+msgid ""
+"In order to understand what happens in your query, consider inspecting the "
+"``query`` property of your ``QuerySet``."
+msgstr "Afin de comprendre ce qui se produit dans la requête, il est possible d'examiner la propriété ``query`` de l'objet ``QuerySet``."
+
+# 068c408af11c4453a91477003124d80c
+#: ../../../../1.7/docs/topics/db/aggregation.txt:187
+msgid ""
+"For instance, combining multiple aggregations with ``annotate()`` will yield"
+" the wrong results, as `multiple tables are cross joined`_, resulting in "
+"duplicate row aggregations."
+msgstr "Par exemple, la combinaison de plusieurs agrégations par ``annotate()`` produit de mauvais résultats car `plusieurs tables sont jointes de manière croisée`_, ce qui provoque une duplication de lignes dans les agrégations."
+
+# c00b1ea73556456bb78718f96ed0ccf6
+#: ../../../../1.7/docs/topics/db/aggregation.txt:194
 msgid "Joins and aggregates"
 msgstr "Jointures et agrégations"
 
@@ -14515,12 +14543,7 @@ msgid ""
 " parameters from the ``params`` argument."
 msgstr "``params`` est une liste ou un dictionnaire de paramètres. Dans la chaîne de requête, il faut alors inclure des substituants ``%s`` pour une liste ou des substituants``%(clé)s`` pour un dictionnaire (où ``clé`` est remplacé par une clé de dictionnaire, bien sûr), quel que soit le moteur de base de données. Ces substituants seront remplacés par le contenu du paramètre ``params``."
 
-# 8c3505114e1b402d998cecec23c56213
-#: ../../../../1.7/docs/topics/db/sql.txt:206
-msgid "Dictionary params not supported with SQLite"
-msgstr "Les paramètres ``params`` de type dictionnaire ne sont pas pris en charge par SQLite"
-
-# e475fe9552154a09ada26fb464b42ded
+# 12e95675e69d4ce6b1da8a211eb58171
 #: ../../../../1.7/docs/topics/db/sql.txt:208
 msgid ""
 "Dictionary params are not supported with the SQLite backend; with this "
@@ -18456,8 +18479,15 @@ msgid ""
 "and in a Django template, will be rendered appropriately. For example:"
 msgstr "Laisser Django afficher un à un les champs du formulaire n'est pas la seule possibilité ; on peut tout à fait afficher soi-même les champs (par exemple pour changer leur ordre d'apparition). Chaque champ est accessible en tant qu'attribut du formulaire avec la syntaxe ``{{ form.nom_du_champ }}``, ce qui, dans un gabarit Django, produira son affichage de manière appropriée. Par exemple :"
 
-# 44401f56e3f64b95b086f61a9718ff84
-#: ../../../../1.7/docs/topics/forms/index.txt:558
+# 9ce31cdef3dc4a4bb8393ad2810348d4
+#: ../../../../1.7/docs/topics/forms/index.txt:557
+msgid ""
+"Complete ``<label>`` element can also be generated using the "
+":meth:`~django.forms.BoundField.label_tag`. For example:"
+msgstr "Une balise ``<label>`` complète peut aussi être générée au moyen de :meth:`~django.forms.BoundField.label_tag`. Par exemple :"
+
+# f670dd9ada454843b24c69cfe7be47f6
+#: ../../../../1.7/docs/topics/forms/index.txt:570
 msgid "Rendering form error messages"
 msgstr "Affichage des messages d'erreur de formulaires"
 
@@ -19756,7 +19786,7 @@ msgstr "Pour indiquer un composant personnalisé pour un champ, utilisez l'attri
 # adf0cc7bf27a415fb0f0ee8bd906303d
 #: ../../../../1.7/docs/topics/forms/modelforms.txt:490
 msgid ""
-"For example, if you want the a ``CharField`` for the ``name`` attribute of "
+"For example, if you want the ``CharField`` for the ``name`` attribute of "
 "``Author`` to be represented by a ``<textarea>`` instead of its default "
 "``<input type=\"text\">``, you can override the field's widget::"
 msgstr "Par exemple, si vous voulez que le champ ``CharField`` de l'attribut ``name`` du modèle ``Author`` soit représenté par un composant ``<textarea>`` au lieu du composant ``<input type=\"text\">`` par défaut, vous pouvez surcharger le composant du champ ::"
@@ -26600,8 +26630,8 @@ msgstr "``{{ LANGUAGE_CODE|language_name_local }}`` (\"Deutsch\")"
 
 # e84d0d3803c440ab8900d589774c2c4c
 #: ../../../../1.7/docs/topics/i18n/translation.txt:875
-msgid "``{{ LANGUAGE_CODE|bidi }}`` (False)"
-msgstr "``{{ LANGUAGE_CODE|bidi }}`` (False)"
+msgid "``{{ LANGUAGE_CODE|language_bidi }}`` (False)"
+msgstr "``{{ LANGUAGE_CODE|language_bidi }}`` (False)"
 
 # 2dcdda81c2ba4d8c9b4d813e5fbf8c8c
 #: ../../../../1.7/docs/topics/i18n/translation.txt:880
@@ -29811,13 +29841,20 @@ msgstr "Ce comportement de dépendances affecte la majorité des opérations de 
 msgid ""
 "Be aware, however, that unmigrated apps cannot depend on migrated apps, by "
 "the very nature of not having migrations. This means that it is not "
-"generally possible to have an unmigrated app have a ForeignKey or "
-"ManyToManyField to a migrated app; some cases may work, but it will "
+"generally possible to have an unmigrated app have a ``ForeignKey`` or "
+"``ManyToManyField`` to a migrated app; some cases may work, but it will "
 "eventually fail."
 msgstr "Il faut cependant savoir que les applications sans migrations ne peuvent pas dépendre d'applications avec migrations, par la nature même de l'absence de migrations. Cela signifie qu'il n'est généralement pas possible d'avoir une application sans migrations qui possède une clé ``ForeignKey`` ou un champ ``ManyToManyField`` vers une application avec migrations ; cela peut marcher dans certains cas, mais risque bien de finir par des erreurs."
 
-# f34cce3f10ff4bc49e4eb21cea730b7a
-#: ../../../../1.7/docs/topics/migrations.txt:219
+# 15ee51ae9ebb4a7188c25e743588b645
+#: ../../../../1.7/docs/topics/migrations.txt:221
+msgid ""
+"Even if things appear to work with unmigrated apps depending on migrated "
+"apps, Django may not generate all the necessary foreign key constraints!"
+msgstr "Même si les choses semblent fonctionner avec des applications sans migrations dépendant d'applications avec migrations, il se peut que Django ne produise pas toutes les contraintes de clé étrangère nécessaires !"
+
+# d772bcaa40a1496994a16af5bb2e65c2
+#: ../../../../1.7/docs/topics/migrations.txt:224
 msgid ""
 "This is particularly apparent if you use swappable models (e.g. "
 "``AUTH_USER_MODEL``), as every app that uses swappable models will need to "
@@ -30452,8 +30489,38 @@ msgid ""
 "deconstruct() is called."
 msgstr "Ce décorateur ajoute la logique nécessaire pour capturer et préserver les paramètres lors de leur transmission au constructeur, puis renvoie ces mêmes paramètres lorsque ``deconstruct()`` est appelée."
 
-# c01b73b44b1a4a57902e3ac4c065cdd9
-#: ../../../../1.7/docs/topics/migrations.txt:626
+# ec172669f5674b728cf94393e621c172
+#: ../../../../1.7/docs/topics/migrations.txt:642
+msgid "Supporting Python 2 and 3"
+msgstr "Prise en charge de Python 2 et 3"
+
+# e8392823bba94f82a4e0c25aaf4f8556
+#: ../../../../1.7/docs/topics/migrations.txt:644
+msgid ""
+"In order to generate migrations that support both Python 2 and 3, all string"
+" literals used in your models and fields (e.g. ``verbose_name``, "
+"``related_name``, etc.), must be consistently either bytestrings or text "
+"(unicode) strings in both Python 2 and 3 (rather than bytes in Python 2 and "
+"text in Python 3, the default situation for unmarked string literals.) "
+"Otherwise running :djadmin:`makemigrations` under Python 3 will generate "
+"spurious new migrations to convert all these string attributes to text."
+msgstr "Dans l'optique de générer des migrations qui prennent en charge à la fois Python 2 et 3, toutes les chaînes de texte littéral dans vos modèles et champs (par ex. ``verbose_name``, ``related_name``, etc.) doivent être des chaînes qui restent toujours soit des chaînes d'octets, soit des chaînes de texte (unicode), que ce soit avec Python 2 ou 3 (au lieu de représenter des octets avec Python 2 et du texte avec Python 3, ce qui correspond à la situation par défaut pour les chaînes littérales non marquées spécialement). Sinon, l'exécution de :djadmin:`makemigrations` avec Python 3 risque de produire de nouvelles migrations bizarres qui convertissent tous ces attributs textuels en texte."
+
+# 009ed4040dc540d8b06b1e03fff55d70
+#: ../../../../1.7/docs/topics/migrations.txt:652
+msgid ""
+"The easiest way to achieve this is to follow the advice in Django's "
+":doc:`Python 3 porting guide </topics/python3>` and make sure that all your "
+"modules begin with ``from __future__ import unicode_literals``, so that all "
+"unmarked string literals are always unicode, regardless of Python version. "
+"When you add this to an app with existing migrations generated on Python 2, "
+"your next run of :djadmin:`makemigrations` on Python 3 will likely generate "
+"many changes as it converts all the bytestring attributes to text strings; "
+"this is normal and should only happen once."
+msgstr "La manière la plus simple de faire cela est de suivre les conseils donnés dans le :doc:`guide de migration vers Python 3 </topics/python3>` et de s'assurer que tous vos modules commencent par ``from __future__ import unicode_literals`` afin que toutes les chaînes littérales soient toujours de l'unicode, quelle que soit la version de Python. Lorsque vous ajoutez cela à une application possédant déjà des migrations générées avec Python 2, le prochain lancement de :djadmin:`makemigrations` avec Python 3 va probablement générer de multiples changements dans la mesure où tous les attributs de type chaîne d'octets sont convertis en chaînes de texte ; c'est normal et ne devrait se produire qu'une seule fois."
+
+# 2d026639142a42f5b2fab921d6a887cd
+#: ../../../../1.7/docs/topics/migrations.txt:664
 msgid "Upgrading from South"
 msgstr "Mise à jour à partir de South"
 
@@ -32213,8 +32280,12 @@ msgstr "``xrange``"
 
 # 5ea0570a21b94994a155a265c34cae62
 #: ../../../../1.7/docs/topics/python3.txt:361
-msgid "Import ``six.moves.xrange`` wherever you use ``xrange``."
-msgstr "Importez ``six.moves.xrange`` chaque fois que vous avez besoin de``xrange``."
+msgid ""
+"If you use ``xrange`` on Python 2, import ``six.moves.range`` and use that "
+"instead. You can also import ``six.moves.xrange`` (it's equivalent to "
+"``six.moves.range``) but the first technique allows you to simply drop the "
+"import when dropping support for Python 2."
+msgstr "Si vous utilisez ``xrange`` avec Python 2, importez ``six.moves.range`` et utilisez plutôt cette fonction. Il est aussi possible d'importer ``six.moves.xrange`` (qui est équivalent à ``six.moves.range``), mais la technique précédente permet de simplement supprimer l'importation au moment de laisser tomber la prise en charge de Python 2."
 
 # ccc6931ac37d435e8eb5eeb94d3bdb95
 #: ../../../../1.7/docs/topics/python3.txt:364
@@ -32275,14 +32346,7 @@ msgid ""
 "in current Python 3 versions, but issues a warning."
 msgstr "Ceci remplace ``testcase.assertRegexpMatches`` avec Python 2 et ``testcase.assertRegex`` avec Python 3. ``assertRegexpMatches`` existe toujours dans les versions actuelles de Python 3, mais génère un avertissement d'obsolescence."
 
-# bc0129c4ebf44bd584abcfb0ba82497a
-#: ../../../../1.7/docs/topics/python3.txt:402
-msgid ""
-"In addition to six' defaults moves, Django's version provides ``thread`` as "
-"``_thread`` and ``dummy_thread`` as ``_dummy_thread``."
-msgstr "En plus des déplacements gérés par ``six``, la version incluse dans Django fournit ``thread`` comme ``_thread`` et ``dummy_thread`` comme ``_dummy_thread``."
-
-# be5dc89b5f77489aba51f45f5b3fa4e3
+# 9705a8faa3924c23beeca95ca7b0c263
 #: ../../../../1.7/docs/topics/security.txt:3
 msgid "Security in Django"
 msgstr "La sécurité dans Django"
@@ -34056,8 +34120,17 @@ msgid ""
 " of Django, signal registration usually happened in the ``models`` module."
 msgstr "Comme :meth:`~django.apps.AppConfig.ready` n'existait pas dans les versions précédentes de Django, l'inscription des signaux se faisait généralement dans le module ``models``."
 
-# 2fcffd30a8544c17a715314d40f0b139
-#: ../../../../1.7/docs/topics/signals.txt:159
+# 344e1536fab54ed7a88a27e2268283e8
+#: ../../../../1.7/docs/topics/signals.txt:158
+msgid ""
+"The :meth:`~django.apps.AppConfig.ready` method may be executed more than "
+"once during testing, so you may want to :ref:`guard your signals from "
+"duplication <preventing-duplicate-signals>`, especially if you're planning "
+"to send them within tests."
+msgstr "Il est possible que la méthode :meth:`~django.apps.AppConfig.ready` soit exécutée plus d'une fois durant les tests. Par conséquent, il est préférable d':ref:`empêcher la duplication des signaux  <preventing-duplicate-signals>`, particulièrement si vous pensez les exploiter dans les tests."
+
+# c2a384a446d54afe88dcb657aa940df7
+#: ../../../../1.7/docs/topics/signals.txt:166
 msgid "Connecting to signals sent by specific senders"
 msgstr "Connexion aux signaux envoyés par des expéditeurs spécifiques"
 
@@ -35676,44 +35749,68 @@ msgid ""
 "key reset is an relatively expensive database operation."
 msgstr "L'utilisation de ``reset_sequences = True`` ralentit les tests, car la réinitialisation des clés primaires est une opération de base de données relativement coûteuse."
 
-# f6f28a30533845c8a9580bd557f8a652
-#: ../../../../1.7/docs/topics/testing/advanced.txt:235
-msgid "Running tests outside the test runner"
-msgstr "Lancement de tests en dehors du lanceur de tests"
+# fa5510fdc6c14b90a847b0f1dad3e7bc
+#: ../../../../1.7/docs/topics/testing/advanced.txt:240
+msgid "Using the Django test runner to test reusable applications"
+msgstr "Utilisation du lanceur de tests de Django pour tester des applications réutilisables"
+
+# 161eeeb360a34396a81a3f40d8a9f7f1
+#: ../../../../1.7/docs/topics/testing/advanced.txt:242
+msgid ""
+"If you are writing a :doc:`reusable application </intro/reusable-apps>` you "
+"may want to use the Django test runner to run your own test suite and thus "
+"benefit from the Django testing infrastructure."
+msgstr "Si vous écrivez une :doc:`application réutilisable </intro/reusable-apps>`, il peut être intéressant d'utiliser le lanceur de tests de Django pour lancer votre propre suite de tests et bénéficier ainsi de l'infrastructure de tests de Django."
+
+# d41d9211d619488db9d11a489ed7530b
+#: ../../../../1.7/docs/topics/testing/advanced.txt:246
+msgid ""
+"A common practice is a *tests* directory next to the application code, with "
+"the following structure::"
+msgstr "Une pratique courante est de placer un répertoire *tests* en parallèle de votre code d'application, avec la structure suivante ::"
+
+# a5649fa9c3124b53b400cc4718f8d776
+#: ../../../../1.7/docs/topics/testing/advanced.txt:260
+msgid "Let's take a look inside a couple of those files:"
+msgstr "Examinons ce qui se trouve dans certains de ces fichiers :"
+
+# 4c5fdae7fd0447ccac836f8b4574ddc3
+#: ../../../../1.7/docs/topics/testing/advanced.txt:282
+msgid ""
+"This is the script that you invoke to run the test suite. It sets up the "
+"Django environment, creates the test database and runs the tests."
+msgstr "Il s'agit ici du script invoqué pour lancer la suite de tests. Il met en place l'environnement Django, crée la base de données de tests et lance les tests."
 
 # 8e7a9864ebff42e09ddc0df49e99b9e5
 #: ../../../../1.7/docs/topics/testing/advanced.txt:237
 msgid ""
-"If you want to run tests outside of ``./manage.py test`` -- for example, "
-"from a shell prompt -- you will need to set up the test environment first. "
-"Django provides a convenience method to do this::"
-msgstr "Si vous souhaitez lancer des tests indépendamment de ``./manage.py test``, par exemple à partir d'une invite de commande, vous devez d'abord mettre en place l'environnement de test. Django fournit une méthode à cet effet ::"
+"For the sake of clarity, this example contains only the bare minimum "
+"necessary to use the Django test runner. You may want to add command-line "
+"options for controlling verbosity, passing in specific test labels to run, "
+"etc."
+msgstr "Par souci de clarté, cet exemple ne contient que le strict minimum nécessaire à l'utilisation du lanceur de tests de Django. On peut cependant imaginer ajouter des options en ligne de commande pour le contrôle de la verbosité, pour passer des étiquettes de tests spécifiques à lancer, etc."
 
 # 1fe1869cc9c74d6183c8202c21dcf49b
 #: ../../../../1.7/docs/topics/testing/advanced.txt:244
 msgid ""
-":func:`~django.test.utils.setup_test_environment` puts several Django "
-"features into modes that allow for repeatable testing, but does not create "
-"the test databases; "
-":func:`django.test.runner.DiscoverRunner.setup_databases` takes care of "
-"that."
-msgstr ":func:`~django.test.utils.setup_test_environment` place plusieurs fonctionnalités de Django en mode de test, mais ne crée pas de base de données de test ; c'est :func:`django.test.runner.DiscoverRunner.setup_databases` qui se charge de cela."
+"This file contains the :doc:`Django settings </topics/settings>` required to"
+" run your app's tests."
+msgstr "Ce fichier contient les :doc:`réglages Django </topics/settings>` indispensables pour lancer les tests de votre application."
 
 # 0d146b4370cf4a18b3ba62037d95edcf
 #: ../../../../1.7/docs/topics/testing/advanced.txt:249
 msgid ""
-"The call to :func:`~django.test.utils.setup_test_environment` is made "
-"automatically as part of the setup of ``./manage.py test``. You only need to"
-" manually invoke this method if you're not using running your tests via "
-"Django's test runner."
-msgstr "L'appel à :func:`~django.test.utils.setup_test_environment` est effectué automatiquement dans le cadre de la mise en place des tests par ``./manage.py test``. Cette méthode ne doit être manuellement appelée que si vous lancez vos tests d'une autre façon que par le lanceur de tests de Django."
+"Again, this is a minimal example; your tests may require additional settings"
+" to run."
+msgstr "Encore une fois, il s'agit d'un exemple minimal ; les tests peuvent exiger des réglages supplémentaires pour fonctionner."
 
 # 5df49ce6894c43e082805b78956c7110
 #: ../../../../1.7/docs/topics/testing/advanced.txt:256
 msgid ""
-"If you are not using a management command to invoke the tests, you will also"
-" need to first setup Django itself using :func:`django.setup()`."
-msgstr "Si vous n'utilisez pas de commande de gestion pour appeler les tests, il sera aussi nécessaire de configurer Django au préalable en utilisant :func:`django.setup()`."
+"Since the *tests* package is included in :setting:`INSTALLED_APPS` when "
+"running your tests, you can define test-only models in its ``models.py`` "
+"file."
+msgstr "Comme le paquet *tests* est inclus dans :setting:`INSTALLED_APPS` au moment de lancer les tests, il est possible de définir des modèles uniquement pour les tests dans le fichier ``models.py``."
 
 # 2600a34bdcb04bac847c148bcee74cee
 #: ../../../../1.7/docs/topics/testing/advanced.txt:262
@@ -38126,13 +38223,21 @@ msgid ""
 " If ``multi_db=True``, fixtures are loaded into all databases."
 msgstr "L'option ``multi_db`` affecte également les bases données dans lesquelles sont chargés les instantanés (attr:`TransactionTestCase.fixtures`). Par défaut lorsque ``multi_db=False``, les instantanés ne sont chargés que dans la base de données ``default``. Si ``multi_db=True``, ils sont chargés dans toutes les bases de données."
 
-# 919709a5c00142808f5fd66f87523347
+# 48eda4cbf0d14e26ad39c2d9926e95cf
 #: ../../../../1.7/docs/topics/testing/tools.txt:1035
 msgid "Overriding settings"
 msgstr "Surcharge des réglages"
 
-# 87a4d7c10e50425996dc042a12ec65e3
+# 50355201b5bd4c438e7d8dc1dcdfcfb9
 #: ../../../../1.7/docs/topics/testing/tools.txt:1039
+msgid ""
+"Use the functions below to temporarily alter the value of settings in tests."
+" Don't manipulate ``django.conf.settings`` directly as Django won't restore "
+"the original values after such manipulations."
+msgstr "Utilisez les fonctions ci-dessous pour modifier temporairement la valeur de certains réglages pendant les tests. Ne manipulez pas directement ``django.conf.settings`` car Django ne s'occupe pas de restaurer les valeurs d'origine après de telles manipulations."
+
+# cf7c293e07f54942b800a56fa8351da1
+#: ../../../../1.7/docs/topics/testing/tools.txt:1045
 msgid ""
 "For testing purposes it's often useful to change a setting temporarily and "
 "revert to the original value after running the testing code. For this use "
@@ -38837,8 +38942,21 @@ msgid ""
 "outbox manually, assign the empty list to ``mail.outbox``::"
 msgstr "Comme noté :ref:`précédemment <emptying-test-outbox>`, la boîte de messagerie de test est vidée au début de chaque test des classes Django ``*TestCase``. Pour vider la boîte manuellement, attribuez une liste vide à ``mail.outbox``::"
 
-# f47530a345be4484b1bd602f1871d10b
-#: ../../../../1.7/docs/topics/testing/tools.txt:1568
+# 28d1bd8432fd46aeab76b314d7c3693b
+#: ../../../../1.7/docs/topics/testing/tools.txt:1574
+msgid "Management Commands"
+msgstr "Commandes d'administration"
+
+# 81f1bac0ec1740a0b0123f2f656e9727
+#: ../../../../1.7/docs/topics/testing/tools.txt:1576
+msgid ""
+"Management commands can be tested with the "
+":func:`~django.core.management.call_command` function. The output can be "
+"redirected into a ``StringIO`` instance::"
+msgstr "Les commandes d'administration peuvent être testées avec la fonction :func:`~django.core.management.call_command`. La sortie peut être redirigée vers une instance de ``StringIO``::"
+
+# e357dddfe520434597bd7fdc16ccea29
+#: ../../../../1.7/docs/topics/testing/tools.txt:1593
 msgid "Skipping tests"
 msgstr "Exclusion de tests"
 

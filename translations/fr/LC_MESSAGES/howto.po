@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-31 03:09-0500\n"
-"PO-Revision-Date: 2014-10-31 16:20+0000\n"
+"POT-Creation-Date: 2014-12-19 02:09-0600\n"
+"PO-Revision-Date: 2014-12-19 07:50+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -164,10 +164,9 @@ msgstr "Votre classe de stockage doit être :ref:`déconstructible <custom-decon
 # 3594357c6189495a9e3a66afa5a8abb9
 #: ../../../../1.7/docs/howto/custom-file-storage.txt:44
 msgid ""
-"Your custom storage system may override any of the storage methods explained"
-" in :doc:`/ref/files/storage`, but you **must** implement the following "
-"methods:"
-msgstr "Votre système de stockage personnalisé peut surcharger toute méthode de stockage décrite dans :doc:`/ref/files/storage`, mais vous **devez** implémenter les méthodes suivantes :"
+"By default, the following methods raise `NotImplementedError` and will "
+"typically have to be overridden:"
+msgstr "Par défaut, les méthodes suivantes génèrent ``NotImplementedError`` et doivent typiquement être surchargées :"
 
 # 8611a1bf70714a95ac4c3947c8357bf9
 #: ../../../../1.7/docs/howto/custom-file-storage.txt:47
@@ -196,6 +195,36 @@ msgstr ":meth:`Storage.url`"
 
 # 7519c2bfa22d4b639c1a2929e9b80df1
 #: ../../../../1.7/docs/howto/custom-file-storage.txt:53
+msgid ""
+"Note however that not all these methods are required and may be deliberately"
+" omitted. As it happens, it is possible to leave each method unimplemented "
+"and still have a working Storage."
+msgstr "Notez cependant que ces méthodes ne sont pas toutes obligatoires et peuvent être délibérément omises. Il est même possible d'obtenir une classe de stockage fonctionnelle sans implémenter aucune de ces méthodes."
+
+# 89aa665c1a794524a499a28fdff5e5ec
+#: ../../../../1.7/docs/howto/custom-file-storage.txt:57
+msgid ""
+"By way of example, if listing the contents of certain storage backends turns"
+" out to be expensive, you might decide not to implement `Storage.listdir`."
+msgstr "À titre d'exemple, si l'énumération du contenu de certains moteurs de stockage se révèle coûteuse, il est tout à fait possible de décider de ne pas implémenter ``Storage.listdir``."
+
+# 90e6b34e3e264b5cbd57f700e7145c54
+#: ../../../../1.7/docs/howto/custom-file-storage.txt:60
+msgid ""
+"Another example would be a backend that only handles writing to files. In "
+"this case, you would not need to implement any of the above methods."
+msgstr "Un autre exemple pourrait être un moteur qui ne gère que l'écriture dans des fichiers. Dans ce cas, il ne serait pas nécessaire d'implémenter une seule des méthodes ci-dessus."
+
+# 844db5b1307544fdb356da5eb4f82a7d
+#: ../../../../1.7/docs/howto/custom-file-storage.txt:63
+msgid ""
+"Ultimately, which of these methods are implemented is up to you. Leaving "
+"some methods unimplemented will result in a partial (possibly broken) "
+"interface."
+msgstr "Au final, le choix des méthodes à implémenter vous revient. En laissant certaines méthodes non implémentées, l'interface proposée sera partielle (voire défectueuse)."
+
+# 58c1bc7b54aa4d4d82747606d0d99372
+#: ../../../../1.7/docs/howto/custom-file-storage.txt:66
 msgid ""
 "You'll also usually want to use hooks specifically designed for custom "
 "storage objects. These are:"
@@ -463,9 +492,17 @@ msgid ""
 "specify this here as it didn't change, but supposing we were applying "
 "``AbsoluteValue`` to some field which represents a more complex type (for "
 "example a point relative to an origin, or a complex number) then we may have"
-" wanted to specify ``output_field = FloatField``, which will ensure that "
-"further lookups like ``abs__lte`` behave as they would for a ``FloatField``."
-msgstr "Lorsqu'il recherche quels sont les expressions de recherche autorisées après l'application de ``Transform``, Django se base sur l'attribut ``output_field``. Nous n'avons pas eu besoin de le préciser ici car il n'a pas changé, mais si nous avions appliqué ``AbsoluteValue`` à un champ représentant un type plus complexe (par exemple un point relatif à une origine ou un nombre complexe), nous aurions dû indiquer ``output_field = FloatField``, ce qui garantirait que des recherches subséquentes comme ``abs__lte`` se comportent comme elles le feraient pour un champ ``FloatField``."
+" wanted to specify that the transform returns a ``FloatField`` type for "
+"further lookups. This can be done by adding an ``output_field`` attribute to"
+" the transform::"
+msgstr "Lorsqu'il recherche quelles sont les expressions de recherche autorisées après l'application de ``Transform``, Django se base sur l'attribut ``output_field``. Nous n'avons pas eu besoin de le préciser ici car il n'a pas changé, mais si nous avions appliqué ``AbsoluteValue`` à un champ représentant un type plus complexe (par exemple un point relatif à une origine ou un nombre complexe), nous aurions pu vouloir indiquer que la transformation renvoie un type ``FloatField`` dans l'optique de recherches subséquentes. Cela peut se faire en ajoutant un attribut ``output_field`` à la transformation ::"
+
+# 82b8f73280d04031b4053fe45b67a61c
+#: ../../../../1.7/docs/howto/custom-lookups.txt:161
+msgid ""
+"This ensures that further lookups like ``abs__lte`` behave as they would for"
+" a ``FloatField``."
+msgstr "Cela garantit que les recherches suivantes comme dans ``abs__lte`` se comportent comme elles le feraient avec un champ "
 
 # 83a1af2c4ef345eaa251b97531012a7a
 #: ../../../../1.7/docs/howto/custom-lookups.txt:149
@@ -820,6 +857,20 @@ msgstr "Passez en revue le code de votre commande et le code qu'elle appelle qua
 
 # a3915dd939af4800be97f70fd5fd9aa5
 #: ../../../../1.7/docs/howto/custom-management-commands.txt:182
+#: ../../../../1.7/docs/howto/static-files/index.txt:143
+#: ../../../../1.7/docs/howto/upgrade-version.txt:69
+msgid "Testing"
+msgstr "Tests"
+
+# 479dd20393c841f287e39b35463a753f
+#: ../../../../1.7/docs/howto/custom-management-commands.txt:184
+msgid ""
+"Information on how to test custom management commands can be found in the "
+":ref:`testing docs <topics-testing-management-commands>`."
+msgstr "Des informations sur la manière de tester des commandes d'administration personnalisées peuvent être consultées dans la :ref:`documentation sur les tests <topics-testing-management-commands>`."
+
+# 8ee9a0631fdb43c19e7e2ebaa805edb1
+#: ../../../../1.7/docs/howto/custom-management-commands.txt:188
 msgid "Command objects"
 msgstr "Objets de commandes"
 
@@ -5550,7 +5601,7 @@ msgstr "Configuration et démarrage du serveur uWSGI pour Django"
 #: ../../../../1.7/docs/howto/deployment/wsgi/uwsgi.txt:58
 msgid ""
 "uWSGI supports multiple ways to configure the process. See uWSGI's "
-"`configuration documentation`_ and `examples`_"
+"`configuration documentation`_ and `examples`_."
 msgstr "uWSGI accepte plusieurs façons de configurer le processus. Voir la `documentation de configuration`_ et les `exemples`_ fournis par uWSGI. "
 
 # ed8a2b581abd44d9ae073f2fbbc22b09
@@ -7320,14 +7371,7 @@ msgid ""
 "``http://media.example.com/``)."
 msgstr "Cette fonction utilitaire ne fonctionne qu'en mode « debug » et seulement si le préfixe donné est local (par ex. ``/media/``), pas une URL (par ex. ``http://media.example.com/``)."
 
-# 321cb9773a5b4ef8b811f5dbd4214bf4
-# b54af213e4784293a3025d7b7cd22ec9
-#: ../../../../1.7/docs/howto/static-files/index.txt:143
-#: ../../../../1.7/docs/howto/upgrade-version.txt:69
-msgid "Testing"
-msgstr "Tests"
-
-# 513b82ee85bf4eb997790543c45371bd
+# acbdf25eebb14f4f9bdcccb48f5f9df7
 #: ../../../../1.7/docs/howto/static-files/index.txt:145
 msgid ""
 "When running tests that use actual HTTP requests instead of the built-in "
