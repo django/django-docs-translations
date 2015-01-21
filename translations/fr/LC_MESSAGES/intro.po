@@ -6,14 +6,14 @@
 # annoa <annoa.b@gmail.com>, 2013-2014
 # charettes <charette.s@gmail.com>, 2013
 # Christophe kryskool <christophe.chauvet@gmail.com>, 2013
-# Claude Paroz <claude@2xlibre.net>, 2013-2014
+# Claude Paroz <claude@2xlibre.net>, 2013-2015
 # Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-31 04:09-0500\n"
-"PO-Revision-Date: 2014-10-31 11:03+0000\n"
+"POT-Creation-Date: 2015-01-21 03:13-0600\n"
+"PO-Revision-Date: 2015-01-21 10:55+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -3221,8 +3221,15 @@ msgid ""
 "few attributes, as follows:"
 msgstr "Vous pouvez améliorer cela en donnant à cette méthode (dans :file:`polls/models.py`) quelques attributs, comme ceci :"
 
-# 73806991d69a4988bc0d67eaa062ced0
-#: ../../../../1.7/docs/intro/tutorial02.txt:428
+# 4dddd93e77a6433aa2b31b5a02a998c9
+#: ../../../../1.7/docs/intro/tutorial02.txt:430
+msgid ""
+"For more information on these method properties, see "
+":attr:`~django.contrib.admin.ModelAdmin.list_display`."
+msgstr "Pour plus d'informations sur ces propriétés de méthodes, voir :attr:`~django.contrib.admin.ModelAdmin.list_display`."
+
+# 7cf22056d86a424480ad6bc60da8e9af
+#: ../../../../1.7/docs/intro/tutorial02.txt:433
 msgid ""
 "Edit your :file:`polls/admin.py` file again and add an improvement to the "
 "``Question`` change list page: filters using the "
@@ -3348,7 +3355,7 @@ msgstr "Si vous ne savez pas où les fichiers source de Django se trouvent sur v
 msgid ""
 "Then, just edit the file and replace ``{{ site_header|default:_('Django "
 "administration') }}`` (including the curly braces) with your own site's name"
-" as you see fit. You should end up with a line like:"
+" as you see fit. You should end up with a section of code like:"
 msgstr "Ensuite, éditez simplement le fichier et remplacez ``{{ site_header|default:_('Django administration') }}`` (y compris les accolades) par le nom de votre propre site. Cela devrait donner quelque chose comme :"
 
 # 1560a1a6d5b6479ba234cac641501d1b

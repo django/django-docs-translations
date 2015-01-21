@@ -5,7 +5,7 @@
 # Translators:
 # annoa <annoa.b@gmail.com>, 2014
 # Baptiste Mispelon <bmispelon@gmail.com>, 2014
-# Claude Paroz <claude@2xlibre.net>, 2013-2014
+# Claude Paroz <claude@2xlibre.net>, 2013-2015
 # Loïs BURG <burg.lois@gmail.com>, 2013
 # Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014
 # Sam Stewart <sam@sapient.com.au>, 2013
@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-18 03:09-0600\n"
-"PO-Revision-Date: 2014-12-19 08:20+0000\n"
+"POT-Creation-Date: 2015-01-21 04:13-0600\n"
+"PO-Revision-Date: 2015-01-21 11:19+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -978,10 +978,10 @@ msgstr ":class:`~django.contrib.auth.forms.PasswordResetForm`"
 # 4e584afabc2142febd638055167542df
 #: ../../../../1.7/docs/topics/auth/customizing.txt:737
 msgid ""
-"Assumes that the user model has an integer primary key, has a field named "
-"``email`` that can be used to identify the user, and a boolean field named "
-"``is_active`` to prevent password resets for inactive users."
-msgstr "S'attend à ce que le modèle d'utilisateur possède une clé primaire de type nombre entier, qu'il ait un champ nommé ``email`` permettant d'identifier l'utilisateur et un champ booléen nommé ``is_active`` pour empêcher les utilisateurs inactifs de réinitialiser leur mot de passe."
+"Assumes that the user model has a field named ``email`` that can be used to "
+"identify the user and a boolean field named ``is_active`` to prevent "
+"password resets for inactive users."
+msgstr "S'attend à ce que le modèle d'utilisateur possède un champ nommé ``email`` permettant d'identifier l'utilisateur et un champ booléen nommé ``is_active`` pour empêcher les utilisateurs inactifs de réinitialiser leur mot de passe."
 
 # 72f90d7fd2d14ae8be123b263258e685
 #: ../../../../1.7/docs/topics/auth/customizing.txt:741
@@ -4395,10 +4395,10 @@ msgstr "Il est aussi possible de surcharger le préfixe de cache par vue. ``cach
 # 0459c82584494b34852f99717ed9a523
 #: ../../../../1.7/docs/topics/cache.txt:563
 msgid ""
-"The two settings can also be combined. If you specify a ``cache`` *and* a "
-"``key_prefix``, you will get all the settings of the requested cache alias, "
-"but with the key_prefix overridden."
-msgstr "Les deux réglages peuvent aussi être combinés. Si vous indiquez à la fois ``cache`` *et* ``key_prefix``, vous obtenez tous les réglages de l'alias de cache demandé, mais avec le préfixe de clé ``key_prefix`` surchargé."
+"The ``key_prefix and ``cache`` arguments may be specified together. The "
+"``key_prefix`` argument and the :setting:`KEY_PREFIX <CACHES-KEY_PREFIX>` "
+"specified under :setting:`CACHES` will be concatenated."
+msgstr "Les paramètres ``key_prefix`` et ``cache`` peuvent être tous deux spécifiés. Le paramètre ``key_prefix`` et la clé :setting:`KEY_PREFIX <CACHES-KEY_PREFIX>` du réglage :setting:`CACHES` sont combinés."
 
 # b1fb95f561144dd4ab145f0b1ed11244
 #: ../../../../1.7/docs/topics/cache.txt:568
@@ -5306,9 +5306,11 @@ msgstr "L'infrastructure de contrôle du système est un ensemble de contrôles 
 msgid ""
 "Checks can be triggered explicitly via the :djadmin:`check` command. Checks "
 "are triggered implicitly before most commands, including "
-":djadmin:`runserver` and :djadmin:`migrate`. For performance reasons, the "
-"checks are not performed if :setting:`DEBUG` is set to ``False``."
-msgstr "Les contrôles peuvent être déclenchées de manière explicite par la commande :djadmin:`check`. Les contrôles sont déclenchés implicitement avant la plupart des commandes, y compris :djadmin:`runserver` et :djadmin:`migrate`. Pour des raisons de performance, les contrôles ne sont pas effectués si :setting:`DEBUG` est réglé à ``False``."
+":djadmin:`runserver` and :djadmin:`migrate`. For performance reasons, checks"
+" are not run as part of the WSGI stack that is used in deployment. If you "
+"need to run system checks on your deployment server, trigger them explicitly"
+" using :djadmin:`check`."
+msgstr "Les contrôles peuvent être déclenchées de manière explicite par la commande :djadmin:`check`. Les contrôles sont déclenchés implicitement avant la plupart des commandes, y compris :djadmin:`runserver` et :djadmin:`migrate`. Pour des raisons de performance, les contrôles ne sont pas effectués dans le contexte de la pile WSGI utilisée en mode déployé. Si vous avez besoin d'effectuer les contrôles systèmes sur le serveur de déploiement, appelez explicitement la commande :djadmin:`check`."
 
 # 5e17cfcc35c04b2191d7b3f03edf44f4
 #: ../../../../1.7/docs/topics/checks.txt:18
@@ -9714,8 +9716,16 @@ msgid ""
 "fields`."
 msgstr "Si vous n'indiquez aucun paramètre :attr:`primary_key=True <Field.primary_key>` dans les champs d'un modèle, Django ajoute automatiquement un champ :class:`IntegerField` pour constituer une clé primaire ; il n'est donc pas nécessaire de définir le paramètre :attr:`primary_key=True <Field.primary_key>` pour un champ sauf si vous souhaitez modifier le comportement par défaut de clé primaire automatique. Pour en savoir plus, consultez :ref:`automatic-primary-key-fields`."
 
-# 5611abf9ccac400bbd9665bc0ce7b91b
-#: ../../../../1.7/docs/topics/db/models.txt:217
+# efa6b6fe2184462492b9f00eb08a392f
+#: ../../../../1.7/docs/topics/db/models.txt:216
+msgid ""
+"The primary key field is read-only. If you change the value of the primary "
+"key on an existing object and then save it, a new object will be created "
+"alongside the old one. For example::"
+msgstr "Le champ de clé primaire est en lecture seule. Si vous modifiez la valeur de la clé primaire d'un objet existant et que vous l'enregistrez, un nouvel objet est créé en parallèle à l'ancien. Par exemple ::"
+
+# 910f1a04a9de4bf69b33a57e853a6118
+#: ../../../../1.7/docs/topics/db/models.txt:234
 msgid ":attr:`~Field.unique`"
 msgstr ":attr:`~Field.unique`"
 
@@ -18282,9 +18292,9 @@ msgstr "Un formulaire renseigné contient des données envoyées et il est donc 
 # f52d041fbfc247afa2e0f6cf7a210066
 #: ../../../../1.7/docs/topics/forms/index.txt:392
 msgid ""
-"The form's ``is_bound()`` method will tell you whether a form has data bound"
-" to it or not."
-msgstr "La méthode ``is_bound()`` d'un formulaire indique si des données ont été liées au formulaire ou pas."
+"The form's :attr:`~Form.is_bound` attribute will tell you whether a form has"
+" data bound to it or not."
+msgstr "L'attribut :attr:`~Form.is_bound` d'un formulaire indique si des données ont été liées au formulaire ou pas."
 
 # b710fd587a4f4e91b1b008dc1c68105f
 #: ../../../../1.7/docs/topics/forms/index.txt:396
@@ -24270,8 +24280,17 @@ msgid ""
 "tree."
 msgstr "Afin d'exploiter l'exception ``Http404`` à son maximum, il est recommandé de créer un gabarit affiché lorsque des erreurs 404 sont générées. Ce gabarit doit s'appeler ``404.html`` et se trouver au premier niveau de l'arborescence des gabarits."
 
-# f4bf3f32dc8a465bbc8d32321fc9684a
-#: ../../../../1.7/docs/topics/http/views.txt:134
+# a1d0ab38dc544ec7ba7ba33a2e25b89d
+#: ../../../../1.7/docs/topics/http/views.txt:131
+msgid ""
+"If you provide a message when raising an ``Http404`` exception, it will "
+"appear in the standard 404 template displayed when :setting:`DEBUG` is "
+"``True``. Use these messages for debugging purposes; they generally aren't "
+"suitable for use in a production 404 template."
+msgstr "Si vous indiquez un message lors de la génération d'une exception ``Http404``, il apparaît dans le gabarit 404 standard affiché lorsque :setting:`DEBUG` vaut ``True``. Utilisez ces messages à des fins de débogage ; ils ne sont généralement pas adaptés aux gabarits 404 de production."
+
+# afe183775ac842f5b8f7e5bb705ea665
+#: ../../../../1.7/docs/topics/http/views.txt:139
 msgid "Customizing error views"
 msgstr "Personnalisation des vues d'erreur"
 
@@ -30143,8 +30162,47 @@ msgid ""
 "migrating backwards will raise an exception."
 msgstr "Il est possible de passer un second objet exécutable à :class:`~django.db.migrations.operations.RunPython` pour exécuter toute logique adéquate dans le cas d'une migration inverse. Si cet objet est omis, la migration inverse générera une exception, le cas échéant."
 
-# b2b2e4748ed742cca7a9c8ac021d54cf
-#: ../../../../1.7/docs/topics/migrations.txt:426
+# 67a3567bd5a641189e5f23561140a9bb
+#: ../../../../1.7/docs/topics/migrations.txt:441
+msgid "Data migrations and multiple databases"
+msgstr "Migrations de données et bases de données multiples"
+
+# a8dff9d8e7ce4117ae73ee47fa2201fe
+#: ../../../../1.7/docs/topics/migrations.txt:443
+msgid ""
+"When using multiple databases, you may need to figure out whether or not to "
+"run a migration against a particular database. For example, you may want to "
+"**only** run a migration on a particular database."
+msgstr "Lorsque vous utilisez plusieurs bases de données, il peut être nécessaire de déterminer si une migration doit être appliquée à une certaine base de données. Par exemple, il est possible qu'une migration ne doive s'appliquer qu'à **une seule** base de données."
+
+# f69dd6108dfa48b1ae98bffacee66df1
+#: ../../../../1.7/docs/topics/migrations.txt:447
+msgid ""
+"In order to do that you can check the database connection's alias inside a "
+"``RunPython`` operation by looking at the ``schema_editor.connection.alias``"
+" attribute::"
+msgstr "Pour faire cela, il est possible de se baser sur l'alias de base de données de la connexion dans une opération ``RunPython`` en consultant l'attribut ``schema_editor.connection.alias``::"
+
+# ec50a2788d4941648f5481203b0e6b70
+#: ../../../../1.7/docs/topics/migrations.txt:468
+msgid ""
+"You can also use your database router's ``allow_migrate()`` method, but keep"
+" in mind that the imported router needs to stay around as long as it is "
+"referenced inside a migration:"
+msgstr "Il est aussi possible d'utiliser la méthode ``allow_migrate()`` du routeur de base de données, mais il faut savoir qu'un routeur importé dans une migration doit rester accessible aussi longtemps qu'une migration existante y fait référence :"
+
+# ddb95169bd6f46968039428b3360a423
+#: ../../../../1.7/docs/topics/migrations.txt:480
+msgid "Then, to leverage this in your migrations, do the following::"
+msgstr "Puis, pour s'appuyer sur ce code dans une migration, procédez comme suit ::"
+
+# ba95295d5a4249089fd63c5d49be7135
+#: ../../../../1.7/docs/topics/migrations.txt:503
+msgid "More advanced migrations"
+msgstr "Migrations avancées"
+
+# 67f5ab4c4ccf4db0bddbed3fdd588b0e
+#: ../../../../1.7/docs/topics/migrations.txt:505
 msgid ""
 "If you're interested in the more advanced migration operations, or want to "
 "be able to write your own, see the :doc:`migration operations reference "
@@ -32327,26 +32385,10 @@ msgstr "La version adaptée de ``six`` dans Django"
 #: ../../../../1.7/docs/topics/python3.txt:386
 msgid ""
 "The version of six bundled with Django (``django.utils.six``) includes a few"
-" extras."
-msgstr "La version de ``six`` livrée avec Django (``django.utils.six``) contient quelques éléments supplémentaires."
+" customizations for internal use only."
+msgstr "La version de ``six`` livrée avec Django (``django.utils.six``) contient quelques adaptations à usage purement interne."
 
-# 95a82e10b4a54bf281808a1fa26afab2
-#: ../../../../1.7/docs/topics/python3.txt:391
-msgid ""
-"This replaces ``testcase.assertRaisesRegexp`` on Python 2, and "
-"``testcase.assertRaisesRegex`` on Python 3. ``assertRaisesRegexp`` still "
-"exists in current Python 3 versions, but issues a warning."
-msgstr "Ceci remplace ``testcase.assertRaisesRegexp`` avec Python 2 et ``testcase.assertRaisesRegex`` avec Python 3. ``assertRaisesRegexp`` existe toujours dans les versions actuelles de Python 3, mais génère un avertissement d'obsolescence."
-
-# 20ca2a8da4d2494490274785357da766
-#: ../../../../1.7/docs/topics/python3.txt:397
-msgid ""
-"This replaces ``testcase.assertRegexpMatches`` on Python 2, and "
-"``testcase.assertRegex`` on Python 3. ``assertRegexpMatches`` still exists "
-"in current Python 3 versions, but issues a warning."
-msgstr "Ceci remplace ``testcase.assertRegexpMatches`` avec Python 2 et ``testcase.assertRegex`` avec Python 3. ``assertRegexpMatches`` existe toujours dans les versions actuelles de Python 3, mais génère un avertissement d'obsolescence."
-
-# 9705a8faa3924c23beeca95ca7b0c263
+# 135ef498a77d419e8aded29d0e61b16e
 #: ../../../../1.7/docs/topics/security.txt:3
 msgid "Security in Django"
 msgstr "La sécurité dans Django"
@@ -37394,7 +37436,7 @@ msgstr "Test des réponses"
 msgid ""
 "The ``get()`` and ``post()`` methods both return a ``Response`` object. This"
 " ``Response`` object is *not* the same as the ``HttpResponse`` object "
-"returned Django views; the test response object has some additional data "
+"returned by Django views; the test response object has some additional data "
 "useful for test code to verify."
 msgstr "Les méthodes ``get()`` et ``post()`` renvoient les deux un objet ``Response``. Cet objet n'est *pas* le même que les objets ``HttpResponse`` renvoyés par les vues Django ; l'objet de réponse de test possède des données supplémentaires bien utiles pour certaines vérifications dans le code des tests."
 

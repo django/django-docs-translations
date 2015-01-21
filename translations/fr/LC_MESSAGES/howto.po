@@ -5,7 +5,7 @@
 # Translators:
 # Amirouche <amirouche.boubekki@gmail.com>, 2013
 # annoa <annoa.b@gmail.com>, 2013-2014
-# Claude Paroz <claude@2xlibre.net>, 2013-2014
+# Claude Paroz <claude@2xlibre.net>, 2013-2015
 # Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014
 # Sébastien Fievet <zyegfryed@gmail.com>, 2014
 # Sylvain GROS-DESORMEAUX <sylvain.grodes@gmail.com>, 2013
@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-19 02:09-0600\n"
-"PO-Revision-Date: 2014-12-19 07:50+0000\n"
+"POT-Creation-Date: 2015-01-21 03:13-0600\n"
+"PO-Revision-Date: 2015-01-21 10:32+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -99,8 +99,30 @@ msgid ""
 "``header`` attribute to the desired ``request.META`` key.  For example::"
 msgstr "Si votre mécanisme d'authentification utilise un en-tête HTTP personnalisé à la place de ``REMOTE_USER``, vous pouvez créer une sous-classe de ``RemoteUserMiddleware`` et définir l'attribut `header`` à la clé de ``request.META`` désirée. Par exemple ::"
 
-# 5d0d95d1472847e8b88e3be784b90dba
-#: ../../../../1.7/docs/howto/auth-remote-user.txt:67
+# 731599debf4048e0b7edf08cbfa82f3a
+#: ../../../../1.7/docs/howto/auth-remote-user.txt:69
+msgid ""
+"Be very careful if using a ``RemoteUserMiddleware`` subclass with a custom "
+"HTTP header. You must be sure that your front-end web server always sets or "
+"strips that header based on the appropriate authentication checks, never "
+"permitting an end-user to submit a fake (or \"spoofed\") header value. Since"
+" the HTTP headers ``X-Auth-User`` and ``X-Auth_User`` (for example) both "
+"normalize to the ``HTTP_X_AUTH_USER`` key in ``request.META``, you must also"
+" check that your web server doesn't allow a spoofed header using underscores"
+" in place of dashes."
+msgstr "Soyez très prudent si vous utilisez une sous-classe de ``RemoteUserMiddleware`` avec un en-tête HTTP personnalisé. Vous devez être certain que le serveur Web frontal définit ou ajuste toujours cet en-tête sur la base des contrôles d'authentification appropriés, et ne permet à personne d'envoyer une valeur d'en-tête trafiquée. Comme les en-têtes HTTP ``X-Auth-User`` et ``X-Auth_User`` (par exemple) sont tous deux normalisés en ``HTTP_X_AUTH_USER`` dans le dictionnaire ``request.META``, vous devez aussi contrôler que votre serveur Web n'autorise pas les en-têtes trafiqués qui utilisent des soulignements à la place des tirets."
+
+# e82562c257f743a1926a7efa8a91154a
+#: ../../../../1.7/docs/howto/auth-remote-user.txt:78
+msgid ""
+"This warning doesn't apply to ``RemoteUserMiddleware`` in its default "
+"configuration with ``header = 'REMOTE_USER'``, since a key that doesn't "
+"start with ``HTTP_`` in ``request.META`` can only be set by your WSGI "
+"server, not directly from an HTTP request header."
+msgstr "Cet avertissement ne s'applique pas à ``RemoteUserMiddleware`` dans sa configuration par défaut avec ``header = 'REMOTE_USER'``, car une clé qui ne commence pas par ``HTTP_`` dans ``request.META`` ne peut être définie que par le serveur WSGI, et pas directement à partir d'un en-tête de requête HTTP."
+
+# 1e43054574d5452a95b9854d29aa9113
+#: ../../../../1.7/docs/howto/auth-remote-user.txt:83
 msgid ""
 "If you need more control, you can create your own authentication backend "
 "that inherits from :class:`~django.contrib.auth.backends.RemoteUserBackend` "
@@ -1036,7 +1058,7 @@ msgstr "Si vous implémentez ``__init__`` dans votre sous-classe de :class:`Base
 # 11d1d660e6af42d386d9a1ca4260fcf2
 #: ../../../../1.7/docs/howto/custom-management-commands.txt:300
 msgid ""
-"Return the Django version, which should be correct for all built-in Django "
+"Returns the Django version, which should be correct for all built-in Django "
 "commands. User-supplied commands can override this method to return their "
 "own version."
 msgstr "Renvoie la version de Django, qui devrait être correcte pour toutes les commandes intégrées de Django. Les commandes fournies par les applications non Django peuvent surcharger cette méthode pour retourner leur propre version."
@@ -1044,11 +1066,10 @@ msgstr "Renvoie la version de Django, qui devrait être correcte pour toutes les
 # 2a1919b972d84f908945b647709afa5d
 #: ../../../../1.7/docs/howto/custom-management-commands.txt:306
 msgid ""
-"Try to execute this command, performing model validation if needed (as "
-"controlled by the attribute :attr:`requires_model_validation`). If the "
-"command raises a :class:`CommandError`, intercept it and print it sensibly "
-"to stderr."
-msgstr "Essaie d'exécuter cette commande en effectuant la validation des modèles au besoin (selon la valeur de l'attribut :attr:`requires_model_validation`). Si la commande lève une erreur :class:`CommandError`, elle l'intercepte et l'affiche proprement à destination de stderr."
+"Tries to execute this command, performing system checks if needed (as "
+"controlled by the :attr:`requires_system_checks` attribute). If the command "
+"raises a :class:`CommandError`, it's intercepted and printed to stderr."
+msgstr "Essaie d'exécuter cette commande en procédant aux contrôles systèmes au besoin (selon la valeur de l'attribut :attr:`requires_system_checks`). Si la commande génère une erreur :class:`CommandError`, celle-ci est interceptée et affichée sur ``stderr``."
 
 # e080b9d7197c4bdfb841d15b4b2078cd
 #: ../../../../1.7/docs/howto/custom-management-commands.txt:312
@@ -6117,10 +6138,10 @@ msgstr "Chargement automatique des instantanés de données initiales"
 #: ../../../../1.7/docs/howto/initial-data.txt:82
 msgid ""
 "If an application uses migrations, there is no automatic loading of "
-"fixtures. Since migrations will be required for applications in Django 2.0, "
+"fixtures. Since migrations will be required for applications in Django 1.9, "
 "this behavior is considered deprecated. If you want to load initial data for"
 " an app, consider doing it in a :ref:`data migration <data-migrations>`."
-msgstr "Si une application utilise les migrations, il n'y a pas de chargement automatique des instantanés. Du fait que les migrations seront nécessaires pour les applications dans Django 2.0, ce comportement est considéré comme obsolète. Si vous voulez charger des données initiales pour une application, envisagez de le faire dans une :ref:`migration de données <data-migrations>`."
+msgstr "Si une application utilise les migrations, il n'y a pas de chargement automatique des instantanés. Du fait que les migrations seront nécessaires pour les applications dans Django 1.9, ce comportement est considéré comme obsolète. Si vous voulez charger des données initiales pour une application, envisager de le faire dans une :ref:`migration de données <data-migrations>`."
 
 # 28160c734dbf4236bd5eee8adac75dbd
 #: ../../../../1.7/docs/howto/initial-data.txt:87
@@ -6169,10 +6190,10 @@ msgstr "Données initiales en SQL"
 msgid ""
 "If an application uses migrations, there is no loading of initial SQL data "
 "(including backend-specific SQL data). Since migrations will be required for"
-" applications in Django 2.0, this behavior is considered deprecated. If you "
+" applications in Django 1.9, this behavior is considered deprecated. If you "
 "want to use initial SQL for an app, consider doing it in a :ref:`data "
 "migration <data-migrations>`."
-msgstr "Si une application utilise les migrations, il n'y a pas de chargement de données initiales SQL (y compris les données SQL spécifiques au moteur). Du fait que les migrations seront nécessaires pour les applications dans Django 2.0, ce comportement est considéré comme obsolète. Si vous souhaitez utiliser des données SQL initiales pour une application, envisagez de le faire dans une :ref:`migration de données <data-migrations>`."
+msgstr "Si une application utilise les migrations, il n'y a pas de chargement de données initiales SQL (y compris les données SQL spécifique au moteur). Du fait que les migrations seront nécessaires pour les applications dans Django 1.9, ce comportement est considéré comme obsolète. Si vous souhaitez utiliser des données SQL initiales pour une application, envisager de le faire dans une :ref:`migration de données <data-migrations>`."
 
 # 2e3941e2a8dd4e45a35d455f5e83c88f
 #: ../../../../1.7/docs/howto/initial-data.txt:121
