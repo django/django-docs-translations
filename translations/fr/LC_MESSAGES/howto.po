@@ -6,7 +6,7 @@
 # Amirouche <amirouche.boubekki@gmail.com>, 2013
 # annoa <annoa.b@gmail.com>, 2013-2014
 # Claude Paroz <claude@2xlibre.net>, 2013-2015
-# Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014
+# Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014-2015
 # Sébastien Fievet <zyegfryed@gmail.com>, 2014
 # Sylvain GROS-DESORMEAUX <sylvain.grodes@gmail.com>, 2013
 # hf, 2013
@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-21 03:13-0600\n"
-"PO-Revision-Date: 2015-01-21 10:32+0000\n"
-"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
+"POT-Creation-Date: 2015-03-31 04:13-0500\n"
+"PO-Revision-Date: 2015-03-21 07:11+0000\n"
+"Last-Translator: Marie-Cécile Gohier <mariececile.gohier@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -83,8 +83,28 @@ msgid ""
 "user using the :class:`~django.contrib.auth.backends.RemoteUserBackend`."
 msgstr "Avec cette configuration, ``RemoteUserMiddleware`` va détecter le nom d'utilisateur dans ``request.META['REMOTE_USER']`` et va authentifier et connecter automatiquement cet utilisateur à l'aide de :class:`~django.contrib.auth.backends.RemoteUserBackend`."
 
-# 170698e530c74128b1d8862c7e50e057
-#: ../../../../1.7/docs/howto/auth-remote-user.txt:54
+# 2ca4a73ce86d40d5b2f73dc2dfcd5c84
+#: ../../../../1.7/docs/howto/auth-remote-user.txt:53
+msgid ""
+"Be aware that this particular setup disables authentication with the default"
+" ``ModelBackend``. This means that if the ``REMOTE_USER`` value is not set "
+"then the user is unable to log in, even using Django's admin interface. "
+"Adding ``'django.contrib.auth.backends.ModelBackend'`` to the "
+"``AUTHENTICATION_BACKENDS`` list will use ``ModelBackend`` as a fallback if "
+"``REMOTE_USER`` is absent, which will solve these issues."
+msgstr "Soyez conscient que cette configuration particulière désactive l'authentification avec le ``ModelBackend`` par défaut. Cela signifie que si la valeur de ``REMOTE_USER`` n'est pas configurée, l'utilisateur ne parviendra pas à se connecter, même en utilisant l'interface d'administration de Django. Ajouter ``'django.contrib.auth.backends.ModelBackend'`` à la liste des ``AUTHENTICATION_BACKENDS`` utilisera ``ModelBackend`` comme solution de repli si ``REMOTE_USER`` est absent, ce qui permettra de résoudre ces problèmes."
+
+# 4209b5837ee84306aac1ce9ba22a83ec
+#: ../../../../1.7/docs/howto/auth-remote-user.txt:60
+msgid ""
+"Django's user management, such as the views in ``contrib.admin`` and the "
+":djadmin:`createsuperuser` management command, doesn't integrate with remote"
+" users. These interfaces work with users stored in the database regardless "
+"of ``AUTHENTICATION_BACKENDS``."
+msgstr "La gestion des utilisateurs de Django, tels que les vue de ``contrib.admin`` et la commande de gestion :djadmin:`createsuperuser`, ne s'intègrent pas avec des utilisateurs distants. Ces interfaces travaillent avec les utilisateurs stockés dans la base de données indépendamment de `` AUTHENTICATION_BACKENDS``."
+
+# 459e0fd2ad83484a84e779e7b9c712dd
+#: ../../../../1.7/docs/howto/auth-remote-user.txt:66
 msgid ""
 "Since the ``RemoteUserBackend`` inherits from ``ModelBackend``, you will "
 "still have all of the same permissions checking that is implemented in "
@@ -2766,7 +2786,7 @@ msgstr "Pour marquer le résultat comme une chaîne sûre, utilisez :func:`djang
 msgid ""
 "Be careful, though. You need to do more than just mark the output as safe. "
 "You need to ensure it really *is* safe, and what you do depends on whether "
-"auto-escaping is in effect. The idea is to write filters than can operate in"
+"auto-escaping is in effect. The idea is to write filters that can operate in"
 " templates where auto-escaping is either on or off in order to make things "
 "easier for your template authors."
 msgstr "Mais restez prudent. Vous devez faire plus que simplement marquer le résultat comme sûr. Vous devez vous assurer qu'il soit *réellement* sûr et votre action dépend de l'activité de l'échappement automatique. L'idée est d'écrire des filtres qui peuvent agir dans des gabarits où l'échappement automatique est activé ou non, afin de faciliter la tâche aux rédacteurs de gabarits."
@@ -5347,7 +5367,7 @@ msgid ""
 "``WSGIPythonPath`` directive, with multiple paths separated by a colon "
 "(``:``) if using a UNIX-like system, or a semicolon (``;``) if using "
 "Windows. If any part of a directory path contains a space character, the "
-"complete argument string to ``WSGIPythonPath`` must be quoted::"
+"complete argument string to ``WSGIPythonPath`` must be quoted:"
 msgstr "Si vous installez les dépendances Python de votre projet à l'intérieur d'un `virtualenv`_, vous devrez aussi ajouter le chemin du répertoire ``site-packages`` de ce virtualenv dans le chemin Python. Pour cela, ajoutez un chemin supplémentaire dans votre directive ``WSGIPythonPath``, en séparant les chemins par un caractère deux-points (``:``) sur un système de type Unix ou par un point-virgule (``;``) sur un système Windows. Si un chemin de répertoire contient des espaces, toute la chaîne de paramètre de ``WSGIPythonPath`` doit être placée entre guillemets ::"
 
 # 7d6e4abeaf2a4bd3a8acef8d7d0d6f08
@@ -5371,8 +5391,16 @@ msgid ""
 "``WSGIDaemonProcess`` and ``WSGIProcessGroup`` directives. A further change "
 "required to the above configuration if you use daemon mode is that you can't"
 " use ``WSGIPythonPath``; instead you should use the ``python-path`` option "
-"to ``WSGIDaemonProcess``, for example::"
-msgstr "Le « mode daemon » est le mode recommandé pour le fonctionnement de mod_wsgi (sur les plates-formes non Windows). Pour créer le groupe de processus daemon nécessaire et y installer l'instance Django, vous devez ajouter les directives ``WSGIDaemonProcess`` et ``WSGIProcessGroup`` appropriées. Une autre modification nécessaire à la configuration ci-dessus si vous utilisez le mode daemon est due à ce qu'il n'est pas possible d'utiliser ``WSGIPythonPath`` ; vous devez la remplacer par l'option ``python-path`` de ``WSGIDaemonProcess``, par exemple ::"
+"to ``WSGIDaemonProcess``, for example:"
+msgstr "Le « mode daemon » est le mode recommandé pour le fonctionnement de mod_wsgi (sur les plates-formes non Windows). Pour créer le groupe de processus daemon nécessaire et y installer l'instance Django, vous devez ajouter les directives ``WSGIDaemonProcess`` et ``WSGIProcessGroup`` appropriées. Une autre modification nécessaire à la configuration ci-dessus si vous utilisez le mode daemon est due à ce qu'il n'est pas possible d'utiliser  ``WSGIPythonPath`` ; vous devez la remplacer par l'option ``python-path`` de ``WSGIDaemonProcess``, par exemple ::"
+
+# 05b46bebd81f4aa6950481b8e67b760c
+#: ../../../../1.7/docs/howto/deployment/wsgi/modwsgi.txt:115
+msgid ""
+"If you want to serve your project in a subdirectory "
+"(``http://example.com/mysite`` in this example), you can add "
+"``WSGIScriptAlias`` to the configuration above:"
+msgstr "Si vous voulez que votre projet soit dans un sous-répertoire (``http://example.com/mysite`` dans cet exemple), vous pouvez ajouter ``WSGIScriptAlias`` à la configuration ci-dessus:"
 
 # 504fe26e3421464db5d06748c732c678
 #: ../../../../1.7/docs/howto/deployment/wsgi/modwsgi.txt:105
@@ -5449,8 +5477,8 @@ msgid ""
 "This example sets up Django at the site root, but explicitly serves "
 "``robots.txt``, ``favicon.ico``, any CSS file, and anything in the "
 "``/static/`` and ``/media/`` URL space as a static file. All other URLs will"
-" be served using mod_wsgi::"
-msgstr "Cet exemple définit Django comme site racine, mais sert explicitement ``robots.txt``, ``favicon.ico``, tout fichier CSS et toutes les URL commençant par ``/static/`` et ``/media/`` comme fichiers statiques. Toutes les autres URL sont servies par mod_wsgi ::"
+" be served using mod_wsgi:"
+msgstr "Cet exemple définit Django comme site racine, mais sert explicitement ``robots.txt``, ``favicon.ico``, tout fichier CSS et toutes les URL commençant pas ``/static/`` et ``/media/`` comme fichiers statiques. Toutes les autres URL sont servies par mod_wsgi ::"
 
 # ee39dd46c90e40f2883bdaad34fee808
 #: ../../../../1.7/docs/howto/deployment/wsgi/modwsgi.txt:160

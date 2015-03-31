@@ -7,7 +7,7 @@
 # Baptiste Mispelon <bmispelon@gmail.com>, 2014
 # Claude Paroz <claude@2xlibre.net>, 2013-2015
 # Loïs BURG <burg.lois@gmail.com>, 2013
-# Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014
+# Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014-2015
 # Sam Stewart <sam@sapient.com.au>, 2013
 # Sébastien Fievet <zyegfryed@gmail.com>, 2014
 # chrisglass <tribaal@gmail.com>, 2013
@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-21 04:13-0600\n"
-"PO-Revision-Date: 2015-01-21 11:19+0000\n"
+"POT-Creation-Date: 2015-03-31 05:13-0500\n"
+"PO-Revision-Date: 2015-03-31 19:31+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -1797,8 +1797,8 @@ msgstr "Appel préalable à ``authenticate()``"
 # b8cbde3f714345f9928fab2b5a9b1f3c
 #: ../../../../1.7/docs/topics/auth/default.txt:359
 msgid ""
-"When you're manually logging a user in, you *must* call "
-":func:`~django.contrib.auth.authenticate()` before you call "
+"When you're manually logging a user in, you *must* successfully authenticate"
+" the user with :func:`~django.contrib.auth.authenticate()` before you call "
 ":func:`~django.contrib.auth.login()`. "
 ":func:`~django.contrib.auth.authenticate()` sets an attribute on the "
 ":class:`~django.contrib.auth.models.User` noting which authentication "
@@ -1806,7 +1806,7 @@ msgid ""
 "documentation <authentication-backends>` for details), and this information "
 "is needed later during the login process. An error will be raised if you try"
 " to login a user object retrieved from the database directly."
-msgstr "Lorsque vous connectez un utilisateur manuellement, vous *devez* appeler :func:`~django.contrib.auth.authenticate()` avant d'appeler :func:`~django.contrib.auth.login()`. :func:`~django.contrib.auth.authenticate()` définit un attribut sur l'objet :class:`~django.contrib.auth.models.User` indiquant quel moteur d'authentification a servi à authentifier cet utilisateur (voir la :ref:`documentation sur les moteurs <authentication-backends>` pour plus de détails), cette information étant ensuite nécessaire durant le processus de connexion ultérieur. Une erreur sera générée si vous essayez de connecter un objet utilisateur directement obtenu à partir de la base de données."
+msgstr "Lorsque vous connectez un utilisateur manuellement, vous *devez* authentifier un utilisateur proprement et avec succès avec la fonction :func:`~django.contrib.auth.authenticate()` avant d'appeler :func:`~django.contrib.auth.login()`. :func:`~django.contrib.auth.authenticate()` définit un attribut sur l'objet :class:`~django.contrib.auth.models.User` indiquant quel moteur d'authentification a servi à authentifier cet utilisateur (voir la :ref:`documentation sur les moteurs <authentication-backends>` pour plus de détails), cette information étant ensuite nécessaire durant le processus de connexion ultérieur. Une erreur sera générée si vous essayez de connecter un objet utilisateur directement obtenu à partir de la base de données."
 
 # 20f43d7b096546c0b1f768b7ef73eb47
 #: ../../../../1.7/docs/topics/auth/default.txt:371
@@ -1965,14 +1965,16 @@ msgstr "Pour limiter l'accès en fonction d'une certaine permission ou d'un test
 msgid ""
 "The simple way is to run your test on :attr:`request.user "
 "<django.http.HttpRequest.user>` in the view directly. For example, this view"
-" checks to make sure the user has an email in the desired domain::"
-msgstr "La manière simple est d'effectuer le test sur :attr:`request.user <django.http.HttpRequest.user>` directement dans la vue. Par exemple, cette vue vérifie que l'utilisateur possède bien une adresse électronique dans le domaine prévu ::"
+" checks to make sure the user has an email in the desired domain and if not,"
+" redirects to the login page::"
+msgstr "La manière simple est d'effectuer le test sur :attr:`request.user <django.http.HttpRequest.user>` directement dans la vue. Par exemple, cette vue vérifie que l'utilisateur possède bien une adresse électronique dans le domaine prévu et, dans le cas contraire, redirige vers la page de connexion ::"
 
 # 55088217b1e242fb8abff3b2901d79f9
 #: ../../../../1.7/docs/topics/auth/default.txt:509
 msgid ""
-"As a shortcut, you can use the convenient ``user_passes_test`` decorator::"
-msgstr "Comme raccourci, vous pouvez utiliser le décorateur ``user_passes_test``::"
+"As a shortcut, you can use the convenient ``user_passes_test`` decorator "
+"which performs a redirect when the callable returns ``False``::"
+msgstr "Comme raccourci, vous pouvez utiliser le décorateur ``user_passes_test`` qui procède à une redirection lorsque la fonction décorée renvoie ``False``::"
 
 # 49fc6b6911fb49569635ca48c12dfcee
 #: ../../../../1.7/docs/topics/auth/default.txt:520
@@ -2196,30 +2198,82 @@ msgstr "Django fournit plusieurs vues permettant de gérer la connexion, la déc
 # aa4f4e07675a4083978e5b41cca5f2a1
 #: ../../../../1.7/docs/topics/auth/default.txt:667
 msgid ""
-"Django provides no default template for the authentication views - however "
-"the template context is documented for each view below."
-msgstr "Django ne fournit pas de gabarit par défaut pour les vues d'authentification, mais le contexte de gabarit est documenté ci-dessous pour chaque vue."
+"Django provides no default template for the authentication views. You should"
+" create your own templates for the views you want to use. The template "
+"context is documented in each view, see :ref:`all-authentication-views`."
+msgstr "Django fournit pas de gabarit par défaut pour les vues d'authentification. Vous devez créer vos propres gabarits pour les vues que vous souhaitez utiliser. Le contexte de gabarit est documenté dans chaque vue, voir :ref:`all-authentication-views`."
+
+# abbb1039e02d44359b378122ea4e1742
+#: ../../../../1.7/docs/topics/auth/default.txt:683
+msgid "Using the views"
+msgstr "Utilisation des vues"
 
 # 7059e92454d64b98a111ed7dc413320d
 #: ../../../../1.7/docs/topics/auth/default.txt:670
 msgid ""
-"The built-in views all return a "
-":class:`~django.template.response.TemplateResponse` instance, which allows "
-"you to easily customize the response data before rendering.  For more "
-"details, see the :doc:`TemplateResponse documentation </ref/template-"
-"response>`."
-msgstr "Les vues intégrées renvoient toutes une instance :class:`~django.template.response.TemplateResponse`, ce qui permet de personnaliser facilement les données de la réponse avant le rendu du gabarit. Pour plus de détails, consultez la :doc:`documentation de TemplateResponse </ref/template-response>`."
+"There are different methods to implement these views in your project. The "
+"easiest way is to include the provided URLconf in "
+"``django.contrib.auth.urls`` in your own URLconf, for example::"
+msgstr "Il existe différentes méthodes pour mettre en œuvre ces vues dans votre projet. Le plus simple est d'inclure l'URLconf de ``django.contrib.auth.urls`` dans votre propre URLconf, par exemple ::"
 
-# ac0724310c4d4f48b0ee2161eefd58e2
-#: ../../../../1.7/docs/topics/auth/default.txt:675
+# 64fa0350b7e54d2cb71d557de2745b90
+#: ../../../../1.7/docs/topics/auth/default.txt:693
+msgid "This will include the following URL patterns::"
+msgstr "Cela comprendra les modèles d'URL suivants ::"
+
+# 83bb63973642475ca7089c0efc4e0d35
+#: ../../../../1.7/docs/topics/auth/default.txt:704
 msgid ""
-"Most built-in authentication views provide a URL name for easier reference. "
-"See :doc:`the URL documentation </topics/http/urls>` for details on using "
-"named URL patterns."
-msgstr "La plupart des vues d'authentification intégrées fournissent un nom d'URL pour s'y référer plus facilement. Consultez la :doc:`documentation sur les URL </topics/http/urls>` pour plus de détails sur l'utilisation des motifs d'URL nommés."
+"The views provide a URL name for easier reference. See :doc:`the URL "
+"documentation </topics/http/urls>` for details on using named URL patterns."
+msgstr "Les vues possèdent un nom d'URL pour les référencer plus facilement. Voir :doc:`la documentation des URL </topics/http/urls>` pour plus de détails sur l'utilisation de modèles d'URL nommés."
 
-# 748498bff316433d813ed06245b13958
-#: ../../../../1.7/docs/topics/auth/default.txt:682
+# ffcc6506bca746b8a88be3e526747983
+#: ../../../../1.7/docs/topics/auth/default.txt:707
+msgid ""
+"If you want more control over your URLs, you can reference a specific view "
+"in your URLconf::"
+msgstr "Si vous voulez plus de contrôle sur vos URL, vous pouvez référencer une vue spécifique dans votre URLconf ::"
+
+# cb00c76e76fd48f29e3a37faa692b2fd
+#: ../../../../1.7/docs/topics/auth/default.txt:714
+msgid ""
+"The views have optional arguments you can use to alter the behavior of the "
+"view. For example, if you want to change the template name a view uses, you "
+"can provide the ``template_name`` argument. A way to do this is to provide "
+"keyword arguments in the URLconf, these will be passed on to the view. For "
+"example::"
+msgstr "Les vues ont des paramètres optionnels que vous pouvez utiliser pour modifier le comportement de la vue. Par exemple, si vous voulez changer le nom du modèle utilisé par une vue, vous pouvez fournir le paramètre ``template_name``. Une façon de le faire est de fournir des paramètres mot-clé dans l'URLconf, ceux-ci seront transmis à la vue. Par exemple ::"
+
+# bb813971b9704184a69b91a5779c39ac
+#: ../../../../1.7/docs/topics/auth/default.txt:727
+msgid ""
+"All views return a :class:`~django.template.response.TemplateResponse` "
+"instance, which allows you to easily customize the response data before "
+"rendering. A way to do this is to wrap a view in your own view::"
+msgstr "Toutes les vues renvoient une instance de :class:`~django.template.response.TemplateResponse`, qui vous permet de personnaliser facilement les données de réponse avant le rendu. Une façon de le faire est d'envelopper une vue dans votre propre vue ::"
+
+# fd48b0c60d1048479ba55b97ec44ba79
+#: ../../../../1.7/docs/topics/auth/default.txt:738
+msgid ""
+"For more details, see the :doc:`TemplateResponse documentation </ref"
+"/template-response>`."
+msgstr "Pour plus de détails, consultez la :doc:`documentation de TemplateResponse </ref/template-response>`."
+
+# 535718f8614a489e9b9d73bd45af4e11
+#: ../../../../1.7/docs/topics/auth/default.txt:744
+msgid "All authentication views"
+msgstr "Toutes les vues d'authentification"
+
+# 11f66d28ba7a4457879f0e06d47fbff1
+#: ../../../../1.7/docs/topics/auth/default.txt:746
+msgid ""
+"This is a list with all the views ``django.contrib.auth`` provides. For "
+"implementation details see :ref:`using-the-views`."
+msgstr "Ceci est une liste de toutes les vues fournies par ``django.contrib.auth``. Pour les détails de l'implémentation, voir :ref:`using-the-views`."
+
+# 2c4c28f8af9a45d2969eb6bb9ca871ba
+#: ../../../../1.7/docs/topics/auth/default.txt:751
 msgid "**URL name:** ``login``"
 msgstr "**Nom d'URL :** ``login``"
 
@@ -3119,8 +3173,17 @@ msgid ""
 "slight security measure."
 msgstr "Notez également que si vous voulez qu'un utilisateur puisse créer d'autres utilisateurs dans le site d'administration de Django, vous devez lui attribuer la permission d'ajouter des utilisateurs *et* de modifier des utilisateurs (c'est-à-dire les permissions « Can add user » et « Can change user »). Si un compte utilisateur a la permission d'ajouter des utilisateurs mais pas de les modifier, ce compte ne pourra pas créer d'utilisateurs. Pourquoi ? Parce que si vous avez la permission d'ajouter des utilisateurs, vous avez le pouvoir de créer des superutilisateurs, qui peuvent à leur tour modifier d'autres utilisateurs. Django exige donc à la fois les permissions « ajout » et « modification » comme légère mesure de sécurité."
 
-# 438962afd8c846aea0ca5b4dff30e03d
-#: ../../../../1.7/docs/topics/auth/default.txt:1341
+# 1495d0413019498da4267832e03a6f3a
+#: ../../../../1.7/docs/topics/auth/default.txt:1414
+msgid ""
+"Be thoughtful about how you allow users to manage permissions. If you give a"
+" non-superuser the ability to edit users, this is ultimately the same as "
+"giving them superuser status because they will be able to elevate "
+"permissions of users including themselves!"
+msgstr "Faites attention à la façon dont vous permettez aux utilisateurs de gérer les autorisations. Si vous donnez à un non-superutilisateur la possibilité d'éditer les utilisateurs, cela revient  finalement au même que de lui donner un statut de super-utilisateur, car il sera en mesure d'élever les autorisations des utilisateurs, y compris les siennes !"
+
+# 30bfe20a7392432c88204edff4445ca2
+#: ../../../../1.7/docs/topics/auth/default.txt:1420
 msgid "Changing Passwords"
 msgstr "Changement des mots de passe"
 
@@ -4107,8 +4170,9 @@ msgstr ":setting:`TIMEOUT <CACHES-TIMEOUT>`: le délai d'expiration du cache par
 #: ../../../../1.7/docs/topics/cache.txt:373
 msgid ""
 "You can set ``TIMEOUT`` to ``None`` so that, by default, cache keys never "
-"expire."
-msgstr "Vous pouvez définir ``TIMEOUT`` à ``None`` de sorte que, par défaut, les clés de cache n'expirent jamais."
+"expire. A value of ``0`` causes keys to immediately expire (effectively "
+"\"don't cache\")."
+msgstr "Vous pouvez définir ``TIMEOUT`` à la valeur ``None`` de sorte que, par défaut, les clés de cache n'expirent jamais. Une valeur de ``0`` implique que les clés expirent immédiatement (dans les faits on \"ne met pas en cache\")."
 
 # 0a3b171ecdb243ed9187411eb3e31a61
 #: ../../../../1.7/docs/topics/cache.txt:376
@@ -4625,7 +4689,8 @@ msgid ""
 "argument of the appropriate backend in the :setting:`CACHES` setting "
 "(explained above). It's the number of seconds the value should be stored in "
 "the cache. Passing in ``None`` for ``timeout`` will cache the value forever."
-msgstr "Le paramètre ``timeout`` est facultatif ; par défaut, il est égal au paramètre ``timeout`` du moteur correspondant dans le réglage :setting:`CACHES` (expliqué ci-dessus). Il correspond au nombre de secondes durant lequel la valeur doit être stockée dans le cache. En passant ``None`` dans ``timeout``,  la valeur est mise en cache sans limite de temps."
+" A ``timeout`` of ``0`` won't cache the value."
+msgstr "Le paramètre ``timeout`` est optionnel et est par défaut à la même valeur que le paramètre ``timeout`` du backend approprié défini dans le réglage de :setting:`CACHES` (expliqué ci-dessus). Il correspond au nombre de secondes pendant lesquelles la valeur doit être stockée dans le cache. Si ``timeout`` a la valeur ``None`` la valeur reste en cache pour toujours. Un ``timeout`` de ``0`` ne met pas en cache la valeur."
 
 # 7805be7c76a04ecba0ed96a322740287
 #: ../../../../1.7/docs/topics/cache.txt:777
@@ -13287,22 +13352,21 @@ msgid ""
 " to find entries linked to tags called *\"music\"* and *\"bands\"* or we "
 "might want an entry that contains a tag with a name of *\"music\"* and a "
 "status of *\"public\"*."
-msgstr "Le même genre de situation survient avec un champ :class:`~django.db.models.ManyToManyField`. Par exemple, si un ``Entry`` avait un :class:`~django.db.models.ManyToManyField` nommé ``tags``, nous pourrions vouloir trouver des entrées liées aux ``tags`` nommés *\"music\"* et *\"bands\"*, ou nous pourrions vouloir une entrée qui contient un ``tag``\navec le nom *\"music\"* et un statut *\"public\"*."
+msgstr "Le même genre de situation survient avec un champ :class:`~django.db.models.ManyToManyField`. Par exemple, si une ``Entry`` avait un :class:`~django.db.models.ManyToManyField` nommé ``tags``, nous pourrions vouloir trouver des entrées liées aux ``tags`` nommés *\"music\"* et *\"bands\"*, ou nous pourrions vouloir une entrée qui contient un ``tag`` avec le nom *\"music\"* et un statut *\"public\"*."
 
 # 2a55fd82809743a1bbbb5a29ee6b7747
 #: ../../../../1.7/docs/topics/db/queries.txt:547
 msgid ""
 "To handle both of these situations, Django has a consistent way of "
-"processing :meth:`~django.db.models.query.QuerySet.filter` and "
-":meth:`~django.db.models.query.QuerySet.exclude` calls. Everything inside a "
-"single :meth:`~django.db.models.query.QuerySet.filter` call is applied "
-"simultaneously to filter out items matching all those requirements. "
+"processing :meth:`~django.db.models.query.QuerySet.filter` calls. Everything"
+" inside a single :meth:`~django.db.models.query.QuerySet.filter` call is "
+"applied simultaneously to filter out items matching all those requirements. "
 "Successive :meth:`~django.db.models.query.QuerySet.filter` calls further "
 "restrict the set of objects, but for multi-valued relations, they apply to "
 "any object linked to the primary model, not necessarily those objects that "
 "were selected by an earlier :meth:`~django.db.models.query.QuerySet.filter` "
 "call."
-msgstr "Pour gérer ces deux situations, Django a une façon cohérente de traiter les appels  :meth:`~django.db.models.query.QuerySet.filter` et :meth:`~django.db.models.query.QuerySet.exclude`. Tous les paramètres d'un appel à :meth:`~django.db.models.query.QuerySet.filter` sont appliqués simultanément pour filtrer les éléments qui\ncorrespondent à tous ces critères. Les appels à  :meth:`~django.db.models.query.QuerySet.filter` subséquents restreignent ensuite davantage les éléments renvoyés, mais pour les relations multivaluées ces appels s'appliquent à tous les objets liés au modèle principal, pas nécessairement aux objets qui ont été sélectionnés par un appel précédent à :meth:`~django.db.models.query.QuerySet.filter`."
+msgstr "Pour gérer ces deux situations, Django a une façon cohérente de traiter les appels de :meth:`~django.db.models.query.QuerySet.filter`. Tous les paramètres d'un appel à :meth:`~django.db.models.query.QuerySet.filter` sont appliqués simultanément pour filtrer les éléments qui correspondent à tous ces critères. Les appels subséquents à :meth:`~django.db.models.query.QuerySet.filter` restreignent ensuite davantage les éléments renvoyés, mais pour les relations multivaluées ces appels s'appliquent à tous les objets liés au modèle principal, pas nécessairement aux objets (dépendants du modèle principal) qui ont été sélectionnés par un appel précédent à :meth:`~django.db.models.query.QuerySet.filter`."
 
 # 5fb041460e5f49659e8c18173981e60f
 #: ../../../../1.7/docs/topics/db/queries.txt:557
@@ -13318,7 +13382,7 @@ msgstr "Ceci peut paraître un peu déroutant ; nous espérons qu'un exemple vi
 msgid ""
 "To select all blogs that contain an entry with *\"Lennon\"* in the headline "
 "**as well as** an entry that was published in 2008, we would write::"
-msgstr "Pour sélectionner tous les blogues qui contiennent une entrée avec *\"Lennon\"* dans le titre **et en plus** une entrée qui a été publiée en 2008, nous pourrions écrire ::"
+msgstr "Pour sélectionner tous les blogues qui contiennent une entrée avec *\"Lennon\"* dans le titre **et d'autre part** une entrée qui a été publiée en 2008, nous pourrions écrire ::"
 
 # fee6d3944995460896b8fc111efa5330
 #: ../../../../1.7/docs/topics/db/queries.txt:571
@@ -13339,23 +13403,37 @@ msgid ""
 "filter may or may not be the same as the entries in the first filter. We are"
 " filtering the ``Blog`` items with each filter statement, not the ``Entry`` "
 "items."
-msgstr "Dans ce deuxième exemple, le premier filtre restreint le queryset à tous les blogues avec un lien vers des articles contentant *\"Lennon\"* dans le titre. Le second filtre restreint *davantage* les blogues résultants à ceux qui ont aussi un lien vers les articles publiés en 2008. Les articles sélectionnés par le second filtre\npeuvent être ou non les mêmes que ceux sélectionnés par le premier filtre. Nous filtrons les éléments ``Blog`` avec chaque appel de filtre, pas les éléments ``Entry``."
+msgstr "Dans le deuxième exemple, le premier filtre restreint le queryset à tous les blogues avec un lien vers des articles contentant *\"Lennon\"* dans le titre. Le second filtre restreint *davantage* les blogues résultants à ceux qui ont aussi un lien vers les articles publiés en 2008. Les articles sélectionnés par le second filtre peuvent être ou non les mêmes que ceux sélectionnés par le premier filtre. Nous filtrons les éléments ``Blog`` avec chaque appel de filtre, pas les éléments ``Entry``."
 
-# c0d9baf344ed47f4b1c1eb308ad86d11
-#: ../../../../1.7/docs/topics/db/queries.txt:583
+# e6cd4964635f42f9a874b37d960c9d89
+#: ../../../../1.7/docs/topics/db/queries.txt:584
 msgid ""
-"All of this behavior also applies to "
-":meth:`~django.db.models.query.QuerySet.exclude`: all the conditions in a "
-"single :meth:`~django.db.models.query.QuerySet.exclude` statement apply to a"
-" single instance (if those conditions are talking about the same multi-"
-"valued relation). Conditions in subsequent "
-":meth:`~django.db.models.query.QuerySet.filter` or "
-":meth:`~django.db.models.query.QuerySet.exclude` calls that refer to the "
-"same relation may end up filtering on different linked objects."
-msgstr "Tous ces comportements s'appliquent aussi à :meth:`~django.db.models.query.QuerySet.exclude` : toutes les conditions dans un même appel à :meth:`~django.db.models.query.QuerySet.exclude` s'appliquent à une seule instance (si ces conditions portent sur la même relation multi-valuée). Les conditions dans les appels successifs à :meth:`~django.db.models.query.QuerySet.filter` ou :meth:`~django.db.models.query.QuerySet.exclude` qui\nportent sur la même relation peuvent potentiellement filtrer sur différents objets liés. "
+"The behavior of :meth:`~django.db.models.query.QuerySet.filter` for queries "
+"that span multi-value relationships, as described above, is not implemented "
+"equivalently for :meth:`~django.db.models.query.QuerySet.exclude`. Instead, "
+"the conditions in a single :meth:`~django.db.models.query.QuerySet.exclude` "
+"call will not necessarily refer to the same item."
+msgstr "Le comportement de :meth:`~django.db.models.query.QuerySet.filter` pour les requêtes qui couvrent des relations multi-valeurs' tel que décrit ci-dessus, n'est pas implémenté de la même manière pour :meth:`~django.db.models.query.QuerySet.exclude`. Au contraire, les conditions de restriction indiquées lors qu'un appel à  :meth:`~django.db.models.query.QuerySet.exclude` ne doivent pas nécessairement s'appliquer au même élément."
 
-# 4dc9b9885b9e42b0a64cca51ff982866
-#: ../../../../1.7/docs/topics/db/queries.txt:595
+# 7122d938738649baad57b7da5267d228
+#: ../../../../1.7/docs/topics/db/queries.txt:590
+msgid ""
+"For example, the following query would exclude blogs that contain *both* "
+"entries with *\"Lennon\"* in the headline *and* entries published in 2008::"
+msgstr "Par exemple, la requête ci-dessous exclurait les blogues qui contiennent **à la fois** *\"Lennon\"* dans le titre *et* des entrées publiées en 2008 ::"
+
+# 672dcd0fe1e54f5cb1e02f3f0fd23ba0
+#: ../../../../1.7/docs/topics/db/queries.txt:598
+msgid ""
+"However, unlike the behavior when using "
+":meth:`~django.db.models.query.QuerySet.filter`, this will not limit blogs "
+"based on entries that satisfy both conditions. In order to do that, i.e. to "
+"select all blogs that do not contain entries published with *\"Lennon\"* "
+"that were published in 2008, you need to make two queries::"
+msgstr "Cependant, contrairement au comportement lors de l'utilisation de :meth:`~django.db.models.query.QuerySet.filter`, cela ne sélectionnera pas les blogs basés sur des entrées qui satisfont les deux conditions en même temps. Pour faire cela, c'est à dire pour sélectionner tous les blogs qui ne contiennent pas d'entrées publiées avec *\"Lennon\"* et qui ont été publiées en 2008, vous devez faire deux requêtes ::"
+
+# 9c5eb678474c44ad92f2124c98884ada
+#: ../../../../1.7/docs/topics/db/queries.txt:614
 msgid "Filters can reference fields on the model"
 msgstr "Les filtres peuvent référencer les champs d'un modèle"
 
@@ -14364,8 +14442,8 @@ msgstr "Noms de table des modèles"
 
 # 6375d206fbc3424ea2f6f75231ca55ac
 #: ../../../../1.7/docs/topics/db/sql.txt:59
-msgid "Where'd the name of the ``Person`` table come from in that example?"
-msgstr "D'où peut bien provenir le nom de la table ``Person`` dans cet exemple ?"
+msgid "Where did the name of the ``Person`` table come from in that example?"
+msgstr "D'où vient le nom de la table `` Person`` dans cet exemple?"
 
 # 0c30872859964fdbb1f2f2ad75f3644a
 #: ../../../../1.7/docs/topics/db/sql.txt:61
@@ -16954,8 +17032,17 @@ msgid ""
 "saved."
 msgstr "Le fichier est enregistré durant la phase d'enregistrement du modèle dans la base de données, il n'est donc pas possible de se baser sur le nom de fichier réel sur le disque tant que le modèle lui-même n'a pas été enregistré."
 
-# fa570644b4d042a98ff764fffac32ebc
-#: ../../../../1.7/docs/topics/files.txt:60
+# b98f3d9fef764360ad06897119f2adb7
+#: ../../../../1.7/docs/topics/files.txt:58
+msgid ""
+"For example, you can change the file name by setting the file's "
+":attr:`~django.core.files.File.name` to a path relative to the file "
+"storage's location (:setting:`MEDIA_ROOT` if you are using the default "
+":class:`~django.core.files.storage.FileSystemStorage`)::"
+msgstr "Par exemple, vous pouvez modifier le nom de fichier en définissant l'attribut :attr:`~django.core.files.File.name` du fichier à un chemin relatif à l'emplacement de stockage des fichiers (:setting:`MEDIA_ROOT` si vous utilisez le :class:`~django.core.files.storage.FileSystemStorage` par défaut) ::"
+
+# f0c2a5354dd94708a2738ca97a9968cc
+#: ../../../../1.7/docs/topics/files.txt:77
 msgid "The ``File`` object"
 msgstr "L'objet "
 
@@ -19156,211 +19243,260 @@ msgstr "Champ de modèle"
 msgid "Form field"
 msgstr "Champ de formulaire"
 
-# a7aabde7fc8645eeb49517c837d55425
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:55
-msgid "``AutoField``"
-msgstr "``AutoField``"
+# 63e88d64be734affb34456208c28dbb5
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:57
+msgid ":class:`AutoField`"
+msgstr ":class:`AutoField`"
 
 # 990c1cdb762d4023b1b3d50299eab960
 #: ../../../../1.7/docs/topics/forms/modelforms.txt:55
 msgid "Not represented in the form"
 msgstr "Non représenté dans le formulaire"
 
-# e675031bb5114d139fb0985420c7afbf
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:57
-msgid "``BigIntegerField``"
-msgstr "``BigIntegerField``"
+# 9ba863842379485eb21ddfa48e0b0b4d
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:59
+msgid ":class:`BigIntegerField`"
+msgstr ":class:`BigIntegerField`"
 
 # 92b344459b084e4ca1e556a5ba252ba1
 #: ../../../../1.7/docs/topics/forms/modelforms.txt:57
 msgid ""
-"``IntegerField`` with ``min_value`` set to -9223372036854775808 and "
-"``max_value`` set to 9223372036854775807."
-msgstr "``IntegerField`` avec ``min_value`` définie à -9223372036854775808 et ``max_value`` définie à 9223372036854775807."
-
-# f2d18d862bf74ba3874e9f9fb6f6a4d0
-# 1d291dbf21544e6686a2f55c5015cd55
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:61
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:61
-msgid "``BooleanField``"
-msgstr "``BooleanField``"
+":class:`~django.forms.IntegerField` with ``min_value`` set to "
+"-9223372036854775808 and ``max_value`` set to 9223372036854775807."
+msgstr ":class:`~django.forms.IntegerField` avec ``min_value`` à -9223372036854775808 et ``max_value`` à 9223372036854775807."
 
 # 2f70f2b3cf684571aa5dfdc07f93fbb7
 # 0a08a0e40798415d929e7c6939371ee1
 # 877d1202e0854c9b9476e99c3ba74d90
 #: ../../../../1.7/docs/topics/forms/modelforms.txt:63
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:66
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:95
-msgid "``CharField``"
-msgstr "``CharField``"
+msgid ":class:`BooleanField`"
+msgstr ":class:`BooleanField`"
 
 # b55d825233a34ade850e57fbf7839522
 #: ../../../../1.7/docs/topics/forms/modelforms.txt:63
+msgid ":class:`~django.forms.BooleanField`"
+msgstr ":class:`~django.forms.BooleanField`"
+
+# 9668962bcfec4bf58265d43f37f8de9a
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:65
+msgid ":class:`CharField`"
+msgstr ":class:`CharField`"
+
+# 20ab4a175ee74f51b29ddd59158174a2
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:65
 msgid ""
-"``CharField`` with ``max_length`` set to the model field's ``max_length``"
-msgstr "``CharField`` avec ``max_length`` définie à la même valeur que ``max_length`` du champ de modèle"
+":class:`~django.forms.CharField` with ``max_length`` set to the model "
+"field's ``max_length``"
+msgstr ":class:`~django.forms.CharField` avec ``max_length`` définie à la même valeur que ``max_length`` du champ de modèle"
 
-# 9f34654c17724ab2acfc918da766cfba
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:66
-msgid "``CommaSeparatedIntegerField``"
-msgstr "``CommaSeparatedIntegerField``"
+# eb1b76e272b44c83a3e6388405ef22f0
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:69
+msgid ":class:`CommaSeparatedIntegerField`"
+msgstr ":class:`CommaSeparatedIntegerField`"
 
-# 391035f0d04e400aabbf854dbabaaa18
-# 2332f5c0cebd499dac4ff60cdb5a3280
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:68
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:68
-msgid "``DateField``"
-msgstr "``DateField``"
+# 07dd6ee0006a4bdb96d32a1033a91fca
+# 590f1f3848c84d70b5745f5c1c3feac2
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:69
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:99
+msgid ":class:`~django.forms.CharField`"
+msgstr ":class:`~django.forms.CharField`"
 
-# f969291a7de149349a758e0acb54e846
-# b8064e7291b8414a8c2f4ad704dda763
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:70
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:70
-msgid "``DateTimeField``"
-msgstr "``DateTimeField``"
+# 51993856c3264e88a4e34f8724cf55de
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:71
+msgid ":class:`DateField`"
+msgstr ":class:`DateField`"
 
-# fe24050af3704226972fdc3cf25930aa
-# bf3c8bc63db94f8c82a8397dbe0a8b1f
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:72
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:72
-msgid "``DecimalField``"
-msgstr "``DecimalField``"
+# 7cb82075a3234ecaaa7895fc2e63fff4
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:71
+msgid ":class:`~django.forms.DateField`"
+msgstr ":class:`~django.forms.DateField`"
 
-# fab04541be714625aa96a82b227862f1
-# 55bbcdc30f5a463bbd36f8842d925003
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:74
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:74
-msgid "``EmailField``"
-msgstr "``EmailField``"
+# 67c43cfadfa745a5bba9ed57e2ddba35
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:73
+msgid ":class:`DateTimeField`"
+msgstr ":class:`DateTimeField`"
 
-# 25f18e2053d04d74b50da9ea3f502b68
-# 41c6c51608614d57ae543011f8964ead
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:76
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:76
-msgid "``FileField``"
-msgstr "``FileField``"
+# e400db623d564ef9bcaa315f76bb9c4e
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:73
+msgid ":class:`~django.forms.DateTimeField`"
+msgstr ":class:`~django.forms.DateTimeField`"
 
-# 48fbf5bcd765476dac354275c453505a
-# 6b7022dca2cc4329ade8ba668923dc99
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:78
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:78
-msgid "``FilePathField``"
-msgstr "``FilePathField``"
+# c03d629afe884aa297aafc9ec871abeb
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:75
+msgid ":class:`DecimalField`"
+msgstr ":class:`DecimalField`"
 
-# cefe8b42d9b44f529ce84b60afdf34a0
-# be60981765954ab2aef288147d1975b6
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:80
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:80
-msgid "``FloatField``"
-msgstr "``FloatField``"
+# d9e3259131664a41a1e8deceffeb34f8
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:75
+msgid ":class:`~django.forms.DecimalField`"
+msgstr ":class:`~django.forms.DecimalField`"
 
-# 3a4177c92d95414cafbf609a752f0b05
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:82
-msgid "``ForeignKey``"
-msgstr "``ForeignKey``"
+# cf9b1424a0fd4e18a3e42514b112ca7b
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:77
+msgid ":class:`EmailField`"
+msgstr ":class:`EmailField`"
 
-# acc1ed9bff0b411e8038d1945e9bde1a
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:82
-msgid "``ModelChoiceField`` (see below)"
-msgstr "``ModelChoiceField`` (voir ci-dessous)"
+# 91be5f143dc84b98bc1d5edf8fc50120
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:77
+msgid ":class:`~django.forms.EmailField`"
+msgstr ":class:`~django.forms.EmailField`"
 
-# aac717315b204cfca4b652622af32795
-# 039e5618c44942098fbe9dfc5c9b001f
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:84
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:84
+# 1e0f4f5533c54c85b716d614b158342b
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:79
+msgid ":class:`FileField`"
+msgstr ":class:`FileField`"
+
+# 56e9aada4d9249c0ac7e72aabd0d8351
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:79
+msgid ":class:`~django.forms.FileField`"
+msgstr ":class:`~django.forms.FileField`"
+
+# 9220dfc9ab434e29a8a4acef95741ab5
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:81
+msgid ":class:`FilePathField`"
+msgstr ":class:`FilePathField`"
+
+# c77e519be5094cbabbe826b0e105fb9d
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:81
+msgid ":class:`~django.forms.FilePathField`"
+msgstr ":class:`~django.forms.FilePathField`"
+
+# 8f690ad805a74b6297a6fc0fcc1b5489
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:83
+msgid ":class:`FloatField`"
+msgstr ":class:`FloatField`"
+
+# 5d80099e94fd422e9b17cff844f2c5b2
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:83
+msgid ":class:`~django.forms.FloatField`"
+msgstr ":class:`~django.forms.FloatField`"
+
+# 12f9b958910d4595807607411829ff61
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:85
+msgid ":class:`ForeignKey`"
+msgstr ":class:`ForeignKey`"
+
+# f8fc9c148ef6497d9ae352b4e2f18d16
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:85
+msgid ":class:`~django.forms.ModelChoiceField` (see below)"
+msgstr ":class:`~django.forms.ModelChoiceField` (voir ci-dessous)"
+
+# 726c819bc81b40f9af388f87607b7e54
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:88
 msgid "``ImageField``"
 msgstr "``ImageField``"
 
-# 26dd3a9753b541ca8bf2b08ced72a709
-# 4d81d6b1802e4a299bac5928600ea7c4
-# bfc42083d8294bb1887c905e52efb4c5
-# 70e6f9fd581e410a8013497e86d42272
-# baef9a1c77924ef5bde35bdc769f7759
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:86
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:86
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:97
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:99
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:103
-msgid "``IntegerField``"
-msgstr "``IntegerField``"
-
-# 5efa1bd2b4ad4723b3cee50239b90206
-# 97f772adb46a4e04aca0497260e1bf20
+# 44fe94662d27467ab6acc7122fe62016
 #: ../../../../1.7/docs/topics/forms/modelforms.txt:88
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:88
-msgid "``IPAddressField``"
-msgstr "``IPAddressField``"
+msgid ":class:`~django.forms.ImageField`"
+msgstr ":class:`~django.forms.ImageField`"
 
 # d06db2fb9ebb4c3ab923a9fccd1811bc
 # ed478551c99f421e89b23e2dad03dea3
 #: ../../../../1.7/docs/topics/forms/modelforms.txt:90
+msgid ":class:`IntegerField`"
+msgstr ":class:`IntegerField`"
+
+# 4140c657be6446f19c997d2148e1f70d
+# a69c0b4659b543dcb2522f3c65a3fde9
+# 4e6d70b5b77d47bb82c69bda187a1fc6
+# ddfd55a02c544ca89af32da178394693
 #: ../../../../1.7/docs/topics/forms/modelforms.txt:90
-msgid "``GenericIPAddressField``"
-msgstr "``GenericIPAddressField``"
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:101
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:103
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:107
+msgid ":class:`~django.forms.IntegerField`"
+msgstr ":class:`~django.forms.IntegerField`"
 
 # 73c278bb70284d7f8412131500cbe05f
 #: ../../../../1.7/docs/topics/forms/modelforms.txt:92
-msgid "``ManyToManyField``"
-msgstr "``ManyToManyField``"
-
-# c26c1643651e424b9c6d332b99bca4cb
 #: ../../../../1.7/docs/topics/forms/modelforms.txt:92
-msgid "``ModelMultipleChoiceField`` (see below)"
-msgstr "``ModelMultipleChoiceField`` (voir ci-dessous)"
+msgid "``IPAddressField``"
+msgstr "``IPAddressField``"
 
-# e416421f81194ce59dddcaee36f897ea
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:95
-msgid "``NullBooleanField``"
-msgstr "``NullBooleanField``"
+# 42bc522dc3284e9a9e4daeb4c7c6b7cd
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:94
+msgid ":class:`GenericIPAddressField`"
+msgstr ":class:`GenericIPAddressField`"
 
-# 257b1d75924b478496b401a6c634e6f9
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:97
-msgid "``PositiveIntegerField``"
-msgstr "``PositiveIntegerField``"
+# 16f16af73e244a73ad91468866c68d26
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:94
+msgid ":class:`~django.forms.GenericIPAddressField`"
+msgstr ":class:`~django.forms.GenericIPAddressField`"
 
-# c290beccfc0c4ac3b28749b4d63a8f10
+# 0834cd4ff33c4c8ea45c2598fde3492c
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:96
+msgid ":class:`ManyToManyField`"
+msgstr ":class:`ManyToManyField`"
+
+# a2b908795e0c4c1894b7c16f778af040
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:96
+msgid ":class:`~django.forms.ModelMultipleChoiceField` (see below)"
+msgstr ":class:`~django.forms.ModelMultipleChoiceField` (voir ci-dessous)"
+
+# fc3059b1dff045a18693620b3244880e
 #: ../../../../1.7/docs/topics/forms/modelforms.txt:99
-msgid "``PositiveSmallIntegerField``"
-msgstr "``PositiveSmallIntegerField``"
+msgid ":class:`NullBooleanField`"
+msgstr ":class:`NullBooleanField`"
 
 # 287083276cda4ddc93dd5edbf0a593b9
 # 4030903f1fb9405b89c64f911204dd2a
 #: ../../../../1.7/docs/topics/forms/modelforms.txt:101
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:101
-msgid "``SlugField``"
-msgstr "``SlugField``"
+msgid ":class:`PositiveIntegerField`"
+msgstr ":class:`PositiveIntegerField`"
 
 # 1a4e8672971c4ec0aaa1834bd558d6b6
 #: ../../../../1.7/docs/topics/forms/modelforms.txt:103
-msgid "``SmallIntegerField``"
-msgstr "``SmallIntegerField``"
+msgid ":class:`PositiveSmallIntegerField`"
+msgstr ":class:`PositiveSmallIntegerField`"
 
 # 009605a0af3044d1878299416e93bd40
 #: ../../../../1.7/docs/topics/forms/modelforms.txt:105
-msgid "``TextField``"
-msgstr "``TextField``"
+msgid ":class:`SlugField`"
+msgstr ":class:`SlugField`"
 
 # 16345d0d9b064cbab83e967dc2be83e8
 #: ../../../../1.7/docs/topics/forms/modelforms.txt:105
-msgid "``CharField`` with ``widget=forms.Textarea``"
-msgstr "``CharField`` avec ``widget=forms.Textarea``"
+msgid ":class:`~django.forms.SlugField`"
+msgstr ":class:`~django.forms.SlugField`"
 
-# 8c1fc985e7ee4629b2c6ddbf248cfd67
-# c6804fb754544b389ff12a15258e58cf
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:108
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:108
-msgid "``TimeField``"
-msgstr "``TimeField``"
+# 629be2accb4d4a85b35dc1ce32864410
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:107
+msgid ":class:`SmallIntegerField`"
+msgstr ":class:`SmallIntegerField`"
 
-# 5e2583c25e9340bcb1a2c037b43c1ff1
-# 17e9f5d9fc8a48a7b9a5c5fb9d33c5e7
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:110
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:110
-msgid "``URLField``"
-msgstr "``URLField``"
+# 434c80e503704d869429e7d719b1c467
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:109
+msgid ":class:`TextField`"
+msgstr ":class:`TextField`"
 
-# 443b48ba238848f38df2932aa5f1f91b
+# 4b92db8fdeda4170b7fd03ce7b510ad6
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:109
+msgid ":class:`~django.forms.CharField` with ``widget=forms.Textarea``"
+msgstr ":class:`~django.forms.CharField` avec ``widget=forms.Textarea``"
+
+# ee486ad645cd4be2b66afbc7cb1e464e
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:112
+msgid ":class:`TimeField`"
+msgstr ":class:`TimeField`"
+
+# 6050c12b31584843913dffe2ed6b8a14
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:112
+msgid ":class:`~django.forms.TimeField`"
+msgstr ":class:`~django.forms.TimeField`"
+
+# c7f752373b0744f180b11f3ef852ecbe
 #: ../../../../1.7/docs/topics/forms/modelforms.txt:114
+msgid ":class:`URLField`"
+msgstr ":class:`URLField`"
+
+# 5c3ccd461ddb46729759d96a49cb7f2b
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:114
+msgid ":class:`~django.forms.URLField`"
+msgstr ":class:`~django.forms.URLField`"
+
+# 571f98cafc814702b17a8707dfc38b93
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:119
 msgid ""
 "As you might expect, the ``ForeignKey`` and ``ManyToManyField`` model field "
 "types are special cases:"
@@ -19502,8 +19638,9 @@ msgstr "Vous pouvez surcharger la méthode ``clean()`` d'un formulaire de modèl
 # c5d5c0d5d2744694829aadc190a87c25
 #: ../../../../1.7/docs/topics/forms/modelforms.txt:235
 msgid ""
-"A model form instance bound to a model object will contain an ``instance`` "
-"attribute that gives its methods access to that specific model instance."
+"A model form instance attached to a model object will contain an "
+"``instance`` attribute that gives its methods access to that specific model "
+"instance."
 msgstr "Une instance de formulaire de modèle liée à un objet modèle contient un attribut ``instance`` qui donne à ses méthodes l'accès à cette instance de modèle spécifique."
 
 # f2f9f1772885498e9a116c7c6cadfd33
@@ -20011,8 +20148,24 @@ msgid ""
 "see :ref:`controlling-fields-with-fields-and-exclude`."
 msgstr "Cette technique n'est utilisable que pour enlever des champs qui ont eux-mêmes été définis de manière déclarative dans la classe parente ; cela n'empêchera pas la métaclasse de ``ModelForm`` de générer un champ par défaut. Pour enlever des champs par défaut, voir :ref:`controlling-fields-with-fields-and-exclude`."
 
-# 8667821906804794b0e83fb911f658da
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:688
+# 076954f975de448191400976bc90ade4
+# 756efc33f22747a5b9d18fb3c99fcdb1
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:690
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:870
+msgid "Providing initial values"
+msgstr "Indication de valeurs initiales"
+
+# a2f7b54feda746c3867eac83125543ab
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:692
+msgid ""
+"As with regular forms, it's possible to specify initial data for forms by "
+"specifying an ``initial`` parameter when instantiating the form. Initial "
+"values provided this way will override both initial values from the form "
+"field and values from an attached model instance. For example::"
+msgstr "Comme avec les formulaires normaux, il est possible de spécifier les données initiales pour les formulaires en spécifiant un paramètre ``initial`` lors de l'instanciation du formulaire. Les valeurs initiales prévues de cette façon remplaceront la valeur initiale définie pour le champ et celle définie pour le modèle lié. Par exemple ::"
+
+# 8e414800af9f4b9c8a34a323716581a4
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:707
 msgid "ModelForm factory function"
 msgstr "Fonction de fabrique de ModelForm"
 
@@ -20182,21 +20335,17 @@ msgid ""
 "fields in the form."
 msgstr "À l'aide du paramètre ``localized_fields``, vous pouvez activer la régionalisation des champs du formulaire."
 
-# 49b26bc61cc741ffae290c58ee4d2f5e
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:851
-msgid "Providing initial values"
-msgstr "Indication de valeurs initiales"
-
-# 630f5ef5375e4060be773033322ed649
-#: ../../../../1.7/docs/topics/forms/modelforms.txt:853
+# 01bd2c9d68cd44c68fc16a028604c1a0
+#: ../../../../1.7/docs/topics/forms/modelforms.txt:872
 msgid ""
 "As with regular formsets, it's possible to :ref:`specify initial data "
 "<formsets-initial-data>` for forms in the formset by specifying an "
 "``initial`` parameter when instantiating the model formset class returned by"
 " :func:`~django.forms.models.modelformset_factory`. However, with model "
 "formsets, the initial values only apply to extra forms, those that aren't "
-"bound to an existing object instance."
-msgstr "Comme pour les formulaires groupés normaux, il est possible :ref:`de fournir des données initiales <formsets-initial-data>` aux formulaires groupés en indiquant le paramètre ``initial`` au moment de la création de l'instance de classe de formulaires groupés de modèles renvoyée par :func:`~django.forms.models.modelformset_factory`. Cependant, avec les formulaires groupés de modèles, les valeurs initiales ne s'appliquent qu'aux formulaires supplémentaires, ceux qui ne sont pas liés à des instances d'objets existants."
+"attached to an existing model instance. If the extra forms with initial data"
+" aren't changed by the user, they won't be validated or saved."
+msgstr "Comme pour les formulaires groupés normaux, il est possible :ref:`de fournir des données initiales <formsets-initial-data>` aux formulaires groupés en indiquant le paramètre ``initial`` au moment de la création de l'instance de classe de formulaires groupés de modèles renvoyée par :func:`~django.forms.models.modelformset_factory`. Cependant, avec les formulaires groupés de modèles, les valeurs initiales ne s'appliquent qu'aux formulaires supplémentaires, ceux qui ne sont pas liés à des instances d'objets existants. Si les formulaires avec données initiales ne sont pas modifiés par l'utilisateur, ils ne seront ni validés, ni enregistrés."
 
 # 5283e0c117de41528e637f32dbe0c662
 #: ../../../../1.7/docs/topics/forms/modelforms.txt:863
@@ -24773,17 +24922,16 @@ msgstr "Fuseaux horaires"
 # 13551cf5cd174f718fd20b06b586d374
 #: ../../../../1.7/docs/topics/i18n/timezones.txt:12
 msgid ""
-"When support for time zones is enabled, Django stores date and time "
-"information in UTC in the database, uses time-zone-aware datetime objects "
-"internally, and translates them to the end user's time zone in templates and"
-" forms."
+"When support for time zones is enabled, Django stores datetime information "
+"in UTC in the database, uses time-zone-aware datetime objects internally, "
+"and translates them to the end user's time zone in templates and forms."
 msgstr "Lorsque la prise en charge des fuseaux horaires est activée, Django stocke les informations de date/heure en UTC dans la base de données, utilise en interne des objets date/heure conscients de leur fuseau horaire et les convertit dans les gabarits et les formulaires en utilisant le fuseau horaire de l'utilisateur."
 
 # b49f8e86399e474c86c598dd78fd6d04
 #: ../../../../1.7/docs/topics/i18n/timezones.txt:17
 msgid ""
 "This is handy if your users live in more than one time zone and you want to "
-"display date and time information according to each user's wall clock."
+"display datetime information according to each user's wall clock."
 msgstr "C'est très pratique si vos utilisateurs sont répartis sur plus d'un fuseau horaire et que vous vouliez afficher les informations temporelles selon l'heure locale de chacun."
 
 # f6e996047be24fd9be2b40094b874aa5
@@ -26000,8 +26148,24 @@ msgid ""
 "compilemessages <compilemessages>`::"
 msgstr "Vous obtiendriez une erreur lors du lancement de :djadmin:`django-admin.py compilemessages <compilemessages>`::"
 
-# 893e9802e7034371bc5b271297a57144
-#: ../../../../1.7/docs/topics/i18n/translation.txt:271
+# a97cae02c2804123b1ffd47aa54c4a5b
+#: ../../../../1.7/docs/topics/i18n/translation.txt:268
+msgid "Plural form and po files"
+msgstr "Pluriel et fichiers po"
+
+# 3b6c620b4159455eaf8ff35ca0d987ae
+#: ../../../../1.7/docs/topics/i18n/translation.txt:270
+msgid ""
+"Django does not support custom plural equations in po files. As all "
+"translation catalogs are merged, only the plural form for the main Django po"
+" file (in ``django/conf/locale/<lang_code>/LC_MESSAGES/django.po``) is "
+"considered. Plural forms in all other po files are ignored. Therefore, you "
+"should not use different plural equations in your project or application po "
+"files."
+msgstr "Django ne supporte pas l'utilisation de pluriels personnalisés dans les fichiers po. Comme tous les catalogues de traduction sont fusionnés, seule la forme plurielle du fichier po principal de Django (dans  ``django/conf/locale/<lang_code>/LC_MESSAGES/django.po``) est pris en compte. Les formes plurielles dans tous les autres fichiers po sont ignorées. Par conséquent, vous ne devriez pas utiliser différentes formes de pluriels dans les fichiers po de votre projet ou de votre application."
+
+# 2e7e8c02fbf845388794988a88c25790
+#: ../../../../1.7/docs/topics/i18n/translation.txt:280
 msgid "Contextual markers"
 msgstr "Marqueurs contextuels"
 
@@ -28084,27 +28248,20 @@ msgstr "En plus du moteur de base de données, il est aussi nécessaire de véri
 # a2ce3813a18e4383983241255ef5d3e0
 #: ../../../../1.7/docs/topics/install.txt:89
 msgid ""
-"If you're using PostgreSQL, you'll need the `postgresql_psycopg2`_ package. "
-"You might want to refer to our :ref:`PostgreSQL notes <postgresql-notes>` "
-"for further technical details specific to this database."
-msgstr "Si vous utilisez PostgreSQL, vous avez besoin du paquet `postgresql_psycopg2`_. Vous pouvez consultez les :ref:`notes sur PostgreSQL <postgresql-notes>` pour des détails techniques plus complets au sujet de cette base de données."
+"If you're using PostgreSQL, you'll need the `psycopg2`_ package. Refer to "
+"the :ref:`PostgreSQL notes <postgresql-notes>` for further details."
+msgstr "Si vous utilisez PostgreSQL, vous avez besoin du paquet `psycopg2`_. Vous pouvez consultez les :ref:`notes sur PostgreSQL <postgresql-notes>` pour plus de détails."
 
 # 3b547381c32b482aa400b503a0f1b069
 #: ../../../../1.7/docs/topics/install.txt:93
 msgid ""
-"If you're on Windows, check out the unofficial `compiled Windows version`_."
-msgstr "Si vous êtes sur Windows, récupérez la `version non officielle compilée pour Windows`_."
+"If you're using MySQL, you'll need a :ref:`DB API driver <mysql-db-api-"
+"drivers>` like ``mysqlclient``. See :ref:`notes for the MySQL backend "
+"<mysql-notes>` for details."
+msgstr "Si vous utilisez MySQL, vous aurez besoin d'une :ref:`API de driver de BDD <mysql-db-api-drivers>` comme ``mysqlclient``. Voir :ref:`notes pour le backend MySQL <mysql-notes>` pour plus de détails."
 
-# b2d6d3ce54e845c2b7fdda1cf89fc2c5
-#: ../../../../1.7/docs/topics/install.txt:95
-msgid ""
-"If you're using MySQL, you'll need the ``MySQL-python`` package, version "
-"1.2.1p2 or higher. You will also want to read the database-specific "
-":ref:`notes for the MySQL backend <mysql-notes>`."
-msgstr "Si vous utilisez MySQL, vous aurez besoin du paquet ``MySQL-python``, version 1.2.1p2 ou plus récente. Il est aussi recommandé de lire les :ref:`notes spécifiques pour le moteur de base de données MySQL <mysql-notes>`."
-
-# 11f3b5622b08492098ced2de0f2c2d4f
-#: ../../../../1.7/docs/topics/install.txt:99
+# 53ea930bd6e042d7bba882c32d8fb095
+#: ../../../../1.7/docs/topics/install.txt:96
 msgid ""
 "If you're using SQLite you might want to read the :ref:`SQLite backend notes"
 " <sqlite-notes>`."
@@ -28114,10 +28271,9 @@ msgstr "Si vous utilisez SQLite, il est recommandé de lire les :ref:`notes du m
 #: ../../../../1.7/docs/topics/install.txt:102
 msgid ""
 "If you're using Oracle, you'll need a copy of cx_Oracle_, but please read "
-"the database-specific :ref:`notes for the Oracle backend <oracle-notes>` for"
-" important information regarding supported versions of both Oracle and "
-"``cx_Oracle``."
-msgstr "Si vous utilisez Oracle, vous aurez besoin d'une copie de cx_Oracle_, mais veuillez lire les :ref:`notes spécifiques pour le moteur de base de données Oracle <oracle-notes>` qui contient d'importantes informations concernant les versions prises en charge d'Oracle et de ``cx_Oracle``."
+"the :ref:`notes for the Oracle backend <oracle-notes>` for details regarding"
+" supported versions of both Oracle and ``cx_Oracle``."
+msgstr "Si vous utilisez Oracle, vous aurez besoin d'une copie de cx_Oracle_, mais veuillez lire les :ref:`notes spécifiques pour le moteur de base de données Oracle <oracle-notes>` pour les détails concernant les versions prises en charge d'Oracle et de ``cx_Oracle``."
 
 # d3f11483aed54805b5dcd1a717204350
 #: ../../../../1.7/docs/topics/install.txt:107
@@ -28195,22 +28351,8 @@ msgstr "Les instructions d'installation divergent légèrement selon que vous in
 msgid "It's easy, no matter which way you choose."
 msgstr "C'est facile, quelle que soit la méthode choisie."
 
-# b7c3069be401460297f172a5c9acccf6
-#: ../../../../1.7/docs/topics/install.txt:170
-msgid "Installing a distribution-specific package"
-msgstr "Installation d'un paquet de la distribution"
-
-# e05dd4c0e802445890ab4fa6fd37cf49
-#: ../../../../1.7/docs/topics/install.txt:172
-msgid ""
-"Check the :doc:`distribution specific notes </misc/distributions>` to see if"
-" your platform/distribution provides official Django packages/installers. "
-"Distribution-provided packages will typically allow for automatic "
-"installation of dependencies and easy upgrade paths."
-msgstr "Parcourez les :doc:`notes spécifiques aux distributions </misc/distributions>` pour vérifier que votre plate-forme/distribution propose des paquets ou installeurs officiels de Django. Les paquets fournis par les distributions permettent généralement de profiter de l'installation automatique des dépendances et de mises à niveau plus faciles."
-
-# 3aa85bec54a743d1abf427ecc2f82db0
-#: ../../../../1.7/docs/topics/install.txt:180
+# 6f5bbe1540f144b79f89245966228351
+#: ../../../../1.7/docs/topics/install.txt:162
 msgid "Installing an official release with ``pip``"
 msgstr "Installation d'une version officielle avec "
 
@@ -28305,8 +28447,23 @@ msgid ""
 " removed from Django."
 msgstr "Si vous utilisez cette technique d'installation, il est particulièrement important de :ref:`supprimer d'abord toute installation existante<removing-old-versions-of-django>` de Django. Sinon, vous pouvez vous retrouver avec une installation défaillante qui contient des fichiers de versions précédentes qui ne doivent plus se trouver dans Django."
 
-# 5b4849638ae4459294822ac0eb0f6838
-#: ../../../../1.7/docs/topics/install.txt:244
+# b8e2a768fcf1465d96b078f79722115c
+#: ../../../../1.7/docs/topics/install.txt:224
+msgid "Installing a distribution-specific package"
+msgstr "Installation d'un paquet de la distribution"
+
+# 7b0b1ecedb7a4498ba55808b9b7dd335
+#: ../../../../1.7/docs/topics/install.txt:226
+msgid ""
+"Check the :doc:`distribution specific notes </misc/distributions>` to see if"
+" your platform/distribution provides official Django packages/installers. "
+"Distribution-provided packages will typically allow for automatic "
+"installation of dependencies and easy upgrade paths; however, these packages"
+" will rarely contain the latest release of Django."
+msgstr "Parcourez les :doc:`notes spécifiques aux distributions </misc/distributions>` pour vérifier que votre plate-forme/distribution propose des paquets ou installeurs officiels de Django. Les paquets fournis par les distributions permettent généralement de profiter de l'installation automatique des dépendances et de mises à niveau plus faciles ; toutefois, ces paquets correspondent rarement aux dernières versions de Django."
+
+# 0f2168e25a3f4ae896ae8de0c426b0eb
+#: ../../../../1.7/docs/topics/install.txt:235
 msgid "Installing the development version"
 msgstr "Installation de la version de développement"
 
@@ -28996,24 +29153,28 @@ msgstr "Pour configurer la journalisation, il s'agit de définir un dictionnaire
 # 8b6494a754a24799a1d5c0bbdda2b18e
 #: ../../../../1.7/docs/topics/logging.txt:215
 msgid ""
-"Prior to Django 1.5, the :setting:`LOGGING` setting always overwrote the "
-":ref:`default Django logging configuration <default-logging-configuration>`."
-" From Django 1.5 forward, it is possible to get the project's logging "
-"configuration merged with Django's defaults, hence you can decide if you "
-"want to add to, or replace the existing configuration."
-msgstr "Avant Django 1.5, le réglage :setting:`LOGGING` écrasait toujours la :ref:`configuration de journalisation par défaut de Django <default-logging-configuration>`. À partir de Django 1.5, il est possible de faire fusionner la configuration de journalisation d'un projet avec les valeurs par défaut de Django, il est donc possible de choisir si l'on veut compléter ou complètement remplacer la configuration existante."
+"By default, the :setting:`LOGGING` setting is merged with :ref:`Django's "
+"default logging configuration <default-logging-configuration>` using the "
+"following scheme."
+msgstr "Par défaut, le réglage :setting:`LOGGING` est fusionné avec :ref:`la configuration de journalisation par défaut de Django <default-logging-configuration>` en se basant sur les principes suivants."
 
 # 00eeb5a16e1948d198c6b67791a2f3a4
 #: ../../../../1.7/docs/topics/logging.txt:221
 msgid ""
 "If the ``disable_existing_loggers`` key in the :setting:`LOGGING` dictConfig"
-" is set to ``True`` (which is the default) the default configuration is "
-"completely overridden. Alternatively you can redefine some or all of the "
-"loggers by setting ``disable_existing_loggers`` to ``False``."
-msgstr "Si la clé ``disable_existing_loggers`` dans la configuration ``dictConfig`` de :setting:`LOGGING` est définie à ``True`` (valeur par défaut), la configuration par défaut est complètement écrasée. Si au contraire vous voulez uniquement redéfinir tout ou partie des journaliseurs, définissez ``disable_existing_loggers`` à ``False``."
+" is set to ``True`` (which is the default) then all loggers from the default"
+" configuration will be disabled. Disabled loggers are not the same as "
+"removed; the logger will still exist, but will silently discard anything "
+"logged to it, not even propagating entries to a parent logger. Thus you "
+"should be very careful using ``'disable_existing_loggers': True``; it's "
+"probably not what you want. Instead, you can set "
+"``disable_existing_loggers`` to ``False`` and redefine some or all of the "
+"default loggers; or you can set :setting:`LOGGING_CONFIG` to ``None`` and "
+":ref:`handle logging config yourself <disabling-logging-configuration>`."
+msgstr "Si la clé ``disable_existing_loggers`` du dictionnaire :setting:`LOGGING` contient ``True`` (valeur par défaut), tous les journaliseurs de la configuration par défaut seront désactivés. Désactiver un journaliseur n'est pas équivalent à sa suppression ; le journaliseur existe toujours, mais il élimine silencieusement les messages qu'il reçoit, sans même les propager au journaliseur parent. Vous devez donc vous méfier du réglage ``'disable_existing_loggers': True``; cela ne fait souvent pas ce qu'on aimerait. Par contre, vous pouvez définir ``disable_existing_loggers`` à ``False`` et redéfinir certains ou tous les journaliseurs par défaut. Une autre stratégie est de définir :setting:`LOGGING_CONFIG` à ``None`` et vous :ref:`charger vous-même de la configuration de la journalisation <disabling-logging-configuration>`."
 
-# 3a075767c99d4f05bbdf2392390d8341
-#: ../../../../1.7/docs/topics/logging.txt:226
+# 8eb04261c00c45829742ed2c586fe167
+#: ../../../../1.7/docs/topics/logging.txt:230
 msgid ""
 "Logging is configured as part of the general Django ``setup()`` function. "
 "Therefore, you can be certain that loggers are always ready for use in your "
@@ -29025,7 +29186,7 @@ msgstr "La journalisation est configurée dans le cadre de la fonction ``setup()
 msgid ""
 "The full documentation for `dictConfig format`_ is the best source of "
 "information about logging configuration dictionaries. However, to give you a"
-" taste of what is possible, here are a couple examples."
+" taste of what is possible, here are several examples."
 msgstr "La documentation complète du `format dictConfig`_ est la meilleure source d'informations concernant les dictionnaires de configuration de la journalisation. Cependant, pour vous donner un petit aperçu de ce qui est réalisable, voici quelques exemples."
 
 # 8db859e22cac49d2b7a9d5bf267d0f26
@@ -29045,12 +29206,28 @@ msgstr "Si vous utilisez cet exemple, prenez soin de remplacer le chemin ``'file
 # dfd2797755b547258aae0d869511f964
 #: ../../../../1.7/docs/topics/logging.txt:264
 msgid ""
-"Second, here's an example of a fairly complex logging setup, configured "
-"using :func:`logging.config.dictConfig`::"
-msgstr "Deuxièmement, voici un exemple d'une configuration de journalisation relativement complexe, configurée par :func:`logging.config.dictConfig`::"
+"Second, here's an example of how to make the logging system print Django's "
+"logging to the console. It overrides the fact that ``django.request`` and "
+"``django.security`` don't propagate their log entries by default. It may be "
+"useful during local development."
+msgstr "Deuxièmement, voici un exemple expliquant comment journaliser les messages de Django dans la console. Il surcharge le réglage qui empêche ``django.request`` et ``django.security`` de propager par défaut les messages qu'ils reçoivent. Cela peut se révéler utile en phase de développement local."
 
-# 969b0c86822c46fbb41dbd51fd24d6fe
-#: ../../../../1.7/docs/topics/logging.txt:319
+# eb168b2f5dc94d308f99f03b21d23aed
+#: ../../../../1.7/docs/topics/logging.txt:273
+msgid ""
+"By default, this config only sends messages of level ``INFO`` or higher to "
+"the console. Django does not log many such messages. Set the environment "
+"variable ``DJANGO_LOG_LEVEL=DEBUG`` to see all of Django's debug logging "
+"which is very verbose as it includes all database queries::"
+msgstr "Par défaut, cette configuration n'envoie que les messages de niveau ``INFO`` ou plus élevé vers la console. Django ne génère pas tant de messages de ce genre. Définissez la variable d'environnement ``DJANGO_LOG_LEVEL=DEBUG`` pour voir tous les messages de débogage  journalisés par Django, ce qui est très bavard car toutes les requêtes de base de données sont incluses ::"
+
+# 098c71c5954645a99fd41a3cb4acf0c7
+#: ../../../../1.7/docs/topics/logging.txt:296
+msgid "Finally, here's an example of a fairly complex logging setup::"
+msgstr "Finalement, voici un exemple d'une configuration de journalisation plutôt complexe ::"
+
+# 3e26997d23cb45e69ea939f3367324e5
+#: ../../../../1.7/docs/topics/logging.txt:350
 msgid "This logging configuration does the following things:"
 msgstr "Cette configuration de journalisation effectue les choses suivantes :"
 
@@ -29061,13 +29238,8 @@ msgid ""
 "present, this is the only dictConfig format version."
 msgstr "Elle identifie la configuration comme étant au format « dictConfig version 1 ». C'est actuellement la seule version du format dictConfig."
 
-# 6a93242b52844f49adca8fa8f0428e34
-#: ../../../../1.7/docs/topics/logging.txt:324
-msgid "Disables all existing logging configurations."
-msgstr "Elle désactive toutes les configurations de journalisation existantes."
-
-# f67f03a470c74a978dc14743f4475e37
-#: ../../../../1.7/docs/topics/logging.txt:326
+# 535e173240954440b939471beca18e83
+#: ../../../../1.7/docs/topics/logging.txt:355
 msgid "Defines two formatters:"
 msgstr "Elle définit deux formateurs :"
 
@@ -29195,17 +29367,19 @@ msgid ""
 "If you don't want to configure logging at all (or you want to manually "
 "configure logging using your own approach), you can set "
 ":setting:`LOGGING_CONFIG` to ``None``. This will disable the configuration "
-"process."
-msgstr "Si vous ne souhaitez pas configurer de journalisation (ou que vous vouliez le faire manuellement selon votre propre méthode), vous pouvez définir :setting:`LOGGING_CONFIG` à ``None``. Cela va désactiver le processus de configuration."
+"process for :ref:`Django's default logging <default-logging-configuration>`."
+" Here's an example that disables Django's logging configuration and then "
+"manually configures logging:"
+msgstr "Si vous ne souhaitez pas configurer de journalisation (ou que vous vouliez le faire manuellement selon votre propre méthode), vous pouvez définir :setting:`LOGGING_CONFIG` à ``None``. Cela va désactiver le processus de configuration pour la ref:`journalisation par défaut de Django <default-logging-configuration>`. Voici un exemple qui désactive la configuration de journalisation de Django, puis qui configure manuellement la journalisation :"
 
 # 3ea8fac070404b5785394091edcd09a4
 #: ../../../../1.7/docs/topics/logging.txt:402
 msgid ""
-"Setting :setting:`LOGGING_CONFIG` to ``None`` only means that the "
+"Setting :setting:`LOGGING_CONFIG` to ``None`` only means that the automatic "
 "configuration process is disabled, not logging itself. If you disable the "
 "configuration process, Django will still make logging calls, falling back to"
 " whatever default logging behavior is defined."
-msgstr "En définissant :setting:`LOGGING_CONFIG` à ``None``, vous ne faites que désactiver le processus de configuration, pas la journalisation elle-même. Même quand vous désactivez le processus de configuration, Django continue de faire appel à la journalisation, dont le comportement correspondra alors à ce qui est défini par défaut."
+msgstr "En définissant :setting:`LOGGING_CONFIG` à ``None``, vous ne faites que désactiver le processus de configuration automatique, pas la journalisation elle-même. Même quand vous désactivez le processus de configuration, Django continue de faire appel à la journalisation, dont le comportement correspondra alors à ce qui est défini par défaut."
 
 # 889a667b56d7409bb77634182988bf44
 #: ../../../../1.7/docs/topics/logging.txt:409
@@ -29483,25 +29657,49 @@ msgstr "Ce filtre est similaire à :class:`RequireDebugFalse`, sauf que les enre
 msgid "Django's default logging configuration"
 msgstr "Configuration de journalisation par défaut de Django"
 
-# e122217a76ae44c3b1c222ef2a094984
-#: ../../../../1.7/docs/topics/logging.txt:648
+# b301119900014a08bfbcb9a247181fc0
+#: ../../../../1.7/docs/topics/logging.txt:687
+msgid "By default, Django configures the following logging:"
+msgstr "Par défaut, Django configure la journalisation suivante :"
+
+# 3e078bf6729645ba8a95773b89592304
+#: ../../../../1.7/docs/topics/logging.txt:689
+msgid "When :setting:`DEBUG` is ``True``:"
+msgstr "Lorsque :setting:`DEBUG` vaut ``True``:"
+
+# 831beaeaf7994583b0a75871b2d48c91
+#: ../../../../1.7/docs/topics/logging.txt:691
 msgid ""
-"By default, Django configures the ``django.request`` logger so that all "
-"messages with ``ERROR`` or ``CRITICAL`` level are sent to "
-":class:`AdminEmailHandler`, as long as the :setting:`DEBUG` setting is set "
-"to ``False``."
-msgstr "Par défaut, Django configure le journaliseur ``django.request`` afin que tous les messages de niveau ``ERROR`` ou ``CRITICAL`` soient envoyés à :class:`AdminEmailHandler`, pour autant que le réglage :setting:`DEBUG` soit défini à ``False``."
+"The ``django`` catch-all logger sends all messages at the ``INFO`` level or "
+"higher to the console. Django doesn't make any such logging calls at this "
+"time (all logging is at the ``DEBUG`` level or handled by the "
+"``django.request`` and ``django.security`` loggers)."
+msgstr "Le journaliseur « fourre-tout » ``django`` envoie tous les messages du niveau ``INFO`` ou plus élevé vers la console. Pour l'instant, Django n'envoie aucun message de ce type (toute la journalisation se fait au niveau ``DEBUG`` ou est interceptée par les journaliseurs ``django.request`` et ``django.security``)."
 
 # e6b86dda1cfb47cea3dc033d6dd3e5fe
 #: ../../../../1.7/docs/topics/logging.txt:652
 msgid ""
-"All messages reaching the ``django`` catch-all logger when :setting:`DEBUG` "
-"is ``True`` are sent to the console. They are simply discarded (sent to "
-"``NullHandler``) when :setting:`DEBUG` is ``False``."
-msgstr "Tous les messages atteignant le journaliseur « fourre-tout » ``django`` lorsque :setting:`DEBUG` vaut ``True`` sont affichés dans la console. Ils sont simplement ignorés (envoyés à ``NullHandler``) lorsque :setting:`DEBUG` vaut ``False``."
+"The ``py.warnings`` logger, which handles messages from ``warnings.warn()``,"
+" sends messages to the console."
+msgstr "Le journaliseur ``py.warnings`` qui s'occupe des messages produits par ``warnings.warn()``, envoie les messages vers la console."
 
-# 280b3aa52fcf4e8b9f0c7ff7bb8607d3
-#: ../../../../1.7/docs/topics/logging.txt:656
+# feefccba0f604e5f92045a00bf5a5d92
+#: ../../../../1.7/docs/topics/logging.txt:699
+msgid "When :setting:`DEBUG` is ``False``:"
+msgstr "Lorsque :setting:`DEBUG` vaut ``False``:"
+
+# a7af9f2268b14e3eace9ec83cd52ada7
+#: ../../../../1.7/docs/topics/logging.txt:701
+msgid ""
+"The ``django.request`` and ``django.security`` loggers send messages with "
+"``ERROR`` or ``CRITICAL`` level to :class:`AdminEmailHandler`. These loggers"
+" ignore anything at the ``WARNING`` level or below and log entries aren't "
+"propagated to other loggers (they won't reach the ``django`` catch-all "
+"logger, even when ``DEBUG`` is ``True``)."
+msgstr "Les journaliseurs ``django.request`` et ``django.security`` envoie les messages de niveau ``ERROR`` ou ``CRITICAL`` vers :class:`AdminEmailHandler`. Ces journaliseurs ignorent tout ce qui est au niveau ``WARNING`` (avertissement) ou plus bas et les messages journalisés ne sont pas propagés vers d'autres journaliseurs (ils n'atteindront pas le journaliseur « fourre-tout » ``django``, même quand ``DEBUG`` vaut ``True``)."
+
+# 9061e6b3f2364b3e98110bf0618db686
+#: ../../../../1.7/docs/topics/logging.txt:707
 msgid ""
 "See also :ref:`Configuring logging <configuring-logging>` to learn how you "
 "can complement or replace this default logging configuration."
@@ -29964,8 +30162,8 @@ msgid ""
 "custom field without raising a ``TypeError``. The old migration will call "
 "the modified ``__init__`` method with the old signature. So if you need a "
 "new argument, please create a keyword argument and add something like "
-"``assert kwargs.get('argument_name') is not None`` in the constructor."
-msgstr "Il n'est pas possible de modifier le nombre de paramètres positionnels dans un champ personnalisé déjà migré sans générer une exception ``TypeError``. L'ancienne migration appellera la méthode ``__init__`` modifiée avec l'ancienne signature. Si donc vous avez besoin d'un nouveau paramètre, créez plutôt un paramètre nommé et ajoutez quelque chose comme ``assert kwargs.get('nom_du_paramètre') is not None`` dans le constructeur."
+"``assert 'argument_name' in kwargs`` in the constructor."
+msgstr "Il n'est pas possible de modifier le nombre de paramètres positionnels dans un champ personnalisé déjà migré sans générer une exception ``TypeError``. L'ancienne migration appellera la méthode ``__init__`` modifiée avec l'ancienne signature. Si donc vous avez besoin d'un nouveau paramètre, créez plutôt un paramètre nommé et ajoutez quelque chose comme  ``assert 'nom_du_paramètre' in kwargs`` dans le constructeur."
 
 # 3251acc39b87409dbdc1f0e298266dcf
 #: ../../../../1.7/docs/topics/migrations.txt:285
@@ -30162,42 +30360,33 @@ msgid ""
 "migrating backwards will raise an exception."
 msgstr "Il est possible de passer un second objet exécutable à :class:`~django.db.migrations.operations.RunPython` pour exécuter toute logique adéquate dans le cas d'une migration inverse. Si cet objet est omis, la migration inverse générera une exception, le cas échéant."
 
-# 67a3567bd5a641189e5f23561140a9bb
-#: ../../../../1.7/docs/topics/migrations.txt:441
-msgid "Data migrations and multiple databases"
-msgstr "Migrations de données et bases de données multiples"
-
-# a8dff9d8e7ce4117ae73ee47fa2201fe
-#: ../../../../1.7/docs/topics/migrations.txt:443
-msgid ""
-"When using multiple databases, you may need to figure out whether or not to "
-"run a migration against a particular database. For example, you may want to "
-"**only** run a migration on a particular database."
-msgstr "Lorsque vous utilisez plusieurs bases de données, il peut être nécessaire de déterminer si une migration doit être appliquée à une certaine base de données. Par exemple, il est possible qu'une migration ne doive s'appliquer qu'à **une seule** base de données."
-
-# f69dd6108dfa48b1ae98bffacee66df1
-#: ../../../../1.7/docs/topics/migrations.txt:447
-msgid ""
-"In order to do that you can check the database connection's alias inside a "
-"``RunPython`` operation by looking at the ``schema_editor.connection.alias``"
-" attribute::"
-msgstr "Pour faire cela, il est possible de se baser sur l'alias de base de données de la connexion dans une opération ``RunPython`` en consultant l'attribut ``schema_editor.connection.alias``::"
+# 2078de0a00944bed95671d89e7fad28c
+#: ../../../../1.7/docs/topics/migrations.txt:439
+msgid "Accessing models from other apps"
+msgstr "Accèder aux modèles d'autres applications"
 
 # ec50a2788d4941648f5481203b0e6b70
 #: ../../../../1.7/docs/topics/migrations.txt:468
 msgid ""
-"You can also use your database router's ``allow_migrate()`` method, but keep"
-" in mind that the imported router needs to stay around as long as it is "
-"referenced inside a migration:"
-msgstr "Il est aussi possible d'utiliser la méthode ``allow_migrate()`` du routeur de base de données, mais il faut savoir qu'un routeur importé dans une migration doit rester accessible aussi longtemps qu'une migration existante y fait référence :"
+"When writing a ``RunPython`` function that uses models from apps other than "
+"the one in which the migration is located, the migration's ``dependencies`` "
+"attribute should include the latest migration of each app that is involved, "
+"otherwise you may get an error similar to: ``LookupError: No installed app "
+"with label 'myappname'`` when you try to retrieve the model in the "
+"``RunPython`` function using ``apps.get_model()``."
+msgstr "Lorsque vous écrivez une fonction appelée par ``RunPython`` et qui utilise des modèles issus d'applications autres que celle dans laquelle la migration est située, l'attribut ``dependencies`` de la migration doit inclure la dernière migration de chaque application qui est en cause, sinon vous pouvez obtenir une erreur semblable à : ``LookupError: Aucune application installée pour 'myappname'`` lorsque vous utilisez ``apps.get_model()`` pour essayer de récupérer le modèle dans la fonction appelée par ``RunPython``."
 
-# ddb95169bd6f46968039428b3360a423
-#: ../../../../1.7/docs/topics/migrations.txt:480
-msgid "Then, to leverage this in your migrations, do the following::"
-msgstr "Puis, pour s'appuyer sur ce code dans une migration, procédez comme suit ::"
+# 710a0f076ccc4cedae5e34873159b914
+#: ../../../../1.7/docs/topics/migrations.txt:448
+msgid ""
+"In the following example, we have a migration in ``app1`` which needs to use"
+" models in ``app2``. We aren't concerned with the details of ``move_m1`` "
+"other than the fact it will need to access models from both apps. Therefore "
+"we've added a dependency that specifies the last migration of ``app2``::"
+msgstr "Dans l'exemple suivant, nous avons une migration dans ``app1`` qui a besoin d'utiliser des modèles dans ``app2``. Nous ne sommes pas préoccupés par les détails de ``move_m1`` mis à part que cette fonction aura besoin d'accéder à des modèles des deux applications. Par conséquent, nous avons ajouté une dépendance qui spécifie la dernière migration de ``app2`` ::"
 
-# ba95295d5a4249089fd63c5d49be7135
-#: ../../../../1.7/docs/topics/migrations.txt:503
+# e6d61b83567f47c59b0898b1abcc00cc
+#: ../../../../1.7/docs/topics/migrations.txt:466
 msgid "More advanced migrations"
 msgstr "Migrations avancées"
 
@@ -30577,8 +30766,33 @@ msgid ""
 "this is normal and should only happen once."
 msgstr "La manière la plus simple de faire cela est de suivre les conseils donnés dans le :doc:`guide de migration vers Python 3 </topics/python3>` et de s'assurer que tous vos modules commencent par ``from __future__ import unicode_literals`` afin que toutes les chaînes littérales soient toujours de l'unicode, quelle que soit la version de Python. Lorsque vous ajoutez cela à une application possédant déjà des migrations générées avec Python 2, le prochain lancement de :djadmin:`makemigrations` avec Python 3 va probablement générer de multiples changements dans la mesure où tous les attributs de type chaîne d'octets sont convertis en chaînes de texte ; c'est normal et ne devrait se produire qu'une seule fois."
 
-# 2d026639142a42f5b2fab921d6a887cd
-#: ../../../../1.7/docs/topics/migrations.txt:664
+# 511deeb6998743bdb8bc57d915954d8b
+#: ../../../../1.7/docs/topics/migrations.txt:692
+msgid "Supporting multiple Django versions"
+msgstr "Prendre en charge plusieurs versions de Django"
+
+# f67f21f9295c41ab9ecfd86bab334c3d
+#: ../../../../1.7/docs/topics/migrations.txt:694
+msgid ""
+"If you are the maintainer of a third-party app with models, you may need to "
+"ship migrations that support multiple Django versions. In this case, you "
+"should always run :djadmin:`makemigrations` **with the lowest Django version"
+" you wish to support**."
+msgstr "Si vous êtes responsable d'une application tierce qui contient des modèles, vous devrez peut-être fournir des migrations qui prennent en charge plusieurs versions de Django. Dans ce cas, vous devez toujours exécuter :djadmin:`makemigrations` **avec le plus bas niveau de version de Django vous souhaitez prendre en charge**."
+
+# a4477f379ed747d5a0cc39d55882a823
+#: ../../../../1.7/docs/topics/migrations.txt:699
+msgid ""
+"The migrations system will maintain backwards-compatibility according to the"
+" same policy as the rest of Django, so migration files generated on Django "
+"X.Y should run unchanged on Django X.Y+1. The migrations system does not "
+"promise forwards-compatibility, however. New features may be added, and "
+"migration files generated with newer versions of Django may not work on "
+"older versions."
+msgstr "Le système de migrations maintiendra la compatibilité ascendante selon la même politique que le reste de Django, afin que les fichiers de migration générées sur Django X.Y devraient fonctionner sans modification sur Django X.Y+1. Cependant, le système des migrations ne promet pas de compatibilité descendante. De nouvelles fonctionnalités peuvent être ajoutées, et les fichiers de migration générés avec les nouvelles versions de Django pourront ne pas fonctionner sur les anciennes versions."
+
+# a2e419a1db314e16aff1644ba18755e3
+#: ../../../../1.7/docs/topics/migrations.txt:708
 msgid "Upgrading from South"
 msgstr "Mise à jour à partir de South"
 
@@ -30619,8 +30833,9 @@ msgstr "Exécutez ``python manage.py makemigrations``. Django devrait détecter 
 msgid ""
 "Run ``python manage.py migrate``. Django will see that the tables for the "
 "initial migrations already exist and mark them as applied without running "
-"them."
-msgstr "Exécutez ``python manage.py migrate``. Django constatera que les tables des migrations initiales existent déjà et les marquera comme appliquées sans effectuer les opérations correspondantes."
+"them. (Only matching table names are checked; not their full schema - it's "
+"up to you to make sure the existing schema is up to date with your models!)"
+msgstr "Exécuter ``python manage.py migrate``. Django verra que les tables pour les migrations initiales existent déjà et les marquera comme appliquées sans les exécuter. (Seuls les noms des tables sont vérifiés; pas leur schéma complet - c'est à vous de vous assurer que le schéma existant est à jour avec vos modèles!)"
 
 # 2b797162fb894c1b869c3a0359881da4
 #: ../../../../1.7/docs/topics/migrations.txt:642
@@ -37981,32 +38196,20 @@ msgstr "Cet exemple ouvre Firefox automatiquement puis se rend à la page de con
 # 8974f82880804176a71d5ce9c72a4fbf
 #: ../../../../1.7/docs/topics/testing/tools.txt:765
 msgid ""
-"Before Django 1.7 ``LiveServerTestCase`` used to rely on the "
-":doc:`staticfiles contrib app </howto/static-files/index>` to get the static"
-" assets of the application(s) under test transparently served at their "
-"expected locations during the execution of these tests."
-msgstr "Avant Django 1.7, ``LiveServerTestCase`` se basait sur l':doc:`application contribuée staticfiles </howto/static-files/index>` pour obtenir les fichiers statiques des applications en cours de test, servis de manière transparente à l'emplacement attendu pendant l'exécution de ces tests."
-
-# 7800b0f5d3df4a208256039f2a9b0418
-#: ../../../../1.7/docs/topics/testing/tools.txt:770
-msgid ""
-"In Django 1.7 this dependency of core functionality on a ``contrib`` "
-"application has been removed, because of which ``LiveServerTestCase`` "
-"ability in this respect has been retrofitted to simply publish the contents "
-"of the file system under :setting:`STATIC_ROOT` at the :setting:`STATIC_URL`"
-" URL."
-msgstr "Dans Django 1.7, cette dépendance d'une fonctionnalité de base sur une application ``contrib`` a été supprimée ; c'est pour cela que cette capacité de ``LiveServerTestCase`` s'en trouve limitée à simplement publier les contenus du système de fichier dans :setting:`STATIC_ROOT` à l'URL :setting:`STATIC_URL`."
+"In older versions, ``LiveServerTestCase`` relied on the :doc:`staticfiles "
+"contrib app </howto/static-files/index>` to transparently serve static files"
+" during the execution of tests. This functionality has been moved to the "
+":class:`~django.contrib.staticfiles.testing.StaticLiveServerTestCase` "
+"subclass, so use that subclass if you need :ref:`the original behavior "
+"<staticfiles-testing-support>`."
+msgstr "Dans les anciennes versions, ``LiveServerTestCase`` s'appuyait sur l' :doc:`application intégrée staticfiles </howto/static-files/index>` pour servir de manière transparente les fichiers statiques pendant l'exécution des tests. Cette fonctionnalité a été déplacée dans la classe fille :class:`~django.contrib.staticfiles.testing.StaticLiveServerTestCase`, afin d'utiliser cette classe fille si vous avez besoin :ref:`du comportement d'origine <staticfiles-testing-support> `."
 
 # 95e27b501e0a45b5b8c84104731aec0f
 #: ../../../../1.7/docs/topics/testing/tools.txt:776
 msgid ""
-"If you use the ``staticfiles`` app in your project and need to perform live "
-"testing then you might want to consider using the "
-":class:`~django.contrib.staticfiles.testing.StaticLiveServerTestCase` "
-"subclass shipped with it instead because it's the one that implements the "
-"original behavior now. See :ref:`the relevant documentation <staticfiles-"
-"testing-support>` for more details."
-msgstr "Si vous utilisez l'application ``staticfiles`` dans votre projet et que vous avez besoin de tester en « live », vous pouvez envisager d'utiliser plutôt la sous-classe :class:`~django.contrib.staticfiles.testing.StaticLiveServerTestCase` qui est livrée avec l'application parce que cette classe implémente dorénavant le comportement original. Voir la :ref:`documentation correspondante <staticfiles-testing-support>` pour plus de détails."
+"``LiveServerTestCase`` now simply publishes the contents of the file system "
+"under :setting:`STATIC_ROOT` at the :setting:`STATIC_URL`."
+msgstr "`` LiveServerTestCase`` publie maintenant simplement le contenu du système de fichiers sous la racine définie dans le réglage :setting:`STATIC_ROOT` à l'adresse :setting:` STATIC_URL`."
 
 # daab482f088744248efc534e01956d40
 #: ../../../../1.7/docs/topics/testing/tools.txt:785

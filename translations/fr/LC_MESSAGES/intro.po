@@ -7,13 +7,13 @@
 # charettes <charette.s@gmail.com>, 2013
 # Christophe kryskool <christophe.chauvet@gmail.com>, 2013
 # Claude Paroz <claude@2xlibre.net>, 2013-2015
-# Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014
+# Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-21 03:13-0600\n"
-"PO-Revision-Date: 2015-01-21 10:55+0000\n"
+"POT-Creation-Date: 2015-03-31 04:13-0500\n"
+"PO-Revision-Date: 2015-03-31 19:01+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -1913,8 +1913,10 @@ msgid ""
 "By default, the configuration uses SQLite. If you're new to databases, or "
 "you're just interested in trying Django, this is the easiest choice. SQLite "
 "is included in Python, so you won't need to install anything else to support"
-" your database."
-msgstr "La configuration par défaut utilise SQLite. Si vous débutez avec les bases de données ou que vous voulez juste essayer Django, il s'agit du choix le plus simple. SQLite est inclus dans Python, vous n'aurez donc rien d'autre à installer pour utiliser ce type de base de données."
+" your database. When starting your first real project, however, you may want"
+" to use a more robust database like PostgreSQL, to avoid database-switching "
+"headaches down the road."
+msgstr "La configuration par défaut utilise SQLite. Si vous débutez avec les bases de données ou que vous voulez juste essayer Django, il s'agit du choix le plus simple. SQLite est inclus dans Python, vous n'aurez donc rien d'autre à installer pour utiliser ce type de base de données. Lorsque vous démarrez votre premier projet réel, cependant, vous pouvez utiliser une base de données plus robuste comme PostgreSQL, afin d'éviter les maux de tête consécutifs au changement perpétuel d'une base de données à l'autre."
 
 # c7ae2e32ca534f3e821b4c80f939c433
 #: ../../../../1.7/docs/intro/tutorial01.txt:139
@@ -2642,9 +2644,9 @@ msgstr "Une seconde. ``<Question: Question object>`` n'est, à l'évidence, pas 
 #: ../../../../1.7/docs/intro/tutorial01.txt:680
 msgid ""
 "It's important to add :meth:`~django.db.models.Model.__str__` methods to "
-"your models, not only for your own sanity when dealing with the interactive "
-"prompt, but also because objects' representations are used throughout "
-"Django's automatically-generated admin."
+"your models, not only for your own convenience when dealing with the "
+"interactive prompt, but also because objects' representations are used "
+"throughout Django's automatically-generated admin."
 msgstr "Il est important d'ajouter des méthodes  :meth:`~django.db.models.Model.__str__` à vos modèles, non seulement parce que c'est plus pratique lorsque vous utilisez le shell interactif, mais aussi parce que la représentation des objets est très utilisée dans l'interface d'administration automatique de Django."
 
 # 06a34cac9115448fa3157cf66b97ae0e
@@ -3309,11 +3311,12 @@ msgstr "Personnalisation des gabarits de votre *projet*"
 # 292e1accb8cd4b58b544e6473389e929
 #: ../../../../1.7/docs/intro/tutorial02.txt:480
 msgid ""
-"Create a ``templates`` directory in your project directory. Templates can "
-"live anywhere on your filesystem that Django can access. (Django runs as "
-"whatever user your server runs.) However, keeping your templates within the "
-"project is a good convention to follow."
-msgstr "Créez un répertoire s'appelant ``templates`` dans le répertoire de votre projet. Les gabarits peuvent se trouver à n'importe quel endroit du système de fichiers, pourvu qu'ils soient accessibles par Django (Django utilise le même utilisateur que celui qui a démarré votre serveur). Cependant, par convention, il est recommandé de conserver les gabarits à l'intérieur du projet."
+"Create a ``templates`` directory in your project directory (the one that "
+"contains ``manage.py``). Templates can live anywhere on your filesystem that"
+" Django can access. (Django runs as whatever user your server runs.) "
+"However, keeping your templates within the project is a good convention to "
+"follow."
+msgstr "Créez un répertoire s'appelant ``templates`` dans le répertoire de votre projet (celui qui contient ``manage.py``). Les gabarits peuvent se trouver à n'importe quel endroit du système de fichiers, pourvu qu'ils soient accessibles par Django (Django utilise le même utilisateur que celui qui a démarré votre serveur). Cependant, par convention, il est recommandé de conserver les gabarits à l'intérieur du projet."
 
 # ef09408324e6407e89ffc2978f8dad25
 #: ../../../../1.7/docs/intro/tutorial02.txt:485
