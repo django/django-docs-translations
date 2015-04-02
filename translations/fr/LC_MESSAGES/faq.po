@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-20 04:13-0600\n"
-"PO-Revision-Date: 2015-01-21 10:09+0000\n"
+"POT-Creation-Date: 2015-04-02 05:09-0500\n"
+"PO-Revision-Date: 2015-04-02 12:23+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -25,28 +25,28 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-# 6d3edb5c3b59406388c12418bf736348
-#: ../../../../1.7/docs/faq/admin.txt:2
+# 099174c5941d4dfd9f59c055b13f00ac
+#: ../../../../1.8/docs/faq/admin.txt:2
 msgid "FAQ: The admin"
 msgstr "FAQ : l'interface d'administration"
 
-# 3b946fa00c9a4193a0c40d602da229f0
-#: ../../../../1.7/docs/faq/admin.txt:5
+# 9d5461c05e4848238ed6d193e56f0ba1
+#: ../../../../1.8/docs/faq/admin.txt:5
 msgid ""
 "I can't log in. When I enter a valid username and password, it just brings "
 "up the login page again, with no error messages."
 msgstr "Je ne peux pas me connecter. Lorsque je saisis un nom d'utilisateur et un mot de passe valides, cela me renvoie toujours vers la même page de connexion, sans aucun message d'erreur."
 
-# 074fe49796d64e738ae44c3bb0a492e2
-#: ../../../../1.7/docs/faq/admin.txt:7
+# 0553b0dfd53f4b12bd1e99a856180bde
+#: ../../../../1.8/docs/faq/admin.txt:7
 msgid ""
 "The login cookie isn't being set correctly, because the domain of the cookie"
 " sent out by Django doesn't match the domain in your browser. Try these two "
 "things:"
 msgstr "Le cookie de connexion n'a pas été défini correctement parce que le domaine du cookie envoyé par Django ne correspond pas au domaine utilisé par votre navigateur. Essayez les deux choses suivantes :"
 
-# 56db677fe9b64d9787ca3c82b58d76a4
-#: ../../../../1.7/docs/faq/admin.txt:11
+# 390f72f620444b8592217071e42855e6
+#: ../../../../1.8/docs/faq/admin.txt:11
 msgid ""
 "Set the :setting:`SESSION_COOKIE_DOMAIN` setting in your admin config file "
 "to match your domain. For example, if you're going to "
@@ -54,16 +54,16 @@ msgid ""
 " you should set :setting:`SESSION_COOKIE_DOMAIN` = 'www.example.com'."
 msgstr "Définissez le réglage :setting:`SESSION_COOKIE_DOMAIN` dans votre fichier de configuration de l'administration de sorte que le domaine corresponde à votre domaine. Par exemple, si vous souhaitez utiliser l'adresse « http://www.example.com/admin/ » dans votre navigateur, vous devriez définir :setting:`SESSION_COOKIE_DOMAIN` = 'www.example.com' dans le fichier « myproject.settings »."
 
-# 8957a7a8d3234ab6b04556261a1feb4f
-#: ../../../../1.7/docs/faq/admin.txt:17
+# 1188061c64354a71b7f53b20476ccee1
+#: ../../../../1.8/docs/faq/admin.txt:17
 msgid ""
 "I can't log in. When I enter a valid username and password, it brings up the"
 " login page again, with a \"Please enter a correct username and password\" "
 "error."
 msgstr "Je n'arrive pas à me connecter. Quand je saisis un couple nom d'utilisateur/mot de passe valide, j'obtiens à nouveau la page de connexion avec l'erreur : « Saisissez un nom d'utilisateur et un mot de passe valides »."
 
-# 06c717136afb4cebae7cc1434c255f22
-#: ../../../../1.7/docs/faq/admin.txt:19
+# 6f3e1d3d8a4d4ba6bbd13270dccb0bb3
+#: ../../../../1.8/docs/faq/admin.txt:19
 msgid ""
 "If you're sure your username and password are correct, make sure your user "
 "account has :attr:`~django.contrib.auth.models.User.is_active` and "
@@ -71,15 +71,15 @@ msgid ""
 "site only allows access to users with those two fields both set to True."
 msgstr "Si vous êtes certain que votre nom d'utilisateur et votre mot de passe sont corrects, assurez-vous \nque les attributs :attr:`~django.contrib.auth.models.User.is_active` et :attr:`~django.contrib.auth.models.User.is_staff` de votre compte sont définis à True. Le site d'administration permet uniquement l'accès aux utilisateurs qui ont ces deux champs définis à True."
 
-# 26f8436531dd41878441dfc9ed326944
-#: ../../../../1.7/docs/faq/admin.txt:25
+# 786ca9abc6d84d60a061308ee0915c88
+#: ../../../../1.8/docs/faq/admin.txt:25
 msgid ""
 "How do I automatically set a field's value to the user who last edited the "
 "object in the admin?"
 msgstr "Comment automatiquement définir la valeur d'un champ avec l'utilisateur qui a mis à jour l'objet en dernier dans l'interface d'administration ?"
 
-# 155bbf483ce9472c9ab9415e71612cf9
-#: ../../../../1.7/docs/faq/admin.txt:27
+# 3040b21499dc4b419f8af60e82a2c107
+#: ../../../../1.8/docs/faq/admin.txt:27
 msgid ""
 "The :class:`~django.contrib.admin.ModelAdmin` class provides customization "
 "hooks that allow you to transform an object as it saved, using details from "
@@ -89,15 +89,15 @@ msgid ""
 "documentation on ModelAdmin methods <model-admin-methods>` for an example."
 msgstr "La classe :class:`~django.contrib.admin.ModelAdmin` offre des points d'extension vous permettant de transformer un objet lorsqu'il est enregistré, à partir des informations de la requête. En récupérant l'utilisateur actuel de la requête et en étendant la méthode :meth:`~django.contrib.admin.ModelAdmin.save_model`, vous pouvez mettre à jour un objet pour qu'il contienne l'utilisateur qui l'a modifié. Voir :ref:`la documentation de ModelAdmin <model-admin-methods>` pour un exemple."
 
-# 1773e3e114ee4f70a3fdecde021f6a59
-#: ../../../../1.7/docs/faq/admin.txt:35
+# e58b4c796aa246e39038ce2209c3e4b2
+#: ../../../../1.8/docs/faq/admin.txt:35
 msgid ""
 "How do I limit admin access so that objects can only be edited by the users "
 "who created them?"
 msgstr "Comment limiter l'accès à l'interface d'administration afin que les objets ne puissent être modifiés que par leur créateur ?"
 
-# d3c6a21d6d144fa1b26ce2c687a941dc
-#: ../../../../1.7/docs/faq/admin.txt:37
+# 6bedb1442fba4cf4922b97f7f9d67137
+#: ../../../../1.8/docs/faq/admin.txt:37
 msgid ""
 "The :class:`~django.contrib.admin.ModelAdmin` class also provides "
 "customization hooks that allow you to control the visibility and editability"
@@ -107,36 +107,36 @@ msgid ""
 "to control the visibility and editability of objects in the admin."
 msgstr "La classe :class:`~django.contrib.admin.ModelAdmin` offre aussi des points d'extension permettant de contrôler la visibilité et la capacité d'édition des objets de l'interface d'administration. En utilisant la même astuce que pour l'extraction de l'utilisateur depuis une requête, :meth:`~django.contrib.admin.ModelAdmin.get_queryset` et :meth:`~django.contrib.admin.ModelAdmin.has_change_permission` peuvent être utilisés pour contrôler la visibilité et la capacité d'édition des objets dans l'interface d'administration."
 
-# aa8c95a4194b4df88cdfa460a6ca644c
-#: ../../../../1.7/docs/faq/admin.txt:45
+# 3f58642e52214b8e95ae88bdc3c7fb9e
+#: ../../../../1.8/docs/faq/admin.txt:45
 msgid ""
 "My admin-site CSS and images showed up fine using the development server, "
 "but they're not displaying when using mod_wsgi."
 msgstr "Le CSS et les images de mon site d'administration s'affichent parfaitement avec le serveur de développement, mais plus quand j'utilise mod_wsgi."
 
-# 909280d9320a498db9a15ea08a739d41
-#: ../../../../1.7/docs/faq/admin.txt:47
+# 85bb561585044727836370c24547290e
+#: ../../../../1.8/docs/faq/admin.txt:47
 msgid ""
 "See :ref:`serving the admin files <serving-the-admin-files>` in the \"How to"
 " use Django with mod_wsgi\" documentation."
 msgstr "Consultez :ref:`service des fichiers de l'administration <serving-the-admin-files>` dans la documentation « Comment utiliser Django avec mod_wsgi »."
 
-# 12097139d5974f5d87ac40eddbe51e40
-#: ../../../../1.7/docs/faq/admin.txt:51
+# 81844ab11a604ff79e193af691c2172d
+#: ../../../../1.8/docs/faq/admin.txt:51
 msgid ""
 "My \"list_filter\" contains a ManyToManyField, but the filter doesn't "
 "display."
 msgstr "Mon « list_filter » contient un champ ManyToManyField, mais le filtre ne s'affiche pas."
 
-# f4f592fdd2434605b149650644de1105
-#: ../../../../1.7/docs/faq/admin.txt:53
+# a72d737a08f64fdb8e4f68bd4574f960
+#: ../../../../1.8/docs/faq/admin.txt:53
 msgid ""
 "Django won't bother displaying the filter for a ``ManyToManyField`` if there"
 " are fewer than two related objects."
 msgstr "Django ne se fatigue pas à afficher le résultat d'un filtre ``ManyToManyField`` s'il ne contient pas plus d'un élément lié."
 
-# 6a45f2e0b83e4ff781e5a62cac98317d
-#: ../../../../1.7/docs/faq/admin.txt:56
+# b3cdd550ab8a437a9764dad87b5cab49
+#: ../../../../1.8/docs/faq/admin.txt:56
 msgid ""
 "For example, if your :attr:`~django.contrib.admin.ModelAdmin.list_filter` "
 "includes :doc:`sites </ref/contrib/sites>`, and there's only one site in "
@@ -144,13 +144,13 @@ msgid ""
 "by site would be meaningless."
 msgstr "Par exemple, si votre :attr:`~django.contrib.admin.ModelAdmin.list_filter` inclut :doc:`sites </ref/contrib/sites>` et qu'il n'y a qu'un seul site dans votre base de données, il n'affichera par le filtre « Site ». Dans ce cas, le filtrage par site est inutile."
 
-# 2bcc49cedb024682ada114068155eb53
-#: ../../../../1.7/docs/faq/admin.txt:62
+# 7ac780a2ed5b4eac83552189e0acd39e
+#: ../../../../1.8/docs/faq/admin.txt:62
 msgid "Some objects aren't appearing in the admin."
 msgstr "Certains objets n'apparaissent pas dans l'interface d'administration."
 
-# 85d8932da109488abb0454f229674c5c
-#: ../../../../1.7/docs/faq/admin.txt:64
+# dcd15803b2244629bb0502e57836f714
+#: ../../../../1.8/docs/faq/admin.txt:64
 msgid ""
 "Inconsistent row counts may be caused by missing foreign key values or a "
 "foreign key field incorrectly set to :attr:`null=False "
@@ -162,13 +162,13 @@ msgid ""
 "integrity constraint that is not implemented at the database level."
 msgstr "L'incohérence du nombre de lignes peut être causée par l'absence de valeurs de clé étrangère ou par un champ de clé étrangère incorrectement défini avec :attr:`null=False <django.db.models.Field.null>`. Si vous avez un enregistrement avec une :class:`~django.db.models.ForeignKey` pointant sur un objet inexistant et que cette clé étrangère est incluse dans :attr:`~django.contrib.admin.ModelAdmin.list_display`, l'enregistrement ne sera pas affiché dans la liste des objets de l'administration parce que le modèle Django déclare une contrainte d'intégrité non implémentée au niveau de la base de données."
 
-# 0442b41fded94cbfb26d747f3cf9294b
-#: ../../../../1.7/docs/faq/admin.txt:74
+# ecea0f932e8545afbc45afbd28fa5253
+#: ../../../../1.8/docs/faq/admin.txt:74
 msgid "How can I customize the functionality of the admin interface?"
 msgstr "Comment puis-je personnaliser les fonctionnalités de l'interface d'administration ?"
 
-# 5e64a39b0b434d6f856c61356ae13e7c
-#: ../../../../1.7/docs/faq/admin.txt:76
+# 31c41094ff184468acd36c58ed8b122c
+#: ../../../../1.8/docs/faq/admin.txt:76
 msgid ""
 "You've got several options. If you want to piggyback on top of an add/change"
 " form that Django automatically generates, you can attach arbitrary "
@@ -178,8 +178,8 @@ msgid ""
 " admin form via a ``<script>`` tag."
 msgstr "Vous avez plusieurs options. Si vous souhaitez vous greffer au-dessus d'un formulaire d'ajout/édition généré automatiquement par Django, vous pouvez attacher n'importe quel module JavaScript à la page via le :ref:`paramètre js <modeladmin-asset-definitions>` de la classe Admin du modèle. Ce paramètre est une liste d'URL, de type chaîne de caractères, pointant sur les modules JavaScript qui seront inclus dans le formulaire d'administration via une balise ``<script>``."
 
-# cb4c3082ba864e87b31b2a24b3e1366a
-#: ../../../../1.7/docs/faq/admin.txt:83
+# b39f08766d244c5096d9f3b58696e024
+#: ../../../../1.8/docs/faq/admin.txt:83
 msgid ""
 "If you want more flexibility than simply tweaking the auto-generated forms, "
 "feel free to write custom views for the admin. The admin is powered by "
@@ -188,20 +188,20 @@ msgid ""
 "do."
 msgstr "Si vous souhaitez plus de flexibilité qu'un simple ajustement des formulaires auto-générés, vous êtes libre d'écrire des vues personnalisées pour l'administration. L'interface d'administration est elle-même basée sur Django et vous pouvez écrire des vues personnalisées qui se branchent sur le système d'authentification, vérifient les permissions et font tout ce qu'elles ont besoin de faire."
 
-# cefddb291ce444dcb1c3bfd132e2c668
-#: ../../../../1.7/docs/faq/admin.txt:88
+# f76040f3975541de9bdfb1a34fe2b21c
+#: ../../../../1.8/docs/faq/admin.txt:88
 msgid ""
 "If you want to customize the look-and-feel of the admin interface, read the "
 "next question."
 msgstr "Si vous souhaitez modifier l'aspect de l'interface d'administration, lisez la question suivante."
 
-# 3cdf1363aa8f4ae68a18e51e99a81955
-#: ../../../../1.7/docs/faq/admin.txt:92
+# 7428bc946bdc4e2ba6f438c0f407bebc
+#: ../../../../1.8/docs/faq/admin.txt:92
 msgid "The dynamically-generated admin site is ugly! How can I change it?"
 msgstr "Le site d'administration généré dynamiquement ne me plaît pas. Comment puis-je le modifier ?"
 
-# 1cdfc299e7104986a505fa5b954b51db
-#: ../../../../1.7/docs/faq/admin.txt:94
+# b90f7405af3843d593f6521832a90c85
+#: ../../../../1.8/docs/faq/admin.txt:94
 msgid ""
 "We like it, but if you don't agree, you can modify the admin site's "
 "presentation by editing the CSS stylesheet and/or associated image files. "
@@ -209,58 +209,58 @@ msgid ""
 "changes you'd like to make should be possible by editing the stylesheet."
 msgstr "De notre côté, nous l'apprécions, mais si ce n'est pas votre cas, vous pouvez modifier la présentation du site d'administration en éditant la feuille de style CSS ou les images associées. Le site est construit en utilisant du HTML sémantique et beaucoup de points d'ancrage CSS de sorte que tout changement que vous souhaitez apporter devrait être possible en modifiant la feuille de style."
 
-# a6b1b1f53ebb4e7cbf14547f6cfd74ce
-#: ../../../../1.7/docs/faq/admin.txt:100
+# 712e7e4cd8c8458b95954586c11bdcbe
+#: ../../../../1.8/docs/faq/admin.txt:100
 msgid "What browsers are supported for using the admin?"
 msgstr "Quels sont les navigateurs pris en charge par le site d'administration ?"
 
-# 9d4cdae82d1544138db41c840c2bdcdb
-#: ../../../../1.7/docs/faq/admin.txt:102
+# 1705996c3f7e4feeb7117f0382f8fd39
+#: ../../../../1.8/docs/faq/admin.txt:102
 msgid ""
 "The admin provides a fully-functional experience to `YUI's A-grade`_ "
 "browsers, with the notable exception of IE6, which is not supported."
 msgstr "Le site d'administration offre une expérience fonctionnelle complète pour les navigateurs `de niveau A de YUI`_, à l'exception notable de IE6 qui n'est plus pris en charge."
 
-# ab054b4639744e75a14a3e4e75b7abb4
-#: ../../../../1.7/docs/faq/admin.txt:105
+# 5bc670bcab9d4aceb856c0474e51990e
+#: ../../../../1.8/docs/faq/admin.txt:105
 msgid ""
 "There *may* be minor stylistic differences between supported browsers—for "
 "example, some browsers may not support rounded corners. These are considered"
 " acceptable variations in rendering."
 msgstr "Des différences stylistiques mineures *peuvent* surgir entre les navigateurs pris en charge — par exemple, certains navigateurs ne gèrent pas les coins arrondis. Celles-ci sont considérées comme des variations acceptables en terme de rendu."
 
-# 7fa0244ea7a447a18f6580bed0956b22
-#: ../../../../1.7/docs/faq/contributing.txt:2
+# c1acb54646894cf6979f5a9aaf1e0410
+#: ../../../../1.8/docs/faq/contributing.txt:2
 msgid "FAQ: Contributing code"
 msgstr "FAQ : contribution au code"
 
-# 368f3d50ff4d440eadf1df3b8f6ce005
-#: ../../../../1.7/docs/faq/contributing.txt:5
+# 4ddf758b869b486c946e1e46467c3ccf
+#: ../../../../1.8/docs/faq/contributing.txt:5
 msgid "How can I get started contributing code to Django?"
 msgstr "Comment puis-je commencer à contribuer au code de Django ?"
 
-# a243efa950ee4f9fa4922039d2783ce9
-#: ../../../../1.7/docs/faq/contributing.txt:7
+# 365c654f888440f7bd255b3ffc966875
+#: ../../../../1.8/docs/faq/contributing.txt:7
 msgid ""
 "Thanks for asking! We've written an entire document devoted to this "
 "question. It's titled :doc:`Contributing to Django "
 "</internals/contributing/index>`."
 msgstr "Merci d'avoir posé la question ! Nous avons écrit une documentation complète sur cette question. Elle se nomme :doc:`Contribution à Django </internals/contributing/index>`."
 
-# a7f6e37a3b63488e83a01667bd95fb93
-#: ../../../../1.7/docs/faq/contributing.txt:11
+# fd273880a07148168bdebd0c3c8f64a1
+#: ../../../../1.8/docs/faq/contributing.txt:11
 msgid ""
 "I submitted a bug fix in the ticket system several weeks ago. Why are you "
 "ignoring my patch?"
 msgstr "J'ai soumis un correctif dans le système de tickets il y a maintenant plusieurs semaines. Pourquoi avez-vous ignoré mon correctif ?"
 
-# eb6b3c145d8c40fa9c37152c452f2553
-#: ../../../../1.7/docs/faq/contributing.txt:13
+# 84c5d7a2aad24538bf5bdb126e386086
+#: ../../../../1.8/docs/faq/contributing.txt:13
 msgid "Don't worry: We're not ignoring you!"
 msgstr "Ne vous inquiétez pas : nous ne vous ignorons pas !"
 
-# 9923fefb675e4e2c9e8b26949c7ff24a
-#: ../../../../1.7/docs/faq/contributing.txt:15
+# e8482d63b3d1432f929a73aeedce5a2d
+#: ../../../../1.8/docs/faq/contributing.txt:15
 msgid ""
 "It's important to understand there is a difference between \"a ticket is "
 "being ignored\" and \"a ticket has not been attended to yet.\" Django's "
@@ -269,8 +269,8 @@ msgid ""
 " prioritize."
 msgstr "Il est important de comprendre la différence entre « le ticket est ignoré » et « le ticket n'a pas encore été traité ». Le système de tickets de Django contient des centaines de tickets ouverts, avec divers degrés d'impact sur ​​la fonctionnalité de l'utilisateur final, et les développeurs de Django doivent les analyser et les classer par priorité."
 
-# 3d9905f96a8240c4870648a2c6d9c10d
-#: ../../../../1.7/docs/faq/contributing.txt:20
+# e4f4085933c44f6ca86af0692bff484f
+#: ../../../../1.8/docs/faq/contributing.txt:20
 msgid ""
 "On top of that: the people who work on Django are all volunteers. As a "
 "result, the amount of time that we have to work on the framework is limited "
@@ -278,39 +278,39 @@ msgid ""
 "we may not be able to spend as much time on Django as we might want."
 msgstr "En plus de cela, les personnes travaillant sur Django sont toutes volontaires. Par conséquent, le temps qu'elles consacrent à travailler sur Django est limité et varie chaque semaine en fonction de leur temps libre. Si elles sont occupées, elles ne peuvent pas passer autant de temps sur Django qu'elles le voudraient."
 
-# db4483289d1648a29c9fdf1d23b627fc
-#: ../../../../1.7/docs/faq/contributing.txt:25
+# 924ed28d95594bd79a31cdaa690011cb
+#: ../../../../1.8/docs/faq/contributing.txt:25
 msgid ""
 "The best way to make sure tickets do not get hung up on the way to checkin "
 "is to make it dead easy, even for someone who may not be intimately familiar"
 " with that area of the code, to understand the problem and verify the fix:"
 msgstr "La meilleure façon de s'assurer que les tickets ne soient pas abandonnés en cours de route est de les rendre facile à comprendre et à vérifier, même pour quelqu'un qui n'est pas très familier avec la zone du code concernée :"
 
-# 96ca79f8209c46d585a934da7f2cb414
-#: ../../../../1.7/docs/faq/contributing.txt:29
+# 5483770014aa43b08248c8f1c6685abe
+#: ../../../../1.8/docs/faq/contributing.txt:29
 msgid ""
 "Are there clear instructions on how to reproduce the bug? If this touches a "
-"dependency (such as Pillow/PIL), a contrib module, or a specific database, "
-"are those instructions clear enough even for someone not familiar with it?"
-msgstr "Y a-t-il des instructions détaillées sur la manière de reproduire un bogue ? Si cela affecte une dépendance (telle que Pillow/PIL), un module contrib ou une base de données spécifique, les instructions sont-elles assez précises même pour quelqu'un qui n'est pas familier de ces éléments ?"
+"dependency (such as Pillow), a contrib module, or a specific database, are "
+"those instructions clear enough even for someone not familiar with it?"
+msgstr "Y a t'il des instructions détaillées sur la manière de reproduire un bogue ? Si cela affecte une dépendance (telle que Pillow), un module contrib, ou une base de données spécifique, les instructions sont elles assez précises même pour quelqu'un qui n'y est pas familier ?"
 
-# d629d5f292bb4ac0bbc555073f591282
-#: ../../../../1.7/docs/faq/contributing.txt:34
+# 3782d07129254bb8863d8d8d4dac85c0
+#: ../../../../1.8/docs/faq/contributing.txt:34
 msgid ""
 "If there are several patches attached to the ticket, is it clear what each "
 "one does, which ones can be ignored and which matter?"
 msgstr "S'il y a plusieurs correctifs joints au ticket, est-ce qu'il est facile de voir ce que chaque correctif fait, lesquels peuvent être ignorés et lesquels sont intéressants ?"
 
-# a5356bf3049a4a06936de2e4c9be7d99
-#: ../../../../1.7/docs/faq/contributing.txt:37
+# 2c851052dd2046af80a5bf6787948a61
+#: ../../../../1.8/docs/faq/contributing.txt:37
 msgid ""
 "Does the patch include a unit test? If not, is there a very clear "
 "explanation why not? A test expresses succinctly what the problem is, and "
 "shows that the patch actually fixes it."
 msgstr "Est-ce que le correctif inclut des tests unitaires ? Sinon, est-ce qu'il y a une explication précise du pourquoi ? Un test explique succinctement la nature du problème et montre que le correctif le règle vraiment."
 
-# cccd18cd113d473f96fd43a77761aecc
-#: ../../../../1.7/docs/faq/contributing.txt:41
+# 5bed330e2c664901a8c349950189d174
+#: ../../../../1.8/docs/faq/contributing.txt:41
 msgid ""
 "If your patch stands no chance of inclusion in Django, we won't ignore it --"
 " we'll just close the ticket. So if your ticket is still open, it doesn't "
@@ -318,13 +318,13 @@ msgid ""
 "yet."
 msgstr "Si votre correctif n'a aucune chance d'être inclus dans Django, nous n'allons pas l'ignorer mais juste fermer le ticket. Donc si votre ticket est toujours ouvert, cela ne signifie pas que l'on vous ignore ; nous n'avons juste pas encore eu le temps de l'examiner."
 
-# 15d5c654d88041139c7b2f9707c535aa
-#: ../../../../1.7/docs/faq/contributing.txt:46
+# b3f82ad464674709871a9210a46cc53c
+#: ../../../../1.8/docs/faq/contributing.txt:46
 msgid "When and how might I remind the core team of a patch I care about?"
 msgstr "Quand et comment devrais-je relancer l'équipe principale à propos d'un correctif qui me tient à cœur ?"
 
-# 895526f7244b453bba7b153dd85ccae1
-#: ../../../../1.7/docs/faq/contributing.txt:48
+# b480c2fa67364c4c8cc61f488171ae3e
+#: ../../../../1.8/docs/faq/contributing.txt:48
 msgid ""
 "A polite, well-timed message to the mailing list is one way to get "
 "attention. To determine the right time, you need to keep an eye on the "
@@ -336,15 +336,15 @@ msgid ""
 "example -- you're much more likely to get a productive response."
 msgstr "Un message poli et adressé au bon moment à la liste de diffusion est une des manières d'obtenir l'attention. Pour déterminer le bon moment, vous devez garder un œil sur la planification. Si vous envoyez un message lorsque les principaux développeurs tentent de respecter une date butoir pour une fonctionnalité ou qu'ils essayent de gérer une phase de planification, vous ne recevrez pas l'attention que vous nécessitez. En revanche, si vous attirez l'attention sur un ticket lorsque les principaux développeurs prêtent une attention particulière aux bogues -- juste avant un sprint de correction de bogues, ou à l'approche de la publication d'une version bêta par exemple -- vous aurez beaucoup plus de chances d'obtenir une réponse constructive."
 
-# 3d2ab6fe4cea4a3d9e2d1effe287a3f6
-#: ../../../../1.7/docs/faq/contributing.txt:57
+# 4366952e74724ad38be8b152e0f30d98
+#: ../../../../1.8/docs/faq/contributing.txt:57
 msgid ""
 "Gentle IRC reminders can also work -- again, strategically timed if "
 "possible. During a bug sprint would be a very good time, for example."
 msgstr "De subtils rappels sur IRC peuvent aussi fonctionner -- encore une fois, stratégiquement placés dans le temps. Par exemple durant un sprint de résolution de bogues."
 
-# 176c7a86de7148acb99b09c256914043
-#: ../../../../1.7/docs/faq/contributing.txt:60
+# a7f95558721a48778db9211574290596
+#: ../../../../1.8/docs/faq/contributing.txt:60
 msgid ""
 "Another way to get traction is to pull several related tickets together. "
 "When the core developers sit down to fix a bug in an area they haven't "
@@ -355,8 +355,8 @@ msgid ""
 "multiple tickets."
 msgstr "Une autre manière de susciter l'attention consiste à regrouper plusieurs tickets liés. Lorsque les développeurs principaux s'attellent à la correction d'un bogue dans un endroit qu'ils n'ont pas touché depuis longtemps, il leur faut du temps pour se souvenir de tous les petits détails du fonctionnement de cette zone du code. Si vous regroupez plusieurs corrections de bogues mineurs aux thèmes communs, vous créez une cible attrayante, puisque le coût pour se remettre à jour sur une zone du code peut être étalé sur plusieurs tickets. "
 
-# d8f461a552b54e3a8b6efac8225f987d
-#: ../../../../1.7/docs/faq/contributing.txt:67
+# 57f4f88884944899b8b8b9c17dc4b0b6
+#: ../../../../1.8/docs/faq/contributing.txt:67
 msgid ""
 "Please refrain from emailing core developers personally, or repeatedly "
 "raising the same issue over and over. This sort of behavior will not gain "
@@ -364,13 +364,13 @@ msgid ""
 " order to get your pet bug addressed."
 msgstr "Retenez-vous d'envoyer un courriel aux principaux développeurs personnellement, ou de faire remonter le même problème de façon répétée. Ce genre de comportement ne vous apportera pas plus d'attention -- et certainement pas le type d'attention dont vous avez besoin pour traiter votre bogue préféré."
 
-# 39afa8fbad6044acb97520f5ff2e8727
-#: ../../../../1.7/docs/faq/contributing.txt:73
+# 67db3ea9dd534b828f7ae208b57a16eb
+#: ../../../../1.8/docs/faq/contributing.txt:73
 msgid "But I've reminded you several times and you keep ignoring my patch!"
 msgstr "Mais je vous ai adressé un rappel plusieurs fois et vous continuez d'ignorer mon correctif !"
 
-# 6c34bac754f7406180a4b0bda4bb3d07
-#: ../../../../1.7/docs/faq/contributing.txt:75
+# 580320e8c41a47b59d4169befe5063ff
+#: ../../../../1.8/docs/faq/contributing.txt:75
 msgid ""
 "Seriously - we're not ignoring you. If your patch stands no chance of "
 "inclusion in Django, we'll close the ticket. For all the other tickets, we "
@@ -378,8 +378,8 @@ msgid ""
 "addressed before others."
 msgstr "Très sérieusement : nous ne vous ignorons pas. Si votre correctif n'a aucune chance d'être inclus dans Django, nous fermerons le ticket. Pour tous les autres tickets, nous devons prioriser nos efforts, ce qui signifie parfois que certains tickets seront traités après certains autres."
 
-# 2ecb530758f94134ab76255ba212897f
-#: ../../../../1.7/docs/faq/contributing.txt:80
+# 6a4291976d264e3ba5e9c6cb5d83c5a9
+#: ../../../../1.8/docs/faq/contributing.txt:80
 msgid ""
 "One of the criteria that is used to prioritize bug fixes is the number of "
 "people that will likely be affected by a given bug. Bugs that have the "
@@ -387,8 +387,8 @@ msgid ""
 "are edge cases."
 msgstr "L'un des critères utilisés pour prioriser les corrections de bogues est le nombre de personnes qui seront probablement affectées par un bogue donné. Les bogues qui peuvent potentiellement affecter de nombreuses personnes recevront généralement la priorité par rapport à des bogues plus marginaux."
 
-# 35b81a384b34480e8cba1a3be6b75e4f
-#: ../../../../1.7/docs/faq/contributing.txt:85
+# 23efc97c8a3a4ba7b91b1553f4d3a1ff
+#: ../../../../1.8/docs/faq/contributing.txt:85
 msgid ""
 "Another reason that bugs might be ignored for while is if the bug is a "
 "symptom of a larger problem. While we can spend time writing, testing and "
@@ -401,8 +401,8 @@ msgid ""
 "future."
 msgstr "Une autre raison pour laquelle des bogues peuvent être ignorés pendant un moment est si le bogue est un symptôme d'un problème plus large. Bien que nous puissions passer du temps à écrire, tester et appliquer nombre de petits correctifs, quelquefois la bonne solution est de reconstruire. Si une reconstruction ou une refactorisation d'un composant particulier a été proposée ou est en cours, vous constaterez que des bogues affectant ce composant ne recevront que peu d'attention. Encore une fois, cela est uniquement pour des raisons de priorisation de ressources rares. En nous concentrant sur la reconstruction, nous pouvons fermer tous les petits bogues d'un seul coup, et avec un peu de chance prévenir d'autres petits bogues de faire leur apparition dans le futur."
 
-# ddc1822c8b6749cca03bbf9e66008cf0
-#: ../../../../1.7/docs/faq/contributing.txt:94
+# e9e7270bc91c462cbca1369873594273
+#: ../../../../1.8/docs/faq/contributing.txt:94
 msgid ""
 "Whatever the reason, please keep in mind that while you may hit a particular"
 " bug regularly, it doesn't necessarily follow that every single Django user "
@@ -415,18 +415,18 @@ msgid ""
 "of making 10 people happy rather than making 1 person happy."
 msgstr "Peu importe la raison, gardez s'il vous plaît à l'esprit que bien que vous puissiez rencontrer régulièrement un bogue en particulier, cela ne veut pas forcément dire que chaque utilisateur de Django rencontrera le même bogue. Différentes personnes utilisent Django de différentes manières, mettent sous contraintes différentes parties du code dans des conditions différentes. Lorsque nous évaluons les priorités relatives, nous essayons généralement de considérer les besoins de la communauté toute entière, pas seulement la sévérité pour un utilisateur en particulier. Cela ne signifie pas que nous pensons que votre problème n'est pas important -- seulement que dans le temps limité à notre disposition, nous privilégierons toujours la possibilité de satisfaire 10 personnes plutôt qu'une seule."
 
-# 5ac8e500163f47c1a84d72d3d2e9a001
-#: ../../../../1.7/docs/faq/general.txt:2
+# 70d0fb62cb6a40eb8887b9218e752a62
+#: ../../../../1.8/docs/faq/general.txt:2
 msgid "FAQ: General"
 msgstr "FAQ : généralités"
 
-# 7c9c74739f124476b89edf808617b7fd
-#: ../../../../1.7/docs/faq/general.txt:5
+# 55f80555cad344f99ed5c7431f21e110
+#: ../../../../1.8/docs/faq/general.txt:5
 msgid "Why does this project exist?"
 msgstr "Pourquoi ce projet existe-t-il ?"
 
-# 4a8cbca4fd334a0aba8fcd5770ea494c
-#: ../../../../1.7/docs/faq/general.txt:7
+# c0b5ae700ccf42dcbca60ebb64955605
+#: ../../../../1.8/docs/faq/general.txt:7
 msgid ""
 "Django grew from a very practical need: World Online, a newspaper Web "
 "operation, is responsible for building intensive Web applications on "
@@ -435,15 +435,15 @@ msgid ""
 " public launch."
 msgstr "Django a grandi à partir de besoins très concrets : World Online, un éditeur de journal Web, a la charge de construire des applications Web avec des impératifs temporels hérités du journalisme. Dans le rythme soutenu de la salle de presse, World Online ne dispose généralement que de quelques heures pour délivrer une application Web de sa phase d'ébauche jusqu'à sa mise à disposition publique."
 
-# a9c2f7d437874c968f45a1f40707e2f8
-#: ../../../../1.7/docs/faq/general.txt:12
+# 64b78f64f3bd462286d57200e700d696
+#: ../../../../1.8/docs/faq/general.txt:12
 msgid ""
 "At the same time, the World Online Web developers have consistently been "
 "perfectionists when it comes to following best practices of Web development."
 msgstr "Dans le même temps, les développeurs de World Online ont toujours été perfectionnistes quant au suivi des bonnes pratiques de développement Web."
 
-# 87eca374f45f4d6fa50fc88bdf73390f
-#: ../../../../1.7/docs/faq/general.txt:15
+# 551eacf847824626b0a9aebe53088653
+#: ../../../../1.8/docs/faq/general.txt:15
 msgid ""
 "In fall 2003, the World Online developers (Adrian Holovaty and Simon "
 "Willison) ditched PHP and began using Python to develop its Web sites. As "
@@ -453,8 +453,8 @@ msgid ""
 " adding improvements over two years."
 msgstr "À l'automne 2003, les développeurs de World Online (Adrian Holovaty et Simon Willison) ont abandonné PHP au profit de Python pour développer leurs sites Web. Tout en développant intensément des sites interactifs riches tels que Lawrence.com, ils commencèrent à composer un environnement Web générique leur permettant de construire des applications Web de plus en plus vite. Il l'améliorèrent constamment pendant deux ans."
 
-# 58f89e0d32d24dc29eed34e6bc96e8d8
-#: ../../../../1.7/docs/faq/general.txt:22
+# 02f395a0e65a4cfc8646210a46e3fa12
+#: ../../../../1.8/docs/faq/general.txt:22
 msgid ""
 "In summer 2005, World Online decided to open-source the resulting software, "
 "Django. Django would not be possible without a whole host of open-source "
@@ -463,117 +463,116 @@ msgid ""
 "community."
 msgstr "En été 2005, World Online accepta de libérer le logiciel ainsi réalisé, Django. Django n'aurait pas pu exister sans un ensemble de projets libres, `Apache`_, `Python`_ et `PostgreSQL`_ pour n'en nommer que quelques-uns. Nous sommes ravis de pouvoir reverser quelque chose à la communauté du libre."
 
-# 0c7872abe61a4822aa8843d8ee50b3d9
-#: ../../../../1.7/docs/faq/general.txt:32
+# 07ea930958ca42b68a0850d03d76944b
+#: ../../../../1.8/docs/faq/general.txt:32
 msgid "What does \"Django\" mean, and how do you pronounce it?"
 msgstr "Que signifie « Django », et comment le prononcer ?"
 
-# df6a8d6a56fb4f83a7ea1ba78335fa1b
-#: ../../../../1.7/docs/faq/general.txt:34
+# 73a856ee932049989493339c35473293
+#: ../../../../1.8/docs/faq/general.txt:34
 msgid ""
 "Django is named after `Django Reinhardt`_, a gypsy jazz guitarist from the "
 "1930s to early 1950s. To this day, he's considered one of the best "
 "guitarists of all time."
 msgstr "Django est nommé en hommage à `Django Reinhardt`_, un guitariste de jazz d'origine gitane des années 1930 jusqu'au début des années 1950. À ce jour, il est considéré comme l'un des meilleurs guitaristes de tous les temps."
 
-# f8b1a85664d54adfa9f4021bc81ea2ed
-#: ../../../../1.7/docs/faq/general.txt:37
+# 0b66b958f44542269657fd7b0bbf6b62
+#: ../../../../1.8/docs/faq/general.txt:37
 msgid "Listen to his music. You'll like it."
 msgstr "Écoutez sa musique. Vous apprécierez."
 
-# edd5d752cc25481ab14b917905a8c614
-#: ../../../../1.7/docs/faq/general.txt:39
+# eac40facf35f4d8bbaf918a5aaaa1c87
+#: ../../../../1.8/docs/faq/general.txt:39
 msgid ""
 "Django is pronounced **JANG**-oh. Rhymes with FANG-oh. The \"D\" is silent."
 msgstr "Django se prononce **JANG**-oh. Cela rime avec FANG-oh. Le « D » est silencieux."
 
-# f8e1dcc8d53b480798847c853913db19
-#: ../../../../1.7/docs/faq/general.txt:41
+# abca226dedf7416a88af345ad631b168
+#: ../../../../1.8/docs/faq/general.txt:41
 msgid "We've also recorded an `audio clip of the pronunciation`_."
 msgstr "Nous avons également enregistré une `séquence audio de la prononciation`_."
 
-# 36679aa7170e4082a032fe7450e2cc9b
-#: ../../../../1.7/docs/faq/general.txt:47
+# 36db443977674854930acc12fa7f0b1b
+#: ../../../../1.8/docs/faq/general.txt:47
 msgid "Is Django stable?"
 msgstr "Est-ce que Django est stable ?"
 
-# 054cb219c3fb48a19ca7aad35dd0182a
-#: ../../../../1.7/docs/faq/general.txt:49
+# a9e2bca329d7417dbfc4cdb3d51d7be8
+#: ../../../../1.8/docs/faq/general.txt:49
 msgid ""
 "Yes, it's quite stable. Companies like Disqus, Instagram, Pinterest, and "
 "Mozilla have been using Django for many years. Sites built on Django have "
 "weathered traffic spikes of over 50 thousand hits per second."
 msgstr "Oui, c'est stable. Des entreprises comme Disqus, Instagram, Pinterest et Mozilla utilisent Django depuis plusieurs années. Les sites construits avec Django ont essuyé des pics de trafic allant jusqu'à 50 milles hits par seconde."
 
-# 3109e1cd706d466b9add91c366167033
-#: ../../../../1.7/docs/faq/general.txt:54
+# 072c34e7c04045f796db429d07f74d81
+#: ../../../../1.8/docs/faq/general.txt:54
 msgid "Does Django scale?"
 msgstr "Est-ce que Django a la capacité de monter en charge ?"
 
-# 968371e997424285b1fb39ea6266cad5
-#: ../../../../1.7/docs/faq/general.txt:56
+# 04a6aa894a5148b3b89cbe200e067cc7
+#: ../../../../1.8/docs/faq/general.txt:56
 msgid ""
 "Yes. Compared to development time, hardware is cheap, and so Django is "
 "designed to take advantage of as much hardware as you can throw at it."
 msgstr "Oui. Comparé au temps de développement, le matériel est bon marché, donc Django est conçu pour profiter au maximum du matériel que vous lui mettez à disposition."
 
-# ec5868a93f1345c9b4e4390e643ce601
-#: ../../../../1.7/docs/faq/general.txt:59
+# ee7b815f1cbc4536bdf6b0e297635cb7
+#: ../../../../1.8/docs/faq/general.txt:59
 msgid ""
 "Django uses a \"shared-nothing\" architecture, which means you can add "
 "hardware at any level -- database servers, caching servers or "
 "Web/application servers."
 msgstr "Django utilise une architecture « shared-nothing » (« rien de partagé »), ce qui signifie que vous pouvez ajouter du matériel à n'importe quel niveau -- serveurs de bases de données, serveurs de cache ou serveurs Web/applicatifs."
 
-# 87a5192af55b49ffa55033a2d83381f9
-#: ../../../../1.7/docs/faq/general.txt:62
+# a2a509aca7af480f8a0d08f9379a27bf
+#: ../../../../1.8/docs/faq/general.txt:62
 msgid ""
 "The framework cleanly separates components such as its database layer and "
 "application layer. And it ships with a simple-yet-powerful :doc:`cache "
 "framework </topics/cache>`."
 msgstr "Django sépare proprement les composants tels que la couche de base de données et la couche applicative. Et il est livré avec une :doc:`infrastructure de cache</topics/cache>` simple mais puissante."
 
-# 117d9d937a914b7cb3aa948bf05a9fdb
-#: ../../../../1.7/docs/faq/general.txt:67
+# 4f8be73e053b4f63a50b3e7a408aa2ee
+#: ../../../../1.8/docs/faq/general.txt:67
 msgid "Who's behind this?"
 msgstr "Qui est derrière cela ?"
 
-# fec40f80b5ef4459a15cc1173f9d5d8f
-#: ../../../../1.7/docs/faq/general.txt:69
+# 48cf4caf88e7474ea48f48c8b41fce5c
+#: ../../../../1.8/docs/faq/general.txt:69
 msgid ""
 "Django was originally developed at World Online, the Web department of a "
 "newspaper in Lawrence, Kansas, USA. Django's now run by an international "
-"team of volunteers; you can read all about them over at the :doc:`list of "
-"committers </internals/committers>`."
-msgstr "Django a initialement été développé chez World Online, le département Web d'un journal à Lawrence, Kansas, USA. Django est maintenant géré par une équipe internationale de volontaires ; pour en connaître tous les détails, consultez la :doc:`liste des contributeurs </internals/committers>`."
+":doc:`team of volunteers </internals/team>`."
+msgstr "Django fut initialement développé à World Online, le département Web d'un journal à Lawrence, Kansas, USA. Django est maintenant géré par une :doc:`équipe internationale de volontaires </internals/team>`."
 
-# 8bae5d1abf814e489e4714fe8e7ddc0e
-#: ../../../../1.7/docs/faq/general.txt:75
+# e91644d8f1b24a289ecaa99692a55b07
+#: ../../../../1.8/docs/faq/general.txt:74
 msgid "Which sites use Django?"
 msgstr "Quels sites utilisent Django ?"
 
-# 3785abf06af14301a82a85a8bb7e9f64
-#: ../../../../1.7/docs/faq/general.txt:77
+# 6cc1893a163a4b4f897379c2f1c14bfe
+#: ../../../../1.8/docs/faq/general.txt:76
 msgid ""
 "`DjangoSites.org`_ features a constantly growing list of Django-powered "
 "sites."
 msgstr "`DjangoSites.org`_ propose une liste constamment enrichie de sites bâtis avec Django."
 
-# 971a2bf1ca224523b9745f35b33c853c
-#: ../../../../1.7/docs/faq/general.txt:84
+# fce0e24afc4f472488951932cf8b90d6
+#: ../../../../1.8/docs/faq/general.txt:83
 msgid ""
 "Django appears to be a MVC framework, but you call the Controller the "
 "\"view\", and the View the \"template\". How come you don't use the standard"
 " names?"
 msgstr "Django apparaît comme un système MVC, mais vous appelez le contrôleur la « vue », et la vue le « gabarit » (template). Pourquoi n'utilisez-vous pas les noms standards ?"
 
-# 8365fdd25de04e83905866aabe39cee8
-#: ../../../../1.7/docs/faq/general.txt:86
+# 33bf41cc67904ad3bbe82630f5529fc8
+#: ../../../../1.8/docs/faq/general.txt:85
 msgid "Well, the standard names are debatable."
 msgstr "Et bien, les noms standards sont discutables."
 
-# ebf512d8a80d456aa434d0413cf6d23a
-#: ../../../../1.7/docs/faq/general.txt:88
+# ac9fed69f6474e829aa9f41d85bc1086
+#: ../../../../1.8/docs/faq/general.txt:87
 msgid ""
 "In our interpretation of MVC, the \"view\" describes the data that gets "
 "presented to the user. It's not necessarily *how* the data *looks*, but "
@@ -581,15 +580,15 @@ msgid ""
 " you see it.* It's a subtle distinction."
 msgstr "Dans notre interprétation du MVC, la « vue » décrit les données qui sont présentées à l'utilisateur. Ce n'est pas nécessairement *comment* les données se *présentent*, mais *quelles* données sont présentées. La vue décrit *quelles données vous voyez*, pas *comment vous les voyez*. C'est une distinction subtile."
 
-# 970df32defdb4f03a25d2ffde40e2892
-#: ../../../../1.7/docs/faq/general.txt:93
+# c311555d760e482aa2d56e5d181647be
+#: ../../../../1.8/docs/faq/general.txt:92
 msgid ""
 "So, in our case, a \"view\" is the Python callback function for a particular"
 " URL, because that callback function describes which data is presented."
 msgstr "Donc, dans notre cas, une « vue » est la fonction de rappel Python pour une URL donnée, car la fonction de rappel détermine quelles données sont présentées."
 
-# db5f60e19fac41fdb1ba2f95f391db53
-#: ../../../../1.7/docs/faq/general.txt:96
+# dc2c7b85698345bd916d2386eadd8f68
+#: ../../../../1.8/docs/faq/general.txt:95
 msgid ""
 "Furthermore, it's sensible to separate content from presentation -- which is"
 " where templates come in. In Django, a \"view\" describes which data is "
@@ -597,37 +596,37 @@ msgid ""
 "*how* the data is presented."
 msgstr "De plus, il est sensé de séparer le contenu de la présentation -- c'est là que les gabarits entrent en jeu. Dans Django, une « vue » décrit quelles données sont présentées, mais une vue délègue normalement la suite à un gabarit, qui décrit *comment* les données sont présentées."
 
-# 926a1590ce3a439cb1960cf88c9beea1
-#: ../../../../1.7/docs/faq/general.txt:101
+# 561aca9e2a1c4b31bf5980aa41bea6c7
+#: ../../../../1.8/docs/faq/general.txt:100
 msgid ""
 "Where does the \"controller\" fit in, then? In Django's case, it's probably "
 "the framework itself: the machinery that sends a request to the appropriate "
 "view, according to the Django URL configuration."
 msgstr "Où se place alors le « contrôleur » ? Dans le cas de Django, il s'agit probablement du système en lui-même : la machinerie qui envoie une requête à la vue appropriée, selon la configuration d'URL de Django."
 
-# 0451b96a34854b6da147388cb25e4daa
-#: ../../../../1.7/docs/faq/general.txt:105
+# cd3bfe30dc9a424e964abfa051a7de71
+#: ../../../../1.8/docs/faq/general.txt:104
 msgid ""
 "If you're hungry for acronyms, you might say that Django is a \"MTV\" "
 "framework -- that is, \"model\", \"template\", and \"view.\" That breakdown "
 "makes much more sense."
 msgstr "Si vous êtes friand d'acronymes, vous pourriez dire que Django est un système « MTV » -- à savoir « modèle », « template » (gabarit) et « vue ». Cette décomposition fait davantage sens."
 
-# 87ea1777b17848df8dbfa31004b2a543
-#: ../../../../1.7/docs/faq/general.txt:109
+# 101febc855ce47d5afef5f11d2998684
+#: ../../../../1.8/docs/faq/general.txt:108
 msgid ""
 "At the end of the day, of course, it comes down to getting stuff done. And, "
 "regardless of how things are named, Django gets stuff done in a way that's "
 "most logical to us."
 msgstr "Au final bien sûr, il s'agit surtout de faire le boulot. Et peu importe comment les choses sont appelées, Django fait son travail d'une manière qui nous semble la plus logique."
 
-# d71b2f411b004ee0b8b766b05a342c14
-#: ../../../../1.7/docs/faq/general.txt:114
+# ae833888fd4041b881f96fb6cdf8eede
+#: ../../../../1.8/docs/faq/general.txt:113
 msgid "<Framework X> does <feature Y> -- why doesn't Django?"
 msgstr "Le <Système X> contient la <fonctionnalité Y> -- pourquoi Django ne le fait-il pas ?"
 
-# 0981340e62a848ed8c1e3114e89c85b5
-#: ../../../../1.7/docs/faq/general.txt:116
+# 29102d15f3054020bd08ed2f33b918ac
+#: ../../../../1.8/docs/faq/general.txt:115
 msgid ""
 "We're well aware that there are other awesome Web frameworks out there, and "
 "we're not averse to borrowing ideas where appropriate. However, Django was "
@@ -636,33 +635,33 @@ msgid ""
 "sufficient reason to add a given feature to Django."
 msgstr "Nous sommes bien conscients qu'il existe d'autres applicatifs Web géniaux, et nous ne sommes pas opposés à l'idée d'emprunter des idées lorsque c'est approprié. Cependant, Django fut développé précisément car nous étions mécontents du status quo, soyez donc conscient que « parce que le <Système X> le fait » n'est pas une raison suffisante pour ajouter une fonctionnalité donnée à Django."
 
-# c996ebdb4fca49f18860b1afcca47e6b
-#: ../../../../1.7/docs/faq/general.txt:123
+# 82d44b1f867c4126a12f05e927c369a1
+#: ../../../../1.8/docs/faq/general.txt:122
 msgid ""
 "Why did you write all of Django from scratch, instead of using other Python "
 "libraries?"
 msgstr "Pourquoi avoir écrit Django de zéro, au lieu d'utiliser d'autres bibliothèques Python ?"
 
-# 4ed7ae68aa644b65a73fdacf1d1220a0
-#: ../../../../1.7/docs/faq/general.txt:125
+# d254edaeab084ee0b11145cd0b9ba7f0
+#: ../../../../1.8/docs/faq/general.txt:124
 msgid ""
 "When Django was originally written a couple of years ago, Adrian and Simon "
 "spent quite a bit of time exploring the various Python Web frameworks "
 "available."
 msgstr "Lorsque Django a été écrit il y a quelques années, Adrian et Simon ont passé un bout de temps à explorer les divers applicatifs Web Python disponibles."
 
-# 9b78c4d710ea42d9b8e4da853a46745e
-#: ../../../../1.7/docs/faq/general.txt:129
+# bab7f46aebc14654b944e5f492d56390
+#: ../../../../1.8/docs/faq/general.txt:128
 msgid "In our opinion, none of them were completely up to snuff."
 msgstr "À notre avis, aucun d'entre eux ne correspondait à ce qui était attendu."
 
-# f81af89da81f45e794f7564ec9953cf0
-#: ../../../../1.7/docs/faq/general.txt:131
+# 53d7c1806ef542afa7e5662756f560d7
+#: ../../../../1.8/docs/faq/general.txt:130
 msgid "We're picky. You might even call us perfectionists. (With deadlines.)"
 msgstr "Nous sommes pointilleux. Vous pourriez même nous traiter de perfectionnistes (avec des délais à tenir)."
 
-# 5bb712a942cc44cd9730dacc905d4d55
-#: ../../../../1.7/docs/faq/general.txt:133
+# 39734cb63dfa48ff8d4cd262abec4ebc
+#: ../../../../1.8/docs/faq/general.txt:132
 msgid ""
 "Over time, we stumbled across open-source libraries that did things we'd "
 "already implemented. It was reassuring to see other people solving similar "
@@ -671,48 +670,48 @@ msgid ""
 "several production settings -- and our own code met our needs delightfully."
 msgstr "Au fil du temps, nous sommes tombés sur des bibliothèques libres qui faisaient des choses que nous avions déjà implémentées. Cela était rassurant de voir d'autre personnes résoudre des problèmes similaires avec des méthodes similaires, mais il était trop tard pour intégrer du code extérieur : nous avions déjà écrit, testé et implémenté nos propres morceaux du système dans plusieurs environnements de production -- et notre propre code satisfaisait grandement nos besoins."
 
-# b426b26976a841949282cfc98cb67922
-#: ../../../../1.7/docs/faq/general.txt:139
+# b92a813fba9e4445950860ef687262d2
+#: ../../../../1.8/docs/faq/general.txt:138
 msgid ""
 "In most cases, however, we found that existing frameworks/tools inevitably "
 "had some sort of fundamental, fatal flaw that made us squeamish. No tool fit"
 " our philosophies 100%."
 msgstr "Dans la plupart des cas cependant, nous avons constaté que les applicatifs/outils existants présentaient inévitablement certains défauts fondamentaux et critiques qui nous laissaient sur notre faim. Aucun outil ne correspondait à notre philosophie à 100 %."
 
-# 032c81819aae480a861c2c9d48236fd9
-#: ../../../../1.7/docs/faq/general.txt:143
+# c46e85a202614df1b6ab9cda64039153
+#: ../../../../1.8/docs/faq/general.txt:142
 msgid "Like we said: We're picky."
 msgstr "Comme dit précédemment : nous sommes pointilleux."
 
-# 40b294619d2e4865b924b8572d2f5888
-#: ../../../../1.7/docs/faq/general.txt:145
+# a8e75206f88243a4917d95896880b982
+#: ../../../../1.8/docs/faq/general.txt:144
 msgid ""
 "We've documented our philosophies on the :doc:`design philosophies page "
 "</misc/design-philosophies>`."
 msgstr "Nous avons détaillé notre philosophie sur la :doc:`page de la philosophie de conception </misc/design-philosophies>`."
 
-# 5f9a3ab4302b45ccaecc5f0d1e7f7e4d
-#: ../../../../1.7/docs/faq/general.txt:149
+# 2939ca2f01c049799d843654c61ab685
+#: ../../../../1.8/docs/faq/general.txt:148
 msgid "Is Django a content-management-system (CMS)?"
 msgstr "Django est-il un système de gestion de contenus (CMS) ?"
 
-# b6f6886515e243f49f7d286d31971194
-#: ../../../../1.7/docs/faq/general.txt:151
+# bc68390959e44f93a952fda55c89c0f4
+#: ../../../../1.8/docs/faq/general.txt:150
 msgid ""
 "No, Django is not a CMS, or any sort of \"turnkey product\" in and of "
 "itself. It's a Web framework; it's a programming tool that lets you build "
 "Web sites."
 msgstr "Non, Django n'est pas en soi un CMS, ou n'importe quelle autre sorte de « produit clé-en-main ». C'est un applicatif Web ; un outil de programmation qui vous permet de construire des sites Web."
 
-# 55115981a6cf405a9df06cfc838e1010
-#: ../../../../1.7/docs/faq/general.txt:154
+# 2cd22697ada140b3af4ef9477eafe3b1
+#: ../../../../1.8/docs/faq/general.txt:153
 msgid ""
 "For example, it doesn't make much sense to compare Django to something like "
 "Drupal_, because Django is something you use to *create* things like Drupal."
 msgstr "Par exemple, cela n'a pas beaucoup de sens de comparer Django à quelque chose comme Drupal_, parce que Django est utilisé pour *créer* des systèmes comme Drupal."
 
-# 142a337198394ac0889f3c04e8955e58
-#: ../../../../1.7/docs/faq/general.txt:157
+# c09818de0683408ea17c4fe312ed5350
+#: ../../../../1.8/docs/faq/general.txt:156
 msgid ""
 "Of course, Django's automatic admin site is fantastic and timesaving -- but "
 "the admin site is one module of Django the framework. Furthermore, although "
@@ -721,28 +720,28 @@ msgid ""
 "that means!)."
 msgstr "Évidemment, l'administration automatique de Django est fantastique et fait gagner du temps -- mais le site d'administration n'est qu'un module du système Django. De plus, bien que Django offre des commodités pour construire des applications de type CMS, ça ne signifie pas qu'il n'est pas approprié à la construction d'applications autres que des CMS (si cette distinction à un sens !)."
 
-# 3649b644410e4b83a7cb79adc641dfc4
-#: ../../../../1.7/docs/faq/general.txt:166
+# 15441cc3841f41309c7afec370c43b73
+#: ../../../../1.8/docs/faq/general.txt:165
 msgid "How can I download the Django documentation to read it offline?"
 msgstr "Comment puis-je télécharger la documentation Django pour la lire hors ligne ?"
 
-# f3ee27f693b4461f92aedb2fc1bfd3f7
-#: ../../../../1.7/docs/faq/general.txt:168
+# 5b02e69f00e64a9fa9ad48e914b219b3
+#: ../../../../1.8/docs/faq/general.txt:167
 msgid ""
 "The Django docs are available in the ``docs`` directory of each Django "
 "tarball release. These docs are in reST (reStructuredText) format, and each "
 "text file corresponds to a Web page on the official Django site."
 msgstr "La documentation de Django est disponible dans le répertoire ``docs`` de chaque version empaquetée de Django. Cette documentation est écrite au format reST (reStructuredText), et chaque fichier texte correspond à une page Web sur le site officiel de Django."
 
-# 21f492b99a79418caafe1c8745ab8993
-#: ../../../../1.7/docs/faq/general.txt:172
+# 93cdeeed9c444f8a8140ac6579b7980c
+#: ../../../../1.8/docs/faq/general.txt:171
 msgid ""
 "Because the documentation is `stored in revision control`_, you can browse "
 "documentation changes just like you can browse code changes."
 msgstr "Grâce au fait que la documentation est `versionnée`_, vous pouvez naviguer à travers les modifications de la documentation tout comme vous le feriez avec le code."
 
-# 81c5ec7959ae4693a99eadd315f41b08
-#: ../../../../1.7/docs/faq/general.txt:175
+# db78873612c84116b04bc63612905d33
+#: ../../../../1.8/docs/faq/general.txt:174
 msgid ""
 "Technically, the docs on Django's site are generated from the latest "
 "development versions of those reST documents, so the docs on the Django site"
@@ -750,113 +749,113 @@ msgid ""
 "release."
 msgstr "Techniquement, la documentation du site de Django est générée à partir de la toute dernière version en cours de développement de ses documents reST, il se peut donc qu'elle contienne plus d'informations que la documentation livrée avec la dernière version de Django."
 
-# f11eb70aa4e44835aa3fd196c421e079
-#: ../../../../1.7/docs/faq/general.txt:182
+# 61cac7591c69453084dbe62cc408689a
+#: ../../../../1.8/docs/faq/general.txt:181
 msgid "Where can I find Django developers for hire?"
 msgstr "Où puis-je trouver des développeurs Django à recruter ?"
 
-# 34e38dae42d44bafa1438eb7bc7d2bb1
-#: ../../../../1.7/docs/faq/general.txt:184
+# fe3657cd542646c6ba3887abda4d4230
+#: ../../../../1.8/docs/faq/general.txt:183
 msgid ""
 "Consult our `developers for hire page`_ for a list of Django developers who "
 "would be happy to help you."
 msgstr "Consultez notre `page des développeurs à recruter`_ pour une liste de développeurs Django qui seraient heureux de vous aider."
 
-# 5996e7f916e84e27b449a97f8a433417
-#: ../../../../1.7/docs/faq/general.txt:187
+# 23c084adfacc479fac4ed3133cb70b4f
+#: ../../../../1.8/docs/faq/general.txt:186
 msgid ""
 "You might also be interested in posting a job to https://djangogigs.com/ . "
 "If you want to find Django-capable people in your local area, try "
 "https://people.djangoproject.com/ ."
 msgstr "Vous pourriez aussi être intéressé par la publication d'une offre d'emploi sur https://djangogigs.com/ . Si vous souhaitez trouver une personne compétente en Django dans votre région, essayez https://people.djangoproject.com/ ."
 
-# e2c4379bda6643d6b0d7ab76e3ced9e1
-#: ../../../../1.7/docs/faq/general.txt:194
+# 0d47c423e95344469f927ed5d5d187c7
+#: ../../../../1.8/docs/faq/general.txt:193
 msgid "How do I cite Django?"
 msgstr "Comment dois-je citer Django ?"
 
-# f5de207152bd441e974499c64e2a7e6c
-#: ../../../../1.7/docs/faq/general.txt:196
+# e6f732a869934c7db04192428c4cc428
+#: ../../../../1.8/docs/faq/general.txt:195
 msgid ""
 "It's difficult to give an official citation format, for two reasons: "
 "citation formats can vary wildly between publications, and citation "
 "standards for software are still a matter of some debate."
 msgstr "Il est difficile de donner un format officiel de citation, pour deux raisons : les formats de citation peuvent varier énormément entre les publications, et les normes de citation pour les logiciels sont encore un sujet de débat."
 
-# 2ffa67231e854f2b8833283a1ec6de24
-#: ../../../../1.7/docs/faq/general.txt:200
+# e4872a02b1544136800013da9e143e21
+#: ../../../../1.8/docs/faq/general.txt:199
 msgid "For example, `APA style`_,  would dictate something like::"
 msgstr "Par exemple, le `style APA`_ imposerait quelque chose comme ::"
 
-# 47660509a54f4ef59b0c29027fb965c6
-#: ../../../../1.7/docs/faq/general.txt:204
+# ec445d5ca58a4ac285fabe76a1223e52
+#: ../../../../1.8/docs/faq/general.txt:203
 msgid ""
 "However, the only true guide is what your publisher will accept, so get a "
 "copy of those guidelines and fill in the gaps as best you can."
 msgstr "Cependant, le seul vrai guide est celui que votre éditeur acceptera, donc munissez-vous d'une copie de ses règles et comblez les lacunes de votre mieux."
 
-# 1a5ed77e6f3d4bc29961f873d3dce67f
-#: ../../../../1.7/docs/faq/general.txt:207
+# ce9062164bb64b5f8b0667b3ad840235
+#: ../../../../1.8/docs/faq/general.txt:206
 msgid ""
 "If your referencing style guide requires a publisher name, use \"Django "
 "Software Foundation\"."
 msgstr "Si votre guide stylistique de référence nécessite un nom d'éditeur, utilisez « Django Software Foundation »."
 
-# 23a70e20aa224cfdb01f2d3f0c6b41c6
-#: ../../../../1.7/docs/faq/general.txt:210
+# 4ea4a9e644c143849ef1d54aedaf64b8
+#: ../../../../1.8/docs/faq/general.txt:209
 msgid "If you need a publishing location, use \"Lawrence, Kansas\"."
 msgstr "Si vous avez besoin d'une adresse d'édition, utilisez « Lawrence, Kansas »."
 
-# 4c931d5a13b044a6bc2722d1ed993a6a
-#: ../../../../1.7/docs/faq/general.txt:212
+# c148a495420c43cb930b5174f563bf21
+#: ../../../../1.8/docs/faq/general.txt:211
 msgid "If you need a web address, use https://djangoproject.com."
 msgstr "Si vous avez besoin d'une adresse Web, utilisez https://djangoproject.com."
 
-# e73ae0141e424c0cacc8f56623a17beb
-#: ../../../../1.7/docs/faq/general.txt:214
+# 305f3313cdd8442f8dbfe647f9b63903
+#: ../../../../1.8/docs/faq/general.txt:213
 msgid "If you need a name, just use \"Django\", without any tagline."
 msgstr "Si vous avez besoin d'un nom, utilisez simplement « Django », sans le slogan."
 
-# 74288566b1804ab8acac2c143ba85d68
-#: ../../../../1.7/docs/faq/general.txt:216
+# 834f5d34d8ab4181bc852f2c1d474139
+#: ../../../../1.8/docs/faq/general.txt:215
 msgid ""
 "If you need a publication date, use the year of release of the version "
 "you're referencing (e.g., 2013 for v1.5)"
 msgstr "Si vous avez besoin d'une date de publication, utilisez l'année de publication de la version que vous référencez (par ex. 2013 pour la version 1.5)."
 
-# 83368e7768714ee6947e116c5d0ada74
-#: ../../../../1.7/docs/faq/help.txt:2
+# d22d71e2172947c0b05ad0261e2e91af
+#: ../../../../1.8/docs/faq/help.txt:2
 msgid "FAQ: Getting Help"
 msgstr "FAQ : Obtenir de l'aide"
 
-# f0b6e9df45da4fda8e5f6cdb1c5de168
-#: ../../../../1.7/docs/faq/help.txt:5
+# 9587f6def7c94a5184745ed3950269fe
+#: ../../../../1.8/docs/faq/help.txt:5
 msgid "How do I do X? Why doesn't Y work? Where can I go to get help?"
 msgstr "Comment puis-je faire X ? Pourquoi Y ne fonctionne-t-il pas ? Où puis-je obtenir de l'aide ?"
 
-# be42e59db8594f4daab924f5342f5ce3
-#: ../../../../1.7/docs/faq/help.txt:7
+# 3ccbc01b759c419fb854cd948086ca50
+#: ../../../../1.8/docs/faq/help.txt:7
 msgid ""
 "If this FAQ doesn't contain an answer to your question, you might want to "
 "try the |django-users| mailing list. Feel free to ask any question related "
 "to installing, using, or debugging Django."
 msgstr "Si cette FAQ ne contient pas réponse à votre question, vous pouvez utiliser la liste de diffusion |django-users|. N'hésitez pas à poser n'importe quelle question sur comment installer, utiliser ou déboguer Django."
 
-# 07a40a7647c443c3b18a04644bea63e5
-#: ../../../../1.7/docs/faq/help.txt:11
+# b8b6c0cc29ac4c50b2c0e6392c2d1ac6
+#: ../../../../1.8/docs/faq/help.txt:11
 msgid ""
 "If you prefer IRC, the `#django IRC channel`_ on the Freenode IRC network is"
 " an active community of helpful individuals who may be able to solve your "
 "problem."
 msgstr "Si vous préférez IRC, le `canal IRC #django`_ sur le réseau IRC Freenode (ou #django-fr pour les francophones) est une communauté active de personnes prêtes à vous aider et à même de résoudre vos problèmes."
 
-# 94af9ac3220d4eaab74995278d077165
-#: ../../../../1.7/docs/faq/help.txt:19
+# 589acbdcf066443182557507d6573c0d
+#: ../../../../1.8/docs/faq/help.txt:19
 msgid "Why hasn't my message appeared on django-users?"
 msgstr "Pourquoi mon message n'apparaît-il pas sur django-users ?"
 
-# a9ddafde6aed4b8fb9ba4dbc550f1377
-#: ../../../../1.7/docs/faq/help.txt:21
+# 2f7bc501ff76420eaecae158cebf2e45
+#: ../../../../1.8/docs/faq/help.txt:21
 msgid ""
 "|django-users| has a lot of subscribers. This is good for the community, as "
 "it means many people are available to contribute answers to questions. "
@@ -864,8 +863,8 @@ msgid ""
 " spammers."
 msgstr "|django-users| possède un grand nombre d'abonnés. C'est une bonne chose pour la communauté, car cela signifie qu'il y a beaucoup de personnes disponibles pour apporter des réponses aux questions.  Malheureusement, cela veut aussi dire que |django-users| est une cible de choix pour les polluposteurs."
 
-# 0e1703d778e74420a4d72c418bacb80e
-#: ../../../../1.7/docs/faq/help.txt:26
+# 9760ed1d3a954c8ba5a37f952da7c487
+#: ../../../../1.8/docs/faq/help.txt:26
 msgid ""
 "In order to combat the spam problem, when you join the |django-users| "
 "mailing list, we manually moderate the first message you send to the list. "
@@ -874,20 +873,20 @@ msgid ""
 "apologize for any inconvenience that this policy may cause."
 msgstr "Afin de lutter contre le problème du pourriel, lorsque vous rejoignez la liste de diffusion |django-users| nous modérons manuellement le premier message que vous envoyez à la liste. Cela signifie que les polluposteurs se font prendre, mais aussi que votre première question à la liste pourrait prendre un peu plus de temps pour obtenir une réponse. Nous nous excusons pour tout inconvénient que cette politique peut entraîner."
 
-# a74bb54752fd48899c5e3b3bc112e899
-#: ../../../../1.7/docs/faq/help.txt:33
+# d638003d4a1443eb9df329695099caf7
+#: ../../../../1.8/docs/faq/help.txt:33
 msgid "Nobody on django-users answered my question! What should I do?"
 msgstr "Personne n'a répondu à ma question sur django-users ! Que dois-je faire ?"
 
-# 56f5759277014fa1a5c49798e4303a18
-#: ../../../../1.7/docs/faq/help.txt:35
+# 3c8d376be85241798ef32d769be9b227
+#: ../../../../1.8/docs/faq/help.txt:35
 msgid ""
 "Try making your question more specific, or provide a better example of your "
 "problem."
 msgstr "Essayez de préciser votre question ou de fournir un meilleur exemple de votre problème."
 
-# 481f74a6d1444458aeb8ef2eb6f11764
-#: ../../../../1.7/docs/faq/help.txt:38
+# 8f9292b5462a4880bbeedd97e49d7bf9
+#: ../../../../1.8/docs/faq/help.txt:38
 msgid ""
 "As with most open-source mailing lists, the folks on |django-users| are "
 "volunteers. If nobody has answered your question, it may be because nobody "
@@ -897,8 +896,8 @@ msgid ""
 "Freenode IRC network."
 msgstr "Comme avec la plupart des listes de diffusion libres, les gens sur |django-users| sont des bénévoles. Si personne n'a répondu à votre question, ce peut être parce que personne ne connaît la réponse ; il se peut que personne ne comprenne la question ou que toute personne susceptible d'aider est occupée. Une chose que vous pourriez faire est de poser la question sur IRC -- visitez le `canal IRC #django`_ sur le réseau IRC Freenode."
 
-# ab333174d91c467899d743cbdef059de
-#: ../../../../1.7/docs/faq/help.txt:45
+# 75456688b92941bdb55c182bc5905b40
+#: ../../../../1.8/docs/faq/help.txt:45
 msgid ""
 "You might notice we have a second mailing list, called |django-developers| "
 "-- but please don't email support questions to this mailing list. This list "
@@ -906,25 +905,25 @@ msgid ""
 " question there is considered quite impolite."
 msgstr "Vous remarquerez peut-être que nous avons une deuxième liste de diffusion appelée |django-developers|; mais s'il vous plaît, n'envoyez aucune question de support sur cette liste de diffusion. Cette liste est destinée à la discussion sur le développement de Django lui-même. Y poser une question de support technique est considéré comme très impoli."
 
-# 36ef8fa8d9df49edbe1fda2ef7e88696
-#: ../../../../1.7/docs/faq/help.txt:51
+# 43c28cb6a30c45c58ab7e44f6d8f2df9
+#: ../../../../1.8/docs/faq/help.txt:51
 msgid "I think I've found a bug! What should I do?"
 msgstr "Je pense avoir trouvé un bogue ! Que dois-je faire ?"
 
-# 29cf0aacd1c54c68870a2120ebe57904
-#: ../../../../1.7/docs/faq/help.txt:53
+# 5b5e453c6e2b4ac1970d40c3f294592f
+#: ../../../../1.8/docs/faq/help.txt:53
 msgid ""
 "Detailed instructions on how to handle a potential bug can be found in our "
 ":ref:`Guide to contributing to Django <reporting-bugs>`."
 msgstr "Les instructions détaillées sur la manière de gérer un bogue potentiel sont disponibles dans notre :ref:`Guide de contribution à Django <reporting-bugs>`."
 
-# 38749bdc570e43a7894cfec684f5e675
-#: ../../../../1.7/docs/faq/help.txt:57
+# b488de75d8814043a8f0eb76b4e47f22
+#: ../../../../1.8/docs/faq/help.txt:57
 msgid "I think I've found a security problem! What should I do?"
 msgstr "Je pense avoir trouvé un problème de sécurité ! Que dois-je faire ?"
 
-# f0400e054883482aa0ec34d48ab475f7
-#: ../../../../1.7/docs/faq/help.txt:59
+# 48edbbd7234949d89b67dd5ca5f40fd4
+#: ../../../../1.8/docs/faq/help.txt:59
 msgid ""
 "If you think you've found a security problem with Django, please send a "
 "message to security@djangoproject.com. This is a private list only open to "
@@ -932,8 +931,8 @@ msgid ""
 "publicly readable."
 msgstr "Si vous pensez avoir trouvé un problème de sécurité avec Django, veuillez envoyer un message à security@djangoproject.com. C'est une liste privée uniquement ouverte à des développeurs Django de longue date et extrêmement fiables, et ses archives ne sont pas lisibles publiquement."
 
-# 8938175d237a49829a824a64609a2b69
-#: ../../../../1.7/docs/faq/help.txt:63
+# b4904a287fd147db8fb1aee3f719d9d3
+#: ../../../../1.8/docs/faq/help.txt:63
 msgid ""
 "Due to the sensitive nature of security issues, we ask that if you think you"
 " have found a security problem, *please* don't send a message to one of the "
@@ -943,58 +942,58 @@ msgid ""
 "that defect."
 msgstr "De par la nature sensible des failles de sécurité, nous vous *prions* au cas où vous pensez avoir trouvé un problème de sécurité de ne surtout pas envoyer de message à l'une des listes de diffusion publiques. Django possède une :ref:`politique de gestion des failles de sécurité <reporting-security-issues>`; bien qu'un défaut puisse être très important, nous souhaitons minimiser tout dommage qui pourrait être infligé par une annonce publique de ce défaut."
 
-# cb455066df0048e9b01fd865906cd6e2
-#: ../../../../1.7/docs/faq/index.txt:3
+# fde0da7f8d7e4bc0949936422f294579
+#: ../../../../1.8/docs/faq/index.txt:3
 msgid "Django FAQ"
 msgstr "FAQ Django"
 
-# 5524d2271b584528a5b09edc3a68da74
-#: ../../../../1.7/docs/faq/install.txt:2
+# 2c6827fb69794354961281a70f3b2346
+#: ../../../../1.8/docs/faq/install.txt:2
 msgid "FAQ: Installation"
 msgstr "FAQ : Installation"
 
-# b040ef1c6bff4aee87b5b7a3c338d1d5
-#: ../../../../1.7/docs/faq/install.txt:5
+# cb069c3a05b244f5b761c243680a92a9
+#: ../../../../1.8/docs/faq/install.txt:5
 msgid "How do I get started?"
 msgstr "Comment débuter ?"
 
-# 0f83af8b56bd471da8823153878d8c9e
-#: ../../../../1.7/docs/faq/install.txt:7
+# 9f67efafd94449ca8af92ad4390ecbca
+#: ../../../../1.8/docs/faq/install.txt:7
 msgid "`Download the code`_."
 msgstr "`Téléchargez le code`_."
 
-# 338300bfec814584a5099ab250c2f884
-#: ../../../../1.7/docs/faq/install.txt:8
+# 0c29d4ee422a4e12b90e70554a23da6b
+#: ../../../../1.8/docs/faq/install.txt:8
 msgid "Install Django (read the :doc:`installation guide </intro/install>`)."
 msgstr "Installez Django (lisez le :doc:`guide d'installation </intro/install>`)."
 
-# 886539c3724a48e3beb721e45ffc4f9d
-#: ../../../../1.7/docs/faq/install.txt:9
+# f4df80368edb47be8fcf039391551a43
+#: ../../../../1.8/docs/faq/install.txt:9
 msgid "Walk through the :doc:`tutorial </intro/tutorial01>`."
 msgstr "Parcourez le :doc:`tutoriel </intro/tutorial01>`."
 
-# 8367a5832e2a431a87a3725f837649f1
-#: ../../../../1.7/docs/faq/install.txt:10
+# 0dcba86564ed44f6bea43fd45a0476c7
+#: ../../../../1.8/docs/faq/install.txt:10
 msgid ""
 "Check out the rest of the :doc:`documentation </index>`, and `ask "
 "questions`_ if you run into trouble."
 msgstr "Consultez le reste de la :doc:`documentation </index>` et `posez des questions`_ si vous rencontrez un problème."
 
-# dc63448b10ce4b788dae6f9bafb04459
-#: ../../../../1.7/docs/faq/install.txt:17
+# 3ec0750a60eb4f1aacfdfd52d61f28b5
+#: ../../../../1.8/docs/faq/install.txt:17
 msgid "What are Django's prerequisites?"
 msgstr "Quels sont les prérequis de Django ?"
 
-# 7455b9096eba4080a5a74b714c3ff9a0
-#: ../../../../1.7/docs/faq/install.txt:19
+# a026a080c94c476b871950fae1ab231e
+#: ../../../../1.8/docs/faq/install.txt:19
 msgid ""
 "Django requires Python, specifically Python 2.7 or 3.2 and above. Other "
 "Python libraries may be required for some uses, but you'll receive an error "
 "about it as they're needed."
 msgstr "Django nécessite Python, plus précisément Python 2.7,  3.2 ou plus récent. D'autres bibliothèques Python peuvent être nécessaires pour certains besoins, mais vous serez averti par une erreur le cas échéant."
 
-# 8fffdde158fe45f29d5798dd4680b12c
-#: ../../../../1.7/docs/faq/install.txt:23
+# 886e9fdd9da34bb98e0bbeddb0db1e80
+#: ../../../../1.8/docs/faq/install.txt:23
 msgid ""
 "For a development environment -- if you just want to experiment with Django "
 "-- you don't need to have a separate Web server installed; Django comes with"
@@ -1004,8 +1003,8 @@ msgid ""
 "</howto/deployment/index>` for some popular alternatives."
 msgstr "Pour un environnement de développement -- si vous souhaitez juste tester Django -- vous n'avez pas besoin d'avoir un serveur Web installé; Django est livré avec son propre serveur léger de développement. Pour un environnement de production, Django suit la spécification WSGI, :pep:`3333`, ce qui signifie qu'il peut fonctionner sur une variété de plates-formes serveur. Voir :doc:`Déploiement Django </howto/deployment/index>` pour des alternatives populaires."
 
-# 5da6049b8f9d4cdb900fbce0b8bca39e
-#: ../../../../1.7/docs/faq/install.txt:30
+# 4f7121bbfb2349f1a6ad5587e872c2ee
+#: ../../../../1.8/docs/faq/install.txt:30
 msgid ""
 "If you want to use Django with a database, which is probably the case, "
 "you'll also need a database engine. PostgreSQL_ is recommended, because "
@@ -1013,76 +1012,76 @@ msgid ""
 "supported."
 msgstr "Si vous souhaitez utiliser Django avec une base de données, ce qui est probablement le cas, vous aurez également besoin d'un moteur de base de données. PostgreSQL_ est recommandé, parce que nous sommes des admirateurs de PostgreSQL, mais MySQL_, `SQLite 3`_ et Oracle_ sont également pris en charge."
 
-# ec23bd40b6fe453aa8650f0bf76de1c3
-#: ../../../../1.7/docs/faq/install.txt:41
+# 4e05041ab2af484faced61f583a3f767
+#: ../../../../1.8/docs/faq/install.txt:41
 msgid "What Python version can I use with Django?"
 msgstr "Quelle version de Python puis-je utiliser avec Django ?"
 
-# 750bef48cbad4ab9a6c8bffebdf7eab4
-#: ../../../../1.7/docs/faq/install.txt:44
+# cd0e7238335748a293c6b0c96ac0efda
+#: ../../../../1.8/docs/faq/install.txt:44
 msgid "Django version"
 msgstr "Version de Django"
 
-# b319fc0a32b44e9d9cbf00339a5629ab
-#: ../../../../1.7/docs/faq/install.txt:44
+# 0cb33452a8b542b6bb154625ca844228
+#: ../../../../1.8/docs/faq/install.txt:44
 msgid "Python versions"
 msgstr "Versions de Python"
 
-# 058896ad133c43f292b1cdb7528ecdc5
-#: ../../../../1.7/docs/faq/install.txt:46
+# 8fe6a7a71e2d4076a9fc6339c977f3e8
+#: ../../../../1.8/docs/faq/install.txt:46
 msgid "1.4"
 msgstr "1.4"
 
-# 57af57b673bd465aa27cead603ee9891
-#: ../../../../1.7/docs/faq/install.txt:46
+# 0bc9de63910d4b9b8c8a47d4500afce8
+#: ../../../../1.8/docs/faq/install.txt:46
 msgid "2.5, 2.6, 2.7"
 msgstr "2.5, 2.6, 2.7"
 
-# 4af2609da8154ddeb1e563758fbdc0bb
-#: ../../../../1.7/docs/faq/install.txt:47
-msgid "1.5"
-msgstr "1.5"
-
-# 16297c4cc6eb4bceadf4d6708a6c6438
-#: ../../../../1.7/docs/faq/install.txt:47
-msgid "2.6, 2.7 and 3.2, 3.3 (experimental)"
-msgstr "2.6, 2.7 et 3.2, 3.3 (expérimental)"
-
-# 6796677209e34c7ca4d64c44ad8dd1b3
-#: ../../../../1.7/docs/faq/install.txt:48
+# 774a21127a824f499872c5754c708f11
+#: ../../../../1.8/docs/faq/install.txt:47
 msgid "1.6"
 msgstr "1.6"
 
-# 4bfdda31c77447d7bcb74d81bec91334
-#: ../../../../1.7/docs/faq/install.txt:48
+# 8162471114b74cc9b821cdb02591c695
+#: ../../../../1.8/docs/faq/install.txt:47
 msgid "2.6, 2.7 and 3.2, 3.3"
 msgstr "2.6, 2.7 et 3.2, 3.3"
 
-# 1b6a2240781144459ab499cf699997cb
-#: ../../../../1.7/docs/faq/install.txt:49
+# fb465fac6ddb442b9cba8d550c6d76a1
+#: ../../../../1.8/docs/faq/install.txt:48
 msgid "**1.7, 1.8**"
 msgstr "**1.7, 1.8**"
 
-# 1434a1a279524051b9ed1df54b835988
-#: ../../../../1.7/docs/faq/install.txt:49
+# 45ffcad637ed47a7ae8cb53eaa5cd1d7
+#: ../../../../1.8/docs/faq/install.txt:48
 msgid "**2.7** and **3.2, 3.3, 3.4**"
 msgstr "**2.7** et **3.2, 3.3, 3.4**"
 
-# af57e5b5203e4444bb3e1a3bd8300fca
-#: ../../../../1.7/docs/faq/install.txt:52
+# 6b087889dfb947ba94d7e657fdc99244
+#: ../../../../1.8/docs/faq/install.txt:49
+msgid "1.9"
+msgstr "1.9"
+
+# 7468fc6cd8864a97a2e7c18f6f136310
+#: ../../../../1.8/docs/faq/install.txt:49
+msgid "2.7, 3.3, 3.4, 3.5"
+msgstr "2.7, 3.3, 3.4, 3.5"
+
+# 30bea357954c4284a72294e967bd0915
+#: ../../../../1.8/docs/faq/install.txt:52
 msgid ""
 "For each version of Python, only the latest micro release (A.B.C) is "
 "officially supported. You can find the latest micro version for each series "
 "on the `Python download page <https://www.python.org/downloads/>`_."
 msgstr "Pour chaque version de Python, seule la dernière publication micro (A.B.C) est officiellement prise en charge. Cette dernière publication est toujours disponible sur la `page de téléchargement de Python <https://www.python.org/downloads/>`_."
 
-# e348afd014064877b1ac306258f5febe
-#: ../../../../1.7/docs/faq/install.txt:57
+# ce896d4db3164fb5a91319196f2ea2c0
+#: ../../../../1.8/docs/faq/install.txt:57
 msgid "What Python version should I use with Django?"
 msgstr "Quelle version de Python devrais-je utiliser avec Django ?"
 
-# 21b163dd1b20445fb23255b4dc4804d2
-#: ../../../../1.7/docs/faq/install.txt:59
+# 3068056d64f044688341674f48d63bfd
+#: ../../../../1.8/docs/faq/install.txt:59
 msgid ""
 "As of Django 1.6, Python 3 support is considered stable and you can safely "
 "use it in production. See also :doc:`/topics/python3`. However, the "
@@ -1090,24 +1089,24 @@ msgid ""
 "applications to Python 3."
 msgstr "Depuis Django 1.6, la prise en charge de Python 3 est considérée comme stable et vous pouvez l'utiliser en toute sécurité en production. Voir aussi :doc:`/topics/python3`. Cependant, la communauté est toujours dans le processus de migration à Python 3 de paquets tiers et d'applications."
 
-# b53a05115a2845d9b4b0570c9dd07bab
-#: ../../../../1.7/docs/faq/install.txt:64
+# 8590d2031c3247838d94b649bfee2558
+#: ../../../../1.8/docs/faq/install.txt:64
 msgid ""
 "If you're starting a new project, and the dependencies you plan to use work "
 "on Python 3, you should use Python 3. If they don't, consider contributing "
 "to the porting efforts, or stick to Python 2."
 msgstr "Si vous commencez un nouveau projet et que les dépendances que vous prévoyez d'utiliser fonctionnent avec Python 3, vous devriez utiliser Python 3. Si elles ne le sont pas, envisagez de contribuer aux efforts de migration, ou restez à Python 2."
 
-# 11f6eb074d7841e5b773f325c532748b
-#: ../../../../1.7/docs/faq/install.txt:68
+# 4546b7bbabc24e50b2de40b72f30a493
+#: ../../../../1.8/docs/faq/install.txt:68
 msgid ""
 "Since newer versions of Python are often faster, have more features, and are"
 " better supported, all else being equal, we recommend that you use the "
 "latest 2.x.y or 3.x.y release."
 msgstr "Comme les nouvelles versions de Python sont souvent plus rapides, ont plus de fonctionnalités et sont mieux prises en charge, toutes choses étant égales par ailleurs, nous vous recommandons d'utiliser la dernière version 2.x.y ou 3.x.y."
 
-# db0df6049efe4e1daa29aa12259321cf
-#: ../../../../1.7/docs/faq/install.txt:72
+# 81e8bf01b85f46c8bcfe758d85f822af
+#: ../../../../1.8/docs/faq/install.txt:72
 msgid ""
 "You don't lose anything in Django by using an older release, but you don't "
 "take advantage of the improvements and optimizations in newer Python "
@@ -1115,13 +1114,13 @@ msgid ""
 "to set their own version requirements."
 msgstr "Vous ne perdez rien dans Django en utilisant une version antérieure, mais vous ne profitez pas des améliorations et optimisations des nouvelles publications de Python. Les applications tierces fonctionnant avec Django sont, bien entendu, libres de fixer leurs propres exigences de version."
 
-# 6834796ace76479e8911208929d65338
-#: ../../../../1.7/docs/faq/install.txt:78
+# 4d80bc0bf354458a995df4dea7854ccc
+#: ../../../../1.8/docs/faq/install.txt:78
 msgid "Should I use the stable version or development version?"
 msgstr "Dois-je utiliser la version stable ou la version de développement ?"
 
-# 609f435049ef4053a3a60ce9edb77d6d
-#: ../../../../1.7/docs/faq/install.txt:80
+# c3f31250f3d045beb262d26ada217df0
+#: ../../../../1.8/docs/faq/install.txt:80
 msgid ""
 "Generally, if you're using code in production, you should be using a stable "
 "release. The Django project publishes a full stable release every nine "
@@ -1131,33 +1130,33 @@ msgid ""
 "upgrading when the next official version is released."
 msgstr "En règle générale, si vous utilisez du code en production, vous devriez utiliser la version stable. L'équipe Django publie une version complète stable tous les neuf mois environ, avec des mises à jour correctives entre chaque version. Ces versions stables contiennent l'API couverte par nos garanties de rétrocompatibilité ; si vous écrivez du code avec les versions stables, vous ne devriez pas avoir de soucis de mise à jour lors de la sortie de la version officielle suivante."
 
-# 84e0c793b9b942a990349bf55526bb85
-#: ../../../../1.7/docs/faq/models.txt:2
+# 30bf291ec4dc461d9581671c631933db
+#: ../../../../1.8/docs/faq/models.txt:2
 msgid "FAQ: Databases and models"
 msgstr "FAQ : Bases de données et modèles"
 
-# 9bbd3d0994cd4aa2a7cf5dda0ca6e50d
-#: ../../../../1.7/docs/faq/models.txt:7
+# 5b26417ab0174856ab77d93926504535
+#: ../../../../1.8/docs/faq/models.txt:7
 msgid "How can I see the raw SQL queries Django is running?"
 msgstr "Comment est-ce que je peux voir les requêtes SQL brutes exécutées par Django ?"
 
-# 419b276dd0c94723b939d1cbf52781fc
-#: ../../../../1.7/docs/faq/models.txt:9
+# 7b0c3e10b21f429f9222643a42a3b192
+#: ../../../../1.8/docs/faq/models.txt:9
 msgid ""
 "Make sure your Django :setting:`DEBUG` setting is set to ``True``. Then, "
 "just do this::"
 msgstr "Vérifiez que le réglage Django :setting:`DEBUG` est défini à ``True``. Ensuite, vous avez juste à faire ceci ::"
 
-# 62af574c57b44169940f095d7eaf223f
-#: ../../../../1.7/docs/faq/models.txt:17
+# d4fa161027bb4d8596f7fef474a849f3
+#: ../../../../1.8/docs/faq/models.txt:17
 msgid ""
 "``connection.queries`` is only available if :setting:`DEBUG` is ``True``. "
 "It's a list of dictionaries in order of query execution. Each dictionary has"
 " the following::"
 msgstr "``connection.queries`` est uniquement disponible si :setting:`DEBUG` vaut ``True``. C'est une liste de dictionnaires dans l'ordre d’exécution des requêtes. Chaque dictionnaire contient ce qui suit ::"
 
-# 1df0d877ad0444e9801cc9615f7d6c9e
-#: ../../../../1.7/docs/faq/models.txt:24
+# 37473aacf4e840979f1c321a9414b218
+#: ../../../../1.8/docs/faq/models.txt:24
 msgid ""
 "``connection.queries`` includes all SQL statements -- INSERTs, UPDATES, "
 "SELECTs, etc. Each time your app hits the database, the query will be "
@@ -1165,57 +1164,64 @@ msgid ""
 "under SQLite <sqlite-connection-queries>`."
 msgstr "``connection.queries`` comprend toutes les instructions SQL -- INSERT, UPDATE, SELECT, etc. Chaque fois que votre application accède à la base de données, les requêtes sont journalisées. Notez que le SQL enregistré ici peut être :ref:`mal mis en forme sous SQLite <sqlite-connection-queries>`."
 
-# 76cc30e69a054cb38425ad8cf6e03d21
-#: ../../../../1.7/docs/faq/models.txt:29
+# 09f32786117e471492dd1f13223ae2e4
+#: ../../../../1.8/docs/faq/models.txt:29
 msgid ""
 "If you are using :doc:`multiple databases</topics/db/multi-db>`, you can use"
 " the same interface on each member of the ``connections`` dictionary::"
 msgstr "Si vous utilisez :doc:`plusieurs bases de données </topics/db/multi-db>`, vous pouvez utiliser la même interface sur chaque membre du dictionnaire ``connections``::"
 
-# b93d94711e2946a39d3564994c1296eb
-#: ../../../../1.7/docs/faq/models.txt:36
+# 8b1b8b4459c14c578a1c33f8cdbb8ea1
+#: ../../../../1.8/docs/faq/models.txt:35
+msgid ""
+"If you need to clear the query list manually at any point in your functions,"
+" just call ``reset_queries()``, like this::"
+msgstr "Si vous avez besoin d'effacer manuellement la liste des requêtes à tout moment dans vos fonctions, il suffit d'appeler ``reset_queries()`` comme ceci ::"
+
+# c268b4259d0543a8b1c662b33985b130
+#: ../../../../1.8/docs/faq/models.txt:42
 msgid "Can I use Django with a pre-existing database?"
 msgstr "Puis-je utiliser Django avec une base de données pré-existante ?"
 
-# 44e1907ad84c4ee781a834bae69a2b46
-#: ../../../../1.7/docs/faq/models.txt:38
+# 3986ad1ab59041eea431df4a0cc2ed9d
+#: ../../../../1.8/docs/faq/models.txt:44
 msgid ""
 "Yes. See :doc:`Integrating with a legacy database </howto/legacy-"
 "databases>`."
 msgstr "Oui. Voir :doc:`Intégration avec une base de données existante </howto/legacy-databases>`."
 
-# 80d267b92f904254ba687097f09fdb9f
-#: ../../../../1.7/docs/faq/models.txt:41
+# 0e62870c233c49ab8a427265a44ca592
+#: ../../../../1.8/docs/faq/models.txt:47
 msgid "If I make changes to a model, how do I update the database?"
 msgstr "Si je fais des changements à un modèle, comment puis-je mettre à jour la base de données ?"
 
-# 984836993c2a48f2a3e99466dba32cab
-#: ../../../../1.7/docs/faq/models.txt:43
+# 6ef9991c623c4cfeba2fe25ca02c968c
+#: ../../../../1.8/docs/faq/models.txt:49
 msgid ""
 "Take a look at Django's support for :mod:`schema migrations "
 "<django.db.migrations>`."
 msgstr "Jetez un œil à la prise en charge des :mod:`migrations de schéma <django.db.migrations>` par Django."
 
-# 9b7fae14debe4542bf124694bf535f0c
-#: ../../../../1.7/docs/faq/models.txt:46
+# 0bbfe2be76964cd5b99c2c75260e0fd1
+#: ../../../../1.8/docs/faq/models.txt:52
 msgid ""
 "If you don't mind clearing data, your project's ``manage.py`` utility has a "
 ":djadmin:`flush` option to reset the database to the state it was in "
 "immediately after :djadmin:`migrate` was executed."
 msgstr "Si cela ne vous dérange pas d'effacer les données, l'utilitaire ``manage.py`` a une option :djadmin:`flush` pour réinitialiser la base de données à l'état où elle se trouvait immédiatement après que :djadmin:`migrate` fut exécuté."
 
-# 3825a777cf1b43ceb0c2246eae3850b8
-#: ../../../../1.7/docs/faq/models.txt:51
+# fd0ac51d92dc4ef2b4041d914f2b2575
+#: ../../../../1.8/docs/faq/models.txt:57
 msgid "Do Django models support multiple-column primary keys?"
 msgstr "Est-ce que les modèles de Django prennent en charge les clés primaires sur plusieurs colonnes ?"
 
-# 8a750a0b2e9449c695c8e4005a1c93e7
-#: ../../../../1.7/docs/faq/models.txt:53
+# 298cdaa8f1b344fe8c4ee68e61ce9263
+#: ../../../../1.8/docs/faq/models.txt:59
 msgid "No. Only single-column primary keys are supported."
 msgstr "Non. Seules les clés primaires sur une seule colonne sont prises en charge."
 
-# 70a531f6998248d28dde6fcd626ff32a
-#: ../../../../1.7/docs/faq/models.txt:55
+# 1ccb365a682740469056eb095194fa7d
+#: ../../../../1.8/docs/faq/models.txt:61
 msgid ""
 "But this isn't an issue in practice, because there's nothing stopping you "
 "from adding other constraints (using the ``unique_together`` model option or"
@@ -1225,35 +1231,35 @@ msgid ""
 "able to specify an object to edit or delete."
 msgstr "Mais ce n'est pas un problème en pratique, car rien ne vous empêche d'ajouter d'autres contraintes (en utilisant l'option de modèle ``unique_together`` ou en créant la contrainte directement dans votre base de données), et de faire respecter l'unicité à ce niveau. Les clés primaires sur une seule colonne sont nécessaires au bon fonctionnement de l'interface d'administration ; par exemple quand il y a besoin d'un moyen simple pour être en mesure de désigner un objet à modifier ou à supprimer."
 
-# cc17244816804396b7d8c1316a2c3a21
-#: ../../../../1.7/docs/faq/models.txt:63
+# 1a29de83eabe4b74b6ce7c5caa79022e
+#: ../../../../1.8/docs/faq/models.txt:69
 msgid "Does Django support NoSQL databases?"
 msgstr "Django prend-il en charge les bases de données NoSQL ?"
 
-# f4c131117ea649ae9cb8107a3c49425a
-#: ../../../../1.7/docs/faq/models.txt:65
+# 16f8af3756014ae0a500cfd0bacfabe5
+#: ../../../../1.8/docs/faq/models.txt:71
 msgid ""
 "NoSQL databases are not officially supported by Django itself. There are, "
 "however, a number of side project and forks which allow NoSQL functionality "
 "in Django, like `Django non-rel`_."
 msgstr "Les bases de données NoSQL ne sont pas officiellement prises en charge par Django lui-même. Il existe toutefois un certain nombre de projets externes permettant d'exploiter la fonctionnalité NoSQL dans Django, comme `Django non-rel`_."
 
-# b6a598ae97ce402c88b34ce8f51a6c8c
-#: ../../../../1.7/docs/faq/models.txt:69
+# 094bbcd5e6b34a4dbbee431197442339
+#: ../../../../1.8/docs/faq/models.txt:75
 msgid ""
 "You can also take a look on `the wiki page`_ which discusses some "
 "alternatives."
 msgstr "Vous pouvez également consulter la `page de Wiki`_ qui discute de certaines alternatives."
 
-# b74ba7d980dd4a0684db44b2b3a4d418
-#: ../../../../1.7/docs/faq/models.txt:75
+# 4c19938c68fa4d9595cac8adb613733e
+#: ../../../../1.8/docs/faq/models.txt:81
 msgid ""
 "How do I add database-specific options to my CREATE TABLE statements, such "
 "as specifying MyISAM as the table type?"
 msgstr "Comment puis-je ajouter des options spécifiques à la base de données dans mes commandes CREATE TABLE, telles que spécifier MyISAM comme type de table ?"
 
-# 60f81aef98d14ed6ad8de125af5da238
-#: ../../../../1.7/docs/faq/models.txt:77
+# a816b4aa02694c86a99158e42f42c954
+#: ../../../../1.8/docs/faq/models.txt:83
 msgid ""
 "We try to avoid adding special cases in the Django code to accommodate all "
 "the database-specific options such as table type, etc. If you'd like to use "
@@ -1262,119 +1268,97 @@ msgid ""
 "``ALTER TABLE`` statements that do what you want to do."
 msgstr "Nous essayons d'éviter d'ajouter des cas spéciaux dans le code de Django pour accueillir toutes les options spécifiques aux bases de données telles que le type de table, etc. Si vous souhaitez utiliser une de ces options, créez une migration avec une opération :class:`~django.db.migrations.operations.RunSQL` contenant des instructions ``ALTER TABLE`` faisant ce que vous voulez faire."
 
-# cb253f89ceaf419e89935f09be144e1e
-#: ../../../../1.7/docs/faq/models.txt:83
+# 317c88481a5f4d63b57238ae102c48af
+#: ../../../../1.8/docs/faq/models.txt:89
 msgid ""
 "For example, if you're using MySQL and want your tables to use the MyISAM "
 "table type, use the following SQL::"
 msgstr "Par exemple, si vous utilisez MySQL et que vous voulez que vos tables utilisent le type de table MyISAM, utilisez le code SQL suivant ::"
 
-# 81691473511d4d22a3b7548ae2af022c
-#: ../../../../1.7/docs/faq/troubleshooting.txt:3
+# 00ebdfb33a4846fdbd8fc1c5cce328d6
+#: ../../../../1.8/docs/faq/troubleshooting.txt:3
 msgid "Troubleshooting"
 msgstr "Dépannage"
 
-# d5854b561989453abbbaf5697e784ef6
-#: ../../../../1.7/docs/faq/troubleshooting.txt:5
+# 8f484e70e0e04837b955e8c15157c18a
+#: ../../../../1.8/docs/faq/troubleshooting.txt:5
 msgid ""
 "This page contains some advice about errors and problems commonly "
 "encountered during the development of Django applications."
 msgstr "Cette page contient des conseils sur les erreurs et les problèmes couramment rencontrés lors du développement d'applications Django."
 
-# 25b959d8798e4ce98679ca0293d67e24
-#: ../../../../1.7/docs/faq/troubleshooting.txt:11
-msgid "Problems running django-admin.py"
-msgstr "Problèmes d'exécution de django-admin.py"
+# 3ba0b4fa30d04d3a8e85678a7a737146
+#: ../../../../1.8/docs/faq/troubleshooting.txt:11
+msgid "Problems running django-admin"
+msgstr "Problèmes d'exécution de django-admin"
 
-# 765cf08ac08747f48a254bb6f5b1b701
-#: ../../../../1.7/docs/faq/troubleshooting.txt:14
-msgid "\"command not found: django-admin.py\""
-msgstr "\"command not found: django-admin.py\""
+# 61b32e8e3b864af7a1ff797991252ac0
+#: ../../../../1.8/docs/faq/troubleshooting.txt:14
+msgid "\"command not found: django-admin\""
+msgstr "\"command not found: django-admin\""
 
-# d612cac8121b4dcab68e402081941243
-#: ../../../../1.7/docs/faq/troubleshooting.txt:16
+# 64d3c3b5b5404b6293314e8fe0bbba56
+#: ../../../../1.8/docs/faq/troubleshooting.txt:16
 msgid ""
-":doc:`django-admin.py </ref/django-admin>` should be on your system path if "
-"you installed Django via ``python setup.py``. If it's not on your path, you "
-"can find it in ``site-packages/django/bin``, where ``site-packages`` is a "
+":doc:`django-admin </ref/django-admin>` should be on your system path if you"
+" installed Django via ``python setup.py``. If it's not on your path, you can"
+" find it in ``site-packages/django/bin``, where ``site-packages`` is a "
 "directory within your Python installation. Consider symlinking to :doc"
-":`django-admin.py </ref/django-admin>` from some place on your path, such as"
-" :file:`/usr/local/bin`."
-msgstr ":doc:`django-admin.py </ref/django-admin>` devrait se trouver dans votre chemin système si vous avez installé Django via ``python setup.py``. S'il n'est pas dans votre chemin, vous pouvez le trouver dans ``site-packages/django/bin``, où ``site-packages`` est situé dans le répertoire de votre installation de Python. Envisagez un lien symbolique de :doc:`django-admin.py </ref/django-admin>` depuis un endroit inclus dans votre chemin, tel que :file:`/usr/local/bin`."
+":`django-admin </ref/django-admin>` from some place on your path, such as "
+":file:`/usr/local/bin`."
+msgstr ":doc:`django-admin </ref/django-admin>` devrait se trouver dans votre chemin système si vous avez installé Django via ``python setup.py``. S'il n'est pas dans votre chemin, vous pouvez le trouver dans ``site-packages/django/bin``, où ``site-packages`` est situé dans le répertoire de votre installation de Python. Envisagez un lien symbolique de :doc:`django-admin.py </ref/django-admin>` depuis un endroit inclus dans votre chemin, tel que :file:`/usr/local/bin`."
 
-# ea1b1e67f52d466b9921ec2f21bf57e9
-#: ../../../../1.7/docs/faq/troubleshooting.txt:24
-msgid "Script name may differ in distribution packages"
-msgstr "Le nom du script peut varier dans les paquets de distribution"
-
-# 0aa2776404d2440fbbe002e3d33bc191
-#: ../../../../1.7/docs/faq/troubleshooting.txt:26
+# 70111e903ef948d4b94a97ad7a18c9c9
+#: ../../../../1.8/docs/faq/troubleshooting.txt:23
 msgid ""
-"If you installed Django using a Linux distribution's package manager (e.g. "
-"``apt-get`` or ``yum``) ``django-admin.py`` may have been renamed to "
-"``django-admin``; use that instead."
-msgstr "Si vous avez installé Django en utilisant le gestionnaire de paquets d'une distribution Linux (par ex. ``apt-get`` ou ``yum``), ``django-admin.py`` a peut-être été renommé ``django-admin``; utilisez alors plutôt ce dernier nom."
+"If ``django-admin`` doesn't work but ``django-admin.py`` does, you're "
+"probably using a version of Django that doesn't match the version of this "
+"documentation. ``django-admin`` is new in Django 1.7."
+msgstr "Si ``django-admin`` ne fonctionne pas mais que ``django-admin.py`` fonctionne, c'est que vous utilisez probablement une version de Django qui ne correspond pas à cette version de la documentation. ``django-admin`` est apparu dans Django 1.7."
 
-# 3fe9a539235649378331950283be6691
-#: ../../../../1.7/docs/faq/troubleshooting.txt:31
+# 65186a20560f431ea80978d5054a2795
+#: ../../../../1.8/docs/faq/troubleshooting.txt:28
 msgid "Mac OS X permissions"
 msgstr "Autorisations de Mac OS X"
 
-# 231130f5e7a3426ba1559f0803340117
-#: ../../../../1.7/docs/faq/troubleshooting.txt:33
+# 88e0a61eb66f49238d149f6e3e8b81c4
+#: ../../../../1.8/docs/faq/troubleshooting.txt:30
 msgid ""
 "If you're using Mac OS X, you may see the message \"permission denied\" when"
-" you try to run ``django-admin.py``. This is because, on Unix-based systems "
+" you try to run ``django-admin``. This is because, on Unix-based systems "
 "like OS X, a file must be marked as \"executable\" before it can be run as a"
 " program. To do this, open Terminal.app and navigate (using the ``cd`` "
-"command) to the directory where :doc:`django-admin.py </ref/django-admin>` "
-"is installed, then run the command ``sudo chmod +x django-admin.py``."
-msgstr "Si vous utilisez Mac OS X, il est possible que le message « permission denied » (permission refusée) apparaisse lorsque vous essayez d'exécuter ``django-admin.py``. C'est parce que, sur les systèmes Unix comme OS X, un fichier doit être marqué comme « exécutable » avant de pouvoir être exécuté comme un programme. Pour ce faire, ouvrez Terminal.app et placez-vous (en utilisant la commande ``cd``) dans le répertoire où :doc:`django-admin.py </ref/django-admin>` est installé, puis exécutez la commande ``sudo chmod + x django-admin.py``."
+"command) to the directory where :doc:`django-admin </ref/django-admin>` is "
+"installed, then run the command ``sudo chmod +x django-admin``."
+msgstr "Si vous utilisez Mac OS X, il est possible que le message « permission denied » (permission refusée) apparaisse lorsque vous essayez d'exécuter ``django-admin``. C'est parce que, sur les systèmes Unix comme OS X, un fichier doit être marqué comme « exécutable » avant de pouvoir être exécuté comme un programme. Pour ce faire, ouvrez Terminal.app et placez-vous (en utilisant la commande ``cd``) dans le répertoire où :doc:`django-admin </ref/django-admin>` est installé, puis exécutez la commande ``sudo chmod + x django-admin``."
 
-# 0a49e05bdb8d4b629932b5e543ddd9cb
-#: ../../../../1.7/docs/faq/troubleshooting.txt:41
-msgid "Running virtualenv on Windows"
-msgstr "Faire fonctionner virtualenv sur Windows"
-
-# 4411f3e8e97e481a8e127eabe991530e
-#: ../../../../1.7/docs/faq/troubleshooting.txt:43
-msgid ""
-"If you used virtualenv_ to :ref:`install Django <installing-official-"
-"release>` on Windows, you may get an ``ImportError`` when you try to run "
-"``django-admin.py``. This is because Windows does not run the Python "
-"interpreter from your virtual environment unless you invoke it directly. "
-"Instead, prefix all commands that use .py files with ``python`` and use the "
-"full path to the file, like so: ``python C:\\pythonXY\\Scripts\\django-"
-"admin.py``."
-msgstr "Si vous avez utilisé virtualenv_ pour :ref:`installer Django <installing-official-release>` sur Windows, vous pouvez obtenir une exception ``ImportError`` lorsque vous essayez d'exécuter ``django-admin.py``. C'est parce que Windows n'exécute pas l'interpréteur Python à partir de votre environnement virtuel, sauf si vous l'appelez directement. Au lieu de cela, faites précéder toutes les commandes qui utilisent des fichiers .py avec ``python`` et utilisez le chemin complet vers le fichier, comme ceci : ``python C:\\pythonXY\\Scripts\\django-admin.py``."
-
-# e4ebd2caeca3412f8efe911d4abb1fda
-#: ../../../../1.7/docs/faq/troubleshooting.txt:54
+# 657b4f928e4440b09d08c3cffe1e518e
+#: ../../../../1.8/docs/faq/troubleshooting.txt:38
 msgid "Miscellaneous"
 msgstr "Divers"
 
-# 1e37eccdfbb14ec5a99ecd269206cb2f
-#: ../../../../1.7/docs/faq/troubleshooting.txt:57
+# 75e59c9a1bf14b5e823140e53f4bc436
+#: ../../../../1.8/docs/faq/troubleshooting.txt:41
 msgid "I'm getting a ``UnicodeDecodeError``. What am I doing wrong?"
 msgstr "J'obtiens une erreur ``UnicodeDecodeError``. Qu'est-ce que je fais de faux ?"
 
-# c3ff45fa082c47d7ba55347388d4fb82
-#: ../../../../1.7/docs/faq/troubleshooting.txt:59
+# 4d698fe53b6a4893993bbd4da988b6b5
+#: ../../../../1.8/docs/faq/troubleshooting.txt:43
 msgid ""
 "This class of errors happen when a bytestring containing non-ASCII sequences"
 " is transformed into a Unicode string and the specified encoding is "
 "incorrect. The output generally looks like this::"
 msgstr "Cette classe d'erreurs se produit lorsqu'une chaîne d'octets contenant des séquences non ASCII est transformée en une chaîne Unicode et que le codage indiqué n'est pas correct. Le résultat ressemble généralement à ceci ::"
 
-# cafc145bd745443f990457bcf96bc199
-#: ../../../../1.7/docs/faq/troubleshooting.txt:66
+# 174444b8e02d43ce9f2a0f32b20a7429
+#: ../../../../1.8/docs/faq/troubleshooting.txt:50
 msgid ""
 "The resolution mostly depends on the context, however here are two common "
 "pitfalls producing this error:"
 msgstr "La résolution dépend beaucoup du contexte, mais voici deux pièges courants qui aboutissent à cette erreur :"
 
-# acfea908f5df4d7ba195adef0ac64696
-#: ../../../../1.7/docs/faq/troubleshooting.txt:69
+# 21304e1fa49d42b991945c685a2fc081
+#: ../../../../1.8/docs/faq/troubleshooting.txt:53
 msgid ""
 "Your system locale may be a default ASCII locale, like the \"C\" locale on "
 "UNIX-like systems (can be checked by the ``locale`` command). If it's the "
@@ -1382,115 +1366,115 @@ msgid ""
 "this to a UTF-8 locale."
 msgstr "La locale de votre système est peut-être une locale ASCII par défaut, comme la locale « C » sur les systèmes de type Unix (se vérifie avec la commande ``locale``). Si c'est le cas, référez-vous à la documentation de votre système pour apprendre comment vous pouvez changer cela et utiliser une locale UTF-8."
 
-# c018e875d22b485899c5416ac73eded5
-#: ../../../../1.7/docs/faq/troubleshooting.txt:74
+# af8e7f67de4844eb9339ce0843b2ea65
+#: ../../../../1.8/docs/faq/troubleshooting.txt:58
 msgid "You created raw bytestrings, which is easy to do on Python 2::"
 msgstr "Vous avez créé des chaînes d'octets brutes, ce qui arrive facilement avec Python 2 ::"
 
-# 4b65f00b160e49ad8e882a0124b7c0c3
-#: ../../../../1.7/docs/faq/troubleshooting.txt:78
+# bb03bc139b834b73b705bd00175636e4
+#: ../../../../1.8/docs/faq/troubleshooting.txt:62
 msgid ""
 "Either use the ``u''`` prefix or even better, add the ``from __future__ "
 "import unicode_literals`` line at the top of your file so that your code "
 "will be compatible with Python 3.2 which doesn't support the ``u''`` prefix."
 msgstr "Utilisez le préfixe ``u''`` ou mieux encore, ajoutez la ligne ``from __future__ import unicode_literals`` au sommet de votre fichier pour que le code soit compatible avec Python 3.2 qui n'accepte pas le préfixe ``u''``."
 
-# be59c66c08914804994a8010ad645e82
-#: ../../../../1.7/docs/faq/troubleshooting.txt:83
+# 2a054032367e45929a0e6d725ee2c6e2
+#: ../../../../1.8/docs/faq/troubleshooting.txt:67
 msgid "Related resources:"
 msgstr "Ressources connexes :"
 
-# cd9061a8fd484abfa540bd8ef8143fe7
-#: ../../../../1.7/docs/faq/troubleshooting.txt:85
+# 2d865b0cb6f24f0699b6625b0d02e583
+#: ../../../../1.8/docs/faq/troubleshooting.txt:69
 msgid ":doc:`Unicode in Django </ref/unicode>`"
 msgstr ":doc:`Unicode dans Django </ref/unicode>`"
 
-# 25a130b7822343ab86d0c9c7b1b45ecb
-#: ../../../../1.7/docs/faq/troubleshooting.txt:86
+# 184139342ab14e16a51bb43e22c983f3
+#: ../../../../1.8/docs/faq/troubleshooting.txt:70
 msgid "https://wiki.python.org/moin/UnicodeDecodeError"
 msgstr "https://wiki.python.org/moin/UnicodeDecodeError"
 
-# 926f603d612a4b3e9a671a4cd0efa137
-#: ../../../../1.7/docs/faq/usage.txt:2
+# 5fce6a74eb7c42f492429756eab3f00b
+#: ../../../../1.8/docs/faq/usage.txt:2
 msgid "FAQ: Using Django"
 msgstr "FAQ : utilisation de Django"
 
-# e91562f6b14a43ac9673f571b3a036d0
-#: ../../../../1.7/docs/faq/usage.txt:5
+# 582c5bc8315c42eb84e1b99231ac4a92
+#: ../../../../1.8/docs/faq/usage.txt:5
 msgid "Why do I get an error about importing DJANGO_SETTINGS_MODULE?"
 msgstr "Pourquoi ai-je une erreur sur l'importation de DJANGO_SETTINGS_MODULE ?"
 
-# 50072852769446d093b8325372efe491
-#: ../../../../1.7/docs/faq/usage.txt:7
+# 6272a748c5c145dd96586358ace44907
+#: ../../../../1.8/docs/faq/usage.txt:7
 msgid "Make sure that:"
 msgstr "Assurez-vous que :"
 
-# f421e65fef9f49d0b4f14c21ee00065d
-#: ../../../../1.7/docs/faq/usage.txt:9
+# f588a79e43a744cfacf33b224e27f9f4
+#: ../../../../1.8/docs/faq/usage.txt:9
 msgid ""
 "The environment variable DJANGO_SETTINGS_MODULE is set to a fully-qualified "
 "Python module (i.e. \"mysite.settings\")."
 msgstr "La variable d'environnement DJANGO_SETTINGS_MODULE  est définie sur un module Python complètement qualifié (par ex. \"mysite.settings\")."
 
-# 8900fd416ee345b5a968c1c8f0e8b54d
-#: ../../../../1.7/docs/faq/usage.txt:12
+# 9d58f9fafc854e4f84c8858d08e754ce
+#: ../../../../1.8/docs/faq/usage.txt:12
 msgid ""
 "Said module is on ``sys.path`` (``import mysite.settings`` should work)."
 msgstr "Ledit module se trouve dans ``sys.path`` (``import mysite.settings`` devrait fonctionner)."
 
-# ba058ca1a05e4061b19f7881611a9dc4
-#: ../../../../1.7/docs/faq/usage.txt:14
+# 783aaa3699cc42de96115985050497f9
+#: ../../../../1.8/docs/faq/usage.txt:14
 msgid "The module doesn't contain syntax errors (of course)."
 msgstr "Le module ne contient pas d'erreurs de syntaxe (évidemment)."
 
-# 70739583d8854df8bc35cb7740159822
-#: ../../../../1.7/docs/faq/usage.txt:17
+# 777cd2e60c68409c895a3f215ca47f9d
+#: ../../../../1.8/docs/faq/usage.txt:17
 msgid "I can't stand your template language. Do I have to use it?"
 msgstr "Je ne supporte pas votre langage de gabarit. Suis-je obligé de l'utiliser ?"
 
-# 5b69ee14379540f194f2918f6d19a3a8
-#: ../../../../1.7/docs/faq/usage.txt:19
+# 1224d98bdb7446ce978984d939b609fa
+#: ../../../../1.8/docs/faq/usage.txt:19
 msgid ""
 "We happen to think our template engine is the best thing since chunky bacon,"
 " but we recognize that choosing a template language runs close to religion. "
 "There's nothing about Django that requires using the template language, so "
-"if you're attached to Jinja2, Cheetah, or whatever, feel free to use those."
-msgstr "Il nous arrive de penser que notre moteur de gabarit est la meilleure chose depuis le lard en morceaux, mais nous reconnaissons que le choix d'un langage de gabarit est proche de celui d'une religion. Il n'y a rien dans Django qui nécessite l'utilisation du langage de gabarit, donc si vous êtes attaché à Jinja2, Cheetah, ou quoi que ce soit, n'hésitez pas à les utiliser."
+"if you're attached to Jinja2, Mako, or whatever, feel free to use those."
+msgstr "Il nous arrive de penser que notre moteur de gabarit est la meilleure chose depuis le lard en morceaux, mais nous reconnaissons que le choix d'un langage de gabarit est proche de celui d'une religion. Il n'y a rien dans Django qui nécessite l'utilisation de son langage de gabarit, donc si vous êtes attaché à Jinja2, Mako, ou quoi que ce soit, n'hésitez pas à les utiliser."
 
-# e822b998c90e44e69a48abd3d887420e
-#: ../../../../1.7/docs/faq/usage.txt:25
+# 7a24716183914a5d90faeacd3660f527
+#: ../../../../1.8/docs/faq/usage.txt:25
 msgid "Do I have to use your model/database layer?"
 msgstr "Dois-je utiliser votre couche modèle/base de données ?"
 
-# f762d7d899ee4b59bf864b2ac22e1437
-#: ../../../../1.7/docs/faq/usage.txt:27
+# a415793c01644f0aa18b36375dee8cb9
+#: ../../../../1.8/docs/faq/usage.txt:27
 msgid ""
 "Nope. Just like the template system, the model/database layer is decoupled "
 "from the rest of the framework."
 msgstr "Non. Tout comme le système de gabarit, la couche modèle/base de données est découplée du reste du système."
 
-# 18aed4ce72d042759a6721d29f035bf4
-#: ../../../../1.7/docs/faq/usage.txt:30
+# 2ac032cd54194532adad3ebe4a390aff
+#: ../../../../1.8/docs/faq/usage.txt:30
 msgid ""
 "The one exception is: If you use a different database library, you won't get"
 " to use Django's automatically-generated admin site. That app is coupled to "
 "the Django database layer."
 msgstr "La seule exception étant : si vous utilisez une autre bibliothèque de base de données, vous ne pourrez pas utiliser le site d'administration généré automatiquement par Django. Cette application est couplée à la couche de base de données de Django."
 
-# e1c57ec7478440a29dcaf3db840b531a
-#: ../../../../1.7/docs/faq/usage.txt:35
+# c4d5e9ebb13f48f8a061c16e0caa49a6
+#: ../../../../1.8/docs/faq/usage.txt:35
 msgid "How do I use image and file fields?"
 msgstr "Comment puis-je utiliser les champs image et fichier ?"
 
-# fed201e19c214dad958fd1c35823c671
-#: ../../../../1.7/docs/faq/usage.txt:37
+# 3bae430f83d0498a9d99edb48a836abc
+#: ../../../../1.8/docs/faq/usage.txt:37
 msgid ""
 "Using a :class:`~django.db.models.FileField` or an "
 ":class:`~django.db.models.ImageField` in a model takes a few steps:"
 msgstr "L'utilisation d'un champ :class:`~django.db.models.FileField` ou d'un champ :class:`~django.db.models.ImageField` dans un modèle implique quelques étapes :"
 
-# ab081c2697324980b00b7cad7a64602a
-#: ../../../../1.7/docs/faq/usage.txt:40
+# 4b4feec21cd64f6a8651a2733c009f29
+#: ../../../../1.8/docs/faq/usage.txt:40
 msgid ""
 "In your settings file, you'll need to define :setting:`MEDIA_ROOT` as the "
 "full path to a directory where you'd like Django to store uploaded files. "
@@ -1499,8 +1483,8 @@ msgid ""
 "that this directory is writable by the Web server's user account."
 msgstr "Dans votre fichier de réglages, vous devez indiquer dans :setting:`MEDIA_ROOT` le chemin d'accès absolu vers un répertoire où Django peut enregistrer les fichiers téléversés (pour des raisons de performance, ces fichiers ne sont pas stockés en base de données). Indiquez dans :setting:`MEDIA_URL` l'URL publique de base correspondant à ce répertoire. Assurez-vous que ce répertoire soit accessible en écriture par l'utilisateur du serveur Web."
 
-# 55c23e601f5b435baa363b471371de6c
-#: ../../../../1.7/docs/faq/usage.txt:47
+# f984a0638122469e8f82f98d15a474b7
+#: ../../../../1.8/docs/faq/usage.txt:47
 msgid ""
 "Add the :class:`~django.db.models.FileField` or "
 ":class:`~django.db.models.ImageField` to your model, defining the "
@@ -1508,8 +1492,8 @@ msgid ""
 "subdirectory of :setting:`MEDIA_ROOT` to use for uploaded files."
 msgstr "Ajoutez le champ :class:`~django.db.models.FileField` ou :class:`~django.db.models.ImageField` à votre modèle, en définissant l'option :attr:`~django.db.models.FileField.upload_to` pour indiquer dans quel sous-répertoire de :setting:`MEDIA_ROOT` les fichiers doivent être téléversés."
 
-# 7c1bf20afd464ed0ab5ffcfed9ed0c50
-#: ../../../../1.7/docs/faq/usage.txt:52
+# 0959fec0a7d8461581dd8dfe6e66a702
+#: ../../../../1.8/docs/faq/usage.txt:52
 msgid ""
 "All that will be stored in your database is a path to the file (relative to "
 ":setting:`MEDIA_ROOT`). You'll most likely want to use the convenience "
@@ -1519,21 +1503,21 @@ msgid ""
 "with ``{{ object.mug_shot.url }}``."
 msgstr "La base de données ne stockera qu'un chemin d'accès au fichier (relatif à :setting:`MEDIA_ROOT`). On utilise ensuite très souvent l'attribut :attr:`~django.db.models.fields.files.FieldFile.url` fourni par Django. Par exemple, si un champ :class:`~django.db.models.ImageField` est nommé ``mug_shot``, vous pouvez obtenir le chemin absolu de l'image correspondante dans un gabarit avec ``{{ object.mug_shot.url }}``."
 
-# c684293664fa4552a6df87a3724919eb
-#: ../../../../1.7/docs/faq/usage.txt:61
+# d741cb1101a141bcb5f10129d13e1767
+#: ../../../../1.8/docs/faq/usage.txt:61
 msgid "How do I make a variable available to all my templates?"
 msgstr "Comment puis-je rendre une variable disponible pour tous mes gabarits ?"
 
-# 3ff1632e2da44f50ac32e295fe858831
-#: ../../../../1.7/docs/faq/usage.txt:63
+# 61f44c0c05304749addb8f6360b9a5de
+#: ../../../../1.8/docs/faq/usage.txt:63
 msgid ""
 "Sometimes your templates just all need the same thing. A common example "
 "would be dynamically-generated menus. At first glance, it seems logical to "
 "simply add a common dictionary to the template context."
 msgstr "Parfois, vos gabarits ont tous besoin de la même chose. Un exemple courant serait des menus générés dynamiquement. À première vue, il semble logique d'ajouter simplement un dictionnaire commun dans le contexte du gabarit."
 
-# b185f55878ef4cd487327fadb1c42737
-#: ../../../../1.7/docs/faq/usage.txt:67
+# 6e802cb1e0244bb5b56f3c2008711a27
+#: ../../../../1.8/docs/faq/usage.txt:67
 msgid ""
 "The correct solution is to use a ``RequestContext``. Details on how to do "
 "this are here: :ref:`subclassing-context-requestcontext`."

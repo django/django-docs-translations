@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the Django package.
 # 
 # Translators:
-# claudep <claude@2xlibre.net>, 2013-2014
+# Claude Paroz <claude@2xlibre.net>, 2013-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-01 03:15-0500\n"
-"PO-Revision-Date: 2014-05-01 11:50+0000\n"
-"Last-Translator: claudep <claude@2xlibre.net>\n"
+"POT-Creation-Date: 2015-04-02 03:09-0500\n"
+"PO-Revision-Date: 2015-04-02 12:12+0000\n"
+"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,173 +18,185 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-# 3ce9892b5de94bd1937c2c5e3a530be6
-#: ../../../../1.6/docs/glossary.txt:5
+# 976c02011ec74668abf345e9c51e83b2
+#: ../../../../1.8/docs/glossary.txt:5
 msgid "Glossary"
 msgstr "Glossaire"
 
-# 6a5c5ef16dd24b16b4d5af0cc8946756
-#: ../../../../1.6/docs/glossary.txt:8
+# 5b54a50d90354af19e42afc0df50bb37
+#: ../../../../1.8/docs/glossary.txt:8
+msgid "concrete model"
+msgstr "modèle concret"
+
+# 77da45f923a6478086f37d9838aecd44
+#: ../../../../1.8/docs/glossary.txt:10
+msgid ""
+"A non-abstract (:attr:`abstract=False <django.db.models.Options.abstract>`) "
+"model."
+msgstr "Un modèle non abstrait (:attr:`abstract=False <django.db.models.Options.abstract>`)."
+
+# 57833d3e60a549f8a63dcf67c2c100aa
+#: ../../../../1.8/docs/glossary.txt:12
 msgid "field"
 msgstr "champ"
 
-# 91ebed69c3754e4a8172592da129c61e
-#: ../../../../1.6/docs/glossary.txt:10
+# 50018c6785804a6cb8ff5346dd9cbea5
+#: ../../../../1.8/docs/glossary.txt:14
 msgid ""
 "An attribute on a :term:`model`; a given field usually maps directly to a "
 "single database column."
 msgstr "Un attribut d'un :term:`modèle` ; un champ donné correspond habituellement à une seule colonne de la base de données."
 
-# 87b9142c2a804c4e84c155d8ebf998d9
-# 925de38aa375463aa96db2bcf9f4c69c
-#: ../../../../1.6/docs/glossary.txt:13 ../../../../1.6/docs/glossary.txt:24
+# ea727eabfc5248f3b9dc9c400ea20a09
+# 5e145d2f79964360b739bc6bda0cbb6c
+#: ../../../../1.8/docs/glossary.txt:17 ../../../../1.8/docs/glossary.txt:28
 msgid "See :doc:`/topics/db/models`."
 msgstr "Voir :doc:`/topics/db/models`."
 
-# 50228ddd91a64ec2a863d44d0e340228
-#: ../../../../1.6/docs/glossary.txt:14
+# a63b32d4f7c74aba9b7d95bda2810eeb
+#: ../../../../1.8/docs/glossary.txt:18
 msgid "generic view"
 msgstr "vue générique"
 
-# 69dfdfc844ab475a9594e5985b766f39
-#: ../../../../1.6/docs/glossary.txt:16
+# 14824a50bf9e42bbaa5f2f7c16f5a5d2
+#: ../../../../1.8/docs/glossary.txt:20
 msgid ""
 "A higher-order :term:`view` function that provides an abstract/generic "
 "implementation of a common idiom or pattern found in view development."
 msgstr "Une fonction de :term:`vue` de niveau supérieur fournissant une implémentation abstraite/générique d'un idiome fréquent dans le développement de vues."
 
-# d53a21e9e26e400a95d3d1db1a373614
-#: ../../../../1.6/docs/glossary.txt:19
+# 19c4ca0939594b199925922ce450c3ae
+#: ../../../../1.8/docs/glossary.txt:23
 msgid "See :doc:`/topics/class-based-views/index`."
 msgstr "Voir :doc:`/topics/class-based-views/index`."
 
-# 91757d673c244b79be1ce5736229adaf
-#: ../../../../1.6/docs/glossary.txt:20
+# 98a9d62e8a3f4333a5b43e5464c34bb3
+#: ../../../../1.8/docs/glossary.txt:24
 msgid "model"
 msgstr "modèle"
 
-# a40b8270976247e3964ed6876d76c1ef
-#: ../../../../1.6/docs/glossary.txt:22
+# e51257a58f0b43979d4d05460883aa88
+#: ../../../../1.8/docs/glossary.txt:26
 msgid "Models store your application's data."
 msgstr "Les modèles stockent les données de vos applications."
 
-# b4ccda30175e447894e860393e496aa2
-#: ../../../../1.6/docs/glossary.txt:25
+# ea9b976cbc55419a9e2fe041651394e1
+#: ../../../../1.8/docs/glossary.txt:29
 msgid "MTV"
 msgstr "MTV"
 
-# 8743166da37144bcb98fef043fb4b1e8
-#: ../../../../1.6/docs/glossary.txt:27
+# c14749ed407049ec927a90a483a3ad74
+#: ../../../../1.8/docs/glossary.txt:31
 msgid ""
 "\"Model-template-view\"; a software pattern, similar in style to MVC, but a "
 "better description of the way Django does things."
 msgstr "« Modèle-template-vue » ; un patron logiciel, du même style que MVC mais décrivant mieux la manière dont Django fonctionne."
 
-# 8c7af89d440b420aac3fe3f07272951d
-#: ../../../../1.6/docs/glossary.txt:30
+# 15c1b610123d466c9194fa098dff6912
+#: ../../../../1.8/docs/glossary.txt:34
 msgid "See :ref:`the FAQ entry <faq-mtv>`."
 msgstr "Voir :ref:`l'item de la FAQ <faq-mtv>`."
 
-# 49fa056fe7554f50868491caa3b46c5f
-#: ../../../../1.6/docs/glossary.txt:31
+# 9567955767994f42b5cdedb8335a845e
+#: ../../../../1.8/docs/glossary.txt:35
 msgid "MVC"
 msgstr "MVC"
 
-# a1622aeed8944ed6b67d33dbb58ec6e2
-#: ../../../../1.6/docs/glossary.txt:33
+# 108d623a4a924b2bb2362a6195acd3df
+#: ../../../../1.8/docs/glossary.txt:37
 msgid ""
 "`Model-view-controller`__; a software pattern. Django :ref:`follows MVC to "
 "some extent <faq-mtv>`."
 msgstr "`Modèle-vue-contrôleur`__ ; un patron logiciel. Django est mieux décrit par :ref:`le patron MVC<faq-mtv>`."
 
-# 826e0168fea74365b5778dad3184bff8
-#: ../../../../1.6/docs/glossary.txt:37
+# 257dda969d854e04b3f312484d9bf617
+#: ../../../../1.8/docs/glossary.txt:41
 msgid "project"
 msgstr "projet"
 
-# 9f8d09ce2d834555864229eeae5bff58
-#: ../../../../1.6/docs/glossary.txt:39
+# b86815fd1b4c488d933d056f8fc20016
+#: ../../../../1.8/docs/glossary.txt:43
 msgid ""
 "A Python package -- i.e. a directory of code -- that contains all the "
 "settings for an instance of Django. This would include database "
 "configuration, Django-specific options and application-specific settings."
 msgstr "Un paquet Python, c'est-à-dire un répertoire de code, qui contient tous les réglages d'une instance de Django. Cela comprend la configuration de la base de données, des options spécifiques à Django et des réglages liés aux applications."
 
-# f9f0c0e739de453a9c46a6f3e71fb797
-#: ../../../../1.6/docs/glossary.txt:43
+# 292e3f65aa3047998bcee2a5f874f124
+#: ../../../../1.8/docs/glossary.txt:47
 msgid "property"
 msgstr "propriété"
 
-# 3d53d070c0724a0a988c22439a257afa
-#: ../../../../1.6/docs/glossary.txt:45
+# dd1c0c416f544686963f3758e4d0425f
+#: ../../../../1.8/docs/glossary.txt:49
 msgid ""
 "Also known as \"managed attributes\", and a feature of Python since version "
 "2.2. This is a neat way to implement attributes whose usage resembles "
 "attribute access, but whose implementation uses method calls."
 msgstr "Aussi connue comme « attributs gérés », une fonctionnalité de Python depuis la version 2.2. C'est une manière élégante d'implémenter des attributs dont l'utilisation ressemble à l'accès à des attributs mais dont l'implémentation utilise des appels de méthodes."
 
-# 913f12408de440b48032b6f08ca49ec2
-#: ../../../../1.6/docs/glossary.txt:49
-msgid "See :func:`property`."
-msgstr "Voir :func:`property`."
+# cde1ef13a3f34168a0f2e70b163b7957
+#: ../../../../1.8/docs/glossary.txt:53
+msgid "See :class:`property`."
+msgstr "Voir :class:`property`."
 
-# 7c5487fe56d645d68cd3f77184b9b881
-#: ../../../../1.6/docs/glossary.txt:50
+# 9afd5dbcb23940169b4cce2dc6bed0d6
+#: ../../../../1.8/docs/glossary.txt:54
 msgid "queryset"
 msgstr "queryset"
 
-# 2a9f42c464af4e6a84e5c5990729757b
-#: ../../../../1.6/docs/glossary.txt:52
+# c858b8907d704d63b8f008adfcec4e02
+#: ../../../../1.8/docs/glossary.txt:56
 msgid ""
 "An object representing some set of rows to be fetched from the database."
 msgstr "Un objet représentant un ensemble de lignes à extraire de la base de données."
 
-# 6fcfa9ac8b5148be9b12b3ca561d8520
-#: ../../../../1.6/docs/glossary.txt:54
+# 9ef39c6de17b48b08317e2f1196bdb08
+#: ../../../../1.8/docs/glossary.txt:58
 msgid "See :doc:`/topics/db/queries`."
 msgstr "Voir :doc:`/topics/db/queries`."
 
-# 59ccd0a08d204227b477979e4a725208
-#: ../../../../1.6/docs/glossary.txt:55
+# b0bf67836aef4605a665bf61d41fdb9b
+#: ../../../../1.8/docs/glossary.txt:59
 msgid "slug"
 msgstr "slug"
 
-# 43846140844a493da246a97c68a2f62a
-#: ../../../../1.6/docs/glossary.txt:57
+# ae16605b554a45569a3f3366739e0429
+#: ../../../../1.8/docs/glossary.txt:61
 msgid ""
 "A short label for something, containing only letters, numbers, underscores "
 "or hyphens. They're generally used in URLs. For example, in a typical blog "
 "entry URL:"
 msgstr "Une courte étiquette identifiant un objet, contenant uniquement des lettres, des chiffres, des soulignements ou des tirets. Ils sont utilisés en général dans les URL. Par exemple, dans l'URL d'un article de blog typique :"
 
-# b2e7b28f40564f298921bb0853945ffd
-#: ../../../../1.6/docs/glossary.txt:65
+# 919f8830609e43398abc449fa6711a6d
+#: ../../../../1.8/docs/glossary.txt:69
 msgid "the last bit (``spring``) is the slug."
 msgstr "le dernier élément (``spring``) est le slug."
 
-# dc43b61698af4e40804b9697f63c0187
-#: ../../../../1.6/docs/glossary.txt:66
+# 7fa04f533d1e4326afe44930f8091e54
+#: ../../../../1.8/docs/glossary.txt:70
 msgid "template"
 msgstr "template"
 
-# 3f6aa9ec50f141ac8b9d25df34a89975
-#: ../../../../1.6/docs/glossary.txt:68
+# 8603035a70e343aabbd8a094782e8e52
+#: ../../../../1.8/docs/glossary.txt:72
 msgid ""
 "A chunk of text that acts as formatting for representing data. A template "
 "helps to abstract the presentation of data from the data itself."
 msgstr "Un bout de texte servant de base de formatage pour représenter des données. Un template aide à faire la séparation claire entre des données et leur présentation."
 
-# 449e2330b44a49e6ad03db536c6bead1
-#: ../../../../1.6/docs/glossary.txt:72
+# c2a2da5c0f8246148955f292c62500bb
+#: ../../../../1.8/docs/glossary.txt:76
 msgid "See :doc:`/topics/templates`."
 msgstr "Voir :doc:`/topics/templates`."
 
-# d3d6ca67e69c4b30b818abad0accb42e
-#: ../../../../1.6/docs/glossary.txt:73
+# a04163dd6eec4262bfce06114f8a8698
+#: ../../../../1.8/docs/glossary.txt:77
 msgid "view"
 msgstr "vue"
 
-# 1076480ee119470dbde7de262f343155
-#: ../../../../1.6/docs/glossary.txt:75
+# a9d5090d72fa4b35957e863b0154f4e9
+#: ../../../../1.8/docs/glossary.txt:79
 msgid "A function responsible for rendering a page."
 msgstr "Une fonction responsable du rendu d'une page."
