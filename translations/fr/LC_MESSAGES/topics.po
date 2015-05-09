@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-06 05:09-0500\n"
-"PO-Revision-Date: 2015-04-06 15:12+0000\n"
+"POT-Creation-Date: 2015-05-09 03:08-0500\n"
+"PO-Revision-Date: 2015-05-09 09:54+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -539,8 +539,24 @@ msgid ""
 "dependency if you want to see how it's usually done)"
 msgstr "En outre, vous pouvez rencontrer une erreur ``CircularDependencyError`` lors de l'exécution des migrations lorsque Django n'est pas en mesure de briser automatiquement la boucle de dépendance en raison de la dépendance dynamique. Si vous rencontrez cette erreur, vous devez rompre la boucle en déplaçant les modèles dont dépend votre modèle d'utilisateur dans une deuxième migration (vous pouvez essayer de faire deux modèles normaux qui ont une clé ``ForeignKey`` l'un vers l'autre et voir comment ``makemigrations`` résout la dépendance circulaire si vous voulez voir comment cela se passe habituellement)."
 
-# 5a56427478a148fc9c73e1a961e5c479
+# e9f413c911e5403598ec952ef07bc082
+#: ../../../../1.8/docs/topics/auth/customizing.txt:410
+msgid "Reusable apps and ``AUTH_USER_MODEL``"
+msgstr "Applications réutilisables et ``AUTH_USER_MODEL``"
+
+# 351652a7ad07460383dba9b51a104337
 #: ../../../../1.8/docs/topics/auth/customizing.txt:412
+msgid ""
+"Reusable apps shouldn't implement a custom user model. A project may use "
+"many apps, and two reusable apps that implemented a custom user model "
+"couldn't be used together. If you need to store per user information in your"
+" app, use a :class:`~django.db.models.ForeignKey` or "
+":class:`~django.db.models.OneToOneField` to ``settings.AUTH_USER_MODEL`` as "
+"described below."
+msgstr "Les applications réutilisables ne devraient pas implémenter de modèle d'utilisateur personnalisé. Un projet peut utiliser beaucoup d'applications, et deux applications réutilisables qui implémenteraient chacune un modèle d'utilisateur personnalisé ne pourraient pas être utilisées conjointement. Si vous avez besoin de stocker des informations liées aux utilisateurs dans une application, utilisez une liaison :class:`~django.db.models.ForeignKey` ou :class:`~django.db.models.OneToOneField` vers ``settings.AUTH_USER_MODEL`` comme expliqué ci-dessous."
+
+# e18f77f50d674111aa11dc015914abeb
+#: ../../../../1.8/docs/topics/auth/customizing.txt:420
 msgid "Referencing the User model"
 msgstr "Références au modèle d'utilisateur"
 
@@ -619,13 +635,8 @@ msgid ""
 "Django expects your custom User model to meet some minimum requirements."
 msgstr "Django s'attend à ce qu'un minimum d'exigences soient respectées dans les modèles d'utilisateur personnalisés."
 
-# 6dd14bae990a48b1a3c2c6d80728fe24
-#: ../../../../1.8/docs/topics/auth/customizing.txt:474
-msgid "Your model must have an integer primary key."
-msgstr "Le modèle doit posséder un clé primaire de type nombre entier."
-
-# 7011239be0ce461bb571f280c0a9a7a9
-#: ../../../../1.8/docs/topics/auth/customizing.txt:476
+# 3c18f0f3042f436683bdeb9060d435be
+#: ../../../../1.8/docs/topics/auth/customizing.txt:482
 msgid ""
 "Your model must have a single unique field that can be used for "
 "identification purposes. This can be a username, an email address, or any "
@@ -642,8 +653,15 @@ msgid ""
 " methods return - if you want, they can return exactly the same value."
 msgstr "Le modèle doit fournir une manière de décrire l'utilisateur dans une forme « courte » et dans une forme « longue ». L'interprétation la plus courante étant de considérer le prénom  comme identifiant « court » et le nom complet comme identifiant « long ». Cependant, il n'y a aucune contrainte sur les valeurs renvoyées par ces deux méthodes ; elles peuvent tout aussi bien renvoyer la même valeur si vous le souhaitez."
 
-# a5f826dc99044c3c892d6d4622e97c17
-#: ../../../../1.8/docs/topics/auth/customizing.txt:487
+# 0f4f01c858ec4cbabe704cb8cb8352b6
+#: ../../../../1.8/docs/topics/auth/customizing.txt:495
+msgid ""
+"Older versions of Django required your model to have an integer primary key "
+"as well."
+msgstr "Les versions précédentes de Django exigeaient que le modèle possède également une clé primaire de type nombre entier."
+
+# df35b02cdc924c7dba5ba873c38a184e
+#: ../../../../1.8/docs/topics/auth/customizing.txt:498
 msgid ""
 "The easiest way to construct a compliant custom User model is to inherit "
 "from :class:`~django.contrib.auth.models.AbstractBaseUser`. "
@@ -6867,10 +6885,10 @@ msgstr "Décoration des vues fondées sur les classes"
 #: ../../../../1.8/docs/topics/class-based-views/intro.txt:254
 msgid ""
 "The extension of class-based views isn't limited to using mixins. You can "
-"use also use decorators. Since class-based views aren't functions, "
-"decorating them works differently depending on if you're using ``as_view`` "
-"or creating a subclass."
-msgstr "L'extension des vues fondées sur les classes n'est pas limitée aux mixins. Il est aussi possible d'utiliser des décorateurs. Comme les vues fondées sur les classes ne sont pas des fonctions, leur décoration fonctionne différemment selon que vous utilisez ``as_view`` ou que vous créez une sous-classe."
+"also use decorators. Since class-based views aren't functions, decorating "
+"them works differently depending on if you're using ``as_view()`` or "
+"creating a subclass."
+msgstr "L’extension des vues fondées sur les classes n’est pas limitée aux mixins. Il est aussi possible d’utiliser des décorateurs. Comme les vues fondées sur les classes ne sont pas des fonctions, leur décoration fonctionne différemment selon que vous utilisez ``as_view()`` ou que vous créez une sous-classe."
 
 # f51bba1f6bf8452bbb9740fa7b368873
 #: ../../../../1.8/docs/topics/class-based-views/intro.txt:260
@@ -11182,20 +11200,13 @@ msgid ""
 " they do *not* define any model fields."
 msgstr "Un modèle mandataire ne peut hériter que d'une seule classe de modèle non abstraite. Il n'est pas possible d'hériter de plusieurs modèles non abstraits car le modèle mandataire ne fournit aucune connexion entre les lignes de différentes tables de base de données. Un modèle mandataire peut hériter d'autant de classes de modèle abstraites que nécessaire pourvu qu'elles ne définissent *pas* de champ de modèle."
 
-# 49d6f65bba5a4eda9c81656d0aaec3da
-#: ../../../../1.8/docs/topics/db/models.txt:1198
-msgid ""
-"Proxy models inherit any ``Meta`` options that they don't define from their "
-"non-abstract model parent (the model they are proxying for)."
-msgstr "Les modèles mandataires héritent de toutes les options ``Meta`` qu'ils ne définissent pas eux-mêmes, de leur modèle parent non abstrait (le modèle dont elles sont le mandataire)."
-
-# fa2ff934883e4f758bb9baaae671ad40
-#: ../../../../1.8/docs/topics/db/models.txt:1202
+# dd2886f2db0c4328a6609dcf2939429e
+#: ../../../../1.8/docs/topics/db/models.txt:1199
 msgid "Proxy model managers"
 msgstr "Gestionnaires des modèles mandataires"
 
-# cd6e72f9c19647a7a8f1d16af95bd24b
-#: ../../../../1.8/docs/topics/db/models.txt:1204
+# ba45abc8b30b4133a710d0531849f5f6
+#: ../../../../1.8/docs/topics/db/models.txt:1201
 msgid ""
 "If you don't specify any model managers on a proxy model, it inherits the "
 "managers from its model parents. If you define a manager on the proxy model,"
@@ -15831,383 +15842,7 @@ msgid ""
 "``b.save()`` raises an exception."
 msgstr "Dans cet exemple, ``a.save()`` ne sera pas annulé dans le cas où ``b.save()`` génère une exception."
 
-# 754dedd14833497a8c5d0e73a0d289d3
-#: ../../../../1.8/docs/topics/db/transactions.txt:509
-msgid "Changes from Django 1.5 and earlier"
-msgstr "Modifications par rapport à Django 1.5"
-
-# 096f9532e74b4d59ae732efedf58458d
-#: ../../../../1.8/docs/topics/db/transactions.txt:511
-msgid ""
-"The features described below were deprecated in Django 1.6 and will be "
-"removed in Django 1.8. They're documented in order to ease the migration to "
-"the new transaction management APIs."
-msgstr "Les fonctionnalités décrites ci-dessous sont obsolètes à partir de Django 1.6 et seront supprimées dans Django 1.8. Elles sont documentées afin de faciliter la migration vers la nouvelle API de gestion des transactions."
-
-# 947e505067d24d3293eb107b8d3bf2e3
-#: ../../../../1.8/docs/topics/db/transactions.txt:516
-msgid "Legacy APIs"
-msgstr "Ancienne API"
-
-# 395831fdba234bf2a745840232df4a75
-#: ../../../../1.8/docs/topics/db/transactions.txt:518
-msgid ""
-"The following functions, defined in ``django.db.transaction``, provided a "
-"way to control transactions on a per-function or per-code-block basis. They "
-"could be used as decorators or as context managers, and they accepted a "
-"``using`` argument, exactly like :func:`atomic`."
-msgstr "Les fonctions suivantes, définies dans ``django.db.transaction``, fournissaient une manière de contrôler les transactions par fonction ou par bloc de code. Elles pouvaient être utilisées comme décorateurs ou comme gestionnaires de contexte, et elles acceptaient un paramètre ``using``, tout comme :func:`atomic`."
-
-# b1ba2cfb9813421c9a46fb78549df62b
-#: ../../../../1.8/docs/topics/db/transactions.txt:525
-msgid "Enable Django's default autocommit behavior."
-msgstr "Active le comportement de validation automatique par défaut de Django."
-
-# d26af2176e1a4e1b9364f57a8924c9d7
-#: ../../../../1.8/docs/topics/db/transactions.txt:527
-msgid ""
-"Transactions will be committed as soon as you call ``model.save()``, "
-"``model.delete()``, or any other function that writes to the database."
-msgstr "Les transactions sont validées dès que vous appelez ``model.save()``, ``model.delete()`` ou toute autre fonction qui écrit dans la base de données."
-
-# dfa6d00c468a4f89a8889519f1a84428
-#: ../../../../1.8/docs/topics/db/transactions.txt:532
-msgid "Use a single transaction for all the work done in a function."
-msgstr "Utilise une transaction unique pour toutes les opérations effectuées dans une fonction."
-
-# c0b2beaedee245349edb27d9146454d5
-#: ../../../../1.8/docs/topics/db/transactions.txt:534
-msgid ""
-"If the function returns successfully, then Django will commit all work done "
-"within the function at that point. If the function raises an exception, "
-"though, Django will roll back the transaction."
-msgstr "Si la fonction se termine avec succès, Django valide (dans le sens de « commit ») toutes les opérations effectuées dans la fonction jusqu'à ce point. Cependant, si la fonction génère une exception, Django annule (dans le sens de « rollback ») la transaction."
-
-# 94d51776cddb4c16a4d53fa4a197ad67
-#: ../../../../1.8/docs/topics/db/transactions.txt:540
-msgid "Tells Django you'll be managing the transaction on your own."
-msgstr "Indique à Django que vous allez gérer vous-même les transactions."
-
-# 7dae9d75c291426fbd8ffa2b93b1e97c
-#: ../../../../1.8/docs/topics/db/transactions.txt:542
-msgid ""
-"Whether you are writing or simply reading from the database, you must "
-"``commit()`` or ``rollback()`` explicitly or Django will raise a "
-":exc:`TransactionManagementError` exception. This is required when reading "
-"from the database because ``SELECT`` statements may call functions which "
-"modify tables, and thus it is impossible to know if any data has been "
-"modified."
-msgstr "Que vous écriviez ou que vous lisiez simplement depuis la base de données, vous devez appeler explicitement ``commit()`` ou ``rollback()`` ou Django générera une exception :exc:`TransactionManagementError`. C'est obligatoire même en lisant depuis la base de données car les commandes ``SELECT`` peuvent appeler des fonctions modifiant potentiellement des tables, ce qui fait qu'il est impossible de savoir si des données ont été modifiées ou non."
-
-# 99d1772b7ee24c44aacf6fe1ef1ffca5
-#: ../../../../1.8/docs/topics/db/transactions.txt:552
-msgid "Transaction states"
-msgstr "État des transactions"
-
-# 844da9c75572437cbfa915601930e5ee
-#: ../../../../1.8/docs/topics/db/transactions.txt:554
-msgid ""
-"The three functions described above relied on a concept called \"transaction"
-" states\". This mechanism was deprecated in Django 1.6, but it's still "
-"available until Django 1.8."
-msgstr "Les trois fonctions décrites ci-dessus se basent sur un concept nommé « états des transactions ». Ce mécanisme a été rendu obsolète dans Django 1.6, mais il sera encore disponible jusqu'à Django 1.8."
-
-# 38a0475983e9427ea940c83e64cebb40
-#: ../../../../1.8/docs/topics/db/transactions.txt:558
-msgid "At any time, each database connection is in one of these two states:"
-msgstr "À tout instant, une connexion de base de données est dans l'un de ces deux états :"
-
-# f39c88a8d69043e7bedb284b502a4faa
-#: ../../../../1.8/docs/topics/db/transactions.txt:560
-msgid "**auto mode**: autocommit is enabled;"
-msgstr "**mode « auto »**: la validation automatique est activée ;"
-
-# 02bf62ddf6c3452a945259395004dfee
-#: ../../../../1.8/docs/topics/db/transactions.txt:561
-msgid "**managed mode**: autocommit is disabled."
-msgstr "**mode « managed »**: la validation automatique est désactivée."
-
-# 79abbe5a3f52430c9bef2201d06ef0b1
-#: ../../../../1.8/docs/topics/db/transactions.txt:563
-msgid ""
-"Django starts in auto mode. ``TransactionMiddleware``, "
-":func:`commit_on_success` and :func:`commit_manually` activate managed mode;"
-" :func:`autocommit` activates auto mode."
-msgstr "Django démarre en mode « auto ». ``TransactionMiddleware``, :func:`commit_on_success` et :func:`commit_manually` activent le mode « managed » ; :func:`autocommit` active le mode « auto »."
-
-# 17c1f295eba544efa5863a83ba1234bf
-#: ../../../../1.8/docs/topics/db/transactions.txt:567
-msgid ""
-"Internally, Django keeps a stack of states. Activations and deactivations "
-"must be balanced."
-msgstr "En interne, Django conserve une pile d'états. Les activations et les désactivations doivent être équilibrées."
-
-# 8ed97ad013024e15829ccac4f5846f56
-#: ../../../../1.8/docs/topics/db/transactions.txt:570
-msgid ""
-"For example, :func:`commit_on_success` switches to managed mode when "
-"entering the block of code it controls; when exiting the block, it commits "
-"or rollbacks, and switches back to auto mode."
-msgstr "Par exemple, :func:`commit_on_success` bascule en mode « managed » lorsqu'on entre dans le code qu'il contrôle ; à la sortie du bloc, il valide ou annule et repasse en mode « auto »."
-
-# f1ed6e258a464c94a3124c35a8525ffc
-#: ../../../../1.8/docs/topics/db/transactions.txt:574
-msgid ""
-"So :func:`commit_on_success` really has two effects: it changes the "
-"transaction state and it defines a transaction block. Nesting will give the "
-"expected results in terms of transaction state, but not in terms of "
-"transaction semantics. Most often, the inner block will commit, breaking the"
-" atomicity of the outer block."
-msgstr "Ainsi, :func:`commit_on_success` produit en réalité deux effets : elle change l'état de transaction et elle définit un bloc de transaction. L'imbrication donne les résultats espérés en terme d'état de transaction, mais pas en terme de sémantique de transaction. La plupart du temps, le bloc intérieur valide, cassant l'atomicité du bloc externe."
-
-# 21e073b1f6ce44c7a780523f9342ab8b
-#: ../../../../1.8/docs/topics/db/transactions.txt:580
-msgid ""
-":func:`autocommit` and :func:`commit_manually` have similar limitations."
-msgstr ":func:`autocommit` et :func:`commit_manually` présentent les mêmes problèmes."
-
-# 0cd701f7100c4cfa8e2c33ec96ab5d4a
-#: ../../../../1.8/docs/topics/db/transactions.txt:583
-msgid "API changes"
-msgstr "Modifications d'API"
-
-# 9457374fc5a142e88c9973026b70ae67
-#: ../../../../1.8/docs/topics/db/transactions.txt:586
-msgid "Transaction middleware"
-msgstr "Intergiciel de transaction"
-
-# a4a22fa49f2448f18dbbcfaa28cd4003
-#: ../../../../1.8/docs/topics/db/transactions.txt:588
-msgid ""
-"In Django 1.6, ``TransactionMiddleware`` is deprecated and replaced by "
-":setting:`ATOMIC_REQUESTS <DATABASE-ATOMIC_REQUESTS>`. While the general "
-"behavior is the same, there are two differences."
-msgstr "Dans Django 1.6, ``TransactionMiddleware`` est obsolète et remplacé par :setting:`ATOMIC_REQUESTS <DATABASE-ATOMIC_REQUESTS>`. Même si le fonctionnement général est le même, il y a deux différences."
-
-# 57978a975b36440794d9712134399420
-#: ../../../../1.8/docs/topics/db/transactions.txt:592
-msgid ""
-"With the previous API, it was possible to switch to autocommit or to commit "
-"explicitly anywhere inside a view. Since :setting:`ATOMIC_REQUESTS "
-"<DATABASE-ATOMIC_REQUESTS>` relies on :func:`atomic` which enforces "
-"atomicity, this isn't allowed any longer. However, at the top level, it's "
-"still possible to avoid wrapping an entire view in a transaction. To achieve"
-" this, decorate the view with :func:`non_atomic_requests` instead of "
-":func:`autocommit`."
-msgstr "Avec l'ancienne API, il était possible de passer en mode validation automatique ou de valider explicitement n'importe où dans une vue. Comme :setting:`ATOMIC_REQUESTS <DATABASE-ATOMIC_REQUESTS>` compte sur :func:`atomic` pour garantir l'atomicité, ce n'est plus autorisé. Cependant, à un plus haut niveau, il est encore possible d'éviter d'envelopper toute la vue dans une transaction. À cet effet, décorez la vue avec :func:`non_atomic_requests` au lieu de :func:`autocommit`."
-
-# 7059144a2e674269aba943d113bff541
-#: ../../../../1.8/docs/topics/db/transactions.txt:599
-msgid ""
-"The transaction middleware applied not only to view functions, but also to "
-"middleware modules that came after it. For instance, if you used the session"
-" middleware after the transaction middleware, session creation was part of "
-"the transaction. :setting:`ATOMIC_REQUESTS <DATABASE-ATOMIC_REQUESTS>` only "
-"applies to the view itself."
-msgstr "L'intergiciel de transaction ne s'appliquait pas qu'aux fonctions de vue, mais aussi aux modules d'intergiciel qui lui succédaient. Par exemple, si vous aviez placé l'intergiciel de session après l'intergiciel de transaction, la création des sessions faisaient partie de la transaction. :setting:`ATOMIC_REQUESTS <DATABASE-ATOMIC_REQUESTS>` ne s'applique qu'à la vue elle-même."
-
-# 11cce64b5e094a5bba43be428b5d746f
-#: ../../../../1.8/docs/topics/db/transactions.txt:606
-msgid "Managing transactions"
-msgstr "Gestion des transactions"
-
-# 5095fb0f2c124069991948e1a7eb1775
-#: ../../../../1.8/docs/topics/db/transactions.txt:608
-msgid ""
-"Starting with Django 1.6, :func:`atomic` is the only supported API for "
-"defining a transaction. Unlike the deprecated APIs, it's nestable and always"
-" guarantees atomicity."
-msgstr "À partir de Django 1.6, :func:`atomic` est la seule API prise en charge pour définir une transaction. Au contraire de l'API obsolète, l'imbrication est possible et garantit toujours l'atomicité."
-
-# 153f32265a4749ec948f5674869aa2ba
-#: ../../../../1.8/docs/topics/db/transactions.txt:612
-msgid ""
-"In most cases, it will be a drop-in replacement for "
-":func:`commit_on_success`."
-msgstr "Dans la plupart des cas, il s'agira simplement de remplacer :func:`commit_on_success` par :func:`atomic`."
-
-# e033e0b6f60e4db998611b7638dedade
-#: ../../../../1.8/docs/topics/db/transactions.txt:614
-msgid ""
-"During the deprecation period, it's possible to use :func:`atomic` within "
-":func:`autocommit`, :func:`commit_on_success` or :func:`commit_manually`. "
-"However, the reverse is forbidden, because nesting the old decorators / "
-"context managers breaks atomicity."
-msgstr "Durant la période d'obsolescence, il est possible d'utiliser :func:`atomic` à l'intérieur de :func:`autocommit`, :func:`commit_on_success` ou :func:`commit_manually`. Cependant, l'inverse est défendu, car l'imbrication des anciens décorateurs/gestionnaires de contexte casse l'atomicité."
-
-# ea0eb53679e6494d819e137df6716bdf
-#: ../../../../1.8/docs/topics/db/transactions.txt:620
-msgid "Managing autocommit"
-msgstr "Gestion de la validation automatique (« autocommit »)"
-
-# da7a1a688536431aa19a4002ad0a45e8
-#: ../../../../1.8/docs/topics/db/transactions.txt:622
-msgid ""
-"Django 1.6 introduces an explicit :ref:`API for managing autocommit "
-"<managing-autocommit>`."
-msgstr "Django 1.6 introduit une :ref:`API explicite pour la gestion de la validation automatique <managing-autocommit>`."
-
-# a4466db294e24d88badb34e8b6b3ff3c
-#: ../../../../1.8/docs/topics/db/transactions.txt:625
-msgid "To disable autocommit temporarily, instead of::"
-msgstr "Pour désactiver temporairement la validation automatique, au lieu de ::"
-
-# e46e698205c44356b63de2d168333485
-# 721cc80badec478cb45b781698e8e3fb
-#: ../../../../1.8/docs/topics/db/transactions.txt:630
-#: ../../../../1.8/docs/topics/db/transactions.txt:643
-msgid "you should now use::"
-msgstr "il faut dorénavant utiliser ::"
-
-# 0708c911890f4c82979597e3a0e91ff5
-#: ../../../../1.8/docs/topics/db/transactions.txt:638
-msgid "To enable autocommit temporarily, instead of::"
-msgstr "Pour activer temporairement la validation automatique, au lieu de ::"
-
-# be07084b559741be83c52c8269518cf3
-#: ../../../../1.8/docs/topics/db/transactions.txt:651
-msgid ""
-"Unless you're implementing a transaction management framework, you shouldn't"
-" ever need to do this."
-msgstr "Sauf dans le cas où vous implémentez un système de gestion des transactions, vous ne devriez jamais avoir besoin de faire cela."
-
-# 81b0c08b6ebf444793ad28db42e64462
-#: ../../../../1.8/docs/topics/db/transactions.txt:655
-msgid "Disabling transaction management"
-msgstr "Désactivation de la gestion des transactions"
-
-# 68085df7797540e8a8e524d8d74bd5e5
-#: ../../../../1.8/docs/topics/db/transactions.txt:657
-msgid ""
-"Instead of setting ``TRANSACTIONS_MANAGED = True``, set the ``AUTOCOMMIT`` "
-"key to ``False`` in the configuration of each database, as explained in :ref"
-":`deactivate-transaction-management`."
-msgstr "Au lieu de définir ``TRANSACTIONS_MANAGED = True``, définissez la clé ``AUTOCOMMIT`` à ``False`` dans la configuration de chaque base de données, comme expliqué dans :ref:`deactivate-transaction-management`."
-
-# b164563ebd764b49bb652c2d5afc6756
-#: ../../../../1.8/docs/topics/db/transactions.txt:662
-msgid "Backwards incompatibilities"
-msgstr "Incompatibilités avec les anciennes versions"
-
-# e46eead05f1a498cb89617b1d2eeebe6
-#: ../../../../1.8/docs/topics/db/transactions.txt:664
-msgid ""
-"Since version 1.6, Django uses database-level autocommit in auto mode. "
-"Previously, it implemented application-level autocommit by triggering a "
-"commit after each ORM write."
-msgstr "Depuis la version 1.6, Django utilise la validation automatique au niveau de la base de données en mode automatique. Précédemment, il utilisait la validation automatique au niveau applicatif en provoquant une validation (« commit ») après chaque écriture de l'ORM."
-
-# 8a3d5c8747c34d36ba65e8fbf56fbd18
-#: ../../../../1.8/docs/topics/db/transactions.txt:668
-msgid ""
-"As a consequence, each database query (for instance, an ORM read) started a "
-"transaction that lasted until the next ORM write. Such \"automatic "
-"transactions\" no longer exist in Django 1.6."
-msgstr "Par conséquent, chaque requête de base de données (par exemple, une lecture par l'ORM) démarrait une transaction qui durait jusqu'à l'écriture suivante par l'ORM. De telles « transactions automatiques » n'existent plus dans Django 1.6."
-
-# 8e16e4481e014ea3ab8adceb6636baa8
-#: ../../../../1.8/docs/topics/db/transactions.txt:672
-msgid "There are four known scenarios where this is backwards-incompatible."
-msgstr "Il y a quatre scénarios pour lesquels ce nouveau comportement est incompatible."
-
-# 8d1fef3ea73d48da898284e268c7e619
-#: ../../../../1.8/docs/topics/db/transactions.txt:674
-msgid ""
-"Note that managed mode isn't affected at all. This section assumes auto "
-"mode. See the :ref:`description of modes <transaction-states>` above."
-msgstr "Notez que le mode « managed » n'est pas touché du tout. Cette section présuppose l'utilisation du mode automatique. Voir la :ref:`description des modes <transaction-states>` ci-dessus."
-
-# 4ecbaa2931894c62be2c60aeac79818d
-#: ../../../../1.8/docs/topics/db/transactions.txt:678
-msgid "Sequences of custom SQL queries"
-msgstr "Suites de requêtes SQL personnalisées"
-
-# 18e519cc2bc344b7bf3dacfd7dbc0ab4
-#: ../../../../1.8/docs/topics/db/transactions.txt:680
-msgid ""
-"If you're executing several :ref:`custom SQL queries <executing-custom-sql>`"
-" in a row, each one now runs in its own transaction, instead of sharing the "
-"same \"automatic transaction\". If you need to enforce atomicity, you must "
-"wrap the sequence of queries in :func:`atomic`."
-msgstr "Si vous exécutez plusieurs :ref:`requêtes SQL personnalisées <executing-custom-sql>` à la suite, chacune s'exécute dorénavant dans sa propre transaction, au lieu de partager la même « transaction automatique ». Si vous avez besoin de garantir l'atomicité, vous devez entourer la suite de requêtes par un bloc :func:`atomic`."
-
-# 0152d48082b34fa5a14f42c1f3c24dd3
-#: ../../../../1.8/docs/topics/db/transactions.txt:685
-msgid ""
-"To check for this problem, look for calls to ``cursor.execute()``. They're "
-"usually followed by a call to ``transaction.commit_unless_managed()``, which"
-" isn't useful any more and should be removed."
-msgstr "Pour savoir si ce problème existe, faites une recherche de ``cursor.execute()``. Ces appels sont généralement suivis par un appel à ``transaction.commit_unless_managed()``, qui ne sert plus à rien et qui devrait être enlevé."
-
-# 613b4cf635dc4b4b89ba9860f8ce9f99
-#: ../../../../1.8/docs/topics/db/transactions.txt:690
-msgid "Select for update"
-msgstr "Sélection pour mise à jour"
-
-# 70e40cb7d55c4d58a690ef1ea7b0c5c5
-#: ../../../../1.8/docs/topics/db/transactions.txt:692
-msgid ""
-"If you were relying on \"automatic transactions\" to provide locking between"
-" :meth:`~django.db.models.query.QuerySet.select_for_update` and a subsequent"
-" write operation — an extremely fragile design, but nonetheless possible — "
-"you must wrap the relevant code in :func:`atomic`. Since Django 1.6.3, "
-"executing a query with "
-":meth:`~django.db.models.query.QuerySet.select_for_update` in autocommit "
-"mode will raise a :exc:`~django.db.transaction.TransactionManagementError`."
-msgstr "Si vous comptiez sur les « transactions automatiques » pour se charger du verrouillage entre :meth:`~django.db.models.query.QuerySet.select_for_update` et l'opération d'écriture qui suit, une structure très fragile, mais néanmoins possible, vous devez maintenant envelopper le code concerné dans :func:`atomic`. À partir de Django 1.6.3, l'exécution d'une requête avec :meth:`~django.db.models.query.QuerySet.select_for_update` en mode autocommit génère une exception :exc:`~django.db.transaction.TransactionManagementError`."
-
-# 2fe58e8ca2834f519c1d410eb4bb1a1a
-#: ../../../../1.8/docs/topics/db/transactions.txt:701
-msgid "Using a high isolation level"
-msgstr "Utilisation d'un niveau d'isolation élevé"
-
-# 58301664dfd040c8b5e7c07fdb6ee7b0
-#: ../../../../1.8/docs/topics/db/transactions.txt:703
-msgid ""
-"If you were using the \"repeatable read\" isolation level or higher, and if "
-"you relied on \"automatic transactions\" to guarantee consistency between "
-"successive reads, the new behavior might be backwards-incompatible. To "
-"enforce consistency, you must wrap such sequences in :func:`atomic`."
-msgstr "Si vous utilisiez le niveau d'isolation « repeatable read » ou plus élevé et que vous comptiez sur les « transactions automatiques » pour garantir la cohérence entre plusieurs lectures successives, le nouveau comportement modifie votre attente de manière incompatible. Pour garantir cette cohérence des lectures, vous devez envelopper ces instructions successives dans un bloc :func:`atomic`."
-
-# 8206254118804d04aa58f09fd0202bf4
-#: ../../../../1.8/docs/topics/db/transactions.txt:708
-msgid ""
-"MySQL defaults to \"repeatable read\" and SQLite to \"serializable\"; they "
-"may be affected by this problem."
-msgstr "Le niveau d'isolation par défaut de MySQL est « repeatable read » et celui de SQLite est « serializable » ; ils peuvent donc être concernés par ce problème."
-
-# 021fe84b82e5456a8a3b50bdddd32b3b
-#: ../../../../1.8/docs/topics/db/transactions.txt:711
-msgid ""
-"At the \"read committed\" isolation level or lower, \"automatic "
-"transactions\" have no effect on the semantics of any sequence of ORM "
-"operations."
-msgstr "Au niveau d'isolation « read committed » ou plus bas, les « transactions automatiques » n'ont aucun effet sur la sémantique de suites d'opérations de l'ORM."
-
-# d48331404809498e84fe1804cf90ded4
-#: ../../../../1.8/docs/topics/db/transactions.txt:714
-msgid ""
-"PostgreSQL and Oracle default to \"read committed\" and aren't affected, "
-"unless you changed the isolation level."
-msgstr "Le niveau d'isolation par défaut de PostgreSQL et Oracle est « read committed » ; ils ne sont donc pas concernés pour autant que vous n'ayez pas changé le niveau d'isolation."
-
-# eb087d04fa414b7e92b94356551686e3
-#: ../../../../1.8/docs/topics/db/transactions.txt:718
-msgid "Using unsupported database features"
-msgstr "Utilisation de fonctionnalités de bases de données non prises en charge"
-
-# a87c0944fcde45b9a7185c95bd1a7a02
-#: ../../../../1.8/docs/topics/db/transactions.txt:720
-msgid ""
-"With triggers, views, or functions, it's possible to make ORM reads result "
-"in database modifications. Django 1.5 and earlier doesn't deal with this "
-"case and it's theoretically possible to observe a different behavior after "
-"upgrading to Django 1.6 or later. In doubt, use :func:`atomic` to enforce "
-"integrity."
-msgstr "Avec les déclencheurs (triggers), les vues ou les fonctions, il est possible que des lectures par l'ORM aboutissent à des modifications en base de données. Django 1.5 et les versions précédentes ne se préoccupaient pas de cette question, et il est théoriquement possible d'observer un comportement différent après avoir passé à Django 1.6. Dans le doute, utilisez :func:`atomic` pour garantir l'intégrité."
-
-# 4bfeff9b9be544b992ff1bb473a22bd6
+# 66e62c64946843fdbab1570ec753809d
 #: ../../../../1.8/docs/topics/email.txt:3
 msgid "Sending email"
 msgstr "Envoi de messages électroniques"
@@ -16891,18 +16526,63 @@ msgstr "Le moteur SMTP"
 
 # da348dfec0fa4cc183163cf1139d956f
 #: ../../../../1.8/docs/topics/email.txt:458
-msgid ""
-"This is the default backend. Email will be sent through a SMTP server. The "
-"server address and authentication credentials are set in the "
-":setting:`EMAIL_HOST`, :setting:`EMAIL_PORT`, :setting:`EMAIL_HOST_USER`, "
-":setting:`EMAIL_HOST_PASSWORD`, :setting:`EMAIL_USE_TLS`, "
-":setting:`EMAIL_USE_SSL`, :setting:`EMAIL_TIMEOUT`, "
-":setting:`EMAIL_SSL_CERTFILE` and :setting:`EMAIL_SSL_KEYFILE` settings in "
-"your settings file."
-msgstr "C'est le moteur par défaut. Les courriels seront envoyés par un serveur SMTP. L'adresse et les informations d'authentification du serveur sont définis par les réglages :setting:`EMAIL_HOST`, :setting:`EMAIL_PORT`, :setting:`EMAIL_HOST_USER`, :setting:`EMAIL_HOST_PASSWORD`, :setting:`EMAIL_USE_TLS`, :setting:`EMAIL_USE_SSL`, :setting:`EMAIL_TIMEOUT`, :setting:`EMAIL_SSL_CERTFILE` et :setting:`EMAIL_SSL_KEYFILE` de votre fichier de réglages."
+msgid "This is the default backend. Email will be sent through a SMTP server."
+msgstr "C’est le moteur par défaut. Les courriels seront envoyés par un serveur SMTP."
 
-# d44346c444b8468c800d7cf461576068
+# 67c8211d43f447a0bcbe0ada66a81790
+#: ../../../../1.8/docs/topics/email.txt:460
+msgid ""
+"The value for each argument is retrieved from the matching setting if the "
+"argument is ``None``:"
+msgstr "La valeur de chaque paramètre est récupérée à partir du réglage correspondant si le paramètre vaut ``None``:"
+
+# 0704ad35dc304c5cae836f1859736011
+#: ../../../../1.8/docs/topics/email.txt:463
+msgid "``host``: :setting:`EMAIL_HOST`"
+msgstr "``host``: :setting:`EMAIL_HOST`"
+
+# 7f3bd25869b4451396f5e00b8f186570
+#: ../../../../1.8/docs/topics/email.txt:464
+msgid "``port``: :setting:`EMAIL_PORT`"
+msgstr "``port``: :setting:`EMAIL_PORT`"
+
+# 297482912346465393f70c8b343269a4
+#: ../../../../1.8/docs/topics/email.txt:465
+msgid "``username``: :setting:`EMAIL_HOST_USER`"
+msgstr "``username``: :setting:`EMAIL_HOST_USER`"
+
+# 72586a55cca24da68907318efe55e7b1
 #: ../../../../1.8/docs/topics/email.txt:466
+msgid "``password``: :setting:`EMAIL_HOST_PASSWORD`"
+msgstr "``password``: :setting:`EMAIL_HOST_PASSWORD`"
+
+# 7ca81817a4254fea8c1e898521a97027
+#: ../../../../1.8/docs/topics/email.txt:467
+msgid "``use_tls``: :setting:`EMAIL_USE_TLS`"
+msgstr "``use_tls``: :setting:`EMAIL_USE_TLS`"
+
+# 62e5832477244633a253bde20fe7ac54
+#: ../../../../1.8/docs/topics/email.txt:468
+msgid "``use_ssl``: :setting:`EMAIL_USE_SSL`"
+msgstr "``use_ssl``: :setting:`EMAIL_USE_SSL`"
+
+# e0b039fd9c4d476792291ef319ec2882
+#: ../../../../1.8/docs/topics/email.txt:469
+msgid "``timeout``: :setting:`EMAIL_TIMEOUT`"
+msgstr "``timeout``: :setting:`EMAIL_TIMEOUT`"
+
+# 53b1cafc36ad4ed895611885ff612be0
+#: ../../../../1.8/docs/topics/email.txt:470
+msgid "``ssl_keyfile``: :setting:`EMAIL_SSL_KEYFILE`"
+msgstr "``ssl_keyfile``: :setting:`EMAIL_SSL_KEYFILE`"
+
+# 829a48efcc0848eda36f9ad245a2ca9c
+#: ../../../../1.8/docs/topics/email.txt:471
+msgid "``ssl_certfile``: :setting:`EMAIL_SSL_CERTFILE`"
+msgstr "``ssl_certfile``: :setting:`EMAIL_SSL_CERTFILE`"
+
+# 10d426daaf5148c3abd53b4ad1ebfb16
+#: ../../../../1.8/docs/topics/email.txt:473
 msgid ""
 "The SMTP backend is the default configuration inherited by Django. If you "
 "want to specify it explicitly, put the following in your settings::"
@@ -18312,8 +17992,8 @@ msgstr "La classe :class:`Form`"
 #: ../../../../1.8/docs/topics/forms/index.txt:226
 msgid ""
 "We already know what we want our HTML form to look like. Our starting point "
-"for it in Django is this::"
-msgstr "Nous savons déjà à quoi notre formulaire HTML doit ressembler. Notre point de départ dans Django est le suivant ::"
+"for it in Django is this:"
+msgstr "Nous savons déjà à quoi notre formulaire HTML doit ressembler. Notre point de départ dans Django est le suivant :"
 
 # cf7219adecc94cde9e0ee7b8cf939fb8
 #: ../../../../1.8/docs/topics/forms/index.txt:234
@@ -18383,8 +18063,8 @@ msgstr "Les données de formulaire renvoyés à un site Web Django sont traitée
 #: ../../../../1.8/docs/topics/forms/index.txt:273
 msgid ""
 "To handle the form we need to instantiate it in the view for the URL where "
-"we want it to be published::"
-msgstr "Pour traiter le formulaire, nous devons en créer une instance dans la vue à destination de l'URL à laquelle il doit apparaître ::"
+"we want it to be published:"
+msgstr "Pour traiter le formulaire, nous devons en créer une instance dans la vue à destination de l'URL à laquelle il doit apparaître :"
 
 # 3156500f294e4fc688f0aa95b284c5f6
 #: ../../../../1.8/docs/topics/forms/index.txt:297
@@ -18558,8 +18238,8 @@ msgstr "Plus de détails sur les champs"
 #: ../../../../1.8/docs/topics/forms/index.txt:394
 msgid ""
 "Consider a more useful form than our minimal example above, which we could "
-"use to implement \"contact me\" functionality on a personal Web site::"
-msgstr "Voici un formulaire un peu plus utile que notre exemple minimal ci-dessus, que nous pourrions utiliser pour implémenter une fonctionnalité « Contactez-moi » sur un site Web personnel ::"
+"use to implement \"contact me\" functionality on a personal Web site:"
+msgstr "Voici un formulaire un peu plus utile que notre exemple minimal ci-dessus, que nous pourrions utiliser pour implémenter une fonctionnalité « Contactez-moi » sur un site Web personnel :"
 
 # bfe2313ef95540acb9a5e5366b96348d
 #: ../../../../1.8/docs/topics/forms/index.txt:405
@@ -18628,8 +18308,8 @@ msgstr "Dans l'exemple ci-dessus du formulaire de contact, ``cc_myself`` sera un
 #: ../../../../1.8/docs/topics/forms/index.txt:441
 msgid ""
 "Here's how the form data could be processed in the view that handles this "
-"form::"
-msgstr "Voici comment les données de formulaire pourraient être traitées dans la vue qui gère ce formulaire ::"
+"form:"
+msgstr "Voici comment les données de formulaire pourraient être traitées dans la vue qui gère ce formulaire :"
 
 # 95703ba0410c46a88c04098137f3f571
 #: ../../../../1.8/docs/topics/forms/index.txt:460
@@ -19267,9 +18947,9 @@ msgstr "Les chemins utilisés pour définir les fichiers annexes peuvent être r
 msgid ""
 "As part of the introduction of the :doc:`staticfiles app "
 "</ref/contrib/staticfiles>` two new settings were added to refer to \"static"
-" files\" (images, CSS, Javascript, etc.) that are needed to render a "
+" files\" (images, CSS, JavaScript, etc.) that are needed to render a "
 "complete web page: :setting:`STATIC_URL` and :setting:`STATIC_ROOT`."
-msgstr "Dans le cadre de l'introduction de :doc:`l'application staticfiles </ref/contrib/staticfiles>`, deux nouveaux réglages ont été ajoutés pour faire référence aux « fichiers statiques » (images, CSS, JavaScript, etc.) nécessaires à l'affichage d'une page Web complète : :setting:`STATIC_URL` et :setting:`STATIC_ROOT`."
+msgstr "Dans le cadre de l’introduction de l':doc:`application staticfiles </ref/contrib/staticfiles>`, deux nouveaux réglages ont été ajoutés pour faire référence aux « fichiers statiques » (images, CSS, JavaScript, etc.) nécessaires à l’affichage d’une page Web complète : :setting:`STATIC_URL` et :setting:`STATIC_ROOT`."
 
 # 530e57c6fdc14f06a25675be59bbfd37
 #: ../../../../1.8/docs/topics/forms/media.txt:213
@@ -19614,7 +19294,12 @@ msgstr ":class:`~django.forms.ModelMultipleChoiceField` (voir ci-dessous)"
 msgid ":class:`NullBooleanField`"
 msgstr ":class:`NullBooleanField`"
 
-# 3002c6bdfb6748fdb759e220c559853b
+# 3e1be12a1aed4a97b957f6aca87698c1
+#: ../../../../1.8/docs/topics/forms/modelforms.txt:99
+msgid ":class:`~django.forms.NullBooleanField`"
+msgstr ":class:`~django.forms.NullBooleanField`"
+
+# 8931f2a661ee4df78bdf00a47d08d982
 #: ../../../../1.8/docs/topics/forms/modelforms.txt:101
 msgid ":class:`PositiveIntegerField`"
 msgstr ":class:`PositiveIntegerField`"
@@ -23156,8 +22841,8 @@ msgstr "``get_object_or_404``"
 msgid ""
 "Calls :meth:`~django.db.models.query.QuerySet.get()` on a given model "
 "manager, but it raises :class:`~django.http.Http404` instead of the model's "
-":class:`~django.core.exceptions.DoesNotExist` exception."
-msgstr "Appelle :meth:`~django.db.models.query.QuerySet.get()` d'un gestionnaire de modèle donné, mais lève une exception :class:`~django.http.Http404` au lieu de l'exception :class:`~django.core.exceptions.DoesNotExist` du modèle."
+":class:`~django.db.models.Model.DoesNotExist` exception."
+msgstr "Appelle :meth:`~django.db.models.query.QuerySet.get()` d’un gestionnaire de modèle donné, mais génère une exception :class:`~django.http.Http404` au lieu de l’exception :class:`~django.db.models.Model.DoesNotExist` du modèle."
 
 # 673e7a943d2f414aa09786830fefffe4
 # 9987f446dcc34571a96bdf58ff262bd5
@@ -24715,11 +24400,11 @@ msgstr "Quand la mise en forme est activée avec :setting:`USE_L10N`, Django ess
 #: ../../../../1.8/docs/topics/i18n/formatting.txt:66
 msgid ""
 "However, it may not always be appropriate to use localized values -- for "
-"example, if you're outputting Javascript or XML that is designed to be "
+"example, if you're outputting JavaScript or XML that is designed to be "
 "machine-readable, you will always want unlocalized values. You may also want"
 " to use localization in selected templates, rather than using localization "
 "everywhere."
-msgstr "Cependant, il n'est pas toujours adéquat d'utiliser des valeurs régionalisées, par exemple si vous produisez du JavaScript ou du XML qui devront être interprétés par le système, ce contenu ne devrait jamais contenir d'affichage régionalisé. Il peut aussi être parfois souhaitable de limiter la régionalisation à certains gabarits, plutôt que de l'utiliser partout."
+msgstr "Cependant, il n’est pas toujours adéquat d’utiliser des valeurs régionalisées, par exemple si vous produisez du JavaScript ou du XML qui devront être interprétés par le système, ce contenu ne devrait jamais contenir d’affichage régionalisé. Il peut aussi être parfois souhaitable de limiter la régionalisation à certains gabarits, plutôt que de l’utiliser partout."
 
 # 0b413b4075ea4abfbbdc9d071eaf1cfa
 #: ../../../../1.8/docs/topics/i18n/formatting.txt:72
@@ -27099,29 +26784,90 @@ msgstr "Pour utiliser le catalogue, insérez le script généré dynamiquement c
 #: ../../../../1.8/docs/topics/i18n/translation.txt:978
 msgid ""
 "This uses reverse URL lookup to find the URL of the JavaScript catalog view."
-" When the catalog is loaded, your JavaScript code can use the standard "
-"``gettext`` interface to access it::"
-msgstr "Nous utilisons la résolution inverse d'URL pour trouver l'URL de la vue du catalogue JavaScript. Lorsque le catalogue est chargé, votre code JavaScript peut utiliser l'interface ``gettext`` standard pour y avoir accès ::"
+" When the catalog is loaded, your JavaScript code can use the following "
+"methods:"
+msgstr "Nous utilisons la résolution inverse d’URL pour trouver l’URL de la vue du catalogue JavaScript. Lorsque le catalogue est chargé, votre code JavaScript peut utiliser les méthodes suivantes :"
 
-# 05531950ea954771a36a37fe7f1db35b
+# 292fa1599d6a41b7abf2477640200cd7
+# c242534c1cdd4550bb8ca57f568dc86a
+#: ../../../../1.8/docs/topics/i18n/translation.txt:981
+#: ../../../../1.8/docs/topics/i18n/translation.txt:991
+msgid "``gettext``"
+msgstr "``gettext``"
+
+# c75953003b544596b6b12bcd187f2f4b
+# 3d4ca1f429a74847aed1508fe0b1eb23
+#: ../../../../1.8/docs/topics/i18n/translation.txt:982
+#: ../../../../1.8/docs/topics/i18n/translation.txt:999
+msgid "``ngettext``"
+msgstr "``ngettext``"
+
+# 96b95bb0a543430e85e72fb41024791b
+# e46b238196d2409d8d81c4b3aefbf4d6
+#: ../../../../1.8/docs/topics/i18n/translation.txt:983
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1009
+msgid "``interpolate``"
+msgstr "``interpolate``"
+
+# 4f684eab4c074b269f425d81358b57c2
+# e3c9543ea0e246b591231a7da00e226c
 #: ../../../../1.8/docs/topics/i18n/translation.txt:984
-msgid "There is also an ``ngettext`` interface::"
-msgstr "L'interface ``ngettext`` est aussi disponible ::"
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1045
+msgid "``get_format``"
+msgstr "``get_format``"
 
-# 83286d3e34e84eb4ad8e119f813d54b7
-#: ../../../../1.8/docs/topics/i18n/translation.txt:990
-msgid "and even a string interpolation function::"
-msgstr "ainsi qu'une fonction d'interpolation de chaîne ::"
+# dcbb50170a5a4c1ba309fce382ddec3b
+# c34f99da67cb42e69ffa29794c5f3d2f
+#: ../../../../1.8/docs/topics/i18n/translation.txt:985
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1074
+msgid "``gettext_noop``"
+msgstr "``gettext_noop``"
 
-# d91edcf3de8f41f3a698c8cd64598147
-#: ../../../../1.8/docs/topics/i18n/translation.txt:994
+# 0ce4a69bfe914e9587d8b9b1cd8b3ee9
+# 4cd74c8b0bf345f7bbdf044a7b12993c
+#: ../../../../1.8/docs/topics/i18n/translation.txt:986
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1085
+msgid "``pgettext``"
+msgstr "``pgettext``"
+
+# a3f25b92c2bb4b04b8b72345aaa35136
+# 8598a50784f24cfeaf52764ebb40f795
+#: ../../../../1.8/docs/topics/i18n/translation.txt:987
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1094
+msgid "``npgettext``"
+msgstr "``npgettext``"
+
+# 89ef7e255a5c4f56a13c12cca598ff25
+# 54fe9fbb74e34b03b7b9459b5baed75e
+#: ../../../../1.8/docs/topics/i18n/translation.txt:988
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1106
+msgid "``pluralidx``"
+msgstr "``pluralidx``"
+
+# f5f597979b6a466d91a661e071897a14
+#: ../../../../1.8/docs/topics/i18n/translation.txt:993
 msgid ""
-"The interpolation syntax is borrowed from Python, so the ``interpolate`` "
-"function supports both positional and named interpolation:"
-msgstr "La syntaxe d'interpolation est empruntée à Python ; ainsi, la fonction ``interpolate`` prend en charge à la fois les paramètres nommées et les paramètres positionnels :"
+"The ``gettext`` function behaves similarly to the standard ``gettext`` "
+"interface within your Python code::"
+msgstr "La fonction ``gettext`` fonctionne de manière similaire à l'interface ``gettext`` standard accessible depuis le code Python ::"
 
-# 8720a35e1ae1466f8bf170446bccbe84
-#: ../../../../1.8/docs/topics/i18n/translation.txt:997
+# 219f060c8051407fa25d87ebec11dec8
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1001
+msgid ""
+"The ``ngettext`` function provides an interface to pluralize words and "
+"phrases::"
+msgstr "La fonction ``ngettext`` fournit une interface pour mettre au pluriel des mots et des phrases ::"
+
+# 871e32fe1e3549de8edc1d3677e9ae2e
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1011
+msgid ""
+"The ``interpolate`` function supports dynamically populating a format "
+"string. The interpolation syntax is borrowed from Python, so the "
+"``interpolate`` function supports both positional and named interpolation:"
+msgstr "La fonction ``interpolate`` permet de remplir dynamiquement une chaîne de mise en forme. La syntaxe d’interpolation est empruntée à Python ; ainsi, la fonction ``interpolate`` prend en charge à la fois les paramètres nommés et les paramètres positionnels :"
+
+# 90e338f54e2f416f93f08f0b2ce9aee8
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1015
 msgid ""
 "Positional interpolation: ``obj`` contains a JavaScript Array object whose "
 "elements values are then sequentially interpolated in their corresponding "
@@ -27132,7 +26878,7 @@ msgstr "Interpolation positionnelle : ``obj`` contient un objet Array JavaScrip
 #: ../../../../1.8/docs/topics/i18n/translation.txt:1007
 msgid ""
 "Named interpolation: This mode is selected by passing the optional boolean "
-"``named`` parameter as true. ``obj`` contains a JavaScript object or "
+"``named`` parameter as ``true``. ``obj`` contains a JavaScript object or "
 "associative array. For example::"
 msgstr "Interpolation nommée : ce mode est sélectionné en passant ``true`` dans le paramètre booléen facultatif ``named``. ``obj`` contient un objet JavaScript ou un tableau associatif. Par exemple ::"
 
@@ -27146,8 +26892,157 @@ msgid ""
 "with ``ngettext`` to produce proper pluralizations)."
 msgstr "Il ne faut cependant pas abuser de l'interpolation de chaînes : c'est toujours du JavaScript, le code effectue donc des substitutions répétées par expression régulière. Ce n'est pas aussi rapide que l'interpolation de chaînes en Python, il s'agit donc de réserver cet usage pour les cas où c'est vraiment nécessaire (par exemple conjointement avec``ngettext`` pour générer des pluriels corrects)."
 
-# 04e04257d2b5408eb98c40e7460b508c
-#: ../../../../1.8/docs/topics/i18n/translation.txt:1027
+# 32ceea5d6b824f349e92a79745de2546
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1047
+msgid ""
+"The ``get_format`` function has access to the configured i18n formatting "
+"settings and can retrieve the format string for a given setting name::"
+msgstr "La fonction ``get_format`` accède aux réglages de mise en forme régionalisée et peut obtenir la chaîne de format d'un nom de réglage donné ::"
+
+# 44948af832dd41d1933b7dbb6eca5adb
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1053
+msgid "It has access to the following settings:"
+msgstr "Elle peut accéder aux réglages suivants :"
+
+# 1dc3ff98b39f4e2098e2e7722843a000
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1055
+msgid ":setting:`DATE_FORMAT`"
+msgstr ":setting:`DATE_FORMAT`"
+
+# c26a9e04094044c8bd8442f8c0fd1040
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1056
+msgid ":setting:`DATE_INPUT_FORMATS`"
+msgstr ":setting:`DATE_INPUT_FORMATS`"
+
+# 7796ff16b8ca408ead38b81623db24e3
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1057
+msgid ":setting:`DATETIME_FORMAT`"
+msgstr ":setting:`DATETIME_FORMAT`"
+
+# 375a7f2afa4d4b70833d650e8044b249
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1058
+msgid ":setting:`DATETIME_INPUT_FORMATS`"
+msgstr ":setting:`DATETIME_INPUT_FORMATS`"
+
+# 2816305e4fe14ef6894012028c582d6c
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1059
+msgid ":setting:`DECIMAL_SEPARATOR`"
+msgstr ":setting:`DECIMAL_SEPARATOR`"
+
+# 18fd4b600fb5450e87000d8b87c8789b
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1060
+msgid ":setting:`FIRST_DAY_OF_WEEK`"
+msgstr ":setting:`FIRST_DAY_OF_WEEK`"
+
+# 87a8fd853d4e462e9942a3d83c1f1406
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1061
+msgid ":setting:`MONTH_DAY_FORMAT`"
+msgstr ":setting:`MONTH_DAY_FORMAT`"
+
+# 3c3cd025347d4fb78a975be8a33eb43a
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1062
+msgid ":setting:`NUMBER_GROUPING`"
+msgstr ":setting:`NUMBER_GROUPING`"
+
+# 44b57f2d9dad470fbd7fbe02cfa66f38
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1063
+msgid ":setting:`SHORT_DATE_FORMAT`"
+msgstr ":setting:`SHORT_DATE_FORMAT`"
+
+# 053a196230dc445b878ee3747976460c
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1064
+msgid ":setting:`SHORT_DATETIME_FORMAT`"
+msgstr ":setting:`SHORT_DATETIME_FORMAT`"
+
+# ba35bc97e1434f63b557d7b1923a773d
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1065
+msgid ":setting:`THOUSAND_SEPARATOR`"
+msgstr ":setting:`THOUSAND_SEPARATOR`"
+
+# 24838c0b14174a4c94ba0b353fec8ad0
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1066
+msgid ":setting:`TIME_FORMAT`"
+msgstr ":setting:`TIME_FORMAT`"
+
+# f1bea42a22be445696b0ec3271caf4b6
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1067
+msgid ":setting:`TIME_INPUT_FORMATS`"
+msgstr ":setting:`TIME_INPUT_FORMATS`"
+
+# 49389f27a10b4b0fb3a624c224c8de55
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1068
+msgid ":setting:`YEAR_MONTH_FORMAT`"
+msgstr ":setting:`YEAR_MONTH_FORMAT`"
+
+# c9aa2e367fef465aa61e1e30c9fcad11
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1070
+msgid ""
+"This is useful for maintaining formatting consistency with the Python-"
+"rendered values."
+msgstr "C'est bien utile pour conserver une cohérence de mise en forme en lien avec les valeurs produites par le code Python."
+
+# b4b35d7cf54343c3aae8be1e58ee7eee
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1076
+msgid ""
+"This emulates the ``gettext`` function but does nothing, returning whatever "
+"is passed to it::"
+msgstr "Ceci émule la fonction ``gettext``, mais ne fait rien d'autre que de renvoyer le contenu qui lui est transmis ::"
+
+# e3bcef883d2f4e559c776acf2c66ed4f
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1081
+msgid ""
+"This is useful for stubbing out portions of the code that will need "
+"translation in the future."
+msgstr "C'est utile pour identifier des portions de code qui vont avoir besoin d'être traduites plus tard."
+
+# 693274bd95514269b62399389badea53
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1087
+msgid ""
+"The ``pgettext`` function behaves like the Python variant "
+"(:func:`~django.utils.translation.pgettext()`), providing a contextually "
+"translated word::"
+msgstr "La fonction ``pgettext`` fonctionne de manière similaire à son équivalent Python (:func:`~django.utils.translation.pgettext()`), fournissant un contenu traduit en fonction d'un contexte ::"
+
+# 6e030af566664c1d9b178451b42e1599
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1096
+msgid ""
+"The ``npgettext`` function also behaves like the Python variant "
+"(:func:`~django.utils.translation.npgettext()`), providing a **pluralized** "
+"contextually translated word::"
+msgstr "La fonction ``npgettext`` fonctionne également comme son équivalent Python (:func:`~django.utils.translation.npgettext()`), fournissant un contenu **pluriel** traduit en fonction d'un contexte ::"
+
+# 7c21b51eb48b4768828cf39034f374c7
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1108
+msgid ""
+"The ``pluralidx`` function works in a similar way to the "
+":tfilter:`pluralize` template filter, determining if a given ``count`` "
+"should use a plural form of a word or not::"
+msgstr "La fonction ``pluralidx`` fonctionne de manière semblable au filtre de gabarit :tfilter:`pluralize`, déterminant si un nombre ``count`` donné doit utiliser une forme plurielle d'un mot ou pas ::"
+
+# 8f54a7c3770c4fdab614d2f3c66c9371
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1119
+msgid ""
+"In the simplest case, if no custom pluralization is needed, this returns "
+"``false`` for the integer ``1`` and ``true`` for all other numbers."
+msgstr "Dans le cas le plus simple, si aucune mise au pluriel n'est nécessaire, cette fonction renvoie ``false`` pour le nombre ``1`` et ``true`` pour tous les autres nombres."
+
+# 46f8e3e183bf4947bb44879ecaf41ae7
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1122
+msgid ""
+"However, pluralization is not this simple in all languages. If the language "
+"does not support pluralization, an empty value is provided."
+msgstr "Cependant, la mise au pluriel n'est pas si simple dans toutes les langues. Si la langue ne gère pas les pluriels, une valeur vide est renvoyée."
+
+# 3d196f77eaad412599dac6401c2cf774
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1125
+msgid ""
+"Additionally, if there are complex rules around pluralization, the catalog "
+"view will render a conditional expression. This will evaluate to either a "
+"``true`` (should pluralize) or ``false`` (should **not** pluralize) value."
+msgstr "De plus, si les pluriels se basent sur des règles complexes, la vue du catalogue produit une expression conditionnelle. Son résultat aboutit soit à une valeur ``true`` (pluriel nécessaire), soit à une valeur ``false`` (pluriel **non** nécessaire)."
+
+# e21d3fd7c95d415c8ee94b17abf2aaa2
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1130
 msgid "Note on performance"
 msgstr "Note sur les performances"
 
@@ -27182,7 +27077,7 @@ msgstr "Le cache côté client économise de la bande passante et accélère le 
 # d4b2d581497e4013bd38c70a4b88b564
 #: ../../../../1.8/docs/topics/i18n/translation.txt:1067
 msgid ""
-"You can even pre-generate the javascript catalog as part of your deployment "
+"You can even pre-generate the JavaScript catalog as part of your deployment "
 "procedure and serve it as a static file. This radical technique is "
 "implemented in django-statici18n_."
 msgstr "Il est même possible de pré-générer le catalogue JavaScript dans le cadre de votre procédure de déploiement et le servir comme fichier statique. Cette technique radicale est implémentée dans django-statici18n_."
@@ -27920,8 +27815,16 @@ msgid ""
 "language is supported by Django."
 msgstr "Quelques fonctions dignes d'intérêt sont ``django.utils.translation.get_language()`` qui renvoie la langue utilisée dans le fil d'exécution actuel, ``django.utils.translation.activate()`` qui active un catalogue de traductions pour le fil d'exécution en cours et ``django.utils.translation.check_for_language()`` qui vérifie si la langue indiquée est prise en charge par Django."
 
-# ccdf82a0a36d4d919cc92598017de53c
-#: ../../../../1.8/docs/topics/i18n/translation.txt:1658
+# 027e8d389643422681864929f3f06159
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1761
+msgid ""
+"To help write more concise code, there is also a context manager "
+"``django.utils.translation.override()`` that stores the current language on "
+"enter and restores it on exit. With it, the above example becomes::"
+msgstr "Pour aider à écrire du code plus concis, il existe également un gestionnaire de contexte ``django.utils.translation.override()`` qui stocke la langue en cours en entrée et la restaure en sortie. Avec ceci, l'exemple ci-dessus devient ::"
+
+# bc0336c7636e4b6d95ef829dfec9990d
+#: ../../../../1.8/docs/topics/i18n/translation.txt:1772
 msgid "Language cookie"
 msgstr "Cookie de langue"
 
@@ -39333,8 +39236,8 @@ msgstr "Définissez ``html`` à ``True`` pour que ``text`` soit géré comme du 
 #: ../../../../1.8/docs/topics/testing/tools.txt:1406
 msgid ""
 "Asserts that a ``Response`` instance produced the given ``status_code`` and "
-"that ``text`` does not appears in the content of the response."
-msgstr "Confirme qu'une instance de ``Response`` produit le code ``status_code`` indiqué et que le contenu ``text`` n'apparaît pas dans le contenu de la réponse."
+"that ``text`` does *not* appear in the content of the response."
+msgstr "Confirme qu’une instance de ``Response`` produit le code ``status_code`` indiqué et que le contenu ``text`` n’apparaît *pas* dans le contenu de la réponse."
 
 # 505dfc17cd0549bcbf567dab67d68015
 #: ../../../../1.8/docs/topics/testing/tools.txt:1417

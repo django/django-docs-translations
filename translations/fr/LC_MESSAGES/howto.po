@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-02 04:09-0500\n"
-"PO-Revision-Date: 2015-04-02 15:36+0000\n"
+"POT-Creation-Date: 2015-05-09 03:08-0500\n"
+"PO-Revision-Date: 2015-05-09 09:02+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -1910,11 +1910,11 @@ msgstr "Méthodes utiles"
 # a7a703e74d9d4d18ae8c14b96f9d63ee
 #: ../../../../1.8/docs/howto/custom-model-fields.txt:342
 msgid ""
-"Once you've created your :class:`~django.db.models.Field` subclass and set "
-"up the ``__metaclass__``, you might consider overriding a few standard "
-"methods, depending on your field's behavior. The list of methods below is in"
-" approximately decreasing order of importance, so start from the top."
-msgstr "Après avoir créé la sous-classe de :class:`~django.db.models.Field` et défini la ``__metaclass__``, il peut être utile de surcharger quelques méthodes standards, en fonction du comportement du champ. La liste de méthodes ci-dessous est plus ou moins dans l'ordre décroissant d'importance, il faut donc commencer par les premières."
+"Once you've created your :class:`~django.db.models.Field` subclass, you "
+"might consider overriding a few standard methods, depending on your field's "
+"behavior. The list of methods below is in approximately decreasing order of "
+"importance, so start from the top."
+msgstr "Après avoir créé la sous-classe de :class:`~django.db.models.Field`, il peut être utile de surcharger quelques méthodes standards, en fonction du comportement du champ. La liste de méthodes ci-dessous est plus ou moins dans l’ordre décroissant d’importance, il faut donc commencer par les premières."
 
 # d3e8f1b22a3f46d5a30a567ffd309d67
 #: ../../../../1.8/docs/howto/custom-model-fields.txt:350
@@ -2009,7 +2009,7 @@ msgid ""
 "always called :meth:`~Field.to_python` on assignment. This did not play "
 "nicely with custom database transformations, aggregation, or values queries,"
 " so it has been replaced with :meth:`~Field.from_db_value`."
-msgstr "Historiquement, Django fournissait une métaclasse appelée ``SubfieldBase`` qui appelait toujours :meth:`~Field.to_python` lors de chaque attribution de valeur. Cela ne se combinait pas très bien avec les transformations personnalisées de base de données, l'agrégation ou les requêtes de valeurs, ce qui fait que cette classe a été remplacée par "
+msgstr "Historiquement, Django fournissait une métaclasse appelée ``SubfieldBase`` qui appelait toujours :meth:`~Field.to_python` lors de chaque attribution de valeur. Cela ne se combinait pas très bien avec les transformations personnalisées de base de données, l'agrégation ou les requêtes de valeurs, ce qui fait que cette classe a été remplacée par :meth:`~Field.from_db_value`."
 
 # 2e5f8c2d4c124a78baf443c6d6aade44
 #: ../../../../1.8/docs/howto/custom-model-fields.txt:444
@@ -5054,7 +5054,7 @@ msgid ""
 "If you are running more than Django application, please refer to the "
 "`Defining Application Groups`_ section of the mod_wsgi docs for more "
 "information about this setting."
-msgstr "L'utilisation de ``WSGIApplicationGroup %{GLOBAL}`` dans les configurations ci-dessous suppose que votre instance d'Apache n'exécute qu'une seule application Django. Si vous utilisez plus d'une application Django, veuillez vous référer à la section `Définir des groupes d'applications`_ de la documentation de mod_wsgi pour plus d'informations sur ce paramètre."
+msgstr "L'utilisation de ``WSGIApplicationGroup %{GLOBAL}`` dans les configurations ci-dessous présuppose que l'instance d'Apache ne sert qu'une seule application Django. Si vous faites fonctionner plus d'une application Django, référez-vous à la section `Defining Application Groups`_ de la documentation de mod_wsgi pour plus d'informations au sujet de ce réglage."
 
 # 27d17d4fb1a34e49bd3e73384732f6ae
 #: ../../../../1.8/docs/howto/deployment/wsgi/apache-auth.txt:39
