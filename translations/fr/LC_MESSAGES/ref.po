@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-23 02:09-0500\n"
-"PO-Revision-Date: 2015-05-23 08:59+0000\n"
+"PO-Revision-Date: 2015-05-23 14:42+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -40391,7 +40391,7 @@ msgid ""
 "-Content-Type-Options: nosniff`` header.  ``SecurityMiddleware`` will do "
 "this for all responses if the :setting:`SECURE_CONTENT_TYPE_NOSNIFF` setting"
 " is ``True``."
-msgstr ""
+msgstr "Pour empêcher le navigateur de deviner le type de contenu et le forcer à toujours utiliser le type indiqué dans l'en-tête ``Content-Type``, vous pouvez définir l'en-tête ``X-Content-Type-Options: nosniff``. ``SecurityMiddleware`` s'en charge pour toutes les réponses si le réglage :setting:`SECURE_CONTENT_TYPE_NOSNIFF` est défini à ``True``."
 
 # 50b87d2970a94c289e4736ecef5d5057
 #: ../../../../1.8/docs/ref/middleware.txt:267
@@ -40403,12 +40403,12 @@ msgid ""
 " hand, if you are using Django to do something like require authorization in"
 " order to download files and you cannot set the header using your Web "
 "server, this setting will be useful."
-msgstr ""
+msgstr "Notez que dans la plupart des situations de déploiement où Django n'est pas impliqué dans le service de fichiers envoyés par les utilisateurs, ce réglage ne va pas aider. Par exemple, si le contenu de :setting:`MEDIA_URL` est directement servi par le serveur Web frontal (nginx, Apache, etc.), c'est par ce dernier que l'en-tête doit être défini. D'un autre côté, si vous utilisez Django pour s'occuper de choses comme exiger une autorisation avant de pouvoir télécharger des fichiers et que vous n'êtes pas en mesure de faire définir cet en-tête par le serveur Web, ce réglage sera utile."
 
 # e9f13bae80ea45c5ab465a35935fbba5
 #: ../../../../1.8/docs/ref/middleware.txt:280
 msgid "``X-XSS-Protection: 1; mode=block``"
-msgstr ""
+msgstr "``X-XSS-Protection: 1; mode=block``"
 
 # d17e41b85a0043739e1f9d80fb1f321a
 #: ../../../../1.8/docs/ref/middleware.txt:282
@@ -40418,14 +40418,14 @@ msgid ""
 "parameters of a page. If the JavaScript is replayed in the server's "
 "response, the page is blocked from rendering and an error page is shown "
 "instead."
-msgstr ""
+msgstr "Certains navigateurs ont la capacité de bloquer du contenu qui ressemble à une `attaque XSS`_. Ils le font en examinant le contenu JavaScript dans les paramètres GET ou POST des pages. Si le JavaScript est rejoué dans la réponse du serveur, l'affichage de la page est bloqué et une page d'erreur s'affiche à la place."
 
 # 31966ce379fd4f0288aac6d018736aca
 #: ../../../../1.8/docs/ref/middleware.txt:287
 msgid ""
 "The `X-XSS-Protection header`_ is used to control the operation of the XSS "
 "filter."
-msgstr ""
+msgstr "L'`en-tête X-XSS-Protection`_ est utilisé pour contrôler l'opération du filtre XSS."
 
 # 51b510cac8184bf28c1feb8274d7f3f7
 #: ../../../../1.8/docs/ref/middleware.txt:290
@@ -40434,7 +40434,7 @@ msgid ""
 "suspected XSS attacks, you can pass the ``X-XSS-Protection: 1; mode=block`` "
 "header. ``SecurityMiddleware`` will do this for all responses if the "
 ":setting:`SECURE_BROWSER_XSS_FILTER` setting is ``True``."
-msgstr ""
+msgstr "Pour activer le filtre XSS dans le navigateur et le forcer à toujours bloquer les suspicions d'attaque XSS, vous pouvez définir l'en-tête ``X-XSS-Protection: 1; mode=block``. ``SecurityMiddleware`` s'en charge pour toutes les réponses si le réglage :setting:`SECURE_BROWSER_XSS_FILTER` est défini à ``True``."
 
 # c2677f64f4b04697a9b39a23a582e4f3
 #: ../../../../1.8/docs/ref/middleware.txt:296
@@ -40443,12 +40443,12 @@ msgid ""
 "upon exclusively. It cannot detect all XSS attacks and not all browsers "
 "support the header. Ensure you are still :ref:`validating and sanitizing "
 "<cross-site-scripting>` all input to prevent XSS attacks."
-msgstr ""
+msgstr "Le filtre XSS du navigateur est une mesure de défense utile, mais on ne peut pas s'y fier de manière exclusive. Il ne peut pas détecter toutes les attaques XSS et ce n'est pas pris en charge avec tous les navigateurs. Prenez soin de toujours :ref:`valider et nettoyer <cross-site-scripting>` toutes les valeurs entrées pour éviter les attaques XSS."
 
 # 0cdb05b722ef4b5180bab25e66ebc4ff
 #: ../../../../1.8/docs/ref/middleware.txt:307
 msgid "SSL Redirect"
-msgstr ""
+msgstr "Redirection SSL"
 
 # 28bc238d714841c38ed6d035fa9836e8
 #: ../../../../1.8/docs/ref/middleware.txt:309
@@ -40456,7 +40456,7 @@ msgid ""
 "If your site offers both HTTP and HTTPS connections, most users will end up "
 "with an unsecured connection by default. For best security, you should "
 "redirect all HTTP connections to HTTPS."
-msgstr ""
+msgstr "Si votre site offre à la fois des connexions HTTP et HTTPS, la plupart des utilisateurs obtiendront une connexion non sécurisée par défaut. Pour une meilleure sécurité, vous devriez rediriger toutes les connexions HTTP vers HTTPS."
 
 # a5548ceb3e8744f3b1c37b1fba2c806c
 #: ../../../../1.8/docs/ref/middleware.txt:313
@@ -40464,7 +40464,7 @@ msgid ""
 "If you set the :setting:`SECURE_SSL_REDIRECT` setting to True, "
 "``SecurityMiddleware`` will permanently (HTTP 301) redirect all HTTP "
 "connections to HTTPS."
-msgstr ""
+msgstr "Si vous définissez le réglage :setting:`SECURE_SSL_REDIRECT` à ``True``, ``SecurityMiddleware`` va rediriger de manière permanente (HTTP 301) toutes les connexions HTTP vers HTTPS."
 
 # aefc0d5f1c184f378a39e404bff33efe
 #: ../../../../1.8/docs/ref/middleware.txt:319
@@ -40473,14 +40473,14 @@ msgid ""
 "Django, in a front-end load balancer or reverse-proxy server such as "
 "`nginx`_. :setting:`SECURE_SSL_REDIRECT` is intended for the deployment "
 "situations where this isn't an option."
-msgstr ""
+msgstr "Pour des raisons de performance, il est préférable de procéder à ces redirections en dehors de Django, dans une répartiteur de charge frontal ou un serveur mandataire inverse tel que `nginx`_. :setting:`SECURE_SSL_REDIRECT` est prévu pour des situations de déploiement où ce scénario n'est pas envisageable."
 
 # e3e624b45ece497bbab7ea35cb215992
 #: ../../../../1.8/docs/ref/middleware.txt:324
 msgid ""
 "If the :setting:`SECURE_SSL_HOST` setting has a value, all redirects will be"
 " sent to that host instead of the originally-requested host."
-msgstr ""
+msgstr "Si le réglage :setting:`SECURE_SSL_HOST` possède une valeur, toutes les redirections seront envoyées vers cet hôte au lieu de l'hôte d'origine de la requête."
 
 # 84ce688f610e4880ad88bbadb2e7f71f
 #: ../../../../1.8/docs/ref/middleware.txt:327
@@ -40488,7 +40488,7 @@ msgid ""
 "If there are a few pages on your site that should be available over HTTP, "
 "and not redirected to HTTPS, you can list regular expressions to match those"
 " URLs in the :setting:`SECURE_REDIRECT_EXEMPT` setting."
-msgstr ""
+msgstr "Si certaines pages de votre site doivent rester disponibles par HTTP sans être redirigées vers HTTPS, vous pouvez ajouter des expressions régulières correspondantes à ces URL dans le réglage :setting:`SECURE_REDIRECT_EXEMPT` (sous forme de liste)."
 
 # 07393107d803432b9fc63a3274cebf4c
 #: ../../../../1.8/docs/ref/middleware.txt:332
@@ -40496,7 +40496,7 @@ msgid ""
 "If you are deployed behind a load-balancer or reverse-proxy server and "
 "Django can't seem to tell when a request actually is already secure, you may"
 " need to set the :setting:`SECURE_PROXY_SSL_HEADER` setting."
-msgstr ""
+msgstr "Si votre déploiement se trouve derrière un répartiteur de charge ou un serveur mandataire inverse, et que Django ne semble pas pouvoir détecter si une requête est déjà sécurisée ou non, il peut alors être nécessaire de définir le réglage :setting:`SECURE_PROXY_SSL_HEADER`."
 
 # 5d7cca89253f4f32b8113fdc9267e14f
 #: ../../../../1.8/docs/ref/middleware.txt:339
@@ -46363,7 +46363,7 @@ msgid ""
 "``lhs`` and ``rhs``. Bilateral transformations will be applied to ``rhs`` in"
 " the same order as they appear in the lookup expression. By default it is "
 "set to ``False``. For example usage, see :doc:`/howto/custom-lookups`."
-msgstr ""
+msgstr "Une valeur booléenne indiquant si cette transformation doit s'appliquer aux deux parties ``lhs`` et ``rhs``. Les transformations bilatérales seront appliquées à ``rhs`` dans leur ordre d'apparition dans l'expression de requête. Par défaut, cet attribut vaut ``False``. Pour des exemples d'utilisation, voir :doc:`/howto/custom-lookups`."
 
 # 3744a866b8474150ac5846cfaf7d47ff
 #: ../../../../1.8/docs/ref/models/lookups.txt:143
@@ -46946,7 +46946,7 @@ msgid ""
 "replaced respectively by the name of the application the model is in, and "
 "the name of the model, both lowercased. See the paragraph on :ref:`related "
 "names for abstract models <abstract-related-name>`."
-msgstr ""
+msgstr "Comme le nom inverse d'un champ doit être unique, faites attention si vous créez une sous-classe du modèle. Pour contourner les collisions de noms, une partie du nom devrait contenir ``'%(app_label)s'`` et ``'%(model_name)s'``, qui sont respectivement remplacés par le nom de l'application contenant le modèle, et le nom du modèle, les deux en minuscules. Consultez le paragraphe sur les :ref:`noms de liaison des modèles abstraits <abstract-related-name>`."
 
 # 106b88f7cb2b49e0a86227e93ef3f8d8
 #: ../../../../1.8/docs/ref/models/options.txt:116
@@ -53720,7 +53720,7 @@ msgid ""
 "A dictionary containing the settings for all databases to be used with "
 "Django. It is a nested dictionary whose contents map a database alias to a "
 "dictionary containing the options for an individual database."
-msgstr ""
+msgstr "Un dictionnaire contenant les réglages de toutes les bases de données à utiliser avec Django. C'est un dictionnaire imbriqué dont les contenus font correspondre l'alias de base de données avec un dictionnaire contenant les options de chacune des bases de données."
 
 # 174b3b92b1824b2f8fab6b2f2cab5730
 #: ../../../../1.8/docs/ref/settings.txt:446
@@ -56044,7 +56044,7 @@ msgid ""
 "Setting this incorrectly can irreversibly (for the value of "
 ":setting:`SECURE_HSTS_SECONDS`) break your site. Read the :ref:`http-strict-"
 "transport-security` documentation first."
-msgstr ""
+msgstr "Une définition incorrecte de ce paramètre peut casser votre site de manière irréversible (pour la durée de :setting:`SECURE_HSTS_SECONDS`). Lisez d'abord la documentation :ref:`http-strict-transport-security`."
 
 # 28bbbc5e2d99439088b83ed1206610d4
 #: ../../../../1.8/docs/ref/settings.txt:2112
@@ -56638,7 +56638,7 @@ msgid ""
 "Django will :ref:`serialize the contents of all apps <test-case-serialized-"
 "rollback>` when it starts the test run so it can then reload from that copy "
 "before running tests that need it."
-msgstr ""
+msgstr "Afin de pouvoir restaurer l'état de la base de données entre les tests pour les classes ``TransactionTestCase`` et les moteurs de base de données non transactionnels, Django ref:`sérialise le contenu de toutes les applications <test-case-serialized-rollback>` lorsqu'il lance la suite de tests pour pouvoir ensuite recharger ces données copiées avant de lancer les tests qui ont en besoin."
 
 # 4e2d9c60f332465986cdfb307c255213
 #: ../../../../1.8/docs/ref/settings.txt:2539
@@ -59674,25 +59674,25 @@ msgid ""
 "Preprocesses context data that will be used for rendering a template. "
 "Accepts a :class:`dict` of context data. By default, returns the same "
 ":class:`dict`."
-msgstr ""
+msgstr "Prétraite les données de contexte qui seront utilisées pour la production d'un gabarit. Accepte un :class:`dict` de données de contexte. Par défaut, renvoie le même :class:`dict`."
 
 # 9329e0d233524a01a637d5a149b6ae2c
 #: ../../../../1.8/docs/ref/template-response.txt:119
 msgid "Override this method in order to customize the context."
-msgstr ""
+msgstr "Surchargez cette méthode afin de personnaliser le contexte."
 
 # b5ccb54ee3e64adc971a460611b0ef02
 #: ../../../../1.8/docs/ref/template-response.txt:123
 msgid ""
 "``resolve_context`` returns a :class:`dict`. It used to return a "
 ":class:`~django.template.Context`."
-msgstr ""
+msgstr "``resolve_context`` renvoie un :class:`dict`. Il renvoyait précédemment un :class:`~django.template.Context`."
 
 # e4e2d8c0a16542da9e97299e4b09d76e
 #: ../../../../1.8/docs/ref/template-response.txt:128
 msgid ""
 "``resolve_context`` no longer accepts a :class:`~django.template.Context`."
-msgstr ""
+msgstr "``resolve_context`` n'accepte plus de :class:`~django.template.Context`."
 
 # f332acbcdb60487db770cba334ca5bbc
 #: ../../../../1.8/docs/ref/template-response.txt:133
@@ -59701,12 +59701,12 @@ msgid ""
 "dependent template object (such as those returned by "
 ":func:`~django.template.loader.get_template()`), the name of a template, or "
 "a list of template names."
-msgstr ""
+msgstr "Résout l'instance de gabarit à utiliser pour l'affichage. Accepte un objet gabarit dépendant du moteur (tels que ceux renvoyés par :func:`~django.template.loader.get_template()`), le nom d'un gabarit ou une liste de noms de gabarits."
 
 # ad3a8ec1f9204bafb2e79e2f8626ac89
 #: ../../../../1.8/docs/ref/template-response.txt:138
 msgid "Returns the backend-dependent template object instance to be rendered."
-msgstr ""
+msgstr "Renvoie l'instance d'objet gabarit, dépendante du moteur, qu'il faut afficher."
 
 # db1abaa8aec7434e8d095e26e1744be4
 #: ../../../../1.8/docs/ref/template-response.txt:140
@@ -59718,13 +59718,13 @@ msgstr "Surchargez cette méthode afin de personnaliser le chargement des gabari
 msgid ""
 "``resolve_template`` returns backend-dependent template object. It used to "
 "return a :class:`~django.template.Template`."
-msgstr ""
+msgstr "``resolve_template`` renvoie un objet gabarit dépendant du moteur. Il renvoyait précédemment un objet :class:`django.template.Template`."
 
 # d201d8152d8d440e84aad94343c53b23
 #: ../../../../1.8/docs/ref/template-response.txt:149
 msgid ""
 "``resolve_template`` no longer accepts a :class:`~django.template.Template`."
-msgstr ""
+msgstr "``resolve_template`` n'accepte plus de :class:`~django.template.Template`."
 
 # 3f691df27d8c42b0989cfae7081649bf
 #: ../../../../1.8/docs/ref/template-response.txt:154
@@ -59782,7 +59782,7 @@ msgid ""
 "``TemplateResponse`` is a subclass of "
 ":class:`~django.template.response.SimpleTemplateResponse` that knows about "
 "the current :class:`~django.http.HttpRequest`."
-msgstr ""
+msgstr "``TemplateResponse`` est une sous-classe de :class:`~django.template.response.SimpleTemplateResponse` conscient de la requête :class:`~django.http.HttpRequest` en cours."
 
 # 7ff0829b4c5145efa6d722474c2167b4
 #: ../../../../1.8/docs/ref/template-response.txt:194
@@ -59790,7 +59790,7 @@ msgid ""
 "Instantiates a :class:`~django.template.response.TemplateResponse` object "
 "with the given request, template, context, content type, HTTP status, and "
 "charset."
-msgstr ""
+msgstr "Crée une instance d'objet :class:`~django.template.response.TemplateResponse` avec la requête, le gabarit, le contexte, le type de contenu, le statut HTTP et le jeu de caractères indiqués."
 
 # 74e1a9c40d5e47a683dd5ff1183e1c4c
 #: ../../../../1.8/docs/ref/template-response.txt:199
@@ -59949,7 +59949,7 @@ msgid ""
 ":class:`django.http.HttpResponse` can be used. It can also be used as an "
 "alternative to calling :func:`~django.shortcuts.render()` or "
 ":func:`~django.shortcuts.render_to_response()`."
-msgstr ""
+msgstr "Un objet :class:`TemplateResponse` peut être utilisé partout où un objet :class:`django.http.HttpResponse` normal peut être utilisé. Il peut également être utilisé comme alternative à un appel à :func:`~django.shortcuts.render()` ou à :func:`~django.shortcuts.render_to_response()`."
 
 # b7b3739da42e466e87e10cb4574cdacb
 #: ../../../../1.8/docs/ref/template-response.txt:351
@@ -60460,7 +60460,7 @@ msgid ""
 "Generally, if a variable doesn't exist, the template system inserts the "
 "value of the engine's ``string_if_invalid`` configuration option, which is "
 "set to ``''`` (the empty string) by default."
-msgstr ""
+msgstr "Généralement, si une variable n'existe pas, le système des gabarits insère la valeur de l'option de configuration ``string_if_invalid`` du moteur, qui vaut  ``''`` (chaîne vide) par défaut."
 
 # 67bed52af25b436da692dc0e4294da76
 #: ../../../../1.8/docs/ref/templates/api.txt:340
@@ -60469,7 +60469,7 @@ msgid ""
 "``string_if_invalid`` is set to ``''`` (the empty string). If "
 "``string_if_invalid`` is set to any other value, variable filters will be "
 "ignored."
-msgstr ""
+msgstr "Les filtres appliqués à une variable non valide ne seront appliqués que si ``string_if_invalid`` est défini à ``''`` (la chaîne vide). Si ``string_if_invalid`` est défini à une autre valeur, les filtres de variable seront ignorés."
 
 # bc5fc667dd4a4c1d9b7c4801197cc1d7
 #: ../../../../1.8/docs/ref/templates/api.txt:345
@@ -60518,7 +60518,7 @@ msgstr "Généralement, ``string_if_invalid`` ne devrait être activé que pour 
 # 3e2c5a61197446a1877aac9761407c3a
 #: ../../../../1.8/docs/ref/templates/api.txt:367
 msgid "Built-in variables"
-msgstr ""
+msgstr "Variables intégrées"
 
 # 2a291fa767234b17ad70f11970d491fb
 #: ../../../../1.8/docs/ref/templates/api.txt:369
@@ -60622,7 +60622,7 @@ msgstr "En plus de ``push()`` et ``pop()``, l'objet ``Context`` définit égalem
 msgid ""
 "Using a ``Context`` as a stack comes in handy in :ref:`some custom template "
 "tags <howto-writing-custom-template-tags>`."
-msgstr ""
+msgstr "L'utilisation de ``Context`` comme une pile est bien pratique avec :ref:`certaines balises de gabarit personnalisées <howto-writing-custom-template-tags>`."
 
 # 61426307156742a2bd726cf86f81ef71
 #: ../../../../1.8/docs/ref/templates/api.txt:502
@@ -60675,7 +60675,7 @@ msgid ""
 "dictionary of items to be merged into the context. In the default generated "
 "settings file, the default template engine contains the following context "
 "processors::"
-msgstr ""
+msgstr "L'option ``context_processors`` est une liste d'objets exécutables appelés **processeurs de contexte** qui acceptent un objet requête en paramètre et renvoient un dictionnaire d'éléments à fusionner dans le contexte. Dans le fichier de réglages généré par défaut, le moteur de gabarit par défaut contient les processeurs de contexte suivants ::"
 
 # 7aa9abb3670b49edaea33e2c146b63f6
 #: ../../../../1.8/docs/ref/templates/api.txt:576
@@ -60685,7 +60685,7 @@ msgid ""
 "context processor required by the admin and other contrib apps, and, in case"
 " of accidental misconfiguration, it is deliberately hardcoded in and cannot "
 "be turned off in the ``context_processors`` option."
-msgstr ""
+msgstr "En plus de ce contenu, :class:`RequestContext` active toujours ``'django.template.context_processors.csrf'``. Il s'agit d'un processeur de contexte lié à la sécurité exigé par l'application d'administration ainsi que d'autres applications contribuées. Il est volontairement ajouté de force pour qu'il ne puisse pas être enlevé par une erreur de configuration dans l'option ``context_processors``."
 
 # b2b8e0a1d51c46ffa66000a65a9715e0
 #: ../../../../1.8/docs/ref/templates/api.txt:582
@@ -60708,14 +60708,14 @@ msgid ""
 "context processor may overwrite variables you've supplied to your "
 ":class:`Context` or :class:`RequestContext`, so take care to avoid variable "
 "names that overlap with those supplied by your context processors."
-msgstr ""
+msgstr "Les processeurs de contexte sont appliqués au sommet des données de contexte. Cela signifie qu'un processeur de contexte peut écraser une variable que vous avez fournie dans un objet :class:`Context` ou :class:`RequestContext`, il faut donc faire attention de ne pas utiliser des variables dont le nom peut entrer en conflit avec ceux des processeurs de contexte installés."
 
 # 25d4caefe5a847f6b1c7135b0720da6e
 #: ../../../../1.8/docs/ref/templates/api.txt:595
 msgid ""
 "If you want context data to take priority over context processors, use the "
 "following pattern::"
-msgstr ""
+msgstr "Si vous souhaitez que des données de contexte aient la priorité sur les processeurs de contexte, utilisez le schéma suivant ::"
 
 # 5545c1fe4af34bb68b4e30b4873fefa9
 #: ../../../../1.8/docs/ref/templates/api.txt:603
@@ -60723,7 +60723,7 @@ msgid ""
 "Django does this to allow context data to override context processors in "
 "APIs such as :func:`~django.shortcuts.render` and "
 ":class:`~django.template.response.TemplateResponse`."
-msgstr ""
+msgstr "Django fait cela pour permettre aux données de contexte d'écraser des processeurs de contexte dans des API comme :func:`~django.shortcuts.render` ou :class:`~django.template.response.TemplateResponse`."
 
 # f02bc11307c44694bf8a5b01f9f3297e
 #: ../../../../1.8/docs/ref/templates/api.txt:607
@@ -60935,7 +60935,7 @@ msgid ""
 "``'context_processors'`` option in your :setting:`TEMPLATES` setting — or "
 "the ``context_processors`` argument of :class:`~django.template.Engine` if "
 "you're using it directly."
-msgstr ""
+msgstr "Les processeurs de contexte personnalisés peuvent se trouver n'importe où dans le code. Tout ce que Django demande, c'est que l'option ``'context_processors'`` du réglage :setting:`TEMPLATES` (ou le paramètre ``context_processors`` d'un moteur :class:`~django.template.Engine` si vous l'utilisez directement) contienne le chemin vers le processeur personnalisé."
 
 # 16633bb0491d40a69bd0a2e43c46105e
 #: ../../../../1.8/docs/ref/templates/api.txt:734
@@ -60948,7 +60948,7 @@ msgid ""
 "Generally, you'll store templates in files on your filesystem rather than "
 "using the low-level :class:`~django.template.Template` API yourself. Save "
 "templates in a directory specified as a **template directory**."
-msgstr ""
+msgstr "En général, il est conseillé de stocker les gabarits sur le système de fichiers plutôt que de faire appel à l'API :class:`~django.template.Template` de bas niveau. Les gabarits doivent se trouver dans un répertoire désigné comme **répertoire de gabarits**."
 
 # 29a8b911282541e3bba29b780517f7c5
 #: ../../../../1.8/docs/ref/templates/api.txt:740
@@ -60957,7 +60957,7 @@ msgid ""
 " your template loading settings (see \"Loader types\" below), but the most "
 "basic way of specifying template directories is by using the :setting:`DIRS "
 "<TEMPLATES-DIRS>` option."
-msgstr ""
+msgstr "Django recherche les répertoires de gabarits à plusieurs endroits, en fonction des réglages de chargement des gabarits (voir « Types de chargeurs » ci-dessous), mais la façon la plus élémentaire de désigner des répertoires de gabarits est d'utiliser l'option :setting:`DIRS <TEMPLATES-DIRS>`."
 
 # 80690286b103444195c93b0fd9f982e7
 #: ../../../../1.8/docs/ref/templates/api.txt:746
@@ -60967,7 +60967,7 @@ msgstr "L'option :setting:`DIRS <TEMPLATES-DIRS>`"
 # 0e5f59e0feb24aa1879561aa1e3f1ecd
 #: ../../../../1.8/docs/ref/templates/api.txt:750
 msgid "This value used to be defined by the ``TEMPLATE_DIRS`` setting."
-msgstr ""
+msgstr "Cette valeur était précédemment définie par le réglage ``TEMPLATE_DIRS``."
 
 # 063a6db31d214c3593a9943181efbdc8
 #: ../../../../1.8/docs/ref/templates/api.txt:752
@@ -60977,7 +60977,7 @@ msgid ""
 "settings file — or the ``dirs`` argument of "
 ":class:`~django.template.Engine`. This should be set to a list of strings "
 "that contain full paths to your template directories::"
-msgstr ""
+msgstr "Indiquez à Django quels sont vos répertoires de gabarits en utilisant l'option :setting:`DIRS <TEMPLATES-DIRS>` du réglage :setting:`TEMPLATES` dans votre fichier de réglages, ou le paramètre ``dirs`` de :class:`~django.template.Engine`. Il devrait contenir une liste de chaînes contenant les chemins complets vers les répertoires de gabarits ::"
 
 # 4a1d3356f13647dcac9e205e28ada03c
 #: ../../../../1.8/docs/ref/templates/api.txt:768
@@ -61009,7 +61009,7 @@ msgid ""
 ":class:`~django.template.Engine`. ``loaders`` should be a list of strings or"
 " tuples, where each represents a template loader class. Here are the "
 "template loaders that come with Django:"
-msgstr ""
+msgstr "Certains de ces autres chargeurs sont désactivés par défaut, mais vous pouvez les activer en ajoutant une option ``'loaders'`` à votre moteur ``DjangoTemplates`` dans le réglage :setting:`TEMPLATES` ou en transmettant un paramètre ``loaders`` à :class:`~django.template.Engine`. ``loaders`` doit contenir une liste de chaînes ou de tuples, où chaque élément représente une classe de chargeur de gabarit. Voici les chargeurs de gabarit que Django propose :"
 
 # bfd2055773e543ab98ebda9c2bd6326a
 #: ../../../../1.8/docs/ref/templates/api.txt:792
@@ -61021,14 +61021,14 @@ msgstr "``django.template.loaders.filesystem.Loader``"
 msgid ""
 "Loads templates from the filesystem, according to :setting:`DIRS <TEMPLATES-"
 "DIRS>`."
-msgstr ""
+msgstr "Charge les gabarits à partir du système de fichiers, en fonction de :setting:`DIRS <TEMPLATES-DIRS>`."
 
 # 6706f1c4dc0c43a0a31d6395ec2820e6
 #: ../../../../1.8/docs/ref/templates/api.txt:799
 msgid ""
 "This loader is enabled by default. However it won't find any templates until"
 " you set :setting:`DIRS <TEMPLATES-DIRS>` to a non-empty list::"
-msgstr ""
+msgstr "Ce chargeur est actif par défaut. Cependant, il ne trouvera aucun gabarit tant que vous n'aurez pas défini :setting:`DIRS <TEMPLATES-DIRS>` à une liste non vide ::"
 
 # 6f629f2ddf2348b1954da21c52b95897
 #: ../../../../1.8/docs/ref/templates/api.txt:807
@@ -61095,14 +61095,14 @@ msgid ""
 "Note that the loader performs an optimization when it first runs: it caches "
 "a list of which :setting:`INSTALLED_APPS` packages have a ``templates`` "
 "subdirectory."
-msgstr ""
+msgstr "Notez que le chargeur effectue une optimisation lors de son premier lancement : il place en cache une liste des paquets :setting:`INSTALLED_APPS` qui possèdent un sous-répertoire ``templates``."
 
 # b4393212f26b4b8a9824bd347277b2c8
 #: ../../../../1.8/docs/ref/templates/api.txt:842
 msgid ""
 "You can enable this loader simply by setting :setting:`APP_DIRS <TEMPLATES-"
 "APP_DIRS>` to ``True``::"
-msgstr ""
+msgstr "Vous pouvez activer ce chargeur en définissant simplement :setting:`APP_DIRS <TEMPLATES-APP_DIRS>` à ``True``::"
 
 # 753d43bf0de145908787a051a65ef612
 #: ../../../../1.8/docs/ref/templates/api.txt:850
@@ -62148,7 +62148,7 @@ msgid ""
 ":exc:`~django.template.TemplateSyntaxError` will be raised; otherwise ``{% "
 "include %}`` silences any exception that happens while rendering the "
 "included template and returns an empty string."
-msgstr ""
+msgstr "Si le gabarit inclus provoque une exception lors de son affichage (y compris par son absence ou par des erreurs de syntaxe), le comportement varie en fonction de l'option ``debug`` du :class:`moteur de gabarit <django.template.Engine>` (quand elle n'est pas explicitement définie, la valeur par défaut de cette option correspond à :setting:`DEBUG`). Lorsque le mode de débogage est actif, une exception comme :exc:`~django.template.TemplateDoesNotExist` ou :exc:`~django.template.TemplateSyntaxError` est générée ; sinon, ``{% include %}`` ignore toute exception qui survient lors du processus de rendu du gabarit imbriqué et renvoie une chaîne vide."
 
 # 69292ae2d9284e828efbc3439c5752f6
 #: ../../../../1.8/docs/ref/templates/builtins.txt:708
