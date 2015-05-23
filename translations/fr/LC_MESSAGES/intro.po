@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-09 03:08-0500\n"
-"PO-Revision-Date: 2015-05-09 10:43+0000\n"
+"POT-Creation-Date: 2015-05-22 03:09-0500\n"
+"PO-Revision-Date: 2015-05-23 08:28+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -1886,9 +1886,9 @@ msgstr "Configuration de la base de données"
 # bc58e823e74a43b683bfee097bc126ef
 #: ../../../../1.8/docs/intro/tutorial01.txt:124
 msgid ""
-"Now, edit :file:`mysite/settings.py`. It's a normal Python module with "
+"Now, open up :file:`mysite/settings.py`. It's a normal Python module with "
 "module-level variables representing Django settings."
-msgstr "Maintenant, éditez :file:`mysite/settings.py`. C'est un module Python tout à fait normal, avec des variables de module qui représentent des réglages de Django."
+msgstr "Maintenant, ouvrez :file:`mysite/settings.py`. C'est un module Python tout à fait normal, avec des variables de module qui représentent des réglages de Django."
 
 # 85ecf13dbc094060b28328aaf8283b36
 #: ../../../../1.8/docs/intro/tutorial01.txt:127
@@ -2019,8 +2019,8 @@ msgstr "Ces applications sont incluses par défaut par commodité parce que ce s
 # 57f7988c291143f28c5c3b187176fa7d
 #: ../../../../1.8/docs/intro/tutorial01.txt:191
 msgid ""
-"Some of these applications makes use of at least one database table, though,"
-" so we need to create the tables in the database before we can use them. To "
+"Some of these applications make use of at least one database table, though, "
+"so we need to create the tables in the database before we can use them. To "
 "do that, run the following command:"
 msgstr "Certaines de ces applications utilisent toutefois au moins une table de la base de données, donc il nous faut créer les tables dans la base avant de pouvoir les utiliser. Pour ce faire, lancez la commande suivante :"
 
@@ -2118,8 +2118,8 @@ msgstr "Si vous voulez changer cette valeur, passez-la comme paramètre sur la l
 msgid ""
 "If you want to change the server's IP, pass it along with the port. So to "
 "listen on all public IPs (useful if you want to show off your work on other "
-"computers), use:"
-msgstr "Si vous voulez changer l'IP du serveur, passez-la comme paramètre avec le port. Pour écouter toutes les IP publiques (utile si vous souhaitez montrer votre travail à des personnes sur d'autres ordinateurs), faites :"
+"computers on your network), use:"
+msgstr "Si vous voulez changer l'IP du serveur, passez-la comme paramètre avec le port. Pour écouter toutes les IP publiques (utile si vous souhaitez montrer votre travail à des personnes sur d'autres ordinateurs de votre réseau), faites :"
 
 # b2c5c09d2c1943719104e7ff761d6abe
 #: ../../../../1.8/docs/intro/tutorial01.txt:272
@@ -2464,7 +2464,7 @@ msgid ""
 "It's tailored to the database you're using, so database-specific field types"
 " such as ``auto_increment`` (MySQL), ``serial`` (PostgreSQL), or ``integer "
 "primary key autoincrement`` (SQLite) are handled for you automatically. Same"
-" goes for quoting of field names -- e.g., using double quotes or single "
+" goes for the quoting of field names -- e.g., using double quotes or single "
 "quotes."
 msgstr "Ce que vous voyez est adapté à la base de données que vous utilisez. Ainsi, des champs spécifiques à celle-ci comme ``auto_increment`` (MySQL), ``serial`` (PostgreSQL) ou ``integer primary key autoincrement`` (SQLite) sont gérés pour vous automatiquement. Tout comme pour les guillemets autour des noms de champs (simples ou doubles)."
 
@@ -2536,10 +2536,10 @@ msgstr "Exécutez :djadmin:`python manage.py migrate <migrate>` pour appliquer c
 # 47984be9c3774250b60b19cb9163c48e
 #: ../../../../1.8/docs/intro/tutorial01.txt:568
 msgid ""
-"The reason there's separate commands to make and apply migrations is because"
-" you'll commit migrations to your version control system and ship them with "
-"your app; they not only make your development easier, they're also useable "
-"by other developers and in production."
+"The reason that there are separate commands to make and apply migrations is "
+"because you'll commit migrations to your version control system and ship "
+"them with your app; they not only make your development easier, they're also"
+" useable by other developers and in production."
 msgstr "La raison de séparer les commandes pour créer et appliquer les migrations est que celles-ci vont être ajoutées dans votre système de gestion de versions et qu'elles seront livrées avec l'application ; elles ne font pas que faciliter le développement, elles sont également exploitables par d'autres développeurs ou en production."
 
 # f18f3d1a724044458eeda611285c64e8

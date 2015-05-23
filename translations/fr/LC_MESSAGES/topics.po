@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-09 03:08-0500\n"
-"PO-Revision-Date: 2015-05-09 09:54+0000\n"
+"POT-Creation-Date: 2015-05-22 03:09-0500\n"
+"PO-Revision-Date: 2015-05-23 08:06+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -1230,23 +1230,8 @@ msgid ""
 "your proxy's behavior into your User subclass."
 msgstr "Si votre projet utilise des modèles mandataires, vous devez soit modifier ces modèles afin qu'ils étendent le modèle d'utilisateur réellement utilisé dans votre projet, soit fusionner le comportement du modèle mandataire dans votre sous-classe de ``User``."
 
-# 82a8f64a4efe4a13862499c856c9dfd7
-#: ../../../../1.8/docs/topics/auth/customizing.txt:888
-msgid "Custom users and signals"
-msgstr "Utilisateurs personnalisés et signaux"
-
-# b9965382f77d441792eb47f48042fd49
-#: ../../../../1.8/docs/topics/auth/customizing.txt:890
-msgid ""
-"Another limitation of custom User models is that you can't use "
-":func:`django.contrib.auth.get_user_model()` as the sender or target of a "
-"signal handler. Instead, you must register the handler with the resulting "
-"User model. See :doc:`/topics/signals` for more information on registering "
-"and sending signals."
-msgstr "Une autre limite connue des modèles d'utilisateur personnalisés est que vous ne pouvez pas utiliser :func:`django.contrib.auth.get_user_model()` comme expéditeur ou cible d'un gestionnaire de signal. Il est impératif d'inscrire le gestionnaire avec le modèle d'utilisateur réel. Consultez :doc:`/topics/signals` pour en savoir plus sur l'inscription et l'envoi de signaux."
-
-# 48fd88dc558c437b8b84c5437ebcc452
-#: ../../../../1.8/docs/topics/auth/customizing.txt:897
+# f56200fe99474619bb09cbffd6e4e1b6
+#: ../../../../1.8/docs/topics/auth/customizing.txt:899
 msgid "Custom users and testing/fixtures"
 msgstr "Utilisateurs personnalisés et tests/instantanés"
 
@@ -17599,8 +17584,8 @@ msgstr "En HTML, un formulaire est un ensemble d'éléments à l'intérieur des 
 #: ../../../../1.8/docs/topics/forms/index.txt:29
 msgid ""
 "Some of these form interface elements - text input or checkboxes - are "
-"fairly simple and built-in to HTML itself. Others are much more complex; an "
-"interface that pops up a date picker or allows you to move a slider or "
+"fairly simple and are built into HTML itself. Others are much more complex; "
+"an interface that pops up a date picker or allows you to move a slider or "
 "manipulate controls will typically use JavaScript and CSS as well as HTML "
 "form ``<input>`` elements to achieve these effects."
 msgstr "Certains de ces éléments d'interface de formulaires - boîtes de saisie de texte ou cases à cocher - sont assez simples et intégrés dans le HTML lui-même. D'autres éléments sont beaucoup plus complexes ; une interface qui affiche un sélecteur de date ou qui permet de déplacer un curseur ou de contrôler un autre élément graphique utilise généralement du code JavaScript et CSS, ainsi que des éléments ``<input>`` de formulaires HTML pour produire ce genre d'effets."
@@ -17664,9 +17649,9 @@ msgstr "``GET`` et ``POST`` sont les seules méthodes HTTP à utiliser dans les 
 #: ../../../../1.8/docs/topics/forms/index.txt:61
 msgid ""
 "Django's login form is returned using the ``POST`` method, in which the "
-"browser bundles up the form data, encodes it for transmission, sends it back"
-" to the server, and then receives its response."
-msgstr "Le formulaire de connexion de Django est renvoyé en utilisant la méthode ``POST``, par laquelle le navigateur regroupe les données du formulaire, les encode pour la transmission, les envoie au serveur, puis reçoit la réponse."
+"browser bundles up the form data, encodes it for transmission, sends it to "
+"the server, and then receives back its response."
+msgstr "Le formulaire de connexion de Django est renvoyé en utilisant la méthode ``POST``, par laquelle le navigateur regroupe les données du formulaire, les encode pour la transmission, les envoie au serveur, puis reçoit la réponse en retour."
 
 # e4a42f114bb2402caad42833cc2a54f0
 #: ../../../../1.8/docs/topics/forms/index.txt:65
@@ -17743,7 +17728,7 @@ msgstr "Django gère trois parties distinctes du travail induit par les formulai
 
 # 049f73c13a6c44debd00212de48e86b1
 #: ../../../../1.8/docs/topics/forms/index.txt:105
-msgid "preparing and restructuring data ready for rendering"
+msgid "preparing and restructuring data to make it ready for rendering"
 msgstr "préparation et restructuration des données en vue de leur présentation"
 
 # 3dc39a8f60904403a729bf6d96fa28b7
@@ -17820,8 +17805,8 @@ msgstr "Les champs d'un formulaire sont eux-mêmes des classes ; elles gèrent 
 # 7769e930e8574651a5a6c8384ee022b1
 #: ../../../../1.8/docs/topics/forms/index.txt:141
 msgid ""
-"A form field is represented to a user in the browser as a HTML \"widget\" - "
-"a piece of user interface machinery. Each field type has an appropriate "
+"A form field is represented to a user in the browser as an HTML \"widget\" -"
+" a piece of user interface machinery. Each field type has an appropriate "
 "default :doc:`Widget class </ref/forms/widgets/>`, but these can be "
 "overridden as required."
 msgstr "Un champ de formulaire est présenté dans une interface de navigateur sous forme de « composant » HTML, un élément d'interface utilisateur. Chaque type de champ contient une :doc:`classe Widget </ref/forms/widgets/>` appropriée par défaut, mais celles-ci peuvent être remplacées au besoin."
@@ -17862,7 +17847,7 @@ msgstr "L'affichage d'un formulaire dans un gabarit suit à peu près le même p
 #: ../../../../1.8/docs/topics/forms/index.txt:158
 msgid ""
 "In the case of a model instance that contained no data, it would rarely if "
-"ever be useful to do anything with one in a template. On the other hand, it "
+"ever be useful to do anything with it in a template. On the other hand, it "
 "makes perfect sense to render an unpopulated form - that's what we do when "
 "we want the user to populate it."
 msgstr "Dans le cas d'une instance de modèle ne contenant aucune donnée, il n'y aura pas beaucoup de sens d'en faire quoi que ce soit dans un gabarit. En revanche, il est totalement raisonnable de vouloir afficher un formulaire vierge, c'est ce qu'il faut faire lorsqu'on veut que quelqu'un le remplisse."
@@ -18165,8 +18150,8 @@ msgstr "Nous possédons maintenant un formulaire Web fonctionnel, défini par un
 msgid ""
 "That's all you need to get started, but the forms framework puts a lot more "
 "at your fingertips. Once you understand the basics of the process described "
-"above, you should be aware of what else is readily available in the forms "
-"system and know a little bit about some of the underlying machinery."
+"above, you should be prepared to understand other features of the forms "
+"system and ready to learn a bit more about the underlying machinery."
 msgstr "C'est tout ce dont vous avez besoin pour commencer, mais l'infrastructure des formulaires a beaucoup plus à vous offrir. À partir du moment où vous comprenez les bases du processus décrit ci-dessus, il est bon de connaître les autres fonctionnalités mises à disposition par le système des formulaires et d'en savoir un peu plus au sujet de la machinerie sous-jacente."
 
 # 4624ab46a6f642adbc3b3fa93d795c17
@@ -18425,7 +18410,7 @@ msgstr "Laisser Django afficher un à un les champs du formulaire n'est pas la s
 # 052d8ead25a8456282608ad388d8e323
 #: ../../../../1.8/docs/topics/forms/index.txt:549
 msgid ""
-"Complete ``<label>`` element can also be generated using the "
+"Complete ``<label>`` elements can also be generated using the "
 ":meth:`~django.forms.BoundField.label_tag`. For example:"
 msgstr "Une balise ``<label>`` complète peut aussi être générée au moyen de :meth:`~django.forms.BoundField.label_tag`. Par exemple :"
 
@@ -21748,7 +21733,7 @@ msgstr "Elle possède aussi ces méthodes :"
 # ba4cf0c7c2bc42a58f8302ba67921b3f
 #: ../../../../1.8/docs/topics/http/sessions.txt:229
 msgid ""
-"Delete the current session data from the session and delete the session "
+"Deletes the current session data from the session and deletes the session "
 "cookie. This is used if you want to ensure that the previous session data "
 "can't be accessed again from the user's browser (for example, the "
 ":func:`django.contrib.auth.logout()` function calls it)."
@@ -23131,8 +23116,9 @@ msgid ""
 "``/articles/2003/`` would match the first pattern in the list, not the "
 "second one, because the patterns are tested in order, and the first one is "
 "the first test to pass. Feel free to exploit the ordering to insert special "
-"cases like this."
-msgstr "``/articles/2003/`` correspondrait au premier motif de la liste, et non le deuxième, car les motifs sont évalués dans l'ordre, et le premier est le premier à correspondre. Libre à vous d'utiliser l'ordre de définition pour traiter des cas spéciaux comme ici."
+"cases like this. Here, Django would call the function "
+"``views.special_case_2003(request)``"
+msgstr "``/articles/2003/`` correspondrait au premier motif de la liste, et non le deuxième, car les motifs sont évalués dans l'ordre, et le premier est le premier à correspondre. Libre à vous d'utiliser l'ordre de définition pour traiter des cas spéciaux comme ici. Ici, Django appellerait la fonction ``views.special_case_2003(request)``."
 
 # 9985a93ea64a43d7906e054998aa3398
 #: ../../../../1.8/docs/topics/http/urls.txt:111
@@ -23291,12 +23277,19 @@ msgstr "Chaque paramètre capturé est envoyé à la vue en tant que simple cha�
 # 7160d7659f734a46b12e65bae10e4165
 #: ../../../../1.8/docs/topics/http/urls.txt:200
 msgid ""
-"...the ``year`` argument to ``views.year_archive()`` will be a string, not "
-"an integer, even though the ``[0-9]{4}`` will only match integer strings."
-msgstr "... le paramètre ``year`` de ``views.year_archive()`` sera une chaîne de caractères, pas un entier, même si ``[0-9]{4}`` ne correspondra qu'à des chaînes représentant des entiers."
+"...the ``year`` argument passed to ``views.year_archive()`` will be a "
+"string,"
+msgstr "... le paramètre ``year`` transmis à ``views.year_archive()`` sera une chaîne de caractères,"
 
-# 3a264e260d74407b94d5d9b9677d906f
-#: ../../../../1.8/docs/topics/http/urls.txt:204
+# 28d53f07a7f241f795c6f5762d50c60e
+#: ../../../../1.8/docs/topics/http/urls.txt:202
+msgid ""
+"not an integer, even though the ``[0-9]{4}`` will only match integer "
+"strings."
+msgstr "et non pas un entier, même si ``[0-9]{4}`` ne correspondra qu'à des chaînes représentant des entiers."
+
+# f20e256f43c6449a8f331790c3cad383
+#: ../../../../1.8/docs/topics/http/urls.txt:205
 msgid "Specifying defaults for view arguments"
 msgstr "Valeurs par défaut des paramètres de vue"
 
@@ -23358,8 +23351,8 @@ msgstr "Quand Django ne trouve pas d'expression régulière correspondant à l'U
 msgid ""
 "The views to use for these cases are specified by four variables. Their "
 "default values should suffice for most projects, but further customization "
-"is possible by assigning values to them."
-msgstr "Les vues à utiliser pour ces situations sont définies par quatre variables. Leur valeur par défaut devraient convenir à la plupart des projets, mais il reste possible de les personnaliser en leur attribuant des valeurs."
+"is possible by overriding their default values."
+msgstr "Les vues à utiliser pour ces situations sont définies par quatre variables. Leur valeur par défaut devraient convenir à la plupart des projets, mais il reste possible de les personnaliser en surchargeant leurs valeurs par défaut."
 
 # e56d346afa954c4298bfddbe6de0e1ad
 #: ../../../../1.8/docs/topics/http/urls.txt:252
@@ -23388,15 +23381,10 @@ msgstr "Les valeurs doivent pouvoir être appelées, ou être des chaînes de ca
 msgid "The variables are:"
 msgstr "Les variables sont :"
 
-# 8df3de1cd61f430a87fa79784f4584b1
-#: ../../../../1.8/docs/topics/http/urls.txt:263
-msgid "``handler404`` -- See :data:`django.conf.urls.handler404`."
-msgstr "``handler404`` -- Voir :data:`django.conf.urls.handler404`."
-
-# 362086ea7b624965a0d265c76ce6e190
+# c9ada4a069b940f280a2cee5cedbc802
 #: ../../../../1.8/docs/topics/http/urls.txt:264
-msgid "``handler500`` -- See :data:`django.conf.urls.handler500`."
-msgstr "``handler500`` -- Voir :data:`django.conf.urls.handler500`."
+msgid "``handler400`` -- See :data:`django.conf.urls.handler400`."
+msgstr "``handler400`` -- Voir :data:`django.conf.urls.handler400`."
 
 # dcddaaae8980465e85e0c2882126fbb5
 #: ../../../../1.8/docs/topics/http/urls.txt:265
@@ -23405,8 +23393,13 @@ msgstr "``handler403`` -- Voir :data:`django.conf.urls.handler403`."
 
 # 6a092155199e44e2ad258b51631dc100
 #: ../../../../1.8/docs/topics/http/urls.txt:266
-msgid "``handler400`` -- See :data:`django.conf.urls.handler400`."
-msgstr "``handler400`` -- Voir :data:`django.conf.urls.handler400`."
+msgid "``handler404`` -- See :data:`django.conf.urls.handler404`."
+msgstr "``handler404`` -- Voir :data:`django.conf.urls.handler404`."
+
+# 6249476b18a345be8c7d451b99edd46e
+#: ../../../../1.8/docs/topics/http/urls.txt:267
+msgid "``handler500`` -- See :data:`django.conf.urls.handler500`."
+msgstr "``handler500`` -- Voir :data:`django.conf.urls.handler500`."
 
 # c19d89d7f3d648eb87092ea1928b47f4
 #: ../../../../1.8/docs/topics/http/urls.txt:271
@@ -23449,8 +23442,8 @@ msgstr "Une autre possibilité est d'inclure des motifs d'URL supplémentaires e
 #: ../../../../1.8/docs/topics/http/urls.txt:313
 msgid ""
 "In this example, the ``/credit/reports/`` URL will be handled by the "
-"``credit.views.report()`` Django view."
-msgstr "Dans cet exemple, l'URL ``/credit/reports/`` sera traitée par la vue Django ``credit.views.report()``."
+"``credit_views.report()`` Django view."
+msgstr "Dans cet exemple, l'URL ``/credit/reports/`` sera traitée par la vue Django ``credit_views.report()``."
 
 # e02f5a27125b4ea790b5e6e74221ca80
 #: ../../../../1.8/docs/topics/http/urls.txt:316
@@ -23640,29 +23633,30 @@ msgstr "Un besoin courant quand on travaille sur un projet Django est d'avoir la
 # e879dbb59587489aa65560aef7ca00ee
 #: ../../../../1.8/docs/topics/http/urls.txt:500
 msgid ""
-"It is strongly desirable not having to hard-code these URLs (a laborious, "
-"non-scalable and error-prone strategy) or having to devise ad-hoc mechanisms"
-" for generating URLs that are parallel to the design described by the "
-"URLconf and as such in danger of producing stale URLs at some point."
-msgstr "Il est très fortement suggéré de ne pas écrire des URL figées (une approche laborieuse, non extensible et sujette à l'erreur), ni de concevoir des mécanismes ad hoc capables de générer des URL identiques à celles décrites dans la configuration d'URL, risquant de générer des URL mortes."
+"It is strongly desirable to avoid hard-coding these URLs (a laborious, non-"
+"scalable and error-prone strategy). Equally dangerous is devising ad-hoc "
+"mechanisms to generate URLs that are parallel to the design described by the"
+" URLconf, which can result in the production of URLs that become stale over "
+"time."
+msgstr "Il est très fortement suggéré d'éviter d'écrire des URL figées (une approche laborieuse, non extensible et sujette à l'erreur). Il est tout aussi dangereux de concevoir des mécanismes ad hoc capables de générer des URL identiques à celles décrites dans la configuration d'URL, risquant d'aboutir avec le temps à l'obtention d'URL obsolètes."
 
 # b064d6e51edf4b258eed6664763da952
 #: ../../../../1.8/docs/topics/http/urls.txt:505
 msgid ""
 "In other words, what's needed is a DRY mechanism. Among other advantages it "
-"would allow evolution of the URL design without having to go all over the "
+"would allow evolution of the URL design without having to go over all the "
 "project source code to search and replace outdated URLs."
 msgstr "En d'autres termes, ce dont nous avons besoin est un mécanisme DRY (« ne pas se répéter »). L'un de ses avantages est de permettre l'évolution de l'organisation des URL sans avoir à parcourir le code source du projet pour remplacer les URL obsolètes."
 
 # 42dbc2c6f0d949b29e4777316bfcfbe3
 #: ../../../../1.8/docs/topics/http/urls.txt:509
 msgid ""
-"The piece of information we have available as a starting point to get a URL "
-"is an identification (e.g. the name) of the view in charge of handling it, "
-"other pieces of information that necessarily must participate in the lookup "
-"of the right URL are the types (positional, keyword) and values of the view "
+"The primary piece of information we have available to get a URL is an "
+"identification (e.g. the name) of the view in charge of handling it. Other "
+"pieces of information that necessarily must participate in the lookup of the"
+" right URL are the types (positional, keyword) and values of the view "
 "arguments."
-msgstr "La première information dont nous disposons pour récupérer une URL est un moyen d'identifier la vue qui lui est associée (par exemple, son nom), les autres informations nécessaires à la recherche de la bonne URL sont les types (positionnel, nommé) et les valeurs des paramètres de la vue."
+msgstr "L'information principale dont nous disposons pour récupérer une URL est une identification de la vue qui est chargée de la traiter (par exemple, son nom). Les autres informations nécessaires à la recherche de la bonne URL sont les types (positionnel, nommé) et les valeurs des paramètres de la vue."
 
 # a2c98beb1e334f8f8bd8ab6fef4e2a24
 #: ../../../../1.8/docs/topics/http/urls.txt:514
@@ -27959,7 +27953,7 @@ msgid ""
 "makes use of session data. And it should come before ``CommonMiddleware`` "
 "because ``CommonMiddleware`` needs an activated language in order to resolve"
 " the requested URL."
-msgstr "Il devrait figurer après ``SessionMiddleware``, parce que ``LocaleMiddleware`` emploie des données de session. Et il devrait figurer après ``CommonMiddleware``, parce que ``CommonMiddleware`` a besoin d'une langue active pour la résolution de l'URL demandée."
+msgstr "Il devrait figurer après ``SessionMiddleware``, parce que ``LocaleMiddleware`` emploie des données de session. Et il devrait figurer avant ``CommonMiddleware``, parce que ``CommonMiddleware`` a besoin d'une langue active pour la résolution de l'URL demandée."
 
 # 9e3766e174f4457fb9106d149823e923
 #: ../../../../1.8/docs/topics/i18n/translation.txt:1728
@@ -39102,15 +39096,23 @@ msgid ""
 "an failure in your test suite."
 msgstr "Les messages d'échec produits par la plupart de ces méthodes d'assertion peuvent être personnalisés par le paramètre ``msg_prefix``. Cette chaîne préfixe tout message d'échec généré par l'assertion. Ceci permet d'ajouter des détails pouvant aider à identifier l'emplacement et la cause d'un échec dans une suite de tests."
 
-# 04091a838f264eab9c17b8c1b3d04926
-#: ../../../../1.8/docs/topics/testing/tools.txt:1331
+# 9e9c27cbcdce4203a2bb14bdc6415e10
+#: ../../../../1.8/docs/topics/testing/tools.txt:1332
 msgid ""
-"Asserts that execution of callable ``callable_obj`` raised the "
-"``expected_exception`` exception and that such exception has an "
-"``expected_message`` representation. Any other outcome is reported as a "
-"failure. Similar to unittest's :meth:`~unittest.TestCase.assertRaisesRegex` "
-"with the difference that ``expected_message`` isn't a regular expression."
-msgstr "Confirme que l'appel à l'exécutable ``callable_obj`` génère l'exception ``expected_exception`` et que la représentation de celle-ci correspond à ``expected_message``. Tout autre résultat est signalé comme un échec. Semblable à :meth:`~unittest.TestCase.assertRaisesRegex` de la bibliothèque ``unittest``, à la différence près que ``expected_message`` n'est ici pas une expression régulière."
+"Asserts that execution of ``callable`` raises ``expected_exception`` and "
+"that the exception has an ``expected_message`` representation. Any other "
+"outcome is reported as a failure. Similar to unittest's "
+":meth:`~unittest.TestCase.assertRaisesRegex` with the difference that "
+"``expected_message`` isn't a regular expression."
+msgstr "Confirme que l'appel à l'exécutable ``callable`` génère l'exception ``expected_exception`` et que la représentation de celle-ci correspond à ``expected_message``. Tout autre résultat est signalé comme un échec. Semblable à :meth:`~unittest.TestCase.assertRaisesRegex` de la bibliothèque ``unittest``, à la différence près que ``expected_message`` n'est ici pas une expression régulière."
+
+# 5106cab8245242c086108eef204f6097
+#: ../../../../1.8/docs/topics/testing/tools.txt:1338
+msgid ""
+"If only the ``expected_exception`` and ``expected_message`` parameters are "
+"given, returns a context manager so that the code being tested can be "
+"written inline rather than as a function::"
+msgstr "Si seuls les paramètres ``expected_exception`` et ``expected_message`` sont donnés, renvoie un gestionnaire de contexte afin que le code en cours de test puisse être écrit en ligne plutôt que sous la forme d'une fonction ::"
 
 # 7ec16d44147f4075a3afb91ebf6a27ca
 #: ../../../../1.8/docs/topics/testing/tools.txt:1339

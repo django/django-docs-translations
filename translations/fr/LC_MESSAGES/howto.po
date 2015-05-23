@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-09 03:08-0500\n"
-"PO-Revision-Date: 2015-05-09 09:02+0000\n"
+"POT-Creation-Date: 2015-05-22 03:09-0500\n"
+"PO-Revision-Date: 2015-05-23 08:40+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -5051,7 +5051,7 @@ msgstr "Authentification avec mod_wsgi"
 msgid ""
 "The use of ``WSGIApplicationGroup %{GLOBAL}`` in the configurations below "
 "presumes that your Apache instance is running only one Django application. "
-"If you are running more than Django application, please refer to the "
+"If you are running more than one Django application, please refer to the "
 "`Defining Application Groups`_ section of the mod_wsgi docs for more "
 "information about this setting."
 msgstr "L'utilisation de ``WSGIApplicationGroup %{GLOBAL}`` dans les configurations ci-dessous présuppose que l'instance d'Apache ne sert qu'une seule application Django. Si vous faites fonctionner plus d'une application Django, référez-vous à la section `Defining Application Groups`_ de la documentation de mod_wsgi pour plus d'informations au sujet de ce réglage."
@@ -7966,79 +7966,78 @@ msgid ""
 "constraint."
 msgstr "L'application d'une « simple » migration qui ajoute un champ unique non nul à une table qui contient déjà des lignes va produire une erreur car la valeur utilisée pour remplir les champs existants n'est générée qu'une seule fois, ce qui va à l'encontre de la contrainte d'unicité."
 
-# 74c292ce284e4d14ae912b9184639095
-#: ../../../../1.8/docs/howto/writing-migrations.txt:82
+# c55088eefa55493e9e6a3362a922b1d6
+#: ../../../../1.8/docs/howto/writing-migrations.txt:83
 msgid ""
 "Therefore, the following steps should be taken. In this example, we'll add a"
 " non-nullable :class:`~django.db.models.UUIDField` with a default value. "
 "Modify the respective field according to your needs."
 msgstr "Il est donc nécessaire de suivre les étapes suivantes. Dans cet exemple, nous allons ajouter un champ non nul :class:`~django.db.models.UUIDField` avec une valeur par défaut. Modifiez le champ adéquat en fonction de vos propres besoins."
 
-# a55fa789b227432183856393789fe682
-#: ../../../../1.8/docs/howto/writing-migrations.txt:86
+# 8ee9b5f6a3814e978cf13c4c0ef04655
+#: ../../../../1.8/docs/howto/writing-migrations.txt:87
 msgid ""
-"Add the field on your model with ``default=...`` and ``unique=True`` "
-"arguments. In the example, we use ``uuid.uuid4`` for the default."
-msgstr "Ajoutez le champ à votre modèle avec les paramètres ``default=...`` et ``unique=True``. Dans cet exemple, nous utilisons ``uuid.uuid4`` comme valeur par défaut."
+"Add the field on your model with ``default=uuid.uuid4`` and ``unique=True`` "
+"arguments (choose an appropriate default for the type of the field you're "
+"adding)."
+msgstr "Ajoutez le champ à votre modèle avec les paramètres ``default=uuid.uuid4`` et ``unique=True`` (choisissez une valeur par défaut adéquate au type de champ que vous ajoutez)."
 
-# f9d92d3e76ba4f418be4cd5de4fb5698
-#: ../../../../1.8/docs/howto/writing-migrations.txt:89
-msgid "Run the :djadmin:`makemigrations` command."
-msgstr "Lancez la commande :djadmin:`makemigrations`::"
-
-# 61c373ea7be647e78b78ed2d41ac4963
+# 2c43a5d98f0b461badc4bfff1adb0b84
 #: ../../../../1.8/docs/howto/writing-migrations.txt:91
-msgid "Edit the created migration file."
-msgstr "Modifiez le fichier de migration créé."
-
-# 229ab28fa1b54bca815944ced6c779ff
-#: ../../../../1.8/docs/howto/writing-migrations.txt:93
-msgid "The generated migration class should look similar to this::"
-msgstr "La classe de migration générée devrait ressembler à ceci ::"
-
-# ebd77042e3034ac79886a491d1347643
-#: ../../../../1.8/docs/howto/writing-migrations.txt:109
-msgid "You will need to make three changes:"
-msgstr "Vous devrez procéder à trois changements :"
-
-# 132a610ce3b44cb5ac8b44b5c4902ced
-#: ../../../../1.8/docs/howto/writing-migrations.txt:111
 msgid ""
-"Add a second :class:`~django.db.migrations.operations.AddField` operation "
-"copied from the generated one and change it to "
-":class:`~django.db.migrations.operations.AlterField`."
-msgstr "Ajoutez une seconde opération :class:`~django.db.migrations.operations.AddField` copiée sur celle qui a été générée et modifiez-la en :class:`~django.db.migrations.operations.AlterField`."
+"Run the :djadmin:`makemigrations` command. This should generate a migration "
+"with an ``AddField`` operation."
+msgstr "Lancez la commande :djadmin:`makemigrations`. Cela devrait générer une migration contenant une opération ``AddField``."
 
-# 1444c75a56cd47e68b2061f177b98687
-#: ../../../../1.8/docs/howto/writing-migrations.txt:115
+# eb62c2b233854697ac9ae8ed2a8b7ad4
+#: ../../../../1.8/docs/howto/writing-migrations.txt:94
 msgid ""
-"On the first operation (``AddField``), change ``unique=True`` to "
-"``null=True`` -- this will create the intermediary null field."
-msgstr "Dans la première opération (``AddField``), modifiez ``unique=True`` en ``null=True``, ce qui va créer le champ intermédiaire avec valeur nulle autorisée."
+"Generate two empty migration files for the same app by running "
+"``makemigrations myapp --empty`` twice. We've renamed the migration files to"
+" give them meaningful names in the examples below."
+msgstr "Générez deux fichiers de migration vides pour la même application en exécutant deux fois ``makemigrations monapp --empty``. Nous avons renommé les fichiers de migration dans les exemples ci-dessous pour leur donner des noms plus explicites."
 
-# 2a0ee7bdcac2495d85faa2f68f2b062f
-#: ../../../../1.8/docs/howto/writing-migrations.txt:118
+# d69a9b55b80d41979fb019e5af5d3bc0
+#: ../../../../1.8/docs/howto/writing-migrations.txt:98
 msgid ""
-"Between the two operations, add a "
+"Copy the ``AddField`` operation from the auto-generated migration (the first"
+" of the three new files) to the last migration and change ``AddField`` to "
+"``AlterField``. For example:"
+msgstr "Copiez l'opération ``AddField`` à partir de la migration auto-générée (le premier des trois nouveaux fichiers) vers la dernière migration et modifiez ``AddField`` en ``AlterField``. Par exemple :"
+
+# 45fc2a0162ab4a7da33d1fa943deccca
+#: ../../../../1.8/docs/howto/writing-migrations.txt:126
+msgid ""
+"Edit the first migration file. The generated migration class should look "
+"similar to this:"
+msgstr "Modifiez le premier fichier de migration. La classe de migration générée devrait ressembler à ceci :"
+
+# e07ab10d455a46af9453eefd19980432
+#: ../../../../1.8/docs/howto/writing-migrations.txt:146
+msgid ""
+"Change ``unique=True`` to ``null=True`` -- this will create the intermediary"
+" null field and defer creating the unique constraint until we've populated "
+"unique values on all the rows."
+msgstr "Modifiez ``unique=True`` en ``null=True``, ce qui créera le champ intermédiaire pouvant contenir la valeur ``null`` et va différer la création de la contrainte d'unicité en attendant que nous ayons terminé de remplir les valeurs uniques pour chaque ligne."
+
+# b674ae60ea5d4678ab183a85ff9843d2
+#: ../../../../1.8/docs/howto/writing-migrations.txt:150
+msgid ""
+"In the first empty migration file, add a "
 ":class:`~django.db.migrations.operations.RunPython` or "
 ":class:`~django.db.migrations.operations.RunSQL` operation to generate a "
-"unique value (UUID in the example) for each existing row."
-msgstr "Entre les deux opérations, ajoutez une opération :class:`~django.db.migrations.operations.RunPython` ou :class:`~django.db.migrations.operations.RunSQL` pour générer une valeur unique (UUID dans l'exemple) pour chaque ligne existante."
+"unique value (UUID in the example) for each existing row. For example:"
+msgstr "Dans le premier fichier de mgiration vide, ajoutez une opération :class:`~django.db.migrations.operations.RunPython` ou :class:`~django.db.migrations.operations.RunSQL` pour générer une valeur unique (UUID dans l'exemple) pour chaque ligne existante. Par exemple :"
 
-# 3e527ba999d84ee68d8fcaf9d2d21e81
-#: ../../../../1.8/docs/howto/writing-migrations.txt:123
-msgid "The resulting migration should look similar to this::"
-msgstr "La migration résultante devrait ressembler à ceci ::"
-
-# 77372d29e7e34d3bacb9ab08beb2f6a2
-#: ../../../../1.8/docs/howto/writing-migrations.txt:158
+# 66e947cf710541249e455b7c6114f59d
+#: ../../../../1.8/docs/howto/writing-migrations.txt:181
 msgid ""
-"Now you can apply the migration as usual with the :djadmin:`migrate` "
+"Now you can apply the migrations as usual with the :djadmin:`migrate` "
 "command."
-msgstr "Vous pouvez maintenant appliquer la migration comme d'habitude avec la commande :djadmin:`migrate`."
+msgstr "Vous pouvez maintenant appliquer les migrations comme d'habitude avec la commande :djadmin:`migrate`."
 
-# f8b34f78ec194316b099c21c377d363a
-#: ../../../../1.8/docs/howto/writing-migrations.txt:160
+# 3a14df82862b4579aa9bb59d6f0d256c
+#: ../../../../1.8/docs/howto/writing-migrations.txt:183
 msgid ""
 "Note there is a race condition if you allow objects to be created while this"
 " migration is running. Objects created after the ``AddField`` and before "
