@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-22 03:09-0500\n"
-"PO-Revision-Date: 2015-05-23 08:06+0000\n"
+"POT-Creation-Date: 2015-06-06 02:09-0500\n"
+"PO-Revision-Date: 2015-06-06 09:33+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -11778,7 +11778,7 @@ msgstr "Et nous voulons également un routeur pour que toutes les autres applica
 #: ../../../../1.8/docs/topics/db/multi-db.txt:361
 msgid ""
 "Finally, in the settings file, we add the following (substituting "
-"``path.to.`` with the actual python path to the module(s) where the routers "
+"``path.to.`` with the actual Python path to the module(s) where the routers "
 "are defined)::"
 msgstr "Pour terminer, nous ajoutons dans le fichier de réglages le code suivant (remplaçant ``path.to.`` par le chemin Python réel vers les modules où les routeurs sont définis) ::"
 
@@ -14146,10 +14146,10 @@ msgid ""
 "The ``update()`` method is applied instantly and returns the number of rows "
 "matched by the query (which may not be equal to the number of rows updated "
 "if some rows already have the new value). The only restriction on the "
-":class:`~django.db.models.query.QuerySet` that is updated is that it can "
-"only access one database table, the model's main table. You can filter based"
-" on related fields, but you can only update columns in the model's main "
-"table. Example::"
+":class:`~django.db.models.query.QuerySet` being updated is that it can only "
+"access one database table: the model's main table. You can filter based on "
+"related fields, but you can only update columns in the model's main table. "
+"Example::"
 msgstr "La méthode ``update()`` est appliquée immédiatement et renvoie le nombre de lignes correspondant à la requête (ce qui ne correspond pas toujours au nombre de lignes mises à jour si certaines lignes ont déjà la bonne valeur). La seule restriction sur l'objet :class:`~django.db.models.query.QuerySet` mis à jour est qu'il ne peut accéder qu'à une seule table de base de données, la table principale du modèle. Vous pouvez filtrer selon des champs liés, mais vous ne pouvez mettre à jour des colonnes que dans la table principale du modèle. Exemple ::"
 
 # b463a0e96f7d4fb68af4893465e6f4ba
@@ -20518,38 +20518,38 @@ msgid ""
 "not met."
 msgstr "Les décorateurs présents dans  :mod:`django.views.decorators.http` peuvent être utilisés pour restreindre l'accès à une vue en se basant sur la méthode utilisée lors de la requête. Ces décorateurs renvoient une instance de :class:`django.http.HttpResponseNotAllowed` si les conditions ne sont pas remplies."
 
-# ab1bcf90915c4653ac76d59c6b98dda2
+# e4fa75fafee44050aaaa206fe5033400
 #: ../../../../1.8/docs/topics/http/decorators.txt:19
 msgid ""
-"Decorator to require that a view only accept particular request methods. "
+"Decorator to require that a view only accepts particular request methods. "
 "Usage::"
 msgstr "Décorateur exigeant que l'accès à une vue se fasse via certaines méthodes HTTP seulement. Exemple ::"
 
-# 90492c718a0d4a87a42014eef2aa1585
+# 551613d9f5774f989a1b8bbcabb15462
 #: ../../../../1.8/docs/topics/http/decorators.txt:30
 msgid "Note that request methods should be in uppercase."
 msgstr "Remarquez que les noms de méthodes HTTP doivent être en majuscules."
 
-# 961382d96be3442c9d66781ef4322219
+# fcc4848f1f4243a893d1848be383e816
 #: ../../../../1.8/docs/topics/http/decorators.txt:34
-msgid "Decorator to require that a view only accept the GET method."
+msgid "Decorator to require that a view only accepts the GET method."
 msgstr "Décorateur exigeant que la vue n'accepte que la méthode GET."
 
-# 7ccda1d92feb49e7bc99c0137d99f612
+# df96804080f54af89a15855e1d88f852
 #: ../../../../1.8/docs/topics/http/decorators.txt:38
-msgid "Decorator to require that a view only accept the POST method."
+msgid "Decorator to require that a view only accepts the POST method."
 msgstr "Décorateur exigeant que la vue n'accepte que la méthode POST."
 
-# de89a91a82a14768852a323c44896e56
+# d1c92050e6d041dbb78aa58a2bedafa6
 #: ../../../../1.8/docs/topics/http/decorators.txt:42
 msgid ""
-"Decorator to require that a view only accept the GET and HEAD methods. These"
-" methods are commonly considered \"safe\" because they should not have the "
-"significance of taking an action other than retrieving the requested "
+"Decorator to require that a view only accepts the GET and HEAD methods. "
+"These methods are commonly considered \"safe\" because they should not have "
+"the significance of taking an action other than retrieving the requested "
 "resource."
 msgstr "Décorateur exigeant que la vue n'accepte que les méthodes GET et HEAD. Ces méthodes sont généralement considérées « sans risque » car elles ne devraient rien faire d'autre mis à part retourner la ressource demandée."
 
-# 34e06670c8e04c8d85b00a1956ab75cd
+# 9602a2ec59a643399389eed0166a78d7
 #: ../../../../1.8/docs/topics/http/decorators.txt:48
 msgid ""
 "Django will automatically strip the content of responses to HEAD requests "
@@ -26557,29 +26557,44 @@ msgstr "Autres balises"
 msgid "These tags also require a ``{% load i18n %}``."
 msgstr "Ces balises nécessitent aussi le chargement ``{% load i18n %}``."
 
-# 5a6ec474854c4a64a02f2afcf1552f47
-#: ../../../../1.8/docs/topics/i18n/translation.txt:824
+# 0755ba3fc1e74de38cac4dc10da62e77
+#: ../../../../1.8/docs/topics/i18n/translation.txt:827
+msgid "``get_available_languages``"
+msgstr "``get_available_languages``"
+
+# 1d4cd8cc62084053add37a7d8c069edf
+#: ../../../../1.8/docs/topics/i18n/translation.txt:829
 msgid ""
 "``{% get_available_languages as LANGUAGES %}`` returns a list of tuples in "
 "which the first element is the :term:`language code` and the second is the "
 "language name (translated into the currently active locale)."
 msgstr "``{% get_available_languages as LANGUAGES %}`` renvoie une liste de tuples dont le premier élément est le :term:`code de langue` et le second est le nom de la langue (traduit dans la langue actuellement active)."
 
-# baf36c2498a04c63b2183d29e37062c4
-#: ../../../../1.8/docs/topics/i18n/translation.txt:828
+# a147add58d7f414fb879f68a73fc38f1
+#: ../../../../1.8/docs/topics/i18n/translation.txt:836
+msgid "``get_current_languages``"
+msgstr "``get_current_languages``"
+
+# 31d78a24da87429ab3cc50dd0db52995
+#: ../../../../1.8/docs/topics/i18n/translation.txt:838
 msgid ""
 "``{% get_current_language as LANGUAGE_CODE %}`` returns the current user's "
-"preferred language, as a string.  Example: ``en-us``. (See :ref:`how-django-"
-"discovers-language-preference`.)"
-msgstr "``{% get_current_language as LANGUAGE_CODE %}`` renvoie la langue préférée de l'utilisateur actuel, sous forme textuelle. Exemple : ``en-us`` (voir :ref:`how-django-discovers-language-preference`)."
+"preferred language as a string. Example: ``en-us``. See :ref:`how-django-"
+"discovers-language-preference`."
+msgstr "``{% get_current_language as LANGUAGE_CODE %}`` renvoie la langue préférée de l'utilisateur actuel sous forme textuelle. Exemple : ``en-us``. Voir :ref:`how-django-discovers-language-preference`."
 
-# 16aa1bd9022541e7b3972f8521a89f1f
-#: ../../../../1.8/docs/topics/i18n/translation.txt:832
+# 2a2a99c61ace45499807ced9ff9ccec9
+#: ../../../../1.8/docs/topics/i18n/translation.txt:845
+msgid "``get_current_language_bidi``"
+msgstr "``get_current_language_bidi``"
+
+# cc4f8a98fd9245d280578e37f07d89d5
+#: ../../../../1.8/docs/topics/i18n/translation.txt:847
 msgid ""
 "``{% get_current_language_bidi as LANGUAGE_BIDI %}`` returns the current "
-"locale's direction. If True, it's a right-to-left language, e.g.: Hebrew, "
-"Arabic. If False it's a left-to-right language, e.g.: English, French, "
-"German etc."
+"locale's direction. If ``True``, it's a right-to-left language, e.g. Hebrew,"
+" Arabic. If ``False`` it's a left-to-right language, e.g. English, French, "
+"German, etc."
 msgstr "``{% get_current_language_bidi as LANGUAGE_BIDI %}`` renvoie la direction du texte de la langue actuelle. Si ``True``, il s'agit d'une langue s'écrivant de droite à gauche, comme l'hébreu ou l'arabe. Si ``False``, il s'agit d'une langue s'écrivant de gauche à droite, comme l'anglais, le français, l'allemand, etc."
 
 # f32360e02dee4671b3be3304f63f051b
@@ -26596,8 +26611,13 @@ msgid ""
 "The ``i18n`` context processor is not enabled by default for new projects."
 msgstr "Le processeur de contexte ``i18n`` n'est pas activé par défaut dans les nouveaux projets."
 
-# eb1341c7bacc47a6915df347348b1286
-#: ../../../../1.8/docs/topics/i18n/translation.txt:845
+# c7857994670647c1ad42e62b53fa4ef4
+#: ../../../../1.8/docs/topics/i18n/translation.txt:863
+msgid "``get_language_info``"
+msgstr "``get_language_info``"
+
+# 1c1ebc63f8714e96af769be3b752095b
+#: ../../../../1.8/docs/topics/i18n/translation.txt:865
 msgid ""
 "You can also retrieve information about any of the available languages using"
 " provided template tags and filters. To get information about a single "
@@ -26609,8 +26629,13 @@ msgstr "Vous pouvez aussi récupérer toute information à propos des langues di
 msgid "You can then access the information::"
 msgstr "Vous pouvez ensuite accéder à ces informations ::"
 
-# baf8c7f65dad4799b89306c5b30553a6
-#: ../../../../1.8/docs/topics/i18n/translation.txt:859
+# cbf1b467a82e43008a6aff1ce703eb3c
+#: ../../../../1.8/docs/topics/i18n/translation.txt:882
+msgid "``get_language_info_list``"
+msgstr "``get_language_info_list``"
+
+# 8bf2adcaec4945b3bffb0cc9057902b5
+#: ../../../../1.8/docs/topics/i18n/translation.txt:884
 msgid ""
 "You can also use the ``{% get_language_info_list %}`` template tag to "
 "retrieve information for a list of languages (e.g. active languages as "
@@ -27871,7 +27896,7 @@ msgid ""
 "The string domain is ``django`` or ``djangojs``. This string domain is used "
 "to differentiate between different programs that store their data in a "
 "common message-file library (usually ``/usr/share/locale/``). The ``django``"
-" domain is used for python and template translation strings and is loaded "
+" domain is used for Python and template translation strings and is loaded "
 "into the global translation catalogs. The ``djangojs`` domain is only used "
 "for JavaScript translation catalogs to make sure that those are as small as "
 "possible."
@@ -30163,8 +30188,15 @@ msgid ""
 "your user model unmigrated."
 msgstr "C'est particulièrement visible quand on utilise des modèles interchangeables (par ex. ``AUTH_USER_MODEL``), car chaque application qui utilise ces modèles aura besoin de migrations si vous n'avez pas de chance. Le temps passant, de plus en plus d'applications tierces posséderont des migrations, mais dans l'intervalle, vous pouvez soit leur ajouter vous-même des migrations (en utilisant :setting:`MIGRATION_MODULES` pour stocker ces modules en dehors des modules propres à l'application, si vous le voulez), soit laisser l'application contenant votre modèle utilisateur sans migrations."
 
-# 0335ebdc2064414884fd1890b74c4a24
-#: ../../../../1.8/docs/topics/migrations.txt:242
+# 20ab0a7b1c994bb28ea18a75023597ea
+#: ../../../../1.8/docs/topics/migrations.txt:239
+msgid ""
+"In addition, any models that are used in ``RunPython`` operations must have "
+"migrations so that their relations to other models are properly created."
+msgstr "De plus, tout modèle utilisé dans des opérations ``RunPython`` doit posséder des migrations afin que leurs relations à d'autres modèles puissent être créées convenablement."
+
+# e3cc3ae23b214042bb48a67cbf0b9cf6
+#: ../../../../1.8/docs/topics/migrations.txt:245
 msgid "Migration files"
 msgstr "Fichiers de migrations"
 

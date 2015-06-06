@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-23 02:09-0500\n"
-"PO-Revision-Date: 2015-05-23 14:42+0000\n"
+"POT-Creation-Date: 2015-06-06 02:09-0500\n"
+"PO-Revision-Date: 2015-06-06 09:38+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -6626,9 +6626,16 @@ msgid ""
 "only set the header for certain views."
 msgstr "Un ensemble de décorateurs de vue qui peuvent être utilisés pour remplacer l'intergiciel ou pour ne renseigner l'en-tête que pour certaines vues."
 
-# 168e75723c0c4de3b9e83142b89f552c
-# c2f6410ac6684e03bdf32d610626677c
-#: ../../../../1.8/docs/ref/clickjacking.txt:49
+# 499874da7be74d0185d52d68b06e7c8e
+#: ../../../../1.8/docs/ref/clickjacking.txt:48
+msgid ""
+"The ``X-Frame-Options`` HTTP header will only be set by the middleware or "
+"view decorators if it is not already present in the response."
+msgstr "L'en-tête HTTP ``X-Frame-Options`` ne sera défini par l'intergiciel ou les décorateurs de vue que s'il n'est pas déjà présent dans la réponse."
+
+# 36bb07968e614e319c425e8aa21c68e7
+# f3399c0473ee4366a77b09839d99411b
+#: ../../../../1.8/docs/ref/clickjacking.txt:52
 #: ../../../../1.8/docs/ref/csrf.txt:27
 msgid "How to use it"
 msgstr "Comment l'utiliser"
@@ -25278,8 +25285,19 @@ msgstr "Ajouter ``'django.contrib.postgres'`` à votre réglage :setting:`INSTAL
 msgid ""
 "Setup the hstore extension in PostgreSQL before the first ``CreateModel`` or"
 " ``AddField`` operation by adding a migration with the "
-":class:`~django.contrib.postgres.operations.HStoreExtension` operation."
-msgstr "Configurer l'extension hstore dans PostgreSQL avant la première opération ``CreateModel`` ou ``AddField`` en ajoutant une migration comprenant l'opération :class:`~django.contrib.postgres.operations.HStoreExtension`."
+":class:`~django.contrib.postgres.operations.HStoreExtension` operation. For "
+"example::"
+msgstr "Configurer l'extension hstore dans PostgreSQL avant la première opération ``CreateModel`` ou ``AddField`` en ajoutant une migration comprenant l'opération :class:`~django.contrib.postgres.operations.HStoreExtension`. Par exemple ::"
+
+# 1dc27eb138694e2a98c19c875040bd12
+#: ../../../../1.8/docs/ref/contrib/postgres/fields.txt:272
+msgid ""
+"Creating the extension requires a database user with superuser privileges. "
+"If the Django database user doesn't have superuser privileges, you'll have "
+"to create the extension outside of Django migrations with a user that has "
+"the appropriate privileges. In that case, connect to your Django database "
+"and run the query ``CREATE EXTENSION IF NOT EXISTS hstore;``"
+msgstr "La création de l'extension exige un utilisateur de base de données possédant les droits de superutilisateur. Si l'utilisateur de base de données Django ne possède pas ces privilèges, il est alors nécessaire de créer l'extension en dehors des migrations Django avec un utilisateur qui possède les droits requis. Dans ce cas, connectez-vous à la base de données et lancez la requête ``CREATE EXTENSION IF NOT EXISTS hstore;``."
 
 # f558a9340b934cf99f11796fd3e178d4
 #: ../../../../1.8/docs/ref/contrib/postgres/fields.txt:261
@@ -35923,7 +35941,7 @@ msgstr "Notez que si un champ :class:`~django.forms.Field` définit :attr:`~Form
 
 # a0fbfac2242045828c7d9a0af6310d65
 #: ../../../../1.8/docs/ref/forms/api.txt:260
-msgid "Checking if form data has changed"
+msgid "Checking which form data has changed"
 msgstr "Contrôle des données de formulaires modifiées"
 
 # 212c537491f64369bd6b85d3e2c5588d
@@ -35949,8 +35967,17 @@ msgid ""
 "the form."
 msgstr "``has_changed()`` renvoie ``True`` si les données de ``request.POST`` diffèrent de celles qui ont été fournies dans :attr:`~Form.initial`, sinon elle renvoie ``False``. Le résultat est produit en appelant :meth:`Field.has_changed` pour chaque champ du formulaire."
 
-# 6577e68fe1314cf18f597556c4d2b6a4
-#: ../../../../1.8/docs/ref/forms/api.txt:287
+# 5a56340c9f6642f8a8e6c0a3485ee56b
+#: ../../../../1.8/docs/ref/forms/api.txt:288
+msgid ""
+"The ``changed_data`` attribute returns a list of the names of the fields "
+"whose values in the form's bound data (usually ``request.POST``) differ from"
+" what was provided in :attr:`~Form.initial`. It returns an empty list if no "
+"data differs."
+msgstr "L'attribut ``changed_data`` renvoie une liste des noms de champs dont les valeurs dans les données liées au formulaire (habituellement ``request.POST``) diffèrent de celles fournies initialement dans :attr:`~Form.initial`. La liste renvoyée est vide si les données sont parfaitement identiques."
+
+# 114e1b2b5a014151acec238685af3015
+#: ../../../../1.8/docs/ref/forms/api.txt:297
 msgid "Accessing the fields from the form"
 msgstr "Accès aux champs depuis le formulaire"
 
@@ -36894,7 +36921,7 @@ msgstr "``localize``"
 # 2f6508025c9a4850ba267afb699bdc92
 #: ../../../../1.8/docs/ref/forms/fields.txt:296
 msgid ""
-"The ``localize`` argument enables the localization of form data, input as "
+"The ``localize`` argument enables the localization of form data input, as "
 "well as the rendered output."
 msgstr "Le paramètre ``localize`` active la régionalisation des données de formulaires, aussi bien au niveau de la saisie que de l'affichage produit."
 
@@ -37660,7 +37687,7 @@ msgstr "Est normalisé en : un objet Python float."
 # 572d042b4b6041c8bdd6d070e65a875f
 #: ../../../../1.8/docs/ref/forms/fields.txt:662
 msgid ""
-"Validates that the given value is an float. Leading and trailing whitespace "
+"Validates that the given value is a float. Leading and trailing whitespace "
 "is allowed, as in Python's ``float()`` function."
 msgstr "Valide que la valeur donnée est un nombre flottant. Les espaces initiales et finales sont permises, comme dans la fonction ``float()`` de Python."
 
@@ -38096,7 +38123,7 @@ msgstr "``ComboField``"
 # 02bf2fb1f5334900bc32efadb34dfb93
 #: ../../../../1.8/docs/ref/forms/fields.txt:940
 msgid ""
-"Validates that the given value against each of the fields specified as an "
+"Validates the given value against each of the fields specified as an "
 "argument to the ``ComboField``."
 msgstr "Valide que la valeur donnée est valide pour chacun des champs indiqués en paramètre de ``ComboField``."
 
@@ -38121,7 +38148,7 @@ msgstr "Est normalisé en : le type renvoyé par la méthode ``compress`` de la 
 # e615891591264e289b7636a1d850c890
 #: ../../../../1.8/docs/ref/forms/fields.txt:968
 msgid ""
-"Validates that the given value against each of the fields specified as an "
+"Validates the given value against each of the fields specified as an "
 "argument to the ``MultiValueField``."
 msgstr "Valide que les valeurs données sont valides pour chacun des champs indiqués en paramètre de ``MultiValueField``."
 
@@ -38617,13 +38644,13 @@ msgstr "La validation de formulaires et de champs"
 #: ../../../../1.8/docs/ref/forms/validation.txt:8
 msgid ""
 "Form validation happens when the data is cleaned. If you want to customize "
-"this process, there are various places you can change, each one serving a "
+"this process, there are various places to make changes, each one serving a "
 "different purpose. Three types of cleaning methods are run during form "
 "processing. These are normally executed when you call the ``is_valid()`` "
-"method on a form. There are other things that can trigger cleaning and "
+"method on a form. There are other things that can also trigger cleaning and "
 "validation (accessing the ``errors`` attribute or calling ``full_clean()`` "
 "directly), but normally they won't be needed."
-msgstr "La validation de formulaire intervient lorsque les données sont nettoyées. Si vous souhaitez personnaliser ce processus, il y a plusieurs points d'entrée utilisables, chacun visant un objectif différent. Trois types de méthodes de nettoyage sont exécutés durant le traitement d'un formulaire. Elles sont normalement exécutées lorsque la méthode ``is_valid()`` d'un formulaire est appelée. Il y a d'autres opérations qui peuvent provoquer le nettoyage et la validation (l'accès à l'attribut ``errors`` ou l'appel direct à ``full_clean()``), mais en principe, cela ne fait pas partie du processus normal."
+msgstr "La validation de formulaire intervient lorsque les données sont nettoyées. Si vous souhaitez personnaliser ce processus, il y a plusieurs points d'entrée où des changements peuvent se faire, chacun visant un objectif différent. Trois types de méthodes de nettoyage sont exécutés durant le traitement d'un formulaire. Elles sont normalement exécutées lorsque la méthode ``is_valid()`` d'un formulaire est appelée. Il y a d'autres opérations qui peuvent aussi provoquer le nettoyage et la validation (l'accès à l'attribut ``errors`` ou l'appel direct à ``full_clean()``), mais en principe, cela ne fait pas partie du processus normal."
 
 # db125c208c39491486ffd3cd11640eac
 #: ../../../../1.8/docs/ref/forms/validation.txt:16
@@ -38646,57 +38673,58 @@ msgid ""
 "called."
 msgstr "La plupart de la validation peut se faire à l'aide de `validateurs`_, de simples fonctions utilitaires pouvant facilement être réutilisées. Il s'agit de simples fonctions (ou objets exécutables) acceptant un seul paramètre et générant une exception ``ValidationError`` en cas de saisie non valide. Les validateurs sont exécutés après l'appel aux méthodes ``to_python`` et ``validate`` du champ."
 
-# 77568d2ac7a64dfabee7a471e0417a41
+# 220ae66e07c24d10ae3cef49b2e59c67
 #: ../../../../1.8/docs/ref/forms/validation.txt:28
 msgid ""
-"Validation of a Form is split into several steps, which can be customized or"
+"Validation of a form is split into several steps, which can be customized or"
 " overridden:"
 msgstr "La validation d'un formulaire est partagée en plusieurs étapes, qui peuvent être personnalisées ou surchargées :"
 
-# 479fed31c34b4c2cae31849adc05b869
+# da07be68d16f482e8a413cbe44052a4d
 #: ../../../../1.8/docs/ref/forms/validation.txt:31
 msgid ""
-"The ``to_python()`` method on a Field is the first step in every validation."
-" It coerces the value to correct datatype and raises ``ValidationError`` if "
-"that is not possible. This method accepts the raw value from the widget and "
-"returns the converted value. For example, a FloatField will turn the data "
-"into a Python ``float`` or raise a ``ValidationError``."
-msgstr "La méthode ``to_python()`` d'un champ est la première étape de toute validation. Elle transforme la valeur dans le bon type de données et génère ``ValidationError`` si ce n'est pas possible. Cette méthode accepte la valeur brute provenant du composant et renvoie la valeur convertie. Par exemple, un champ ``FloatField`` transforme la donnée en un objet Python ``float`` ou génère une exception ``ValidationError``."
+"The ``to_python()`` method on a ``Field`` is the first step in every "
+"validation. It coerces the value to a correct datatype and raises "
+"``ValidationError`` if that is not possible. This method accepts the raw "
+"value from the widget and returns the converted value. For example, a "
+"``FloatField`` will turn the data into a Python ``float`` or raise a "
+"``ValidationError``."
+msgstr "La méthode ``to_python()`` d'un champ ``Field`` est la première étape de toute validation. Elle transforme la valeur dans le bon type de données et génère ``ValidationError`` si ce n'est pas possible. Cette méthode accepte la valeur brute provenant du composant et renvoie la valeur convertie. Par exemple, un champ ``FloatField`` transforme la donnée en un objet Python ``float`` ou génère une exception ``ValidationError``."
 
-# dc6bc30b53cd4055b9303b04ea9317ff
+# 94722b83ca3343b8a5d806b670eeff1e
 #: ../../../../1.8/docs/ref/forms/validation.txt:38
 msgid ""
-"The ``validate()`` method on a Field handles field-specific validation that "
-"is not suitable for a validator. It takes a value that has been coerced to "
-"correct datatype and raises ``ValidationError`` on any error. This method "
-"does not return anything and shouldn't alter the value. You should override "
-"it to handle validation logic that you can't or don't want to put in a "
-"validator."
-msgstr "La méthode ``validate()`` d'un champ se charge de la validation spécifique du champ qui ne convient pas pour un validateur. Elle accepte une valeur ayant déjà été convertie dans le bon type et génère une exception ``ValidationError`` en cas d'erreur. Cette méthode ne renvoie rien et ne doit pas modifier la valeur. Elle peut être surchargée pour gérer de la logique de validation que vous ne pouvez ou ne voulez pas placer dans un validateur."
+"The ``validate()`` method on a ``Field`` handles field-specific validation "
+"that is not suitable for a validator. It takes a value that has been coerced"
+" to a correct datatype and raises ``ValidationError`` on any error. This "
+"method does not return anything and shouldn't alter the value. You should "
+"override it to handle validation logic that you can't or don't want to put "
+"in a validator."
+msgstr "La méthode ``validate()`` d'un champ ``Field`` se charge de la validation spécifique du champ qui ne convient pas pour un validateur. Elle accepte une valeur ayant déjà été convertie dans le bon type et génère une exception ``ValidationError`` en cas d'erreur. Cette méthode ne renvoie rien et ne doit pas modifier la valeur. Elle peut être surchargée pour gérer de la logique de validation que vous ne pouvez ou ne voulez pas placer dans un validateur."
 
-# c93cf98cd03e441092d58c959326c286
+# fc6a9a8bcc224e51a6059ddecbbb146a
 #: ../../../../1.8/docs/ref/forms/validation.txt:45
 msgid ""
-"The ``run_validators()`` method on a Field runs all of the field's "
+"The ``run_validators()`` method on a ``Field`` runs all of the field's "
 "validators and aggregates all the errors into a single ``ValidationError``. "
 "You shouldn't need to override this method."
 msgstr "La méthode ``run_validators()`` d'un champ lance tous les validateurs du champ et rassemble toutes les erreurs dans une seule exception ``ValidationError``. Il n'est en principe pas utile de surcharger cette méthode."
 
-# da0bc90222b3410f8b4ab73e6d9c5384
+# af8cc15077f0415693824b67988df072
 #: ../../../../1.8/docs/ref/forms/validation.txt:49
 msgid ""
-"The ``clean()`` method on a Field subclass. This is responsible for running "
-"``to_python``, ``validate`` and ``run_validators`` in the correct order and "
-"propagating their errors. If, at any time, any of the methods raise "
-"``ValidationError``, the validation stops and that error is raised. This "
-"method returns the clean data, which is then inserted into the "
+"The ``clean()`` method on a ``Field`` subclass is responsible for running "
+"``to_python()``, ``validate()``, and ``run_validators()`` in the correct "
+"order and propagating their errors. If, at any time, any of the methods "
+"raise ``ValidationError``, the validation stops and that error is raised. "
+"This method returns the clean data, which is then inserted into the "
 "``cleaned_data`` dictionary of the form."
-msgstr "La méthode ``clean()`` d'une sous-classe de champ. Elle est responsable de l'exécution de ``to_python``, ``validate`` et ``run_validators`` dans le bon ordre et de la propagation des erreurs. Si à tout moment l'une de ces méthodes génère une exception ``ValidationError``, la validation s'arrête et cette erreur est propagée. Cette méthode renvoie les données nettoyées qui sont ensuite insérées dans le dictionnaire ``cleaned_data`` du formulaire."
+msgstr "La méthode ``clean()`` d'une sous-classe de champ est responsable de l'exécution de ``to_python()``, ``validate()`` et ``run_validators()`` dans le bon ordre et de la propagation des erreurs. Si à tout moment l'une de ces méthodes génère une exception ``ValidationError``, la validation s'arrête et cette erreur est propagée. Cette méthode renvoie les données nettoyées qui sont ensuite insérées dans le dictionnaire ``cleaned_data`` du formulaire."
 
-# cff29d96c24345469bbfc1b3048a2102
+# a3e59271ef244aa5acdd84ba113e4a60
 #: ../../../../1.8/docs/ref/forms/validation.txt:56
 msgid ""
-"The ``clean_<fieldname>()`` method in a form subclass -- where "
+"The ``clean_<fieldname>()`` method is called on a form subclass -- where "
 "``<fieldname>`` is replaced with the name of the form field attribute. This "
 "method does any cleaning that is specific to that particular attribute, "
 "unrelated to the type of field that it is. This method is not passed any "
@@ -38705,9 +38733,9 @@ msgid ""
 "point, not the original string submitted in the form (it will be in "
 "``cleaned_data`` because the general field ``clean()`` method, above, has "
 "already cleaned the data once)."
-msgstr "La méthode ``clean_<nom_du_champ>()`` dans une sous-classe de formulaire -- où ``<nom_du_champ>`` est remplacé par le nom de l'attribut de champ de formulaire. Cette méthode s'occupe de tout nettoyage spécifique à cet attribut, sans considération du type de champ concerné. Cette méthode ne reçoit aucun paramètre. Vous devez chercher vous-même la valeur du champ dans ``self.cleaned_data`` et vous rappeler qu'il s'agira à ce moment d'un objet Python, pas de la chaîne initialement soumise avec le formulaire (la valeur figure dans ``cleaned_data`` parce que la méthode générale ``clean()`` du champ aura déjà nettoyé la valeur une première fois)."
+msgstr "La méthode ``clean_<nom_du_champ>()`` est appelée pour une sous-classe de formulaire -- où ``<nom_du_champ>`` est remplacé par le nom de l'attribut de champ de formulaire. Cette méthode s'occupe de tout nettoyage spécifique à cet attribut, sans considération du type de champ concerné. Cette méthode ne reçoit aucun paramètre. Vous devez chercher vous-même la valeur du champ dans ``self.cleaned_data`` et vous rappeler qu'il s'agira à ce moment d'un objet Python, pas de la chaîne initialement soumise avec le formulaire (la valeur figure dans ``cleaned_data`` parce que la méthode générale ``clean()`` du champ aura déjà nettoyé la valeur une première fois)."
 
-# 25e3452824ff40eca85c136a955f4c13
+# a0a69c3e71f449d4a80ad2f6c8ddf2b8
 #: ../../../../1.8/docs/ref/forms/validation.txt:66
 msgid ""
 "For example, if you wanted to validate that the contents of a ``CharField`` "
@@ -38717,34 +38745,33 @@ msgid ""
 "possibly, cleaning/normalizing the data."
 msgstr "Par exemple, si vous souhaitiez valider que le contenu d'un champ ``CharField`` nommé ``serialnumber`` est unique, ``clean_serialnumber()`` serait le bon endroit pour le faire. Vous n'avez pas besoin d'un champ spécifique (ce n'est qu'un ``CharField``), mais vous avez besoin d'une séquence de validation propre au champ de formulaire et, si possible, de nettoyer/normaliser les données."
 
-# 6bf970df9b254908905582488de873c8
+# 5ca809262d524cdcb2b39d9c16da35b2
 #: ../../../../1.8/docs/ref/forms/validation.txt:73
 msgid ""
-"This method should return the cleaned value obtained from cleaned_data, "
+"This method should return the cleaned value obtained from ``cleaned_data``, "
 "regardless of whether it changed anything or not."
 msgstr "Cette méthode doit renvoyer la valeur nettoyée obtenue de ``cleaned_data``, qu'elle ait été modifiée ou non."
 
-# 16aff244033143f8a9ccfc7388dd2ba1
+# 9197c9cee1ff4b2583b1c16ce089d2c3
 #: ../../../../1.8/docs/ref/forms/validation.txt:76
 msgid ""
-"The Form subclass's ``clean()`` method. This method can perform any "
-"validation that requires access to multiple fields from the form at once. "
-"This is where you might put in things to check that if field ``A`` is "
-"supplied, field ``B`` must contain a valid email address and the like. This "
-"method can return a completely different dictionary if it wishes, which will"
-" be used as the ``cleaned_data``."
-msgstr "La méthode ``clean()`` de la sous-classe de formulaire. Cette méthode peut effectuer toute validation nécessitant d'accéder à plusieurs champs de formulaire depuis le même endroit. C'est ici que vous pouvez placer des contrôles du genre : si le champ ``A`` est renseigné , le champ ``B`` doit contenir une adresse de messagerie valide. Cette méthode peut renvoyer un dictionnaire complètement différent si elle le souhaite, et ce résultat sera utilisé comme contenu de ``cleaned_data``."
+"The form subclass's ``clean()`` method can perform validation that requires "
+"access to multiple form fields. This is where you might put in checks such "
+"as \"if field ``A``is supplied, field ``B`` must contain a valid email "
+"address\". This method can return a completely different dictionary if it "
+"wishes, which will be used as the ``cleaned_data``."
+msgstr "La méthode ``clean()`` de la sous-classe de formulaire peut effectuer toute validation nécessitant d'accéder à plusieurs champs de formulaire. C'est ici que vous pouvez placer des contrôles du genre : si le champ ``A`` est renseigné , le champ ``B`` doit contenir une adresse de messagerie valide. Cette méthode peut renvoyer un dictionnaire complètement différent si elle le souhaite, et ce résultat sera utilisé comme contenu de ``cleaned_data``."
 
-# 0ab1879256bb49abb043a4489e796fbd
-#: ../../../../1.8/docs/ref/forms/validation.txt:83
+# 97b5a88958e14a48939994c3015e9600
+#: ../../../../1.8/docs/ref/forms/validation.txt:82
 msgid ""
 "Since the field validation methods have been run by the time ``clean()`` is "
 "called, you also have access to the form's ``errors`` attribute which "
 "contains all the errors raised by cleaning of individual fields."
 msgstr "Comme les méthodes de validation des champs ont été exécutées au moment où ``clean()`` est appelée, vous avez aussi accès à l'attribut ``errors`` du formulaire qui contient toutes les erreurs générées lors du nettoyage individuel des champs."
 
-# 68a79b13ae9644348f31842771758b51
-#: ../../../../1.8/docs/ref/forms/validation.txt:87
+# 8fbdcbf5b5894c278bd24b717336e4d9
+#: ../../../../1.8/docs/ref/forms/validation.txt:86
 msgid ""
 "Note that any errors raised by your :meth:`Form.clean()` override will not "
 "be associated with any field in particular. They go into a special \"field\""
@@ -39074,7 +39101,7 @@ msgstr "Le second paramètre de ``add_error()`` peut être une simple chaîne, o
 # 206004dfa41e4a4a940dc2fc0fbea59c
 #: ../../../../1.8/docs/ref/forms/widgets.txt:10
 msgid ""
-"A widget is Django's representation of a HTML input element. The widget "
+"A widget is Django's representation of an HTML input element. The widget "
 "handles the rendering of the HTML, and the extraction of data from a "
 "GET/POST dictionary that corresponds to the widget."
 msgstr "Un composant de formulaire est la représentation Django d'un élément de saisie HTML. Le composant se charge de produire le code HTML et d'extraire les données qui lui sont propres dans un dictionnaire GET/POST."
@@ -39559,7 +39586,7 @@ msgstr "Zone de saisie de texte : ``<input type=\"number\" ...>``"
 msgid ""
 "Beware that not all browsers support entering localized numbers in "
 "``number`` input types. Django itself avoids using them for fields having "
-"their :attr:`~django.forms.Field.localize` property to ``True``."
+"their :attr:`~django.forms.Field.localize` property set to ``True``."
 msgstr "Il faut savoir que certains navigateurs ne gèrent pas correctement la saisie de nombres régionalisés dans les types de zones ``number``. Django lui-même évite de les utiliser pour les champs dont la propriété :attr:`~django.forms.Field.localize` est ``True``."
 
 # 08826c11fe874e08a9fe7053ac1db04b
@@ -41179,7 +41206,7 @@ msgstr "Il est conseillé d'écrire le code sous forme de fonction distincte au-
 msgid ""
 "This is generally the operation you would use to create :ref:`data "
 "migrations <data-migrations>`, run custom data updates and alterations, and "
-"anything else you need access to an ORM and/or python code for."
+"anything else you need access to an ORM and/or Python code for."
 msgstr "Il s'agit généralement de l'opération que l'on utilise pour créer des :ref:`migrations de données <data-migrations>`, pour lancer des mises à jour et modifications de données personnalisées ou pour toute autre opération qui nécessite le recours à l'ORM ou à du code Python."
 
 # 5ba357a1332e408fbb5c7bf7eefc4751
@@ -41585,8 +41612,15 @@ msgstr "Accepte une liste d'au moins deux noms de champ ou expressions et renvoi
 msgid "Usage examples::"
 msgstr "Exemples d'utilisation ::"
 
-# 65c3b63b3ec64f03b1ffa3994ab8a448
-#: ../../../../1.8/docs/ref/models/database-functions.txt:59
+# d39606d079604f9c8348e2eea89d886b
+#: ../../../../1.8/docs/ref/models/database-functions.txt:60
+msgid ""
+"A Python value passed to ``Coalesce`` on MySQL may be converted to an "
+"incorrect type unless explicitly cast to the correct database type:"
+msgstr "Avec MySQL, il est possible qu'une valeur Python transmise à ``Coalesce`` soit convertie en un type incorrect, sauf dans le cas où le bon type de base de données est explicitement forcé :"
+
+# 4c8785272b4e43d7a492bb322cbe3e4c
+#: ../../../../1.8/docs/ref/models/database-functions.txt:70
 msgid "Concat"
 msgstr "Concat"
 
@@ -43091,8 +43125,11 @@ msgstr "Assigne automatiquement la valeur du champ à la date du jour lors de ch
 msgid ""
 "Automatically set the field to now when the object is first created. Useful "
 "for creation of timestamps. Note that the current date is *always* used; "
-"it's not just a default value that you can override."
-msgstr "Assigne automatiquement la valeur du champ à la date du jour lors du premier enregistrement de l'objet. Utile pour les horodatages de date de création. Notez que c'est *toujours* la date actuelle qui est utilisée ; il ne s'agit pas seulement d'une valeur par défaut que l'on peut surcharger."
+"it's not just a default value that you can override. So even if you set a "
+"value for this field when creating the object, it will be ignored. If you "
+"want to be able to modify this field, set ``default=timezone.now`` (from "
+":func:`django.utils.timezone.now`) instead of ``auto_now_add=True``."
+msgstr "Assigne automatiquement la valeur du champ à la date du jour lors du premier enregistrement de l'objet. Utile pour les horodatages de date de création. Notez que c'est *toujours* la date actuelle qui est utilisée ; il ne s'agit pas seulement d'une valeur par défaut que l'on peut surcharger. Ainsi, même si vous définissez une valeur pour ce champ lors de la création de l'objet, il sera ignoré. Si vous voulez pouvoir modifier ce champ, ajoutez ``default=timezone.now`` dans sa définition (de :func:`django.utils.timezone.now`) au lieu de définir ``auto_now_add=True``."
 
 # 115c7e08c42b4ad989e42719054ee659
 #: ../../../../1.8/docs/ref/models/fields.txt:500
@@ -49280,19 +49317,22 @@ msgstr "Si vous passez ``nowait=True`` à ``select_for_update()`` et que le mote
 # 01d3028be4b44e0393fa5b27ff39b6fc
 #: ../../../../1.8/docs/ref/models/querysets.txt:1513
 msgid ""
-"Evaluating a queryset with ``select_for_update()`` in autocommit mode is a "
+"Evaluating a queryset with ``select_for_update()`` in autocommit mode on "
+"backends which support ``SELECT ... FOR UPDATE`` is a "
 ":exc:`~django.db.transaction.TransactionManagementError` error because the "
 "rows are not locked in that case. If allowed, this would facilitate data "
 "corruption and could easily be caused by calling code that expects to be run"
 " in a transaction outside of one."
-msgstr "L'évaluation d'un jeu de requête avec ``select_for_update()`` en mode autocommit est une erreur :exc:`~django.db.transaction.TransactionManagementError`, car dans ce cas-là, les lignes ne sont pas verrouillées. Si c'était permis, ce serait un vecteur de corruption de données qui pourrait facilement être provoqué par l'appel de code conçu pour être exécuté dans une transaction en dehors d'une transaction."
+msgstr "L'évaluation d'un jeu de requête avec ``select_for_update()`` en mode autocommit avec les bases de données qui prennent en charge ``SELECT ... FOR UPDATE`` est une erreur :exc:`~django.db.transaction.TransactionManagementError`, car dans ce cas-là, les lignes ne sont pas verrouillées. Si c'était permis, ce serait un vecteur de corruption de données qui pourrait facilement être provoqué par l'appel de code conçu pour être exécuté dans une transaction en dehors d'une transaction."
 
 # b2527bfe0b414f678e7062579cf95046
 #: ../../../../1.8/docs/ref/models/querysets.txt:1519
 msgid ""
 "Using ``select_for_update()`` on backends which do not support ``SELECT ... "
-"FOR UPDATE`` (such as SQLite) will have no effect."
-msgstr "L'emploi de ``select_for_update()`` avec des moteurs qui ne prennent pas en charge ``SELECT ... FOR UPDATE`` (comme pour SQLite) n'aura aucun effet."
+"FOR UPDATE`` (such as SQLite) will have no effect. ``SELECT ... FOR UPDATE``"
+" will not be added to the query, and an error isn't raised if "
+"``select_for_update()`` is used in autocommit mode."
+msgstr "L'emploi de ``select_for_update()`` avec des moteurs qui ne prennent pas en charge ``SELECT ... FOR UPDATE`` (comme pour SQLite) n'aura aucun effet. ``SELECT ... FOR UPDATE`` ne sera pas ajouté à la requête et aucune erreur ne sera produite si ``select_for_update()`` est utilisé en mode autocommit."
 
 # edc647133e4d4b51bb6c676194acc3ff
 #: ../../../../1.8/docs/ref/models/querysets.txt:1524
