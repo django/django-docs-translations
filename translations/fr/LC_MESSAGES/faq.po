@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-02 05:09-0500\n"
-"PO-Revision-Date: 2015-04-02 12:23+0000\n"
+"POT-Creation-Date: 2015-06-30 03:09-0500\n"
+"PO-Revision-Date: 2015-07-01 07:32+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -987,10 +987,11 @@ msgstr "Quels sont les prérequis de Django ?"
 # a026a080c94c476b871950fae1ab231e
 #: ../../../../1.8/docs/faq/install.txt:19
 msgid ""
-"Django requires Python, specifically Python 2.7 or 3.2 and above. Other "
-"Python libraries may be required for some uses, but you'll receive an error "
-"about it as they're needed."
-msgstr "Django nécessite Python, plus précisément Python 2.7,  3.2 ou plus récent. D'autres bibliothèques Python peuvent être nécessaires pour certains besoins, mais vous serez averti par une erreur le cas échéant."
+"Django requires Python. See the table in the next question for the versions "
+"of Python that work with each version of Django. Other Python libraries may "
+"be required for some uses, but you'll receive an error about it as they're "
+"needed."
+msgstr "Django nécessite Python. Consultez le tableau dans la question suivante pour connaître les versions de Python qui conviennent aux versions de Django. D'autres bibliothèques Python peuvent être nécessaires pour certains besoins, mais vous serez averti par une erreur le cas échéant."
 
 # 886e9fdd9da34bb98e0bbeddb0db1e80
 #: ../../../../1.8/docs/faq/install.txt:23
@@ -1037,18 +1038,8 @@ msgstr "1.4"
 msgid "2.5, 2.6, 2.7"
 msgstr "2.5, 2.6, 2.7"
 
-# 774a21127a824f499872c5754c708f11
-#: ../../../../1.8/docs/faq/install.txt:47
-msgid "1.6"
-msgstr "1.6"
-
-# 8162471114b74cc9b821cdb02591c695
-#: ../../../../1.8/docs/faq/install.txt:47
-msgid "2.6, 2.7 and 3.2, 3.3"
-msgstr "2.6, 2.7 et 3.2, 3.3"
-
-# fb465fac6ddb442b9cba8d550c6d76a1
-#: ../../../../1.8/docs/faq/install.txt:48
+# 2b18ad76483d48f09ee56313cb282dac
+#: ../../../../1.8/docs/faq/install.txt:49
 msgid "**1.7, 1.8**"
 msgstr "**1.7, 1.8**"
 
@@ -1062,10 +1053,10 @@ msgstr "**2.7** et **3.2, 3.3, 3.4**"
 msgid "1.9"
 msgstr "1.9"
 
-# 7468fc6cd8864a97a2e7c18f6f136310
-#: ../../../../1.8/docs/faq/install.txt:49
-msgid "2.7, 3.3, 3.4, 3.5"
-msgstr "2.7, 3.3, 3.4, 3.5"
+# 09bc339fce7f47dda3d0fa0f75bd750d
+#: ../../../../1.8/docs/faq/install.txt:50
+msgid "2.7, 3.4, 3.5"
+msgstr "2.7, 3.4, 3.5"
 
 # 30bea357954c4284a72294e967bd0915
 #: ../../../../1.8/docs/faq/install.txt:52
@@ -1077,6 +1068,16 @@ msgstr "Pour chaque version de Python, seule la dernière publication micro (A.B
 
 # ce896d4db3164fb5a91319196f2ea2c0
 #: ../../../../1.8/docs/faq/install.txt:57
+msgid ""
+"Typically, we will support a Python version up to and including the first "
+"Django LTS release whose security support ends after security support for "
+"that version of Python ends. For example, Python 3.3 security support ends "
+"September 2017 and Django 1.8 LTS security support ends April 2018. "
+"Therefore Django 1.8 is the last version to support Python 3.3."
+msgstr "En règle générale, nous prenons en charge une version de Python jusqu'à et y compris la première version de Django LTS dont la prise en charge de sécurité se termine après la prise en charge de sécurité de cette version de Python. Par exemple, la prise en charge de la sécurité de Python 3.3 se termine en septembre 2017 et la prise en charge de la sécurité de Django 1.8 LTS se termine en avril 2018. Ainsi, Django 1.8 est la dernière version prenant en charge Python 3.3."
+
+# 232339d6fba04ac5b2ef5e2081e86ba8
+#: ../../../../1.8/docs/faq/install.txt:64
 msgid "What Python version should I use with Django?"
 msgstr "Quelle version de Python devrais-je utiliser avec Django ?"
 

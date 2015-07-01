@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-06 02:09-0500\n"
-"PO-Revision-Date: 2015-06-10 09:38+0000\n"
+"POT-Creation-Date: 2015-07-02 04:09-0500\n"
+"PO-Revision-Date: 2015-07-02 12:41+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -5808,8 +5808,8 @@ msgstr "``success_url`` peut contenir des chaînes de format de type dictionnair
 msgid ""
 "Support for the new brace-based Python formatting syntax has been added. The"
 " old ``%(slug)s`` placeholder syntax support has been deprecated and will be"
-" removed in Django 2.0."
-msgstr "La prise en charge de la nouvelle syntaxe de Python de mise en forme par accolades a été ajoutée. L'ancienne syntaxe par substitution de type ``%(slug)s`` est maintenant obsolète et sera supprimée dans Django 2.0."
+" removed in Django 1.10."
+msgstr "La prise en charge de la nouvelle syntaxe de Python de mise en forme par accolades a été ajoutée. L'ancienne syntaxe par substitution de type ``%(slug)s`` est maintenant obsolète et sera supprimée dans Django 1.10."
 
 # 34871ed528a44a9abe9ee4fb15f41202
 #: ../../../../1.8/docs/ref/class-based-views/mixins-editing.txt:164
@@ -7667,14 +7667,15 @@ msgstr "Le site d'administration a besoin de quatre applications pour fonctionne
 # 997a403b2e5145ffa2b2cf5dba447bba
 #: ../../../../1.8/docs/ref/contrib/admin/index.txt:30
 msgid ""
-"Add ``django.contrib.messages.context_processors.messages`` to the "
+"Add ``django.contrib.auth.context_processors.auth`` and "
+"``django.contrib.messages.context_processors.messages`` to the "
 "``'context_processors'`` option of the ``DjangoTemplates`` backend defined "
 "in your :setting:`TEMPLATES` as well as "
 ":class:`django.contrib.auth.middleware.AuthenticationMiddleware` and "
 ":class:`django.contrib.messages.middleware.MessageMiddleware` to "
 ":setting:`MIDDLEWARE_CLASSES`. (These are all active by default, so you only"
 " need to do this if you've manually tweaked the settings.)"
-msgstr "Ajoutez ``django.contrib.messages.context_processors.messages`` à l'option ``'context_processors'`` du moteur ``DjangoTemplates`` défini dans le réglage :setting:`TEMPLATES` ainsi que :class:`django.contrib.auth.middleware.AuthenticationMiddleware` et :class:`django.contrib.messages.middleware.MessageMiddleware` à :setting:`MIDDLEWARE_CLASSES`.  (Ceux-ci sont tous actifs par défaut, donc vous avez seulement besoin de faire cela si vous avez modifié manuellement les réglages.)"
+msgstr "Ajoutez ``django.contrib.auth.context_processors.auth`` et ``django.contrib.messages.context_processors.messages`` à l'option ``'context_processors'`` du moteur ``DjangoTemplates`` défini dans le réglage :setting:`TEMPLATES` ainsi que :class:`django.contrib.auth.middleware.AuthenticationMiddleware` et :class:`django.contrib.messages.middleware.MessageMiddleware` à :setting:`MIDDLEWARE_CLASSES`.  (Ceux-ci sont tous actifs par défaut, donc vous avez seulement besoin de faire cela si vous avez modifié manuellement les réglages.)"
 
 # 8bb10155ab1d4b96b6066252ae3eca4a
 #: ../../../../1.8/docs/ref/contrib/admin/index.txt:38
@@ -27040,8 +27041,10 @@ msgstr "Un modèle pour le stockage des attributs ``domain`` et ``name`` d'un si
 
 # ad3d047fc9b34ca6a5727df4115bc9e6
 #: ../../../../1.8/docs/ref/contrib/sites.txt:24
-msgid "The domain name associated with the Web site."
-msgstr "Le nom de domaine associé au site Web."
+msgid ""
+"The fully qualified domain name associated with the Web site. For example, "
+"``www.example.com``."
+msgstr "Le nom de domaine pleinement qualifié associé au site Web. Par exemple, ``www.example.com``."
 
 # 98857b3366424a94a43f0c84503e19c6
 #: ../../../../1.8/docs/ref/contrib/sites.txt:28
@@ -27709,6 +27712,16 @@ msgstr "Lorsque deux fichiers ont le même nom, le problème est résolu par dé
 
 # 89164e4b3c414863936629ef1b67d35e
 #: ../../../../1.8/docs/ref/contrib/staticfiles.txt:49
+msgid ""
+"On subsequent ``collectstatic`` runs (if ``STATIC_ROOT`` isn't empty), files"
+" are copied only if they have a modified timestamp greater than the "
+"timestamp of the file in ``STATIC_ROOT``. Therefore if you remove an "
+"application from :setting:`INSTALLED_APPS`, it's a good idea to use the "
+":djadminopt:`--clear` option in order to remove stale static files."
+msgstr "Lors des prochains lancements de ``collectstatic`` (si ``STATIC_ROOT`` n'est pas vide), les fichiers ne sont copiés que si leur date de modification est plus récente que la date de modification du fichier dans ``STATIC_ROOT``. Ainsi, si vous supprimez une application de :setting:`INSTALLED_APPS`, il est recommandé d'utiliser l'option :djadminopt:`--clear` afin de supprimer les fichiers statiques obsolètes."
+
+# dab2620f582b43559b742c49b9745018
+#: ../../../../1.8/docs/ref/contrib/staticfiles.txt:55
 msgid ""
 "Files are searched by using the :setting:`enabled finders "
 "<STATICFILES_FINDERS>`. The default is to look in all locations defined in "
@@ -31827,26 +31840,26 @@ msgstr "Utilisez ``--no-initial-data`` pour éviter de charger les instantanés 
 # 8fb01cbc2f2e4986bfbcd1de793dbf2b
 #: ../../../../1.8/docs/ref/django-admin.txt:355
 msgid ""
-"Introspects the database tables and views in the database pointed-to by the "
+"Introspects the database tables in the database pointed-to by the "
 ":setting:`NAME` setting and outputs a Django model module (a ``models.py`` "
 "file) to standard output."
-msgstr "Introspecte les tables et les vues de base de données de la base désignée dans le réglage :setting:`NAME` et affiche un module de modèle Django (un fichier ``models.py``) vers la sortie standard."
+msgstr "Introspecte les tables de base de données de la base désignée dans le réglage :setting:`NAME` et affiche un module de modèle Django (un fichier ``models.py``) vers la sortie standard."
 
 # f893493a73044b14818436c5579b7e15
 #: ../../../../1.8/docs/ref/django-admin.txt:359
 msgid ""
 "Use this if you have a legacy database with which you'd like to use Django. "
-"The script will inspect the database and create a model for each table or "
-"view within it."
-msgstr "Cette commande est utile dans le cas d'une base de données existante que vous aimeriez utilisez avec Django. Le script inspecte la base de données et crée un modèle pour chacune de ses tables ou vues."
+"The script will inspect the database and create a model for each table "
+"within it."
+msgstr "Cette commande est utile dans le cas d'une base de données existante que vous aimeriez utilisez avec Django. Le script inspecte la base de données et crée un modèle pour chacune de ses tables."
 
 # ad1b20fcabc7487093fab35496558930
 #: ../../../../1.8/docs/ref/django-admin.txt:363
 msgid ""
 "As you might expect, the created models will have an attribute for every "
-"field in the table or view. Note that ``inspectdb`` has a few special cases "
-"in its field-name output:"
-msgstr "Comme l'on peut s'y attendre, les modèles créés possèdent un attribut pour chaque champ de table ou de vue. Notez que ``inspectdb`` gère quelques cas particuliers dans sa manière de nommer les champs :"
+"field in the table. Note that ``inspectdb`` has a few special cases in its "
+"field-name output:"
+msgstr "Comme l'on peut s'y attendre, les modèles créés possèdent un attribut pour chaque champ de table. Notez que ``inspectdb`` gère quelques cas particuliers dans sa manière de nommer les champs :"
 
 # 8a42942162f64b46b9649f5125b4f6f9
 #: ../../../../1.8/docs/ref/django-admin.txt:367
@@ -31918,15 +31931,8 @@ msgid ""
 "introspect."
 msgstr "L'option :djadminopt:`--database` peut être utilisée pour indiquer la base de données qu'il s'agit d'analyser."
 
-# 7b193879812d4e6495928759273d2960
-#: ../../../../1.8/docs/ref/django-admin.txt:410
-msgid ""
-"A feature to inspect database views was added. In previous versions, only "
-"tables (not views) were inspected."
-msgstr "La capacité d'inspecter les vues de base de données a été ajoutée. Dans les versions précédentes, seules les tables (et pas les vues) étaient examinées."
-
-# c6a88d158cb24829a0546f8f22f90bb6
-#: ../../../../1.8/docs/ref/django-admin.txt:414
+# 9acaad7b4db54fd7b1992cea99045cea
+#: ../../../../1.8/docs/ref/django-admin.txt:409
 msgid "loaddata <fixture fixture ...>"
 msgstr "loaddata <instantané instantané ...>"
 
@@ -33385,14 +33391,16 @@ msgstr "syncdb"
 #: ../../../../1.8/docs/ref/django-admin.txt:1419
 msgid ""
 "This command has been deprecated in favor of the :djadmin:`migrate` command,"
-" which performs both the old behavior as well as executing migrations. It is"
-" now just an alias to that command."
-msgstr "Cette commande a été rendue obsolète en faveur de la commande :djadmin:`migrate` qui applique à la fois l'ancien comportement tout en exécutant les migrations. Il ne s'agit plus maintenant que d'un alias vers cette dernière commande."
+" which performs both the old behavior as well as executing migrations."
+msgstr "Cette commande a été rendue obsolète en faveur de la commande :djadmin:`migrate` qui applique à la fois l'ancien comportement tout en exécutant les migrations."
 
-# 963524db51e648cda1454f6421c2b97b
-#: ../../../../1.8/docs/ref/django-admin.txt:1423
-msgid "Alias for :djadmin:`migrate`."
-msgstr "Alias de :djadmin:`migrate`."
+# 74f8de770a604c3caa28e012fe38543d
+#: ../../../../1.8/docs/ref/django-admin.txt:1418
+msgid ""
+"Alias for :djadmin:`migrate`, except that it also prompts you to create a "
+"superuser if one doesn't exist (assuming you are using "
+"``django.contrib.auth``)."
+msgstr "Alias de :djadmin:`migrate`, sauf que cette commande vous invite en plus à créer un superutilisateur s'il n'en existe pas encore (en supposant que vous utilisiez :mod:`django.contrib.auth`)."
 
 # dba42bea113d4d35808aa2bea47fbeb1
 #: ../../../../1.8/docs/ref/django-admin.txt:1426
@@ -37749,15 +37757,22 @@ msgstr "Lorsque vous utilisez un champ ``ImageField`` dans un formulaire, vous n
 msgid ""
 "After the field has been cleaned and validated, the ``UploadedFile`` object "
 "will have an additional ``image`` attribute containing the Pillow `Image`_ "
-"instance used to check if the file was a valid image. "
-"``UploadedFile.content_type`` is also updated with the image's content type "
-"as determined by Pillow."
-msgstr "Après que le champ a été nettoyé et validé, l'objet ``UploadedFile`` comportera un attribut supplémentaire ``image`` contenant l'instance `Image`_ de Pillow utilisée pour contrôler que le fichier est une image valide. ``UploadedFile.content_type`` est également mis à jour avec le type de contenu de l'image déterminé par Pillow."
+"instance used to check if the file was a valid image. Also, "
+"``UploadedFile.content_type`` will be updated with the image's content type "
+"if Pillow can determine it, otherwise it will be set to ``None``."
+msgstr "Après que le champ a été nettoyé et validé, l'objet ``UploadedFile`` comportera un attribut supplémentaire ``image`` contenant l'instance `Image`_ de Pillow utilisée pour contrôler que le fichier est une image valide. De plus, ``UploadedFile.content_type`` sera également mis à jour avec le type de contenu de l'image pour autant que Pillow puisse le déterminer, sinon il prend la valeur ``None``."
 
-# c3495cfeeffc4c199deb96c01746fe80
-# cd60bb9db76a4dfcacd1cc0a9627afec
-#: ../../../../1.8/docs/ref/forms/fields.txt:705
-#: ../../../../1.8/docs/ref/models/fields.txt:907
+# 13d1458a10a244fba812a19cd8590d2c
+#: ../../../../1.8/docs/ref/forms/fields.txt:701
+msgid ""
+"The ``image`` and ``content_type`` attributes described in the last "
+"paragraph were added."
+msgstr "Les attributs ``image`` et ``content_type`` décrits dans le paragraphe précédent ont été ajoutés."
+
+# 19e2b47fadd64f3893ff2f824721ca11
+# d4899528f887419cbf5607c226a4a273
+#: ../../../../1.8/docs/ref/forms/fields.txt:708
+#: ../../../../1.8/docs/ref/models/fields.txt:915
 msgid "``IntegerField``"
 msgstr "``IntegerField``"
 
@@ -38003,11 +38018,11 @@ msgstr "Accepte également ``max_length`` et ``min_length``, qui fonctionnent ex
 #: ../../../../1.8/docs/ref/forms/fields.txt:851
 msgid ""
 "The optional argument ``error_message`` is also accepted for backwards "
-"compatibility but will be removed in Django 2.0. The preferred way to "
+"compatibility but will be removed in Django 1.10. The preferred way to "
 "provide an error message is to use the :attr:`~Field.error_messages` "
 "argument, passing a dictionary with ``'invalid'`` as a key and the error "
 "message as the value."
-msgstr "Le paramètre facultatif ``error_message`` est également accepté par rétrocompatibilité, mais sera supprimé dans Django 2.0. La manière privilégiée d'indiquer un message d'erreur est d'utiliser le paramètre :attr:`~Field.error_messages` en transmettant un dictionnaire ayant la clé ``'invalid'`` et le message d'erreur souhaité comme valeur."
+msgstr "Le paramètre facultatif ``error_message`` est également accepté par rétrocompatibilité, mais sera supprimé dans Django 1.10. La manière privilégiée d'indiquer un message d'erreur est d'utiliser le paramètre :attr:`~Field.error_messages` en transmettant un dictionnaire ayant la clé ``'invalid'`` et le message d'erreur souhaité comme valeur."
 
 # 33f7b55d00f547a48ceaad099674e6a8
 # 95333cb8fe4249159857efe3b5d2d24f
@@ -43217,6 +43232,15 @@ msgstr "Et pour enregistrer un nombre jusqu'à un milliard environ avec une pré
 
 # a3b7cd460d3b4861bfa1411989a93bdc
 #: ../../../../1.8/docs/ref/models/fields.txt:565
+#: ../../../../1.8/docs/ref/models/fields.txt:864
+msgid ""
+"The default form widget for this field is a "
+":class:`~django.forms.NumberInput` when :attr:`~django.forms.Field.localize`"
+" is ``False`` or :class:`~django.forms.TextInput` otherwise."
+msgstr "Le composant de formulaire par défaut de ce champ est un :class:`~django.forms.NumberInput` lorsque :attr:`~django.forms.Field.localize` vaut ``False``, ou :class:`~django.forms.TextInput` dans le cas contraire."
+
+# 90840687e7374a61a8bf8428d519fff2
+#: ../../../../1.8/docs/ref/models/fields.txt:571
 msgid ""
 "For more information about the differences between the :class:`FloatField` "
 "and :class:`DecimalField` classes, please see :ref:`FloatField vs. "
@@ -43725,8 +43749,9 @@ msgstr "Les instances de :class:`ImageField` sont créées en tant que colonnes 
 msgid ""
 "An integer. Values from ``-2147483648`` to ``2147483647`` are safe in all "
 "databases supported by Django. The default form widget for this field is a "
-":class:`~django.forms.TextInput`."
-msgstr "Un nombre entier. Les valeurs de ``-2147483648`` à ``2147483647`` sont acceptées par toutes les base de données prises en charge par Django. Le composant de formulaire par défaut de ce champ est :class:`~django.forms.TextInput`."
+":class:`~django.forms.NumberInput` when :attr:`~django.forms.Field.localize`"
+" is ``False`` or :class:`~django.forms.TextInput` otherwise."
+msgstr "Un nombre entier. Les valeurs de ``-2147483648`` à ``2147483647`` sont acceptées par toutes les base de données prises en charge par Django. Le composant de formulaire par défaut de ce champ est un :class:`~django.forms.NumberInput` lorsque :attr:`~django.forms.Field.localize` vaut ``False``, ou :class:`~django.forms.TextInput` dans le cas contraire."
 
 # 02eef486cdaf4fd6aa6908ba4393fe84
 #: ../../../../1.8/docs/ref/models/fields.txt:920
@@ -46661,8 +46686,8 @@ msgstr "Migration à partir de l'ancienne API"
 msgid ""
 "As part of the formalization of the ``Model._meta`` API (from the "
 ":class:`django.db.models.options.Options` class), a number of methods and "
-"properties have been deprecated and will be removed in Django 2.0."
-msgstr "Dans le cadre de la formalisation de l'API ``Model._meta`` (de la classe :class:`django.db.models.options.Options`), un certain nombre de méthodes et de propriétés ont été rendues obsolètes et seront supprimées dans Django 2.0."
+"properties have been deprecated and will be removed in Django 1.10."
+msgstr "Dans le cadre de la formalisation de l'API ``Model._meta`` (de la classe :class:`django.db.models.options.Options`), un certain nombre de méthodes et de propriétés ont été rendues obsolètes et seront supprimées dans Django 1.10."
 
 # b1f5b96c104c4ffc94d02a5a919efc86
 #: ../../../../1.8/docs/ref/models/meta.txt:156
@@ -47080,12 +47105,12 @@ msgstr "``order_with_respect_to``"
 # 7996f5b137154e4cbe8dd6a8f57cbbb0
 #: ../../../../1.8/docs/ref/models/options.txt:176
 msgid ""
-"Marks this object as \"orderable\" with respect to the given field. This is "
-"almost always used with related objects to allow them to be ordered with "
+"Makes this object orderable with respect to the given field, usually a "
+"``ForeignKey``. This can be used to make related objects orderable with "
 "respect to a parent object. For example, if an ``Answer`` relates to a "
 "``Question`` object, and a question has more than one answer, and the order "
 "of answers matters, you'd do this::"
-msgstr "Marque cet objet comme « triable » en fonction du champ donné. Ceci est presque toujours utilisé avec des objets liés pour leur permettre d'être triés en fonction d'un objet parent. Par exemple, si un objet ``Answer`` (réponse) est lié à un objet ``Question`` et qu'une question possède plus d'une réponse et que l'ordre des réponses est signifiant, voici comment cela serait défini ::"
+msgstr "Rend cet objet « triable » en fonction du champ donné, presque toujours un champ ``ForeignKey``. Cela peut être utilisé pour permettre à des objets liés d'être triés en fonction d'un objet parent. Par exemple, si un objet ``Answer`` (réponse) est lié à un objet ``Question`` et qu'une question possède plus d'une réponse et que l'ordre des réponses est signifiant, voici comment cela serait défini ::"
 
 # ac70513f8ec349b888e8ae4185b94a89
 #: ../../../../1.8/docs/ref/models/options.txt:195
@@ -47115,20 +47140,35 @@ msgstr "Les objets liés reçoivent aussi deux méthodes, ``get_next_in_order()`
 
 # daee387c544747319703251adac6ac4e
 #: ../../../../1.8/docs/ref/models/options.txt:221
-msgid "Changing order_with_respect_to"
-msgstr "Modification de order_with_respect_to"
+msgid "``order_with_respect_to`` implicitly sets the ``ordering`` option"
+msgstr "``order_with_respect_to`` définit implicitement l'option ``ordering``."
 
 # 111e5b9b798e42c28dd45305b411c8a3
 #: ../../../../1.8/docs/ref/models/options.txt:223
 msgid ""
-"``order_with_respect_to`` adds an additional field/database column named "
-"``_order``, so be sure to make and apply the appropriate migrations if you "
-"add or change ``order_with_respect_to`` after your initial "
-":djadmin:`migrate`."
-msgstr "``order_with_respect_to`` ajoute une colonne de base de données supplémentaire nommée ``_order``, il vous revient donc de créer et d'appliquer les migrations appropriées si vous ajoutez ou modifiez ``order_with_respect_to`` après la création initiale opérée par :djadmin:`migrate`."
+"Internally, ``order_with_respect_to`` adds an additional field/database "
+"column named ``_order`` and sets the model's :attr:`~Options.ordering` "
+"option to this field. Consequently, ``order_with_respect_to`` and "
+"``ordering`` cannot be used together, and the ordering added by "
+"``order_with_respect_to`` will apply whenever you obtain a list of objects "
+"of this model."
+msgstr "En interne, ``order_with_respect_to`` ajoute un champ (colonne de base de données) supplémentaire nommé ``_order`` et définit l'option :attr:`~Options.ordering` du modèle avec ce champ. Par conséquent, ``order_with_respect_to`` et ``ordering`` ne peuvent pas être utilisés conjointement, et l'ordre de tri ajouté par ``order_with_respect_to`` s'applique chaque fois que vous obtenez une liste d'objets pour ce modèle."
 
-# 51bf41923dfe46ddaadcf967540ee981
-#: ../../../../1.8/docs/ref/models/options.txt:229
+# 998ab74bf42b40bd911133b71c84b12c
+#: ../../../../1.8/docs/ref/models/options.txt:230
+msgid "Changing ``order_with_respect_to``"
+msgstr "Modification de ``order_with_respect_to``"
+
+# dcee8f18ec48465e84184197347b41e1
+#: ../../../../1.8/docs/ref/models/options.txt:232
+msgid ""
+"Because ``order_with_respect_to`` adds a new database column, be sure to "
+"make and apply the appropriate migrations if you add or change "
+"``order_with_respect_to`` after your initial :djadmin:`migrate`."
+msgstr "Comme ``order_with_respect_to`` ajoute une colonne de base de données supplémentaire, il vous revient donc de créer et d'appliquer les migrations appropriées si vous ajoutez ou modifiez ``order_with_respect_to`` après la création initiale opérée par :djadmin:`migrate`."
+
+# 403632d4bd2d4c14bca9178fe7b09d1b
+#: ../../../../1.8/docs/ref/models/options.txt:237
 msgid "``ordering``"
 msgstr "``ordering``"
 
@@ -51669,8 +51709,16 @@ msgid ""
 "``process_request``, you can use ``process_view`` instead)."
 msgstr "Une instance de :class:`~django.core.urlresolvers.ResolverMatch` représentant l'URL résolue. Cet attribut n'est défini qu'après la phase de résolution d'URL, ce qui veut dire qu'il est disponible dans toutes les vues, mais pas dans les méthodes d'intergiciel qui sont exécutées avant la phase de résolution d'URL (comme pour `process_request``, mais l'attribut est disponible dans ``process_view``)."
 
-# e4f67d265c554dfa9d7d4cc9614d20c6
-#: ../../../../1.8/docs/ref/request-response.txt:218
+# 64d12c74341246068ee9d97bdd93ca4c
+#: ../../../../1.8/docs/ref/request-response.txt:216
+msgid ""
+"Not defined by Django itself, but if set, the :ttag:`url` template tag will "
+"use its value as the ``current_app`` argument to "
+":func:`~django.core.urlresolvers.reverse()`."
+msgstr "Non défini par Django lui-même, mais s'il est défini, la balise de gabarit :ttag:`url` utilise sa valeur comme paramètre ``current_app`` de :func:`~django.core.urlresolvers.reverse()`."
+
+# bcf4d70fa8d64f54b0ffc3954b51da47
+#: ../../../../1.8/docs/ref/request-response.txt:225
 msgid ""
 "Returns the originating host of the request using information from the "
 "``HTTP_X_FORWARDED_HOST`` (if :setting:`USE_X_FORWARDED_HOST` is enabled) "
@@ -53117,8 +53165,8 @@ msgstr "ALLOWED_INCLUDE_ROOTS"
 #: ../../../../1.8/docs/ref/settings.txt:128
 msgid ""
 "This setting, along with the :ttag:`ssi` template tag, is deprecated and "
-"will be removed in Django 2.0."
-msgstr "Ce réglage ainsi que la balise de gabarit :ttag:`ssi` sont obsolètes et seront supprimés dans Django 2.0."
+"will be removed in Django 1.10."
+msgstr "Ce réglage ainsi que la balise de gabarit :ttag:`ssi` sont obsolètes et seront supprimés dans Django 1.10."
 
 # 9b0554f7e45443d09a47d928cdad1c0c
 #: ../../../../1.8/docs/ref/settings.txt:133
@@ -56508,8 +56556,15 @@ msgid ""
 "applications."
 msgstr "Indique si le moteur recherche des fichiers sources de gabarits dans les applications installées."
 
-# 36e012fedd694ac78a4344394b7c7ca0
-#: ../../../../1.8/docs/ref/settings.txt:2402
+# 9cb270fdd047497bae6966561518994b
+#: ../../../../1.8/docs/ref/settings.txt:2399
+msgid ""
+"The default :file:`settings.py` file created by :djadmin:`django-admin "
+"startproject <startproject>` sets ``'APP_DIRS': True``."
+msgstr "Le fichier :file:`settings.py` créé par défaut par :djadmin:`django-admin startproject <startproject>` définit ``'APP_DIRS': True``."
+
+# 1c682250c36c46dda3bab5027388ccec
+#: ../../../../1.8/docs/ref/settings.txt:2407
 msgid "Default: ``{}`` (Empty dict)"
 msgstr "Valeur par défaut : ``{}`` (dictionnaire vide)"
 
@@ -62585,9 +62640,9 @@ msgstr "ssi"
 # ef789ce2d0984eed92dcd5b0e5651585
 #: ../../../../1.8/docs/ref/templates/builtins.txt:993
 msgid ""
-"This tag has been deprecated and will be removed in Django 2.0. Use the "
+"This tag has been deprecated and will be removed in Django 1.10. Use the "
 ":ttag:`include` tag instead."
-msgstr "Cette balise est obsolète et sera supprimée dans Django 2.0. Utilisez la balise :ttag:`include` à la place."
+msgstr "Cette balise est obsolète et sera supprimée dans Django 1.10. Utilisez la balise :ttag:`include` à la place."
 
 # a5a993ae596b4ce5baa22783a1cfe141
 #: ../../../../1.8/docs/ref/templates/builtins.txt:996
@@ -62867,8 +62922,8 @@ msgstr "La :ref:`stratégie habituelle de résolution d'URL avec espace de noms 
 #: ../../../../1.8/docs/ref/templates/builtins.txt:1137
 msgid ""
 "The dotted Python path syntax is deprecated and will be removed in Django "
-"2.0::"
-msgstr "La syntaxe de chemin Python pointé est obsolète et sera supprimée dans Django 2.0 ::"
+"1.10::"
+msgstr "La syntaxe de chemin Python pointé est obsolète et sera supprimée dans Django 1.10 ::"
 
 # a4720a9f276946139258edf30c214a16
 #: ../../../../1.8/docs/ref/templates/builtins.txt:1144
@@ -65054,8 +65109,8 @@ msgstr "Il est nécessaire que la liste soit dans le bon format. Par exemple, si
 msgid ""
 "An older, more restrictive and verbose input format is also supported: "
 "``['States', [['Kansas', [['Lawrence', []], ['Topeka', []]]], ['Illinois', "
-"[]]]]``. Support for this syntax will be removed in Django 2.0."
-msgstr "Un format d'entrée plus ancien, plus restrictif et verbeux est également pris en charge : ``['States', [['Kansas', [['Lawrence', []], ['Topeka', []]]], ['Illinois', []]]]``. La prise en charge de cette syntaxe sera supprimée dans Django 2.0."
+"[]]]]``. Support for this syntax will be removed in Django 1.10."
+msgstr "Un format d'entrée plus ancien, plus restrictif et verbeux est également pris en charge : ``['States', [['Kansas', [['Lawrence', []], ['Topeka', []]]], ['Illinois', []]]]``. La prise en charge de cette syntaxe sera supprimée dans Django 1.10."
 
 # f4aa0a7d6c5343ea9bb2eabcc10126d3
 #: ../../../../1.8/docs/ref/templates/builtins.txt:2335
@@ -66599,8 +66654,8 @@ msgid ""
 "Passing a :class:`~django.template.Context` or a "
 ":class:`~django.template.RequestContext` is still possible when the template"
 " is loaded by a :class:`~django.template.backends.django.DjangoTemplates` "
-"backend but it's deprecated and won't be supported in Django 2.0."
-msgstr "La transmission d'un :class:`~django.template.Context` ou d'un :class:`~django.template.RequestContext` est toujours possible lorsque le gabarit est chargé par un moteur :class:`~django.template.backends.django.DjangoTemplates`, mais cette possibilité est obsolète et ne sera plus prise en charge dans Django 2.0."
+"backend but it's deprecated and won't be supported in Django 1.10."
+msgstr "La transmission d'un :class:`~django.template.Context` ou d'un :class:`~django.template.RequestContext` est toujours possible lorsque le gabarit est chargé par un moteur :class:`~django.template.backends.django.DjangoTemplates`, mais cette possibilité est obsolète et ne sera plus prise en charge dans Django 1.10."
 
 # c334fc97501440ed8f08308744488789
 #: ../../../../1.8/docs/ref/templates/upgrading.txt:155
@@ -67746,8 +67801,8 @@ msgstr "Voir :ref:`Nommage des motifs d'URL <naming-url-patterns>` pour connaît
 #: ../../../../1.8/docs/ref/urls.txt:121
 msgid ""
 "Support for string ``view`` arguments is deprecated and will be removed in "
-"Django 2.0. Pass the callable  instead."
-msgstr "La prise en charge des paramètres textuels pour ``view`` est obsolète et sera supprimée dans Django 2.0. Passez plutôt l'objet exécutable lui-même."
+"Django 1.10. Pass the callable  instead."
+msgstr "La prise en charge des paramètres textuels pour ``view`` est obsolète et sera supprimée dans Django 1.10. Passez plutôt l'objet exécutable lui-même."
 
 # 8bb8134b582b4223beb091e45e759cfa
 #: ../../../../1.8/docs/ref/urls.txt:124

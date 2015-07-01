@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-06 02:09-0500\n"
-"PO-Revision-Date: 2015-06-06 09:33+0000\n"
+"POT-Creation-Date: 2015-07-02 04:09-0500\n"
+"PO-Revision-Date: 2015-07-02 12:14+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -2166,12 +2166,12 @@ msgstr "Cette protection ne s'applique que si :class:`~django.contrib.auth.middl
 # 6eff5fd1d38e495f97a7401bebcd8247
 #: ../../../../1.8/docs/topics/auth/default.txt:624
 msgid ""
-"Session verification will become mandatory in Django 2.0 regardless of "
+"Session verification will become mandatory in Django 1.10 regardless of "
 "whether or not ``SessionAuthenticationMiddleware`` is enabled. If you have a"
 " pre-1.7 project or one generated using a template that doesn't include "
 "``SessionAuthenticationMiddleware``, consider enabling it before then after "
 "reading the upgrade considerations below."
-msgstr "La vérification des sessions deviendra obligatoire dans Django 2.0, sans tenir compte de la présence active de ``SessionAuthenticationMiddleware``. Si vous avez un projet datant d'avant 1.7 ou qui a été généré à l'aide d'un gabarit n'incluant pas ``SessionAuthenticationMiddleware``, vous devriez envisager de l'activer dès maintenant après avoir lu les indications de mise à jour ci-dessous."
+msgstr "La vérification des sessions deviendra obligatoire dans Django 1.10, sans tenir compte de la présence active de ``SessionAuthenticationMiddleware``. Si vous avez un projet datant d'avant 1.7 ou qui a été généré à l'aide d'un gabarit n'incluant pas ``SessionAuthenticationMiddleware``, vous devriez envisager de l'activer dès maintenant après avoir lu les indications de mise à jour ci-dessous."
 
 # b97bc52f897144688f43e47b1aa25401
 #: ../../../../1.8/docs/topics/auth/default.txt:630
@@ -2763,8 +2763,8 @@ msgstr "``html_email_template_name`` a été ajouté."
 #: ../../../../1.8/docs/topics/auth/default.txt:1064
 msgid ""
 "The ``is_admin_site`` argument is deprecated and will be removed in Django "
-"2.0."
-msgstr "Le paramètre ``is_admin_site`` est obsolète et sera supprimé dans Django 2.0."
+"1.10."
+msgstr "Le paramètre ``is_admin_site`` est obsolète et sera supprimé dans Django 1.10."
 
 # 23ed53fa59314b1ab2b770db63b65f95
 #: ../../../../1.8/docs/topics/auth/default.txt:1069
@@ -22523,8 +22523,8 @@ msgstr "Un dictionnaire de valeurs à ajouter un contexte du gabarit. Par défau
 #: ../../../../1.8/docs/topics/templates.txt:275
 msgid ""
 "The ``context`` argument used to be called ``dictionary``. That name is "
-"deprecated in Django 1.8 and will be removed in Django 2.0."
-msgstr "Le paramètre ``context`` était appelé ``dictionary``. Ce nom est obsolète dans Django 1.8 et sera supprimé dans Django 2.0."
+"deprecated in Django 1.8 and will be removed in Django 1.10."
+msgstr "Le paramètre ``context`` était appelé ``dictionary``. Ce nom est obsolète dans Django 1.8 et sera supprimé dans Django 1.10."
 
 # 2b4d4cbba3694685a85796ca9779e50a
 # f12471d971e64b84aff8fc38e11764ec
@@ -27144,9 +27144,9 @@ msgstr "Préfixe de langue dans les motifs d'URL"
 #: ../../../../1.8/docs/topics/i18n/translation.txt:1103
 msgid ""
 "The ``prefix`` argument to ``i18n_patterns()`` has been deprecated and will "
-"not be supported in Django 2.0. Simply pass a list of "
+"not be supported in Django 1.10. Simply pass a list of "
 ":func:`django.conf.urls.url` instances instead."
-msgstr "Le paramètre ``prefix`` de ``i18n_patterns()`` a été rendu obsolète et ne sera plus pris en charge dans Django 2.0. À la place, passez simplement une liste d'instance :func:`django.conf.urls.url`."
+msgstr "Le paramètre ``prefix`` de ``i18n_patterns()`` a été rendu obsolète et ne sera plus pris en charge dans Django 1.10. À la place, passez simplement une liste d'instance :func:`django.conf.urls.url`."
 
 # 61ee0257bacd41aab585e0f470b9a9f6
 #: ../../../../1.8/docs/topics/i18n/translation.txt:1107
@@ -28250,9 +28250,9 @@ msgstr "Installation de Python"
 # f4e2fc6a0ae741adb6a63bce60e3b4d6
 #: ../../../../1.8/docs/topics/install.txt:10
 msgid ""
-"Being a Python Web framework, Django requires Python. It works with Python "
-"2.7, 3.2 or 3.3."
-msgstr "Django étant un applicatif Web Python, il a donc besoin de Python. Il fonctionne avec Python 2.7, 3.2 ou 3.3."
+"Being a Python Web framework, Django requires Python. See :ref:`faq-python-"
+"version-support` for details."
+msgstr "Django étant un applicatif Web Python, il a donc besoin de Python. Voir :ref:`faq-python-version-support` pour plus de détails."
 
 # f7151616e91842508a288c4700112899
 #: ../../../../1.8/docs/topics/install.txt:13
@@ -32175,9 +32175,9 @@ msgstr "Django 1.5 est la première version de Django à prendre en charge Pytho
 # d59951160ec84a23ae9cc6d247885521
 #: ../../../../1.8/docs/topics/python3.txt:11
 msgid ""
-"This document is primarily targeted at authors of pluggable application who "
-"want to support both Python 2 and 3. It also describes guidelines that apply"
-" to Django's code."
+"This document is primarily targeted at authors of pluggable applications who"
+" want to support both Python 2 and 3. It also describes guidelines that "
+"apply to Django's code."
 msgstr "Ce document est principalement destiné aux rédacteurs d'applications réutilisables qui souhaitent prendre en charge à la fois Python 2 et 3. Il présente également des lignes de conduites adoptées dans le code de Django."
 
 # 7eaa247b53094feebfd1d9347ca926ce
@@ -32480,7 +32480,7 @@ msgstr "Avec Python 3, il n'existe que :meth:`~object.__str__` qui doit renvoyer
 #: ../../../../1.8/docs/topics/python3.txt:152
 msgid ""
 "(It is also possible to define :meth:`~object.__bytes__`, but Django "
-"application have little use for that method, because they hardly ever deal "
+"applications have little use for that method, because they hardly ever deal "
 "with ``bytes``.)"
 msgstr "(Il est aussi possible de définir :meth:`~object.__bytes__`, mais les applications Django n'ont que peu l'utilité de cette méthode, parce qu'elles ont rarement affaire directement à des octets (``bytes``).)"
 
@@ -32584,7 +32584,7 @@ msgstr "Lignes directrices pour le code"
 #: ../../../../1.8/docs/topics/python3.txt:210
 msgid ""
 "The following guidelines are enforced in Django's source code. They're also "
-"recommended for third-party application who follow the same porting "
+"recommended for third-party applications that follow the same porting "
 "strategy."
 msgstr "Les lignes directrices suivantes ont été appliquées dans le code source de Django. Elles sont aussi recommandées pour les applications tierces qui suivent la même stratégie de migration."
 
@@ -37934,6 +37934,17 @@ msgstr "Si un projet utilise le :doc:`système d'authentification</topics/auth/i
 
 # 7144878cb08b401a98dfad61e62f48c8
 #: ../../../../1.8/docs/topics/testing/tools.txt:347
+msgid ""
+"Inactive users (:attr:`is_active=False "
+"<django.contrib.auth.models.User.is_active>`) are not permitted to login as "
+"this method is meant to be equivalent to the "
+":func:`~django.contrib.auth.login` view which uses "
+":class:`~django.contrib.auth.forms.AuthenticationForm` and therefore "
+"defaults to rejecting users who are inactive."
+msgstr "Les utilisateurs inactifs (:attr:`is_active=False <django.contrib.auth.models.User.is_active>`) ne sont pas autorisés à se connecter, car cette méthode et supposée être équivalente à la vue :func:`~django.contrib.auth.login` qui utilise :class:`~django.contrib.auth.forms.AuthenticationForm` et rejette donc par défaut les utilisateurs inactifs."
+
+# 0a41c757789f4e748065807b9e53e002
+#: ../../../../1.8/docs/topics/testing/tools.txt:354
 msgid ""
 "After you call this method, the test client will have all the cookies and "
 "session data required to pass any login-based tests that may form part of a "
