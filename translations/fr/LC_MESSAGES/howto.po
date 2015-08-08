@@ -14,10 +14,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-30 03:09-0500\n"
-"PO-Revision-Date: 2015-07-01 07:22+0000\n"
+"POT-Creation-Date: 2015-08-08 03:09-0500\n"
+"PO-Revision-Date: 2015-08-08 12:14+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
-"Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
+"Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -4189,10 +4189,11 @@ msgstr "Si votre site envoie des courriels, ces valeurs doivent être définies 
 #: ../../../../1.8/docs/howto/deployment/checklist.txt:134
 #: ../../../../1.8/docs/howto/error-reporting.txt:38
 msgid ""
-"By default, Django will send email from root@localhost. However, some mail "
-"providers reject all email from this address. To use a different sender "
-"address, modify the :setting:`SERVER_EMAIL` setting."
-msgstr "Par défaut, Django envoie ses messages avec l'adresse d'origine root@localhost. Toutefois, certains fournisseurs de messagerie rejettent tous les messages provenant de cette adresse. Pour utiliser une adresse d'expéditeur différente, modifiez le réglage :setting:`SERVER_EMAIL`."
+"By default, Django sends email from webmaster@localhost and root@localhost. "
+"However, some mail providers reject email from these addresses. To use "
+"different sender addresses, modify the :setting:`DEFAULT_FROM_EMAIL` and "
+":setting:`SERVER_EMAIL` settings."
+msgstr "Par défaut, Django envoie ses messages avec les adresses d'origine webmaster@localhost et root@localhost. Toutefois, certains fournisseurs de messagerie rejettent les messages provenant de ces adresses. Pour utiliser des adresses d'expéditeur différentes, modifiez les réglages :setting:`DEFAULT_FROM_EMAIL` et :setting:`SERVER_EMAIL`."
 
 # 2be5f7fd962a4cb797cd1a0f62b3d646
 #: ../../../../1.8/docs/howto/deployment/checklist.txt:139
@@ -4384,8 +4385,20 @@ msgid ""
 "See :doc:`/howto/error-reporting` for details on error reporting by email."
 msgstr "Consultez :doc:`/howto/error-reporting` pour plus de détails sur le signalement d'erreurs par courriel."
 
-# aa96cdac729b4b719145919c790b8c5f
-#: ../../../../1.8/docs/howto/deployment/checklist.txt:221
+# d7ee49cfb9aa42868ad4acf47ccff7e6
+#: ../../../../1.8/docs/howto/deployment/checklist.txt:232
+msgid "Error reporting by email doesn't scale very well"
+msgstr "Le signalement d'erreurs par courriel n'est pas adapté au fort trafic"
+
+# 9ec431f7228f483eb26b17220119b437
+#: ../../../../1.8/docs/howto/deployment/checklist.txt:234
+msgid ""
+"Consider using an error monitoring system such as Sentry_ before your inbox "
+"is flooded by reports. Sentry can also aggregate logs."
+msgstr "Considérez l'emploi d'un système de surveillance d'erreurs tel que Sentry_ avant de voir votre boîte de réception inondée de messages. Sentry peut aussi collecter la journalisation."
+
+# 2539767b5e0840cd88e43e709995cf9c
+#: ../../../../1.8/docs/howto/deployment/checklist.txt:240
 msgid "Customize the default error views"
 msgstr "Personnalisation des vues d'erreurs par défaut"
 
@@ -5365,11 +5378,10 @@ msgstr "Vous pourriez aussi remplacer l'application WSGI de Django avec une appl
 #: ../../../../1.8/docs/howto/deployment/wsgi/index.txt:87
 msgid ""
 "Some third-party WSGI middleware do not call ``close`` on the response "
-"object after handling a request — most notably Sentry's error reporting "
-"middleware up to version 2.0.7. In those cases the "
+"object after handling a request. In those cases the "
 ":data:`~django.core.signals.request_finished` signal isn't sent. This can "
 "result in idle connections to database and memcache servers."
-msgstr "Certains middlewares WSGI de tierce partie n'appellent pas ``close`` sur la réponse après avoir traité une requête, notamment le middleware de signalement d'erreurs de Sentry jusqu'à la version 2.0.7. Dans ces cas, le signal :data:`~django.core.signals.request_finished` n'est pas envoyé. Par conséquent, il se peut que des connexions de base de données et de serveurs memcache puissent être laissées ouvertes."
+msgstr "Certains intergiciels WSGI de tierce partie n'appellent pas ``close`` sur la réponse après avoir traité une requête. Dans ces cas, le signal :data:`~django.core.signals.request_finished` n'est pas envoyé. Par conséquent, il se peut que des connexions de base de données et de serveurs memcache puissent être laissées ouvertes."
 
 # b2215ae2963148d6a2f461bf07d10e13
 #: ../../../../1.8/docs/howto/deployment/wsgi/modwsgi.txt:3
@@ -5863,7 +5875,15 @@ msgid ""
 "settings."
 msgstr "Pour pouvoir envoyer des courriels, Django a besoin de connaître certains réglages indiquant comment se connecter à un serveur de messagerie. Au minimum, il faut indiquer :setting:`EMAIL_HOST`, et potentiellement :setting:`EMAIL_HOST_USER` et :setting:`EMAIL_HOST_PASSWORD` ; selon la configuration du serveur de messagerie, il peut toutefois être nécessaire de définir d'autres réglages. Consultez la :doc:`documentation sur les réglages Django </ref/settings>` pour une liste complète des réglages liés à l'envoi de messages électroniques."
 
-# e15ac86c24c047e3b318b0b91fac0eec
+# 65a96166d8474f368767a0531c610135
+#: ../../../../1.8/docs/howto/error-reporting.txt:38
+msgid ""
+"By default, Django will send email from root@localhost. However, some mail "
+"providers reject all email from this address. To use a different sender "
+"address, modify the :setting:`SERVER_EMAIL` setting."
+msgstr "Par défaut, Django envoie ses messages avec l'adresse d'origine root@localhost. Toutefois, certains fournisseurs de messagerie rejettent tous les messages provenant de cette adresse. Pour utiliser une adresse d'expéditeur différente, modifiez le réglage :setting:`SERVER_EMAIL`."
+
+# 2d062752897a4a09944ae3d0283027a8
 #: ../../../../1.8/docs/howto/error-reporting.txt:42
 msgid ""
 "To activate this behavior, put the email addresses of the recipients in the "
@@ -5973,8 +5993,18 @@ msgstr "Les erreurs 404 sont journalisées en utilisant l'infrastructure de jour
 msgid "Filtering error reports"
 msgstr "Filtrage de rapports d'erreur"
 
-# f44fec8f51bf441b8a4f04c0e9fffc9d
-#: ../../../../1.8/docs/howto/error-reporting.txt:118
+# b2d4c8ea129e4399a6c41c1dc6864484
+#: ../../../../1.8/docs/howto/error-reporting.txt:119
+msgid ""
+"Filtering sensitive data is a hard problem, and it's nearly impossible to "
+"guarantee that sensitive won't leak into an error report. Therefore, error "
+"reports should only be available to trusted team members and you should "
+"avoid transmitting error reports unencrypted over the Internet (such as "
+"through email)."
+msgstr "Le filtrage des données sensibles est un problème ardu, et il est quasiment impossible de garantir qu'aucune donnée sensible ne figurera dans un rapport d'erreur. Il faudrait donc limiter l'accès aux rapports d'erreurs aux membres de votre équipe dignes de confiance et éviter de transmettre ces rapports de manière non chiffrée par Internet (comme par exemple par messagerie électronique)."
+
+# cbbe0fcad8ff4f6b8b0e01974bafc98b
+#: ../../../../1.8/docs/howto/error-reporting.txt:126
 msgid "Filtering sensitive information"
 msgstr "Filtrage des informations sensibles"
 
@@ -6744,8 +6774,8 @@ msgstr "La réponse est initialisée avec un type MIME spécial, :mimetype:`text
 msgid ""
 "The response gets an additional ``Content-Disposition`` header, which "
 "contains the name of the CSV file. This filename is arbitrary; call it "
-"whatever you want. It'll be used by browsers in the \"Save as...\" dialogue,"
-" etc."
+"whatever you want. It'll be used by browsers in the \"Save as...\" dialog, "
+"etc."
 msgstr "L'en-tête ``Content-Disposition`` de la réponse est aussi défini avec le nom du fichier CSV. Ce nom est totalement arbitraire, donnez-lui le nom que vous voulez. Il sera notamment utilisé par les navigateurs dans la boîte de dialogue « Enregistrer sous »."
 
 # a9cd5ab5020a47769f828a44664f2997
@@ -6982,8 +7012,8 @@ msgstr "La réponse est initialisée avec un type MIME spécial, :mimetype:`appl
 msgid ""
 "The response gets an additional ``Content-Disposition`` header, which "
 "contains the name of the PDF file. This filename is arbitrary: Call it "
-"whatever you want. It'll be used by browsers in the \"Save as...\" dialogue,"
-" etc."
+"whatever you want. It'll be used by browsers in the \"Save as...\" dialog, "
+"etc."
 msgstr "L'en-tête ``Content-Disposition`` de la réponse est aussi défini avec le nom du fichier PDF. Ce nom est totalement arbitraire, donnez-lui le nom que vous voulez. Il sera notamment utilisé par les navigateurs dans la boîte de dialogue « Enregistrer sous »."
 
 # fb9dde8d7cfc4ca2940c9a517063251c

@@ -12,10 +12,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-02 02:09-0500\n"
-"PO-Revision-Date: 2015-07-02 12:08+0000\n"
+"POT-Creation-Date: 2015-08-08 03:09-0500\n"
+"PO-Revision-Date: 2015-08-08 12:24+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
-"Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
+"Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -902,20 +902,23 @@ msgstr "Installer une version de Django :doc:`fournie dans les paquets de votre 
 #: ../../../../1.8/docs/intro/install.txt:59
 msgid ""
 ":ref:`Install an official release <installing-official-release>`. This is "
-"the best approach for users who want a stable version number and aren't "
-"concerned about running a slightly older version of Django."
-msgstr ":ref:`Installer une version officielle <installing-official-release>`. C'est la meilleure approche pour les utilisateurs qui veulent une version stable et n'ont pas de problème à utiliser une version un peu plus ancienne."
+"the best approach for most users."
+msgstr ":ref:`Installer une version officielle <installing-official-release>`. C'est la meilleure approche pour la plupart des utilisateurs."
 
 # f496add66d5b48b994d310765834110d
 #: ../../../../1.8/docs/intro/install.txt:63
 msgid ""
 ":ref:`Install the latest development version <installing-development-"
-"version>`. This is best for users who want the latest-and-greatest features "
-"and aren't afraid of running brand-new code."
-msgstr ":ref:`Installer la dernière version de développement <installing-development-version>`. C'est la meilleure solution pour ceux qui souhaitent les fonctions les plus récentes et qui ne craignent pas d'utiliser un code récent."
+"version>`. This option is for enthusiasts who want the latest-and-greatest "
+"features and aren't afraid of running brand new code. You might encounter "
+"new bugs in the development version, but reporting them helps the "
+"development of Django. Also, releases of third-party packages are less "
+"likely to be compatible with the development version than with the latest "
+"stable release."
+msgstr ":ref:`Installer la dernière version de développement <installing-development-version>`. Cette option est réservée aux enthousiastes qui souhaitent les fonctions les plus récentes et qui ne craignent pas d'utiliser un code récent. Il est possible que de nouvelles anomalies apparaissent dans cette version de développement, mais en les signalant, vous aiderez au développement de Django. De même, il y a plus de risques que les paquets tiers ne soient pas compatible avec cette version, comparé à la dernière version stable."
 
-# 5eef2650aacb4ba9b8731bfb5159b712
-#: ../../../../1.8/docs/intro/install.txt:67
+# 8d7f9d200f4b40868c4382c0ee2ae7af
+#: ../../../../1.8/docs/intro/install.txt:70
 msgid ""
 "Always refer to the documentation that corresponds to the version of Django "
 "you're using!"
@@ -5140,17 +5143,10 @@ msgstr "Dans le :ref:`tutoriel 4 <tutorial04-amend-views>`, nous avons introduit
 # 3430ebf8ccd54c7abbe3f25773255ad5
 #: ../../../../1.8/docs/intro/tutorial05.txt:410
 msgid ""
-"``response.context_data['latest_question_list']`` extracts the data this "
-"view places into the context."
-msgstr "``response.context_data['latest_question_list']`` extrait les données que cette vue place dans le contexte."
-
-# 0335b52571f54bba8d805dafd20ddbac
-#: ../../../../1.8/docs/intro/tutorial05.txt:413
-msgid ""
-"We need to amend the ``get_queryset`` method and change it so that it also "
-"checks the date by comparing it with ``timezone.now()``. First we need to "
+"We need to amend the ``get_queryset()`` method and change it so that it also"
+" checks the date by comparing it with ``timezone.now()``. First we need to "
 "add an import:"
-msgstr "Nous devons corriger la méthode ``get_queryset`` pour qu'elle vérifie aussi la date en la comparant avec ``timezone.now()``. Nous devons d'abord ajouter une importation :"
+msgstr "Nous devons corriger la méthode ``get_queryset()`` pour qu'elle vérifie aussi la date en la comparant avec ``timezone.now()``. Nous devons d'abord ajouter une importation :"
 
 # e98100fc9154467399b860fb7018c3e0
 #: ../../../../1.8/docs/intro/tutorial05.txt:422

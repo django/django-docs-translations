@@ -15,10 +15,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-02 04:09-0500\n"
-"PO-Revision-Date: 2015-07-02 12:14+0000\n"
+"POT-Creation-Date: 2015-08-08 04:09-0500\n"
+"PO-Revision-Date: 2015-08-08 13:53+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
-"Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
+"Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -397,15 +397,17 @@ msgstr "Ce modèle d'exemple ``Task`` crée trois permissions personnalisées, c
 #: ../../../../1.8/docs/topics/auth/customizing.txt:283
 msgid ""
 "The only thing this does is create those extra permissions when you run "
-":djadmin:`manage.py migrate <migrate>`. Your code is in charge of checking "
-"the value of these permissions when a user is trying to access the "
-"functionality provided by the application (viewing tasks, changing the "
-"status of tasks, closing tasks.) Continuing the above example, the following"
-" checks if a user may view tasks::"
-msgstr "La seule conséquence de ce code est la création de ces permissions supplémentaires lors du lancement de :djadmin:`manage.py migrate <migrate>`. Votre code a ensuite la charge de contrôler la valeur de ces permissions lorsqu'un utilisateur essaie d'accéder à la fonctionnalité fournie par l'application (affichage de tâches, modification de l'état des tâches, fermeture des tâches). En poursuivant sur l'exemple précédent, le code suivant contrôle si un utilisateur peut voir les tâches ::"
+":djadmin:`manage.py migrate <migrate>` (the function that creates "
+"permissions is connected to the "
+":data:`~django.db.models.signals.post_migrate` signal). Your code is in "
+"charge of checking the value of these permissions when a user is trying to "
+"access the functionality provided by the application (viewing tasks, "
+"changing the status of tasks, closing tasks.) Continuing the above example, "
+"the following checks if a user may view tasks::"
+msgstr "La seule conséquence de ce code est la création de ces permissions supplémentaires lors du lancement de :djadmin:`manage.py migrate <migrate>` (la fonction qui crée les permissions est connectée au signal :data:`~django.db.models.signals.post_migrate`). Votre code a ensuite la charge de contrôler la valeur de ces permissions lorsqu'un utilisateur essaie d'accéder à la fonctionnalité fournie par l'application (affichage de tâches, modification de l'état des tâches, fermeture des tâches). En poursuivant sur l'exemple précédent, le code suivant contrôle si un utilisateur peut voir les tâches ::"
 
-# 452f16265c264dd0ba643168fae282de
-#: ../../../../1.8/docs/topics/auth/customizing.txt:295
+# cd6eced1342447feb9d941e490d8d296
+#: ../../../../1.8/docs/topics/auth/customizing.txt:296
 msgid "Extending the existing User model"
 msgstr "Extension du modèle User existant"
 
@@ -1628,8 +1630,9 @@ msgid ""
 "permissions will be created for all previously-installed models, as well as "
 "for any new models being installed at that time. Afterward, it will create "
 "default permissions for new models each time you run :djadmin:`manage.py "
-"migrate <migrate>`."
-msgstr "Ces permissions seront créées lorsque vous lancez :djadmin:`manage.py migrate <migrate>`; au premier lancement de ``migrate`` après l'ajout de ``django.contrib.auth`` à :setting:`INSTALLED_APPS`, les permissions par défaut seront créées pour tous les modèles précédemment installés de même que pour tout nouveau modèle installé à ce moment-là. Par la suite, chaque nouvelle exécution de :djadmin:`manage.py migrate <migrate>` crée les permissions par défaut pour les nouveaux modèles."
+"migrate <migrate>` (the function that creates permissions is connected to "
+"the :data:`~django.db.models.signals.post_migrate` signal)."
+msgstr "Ces permissions seront créées lorsque vous lancez :djadmin:`manage.py migrate <migrate>`; au premier lancement de ``migrate`` après l'ajout de ``django.contrib.auth`` à :setting:`INSTALLED_APPS`, les permissions par défaut seront créées pour tous les modèles précédemment installés de même que pour tout nouveau modèle installé à ce moment-là. Par la suite, chaque nouvelle exécution de :djadmin:`manage.py migrate <migrate>` crée les permissions par défaut pour les nouveaux modèles (la fonction qui crée les permissions est connectée au signal :data:`~django.db.models.signals.post_migrate`)."
 
 # 5e5a06664a4448d589c9bfc0436c9398
 #: ../../../../1.8/docs/topics/auth/default.txt:212
@@ -2131,8 +2134,9 @@ msgstr "Si le paramètre ``raise_exception`` est présent, le décorateur génè
 #: ../../../../1.8/docs/topics/auth/default.txt:596
 msgid ""
 "The :func:`~django.contrib.auth.decorators.permission_required` decorator "
-"can take a list of permissions as well as a single permission."
-msgstr "Le décorateur :func:`~django.contrib.auth.decorators.permission_required` peut tout aussi bien accepter une liste de permissions qu'une seule permission."
+"can take a list of permissions, in which case the user must have all of the "
+"permissions in order to access the view."
+msgstr "Le décorateur :func:`~django.contrib.auth.decorators.permission_required` accepte aussi une liste de permissions, auquel cas l'utilisateur doit posséder toutes les permissions de la liste afin d'avoir accès à la vue."
 
 # a100197a2724425da969b073322587c0
 #: ../../../../1.8/docs/topics/auth/default.txt:602
@@ -2530,9 +2534,9 @@ msgid ""
 "</topics/auth/customizing>`) you can pass a custom authentication form to "
 "the login view via the ``authentication_form`` parameter. This form must "
 "accept a ``request`` keyword argument in its ``__init__`` method, and "
-"provide a ``get_user`` method which returns the authenticated user object "
+"provide a ``get_user()`` method which returns the authenticated user object "
 "(this method is only ever called after successful form validation)."
-msgstr "Si vous avez personnalisé l'authentification (voir :doc:`Personnalisation de l'authentification </topics/auth/customizing>`), il est possible de transmettre un formulaire d'authentification personnalisé à la vue de connexion par le paramètre ``authentication_form``. La méthode  ``__init__`` de ce formulaire doit accepter un paramètre nommé ``request``; le formulaire doit également implémenter une méthode ``get_user`` qui renvoie l'objet utilisateur authentifié (cette méthode n'est appelée qu'à la suite d'une validation de formulaire réussie)."
+msgstr "Si vous avez personnalisé l'authentification (voir :doc:`Personnalisation de l'authentification </topics/auth/customizing>`), il est possible de transmettre un formulaire d'authentification personnalisé à la vue de connexion par le paramètre ``authentication_form``. La méthode  ``__init__`` de ce formulaire doit accepter un paramètre nommé ``request``; le formulaire doit également implémenter une méthode ``get_user()`` qui renvoie l'objet utilisateur authentifié (cette méthode n'est appelée qu'à la suite d'une validation de formulaire réussie)."
 
 # 6fa5e96c075a4ff6a6833043516d7950
 #: ../../../../1.8/docs/topics/auth/default.txt:882
@@ -3021,15 +3025,16 @@ msgid ""
 "By default, ``AuthenticationForm`` rejects users whose ``is_active`` flag is"
 " set to ``False``. You may override this behavior with a custom policy to "
 "determine which users can log in. Do this with a custom form that subclasses"
-" ``AuthenticationForm`` and overrides the ``confirm_login_allowed`` method. "
-"This method should raise a :exc:`~django.core.exceptions.ValidationError` if"
-" the given user may not log in."
-msgstr "Par défaut, ``AuthenticationForm`` rejette les utilisateurs pour lesquels ``is_active`` est à ``False``. Vous pouvez modifier ce comportement pour définir une stratégie personnalisée de détermination des utilisateurs qui peuvent se connecter. Pour cela, utilisez un formulaire personnalisé qui hérite de ``AuthenticationForm`` et remplace la méthode ``confirm_login_allowed``. Cette méthode doit générer une exception :exc:`~django.core.exceptions.ValidationError` lorsque l'utilisateur donné n'est pas autorisé à se connecter."
+" ``AuthenticationForm`` and overrides the ``confirm_login_allowed()`` "
+"method. This method should raise a "
+":exc:`~django.core.exceptions.ValidationError` if the given user may not log"
+" in."
+msgstr "Par défaut, ``AuthenticationForm`` rejette les utilisateurs pour lesquels ``is_active`` est à ``False``. Vous pouvez modifier ce comportement pour définir une stratégie personnalisée de détermination des utilisateurs qui peuvent se connecter. Pour cela, utilisez un formulaire personnalisé qui hérite de ``AuthenticationForm`` et remplace la méthode ``confirm_login_allowed()``. Cette méthode doit générer une exception :exc:`~django.core.exceptions.ValidationError` lorsque l'utilisateur donné n'est pas autorisé à se connecter."
 
 # e61506685dfd4f528efaa6a5bdfe70b7
 #: ../../../../1.8/docs/topics/auth/default.txt:1258
 msgid ""
-"For example, to allow all users to log in, regardless of \"active\" status::"
+"For example, to allow all users to log in regardless of \"active\" status::"
 msgstr "Par exemple, pour permettre à tous les utilisateurs de se connecter, indépendamment de leur statut « actif » ::"
 
 # a205c28e9690420d859b0a48f5bf5a0a
@@ -3408,8 +3413,8 @@ msgstr "``'django.contrib.contenttypes'`` est le  :doc:`système de types de con
 
 # c7d8ddd83c4b4b79870cabe3498c2922
 #: ../../../../1.8/docs/topics/auth/index.txt:63
-msgid "and two items in your :setting:`MIDDLEWARE_CLASSES` setting:"
-msgstr "et deux lignes dans le réglage  :setting:`MIDDLEWARE_CLASSES`:"
+msgid "and these items in your :setting:`MIDDLEWARE_CLASSES` setting:"
+msgstr "et ces lignes dans le réglage :setting:`MIDDLEWARE_CLASSES`:"
 
 # bacbf89df4d747b8982081ec124e4973
 #: ../../../../1.8/docs/topics/auth/index.txt:65
@@ -3425,8 +3430,15 @@ msgid ""
 " users with requests using sessions."
 msgstr ":class:`~django.contrib.auth.middleware.AuthenticationMiddleware` associe les utilisateurs aux requêtes en utilisant les sessions."
 
-# 7841a4845b574e4b91375d54e0d7ecf2
-#: ../../../../1.8/docs/topics/auth/index.txt:70
+# 65d3eff52bda4ad1801e10f15ab4966a
+#: ../../../../1.8/docs/topics/auth/index.txt:69
+msgid ""
+":class:`~django.contrib.auth.middleware.SessionAuthenticationMiddleware` "
+"logs users out of their other sessions after a password change."
+msgstr ":class:`~django.contrib.auth.middleware.SessionAuthenticationMiddleware` déconnecte les utilisateurs de leurs autres sessions après un changement de mot de passe."
+
+# 5eda20852f8940a9ae5614f0ec83af0a
+#: ../../../../1.8/docs/topics/auth/index.txt:72
 msgid ""
 "With these settings in place, running the command ``manage.py migrate`` "
 "creates the necessary database tables for auth related models and "
@@ -5530,93 +5542,38 @@ msgid ""
 "Messages are tagged with a ``level`` indicating the severity of the message."
 msgstr "Le concept est très similaire aux messages du :doc:`système de message </ref/contrib/messages>` ou de la :doc:`journalisation </topics/logging>`. Les messages sont étiquettés avec un ``level`` indiquant la gravité du message."
 
-# 7d6571ffd7794998a85acdf39896cebb
-#: ../../../../1.8/docs/topics/checks.txt:66
-msgid "Constructor arguments are:"
-msgstr "Les arguments du constructeur sont :"
-
-# a4451f248c91442dbe22a182b44b43fb
-#: ../../../../1.8/docs/topics/checks.txt:74
-msgid "``level``"
-msgstr "``level``"
-
-# 399efa76f0264c9594113e4f12319b2a
-#: ../../../../1.8/docs/topics/checks.txt:69
+# dafc45faa1d444d69e788e074857f7ee
+#: ../../../../1.8/docs/topics/checks.txt:72
 msgid ""
-"The severity of the message. Use one of the predefined values: ``DEBUG``, "
-"``INFO``, ``WARNING``, ``ERROR``, ``CRITICAL``. If the level is greater or "
-"equal to ``ERROR``, then Django will prevent management commands from "
-"executing. Messages with level lower than ``ERROR`` (i.e. warnings) are "
-"reported to the console, but can be silenced."
-msgstr "La gravité du message. Utilisez l'une des valeurs prédéfinies : ``DEBUG``, ``INFO``, ``WARNING``, ``ERROR``, ``CRITICAL``. Si le niveau est supérieur ou égal à ``ERROR``, Django empêchera l'exécution des commandes de gestion. Les messages avec un niveau inférieur à ``ERROR`` (i.e. les avertissements) sont présentés dans la console, mais peuvent être réduits au silence."
+"There are also shortcuts to make creating messages with common levels "
+"easier. When using these classes you can omit the ``level`` argument because"
+" it is implied by the class name."
+msgstr "Il existe également des raccourcis pour faciliter la création des messages avec les niveaux de base. Lorsque vous utilisez ces classes, vous pouvez omettre le paramètre ``level`` car il est sous-entendu par le nom de la classe."
 
-# bf0e2af831db4ead8ff278e2322369f9
-#: ../../../../1.8/docs/topics/checks.txt:78
-msgid "``msg``"
-msgstr "``msg``"
+# c97026538ba948b9b037637d2644046a
+#: ../../../../1.8/docs/topics/checks.txt:76
+msgid ":class:`Debug`"
+msgstr ":class:`Debug`"
 
 # 23dd6737fc2e46c8bf2cb578e272daf1
 #: ../../../../1.8/docs/topics/checks.txt:77
-msgid ""
-"A short (less than 80 characters) string describing the problem. The string "
-"should *not* contain newlines."
-msgstr "Une courte chaîne (moins de 80 caractères) décrivant le problème. La chaîne ne doit *pas* contenir des sauts de ligne."
+msgid ":class:`Info`"
+msgstr ":class:`Info`"
 
-# 29e03795052346ff909685b4801abe40
-#: ../../../../1.8/docs/topics/checks.txt:83
-msgid "``hint``"
-msgstr "``hint``"
+# 1fabd2b3014e4cb89397fa17cd1b3322
+#: ../../../../1.8/docs/topics/checks.txt:78
+msgid ":class:`Warning`"
+msgstr ":class:`Warning`"
 
-# 5c8d0855e87843cfa4b9affc6c4352e9
-#: ../../../../1.8/docs/topics/checks.txt:81
-msgid ""
-"A single-line string providing a hint for fixing the problem. If no hint can"
-" be provided, or the hint is self-evident from the error message, the hint "
-"can be omitted, or a value of ``None`` can be used."
-msgstr "Une chaîne d'une seule ligne offrant un conseil pour résoudre le problème. Si aucun conseil ne peut être fourni, ou s'il est évident à partir du message d'erreur, le conseil peut être omis, ou une valeur ``None`` peut être utilisée."
+# 56a7b95c4f104726a4deaddc033a1359
+#: ../../../../1.8/docs/topics/checks.txt:79
+msgid ":class:`Error`"
+msgstr ":class:`Error`"
 
-# 547effc3ff86454f8068cb6247adcae4
-#: ../../../../1.8/docs/topics/checks.txt:90
-msgid "``obj``"
-msgstr "``obj``"
-
-# 1949e9726093468d920d7acd292fd7e2
-#: ../../../../1.8/docs/topics/checks.txt:86
-msgid ""
-"Optional. An object providing context for the message (for example, the "
-"model where the problem was discovered). The object should be a model, "
-"field, or manager or any other object that defines ``__str__`` method (on "
-"Python 2 you need to define ``__unicode__`` method). The method is used "
-"while reporting all messages and its result precedes the message."
-msgstr "Facultatif. Un objet fournissant le contexte du message (par exemple, le modèle où le problème a été découvert). L'objet doit être un modèle, un champ, un manager ou de tout autre objet qui définit la méthode ``__str__`` (avec Python 2, vous devez définir la méthode ``__unicode__``). La méthode est utilisée lors de la collecte de tous les messages et son résultat précède le message."
-
-# c57ef6c940e6481ea461e0521a39321e
-#: ../../../../1.8/docs/topics/checks.txt:97
-msgid "``id``"
-msgstr "``id``"
-
-# d76e49bd0efc4c7c9a664a6d5a80182e
-#: ../../../../1.8/docs/topics/checks.txt:93
-msgid ""
-"Optional string. A unique identifier for the issue. Identifiers should "
-"follow the pattern ``applabel.X001``, where ``X`` is one of the letters "
-"``CEWID``, indicating the message severity (``C`` for criticals, ``E`` for "
-"errors and so). The number can be allocated by the application, but should "
-"be unique within that application."
-msgstr "Chaîne facultative. Un identifiant unique pour le problème. Les identifiants doivent suivre le modèle ``applabel.X001``, où ``X`` est l'une des lettres ``CEWID``, indiquant la gravité du message (``C`` pour critique, ``E`` pour les erreurs et ainsi de suite). Le numéro peut être attribué par l'application, mais doit être unique au sein de cette application."
-
-# 1d27ef9b37554fddaaebc1934ee5eab3
-#: ../../../../1.8/docs/topics/checks.txt:99
-msgid ""
-"There are also shortcuts to make creating messages with common levels "
-"easier. When using these methods you can omit the ``level`` argument because"
-" it is implied by the class name."
-msgstr "Il existe également des raccourcis pour faciliter la création des messages avec les niveaux de base. Lorsque vous utilisez ces méthodes, vous pouvez omettre l'argument ``level`` car il est sous-entendu par le nom de la classe."
-
-# 5df49f85f9ee43209f67bd25075e4e29
-#: ../../../../1.8/docs/topics/checks.txt:109
-msgid "Messages are comparable. That allows you to easily write tests::"
-msgstr "Les messages sont comparables. Cela vous permet d'écrire facilement des tests ::"
+# c5b1a022dee8497ba5c7f91c54d6949e
+#: ../../../../1.8/docs/topics/checks.txt:80
+msgid ":class:`Critical`"
+msgstr ":class:`Critical`"
 
 # 3a572371a09c4b94b2a23a0af06123c1
 #: ../../../../1.8/docs/topics/checks.txt:124
@@ -5627,8 +5584,10 @@ msgstr "Enregistrement et étiquetage des contrôles"
 #: ../../../../1.8/docs/topics/checks.txt:126
 msgid ""
 "Lastly, your check function must be registered explicitly with system check "
-"registry."
-msgstr "Enfin, votre fonction de contrôle doit être explicitement enregistrée auprès du registre de vérification système."
+"registry. Checks should be registered in a file that's loaded when your "
+"application is loaded; for example, in the :meth:`AppConfig.ready() "
+"<django.apps.AppConfig.ready>` method."
+msgstr "Finalement, votre fonction de contrôle doit être explicitement inscrite dans le registre des contrôles systèmes. Les contrôles doivent être inscrits dans un fichier qui est chargé au moment du chargement de l'application. Par exemple, dans la méthode :meth:`AppConfig.ready() <django.apps.AppConfig.ready>`."
 
 # ef2ab783e09b4cb19676bd709d9c43db
 #: ../../../../1.8/docs/topics/checks.txt:131
@@ -5719,7 +5678,17 @@ msgid ""
 "instance method::"
 msgstr "Si vous souhaitez ajouter un contrôle à une classe de modèle, l'approche est *presque* la même : la seule différence est que le contrôle est une méthode de classe, pas une méthode d'instance ::"
 
-# 73ed8903d9af4608a51eed69cbcc0765
+# 083cf6b7e15740dfa89a41bfb4ec7d3c
+#: ../../../../1.8/docs/topics/checks.txt:198
+msgid "Writing Tests"
+msgstr "Écriture de tests"
+
+# 55fbeb5c08f74e9ba39138ae8abca2ac
+#: ../../../../1.8/docs/topics/checks.txt:200
+msgid "Messages are comparable. That allows you to easily write tests::"
+msgstr "Les messages sont comparables. Cela vous permet d'écrire facilement des tests ::"
+
+# 882ee47626954d868057434996388e69
 #: ../../../../1.8/docs/topics/class-based-views/generic-display.txt:5
 msgid "Built-in Class-based generic views"
 msgstr "Vues génériques fondées sur les classes, fournies par Django"
@@ -8080,8 +8049,31 @@ msgid ""
 " ``order_by()``, or even additional calls to ``annotate()``."
 msgstr "Au contraire de ``aggregate()``, ``annotate()`` n'est *pas* une clause terminale. Le résultat de la clause ``annotate()`` est un objet ``QuerySet``. Cet objet peut très bien être modifié par une autre opération de type ``QuerySet``, comme par exemple ``filter()``, ``order_by()`` ou même d'autres appels à ``annotate()``."
 
-# 65e0557e3090472b93004b43f1f836ae
-#: ../../../../1.8/docs/topics/db/aggregation.txt:187
+# 0b8fe71d733446c49e20d0661bfa01ac
+#: ../../../../1.8/docs/topics/db/aggregation.txt:188
+msgid "Combining multiple aggregations"
+msgstr "Combinaison de plusieurs agrégations"
+
+# ad046e27f44b45828f9276ccba348e65
+#: ../../../../1.8/docs/topics/db/aggregation.txt:190
+msgid ""
+"Combining multiple aggregations with ``annotate()`` will `yield the wrong "
+"results <https://code.djangoproject.com/ticket/10060>`_, as multiple tables "
+"are cross joined. Due to the use of ``LEFT OUTER JOIN``, duplicate records "
+"will be generated if some of the joined tables contain more records than the"
+" others:"
+msgstr "La combinaison de plusieurs agrégations avec ``annotate()`` produit un mauvais résultat <https://code.djangoproject.com/ticket/10060>`_, dans la mesure ou plusieurs tables sont jointes. En raison de l'utilisation de ``LEFT OUTER JOIN``, des lignes dupliquées seront produites si certaines des tables jointes contiennent plus d'enregistrements que d'autres :"
+
+# f02d1429e79649cda8bb42a6bf595d44
+#: ../../../../1.8/docs/topics/db/aggregation.txt:205
+msgid ""
+"For most aggregates, there is no way to avoid this problem, however, the "
+":class:`~django.db.models.Count` aggregate has a ``distinct`` parameter that"
+" may help:"
+msgstr "Pour la plupart des agrégations, il n'existe pas de solution à ce problème. Cependant, l'agrégation :class:`~django.db.models.Count` possède un paramètre ``distinct`` qui peut être utile :"
+
+# 36d670ad1e1c494c8fe1bd36ef06a2dc
+#: ../../../../1.8/docs/topics/db/aggregation.txt:215
 msgid "If in doubt, inspect the SQL query!"
 msgstr "En cas de doute, inspectez la requête SQL !"
 
@@ -8092,16 +8084,8 @@ msgid ""
 "``query`` property of your ``QuerySet``."
 msgstr "Afin de comprendre ce qui se produit dans la requête, il est possible d'examiner la propriété ``query`` de l'objet ``QuerySet``."
 
-# 998745b1faae4effa1791e42f96923d4
-#: ../../../../1.8/docs/topics/db/aggregation.txt:192
-msgid ""
-"For instance, combining multiple aggregations with ``annotate()`` will yield"
-" the wrong results, as `multiple tables are cross joined`_, resulting in "
-"duplicate row aggregations."
-msgstr "Par exemple, la combinaison de plusieurs agrégations par ``annotate()`` produit de mauvais résultats car `plusieurs tables sont jointes de manière croisée`_, ce qui provoque une duplication de lignes dans les agrégations."
-
-# 5107e06df09f4d8cbfae8d3d769463cb
-#: ../../../../1.8/docs/topics/db/aggregation.txt:199
+# 8a7672a56b5e401cbb2289e35c919449
+#: ../../../../1.8/docs/topics/db/aggregation.txt:221
 msgid "Joins and aggregates"
 msgstr "Jointures et agrégations"
 
@@ -12437,16 +12421,17 @@ msgstr "Si ces outils ne suffisent pas à générer le code SQL nécessaire :"
 
 # c8b148fbad4f43c59a03b80143eaf45b
 #: ../../../../1.8/docs/topics/db/optimization.txt:134
-msgid "Use ``QuerySet.extra()``"
-msgstr "Utilisation de ``QuerySet.extra()``"
+msgid "Use ``RawSQL``"
+msgstr "Utilisation de ``RawSQL``"
 
 # 41e431e887d24f68bd983f468126b49b
 #: ../../../../1.8/docs/topics/db/optimization.txt:136
 msgid ""
-"A less portable but more powerful method is "
-":meth:`~django.db.models.query.QuerySet.extra()`, which allows some SQL to "
-"be explicitly added to the query. If that still isn't powerful enough:"
-msgstr "Une méthode moins portable mais plus puissante est d'utiliser :meth:`~django.db.models.query.QuerySet.extra()` qui permet d'ajouter explicitement du code SQL dans une requête. Si cela ne suffit toujours pas :"
+"A less portable but more powerful method is the "
+":class:`~django.db.models.expressions.RawSQL` expression, which allows some "
+"SQL to be explicitly added to the query. If that still isn't powerful "
+"enough:"
+msgstr "Une méthode moins portable mais plus puissante est d'utiliser l'expression :class:`~django.db.models.expressions.RawSQL` qui permet d'ajouter explicitement du code SQL dans une requête. Si cela ne suffit toujours pas :"
 
 # 21b25aad32c847dfb2746a6531c28f76
 #: ../../../../1.8/docs/topics/db/optimization.txt:141
@@ -26570,12 +26555,12 @@ msgid ""
 "language name (translated into the currently active locale)."
 msgstr "``{% get_available_languages as LANGUAGES %}`` renvoie une liste de tuples dont le premier élément est le :term:`code de langue` et le second est le nom de la langue (traduit dans la langue actuellement active)."
 
-# a147add58d7f414fb879f68a73fc38f1
+# 6cda5553e1e741d09dfbd8d1f3a82ef9
 #: ../../../../1.8/docs/topics/i18n/translation.txt:836
-msgid "``get_current_languages``"
-msgstr "``get_current_languages``"
+msgid "``get_current_language``"
+msgstr "``get_current_language``"
 
-# 31d78a24da87429ab3cc50dd0db52995
+# eab75047a2bc486c906c5503d814645b
 #: ../../../../1.8/docs/topics/i18n/translation.txt:838
 msgid ""
 "``{% get_current_language as LANGUAGE_CODE %}`` returns the current user's "
@@ -30361,8 +30346,16 @@ msgid ""
 "migrations try to modify those tables."
 msgstr "La base de données n'a pas été modifiée manuellement. Django n'est pas capable de détecter que la base de données ne correspond pas aux modèles, et au moment où les migrations essaieront de modifier ces tables, vous obtiendrez des erreurs."
 
-# 541e4ec6c1bd4c19b88227e72c4cf36e
-#: ../../../../1.8/docs/topics/migrations.txt:365
+# 21b60757f87a48dda7c19ae44ac4bbe9
+#: ../../../../1.8/docs/topics/migrations.txt:361
+msgid ""
+"The ``--fake-initial`` flag to :djadmin:`migrate` was added. Previously, "
+"Django would always automatically fake-apply initial migrations if it "
+"detected that the tables exist."
+msgstr "L'option ``--fake-initial`` a été ajoutée à :djadmin:`migrate`. Précédemment, les migrations initiales étaient toujours « pseudo-appliquées » automatiquement si des tables existantes étaient détectées."
+
+# 98c0a174bf2843b0a03450b80258eb2f
+#: ../../../../1.8/docs/topics/migrations.txt:368
 msgid "Historical models"
 msgstr "Modèles historiques"
 
@@ -32956,8 +32949,9 @@ msgid ""
 "sql <executing-custom-sql>`. These capabilities should be used sparingly and"
 " you should always be careful to properly escape any parameters that the "
 "user can control. In addition, you should exercise caution when using "
-":meth:`extra() <django.db.models.query.QuerySet.extra>`."
-msgstr "En utilisant des requêtes Django de type ``QuerySet`` , le code SQL produit est proprement échappé par le pilote de base de données sous-jacent. Cependant, Django permet aussi aux développeurs d'écrire des :ref:`requêtes brutes <executing-raw-queries>` ou d'exécuter du :ref:`code SQL personnalisé <executing-custom-sql>`. Ces possibilités devraient être exploitées de manière parcimonieuse et il faut toujours prendre la précaution d'échapper proprement tout paramètre pouvant être contrôlé par l'utilisateur. De plus, il faut être prudent en utilisant :meth:`extra() <django.db.models.query.QuerySet.extra>`."
+":meth:`~django.db.models.query.QuerySet.extra` and "
+":class:`~django.db.models.expressions.RawSQL`."
+msgstr "En utilisant des requêtes Django de type ``QuerySet`` , le code SQL produit est proprement échappé par le pilote de base de données sous-jacent. Cependant, Django permet aussi aux développeurs d'écrire des :ref:`requêtes brutes <executing-raw-queries>` ou d'exécuter du :ref:`code SQL personnalisé <executing-custom-sql>`. Ces possibilités devraient être exploitées de manière parcimonieuse et il faut toujours prendre la précaution d'échapper proprement tout paramètre pouvant être contrôlé par l'utilisateur. De plus, il faut être prudent en utilisant :meth:`~django.db.models.query.QuerySet.extra` et :class:`~django.db.models.expressions.RawSQL`."
 
 # 45a08f2603c64eeea4b7adc8623f80cd
 #: ../../../../1.8/docs/topics/security.txt:100
@@ -34328,8 +34322,38 @@ msgid ""
 "``DJANGO_SETTINGS_MODULE``. Not both, and not neither."
 msgstr "En conclusion : utilisez soit ``configure()``, soit ``DJANGO_SETTINGS_MODULE``, mais jamais les deux et toujours au moins un des deux."
 
-# 757d0e5713a448ef8b33209785435b88
-#: ../../../../1.8/docs/topics/settings.txt:272
+# bf6c0a9e2f9c4b0b9e5f90c84d968240
+#: ../../../../1.8/docs/topics/settings.txt:269
+msgid "Calling ``django.setup()`` is required for \"standalone\" Django usage"
+msgstr "Appel obligatoire de ``django.setup()`` pour utiliser Django de manière « indépendante »"
+
+# d10a59a96c454d27a82e17bab8b0b054
+#: ../../../../1.8/docs/topics/settings.txt:271
+msgid ""
+"If you're using components of Django \"standalone\" -- for example, writing "
+"a Python script which loads some Django templates and renders them, or uses "
+"the ORM to fetch some data -- there's one more step you'll need in addition "
+"to configuring settings."
+msgstr "Si vous utilisez des composants de Django de manière indépendante, par exemple en écrivant un script Python qui charge certains gabarits Django et les produit, ou en utilisant l'ORM pour récupérer certaines données, une étape supplémentaire est nécessaire en plus de la configuration des réglages."
+
+# 5290d7789d114674afcdf2cdf7ba61d3
+#: ../../../../1.8/docs/topics/settings.txt:276
+msgid ""
+"After you've either set :envvar:`DJANGO_SETTINGS_MODULE` or called "
+"``configure()``, you'll need to call :func:`django.setup()` to load your "
+"settings and populate Django's application registry. For example::"
+msgstr "Après avoir soit défini :envvar:`DJANGO_SETTINGS_MODULE` ou appelé ``configure()``, vous devrez appeler :func:`django.setup()` pour charger les réglages et remplir le registre des applications de Django. Par exemple ::"
+
+# f3edc2f69d044bfa9503134271f27a0b
+#: ../../../../1.8/docs/topics/settings.txt:288
+msgid ""
+"Note that calling ``django.setup()`` is only necessary if your code is truly"
+" standalone. When invoked by your Web server, or through :doc:`django-admin "
+"</ref/django-admin>`, Django will handle this for you."
+msgstr "Notez que l'appel à ``django.setup()`` n'est nécessaire que si votre code est réellement indépendant. Lorsqu'il est appelé par un serveur Web ou par l'intermédiaire de :doc:`django-admin </ref/django-admin>`, Django se charge de procéder à cette initialisation."
+
+# f7e2ab59fe9144848027a4a54ab47348
+#: ../../../../1.8/docs/topics/settings.txt:294
 msgid ":doc:`The Settings Reference </ref/settings>`"
 msgstr ":doc:`La référence des réglages </ref/settings>`"
 
@@ -39143,11 +39167,11 @@ msgstr "Les messages d'échec produits par la plupart de ces méthodes d'asserti
 #: ../../../../1.8/docs/topics/testing/tools.txt:1332
 msgid ""
 "Asserts that execution of ``callable`` raises ``expected_exception`` and "
-"that the exception has an ``expected_message`` representation. Any other "
+"that ``expected_message`` is found in the exception's message. Any other "
 "outcome is reported as a failure. Similar to unittest's "
 ":meth:`~unittest.TestCase.assertRaisesRegex` with the difference that "
 "``expected_message`` isn't a regular expression."
-msgstr "Confirme que l'appel à l'exécutable ``callable`` génère l'exception ``expected_exception`` et que la représentation de celle-ci correspond à ``expected_message``. Tout autre résultat est signalé comme un échec. Semblable à :meth:`~unittest.TestCase.assertRaisesRegex` de la bibliothèque ``unittest``, à la différence près que ``expected_message`` n'est ici pas une expression régulière."
+msgstr "Confirme que l'appel à l'exécutable ``callable`` génère l'exception ``expected_exception`` et que ``expected_message`` est trouvé dans le message de l'exception. Tout autre résultat est signalé comme un échec. Semblable à :meth:`~unittest.TestCase.assertRaisesRegex` de la bibliothèque ``unittest``, à la différence près que ``expected_message`` n'est ici pas une expression régulière."
 
 # 5106cab8245242c086108eef204f6097
 #: ../../../../1.8/docs/topics/testing/tools.txt:1338

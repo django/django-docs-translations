@@ -15,10 +15,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-02 04:09-0500\n"
-"PO-Revision-Date: 2015-07-02 12:41+0000\n"
+"POT-Creation-Date: 2015-08-08 04:09-0500\n"
+"PO-Revision-Date: 2015-08-08 13:23+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
-"Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
+"Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -738,8 +738,119 @@ msgid ""
 "system checks, see the :doc:`System check topic guide </topics/checks>`."
 msgstr "Pour plus de détails sur la façon d'ajouter vos propres contrôles et les intégrer aux contrôles systèmes de Django, consultez le :doc:`Guide thématique sur la vérification système </topics/checks>`."
 
-# 5eddf766824b4e8bb30c5c24940bd8af
-#: ../../../../1.8/docs/ref/checks.txt:15
+# 5bfa6cd5dbc44341b3d255e0ee5f040a
+# b78365df3f584f77a4236aeb03c52789
+# 2240fd9559f447a993980904cde42a19
+#: ../../../../1.8/docs/ref/checks.txt:17
+#: ../../../../1.8/docs/ref/contrib/gis/feeds.txt:22
+#: ../../../../1.8/docs/ref/index.txt:3
+msgid "API Reference"
+msgstr "Référence de l'API"
+
+# 9855043095184eb0bbdd36052241b7ef
+#: ../../../../1.8/docs/ref/checks.txt:20
+msgid "``CheckMessage``"
+msgstr "``CheckMessage``"
+
+# c07b28ccc93746c392ee356f9a8717e6
+#: ../../../../1.8/docs/ref/checks.txt:24
+msgid ""
+"The warnings and errors raised by system checks must be instances of "
+"``CheckMessage``. An instance encapsulates a single reportable error or "
+"warning. It also provides context and hints applicable to the message, and a"
+" unique identifier that is used for filtering purposes."
+msgstr "Les avertissements et les erreurs signalés par les contrôles systèmes doivent être des instances de ``CheckMessage``. Une instance encapsule une seule erreur à signaler ou un seul avertissement. Elle fournit également des indicateurs et le contexte applicables au message, et un identifiant unique qui est utilisé à des fins de filtrage."
+
+# 5ad4d2bf32ee4814bdf79fa64d1fdc5e
+#: ../../../../1.8/docs/ref/checks.txt:29
+msgid "Constructor arguments are:"
+msgstr "Les arguments du constructeur sont :"
+
+# 6806bd0fcdb14522be264b7a371c533f
+#: ../../../../1.8/docs/ref/checks.txt:36
+msgid "``level``"
+msgstr "``level``"
+
+# fbf70104a63744a5869704b3bf18b3a8
+#: ../../../../1.8/docs/ref/checks.txt:32
+msgid ""
+"The severity of the message. Use one of the predefined values: ``DEBUG``, "
+"``INFO``, ``WARNING``, ``ERROR``, ``CRITICAL``. If the level is greater or "
+"equal to ``ERROR``, then Django will prevent management commands from "
+"executing. Messages with level lower than ``ERROR`` (i.e. warnings) are "
+"reported to the console, but can be silenced."
+msgstr "La gravité du message. Utilisez l'une des valeurs prédéfinies : ``DEBUG``, ``INFO``, ``WARNING``, ``ERROR``, ``CRITICAL``. Si le niveau est supérieur ou égal à ``ERROR``, Django empêchera l'exécution des commandes de gestion. Les messages avec un niveau inférieur à ``ERROR`` (i.e. les avertissements) sont présentés dans la console, mais peuvent être réduits au silence."
+
+# 051c7dd886034cc28b3f6b1d937af57e
+#: ../../../../1.8/docs/ref/checks.txt:40
+msgid "``msg``"
+msgstr "``msg``"
+
+# 76e694e474a1456b9decba713e431970
+#: ../../../../1.8/docs/ref/checks.txt:39
+msgid ""
+"A short (less than 80 characters) string describing the problem. The string "
+"should *not* contain newlines."
+msgstr "Une courte chaîne (moins de 80 caractères) décrivant le problème. La chaîne ne doit *pas* contenir des sauts de ligne."
+
+# d6ab20d592ae48c5acd74abc36a79ed7
+#: ../../../../1.8/docs/ref/checks.txt:45
+msgid "``hint``"
+msgstr "``hint``"
+
+# 7cde93b0f8994b5d99beaad60b5888f4
+#: ../../../../1.8/docs/ref/checks.txt:43
+msgid ""
+"A single-line string providing a hint for fixing the problem. If no hint can"
+" be provided, or the hint is self-evident from the error message, the hint "
+"can be omitted, or a value of ``None`` can be used."
+msgstr "Une chaîne d'une seule ligne offrant un indicateur pour résoudre le problème. Si aucun indicateur ne peut être fourni, ou s'il est évident à partir du message d'erreur, l'indicateur peut être omis, ou une valeur ``None`` peut être utilisée."
+
+# 5d5b55eefcef4a47900d47586e9ad88d
+#: ../../../../1.8/docs/ref/checks.txt:52
+msgid "``obj``"
+msgstr "``obj``"
+
+# 839dc83682cf47f9b40d78ef6ec17f95
+#: ../../../../1.8/docs/ref/checks.txt:48
+msgid ""
+"Optional. An object providing context for the message (for example, the "
+"model where the problem was discovered). The object should be a model, "
+"field, or manager or any other object that defines ``__str__`` method (on "
+"Python 2 you need to define ``__unicode__`` method). The method is used "
+"while reporting all messages and its result precedes the message."
+msgstr "Facultatif. Un objet fournissant le contexte du message (par exemple, le modèle où le problème a été découvert). L'objet doit être un modèle, un champ, un gestionnaire ou tout autre objet qui définit la méthode ``__str__`` (avec Python 2, vous devez définir la méthode ``__unicode__``). La méthode est utilisée lors de la collecte de tous les messages et son résultat précède le message."
+
+# 859cf21fa8864f30a76304ad7b723401
+#: ../../../../1.8/docs/ref/checks.txt:59
+msgid "``id``"
+msgstr "``id``"
+
+# e6a83d99c597465a8ac3c8a592c0c2c2
+#: ../../../../1.8/docs/ref/checks.txt:55
+msgid ""
+"Optional string. A unique identifier for the issue. Identifiers should "
+"follow the pattern ``applabel.X001``, where ``X`` is one of the letters "
+"``CEWID``, indicating the message severity (``C`` for criticals, ``E`` for "
+"errors and so). The number can be allocated by the application, but should "
+"be unique within that application."
+msgstr "Chaîne facultative. Un identifiant unique pour le problème. Les identifiants doivent suivre le modèle ``applabel.X001``, où ``X`` est l'une des lettres ``CEWID``, indiquant la gravité du message (``C`` pour critique, ``E`` pour les erreurs et ainsi de suite). Le numéro peut être attribué par l'application, mais doit être unique au sein de cette application."
+
+# d803f5726a0f47c0af0cd794e00a89e6
+#: ../../../../1.8/docs/ref/checks.txt:61
+msgid ""
+"There are subclasses to make creating messages with common levels easier. "
+"When using them you can omit the ``level`` argument because it is implied by"
+" the class name."
+msgstr "Il existe des sous-classes pour faciliter la création des messages avec les niveaux de base. Lorsque vous les utilisez, vous pouvez omettre le paramètre ``level`` car il est sous-entendu par le nom de la classe."
+
+# bd6e99c311da4f02b42872fa991734db
+#: ../../../../1.8/docs/ref/checks.txt:72
+msgid "Builtin checks"
+msgstr "Contrôles prédéfinis"
+
+# 34bc64a1ab07421d84f0d9a6d05300a5
+#: ../../../../1.8/docs/ref/checks.txt:75
 msgid "Builtin tags"
 msgstr "Étiquettes prédéfinies"
 
@@ -1319,8 +1430,20 @@ msgid ""
 "configure this setting."
 msgstr "**1_7.W001** :  Django 1.7 a modifié la valeur par défaut globale de ``MIDDLEWARE_CLASSES.`` ``django.contrib.sessions.middleware.SessionMiddleware``, ``django.contrib.auth.middleware.AuthenticationMiddleware`` et ``django.contrib.messages.middleware.MessageMiddleware`` ont été enlevés de la valeur par défaut. Si votre projet a besoin de ces intergiciels, il faudra alors que vous configuriez ce réglage."
 
-# f0638287b5f247c1a595e0bd050593a4
-#: ../../../../1.8/docs/ref/checks.txt:187
+# 8108c7b5fca542aba5b7d8e41f9d3232
+#: ../../../../1.8/docs/ref/checks.txt:245
+msgid ""
+"**1_8.W001**: The standalone ``TEMPLATE_*`` settings were deprecated in "
+"Django 1.8 and the :setting:`TEMPLATES` dictionary takes precedence. You "
+"must put the values of the following settings into your defaults "
+"``TEMPLATES`` dict: :setting:`TEMPLATE_DIRS`, "
+":setting:`ALLOWED_INCLUDE_ROOTS`, :setting:`TEMPLATE_CONTEXT_PROCESSORS`, "
+":setting:`TEMPLATE_DEBUG`, :setting:`TEMPLATE_LOADERS`, "
+":setting:`TEMPLATE_STRING_IF_INVALID`."
+msgstr "**1_8.W001** : les réglages indépendants ``TEMPLATE_*`` ont été rendus obsolètes dans Django 1.8 et le dictionnaire :setting:`TEMPLATES` a maintenant la priorité. Vous devez placer les valeurs des réglages suivants dans votre dictionnaire ``TEMPLATES`` par défaut : :setting:`TEMPLATE_DIRS`, :setting:`ALLOWED_INCLUDE_ROOTS`, :setting:`TEMPLATE_CONTEXT_PROCESSORS`, :setting:`TEMPLATE_DEBUG`, :setting:`TEMPLATE_LOADERS`, :setting:`TEMPLATE_STRING_IF_INVALID`."
+
+# 4990147518154ab1bd3414aa76579677
+#: ../../../../1.8/docs/ref/checks.txt:253
 msgid "Admin"
 msgstr "Interface d'administration"
 
@@ -13185,8 +13308,8 @@ msgid ""
 "If you add or modify flatpages via your own code, you will likely want to "
 "check for duplicate flatpage URLs within the same site. The flatpage form "
 "used in the admin performs this validation check, and can be imported from "
-"``django.contrib.flatpages.forms.FlatPageForm`` and used in your own views."
-msgstr "Si vous ajoutez ou modifiez les flatpages via votre propre code, il est souhaitable d'éviter des URL définies en double pour un même site. Le formulaire de flatpage utilisé dans l'interface d'administration effectue ce contrôle de validation et peut être importé depuis ``django.contrib.flatpages.forms.FlatPageForm`` et être utilisé dans vos propres vues."
+"``django.contrib.flatpages.forms.FlatpageForm`` and used in your own views."
+msgstr "Si vous ajoutez ou modifiez les flatpages via votre propre code, il est souhaitable d'éviter des URL définies en double pour un même site. Le formulaire de flatpage utilisé dans l'interface d'administration effectue ce contrôle de validation et peut être importé depuis ``django.contrib.flatpages.forms.FlatpageForm`` et être utilisé dans vos propres vues."
 
 # d930353028624044bbd2f4469f04889a
 #: ../../../../1.8/docs/ref/contrib/flatpages.txt:203
@@ -14846,14 +14969,7 @@ msgid ""
 "documentation </ref/contrib/syndication>` for details on general usage."
 msgstr "GeoDjango possède sa propre sous-classe :class:`Feed` qui peut contenir des informations d'emplacement dans les flux RSS/Atom mis en forme selon les standards `Simple GeoRSS`__ ou `W3C Geo`_. Comme l'API du système de syndication de GeoDjango est un sur-ensemble de celle de Django, référez-vous à la :doc:`documentation du système de syndication de Django </ref/contrib/syndication>` pour plus de détails sur son utilisation générale."
 
-# 65c0f49921f449a98d71b3d038fa52c2
-# 94949a1f973d4e15b09886b92240c21e
-#: ../../../../1.8/docs/ref/contrib/gis/feeds.txt:22
-#: ../../../../1.8/docs/ref/index.txt:3
-msgid "API Reference"
-msgstr "Référence de l'API"
-
-# e4af860b72ad4fa8b2b58a5b1e933e20
+# b94710a1de704d99ae9f56da02ee3de3
 #: ../../../../1.8/docs/ref/contrib/gis/feeds.txt:25
 msgid "``Feed`` Subclass"
 msgstr "Sous-classe ``Feed``"
@@ -25059,9 +25175,19 @@ msgid ""
 "arrays."
 msgstr "Un champ pour stocker des listes de données. La plupart des types de champs peuvent être utilisés ; il suffit de passer une autre instance de champ dans l'attribut :attr:`base_field <ArrayField.base_field>`. Vous pouvez aussi indiquer une taille dans :attr:`size <ArrayField.size>`. ``ArrayField`` peut être imbriqué pour stocker des tableaux multidimensionnels."
 
-# 17cc13e2af334f64ad1b6f54e8db3737
-# b47cfe2993364066bf8b3bcec170127f
-#: ../../../../1.8/docs/ref/contrib/postgres/fields.txt:22
+# 277818c17e3a40e197771b34bc39faa5
+#: ../../../../1.8/docs/ref/contrib/postgres/fields.txt:20
+msgid ""
+"If you give the field a :attr:`~django.db.models.Field.default`, ensure it's"
+" a callable such as ``list`` (for an empty default) or a callable that "
+"returns a list (such as a function). Incorrectly using ``default=[]`` "
+"creates a mutable default that is shared between all instances of "
+"``ArrayField``."
+msgstr "Si vous donnez une valeur :attr:`~django.db.models.Field.default` à ce champ, assurez-vous que ce soit un objet exécutable tel que ``list`` (pour une valeur par défaut vide) ou un objet exécutable qui renvoie une liste (par exemple une fonction). L'utilisation de ``default=[]`` n'est pas correct car cela crée une valeur par défaut mutante qui est partagée entre les instances de ``ArrayField``."
+
+# d1943a66b7e94d4d88ca1d8637e88a98
+# b267f3ae1f1b4a67a9913cee06d25e5b
+#: ../../../../1.8/docs/ref/contrib/postgres/fields.txt:28
 #: ../../../../1.8/docs/ref/contrib/postgres/forms.txt:19
 msgid "This is a required argument."
 msgstr "Ce paramètre est obligatoire."
@@ -28144,8 +28270,20 @@ msgid ""
 "slightly different call:"
 msgstr "Si vous souhaitez récupérer une URL statique sans l'afficher, vous pouvez effectuer un appel un peu différent :"
 
-# c5269741db3945c8bde2c6891bda06d1
-#: ../../../../1.8/docs/ref/contrib/staticfiles.txt:369
+# bd8ae2dcdaa64fcab32297e57765eeef
+#: ../../../../1.8/docs/ref/contrib/staticfiles.txt:374
+msgid "Using Jinja2 templates?"
+msgstr "Utilisation de gabarits Jinja2"
+
+# efc717614a824b619d1d590a885d734c
+#: ../../../../1.8/docs/ref/contrib/staticfiles.txt:376
+msgid ""
+"See :class:`django.template.backends.jinja2.Jinja2` for information on using"
+" the ``static`` tag with Jinja2."
+msgstr "Voir :class:`django.template.backends.jinja2.Jinja2` pour des informations sur l'utilisation de la balise ``static`` avec Jinja2."
+
+# 3d69215582d14f3382bf4ea983c8e8e9
+#: ../../../../1.8/docs/ref/contrib/staticfiles.txt:380
 msgid "Finders Module"
 msgstr "Le module ``finders``"
 
@@ -30714,11 +30852,12 @@ msgstr "Lors de l'exécution d'une requête sur un type chaîne mais avec une va
 msgid ""
 "If you implement custom model fields that inherit from "
 ":class:`~django.db.models.Field` directly, are overriding "
-":meth:`~django.db.models.Field.get_prep_value`, or use :meth:`extra() "
-"<django.db.models.query.QuerySet.extra>` or :meth:`raw() "
-"<django.db.models.Manager.raw>`, you should ensure that you perform the "
+":meth:`~django.db.models.Field.get_prep_value`, or use "
+":class:`~django.db.models.expressions.RawSQL`, "
+":meth:`~django.db.models.query.QuerySet.extra`, or "
+":meth:`~django.db.models.Manager.raw`, you should ensure that you perform "
 "appropriate typecasting."
-msgstr "Si vous implémentez des champs de modèle personnalisés héritant directement de :class:`~django.db.models.Field`, que vous surchargez :meth:`~django.db.models.Field.get_prep_value` ou que vous utilisez :meth:`extra() <django.db.models.query.QuerySet.extra>` ou :meth:`raw() <django.db.models.Manager.raw>`, vous devez vous assurer d'effectuer les forçages de type appropriés."
+msgstr "Si vous implémentez des champs de modèle personnalisés héritant directement de :class:`~django.db.models.Field`, que vous surchargez :meth:`~django.db.models.Field.get_prep_value` ou que vous utilisez :class:`~django.db.models.expressions.RawSQL`, :meth:`~django.db.models.query.QuerySet.extra` ou :meth:`~django.db.models.Manager.raw`, vous devez vous assurer d'effectuer les forçages de type appropriés."
 
 # d548ae90764e46a8b6ba711cd3494895
 #: ../../../../1.8/docs/ref/databases.txt:570
@@ -39997,8 +40136,13 @@ msgid ""
 "the standard widgets."
 msgstr "Composant parent de trois sous-composants :class:`~django.forms.Select` pour le mois, le jour et l'année. Notez que le code de ce composant se trouve dans un fichier différent des autres composants standards."
 
-# 8b2d7b919f704041b70fc4f9ee3ccc21
-#: ../../../../1.8/docs/ref/forms/widgets.txt:770
+# cad26ea8fb3a474aa3b35891cbe4718b
+#: ../../../../1.8/docs/ref/forms/widgets.txt:771
+msgid "Takes several optional arguments:"
+msgstr "Accepte plusieurs paramètres facultatifs :"
+
+# 75feee23295f4c53b0e12592a52948b2
+#: ../../../../1.8/docs/ref/forms/widgets.txt:775
 msgid ""
 "An optional list/tuple of years to use in the \"year\" select box. The "
 "default is a list containing the current year and the next 9 years."
@@ -40681,8 +40825,8 @@ msgstr ":class:`~django.middleware.locale.LocaleMiddleware`"
 #: ../../../../1.8/docs/ref/middleware.txt:440
 msgid ""
 "One of the topmost, after ``SessionMiddleware`` (uses session data) and "
-"``CacheMiddleware`` (modifies ``Vary`` header)."
-msgstr "Doit être dans les premiers, après  ``SessionMiddleware`` (utilise les données de sessions) et ``CacheMiddleware`` (modifie l'en-tête ``Vary``)."
+"``UpdateCacheMiddleware`` (modifies ``Vary`` header)."
+msgstr "Doit être dans les premiers, après  ``SessionMiddleware`` (utilise les données de sessions) et ``UpdateCacheMiddleware`` (modifie l'en-tête ``Vary``)."
 
 # e80ac96b7dc84c52a5258ca12e9ddb06
 #: ../../../../1.8/docs/ref/middleware.txt:443
@@ -42214,6 +42358,34 @@ msgstr "Les expressions conditionnelles permettent d'utiliser de la logique :key
 
 # ed97d98c9d6143fbacedc8b2ac883385
 #: ../../../../1.8/docs/ref/models/expressions.txt:399
+msgid "Raw SQL expressions"
+msgstr "Expressions SQL brutes"
+
+# 4940a414604848318c9bef4a6badb005
+#: ../../../../1.8/docs/ref/models/expressions.txt:407
+msgid ""
+"Sometimes database expressions can't easily express a complex ``WHERE`` "
+"clause. In these edge cases, use the ``RawSQL`` expression. For example::"
+msgstr "Parfois, les expressions de base de données ne peuvent pas facilement exprimer une clause ``WHERE`` complexe. Dans ces cas limites, utilisez l'expression ``RawSQL``. Par exemple ::"
+
+# e65e08965486440e8116c3f2207509eb
+#: ../../../../1.8/docs/ref/models/expressions.txt:413
+msgid ""
+"These extra lookups may not be portable to different database engines "
+"(because you're explicitly writing SQL code) and violate the DRY principle, "
+"so you should avoid them if possible."
+msgstr "Ces expressions brutes ne sont pas toujours portables entre moteurs de base de données (parce que vous écrivez du code SQL explicitement) et elles violent le principe DRY (ne pas se répéter), il s'agit donc de les éviter autant que possible."
+
+# ec3dd0634c0840cba7dbbb817112f55d
+#: ../../../../1.8/docs/ref/models/expressions.txt:419
+msgid ""
+"You should be very careful to escape any parameters that the user can "
+"control by using ``params`` in order to protect against :ref:`SQL injection "
+"attacks <sql-injection-protection>`."
+msgstr "Vous devez prendre soin d'échapper systématiquement tout paramètre pouvant être contrôlé par les utilisateurs en employant ``params`` afin de vous protéger contre les :ref:`attaques par injection SQL <sql-injection-protection>`."
+
+# e7ed073f107e402fbc4b1fcd60f2b8d8
+#: ../../../../1.8/docs/ref/models/expressions.txt:426
 msgid "Technical Information"
 msgstr "Informations techniques"
 
@@ -48878,8 +49050,42 @@ msgid ""
 "generated by a ``QuerySet``."
 msgstr "Il peut arriver parfois que la syntaxe de requête de Django ne puisse pas exprimer facilement une clause ``WHERE`` complexe. Pour ces cas extrêmes, Django fournit le modificateur de ``QuerySet`` ``extra()``, un point d'entrée pour injecter des clauses spécifiques dans le code SQL généré par un ``QuerySet``."
 
-# c536e0f001f548aea2297820d7e165b5
+# 29a8f4bfaabf425a9414e0ae86a6bc7d
+#: ../../../../1.8/docs/ref/models/querysets.txt:1139
+msgid "Use this method as a last resort"
+msgstr "N'utilisez cette méthode qu'en dernier recours"
+
+# 937c5bd8dbc34a99a17df29174636ad7
 #: ../../../../1.8/docs/ref/models/querysets.txt:1141
+msgid ""
+"This is an old API that we aim to deprecate at some point in the future. Use"
+" it only if you cannot express your query using other queryset methods. If "
+"you do need to use it, please `file a ticket "
+"<https://code.djangoproject.com/newticket>`_ using the `QuerySet.extra "
+"keyword "
+"<https://code.djangoproject.com/query?status=assigned&status=new&keywords=~QuerySet.extra>`_"
+" with your use case (please check the list of existing tickets first) so "
+"that we can enhance the QuerySet API to allow removing ``extra()``. We are "
+"no longer improving or fixing bugs for this method."
+msgstr "Il s'agit d'une ancienne API que nous prévoyons de rendre obsolète à un moment donné. Ne l'utilisez que si vous ne pouvez pas exprimer votre requête en employant d'autres méthodes de jeux de requêtes. Si vous êtes contraint de l'utiliser, `créez un ticket <https://code.djangoproject.com/newticket>`_ en indiquant le mot-clé `QuerySet.extra <https://code.djangoproject.com/query?status=assigned&status=new&keywords=~QuerySet.extra>`_ et en présentant votre cas d'utilisation (sans oublier de vérifier d'abord d'éventuels tickets existants) afin que nous puissions améliorer l'API QuerySet pour finalement supprimer ``extra()``. Nous n'améliorons ni ne corrigeons plus de bogues pour cette dernière méthode."
+
+# bdae368e520c41c0ad9251185c093920
+#: ../../../../1.8/docs/ref/models/querysets.txt:1150
+msgid "For example, this use of ``extra()``::"
+msgstr "Par exemple, cette utilisation de ``extra()``::"
+
+# f358faf4b0a54beb8692ff8709cc11c8
+#: ../../../../1.8/docs/ref/models/querysets.txt:1161
+msgid ""
+"The main benefit of using :class:`~django.db.models.expressions.RawSQL` is "
+"that you can set ``output_field`` if needed. The main downside is that if "
+"you refer to some table alias of the queryset in the raw SQL, then it is "
+"possible that Django might change that alias (for example, when the queryset"
+" is used as a subquery in yet another query)."
+msgstr "Le principal avantage d'utiliser :class:`~django.db.models.expressions.RawSQL` est qu'il est possible de définir ``output_field`` si nécessaire. Le désavantage principal est que si vous faites référence à un alias de table du jeu de requête dans le code SQL brut, il est alors possible que Django modifie cet alias (par exemple lorsque le jeu de requête est utilisé comme sous-requête dans une autre requête)."
+
+# 4d5087743ac84eb59a9769528e2b03a1
+#: ../../../../1.8/docs/ref/models/querysets.txt:1169
 msgid ""
 "You should be very careful whenever you use ``extra()``. Every time you use "
 "it, you should escape any parameters that the user can control by using "
@@ -51663,8 +51869,18 @@ msgid ""
 "``HTTP_X_BENDER``."
 msgstr "À l'exception de ``CONTENT_LENGTH`` et ``CONTENT_TYPE``, tels que présentés ci-dessus, tout en-tête HTTP de la requête est converti en clés ``META`` en convertissant tous les caractères en majuscules, remplaçant les tirets par des soulignements et en ajoutant un préfixe ``HTTP_`` au nom. Par exemple, un en-tête nommé ``X-Bender`` correspond à la clé ``META`` ``HTTP_X_BENDER``."
 
-# ef17e25898c44d33947046487c93d810
-#: ../../../../1.8/docs/ref/request-response.txt:175
+# d89bb54392374bc6a5165aff21f0b112
+#: ../../../../1.8/docs/ref/request-response.txt:173
+msgid ""
+"Note that :djadmin:`runserver` strips all headers with underscores in the "
+"name, so you won't see them in ``META``. This prevents header-spoofing based"
+" on ambiguity between underscores and dashes both being normalizing to "
+"underscores in WSGI environment variables. It matches the behavior of Web "
+"servers like Nginx and Apache 2.4+."
+msgstr "Notez que :djadmin:`runserver` ignore tous les en-têtes contenant des soulignements dans leur nom, ce qui fait qu'ils n'apparaîtront pas dans ``META``. Ceci évite la falsification d'en-tête basée sur l'ambiguïté entre les soulignements et les tirets qui sont tous deux normalisés en soulignements dans les variables d'environnement WSGI. Cela correspond au comportement des serveurs Web tels que Nginx et Apache 2.4+."
+
+# 613fe02622fd47f686f9682d495c1c65
+#: ../../../../1.8/docs/ref/request-response.txt:181
 msgid ""
 "An object of type :setting:`AUTH_USER_MODEL` representing the currently "
 "logged-in user. If the user isn't currently logged in, ``user`` will be set "
@@ -53729,8 +53945,9 @@ msgstr "Valeur par défaut :: ``'csrftoken'``"
 #: ../../../../1.8/docs/ref/settings.txt:390
 msgid ""
 "The name of the cookie to use for the CSRF authentication token. This can be"
-" whatever you want. See :doc:`/ref/csrf`."
-msgstr "Le nom du cookie à utiliser pour le jeton d'authentification CSRF. Vous pouvez y mettre ce qui vous plaît. Voir :doc:`/ref/csrf`."
+" whatever you want (as long as it's different from the other cookie names in"
+" your application). See :doc:`/ref/csrf`."
+msgstr "Le nom du cookie à utiliser pour le jeton d'authentification CSRF. Vous pouvez y mettre ce qui vous plaît (tant que c'est un nom de cookie différent de ceux qui existent déjà). Voir :doc:`/ref/csrf`."
 
 # ddc7dcc44c954e20a74dde284437e0fd
 #: ../../../../1.8/docs/ref/settings.txt:396
@@ -55583,9 +55800,9 @@ msgstr "Valeur par défaut : ``'django_language'``"
 #: ../../../../1.8/docs/ref/settings.txt:1720
 msgid ""
 "The name of the cookie to use for the language cookie. This can be whatever "
-"you want (but should be different from :setting:`SESSION_COOKIE_NAME`). See "
-":doc:`/topics/i18n/index`."
-msgstr "Le nom à utiliser pour le cookie de langue. Vous pouvez mettre ce que vous voulez, pour autant que ce soit différent de :setting:`SESSION_COOKIE_NAME`. Voir :doc:`/topics/i18n/index`."
+"you want (as long as it's different from the other cookie names in your "
+"application). See :doc:`/topics/i18n/index`."
+msgstr "Le nom à utiliser pour le cookie de langue. Vous pouvez mettre ce que vous voulez (tant que c'est un nom de cookie différent de ceux qui existent déjà). Voir :doc:`/topics/i18n/index`."
 
 # 2754c5fc05c84ed7aa433b37aa3a316b
 #: ../../../../1.8/docs/ref/settings.txt:1727
@@ -57485,8 +57702,8 @@ msgstr "Valeur par défaut : ``'sessionid'``"
 #: ../../../../1.8/docs/ref/settings.txt:3059
 msgid ""
 "The name of the cookie to use for sessions. This can be whatever you want "
-"(but should be different from :setting:`LANGUAGE_COOKIE_NAME`)."
-msgstr "Le nom du cookie à utiliser pour les sessions. Vous pouvez mettre ce que vous voulez (pour autant que ce soit différent de :setting:`LANGUAGE_COOKIE_NAME`)."
+"(as long as it's different from the other cookie names in your application)."
+msgstr "Le nom du cookie à utiliser pour les sessions. Vous pouvez mettre ce que vous voulez (pour autant que ce soit différent de ceux qui existent déjà dans votre application)."
 
 # e4f72211a6a049ac8cbd28cb5fe66ad1
 #: ../../../../1.8/docs/ref/settings.txt:3065
@@ -62415,9 +62632,9 @@ msgstr "Le format indiqué peut aussi correspondre à l'un des formats prédéfi
 #: ../../../../1.8/docs/ref/templates/builtins.txt:812
 msgid ""
 "You can also use the syntax ``{% now \"Y\" as current_year %}`` to store the"
-" output inside a variable. This is useful if you want to use ``{% now %}`` "
-"inside a template tag like :ttag:`blocktrans` for example::"
-msgstr "Vous pouvez également utiliser la syntaxe ``{% now \"Y\" as current_year %}`` pour stocker le résultat dans une variable. Cela peut être utile lorsqu'on veut utiliser ``{% now %}`` dans une balise de gabarit telle que :ttag:`blocktrans` par exemple ::"
+" output (as a string) inside a variable. This is useful if you want to use "
+"``{% now %}`` inside a template tag like :ttag:`blocktrans` for example::"
+msgstr "Vous pouvez également utiliser la syntaxe ``{% now \"Y\" as current_year %}`` pour stocker le résultat dans une variable (une chaîne de caractères). Cela peut être utile lorsqu'on veut utiliser ``{% now %}`` dans une balise de gabarit telle que :ttag:`blocktrans` par exemple ::"
 
 # ec2f0670779b4158b801fe74f020f40e
 #: ../../../../1.8/docs/ref/templates/builtins.txt:821
