@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-08 04:09-0500\n"
-"PO-Revision-Date: 2015-08-08 13:53+0000\n"
+"POT-Creation-Date: 2015-08-26 04:09-0500\n"
+"PO-Revision-Date: 2015-08-27 06:41+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -5690,7 +5690,7 @@ msgstr "Les messages sont comparables. Cela vous permet d'écrire facilement des
 
 # 882ee47626954d868057434996388e69
 #: ../../../../1.8/docs/topics/class-based-views/generic-display.txt:5
-msgid "Built-in Class-based generic views"
+msgid "Built-in class-based generic views"
 msgstr "Vues génériques fondées sur les classes, fournies par Django"
 
 # 6e0f8558606743cfbc2a0f364b14c84f
@@ -6508,7 +6508,7 @@ msgstr "Puis, il suffit d'ajouter cette nouvelle vue dans notre configuration d'
 #: ../../../../1.8/docs/topics/class-based-views/index.txt:86
 msgid ""
 "For more information on how to use the built in generic views, consult the "
-"next topic on :doc:`generic class based views</topics/class-based-views"
+"next topic on :doc:`generic class-based views</topics/class-based-views"
 "/generic-display>`."
 msgstr "Pour plus d'informations sur la façon d'utiliser les vues génériques intégrées dans Django, consultez le prochain thème sur les :doc:`vues génériques fondées sur les classes</topics/class-based-views/generic-display>`."
 
@@ -6551,7 +6551,7 @@ msgstr "Si on accède à la vue par une requête ``GET``, une simple liste d'obj
 
 # 73b47ffb25084690b173b9b6e640ad23
 #: ../../../../1.8/docs/topics/class-based-views/intro.txt:3
-msgid "Introduction to Class-based views"
+msgid "Introduction to class-based views"
 msgstr "Introduction aux vues fondées sur les classes"
 
 # 5f0a24a8894c493d851a49dcb10056ce
@@ -6629,14 +6629,14 @@ msgid ""
 "original problems that generic views were meant to solve."
 msgstr "Si vous avez essayé d'utiliser les vues génériques fondées sur les fonctions par le passé et que vous les avez trouvées trop limitées, vous ne devriez pas simplement considérer les vues génériques fondées sur les classes comme des équivalents, mais plutôt comme une nouvelle approche pour résoudre les problèmes d'origine que les vues génériques étaient censées résoudre."
 
-# 6290e2b39e2b4d0aaa791a22d45ab763
+# 9138b93e53ee488aa25245e62865dbf1
 #: ../../../../1.8/docs/topics/class-based-views/intro.txt:42
 msgid ""
 "The toolkit of base classes and mixins that Django uses to build class-based"
 " generic views are built for maximum flexibility, and as such have many "
 "hooks in the form of default method implementations and attributes that you "
 "are unlikely to be concerned with in the simplest use cases. For example, "
-"instead of limiting you to a class based attribute for ``form_class``, the "
+"instead of limiting you to a class-based attribute for ``form_class``, the "
 "implementation uses a ``get_form`` method, which calls a ``get_form_class`` "
 "method, which in its default implementation just returns the ``form_class`` "
 "attribute of the class. This gives you several options for specifying what "
@@ -7187,8 +7187,8 @@ msgid ""
 "probably end up writing more code, it is more likely to be clearly "
 "understandable to someone else coming to it later, and with fewer "
 "interactions to worry about you will save yourself some thinking. (Of "
-"course, you can always dip into Django's implementation of the generic class"
-" based views for inspiration on how to tackle problems.)"
+"course, you can always dip into Django's implementation of the generic "
+"class-based views for inspiration on how to tackle problems.)"
 msgstr "Dans le doute, il est souvent préférable de simplifier les choses en se basant sur :class:`View` ou :class:`TemplateView`, peut-être avec :class:`~django.views.generic.detail.SingleObjectMixin` ou :class:`~django.views.generic.list.MultipleObjectMixin`. Même si vous devez finalement écrire un peu plus de code, il sera probablement plus compréhensible pour quelqu'un devant s'y atteler plus tard, et en réduisant les interactions à surveiller, vous vous économiserez un peu de temps de réflexion (il est bien sûr toujours possible de se plonger dans l'implémentation de Django des vues génériques fondées sur les classes pour y chercher de l'inspiration sur la façon de traiter les problèmes)."
 
 # d53fd7accd53433396197ff6beaa71b4
@@ -7535,7 +7535,7 @@ msgstr "Plus que du simple code HTML"
 # 2206b08268ab4e47883c2abfdf8b83aa
 #: ../../../../1.8/docs/topics/class-based-views/mixins.txt:596
 msgid ""
-"Where class based views shine is when you want to do the same thing many "
+"Where class-based views shine is when you want to do the same thing many "
 "times. Suppose you're writing an API, and every view should return JSON "
 "instead of rendered HTML."
 msgstr "Les vues fondées sur les classes se révèlent particulièrement utiles au moment où l'on a besoin de répéter plusieurs fois un processus semblable. Imaginez qu'il faille écrire une API et que chaque vue doive renvoyer du JSON au lieu de produire une page HTML."
@@ -8779,24 +8779,16 @@ msgid ""
 "``Reporter`` raises ``ValueError``::"
 msgstr "Notez que vous devez enregistrer un objet avant de pouvoir l'attribuer à une relation de clé étrangère. Par exemple, la création d'un ``Article`` avec une instance ``Reporter`` non enregistrée produit une erreur ``ValueError``::"
 
-# 3ffcd494226846f68a522806d636aaac
-# 7ff5d4015f8e41a1a5ebbe48e92c869a
-#: ../../../../1.8/docs/topics/db/examples/many_to_one.txt:63
-#: ../../../../1.8/docs/topics/db/examples/one_to_one.txt:104
+# 8b07f79489284d24842512e682119b5a
+# da2fd77a40314f48b4e548164d9dce27
+#: ../../../../1.8/docs/topics/db/examples/many_to_one.txt:65
+#: ../../../../1.8/docs/topics/db/examples/one_to_one.txt:102
 msgid ""
-"If you want to disable the unsaved instance check, you can use the "
-":attr:`~django.db.models.ForeignKey.allow_unsaved_instance_assignment` "
-"attribute."
-msgstr "Si vous souhaitez désactiver le contrôle d'enregistrement de l'instance, vous pouvez utiliser l'attribut :attr:`~django.db.models.ForeignKey.allow_unsaved_instance_assignment`."
-
-# a00323de4d6b4498bbb8c48c83b87f86
-# 64aaeb53f5d04d26b4af681db265ac0c
-#: ../../../../1.8/docs/topics/db/examples/many_to_one.txt:69
-#: ../../../../1.8/docs/topics/db/examples/one_to_one.txt:110
-msgid ""
-"Previously, assigning unsaved objects did not raise an error and could "
-"result in silent data loss."
-msgstr "Précédemment, l'attribution d'objets non enregistrés ne générait pas d'erreur et pouvait amener à des pertes de données silencieuses."
+"Previously, saving an object with unsaved related objects did not raise an "
+"error and could result in silent data loss. In 1.8-1.8.3, unsaved model "
+"instances couldn't be assigned to related fields, but this restriction was "
+"removed to allow easier usage of in-memory models."
+msgstr "Précédemment, l'enregistrement d'un objet avec des objets liés non enregistrés ne produisait pas d'erreur et pouvait aboutir à des pertes de données silencieuses. Dans les versions 1.8-1.8.3, des instances de modèles non enregistrées ne pouvaient plus être attribuées à des champs de liaison, mais cette restriction a été levée pour permettre une utilisation facilitée de modèles uniquement en mémoire."
 
 # 38f32d5d8307430a9bd0f03c8eeeefe4
 #: ../../../../1.8/docs/topics/db/examples/many_to_one.txt:72
@@ -15138,15 +15130,15 @@ msgid ""
 "transaction."
 msgstr "Voici comment cela fonctionne. Avant d'appeler une fonction de vue, Django démarre une transaction. Si la réponse est renvoyée sans problème particulier, Django valide la transaction. Si la vue génère une exception, Django annule la transaction."
 
-# f615508d50294e50b42fbde947bf3484
+# 64ec3b5c307c4f7aa8ada79e3303a2aa
 #: ../../../../1.8/docs/topics/db/transactions.txt:42
 msgid ""
-"You may perform partial commits and rollbacks in your view code, typically "
-"with the :func:`atomic` context manager. However, at the end of the view, "
-"either all the changes will be committed, or none of them."
-msgstr "Il est possible d'effectuer des validations ou des annulations partielles dans le code de la vue, typiquement avec le gestionnaire de contexte :func:`atomic`. Cependant, quand la vue se termine, soit tous les changements sont validés, soit tous sont annulés. "
+"You may perform subtransactions using savepoints in your view code, "
+"typically with the :func:`atomic` context manager. However, at the end of "
+"the view, either all or none of the changes will be committed."
+msgstr "Il est possible d'effectuer des sous-transactions à l'aide de points de sauvegarde dans le code de la vue, typiquement avec le gestionnaire de contexte :func:`atomic`. Cependant, quand la vue se termine, soit tous les changements sont validés, soit tous sont annulés. "
 
-# 17b319996b2242d18a085bfec016e70b
+# fde09904b0e14358818ca5ce078fec39
 #: ../../../../1.8/docs/topics/db/transactions.txt:48
 msgid ""
 "While the simplicity of this transaction model is appealing, it also makes "
@@ -23018,7 +23010,7 @@ msgstr "Django parcourt chaque motif d'URL dans l'ordre et s'arrête dès la pre
 #: ../../../../1.8/docs/topics/http/urls.txt:54
 msgid ""
 "Once one of the regexes matches, Django imports and calls the given view, "
-"which is a simple Python function (or a :doc:`class based view </topics"
+"which is a simple Python function (or a :doc:`class-based view </topics"
 "/class-based-views/index>`). The view gets passed the following arguments:"
 msgstr "Une fois qu'une des expressions régulières correspond, Django importe et appelle la vue correspondante, qui est une simple fonction Python (ou une :doc:`vue reposant sur une classe </topics/class-based-views/index>`). La vue se voit passer les paramètres suivants :"
 
@@ -38893,15 +38885,15 @@ msgid ""
 "``multi_db`` attribute on the test suite to request a full flush."
 msgstr "Dans une optique d'optimisation, Django ne réinitialise que la base de données ``default`` au début de chaque test. Si votre configuration contient plusieurs bases de données et que certains tests nécessitent que toutes les bases de données soient propres, vous pouvez définir l'attribut ``multi_db`` de la suite de tests pour provoquer une réinitialisation complète."
 
-# ee31bef542e244d99a599d3afed69b02
-#: ../../../../1.8/docs/topics/testing/tools.txt:1105
+# 8b404fd7a0d041e6bade5f7ef63f4001
+#: ../../../../1.8/docs/topics/testing/tools.txt:1112
 msgid ""
 "This test case will flush *all* the test databases before running "
-"``testIndexPageView``."
-msgstr "Ce cas de test réinitialise *toutes* les bases de données de test avant d'exécuter ``testIndexPageView``."
+"``test_index_page_view``."
+msgstr "Ce cas de test réinitialise *toutes* les bases de données de test avant d'exécuter ``test_index_page_view``."
 
-# 339b1b462cb441e6a040f8e893a34c04
-#: ../../../../1.8/docs/topics/testing/tools.txt:1108
+# 136c7031247344ba9eab581c1c515c1e
+#: ../../../../1.8/docs/topics/testing/tools.txt:1115
 msgid ""
 "The ``multi_db`` flag also affects into which databases the "
 "attr:`TransactionTestCase.fixtures` are loaded. By default (when "

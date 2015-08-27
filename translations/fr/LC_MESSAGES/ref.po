@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-08 04:09-0500\n"
-"PO-Revision-Date: 2015-08-08 13:23+0000\n"
+"POT-Creation-Date: 2015-08-26 04:09-0500\n"
+"PO-Revision-Date: 2015-08-27 06:47+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -5106,7 +5106,7 @@ msgstr "**Exemple myapp/author_confirm_delete.html** :"
 
 # 769dd7e9740449658a474f7f1361226e
 #: ../../../../1.8/docs/ref/class-based-views/index.txt:3
-msgid "Built-in Class-based views API"
+msgid "Built-in class-based views API"
 msgstr "API des vues intégrées fondées sur les classes"
 
 # de7b465161744c6b8b5dac0e3bc0f54e
@@ -12620,21 +12620,14 @@ msgid ""
 ":meth:`~django.contrib.contenttypes.models.ContentTypeManager.get_for_model`."
 msgstr "Si cet attribut vaut ``False``, le champ sera en mesure de référencer des modèles mandataires. La valeur par défaut est ``True``. Cela fait écho au paramètre ``for_concrete_model`` de :meth:`~django.contrib.contenttypes.models.ContentTypeManager.get_for_model`."
 
-# 642a255b4eb646ed8d41bd756f9c8461
-#: ../../../../1.8/docs/ref/contrib/contenttypes.txt:306
-msgid ""
-"Works analogously to :attr:`ForeignKey.allow_unsaved_instance_assignment "
-"<django.db.models.ForeignKey.allow_unsaved_instance_assignment>`."
-msgstr "Fonctionne de manière similaire à :attr:`ForeignKey.allow_unsaved_instance_assignment <django.db.models.ForeignKey.allow_unsaved_instance_assignment>`."
-
-# d547d39576ce46a1a66c4d1f00c45b2e
-# 87139e5b77ae4c6f9414debc512ac02e
-# f811d29114354bf8896d82b24f59c705
-# c5bf3c9f4e4a4f85bbc01828ca893449
-#: ../../../../1.8/docs/ref/contrib/contenttypes.txt:311
-#: ../../../../1.8/docs/ref/contrib/contenttypes.txt:382
-#: ../../../../1.8/docs/ref/contrib/contenttypes.txt:511
-#: ../../../../1.8/docs/ref/contrib/contenttypes.txt:576
+# 6ad5585aa5b247b19b61a99876f94dc5
+# 29ae682edad942dc9b02d4bb6d8ea68b
+# 83b45b9b0a6c49c0aa0020abda34eba7
+# b57745a8fd0f4b0da15180d8e6427814
+#: ../../../../1.8/docs/ref/contrib/contenttypes.txt:304
+#: ../../../../1.8/docs/ref/contrib/contenttypes.txt:375
+#: ../../../../1.8/docs/ref/contrib/contenttypes.txt:504
+#: ../../../../1.8/docs/ref/contrib/contenttypes.txt:569
 msgid ""
 "This class used to be defined in ``django.contrib.contenttypes.generic``. "
 "Support for importing from this old location will be removed in Django 1.9."
@@ -25026,7 +25019,7 @@ msgstr "En définissant ``fail_silently=True``, cela ne fait que masquer les err
 
 # f78db23ef5394790a91e8d5617d9ff3b
 #: ../../../../1.8/docs/ref/contrib/messages.txt:356
-msgid "Adding messages in Class Based Views"
+msgid "Adding messages in class-based views"
 msgstr "Ajout de messages dans les vues fondées sur les classes"
 
 # bd34631011de47e59c65e4ee8b2e814e
@@ -29521,9 +29514,9 @@ msgstr "L'acquisition du jeton est simple :"
 # d93fbdd06117492c9da17d050fdb50ca
 #: ../../../../1.8/docs/ref/csrf.txt:117
 msgid ""
-"The above code could be simplified by using the `jQuery cookie plugin "
-"<http://plugins.jquery.com/cookie/>`_ to replace ``getCookie``:"
-msgstr "Le code ci-dessus pourrait être simplifié en utilisant le `greffon jQuery cookie <http://plugins.jquery.com/cookie/> `_ pour remplacer ``getCookie``:"
+"The above code could be simplified by using the `JavaScript Cookie library "
+"<https://github.com/js-cookie/js-cookie/>`_ to replace ``getCookie``:"
+msgstr "Le code ci-dessus pourrait être simplifié en utilisant la `bibliothèque JavaScript Cookie <https://github.com/js-cookie/js-cookie/>`_ pour remplacer ``getCookie``:"
 
 # 79914f895aba4f48a0cb877201016022
 #: ../../../../1.8/docs/ref/csrf.txt:126
@@ -36784,17 +36777,18 @@ msgstr "Dans cet exemple, ``ContactFormWithPriority`` contient tous les champs d
 # fb3b1784cc654b0899095fc429584e3f
 #: ../../../../1.8/docs/ref/forms/api.txt:1000
 msgid ""
-"It's possible to subclass multiple forms, treating forms as \"mix-ins.\" In "
-"this example, ``BeatleForm`` subclasses both ``PersonForm`` and "
+"It's possible to subclass multiple forms, treating forms as mixins. In this "
+"example, ``BeatleForm`` subclasses both ``PersonForm`` and "
 "``InstrumentForm`` (in that order), and its field list includes the fields "
 "from the parent classes::"
-msgstr "Il est possible d'hériter de plusieurs formulaires, en considérant ces formulaires comme des « mix-ins ». Dans cet exemple, ``BeatleForm`` hérite à la fois de ``PersonForm`` et de ``InstrumentForm`` (dans cet ordre), et sa liste de champs contient les champs de ses classes parentes ::"
+msgstr "Il est possible d'hériter de plusieurs formulaires, en considérant ces formulaires comme des « mixins ». Dans cet exemple, ``BeatleForm`` hérite à la fois de ``PersonForm`` et de ``InstrumentForm`` (dans cet ordre), et sa liste de champs contient les champs de ses classes parentes ::"
 
 # b5a7ba57ceca4432b15d3fcd0bd0da0d
 #: ../../../../1.8/docs/ref/forms/api.txt:1022
 msgid ""
 "It's possible to declaratively remove a ``Field`` inherited from a parent "
-"class by setting the name to be ``None`` on the subclass. For example::"
+"class by setting the name of the field to ``None`` on the subclass. For "
+"example::"
 msgstr "Il est possible d'enlever de manière déclarative un champ ``Field`` hérité d'une classe parente en définissant son nom à ``None`` dans la sous-classe. Par exemple ::"
 
 # 8bab5a5b67b94be39a47eb36a7362690
@@ -44442,33 +44436,8 @@ msgstr "En définissant cette propriété à ``False``, cela ne signifie pas que
 msgid "If in doubt, leave it to its default of ``True``."
 msgstr "En cas de doute, laissez cette propriété à sa valeur par défaut, ``True``."
 
-# 6c580f9aa0444a348177639b2de6065a
-#: ../../../../1.8/docs/ref/models/fields.txt:1347
-msgid ""
-"This flag was added for backwards compatibility as older versions of Django "
-"always allowed assigning unsaved model instances."
-msgstr "Ce drapeau a été ajouté par rétrocompatibilité car les anciennes versions de Django autorisaient toujours l'attribution d'instances de modèles non enregistrées."
-
-# 41b4fc4cac094c6e8191e73558bf553a
-#: ../../../../1.8/docs/ref/models/fields.txt:1350
-msgid ""
-"Django prevents unsaved model instances from being assigned to a "
-"``ForeignKey`` field to prevent accidental data loss (unsaved foreign keys "
-"are silently ignored when saving a model instance)."
-msgstr "Django empêche l'attribution d'instances de modèles non enregistrées à un champ ``ForeignKey`` pour éviter des pertes de données accidentelles (les clés étrangères non enregistrées sont silencieusement ignorées lors de l'enregistrement d'instances de modèles)."
-
-# 616de75a593e4d718ac873c3ef03086f
-#: ../../../../1.8/docs/ref/models/fields.txt:1354
-msgid ""
-"If you require allowing the assignment of unsaved instances and aren't "
-"concerned about the data loss possibility (e.g. you never save the objects "
-"to the database), you can disable this check by creating a subclass of the "
-"field class and setting its ``allow_unsaved_instance_assignment`` attribute "
-"to ``True``. For example::"
-msgstr "Si vous avez absolument besoin de pouvoir attribuer des instances non enregistrées et que la possibilité de pertes de données ne vous gêne pas (par ex. vous n'enregistrez jamais les objets en base de données), vous pouvez désactiver ce contrôle en créant une sous-classe de la classe de champ et en définissant son attribut ``allow_unsaved_instance_assignment`` à ``True``. Par exemple ::"
-
-# cd3530810af94ff4842fce5a81ca565e
-#: ../../../../1.8/docs/ref/models/fields.txt:1370
+# 4edffa6d3e3f4823b15fe0baa3aecfcf
+#: ../../../../1.8/docs/ref/models/fields.txt:1355
 msgid "``ManyToManyField``"
 msgstr "``ManyToManyField``"
 
@@ -44731,14 +44700,8 @@ msgid ""
 "to the setting, not to the model directly."
 msgstr "Contrôle la réaction du système de migrations si ce champ :class:`ManyToManyField` pointe vers un modèle permutable. Quand elle vaut ``True`` (valeur par défaut), si le champ :class:`ManyToManyField` pointe vers un modèle qui correspond à la valeur actuelle de ``settings.AUTH_USER_MODEL`` (ou un autre réglage de modèle permutable), la relation est stockée dans la migration en utilisant une référence au réglage et non pas directement au modèle."
 
-# a39a797e7bda42408fb61b9384836d86
-#: ../../../../1.8/docs/ref/models/fields.txt:1573
-msgid ""
-"Works analogously to :attr:`ForeignKey.allow_unsaved_instance_assignment`."
-msgstr "Fonctionne de manière similaire à :attr:`ForeignKey.allow_unsaved_instance_assignment`."
-
-# 4b66b2e7a34a442ab6acbfa13cca5299
-#: ../../../../1.8/docs/ref/models/fields.txt:1575
+# aa8564fc13254155bfb87472916cab07
+#: ../../../../1.8/docs/ref/models/fields.txt:1554
 msgid ":class:`ManyToManyField` does not support :attr:`~Field.validators`."
 msgstr ":class:`ManyToManyField` ne prend pas en charge le paramètre :attr:`~Field.validators`."
 
@@ -45645,8 +45608,15 @@ msgid ""
 " error to the ``pub_date`` field::"
 msgstr "Pour attribuer une exception à un champ particulier, créez une instance de :exc:`~django.core.exceptions.ValidationError` avec un dictionnaire dont les clés correspondent aux noms de champs. Nous pourrions mettre à jour l'exemple précédent en attribuant l'erreur au champ ``pub_date``::"
 
-# 12f6d580b0004abf94c73a73cf2768bf
-#: ../../../../1.8/docs/ref/models/instances.txt:295
+# 099c9b6960704984b5e595d36b60a7ae
+#: ../../../../1.8/docs/ref/models/instances.txt:296
+msgid ""
+"If you detect errors in multiple fields during ``Model.clean()``, you can "
+"also pass a dictionary mapping field names to errors::"
+msgstr "Si vous détectez des erreurs dans plusieurs champs pendant ``Model.clean()``, il est aussi possible de passer un dictionnaire faisant correspondre des noms de champs aux erreurs ::"
+
+# 4a2991bbfe574785bfac0549052a759d
+#: ../../../../1.8/docs/ref/models/instances.txt:304
 msgid ""
 "Finally, ``full_clean()`` will check any unique constraints on your model."
 msgstr "Finalement, ``full_clean()`` vérifie les contraintes d'unicité éventuelles du modèle."
@@ -54065,9 +54035,9 @@ msgstr "ATOMIC_REQUESTS"
 # 408549a35b024bdd9d2307edc3af5b94
 #: ../../../../1.8/docs/ref/settings.txt:485
 msgid ""
-"Set this to ``True`` to wrap each HTTP request in a transaction on this "
-"database. See :ref:`tying-transactions-to-http-requests`."
-msgstr "Définissez ce réglage à ``True`` pour envelopper chaque requête HTTP dans une transaction sur cette base de données. Voir :ref:`tying-transactions-to-http-requests`."
+"Set this to ``True`` to wrap each view in a transaction on this database. "
+"See :ref:`tying-transactions-to-http-requests`."
+msgstr "Définissez ce réglage à ``True`` pour envelopper chaque vue dans une transaction sur cette base de données. Voir :ref:`tying-transactions-to-http-requests`."
 
 # ba0e59f55d004e289cb28b5d42f0b31c
 #: ../../../../1.8/docs/ref/settings.txt:491
@@ -62284,8 +62254,22 @@ msgid ""
 " do not know the precedence rules."
 msgstr "Si vous devez modifier la priorité, il faudra imbriquer les balises :ttag:`if`. C'est parfois plus lisible aussi, notamment pour ceux qui ne sont pas très au clair au sujet des règles de priorité."
 
-# 07833aec226c47d89f28339eb0fcc4eb
-#: ../../../../1.8/docs/ref/templates/builtins.txt:571
+# bae498536c55433f8e4b62d2893b787a
+#: ../../../../1.8/docs/ref/templates/builtins.txt:565
+msgid "``ifequal`` and ``ifnotequal``"
+msgstr "``ifequal`` et ``ifnotequal``"
+
+# 8dae781ac0df40a981dc8cd39e93dbb6
+#: ../../../../1.8/docs/ref/templates/builtins.txt:567
+msgid ""
+"``{% ifequal a b %} ... {% endifequal %}`` is an obsolete way to write ``{% "
+"if a == b %} ... {% endif %}``. Likewise, ``{% ifnotequal a b %} ... {% "
+"endifnotequal %}`` is superseded by ``{% if a != b %} ... {% endif %}``. The"
+" ``ifequal`` and ``ifnotequal`` tags will be deprecated in a future release."
+msgstr "``{% ifequal a b %} ... {% endifequal %}`` est une ancienne façon d'écrire ``{% if a == b %} ... {% endif %}``. De même, ``{% ifnotequal a b %} ... {% endifnotequal %}`` est maintenant remplacé par ``{% if a != b %} ... {% endif %}``. Les balises ``ifequal`` et ``ifnotequal`` seront rendues obsolètes dans une future version."
+
+# 03f5996272634913a479391860071477
+#: ../../../../1.8/docs/ref/templates/builtins.txt:575
 msgid "ifchanged"
 msgstr "ifchanged"
 
@@ -62324,55 +62308,8 @@ msgid ""
 "will be displayed if the value has not changed::"
 msgstr "La balise ``ifchanged`` accepte aussi une clause facultative ``{% else %}`` qui affiche son contenu si la valeur n'a pas changé ::"
 
-# 29a9d09e71e24ae69f18a736ff4605bd
-#: ../../../../1.8/docs/ref/templates/builtins.txt:616
-msgid "ifequal"
-msgstr "ifequal"
-
-# ece2ac439685429c97ad1e35e692e866
-#: ../../../../1.8/docs/ref/templates/builtins.txt:618
-msgid ""
-"Output the contents of the block if the two arguments equal each other."
-msgstr "Affiche le contenu du bloc si les deux paramètres donnés sont égaux."
-
-# 9ad4b2be248d451291b9e5ea813f92b6
-#: ../../../../1.8/docs/ref/templates/builtins.txt:626
-msgid "As in the :ttag:`if` tag, an ``{% else %}`` clause is optional."
-msgstr "Comme pour la balise :ttag:`if`, la clause ``{% else %}`` est facultative."
-
-# d8626775fbe846de9b9239273feb4799
-#: ../../../../1.8/docs/ref/templates/builtins.txt:628
-msgid "The arguments can be hard-coded strings, so the following is valid::"
-msgstr "Les paramètres peuvent être des chaînes figées, ce qui fait que le code suivant est valable ::"
-
-# 7d3d4f9334a74576b3013d0803f3e01f
-#: ../../../../1.8/docs/ref/templates/builtins.txt:634
-msgid ""
-"An alternative to the ``ifequal`` tag is to use the :ttag:`if` tag and the "
-"``==`` operator."
-msgstr "Une variante équivalente de la balise ``ifequal`` est la balise :ttag:`if` avec l'opérateur ``==``."
-
-# b18aa33195e74136aa181f6c486ce21b
-#: ../../../../1.8/docs/ref/templates/builtins.txt:640
-msgid "ifnotequal"
-msgstr "ifnotequal"
-
-# 302553f3b27646729775ebf56333bf9c
-#: ../../../../1.8/docs/ref/templates/builtins.txt:642
-msgid ""
-"Just like :ttag:`ifequal`, except it tests that the two arguments are not "
-"equal."
-msgstr "Même comportement que  :ttag:`ifequal`, sauf que le test se fait sur l'inégalité des deux paramètres."
-
-# 835aa4f024824193afedb2abc1a96c36
-#: ../../../../1.8/docs/ref/templates/builtins.txt:645
-msgid ""
-"An alternative to the ``ifnotequal`` tag is to use the :ttag:`if` tag and "
-"the ``!=`` operator."
-msgstr "Une variante équivalente de la balise ``ifnotequal`` est la balise :ttag:`if` avec l'opérateur ``!=``."
-
-# 9ab5c0515ea547ec9ee3c8576eb5810c
-#: ../../../../1.8/docs/ref/templates/builtins.txt:651
+# 268a0365aea2400f903c010eb4a4d68f
+#: ../../../../1.8/docs/ref/templates/builtins.txt:620
 msgid "include"
 msgstr "include"
 
@@ -68475,7 +68412,7 @@ msgstr "``django.utils.decorators``"
 #: ../../../../1.8/docs/ref/utils.txt:178
 msgid ""
 "Converts a function decorator into a method decorator. See :ref:`decorating "
-"class based views<decorating-class-based-views>` for example usage."
+"class-based views<decorating-class-based-views>` for example usage."
 msgstr "Convertit un décorateur de fonction en un décorateur de méthode. Voir :ref:`décoration des vues fondées sur les classes <decorating-class-based-views>` pour un exemple d'utilisation."
 
 # 035e2e00a02e40deb5a781e9087b3049
