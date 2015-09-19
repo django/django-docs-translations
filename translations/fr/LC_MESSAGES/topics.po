@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-26 04:09-0500\n"
-"PO-Revision-Date: 2015-08-27 06:41+0000\n"
+"POT-Creation-Date: 2015-09-19 02:09-0500\n"
+"PO-Revision-Date: 2015-09-19 17:03+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -8126,9 +8126,9 @@ msgstr "Ceci indique à Django de récupérer le modèle ``Store``, de faire la 
 #: ../../../../1.8/docs/topics/db/aggregation.txt:221
 msgid ""
 "The same rules apply to the ``aggregate()`` clause. If you wanted to know "
-"the lowest and highest price of any book that is available for sale in a "
-"store, you could use the aggregate::"
-msgstr "Les mêmes règles s'appliquent à la clause ``aggregate()``. Si vous vouliez connaître le prix le plus bas et le prix le plus haut de tous les livres mis en vente dans un magasin, vous pourriez utiliser la fonction d'agrégation ::"
+"the lowest and highest price of any book that is available for sale in any "
+"of the stores, you could use the aggregate::"
+msgstr "Les mêmes règles s'appliquent à la clause ``aggregate()``. Si vous vouliez connaître le prix le plus bas et le prix le plus haut de tous les livres mis en vente dans n'importe quel magasin, vous pourriez utiliser la fonction d'agrégation ::"
 
 # 89bb0ab1762542c0be98d53a8b4b9136
 #: ../../../../1.8/docs/topics/db/aggregation.txt:227
@@ -14900,14 +14900,24 @@ msgstr "Si vous utilisez :doc:`plus d'une base de données </topics/db/multi-db>
 msgid ""
 "By default, the Python DB API will return results without their field names,"
 " which means you end up with a ``list`` of values, rather than a ``dict``. "
-"At a small performance cost, you can return results as a ``dict`` by using "
-"something like this::"
-msgstr "Par défaut, l'API de base de données de Python renvoie les résultats sans les noms de champs, ce qui signifie que vous vous retrouvez avec une liste de valeurs plutôt qu'un dictionnaire. Pour un faible coût en performances, vous pouvez obtenir les résultats sous forme de dictionnaire en écrivant quelque chose comme ::"
+"At a small performance and memory cost, you can return results as a ``dict``"
+" by using something like this::"
+msgstr "Par défaut, l'API de base de données de Python renvoie les résultats sans les noms de champs, ce qui signifie que vous vous retrouvez avec une liste de valeurs plutôt qu'un dictionnaire. Pour un faible coût en performances et en mémoire, vous pouvez obtenir les résultats sous forme de dictionnaire en écrivant quelque chose comme ::"
 
 # e5a93eca74a442139987cbe96e2f4d82
 #: ../../../../1.8/docs/topics/db/sql.txt:291
-msgid "Here is an example of the difference between the two::"
-msgstr "Voici un exemple de la différence entre les deux ::"
+msgid ""
+"Another option is to use :func:`collections.namedtuple` from the Python "
+"standard library. A ``namedtuple`` is a tuple-like object that has fields "
+"accessible by attribute lookup; it's also indexable and iterable. Results "
+"are immutable and accessible by field names or indices, which might be "
+"useful::"
+msgstr "Une autre option est d'utiliser une structure :func:`collections.namedtuple` de la bibliothèque Python standard. Un ``namedtuple`` est un objet de type tuple dont les champs sont accessibles sous forme d'attribut ; l'accès par indice est aussi possible et l'objet est itérable. Les résultats sont immuables et accessibles par nom de champ ou par indice, ce qui pourrait être pratique ::"
+
+# 53693f833f8c462d9440051caeead178
+#: ../../../../1.8/docs/topics/db/sql.txt:304
+msgid "Here is an example of the difference between the three::"
+msgstr "Voici un exemple de la différence entre les trois ::"
 
 # c19bc9307c014c27b7103e0c147de8f4
 #: ../../../../1.8/docs/topics/db/sql.txt:302
@@ -33007,19 +33017,20 @@ msgid ""
 "CSRF vulnerabilities, and failure to do it correctly can also be dangerous!"
 msgstr "Si nécessaire, définissez :setting:`SECURE_PROXY_SSL_HEADER`, en prenant soin de bien comprendre les avertissements correspondants. Sinon, cela pourrait provoquer des vulnérabilités CSRF, et son application incorrecte peut aussi être dangereuse !"
 
-# e35b1cc0f2f94061a3bbb9501f774f57
-#: ../../../../1.8/docs/topics/security.txt:136
-msgid "Set up redirection so that requests over HTTP are redirected to HTTPS."
-msgstr "Configurez une redirection pour que les requêtes HTTP soient redirigées vers HTTPS."
+# eab7a8375f2548c0bc8f63c5cebbdd4d
+#: ../../../../1.8/docs/topics/security.txt:137
+msgid ""
+"Set :setting:`SECURE_SSL_REDIRECT` to ``True``, so that requests over HTTP "
+"are redirected to HTTPS."
+msgstr "Définissez :setting:`SECURE_SSL_REDIRECT` à ``True``, pour que les requêtes HTTP soient redirigées vers HTTPS."
 
 # 51d4ba8bf17f4c9a9e0ae57aa2125284
 #: ../../../../1.8/docs/topics/security.txt:138
 msgid ""
-"This could be done using a custom middleware. Please note the caveats under "
-":setting:`SECURE_PROXY_SSL_HEADER`. For the case of a reverse proxy, it may "
-"be easier or more secure to configure the main Web server to do the redirect"
-" to HTTPS."
-msgstr "Cela peut être effectué avec un intergiciel personnalisé. Prenez bonne note des mises en garde de :setting:`SECURE_PROXY_SSL_HEADER`. Dans le cas d'un serveur mandataire inverse, il peut être plus simple ou plus sûr de configurer le serveur Web principal pour qu'il fasse lui-même la redirection vers HTTPS."
+"Please note the caveats under :setting:`SECURE_PROXY_SSL_HEADER`. For the "
+"case of a reverse proxy, it may be easier or more secure to configure the "
+"main Web server to do the redirect to HTTPS."
+msgstr "Prenez bonne note des mises en garde de :setting:`SECURE_PROXY_SSL_HEADER`. Dans le cas d'un serveur mandataire inverse, il peut être plus simple ou plus sûr de configurer le serveur Web principal pour qu'il fasse lui-même la redirection vers HTTPS."
 
 # fa8648ad2ac54caaab37ab83acfef567
 #: ../../../../1.8/docs/topics/security.txt:143
@@ -33039,10 +33050,10 @@ msgid ""
 "you are redirecting all HTTP traffic to HTTPS)."
 msgstr "Si un navigateur se connecte initialement en HTTP, ce qui est le comportement par défaut de la plupart des navigateurs, il est possible que des cookies existants soient divulgués. Pour cette raison, vous devriez définir les réglages  :setting:`SESSION_COOKIE_SECURE` et :setting:`CSRF_COOKIE_SECURE` à ``True``. Cela indique au navigateur qu'il ne doit envoyer les cookies que par des connexions HTTPS. Notez que cela signifie que les sessions ne fonctionneront pas en HTTP et que la protection CSRF empêchera l'acceptation de données POST par HTTP (ce qui ne pose pas de problème si vous redirigez tout le trafic HTTP vers HTTPS)."
 
-# 2d008c8d032c4cb79e96843a4b97ab16
-#: ../../../../1.8/docs/topics/security.txt:154
-msgid "Use HTTP Strict Transport Security (HSTS)"
-msgstr "Utilisez HTTP Strict Transport Security (HSTS)"
+# b2d4165b847d43659c272fd04302c908
+#: ../../../../1.8/docs/topics/security.txt:155
+msgid "Use :ref:`http-strict-transport-security` (HSTS)"
+msgstr "Utilisez :ref:`http-strict-transport-security` (HSTS)"
 
 # b8266e19c7d745f785fb3131ff8ea900
 #: ../../../../1.8/docs/topics/security.txt:156
@@ -33051,8 +33062,9 @@ msgid ""
 " a particular site should always use HTTPS. Combined with redirecting "
 "requests over HTTP to HTTPS, this will ensure that connections always enjoy "
 "the added security of SSL provided one successful connection has occurred. "
-"HSTS is usually configured on the web server."
-msgstr "HSTS est un en-tête HTTP informant le navigateur que toute connexion future à un site particulier devra toujours utiliser HTTPS. Combiné avec la redirection des requêtes HTTP vers HTTPS, cela garantit que les connexions profiteront toujours de la sécurité ajoutée par SSL à partir du moment où une connexion réussie a eu lieu. HSTS est normalement configuré au niveau du serveur Web."
+"HSTS may either be configured with :setting:`SECURE_HSTS_SECONDS` and "
+":setting:`SECURE_HSTS_INCLUDE_SUBDOMAINS` or on the Web server."
+msgstr "HSTS est un en-tête HTTP informant le navigateur que toute connexion future à un site particulier devra toujours utiliser HTTPS. Combiné avec la redirection des requêtes HTTP vers HTTPS, cela garantit que les connexions profiteront toujours de la sécurité ajoutée par SSL à partir du moment où une connexion réussie a eu lieu. HSTS peut être configuré soit avec :setting:`SECURE_HSTS_SECONDS` et :setting:`SECURE_HSTS_INCLUDE_SUBDOMAINS`, soit directement au niveau du serveur Web."
 
 # 5626530d5ad8412d9093b25920cfe448
 #: ../../../../1.8/docs/topics/security.txt:165
@@ -36095,10 +36107,10 @@ msgstr "Dans cette configuration figurent deux serveurs de base de données : `
 msgid ""
 "If Django created two independent test databases, this would break any tests"
 " that expected replication to occur. However, the ``replica`` database has "
-"been configured as a test mirror (using the :setting:`TEST_MIRROR` setting),"
-" indicating that under testing, ``replica`` should be treated as a mirror of"
-" ``default``."
-msgstr "Si Django avait créé deux bases de données de test indépendantes, cela casserait d'éventuels tests s'attendant à de la réplication. Cependant, la base de données ``replica`` a été configurée comme miroir de test (via le réglage :setting:`TEST_MIRROR`), indiquant par là que lors des tests, ``replica`` doit être traité comme un miroir de ``default``."
+"been configured as a test mirror (using the :setting:`MIRROR <TEST_MIRROR>` "
+"test setting), indicating that under testing, ``replica`` should be treated "
+"as a mirror of ``default``."
+msgstr "Si Django avait créé deux bases de données de test indépendantes, cela casserait d'éventuels tests s'attendant à de la réplication. Cependant, la base de données ``replica`` a été configurée comme miroir de test (via le réglage de test :setting:`MIRROR <TEST_MIRROR>`), indiquant par là que lors des tests, ``replica`` doit être traité comme un miroir de ``default``."
 
 # 9eeff54179a34b07be6e3caa6fdfddc4
 #: ../../../../1.8/docs/topics/testing/advanced.txt:117
@@ -36128,10 +36140,10 @@ msgstr "Par défaut, Django part du principe que toutes les bases de données d�
 #: ../../../../1.8/docs/topics/testing/advanced.txt:134
 msgid ""
 "If your database configuration requires a specific creation order, you can "
-"specify the dependencies that exist using the :setting:`TEST_DEPENDENCIES` "
-"setting. Consider the following (simplified) example database "
-"configuration::"
-msgstr "Si votre configuration de base de données nécessite un ordre de création bien défini, vous pouvez indiquer les dépendances entre bases de données dans le réglage :setting:`TEST_DEPENDENCIES`. Considérez cet exemple (simplifié) de configuration de bases de données ::"
+"specify the dependencies that exist using the :setting:`DEPENDENCIES "
+"<TEST_DEPENDENCIES>` test setting. Consider the following (simplified) "
+"example database configuration::"
+msgstr "Si votre configuration de base de données nécessite un ordre de création bien défini, vous pouvez indiquer les dépendances entre bases de données dans le réglage de test :setting:`DEPENDENCIES <TEST_DEPENDENCIES>`. Considérez cet exemple (simplifié) de configuration de bases de données ::"
 
 # 7c67175d126c42a19c506f66ad8c523b
 #: ../../../../1.8/docs/topics/testing/advanced.txt:162
@@ -36139,15 +36151,17 @@ msgid ""
 "Under this configuration, the ``diamonds`` database will be created first, "
 "as it is the only database alias without dependencies. The ``default`` and "
 "``clubs`` alias will be created next (although the order of creation of this"
-" pair is not guaranteed); then ``hearts``; and finally ``spades``."
+" pair is not guaranteed), then ``hearts``, and finally ``spades``."
 msgstr "Avec cette configuration, la base de données ``diamonds`` sera créée en premier car c'est le seul alias de base de données sans dépendances. Les alias ``default`` et ``clubs`` seront ensuite créés (bien que l'ordre de création de ceux-ci ne soit pas défini), puis ``hearts`` et enfin, ``spades``."
 
 # c0bf8db638f74e1989a62ca60ce16b12
 #: ../../../../1.8/docs/topics/testing/advanced.txt:167
 msgid ""
-"If there are any circular dependencies in the :setting:`TEST_DEPENDENCIES` "
-"definition, an ``ImproperlyConfigured`` exception will be raised."
-msgstr "Si la définition de :setting:`TEST_DEPENDENCIES` comporte des dépendances circulaires, une exception ``ImproperlyConfigured`` sera générée."
+"If there are any circular dependencies in the :setting:`DEPENDENCIES "
+"<TEST_DEPENDENCIES>` definition, an "
+":exc:`~django.core.exceptions.ImproperlyConfigured` exception will be "
+"raised."
+msgstr "Si la définition de :setting:`DEPENDENCIES <TEST_DEPENDENCIES>` comporte des dépendances circulaires, une exception :exc:`~django.core.exceptions.ImproperlyConfigured` sera générée."
 
 # 7eb47fb177b2463db24faba11472b014
 #: ../../../../1.8/docs/topics/testing/advanced.txt:172

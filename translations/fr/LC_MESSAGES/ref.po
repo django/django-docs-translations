@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-26 04:09-0500\n"
-"PO-Revision-Date: 2015-08-27 06:47+0000\n"
+"POT-Creation-Date: 2015-09-19 02:09-0500\n"
+"PO-Revision-Date: 2015-09-19 17:26+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -339,16 +339,18 @@ msgstr "Méthodes"
 
 # 178c39ba270d4361b8e916118e710a0e
 #: ../../../../1.8/docs/ref/applications.txt:207
-msgid "Returns an iterable of :class:`~django.db.models.Model` classes."
-msgstr "Renvoie un objet itérable de classes :class:`~django.db.models.Model`."
+msgid ""
+"Returns an iterable of :class:`~django.db.models.Model` classes for this "
+"application."
+msgstr "Renvoie un objet itérable de classes :class:`~django.db.models.Model` pour cette application."
 
 # 8c44d93fc9c9457db2b050d3aefd44be
 #: ../../../../1.8/docs/ref/applications.txt:211
 msgid ""
 "Returns the :class:`~django.db.models.Model` with the given ``model_name``. "
-"Raises :exc:`LookupError` if no such model exists. ``model_name`` is case-"
-"insensitive."
-msgstr "Renvoie la classe :class:`~django.db.models.Model` ayant le nom ``model_name`` donné. Génère :exc:`LookupError` si aucun modèle de ce nom n'existe. ``model_name`` est insensible à la casse."
+"Raises :exc:`LookupError` if no such model exists in this application. "
+"``model_name`` is case-insensitive."
+msgstr "Renvoie la classe :class:`~django.db.models.Model` ayant le nom ``model_name`` donné. Génère :exc:`LookupError` si aucun modèle de ce nom n'existe dans cette application. ``model_name`` est insensible à la casse."
 
 # e91654ebc0fb46b9aba363ce5a980be2
 #: ../../../../1.8/docs/ref/applications.txt:217
@@ -4280,27 +4282,26 @@ msgstr "En plus du contexte fourni par :class:`django.views.generic.list.Multipl
 # 46ae9f2e8d314a6ab8570aaa0b185278
 #: ../../../../1.8/docs/ref/class-based-views/generic-date-based.txt:51
 msgid ""
-"``date_list``: A :meth:`DateQuerySet<django.db.models.query.QuerySet.dates>`"
-" object containing all years that have objects available according to "
-"``queryset``, represented as "
-":class:`datetime.datetime<python:datetime.datetime>` objects, in descending "
-"order."
-msgstr "``date_list``: un objet :meth:`DateQuerySet<django.db.models.query.QuerySet.dates>` contenant toutes les années possédant des objets disponibles en fonction de ``queryset``, représentés sous forme d'objets :class:`datetime.datetime<python:datetime.datetime>` dans l'ordre chronologique inverse."
+"``date_list``: A :meth:`QuerySet <django.db.models.query.QuerySet.dates>` "
+"object containing all years that have objects available according to "
+"``queryset``, represented as :class:`datetime.datetime` objects, in "
+"descending order."
+msgstr "``date_list``: un objet :meth:`QuerySet <django.db.models.query.QuerySet.dates>` contenant toutes les années possédant des objets disponibles en fonction de ``queryset``, représentés sous forme d'objets :class:`datetime.datetime` dans l'ordre chronologique inverse."
 
-# 76e108f69fa94c09bff027f8908f481b
-# 5ad84ee003a54df5a5a8f8d50a6601e6
-# 116105c3f2464eb692504e703875518a
-# 6fd1778c85ab44f88e42f33f800e1c9d
-# 69537a06617a429387b3600dd148971b
-# ab57c70a3de549d6b79a5d53305696dc
-# 7d706760ec534a83b55d2fef153467c6
-#: ../../../../1.8/docs/ref/class-based-views/generic-date-based.txt:58
-#: ../../../../1.8/docs/ref/class-based-views/generic-date-based.txt:151
-#: ../../../../1.8/docs/ref/class-based-views/generic-date-based.txt:246
-#: ../../../../1.8/docs/ref/class-based-views/generic-date-based.txt:338
-#: ../../../../1.8/docs/ref/class-based-views/generic-date-based.txt:452
-#: ../../../../1.8/docs/ref/class-based-views/generic-date-based.txt:525
-#: ../../../../1.8/docs/ref/class-based-views/generic-date-based.txt:586
+# a717763d7c31449b8413b7435a6e36c3
+# 0c164ca832b644c0a24066ce7baeb34e
+# c055dcdc232944d5944dd57316f9c472
+# 455f9391a4814488beeefaa9646b9f0c
+# 4c57bafa18dc4757b58c606407913df6
+# d5a640ef8f684306939e8a9c21a01964
+# 392042bb3b0e4c4e831a781e8748f9e5
+#: ../../../../1.8/docs/ref/class-based-views/generic-date-based.txt:56
+#: ../../../../1.8/docs/ref/class-based-views/generic-date-based.txt:147
+#: ../../../../1.8/docs/ref/class-based-views/generic-date-based.txt:240
+#: ../../../../1.8/docs/ref/class-based-views/generic-date-based.txt:332
+#: ../../../../1.8/docs/ref/class-based-views/generic-date-based.txt:446
+#: ../../../../1.8/docs/ref/class-based-views/generic-date-based.txt:519
+#: ../../../../1.8/docs/ref/class-based-views/generic-date-based.txt:580
 msgid "**Notes**"
 msgstr "**Notes**"
 
@@ -4400,12 +4401,11 @@ msgstr "Détermine si une liste d'objets est renvoyée comme une portion du cont
 # 6e3b9851adac4a1393ac87ca3f03915c
 #: ../../../../1.8/docs/ref/class-based-views/generic-date-based.txt:131
 msgid ""
-"``date_list``: A :meth:`DateQuerySet<django.db.models.query.QuerySet.dates>`"
-" object containing all months that have objects available according to "
-"``queryset``, represented as "
-":class:`datetime.datetime<python:datetime.datetime>` objects, in ascending "
-"order."
-msgstr "``date_list``: un objet :meth:`DateQuerySet<django.db.models.query.QuerySet.dates>` contenant tous les mois possédant des objets disponibles en fonction de ``queryset``, représentés sous forme d'objets :class:`datetime.datetime<python:datetime.datetime>` dans l'ordre chronologique."
+"``date_list``: A :meth:`QuerySet <django.db.models.query.QuerySet.dates>` "
+"object containing all months that have objects available according to "
+"``queryset``, represented as :class:`datetime.datetime` objects, in "
+"ascending order."
+msgstr "``date_list``: un objet :meth:`QuerySet <django.db.models.query.QuerySet.dates>` contenant tous les mois possédant des objets disponibles en fonction de ``queryset``, représentés sous forme d'objets :class:`datetime.datetime` dans l'ordre chronologique."
 
 # aeb0bf2f15ba43ea81e818b697c5602c
 #: ../../../../1.8/docs/ref/class-based-views/generic-date-based.txt:138
@@ -4502,12 +4502,11 @@ msgstr "En plus du contexte fourni par la classe :class:`~django.views.generic.l
 # e190646cdf8140e0840e53c97328c921
 #: ../../../../1.8/docs/ref/class-based-views/generic-date-based.txt:226
 msgid ""
-"``date_list``: A :meth:`DateQuerySet<django.db.models.query.QuerySet.dates>`"
-" object containing all days that have objects available in the given month, "
-"according to ``queryset``, represented as "
-":class:`datetime.datetime<python:datetime.datetime>` objects, in ascending "
-"order."
-msgstr "``date_list``: un objet :meth:`DateQuerySet<django.db.models.query.QuerySet.dates>` contenant tous les jours possédant des objets disponibles dans le mois donné, en fonction de ``queryset``, représentés sous forme d'objets :class:`datetime.datetime<python:datetime.datetime>` dans l'ordre chronologique."
+"``date_list``: A :meth:`QuerySet <django.db.models.query.QuerySet.dates>` "
+"object containing all days that have objects available in the given month, "
+"according to ``queryset``, represented as :class:`datetime.datetime` "
+"objects, in ascending order."
+msgstr "``date_list``: un objet :meth:`QuerySet <django.db.models.query.QuerySet.dates>` contenant tous les jours possédant des objets disponibles dans le mois indiqué, en fonction de ``queryset``, représentés sous forme d'objets :class:`datetime.datetime` dans l'ordre chronologique."
 
 # 81910d6c74cf47829993f748ad10d702
 #: ../../../../1.8/docs/ref/class-based-views/generic-date-based.txt:233
@@ -20617,6 +20616,11 @@ msgstr "En raison de la variété des systèmes d'empaquetage disponibles pour O
 
 # 2bae688461f74d39a275212ff1c48f7d
 #: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:217
+msgid ":ref:`postgresapp` (easiest and recommended)"
+msgstr ":ref:`postgresapp` (le plus simple et la solution recommandée)"
+
+# 1b646bdf5e924cad89f5102554d90fe3
+#: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:218
 msgid ":ref:`homebrew`"
 msgstr ":ref:`homebrew`"
 
@@ -20640,15 +20644,8 @@ msgstr ":ref:`macports`"
 msgid ":ref:`build_from_source`"
 msgstr ":ref:`build_from_source`"
 
-# 2d1d7d57dca143e39de2351438035be0
-#: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:225
-msgid ""
-"Currently, the easiest and recommended approach for installing GeoDjango on "
-"OS X is to use the KyngChaos packages."
-msgstr "Actuellement, l'approche recommandée la plus simple d'installer GeoDjango sur OS X est d'utiliser les paquets KyngChaos."
-
-# 04bf3673e57349a9b4754073a3c09cd9
-#: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:228
+# 5dd351e9e4ef4e0699e5d30c42b18c4b
+#: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:224
 msgid ""
 "This section also includes instructions for installing an upgraded version "
 "of :ref:`macosx_python` from packages provided by the Python Software "
@@ -20671,23 +20668,51 @@ msgid ""
 "X's Python will remain \"pristine\" for internal operating system use."
 msgstr "Même si Python est préinstallé sur OS X, il est possible de le réinstaller avec des paquets fournis par la fondation Python Software (`2.7`__, `3.2`__ et `3.3`__ sont disponibles). Un des avantages de ces installeurs est que la version Python propre à OS X et utilisée en interne par le système d'exploitation n'est pas touchée."
 
-# 317fc71a26c74191bc761f35f90ab662
-#: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:249
+# 58bb8362ed44419baf1950b2145609a1
+#: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:245
 msgid ""
 "You will need to modify the ``PATH`` environment variable in your "
 "``.profile`` file so that the new version of Python is used when ``python`` "
 "is entered at the command-line::"
 msgstr "Il sera alors nécessaire de modifier la variable d'environnement ``PATH`` dans votre fichier ``.profile`` afin que la nouvelle version de Python soit utilisée lorsque vous saisissez ``python`` dans la ligne de commande ::"
 
-# eb098ffd0f9a49868df4b2df39dc336e
-# 46bb674bc5614e53ab73869f0700fbcd
-#: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:258
+# 425ecb9b9fc34913bfba58911a7b43e6
+#: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:254
+msgid "Postgres.app"
+msgstr "Postgres.app"
+
+# 6de6f000b5be434aa7f91febf62a518e
+#: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:256
+msgid ""
+"`Postgres.app <http://postgresapp.com/>`_ is a standalone PostgreSQL server "
+"that includes the PostGIS extension. You will also need to install ``gdal`` "
+"and ``libgeoip`` with :ref:`homebrew`."
+msgstr "`Postgres.app <http://postgresapp.com/>`_ est un serveur PostgreSQL indépendant qui inclut l'extension PostGIS. Il sera aussi nécessaire d'installer ``gdal`` et ``libgeoip`` avec :ref:`homebrew`."
+
+# 893c4a22de1e42848e3aec5e5ba02dea
+#: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:260
+msgid ""
+"After installing Postgres.app, add the following to your ``.bash_profile`` "
+"so you can run the package's programs from the command-line. Replace ``X.Y``"
+" with the version of PostgreSQL in the Postgres.app you installed:"
+msgstr "Après avoir installé Postgres.app, ajoutez ce qui suit à votre fichier ``.bash_profile`` afin de pouvoir exécuter les programmes correspondants à partir de la ligne de commande. Remplacez ``X.Y`` par la version de PostgreSQL dans le paquet Postgres.app que vous avez installé :"
+
+# 74553ab945f64ef2aea9962f2d2695a0
+#: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:268
+msgid ""
+"You can check if the path is set up correctly by typing ``which psql`` at a "
+"terminal prompt."
+msgstr "Vous pouvez vérifier si le chemin est correctement défini en tapant ``which psql`` dans une invite de commande."
+
+# 028b00e627904b2e9317a0b7f0422e51
+# f9b9fc240d9d46c6932c4c99764b854c
+#: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:274
 #: ../../../../1.8/docs/ref/contrib/gis/install/spatialite.txt:193
 msgid "Homebrew"
 msgstr "Homebrew"
 
-# dcff5402a31e4bb9b2cf020fc1c51174
-#: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:260
+# 445894291e554061917fbd8646f1379a
+#: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:276
 msgid ""
 "`Homebrew`__ provides \"recipes\" for building binaries and packages from "
 "source. It provides recipes for the GeoDjango prerequisites on Macintosh "
@@ -27214,17 +27239,17 @@ msgid ""
 "sites."
 msgstr "Les sites Django LJWorld.com_ et Lawrence.com_ sont exploités par la même agence de presse -- le journal Lawrence Journal-World à Lawrence, Kansas. LJWorld.com se concentre sur l'actualité, tandis que Lawrence.com met l'accent sur le divertissement local. Mais parfois, les éditeurs veulent publier un article sur les *deux* sites."
 
-# a54a72fd142c40f7a8520b429aeec332
-#: ../../../../1.8/docs/ref/contrib/sites.txt:55
+# 1dca28d292a44054b96f0528ec3f5d9b
+#: ../../../../1.8/docs/ref/contrib/sites.txt:56
 msgid ""
-"The brain-dead way of solving the problem would be to require site producers"
-" to publish the same story twice: once for LJWorld.com and again for "
+"The naive way of solving the problem would be to require site producers to "
+"publish the same story twice: once for LJWorld.com and again for "
 "Lawrence.com. But that's inefficient for site producers, and it's redundant "
 "to store multiple copies of the same story in the database."
-msgstr "La manière stupide de résoudre ce problème serait d'exiger de chaque rédacteur de site de publier la même histoire deux fois : une fois pour  LJWorld.com et une autre fois pour Lawrence.com. Mais c'est vraiment inefficace pour les producteurs des sites, sans compter qu'il est redondant de stocker plusieurs copies de la même histoire dans la base de données."
+msgstr "La manière naïve de résoudre ce problème serait d'exiger de chaque rédacteur de site de publier la même histoire deux fois : une fois pour  LJWorld.com et une autre fois pour Lawrence.com. Mais c'est vraiment inefficace pour les producteurs des sites, sans compter qu'il est redondant de stocker plusieurs copies de la même histoire dans la base de données."
 
-# c2420060a3544bb6be47ef5798f3f5cc
-#: ../../../../1.8/docs/ref/contrib/sites.txt:60
+# 5c4b50c0bce44630a56ab1a7a40bb340
+#: ../../../../1.8/docs/ref/contrib/sites.txt:61
 msgid ""
 "The better solution is simple: Both sites use the same article database, and"
 " an article is associated with one or more sites. In Django model "
@@ -30752,13 +30777,29 @@ msgid ""
 ":class:`~django.db.models.CommaSeparatedIntegerField`."
 msgstr "Tous les champs qui sont stockés dans des types de colonnes ``VARCHAR`` ont leur taille maximale (``max_length``) limitée à 255 caractères si vous utilisez ``unique=True`` pour ce champ. Cela concerne les champs :class:`~django.db.models.CharField`, :class:`~django.db.models.SlugField` et :class:`~django.db.models.CommaSeparatedIntegerField`."
 
-# 599cd88884a14680b48321f9face162b
+# 3960042fc7974f9196f5e5f8b63ec010
+# 6667541ac7a24b63a447e06a1d3e8b3c
+#: ../../../../1.8/docs/ref/databases.txt:504
+#: ../../../../1.8/docs/ref/databases.txt:886
+msgid "``TextField`` limitations"
+msgstr "Limites des champs "
+
+# 93daf6c9b721410b8a719564b35a55b0
 #: ../../../../1.8/docs/ref/databases.txt:506
+msgid ""
+"MySQL can index only the first N chars of a ``BLOB`` or ``TEXT`` column. "
+"Since ``TextField`` doesn't have a defined length, you can't mark it as "
+"``unique=True``. MySQL will report: \"BLOB/TEXT column '<db_column>' used in"
+" key specification without a key length\"."
+msgstr "MySQL ne peut indexer que les N premiers caractères d'une colonne ``BLOB`` ou ``TEXT``. Comme ``TextField`` n'a pas de longueur définie, il n'est pas possible de marquer un tel champ avec ``unique=True``. MySQL produirait l'erreur : \"BLOB/TEXT column '<db_column>' used in key specification without a key length\"."
+
+# b2e011a602124a4a92a941e1d2982789
+#: ../../../../1.8/docs/ref/databases.txt:514
 msgid "Fractional seconds support for Time and DateTime fields"
 msgstr "Prise en charge des fractions de secondes pour les champs heure et date/heure"
 
-# ccf431ffc8124263ade1b680374c6bd2
-#: ../../../../1.8/docs/ref/databases.txt:508
+# bf01a9ac8dbd4cab8756db2b5df88d3d
+#: ../../../../1.8/docs/ref/databases.txt:516
 msgid ""
 "MySQL 5.6.4 and later can store fractional seconds, provided that the column"
 " definition includes a fractional indication (e.g. ``DATETIME(6)``). Earlier"
@@ -31174,47 +31215,47 @@ msgid ""
 "OPTION is not usually sufficient for running tests."
 msgstr "Notez que même si le rôle RESOURCE possède les privilèges requis CREATE TABLE, CREATE SEQUENCE, CREATE PROCEDURE et CREATE TRIGGER et qu'un utilisateur disposant de RESOURCE WITH ADMIN OPTION peut accorder le privilège RESOURCE, cet utilisateur ne peut pas accorder de privilèges individuels (par ex. CREATE TABLE), ce qui fait que  RESOURCE WITH ADMIN OPTION n'est généralement pas suffisant pour exécuter les tests."
 
-# d37b08b64f074b59812caa4d64da8985
-#: ../../../../1.8/docs/ref/databases.txt:742
+# 2044152a1d894a9d83fbcfd57de91431
+#: ../../../../1.8/docs/ref/databases.txt:752
 msgid ""
 "Some test suites also create views; to run these, the user also needs the "
 "CREATE VIEW WITH ADMIN OPTION privilege. In particular, this is needed for "
 "Django's own test suite."
 msgstr "Certaines suites de tests créent aussi des vues ; pour exécuter celles-ci, l'utilisateur a aussi besoin du privilège CREATE VIEW WITH ADMIN OPTION. C'est nécessaire en particulier pour la propre suite de tests de Django."
 
-# 1e42b17e623843eeb0d596d9d96ccc70
-#: ../../../../1.8/docs/ref/databases.txt:748
+# 27e71a0988bf4bd4a3ada1c1ca8f2327
+#: ../../../../1.8/docs/ref/databases.txt:758
 msgid ""
 "Prior to Django 1.8, the test user was granted the CONNECT and RESOURCE "
 "roles, so the extra privileges required for running the test suite were "
 "different."
 msgstr "Avant Django 1.8, l'utilisateur de test recevait les rôles CONNECT et RESOURCE, ce qui fait que les privilèges supplémentaires requis pour exécuter la suite de tests étaient différents."
 
-# 7871443df94a41f59a29be712631c1e1
-#: ../../../../1.8/docs/ref/databases.txt:752
+# d7c56f77e31e48dbbd83b10dd4cf13c8
+#: ../../../../1.8/docs/ref/databases.txt:762
 msgid ""
 "All of these privileges are included in the DBA role, which is appropriate "
 "for use on a private developer's database."
 msgstr "Tous ces privilèges sont inclus dans le rôle DBA, qui est adéquat dans le cadre d'une base de données de développement privée."
 
-# bef6b60e396a4044a00219aa72a6826c
-#: ../../../../1.8/docs/ref/databases.txt:755
+# 77a6493bc42e406591ef97aaf8f5f319
+#: ../../../../1.8/docs/ref/databases.txt:765
 msgid ""
-"The Oracle database backend uses the ``SYS.DBMS_LOB`` package, so your user "
-"will require execute permissions on it. It's normally accessible to all "
-"users by default, but in case it is not, you'll need to grant permissions "
-"like so:"
-msgstr "Le moteur de base de données Oracle utilise le paquet ``SYS.DBMS_LOB``, il faut donc que l'utilisateur possède les droits d'exécution pour lui. Il est normalement accessible par défaut à tous les utilisateurs, mais si ce n'est pas le cas, il faut attribuer les permissions comme ceci :"
+"The Oracle database backend uses the ``SYS.DBMS_LOB`` and "
+"``SYS.DBMS_RANDOM`` packages, so your user will require execute permissions "
+"on it. It's normally accessible to all users by default, but in case it is "
+"not, you'll need to grant permissions like so:"
+msgstr "Le moteur de base de données Oracle utilise les paquets ``SYS.DBMS_LOB`` et ``SYS.DBMS_RANDOM``, il faut donc que l'utilisateur possède les droits d'exécution pour lui. Il est normalement accessible par défaut à tous les utilisateurs, mais si ce n'est pas le cas, il faut attribuer les permissions comme ceci :"
 
-# bd9de72595ba4fa483c42af9d4f530f5
-#: ../../../../1.8/docs/ref/databases.txt:766
+# 98563e31f3c441b59dc9589af92ad18f
+#: ../../../../1.8/docs/ref/databases.txt:778
 msgid ""
 "To connect using the service name of your Oracle database, your "
 "``settings.py`` file should look something like this::"
 msgstr "Pour se connecter en utilisant le nom de service de la base de données Oracle, le fichier ``settings.py`` doit ressembler à quelque chose comme ceci ::"
 
-# e3f3e4ea89a84ecfa5d1812c4b0f10f8
-#: ../../../../1.8/docs/ref/databases.txt:781
+# 1d6edcce7db24f988c573761dd530db5
+#: ../../../../1.8/docs/ref/databases.txt:793
 msgid ""
 "In this case, you should leave both :setting:`HOST` and :setting:`PORT` "
 "empty. However, if you don't use a ``tnsnames.ora`` file or a similar naming"
@@ -31329,13 +31370,8 @@ msgid ""
 " this assumption."
 msgstr "Django préfère généralement utiliser la chaîne vide ('') plutôt que NULL, mais Oracle considère ces deux valeurs comme identiques. Pour contourner cela, le moteur Oracle ignore l'option explicite ``null`` pour les champs où la chaîne vide est une valeur possible et génère les instructions SQL comme si ``null=True``. Lors de la lecture à partir de la base de données, Django part du principe qu'une valeur ``NULL`` dans l'un de ces champs équivaut en réalité à la chaîne vide et les données sont silencieusement converties pour respecter ce principe."
 
-# 0826ada8e0c6421fb067b3f2cdf61c77
-#: ../../../../1.8/docs/ref/databases.txt:874
-msgid "``TextField`` limitations"
-msgstr "Limites des champs "
-
-# 0706cdaf3a61476cae86fb200ec9b2bf
-#: ../../../../1.8/docs/ref/databases.txt:876
+# a4f85ce2d6ae41918babdd0b41f8a037
+#: ../../../../1.8/docs/ref/databases.txt:888
 msgid ""
 "The Oracle backend stores ``TextFields`` as ``NCLOB`` columns. Oracle "
 "imposes some limitations on the usage of such LOB columns in general:"
@@ -31356,11 +31392,11 @@ msgstr "Les colonnes LOB ne peuvent pas être utilisées dans les index."
 msgid ""
 "LOB columns may not be used in a ``SELECT DISTINCT`` list. This means that "
 "attempting to use the ``QuerySet.distinct`` method on a model that includes "
-"``TextField`` columns will result in an error when run against Oracle. As a "
-"workaround, use the ``QuerySet.defer`` method in conjunction with "
-"``distinct()`` to prevent ``TextField`` columns from being included in the "
-"``SELECT DISTINCT`` list."
-msgstr "Les colonnes LOB ne peuvent pas être utilisées dans une liste ``SELECT DISTINCT``. Cela signifie qu'une tentative d'utiliser la méthode ``QuerySet.distinct`` pour un modèle qui contient des colonnes ``TextField`` produira une erreur avec Oracle. Pour contourner ce problème, utilisez la méthode ``QuerySet.defer`` de concert avec ``distinct()`` afin d'éviter que des colonnes ``TextField`` ne se retrouvent incluses dans la liste ``SELECT DISTINCT``."
+"``TextField`` columns will result in an ``ORA-00932`` error when run against"
+" Oracle. As a workaround, use the ``QuerySet.defer`` method in conjunction "
+"with ``distinct()`` to prevent ``TextField`` columns from being included in "
+"the ``SELECT DISTINCT`` list."
+msgstr "Les colonnes LOB ne peuvent pas être utilisées dans une liste ``SELECT DISTINCT``. Cela signifie qu'une tentative d'utiliser la méthode ``QuerySet.distinct`` pour un modèle qui contient des colonnes ``TextField`` produira une erreur ``ORA-00932``avec Oracle. Pour contourner ce problème, utilisez la méthode ``QuerySet.defer`` de concert avec ``distinct()`` afin d'éviter que des colonnes ``TextField`` ne se retrouvent incluses dans la liste ``SELECT DISTINCT``."
 
 # 262451be585d4a5d8927b22c64801a19
 #: ../../../../1.8/docs/ref/databases.txt:893
@@ -31399,13 +31435,8 @@ msgstr "Firebird_"
 msgid "ODBC_"
 msgstr "ODBC_"
 
-# 42a899229ff243b59221a016546cafdd
-#: ../../../../1.8/docs/ref/databases.txt:903
-msgid "ADSDB_"
-msgstr "ADSDB_"
-
-# aaafffe809e0462da12926c231819740
-#: ../../../../1.8/docs/ref/databases.txt:905
+# 23ed4daf33ce4b2a8201824b98f591ea
+#: ../../../../1.8/docs/ref/databases.txt:916
 msgid ""
 "The Django versions and ORM features supported by these unofficial backends "
 "vary considerably. Queries regarding the specific capabilities of these "
@@ -31746,51 +31777,56 @@ msgid ""
 ":setting:`USER`, :setting:`PASSWORD`, etc., settings."
 msgstr "Lance le client en ligne de commande correspondant au moteur de base de données défini dans le réglage ``ENGINE``, en respectant les paramètres de connexion définis dans les réglages :setting:`USER`, :setting:`PASSWORD`, etc."
 
-# 66d1343231e849228dd61ebad78c4b99
+# 03ea1a2e7a544ad5b5c8fb0fdbddf651
 #: ../../../../1.8/docs/ref/django-admin.txt:217
 msgid "For PostgreSQL, this runs the ``psql`` command-line client."
 msgstr "Pour PostgreSQL, cette commande lance le client en ligne de commande ``psql``."
 
-# acf31ac48d204595acdd2153fe199eb5
+# 345d3b03f53048fb8db4f9e5f488af1b
 #: ../../../../1.8/docs/ref/django-admin.txt:218
 msgid "For MySQL, this runs the ``mysql`` command-line client."
 msgstr "Pour MySQL, cette commande lance le client en ligne de commande ``mysql``."
 
-# f1cb9b5eb9d1490c9f4119af20f6e898
+# c986fd8ef5454aab9d6409f1a9069ca0
 #: ../../../../1.8/docs/ref/django-admin.txt:219
 msgid "For SQLite, this runs the ``sqlite3`` command-line client."
 msgstr "Pour SQLite, cette commande lance le client en ligne de commande ``sqlite3``."
 
-# 86ea9b957a3046a9bc7cde22d4947624
-#: ../../../../1.8/docs/ref/django-admin.txt:221
+# c382f06bd0f942c9bfd438f6a5d925cf
+#: ../../../../1.8/docs/ref/django-admin.txt:220
+msgid "For Oracle, this runs the ``sqlplus`` command-line client."
+msgstr "Pour Oracle, cette commande lance le client en ligne de commande ``sqlplus``."
+
+# ab21a50ab960488bb109fd79fd42015c
+#: ../../../../1.8/docs/ref/django-admin.txt:222
 msgid ""
 "This command assumes the programs are on your ``PATH`` so that a simple call"
-" to the program name (``psql``, ``mysql``, ``sqlite3``) will find the "
-"program in the right place. There's no way to specify the location of the "
-"program manually."
-msgstr "Cette commande compte sur le fait que les programmes sont accessibles dans le chemin d'exécution afin qu'en appelant simplement leur nom (``psql``, ``mysql``, ``sqlite3``), le bon programme est lancé. Il n'y a pas d'astuce pour indiquer manuellement le chemin du programme de base de données."
+" to the program name (``psql``, ``mysql``, ``sqlite3``, ``sqlplus``) will "
+"find the program in the right place. There's no way to specify the location "
+"of the program manually."
+msgstr "Cette commande compte sur le fait que les programmes sont accessibles dans le chemin d'exécution afin qu'en appelant simplement leur nom (``psql``, ``mysql``, ``sqlite3``, ``sqlplus``), le bon programme est lancé. Il n'y a pas d'astuce pour indiquer manuellement le chemin du programme de base de données."
 
-# 264ef1160e6f460ca8c1712a13044447
-#: ../../../../1.8/docs/ref/django-admin.txt:226
+# bc795f92259c4c0d8d3639b85c2b7ce0
+#: ../../../../1.8/docs/ref/django-admin.txt:227
 msgid ""
 "The :djadminopt:`--database` option can be used to specify the database onto"
 " which to open a shell."
 msgstr "L'option :djadminopt:`--database` peut être utilisée pour indiquer la base de données pour laquelle le shell doit être ouvert."
 
-# f99b39a5aa5e4f1b9eeb316b76793c2c
-#: ../../../../1.8/docs/ref/django-admin.txt:230
+# 7a8ede66cc16419ca32d6171a1fb8df3
+#: ../../../../1.8/docs/ref/django-admin.txt:231
 msgid "diffsettings"
 msgstr "diffsettings"
 
-# 36c38cc66a61437cbed29d3befeebb8c
-#: ../../../../1.8/docs/ref/django-admin.txt:234
+# 353a6c922cf547ddb61d62233c8745a0
+#: ../../../../1.8/docs/ref/django-admin.txt:235
 msgid ""
 "Displays differences between the current settings file and Django's default "
 "settings."
 msgstr "Affiche les différences entre le fichier de réglages actuel et les réglages par défaut de Django."
 
-# de403d4469f94c4cbcd0a306e6a825cf
-#: ../../../../1.8/docs/ref/django-admin.txt:237
+# c8e2dfd3c727491f852d15e3d555ce98
+#: ../../../../1.8/docs/ref/django-admin.txt:238
 msgid ""
 "Settings that don't appear in the defaults are followed by ``\"###\"``. For "
 "example, the default settings don't define :setting:`ROOT_URLCONF`, so "
@@ -41263,15 +41299,22 @@ msgid ""
 "<executing-custom-sql>`. These three operations are equivalent::"
 msgstr "Vous pouvez aussi transmettre une liste de chaînes ou de tuples binaires. Cette dernière option est utilisée pour transmettre des requêtes et des paramètres sur le même principe que pour :ref:`cursor.execute() <executing-custom-sql>`. Ces trois opérations sont équivalentes ::"
 
-# c05fa54ce77f4681810cf3892bbee7ec
+# 0406cbdb4c9445c39104817d5bf9158c
 #: ../../../../1.8/docs/ref/migration-operations.txt:228
 msgid ""
 "If you want to include literal percent signs in the query, you have to "
 "double them if you are passing parameters."
 msgstr "Si vous voulez inclure des signes « pour cent » littéraux dans la requête, vous devez les doubler si vous transmettez des paramètres."
 
-# ebf96b4d55de406d8f1b6bedcd6a208d
+# 494b07cae2744039a484e60d7d057bfc
 #: ../../../../1.8/docs/ref/migration-operations.txt:231
+msgid ""
+"The ``reverse_sql`` queries are executed when the migration is unapplied, so"
+" you can reverse the changes done in the forwards queries::"
+msgstr "Les requêtes ``reverse_sql`` sont exécutées lorsque la migration est défaite, afin que vous puissiez inverser les changements effectués dans les requêtes de migration avant ::"
+
+# 1abf882c0156442688fbc5a12aaf28e3
+#: ../../../../1.8/docs/ref/migration-operations.txt:239
 msgid ""
 "The ``state_operations`` argument is so you can supply operations that are "
 "equivalent to the SQL in terms of project state; for example, if you are "
@@ -41336,8 +41379,16 @@ msgid ""
 "<django.db.backends.base.schema.BaseDatabaseSchemaEditor>`."
 msgstr "Exécute du code Python personnalisé dans un contexte historisé. ``code`` (et ``reverse_code`` s'il est renseigné) doivent être des objets exécutables acceptant deux paramètres ; le premier est une instance de ``django.apps.registry.Apps`` contenant les modèles historisés qui correspondent à la position de l'opération dans l'historique du projet et la seconde une instance de :class:`SchemaEditor <django.db.backends.base.schema.BaseDatabaseSchemaEditor>`."
 
-# 58d4cd65e2c14565920545ae3c8969cb
-#: ../../../../1.8/docs/ref/migration-operations.txt:277
+# 8e1e89b158524e6fb77b11d0544de699
+#: ../../../../1.8/docs/ref/migration-operations.txt:285
+msgid ""
+"The ``reverse_code`` argument is called when unapplying migrations. This "
+"callable should undo what is done in the ``code`` callable so that the "
+"migration is reversible."
+msgstr "Le paramètre ``reverse_code`` est appelé lors de l'inversion des migrations. Cet objet exécutable doit défaire ce qui a été fait par l'objet exécutable ``code`` afin que cette migration soit réversible."
+
+# dc87151192e74db89dee70150c81c175
+#: ../../../../1.8/docs/ref/migration-operations.txt:289
 msgid ""
 "The optional ``hints`` argument will be passed as ``**hints`` to the "
 ":meth:`allow_migrate` method of database routers to assist them in making a "
@@ -48410,10 +48461,10 @@ msgstr "dates"
 # cf692fcef344437b92630387068edd59
 #: ../../../../1.8/docs/ref/models/querysets.txt:663
 msgid ""
-"Returns a ``DateQuerySet`` — a ``QuerySet`` that evaluates to a list of "
-":class:`datetime.date` objects representing all available dates of a "
-"particular kind within the contents of the ``QuerySet``."
-msgstr "Renvoie un ``DateQuerySet`` — un ``QuerySet`` dont l'évaluation produit une liste d'objets :class:`datetime.date` représentant toutes les dates disponibles d'un type particulier dans le contenu ``QuerySet``."
+"Returns a ``QuerySet`` that evaluates to a list of :class:`datetime.date` "
+"objects representing all available dates of a particular kind within the "
+"contents of the ``QuerySet``."
+msgstr "Renvoie un ``QuerySet`` dont l'évaluation produit une liste d'objets :class:`datetime.date` représentant toutes les dates disponibles d'un type particulier dans le contenu ``QuerySet``."
 
 # cb050bbd695047eb900c42769c6c2546
 #: ../../../../1.8/docs/ref/models/querysets.txt:667
@@ -54244,12 +54295,21 @@ msgstr "Valeur par défaut : ``{}``"
 #: ../../../../1.8/docs/ref/settings.txt:624
 msgid ""
 "A dictionary of settings for test databases; for more details about the "
-"creation and use of test databases, see :ref:`the-test-database`. The "
-"following entries are available:"
-msgstr "Un dictionnaire de réglages pour les bases de données de test ; pour plus de détails sur la création et l'utilisation de bases de données de test, voir :ref:`the-test-database`. Les clés suivantes sont disponibles :"
+"creation and use of test databases, see :ref:`the-test-database`."
+msgstr "Un dictionnaire de réglages pour les bases de données de test ; pour plus de détails sur la création et l'utilisation de bases de données de test, voir :ref:`the-test-database`."
 
-# 1f594cdfe0a441d4b9f281816aeb901e
-#: ../../../../1.8/docs/ref/settings.txt:631
+# f6dcb51cbf244bba955482c907861193
+#: ../../../../1.8/docs/ref/settings.txt:628
+msgid "Here's an example with a test database configuration::"
+msgstr "Voici un exemple avec une configuration de base de données de test ::"
+
+# 0142f2e4414b4d558e4c443abbdfa56c
+#: ../../../../1.8/docs/ref/settings.txt:641
+msgid "The following keys in the ``TEST`` dictionary are available:"
+msgstr "Les clés suivantes sont disponibles dans le dictionnaire ``TEST``:"
+
+# 2082ff8834ec4214842e8526e1d35839
+#: ../../../../1.8/docs/ref/settings.txt:646
 msgid "CHARSET"
 msgstr "CHARSET"
 
@@ -56759,8 +56819,11 @@ msgstr "Valeur par défaut : ``{}`` (dictionnaire vide)"
 #: ../../../../1.8/docs/ref/settings.txt:2404
 msgid ""
 "Extra parameters to pass to the template backend. Available parameters vary "
-"depending on the template backend."
-msgstr "Paramètres supplémentaires à transmettre au moteur de gabarit. Les paramètres disponibles varient en fonction du moteur de gabarit."
+"depending on the template backend. See "
+":class:`~django.template.backends.django.DjangoTemplates` and "
+":class:`~django.template.backends.jinja2.Jinja2` for the options of the "
+"built-in backends."
+msgstr "Paramètres supplémentaires à passer au moteur de gabarit. Les paramètres disponibles varient en fonction du moteur. Voir :class:`~django.template.backends.django.DjangoTemplates` et :class:`~django.template.backends.jinja2.Jinja2` pour les options des moteurs intégrés."
 
 # 26f941026b56466e979add1342ad1269
 #: ../../../../1.8/docs/ref/settings.txt:2410
@@ -62965,10 +63028,10 @@ msgstr "url"
 #: ../../../../1.8/docs/ref/templates/builtins.txt:1059
 msgid ""
 "Returns an absolute path reference (a URL without the domain name) matching "
-"a given view function and optional parameters. Any special characters in the"
-" resulting path will be encoded using "
+"a given view and optional parameters. Any special characters in the "
+"resulting path will be encoded using "
 ":func:`~django.utils.encoding.iri_to_uri`."
-msgstr "Renvoie un référence de chemin absolu (une URL sans le nom de domaine) correspondant à une fonction de vue et des paramètres facultatifs. Tout caractère spécial dans le chemin résultant sera codé avec  :func:`~django.utils.encoding.iri_to_uri`."
+msgstr "Renvoie un référence de chemin absolu (une URL sans le nom de domaine) correspondant à une vue et des paramètres facultatifs. Tout caractère spécial dans le chemin résultant sera codé avec  :func:`~django.utils.encoding.iri_to_uri`."
 
 # fa2af818a1eb4ed5974b30e443c7365f
 #: ../../../../1.8/docs/ref/templates/builtins.txt:1063
@@ -62980,13 +63043,12 @@ msgstr "C'est une manière d'afficher des liens sans trahir le principe DRY («�
 # 6ce3c84cb6714005a10db17743432982
 #: ../../../../1.8/docs/ref/templates/builtins.txt:1068
 msgid ""
-"The first argument is a path to a view function in the format "
-"``package.package.module.function``. It can be a quoted literal or any other"
-" context variable. Additional arguments are optional and should be space-"
-"separated values that will be used as arguments in the URL. The example "
-"above shows passing positional arguments. Alternatively you may use keyword "
-"syntax::"
-msgstr "Le premier paramètre est un chemin vers une fonction de vue au format ``package.package.module.function``. Cela peut être une chaîne littérale entre guillemets ou une variable de contexte. Des paramètres supplémentaires sont facultatifs et sont fournis sous forme de valeurs séparées par des espaces qui seront utilisées comme paramètres de l'URL. L'exemple ci-dessus montre comment passer des paramètres positionnels. Il est aussi possible d'utiliser la syntaxe par mot-clé ::"
+"The first argument is a :func:`~django.conf.urls.url` ``name``. It can be a "
+"quoted literal or any other context variable. Additional arguments are "
+"optional and should be space-separated values that will be used as arguments"
+" in the URL. The example above shows passing positional arguments. "
+"Alternatively you may use keyword syntax::"
+msgstr "Le premier paramètre est un nom d':func:`~django.conf.urls.url`. Cela peut être une chaîne littérale entre guillemets ou une variable de contexte. Des paramètres supplémentaires sont facultatifs et sont fournis sous forme de valeurs séparées par des espaces qui seront utilisées comme paramètres de l'URL. L'exemple ci-dessus montre comment passer des paramètres positionnels. Il est aussi possible d'utiliser la syntaxe par mot-clé ::"
 
 # 3fd41e8a184545939385f46499f278fb
 #: ../../../../1.8/docs/ref/templates/builtins.txt:1077
@@ -63020,16 +63082,8 @@ msgstr "…vous pouvez alors dans le gabarit créer un lien vers cette vue comme
 msgid "The template tag will output the string ``/clients/client/123/``."
 msgstr "La balise de gabarit affichera le texte ``/clients/client/123/``."
 
-# 67cfff27e4bc45d79a6c2ee8c1c09906
-#: ../../../../1.8/docs/ref/templates/builtins.txt:1101
-msgid ""
-"If you're using :ref:`named URL patterns <naming-url-patterns>`, you can "
-"refer to the name of the pattern in the ``url`` tag instead of using the "
-"path to the view."
-msgstr "Si vous utilisez des :ref:`motifs d'URL nommés <naming-url-patterns>`, vous pouvez remplacer le chemin de la vue par le nom du motif dans la balise ``url``."
-
-# b23de622e737424ca8e388445bc4e800
-#: ../../../../1.8/docs/ref/templates/builtins.txt:1105
+# b5cbdef1534e4ad185fea976b07af88d
+#: ../../../../1.8/docs/ref/templates/builtins.txt:1070
 msgid ""
 "Note that if the URL you're reversing doesn't exist, you'll get an "
 ":exc:`~django.core.urlresolvers.NoReverseMatch` exception raised, which will"
@@ -63075,16 +63129,16 @@ msgstr "La :ref:`stratégie habituelle de résolution d'URL avec espace de noms 
 # ba363a2d041a445c8731dde09192c9b3
 #: ../../../../1.8/docs/ref/templates/builtins.txt:1137
 msgid ""
-"The dotted Python path syntax is deprecated and will be removed in Django "
-"1.10::"
-msgstr "La syntaxe de chemin Python pointé est obsolète et sera supprimée dans Django 1.10 ::"
+"You can also pass a dotted Python path to a view function, but this syntax "
+"is deprecated and will be removed in Django 1.10::"
+msgstr "Vous pouvez aussi transmettre un chemin Python pointé vers une fonction de vue, mais cette syntaxe est obsolète et sera supprimée dans Django 1.10 ::"
 
 # a4720a9f276946139258edf30c214a16
 #: ../../../../1.8/docs/ref/templates/builtins.txt:1144
 msgid ""
-"Don't forget to put quotes around the function path or pattern name, "
-"otherwise the value will be interpreted as a context variable!"
-msgstr "N'oubliez pas d'entourer le chemin vers la fonction ou le nom de motif par des guillemets, sinon la valeur sera interprétée comme une variable de contexte !"
+"Don't forget to put quotes around the :func:`~django.conf.urls.url` "
+"``name``, otherwise the value will be interpreted as a context variable!"
+msgstr "N'oubliez pas d'entourer le nom d':func:`~django.conf.urls.url` par des guillemets, sinon la valeur sera interprétée comme une variable de contexte !"
 
 # 8fbc8a92e93f48048e203896ac4fcf13
 #: ../../../../1.8/docs/ref/templates/builtins.txt:1150
@@ -66966,6 +67020,13 @@ msgstr "Pour les utilisateurs de PostgreSQL, référez-vous au `manuel PostgreSQ
 
 # 3957170908c44c7ca8b05ad56ab9eceb
 #: ../../../../1.8/docs/ref/unicode.txt:26
+msgid ""
+"Oracle users, refer to the `Oracle manual`_ for details on how to set "
+"(`section 2`_) or alter (`section 11`_) the database character set encoding."
+msgstr "Les utilisateurs d'Oracle doivent se référer au `manuel Oracle`_ pour des détails sur la façon de définir (`section 2`_) ou de modifier (`section 11`_) le codage de caractères de la base de données."
+
+# 576ff2d59da7497d84192a47260f8a89
+#: ../../../../1.8/docs/ref/unicode.txt:29
 msgid ""
 "SQLite users, there is nothing you need to do. SQLite always uses UTF-8 for "
 "internal encoding."
