@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-19 02:09-0500\n"
-"PO-Revision-Date: 2015-09-19 16:48+0000\n"
+"POT-Creation-Date: 2015-10-22 03:12-0500\n"
+"PO-Revision-Date: 2015-10-22 17:37+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -1239,8 +1239,15 @@ msgid ""
 "The actual logic of the command. Subclasses must implement this method."
 msgstr "Le corps de la logique de votre commande. Les sous-classes doivent implémenter cette méthode."
 
-# 0c149e9bc3c94a249ef27359a179581e
-#: ../../../../1.8/docs/howto/custom-management-commands.txt:373
+# 6063e7e9ad9045719294a5c3e83b0c88
+#: ../../../../1.8/docs/howto/custom-management-commands.txt:369
+msgid ""
+"It may return a Unicode string which will be printed to ``stdout`` (wrapped "
+"by ``BEGIN;`` and ``COMMIT;`` if :attr:`output_transaction` is ``True``)."
+msgstr "Elle peut renvoyer une chaîne Unicode qui sera envoyée vers ``stdout`` (encadrée par ``BEGIN;`` et ``COMMIT;`` si :attr:`output_transaction` vaut ``True``)."
+
+# 681586f7b65c4856b3f79b45dc07b262
+#: ../../../../1.8/docs/howto/custom-management-commands.txt:376
 msgid ""
 "Uses the system check framework to inspect the entire Django project for "
 "potential problems. Serious problems are raised as a :class:`CommandError`; "
@@ -2479,18 +2486,29 @@ msgid ""
 "you should create a new app to hold them."
 msgstr "Les balises et filtres de gabarits personnalisés doivent être contenus dans une application Django. S'ils sont liés à une application existante, il est logique de les y intégrer ; sinon, vous devrez créer une nouvelle application spécifique."
 
-# 8cf5404b167847fc8a63ebf2b9bd5f94
+# 5fbcaf34109141819b5115210f896eb4
 #: ../../../../1.8/docs/howto/custom-template-tags.txt:20
 msgid ""
 "The app should contain a ``templatetags`` directory, at the same level as "
 "``models.py``, ``views.py``, etc. If this doesn't already exist, create it -"
 " don't forget the ``__init__.py`` file to ensure the directory is treated as"
-" a Python package. After adding this module, you will need to restart your "
-"server before you can use the tags or filters in templates."
-msgstr "L'application doit contenir un répertoire ``templatetags`` au même niveau que ``models.py``, ``views.py``, etc. S'il n'existe pas encore, créez-le, sans oublier le fichier ``__init__.py`` pour que le répertoire soit bien considéré comme un paquet Python. Après l'ajout de ce module, il sera nécessaire de redémarrer le serveur avant de pouvoir utiliser les balises et les filtres dans les gabarits."
+" a Python package."
+msgstr "L'application doit contenir un répertoire ``templatetags`` au même niveau que ``models.py``, ``views.py``, etc. S'il n'existe pas encore, créez-le, sans oublier le fichier ``__init__.py`` pour que le répertoire soit bien considéré comme un paquet Python."
 
-# ba7419cfc78d4a5b961a032c37b1687c
-#: ../../../../1.8/docs/howto/custom-template-tags.txt:26
+# 75df6ab9041a4f928db1d45845cdf666
+#: ../../../../1.8/docs/howto/custom-template-tags.txt:25
+msgid "Development server won't automatically restart"
+msgstr "Le serveur de développement ne va pas redémarrer automatiquement"
+
+# 6ad02fba151e417bacc76a5c5e9519d6
+#: ../../../../1.8/docs/howto/custom-template-tags.txt:27
+msgid ""
+"After adding the ``templatetags``  module, you will need to restart your "
+"server before you can use the tags or filters in templates."
+msgstr "Après avoir ajouté le module ``templatetags``, vous devez redémarrer le serveur avant de pouvoir utiliser les balises ou les filtres dans les gabarits."
+
+# be154cd8bdaf4894bdb08995a16f0a03
+#: ../../../../1.8/docs/howto/custom-template-tags.txt:30
 msgid ""
 "Your custom tags and filters will live in a module inside the "
 "``templatetags`` directory. The name of the module file is the name you'll "

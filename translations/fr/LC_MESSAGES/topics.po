@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-19 02:09-0500\n"
-"PO-Revision-Date: 2015-09-19 17:03+0000\n"
+"POT-Creation-Date: 2015-10-22 03:12-0500\n"
+"PO-Revision-Date: 2015-10-22 17:54+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -8960,8 +8960,8 @@ msgstr "Redéfinissez ``place`` en utilisant l'assignation dans la direction inv
 #: ../../../../1.8/docs/topics/db/examples/one_to_one.txt:90
 msgid ""
 "Note that you must save an object before it can be assigned to a one-to-one "
-"relationship. For example, creating an ``Restaurant`` with unsaved ``Place``"
-" raises ``ValueError``::"
+"relationship. For example, creating a ``Restaurant`` with unsaved ``Place`` "
+"raises ``ValueError``::"
 msgstr "Notez que vous devez enregistrer un objet avant de pouvoir l'attribuer à une relation un-à-un. Par exemple, la création d'un ``Restaurant`` avec une instance ``Place`` non enregistrée produit une erreur ``ValueError``::"
 
 # aa5f35a5328e4402b073a364cabde7de
@@ -10691,11 +10691,12 @@ msgstr "Les méthodes de modèle surchargées ne sont pas appelées dans les op�
 #: ../../../../1.8/docs/topics/db/models.txt:826
 msgid ""
 "Note that the :meth:`~Model.delete()` method for an object is not "
-"necessarily called when :ref:`deleting objects in bulk using a QuerySet"
-"<topics-db-queries-delete>`. To ensure customized delete logic gets "
-"executed, you can use :data:`~django.db.models.signals.pre_delete` and/or "
-":data:`~django.db.models.signals.post_delete` signals."
-msgstr "Notez que la méthode :meth:`~Model.delete()` d'un objet n'est pas nécessairement appelée lorsque les :ref:`objets sont supprimés en vrac en utilisant un QuerySet<topics-db-queries-delete>`. Pour être certain que la logique de suppression personnalisée soit exécutée, vous pouvez utiliser les signaux :data:`~django.db.models.signals.pre_delete` ou :data:`~django.db.models.signals.post_delete`."
+"necessarily called when :ref:`deleting objects in bulk using a QuerySet "
+"<topics-db-queries-delete>` or as a result of a :attr:`cascading delete "
+"<django.db.models.ForeignKey.on_delete>`. To ensure customized delete logic "
+"gets executed, you can use :data:`~django.db.models.signals.pre_delete` "
+"and/or :data:`~django.db.models.signals.post_delete` signals."
+msgstr "Notez que la méthode :meth:`~Model.delete()` d'un objet n'est pas nécessairement appelée lorsque les :ref:`objets sont supprimés en vrac en utilisant un QuerySet <topics-db-queries-delete>` ou par le truchement d'une :attr:`suppression en cascade <django.db.models.ForeignKey.on_delete>`. Pour être certain que la logique de suppression personnalisée soit exécutée, vous pouvez utiliser les signaux :data:`~django.db.models.signals.pre_delete` ou :data:`~django.db.models.signals.post_delete`."
 
 # b9f8ee7abffc4a15ab33637017ee2aff
 #: ../../../../1.8/docs/topics/db/models.txt:832
@@ -15372,9 +15373,15 @@ msgstr "Vous pouvez désactiver la création de points de sauvegarde pour les bl
 #: ../../../../1.8/docs/topics/db/transactions.txt:202
 msgid ""
 "You may use ``atomic`` when autocommit is turned off. It will only use "
-"savepoints, even for the outermost block, and it will raise an exception if "
-"the outermost block is declared with ``savepoint=False``."
-msgstr "Il est possible d'utiliser ``atomic`` lorsque la validation automatique est désactivée. Seuls des points de sauvegarde seront utilisés, même pour le bloc initial, et une exception est générée si le bloc initial reçoit le paramètre ``savepoint=False``."
+"savepoints, even for the outermost block."
+msgstr "Il est possible d'utiliser ``atomic`` lorsque la validation automatique est désactivée. Seuls des points de sauvegarde seront utilisés, même pour le bloc initial."
+
+# 0372581f88c34134adf00fbb9738ded0
+#: ../../../../1.8/docs/topics/db/transactions.txt:207
+msgid ""
+"Previously the outermost atomic block couldn't be declared with "
+"``savepoint=False`` when autocommit was turned off."
+msgstr "Précédemment, le bloc atomique initial ne pouvait pas être déclaré avec ``savepoint=False`` lorsque la validation automatique était désactivée."
 
 # 15a96f3d65d64563b0acdac42fd47a01
 #: ../../../../1.8/docs/topics/db/transactions.txt:206
@@ -27356,9 +27363,9 @@ msgstr "Utilisation de gabarits Jinja2"
 #: ../../../../1.8/docs/topics/i18n/translation.txt:1318
 msgid ""
 ":djadmin:`makemessages` doesn't understand the syntax of Jinja2 templates. "
-"To extract strings from a project containing Jinja2 templates, use Babel_ "
-"instead."
-msgstr ":djadmin:`makemessages` ne comprend pas la syntaxe des gabarits Jinja2. Pour extraire les chaînes d'un projet contenant des gabarits Jinja2, utilisez plutôt Babel_."
+"To extract strings from a project containing Jinja2 templates, use `Message "
+"Extracting`_ from Babel_ instead."
+msgstr ":djadmin:`makemessages` ne comprend pas la syntaxe des gabarits Jinja2. Pour extraire les chaînes d'un projet contenant des gabarits Jinja2, utilisez plutôt l'`extraction de messages`_ de Babel_."
 
 # a2b0208865e6401593fec75efc46995d
 #: ../../../../1.8/docs/topics/i18n/translation.txt:1322
@@ -28487,85 +28494,25 @@ msgid ""
 "work.)"
 msgstr "Installez pip_. La manière la plus simple est d'utiliser l'`installeur pip autonome`_. Si votre distribution contient déjà une version installée de ``pip``, il pourrait être nécessaire de la mettre à jour si elle est trop ancienne (dans ce cas, vous le verrez bien car l'installation ne fonctionnera pas)."
 
-# 51618fd5e53d414883adcd8540c35f3e
-#: ../../../../1.8/docs/topics/install.txt:171
+# 791da3c30f474e6ebb5c0bf3a3b43630
+#: ../../../../1.8/docs/topics/install.txt:170
 msgid ""
-"(optional) Take a look at virtualenv_ and virtualenvwrapper_. These tools "
-"provide isolated Python environments, which are more practical than "
-"installing packages systemwide. They also allow installing packages without "
-"administrator privileges. It's up to you to decide if you want to learn and "
-"use them."
-msgstr "(facultatif) Jetez un œil à virtualenv_ et virtualenvwrapper_. Ces outils fournissent des environnements Python isolés qui sont bien plus pratiques que d'installer des paquets au niveau de tout le système. Ils permettent aussi d'installer des paquets sans avoir besoin de privilèges administrateurs. C'est à vous de savoir si vous voulez apprendre à les utiliser."
+"Take a look at virtualenv_ and virtualenvwrapper_. These tools provide "
+"isolated Python environments, which are more practical than installing "
+"packages systemwide. They also allow installing packages without "
+"administrator privileges. The :doc:`contributing tutorial "
+"</intro/contributing>` walks through how to create a virtualenv on Python 3."
+msgstr "Jetez un œil à virtualenv_ et virtualenvwrapper_. Ces outils fournissent des environnements Python isolés qui sont bien plus pratiques que d'installer des paquets au niveau de tout le système. Ils permettent aussi d'installer des paquets sans avoir besoin de privilèges administrateurs. Le :doc:`tutoriel de contribution </intro/contributing>` vous guide pour la création d'un environnement virtualenv avec Python 3."
 
-# b631cfe8e139451db8b00ca5c0cabe9f
-#: ../../../../1.8/docs/topics/install.txt:177
+# 9bbaa28db4674c58a993fe7d5a092f5f
+#: ../../../../1.8/docs/topics/install.txt:176
 msgid ""
-"If you're using Linux, Mac OS X or some other flavor of Unix, enter the "
-"command ``sudo pip install Django`` at the shell prompt. If you're using "
-"Windows, start a command shell with administrator privileges and run the "
-"command ``pip install Django``. This will install Django in your Python "
-"installation's ``site-packages`` directory."
-msgstr "Si vous utilisez Linux, Mac OS X ou toute autre variante de Unix, saisissez la commande ``sudo pip install Django`` dans une invite de commande. Si vous utilisez Windows, lancez une invite de commande avec des droits d'administrateur et lancez la commande ``pip install Django``. Cela va installer Django dans le répertoire ``site-packages`` de votre installation Python."
+"After you've created and activated a virtual environment, enter the command "
+"``pip install Django`` at the shell prompt."
+msgstr "Après avoir créé et activé un environnement virtuel, saisissez la commande ``pip install Django`` dans le terminal."
 
-# 18095e67e0db48a4b391538511de7653
-#: ../../../../1.8/docs/topics/install.txt:183
-msgid ""
-"If you're using a virtualenv, you don't need ``sudo`` or administrator "
-"privileges, and this will install Django in the virtualenv's ``site-"
-"packages`` directory."
-msgstr "Si vous utilisez un ``virtualenv``, vous n'avez pas besoin de ``sudo`` ni de privilèges administrateurs ; la commande installera Django dans le répertoire ``site-packages`` du virtualenv."
-
-# c93801a0fa8f444b8f5e578616fd104f
-#: ../../../../1.8/docs/topics/install.txt:193
-msgid "Installing an official release manually"
-msgstr "Installation manuelle d'une version officielle"
-
-# c3de8b1df3b5493cb45875428407f56d
-#: ../../../../1.8/docs/topics/install.txt:195
-msgid "Download the latest release from our `download page`_."
-msgstr "Téléchargez la dernière version à partir de notre `page de téléchargement`_."
-
-# 5698a475bb674212aace87867f8ee487
-#: ../../../../1.8/docs/topics/install.txt:197
-msgid ""
-"Untar the downloaded file (e.g. ``tar xzvf Django-X.Y.tar.gz``, where "
-"``X.Y`` is the version number of the latest release). If you're using "
-"Windows, you can download the command-line tool bsdtar_ to do this, or you "
-"can use a GUI-based tool such as 7-zip_."
-msgstr "Décompressez le fichier téléchargé (par ex. ``tar xzvf Django-X.Y.tar.gz``, où ``X.Y`` est le numéro de version de la dernière version). Si vous utilisez Windows, vous pouvez télécharger l'outil en ligne de commande bsdtar_ pour cette opération ou vous pouvez utiliser un outil graphique du genre 7-zip_."
-
-# ad34f5c46efc43b09b254203564c9f39
-#: ../../../../1.8/docs/topics/install.txt:202
-msgid "Change into the directory created in step 2 (e.g. ``cd Django-X.Y``)."
-msgstr "Placez-vous dans le répertoire créé à l'étape 2 (par ex. ``cd Django-X.Y``)."
-
-# 1475a221e4a74fa9bdef45d23f009d21
-#: ../../../../1.8/docs/topics/install.txt:204
-msgid ""
-"If you're using Linux, Mac OS X or some other flavor of Unix, enter the "
-"command ``sudo python setup.py install`` at the shell prompt. If you're "
-"using Windows, start a command shell with administrator privileges and run "
-"the command ``python setup.py install``. This will install Django in your "
-"Python installation's ``site-packages`` directory."
-msgstr "Si vous utilisez Linux, Mac OS X ou toute autre variante de Unix, saisissez la commande ``sudo python setup.py install`` dans une invite de commande. Si vous utilisez Windows, lancez une invite de commande avec des droits d'administrateur et lancez la commande ``python setup.py install``. Cela va installer Django dans le répertoire ``site-packages`` de votre installation Python."
-
-# 0255516313bc4484bd69e5d8411bb380
-#: ../../../../1.8/docs/topics/install.txt:210
-msgid "Removing an old version"
-msgstr "Suppression d'une ancienne version"
-
-# e14a7e2074424b67b7c90b9181652694
-#: ../../../../1.8/docs/topics/install.txt:212
-msgid ""
-"If you use this installation technique, it is particularly important that "
-"you :ref:`remove any existing installations<removing-old-versions-of-"
-"django>` of Django first. Otherwise, you can end up with a broken "
-"installation that includes files from previous versions that have since been"
-" removed from Django."
-msgstr "Si vous utilisez cette technique d'installation, il est particulièrement important de :ref:`supprimer d'abord toute installation existante<removing-old-versions-of-django>` de Django. Sinon, vous pouvez vous retrouver avec une installation défaillante qui contient des fichiers de versions précédentes qui ne doivent plus se trouver dans Django."
-
-# 51055e3339c0438bac9aa16bb70e7058
-#: ../../../../1.8/docs/topics/install.txt:224
+# 57c6c45ab74e46478645e438bfd8c34c
+#: ../../../../1.8/docs/topics/install.txt:185
 msgid "Installing a distribution-specific package"
 msgstr "Installation d'un paquet de la distribution"
 
@@ -28615,30 +28562,30 @@ msgid ""
 "from a shell. (Enter ``git help`` at a shell prompt to test this.)"
 msgstr "Vérifiez que Git_ est installé et que vous pouvez lancer ses commandes depuis un terminal (saisissez ``git help`` à l'invite de commande pour le tester). "
 
-# a90ef532a62c4a4993b9c2eeb13629cf
-#: ../../../../1.8/docs/topics/install.txt:256
-msgid ""
-"Check out Django's main development branch (the 'trunk' or 'master') like "
-"so:"
-msgstr "Créez une copie de travail de la branche principale de développement de Django (appelée « trunk » ou « master ») comme ceci :"
+# 4d75b39e0b8b4d798305c16eb21c8c94
+#: ../../../../1.8/docs/topics/install.txt:217
+msgid "Check out Django's main development branch like so:"
+msgstr "Créez une copie de travail de la branche principale de développement de Django comme ceci :"
 
-# 702750f04c294ae697368c8ec5c97049
-#: ../../../../1.8/docs/topics/install.txt:263
-msgid ""
-"This will create a directory ``django-trunk`` in your current directory."
-msgstr "Un répertoire ``django-trunk`` sera créé dans le répertoire actuel."
+# 0a28019dedd942e3ab543058733b316e
+#: ../../../../1.8/docs/topics/install.txt:223
+msgid "This will create a directory ``django`` in your current directory."
+msgstr "Un répertoire ``django`` sera créé dans le répertoire actuel."
 
 # 10eee2aa6b6045ebb880f4bebf74af21
 #: ../../../../1.8/docs/topics/install.txt:265
 msgid ""
 "Make sure that the Python interpreter can load Django's code. The most "
-"convenient way to do this is via pip_. Run the following command:"
-msgstr "Vérifiez que l'interpréteur Python peut charger le code de Django. La façon la plus pratique de faire cela est d'utiliser pip_. Lancez la commande suivante :"
+"convenient way to do this is to use virtualenv_, virtualenvwrapper_, and "
+"pip_. The :doc:`contributing tutorial </intro/contributing>` walks through "
+"how to create a virtualenv on Python 3."
+msgstr "Vérifiez que l'interpréteur Python peut charger le code de Django. La façon la plus pratique de faire cela est d'utiliser virtualenv_, virtualenvwrapper_, et pip_. Le :doc:`tutoriel de contribution </intro/contributing>` vous guide pour la création d'un environnement virtualenv avec Python 3."
 
-# 88043b16af1e44378d82f3ac4b4381e2
-#: ../../../../1.8/docs/topics/install.txt:272
-msgid "(If using a virtualenv_ you can omit ``sudo``.)"
-msgstr "(Si vous utilisez un virtualenv_, vous pouvez omettre ``sudo``.)"
+# c21b3d00b17740f0acfc2d5d6e332050
+#: ../../../../1.8/docs/topics/install.txt:230
+msgid ""
+"After setting up and activating the virtualenv, run the following command:"
+msgstr "Après avoir configuré et activé l'environnement virtuel, exécutez la commande suivante :"
 
 # 2922bc3d6a73400c9a998ffadbbe4581
 #: ../../../../1.8/docs/topics/install.txt:274
@@ -28647,128 +28594,15 @@ msgid ""
 "admin`` utility command available. In other words, you're all set!"
 msgstr "Ceci rendra le code Django importable et mettra aussi à disposition la commande utilitaire ``django-admin``. En d'autres mots, vous serez fin prêt !"
 
-# 06f9f92297404662b23213b17c22e4b4
-#: ../../../../1.8/docs/topics/install.txt:278
-msgid ""
-"If you don't have pip_ available, see the alternative instructions for "
-"`installing the development version without pip`_."
-msgstr "Si pip_ n'est pas disponible, consultez les instructions alternatives pour l'`installation de la version de développement sans pip`_."
-
-# 84cf6e3c0912404f91594c4bfd1b3547
-#: ../../../../1.8/docs/topics/install.txt:283
-msgid ""
-"Don't run ``sudo python setup.py install``, because you've already carried "
-"out the equivalent actions in step 3."
-msgstr "Ne lancez pas ``sudo python setup.py install`` car vous avez déjà effectué les actions équivalentes à l'étape 3."
-
-# c9f96bd3a73e4da6a70a4e8f5622f351
-#: ../../../../1.8/docs/topics/install.txt:286
+# 6d3cbebae3334d5ebfa8b36aad113e35
+#: ../../../../1.8/docs/topics/install.txt:240
 msgid ""
 "When you want to update your copy of the Django source code, just run the "
-"command ``git pull`` from within the ``django-trunk`` directory. When you do"
-" this, Git will automatically download any changes."
-msgstr "Lorsque vous souhaitez mettre à jour votre copie du code source de Django, lancez simplement la commande ``git pull`` à partir du répertoire ``django-trunk``. Quand vous faites cela, Git télécharge automatiquement toutes les modifications."
+"command ``git pull`` from within the ``django`` directory. When you do this,"
+" Git will automatically download any changes."
+msgstr "Lorsque vous souhaitez mettre à jour votre copie du code source de Django, lancez simplement la commande ``git pull`` à partir du répertoire ``django``. Quand vous faites cela, Git télécharge automatiquement toutes les modifications."
 
-# 7992af6f97ff4c05ba39f6ef443d3880
-#: ../../../../1.8/docs/topics/install.txt:295
-msgid "Installing the development version without pip"
-msgstr "Installation de la version de développement sans pip"
-
-# 22a4a96feddd4064add6b140376ab5f9
-#: ../../../../1.8/docs/topics/install.txt:297
-msgid ""
-"If you don't have pip_, you can instead manually `modify Python's search "
-"path`_."
-msgstr "Si pip_ n'est pas disponible, vous pouvez manuellement `modifier le chemin de recherche Python`_ à la place.  "
-
-# fcdab33c4f5b4aeba3a5af1351f124fd
-#: ../../../../1.8/docs/topics/install.txt:300
-msgid ""
-"First follow steps 1 and 2 above, so that you have a ``django-trunk`` "
-"directory with a checkout of Django's latest code in it. Then add a ``.pth``"
-" file containing the full path to the ``django-trunk`` directory to your "
-"system's ``site-packages`` directory. For example, on a Unix-like system:"
-msgstr "Suivez d'abord les étapes 1 et 2 ci-dessus pour obtenir un répertoire ``django-trunk`` contenant une extraction du dernier code de Django. Ensuite, dans le répertoire ``site-packages`` de votre système, ajoutez un fichier ``.pth`` contenant le chemin complet vers le répertoire ``django-trunk``. Par exemple, sur un système de type Unix :"
-
-# 1735b8c49d6042bbb6eae14765be2cd0
-#: ../../../../1.8/docs/topics/install.txt:309
-msgid ""
-"In the above line, change ``WORKING-DIR/django-trunk`` to match the full "
-"path to your new ``django-trunk`` directory, and change ``SITE-PACKAGES-"
-"DIR`` to match the location of your system's ``site-packages`` directory."
-msgstr "Dans la ligne ci-dessus, modifiez ``WORKING-DIR/django-trunk`` pour qu'il corresponde au chemin complet de votre nouveau répertoire ``django-trunk`` et modifiez ``SITE-PACKAGES-DIR``  pour qu'il corresponde au répertoire ``site-packages`` de votre système."
-
-# aa54ca1a7590426489d647a28425a246
-#: ../../../../1.8/docs/topics/install.txt:313
-msgid ""
-"The location of the ``site-packages`` directory depends on the operating "
-"system, and the location in which Python was installed. To find your "
-"system's ``site-packages`` location, execute the following:"
-msgstr "L'emplacement du répertoire ``site-packages`` dépend du système d'exploitation et de l'emplacement d'installation de Python. Pour trouver où se situe ce répertoire dans votre système, exécutez ce qui suit :"
-
-# f51add129a914444a0228136e1163855
-#: ../../../../1.8/docs/topics/install.txt:321
-msgid ""
-"(Note that this should be run from a shell prompt, not a Python interactive "
-"prompt.)"
-msgstr "(Notez que cette commande doit être lancée dans une invite de commande de shell, et non pas dans un shell interactif Python.)"
-
-# 8ba51377c6dc493ba458eccc32171a22
-#: ../../../../1.8/docs/topics/install.txt:324
-msgid ""
-"Some Debian-based Linux distributions have separate ``site-packages`` "
-"directories for user-installed packages, such as when installing Django from"
-" a downloaded tarball. The command listed above will give you the system's "
-"``site-packages``, the user's directory can be found in ``/usr/local/lib/`` "
-"instead of ``/usr/lib/``."
-msgstr "Certaines distributions Linux basées sur Debian ont des répertoires ``site-packages`` distincts pour les paquets installés par les utilisateurs, comme lorsqu'on installe Django à partir d'une archive téléchargée. La commande mentionnée ci-dessus affiche le répertoire ``site-packages`` du système, celui des utilisateurs pouvant être trouvé dans ``/usr/local/lib/`` au lieu de ``/usr/lib/``."
-
-# f6024042813c4f8789966aaea97a7e83
-#: ../../../../1.8/docs/topics/install.txt:330
-msgid ""
-"Next you need to make the ``django-admin.py`` utility available in your "
-"shell PATH."
-msgstr "Vous devez ensuite rendre disponible la commande ``django-admin.py`` dans le chemin PATH de votre shell."
-
-# 0db755bc43924b3ba6e058a46e11ca93
-#: ../../../../1.8/docs/topics/install.txt:333
-msgid ""
-"On Unix-like systems, create a symbolic link to the file ``django-"
-"trunk/django/bin/django-admin`` in a directory on your system path, such as "
-"``/usr/local/bin``. For example:"
-msgstr "Sur des systèmes de type Unix, créez un lien symbolique vers le fichier ``django-trunk/django/bin/django-admin`` dans un des répertoires contenus dans le chemin système, comme ``/usr/local/bin``. Par exemple :"
-
-# 745d1cf019a841d5a3366c30c6a8a698
-#: ../../../../1.8/docs/topics/install.txt:341
-msgid ""
-"(In the above line, change WORKING-DIR to match the full path to your new "
-"``django-trunk`` directory.)"
-msgstr "(Dans la ligne ci-dessus, modifiez WORKING-DIR pour qu'il corresponde au chemin complet vers votre nouveau répertoire ``django-trunk``.)"
-
-# e6609ff0ec3e4e7caa86e97dbf2bdcc2
-#: ../../../../1.8/docs/topics/install.txt:344
-msgid ""
-"This simply lets you type ``django-admin.py`` from within any directory, "
-"rather than having to qualify the command with the full path to the file."
-msgstr "Cela vous permet de simplement taper ``django-admin.py`` à partir de n'importe quel répertoire, plutôt que de devoir qualifier la commande avec son chemin complet vers le fichier."
-
-# 6b4d0886b17644efb0cc6353d356fa85
-#: ../../../../1.8/docs/topics/install.txt:347
-msgid ""
-"On Windows systems, the same result can be achieved by copying the file "
-"``django-trunk/django/bin/django-admin.py`` to somewhere on your system "
-"path, for example ``C:\\Python27\\Scripts``."
-msgstr "Sur des systèmes Windows, on peut arriver au même résultat en copiant le fichier ``django-trunk/django/bin/django-admin.py`` dans un emplacement se trouvant le chemin système, par exemple ``C:\\Python27\\Scripts``."
-
-# b3ba9af5a074449598c7ea1b324851bb
-#: ../../../../1.8/docs/topics/install.txt:351
-msgid ""
-"Note that the rest of the documentation assumes this utility is installed as"
-" ``django-admin``. You'll have to substitute ``django-admin.py`` if you use "
-"this method."
-msgstr "Notez que la suite de la documentation part du principe que cet utilitaire est installé comme ``django-admin``. Vous devrez le remplacer par ``django-admin.py`` si vous utilisez cette méthode."
-
-# 54c9050d6a0b49ac85a670c553c5a384
+# 48d3277116934e57b74283ebceb84409
 #: ../../../../1.8/docs/topics/localflavor.txt:3
 msgid "The \"local flavor\" add-ons"
 msgstr "Les compléments régionaux « local flavor »"
@@ -29756,11 +29590,11 @@ msgstr "Lorsque :setting:`DEBUG` vaut ``True``:"
 # b9055dff77f44a1aaef0907856e4ff78
 #: ../../../../1.8/docs/topics/logging.txt:698
 msgid ""
-"The ``django`` catch-all logger sends all messages at the ``INFO`` level or "
-"higher to the console. Django doesn't make any such logging calls at this "
-"time (all logging is at the ``DEBUG`` level or handled by the "
+"The ``django`` catch-all logger sends all messages at the ``WARNING`` level "
+"or higher to the console. Django doesn't make any such logging calls at this"
+" time (all logging is at the ``DEBUG`` level or handled by the "
 "``django.request`` and ``django.security`` loggers)."
-msgstr "Le journaliseur « fourre-tout » ``django`` envoie tous les messages du niveau ``INFO`` ou plus élevé vers la console. Pour l'instant, Django n'envoie aucun message de ce type (toute la journalisation se fait au niveau ``DEBUG`` ou est interceptée par les journaliseurs ``django.request`` et ``django.security``)."
+msgstr "Le journaliseur « fourre-tout » ``django`` envoie tous les messages du niveau ``WARNING`` ou plus élevé vers la console. Pour l'instant, Django n'envoie aucun message de ce type (toute la journalisation se fait au niveau ``DEBUG`` ou est interceptée par les journaliseurs ``django.request`` et ``django.security``)."
 
 # 0167298e6cbc4962af0ba3a93eaf66d1
 #: ../../../../1.8/docs/topics/logging.txt:703
@@ -31866,17 +31700,12 @@ msgid ""
 "information."
 msgstr "Compresse les réponses pour tous les navigateurs modernes, économisant de la bande passante et du temps de transfert. Notez que ```GZipMiddleware`` est actuellement considéré comme un risque de sécurité car il est vulnérable à des attaques qui annulent la protection fournie par TLS/SSL. Lisez l'avertissement dans :class:`~django.middleware.gzip.GZipMiddleware` pour plus de détails."
 
-# 387a2471f50046699c810ca40f30a34a
+# 3eb7bde93a6c4379bd7adcde8ae78ab4
 #: ../../../../1.8/docs/topics/performance.txt:276
 msgid "Sessions"
 msgstr "Sessions"
 
-# 53b6332b013749ad9b2e35e2354d9db1
-#: ../../../../1.8/docs/topics/performance.txt:279
-msgid ":ref:`Using cached sessions <cached-sessions-backend>`"
-msgstr ":ref:`Utilisation des sessions en cache <cached-sessions-backend>`"
-
-# bb906c85b3f049adb415b7ba0c7833d4
+# 706f2aa5efd54d599541fc47f0539f73
 #: ../../../../1.8/docs/topics/performance.txt:281
 msgid ""
 ":ref:`Using cached sessions <cached-sessions-backend>` may be a way to "
@@ -36991,27 +36820,6 @@ msgstr "Les tests unitaires de Django utilisent le module :mod:`unittest` de la 
 
 # 8c8e3f089f3a4543b825053bce89e7a3
 #: ../../../../1.8/docs/topics/testing/overview.txt:23
-msgid "unittest2"
-msgstr "unittest2"
-
-# e784fa1dce78436d93875c5e5ba5a345
-#: ../../../../1.8/docs/topics/testing/overview.txt:27
-msgid ""
-"Python 2.7 introduced some major changes to the ``unittest`` library, adding"
-" some extremely useful features. To ensure that every Django project could "
-"benefit from these new features, Django used to ship with a copy of Python "
-"2.7's ``unittest`` backported for Python 2.6 compatibility."
-msgstr "Python 2.7 a introduit des modifications majeures de la bibliothèque ``unittest``, en ajoutant certaines fonctionnalités très utiles. Pour garantir que chaque projet Django puisse bénéficier de ces nouvelles fonctionnalités, Django intégrait une copie de la bibliothèque ``unittest`` de Python 2.7, rétroprogrammée pour la compatibilité Python 2.6."
-
-# 6bd40f1cede543819f516947f09239ec
-#: ../../../../1.8/docs/topics/testing/overview.txt:32
-msgid ""
-"Since Django no longer supports Python versions older than 2.7, "
-"``django.utils.unittest`` is deprecated. Simply use ``unittest``."
-msgstr "Comme Django ne prend plus en charge les versions de Python antérieures à 2.7, ``django.utils.unittest`` est obsolète. Utilisez simplement ``unittest``."
-
-# aaed6fc16c4c4adb8f8f1f075451f327
-#: ../../../../1.8/docs/topics/testing/overview.txt:37
 msgid ""
 "Here is an example which subclasses from :class:`django.test.TestCase`, "
 "which is a subclass of :class:`unittest.TestCase` that runs each test inside"
@@ -37033,8 +36841,29 @@ msgstr "Lorsque vous :ref:`lancez vos tests <running-tests>`, le comportement pa
 msgid "For more details about :mod:`unittest`, see the Python documentation."
 msgstr "Pour plus de détails au sujet de :mod:`unittest`, consultez la documentation de Python."
 
-# 6d9bd61d305f4d75a3e664a2f43074d2
-#: ../../../../1.8/docs/topics/testing/overview.txt:65
+# a760d0fb82904071948d55d1c58ac3b4
+#: ../../../../1.8/docs/topics/testing/overview.txt:49
+msgid "Where should the tests live?"
+msgstr "À quel endroit les tests devraient-ils se trouver ?"
+
+# f18c4dad09ee4446b875c96c99ebbf55
+#: ../../../../1.8/docs/topics/testing/overview.txt:51
+msgid ""
+"The default :djadmin:`startapp` template creates a ``tests.py`` file in the "
+"new application. This might be fine if you only have a few tests, but as "
+"your test suite grows you'll likely want to restructure it into a tests "
+"package so you can split your tests into different submodules such as "
+"``test_models.py``, ``test_views.py``, ``test_forms.py``, etc. Feel free to "
+"pick whatever organizational scheme you like."
+msgstr "Le gabarit par défaut de :djadmin:`startapp` crée un fichier ``tests.py`` dans la nouvelle application. Cela convient bien quand il n'y a que quelques tests. Mais dès que la suite de tests grandit, il devient préférable de restructurer ce fichier en un module Python afin de pouvoir séparer les tests en sous-modules tels que ``test_models.py``, ``test_views.py``, ``test_forms.py``, etc. Vous êtes libre de choisir le découpage structurel qui vous convient."
+
+# d302d3197ffe4975b7cb19f097601fe0
+#: ../../../../1.8/docs/topics/testing/overview.txt:58
+msgid "See also :ref:`testing-reusable-applications`."
+msgstr "Voir aussi :ref:`testing-reusable-applications`."
+
+# 0b0974e04ea54003a9be52b2ccf85923
+#: ../../../../1.8/docs/topics/testing/overview.txt:62
 msgid ""
 "If your tests rely on database access such as creating or querying models, "
 "be sure to create your test classes as subclasses of "

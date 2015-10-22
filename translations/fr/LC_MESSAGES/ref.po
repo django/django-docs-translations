@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-19 02:09-0500\n"
-"PO-Revision-Date: 2015-09-19 17:26+0000\n"
+"POT-Creation-Date: 2015-10-22 03:12-0500\n"
+"PO-Revision-Date: 2015-10-22 18:23+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -127,8 +127,24 @@ msgid ""
 ":class:`~django.apps.AppConfig` class."
 msgstr "S'il n'y a pas de ``default_app_config``, Django utilise la classe de base :class:`~django.apps.AppConfig`."
 
-# 34e565c5db9a496a9751eb82b8ded03d
-#: ../../../../1.8/docs/ref/applications.txt:63
+# ef9d6f2d0ffc429c84c2d560492e07c3
+#: ../../../../1.8/docs/ref/applications.txt:62
+msgid ""
+"``default_app_config`` allows applications that predate Django 1.7 such as "
+"``django.contrib.admin`` to opt-in to :class:`~django.apps.AppConfig` "
+"features without requiring users to update their :setting:`INSTALLED_APPS`."
+msgstr "``default_app_config`` permet aux applications créées avant Django 1.7 telles que  ``django.contrib.admin`` de faire la transition vers la fonctionnalité :class:`~django.apps.AppConfig` sans exiger des utilisateurs qu'ils mettent à jour leur réglage :setting:`INSTALLED_APPS`."
+
+# d44dbaf372ff40288c7b85f5d820465c
+#: ../../../../1.8/docs/ref/applications.txt:66
+msgid ""
+"New applications should avoid ``default_app_config``. Instead they should "
+"require the dotted path to the appropriate :class:`~django.apps.AppConfig` "
+"subclass to be configured explicitly in :setting:`INSTALLED_APPS`."
+msgstr "Les nouvelles applications devraient éviter ``default_app_config``. Elles devraient plutôt exiger le chemin pointé vers la sous-classe :class:`~django.apps.AppConfig` appropriée de manière explicite dans le réglage :setting:`INSTALLED_APPS`."
+
+# ef200262ee5e483cb9d804f0e337640a
+#: ../../../../1.8/docs/ref/applications.txt:71
 msgid "For application authors"
 msgstr "Pour les auteurs d'applications"
 
@@ -7901,6 +7917,17 @@ msgstr "Il reçoit une ou plusieurs classes de modèles à inscrire à ``ModelAd
 
 # 72a86aceaec446f5b66d8a4bc703d886
 #: ../../../../1.8/docs/ref/contrib/admin/index.txt:129
+msgid ""
+"You can't use this decorator if you have to reference your model admin class"
+" in its ``__init__()`` method, e.g. ``super(PersonAdmin, "
+"self).__init__(*args, **kwargs)``. If you are using Python 3 and don't have "
+"to worry about supporting Python 2, you can use ``super().__init__(*args, "
+"**kwargs)`` . Otherwise, you'll have to use ``admin.site.register()`` "
+"instead of this decorator."
+msgstr "Vous ne pouvez pas utiliser ce décorateur si devez faire référence à la classe d'administration de modèle dans la méthode ``__init__()``, par ex. ``super(PersonAdmin, self).__init__(*args, **kwargs)``. Si vous utilisez Python 3 et que vous ne devez pas garantir la compatibilité Python 2, vous pouvez utiliser ``super().__init__(*args, **kwargs)`` . Sinon, vous devez utiliser ``admin.site.register()`` au lieu du décorateur."
+
+# 630553f9b5e94f488d78a1974bdcfe8a
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:137
 msgid "Discovery of admin files"
 msgstr "Découvert des fichiers d'administration"
 
@@ -12628,9 +12655,10 @@ msgstr "Si cet attribut vaut ``False``, le champ sera en mesure de référencer 
 #: ../../../../1.8/docs/ref/contrib/contenttypes.txt:504
 #: ../../../../1.8/docs/ref/contrib/contenttypes.txt:569
 msgid ""
-"This class used to be defined in ``django.contrib.contenttypes.generic``. "
-"Support for importing from this old location will be removed in Django 1.9."
-msgstr "Cette classe était définie précédemment dans ``django.contrib.contenttypes.generic``. L'ancien emplacement d'importation sera supprimé dans Django 1.9."
+"This class was moved from ``django.contrib.contenttypes.generic`` to "
+"``django.contrib.contenttypes.fields``. Support for importing from the old "
+"location will be removed in Django 1.9."
+msgstr "Cette classe a été déplacée depuis ``django.contrib.contenttypes.generic`` vers ``django.contrib.contenttypes.fields``. L'ancien emplacement d'importation sera supprimé dans Django 1.9."
 
 # 5105d04da4344734a74e3284aa114dab
 #: ../../../../1.8/docs/ref/contrib/contenttypes.txt:315
@@ -12864,8 +12892,16 @@ msgid ""
 ":class:`~django.contrib.contenttypes.fields.GenericForeignKey`."
 msgstr "Une fabrique de groupe de formulaires, :func:`generic_inlineformset_factory`, pour être utilisée avec :class:`~django.contrib.contenttypes.fields.GenericForeignKey`."
 
-# 02c30153fd304d3682c232a626fb8b9a
-#: ../../../../1.8/docs/ref/contrib/contenttypes.txt:517
+# cd45f3a7833449dc8e033709d1af2a28
+#: ../../../../1.8/docs/ref/contrib/contenttypes.txt:506
+msgid ""
+"This class was moved from ``django.contrib.contenttypes.generic`` to "
+"``django.contrib.contenttypes.forms``. Support for importing from the old "
+"location will be removed in Django 1.9."
+msgstr "Cette classe a été déplacée depuis ``django.contrib.contenttypes.generic`` vers ``django.contrib.contenttypes.forms``. L'ancien emplacement d'importation sera supprimé dans Django 1.9."
+
+# ddf2353c17034636b56dcffe5d08a287
+#: ../../../../1.8/docs/ref/contrib/contenttypes.txt:512
 msgid ""
 "Returns a ``GenericInlineFormSet`` using "
 ":func:`~django.forms.models.modelformset_factory`."
@@ -12892,9 +12928,10 @@ msgstr "Le paramètre ``for_concrete_model`` correspond au paramètre :class:`~d
 # 674c9e3c92f84916952a066c9fd77b06
 #: ../../../../1.8/docs/ref/contrib/contenttypes.txt:532
 msgid ""
-"This function used to be defined in ``django.contrib.contenttypes.generic``."
-" Support for importing from this old location will be removed in Django 1.9."
-msgstr "Cette fonction était définie précédemment dans ``django.contrib.contenttypes.generic``. L'ancien emplacement d'importation sera supprimé dans Django 1.9."
+"This function was moved from ``django.contrib.contenttypes.generic`` to "
+"``django.contrib.contenttypes.forms``. Support for importing from the old "
+"location will be removed in Django 1.9."
+msgstr "Cette fonction a été déplacée depuis ``django.contrib.contenttypes.generic`` vers ``django.contrib.contenttypes.forms``. L'ancien emplacement d'importation sera supprimé dans Django 1.9."
 
 # d643201d63c845d7b7a83d854c167f26
 #: ../../../../1.8/docs/ref/contrib/contenttypes.txt:538
@@ -12947,8 +12984,16 @@ msgid ""
 "Defaults to ``object_id``."
 msgstr "Le nom du champ nombre entier qui représente l'identifiant de l'objet associé. Par défaut, ``object_id``."
 
-# 77d5348917a74e669a4653aaf68859bc
-#: ../../../../1.8/docs/ref/contrib/contenttypes.txt:583
+# 4a66dc2dde254912a2b078d77f4e8904
+#: ../../../../1.8/docs/ref/contrib/contenttypes.txt:570
+msgid ""
+"This class was moved from ``django.contrib.contenttypes.generic`` to "
+"``django.contrib.contenttypes.admin``. Support for importing from the old "
+"location will be removed in Django 1.9."
+msgstr "Cette classe a été déplacée depuis ``django.contrib.contenttypes.generic`` vers ``django.contrib.contenttypes.admin``. L'ancien emplacement d'importation sera supprimé dans Django 1.9."
+
+# bc2d4aa9c80342d087824262d63dcdaa
+#: ../../../../1.8/docs/ref/contrib/contenttypes.txt:577
 msgid ""
 "Subclasses of :class:`GenericInlineModelAdmin` with stacked and tabular "
 "layouts, respectively."
@@ -12957,9 +13002,10 @@ msgstr "Les sous-classes de :class:`GenericInlineModelAdmin` avec mises en page 
 # efa91dc3d0204c478fec43a3f4a81dd1
 #: ../../../../1.8/docs/ref/contrib/contenttypes.txt:588
 msgid ""
-"These classes used to be defined in ``django.contrib.contenttypes.generic``."
-" Support for importing from this old location will be removed in Django 1.9."
-msgstr "Ces classes étaient définied précédemment dans ``django.contrib.contenttypes.generic``. L'ancien emplacement d'importation sera supprimé dans Django 1.9."
+"These classes was moved from ``django.contrib.contenttypes.generic`` to "
+"``django.contrib.contenttypes.admin``. Support for importing from the old "
+"location will be removed in Django 1.9."
+msgstr "Ces classes ont été déplacées depuis ``django.contrib.contenttypes.generic`` vers ``django.contrib.contenttypes.admin``. L'ancien emplacement d'importation sera supprimé dans Django 1.9."
 
 # 121bafcdf609409f8f55ef5ef31b4e40
 #: ../../../../1.8/docs/ref/contrib/flatpages.txt:3
@@ -19021,15 +19067,18 @@ msgstr "Renvoie la représentation EWKB de cet objet géométrique sous forme he
 
 # 4dcf6c185723403e95dc0cc7cbb6a81e
 #: ../../../../1.8/docs/ref/contrib/gis/geos.txt:285
-msgid "Returns the GeoJSON representation of the geometry."
-msgstr "Renvoie la représentation GeoJSON de l'objet géométrique."
+msgid ""
+"Returns the GeoJSON representation of the geometry. Note that the result is "
+"not a complete GeoJSON structure but only the ``geometry`` key content of a "
+"GeoJSON structure. See also :doc:`/ref/contrib/gis/serializers`."
+msgstr "Renvoie la représentation GeoJSON de l'objet géométrique. Notez que le résultat ne constitue pas une structure GeoJSON complète, mais seulement le contenu de la clé ``geometry`` d'une structure GeoJSON. Voir aussi :doc:`/ref/contrib/gis/serializers`."
 
-# df1b291b8bfe4808ba9e7e2acdd92a7a
-# 181ea9508c0e4293b465eef7e33f365d
-# 8917d59a129643729c2d3415a596dc4c
-#: ../../../../1.8/docs/ref/contrib/gis/geos.txt:289
-#: ../../../../1.8/docs/ref/contrib/gis/geos.txt:308
-#: ../../../../1.8/docs/ref/contrib/gis/geos.txt:538
+# 8ebcf3ac8ef44eef8b4e23cbea1431d7
+# c264acfd8f8848feb483061cc30352cc
+# a111f000bef14345b58a85fbd716487d
+#: ../../../../1.8/docs/ref/contrib/gis/geos.txt:291
+#: ../../../../1.8/docs/ref/contrib/gis/geos.txt:310
+#: ../../../../1.8/docs/ref/contrib/gis/geos.txt:540
 msgid "Requires GDAL."
 msgstr "Nécessite GDAL."
 
@@ -30972,11 +31021,11 @@ msgstr "SQLite 3.6.23.1 a été publiée en mars 2010 et la plupart des distribu
 # 34176d14fada45e98f56dc6b990d7cbe
 #: ../../../../1.8/docs/ref/databases.txt:615
 msgid ""
-"As of this writing, the latest release for Windows - Python 2.7.9 - includes"
-" SQLite 3.6.21. You can install ``pysqlite2`` or replace ``sqlite3.dll`` (by"
-" default installed in ``C:\\Python27\\DLLs``) with a newer version from "
-"http://www.sqlite.org/ to remedy this issue."
-msgstr "Au moment d'écrire ces lignes, la dernière version pour Windows, Python 2.7.9, inclut SQLite 3.6.21. Vous pouvez installer ``pysqlite2`` ou remplacer ``sqlite3.dll`` (installé par défaut dans ``C:\\Python27\\DLLs``) par une version plus récente provenant de http://www.sqlite.org/ afin de remédier à ce problème."
+"As of this writing, the latest release for Windows - Python 2.7.10 - "
+"includes SQLite 3.6.21. You can install ``pysqlite2`` or replace "
+"``sqlite3.dll`` (by default installed in ``C:\\Python27\\DLLs``) with a "
+"newer version from http://www.sqlite.org/ to remedy this issue."
+msgstr "Au moment d'écrire ces lignes, la dernière version pour Windows, Python 2.7.10, inclut SQLite 3.6.21. Vous pouvez installer ``pysqlite2`` ou remplacer ``sqlite3.dll`` (installé par défaut dans ``C:\\Python27\\DLLs``) par une version plus récente provenant de http://www.sqlite.org/ afin de remédier à ce problème."
 
 # ee36fb6c7ea046dc8010e2caa15f1f0a
 #: ../../../../1.8/docs/ref/databases.txt:625
@@ -39239,42 +39288,46 @@ msgid ""
 "For example::"
 msgstr "Il y a deux manières de signaler des erreurs à ce stade. La méthode probablement la plus courante est d'afficher l'erreur au sommet du formulaire. Pour créer une telle erreur, vous pouvez générer une exception ``ValidationError`` à partir de la méthode ``clean()``. Par exemple ::"
 
-# 8b6b14ac7dd341869828386064e0e471
-#: ../../../../1.8/docs/ref/forms/validation.txt:374
+# 9a496dfd30cd45f9b96781eff02af1a2
+#: ../../../../1.8/docs/ref/forms/validation.txt:375
 msgid ""
 "In previous versions of Django, ``form.clean()`` was required to return a "
 "dictionary of ``cleaned_data``. This method may still return a dictionary of"
 " data to be used, but it's no longer required."
 msgstr "Dans les versions précédentes de Django, ``form.clean()`` devait absolument renvoyer un dictionnaire de ``cleaned_data``. Cette méthode peut toujours renvoyer un dictionnaire de données à utiliser, mais ce n'est plus obligatoire."
 
-# 99eb62a8243042ccba83f0fb61df8f56
-#: ../../../../1.8/docs/ref/forms/validation.txt:378
+# 98c53ffdba4a45afab0947def47f67c0
+#: ../../../../1.8/docs/ref/forms/validation.txt:379
 msgid ""
 "In this code, if the validation error is raised, the form will display an "
 "error message at the top of the form (normally) describing the problem."
 msgstr "Dans ce code, si l'erreur de validation est générée, le formulaire affichera un message d'erreur au sommet du formulaire (dans le cas normal) décrivant le problème."
 
-# f35a6823b0544917b65082313615fc96
-#: ../../../../1.8/docs/ref/forms/validation.txt:381
+# c3fadabc82764f5394d7e9994b70b097
+#: ../../../../1.8/docs/ref/forms/validation.txt:382
 msgid ""
-"Note that the call to ``super(ContactForm, self).clean()`` in the example "
-"code ensures that any validation logic in parent classes is maintained."
-msgstr "Notez que l'appel à ``super(ContactForm, self).clean()`` dans le code d'exemple garantit que toute logique de validation au niveau des classes parentes sera conservée."
+"The call to ``super(ContactForm, self).clean()`` in the example code ensures"
+" that any validation logic in parent classes is maintained. If your form "
+"inherits another that doesn't return a ``cleaned_data`` dictionary in its "
+"``clean()`` method (doing so is optional), then don't assign "
+"``cleaned_data`` to the result of the ``super()`` call and use "
+"``self.cleaned_data`` instead::"
+msgstr "L'appel à ``super(ContactForm, self).clean()`` dans l'exemple de code garantit que toute logique de validation dans les classes parentes est conservée. Si votre formulaire hérite d'un autre qui ne renvoie pas de dictionnaire ``cleaned_data`` dans sa méthode ``clean()`` (c'est facultatif), n'attribuez pas le résultat de l'appel à ``super()`` à ``cleaned_data`` et utilisez plutôt ``self.cleaned_data``::"
 
-# bc182dd4a8284d63913c217b8022f4b7
-#: ../../../../1.8/docs/ref/forms/validation.txt:384
+# e45cb23fd2794cedaf98355c9bfc80fa
+#: ../../../../1.8/docs/ref/forms/validation.txt:393
 msgid ""
-"The second approach might involve assigning the error message to one of the "
-"fields. In this case, let's assign an error message to both the \"subject\" "
-"and \"cc_myself\" rows in the form display. Be careful when doing this in "
-"practice, since it can lead to confusing form output. We're showing what is "
-"possible here and leaving it up to you and your designers to work out what "
-"works effectively in your particular situation. Our new code (replacing the "
-"previous sample) looks like this::"
-msgstr "La seconde approche pourrait impliquer d'attribuer le message d'erreur à l'un des champs. Dans ce cas, attribuons un message d'erreur à la fois aux deux lignes « subject » et « cc_myself » dans l'affichage du formulaire. Soyez prudent si vous faites cela en pratique, car cela pourrait amener de la confusion dans la présentation du formulaire. Nous montrons ici ce qui est possible, mais nous vous laissons la responsabilité de constater vous-même ce qui est faisable dans votre contexte particulier. Notre nouveau code (remplaçant l'exemple précédent) ressemble à ceci ::"
+"The second approach for reporting validation errors might involve assigning "
+"the error message to one of the fields. In this case, let's assign an error "
+"message to both the \"subject\" and \"cc_myself\" rows in the form display. "
+"Be careful when doing this in practice, since it can lead to confusing form "
+"output. We're showing what is possible here and leaving it up to you and "
+"your designers to work out what works effectively in your particular "
+"situation. Our new code (replacing the previous sample) looks like this::"
+msgstr "La seconde approche pour signaler les erreurs de validation pourrait impliquer d'attribuer le message d'erreur à l'un des champs. Dans ce cas, attribuons un message d'erreur à la fois aux deux lignes « subject » et « cc_myself » dans l'affichage du formulaire. Soyez prudent si vous faites cela en pratique, car cela pourrait amener de la confusion dans la présentation du formulaire. Nous montrons ici ce qui est possible, mais nous vous laissons la responsabilité de constater vous-même ce qui est faisable dans votre contexte particulier. Notre nouveau code (remplaçant l'exemple précédent) ressemble à ceci ::"
 
-# e179ae3fcad24f44a98757166491c8a0
-#: ../../../../1.8/docs/ref/forms/validation.txt:408
+# ab31248da22c4897ab6cc8496b0bb2eb
+#: ../../../../1.8/docs/ref/forms/validation.txt:417
 msgid ""
 "The second argument of ``add_error()`` can be a simple string, or preferably"
 " an instance of ``ValidationError``. See :ref:`raising-validation-error` for"
@@ -41190,7 +41243,7 @@ msgid ""
 "value is permanent and should be baked into the project state (``True``), or"
 " if it is temporary and just for this migration (``False``) - usually "
 "because the migration is adding a non-nullable field to a table and needs a "
-"default value to put into existing rows. It does not effect the behavior of "
+"default value to put into existing rows. It does not affect the behavior of "
 "setting defaults in the database directly - Django never sets database "
 "defaults and always applies them in the Django ORM code."
 msgstr "Le paramètre ``preserve_default`` indique si la valeur par défaut du champ est permanente et doit être incluse dans l'état du projet (``True``) ou si elle n'est que temporaire et juste pour la migration (``False``), généralement parce que la migration ajoute un champ non nul à une table et qu'elle a besoin d'une valeur par défaut pour remplir les lignes existantes. Cela ne concerne pas le comportement de définition de valeurs par défaut au sein même de la base de données, car Django ne définit jamais de valeurs par défaut pour la base de données et les applique toujours au niveau du code Django de l'ORM. "
@@ -41234,7 +41287,7 @@ msgid ""
 "value is permanent and should be baked into the project state (``True``), or"
 " if it is temporary and just for this migration (``False``) - usually "
 "because the migration is altering a nullable field to a non-nullable one and"
-" needs a default value to put into existing rows. It does not effect the "
+" needs a default value to put into existing rows. It does not affect the "
 "behavior of setting defaults in the database directly - Django never sets "
 "database defaults and always applies them in the Django ORM code."
 msgstr "Le paramètre ``preserve_default`` indique si la valeur par défaut du champ est permanente et doit être incluse dans l'état du projet (``True``) ou si elle n'est que temporaire et juste pour la migration (``False``), généralement parce que la migration modifie un champ nul vers un champ non nul à une table et qu'elle a besoin d'une valeur par défaut pour remplir les lignes existantes. Cela ne concerne pas le comportement de définition de valeurs par défaut au sein même de la base de données, car Django ne définit jamais de valeurs par défaut pour la base de données et les applique toujours au niveau du code Django de l'ORM. "
@@ -60384,8 +60437,20 @@ msgstr "Le gabarit ``Template`` obtenu à l'étape précédente possède une mé
 msgid "Configuring an engine"
 msgstr "Configuration d'un moteur"
 
-# de9198c0ad5a44fcb78ecd0ddc664e08
-#: ../../../../1.8/docs/ref/templates/api.txt:48
+# 4372be2f66e74258accede19aa6d9aea
+#: ../../../../1.8/docs/ref/templates/api.txt:44
+msgid ""
+"If you are simply using the "
+":class:`~django.template.backends.django.DjangoTemplates` backend, this "
+"probably isn't the documentation you're looking for. An instance of the "
+"``Engine`` class described below is accessible using the ``engine`` "
+"attribute of that backend and any attribute defaults mentioned below are "
+"overridden by what's passed by "
+":class:`~django.template.backends.django.DjangoTemplates`."
+msgstr "Si vous utilisez simplement le moteur :class:`~django.template.backends.django.DjangoTemplates`, cette documentation n'est probablement pas celle que vous cherchez. Une instance de la classe ``Engine`` décrite ci-dessous est accessible en utilisant l'attribut ``engine`` du moteur, et toute valeur par défaut d'attribut mentionnée plus bas est remplacée par ce qui est transmis par :class:`~django.template.backends.django.DjangoTemplates`."
+
+# 57b68d3633924613907c84a9ac81e206
+#: ../../../../1.8/docs/ref/templates/api.txt:55
 msgid ""
 "When instantiating an ``Engine`` all arguments must be passed as keyword "
 "arguments:"
@@ -61988,6 +62053,19 @@ msgstr "Cela peut aussi être utile si vous avez besoin d'accéder aux élément
 
 # 5a6aed0d07c4429eaa3026e5a25c0c9f
 #: ../../../../1.8/docs/ref/templates/builtins.txt:323
+msgid ""
+"Keep in mind that for the dot operator, dictionary key lookup takes "
+"precedence over method lookup. Therefore if the ``data`` dictionary contains"
+" a key named ``'items'``, ``data.items`` will return ``data['items']`` "
+"instead of ``data.items()``. Avoid adding keys that are named like "
+"dictionary methods if you want to use those methods in a template "
+"(``items``, ``values``, ``keys``, etc.). Read more about the lookup order of"
+" the dot operator in the :ref:`documentation of template variables "
+"<template-variables>`."
+msgstr "N'oubliez pas que pour l'opérateur point, la recherche de clé de dictionnaire est prioritaire par rapport à la recherche de méthode. Ainsi, si le dictionnaire ``data`` contient une clé nommée ``'items'``, ``data.items`` renvoie ``data['items']`` au lieu de ``data.items()``. Évitez d'ajouter des clés qui ont le même nom que des méthodes de dictionnaire si vous voulez utilisez ces méthodes dans les gabarits (``items``, ``values``, ``keys``, etc.). Vous trouverez plus de détails sur l'ordre de recherche de l'opérateur point dans la :ref:`documentation des variables de gabarit <template-variables>`."
+
+# d17ba17e35fc43b8972cba2af55b3fd5
+#: ../../../../1.8/docs/ref/templates/builtins.txt:331
 msgid "The for loop sets a number of variables available within the loop:"
 msgstr "La boucle ``for`` définit un certain nombre de variables disponibles à l'intérieur de la boucle :"
 
