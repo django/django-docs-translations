@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-22 03:12-0500\n"
-"PO-Revision-Date: 2015-10-22 17:54+0000\n"
+"POT-Creation-Date: 2015-11-27 02:10-0600\n"
+"PO-Revision-Date: 2015-11-27 17:07+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -218,13 +218,13 @@ msgstr "D'une manière ou d'une autre, ``authenticate`` doit vérifier les donn�
 # b6cba44dc773407b89b43d07c20acb0d
 #: ../../../../1.8/docs/topics/auth/customizing.txt:118
 msgid ""
-"The Django admin system is tightly coupled to the Django ``User`` object "
-"described at the beginning of this document. For now, the best way to deal "
-"with this is to create a Django ``User`` object for each user that exists "
-"for your backend (e.g., in your LDAP directory, your external SQL database, "
-"etc.) You can either write a script to do this in advance, or your "
-"``authenticate`` method can do it the first time a user logs in."
-msgstr "Le système d'administration de Django est étroitement couplé à l'objet ``User`` de Django décrit au début de ce document. Pour l'instant, la meilleure façon de gérer cela est de créer un objet Django ``User`` pour chaque utilisateur existant dans votre moteur (par ex. dans votre annuaire LDAP, votre base de données SQL externe, etc.). Vous pouvez soit écrire un script pour le faire de manière anticipée, soit déléguer à votre méthode ``authenticate`` la création de l'objet ``User`` lors de chaque première connexion."
+"The Django admin is tightly coupled to the Django :ref:`User object <user-"
+"objects>`. The best way to deal with this is to create a Django ``User`` "
+"object for each user that exists for your backend (e.g., in your LDAP "
+"directory, your external SQL database, etc.) You can either write a script "
+"to do this in advance, or your ``authenticate`` method can do it the first "
+"time a user logs in."
+msgstr "Le site d'administration de Django est étroitement couplé à :ref:`l'objet User <user-objects>` de Django. La meilleure façon de gérer cela est de créer un objet Django ``User`` pour chaque utilisateur existant dans votre moteur (par ex. dans votre annuaire LDAP, votre base de données SQL externe, etc.). Vous pouvez soit écrire un script pour le faire de manière anticipée, soit déléguer à votre méthode ``authenticate`` la création de l'objet ``User`` lors de chaque première connexion."
 
 # 948894e2a7ee458fb1c302132bdad565
 #: ../../../../1.8/docs/topics/auth/customizing.txt:125
@@ -2130,8 +2130,16 @@ msgid ""
 "login page."
 msgstr "Si le paramètre ``raise_exception`` est présent, le décorateur génère une exception :exc:`~django.core.exceptions.PermissionDenied` (permission refusée), déclenchant la  :ref:`vue 403 (HTTP Forbidden)<http_forbidden_view>` au lieu de rediriger vers la page de connexion."
 
-# 4a28b12d106c4075b0abf0c17364eebe
-#: ../../../../1.8/docs/topics/auth/default.txt:596
+# cc618a01a0b5413aab9cd9cc82522681
+#: ../../../../1.8/docs/topics/auth/default.txt:595
+msgid ""
+"If you want to use ``raise_exception`` but also give your users a chance to "
+"login first, you can add the "
+":func:`~django.contrib.auth.decorators.login_required` decorator::"
+msgstr "Si vous souhaitez utiliser ``raise_exception`` tout en laissant aux utilisateurs une chance de se connecter, vous pouvez ajouter le décorateur :func:`~django.contrib.auth.decorators.login_required`::"
+
+# 72e9fac8406f429fbca8a1f0b3c39868
+#: ../../../../1.8/docs/topics/auth/default.txt:608
 msgid ""
 "The :func:`~django.contrib.auth.decorators.permission_required` decorator "
 "can take a list of permissions, in which case the user must have all of the "
@@ -3940,22 +3948,28 @@ msgid ""
 "the path to a Memcached Unix socket file."
 msgstr "Définissez :setting:`LOCATION <CACHES-LOCATION>` aux valeurs ``ip:port``, où ``ip`` est l'adresse IP du service Memcached  et ``port`` est le port de fonctionnement de Memcached,  ou à une valeur ``unix:path``, où ``path`` est le chemin vers le fichier connecteur Unix de  Memcached."
 
-# 46d0f60c6eb84872be1a1ce45ea7a5bb
+# 4da412b4d789486cb4f58104801a486c
 #: ../../../../1.8/docs/topics/cache.txt:97
 msgid ""
 "In this example, Memcached is running on localhost (127.0.0.1) port 11211, "
 "using the ``python-memcached`` binding::"
 msgstr "Dans cet exemple, Memcached tourne sur localhost (127.0.0.1) port 11211, utilisant la liaison ``python-memcached``::"
 
-# 828a19538e5948138f88273bec4dc117
+# 9a168fdaa19141c99fe23b2249d7b48a
 #: ../../../../1.8/docs/topics/cache.txt:107
 msgid ""
 "In this example, Memcached is available through a local Unix socket file "
 ":file:`/tmp/memcached.sock` using the ``python-memcached`` binding::"
 msgstr "Dans cet exemple, Memcached est disponible par un connecteur Unix local :file:`/tmp/memcached.sock` en utilisant la liaison ``python-memcached``::"
 
-# c3a1e97202cc451580984f4aece58556
+# 2010b546a7f14f8b959c4fcae32bfecb
 #: ../../../../1.8/docs/topics/cache.txt:117
+msgid ""
+"When using the ``pylibmc`` binding, do not include the ``unix:/`` prefix::"
+msgstr "Si vous utilisez le code de liaison ``pylibmc``, n'utilisez pas le préfixe ``unix:/``::"
+
+# e8efcf8c251d4e7c8f0f6307a6532eeb
+#: ../../../../1.8/docs/topics/cache.txt:126
 msgid ""
 "One excellent feature of Memcached is its ability to share a cache over "
 "multiple servers. This means you can run Memcached daemons on multiple "
@@ -5948,8 +5962,17 @@ msgid ""
 "having trouble, review the method resolution order of your view."
 msgstr "Généralement, ``get_context_data`` fusionne les données de contexte de toutes les classes parentes avec celles de la classe actuelle. Pour préserver ce comportement dans vos propres classes où vous souhaitez modifier le contexte, il faut prendre soin d'appeler ``get_context_data`` de la classe parente (``super``). Pour autant qu'il n'y ait pas deux classes essayant de modifier la même clé, le résultat sera correct. Cependant, si l'une des classes tente de surcharger une clé après qu'une classe parente l'a définie (après l'appel à ``super``), toute classe enfant de cette classe devra aussi définir explicitement cette clé après ``super`` pour être certain de surcharger tous les parents. Si cela vous cause des ennuis, analysez l'ordre de résolution des méthodes de votre vue."
 
-# 77bf6de04a114aa08017a21b1bcca5eb
-#: ../../../../1.8/docs/topics/class-based-views/generic-display.txt:243
+# 5c8941973c9b462797b5b581ed88f420
+#: ../../../../1.8/docs/topics/class-based-views/generic-display.txt:240
+msgid ""
+"Another consideration is that the context data from class-based generic "
+"views will override data provided by context processors; see "
+":meth:`~django.views.generic.detail.SingleObjectMixin.get_context_data` for "
+"an example."
+msgstr "Un autre élément à signaler est que les données de contexte provenant des vues génériques basées sur les classes vont écraser les données fournies par les processeurs de contexte ; voir :meth:`~django.views.generic.detail.SingleObjectMixin.get_context_data` comme exemple."
+
+# 53cb805ee71347e181fcd6824bf1096b
+#: ../../../../1.8/docs/topics/class-based-views/generic-display.txt:248
 msgid "Viewing subsets of objects"
 msgstr "Affichage de sous-ensembles d'objets"
 
@@ -8287,8 +8310,8 @@ msgstr "Ordre des clauses ``annotate()`` et ``filter()``"
 #: ../../../../1.8/docs/topics/db/aggregation.txt:320
 msgid ""
 "When developing a complex query that involves both ``annotate()`` and "
-"``filter()`` clauses, particular attention should be paid to the order in "
-"which the clauses are applied to the ``QuerySet``."
+"``filter()`` clauses, pay particular attention to the order in which the "
+"clauses are applied to the ``QuerySet``."
 msgstr "Lors de la rédaction de requête complexe impliquant à la fois des clauses ``annotate()`` et ``filter()``, une attention particulière doit être donnée à l'ordre dans lequel les clauses sont appliquées à l'objet ``QuerySet``."
 
 # 1357d87c1c404fe1ac73d22a2bb7c966
@@ -8297,30 +8320,81 @@ msgid ""
 "When an ``annotate()`` clause is applied to a query, the annotation is "
 "computed over the state of the query up to the point where the annotation is"
 " requested. The practical implication of this is that ``filter()`` and "
-"``annotate()`` are not commutative operations -- that is, there is a "
-"difference between the query::"
-msgstr "Lorsqu'une clause ``annotate()`` est appliquée à une requête, l'annotation est calculée sur l'état de la requête au point exact où l'annotation est demandée. L'implication pratique de ceci est que ``filter()`` et ``annotate()`` ne sont pas des opérations commutatives, c'est-à-dire qu'il existe une différence entre la requête ::"
+"``annotate()`` are not commutative operations."
+msgstr "Lorsqu'une clause ``annotate()`` est appliquée à une requête, l'annotation est calculée sur l'état de la requête au point exact où l'annotation est demandée. L'implication pratique de ceci est que ``filter()`` et ``annotate()`` ne sont pas des opérations commutatives."
 
-# b9e75ade79a844328d81269b0ca51162
-#: ../../../../1.8/docs/topics/db/aggregation.txt:332
-msgid "and the query::"
-msgstr "et la requête ::"
+# 2574ec27046b42a485e4ca75bae9bded
+#: ../../../../1.8/docs/topics/db/aggregation.txt:353
+msgid "Given:"
+msgstr "Étant donné :"
 
-# e9936055e74f445ba82ce1d3b1c3f232
-#: ../../../../1.8/docs/topics/db/aggregation.txt:336
+# 3e353e54576346da948cd12b697ae3ac
+#: ../../../../1.8/docs/topics/db/aggregation.txt:355
+msgid "Publisher A has two books with ratings 4 and 5."
+msgstr "Un « Publisher » A possède deux livres avec notations 4 et 5."
+
+# f43c80e95e914163823db392bf9d1b35
+#: ../../../../1.8/docs/topics/db/aggregation.txt:356
+msgid "Publisher B has two books with ratings 1 and 4."
+msgstr "Un « Publisher » B possède deux livres avec notations 1 et 4."
+
+# 385e86af80244957a07efc06d9f6eece
+#: ../../../../1.8/docs/topics/db/aggregation.txt:357
+msgid "Publisher C has one book with rating 1."
+msgstr "Un « Publisher » A possède un livre avec notation 1."
+
+# a9765e5076864e1e91c7894c9b11b033
+#: ../../../../1.8/docs/topics/db/aggregation.txt:359
+msgid "Here's an example with the ``Count`` aggregate::"
+msgstr "Voici un exemple avec l'agrégation ``Count``::"
+
+# f86ef3985d9b47238864f5a7bd961226
+#: ../../../../1.8/docs/topics/db/aggregation.txt:373
 msgid ""
-"Both queries will return a list of publishers that have at least one good "
-"book (i.e., a book with a rating exceeding 3.0). However, the annotation in "
-"the first query will provide the total number of all books published by the "
-"publisher; the second query will only include good books in the annotated "
-"count. In the first query, the annotation precedes the filter, so the filter"
-" has no effect on the annotation. In the second query, the filter precedes "
-"the annotation, and as a result, the filter constrains the objects "
-"considered when calculating the annotation."
-msgstr "Les deux requêtes renvoient une liste d'éditeurs possédant au moins un bon livre (c'est-à-dire un livre avec une note dépassant 3.0). Cependant, l'annotation de la première requête fournit le nombre total de livres publiés par l'éditeur, alors que la seconde requête n'inclut que les « bons » livres dans l'annotation calculée. Dans la première requête, l'annotation précède le filtre, ce qui fait que le filtre n'a aucun effet sur l'annotation. Dans la seconde requête, le filtre précède l'annotation, ce qui a comme résultat que le filtre restreint les objets considérés dans le calcul de l'annotation."
+"Both queries return a list of publishers that have at least one book with a "
+"rating exceeding 3.0, hence publisher C is excluded."
+msgstr "Les deux requêtes renvoient une liste d'objets « Publisher » ayant au moins un livre avec une note dépassant 3.0, ce qui fait que Publisher C est exclu."
 
-# ef7cd6015a3d406c8c64e318e43e19f7
-#: ../../../../1.8/docs/topics/db/aggregation.txt:346
+# 8d60a396d98e42fcb0ae78389984c4a8
+#: ../../../../1.8/docs/topics/db/aggregation.txt:376
+msgid ""
+"In the first query, the annotation precedes the filter, so the filter has no"
+" effect on the annotation. ``distinct=True`` is required to avoid a :ref"
+":`cross-join bug <combining-multiple-aggregations>`."
+msgstr "Dans la première requête, l'annotation précède le filtre, ce qui fait que le filtre n'a aucun effet sur l'annotation. ``distinct=True`` est obligatoire pour éviter une :ref:`anomalie de jointure croisée <combining-multiple-aggregations>`."
+
+# 939ca74e8eec422589e971ab24ff3951
+#: ../../../../1.8/docs/topics/db/aggregation.txt:380
+msgid ""
+"The second query counts the number of books that have a rating exceeding 3.0"
+" for each publisher. The filter precedes the annotation, so the filter "
+"constrains the objects considered when calculating the annotation."
+msgstr "La seconde requête compte le nombre de livres ayant une note dépassant 3.0 pour chaque Publisher. Le filtre précède l'annotation, ce qui fait que le filtre limite les objets pris en compte lors du calcul de l'annotation."
+
+# 5bfeddc05c59443498fe334aa34b46b6
+#: ../../../../1.8/docs/topics/db/aggregation.txt:384
+msgid "Here's another example with the ``Avg`` aggregate::"
+msgstr "Voici un autre exemple avec l'agrégation ``Avg``::"
+
+# e70b86af4c2245308955aabda26b4230
+#: ../../../../1.8/docs/topics/db/aggregation.txt:398
+msgid ""
+"The first query asks for the average rating of all a publisher's books for "
+"publisher's that have at least one book with a rating exceeding 3.0. The "
+"second query asks for the average of a publisher's book's ratings for only "
+"those ratings exceeding 3.0."
+msgstr "La première requête calcule la note moyenne de tous les livres de chaque éditeur pour les éditeurs ayant au moins un livre avec une note dépassant 3.0. La seconde requête calcule la moyenne des notes des livres d'un éditeur pour tous les livres dont la note dépasse 3.0."
+
+# a6bd813bc974424fb954470339b92f73
+#: ../../../../1.8/docs/topics/db/aggregation.txt:403
+msgid ""
+"It's difficult to intuit how the ORM will translate complex querysets into "
+"SQL queries so when in doubt, inspect the SQL with ``str(queryset.query)`` "
+"and write plenty of tests."
+msgstr "Il est difficile de deviner comment l'ORM va traduire des jeux de requêtes complexes en instructions SQL ; en cas de doute, inspectez le code SQL produit avec ``str(queryset.query)`` et écrivez de nombreux tests."
+
+# d24b8554790947ae8af8e955ee0f8bd2
+#: ../../../../1.8/docs/topics/db/aggregation.txt:408
 msgid "``order_by()``"
 msgstr "``order_by()``"
 
@@ -11056,9 +11130,9 @@ msgstr "Indication du champ de lien vers le parent"
 #: ../../../../1.8/docs/topics/db/models.txt:1111
 msgid ""
 "As mentioned, Django will automatically create a "
-":class:`~django.db.models.OneToOneField` linking your child class back any "
-"non-abstract parent models. If you want to control the name of the attribute"
-" linking back to the parent, you can create your own "
+":class:`~django.db.models.OneToOneField` linking your child class back to "
+"any non-abstract parent models. If you want to control the name of the "
+"attribute linking back to the parent, you can create your own "
 ":class:`~django.db.models.OneToOneField` and set :attr:`parent_link=True "
 "<django.db.models.OneToOneField.parent_link>` to indicate that your field is"
 " the link back to the parent class."
@@ -29177,27 +29251,32 @@ msgid ""
 "time, process, thread and module that generate the log message."
 msgstr "``verbose`` qui affiche le nom du niveau de journal, le message de journal ainsi que l'heure, le processus, le fil d'exécution et le module qui ont généré le message."
 
-# a2c706dbe25149aaab44214b7abd5b54
-#: ../../../../1.8/docs/topics/logging.txt:369
+# cbdd69e808ab4d20a5d54255e444eb1f
+#: ../../../../1.8/docs/topics/logging.txt:368
+msgid "Defines two filters:"
+msgstr "Elle définit deux filtres :"
+
+# fe1d7fb767ba46f491d89ae867187552
+#: ../../../../1.8/docs/topics/logging.txt:370
 msgid ""
-"Defines one filter -- ``project.logging.SpecialFilter``, using the alias "
-"``special``. If this filter required additional arguments at time of "
-"construction, they can be provided as additional keys in the filter "
-"configuration dictionary. In this case, the argument ``foo`` will be given a"
-" value of ``bar`` when instantiating the ``SpecialFilter``."
-msgstr "Elle définit un filtre (``project.logging.SpecialFilter``) par l'alias ``special``. Si ce filtre nécessite des paramètres supplémentaires au moment de sa construction, ils peuvent être fournis sous forme de clés supplémentaires dans le dictionnaire de configuration du filtre. Dans ce cas, le paramètre ``foo`` reçoit la valeur ``bar`` au moment de l'instanciation de ``SpecialFilter``."
+"``project.logging.SpecialFilter``, using the alias ``special``. If this "
+"filter required additional arguments, they can be provided as additional "
+"keys in the filter configuration dictionary. In this case, the argument "
+"``foo`` will be given a value of ``bar`` when instantiating "
+"``SpecialFilter``."
+msgstr "``project.logging.SpecialFilter`` par l'alias ``special``. Si ce filtre nécessite des paramètres supplémentaires, ils peuvent être fournis sous forme de clés supplémentaires dans le dictionnaire de configuration du filtre. Dans ce cas, le paramètre ``foo`` reçoit la valeur ``bar`` au moment de l'instanciation de ``SpecialFilter``."
 
 # c1f5bc87b421417aaabebc749cd83ec7
 #: ../../../../1.8/docs/topics/logging.txt:376
-msgid "Defines three handlers:"
-msgstr "Elle définit trois gestionnaires :"
-
-# 9e526e5b087648389e257f177defaa34
-#: ../../../../1.8/docs/topics/logging.txt:378
 msgid ""
-"``null``, a NullHandler, which will pass any ``DEBUG`` (or higher) message "
-"to ``/dev/null``."
-msgstr "``null``, un gestionnaire ``NullHandler`` qui fait passer à la trappe (``/dev/null``) tout message de niveau ``DEBUG`` ou plus élevé."
+"``django.utils.log.RequireDebugTrue``, which passes on records when "
+":setting:`DEBUG` is ``True``."
+msgstr "``django.utils.log.RequireDebugTrue``, qui transmet plus loin les messages lorsque :setting:`DEBUG` vaut ``True``."
+
+# ed0042f2cdff42bd8eeaa139023bd3f8
+#: ../../../../1.8/docs/topics/logging.txt:379
+msgid "Defines two handlers:"
+msgstr "Elle définit deux gestionnaires :"
 
 # dcac8c98a12e4c069fb0f0674db85a6d
 #: ../../../../1.8/docs/topics/logging.txt:381
@@ -29221,10 +29300,8 @@ msgstr "Elle configure trois journaliseurs :"
 
 # c605e45def0d428aa2d8ced760c89e25
 #: ../../../../1.8/docs/topics/logging.txt:391
-msgid ""
-"``django``, which passes all messages at ``INFO`` or higher to the ``null`` "
-"handler."
-msgstr "``django`` transmettant tous les messages de niveau ``INFO`` ou plus élevé au gestionnaire ``null``."
+msgid "``django``, which passes all messages to the ``console`` handler."
+msgstr "``django``, qui transmet tous les messages au gestionnaire ``console``."
 
 # 5da71f6fe80241759489c026da58fa08
 #: ../../../../1.8/docs/topics/logging.txt:394
@@ -29465,8 +29542,10 @@ msgstr "Ce gestionnaire envoie un courriel aux administrateurs du site pour chaq
 #: ../../../../1.8/docs/topics/logging.txt:557
 msgid ""
 "If the log record contains a ``request`` attribute, the full details of the "
-"request will be included in the email."
-msgstr "Si la ligne de journal contient un attribut ``request``, les détails complets de la requête sont inclus dans le courriel."
+"request will be included in the email. The email subject will be include the"
+" phrase \"internal IP\" if the client's IP address is in the "
+":setting:`INTERNAL_IPS` setting; if not, it will include \"EXTERNAL IP\"."
+msgstr "Si le message de journalisation contient un attribut ``request``, les détails complets de la requête seront inclus dans le courriel. Le sujet du courriel contiendra « internal IP » si l'adresse IP du client se trouve dans le réglage :setting:`INTERNAL_IPS`; sinon, il contiendra « EXTERNAL IP »."
 
 # 92133b9f5ac443179dbd9fa2c90aa4db
 #: ../../../../1.8/docs/topics/logging.txt:560
@@ -31524,12 +31603,12 @@ msgstr "Il est courant d'avoir à appeler une méthode d'instance de classe plus
 # 66f8d1f9666f411280c35a53edd7af09
 #: ../../../../1.8/docs/topics/performance.txt:177
 msgid ""
-"Using the ``@cached_property`` decorator saves the value returned by a "
-"property; the next time the function is called on that instance, it will "
-"return the saved value rather than re-computing it. Note that this only "
-"works on methods that take ``self`` as their only argument and that it "
-"changes the method to a property."
-msgstr "En utilisant le décorateur ``@cached_property``, la valeur renvoyée par la propriété est enregistrée ; lors de l'appel suivant de cette fonction sur cette instance, c'est la valeur enregistrée qui sera renvoyée au lieu de la recalculer. Notez que cela n'est valable que pour les méthodes qui acceptent uniquement le paramètre ``self`` et que cela transforme la méthode en propriété."
+"Using the :class:`~django.utils.functional.cached_property` decorator saves "
+"the value returned by a property; the next time the function is called on "
+"that instance, it will return the saved value rather than re-computing it. "
+"Note that this only works on methods that take ``self`` as their only "
+"argument and that it changes the method to a property."
+msgstr "En utilisant le décorateur :class:`~django.utils.functional.cached_property`, la valeur renvoyée par la propriété est enregistrée ; lors de l'appel suivant de cette fonction sur cette instance, c'est la valeur enregistrée qui sera renvoyée au lieu de la recalculer. Notez que cela n'est valable que pour les méthodes qui acceptent uniquement le paramètre ``self`` et que cela transforme la méthode en propriété."
 
 # bf3cf8b26f0443d2a5c29fbbe21813a4
 #: ../../../../1.8/docs/topics/performance.txt:183
@@ -37898,9 +37977,9 @@ msgstr "Le client de test utilisé pour effectuer la requête qui a renvoyé cet
 # 00f96420295b42b8853737383b81356a
 #: ../../../../1.8/docs/topics/testing/tools.txt:413
 msgid ""
-"The body of the response, as a string. This is the final page content as "
-"rendered by the view, or any error message."
-msgstr "Le corps de la réponse sous forme de texte. Il s'agit du contenu final de la page produite par la vue, ou d'un éventuel message d'erreur."
+"The body of the response, as a bytestring. This is the final page content as"
+" rendered by the view, or any error message."
+msgstr "Le corps de la réponse sous forme de chaîne d'octets. Il s'agit du contenu final de la page produite par la vue, ou d'un éventuel message d'erreur."
 
 # 2d1d5667f73e44bc844628722ef1f0de
 #: ../../../../1.8/docs/topics/testing/tools.txt:418
@@ -37924,8 +38003,25 @@ msgid ""
 "variable ``name`` could be retrieved using::"
 msgstr "Quel que soit le nombre de gabarits utilisés dans le processus de rendu, vous pouvez récupérer les valeurs de contexte en utilisant l'opérateur ``[]``. Par exemple, la variable de contexte ``name`` peut être récupérée ainsi ::"
 
-# 83587290fb104cb8a541614d1c60523b
-#: ../../../../1.8/docs/topics/testing/tools.txt:434
+# d08966d00d8049fba0db6a31af2859da
+# dfaa3ae78bab426b8b39998a100ea277
+#: ../../../../1.8/docs/topics/testing/tools.txt:439
+#: ../../../../1.8/docs/topics/testing/tools.txt:471
+msgid "Not using Django templates?"
+msgstr "Vous n'utilisez pas les gabarits Django ?"
+
+# b642ac07778b4270b46f6286082b0718
+#: ../../../../1.8/docs/topics/testing/tools.txt:441
+msgid ""
+"This attribute is only populated when using the "
+":class:`~django.template.backends.django.DjangoTemplates` backend. If you're"
+" using another template engine, "
+":attr:`~django.template.response.SimpleTemplateResponse.context_data` may be"
+" a suitable alternative on responses with that attribute."
+msgstr "Cet attribut n'est présent que lorsque le moteur de gabarit est :class:`~django.template.backends.django.DjangoTemplates`. Si vous utilisez un autre moteur, :attr:`~django.template.response.SimpleTemplateResponse.context_data` peut constituer une alternative viable pour les réponses possédant cet attribut."
+
+# 808ea06a2ba948ae87c6dead560eb3b2
+#: ../../../../1.8/docs/topics/testing/tools.txt:449
 msgid "The request data that stimulated the response."
 msgstr "Les données de requête à l'origine de la réponse."
 
@@ -37952,8 +38048,19 @@ msgid ""
 "loaded from a file. (The name is a string such as ``'admin/index.html'``.)"
 msgstr "Une liste d'instances de gabarits (``Template``) ayant servi à rendre le contenu final, dans l'ordre de leur utilisation. Pour chaque gabarit de la liste, utilisez ``template.name`` pour obtenir le nom de fichier du gabarit si celui-ci a été chargé à partir d'un fichier (le nom est une chaîne du genre ``'admin/index.html'``)."
 
-# 5001715ee0434b1c8ec4c50dfded2997
-#: ../../../../1.8/docs/topics/testing/tools.txt:460
+# 82ef2d7d22d94ef0a501a0815708ec26
+#: ../../../../1.8/docs/topics/testing/tools.txt:473
+msgid ""
+"This attribute is only populated when using the "
+":class:`~django.template.backends.django.DjangoTemplates` backend. If you're"
+" using another template engine, "
+":attr:`~django.template.response.SimpleTemplateResponse.template_name` may "
+"be a suitable alternative if you only need the name of the template used for"
+" rendering."
+msgstr "Cet attribut n'est présent que lorsque le moteur de gabarit est :class:`~django.template.backends.django.DjangoTemplates`. Si vous utilisez un autre moteur, :attr:`~django.template.response.SimpleTemplateResponse.template_name` peut constituer une alternative viable si vous n'avez besoin que du nom du gabarit utilisé pour le rendu."
+
+# c0fae4468b444e2ba127c8dc463d0b0e
+#: ../../../../1.8/docs/topics/testing/tools.txt:484
 msgid ""
 "An instance of :class:`~django.core.urlresolvers.ResolverMatch` for the "
 "response. You can use the "
@@ -38362,8 +38469,18 @@ msgid ""
 "called before each test, negating the speed benefits."
 msgstr "Notez que si les tests sont exécutés pour une base de données sans prise en charge des transactions (par exemple MySQL avec le moteur MyISAM), ``setUpTestData()`` sera appelée avant chaque test, ce qui annulera le bénéfice en terme de vitesse."
 
-# a3d5b787180547b683b2b6160e77747e
-#: ../../../../1.8/docs/topics/testing/tools.txt:742
+# 97bb3af8050d474b99cf12c3f66e2acf
+#: ../../../../1.8/docs/topics/testing/tools.txt:764
+msgid ""
+"Be careful not to modify any objects created in ``setUpTestData()`` in your "
+"test methods. Modifications to in-memory objects from setup work done at the"
+" class level will persist between test methods. If you do need to modify "
+"them, you could reload them in the ``setUp()`` method with "
+":meth:`~django.db.models.Model.refresh_from_db`, for example."
+msgstr "Prenez soin de ne pas modifier les objets créés dans ``setUpTestData()`` dans vos méthodes de test. Les modifications en mémoire des objets préparés au niveau de la classe persistent entre les méthodes de test. Si vous avez besoin de les modifier, vous pouvez les recharger dans la méthode ``setUp()`` avec :meth:`~django.db.models.Model.refresh_from_db`, par exemple."
+
+# 8d7b3a0196ba4c1c8d8e0bfbf2625ac1
+#: ../../../../1.8/docs/topics/testing/tools.txt:772
 msgid ""
 "If you want to test some specific database transaction behavior, you should "
 "use ``TransactionTestCase``, as ``TestCase`` wraps test execution within an "
@@ -38443,12 +38560,23 @@ msgstr "Pour démontrer comment utiliser ``LiveServerTestCase``, écrivons un te
 #: ../../../../1.8/docs/topics/testing/tools.txt:804
 msgid ""
 "Then, add a ``LiveServerTestCase``-based test to your app's tests module "
-"(for example: ``myapp/tests.py``). The code for this test may look as "
-"follows::"
-msgstr "Puis, ajoutez un test basé sur ``LiveServerTestCase`` dans le module de test de votre application (par exemple ``myapp/tests.py``). Le code de ce test pourrait ressembler à ceci ::"
+"(for example: ``myapp/tests.py``). For this example, we'll assume you're "
+"using the :mod:`~django.contrib.staticfiles` app and want to have static "
+"files served during the execution of your tests similar to what we get at "
+"development time with ``DEBUG=True``, i.e. without having to collect them "
+"using :djadmin:`collectstatic`. We'll use the  "
+":class:`~django.contrib.staticfiles.testing.StaticLiveServerTestCase` "
+"subclass which provides that functionality. Replace it with "
+"``django.test.LiveServerTestCase`` if you don't need that."
+msgstr "Puis, ajoutez un test basé sur ``LiveServerTestCase`` au module tests de votre application (par exemple ``myapp/tests.py``). Pour cet exemple, nous supposons que vous utilisez l'application :mod:`~django.contrib.staticfiles` et que vous souhaitez disposez des fichiers statiques servis durant l'exécution des tests tout comme ce qu'on a en développement avec ``DEBUG=True``, c'est-à-dire sans devoir les collecter avec :djadmin:`collectstatic`. Nous allons utiliser la sous-classe :class:`~django.contrib.staticfiles.testing.StaticLiveServerTestCase` qui fournit cette fonctionnalité. Remplacez-la par ``django.test.LiveServerTestCase`` si vous n'en avez pas besoin."
 
-# 10c03eab800544bca94c049980f436cd
-#: ../../../../1.8/docs/topics/testing/tools.txt:831
+# 7fce50ef6f47485d8ef443597cba63f2
+#: ../../../../1.8/docs/topics/testing/tools.txt:844
+msgid "The code for this test may look as follows::"
+msgstr "Le code de ce test pourrait ressembler à ceci ::"
+
+# 273bc2c78bd14470b964e721f7d7c761
+#: ../../../../1.8/docs/topics/testing/tools.txt:870
 msgid "Finally, you may run the test as follows:"
 msgstr "Finalement, lancez le test comme ceci :"
 

@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-22 03:12-0500\n"
-"PO-Revision-Date: 2015-10-22 18:23+0000\n"
+"POT-Creation-Date: 2015-11-27 02:10-0600\n"
+"PO-Revision-Date: 2015-11-27 18:09+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -6637,28 +6637,55 @@ msgstr "Renvoie le nom de la variable de contexte utilisée pour contenir les do
 # d2c41378757a4e1389ed7453e8b91e5c
 #: ../../../../1.8/docs/ref/class-based-views/mixins-single-object.txt:109
 msgid ""
-"The base implementation of this method requires that the ``object`` "
+"The base implementation of this method requires that the ``self.object`` "
 "attribute be set by the view (even if ``None``). Be sure to do this if you "
 "are using this mixin without one of the built-in views that does so."
-msgstr "L'implémentation de base de cette méthode exige que l'attribut ``object`` soit défini par la vue (même avec ``None``). Assurez-vous de le définir si vous utilisez cette classe mixin sans l'une des vues intégrées qui le fait."
+msgstr "L'implémentation de base de cette méthode exige que l'attribut ``self.object`` soit défini par la vue (même avec ``None``). Assurez-vous de le définir si vous utilisez cette classe mixin sans l'une des vues intégrées qui le fait."
+
+# 9f27bed5d04242a0b81ab59fc26ecc19
+#: ../../../../1.8/docs/ref/class-based-views/mixins-single-object.txt:113
+msgid "It returns a dictionary with these contents:"
+msgstr "Renvoie un dictionnaire contenant :"
 
 # ce005aeb397a40fb82188e3c2540e6e7
 #: ../../../../1.8/docs/ref/class-based-views/mixins-single-object.txt:115
+msgid "``object``: The object that this view is displaying (``self.object``)."
+msgstr "``object``: l'object affiché par cette vue (``self.object``)."
+
+# 67ae704555f24befbb38f9c8a90d983e
+#: ../../../../1.8/docs/ref/class-based-views/mixins-single-object.txt:117
+msgid ""
+"``context_object_name``: ``self.object`` will also be stored under the name "
+"returned by :meth:`get_context_object_name`, which defaults to the "
+"lowercased version of the model name."
+msgstr "``context_object_name``: ``self.object`` sera aussi stocké sous le nom renvoyé par :meth:`get_context_object_name`, qui équivaut par défaut au nom de modèle en minuscules."
+
+# c99dd5567bb14abf8f3b8f6f801b1f90
+#: ../../../../1.8/docs/ref/class-based-views/mixins-single-object.txt:121
+msgid "Context variables override values from template context processors"
+msgstr "Les variables de contexte écrasent les valeurs provenant des processeurs de contexte des gabarits"
+
+# 12f642e6373c4219b9d3bd2836dbd3c1
+#: ../../../../1.8/docs/ref/class-based-views/mixins-single-object.txt:123
+msgid ""
+"Any variables from :meth:`get_context_data` take precedence over context "
+"variables from :ref:`context processors <subclassing-context-"
+"requestcontext>`. For example, if your view sets the :attr:`model` attribute"
+" to :class:`~django.contrib.auth.models.User`, the default context object "
+"name of ``user`` would override the ``user`` variable from the "
+":func:`django.contrib.auth.context_processors.auth` context processor. Use "
+":meth:`get_context_object_name` to avoid a clash."
+msgstr "Toute variable de :meth:`get_context_data` a la priorité sur les variable de contexte provenant des :ref:`processeurs de contexte <subclassing-context-requestcontext>`. Par exemple, si une vue définit l'attribut :attr:`model` à :class:`~django.contrib.auth.models.User`, le nom d'objet de contexte par défaut ``user`` écrase la variable ``user`` définie par le processeur de contexte :func:`django.contrib.auth.context_processors.auth`. Utilisez :meth:`get_context_object_name` pour éviter cette collision."
+
+# 7cbc3599276a48f3a4ecfa81b68bfd88
+#: ../../../../1.8/docs/ref/class-based-views/mixins-single-object.txt:134
 msgid ""
 "Returns the name of a slug field to be used to look up by slug. By default "
 "this simply returns the value of :attr:`slug_field`."
 msgstr "Renvoie le nom d'un champ de type slug à utiliser lors de la sélection par slug. Par défaut, cette méthode renvoie simplement la valeur de :attr:`slug_field`."
 
-# 17ad802f51ec428fb1551fe3e953f236
-#: ../../../../1.8/docs/ref/class-based-views/mixins-single-object.txt:120
-msgid ""
-"``object``: The object that this view is displaying. If "
-"``context_object_name`` is specified, that variable will also be set in the "
-"context, with the same value as ``object``."
-msgstr "``object``: l'objet que cette vue va afficher. Si ``context_object_name`` est renseigné, cette variable sera également définie dans le contexte, avec le même contenu que ``object``."
-
-# dfd804116bd54a62ad6f0cbdf7d6eb54
-#: ../../../../1.8/docs/ref/class-based-views/mixins-single-object.txt:125
+# 71a12e89acf74e6e8a59a34927117c87
+#: ../../../../1.8/docs/ref/class-based-views/mixins-single-object.txt:139
 msgid "SingleObjectTemplateResponseMixin"
 msgstr "SingleObjectTemplateResponseMixin"
 
@@ -7376,10 +7403,11 @@ msgstr "Ajoutez :mod:`~django.contrib.admindocs` au réglage :setting:`INSTALLED
 # bde71d7282214e8ea67c19a6720b8058
 #: ../../../../1.8/docs/ref/contrib/admin/admindocs.txt:31
 msgid ""
-"Add ``(r'^admin/doc/', include('django.contrib.admindocs.urls'))`` to your "
-"``urlpatterns``. Make sure it's included *before* the ``r'^admin/'`` entry, "
-"so that requests to ``/admin/doc/`` don't get handled by the latter entry."
-msgstr "Ajoutez ``(r'^admin/doc/', include('django.contrib.admindocs.urls'))`` aux motifs d'URL ``urlpatterns``. Assurez-vous que cette inclusion apparaisse *avant* la ligne ``r'^admin/'``, de sorte que les requêtes vers ``/admin/doc/`` ne soient pas interceptées par cette dernière."
+"Add ``url(r'^admin/doc/', include('django.contrib.admindocs.urls'))`` to "
+"your ``urlpatterns``. Make sure it's included *before* the ``r'^admin/'`` "
+"entry, so that requests to ``/admin/doc/`` don't get handled by the latter "
+"entry."
+msgstr "Ajoutez ``url(r'^admin/doc/', include('django.contrib.admindocs.urls'))`` aux motifs d'URL ``urlpatterns``. Assurez-vous que cette inclusion apparaisse *avant* la ligne ``r'^admin/'``, de sorte que les requêtes vers ``/admin/doc/`` ne soient pas interceptées par cette dernière."
 
 # ad14895b4ad64b0c9f31b7bdb62ee261
 #: ../../../../1.8/docs/ref/contrib/admin/admindocs.txt:35
@@ -8719,8 +8747,16 @@ msgid ""
 " prefix on the field name. Using the above example, this would look like::"
 msgstr "Pour indiquer un ordre décroissant avec ``admin_order_field``, vous pouvez préfixer le nom de champ par un tiret. En utilisant l'exemple ci-dessus, cela ressemblerait à ::"
 
-# 442095414a294e30b1f7442b242a9468
-#: ../../../../1.8/docs/ref/contrib/admin/index.txt:672
+# c40ae512aca34391a19fc42ae38273f8
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:680
+msgid ""
+"``admin_order_field`` supports query lookups to sort by values on related "
+"models. This example includes an \"author first name\" column in the list "
+"display and allows sorting it by first name::"
+msgstr "``admin_order_field`` sait gérer les requêtes triées par valeurs de modèles liés. Cet exemple inclut une colonne « author first name » dans l'affichage en liste et permet de le trier en fonction du prénom (first name) ::"
+
+# 6b1d8a60b4e24f309e45c43507c1bb09
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:696
 msgid ""
 "Elements of ``list_display`` can also be properties. Please note however, "
 "that due to the way properties work in Python, setting ``short_description``"
@@ -11146,8 +11182,80 @@ msgid ""
 " under the password box."
 msgstr "La présence de l'URL nommée ``admin_password_reset`` fera apparaître un lien « Mot de passe oublié ? » sur la page par défaut d'ouverture de session de l'administration sous la boîte de saisie du mot de passe."
 
-# 5f6c624a10234e9b9026272fa88d6ea6
-#: ../../../../1.8/docs/ref/contrib/admin/index.txt:2718
+# 8e33ff09887a4d47ad4daeb4da2fd782
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:2740
+msgid "``LogEntry`` objects"
+msgstr "Objets ``LogEntry`` (journalisation)"
+
+# 2ec4a4b2bc8a4383b4971975c3915dfa
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:2744
+msgid ""
+"The ``LogEntry`` class tracks additions, changes, and deletions of objects "
+"done through the admin interface."
+msgstr "La classe ``LogEntry`` garde la trace des ajouts, des modifications et des suppressions d'objets effectués via l'interface d'administration."
+
+# 5f457bbce69b46d680aaf09438a2385c
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:2750
+msgid "``LogEntry`` attributes"
+msgstr "Attributs de ``LogEntry``"
+
+# 9cd6bdad69634a9da0c6c3661401cc3c
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:2754
+msgid "The date and time of the action."
+msgstr "La date et l'heure de l'action."
+
+# d3cb4360e12c4834ab9580d9cb3b6eb1
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:2758
+msgid ""
+"The user (an :setting:`AUTH_USER_MODEL` instance) who performed the action."
+msgstr "L'utilisateur (une instance :setting:`AUTH_USER_MODEL`) qui a procédé à l'action."
+
+# da204fa5bbf84d98ad6f93eb753f3a37
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:2763
+msgid ""
+"The :class:`~django.contrib.contenttypes.models.ContentType` of the modified"
+" object."
+msgstr "Le type de contenu (:class:`~django.contrib.contenttypes.models.ContentType`) de l'objet modifié."
+
+# 0c0c0a06578e4d028914fa0192c2aa8a
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:2768
+msgid "The textual representation of the modified object's primary key."
+msgstr "La représentation textuelle de la clé primaire de l'objet modifié."
+
+# 84ad692cd2384c758a0b6e10935b45a2
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:2772
+msgid "The object`s ``repr()`` after the modification."
+msgstr "La représentation ``repr()`` de l'objet après sa modification."
+
+# 8d01b581567b4e378855508355a180be
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:2776
+msgid "The type of action logged: ``ADDITION``, ``CHANGE``, ``DELETION``."
+msgstr "Le type de l'action journalisée : ``ADDITION``, ``CHANGE``, ``DELETION``."
+
+# be5e11a0febc492e9e09b0d40fc77061
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:2778
+msgid "For example, to get a list of all additions done through the admin::"
+msgstr "Par exemple, pour obtenir la liste de tous les ajouts effectués via l'interface d'administration ::"
+
+# 6c6092b45be3453b9ea2ddecbae6e778
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:2786
+msgid ""
+"The detailed description of the modification. In the case of an edit, for "
+"example, the message contains a list of the edited fields."
+msgstr "La description détaillée de la modification. Dans le cas d'une modification, par exemple, le message contient une liste des champs modifiés."
+
+# c7cad023b3a841148287c45b81b31f75
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:2790
+msgid "``LogEntry`` methods"
+msgstr "Méthodes de ``LogEntry``"
+
+# 7852525610cb4d7fb829db36270a6f94
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:2794
+msgid "A shortcut that returns the referenced object."
+msgstr "Un raccourci qui renvoie l'objet référencé."
+
+# 6999c6833ad3436cb00e11face436fbe
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:2801
 msgid "Reversing admin URLs"
 msgstr "Résolution inverse des URL d'administration"
 
@@ -11333,8 +11441,23 @@ msgstr "Modification"
 msgid "``{{ app_label }}_{{ model_name }}_change``"
 msgstr "``{{ étiquette_app }}_{{ nom_modèle }}_change``"
 
-# 8a9d198ecc874a07b847d5f50609f323
-#: ../../../../1.8/docs/ref/contrib/admin/index.txt:2749
+# a563696da05848a5aec4b6dcf4df8981
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:2832
+msgid "The ``UserAdmin`` provides a named URL:"
+msgstr "La classe ``UserAdmin`` fournit une URL nommée :"
+
+# 6d0cb3a8441e4d22ba5599e95ca35aad
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:2837
+msgid "``auth_user_password_change``"
+msgstr "``auth_user_password_change``"
+
+# eaba5a2f1840478db8ba37bcd0b2a16e
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:2837
+msgid "``user_id``"
+msgstr "``user_id``"
+
+# de16a8fc524547eb9fc5af274e0aff64
+#: ../../../../1.8/docs/ref/contrib/admin/index.txt:2840
 msgid ""
 "These named URLs are registered with the application namespace ``admin``, "
 "and with an instance namespace corresponding to the name of the Site "
@@ -12855,23 +12978,13 @@ msgstr "Relations génériques et agrégation"
 # ade152298a4b4feca412a6c95b0e178d
 #: ../../../../1.8/docs/ref/contrib/contenttypes.txt:482
 msgid ""
-":doc:`Django's database aggregation API </topics/db/aggregation>` doesn't "
-"work with a :class:`~django.contrib.contenttypes.fields.GenericRelation`. "
-"For example, you might be tempted to try something like::"
-msgstr "L':doc:`API d'agrégation de base de données de Django </topics/db/aggregation>` ne fonctionne pas avec les relations :class:`~django.contrib.contenttypes.fields.GenericRelation`. Par exemple, vous pourriez être tenté d'essayer quelque chose comme ::"
+":doc:`Django's database aggregation API </topics/db/aggregation>` works with"
+" a :class:`~django.contrib.contenttypes.fields.GenericRelation`. For "
+"example, you can find out how many tags all the bookmarks have::"
+msgstr "L':doc:`API d'agrégation de base de données de Django </topics/db/aggregation>` fonctionne avec les relations :class:`~django.contrib.contenttypes.fields.GenericRelation`. Par exemple, vous pouvez savoir combien de « tags » sont définis pour tous les signets ::"
 
-# 3d40bd95785347e780b2e51c005ccf3d
-#: ../../../../1.8/docs/ref/contrib/contenttypes.txt:489
-msgid ""
-"This will not work correctly, however. The generic relation adds extra "
-"filters to the queryset to ensure the correct content type, but the "
-":meth:`~django.db.models.query.QuerySet.aggregate` method doesn't take them "
-"into account. For now, if you need aggregates on generic relations, you'll "
-"need to calculate them without using the aggregation API."
-msgstr "Cependant, cela ne fonctionnera pas correctement. La relation générique ajoute des filtres supplémentaires au jeu de requête pour garantir le type de contenu correct, mais la méthode :meth:`~django.db.models.query.QuerySet.aggregate` ne les prend pas en compte. Pour l'instant, si vous avez besoin d'agrégats sur les relations génériques, vous aurez besoin de les calculer sans l'aide de l'API d'agrégation."
-
-# 6b0c5d85654447fd840089aa2f3e06e0
-#: ../../../../1.8/docs/ref/contrib/contenttypes.txt:499
+# 364fc4f78099460cbf42b55e0fab674b
+#: ../../../../1.8/docs/ref/contrib/contenttypes.txt:488
 msgid "Generic relation in forms"
 msgstr "Relations génériques dans les formulaires"
 
@@ -18711,12 +18824,18 @@ msgstr "Un autre option est d'utiliser le constructeur correspondant au type d'o
 # 6679014f210f4f10ad373a7267fbfa34
 #: ../../../../1.8/docs/ref/contrib/gis/geos.txt:68
 msgid ""
-"Finally, there are :func:`fromstr` and :func:`fromfile` factory methods, "
-"which return a :class:`GEOSGeometry` object from an input string or a file::"
-msgstr "Pour terminer, il existe des méthodes de fabrication :func:`fromstr` and :func:`fromfile` qui renvoient un objet :class:`GEOSGeometry` à partir d'une chaîne ou d'un fichier ::"
+"All these constructors take the keyword argument ``srid``. For example::"
+msgstr "Tous ces constructeurs acceptent le paramètre nommé ``srid``. Par exemple ::"
 
 # 2ea1247c565f46b4b4c5718dce226b88
 #: ../../../../1.8/docs/ref/contrib/gis/geos.txt:78
+msgid ""
+"Finally, there is the :func:`fromfile` factory method which returns a "
+":class:`GEOSGeometry` object from a file::"
+msgstr "Pour terminer, il existe la méthode de fabrication :func:`fromfile` qui renvoie un objet :class:`GEOSGeometry` à partir d'un fichier ::"
+
+# 6b2b291f6dcb4cf9bd19eeb8326285a2
+#: ../../../../1.8/docs/ref/contrib/gis/geos.txt:87
 msgid "My logs are filled with GEOS-related errors"
 msgstr "Mes journaux sont remplis par des erreurs liées à GEOS"
 
@@ -18872,8 +18991,40 @@ msgstr "Propriétés"
 msgid "Returns the coordinates of the geometry as a tuple."
 msgstr "Renvoie les coordonnées de l'objet géométrique sous forme de tuple."
 
-# 57a409ae12c147bd925a2091d84c65b9
-#: ../../../../1.8/docs/ref/contrib/gis/geos.txt:177
+# e3370d04d0fe4f6ea711bac752fb9cfb
+#: ../../../../1.8/docs/ref/contrib/gis/geos.txt:186
+msgid "Returns the dimension of the geometry:"
+msgstr "Renvoie la dimension de l'objet géométrique :"
+
+# e3a70ee2a8cd4b779d75ff8fbe0b2a6d
+#: ../../../../1.8/docs/ref/contrib/gis/geos.txt:188
+msgid "``0`` for :class:`Point`\\s and :class:`MultiPoint`\\s"
+msgstr "``0`` pour les :class:`Point`\\s et les :class:`MultiPoint`\\s"
+
+# 812c56f17ea94e98801ee691e460cb34
+#: ../../../../1.8/docs/ref/contrib/gis/geos.txt:189
+msgid "``1`` for :class:`LineString`\\s and :class:`MultiLineString`\\s"
+msgstr "``1`` pour les :class:`LineString`\\s et les :class:`MultiLineString`\\s"
+
+# 3953a67e7abb402e91d09983cfc8fcdb
+#: ../../../../1.8/docs/ref/contrib/gis/geos.txt:190
+msgid "``2`` for :class:`Polygon`\\s and :class:`MultiPolygon`\\s"
+msgstr "``2`` pour les :class:`Polygon`\\s et les :class:`MultiPolygon`\\s"
+
+# e94b83e574624080b1b25dca7c7ac1e8
+#: ../../../../1.8/docs/ref/contrib/gis/geos.txt:191
+msgid "``-1`` for empty :class:`GeometryCollection`\\s"
+msgstr "``-1`` pour les :class:`GeometryCollection`\\s vides"
+
+# 7695bffce3d0436e98eedd3b96c05afd
+#: ../../../../1.8/docs/ref/contrib/gis/geos.txt:192
+msgid ""
+"the maximum dimension of its elements for non-empty "
+":class:`GeometryCollection`\\s"
+msgstr "la dimension maximale de ses éléments pour les :class:`GeometryCollection`\\s non vides"
+
+# e036eb5b524b4ebd8531886a1e65c80c
+#: ../../../../1.8/docs/ref/contrib/gis/geos.txt:197
 msgid "Returns whether or not the set of points in the geometry is empty."
 msgstr "Renvoie une valeur booléenne indiquant si l'ensemble des points de l'objet géométrique est vide."
 
@@ -19136,10 +19287,12 @@ msgid ""
 "boolean."
 msgstr "Toutes les méthodes de prédicats spatiaux ci-après acceptent en paramètre une autre instance :class:`GEOSGeometry` (``other``) et renvoient une valeur booléenne."
 
-# d057695dfebe40be9c7f8b4c9fbde720
-#: ../../../../1.8/docs/ref/contrib/gis/geos.txt:341
-msgid "Returns ``True`` if :meth:`GEOSGeometry.within` is ``False``."
-msgstr "Renvoie ``True`` si :meth:`GEOSGeometry.within` vaut ``False``."
+# 3076cb08de9c4767aeed9d5a3538d3ff
+#: ../../../../1.8/docs/ref/contrib/gis/geos.txt:363
+msgid ""
+"Returns ``True`` if :meth:`other.within(this) <GEOSGeometry.within>` returns"
+" ``True``."
+msgstr "Renvoie ``True`` si :meth:`other.within(this) <GEOSGeometry.within>` renvoie ``True``."
 
 # 16fa8696b0844d428edc839d79eb1825
 #: ../../../../1.8/docs/ref/contrib/gis/geos.txt:345
@@ -19424,8 +19577,8 @@ msgstr "Transforme l'objet géométrique en fonction du paramètre de transforma
 #: ../../../../1.8/docs/ref/contrib/gis/geos.txt:552
 msgid ""
 "Requires GDAL. Raises :class:`~django.contrib.gis.geos.GEOSException` if "
-"GDAL is not available or if the SRID is ``None`` or less than 0."
-msgstr "Exige GDAL. Génère une exception :class:`~django.contrib.gis.geos.GEOSException` si GDAL n'est pas disponible ou si la valeur SRID est ``None`` ou plus petite que 0."
+"GDAL is not available or if the geometry's SRID is ``None`` or less than 0."
+msgstr "Exige GDAL. Génère une exception :class:`~django.contrib.gis.geos.GEOSException` si GDAL n'est pas disponible ou si la valeur SRID de l'objet géométrique est ``None`` ou plus petite que 0."
 
 # 5f691580c2a24732ae6650202a2fbd6a
 #: ../../../../1.8/docs/ref/contrib/gis/geos.txt:556
@@ -19664,8 +19817,15 @@ msgid ""
 "a :class:`GEOSGeometry` corresponding to the spatial data in the string"
 msgstr "un objet :class:`GEOSGeometry` correspondant aux données spatiales de la chaîne"
 
-# a1666274bc654cd3ae1b250ea6e8dbef
-#: ../../../../1.8/docs/ref/contrib/gis/geos.txt:809
+# 0025ee8901da4f37b367663635ce12c2
+#: ../../../../1.8/docs/ref/contrib/gis/geos.txt:826
+msgid ""
+"``fromstr(string, srid)`` is equivalent to :class:`GEOSGeometry(string, "
+"srid) <GEOSGeometry>`."
+msgstr "``fromstr(string, srid)`` est équivalente à :class:`GEOSGeometry(string, srid) <GEOSGeometry>`."
+
+# 483c450d906740559b29396eae3e49fc
+#: ../../../../1.8/docs/ref/contrib/gis/geos.txt:835
 msgid "I/O Objects"
 msgstr "Objets d'entrées/sorties"
 
@@ -20463,8 +20623,8 @@ msgstr "3.6.+"
 
 # 25faf214049f416ca595ebf4b19a7e4f
 #: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:64
-msgid "Requires SpatiaLite 2.3+, pysqlite2 2.5+"
-msgstr "Nécessite SpatiaLite 2.3+, pysqlite2 2.5+"
+msgid "Requires SpatiaLite 2.4+, pysqlite2 2.5+"
+msgstr "Nécessite SpatiaLite 2.4+, pysqlite2 2.5+"
 
 # 8acb22e97b8d4a448555ad2d7bb6145b
 #: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:67
@@ -20500,36 +20660,6 @@ msgstr "Comme pour d'autres applications contribuées dans Django, il *suffit* d
 
 # 90918685d1c3402bb6bf7f3596035095
 #: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:103
-msgid "Add Google projection to ``spatial_ref_sys`` table"
-msgstr "Ajout de la projection Google à la table ``spatial_ref_sys``"
-
-# 6296a0a7076f4c8588807c7cd4a8e7c2
-#: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:107
-msgid ""
-"If you're running GDAL 1.7 or above (most users), you can skip this step."
-msgstr "Si vous disposez de GDAL 1.7 ou plus récent (la plupart du temps), vous pouvez omettre cette étape."
-
-# 748455591ff34f51bc479bb8d6d33741
-#: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:109
-msgid ""
-"In order to conduct database transformations to the so-called \"Google\" "
-"projection (a spherical mercator projection used by Google Maps), an entry "
-"must be added to your spatial database's ``spatial_ref_sys`` table. Invoke "
-"the Django shell from your project and execute the ``add_srs_entry`` "
-"function:"
-msgstr "Dans le but d'effectuer des transformations de base de données dans la projection dite « Google » (une projection Mercator sphérique utilisée par Google Maps), une ligne doit être ajoutée à la table ``spatial_ref_sys`` de votre base de données spatiale. Lancez le shell Django de votre projet et exécutez la fonction ``add_srs_entry``:"
-
-# ef168b6173584ce8aa3650b6453b9831
-#: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:121
-msgid ""
-"This adds an entry for the 900913 SRID to the ``spatial_ref_sys`` (or "
-"equivalent) table, making it possible for the spatial database to transform "
-"coordinates in this projection.  You only need to execute this command "
-"*once* per spatial database."
-msgstr "Ceci ajoute une ligne pour le SRID 900913 à la table ``spatial_ref_sys`` (ou son équivalent), ce qui permet à la base de données spatiale de transformer des coordonnées dans cette projection. Il suffit d'exécuter cette commande *une seule fois* par base de données spatiale."
-
-# 7671c1ef07fb40b390f450c91a3f5b2f
-#: ../../../../1.8/docs/ref/contrib/gis/install/index.txt:128
 msgid ""
 "If you can't find the solution to your problem here then participate in the "
 "community!  You can:"
@@ -21403,41 +21533,17 @@ msgstr "Ensuite, lancez le script ``configure``; cependant, la variable d'enviro
 
 # e55ac6085ed64cc79f9357044ffaac1b
 #: ../../../../1.8/docs/ref/contrib/gis/install/spatialite.txt:60
-msgid "SpatiaLite library (``libspatialite``) and tools (``spatialite``)"
-msgstr "Bibliothèque SpatiaLite (``libspatialite``) et outils (``spatialite``)"
+msgid "SpatiaLite library (``libspatialite``)"
+msgstr "Bibliothèque SpatiaLite (``libspatialite``)"
 
 # 97462a6bd0664d5b82501d57bd9c5659
 #: ../../../../1.8/docs/ref/contrib/gis/install/spatialite.txt:62
 msgid ""
-"Get the latest SpatiaLite library source and tools bundle from the `download"
-" page`__::"
-msgstr "Récupérez le paquet groupé des sources et outils de la bibliothèque Spatialite le plus récent à partir de la `page de téléchargement`__::"
+"Get the latest SpatiaLite library source bundle from the `download page`__::"
+msgstr "Récupérez le paquet groupé des sources de la bibliothèque Spatialite le plus récent à partir de la `page de téléchargement`__::"
 
-# 3b5e574e071f4f9aacfc4bba50ae3033
-#: ../../../../1.8/docs/ref/contrib/gis/install/spatialite.txt:70
-msgid ""
-"Prior to attempting to build, please read the important notes below to see "
-"if customization of the ``configure`` command is necessary.  If not, then "
-"run the ``configure`` script, make, and install for the SpatiaLite library::"
-msgstr "Avant de vous lancer dans la compilation, lisez les notes importantes ci-dessous pour savoir si vous devez personnaliser la commande ``configure``. Si ce n'est pas le cas, lancez les commandes ``configure``, ``make`` et ``install`` pour la bibliothèque SpatiaLite ::"
-
-# e074512329e741d9b145e426e62d0e7b
-#: ../../../../1.8/docs/ref/contrib/gis/install/spatialite.txt:82
-msgid "Finally, do the same for the SpatiaLite tools::"
-msgstr "Pour terminer, faites de même pour les outils SpatiaLite ::"
-
-# f8f34645a1dc45f68eb5669b80e1775b
-#: ../../../../1.8/docs/ref/contrib/gis/install/spatialite.txt:92
-msgid ""
-"If you've installed GEOS and PROJ.4 from binary packages, you will have to "
-"specify their paths when running the ``configure`` scripts for *both* the "
-"library and the tools (the configure scripts look, by default, in "
-"``/usr/local``).  For example, on Debian/Ubuntu distributions that have GEOS"
-" and PROJ.4 packages, the command would be::"
-msgstr "Si vous avez installé GEOS et PROJ.4 à partir de paquets binaires, vous devrez indiquer leur chemin au moment de lancer les scripts ``configure`` aussi bien pour la bibliothèque que pour les outils (le script ``configure`` cherche par défaut dans ``/usr/local``). Par exemple, pour les distributions Debian/Ubuntu qui ont des paquets GEOS et PROJ.4, la commande serait ::"
-
-# fd7632dd79b5440d84ef533a0b6e9c4a
-#: ../../../../1.8/docs/ref/contrib/gis/install/spatialite.txt:101
+# c50d978824b54810a372463802b8501f
+#: ../../../../1.8/docs/ref/contrib/gis/install/spatialite.txt:74
 msgid ""
 "For Mac OS X users building from source, the SpatiaLite library *and* tools "
 "need to have their ``target`` configured::"
@@ -23813,10 +23919,8 @@ msgstr "Tout d'abord, il y a certaines exigences importantes :"
 #: ../../../../1.8/docs/ref/contrib/gis/tutorial.txt:789
 msgid ""
 ":class:`~django.contrib.gis.admin.OSMGeoAdmin` requires that :doc:`GDAL "
-"<gdal>` is installed. If you are running GDAL 1.6 (uncommon) you will also "
-"need to add the :ref:`spherical mercator projection <addgoogleprojection>`  "
-"to the ``spatial_ref_sys`` table."
-msgstr ":class:`~django.contrib.gis.admin.OSMGeoAdmin` nécessite la présence de :doc:`GDAL <gdal>`. Si vous utilisez encore GDAL 1.6 (rare), vous devrez également ajouter la :ref:`projection mercator sphérique <addgoogleprojection>` à la table ``spatial_ref_sys``."
+"<gdal>` is installed."
+msgstr ":class:`~django.contrib.gis.admin.OSMGeoAdmin` exige que :doc:`GDAL <gdal>` soit installée."
 
 # 1203d87e00104642a502b51a90bd7571
 #: ../../../../1.8/docs/ref/contrib/gis/tutorial.txt:794
@@ -30235,15 +30339,8 @@ msgid ""
 ":mod:`django.contrib.postgres`)."
 msgstr "Django prend en charge PostgreSQL 9.0 et plus récent. Il exige la version 2.4.5 ou plus récente de `psycopg2`_ (ou 2.5+ si vous voulez profiter de :mod:`django.contrib.postgres`)."
 
-# cc79b8d535984d8d9d5e3dec1dbb6422
-#: ../../../../1.8/docs/ref/databases.txt:100
-msgid ""
-"If you're on Windows, check out the unofficial `compiled Windows version`_ "
-"of psycopg2."
-msgstr "Si vous êtes sur Windows, récupérez la `version non officielle compilée pour Windows`_ de psycopg2."
-
-# 1d9cf21a741f4b948ad11d0308859e2c
-#: ../../../../1.8/docs/ref/databases.txt:106
+# 1ca8a5c92c284e8fbb2dd05eaff1d8ac
+#: ../../../../1.8/docs/ref/databases.txt:101
 msgid "PostgreSQL connection settings"
 msgstr "Paramètres de connexion PostgreSQL"
 
@@ -30633,10 +30730,10 @@ msgid ""
 " MySQLdb 1.2.1p2 or 1.2.2, you should still use ``utf8_general_ci`` (the "
 "default) collation for the ``django.contrib.sessions.models.Session`` table "
 "(usually called ``django_session``) and the "
-"``django.contrib.admin.models.LogEntry`` table (usually called "
+":class:`django.contrib.admin.models.LogEntry` table (usually called "
 "``django_admin_log``). Those are the two standard tables that use "
 ":class:`~django.db.models.TextField` internally."
-msgstr "Si vous vous décidiez à utiliser la collation ``utf8_bin`` pour certaines de vos tables avec MySQLdb 1.2.1p2 ou 1.2.2, il faut tout de même conserver la collation ``utf8_general_ci`` (par défaut) pour la table ``django.contrib.sessions.models.Session`` (nommée habituellement ``django_session``) ainsi que pour la table ``django.contrib.admin.models.LogEntry`` (nommée habituellement ``django_admin_log``). Ce sont les deux tables standards utilisant en interne un champ :class:`~django.db.models.TextField`."
+msgstr "Si vous vous décidiez à utiliser la collation ``utf8_bin`` pour certaines de vos tables avec MySQLdb 1.2.1p2 ou 1.2.2, il faut tout de même conserver la collation ``utf8_general_ci`` (par défaut) pour la table ``django.contrib.sessions.models.Session`` (nommée habituellement ``django_session``) ainsi que pour la table :class:`django.contrib.admin.models.LogEntry` (nommée habituellement ``django_admin_log``). Ce sont les deux tables standards utilisant en interne un champ :class:`~django.db.models.TextField`."
 
 # 6bebc961a0b74d7db0be3c184bf72abe
 #: ../../../../1.8/docs/ref/databases.txt:375
@@ -31516,9 +31613,9 @@ msgstr "Avant Django 1.7, ``django-admin`` était uniquement installé en tant q
 #: ../../../../1.8/docs/ref/django-admin.txt:13
 msgid ""
 "In addition, ``manage.py`` is automatically created in each Django project. "
-"``manage.py`` is a thin wrapper around ``django-admin`` that takes care of "
-"several things for you before delegating to ``django-admin``:"
-msgstr "De plus, ``manage.py`` est créé automatiquement dans chaque projet Django.``manage.py`` est un adaptateur léger autour de ``django-admin`` et se charge de plusieurs choses à votre place avant de déléguer la suite à ``django-admin``:"
+"``manage.py`` does the same thing as ``django-admin`` but takes care of a "
+"few things for you:"
+msgstr "De plus, ``manage.py`` est créé automatiquement dans chaque projet Django.``manage.py`` fait la même chose que ``django-admin`` mais se charge de plusieurs choses à votre place :"
 
 # 038963946e9c43588eb22e5218d84198
 #: ../../../../1.8/docs/ref/django-admin.txt:17
@@ -31534,17 +31631,6 @@ msgstr "Il définit la variable d'environnement :envvar:`DJANGO_SETTINGS_MODULE`
 
 # c9614718229e4c29a2cd623a2879b75f
 #: ../../../../1.8/docs/ref/django-admin.txt:22
-msgid ""
-"It calls :func:`django.setup()` to initialize various internals of Django."
-msgstr "Il appelle :func:`django.setup()` pour initialiser diverses structures internes à Django."
-
-# dbbc3451546f4123a61e40bb56db269a
-#: ../../../../1.8/docs/ref/django-admin.txt:26
-msgid ":func:`django.setup()` didn't exist in previous versions of Django."
-msgstr ":func:`django.setup()` n'existait pas dans les précédentes versions de Django."
-
-# 2598ffa265c641fabf211d179ae5130d
-#: ../../../../1.8/docs/ref/django-admin.txt:28
 msgid ""
 "The ``django-admin`` script should be on your system path if you installed "
 "Django via its ``setup.py`` utility. If it's not on your path, you can find "
@@ -32501,10 +32587,10 @@ msgstr "Utilisez l'option ``--no-location`` pour que le script n'écrive pas de 
 #: ../../../../1.8/docs/ref/django-admin.txt:675
 msgid ""
 "Use the ``--keep-pot`` option to prevent Django from deleting the temporary "
-".pot files it generates before creating the .po file. This is useful for "
-"debugging errors which may prevent the final language files from being "
+"``.pot`` files it generates before creating the .po file. This is useful for"
+" debugging errors which may prevent the final language files from being "
 "created."
-msgstr "Utilisez l'option ``--keep-pot`` pour empêcher Django de supprimer les fichiers .pot temporaires qu'il génère avant de créer le ou les fichiers .po. Cela peut être utile pour déboguer d'éventuelles erreurs empêchant la création des fichiers de langues finaux."
+msgstr "Utilisez l'option ``--keep-pot`` pour empêcher Django de supprimer les fichiers ``.pot`` temporaires qu'il génère avant de créer le ou les fichiers .po. Cela peut être utile pour déboguer d'éventuelles erreurs empêchant la création des fichiers de langues finaux."
 
 # 4098bef8eb7d4a42a949b77409465241
 #: ../../../../1.8/docs/ref/django-admin.txt:681
@@ -34208,8 +34294,13 @@ msgstr "``error`` - Une erreur importante."
 msgid "``notice`` - A minor error."
 msgstr "``notice`` - Une petite erreur."
 
-# 00f54f3d7bd144c7bb19f282820c7524
-#: ../../../../1.8/docs/ref/django-admin.txt:1829
+# 88ee6bf89f054765bc4bfde2c4e9ac05
+#: ../../../../1.8/docs/ref/django-admin.txt:1820
+msgid "``warning`` - A warning."
+msgstr "``warning`` - Un avertissement."
+
+# dc3b3f5e005447ffa8b73b643a045805
+#: ../../../../1.8/docs/ref/django-admin.txt:1821
 msgid "``sql_field`` - The name of a model field in SQL."
 msgstr "``sql_field`` - Le nom d'un champ de modèle en SQL."
 
@@ -34266,8 +34357,18 @@ msgstr "``http_bad_request`` - Une réponse serveur HTTP de type mauvaise requê
 msgid "``http_server_error`` - A 5XX HTTP Server Error response."
 msgstr "``http_server_error`` - Une réponse serveur HTTP de type erreur (5XX)."
 
-# 7483cc635065475587ffad11b4b8e84c
-#: ../../../../1.8/docs/ref/django-admin.txt:1841
+# e02a6bebcab94142bca58320d2f3d213
+#: ../../../../1.8/docs/ref/django-admin.txt:1832
+msgid "``migrate_heading`` - A heading in a migrations management command."
+msgstr "``migrate_heading`` - Un en-tête dans une commande d'administration de migration."
+
+# 93122c3600dd4a92a0f83e1303d244a6
+#: ../../../../1.8/docs/ref/django-admin.txt:1833
+msgid "``migrate_label`` - A migration name."
+msgstr "``migrate_label`` - Un nom de migration."
+
+# ac776e0014c4453ea51bd37842477554
+#: ../../../../1.8/docs/ref/django-admin.txt:1835
 msgid ""
 "Each of these roles can be assigned a specific foreground and background "
 "color, from the following list:"
@@ -37085,6 +37186,13 @@ msgstr "Le paramètre ``help_text`` vous permet de définir du texte descriptif 
 
 # 10dddd6d1c9d40f0a97c539bfe088b72
 #: ../../../../1.8/docs/ref/forms/fields.txt:228
+msgid ""
+"Like the model field's :attr:`~django.db.models.Field.help_text`, this value"
+" isn't HTML-escaped in automatically-generated forms."
+msgstr "Tout comme l'attribut :attr:`~django.db.models.Field.help_text` d'un champ de modèle, cette valeur n'est pas sujette à l'échappement HTML dans les formulaires générés automatiquement."
+
+# 195cf039e56d446ea51fef45b978c017
+#: ../../../../1.8/docs/ref/forms/fields.txt:231
 msgid ""
 "Here's a full example ``Form`` that implements ``help_text`` for two of its "
 "fields. We've specified ``auto_id=False`` to simplify the output::"
@@ -41083,9 +41191,9 @@ msgstr "``name`` est le nom du modèle tel qu'il est écrit dans le fichier ``mo
 #: ../../../../1.8/docs/ref/migration-operations.txt:47
 msgid ""
 "``fields`` is a list of 2-tuples of ``(field_name, field_instance)``. The "
-"field instance should be an unbound field (so just ``models.CharField()``, "
-"rather than a field takes from another model)."
-msgstr "``fields`` est une liste de tuples binaires ``(nom_champ, instance_champ)``. L'instance de champ doit être un champ non lié (« unbound ») (donc simplement ``models.CharField()``, plutôt qu'un champ repris d'un autre modèle)."
+"field instance should be an unbound field (so just "
+"``models.CharField(...)``, rather than a field taken from another model)."
+msgstr "``fields`` est une liste de tuples binaires ``(nom_champ, instance_champ)``. L'instance de champ doit être un champ non lié (« unbound ») (donc simplement ``models.CharField(…)``, plutôt qu'un champ repris d'un autre modèle)."
 
 # 422caee22e6c41d7866f6767211aed4d
 #: ../../../../1.8/docs/ref/migration-operations.txt:51
@@ -43405,19 +43513,33 @@ msgid ""
 "used; it's not just a default value that you can override."
 msgstr "Assigne automatiquement la valeur du champ à la date du jour lors de chaque enregistrement de l'objet. Utile pour les horodatages de « dernière modification ». Notez que c'est *toujours* la date actuelle qui est utilisée ; il ne s'agit pas seulement d'une valeur par défaut que l'on peut surcharger."
 
-# 565face9310d4239bc557e8e7ccb6bb4
+# 4badd0941ae946a6a8958699d75ae3b0
 #: ../../../../1.8/docs/ref/models/fields.txt:496
 msgid ""
 "Automatically set the field to now when the object is first created. Useful "
 "for creation of timestamps. Note that the current date is *always* used; "
 "it's not just a default value that you can override. So even if you set a "
 "value for this field when creating the object, it will be ignored. If you "
-"want to be able to modify this field, set ``default=timezone.now`` (from "
-":func:`django.utils.timezone.now`) instead of ``auto_now_add=True``."
-msgstr "Assigne automatiquement la valeur du champ à la date du jour lors du premier enregistrement de l'objet. Utile pour les horodatages de date de création. Notez que c'est *toujours* la date actuelle qui est utilisée ; il ne s'agit pas seulement d'une valeur par défaut que l'on peut surcharger. Ainsi, même si vous définissez une valeur pour ce champ lors de la création de l'objet, il sera ignoré. Si vous voulez pouvoir modifier ce champ, ajoutez ``default=timezone.now`` dans sa définition (de :func:`django.utils.timezone.now`) au lieu de définir ``auto_now_add=True``."
+"want to be able to modify this field, set the following instead of "
+"``auto_now_add=True``:"
+msgstr "Assigne automatiquement la valeur du champ à la date du jour lors du premier enregistrement de l'objet. Utile pour les horodatages de date de création. Notez que c'est *toujours* la date actuelle qui est utilisée ; il ne s'agit pas seulement d'une valeur par défaut que l'on peut surcharger. Ainsi, même si vous définissez une valeur pour ce champ lors de la création de l'objet, il sera ignoré. Si vous voulez pouvoir modifier ce champ, utilisez ce qui suit au lieu de définir ``auto_now_add=True``:"
 
-# 115c7e08c42b4ad989e42719054ee659
-#: ../../../../1.8/docs/ref/models/fields.txt:500
+# e3ac5d043e934b6bb9b7d3cd6bd3de09
+#: ../../../../1.8/docs/ref/models/fields.txt:503
+msgid ""
+"For :class:`DateField`: ``default=date.today`` - from "
+":meth:`datetime.date.today`"
+msgstr "Pour un champ :class:`DateField`: ``default=date.today`` - de :meth:`datetime.date.today`"
+
+# 973d54b905894a69a0eb968487a4bf6f
+#: ../../../../1.8/docs/ref/models/fields.txt:505
+msgid ""
+"For :class:`DateTimeField`: ``default=timezone.now`` - from "
+":func:`django.utils.timezone.now`"
+msgstr "Pour un champ :class:`DateTimeField`: ``default=timezone.now`` - de :func:`django.utils.timezone.now`"
+
+# f21bddae47d14cc4b9ba1a55d9c968aa
+#: ../../../../1.8/docs/ref/models/fields.txt:508
 msgid ""
 "The default form widget for this field is a "
 ":class:`~django.forms.TextInput`. The admin adds a JavaScript calendar, and "
@@ -48506,8 +48628,15 @@ msgid ""
 "evaluate the queryset."
 msgstr "Notez que cette méthode renvoie un ``ValuesListQuerySet``. Cette classe se comporte comme une liste. C'est suffisant la plupart du temps, mais si vous avez besoin d'un objet liste Python réel, vous pouvez simplement appeler ``list()`` sur l'objet, ce qui provoquera l'évaluation du jeu de requête."
 
-# 95aca7729ac34ceaac988d4e693af972
-#: ../../../../1.8/docs/ref/models/querysets.txt:659
+# 6b9e0ef6ff6b4ccb8df2fb7c98b92fee
+#: ../../../../1.8/docs/ref/models/querysets.txt:658
+msgid ""
+"A common need is to get a specific field value of a certain model instance. "
+"To achieve that, use ``values_list()`` followed by a ``get()`` call::"
+msgstr "Un besoin fréquent est d'obtenir une valeur de champ spécifique d'une certaine instance de modèle. Pour faire cela, utilisez ``values_list()`` suivie d'un appel à ``get()``::"
+
+# 38b9d41d8ea24f5daf6d21b5d0c9ecd8
+#: ../../../../1.8/docs/ref/models/querysets.txt:665
 msgid "dates"
 msgstr "dates"
 
@@ -48807,11 +48936,14 @@ msgid ""
 "``select_related``, in addition to the foreign key and one-to-one "
 "relationships that are supported by ``select_related``. It also supports "
 "prefetching of :class:`~django.contrib.contenttypes.fields.GenericRelation` "
-"and :class:`~django.contrib.contenttypes.fields.GenericForeignKey`."
-msgstr "``prefetch_related``, de son côté, effectue une requête séparée pour chaque relation et procède à la réconciliation des données dans le code Python. Cela lui permet de précharger les objets plusieurs-à-plusieurs et plusieurs-à-un, ce qui n'est pas possible avec ``select_related``, en plus des liaisons de clé étrangère et un-à-un qui sont prises en charge par ``select_related``. Il permet également de précharger les liaisons :class:`~django.contrib.contenttypes.fields.GenericRelation` et :class:`~django.contrib.contenttypes.fields.GenericForeignKey`."
+"and :class:`~django.contrib.contenttypes.fields.GenericForeignKey`, however,"
+" it must be restricted to a homogeneous set of results. For example, "
+"prefetching objects referenced by a ``GenericForeignKey`` is only supported "
+"if the query is restricted to one ``ContentType``."
+msgstr "``prefetch_related``, de son côté, effectue une requête séparée pour chaque relation et procède à la réconciliation des données dans le code Python. Cela lui permet de précharger les objets plusieurs-à-plusieurs et plusieurs-à-un, ce qui n'est pas possible avec ``select_related``, en plus des liaisons de clé étrangère et un-à-un qui sont prises en charge par ``select_related``. Il permet également de précharger les liaisons :class:`~django.contrib.contenttypes.fields.GenericRelation` et :class:`~django.contrib.contenttypes.fields.GenericForeignKey`. Cependant, il doit être limité à un jeu de résultats homogène. Par exemple, le préchargement d'objets référencés par une clé ``GenericForeignKey`` n'est pris en charge qu'à la condition que la requête soit limitée à un seul type ``ContentType``."
 
-# 0302ccaf8c13411fbe4100db71f92356
-#: ../../../../1.8/docs/ref/models/querysets.txt:903
+# f34da3e7668e4e93bb8b442016a82ad3
+#: ../../../../1.8/docs/ref/models/querysets.txt:912
 msgid "For example, suppose you have these models::"
 msgstr "Par exemple, supposons que vous ayez ces modèles ::"
 
@@ -50537,7 +50669,7 @@ msgstr "Pour une introduction sur ce sujet, consultez la :ref:`documentation sur
 # 558da1742aa44203a816652e2293f4cf
 #: ../../../../1.8/docs/ref/models/querysets.txt:2176
 msgid ""
-"Django's inbuilt lookups are listed below. It is also possible to write "
+"Django's built-in lookups are listed below. It is also possible to write "
 ":doc:`custom lookups </howto/custom-lookups>` for model fields."
 msgstr "Les recherches fournies par Django sont présentées ci-dessous. Il est également possible d'écrire des :doc:`recherches personnalisées </howto/custom-lookups>` pour les champs de modèles."
 
@@ -51683,9 +51815,8 @@ msgstr "Objets HttpRequest"
 # 3d1031a5cffb43668dad55eeab5c2d41
 #: ../../../../1.8/docs/ref/request-response.txt:32
 msgid ""
-"All attributes should be considered read-only, unless stated otherwise "
-"below. ``session`` is a notable exception."
-msgstr "Tous les attributs doivent être considérés en lecture seule, sauf mention contraire ci-dessous. ``session`` est une des exceptions à relever."
+"All attributes should be considered read-only, unless stated otherwise."
+msgstr "Tous les attributs doivent être considérés en lecture seule sauf mention contraire."
 
 # 3b9315d829434638a1b70fce2ba203d5
 #: ../../../../1.8/docs/ref/request-response.txt:39
@@ -51953,35 +52084,8 @@ msgid ""
 "servers like Nginx and Apache 2.4+."
 msgstr "Notez que :djadmin:`runserver` ignore tous les en-têtes contenant des soulignements dans leur nom, ce qui fait qu'ils n'apparaîtront pas dans ``META``. Ceci évite la falsification d'en-tête basée sur l'ambiguïté entre les soulignements et les tirets qui sont tous deux normalisés en soulignements dans les variables d'environnement WSGI. Cela correspond au comportement des serveurs Web tels que Nginx et Apache 2.4+."
 
-# 613fe02622fd47f686f9682d495c1c65
-#: ../../../../1.8/docs/ref/request-response.txt:181
-msgid ""
-"An object of type :setting:`AUTH_USER_MODEL` representing the currently "
-"logged-in user. If the user isn't currently logged in, ``user`` will be set "
-"to an instance of :class:`django.contrib.auth.models.AnonymousUser`. You can"
-" tell them apart with "
-":meth:`~django.contrib.auth.models.User.is_authenticated`, like so::"
-msgstr "Un objet du type indiqué par :setting:`AUTH_USER_MODEL` représentant l'utilisateur actuellement connecté. Si aucun utilisateur n'est actuellement connecté, ``user`` contiendra une instance de :class:`django.contrib.auth.models.AnonymousUser`. Vous pouvez les différencier par la méthode :meth:`~django.contrib.auth.models.User.is_authenticated`, comme ceci ::"
-
-# 2c394f9a117b4495921234b34a47032c
-#: ../../../../1.8/docs/ref/request-response.txt:186
-msgid ""
-"``user`` is only available if your Django installation has the "
-":class:`~django.contrib.auth.middleware.AuthenticationMiddleware` activated."
-" For more, see :doc:`/topics/auth/index`."
-msgstr "``user`` n'est disponible que si :class:`~django.contrib.auth.middleware.AuthenticationMiddleware` est activé dans votre installation de Django. Pour plus de détails, voir :doc:`/topics/auth/index`."
-
-# a4646c7c17814b89a766ae663d434eb5
-#: ../../../../1.8/docs/ref/request-response.txt:192
-msgid ""
-"A readable-and-writable, dictionary-like object that represents the current "
-"session. This is only available if your Django installation has session "
-"support activated. See the :doc:`session documentation "
-"</topics/http/sessions>` for full details."
-msgstr "Un objet de type dictionnaire, accessible en lecture et écriture, représentant la session en cours. Il n'est disponible que quand la prise en charge des sessions est activée dans votre installation de Django. Voir la :doc:`documentation des sessions </topics/http/sessions>` pour plus de détails."
-
-# 9e27196902ef42da9f6aab8061cd683f
-#: ../../../../1.8/docs/ref/request-response.txt:199
+# 941995fd7d384168b1b8796db2b3440a
+#: ../../../../1.8/docs/ref/request-response.txt:180
 msgid ""
 "Not defined by Django itself, but will be read if other code (e.g., a custom"
 " middleware class) sets it. When present, this will be used as the root "
@@ -51999,16 +52103,58 @@ msgid ""
 "``process_request``, you can use ``process_view`` instead)."
 msgstr "Une instance de :class:`~django.core.urlresolvers.ResolverMatch` représentant l'URL résolue. Cet attribut n'est défini qu'après la phase de résolution d'URL, ce qui veut dire qu'il est disponible dans toutes les vues, mais pas dans les méthodes d'intergiciel qui sont exécutées avant la phase de résolution d'URL (comme pour `process_request``, mais l'attribut est disponible dans ``process_view``)."
 
-# 64d12c74341246068ee9d97bdd93ca4c
-#: ../../../../1.8/docs/ref/request-response.txt:216
+# cceb37e1ee184a199cf0d2ab670bfec6
+#: ../../../../1.8/docs/ref/request-response.txt:197
 msgid ""
 "Not defined by Django itself, but if set, the :ttag:`url` template tag will "
 "use its value as the ``current_app`` argument to "
 ":func:`~django.core.urlresolvers.reverse()`."
 msgstr "Non défini par Django lui-même, mais s'il est défini, la balise de gabarit :ttag:`url` utilise sa valeur comme paramètre ``current_app`` de :func:`~django.core.urlresolvers.reverse()`."
 
-# bcf4d70fa8d64f54b0ffc3954b51da47
-#: ../../../../1.8/docs/ref/request-response.txt:225
+# a4ee6f1622754270a650a6962f5485f0
+#: ../../../../1.8/docs/ref/request-response.txt:202
+msgid "Attributes set by middleware"
+msgstr "Attributs définis par l'intergiciel"
+
+# c08defb6bba341e18c967bddd45857f0
+#: ../../../../1.8/docs/ref/request-response.txt:204
+msgid ""
+"Some of the middleware included in Django's contrib apps set attributes on "
+"the request. If you don't see the attribute on a request, be sure the "
+"appropriate middleware class is listed in :setting:`MIDDLEWARE_CLASSES`."
+msgstr "Certains intergiciels inclus dans les applications contribuées de Django définissent des attributs sur la requête. Si vous ne voyez pas un certain attribut dans la requête, vérifiez que la classe d'intergiciel correspondante figure bien dans :setting:`MIDDLEWARE_CLASSES`."
+
+# 123fb363c21f47bcb018784aa86bb11f
+#: ../../../../1.8/docs/ref/request-response.txt:210
+msgid ""
+"From the :class:`~django.contrib.sessions.middleware.SessionMiddleware`: A "
+"readable and writable, dictionary-like object that represents the current "
+"session."
+msgstr "Provenant de :class:`~django.contrib.sessions.middleware.SessionMiddleware`: un objet de type dictionnaire en lecture-écriture représentant la session en cours."
+
+# 5823ea45928c4049a0e70d3a40935343
+#: ../../../../1.8/docs/ref/request-response.txt:216
+msgid ""
+"From the :class:`~django.contrib.sites.middleware.CurrentSiteMiddleware`: An"
+" instance of :class:`~django.contrib.sites.models.Site` or "
+":class:`~django.contrib.sites.requests.RequestSite` as returned by "
+":func:`~django.contrib.sites.shortcuts.get_current_site()` representing the "
+"current site."
+msgstr "Provenant de :class:`~django.contrib.sites.middleware.CurrentSiteMiddleware`: une instance de :class:`~django.contrib.sites.models.Site` ou de :class:`~django.contrib.sites.requests.RequestSite` telle que renvoyée par :func:`~django.contrib.sites.shortcuts.get_current_site()` représentant le site en cours."
+
+# fa6979efac60427aacbf222c7e3e03cf
+#: ../../../../1.8/docs/ref/request-response.txt:224
+msgid ""
+"From the :class:`~django.contrib.auth.middleware.AuthenticationMiddleware`: "
+"An instance of :setting:`AUTH_USER_MODEL` representing the currently logged-"
+"in user. If the user isn't currently logged in, ``user`` will be set to an "
+"instance of :class:`~django.contrib.auth.models.AnonymousUser`. You can tell"
+" them apart with :meth:`~django.contrib.auth.models.User.is_authenticated`, "
+"like so::"
+msgstr "Provenant de :class:`~django.contrib.auth.middleware.AuthenticationMiddleware`: une instance de :setting:`AUTH_USER_MODEL` représentant l'utilisateur actuellement connecté. Si aucun utilisateur n'est actuellement connecté, ``user`` contiendra une instance de :class:`~django.contrib.auth.models.AnonymousUser`. Vous pouvez les différencier par la méthode :meth:`~django.contrib.auth.models.User.is_authenticated`, comme ceci ::"
+
+# de41ecfe129c4472aab3e2d53f570d3b
+#: ../../../../1.8/docs/ref/request-response.txt:241
 msgid ""
 "Returns the originating host of the request using information from the "
 "``HTTP_X_FORWARDED_HOST`` (if :setting:`USE_X_FORWARDED_HOST` is enabled) "
@@ -55759,17 +55905,26 @@ msgstr "INTERNAL_IPS"
 msgid "A tuple of IP addresses, as strings, that:"
 msgstr "Un tuple d'adresses IP, sous forme de chaînes, dont les requêtes :"
 
-# 1cd92f8476764f4e934c12a6c2e347c7
-#: ../../../../1.8/docs/ref/settings.txt:1644
-msgid "See debug comments, when :setting:`DEBUG` is ``True``"
-msgstr "voient les commentaires de débogage, lorsque :setting:`DEBUG` vaut ``True``,"
+# fd3ce99c9ca647e3885dc986adfb8d1e
+#: ../../../../1.8/docs/ref/settings.txt:1659
+msgid ""
+"Allow the :func:`~django.template.context_processors.debug` context "
+"processor to add some variables to the template context."
+msgstr "Permettent au processeur de contexte :func:`~django.template.context_processors.debug` d'ajouter quelques variables au contexte du gabarit."
+
+# 1489b4933ebf4d64a07f93d675ef1501
+#: ../../../../1.8/docs/ref/settings.txt:1661
+msgid ""
+"Can use the :ref:`admindocs bookmarklets <admindocs-bookmarklets>` even if "
+"not logged in as a staff user."
+msgstr "Peuvent utiliser les :ref:`signets dynamiques de admindocs <admindocs-bookmarklets>` même si l'utilisateur n'est pas connecté en tant qu'administrateur (staff)."
 
 # 13e2f84f26444b34a612f9ee8ee8332a
 #: ../../../../1.8/docs/ref/settings.txt:1645
 msgid ""
-"Receive X headers in admindocs if the ``XViewMiddleware`` is installed (see "
-":doc:`/ref/contrib/admin/admindocs`)"
-msgstr "Reçoit des en-têtes X dans admindocs si l'intergiciel ``XViewMiddleware`` est installé (voir :doc:`/ref/contrib/admin/admindocs`)"
+"Are marked as \"internal\" (as opposed to \"EXTERNAL\") in "
+":class:`~django.utils.log.AdminEmailHandler` emails."
+msgstr "Sont marquées comme « internes » (et non pas « EXTERNAL ») dans les courriels envoyés par :class:`~django.utils.log.AdminEmailHandler`."
 
 # bb79c06de50a44d4a722c5b763e8c7c3
 #: ../../../../1.8/docs/ref/settings.txt:1651
@@ -57913,8 +58068,9 @@ msgstr "SESSION_SAVE_EVERY_REQUEST"
 msgid ""
 "Whether to save the session data on every request. If this is ``False`` "
 "(default), then the session data will only be saved if it has been modified "
-"-- that is, if any of its dictionary values have been assigned or deleted."
-msgstr "Indique si les données de sessions sont enregistrées lors de chaque requête. Avec la valeur ``False`` (par défaut), Django n'enregistre la session dans la base de données qu'au moment où la session a été modifiée, c'est-à-dire qu'au moins une des valeurs de son dictionnaire a été définie ou supprimée."
+"-- that is, if any of its dictionary values have been assigned or deleted. "
+"Empty sessions won't be created, even if this setting is active."
+msgstr "Indique si les données de sessions sont enregistrées lors de chaque requête. Avec la valeur ``False`` (par défaut), Django n'enregistre la session dans la base de données qu'au moment où la session a été modifiée, c'est-à-dire qu'au moins une des valeurs de son dictionnaire a été définie ou supprimée. Les sessions vides ne seront pas créées, même si ce réglage est activé."
 
 # 1bfba311614a48e0aed9aa3a3a6d0cfb
 #: ../../../../1.8/docs/ref/settings.txt:3151
@@ -64776,9 +64932,9 @@ msgstr "Convertit une chaîne tout en minuscules."
 # 855e5e2fdb3c4134a90889dd4d6a4b5e
 #: ../../../../1.8/docs/ref/templates/builtins.txt:1873
 msgid ""
-"If ``value`` is ``Still MAD At Yoko``, the output will be ``still mad at "
-"yoko``."
-msgstr "Si ``value`` contient ``Still MAD At Yoko``, le résultat sera "
+"If ``value`` is ``Totally LOVING this Album!``, the output will be ``totally"
+" loving this album!``."
+msgstr "Si ``value`` contient ``J'aime FOLLEMENT cet album!``, le résultat sera ``j'aime follement cet album!``."
 
 # 5d64f4f57eee4bf3a3df0918545f4fc6
 #: ../../../../1.8/docs/ref/templates/builtins.txt:1879
@@ -67598,8 +67754,52 @@ msgid ""
 "into strings. It's easier to work solely with Unicode strings at that point."
 msgstr "Préférer l'utilisation de ``force_text()`` à ``smart_text()`` à ces endroits. La production de balises et l'appel aux filtres se produisent lors de la phase de rendu des gabarits, il n'y a donc pas d'avantage à différer la conversion d'objets de traduction différée en chaînes. Il est plus simple de travailler uniquement avec des chaînes Unicode à ce stade."
 
-# da774fb069684dae88965465c05d90cb
-#: ../../../../1.8/docs/ref/unicode.txt:358
+# d3827c05101340be82d0ec359d692366
+#: ../../../../1.8/docs/ref/unicode.txt:364
+msgid "Files"
+msgstr "Fichiers"
+
+# 0caa67d2017f4b7683423137239316a1
+#: ../../../../1.8/docs/ref/unicode.txt:366
+msgid ""
+"If you intend to allow users to upload files, you must ensure that the "
+"environment used to run Django is configured to work with non-ASCII file "
+"names. If your environment isn't configured correctly, you'll encounter "
+"``UnicodeEncodeError`` exceptions when saving files with file names that "
+"contain non-ASCII characters."
+msgstr "Si vous prévoyez de permettre aux utilisateurs d'envoyer des fichiers, vous devez vous assurer que l'environnement utilisé pour faire fonctionner Django est bien configuré pour fonctionner avec des noms de fichiers non ASCII. Si votre environnement n'est pas configuré correctement, vous allez recevoir des exceptions ``UnicodeEncodeError`` lors de l'enregistrement de fichiers dont le nom contient des caractères non ASCII."
+
+# 465f47fcdbec4c888ebd75da5473936f
+#: ../../../../1.8/docs/ref/unicode.txt:372
+msgid ""
+"Filesystem support for UTF-8 file names varies and might depend on the "
+"environment. Check your current configuration in an interactive Python shell"
+" by running::"
+msgstr "La prise en charge de noms de fichiers UTF-8 par le système de fichiers est variable et peut dépendre de l'environnement. Contrôlez votre configuration actuelle dans un shell Python interactif en exécutant ::"
+
+# 2dbb5b175fe8480fbc616dfb0e35eabb
+#: ../../../../1.8/docs/ref/unicode.txt:379
+msgid "This should output \"UTF-8\"."
+msgstr "Cela devrait afficher « UTF-8 »."
+
+# e15d9d964b1b4a8a9db995276f02fdd1
+#: ../../../../1.8/docs/ref/unicode.txt:381
+msgid ""
+"The ``LANG`` environment variable is responsible for setting the expected "
+"encoding on Unix platforms. Consult the documentation for your operating "
+"system and application server for the appropriate syntax and location to set"
+" this variable."
+msgstr "Sur les plates-formes Unix, c'est la variable d'environnement ``LANG`` qui est responsable de définir le codage souhaité. Consultez la documentation de votre système d'exploitation et de votre serveur d'applications pour la syntaxe et l'emplacement appropriés pour définir cette variable."
+
+# 043387970b8846da851749b2da3f726d
+#: ../../../../1.8/docs/ref/unicode.txt:386
+msgid ""
+"In your development environment, you might need to add a setting to your "
+"``~.bashrc`` analogous to:::"
+msgstr "Dans votre environnement de développement, il pourrait être nécessaire d'ajouter un réglage à votre fichier ``~.bashrc`` du style ::"
+
+# 05a18b7306c940728388d7d231a83042
+#: ../../../../1.8/docs/ref/unicode.txt:394
 msgid ""
 "Django's email framework (in ``django.core.mail``) supports Unicode "
 "transparently. You can use Unicode data in the message bodies and any "

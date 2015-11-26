@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-22 03:12-0500\n"
-"PO-Revision-Date: 2015-10-22 17:37+0000\n"
+"POT-Creation-Date: 2015-11-26 03:11-0600\n"
+"PO-Revision-Date: 2015-11-26 14:44+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -1172,8 +1172,30 @@ msgid ""
 "condition will generate a :class:`CommandError`."
 msgstr "Cette option en peut pas être ``False`` lorsque l'option :data:`~BaseCommand.can_import_settings` est aussi définie à ``False`` parce que le processus de changement de langue a besoin d'accéder aux réglages. Cette condition provoque une erreur :class:`CommandError`."
 
-# ee1024cdd68b4cb7acc9cc37637618ba
-#: ../../../../1.8/docs/howto/custom-management-commands.txt:324
+# 1958ad826b80486aada4eb6b2000c003
+#: ../../../../1.8/docs/howto/custom-management-commands.txt:325
+msgid ""
+"An instance attribute that helps create colored output when writing to "
+"``stdout`` or ``stderr``. For example::"
+msgstr "Un attribut d'instance aidant à colorer le contenu envoyé aux sorties ``stdout`` ou ``stderr``. Par exemple ::"
+
+# 983893d1c7b3472abfff7897cb87a5cb
+#: ../../../../1.8/docs/howto/custom-management-commands.txt:330
+msgid ""
+"See :ref:`syntax-coloring` to learn how to modify the color palette and to "
+"see the available styles (use uppercased versions of the \"roles\" described"
+" in that section)."
+msgstr "Voir :ref:`syntax-coloring` pour savoir comment modifier la palette de couleurs et pour connaître les styles disponibles (utilisez les versions en majuscules des « rôles » décrits dans cette section)."
+
+# 0b6bba093331422191d602692b22ac1c
+#: ../../../../1.8/docs/howto/custom-management-commands.txt:334
+msgid ""
+"If you pass the :djadminopt:`--no-color` option when running your command, "
+"all ``self.style()`` calls will return the original string uncolored."
+msgstr "Si vous passez l'option :djadminopt:`--no-color` lors du lancement de la commande, tous les appels à ``self.style()`` renverront la chaîne originale sans couleur."
+
+# 9e4fbe4b457748409ce8418171cc3e8a
+#: ../../../../1.8/docs/howto/custom-management-commands.txt:339
 msgid "Methods"
 msgstr "Méthodes"
 
@@ -5498,8 +5520,38 @@ msgid ""
 "site runs in its own daemon process."
 msgstr "ou en :ref:`utilisant le mode daemon de mod_wsgi<daemon-mode>` et en prenant soin de faire tourner chaque site dans son propre processus daemon."
 
-# 6d774f8106474038a7882a3b356871d5
-#: ../../../../1.8/docs/howto/deployment/wsgi/modwsgi.txt:78
+# 0e7bcb32992b498eb3c62a22429bf302
+# 94225c2ebe934ad5b893addf2847539a
+#: ../../../../1.8/docs/howto/deployment/wsgi/modwsgi.txt:77
+#: ../../../../1.8/docs/howto/deployment/wsgi/uwsgi.txt:111
+msgid "Fixing ``UnicodeEncodeError`` for file uploads"
+msgstr "Résolution des erreurs ``UnicodeEncodeError`` pour les envois de fichiers"
+
+# 607d84cf0a164064b3f21f8e29dfba37
+#: ../../../../1.8/docs/howto/deployment/wsgi/modwsgi.txt:79
+msgid ""
+"If you get a ``UnicodeEncodeError`` when uploading files with file names "
+"that contain non-ASCII characters, make sure Apache is configured to accept "
+"non-ASCII file names::"
+msgstr "Si vous obtenez des erreurs ``UnicodeEncodeError`` lors de l'envoi de fichiers contenant des caractères non ASCII, vérifiez que Apache est configuré pour accepter les noms de fichiers non ASCII ::"
+
+# 9f02ed4d8bf142678227761b8458eb0e
+#: ../../../../1.8/docs/howto/deployment/wsgi/modwsgi.txt:86
+msgid ""
+"A common location to put this configuration is ``/etc/apache2/envvars``."
+msgstr "Cette configuration se trouve habituellement dans ``/etc/apache2/envvars``."
+
+# 409813f6657244d997512e767fc16203
+# 58b4745465f14241b14cb28ad503086e
+#: ../../../../1.8/docs/howto/deployment/wsgi/modwsgi.txt:88
+#: ../../../../1.8/docs/howto/deployment/wsgi/uwsgi.txt:119
+msgid ""
+"See the :ref:`unicode-files` section of the Unicode reference guide for "
+"details."
+msgstr "Consultez la section :ref:`unicode-files` du guide de référence Unicode pour plus de détails."
+
+# 058ca8203ec748068df4767d632cdefb
+#: ../../../../1.8/docs/howto/deployment/wsgi/modwsgi.txt:92
 msgid "Using a virtualenv"
 msgstr "Utilisation de virtualenv"
 
@@ -5675,40 +5727,7 @@ msgid ""
 "authentication documentation </howto/deployment/wsgi/apache-auth>`."
 msgstr "Django met à disposition un gestionnaire pour permettre à Apache d'authentifier les utilisateurs directement avec les moteurs d'authentification de Django. Consultez la :doc:`documentation d'authentification mod_wsgi </howto/deployment/wsgi/apache-auth>`."
 
-# 298d3d54c42b46849fcb56190241f65c
-#: ../../../../1.8/docs/howto/deployment/wsgi/modwsgi.txt:227
-msgid "If you get a UnicodeEncodeError"
-msgstr "En cas d'erreur UnicodeEncodeError"
-
-# 253963a4eebf4e1da1159e4903827bce
-#: ../../../../1.8/docs/howto/deployment/wsgi/modwsgi.txt:229
-msgid ""
-"If you're taking advantage of the internationalization features of Django "
-"(see :doc:`/topics/i18n/index`) and you intend to allow users to upload "
-"files, you must ensure that the environment used to start Apache is "
-"configured to accept non-ASCII file names. If your environment is not "
-"correctly configured, you will trigger ``UnicodeEncodeError`` exceptions "
-"when calling functions like the ones in :mod:`os.path` on filenames that "
-"contain non-ASCII characters."
-msgstr "Si vous profitez des fonctionnalités d'internationalisation de Django (voir :doc:`/topics/i18n/index`) et que vous pensez permettre aux utilisateurs d'envoyer des fichiers, vous devez vous assurer que l'environnement utilisé pour lancer Apache est bien configuré pour accepter des noms de fichiers non ASCII. Si votre environnement n'est pas configuré correctement, vous allez provoquer des exceptions ``UnicodeEncodeError`` lors de l'appel à des fonctions comme celles dans :mod:`os.path()` avec des noms de fichiers qui contiennent des caractères non ASCII."
-
-# 7ec3a9ee559e4660bde2b433783e1694
-#: ../../../../1.8/docs/howto/deployment/wsgi/modwsgi.txt:236
-msgid ""
-"To avoid these problems, the environment used to start Apache should contain"
-" settings analogous to the following::"
-msgstr "Pour éviter ces problèmes, l'environnement utilisé pour lancer Apache devrait contenir des réglages semblables à ceux-ci ::"
-
-# ea872225f4b1446bbf8e65b262acadff
-#: ../../../../1.8/docs/howto/deployment/wsgi/modwsgi.txt:242
-msgid ""
-"Consult the documentation for your operating system for the appropriate "
-"syntax and location to put these configuration items; "
-"``/etc/apache2/envvars`` is a common location on Unix platforms. Once you "
-"have added these statements to your environment, restart Apache."
-msgstr "Consultez la documentation de votre système d'exploitation pour connaître la syntaxe et l'emplacement appropriés pour ces éléments de configuration ; ``/etc/apache2/envvars`` est un des endroits habituels pour les plats-formes Unix. Après avoir ajouté ces directives à votre environnement, redémarrez Apache."
-
-# 38b6a1d6035a4e7087d08200fbc9b344
+# 3ed9a30b9ecf4a8b9af5c56b72df5f89
 #: ../../../../1.8/docs/howto/deployment/wsgi/uwsgi.txt:3
 msgid "How to use Django with uWSGI"
 msgstr "Déploiement de Django avec uWSGI"
@@ -5834,8 +5853,16 @@ msgstr "Exemple de fichier de configuration .ini ::"
 msgid "Example ini configuration file usage::"
 msgstr "Exemple d'utilisation de fichier de configuration .ini ::"
 
-# da1c0189c95247258e18f34cc9a03fdc
-#: ../../../../1.8/docs/howto/deployment/wsgi/uwsgi.txt:111
+# 5c0e75b4423740d29c072042ba62a135
+#: ../../../../1.8/docs/howto/deployment/wsgi/uwsgi.txt:113
+msgid ""
+"If you get a ``UnicodeEncodeError`` when uploading files with file names "
+"that contain non-ASCII characters, make sure uWSGI is configured to accept "
+"non-ASCII file names by adding this to your ``uwsgi.ini``::"
+msgstr "Si vous obtenez des erreurs ``UnicodeEncodeError`` lors de l'envoi de fichiers contenant des caractères non ASCII dans leur nom, vérifiez que uWSGI est configuré pour accepter les noms de fichiers non ASCII en ajoutant ceci dans ``uwsgi.ini``::"
+
+# 2b92cfaa31d14007b4713b1f2e5734a9
+#: ../../../../1.8/docs/howto/deployment/wsgi/uwsgi.txt:122
 msgid ""
 "See the uWSGI docs on `managing the uWSGI process`_ for information on "
 "starting, stopping and reloading the uWSGI workers."
