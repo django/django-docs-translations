@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-27 02:10-0600\n"
-"PO-Revision-Date: 2015-11-27 17:14+0000\n"
+"POT-Creation-Date: 2015-12-02 03:08-0600\n"
+"PO-Revision-Date: 2015-12-02 15:50+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -50,9 +50,10 @@ msgstr "Le cookie de connexion n'a pas été défini correctement parce que le d
 msgid ""
 "Set the :setting:`SESSION_COOKIE_DOMAIN` setting in your admin config file "
 "to match your domain. For example, if you're going to "
-"\"http://www.example.com/admin/\" in your browser, in \"myproject.settings\""
-" you should set :setting:`SESSION_COOKIE_DOMAIN` = 'www.example.com'."
-msgstr "Définissez le réglage :setting:`SESSION_COOKIE_DOMAIN` dans votre fichier de configuration de l'administration de sorte que le domaine corresponde à votre domaine. Par exemple, si vous souhaitez utiliser l'adresse « http://www.example.com/admin/ » dans votre navigateur, vous devriez définir :setting:`SESSION_COOKIE_DOMAIN` = 'www.example.com' dans le fichier « myproject.settings »."
+"\"https://www.example.com/admin/\" in your browser, in "
+"\"myproject.settings\" you should set :setting:`SESSION_COOKIE_DOMAIN` = "
+"'www.example.com'."
+msgstr "Définissez le réglage :setting:`SESSION_COOKIE_DOMAIN` dans votre fichier de configuration de l'administration de sorte que le domaine corresponde à votre domaine. Par exemple, si vous souhaitez utiliser l'adresse « https://www.example.com/admin/ » dans votre navigateur, vous devriez définir :setting:`SESSION_COOKIE_DOMAIN` = 'www.example.com' dans le fichier « myproject.settings »."
 
 # 1188061c64354a71b7f53b20476ccee1
 #: ../../../../1.8/docs/faq/admin.txt:17
@@ -446,7 +447,7 @@ msgstr "Dans le même temps, les développeurs de World Online ont toujours ét�
 #: ../../../../1.8/docs/faq/general.txt:15
 msgid ""
 "In fall 2003, the World Online developers (Adrian Holovaty and Simon "
-"Willison) ditched PHP and began using Python to develop its Web sites. As "
+"Willison) ditched PHP and began using Python to develop its websites. As "
 "they built intensive, richly interactive sites such as Lawrence.com, they "
 "began to extract a generic Web development framework that let them build Web"
 " applications more and more quickly. They tweaked this framework constantly,"
@@ -700,7 +701,7 @@ msgstr "Django est-il un système de gestion de contenus (CMS) ?"
 msgid ""
 "No, Django is not a CMS, or any sort of \"turnkey product\" in and of "
 "itself. It's a Web framework; it's a programming tool that lets you build "
-"Web sites."
+"websites."
 msgstr "Non, Django n'est pas en soi un CMS, ou n'importe quelle autre sorte de « produit clé-en-main ». C'est un applicatif Web ; un outil de programmation qui vous permet de construire des sites Web."
 
 # 2cd22697ada140b3af4ef9477eafe3b1
@@ -1028,38 +1029,28 @@ msgstr "Version de Django"
 msgid "Python versions"
 msgstr "Versions de Python"
 
-# b5aaf2a9213b4aa7b93755450675b750
-#: ../../../../1.8/docs/faq/install.txt:48
-msgid "1.7"
-msgstr "1.7"
+# 2d7853dcd8ea423a8023a9ae345a6c03
+#: ../../../../1.9/docs/faq/install.txt:48
+msgid "1.8"
+msgstr "1.8"
 
-# 8cfe524d29ee41d8a055b421b4c8e840
-#: ../../../../1.8/docs/faq/install.txt:48
-msgid "2.7 and 3.2, 3.3, 3.4"
-msgstr "2.7 et 3.2, 3.3, 3.4"
+# f26051c365d1438bbe21cbbb6f9c4628
+#: ../../../../1.9/docs/faq/install.txt:48
+msgid "2.7, 3.2, 3.3, 3.4, 3.5"
+msgstr "2.7, 3.2, 3.3, 3.4, 3.5"
 
-# 2b18ad76483d48f09ee56313cb282dac
-#: ../../../../1.8/docs/faq/install.txt:49
-msgid "**1.8**"
-msgstr "**1.8**"
+# 044df9e86a8041b3b7dab33cd0d0360b
+#: ../../../../1.9/docs/faq/install.txt:49
+msgid "**1.9, 1.10**"
+msgstr "**1.9, 1.10**"
 
-# c1109232e3d0467aa574a9c479a61429
-#: ../../../../1.8/docs/faq/install.txt:49
-msgid "**2.7** and **3.2, 3.3, 3.4, 3.5**"
-msgstr "**2.7** et **3.2, 3.3, 3.4, 3.5**"
+# 1c27c915f8684e269d3bf808078caf79
+#: ../../../../1.9/docs/faq/install.txt:49
+msgid "**2.7, 3.4, 3.5**"
+msgstr "**2.7, 3.4, 3.5**"
 
-# f369a1c012694179b94d1f85da1db900
-#: ../../../../1.8/docs/faq/install.txt:50
-msgid "1.9"
-msgstr "1.9"
-
-# 09bc339fce7f47dda3d0fa0f75bd750d
-#: ../../../../1.8/docs/faq/install.txt:50
-msgid "2.7, 3.4, 3.5"
-msgstr "2.7, 3.4, 3.5"
-
-# 30bea357954c4284a72294e967bd0915
-#: ../../../../1.8/docs/faq/install.txt:52
+# 26fc98bb0cd64c3e836d7ce733e9c766
+#: ../../../../1.9/docs/faq/install.txt:52
 msgid ""
 "For each version of Python, only the latest micro release (A.B.C) is "
 "officially supported. You can find the latest micro version for each series "
@@ -1161,9 +1152,8 @@ msgstr "``connection.queries`` est uniquement disponible si :setting:`DEBUG` vau
 msgid ""
 "``connection.queries`` includes all SQL statements -- INSERTs, UPDATES, "
 "SELECTs, etc. Each time your app hits the database, the query will be "
-"recorded. Note that the SQL recorded here may be :ref:`incorrectly quoted "
-"under SQLite <sqlite-connection-queries>`."
-msgstr "``connection.queries`` comprend toutes les instructions SQL -- INSERT, UPDATE, SELECT, etc. Chaque fois que votre application accède à la base de données, les requêtes sont journalisées. Notez que le SQL enregistré ici peut être :ref:`mal mis en forme sous SQLite <sqlite-connection-queries>`."
+"recorded."
+msgstr "``connection.queries`` comprend toutes les instructions SQL -- INSERT, UPDATE, SELECT, etc. Chaque fois que votre application accède à la base de données, les requêtes sont journalisées."
 
 # 09f32786117e471492dd1f13223ae2e4
 #: ../../../../1.8/docs/faq/models.txt:29

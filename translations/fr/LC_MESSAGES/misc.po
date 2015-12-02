@@ -3,17 +3,17 @@
 # This file is distributed under the same license as the Django package.
 # 
 # Translators:
-# Claude Paroz <claude@2xlibre.net>, 2014
+# Claude Paroz <claude@2xlibre.net>, 2014-2015
 # Sébastien Fievet <zyegfryed@gmail.com>, 2014
 # Sébastien Fievet <zyegfryed@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-03 03:05-0500\n"
-"PO-Revision-Date: 2014-09-03 13:01+0000\n"
+"POT-Creation-Date: 2015-12-02 03:08-0600\n"
+"PO-Revision-Date: 2015-12-02 16:01+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
-"Language-Team: French (http://www.transifex.com/projects/p/django-docs/language/fr/)\n"
+"Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,14 +28,13 @@ msgstr "Stabilité de l'API"
 # 9e139980d6dd46afbf4204e4400c0cf7
 #: ../../../../1.7/docs/misc/api-stability.txt:5
 msgid ""
-":doc:`The release of Django 1.0 </releases/1.0>` comes with a promise of API"
-" stability and forwards-compatibility. In a nutshell, this means that code "
-"you develop against a 1.X version of Django will continue to work with "
-"future 1.X releases. You may need to make minor changes when upgrading the "
-"version of Django your project uses: see the \"Backwards incompatible "
-"changes\" section of the :doc:`release note </releases/index>` for the "
-"version or versions to which you are upgrading."
-msgstr "Depuis la :doc:`publication de Django 1.0 </releases/1.0>`, un engagement de stabilité d'API et de compatibilité ascendante a été pris. En résumé, cela signifie que le code que vous développez avec une version 1.x de Django continuera à fonctionner avec les publications 1.x futures. Il est parfois nécessaire d'effectuer de petits ajustements lors de la mise à niveau de la version de Django utilisée par votre projet : voir la section des « Changements incompatibles avec les version précédentes » des :doc:`notes de publication </releases/index>` concernant la ou les versions vers lesquelles vous mettez à niveau."
+"Django promises API stability and forwards-compatibility since version 1.0. "
+"In a nutshell, this means that code you develop against a version of Django "
+"will continue to work with future releases. You may need to make minor "
+"changes when upgrading the version of Django your project uses: see the "
+"\"Backwards incompatible changes\" section of the :doc:`release note "
+"</releases/index>` for the version or versions to which you are upgrading."
+msgstr "Django s'engage à garantir une API stable et une compatibilité ascendante depuis la version 1.0. En résumé, cela signifie que le code que vous développez avec une version de Django continuera à fonctionner avec les publications futures. Il est parfois nécessaire d'effectuer de petits ajustements lors de la mise à niveau de la version de Django utilisée par votre projet : voir la section des « Changements incompatibles avec les version précédentes » des :doc:`notes de publication </releases/index>` concernant la ou les versions vers lesquelles vous mettez à niveau."
 
 # 781d05c9e6bf40189a2df2f854969df2
 #: ../../../../1.7/docs/misc/api-stability.txt:14
@@ -67,9 +66,9 @@ msgstr "Si de nouvelles fonctions sont ajoutées à ces API -- ce qui est vraise
 msgid ""
 "If, for some reason, an API declared stable must be removed or replaced, it "
 "will be declared deprecated but will remain in the API for at least two "
-"minor version releases. Warnings will be issued when the deprecated method "
-"is called."
-msgstr "Si pour une raison ou une autre, une API déclarée stable doit être supprimée ou remplacée, elle sera déclarée obsolète mais restera dans l'API durant au moins deux publications de versions mineures. Des avertissements seront émis lors des appels aux méthodes obsolètes."
+"feature releases. Warnings will be issued when the deprecated method is "
+"called."
+msgstr "Si pour une raison ou une autre, une API déclarée stable doit être supprimée ou remplacée, elle sera déclarée obsolète mais restera dans l'API durant au moins deux publications principales. Des avertissements seront émis lors des appels aux méthodes obsolètes."
 
 # 63c0a4d67c8549a787f4ed29f0ee64f2
 #: ../../../../1.7/docs/misc/api-stability.txt:30
@@ -495,8 +494,8 @@ msgstr "Prévention de la redondance"
 # 90f7e6b71a3d4bd1839c0e0ed41adf0e
 #: ../../../../1.7/docs/misc/design-philosophies.txt:209
 msgid ""
-"The majority of dynamic Web sites use some sort of common sitewide design --"
-" a common header, footer, navigation bar, etc. The Django template system "
+"The majority of dynamic websites use some sort of common sitewide design -- "
+"a common header, footer, navigation bar, etc. The Django template system "
 "should make it easy to store those elements in a single place, eliminating "
 "duplicate code."
 msgstr "La majorité des sites Web dynamiques utilise des parties entières et communes au design du site -- un en-tête, un pied de page, une barre de navigation, etc. Le système de gabarit de Django devrait faciliter le stockage de ces éléments en un lieu unique, éliminant la duplication de code."
@@ -567,28 +566,15 @@ msgstr "Le système de gabarit ne doit pas faire de magie avec les espaces. Si u
 msgid "Don't invent a programming language"
 msgstr "Ne pas inventer un langage de programmation"
 
-# 055d0e59d7ba44f8b5b01683e6351cf0
-#: ../../../../1.7/docs/misc/design-philosophies.txt:252
-msgid "The template system intentionally doesn't allow the following:"
-msgstr "Intentionnellement, le système de gabarit ne permet pas les éléments suivants :"
-
-# de771a5e89e34aa3980cb1041138da43
-#: ../../../../1.7/docs/misc/design-philosophies.txt:254
-msgid "Assignment to variables"
-msgstr "L'affectation des variables"
-
-# cf0cba3262f843ef871c240dbf70785d
-#: ../../../../1.7/docs/misc/design-philosophies.txt:255
-msgid "Advanced logic"
-msgstr "La logique avancée"
-
-# ddeb2e07d3524f519d33a75481ecfe1b
-#: ../../../../1.7/docs/misc/design-philosophies.txt:257
+# 94882e16b0e94b44be7ccb58c59c6bc6
+#: ../../../../1.9/docs/misc/design-philosophies.txt:252
 msgid ""
 "The goal is not to invent a programming language. The goal is to offer just "
 "enough programming-esque functionality, such as branching and looping, that "
-"is essential for making presentation-related decisions."
-msgstr "Le but n'est pas d'inventer un langage de programmation. L'objectif est d'offrir une fonctionnalité juste assez programmatique, comme les conditions et les boucles, ce qui est essentiel pour la prise de décision liée à la présentation."
+"is essential for making presentation-related decisions. The :ref:`Django "
+"Template Language (DTL) <template-language-intro>` aims to avoid advanced "
+"logic."
+msgstr "Le but n'est pas d'inventer un langage de programmation. L'objectif est d'offrir une fonctionnalité juste assez programmatique, comme les conditions et les boucles, ce qui est essentiel pour la prise de décision liée à la présentation. Le :ref:`langage de gabarit de Django (DTL) <template-language-intro>` vise à éviter toute logique avancée."
 
 # b0d32cc53b3b456c9575a356b81eb1cc
 #: ../../../../1.7/docs/misc/design-philosophies.txt:261
