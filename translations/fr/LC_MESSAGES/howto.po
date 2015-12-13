@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-02 03:08-0600\n"
-"PO-Revision-Date: 2015-12-02 19:30+0000\n"
+"POT-Creation-Date: 2015-12-13 03:09-0600\n"
+"PO-Revision-Date: 2015-12-13 16:19+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -628,13 +628,14 @@ msgid ""
 "There are a couple of notable things going on. First, "
 "``AbsoluteValueLessThan`` isn't calling ``process_lhs()``. Instead it skips "
 "the transformation of the ``lhs`` done by ``AbsoluteValue`` and uses the "
-"original ``lhs``. That is, we want to get ``27`` not ``ABS(27)``. Referring "
-"directly to ``self.lhs.lhs`` is safe as ``AbsoluteValueLessThan`` can be "
-"accessed only from the ``AbsoluteValue`` lookup, that is the ``lhs`` is "
-"always an instance of ``AbsoluteValue``."
-msgstr "Plusieurs éléments méritent d'être signalés. Tout d'abord, ``AbsoluteValueLessThan`` n'appelle pas ``process_lhs()``. Au lieu de cela, il omet la transformation de ``lhs`` effectuée par ``AbsoluteValue`` et utilise la variable ``lhs`` originale. C'est-à-dire que nous voulons obtenir ``27`` et non ``ABS(27)``. La référence directe à ``self.lhs.lhs`` est sûre car ``AbsoluteValueLessThan`` ne peut être accédée qu'au travers de l'expression ``AbsoluteValue``, ce qui veut dire que ``lhs`` est toujours une instance de ``AbsoluteValue``."
+"original ``lhs``. That is, we want to get ``\"experiments\".\"change\"`` not"
+" ``ABS(\"experiments\".\"change\")``. Referring directly to ``self.lhs.lhs``"
+" is safe as ``AbsoluteValueLessThan`` can be accessed only from the "
+"``AbsoluteValue`` lookup, that is the ``lhs`` is always an instance of "
+"``AbsoluteValue``."
+msgstr "Plusieurs éléments méritent d'être signalés. Tout d'abord, ``AbsoluteValueLessThan`` n'appelle pas ``process_lhs()``. Au lieu de cela, il omet la transformation de ``lhs`` effectuée par ``AbsoluteValue`` et utilise la variable ``lhs`` originale. C'est-à-dire que nous voulons obtenir ``\"experiments\".\"change\"`` et non ``ABS(\"experiments\".\"change\")``. La référence directe à ``self.lhs.lhs`` est sûre car ``AbsoluteValueLessThan`` ne peut être accédée qu'au travers de l'expression ``AbsoluteValue``, ce qui veut dire que ``lhs`` est toujours une instance de ``AbsoluteValue``."
 
-# 9025003285f044c2a5d0957b9b12274a
+# 2c963f650f944c799ea62ed199a9860d
 #: ../../../../1.9/docs/howto/custom-lookups.txt:202
 msgid ""
 "Notice also that  as both sides are used multiple times in the query the "
@@ -3875,10 +3876,10 @@ msgstr "La différence ici est que ``do_current_time()`` capture la chaîne de f
 #: ../../../../1.9/docs/howto/custom-template-tags.txt:1133
 msgid ""
 "Finally, if you only need to have a simple syntax for your custom context-"
-"updating template tag, you might want to consider using the :ref:`assignment"
-" tag <howto-custom-template-tags-assignment-tags>` shortcut we introduced "
-"above."
-msgstr "Finalement, si vous n'avez besoin que d'une syntaxe simple pour votre balise de gabarit de mise à jour du contexte, il peut être plus simple d'envisager l'utilisation du raccourci de la :ref:`balise d'attribution <howto-custom-template-tags-assignment-tags>` que nous avons présenté précédemment."
+"updating template tag, consider using the "
+":meth:`~django.template.Library.simple_tag` shortcut, which supports "
+"assigning the tag results to a template variable."
+msgstr "Finalement, si vous n'avez besoin que d'une syntaxe simple pour votre balise de gabarit de mise à jour du contexte, envisagez l'utilisation du raccourci :meth:`~django.template.Library.simple_tag` qui permet d'attribuer le résultat de la balise à une variable de gabarit."
 
 # e4a11f7f03404db0babc55060c6a6020
 #: ../../../../1.9/docs/howto/custom-template-tags.txt:1140
