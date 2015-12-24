@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-13 02:09-0600\n"
-"PO-Revision-Date: 2015-12-13 16:13+0000\n"
+"POT-Creation-Date: 2015-12-24 02:09-0600\n"
+"PO-Revision-Date: 2015-12-24 23:11+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -8671,11 +8671,9 @@ msgstr "Combinaison de plusieurs agrégations"
 #: ../../../../1.9/docs/topics/db/aggregation.txt:192
 msgid ""
 "Combining multiple aggregations with ``annotate()`` will `yield the wrong "
-"results <https://code.djangoproject.com/ticket/10060>`_, as multiple tables "
-"are cross joined. Due to the use of ``LEFT OUTER JOIN``, duplicate records "
-"will be generated if some of the joined tables contain more records than the"
-" others:"
-msgstr "La combinaison de plusieurs agrégations avec ``annotate()`` produit un mauvais résultat <https://code.djangoproject.com/ticket/10060>`_, dans la mesure ou plusieurs tables sont jointes. En raison de l'utilisation de ``LEFT OUTER JOIN``, des lignes dupliquées seront produites si certaines des tables jointes contiennent plus d'enregistrements que d'autres :"
+"results <https://code.djangoproject.com/ticket/10060>`_ because joins are "
+"used instead of subqueries:"
+msgstr "La combinaison de plusieurs agrégations avec ``annotate()`` produit un mauvais résultat <https://code.djangoproject.com/ticket/10060>`_, car des jointures sont utilisées à la place de sous-requêtes :"
 
 # 18792f9805514d6e9e78bfd05cb8b4d6
 #: ../../../../1.9/docs/topics/db/aggregation.txt:207
@@ -8949,9 +8947,9 @@ msgstr "Les deux requêtes renvoient une liste d'objets « Publisher » ayant 
 #: ../../../../1.9/docs/topics/db/aggregation.txt:376
 msgid ""
 "In the first query, the annotation precedes the filter, so the filter has no"
-" effect on the annotation. ``distinct=True`` is required to avoid a :ref"
-":`cross-join bug <combining-multiple-aggregations>`."
-msgstr "Dans la première requête, l'annotation précède le filtre, ce qui fait que le filtre n'a aucun effet sur l'annotation. ``distinct=True`` est obligatoire pour éviter une :ref:`anomalie de jointure croisée <combining-multiple-aggregations>`."
+" effect on the annotation. ``distinct=True`` is required to avoid a "
+":ref:`query bug <combining-multiple-aggregations>`."
+msgstr "Dans la première requête, l'annotation précède le filtre, ce qui fait que le filtre n'a aucun effet sur l'annotation. ``distinct=True`` est obligatoire pour éviter une :ref:`anomalie de requête <combining-multiple-aggregations>`."
 
 # fd7ca2dc725c4b81982b331b84abc940
 #: ../../../../1.9/docs/topics/db/aggregation.txt:380
@@ -23645,14 +23643,6 @@ msgstr "Combine un gabarit donné avec un dictionnaire contexte donné et renvoi
 # c916bf16b3e949a1a9b35ea359750594
 #: ../../../../1.9/docs/topics/http/shortcuts.txt:23
 msgid ""
-":func:`render()` is the same as a call to :func:`render_to_response()` with "
-"a ``context_instance`` argument that forces the use of a "
-":class:`~django.template.RequestContext`."
-msgstr ":func:`render()` est semblable à l'appel à :func:`render_to_response()` avec un paramètre ``context_instance`` qui force l'utilisation d'une classe :class:`~django.template.RequestContext`."
-
-# b09d1db8525f480e96031001d11610e6
-#: ../../../../1.9/docs/topics/http/shortcuts.txt:27
-msgid ""
 "Django does not provide a shortcut function which returns a "
 ":class:`~django.template.response.TemplateResponse` because the constructor "
 "of :class:`~django.template.response.TemplateResponse` offers the same level"
@@ -23693,10 +23683,16 @@ msgstr "L'objet requête utilisé pour générer la réponse."
 msgid "``template_name``"
 msgstr "``template_name``"
 
-# bbbedc526cbd4ecfbdf34e848589952c
-#: ../../../../1.9/docs/topics/http/shortcuts.txt:39
-msgid "The full name of a template to use or sequence of template names."
-msgstr "Le nom complet d'un gabarit à utiliser ou une liste de noms de gabarits."
+# 9d6db201b54948d084f70f6710284afd
+# e7dbfd9274014c159d56a4a35963094d
+#: ../../../../1.9/docs/topics/http/shortcuts.txt:35
+#: ../../../../1.9/docs/topics/http/shortcuts.txt:129
+msgid ""
+"The full name of a template to use or sequence of template names. If a "
+"sequence is given, the first template that exists will be used. See the "
+":ref:`template loading documentation <template-loading>` for more "
+"information on how templates are found."
+msgstr "Le nom complet d'un gabarit à utiliser ou une liste de noms de gabarits. Si une liste est donnée, le premier gabarit de la liste qui est trouvé sera utilisé. Consultez la :ref:`documentation du chargement de gabarits <template-loading>` pour plus d'informations sur la façon dont les gabarits sont recherchés."
 
 # 8ceae3f32ffb4d0c9ba99ddb95028eb0
 # 31fcc9e2a9ac4504bf4fbae9a1192306
@@ -23876,20 +23872,12 @@ msgstr "``render_to_response``"
 # da9ef0142a2542e787d97f1495d7bac7
 #: ../../../../1.9/docs/topics/http/shortcuts.txt:122
 msgid ""
-"Renders a given template with a given context dictionary and returns an "
-":class:`~django.http.HttpResponse` object with that rendered text."
-msgstr "Effectue le rendu d'un gabarit donné avec le dictionnaire de contexte donné et renvoie un objet :class:`~django.http.HttpResponse` avec le texte résultant."
+"This function preceded the introduction of :func:`render` and works "
+"similarly except that it doesn't make the ``request`` available in the "
+"response. It's not recommended and is likely to be deprecated in the future."
+msgstr "Cette fonction a précédé l'introduction de :func:`render` et fonctionne de manière similaire, sauf qu'elle ne rend pas la requête disponible dans la réponse. Elle n'est plus recommandée et va probablement être rendue obsolète à l'avenir."
 
-# 10b468616c714e939c33e68b71625b36
-#: ../../../../1.9/docs/topics/http/shortcuts.txt:129
-msgid ""
-"The full name of a template to use or sequence of template names. If a "
-"sequence is given, the first template that exists will be used. See the "
-":ref:`template loading documentation <template-loading>` for more "
-"information on how templates are found."
-msgstr "Le nom complet d'un gabarit à utiliser ou une liste de noms de gabarits. Si une liste est donnée, le premier gabarit de la liste qui est trouvé sera utilisé. Consultez la :ref:`documentation du chargement de gabarits <template-loading>` pour plus d'informations sur la façon dont les gabarits sont recherchés."
-
-# fff13f253cc84d449eb8364e9e5281a1
+# b6742da9226a4e5c8a157195ed0dab3b
 #: ../../../../1.9/docs/topics/http/shortcuts.txt:148
 msgid ""
 "The context instance to render the template with. By default, the template "
@@ -23900,8 +23888,15 @@ msgid ""
 "look something like this::"
 msgstr "L'instance de contexte avec laquelle effectuer le rendu du gabarit. Par défaut, le gabarit sera rendu avec une instance :class:`~django.template.Context` (complétée par des valeurs de ``context``). Si vous avez besoin d'utiliser des :ref:`processeurs de contexte <subclassing-context-requestcontext>`, produisez plutôt le gabarit avec une instance :class:`~django.template.RequestContext`. Votre code pourrait ressembler à ceci ::"
 
-# e3f5c20f2ec04d6b90d746dbe92c3bf0
-#: ../../../../1.9/docs/topics/http/shortcuts.txt:176
+# 7d761e1f583d494dadcdfb2a9a944dee
+#: ../../../../1.9/docs/topics/http/shortcuts.txt:161
+msgid ""
+"The ``context_instance`` argument is deprecated. Use the :func:`render` "
+"function instead which always makes ``RequestContext`` available."
+msgstr "Le paramètre ``context_instance`` est obsolète. Utilisez plutôt la fonction :func:`render` qui rend toujours disponible l'objet ``RequestContext``."
+
+# b7b990561307464da1789d7480c5e22f
+#: ../../../../1.9/docs/topics/http/shortcuts.txt:177
 msgid "The ``status`` and ``using`` parameters were added."
 msgstr "Les paramètres ``status`` et ``using`` ont été ajoutés."
 
@@ -30907,6 +30902,11 @@ msgstr ":djadmin:`sqlmigrate`, qui affiche les instructions SQL correspondant à
 
 # 6995c247dada4ab887c26f3a58fdb2b4
 #: ../../../../1.9/docs/topics/migrations.txt:27
+msgid ":djadmin:`showmigrations`, which lists a project's migrations."
+msgstr ":djadmin:`showmigrations`, qui affiche la liste des migrations d'un projet."
+
+# 30161e4025014dcdaa695b082226b6aa
+#: ../../../../1.9/docs/topics/migrations.txt:29
 msgid ""
 "You should think of migrations as a version control system for your database"
 " schema. ``makemigrations`` is responsible for packaging up your model "
@@ -34031,12 +34031,12 @@ msgstr "SSL/HTTPS"
 # 4da43851f0704358b30b532d3f525915
 #: ../../../../1.9/docs/topics/security.txt:123
 msgid ""
-"It is always better for security, though not always practical in all cases, "
-"to deploy your site behind HTTPS. Without this, it is possible for malicious"
-" network users to sniff authentication credentials or any other information "
-"transferred between client and server, and in some cases -- **active** "
-"network attackers -- to alter data that is sent in either direction."
-msgstr "Le déploiement de votre site en HTTPS est toujours mieux pour la sécurité, même si ce n'est pas toujours réalisable. Sans cela, il est possible que des utilisateurs malveillants du réseau interceptent des données d'authentification ou toute autre information transférée entre le client et le serveur et, dans certains cas, pour des attaquants réseau **actifs**, que des données soient modifiées au passage, dans l'une ou l'autre direction."
+"It is always better for security to deploy your site behind HTTPS. Without "
+"this, it is possible for malicious network users to sniff authentication "
+"credentials or any other information transferred between client and server, "
+"and in some cases -- **active** network attackers -- to alter data that is "
+"sent in either direction."
+msgstr "Le déploiement de votre site en HTTPS est toujours mieux pour la sécurité. Sans cela, il est possible que des utilisateurs malveillants du réseau interceptent des données d'authentification ou toute autre information transférée entre le client et le serveur et, dans certains cas, pour des attaquants réseau **actifs**, que des données soient modifiées au passage, dans l'une ou l'autre direction."
 
 # 0035de84f0344e049a426dbd4497cfc9
 #: ../../../../1.9/docs/topics/security.txt:129
@@ -36515,11 +36515,10 @@ msgstr "Le paramètre ``request`` a été ajouté."
 # f99079773b6044c0994a50c1b8004005
 #: ../../../../1.9/docs/topics/templates.txt:312
 msgid ""
-"See also the :func:`~django.shortcuts.render()` and "
-":func:`~django.shortcuts.render_to_response()` shortcuts, which call "
-":func:`render_to_string()` and feed the result into an "
+"See also the :func:`~django.shortcuts.render()` shortcut which calls "
+":func:`render_to_string()` and feeds the result into an "
 ":class:`~django.http.HttpResponse` suitable for returning from a view."
-msgstr "Voir aussi les raccourcis :func:`~django.shortcuts.render()` et :func:`~django.shortcuts.render_to_response()` qui appellent :func:`render_to_string()` et fournissent le résultat à un objet :class:`~django.http.HttpResponse` prêt à être renvoyé depuis une vue."
+msgstr "Voir aussi le raccourci :func:`~django.shortcuts.render()` qui appelle :func:`render_to_string()` et fournit le résultat à un objet :class:`~django.http.HttpResponse` prêt à être renvoyé depuis une vue."
 
 # fb753c1ca66b43fc9406422d5a07cfe7
 #: ../../../../1.9/docs/topics/templates.txt:317
@@ -40512,10 +40511,10 @@ msgstr "Les messages d'échec produits par la plupart de ces méthodes d'asserti
 msgid ""
 "Asserts that execution of ``callable`` raises ``expected_exception`` and "
 "that ``expected_message`` is found in the exception's message. Any other "
-"outcome is reported as a failure. Similar to unittest's "
-":meth:`~unittest.TestCase.assertRaisesRegex` with the difference that "
-"``expected_message`` isn't a regular expression."
-msgstr "Confirme que l'appel à l'exécutable ``callable`` génère l'exception ``expected_exception`` et que ``expected_message`` est trouvé dans le message de l'exception. Tout autre résultat est signalé comme un échec. Semblable à :meth:`~unittest.TestCase.assertRaisesRegex` de la bibliothèque ``unittest``, à la différence près que ``expected_message`` n'est ici pas une expression régulière."
+"outcome is reported as a failure. It's a simpler version of "
+":meth:`unittest.TestCase.assertRaisesRegex` with the difference that "
+"``expected_message`` isn't treated as a regular expression."
+msgstr "Confirme que l'appel à l'exécutable ``callable`` génère l'exception ``expected_exception`` et que ``expected_message`` est trouvé dans le message de l'exception. Tout autre résultat est signalé comme un échec. Il s'agit d'une version simplifiée de :meth:`unittest.TestCase.assertRaisesRegex`, à la différence près que ``expected_message`` n'est ici pas traité comme une expression régulière."
 
 # f113458c0bff4bd2952a280e469bcf9a
 #: ../../../../1.9/docs/topics/testing/tools.txt:1398

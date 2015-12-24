@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-02 03:08-0600\n"
-"PO-Revision-Date: 2015-12-02 15:48+0000\n"
+"POT-Creation-Date: 2015-12-24 03:08-0600\n"
+"PO-Revision-Date: 2015-12-24 23:04+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -3594,11 +3594,10 @@ msgstr "Il est très courant de charger un gabarit, remplir un contexte et renvo
 #: ../../../../1.9/docs/intro/tutorial03.txt:280
 msgid ""
 "Note that once we've done this in all these views, we no longer need to "
-"import :mod:`~django.template.loader`, "
-":class:`~django.template.RequestContext` and "
-":class:`~django.http.HttpResponse` (you'll want to keep ``HttpResponse`` if "
-"you still have the stub methods for ``detail``, ``results``, and ``vote``)."
-msgstr "Notez qu'à partir du moment où nous avons fait ceci dans toutes nos vues, nous n'avons plus à importer :mod:`~django.template.loader`, :class:`~django.template.RequestContext` et :class:`~django.http.HttpResponse` (il faut conserver ``HttpResponse`` tant que les méthodes initiales pour ``detail``, ``results`` et ``vote`` sont présentes)."
+"import :mod:`~django.template.loader` and :class:`~django.http.HttpResponse`"
+" (you'll want to keep ``HttpResponse`` if you still have the stub methods "
+"for ``detail``, ``results``, and ``vote``)."
+msgstr "Notez qu'une fois que nous avons fait ceci dans toutes nos vues, nous n'avons plus à importer :mod:`~django.template.loader` et :class:`~django.http.HttpResponse` (il faut conserver ``HttpResponse`` tant que les méthodes initiales pour ``detail``, ``results`` et ``vote`` sont présentes)."
 
 # 2ac2ffb38ce2420385c562d4341933f9
 #: ../../../../1.9/docs/intro/tutorial03.txt:285
