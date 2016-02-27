@@ -1,0 +1,1301 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# 
+# Translators:
+# Eiji Warashina <Eiji.Warashina@gmail.com>, 2016
+# Tatsuhiko Kono <kono@takenoko-tech.co.jp>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: django-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-24 16:09-0600\n"
+"PO-Revision-Date: 2016-02-26 16:53+0000\n"
+"Last-Translator: Tatsuhiko Kono <kono@takenoko-tech.co.jp>\n"
+"Language-Team: Japanese (http://www.transifex.com/django/django-docs/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:3
+msgid "FAQ: The admin"
+msgstr "FAQ: 管理サイト\"admin\"について"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:6
+msgid ""
+"I can't log in. When I enter a valid username and password, it just brings "
+"up the login page again, with no error messages."
+msgstr "ログインできません。正しいユーザ名とパスワードを入力したのに、再度ログインページが表示されます。エラーメッセージも出ません。"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:8
+msgid ""
+"The login cookie isn't being set correctly, because the domain of the cookie"
+" sent out by Django doesn't match the domain in your browser. Try these two "
+"things:"
+msgstr "Django の発行するクッキーのドメインと、ブラウザに格納されたドメインが一致していないために、ログインクッキーが正しく設定されていない場合に起きる症状です。以下の二つの対策を試してみて下さい:"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:12
+msgid ""
+"Set the :setting:`SESSION_COOKIE_DOMAIN` setting in your admin config file "
+"to match your domain. For example, if you're going to "
+"\"https://www.example.com/admin/\" in your browser, in "
+"\"myproject.settings\" you should set :setting:`SESSION_COOKIE_DOMAIN` = "
+"'www.example.com'."
+msgstr "設定ファイルの :setting:`SESSION_COOKIE_DOMAIN` に正しいドメインを設定してく ださい。例えば、Django のサイトにアクセスするときに、ブラウザで “https://www.example.com/admin/” と入力しているのなら、 “myproject.settings” には set :setting:`SESSION_COOKIE_DOMAIN = 'www.example.com' と設定せねばなりません。"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:18
+msgid ""
+"I can't log in. When I enter a valid username and password, it brings up the"
+" login page again, with a \"Please enter a correct username and password\" "
+"error."
+msgstr "ログインできません。正しいユーザ名とパスワードを入力したところ、「正しいユーザ名とパスワードを入力してください」というエラーメッセージつきでログインページを表示します。"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:20
+msgid ""
+"If you're sure your username and password are correct, make sure your user "
+"account has :attr:`~django.contrib.auth.models.User.is_active` and "
+":attr:`~django.contrib.auth.models.User.is_staff` set to True. The admin "
+"site only allows access to users with those two fields both set to True."
+msgstr "ユーザネームとパスワードが本当に正しいのなら、ユーザアカウントが :attr:`~django.contrib.auth.models.User.is_active` で、かつ :attr:`~django.contrib.auth.models.User.is_staff` が True であるか確かめて下さい。 管理サイトにアクセスできるのは、 is_active と is_staff が共に True のユーザだけです。"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:26
+msgid ""
+"How do I automatically set a field's value to the user who last edited the "
+"object in the admin?"
+msgstr "管理サイト上でオブジェクトを編集するときに、あるフィールドに、そのオブジェクトを最後に編集したユーザの情報を自動的に入れる方法はないですか？"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:28
+msgid ""
+"The :class:`~django.contrib.admin.ModelAdmin` class provides customization "
+"hooks that allow you to transform an object as it saved, using details from "
+"the request. By extracting the current user from the request, and "
+"customizing the :meth:`~django.contrib.admin.ModelAdmin.save_model` hook, "
+"you can update an object to reflect the user that edited it. See :ref:`the "
+"documentation on ModelAdmin methods <model-admin-methods>` for an example."
+msgstr ":class:`~django.contrib.admin.ModelAdmin` クラスの用意しているカスタマイズ用のフックを使えば、オブジェクトを保存するときに、リクエストから取り出した情報に基づいてフィールドの値を変更できます。具体的には、 meth:`~django.contrib.admin.ModelAdmin.save_model` フックをカスタマイズして、 オブジェクトのフィールド値にリクエストから取り出した現在のユーザを反映させます。 :ref:`ModelAdmin メソッドのドキュメント<model-admin-methods>` にサンプルがあります。"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:36
+msgid ""
+"How do I limit admin access so that objects can only be edited by the users "
+"who created them?"
+msgstr "管理サイト上でオブジェクトを編集するときに、オブジェクトを最初に作成したユーザだけが編集できるよう制限するにはどうすればよいですか？"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:38
+msgid ""
+"The :class:`~django.contrib.admin.ModelAdmin` class also provides "
+"customization hooks that allow you to control the visibility and editability"
+" of objects in the admin. Using the same trick of extracting the user from "
+"the request, the :meth:`~django.contrib.admin.ModelAdmin.get_queryset` and "
+":meth:`~django.contrib.admin.ModelAdmin.has_change_permission` can be used "
+"to control the visibility and editability of objects in the admin."
+msgstr ":class:`~django.contrib.admin.ModelAdmin` の用意しているフックには、オブ ジェクトを管理サイト上に表示するかどうかと編集可能かどうかを制御できるものがあります。 :meth:`~django.contrib.admin.ModelAdmin.get_queryset` および :meth:`~django.contrib.admin.ModelAdmin.has_change_permission` フックをカスタマイズすれば、上の質問の答えと同様、リクエストから取り出した 現在のユーザの情報に基づいて、オブジェクトの表示や編集を制御できます。"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:46
+msgid ""
+"My admin-site CSS and images showed up fine using the development server, "
+"but they're not displaying when using mod_wsgi."
+msgstr "開発サーバでは管理サイトの CSS や画像がうまく表示されるのに、 mod_wsgi を使うと表示されません。"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:48
+msgid ""
+"See :ref:`serving the admin files <serving-the-admin-files>` in the \"How to"
+" use Django with mod_wsgi\" documentation."
+msgstr "「mod_wsgi で Django を使う」というドキュメントの See :ref:`管理サイト用のファイルを公開する方法 <serving-the-admin-files>` を参照してください。"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:52
+msgid ""
+"My \"list_filter\" contains a ManyToManyField, but the filter doesn't "
+"display."
+msgstr "“list_filter” に ManyToManyField を入れたのに、管理サイトがフィルタを表示しません。"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:54
+msgid ""
+"Django won't bother displaying the filter for a ``ManyToManyField`` if there"
+" are fewer than two related objects."
+msgstr "Django が ``ManyToManyField`` に対してフィルタを表示するのは、リレーション 先のオブジェクトが複数のときだけです。"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:57
+msgid ""
+"For example, if your :attr:`~django.contrib.admin.ModelAdmin.list_filter` "
+"includes :doc:`sites </ref/contrib/sites>`, and there's only one site in "
+"your database, it won't display a \"Site\" filter. In that case, filtering "
+"by site would be meaningless."
+msgstr "例えば、 :attr:`~django.contrib.admin.ModelAdmin.list_filter` に :doc:`sites </ref/contrib/sites>` が含まれていて、かつデータベースに1個しかsiteのデータが無い場合はSiteによるフィルタリングは表示されません。この場合Siteによるフィルタリングは無意味だからです。"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:63
+msgid "Some objects aren't appearing in the admin."
+msgstr "admin画面でいくつかのオブジェクトが表示されません。"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:65
+msgid ""
+"Inconsistent row counts may be caused by missing foreign key values or a "
+"foreign key field incorrectly set to :attr:`null=False "
+"<django.db.models.Field.null>`. If you have a record with a "
+":class:`~django.db.models.ForeignKey` pointing to a non-existent object and "
+"that foreign key is included is "
+":attr:`~django.contrib.admin.ModelAdmin.list_display`, the record will not "
+"be shown in the admin changelist because the Django model is declaring an "
+"integrity constraint that is not implemented at the database level."
+msgstr "おかしな行数カウントが発生するのは、ForeignKeyの値が抜けている場合、又はForeignKeyであるフィールドが間違って :attr:`null=False <django.db.models.Field.null>` に設定されている事が原因です。\nもし :class:`~django.db.models.ForeignKey` が存在しないオブジェクトを指しているデータがあり、そのフィールドが :attr:`~django.contrib.admin.ModelAdmin.list_display` に含まれている場合、adminのchangelistには表示されません。なぜならばDjangoのモデルが宣言している整合性制約はデータベースレベルまでは実装されていないからです。"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:75
+msgid "How can I customize the functionality of the admin interface?"
+msgstr "adminインターフェースの機能をカスタマイズするにはどうしたら良いですか？"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:77
+msgid ""
+"You've got several options. If you want to piggyback on top of an add/change"
+" form that Django automatically generates, you can attach arbitrary "
+"JavaScript modules to the page via the model's class Admin :ref:`js "
+"parameter <modeladmin-asset-definitions>`. That parameter is a list of URLs,"
+" as strings, pointing to JavaScript modules that will be included within the"
+" admin form via a ``<script>`` tag."
+msgstr "幾つかの方法があります。\nDjangoが自動的に生成する追加/変更フォームに追加したい場合は、モデルのAdminClassの :ref:`js parameter <modeladmin-asset-definitions>` を介してページに任意のJavaScriptモジュールを埋め込む事ができます。\nこのパラメーターは、<script>タグにてadminのフォーム画面に読み込まれるJavaScriptモジュールのURLである文字列の、リストです。"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:84
+msgid ""
+"If you want more flexibility than simply tweaking the auto-generated forms, "
+"feel free to write custom views for the admin. The admin is powered by "
+"Django itself, and you can write custom views that hook into the "
+"authentication system, check permissions and do whatever else they need to "
+"do."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:89
+msgid ""
+"If you want to customize the look-and-feel of the admin interface, read the "
+"next question."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:93
+msgid "The dynamically-generated admin site is ugly! How can I change it?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:95
+msgid ""
+"We like it, but if you don't agree, you can modify the admin site's "
+"presentation by editing the CSS stylesheet and/or associated image files. "
+"The site is built using semantic HTML and plenty of CSS hooks, so any "
+"changes you'd like to make should be possible by editing the stylesheet."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:101
+msgid "What browsers are supported for using the admin?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:103
+msgid ""
+"The admin provides a fully-functional experience to `YUI's A-grade`_ "
+"browsers, with the notable exception of IE6, which is not supported."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:106
+msgid ""
+"There *may* be minor stylistic differences between supported browsers—for "
+"example, some browsers may not support rounded corners. These are considered"
+" acceptable variations in rendering."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:3
+msgid "FAQ: Contributing code"
+msgstr "FAQ: コードへの貢献"
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:6
+msgid "How can I get started contributing code to Django?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:8
+msgid ""
+"Thanks for asking! We've written an entire document devoted to this "
+"question. It's titled :doc:`Contributing to Django "
+"</internals/contributing/index>`."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:12
+msgid ""
+"I submitted a bug fix in the ticket system several weeks ago. Why are you "
+"ignoring my patch?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:14
+msgid "Don't worry: We're not ignoring you!"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:16
+msgid ""
+"It's important to understand there is a difference between \"a ticket is "
+"being ignored\" and \"a ticket has not been attended to yet.\" Django's "
+"ticket system contains hundreds of open tickets, of various degrees of "
+"impact on end-user functionality, and Django's developers have to review and"
+" prioritize."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:21
+msgid ""
+"On top of that: the people who work on Django are all volunteers. As a "
+"result, the amount of time that we have to work on the framework is limited "
+"and will vary from week to week depending on our spare time. If we're busy, "
+"we may not be able to spend as much time on Django as we might want."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:26
+msgid ""
+"The best way to make sure tickets do not get hung up on the way to checkin "
+"is to make it dead easy, even for someone who may not be intimately familiar"
+" with that area of the code, to understand the problem and verify the fix:"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:30
+msgid ""
+"Are there clear instructions on how to reproduce the bug? If this touches a "
+"dependency (such as Pillow), a contrib module, or a specific database, are "
+"those instructions clear enough even for someone not familiar with it?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:35
+msgid ""
+"If there are several patches attached to the ticket, is it clear what each "
+"one does, which ones can be ignored and which matter?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:38
+msgid ""
+"Does the patch include a unit test? If not, is there a very clear "
+"explanation why not? A test expresses succinctly what the problem is, and "
+"shows that the patch actually fixes it."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:42
+msgid ""
+"If your patch stands no chance of inclusion in Django, we won't ignore it --"
+" we'll just close the ticket. So if your ticket is still open, it doesn't "
+"mean we're ignoring you; it just means we haven't had time to look at it "
+"yet."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:47
+msgid "When and how might I remind the core team of a patch I care about?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:49
+msgid ""
+"A polite, well-timed message to the mailing list is one way to get "
+"attention. To determine the right time, you need to keep an eye on the "
+"schedule. If you post your message when the core developers are trying to "
+"hit a feature deadline or manage a planning phase, you're not going to get "
+"the sort of attention you require. However, if you draw attention to a "
+"ticket when the core developers are paying particular attention to bugs -- "
+"just before a bug fixing sprint, or in the lead up to a beta release for "
+"example -- you're much more likely to get a productive response."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:58
+msgid ""
+"Gentle IRC reminders can also work -- again, strategically timed if "
+"possible. During a bug sprint would be a very good time, for example."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:61
+msgid ""
+"Another way to get traction is to pull several related tickets together. "
+"When the core developers sit down to fix a bug in an area they haven't "
+"touched for a while, it can take a few minutes to remember all the fine "
+"details of how that area of code works. If you collect several minor bug "
+"fixes together into a similarly themed group, you make an attractive target,"
+" as the cost of coming up to speed on an area of code can be spread over "
+"multiple tickets."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:68
+msgid ""
+"Please refrain from emailing core developers personally, or repeatedly "
+"raising the same issue over and over. This sort of behavior will not gain "
+"you any additional attention -- certainly not the attention that you need in"
+" order to get your pet bug addressed."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:74
+msgid "But I've reminded you several times and you keep ignoring my patch!"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:76
+msgid ""
+"Seriously - we're not ignoring you. If your patch stands no chance of "
+"inclusion in Django, we'll close the ticket. For all the other tickets, we "
+"need to prioritize our efforts, which means that some tickets will be "
+"addressed before others."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:81
+msgid ""
+"One of the criteria that is used to prioritize bug fixes is the number of "
+"people that will likely be affected by a given bug. Bugs that have the "
+"potential to affect many people will generally get priority over those that "
+"are edge cases."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:86
+msgid ""
+"Another reason that bugs might be ignored for while is if the bug is a "
+"symptom of a larger problem. While we can spend time writing, testing and "
+"applying lots of little patches, sometimes the right solution is to rebuild."
+" If a rebuild or refactor of a particular component has been proposed or is "
+"underway, you may find that bugs affecting that component will not get as "
+"much attention. Again, this is just a matter of prioritizing scarce "
+"resources. By concentrating on the rebuild, we can close all the little bugs"
+" at once, and hopefully prevent other little bugs from appearing in the "
+"future."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:95
+msgid ""
+"Whatever the reason, please keep in mind that while you may hit a particular"
+" bug regularly, it doesn't necessarily follow that every single Django user "
+"will hit the same bug. Different users use Django in different ways, "
+"stressing different parts of the code under different conditions. When we "
+"evaluate the relative priorities, we are generally trying to consider the "
+"needs of the entire community, not just the severity for one particular "
+"user. This doesn't mean that we think your problem is unimportant -- just "
+"that in the limited time we have available, we will always err on the side "
+"of making 10 people happy rather than making 1 person happy."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:3
+msgid "FAQ: General"
+msgstr "FAQ: 一般的な質問"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:6
+msgid "Why does this project exist?"
+msgstr "なぜこんなプロジェクトがあるのですか？"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:8
+msgid ""
+"Django grew from a very practical need: World Online, a newspaper Web "
+"operation, is responsible for building intensive Web applications on "
+"journalism deadlines. In the fast-paced newsroom, World Online often has "
+"only a matter of hours to take a complicated Web application from concept to"
+" public launch."
+msgstr "Django は極めて実践的な要請のもとで成長してきました。 Web 新聞を発行している WorldOnline では、効果的な Web アプリケーションを、ジャーナリズムとして成立 する締め切りに間に合うように構築せねばなりません。刻一刻と状況が変化するニュー スルームにあって、WorldOnline には、複雑な Web アプリケーションをコンセプト から立ち上げ公開にもっていくまで数時間の猶予しかないのです。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:13
+msgid ""
+"At the same time, the World Online Web developers have consistently been "
+"perfectionists when it comes to following best practices of Web development."
+msgstr "同時に、 WorldOnline の Web 開発者たちは、こと Web 開発の王道に関しては一貫 して完璧主義者です。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:16
+msgid ""
+"In fall 2003, the World Online developers (Adrian Holovaty and Simon "
+"Willison) ditched PHP and began using Python to develop its websites. As "
+"they built intensive, richly interactive sites such as Lawrence.com, they "
+"began to extract a generic Web development framework that let them build Web"
+" applications more and more quickly. They tweaked this framework constantly,"
+" adding improvements over two years."
+msgstr " 2003 年、WorldOnline の開発者 (Adrian Holovaty と Simon Willison) は PHP に 見切りをつけ、 Python による Web 開発に取り組みはじめました。集約的で高い双 方向性を備えた Lawrence.com のようなサイト開発の中で、彼らは Web アプリケー ションをより迅速に開発できるように、サイトのコードから汎用の Web 開発フレー ムワークを切り出し、 2 年近くの間ずっと改良を加えながら使い込んできました。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:23
+msgid ""
+"In summer 2005, World Online decided to open-source the resulting software, "
+"Django. Django would not be possible without a whole host of open-source "
+"projects -- `Apache`_, `Python`_, and `PostgreSQL`_ to name a few -- and "
+"we're thrilled to be able to give something back to the open-source "
+"community."
+msgstr "2005 年の夏、 World Online はこれまでの開発の成果を Django としてオープンソー ス化する決定を下しました。 Django は `Apache`_, `Python`_, そして `PostgreSQL`_ をはじめとする様々なオープンソースプロジェクトなしでは実現し ませんでした。そして今、私達はオープンソースコミュニティに多少なりともお返 しできることにワクワクしているのです。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:33
+msgid "What does \"Django\" mean, and how do you pronounce it?"
+msgstr "“Django” とはどういう意味で、どのように発音するのですか？"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:35
+msgid ""
+"Django is named after `Django Reinhardt`_, a jazz manouche guitarist from "
+"the 1930s to early 1950s. To this day, he's considered one of the best "
+"guitarists of all time."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:38
+msgid "Listen to his music. You'll like it."
+msgstr "彼の曲を聞いてみてください。きっと気に入ることでしょう。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:40
+msgid ""
+"Django is pronounced **JANG**-oh. Rhymes with FANG-oh. The \"D\" is silent."
+msgstr "Django は **JANG**-oh (‘a’ は伸ばす) と発音します。韻は FANG-oh と 同じです。 “D” は発音しません。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:42
+msgid "We've also recorded an `audio clip of the pronunciation`_."
+msgstr "正しい発音の音声ファイル `audio clip of the pronunciation`_ を作成してあるので参考にしてください。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:48
+msgid "Is Django stable?"
+msgstr "Django は安定していますか？"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:50
+msgid ""
+"Yes, it's quite stable. Companies like Disqus, Instagram, Pinterest, and "
+"Mozilla have been using Django for many years. Sites built on Django have "
+"weathered traffic spikes of over 50 thousand hits per second."
+msgstr "そうですね。きわめて安定です。Disqus, Instagram, Pinterest, そして Mozilla のような企業が長年Djangoを使用しています。Djangoによって構築されたサイトは5万ヒット/秒\"50 thousand hits per second\"を超えるトラフィックスパイクにも曝されています。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:55
+msgid "Does Django scale?"
+msgstr "Django はスケールしますか？"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:57
+msgid ""
+"Yes. Compared to development time, hardware is cheap, and so Django is "
+"designed to take advantage of as much hardware as you can throw at it."
+msgstr "はい。ハードウェアというものは、開発時間に比べて安いものですし、それゆえ Django はユーザが投入可能なハードウェアをできるだけ活用するべく設計されてい ます。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:60
+msgid ""
+"Django uses a \"shared-nothing\" architecture, which means you can add "
+"hardware at any level -- database servers, caching servers or "
+"Web/application servers."
+msgstr "Django は「レイヤ間で何も共有しない \"shared-nothing\"」アーキテクチャなので、 データベースサーバ、キャッシュサーバ、 Web/アプリケーションサーバのどのレベ ルにハードウェアを追加してもかまいません。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:63
+msgid ""
+"The framework cleanly separates components such as its database layer and "
+"application layer. And it ships with a simple-yet-powerful :doc:`cache "
+"framework </topics/cache>`."
+msgstr "Django はアプリケーションレイヤからのデータベースレイヤを分離し、シンプルな がら強力な :doc:`キャッシュフレームワーク</topics/cache>` を備えています。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:68
+msgid "Who's behind this?"
+msgstr "Django の舞台裏には誰がいるのですか？"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:70
+msgid ""
+"Django was originally developed at World Online, the Web department of a "
+"newspaper in Lawrence, Kansas, USA. Django's now run by an international "
+":doc:`team of volunteers </internals/team>`."
+msgstr "Django はもともと、World Online という、米国カンザス州ローレンス \"Lawrence, Kansas, USA\" のとある新聞の Web 部門で開発されました。今では、 Django は国 際的な :doc:`ボランティアのチーム</internals/team>` によって運営されています。 "
+
+#: ../../../../sources/1.9/docs/faq/general.txt:75
+msgid "Which sites use Django?"
+msgstr "どんなサイトが Django を使っているのですか？"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:77
+msgid ""
+"`DjangoSites.org`_ features a constantly growing list of Django-powered "
+"sites."
+msgstr "`DjangoSites.org`_ には Django で作られたサイト一覧という特集ページがあり、 日々内容が増えています。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:84
+msgid ""
+"Django appears to be a MVC framework, but you call the Controller the "
+"\"view\", and the View the \"template\". How come you don't use the standard"
+" names?"
+msgstr "Django は MVC フレームワークのようですが、コントローラ \"Controller\"を「ビュー \"view\"」と呼び、ビュー \"View\" を「テンプレート \"template\"」と呼んでいます。どうして標準的な呼び方をしないのですか？"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:86
+msgid "Well, the standard names are debatable."
+msgstr "そうですね、呼び名には議論の余地があるでしょう。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:88
+msgid ""
+"In our interpretation of MVC, the \"view\" describes the data that gets "
+"presented to the user. It's not necessarily *how* the data *looks*, but "
+"*which* data is presented. The view describes *which data you see*, not *how"
+" you see it.* It's a subtle distinction."
+msgstr "我々の MVC の解釈では、「ビュー」とはユーザに提示されるデータのことをいいま す。つまり、データが *どのように見えるか* ということではなく、むしろ *どの* データを提示するか です。ビューには *データがどのように見えるか* ではなく *どのデータが表示されるか* が定義されています。この二つは明らかに違います。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:93
+msgid ""
+"So, in our case, a \"view\" is the Python callback function for a particular"
+" URL, because that callback function describes which data is presented."
+msgstr "というわけで、我々のケースでは、「ビュー」は特定の URL に対する Python コー ルバック関数になります。なぜなら、コールバック関数はどのデータを提示するか を決めているからです。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:96
+msgid ""
+"Furthermore, it's sensible to separate content from presentation -- which is"
+" where templates come in. In Django, a \"view\" describes which data is "
+"presented, but a view normally delegates to a template, which describes "
+"*how* the data is presented."
+msgstr "さらに、テンプレートによってコンテンツとプレゼンテーションの分離がはっきり しています。Django では、ビューはどのデータを提示するかを決めていますが、 ビューは通常、*どのように*データを提示するかをテンプレートに委ねます。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:101
+msgid ""
+"Where does the \"controller\" fit in, then? In Django's case, it's probably "
+"the framework itself: the machinery that sends a request to the appropriate "
+"view, according to the Django URL configuration."
+msgstr "では、「コントローラ」はどこに入るのでしょうか。 Django の場合、おそらくフ レームワーク、すなわち URL 設定にしたがってリクエストを適切なビューに送信する機構自体がコントローラにあたるといえるでしょう。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:105
+msgid ""
+"If you're hungry for acronyms, you might say that Django is a \"MTV\" "
+"framework -- that is, \"model\", \"template\", and \"view.\" That breakdown "
+"makes much more sense."
+msgstr "略語がお好みなら、 Django を “MTV” フレームワークと呼んでもよいでしょう。つ まり、モデル \"Model\"、テンプレート \"Template\"、そしてビュー \"View\" です。 こっちの方がよりしっくりきます。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:109
+msgid ""
+"At the end of the day, of course, it comes down to getting stuff done. And, "
+"regardless of how things are named, Django gets stuff done in a way that's "
+"most logical to us."
+msgstr "最後に、結局重要なのは問題を解決することです。そして、呼び方は何であれ、 Django はわれわれにとって最も理にかなった方法で問題を解決しているのです。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:114
+msgid "<Framework X> does <feature Y> -- why doesn't Django?"
+msgstr "<フレームワーク X> には <機能 Y> がありますが、なぜ Django にはないのですか"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:116
+msgid ""
+"We're well aware that there are other awesome Web frameworks out there, and "
+"we're not averse to borrowing ideas where appropriate. However, Django was "
+"developed precisely because we were unhappy with the status quo, so please "
+"be aware that \"because <Framework X> does it\" is not going to be "
+"sufficient reason to add a given feature to Django."
+msgstr "世の中には他にも素晴らしい Web フレームワークがあるのは良く知っていますし、 必要であればそこからアイデアを借りるのにやぶさかではありません。とはいえ、 私たちが Django を開発した動機は、旧態然たる Web フレームワークに不満だった からこそなので、「<Framework X> でできるから」といって、同じ機能を Django に機能を追加する理由にはならないのです。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:123
+msgid ""
+"Why did you write all of Django from scratch, instead of using other Python "
+"libraries?"
+msgstr "なぜ既存の Python ライブラリを使わずスクラッチで Django を作ったのですか？"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:125
+msgid ""
+"When Django was originally written a couple of years ago, Adrian and Simon "
+"spent quite a bit of time exploring the various Python Web frameworks "
+"available."
+msgstr "Django を書き始めた数年前、 Adrian と Simon は少し時間を取って、当時利用できた様々な Python ウェブフレームワークを試してみました。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:129
+msgid "In our opinion, none of them were completely up to snuff."
+msgstr "その結果、十分な出来具合のものは一つもないという結論に達したのです。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:131
+msgid "We're picky. You might even call us perfectionists. (With deadlines.)"
+msgstr "私達は好みにうるさいのです。(締め切りに追われる) 完璧主義者と呼んでもいいで しょう。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:133
+msgid ""
+"Over time, we stumbled across open-source libraries that did things we'd "
+"already implemented. It was reassuring to see other people solving similar "
+"problems in similar ways, but it was too late to integrate outside code: "
+"We'd already written, tested and implemented our own framework bits in "
+"several production settings -- and our own code met our needs delightfully."
+msgstr "これまでずっと、私達は自分たちがすでに実装済みの機能を実現するオープンソースライブラリに出会ってきました。そうしたライブラリに、他の人達が同じ問題を同じ方法で解決しようとしているのを見ては元気づけられる思いでしたが、自分たちのコードの外側に組み込むにはもう遅すぎました。私達はすでにいくつもの運用 環境で独自のフレームワークを書き上げ、テストし、実装してきており、できたコー ドは快適なまでに要求を満たしていたのです。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:139
+msgid ""
+"In most cases, however, we found that existing frameworks/tools inevitably "
+"had some sort of fundamental, fatal flaw that made us squeamish. No tool fit"
+" our philosophies 100%."
+msgstr "一方、ほとんどの場合、既存のフレームワークやツールは明らかにある主の根本的、致命的な欠陥があり、私達を神経質にさせました。結局、私達の哲学に100%合うものはなかったのです。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:143
+msgid "Like we said: We're picky."
+msgstr "繰り返していいますが、私達は好みにうるさいのです。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:145
+msgid ""
+"We've documented our philosophies on the :doc:`design philosophies page "
+"</misc/design-philosophies>`."
+msgstr "私達の設計哲学は :doc:`設計哲学のページ</misc/design-philosophies>` に詳し く書いてあります。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:149
+msgid "Is Django a content-management-system (CMS)?"
+msgstr "Django はコンテンツ管理システム (CMS) なのでしょうか?"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:151
+msgid ""
+"No, Django is not a CMS, or any sort of \"turnkey product\" in and of "
+"itself. It's a Web framework; it's a programming tool that lets you build "
+"websites."
+msgstr "いいえ。 Django は CMS ではありませんし、いわゆる「ターンキーシステム」のようなものでもありません。 Django は Web フレームワークであり、 Web サイトを構築する際に使えるプログラミングツールにすぎません。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:154
+msgid ""
+"For example, it doesn't make much sense to compare Django to something like "
+"Drupal_, because Django is something you use to *create* things like Drupal."
+msgstr "例えば、 Django を Drupal_ のようなシステムと比較するのは無意味です。というのも、 Django はまさに Drupal のようなシステムを *作る* ためのものだからで す。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:157
+msgid ""
+"Of course, Django's automatic admin site is fantastic and timesaving -- but "
+"the admin site is one module of Django the framework. Furthermore, although "
+"Django has special conveniences for building \"CMS-y\" apps, that doesn't "
+"mean it's not just as appropriate for building \"non-CMS-y\" apps (whatever "
+"that means!)."
+msgstr "もちろん、 Django の自動 admin サイトはすばらしく、開発時間の節約になります。 しかし、 admin サイトは Django というフレームワークのいちモジュールに過ぎません。もっと言うなら、 Django が「 CMS 的な」アプリケーションを作成する上でとりわけ便利な点を持ってはいますが、そのことが「 CMS 的でない」アプリケーショ ンの開発に向いていない、なんてことにつながったりはしないのです(とにかくDjangoはCMSじゃないってことです!)。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:166
+msgid "How can I download the Django documentation to read it offline?"
+msgstr "どうやれば Django のドキュメントをダウンロードしてオフラインで読めますか？"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:168
+msgid ""
+"The Django docs are available in the ``docs`` directory of each Django "
+"tarball release. These docs are in reST (reStructuredText) format, and each "
+"text file corresponds to a Web page on the official Django site."
+msgstr "Django のドキュメントは Django tarball リリースの docs ディレクトリに あります。これらのドキュメントは reST (reStructuredText) 形式で書かれており、 各テキストファイルが Django 公式サイトのページに対応しています。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:172
+msgid ""
+"Because the documentation is `stored in revision control`_, you can browse "
+"documentation changes just like you can browse code changes."
+msgstr "ドキュメントは バージョン管理システム下にある `stored in revision control`_ ので、コードの変更状況を閲覧するのと同じようにしてドキュメントの変更状況を閲覧できます。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:175
+msgid ""
+"Technically, the docs on Django's site are generated from the latest "
+"development versions of those reST documents, so the docs on the Django site"
+" may offer more information than the docs that come with the latest Django "
+"release."
+msgstr "技術的には、 Django サイトのドキュメントは最新の開発版の reST ドキュメントから生成されます、従って、 Django サイトにあるドキュメントの方が、最新の Django リリースのドキュメントよりも多くの情報を提供していることがあります。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:182
+msgid "Where can I find Django developers for hire?"
+msgstr "Django 開発者はどこで雇えますか？"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:184
+msgid ""
+"Consult our `developers for hire page`_ for a list of Django developers who "
+"would be happy to help you."
+msgstr "求職中の開発者リスト `developers for hire page`_ には、喜んであなたの力になってくれる Django 開発者 のリストがあります。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:187
+msgid ""
+"You might also be interested in posting a job to https://djangogigs.com/ . "
+"If you want to find Django-capable people in your local area, try "
+"https://people.djangoproject.com/ ."
+msgstr "また、求人を https://djangogigs.com/ に出してみるのもよいでしょう。 地元で Django を扱える人を探しているなら、 https://people.djangoproject.com/ を調べてみてください。"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:194
+msgid "How do I cite Django?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:196
+msgid ""
+"It's difficult to give an official citation format, for two reasons: "
+"citation formats can vary wildly between publications, and citation "
+"standards for software are still a matter of some debate."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:200
+msgid "For example, `APA style`_,  would dictate something like::"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:204
+msgid ""
+"However, the only true guide is what your publisher will accept, so get a "
+"copy of those guidelines and fill in the gaps as best you can."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:207
+msgid ""
+"If your referencing style guide requires a publisher name, use \"Django "
+"Software Foundation\"."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:210
+msgid "If you need a publishing location, use \"Lawrence, Kansas\"."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:212
+msgid "If you need a web address, use https://djangoproject.com."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:214
+msgid "If you need a name, just use \"Django\", without any tagline."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:216
+msgid ""
+"If you need a publication date, use the year of release of the version "
+"you're referencing (e.g., 2013 for v1.5)"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/help.txt:3
+msgid "FAQ: Getting Help"
+msgstr "FAQ: 助けを求める"
+
+#: ../../../../sources/1.9/docs/faq/help.txt:6
+msgid "How do I do X? Why doesn't Y work? Where can I go to get help?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/help.txt:8
+msgid ""
+"If this FAQ doesn't contain an answer to your question, you might want to "
+"try the |django-users| mailing list. Feel free to ask any question related "
+"to installing, using, or debugging Django."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/help.txt:12
+msgid ""
+"If you prefer IRC, the `#django IRC channel`_ on the Freenode IRC network is"
+" an active community of helpful individuals who may be able to solve your "
+"problem."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/help.txt:20
+msgid "Why hasn't my message appeared on django-users?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/help.txt:22
+msgid ""
+"|django-users| has a lot of subscribers. This is good for the community, as "
+"it means many people are available to contribute answers to questions. "
+"Unfortunately, it also means that |django-users| is an attractive target for"
+" spammers."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/help.txt:27
+msgid ""
+"In order to combat the spam problem, when you join the |django-users| "
+"mailing list, we manually moderate the first message you send to the list. "
+"This means that spammers get caught, but it also means that your first "
+"question to the list might take a little longer to get answered. We "
+"apologize for any inconvenience that this policy may cause."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/help.txt:34
+msgid "Nobody on django-users answered my question! What should I do?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/help.txt:36
+msgid ""
+"Try making your question more specific, or provide a better example of your "
+"problem."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/help.txt:39
+msgid ""
+"As with most open-source mailing lists, the folks on |django-users| are "
+"volunteers. If nobody has answered your question, it may be because nobody "
+"knows the answer, it may be because nobody can understand the question, or "
+"it may be that everybody that can help is busy. One thing you might try is "
+"to ask the question on IRC -- visit the `#django IRC channel`_ on the "
+"Freenode IRC network."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/help.txt:46
+msgid ""
+"You might notice we have a second mailing list, called |django-developers| "
+"-- but please don't email support questions to this mailing list. This list "
+"is for discussion of the development of Django itself. Asking a tech support"
+" question there is considered quite impolite."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/help.txt:52
+msgid "I think I've found a bug! What should I do?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/help.txt:54
+msgid ""
+"Detailed instructions on how to handle a potential bug can be found in our "
+":ref:`Guide to contributing to Django <reporting-bugs>`."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/help.txt:58
+msgid "I think I've found a security problem! What should I do?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/help.txt:60
+msgid ""
+"If you think you've found a security problem with Django, please send a "
+"message to security@djangoproject.com. This is a private list only open to "
+"long-time, highly trusted Django developers, and its archives are not "
+"publicly readable."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/help.txt:64
+msgid ""
+"Due to the sensitive nature of security issues, we ask that if you think you"
+" have found a security problem, *please* don't send a message to one of the "
+"public mailing lists. Django has a :ref:`policy for handling security issues"
+" <reporting-security-issues>`; while a defect is outstanding, we would like "
+"to minimize any damage that could be inflicted through public knowledge of "
+"that defect."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/index.txt:3
+msgid "Django FAQ"
+msgstr "Django FAQ よくある質問"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:3
+msgid "FAQ: Installation"
+msgstr "FAQ: インストール"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:6
+msgid "How do I get started?"
+msgstr "まずは何をすればよいですか？"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:8
+msgid "`Download the code`_."
+msgstr "コードをダウンロード `Download the code`_ してください。"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:9
+msgid "Install Django (read the :doc:`installation guide </intro/install>`)."
+msgstr "Django をインストールしてください ( :doc:`インストールガイド</intro/install>` を読みましょう)。"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:10
+msgid "Walk through the :doc:`tutorial </intro/tutorial01>`."
+msgstr ":doc:`チュートリアル</intro/tutorial01>` を一通りやってみてください。"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:11
+msgid ""
+"Check out the rest of the :doc:`documentation </index>`, and `ask "
+"questions`_ if you run into trouble."
+msgstr "他の  :doc:`ドキュメント</index>` にも目を通して下さい。何か問題が起きたら、 質問 `ask questions`_ してみましょう。"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:18
+msgid "What are Django's prerequisites?"
+msgstr "Django を動かすには何が必要ですか？"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:20
+msgid ""
+"Django requires Python. See the table in the next question for the versions "
+"of Python that work with each version of Django. Other Python libraries may "
+"be required for some uses, but you'll receive an error about it as they're "
+"needed."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/install.txt:24
+msgid ""
+"For a development environment -- if you just want to experiment with Django "
+"-- you don't need to have a separate Web server installed; Django comes with"
+" its own lightweight development server. For a production environment, "
+"Django follows the WSGI spec, :pep:`3333`, which means it can run on a "
+"variety of server platforms. See :doc:`Deploying Django "
+"</howto/deployment/index>` for some popular alternatives."
+msgstr "開発環境を使う場合、つまり Django を試したいだけの場合は、 Web サーバを別に インストールしておく必要はありません。 Django には簡単な開発用サーバが付属 しています。 Django は WSGI 仕様 :pep:`3333` に準拠しています。 従って、様々なサーバプラットフォームで運用環境を構築できます。 いくつか選択肢を紹介しているので、 :doc:`Django のデプロイ方法 </howto/deployment/index>` を参照してください。"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:31
+msgid ""
+"If you want to use Django with a database, which is probably the case, "
+"you'll also need a database engine. PostgreSQL_ is recommended, because "
+"we're PostgreSQL fans, and MySQL_, `SQLite 3`_, and Oracle_ are also "
+"supported."
+msgstr "Django をデータベースと合わせて使うならデータベースエンジンも必要です。 我々は PostgreSQL_ ファンなので PostgreSQL をお勧めしますが、 MySQL_ や `SQLite 3`_, Oracle_ もサポートしています。"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:44
+msgid "What Python version can I use with Django?"
+msgstr "どのバージョンの Python でどのバージョンの Django が使えますか?"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:47
+msgid "Django version"
+msgstr "Django バージョン"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:47
+msgid "Python versions"
+msgstr "Python バージョン"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:49
+msgid "1.8"
+msgstr "1.8"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:49
+msgid "2.7, 3.2 (until the end of 2016), 3.3, 3.4, 3.5"
+msgstr "2.7, 3.2 (2016年末まで ), 3.3, 3.4, 3.5"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:50
+msgid "**1.9, 1.10**"
+msgstr "**1.9, 1.10**"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:50
+msgid "**2.7, 3.4, 3.5**"
+msgstr "**2.7, 3.4, 3.5**"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:53
+msgid ""
+"For each version of Python, only the latest micro release (A.B.C) is "
+"officially supported. You can find the latest micro version for each series "
+"on the `Python download page <https://www.python.org/downloads/>`_."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/install.txt:57
+msgid ""
+"Typically, we will support a Python version up to and including the first "
+"Django LTS release whose security support ends after security support for "
+"that version of Python ends. For example, Python 3.3 security support ends "
+"September 2017 and Django 1.8 LTS security support ends April 2018. "
+"Therefore Django 1.8 is the last version to support Python 3.3."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/install.txt:64
+msgid "What Python version should I use with Django?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/install.txt:66
+msgid ""
+"As of Django 1.6, Python 3 support is considered stable and you can safely "
+"use it in production. See also :doc:`/topics/python3`. However, the "
+"community is still in the process of migrating third-party packages and "
+"applications to Python 3."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/install.txt:71
+msgid ""
+"If you're starting a new project, and the dependencies you plan to use work "
+"on Python 3, you should use Python 3. If they don't, consider contributing "
+"to the porting efforts, or stick to Python 2."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/install.txt:75
+msgid ""
+"Since newer versions of Python are often faster, have more features, and are"
+" better supported, all else being equal, we recommend that you use the "
+"latest 2.x.y or 3.x.y release."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/install.txt:79
+msgid ""
+"You don't lose anything in Django by using an older release, but you don't "
+"take advantage of the improvements and optimizations in newer Python "
+"releases. Third-party applications for use with Django are, of course, free "
+"to set their own version requirements."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/install.txt:85
+msgid "Should I use the stable version or development version?"
+msgstr "安定版と開発版のどちらを使うべきなのでしょうか？"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:87
+msgid ""
+"Generally, if you're using code in production, you should be using a stable "
+"release. The Django project publishes a full stable release every nine "
+"months or so, with bugfix updates in between. These stable releases contain "
+"the API that is covered by our backwards compatibility guarantees; if you "
+"write code against stable releases, you shouldn't have any problems "
+"upgrading when the next official version is released."
+msgstr "一般的に、もしあなたがコードを製品で使っているのなら、安定版を使うべきで しょう。 Django はおよそ 9 ヶ月ごとに、バグフィックスを含めた安定版をリリースしています。これらの安定版は後方互換を保証した API も提供していますので、もし次の新しい安定版では使用できないコードを書いていても、アップグレードにおいて問題は無いはずです。"
+
+#: ../../../../sources/1.9/docs/faq/models.txt:3
+msgid "FAQ: Databases and models"
+msgstr "FAQ: データベースとモデル"
+
+#: ../../../../sources/1.9/docs/faq/models.txt:8
+msgid "How can I see the raw SQL queries Django is running?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:10
+msgid ""
+"Make sure your Django :setting:`DEBUG` setting is set to ``True``. Then, "
+"just do this::"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:18
+msgid ""
+"``connection.queries`` is only available if :setting:`DEBUG` is ``True``. "
+"It's a list of dictionaries in order of query execution. Each dictionary has"
+" the following::"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:25
+msgid ""
+"``connection.queries`` includes all SQL statements -- INSERTs, UPDATES, "
+"SELECTs, etc. Each time your app hits the database, the query will be "
+"recorded."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:28
+msgid ""
+"If you are using :doc:`multiple databases</topics/db/multi-db>`, you can use"
+" the same interface on each member of the ``connections`` dictionary::"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:34
+msgid ""
+"If you need to clear the query list manually at any point in your functions,"
+" just call ``reset_queries()``, like this::"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:41
+msgid "Can I use Django with a pre-existing database?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:43
+msgid ""
+"Yes. See :doc:`Integrating with a legacy database </howto/legacy-"
+"databases>`."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:46
+msgid "If I make changes to a model, how do I update the database?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:48
+msgid ""
+"Take a look at Django's support for :mod:`schema migrations "
+"<django.db.migrations>`."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:51
+msgid ""
+"If you don't mind clearing data, your project's ``manage.py`` utility has a "
+":djadmin:`flush` option to reset the database to the state it was in "
+"immediately after :djadmin:`migrate` was executed."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:56
+msgid "Do Django models support multiple-column primary keys?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:58
+msgid "No. Only single-column primary keys are supported."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:60
+msgid ""
+"But this isn't an issue in practice, because there's nothing stopping you "
+"from adding other constraints (using the ``unique_together`` model option or"
+" creating the constraint directly in your database), and enforcing the "
+"uniqueness at that level. Single-column primary keys are needed for things "
+"such as the admin interface to work; e.g., you need a simple way of being "
+"able to specify an object to edit or delete."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:68
+msgid "Does Django support NoSQL databases?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:70
+msgid ""
+"NoSQL databases are not officially supported by Django itself. There are, "
+"however, a number of side project and forks which allow NoSQL functionality "
+"in Django, like `Django non-rel`_."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:74
+msgid ""
+"You can also take a look on `the wiki page`_ which discusses some "
+"alternatives."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:80
+msgid ""
+"How do I add database-specific options to my CREATE TABLE statements, such "
+"as specifying MyISAM as the table type?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:82
+msgid ""
+"We try to avoid adding special cases in the Django code to accommodate all "
+"the database-specific options such as table type, etc. If you'd like to use "
+"any of these options, create a migration with a "
+":class:`~django.db.migrations.operations.RunSQL` operation that contains "
+"``ALTER TABLE`` statements that do what you want to do."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:88
+msgid ""
+"For example, if you're using MySQL and want your tables to use the MyISAM "
+"table type, use the following SQL::"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:3
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:5
+msgid ""
+"This page contains some advice about errors and problems commonly "
+"encountered during the development of Django applications."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:11
+msgid "Problems running django-admin"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:14
+msgid "\"command not found: django-admin\""
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:16
+msgid ""
+":doc:`django-admin </ref/django-admin>` should be on your system path if you"
+" installed Django via ``python setup.py``. If it's not on your path, you can"
+" find it in ``site-packages/django/bin``, where ``site-packages`` is a "
+"directory within your Python installation. Consider symlinking to :doc"
+":`django-admin </ref/django-admin>` from some place on your path, such as "
+":file:`/usr/local/bin`."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:23
+msgid ""
+"If ``django-admin`` doesn't work but ``django-admin.py`` does, you're "
+"probably using a version of Django that doesn't match the version of this "
+"documentation. ``django-admin`` is new in Django 1.7."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:28
+msgid "Mac OS X permissions"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:30
+msgid ""
+"If you're using Mac OS X, you may see the message \"permission denied\" when"
+" you try to run ``django-admin``. This is because, on Unix-based systems "
+"like OS X, a file must be marked as \"executable\" before it can be run as a"
+" program. To do this, open Terminal.app and navigate (using the ``cd`` "
+"command) to the directory where :doc:`django-admin </ref/django-admin>` is "
+"installed, then run the command ``sudo chmod +x django-admin``."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:38
+msgid "Miscellaneous"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:41
+msgid "I'm getting a ``UnicodeDecodeError``. What am I doing wrong?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:43
+msgid ""
+"This class of errors happen when a bytestring containing non-ASCII sequences"
+" is transformed into a Unicode string and the specified encoding is "
+"incorrect. The output generally looks like this::"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:50
+msgid ""
+"The resolution mostly depends on the context, however here are two common "
+"pitfalls producing this error:"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:53
+msgid ""
+"Your system locale may be a default ASCII locale, like the \"C\" locale on "
+"UNIX-like systems (can be checked by the ``locale`` command). If it's the "
+"case, please refer to your system documentation to learn how you can change "
+"this to a UTF-8 locale."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:58
+msgid "You created raw bytestrings, which is easy to do on Python 2::"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:62
+msgid ""
+"Either use the ``u''`` prefix or even better, add the ``from __future__ "
+"import unicode_literals`` line at the top of your file so that your code "
+"will be compatible with Python 3.2 which doesn't support the ``u''`` prefix."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:67
+msgid "Related resources:"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:69
+msgid ":doc:`Unicode in Django </ref/unicode>`"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:70
+msgid "https://wiki.python.org/moin/UnicodeDecodeError"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:3
+msgid "FAQ: Using Django"
+msgstr "FAQ: Django を使う"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:6
+msgid "Why do I get an error about importing DJANGO_SETTINGS_MODULE?"
+msgstr "DJANGO_SETTINGS_MODULE の import にまつわるエラーが出るのですが、なぜですか？"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:8
+msgid "Make sure that:"
+msgstr "以下の点を確認してください:"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:10
+msgid ""
+"The environment variable DJANGO_SETTINGS_MODULE is set to a fully-qualified "
+"Python module (i.e. \"mysite.settings\")."
+msgstr "環境変数 DJANGO_SETTINGS_MODULE が完全指定の Python モジュール名になっていますか (たとえば “mysite.settings”)。"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:13
+msgid ""
+"Said module is on ``sys.path`` (``import mysite.settings`` should work)."
+msgstr "設定モジュールは sys.path の上にありますか (import mysite.settings はうまくいきますか)。"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:15
+msgid "The module doesn't contain syntax errors (of course)."
+msgstr "(言うまでもなく) モジュールに構文エラーはありませんか。"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:18
+msgid "I can't stand your template language. Do I have to use it?"
+msgstr "テンプレート言語を好きになれません。どうしても使わないとだめですか？"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:20
+msgid ""
+"We happen to think our template engine is the best thing since chunky bacon,"
+" but we recognize that choosing a template language runs close to religion. "
+"There's nothing about Django that requires using the template language, so "
+"if you're attached to Jinja2, Mako, or whatever, feel free to use those."
+msgstr "私達はこのテンプレートエンジンをchunky bacon 以来の傑作だと思っているんで すが、テンプレート言語の選択というものは宗教に近いものがあるということは認識しています。 Django では、テンプレート言語に対する制限はなんらありません。 ですから、 Jinja2 や Mako などを使いたいのなら、それは自由です。"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:26
+msgid "Do I have to use your model/database layer?"
+msgstr "付属のモデル／データベースレイヤを使わねばならないのですか？"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:28
+msgid ""
+"Nope. Just like the template system, the model/database layer is decoupled "
+"from the rest of the framework."
+msgstr "いいえ、テンプレートシステムと同様、モデル／データベースレイヤはフレームワー クの他の部分と脱カップリングしています。"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:31
+msgid ""
+"The one exception is: If you use a different database library, you won't get"
+" to use Django's automatically-generated admin site. That app is coupled to "
+"the Django database layer."
+msgstr "唯一の例外: 別のデータベースライブラリを使った場合には、 Django の自動生成 admin サイトを利用できなくなります。 admin だけは Django のデータベースレイ ヤとカップリングしています。"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:36
+msgid "How do I use image and file fields?"
+msgstr "画像やファイルのフィールドはどう使うのですか？"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:38
+msgid ""
+"Using a :class:`~django.db.models.FileField` or an "
+":class:`~django.db.models.ImageField` in a model takes a few steps:"
+msgstr "モデルで :class:`~django.db.models.FileField` や :class:`~django.db.models.ImageField` を使うには、いくつかのステップを踏む 必要があります:"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:41
+msgid ""
+"In your settings file, you'll need to define :setting:`MEDIA_ROOT` as the "
+"full path to a directory where you'd like Django to store uploaded files. "
+"(For performance, these files are not stored in the database.) Define "
+":setting:`MEDIA_URL` as the base public URL of that directory. Make sure "
+"that this directory is writable by the Web server's user account."
+msgstr "設定ファイル内で :setting:`MEDIA_ROOT` を指定します。この値は、 Django がアップロードされたファイルを置く場所にします (パフォーマン ス上の理由から、ファイルをデータベースに置くことはありません)。 :setting:`MEDIA_URL` をそのディレクトリの公開 URL にします。ディレク トリは Web サーバのユーザアカウントに対して書き込み可能にしておかね ばなりません。"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:48
+msgid ""
+"Add the :class:`~django.db.models.FileField` or "
+":class:`~django.db.models.ImageField` to your model, defining the "
+":attr:`~django.db.models.FileField.upload_to` option to specify a "
+"subdirectory of :setting:`MEDIA_ROOT` to use for uploaded files."
+msgstr "モデルに :class:`~django.db.models.FileField` や :class:`~django.db.models.ImageField` を追加し、 :attr:`~django.db.models.FileField.upload_to`  オプションを定義して、 :setting:`MEDIA_ROOT`  のどのサブディレクトリにファイルをアップロードさせるのかを Django に教えます。"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:53
+msgid ""
+"All that will be stored in your database is a path to the file (relative to "
+":setting:`MEDIA_ROOT`). You'll most likely want to use the convenience "
+":attr:`~django.db.models.fields.files.FieldFile.url` attribute provided by "
+"Django. For example, if your :class:`~django.db.models.ImageField` is called"
+" ``mug_shot``, you can get the absolute path to your image in a template "
+"with ``{{ object.mug_shot.url }}``."
+msgstr "データベースに保存されるのは、ファイルの (:setting:`MEDIA_ROOT` からの相対で表した) パスだけです。 URL を調べるには、 Django の提供し ている属性 :attr:`~django.db.models.fields.files.FieldFile.url`  を使うことになるでしょう。例えば、 ``mug_shot` という名前の :class:`~django.db.models.ImageField` を作ったなら、テンプレートで画像の URL を指定するには ``{{ object.mug_shot.url }}`` と書きます。"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:62
+msgid "How do I make a variable available to all my templates?"
+msgstr "どうやったら、全てのテンプレートで使えるような変数を定義できますか？"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:64
+msgid ""
+"Sometimes your templates just all need the same thing. A common example "
+"would be dynamically-generated menus. At first glance, it seems logical to "
+"simply add a common dictionary to the template context."
+msgstr "どのテンプレートでも同じデータを扱うことがたまにあります。よくあるのは、メニューを動的に生成して出す場合です。この手の例では、どのテンプレートでも使えるデータの入った辞書をテンプレートコンテキストに入れておくのが合理的ですね。"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:68
+msgid ""
+"The correct solution is to use a ``RequestContext``. Details on how to do "
+"this are here: :ref:`subclassing-context-requestcontext`."
+msgstr "``RequestContext`` を使うのが正解です。詳しくは コンテキストのサブクラス: :ref:`subclassing-context-requestcontext` を参照してください。"
