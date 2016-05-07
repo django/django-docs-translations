@@ -1,0 +1,1300 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# 
+# Translators:
+# Fery Setiawan <gembelweb@gmail.com>, 2015-2016
+msgid ""
+msgstr ""
+"Project-Id-Version: django-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-05 19:12-0600\n"
+"PO-Revision-Date: 2016-03-01 06:01+0000\n"
+"Last-Translator: Fery Setiawan <gembelweb@gmail.com>\n"
+"Language-Team: Indonesian (http://www.transifex.com/django/django-docs/language/id/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: id\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:3
+msgid "FAQ: The admin"
+msgstr "FAQ: Admin"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:6
+msgid ""
+"I can't log in. When I enter a valid username and password, it just brings "
+"up the login page again, with no error messages."
+msgstr "Saya tidak dapat masuk. Ketika Saya memasukkan nama pengguna dan sandi sah, itu hanya membawa ke halaman masuk kembali, tanpa pesan kesalahan."
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:8
+msgid ""
+"The login cookie isn't being set correctly, because the domain of the cookie"
+" sent out by Django doesn't match the domain in your browser. Try these two "
+"things:"
+msgstr "Cookie masuk belum disetel dengan benar, jarena ranah cookie dikeluarkan oleh Django tidak cocok ranah di perambah anda. Coba dua hal berikut:"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:12
+msgid ""
+"Set the :setting:`SESSION_COOKIE_DOMAIN` setting in your admin config file "
+"to match your domain. For example, if you're going to "
+"\"https://www.example.com/admin/\" in your browser, in "
+"\"myproject.settings\" you should set :setting:`SESSION_COOKIE_DOMAIN` = "
+"'www.example.com'."
+msgstr "Setel pengaturan :setting:`SESSION_COOKIE_DOMAIN` di berkas konfigurasi admin untuk mencocokkan ranah anda. Sebagai contoh, jika anda akan ke \"https://www.example.com/admin/\" di perambah anda, di \"myproject.settings\" anda harus menyetel :setting:`SESSION_COOKIE_DOMAIN` = 'www.example.com'."
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:18
+msgid ""
+"I can't log in. When I enter a valid username and password, it brings up the"
+" login page again, with a \"Please enter a correct username and password\" "
+"error."
+msgstr "Saya tidak dapat masuk. Ketika Saya memasukkan nama pengguna dan sandi sah, itu hanya membawa ke halaman masuk kembali dengan kesalahan \"SIlahkan masukkan nama pengguna dan sandi yang benar\"."
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:20
+msgid ""
+"If you're sure your username and password are correct, make sure your user "
+"account has :attr:`~django.contrib.auth.models.User.is_active` and "
+":attr:`~django.contrib.auth.models.User.is_staff` set to True. The admin "
+"site only allows access to users with those two fields both set to True."
+msgstr "Jika anda yakin nama pengguna dan sandi anda benar, pastikan akun pengguna anda telah :attr:`~django.contrib.auth.models.User.is_active` dan :attr:`~django.contrib.auth.models.User.is_staff` disetel ke True. Situs admin hanya mengizinkan akses ke pengguna dengan kedua bidang disetel ke True."
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:26
+msgid ""
+"How do I automatically set a field's value to the user who last edited the "
+"object in the admin?"
+msgstr "Bagaimana Saya otomatis menyetel nilai bidang ke pengguna yang menyunting terakhir obyek di admin?"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:28
+msgid ""
+"The :class:`~django.contrib.admin.ModelAdmin` class provides customization "
+"hooks that allow you to transform an object as it saved, using details from "
+"the request. By extracting the current user from the request, and "
+"customizing the :meth:`~django.contrib.admin.ModelAdmin.save_model` hook, "
+"you can update an object to reflect the user that edited it. See :ref:`the "
+"documentation on ModelAdmin methods <model-admin-methods>` for an example."
+msgstr "Kelas :class:`~django.contrib.admin.ModelAdmin` menyediakan kaitan penyesuaian yang mengizinkan anda merubah sebauh obyek ketika dia disimpan, menggunakan rincian dari permintaan. Dengan mengeluarkan pengguna saat ini dari permintaan, dan menyesuaiakan kaitan :meth:`~django.contrib.admin.ModelAdmin.save_model`, anda dapat memperbaharui sebuah obyek untuk mencerminkan bahwa yang disunting itu. Lihat :ref:`dokumentasi pada cara ModelAdmin <model-admin-methods>` untuk sebuah contoh."
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:36
+msgid ""
+"How do I limit admin access so that objects can only be edited by the users "
+"who created them?"
+msgstr "Bagaimana Saya membatasi akses admin sehingga obyek hanya dapat disunting oleh pengguna yang membuatnya?"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:38
+msgid ""
+"The :class:`~django.contrib.admin.ModelAdmin` class also provides "
+"customization hooks that allow you to control the visibility and editability"
+" of objects in the admin. Using the same trick of extracting the user from "
+"the request, the :meth:`~django.contrib.admin.ModelAdmin.get_queryset` and "
+":meth:`~django.contrib.admin.ModelAdmin.has_change_permission` can be used "
+"to control the visibility and editability of objects in the admin."
+msgstr "Kelas :class:`~django.contrib.admin.ModelAdmin` juga menyediakan kaitan penyesuaian yang mengizinkan anda mengendalikan penampakan dan penyuntingan dari obyek di admin. Menggunakan trik sama dari mengeluarkan pengguna dari permintaan, :meth:`~django.contrib.admin.ModelAdmin.get_queryset` dan :meth:`~django.contrib.admin.ModelAdmin.has_change_permission` dapat digunakan untuk mengendalikan penampakan dan penyuntingan dari obyek di admin."
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:46
+msgid ""
+"My admin-site CSS and images showed up fine using the development server, "
+"but they're not displaying when using mod_wsgi."
+msgstr "CSS dan gambar situs-admin saya menunjukkan baik menggunakan peladen pengembangan, tetapi mereka tidak tampil ketika menggunakan mod_wsgi."
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:48
+msgid ""
+"See :ref:`serving the admin files <serving-the-admin-files>` in the \"How to"
+" use Django with mod_wsgi\" documentation."
+msgstr "Lihat :ref:`melayani berkas admin <serving-the-admin-files>` di dokumentasi \"Bagaimana menggunakan Django dengan mod_wsgi\"."
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:52
+msgid ""
+"My \"list_filter\" contains a ManyToManyField, but the filter doesn't "
+"display."
+msgstr "\"list_filter\" saya mengandung ManyToManyField, tetapi saringan tidak tampil."
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:54
+msgid ""
+"Django won't bother displaying the filter for a ``ManyToManyField`` if there"
+" are fewer than two related objects."
+msgstr "Django tidak akan mengganggu menampilkan saringan untuk ``ManyToManyField`` jika terdapat sedikit dari dua obyek terhubung."
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:57
+msgid ""
+"For example, if your :attr:`~django.contrib.admin.ModelAdmin.list_filter` "
+"includes :doc:`sites </ref/contrib/sites>`, and there's only one site in "
+"your database, it won't display a \"Site\" filter. In that case, filtering "
+"by site would be meaningless."
+msgstr "Sebagai contoh, jika :attr:`~django.contrib.admin.ModelAdmin.list_filter` anda menyertakan :doc:`sites </ref/contrib/sites>`, dan hanya ada satu situs di basisdata anda, dia tidak akan menampilkansaringan \"Situs\". Di kasus itu, penyaringan berdasarkan situs akan tidak berarti."
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:63
+msgid "Some objects aren't appearing in the admin."
+msgstr "Beberapa obyek tidak muncul di admin."
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:65
+msgid ""
+"Inconsistent row counts may be caused by missing foreign key values or a "
+"foreign key field incorrectly set to :attr:`null=False "
+"<django.db.models.Field.null>`. If you have a record with a "
+":class:`~django.db.models.ForeignKey` pointing to a non-existent object and "
+"that foreign key is included is "
+":attr:`~django.contrib.admin.ModelAdmin.list_display`, the record will not "
+"be shown in the admin changelist because the Django model is declaring an "
+"integrity constraint that is not implemented at the database level."
+msgstr "Tidak konsisten jumlah baris dapat disebabkan oleh nilai foreign key yang hilang atau bidang foreign key tidak benar disetel ke :attr:`null=False <django.db.models.Field.null>`. Jika anda mempunyai rekaman dengan :class:`~django.db.models.ForeignKey` menunjuk ke obyek tidak-ada dan bahwa foreign key disertakan adalah :attr:`~django.contrib.admin.ModelAdmin.list_display`, rekaman tidak akan ditampilkan di daftar rubah admin karena model Django dinyatakan sebuah kesatuan pembatas yang tidak diterapkan pada tingkatan basisdata."
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:75
+msgid "How can I customize the functionality of the admin interface?"
+msgstr "Bagaimana dapat Saya menyesuaiakn fungsi dari antarmuka admin?"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:77
+msgid ""
+"You've got several options. If you want to piggyback on top of an add/change"
+" form that Django automatically generates, you can attach arbitrary "
+"JavaScript modules to the page via the model's class Admin :ref:`js "
+"parameter <modeladmin-asset-definitions>`. That parameter is a list of URLs,"
+" as strings, pointing to JavaScript modules that will be included within the"
+" admin form via a ``<script>`` tag."
+msgstr "Anda telah mendapatkan beberapa pilihan. Jika anda ingin mendukung di atas dari sebuah formulir tambah/rubah yang Django otomatis bangkitkan, anda dapat melampirkan modul JavaScript berubah ke halaman melalui kelas model Admin :ref:`js parameter <modeladmin-asset-definitions>`. Parameter itu adalah daftar dari URL, sebagai string, menunjuk modul JavaScript yang akan disertakan dalam bentuk admin melalui etiket ``<script>``."
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:84
+msgid ""
+"If you want more flexibility than simply tweaking the auto-generated forms, "
+"feel free to write custom views for the admin. The admin is powered by "
+"Django itself, and you can write custom views that hook into the "
+"authentication system, check permissions and do whatever else they need to "
+"do."
+msgstr "Jika anda ingin lebih fleksibel daripada menarik formulir otomatis-dibangkitkan, silahkan bebas menulis tampilan sesuaian untuk admin. Admin ditenagai oleh Django itu sendiri, dan anda dapat menulis tamilan sesuaian yang mengkait ke dalam sistem pembuktian keaslian dan lakukan apapun mereka butuh lakukan."
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:89
+msgid ""
+"If you want to customize the look-and-feel of the admin interface, read the "
+"next question."
+msgstr "Jika anda ingin menyesuai tampilan-dan-perasaan dari antarmuka admin, baca pertanyaan selanjutnya."
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:93
+msgid "The dynamically-generated admin site is ugly! How can I change it?"
+msgstr "Situs admin dibangkitkan-dinamis buruh! Bagaimana dapat Saya merubahnya?"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:95
+msgid ""
+"We like it, but if you don't agree, you can modify the admin site's "
+"presentation by editing the CSS stylesheet and/or associated image files. "
+"The site is built using semantic HTML and plenty of CSS hooks, so any "
+"changes you'd like to make should be possible by editing the stylesheet."
+msgstr "Kami menyukainya, tetapi jika anda tidak setuju, anda dapat merubah penyajian situs admin dengan menyunting stylesheet CSS dan/atau berkas gambar terhubung. Situs dibangun menggunakan HTML dan cukup kaitan CSS, jadi setiap perubahan anda ingin buat harus mungkin dengan menyunting stylesheet."
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:101
+msgid "What browsers are supported for using the admin?"
+msgstr "Perambah apa yang didukung untuk menggunakan admin?"
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:103
+msgid ""
+"The admin provides a fully-functional experience to `YUI's A-grade`_ "
+"browsers, with the notable exception of IE6, which is not supported."
+msgstr "Admin menyediakan pengalaman fungsional-penuh kepada perambah `Tingkatan-A YUI`_, dengan pengecualian penting dari IE 6, yang tidak didukung."
+
+#: ../../../../sources/1.9/docs/faq/admin.txt:106
+msgid ""
+"There *may* be minor stylistic differences between supported browsers—for "
+"example, some browsers may not support rounded corners. These are considered"
+" acceptable variations in rendering."
+msgstr "Ada *mungkin* gaya sedikit berbeda diantara perambah yang didukung-sebagai contoh, beberapa perambah mungkin tidak mendukunh sudut bundar. Ini dianggap macam yang dapat diterima dalam membangun."
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:3
+msgid "FAQ: Contributing code"
+msgstr "FAQ: Kode Bantuan"
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:6
+msgid "How can I get started contributing code to Django?"
+msgstr "Bagaimana dapat Saya mulai membantu kode ke Django?"
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:8
+msgid ""
+"Thanks for asking! We've written an entire document devoted to this "
+"question. It's titled :doc:`Contributing to Django "
+"</internals/contributing/index>`."
+msgstr "Terima kasih untuk bertanya! Kami telah menulis seluruh dokumen setia untuk pertanyaan ini. Itu adalah berjudul :doc:`Membantu ke Django </internals/contributing/index>`."
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:12
+msgid ""
+"I submitted a bug fix in the ticket system several weeks ago. Why are you "
+"ignoring my patch?"
+msgstr "Saya mengajukan perbaikan kesalahan di sistem tiket beberapa minggu lalu. mengapa anda mengabaikan tambalan saya?"
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:14
+msgid "Don't worry: We're not ignoring you!"
+msgstr "Jangan khawatir: Kami tidak mengabaikan anda!"
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:16
+msgid ""
+"It's important to understand there is a difference between \"a ticket is "
+"being ignored\" and \"a ticket has not been attended to yet.\" Django's "
+"ticket system contains hundreds of open tickets, of various degrees of "
+"impact on end-user functionality, and Django's developers have to review and"
+" prioritize."
+msgstr "Anda mendapatkan beberapa pilihan. Jika anda menginginkan dukungan di atas dari bentuk tambah/rubah yang Django otomatis dibangkitkan, anda dapat melampirkan modul JavaScript sewenang-wenang ke halaman melalui kelas model Admin :ref:`js parameter <modeladmin-asset-definitions>`. Parameter itu adalah daftar URL, sebagai string, menunjuk ke modul JavaScript yang akan disertakan dalam bentuk admin melalui etiket ``<script>``."
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:21
+msgid ""
+"On top of that: the people who work on Django are all volunteers. As a "
+"result, the amount of time that we have to work on the framework is limited "
+"and will vary from week to week depending on our spare time. If we're busy, "
+"we may not be able to spend as much time on Django as we might want."
+msgstr "Di atas semua itu: orang yang bekerja pada Django adalah semuanya sukarelawan. Sebagai hasilnya, sejumlah waktu yang kami harus kerjakan di kerangka adalah terbatas dan akan beragam dari minggu ke minggu tergantung waktu lenggang kami. Jika kami sibuk, kami mungkin tidak dapat menghabiskan waktu pada Django seperti yang kita inginkan."
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:26
+msgid ""
+"The best way to make sure tickets do not get hung up on the way to checkin "
+"is to make it dead easy, even for someone who may not be intimately familiar"
+" with that area of the code, to understand the problem and verify the fix:"
+msgstr "Cara terbaik untuk memastikan tiket tidak menutup dalam perjalanan untuk memeriksa adalah membuatnya mudah mati, bahkan untuk seseorang yang tidak ingin dengan baik sekali akrab dengan kawasan dari kode, untuk memahami masalah dan memeriksa perbaikan:"
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:30
+msgid ""
+"Are there clear instructions on how to reproduce the bug? If this touches a "
+"dependency (such as Pillow), a contrib module, or a specific database, are "
+"those instructions clear enough even for someone not familiar with it?"
+msgstr "Apakah ada perintah jelas bagaimana memproduksi kembali kesalahan? Jika ini menyentuh ketergantungan (seperti Pillow), modul kontribusi, atau basisdata khusus, perintah tersebut cukup jelas bahkan untuk seseorang tidak akrab dengannya?"
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:35
+msgid ""
+"If there are several patches attached to the ticket, is it clear what each "
+"one does, which ones can be ignored and which matter?"
+msgstr "Jika ada beberapa tambalan dilampirkan ke tiket, apakah jelas apa setiap satu lakukan, yang mana dapat diabaikan dan hal apa?"
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:38
+msgid ""
+"Does the patch include a unit test? If not, is there a very clear "
+"explanation why not? A test expresses succinctly what the problem is, and "
+"shows that the patch actually fixes it."
+msgstr "Apakah tambalan menyertakan satuan percobaan? Jika tidak, apakah ada penjelasan sangat jelas kenapa tidak? Sebuah percobaan mengekspresikan dengan ringkas apa masalahnya, dan tampilkan yang tambalan sebenarnya diperbaiki."
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:42
+msgid ""
+"If your patch stands no chance of inclusion in Django, we won't ignore it --"
+" we'll just close the ticket. So if your ticket is still open, it doesn't "
+"mean we're ignoring you; it just means we haven't had time to look at it "
+"yet."
+msgstr "Jika tambalan anda tidak mempunyai kesempatan penyertaan di Django, kami tidak akan mengabaikannya -- kami akan menutup tiket. Jadi jika tiket anda masih terbuka, tidak berarti kami akan mengabaikan anda; itu berarti kami belum mempunyai waktu untuk melihatnya."
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:47
+msgid "When and how might I remind the core team of a patch I care about?"
+msgstr "Kapan dan bagaimana Saya mengingatkan tim inti dari tambalan Saya peduli?"
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:49
+msgid ""
+"A polite, well-timed message to the mailing list is one way to get "
+"attention. To determine the right time, you need to keep an eye on the "
+"schedule. If you post your message when the core developers are trying to "
+"hit a feature deadline or manage a planning phase, you're not going to get "
+"the sort of attention you require. However, if you draw attention to a "
+"ticket when the core developers are paying particular attention to bugs -- "
+"just before a bug fixing sprint, or in the lead up to a beta release for "
+"example -- you're much more likely to get a productive response."
+msgstr "Sopan, pesan di waktu baik ke daftar penyuratan adalah satu cara utnuk mendapatkan perhatian. Untuk menentukan waktu tepat, anda butuh menjaga mata pada jadwal. Jika anda memasang pesan anda ketika pengembang inti mencoba mengenai tenggat waktu fitur atau mengelola fase perencanaan, anda tidak akan mendapatkan perhatian anda butuhkan. Bagaimanapun, jika anda menarik perhatian ke sebuah tiket ketika pengembang inti sedang khusus memperhatikan ke kesalahan -- hanya sebelum perbaikan kesalahan berlari cepat, atau di memimpin ke terbitan beta sebagai contoh -- anda jauh lebih mungkin mendapatkan tanggapan produktif."
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:58
+msgid ""
+"Gentle IRC reminders can also work -- again, strategically timed if "
+"possible. During a bug sprint would be a very good time, for example."
+msgstr "Pengingat Gentle IRC dapa juga bekerja -- kembali, menurut rencana waktu jika memungkinkan. Selama sebuah kesalahan berlari cepat akan menjadi waktu bagus, sebagai contoh."
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:61
+msgid ""
+"Another way to get traction is to pull several related tickets together. "
+"When the core developers sit down to fix a bug in an area they haven't "
+"touched for a while, it can take a few minutes to remember all the fine "
+"details of how that area of code works. If you collect several minor bug "
+"fixes together into a similarly themed group, you make an attractive target,"
+" as the cost of coming up to speed on an area of code can be spread over "
+"multiple tickets."
+msgstr "Cara lain untuk mendapatkan daya tarik adalah menarik beberapa tiket terkait bersama-sama. ketika pengembang inti duduk untuk memperbaiki masalah di sebuah kawasan mereka tidak sentuh beberapa saat, itu dapat memakan beberapa menit untuk mengingat semua rincian dari bagaimana kawasan kode bekerja. Jika anda memilih beberapa perbaikan kesalahan kecil bersama-sama kedalam kelompok tema yang mirip, anda membuat sebuah sasaran atraktif, ketika biaya yang datang ke kecepatan di kawasan kode dapat disebar melalui banyak tiket."
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:68
+msgid ""
+"Please refrain from emailing core developers personally, or repeatedly "
+"raising the same issue over and over. This sort of behavior will not gain "
+"you any additional attention -- certainly not the attention that you need in"
+" order to get your pet bug addressed."
+msgstr "Silahkan menahan dari mengemail pengembang inti secara pribadi, atau berilang menampilkan masalah sama lagi dan lagi. kebiasaan pendek ini tidak akan mendapatkan perhatian tambahan -- pasti bukan perhatian yang anda butuhkan agar mendapatkan alamat kesalahan hewan anda."
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:74
+msgid "But I've reminded you several times and you keep ignoring my patch!"
+msgstr "Tetapi saya telah mengingatkan anda beberapa kali dan tetap mengabaikan tambalan saya!"
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:76
+msgid ""
+"Seriously - we're not ignoring you. If your patch stands no chance of "
+"inclusion in Django, we'll close the ticket. For all the other tickets, we "
+"need to prioritize our efforts, which means that some tickets will be "
+"addressed before others."
+msgstr "Sungguh - kami tidak mengabaikan anda. Jika tambalan anda berdiri tidak ada kesempatan penyertaan di Django, kami akan menutup tiket. Untuk semua tiket lainnnya, kami butuh mengutamakan usaha kami, yang berarti beberapa tiket akan dialamatkan sebelum lainnya."
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:81
+msgid ""
+"One of the criteria that is used to prioritize bug fixes is the number of "
+"people that will likely be affected by a given bug. Bugs that have the "
+"potential to affect many people will generally get priority over those that "
+"are edge cases."
+msgstr "Satu dari kriteria yang digunakan untuk mengutamakan perbaikan kesalahan adalah jumlah orang yang akan dipengaruhi oleh kesalahan yang diberikan. Kesalahan yang mempunyai kemungkinan untuk mempengarui banyak orang akan umumnya mendapatkan keutamaan disamping orang-orang yang kasusnya dipinggirkan."
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:86
+msgid ""
+"Another reason that bugs might be ignored for while is if the bug is a "
+"symptom of a larger problem. While we can spend time writing, testing and "
+"applying lots of little patches, sometimes the right solution is to rebuild."
+" If a rebuild or refactor of a particular component has been proposed or is "
+"underway, you may find that bugs affecting that component will not get as "
+"much attention. Again, this is just a matter of prioritizing scarce "
+"resources. By concentrating on the rebuild, we can close all the little bugs"
+" at once, and hopefully prevent other little bugs from appearing in the "
+"future."
+msgstr "Alasan lain yang kesalahan mungkin diabaikan untuk sementara adalah jika kesalahan adalah gejala dari masalah besar. Selama kami dapat menghabiskan waktu menulis, mencoba dan memberlakukan banyak tambalan kecil, terkadang pemecahan terbaik adalah membangun kembali. Jika membangun kembali atau mengurai kembali dari komponen khusus telah diajukan atau sedang berjalan, anda mungkin menemukan kesalahan itu mempengaruhi komponen itu tidak akan mendapatkan perhatian banyak. kembali, ini hanya masalah prioritas sumber daya yang langka. Dengan berkonsentrasi dalam membangun kembali, kami dapat menutup semua kesalahan kecil sekaligus, dan berharap mencegah kesalahan kecil lain muncul di masa depan."
+
+#: ../../../../sources/1.9/docs/faq/contributing.txt:95
+msgid ""
+"Whatever the reason, please keep in mind that while you may hit a particular"
+" bug regularly, it doesn't necessarily follow that every single Django user "
+"will hit the same bug. Different users use Django in different ways, "
+"stressing different parts of the code under different conditions. When we "
+"evaluate the relative priorities, we are generally trying to consider the "
+"needs of the entire community, not just the severity for one particular "
+"user. This doesn't mean that we think your problem is unimportant -- just "
+"that in the limited time we have available, we will always err on the side "
+"of making 10 people happy rather than making 1 person happy."
+msgstr "Apapun alasannya, harap diingat bahwa selama anda mungkin menemukan kesalahan tertentu secara teratur, itu tidak selalu mengikuti setiap bahwa setiap pengguna Django tunggal akan menemukan kesalahan yang sama. Pengguna berbeda menggunakan Django dalam cara berbeda, menekankan bagian berbeda dari kode dibawah kondisi berbeda. ketika kami menilai prioritas relatif, kami umumnya mencoba menganggap kebutuhan dari komunitas keseluruhan, bukan hanya satu pengguna khusus. Ini tidak berarti bahwa kami pikir masalah anda tidak penting -- hanya saja terbatas waktu yang kami punya, kami akan selalu berbuat salah di sisi membuat 10 orang seanng datipada membuat 1 orang senang."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:3
+msgid "FAQ: General"
+msgstr "FAQ: Umum"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:6
+msgid "Why does this project exist?"
+msgstr "Mengapa proyek ini ada?"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:8
+msgid ""
+"Django grew from a very practical need: World Online, a newspaper Web "
+"operation, is responsible for building intensive Web applications on "
+"journalism deadlines. In the fast-paced newsroom, World Online often has "
+"only a matter of hours to take a complicated Web application from concept to"
+" public launch."
+msgstr "Django tumbuh dari kebutuhan yang sangat praktis: World Online, operasi Jaringan surat kabar, bertanggung jawab untuk membangun aplikasi Jaringan instensif pada tenggat waktu jurnalisme. Dalam ruang berita serba cepat, World Online sering mempunyai hanya masalah jam untuk mengambil aplikasi Jaringan rumit dari konsep ke peluncuran umum."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:13
+msgid ""
+"At the same time, the World Online Web developers have consistently been "
+"perfectionists when it comes to following best practices of Web development."
+msgstr "Pada saat bersamaan, pengembang Jaringan World Online secara konsisten telah sempurna ketika dia datang untuk mengikuti latihan terbaik dari pengembangan Jaringan."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:16
+msgid ""
+"In fall 2003, the World Online developers (Adrian Holovaty and Simon "
+"Willison) ditched PHP and began using Python to develop its websites. As "
+"they built intensive, richly interactive sites such as Lawrence.com, they "
+"began to extract a generic Web development framework that let them build Web"
+" applications more and more quickly. They tweaked this framework constantly,"
+" adding improvements over two years."
+msgstr "Di musim gugur 2003, pengembang World Online (Adrian Holovaty dan Simon Willison) menyingkirkan PHP dan mulai menggunakan Python untuk mengembangkan situs jaringannya. Saat mereka dibangun intensif, situs kaya interaktif seperti Lawrence.com, mereka mulai mengeluarkan kerangka pengembangan Jaringan umum yang membiarkan mereka membangun jaringan Jaringan lebih dan lebih cepat. Mereka mengulik kerangka ini secara tetap, menambahkan perbaikan selama dua tahun."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:23
+msgid ""
+"In summer 2005, World Online decided to open-source the resulting software, "
+"Django. Django would not be possible without a whole host of open-source "
+"projects -- `Apache`_, `Python`_, and `PostgreSQL`_ to name a few -- and "
+"we're thrilled to be able to give something back to the open-source "
+"community."
+msgstr "Di musim panas 2005, World Online memutuskan sumber-terbuka perangkat lunak yang dihasilkan, Django. Django mungkin tidak memungkinkan tanpa seluruh rumah dari proyek sumber-terbuka -- `Apache`_, `Python`_, dan `PostgreSQL`_ dan kami senang dapat memberikan sesuatu kembali ke komunitas sumber-terbuka."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:33
+msgid "What does \"Django\" mean, and how do you pronounce it?"
+msgstr "Apakah arti \"Django\", dan bagaimana anda mengucapkannya?"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:35
+msgid ""
+"Django is named after `Django Reinhardt`_, a jazz manouche guitarist from "
+"the 1930s to early 1950s. To this day, he's considered one of the best "
+"guitarists of all time."
+msgstr "Django dinamai setelah `Django Reinhardt`_, gitaris jazz manouche dari 1930 sampai awal 1950. Sampai hari ini, dia dianggap satu dari gitaris terbaik sepanjang masa."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:38
+msgid "Listen to his music. You'll like it."
+msgstr "Dengarkan musik dia. Anda akan menyukainya."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:40
+msgid ""
+"Django is pronounced **JANG**-oh. Rhymes with FANG-oh. The \"D\" is silent."
+msgstr "Django diucapkan **JANG**-oh. Irama dengan FANG-oh. \"D\" adalah senyap."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:42
+msgid "We've also recorded an `audio clip of the pronunciation`_."
+msgstr "Kami juga merekam sebuah `klip suara dari pengucapan`_."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:48
+msgid "Is Django stable?"
+msgstr "Apakah Django stabil?"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:50
+msgid ""
+"Yes, it's quite stable. Companies like Disqus, Instagram, Pinterest, and "
+"Mozilla have been using Django for many years. Sites built on Django have "
+"weathered traffic spikes of over 50 thousand hits per second."
+msgstr "Ya, dia cukup stabil. Perusahaan seperti Disqus, Instagram, Pinterest, dan Mozilla telah menggunakan Django selama bertahun-tahun. Situs yang dibangun di Django telah mengalami lonjakan lalu lintas lebih 50 ribu pukulan per detik."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:55
+msgid "Does Django scale?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:57
+msgid ""
+"Yes. Compared to development time, hardware is cheap, and so Django is "
+"designed to take advantage of as much hardware as you can throw at it."
+msgstr "Ya. Dibandingkan pada wakt pengembangan, perangkat keras adalah murah, dan Django dirancang untuk mengambil keuntungan sebanyak perangkat lunak anda dapat adakan."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:60
+msgid ""
+"Django uses a \"shared-nothing\" architecture, which means you can add "
+"hardware at any level -- database servers, caching servers or "
+"Web/application servers."
+msgstr "Django menggunakan arsitektur \"tidak ada-berbagi\", yang berarti anda dapat menambahkan perangkat keras pada tingkatan apapun -- peladen basisdata, peladen tombolok atau peladen Jaringan/aplikasi."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:63
+msgid ""
+"The framework cleanly separates components such as its database layer and "
+"application layer. And it ships with a simple-yet-powerful :doc:`cache "
+"framework </topics/cache>`."
+msgstr "Kerangka secara bersih memisahkan komponen seperti lapisan basisdatanya dan lapisan aplikasi. Dan dia dibungkus dengan sederhana namun kuat :doc:`kerangka tembolok </topics/cache>`."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:68
+msgid "Who's behind this?"
+msgstr "Siapa dibelakang ini?"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:70
+msgid ""
+"Django was originally developed at World Online, the Web department of a "
+"newspaper in Lawrence, Kansas, USA. Django's now run by an international "
+":doc:`team of volunteers </internals/team>`."
+msgstr "Django aslinya dikembangkan pada World Online, departemen jaringan koran di Lawrence, Kansas, USA. Django sekarang berjalan oleh sebuah internasional :doc:`tim dari sukarelawan </internals/team>`."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:75
+msgid "Which sites use Django?"
+msgstr "Situs mana menggunakan Django?"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:77
+msgid ""
+"`DjangoSites.org`_ features a constantly growing list of Django-powered "
+"sites."
+msgstr "`DjangoSites.org`_ menampilkan selalu tumbuh daftar dari situs ditenagai-Django."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:84
+msgid ""
+"Django appears to be a MVC framework, but you call the Controller the "
+"\"view\", and the View the \"template\". How come you don't use the standard"
+" names?"
+msgstr "Django muncul menjadi kerangka MVC, tetapi anda memanggil Controller \"view\", dan View \"template\". Bagaimana bisa anda tidak menggunakan nama standar?"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:86
+msgid "Well, the standard names are debatable."
+msgstr "Baiklah, nama standar masih diperdebatkan."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:88
+msgid ""
+"In our interpretation of MVC, the \"view\" describes the data that gets "
+"presented to the user. It's not necessarily *how* the data *looks*, but "
+"*which* data is presented. The view describes *which data you see*, not *how"
+" you see it.* It's a subtle distinction."
+msgstr "Dalam tafsiran kami dari MVC, \"view\" menggambarkan data yang mendapatkan dihadirkan ke pengguna. Itu tidak perlu *bagaimana* data *kelihatan*, tetapi *yang mana* data dihadirkan. View menggambarkan *data mana anda lihat*, bukan *bagaimana anda melihatnya.* Ini adalah perbedaan yang halus."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:93
+msgid ""
+"So, in our case, a \"view\" is the Python callback function for a particular"
+" URL, because that callback function describes which data is presented."
+msgstr "Jadi, di kasus kami, sebuah \"view\" adalah fungsi panggilan kembali Python utnuk URL khusus, karena fungsi panggilan kembali menggambarkan data mana yang dihadirkan."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:96
+msgid ""
+"Furthermore, it's sensible to separate content from presentation -- which is"
+" where templates come in. In Django, a \"view\" describes which data is "
+"presented, but a view normally delegates to a template, which describes "
+"*how* the data is presented."
+msgstr "Lebih jauh, ini adalah bijaksana untuk memisahkan dari penyajian -- yaitu dimana cetakan masuk. Di Django, sebuah 'view\" menggambarkan data mana dihadirkan, tetapi view umumnya menugaskan ke sebuah cetakan, yang menggambarkan *bagaimana* data dihadirkan."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:101
+msgid ""
+"Where does the \"controller\" fit in, then? In Django's case, it's probably "
+"the framework itself: the machinery that sends a request to the appropriate "
+"view, according to the Django URL configuration."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:105
+msgid ""
+"If you're hungry for acronyms, you might say that Django is a \"MTV\" "
+"framework -- that is, \"model\", \"template\", and \"view.\" That breakdown "
+"makes much more sense."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:109
+msgid ""
+"At the end of the day, of course, it comes down to getting stuff done. And, "
+"regardless of how things are named, Django gets stuff done in a way that's "
+"most logical to us."
+msgstr "Pada akhir hari, tentu saja, dia datang untuk mendapatkan barang selesai. Dan, tanpa memperhatikan bagaimana hal-hal dinamai, Django mendapatkan barang selesai di cara yang paling masuk akal bagi kami."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:114
+msgid "<Framework X> does <feature Y> -- why doesn't Django?"
+msgstr "<Kerangka X> melakukan <fitur Y> -- kenapa Django tidak?"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:116
+msgid ""
+"We're well aware that there are other awesome Web frameworks out there, and "
+"we're not averse to borrowing ideas where appropriate. However, Django was "
+"developed precisely because we were unhappy with the status quo, so please "
+"be aware that \"because <Framework X> does it\" is not going to be "
+"sufficient reason to add a given feature to Django."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:123
+msgid ""
+"Why did you write all of Django from scratch, instead of using other Python "
+"libraries?"
+msgstr "Kenapa anda menulis semua Django dari goresan, daripada menggunakan pustaka lain Django?"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:125
+msgid ""
+"When Django was originally written a couple of years ago, Adrian and Simon "
+"spent quite a bit of time exploring the various Python Web frameworks "
+"available."
+msgstr "Ketika Django aslinya ditulis beberapa tahun lalu, Adrian dan Simon megnhabiskan sedikit waktu menjelakahi beragam kerangka Jaringan Phyton yang tersedia."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:129
+msgid "In our opinion, none of them were completely up to snuff."
+msgstr "Menurut pendapat kami, tidak satupun dari mereka benar-benar sampai tidak berguna"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:131
+msgid "We're picky. You might even call us perfectionists. (With deadlines.)"
+msgstr "Kami pilih-pilih. Anda mungkin bahkan memanggil kami perfeksionis. (Dengan tenggat waktu.)"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:133
+msgid ""
+"Over time, we stumbled across open-source libraries that did things we'd "
+"already implemented. It was reassuring to see other people solving similar "
+"problems in similar ways, but it was too late to integrate outside code: "
+"We'd already written, tested and implemented our own framework bits in "
+"several production settings -- and our own code met our needs delightfully."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:139
+msgid ""
+"In most cases, however, we found that existing frameworks/tools inevitably "
+"had some sort of fundamental, fatal flaw that made us squeamish. No tool fit"
+" our philosophies 100%."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:143
+msgid "Like we said: We're picky."
+msgstr "Seperti kami katakan: Kami pemilih."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:145
+msgid ""
+"We've documented our philosophies on the :doc:`design philosophies page "
+"</misc/design-philosophies>`."
+msgstr "Kami telah mendokumentasikan filosofi kami di :doc:`halaman rancangan filosofi </misc/design-philosophies>`."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:149
+msgid "Is Django a content-management-system (CMS)?"
+msgstr "Apakah Django content-management-system (CMS)?"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:151
+msgid ""
+"No, Django is not a CMS, or any sort of \"turnkey product\" in and of "
+"itself. It's a Web framework; it's a programming tool that lets you build "
+"websites."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:154
+msgid ""
+"For example, it doesn't make much sense to compare Django to something like "
+"Drupal_, because Django is something you use to *create* things like Drupal."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:157
+msgid ""
+"Of course, Django's automatic admin site is fantastic and timesaving -- but "
+"the admin site is one module of Django the framework. Furthermore, although "
+"Django has special conveniences for building \"CMS-y\" apps, that doesn't "
+"mean it's not just as appropriate for building \"non-CMS-y\" apps (whatever "
+"that means!)."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:166
+msgid "How can I download the Django documentation to read it offline?"
+msgstr "Bagaimana dapat Saya mengunduh dokumentasi Django utnuk membacanya tanpa jaringan?"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:168
+msgid ""
+"The Django docs are available in the ``docs`` directory of each Django "
+"tarball release. These docs are in reST (reStructuredText) format, and each "
+"text file corresponds to a Web page on the official Django site."
+msgstr "Dokumen Django tersedia di direktori ``docs`` dari setiap terbitan tarball Django. Dokumen ini berada di bentuk (reStructuredText), dan setiap berkas teks berhubungan ke halaman Jaringan di situs Django resmi."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:172
+msgid ""
+"Because the documentation is `stored in revision control`_, you can browse "
+"documentation changes just like you can browse code changes."
+msgstr "Karena dokumentasi `disimpan di kendali  pembetulan`_, anda dapat menjelajahi perubahan dokumentasi seperti anda dapat menjelajahi perubahan kode."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:175
+msgid ""
+"Technically, the docs on Django's site are generated from the latest "
+"development versions of those reST documents, so the docs on the Django site"
+" may offer more information than the docs that come with the latest Django "
+"release."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:182
+msgid "Where can I find Django developers for hire?"
+msgstr "Dimana Saya dapat menemukan pengembang untuk di bayar?"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:184
+msgid ""
+"Consult our `developers for hire page`_ for a list of Django developers who "
+"would be happy to help you."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/general.txt:187
+msgid ""
+"You might also be interested in posting a job to https://djangogigs.com/ . "
+"If you want to find Django-capable people in your local area, try "
+"https://people.djangoproject.com/ ."
+msgstr "Anda mungkin juga tertarik di menempatkan sebuah pekerjaan ke https://djangogigs.com/ . Jika anda ingin menemukan orang yang mampu-Django di kawasan lokal anda, coba https://people.djangoproject.com/ ."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:194
+msgid "How do I cite Django?"
+msgstr "Bagaimana Saya mengutip Django?"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:196
+msgid ""
+"It's difficult to give an official citation format, for two reasons: "
+"citation formats can vary wildly between publications, and citation "
+"standards for software are still a matter of some debate."
+msgstr "Sangatlah sulit memberikan bentuk kutipan resmi, untuk dua alasan: bentuk kutipan dapat beragam liar diantara pengumuman, dan standar kutipan utnuk perangkat lunak masih masalah dari beberapa perdebatan."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:200
+msgid "For example, `APA style`_,  would dictate something like::"
+msgstr "Sebagai contoh,  `gaya APA`_, akan mendikte sesuatu seperti::"
+
+#: ../../../../sources/1.9/docs/faq/general.txt:204
+msgid ""
+"However, the only true guide is what your publisher will accept, so get a "
+"copy of those guidelines and fill in the gaps as best you can."
+msgstr "Bagaimanapun, panduan sebenarnya adalah apa yang penerbit anda akan terima, jadi dapatkan salinan dari panduan tersebut dan isi jarak sebaik anda bisa."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:207
+msgid ""
+"If your referencing style guide requires a publisher name, use \"Django "
+"Software Foundation\"."
+msgstr "Jika panduan gaya pemberian petunjuk anda membutuhkan sebuah nama penerbit, gunakan \"Django Software Foundation\"."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:210
+msgid "If you need a publishing location, use \"Lawrence, Kansas\"."
+msgstr "Jika anda butuh tempat penerbitan, gunakan \"Lawrence, Kansas\"."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:212
+msgid "If you need a web address, use https://djangoproject.com."
+msgstr "Jika anda butuh alamat jaringan, gunakan https://djangoproject.com."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:214
+msgid "If you need a name, just use \"Django\", without any tagline."
+msgstr "Jika anda butuh hanya nama, gunakan \"Django\", tanpa ucapan apapun."
+
+#: ../../../../sources/1.9/docs/faq/general.txt:216
+msgid ""
+"If you need a publication date, use the year of release of the version "
+"you're referencing (e.g., 2013 for v1.5)"
+msgstr "Jika anda butuh tanggal penerbitan, gunakan tahun terbitan dari versi anda sedang acukan (sebagai contoh, 2013 untuk v1.5)"
+
+#: ../../../../sources/1.9/docs/faq/help.txt:3
+msgid "FAQ: Getting Help"
+msgstr "FAQ: Mendapatkan Bantuan"
+
+#: ../../../../sources/1.9/docs/faq/help.txt:6
+msgid "How do I do X? Why doesn't Y work? Where can I go to get help?"
+msgstr "Bagaimana Saya melakukan X? Mengapa Y tidak bekerja? Dimana Saya mendapatkan bantuan?"
+
+#: ../../../../sources/1.9/docs/faq/help.txt:8
+msgid ""
+"If this FAQ doesn't contain an answer to your question, you might want to "
+"try the |django-users| mailing list. Feel free to ask any question related "
+"to installing, using, or debugging Django."
+msgstr "Jika FAQ ini tidak mengandung sebuah jawaban pada pertanyaan anda, anda mungkin ingin mencoba daftar penyuratan |django-users|. Silahkan bebas bertanya pertanyaan apapun terhubung ke pemasangan, penggunaan, atau mencari kesalahan Django."
+
+#: ../../../../sources/1.9/docs/faq/help.txt:12
+msgid ""
+"If you prefer IRC, the `#django IRC channel`_ on the Freenode IRC network is"
+" an active community of helpful individuals who may be able to solve your "
+"problem."
+msgstr "Jika anda memilih IRC, `#django IRC channel`_ di jaringan Freenode IRC adalah komunitas aktif dari pribadi yang sangat membantu mungkin dapat mengatasi masalah anda."
+
+#: ../../../../sources/1.9/docs/faq/help.txt:20
+msgid "Why hasn't my message appeared on django-users?"
+msgstr "Mengapa pesan saya belum muncul di pengguna-django?"
+
+#: ../../../../sources/1.9/docs/faq/help.txt:22
+msgid ""
+"|django-users| has a lot of subscribers. This is good for the community, as "
+"it means many people are available to contribute answers to questions. "
+"Unfortunately, it also means that |django-users| is an attractive target for"
+" spammers."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/help.txt:27
+msgid ""
+"In order to combat the spam problem, when you join the |django-users| "
+"mailing list, we manually moderate the first message you send to the list. "
+"This means that spammers get caught, but it also means that your first "
+"question to the list might take a little longer to get answered. We "
+"apologize for any inconvenience that this policy may cause."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/help.txt:34
+msgid "Nobody on django-users answered my question! What should I do?"
+msgstr "Tidak seorangpun di django-users menjawab pertanyaan saya! Apa harus Saya lakukan?"
+
+#: ../../../../sources/1.9/docs/faq/help.txt:36
+msgid ""
+"Try making your question more specific, or provide a better example of your "
+"problem."
+msgstr "Coba buat pertanyaan anda lebih jelas, atau sediakan contoh lebih baik dari masalah anda."
+
+#: ../../../../sources/1.9/docs/faq/help.txt:39
+msgid ""
+"As with most open-source mailing lists, the folks on |django-users| are "
+"volunteers. If nobody has answered your question, it may be because nobody "
+"knows the answer, it may be because nobody can understand the question, or "
+"it may be that everybody that can help is busy. One thing you might try is "
+"to ask the question on IRC -- visit the `#django IRC channel`_ on the "
+"Freenode IRC network."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/help.txt:46
+msgid ""
+"You might notice we have a second mailing list, called |django-developers| "
+"-- but please don't email support questions to this mailing list. This list "
+"is for discussion of the development of Django itself. Asking a tech support"
+" question there is considered quite impolite."
+msgstr "Anda mungkin menyadari kami mempunyai daftar penyuratan kedua, dipanggil |django-developers| -- tetapi silahkan jangan email pertanyaan dukungan ke daftar penyuratan ini. Daftar ini untuk obrolan dari pengembangan Django itu sendiri. Bertanya pertanyaan dukungan teknis dianggap sangat tidak sopan."
+
+#: ../../../../sources/1.9/docs/faq/help.txt:52
+msgid "I think I've found a bug! What should I do?"
+msgstr "Saya pikir saya telah menemukan kesalahan! Apa yang harus Saya lakukan?"
+
+#: ../../../../sources/1.9/docs/faq/help.txt:54
+msgid ""
+"Detailed instructions on how to handle a potential bug can be found in our "
+":ref:`Guide to contributing to Django <reporting-bugs>`."
+msgstr "Rincian perintah pada bagaimana menangani kesalahan potensial dapat ditemukan di :ref:`Panduan membantu Django <reporting-bugs>` kami."
+
+#: ../../../../sources/1.9/docs/faq/help.txt:58
+msgid "I think I've found a security problem! What should I do?"
+msgstr "Saya pikir saya telah menemukan masalah keamanan! Apa yang harus Saya lakukan?"
+
+#: ../../../../sources/1.9/docs/faq/help.txt:60
+msgid ""
+"If you think you've found a security problem with Django, please send a "
+"message to security@djangoproject.com. This is a private list only open to "
+"long-time, highly trusted Django developers, and its archives are not "
+"publicly readable."
+msgstr "Jika anda berpikir anda telah menemukan sebuah masalah keamanan dengan Django, silahkan kirim sebuah pesan ke security@djangoproject.com. Ini adalah daftar pribadi hanya dibuka untuk waktu-panjang, sangat dipercaya pengembang Django, dan arsipnya tidak dibaca secara umum."
+
+#: ../../../../sources/1.9/docs/faq/help.txt:64
+msgid ""
+"Due to the sensitive nature of security issues, we ask that if you think you"
+" have found a security problem, *please* don't send a message to one of the "
+"public mailing lists. Django has a :ref:`policy for handling security issues"
+" <reporting-security-issues>`; while a defect is outstanding, we would like "
+"to minimize any damage that could be inflicted through public knowledge of "
+"that defect."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/index.txt:3
+msgid "Django FAQ"
+msgstr "FAQ Django"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:3
+msgid "FAQ: Installation"
+msgstr "FAQ: Pemasangan"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:6
+msgid "How do I get started?"
+msgstr "Bagaimana Saya memulai?"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:8
+msgid "`Download the code`_."
+msgstr "`Unduh kode`_."
+
+#: ../../../../sources/1.9/docs/faq/install.txt:9
+msgid "Install Django (read the :doc:`installation guide </intro/install>`)."
+msgstr "Pasang Django (baca :doc:`panduan pemasangan </intro/install>`)."
+
+#: ../../../../sources/1.9/docs/faq/install.txt:10
+msgid "Walk through the :doc:`tutorial </intro/tutorial01>`."
+msgstr "Berjalan melalui :doc:`tutorial </intro/tutorial01>`."
+
+#: ../../../../sources/1.9/docs/faq/install.txt:11
+msgid ""
+"Check out the rest of the :doc:`documentation </index>`, and `ask "
+"questions`_ if you run into trouble."
+msgstr "Periksa sisanya dari :doc:`documentasi </index>`, dan `tanyakan pertanyaan`_ jika anda berjalan kedalam masalah."
+
+#: ../../../../sources/1.9/docs/faq/install.txt:18
+msgid "What are Django's prerequisites?"
+msgstr "Apa itu prasyarat Django?"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:20
+msgid ""
+"Django requires Python. See the table in the next question for the versions "
+"of Python that work with each version of Django. Other Python libraries may "
+"be required for some uses, but you'll receive an error about it as they're "
+"needed."
+msgstr "Django membutuhkan Python. Lihat tabel di pertanyaan selanjutnya untuk versi dari Python yang bekerja dengan setiap versi dari Django. Pustaka Python lainnya mungkin dibutuhkan untuk beberapa pengguna, tetapi anda akan menerima sebuah kesalahan tentangnya sesuai kebutuhan mereka."
+
+#: ../../../../sources/1.9/docs/faq/install.txt:24
+msgid ""
+"For a development environment -- if you just want to experiment with Django "
+"-- you don't need to have a separate Web server installed; Django comes with"
+" its own lightweight development server. For a production environment, "
+"Django follows the WSGI spec, :pep:`3333`, which means it can run on a "
+"variety of server platforms. See :doc:`Deploying Django "
+"</howto/deployment/index>` for some popular alternatives."
+msgstr "Untuk lingkungan pengembangan -- jika anda hanya ingin mencoba dengan Django -- anda tidak ingin mempunyai peladen Jaringan terpisah dipasang; Django datang dengan peladen pengembangan ringan sendiri. Untuk lingkungan produksi, Django mengikuti spesifikasi WSGI, :pep:`3333`, yang berarti dia dapat berjalan pada beragam paladen. Lihat :doc:`Menyebarkan Django </howto/deployment/index>` untuk beberapa cara lain terkenal."
+
+#: ../../../../sources/1.9/docs/faq/install.txt:31
+msgid ""
+"If you want to use Django with a database, which is probably the case, "
+"you'll also need a database engine. PostgreSQL_ is recommended, because "
+"we're PostgreSQL fans, and MySQL_, `SQLite 3`_, and Oracle_ are also "
+"supported."
+msgstr "Jika anda ingin menggunakan Django dengan basisdata, yang kemungkinan terjadi, anda akan juga butuh mesin basisdata. PostgreSQL_ dianjurkan, karena kami penggemar PostgreSQL, dan MySQL_, `SQLite 3`_, dan Oracle_ juga didukung."
+
+#: ../../../../sources/1.9/docs/faq/install.txt:44
+msgid "What Python version can I use with Django?"
+msgstr "Versi Phyton apa dapat Saya gunakan dengan Django?"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:47
+msgid "Django version"
+msgstr "Versi Django"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:47
+msgid "Python versions"
+msgstr "Versi Python"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:49
+msgid "1.8"
+msgstr "1.8"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:49
+msgid "2.7, 3.2 (until the end of 2016), 3.3, 3.4, 3.5"
+msgstr "2.7, 3.2 (sampai akhir 2016), 3.3, 3.4, 3.5"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:50
+msgid "**1.9, 1.10**"
+msgstr "**1.9, 1.10**"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:50
+msgid "**2.7, 3.4, 3.5**"
+msgstr "**2.7, 3.4, 3.5**"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:53
+msgid ""
+"For each version of Python, only the latest micro release (A.B.C) is "
+"officially supported. You can find the latest micro version for each series "
+"on the `Python download page <https://www.python.org/downloads/>`_."
+msgstr "Untuk setiap versi dari Phyton, hanya terbitak mikro terakhir (A.B.C) adalah resmi yang didukung. Anda dapat menemukan versi mikro terakhir untuk setiap seri pada `Halaman unduh Python <https://www.python.org/downloads/>`_."
+
+#: ../../../../sources/1.9/docs/faq/install.txt:57
+msgid ""
+"Typically, we will support a Python version up to and including the first "
+"Django LTS release whose security support ends after security support for "
+"that version of Python ends. For example, Python 3.3 security support ends "
+"September 2017 and Django 1.8 LTS security support ends April 2018. "
+"Therefore Django 1.8 is the last version to support Python 3.3."
+msgstr "Secara khusus, kami akan mendukung versi Phyton sampai dan termasuk terbitan LTS Django pertama yang dukungan keamanan berakhir setelah dukungan keamanan untuk versi tersebut dari Phyton berakhir. Sebagai contoh, dukungan keamanan Python 3.3 berakhir September 2017 dan dukungan keamanan Django 1.8 LTS berakhir April 2018. Karena itu Django 1.8 adalah versi terakhir untuk mendukung Phyton 3.3."
+
+#: ../../../../sources/1.9/docs/faq/install.txt:64
+msgid "What Python version should I use with Django?"
+msgstr "Versi Phyton apa harus Saya gunakan dengan Django?"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:66
+msgid ""
+"As of Django 1.6, Python 3 support is considered stable and you can safely "
+"use it in production. See also :doc:`/topics/python3`. However, the "
+"community is still in the process of migrating third-party packages and "
+"applications to Python 3."
+msgstr "Sebagai Django 1.6, dukungan Python 3 dipertimbangkan stabil dan anda dapat aman menggunakannya dalam produksi. Lihat juga :doc:`/topics/python3`. Bagaimanapun, komunitas masih dalam proses dari memindahkan paket pihak-ketiga dan aplikasi ke Python 3."
+
+#: ../../../../sources/1.9/docs/faq/install.txt:71
+msgid ""
+"If you're starting a new project, and the dependencies you plan to use work "
+"on Python 3, you should use Python 3. If they don't, consider contributing "
+"to the porting efforts, or stick to Python 2."
+msgstr "Jika anda sedang memulai proyek baru, dan ketergantungan anda berencana menggunakan bekerja pada Python 3, anda harus menggunakan Python 3. Jika mereka tidak, pertimbangkan membantu usaha penghubungan, atau melekatkan ke Python 2."
+
+#: ../../../../sources/1.9/docs/faq/install.txt:75
+msgid ""
+"Since newer versions of Python are often faster, have more features, and are"
+" better supported, all else being equal, we recommend that you use the "
+"latest 2.x.y or 3.x.y release."
+msgstr "Sejak versi terbaru dari Python sering tercepat, mempunyai fitur lebih, dan dukungan terbaik, semua menjadi sama, kami menganjurkan bahwa anda menggunakan terbitan 2.x.y atau 3.x.y terakhir."
+
+#: ../../../../sources/1.9/docs/faq/install.txt:79
+msgid ""
+"You don't lose anything in Django by using an older release, but you don't "
+"take advantage of the improvements and optimizations in newer Python "
+"releases. Third-party applications for use with Django are, of course, free "
+"to set their own version requirements."
+msgstr "Anda tidak kehilangan apapun di Django dengan menggunakan sebuah terbitan lama, tetapi anda tidak dapat mengambil keuntungan dari perbaikan dan optimalisasi di terbitan Python terbaru. Aplikasi pihak-ketiga untuk digunakan dengan Django, tentu saja, bebas menyetel persyaratan versi mereka sendiri."
+
+#: ../../../../sources/1.9/docs/faq/install.txt:85
+msgid "Should I use the stable version or development version?"
+msgstr "Haruskah Saya menggunakan versi stabil atau versi pengembangan?"
+
+#: ../../../../sources/1.9/docs/faq/install.txt:87
+msgid ""
+"Generally, if you're using code in production, you should be using a stable "
+"release. The Django project publishes a full stable release every nine "
+"months or so, with bugfix updates in between. These stable releases contain "
+"the API that is covered by our backwards compatibility guarantees; if you "
+"write code against stable releases, you shouldn't have any problems "
+"upgrading when the next official version is released."
+msgstr "Umumnya, jika anda sedang menggunakan kode di produksi, anda harus menggunakan terbitan stabil. Proyek Django menerbitkan terbitan stabil penuh setiap sembilan bukan atau lebih, dengan pembaharuan perbaikan kesalahan diantaranya. Terbitan stabil ini mengandung API yang melingkupi jaminan kesesuaian kebelakang; jika anda menulis kode terhadap terbitan stabil, anda tidak harus mempunyai masalah mengingkatkan ketika versi resmi selanjutnya terbit."
+
+#: ../../../../sources/1.9/docs/faq/models.txt:3
+msgid "FAQ: Databases and models"
+msgstr "FAQ: Basisdata dan model"
+
+#: ../../../../sources/1.9/docs/faq/models.txt:8
+msgid "How can I see the raw SQL queries Django is running?"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:10
+msgid ""
+"Make sure your Django :setting:`DEBUG` setting is set to ``True``. Then, "
+"just do this::"
+msgstr "Pastikan pengaturan :setting:`DEBUG` Django anda disetel ke ``True``. Lalu, lakukan ini::"
+
+#: ../../../../sources/1.9/docs/faq/models.txt:18
+msgid ""
+"``connection.queries`` is only available if :setting:`DEBUG` is ``True``. "
+"It's a list of dictionaries in order of query execution. Each dictionary has"
+" the following::"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:25
+msgid ""
+"``connection.queries`` includes all SQL statements -- INSERTs, UPDATES, "
+"SELECTs, etc. Each time your app hits the database, the query will be "
+"recorded."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:28
+msgid ""
+"If you are using :doc:`multiple databases</topics/db/multi-db>`, you can use"
+" the same interface on each member of the ``connections`` dictionary::"
+msgstr "Jika anda sedang menggunakan :doc:`multiple databases</topics/db/multi-db>`, anda dapat menggunakan antarmuka sama pada setiap anggota dari kamus ``connections``::"
+
+#: ../../../../sources/1.9/docs/faq/models.txt:34
+msgid ""
+"If you need to clear the query list manually at any point in your functions,"
+" just call ``reset_queries()``, like this::"
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:41
+msgid "Can I use Django with a pre-existing database?"
+msgstr "Dapatkah Saya menggunakan Django dengan basisdata sudah ada?"
+
+#: ../../../../sources/1.9/docs/faq/models.txt:43
+msgid ""
+"Yes. See :doc:`Integrating with a legacy database </howto/legacy-"
+"databases>`."
+msgstr "Ya. Lihat :doc:`memadukan dengan warisan basisdata </howto/legacy-databases>`."
+
+#: ../../../../sources/1.9/docs/faq/models.txt:46
+msgid "If I make changes to a model, how do I update the database?"
+msgstr "Jika Saya membuat perubahan pada model, bagaimana Saya memperbaharui basisdata?"
+
+#: ../../../../sources/1.9/docs/faq/models.txt:48
+msgid ""
+"Take a look at Django's support for :mod:`schema migrations "
+"<django.db.migrations>`."
+msgstr "Lihatlah pada dukungan Django untuk :mod:`skema perpindahan <django.db.migrations>`."
+
+#: ../../../../sources/1.9/docs/faq/models.txt:51
+msgid ""
+"If you don't mind clearing data, your project's ``manage.py`` utility has a "
+":djadmin:`flush` option to reset the database to the state it was in "
+"immediately after :djadmin:`migrate` was executed."
+msgstr "Jika anda tidak keberatan membersihkan data, alat ``manage.py`` proyek anda mempunyai pilihan :djadmin:`flush` untuk mengatur kembali basisdata ke keadaan nya dengan segera setelah :djadmin:`migrate` dijalankan."
+
+#: ../../../../sources/1.9/docs/faq/models.txt:56
+msgid "Do Django models support multiple-column primary keys?"
+msgstr "Apakah model Django mendukung primary key banyak kolom?"
+
+#: ../../../../sources/1.9/docs/faq/models.txt:58
+msgid "No. Only single-column primary keys are supported."
+msgstr "Tidak. Hanya primary key kolom-tunggal yang didukung."
+
+#: ../../../../sources/1.9/docs/faq/models.txt:60
+msgid ""
+"But this isn't an issue in practice, because there's nothing stopping you "
+"from adding other constraints (using the ``unique_together`` model option or"
+" creating the constraint directly in your database), and enforcing the "
+"uniqueness at that level. Single-column primary keys are needed for things "
+"such as the admin interface to work; e.g., you need a simple way of being "
+"able to specify an object to edit or delete."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/models.txt:68
+msgid "Does Django support NoSQL databases?"
+msgstr "Apakah Django mendukung basisdata NoSQL?"
+
+#: ../../../../sources/1.9/docs/faq/models.txt:70
+msgid ""
+"NoSQL databases are not officially supported by Django itself. There are, "
+"however, a number of side project and forks which allow NoSQL functionality "
+"in Django, like `Django non-rel`_."
+msgstr "Basisdata NoSQL tidak secara resmi didukung oleh Django itu sendiri. Ada, bagaimanapun, sejumlah proyek samping dan cabang yang mengizinkan fungsi NoSQL di Django, seperti `Django non-rel`_."
+
+#: ../../../../sources/1.9/docs/faq/models.txt:74
+msgid ""
+"You can also take a look on `the wiki page`_ which discusses some "
+"alternatives."
+msgstr "Anda dapat juga melihat di `halaman wiki`_ yang mengobrolkan beberapa alternatif."
+
+#: ../../../../sources/1.9/docs/faq/models.txt:80
+msgid ""
+"How do I add database-specific options to my CREATE TABLE statements, such "
+"as specifying MyISAM as the table type?"
+msgstr "Bagaimana Saya menambah pilihan khusus-basisdata ke pernyataan CREATE TABLE saya, seperti menentukan MyISAM sebagai jenis tabel?"
+
+#: ../../../../sources/1.9/docs/faq/models.txt:82
+msgid ""
+"We try to avoid adding special cases in the Django code to accommodate all "
+"the database-specific options such as table type, etc. If you'd like to use "
+"any of these options, create a migration with a "
+":class:`~django.db.migrations.operations.RunSQL` operation that contains "
+"``ALTER TABLE`` statements that do what you want to do."
+msgstr "Kami mencoba menghidnari menambahkan kasus khusus di kode Django untuk menampung semua pilihan basisdata-khusus seperti jenis tabel, dll. Jika anda ingin menggunakan salah satu pilihan ini, buat perpindahan dengan operasi :class:`~django.db.migrations.operations.RunSQL` yang mengandung pernyataan ``ALTER TABLE`` yang melakukan apa anda ingin lakukan."
+
+#: ../../../../sources/1.9/docs/faq/models.txt:88
+msgid ""
+"For example, if you're using MySQL and want your tables to use the MyISAM "
+"table type, use the following SQL::"
+msgstr "Sebagai contoh, jika anda sedang menggunakan MySQL dan ingin tabel anda menggunakan jenis tabel MyISAM, gunakan SQL berikut::"
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:3
+msgid "Troubleshooting"
+msgstr "Menyelesaikan masalah"
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:5
+msgid ""
+"This page contains some advice about errors and problems commonly "
+"encountered during the development of Django applications."
+msgstr "Halaman ini mengandung beberapa saran tentang kesalahan dan masalah umum dihadapi selama pengembangan aplikasi Django."
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:11
+msgid "Problems running django-admin"
+msgstr "Masalah menjalankan admin-django"
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:14
+msgid "\"command not found: django-admin\""
+msgstr "\"perintah tidak ditemukan: admin-django\""
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:16
+msgid ""
+":doc:`django-admin </ref/django-admin>` should be on your system path if you"
+" installed Django via ``python setup.py``. If it's not on your path, you can"
+" find it in ``site-packages/django/bin``, where ``site-packages`` is a "
+"directory within your Python installation. Consider symlinking to :doc"
+":`django-admin </ref/django-admin>` from some place on your path, such as "
+":file:`/usr/local/bin`."
+msgstr ":doc:`django-admin </ref/django-admin>` harus di jalur sistem anda jika anda memasang Django melalui ``python setup.py``. Jika itu tidak di jalur anda, anda dapat menemukannya di ``site-packages/django/bin``, dimana ``site-packages`` adalah direktori didalam pemasangan Python anda. Pertimbangkan tautan simbolis pada :doc:`django-admin </ref/django-admin>` dari beberapa tempat di jalur anda, seperti :file:`/usr/local/bin`."
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:23
+msgid ""
+"If ``django-admin`` doesn't work but ``django-admin.py`` does, you're "
+"probably using a version of Django that doesn't match the version of this "
+"documentation. ``django-admin`` is new in Django 1.7."
+msgstr "Jika ``django-admin`` tidak bekerja tetapi ``django-admin.py`` bekerja, anda mungkin menggunakan versi DJango yang tidak cocok versi dari dokumentasi ini. ``django-admin`` adalah baru di Django 1.7."
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:28
+msgid "Mac OS X permissions"
+msgstr "Perizinan Mac OS X"
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:30
+msgid ""
+"If you're using Mac OS X, you may see the message \"permission denied\" when"
+" you try to run ``django-admin``. This is because, on Unix-based systems "
+"like OS X, a file must be marked as \"executable\" before it can be run as a"
+" program. To do this, open Terminal.app and navigate (using the ``cd`` "
+"command) to the directory where :doc:`django-admin </ref/django-admin>` is "
+"installed, then run the command ``sudo chmod +x django-admin``."
+msgstr "Jika anda sedang menggunakan Mac OS X, anda mungkin melihat pesan \"perizinan ditolak\" ketika anda mencoba menjalankan ``django-admin``. Ini karena, pada sistem berbasis Unix seperti OS X, sebuah berkas harus ditandai sebagai \"executable\" sebelum dia dapat dijalankan sebagai sebuah program. Untuk melakukan ini, buka Terminal.app dan navigasikan (menggunakan perintah ``cd``) ke direktori dimana :doc:`django-admin </ref/django-admin>` terpasang, kemudian jalankan perintah ``sudo chmod +x django-admin``."
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:38
+msgid "Miscellaneous"
+msgstr "Bermacam-macam"
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:41
+msgid "I'm getting a ``UnicodeDecodeError``. What am I doing wrong?"
+msgstr "Saya mendapatkan ``UnicodeDecodeError``. Apa yang saya lakukan salah?"
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:43
+msgid ""
+"This class of errors happen when a bytestring containing non-ASCII sequences"
+" is transformed into a Unicode string and the specified encoding is "
+"incorrect. The output generally looks like this::"
+msgstr "Kelas kesalahan ini terjadi ketika sebuah bytestring mengandung urutan bukan-ASCII dirubah menjadi deretan karakter Unicode dan penyandian ditentukan tidak benar. Keluaran umumnya kelihatan seperti ini::"
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:50
+msgid ""
+"The resolution mostly depends on the context, however here are two common "
+"pitfalls producing this error:"
+msgstr "Resolusi itu sebagian besar tergantung pada konteks, namun ada dua kesalahan umum menghasilkan kesalahan ini:"
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:53
+msgid ""
+"Your system locale may be a default ASCII locale, like the \"C\" locale on "
+"UNIX-like systems (can be checked by the ``locale`` command). If it's the "
+"case, please refer to your system documentation to learn how you can change "
+"this to a UTF-8 locale."
+msgstr "Sitem lokal anda mungkin awalnya ASCII lokal, seperti lokal \"C\" pada sistem seperti-UNIX (dapat diperiksa dengan perintah ``locale``). Jika itu kasusnya, silahkan mengacu ke dokumentasi sistem anda untuk mempelajari bagaimana anda dapat merubah ini menjadi lokal UTF-8."
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:58
+msgid "You created raw bytestrings, which is easy to do on Python 2::"
+msgstr "Anda membuat bytestring mentah, yang mudah melakukannya pada Python 2::"
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:62
+msgid ""
+"Either use the ``u''`` prefix or even better, add the ``from __future__ "
+"import unicode_literals`` line at the top of your file so that your code "
+"will be compatible with Python 3.2 which doesn't support the ``u''`` prefix."
+msgstr ""
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:67
+msgid "Related resources:"
+msgstr "Sumber daya terkait:"
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:69
+msgid ":doc:`Unicode in Django </ref/unicode>`"
+msgstr ":doc:`Unicode di Django </ref/unicode>`"
+
+#: ../../../../sources/1.9/docs/faq/troubleshooting.txt:70
+msgid "https://wiki.python.org/moin/UnicodeDecodeError"
+msgstr "https://wiki.python.org/moin/UnicodeDecodeError"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:3
+msgid "FAQ: Using Django"
+msgstr "FAQ: Menggunakan Django"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:6
+msgid "Why do I get an error about importing DJANGO_SETTINGS_MODULE?"
+msgstr "Kenapa saya mendapatkan kesalahan tentang mengimpor DJANGO_SETTINGS_MODULE?"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:8
+msgid "Make sure that:"
+msgstr "Pastikan itu:"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:10
+msgid ""
+"The environment variable DJANGO_SETTINGS_MODULE is set to a fully-qualified "
+"Python module (i.e. \"mysite.settings\")."
+msgstr "Variabel lingkungan DJANGO_SETTINGS_MODULE disetel ke modul Phyton sepenuhnya-berkualitas (yaitu \"mysite.settings\")."
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:13
+msgid ""
+"Said module is on ``sys.path`` (``import mysite.settings`` should work)."
+msgstr "Modul said ada di ``sys.path`` (``impor mysite.settings`` seharusnya bekerja)."
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:15
+msgid "The module doesn't contain syntax errors (of course)."
+msgstr "Modul tidak mengandung kesalahan sintaks (tentu saja)."
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:18
+msgid "I can't stand your template language. Do I have to use it?"
+msgstr " Saya tidak tahan bahasa cetakan anda. Apakah Saya harus menggunakannya?"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:20
+msgid ""
+"We happen to think our template engine is the best thing since chunky bacon,"
+" but we recognize that choosing a template language runs close to religion. "
+"There's nothing about Django that requires using the template language, so "
+"if you're attached to Jinja2, Mako, or whatever, feel free to use those."
+msgstr "Kami berpikir mesin cetakan kami adalah hal terbaik sejak chunky bacon, tetapi kami mengenali bahwa memilih sebuah bahasa cetakan berjalan dekat ke agama. Tidak ada tentang Django yang membutuhkan menggunakan bahasa cetakan, jadi jika anda sedang dilampirkan ke Jinja2, Mako, atau apapun, merasa bebas untuk menggunakan mereka."
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:26
+msgid "Do I have to use your model/database layer?"
+msgstr "Apakah saya harus menggunakan lapisan model/basisdata?"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:28
+msgid ""
+"Nope. Just like the template system, the model/database layer is decoupled "
+"from the rest of the framework."
+msgstr "Tidak, Hanya seperti sistem cetakan, lapisan model/basisdata dispisahkan dari sisa kerangka."
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:31
+msgid ""
+"The one exception is: If you use a different database library, you won't get"
+" to use Django's automatically-generated admin site. That app is coupled to "
+"the Django database layer."
+msgstr "Satu pengecualian adalah: Jika anda menggunakan pustaka basisdata beda, anda tidak akan dapat menggunakan situs admin dibangkitkan-otomatis Django. Aplikasi itu berpasangan pada lapisan basisdata Django."
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:36
+msgid "How do I use image and file fields?"
+msgstr "Bagaimana Saya menggunakan bidang gambar dan berkas?"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:38
+msgid ""
+"Using a :class:`~django.db.models.FileField` or an "
+":class:`~django.db.models.ImageField` in a model takes a few steps:"
+msgstr "Menggunakan sebuah :class:`~django.db.models.FileField` atau sebuah :class:`~django.db.models.ImageField` di model memakan dua langkah:"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:41
+msgid ""
+"In your settings file, you'll need to define :setting:`MEDIA_ROOT` as the "
+"full path to a directory where you'd like Django to store uploaded files. "
+"(For performance, these files are not stored in the database.) Define "
+":setting:`MEDIA_URL` as the base public URL of that directory. Make sure "
+"that this directory is writable by the Web server's user account."
+msgstr "Dalam berkas pengaturan anda, anda akan butuh menentukan :setting:`MEDIA_ROOT` sebagai jalur penuh ke direktori dimana anda ingin menyimpan berkas terunggah. (Untuk penampilan, berkas-berkas ini tidak disimpan di basisdata.) Tentukan :setting:`MEDIA_URL` sebagai dasar URL umum dari direktori itu. pastikan bahwa direktori ini dapat ditulis oleh Jaringan akun pengguna peladen."
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:48
+msgid ""
+"Add the :class:`~django.db.models.FileField` or "
+":class:`~django.db.models.ImageField` to your model, defining the "
+":attr:`~django.db.models.FileField.upload_to` option to specify a "
+"subdirectory of :setting:`MEDIA_ROOT` to use for uploaded files."
+msgstr "Tambah :class:`~django.db.models.FileField` atau :class:`~django.db.models.ImageField` ke model anda, menetapkan pilihan :attr:`~django.db.models.FileField.upload_to` untuk menentukan sebuah subdirektori dari :setting:`MEDIA_ROOT` untuk digunakan untuk berkas terunggah."
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:53
+msgid ""
+"All that will be stored in your database is a path to the file (relative to "
+":setting:`MEDIA_ROOT`). You'll most likely want to use the convenience "
+":attr:`~django.db.models.fields.files.FieldFile.url` attribute provided by "
+"Django. For example, if your :class:`~django.db.models.ImageField` is called"
+" ``mug_shot``, you can get the absolute path to your image in a template "
+"with ``{{ object.mug_shot.url }}``."
+msgstr "Semua itu akan disimpan dalam basisdata anda adalah jalur ke berkas (tergantung ke :setting:`MEDIA_ROOT`). Anda akan ingin menggunakan atribut :attr:`~django.db.models.fields.files.FieldFile.url` meyakinkan disediakan oleh Django. Sebagai contoh, jika :class:`~django.db.models.ImageField` anda dipanggil ``mug_shot``, anda dapat mendapatkan jalur mutlak ke gambar anda di cetakan dengan ``{{ object.mug_shot.url }}``."
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:62
+msgid "How do I make a variable available to all my templates?"
+msgstr "Bagaimana Saya membuat variabel tersedia ke semua cetakan saya?"
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:64
+msgid ""
+"Sometimes your templates just all need the same thing. A common example "
+"would be dynamically-generated menus. At first glance, it seems logical to "
+"simply add a common dictionary to the template context."
+msgstr "Terkadang cetakan anda hanya semua butuh hal sama. Sebuah contoh umum akan membangkitkan-dinamis menu. Pada pandangan pertama, kelihatannya logis untuk menambah kamus umum ke cetakan konteks."
+
+#: ../../../../sources/1.9/docs/faq/usage.txt:68
+msgid ""
+"The correct solution is to use a ``RequestContext``. Details on how to do "
+"this are here: :ref:`subclassing-context-requestcontext`."
+msgstr "Pemecahan benar adalah menggunakan ``RequestContext``. Rincian pada bagaimana melakukan ini adalah disini: :ref:`subclassing-context-requestcontext`."

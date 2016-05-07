@@ -1,0 +1,654 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# 
+# Translators:
+# Fery Setiawan <gembelweb@gmail.com>, 2015-2016
+msgid ""
+msgstr ""
+"Project-Id-Version: django-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-06 18:12-0500\n"
+"PO-Revision-Date: 2016-01-27 03:43+0000\n"
+"Last-Translator: Fery Setiawan <gembelweb@gmail.com>\n"
+"Language-Team: Indonesian (http://www.transifex.com/django/django-docs/language/id/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: id\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../../../sources/1.9/docs/misc/api-stability.txt:3
+msgid "API stability"
+msgstr "Keseimbangan API"
+
+#: ../../../../sources/1.9/docs/misc/api-stability.txt:5
+msgid ""
+"Django promises API stability and forwards-compatibility since version 1.0. "
+"In a nutshell, this means that code you develop against a version of Django "
+"will continue to work with future releases. You may need to make minor "
+"changes when upgrading the version of Django your project uses: see the "
+"\"Backwards incompatible changes\" section of the :doc:`release note "
+"</releases/index>` for the version or versions to which you are upgrading."
+msgstr "Django menjanjikan kestabilan API dan  kesesuaian-kedepan sejak versi 1.0. Dalam cangkang kacang, ini berarti bahwa kode anda kembangkan terhadap versi DJango akan tetap bekerja dengan terbitan akan datang. Anda butuh membuat perubahan kecil ketika meningkatkan versi Django dari proyek anda gunakan: lihat bagian \"Perubahan ketidaksesuaian kebelakang\" dari :doc:`catatan terbitan </releases/index>` untuk versi atau versi dimana anda tingkatkan."
+
+#: ../../../../sources/1.9/docs/misc/api-stability.txt:13
+msgid "What \"stable\" means"
+msgstr "Apa \"stabil\" berarti"
+
+#: ../../../../sources/1.9/docs/misc/api-stability.txt:15
+msgid "In this context, stable means:"
+msgstr "Daam konteks ini, stabil berarti:"
+
+#: ../../../../sources/1.9/docs/misc/api-stability.txt:17
+msgid ""
+"All the public APIs (everything in this documentation) will not be moved or "
+"renamed without providing backwards-compatible aliases."
+msgstr "Semua API umum (semuanya di dokumentasi ini) tidak akan dipindahkan atau dinamai kembali tanpa menyediakan alias belakang-sesuai."
+
+#: ../../../../sources/1.9/docs/misc/api-stability.txt:20
+msgid ""
+"If new features are added to these APIs -- which is quite possible -- they "
+"will not break or change the meaning of existing methods. In other words, "
+"\"stable\" does not (necessarily) mean \"complete.\""
+msgstr "Jika fitur baru ini ditambahkan ke API ini -- yang sangat memungkinkan -- mereka akan tidak rusak atau merubah arti dari cara yang ada. Dengan kata lain, \"stabil\" tidak (perlu) berarti \"lengkap.\""
+
+#: ../../../../sources/1.9/docs/misc/api-stability.txt:24
+msgid ""
+"If, for some reason, an API declared stable must be removed or replaced, it "
+"will be declared deprecated but will remain in the API for at least two "
+"feature releases. Warnings will be issued when the deprecated method is "
+"called."
+msgstr "Jika, untuk beberapa alasan, sebuah API dinyatakan stabil harus dipindahkan atau diganti, dia akan dinyatakan usang tetapi akan tetap berada di API unuk setidaknya dua fitur terbitan. Peringatan akan ditampilkan ketika cara usang dipanggil."
+
+#: ../../../../sources/1.9/docs/misc/api-stability.txt:29
+msgid ""
+"See :ref:`official-releases` for more details on how Django's version "
+"numbering scheme works, and how features will be deprecated."
+msgstr "Lihat :ref:`official-releases` utnuk lebih rinci bagaimana skema penomoran versi Django bekerja, dan bagaimana fitur akan diusangkan."
+
+#: ../../../../sources/1.9/docs/misc/api-stability.txt:32
+msgid ""
+"We'll only break backwards compatibility of these APIs if a bug or security "
+"hole makes it completely unavoidable."
+msgstr "Kami hanya merusak kecocokan sebelumnya dari API ini jika sebuah lubang kesalahan atau keamanan membuatnya tidak dapat dihindari."
+
+#: ../../../../sources/1.9/docs/misc/api-stability.txt:36
+msgid "Stable APIs"
+msgstr "API Stabil"
+
+#: ../../../../sources/1.9/docs/misc/api-stability.txt:38
+msgid ""
+"In general, everything covered in the documentation -- with the exception of"
+" anything in the :doc:`internals area </internals/index>` is considered "
+"stable."
+msgstr "Pada umumnya, semaunya dicakupi di dokumentasi -- dengan pengecualian dari apapun di :doc:`kawasan internal </internals/index>` adalah dianggap stabil."
+
+#: ../../../../sources/1.9/docs/misc/api-stability.txt:42
+msgid "Exceptions"
+msgstr "Pengecualian"
+
+#: ../../../../sources/1.9/docs/misc/api-stability.txt:44
+msgid ""
+"There are a few exceptions to this stability and backwards-compatibility "
+"promise."
+msgstr "Ada beberapa pengecualian pada kestabilan ini dan janji kecocokan-belakang."
+
+#: ../../../../sources/1.9/docs/misc/api-stability.txt:48
+msgid "Security fixes"
+msgstr "Perbaikan keamanan"
+
+#: ../../../../sources/1.9/docs/misc/api-stability.txt:50
+msgid ""
+"If we become aware of a security problem -- hopefully by someone following "
+"our :ref:`security reporting policy <reporting-security-issues>` -- we'll do"
+" everything necessary to fix it. This might mean breaking backwards "
+"compatibility; security trumps the compatibility guarantee."
+msgstr "Jika kami menjadi waspada dari masalah keamanan -- semoga oleh seseorang mengikuti :ref:`kebijakan pelaporan keamanan <reporting-security-issues>` kami -- kami akan melakukan apapun yang dibutuhkan untuk memperbaikinya.  Ini mungkin berarti merusak kecocokan sebelumnya; keamanan mengalahkan jaminan kecocokan."
+
+#: ../../../../sources/1.9/docs/misc/api-stability.txt:56
+msgid "APIs marked as internal"
+msgstr "API ditandai sebagai internal"
+
+#: ../../../../sources/1.9/docs/misc/api-stability.txt:58
+msgid "Certain APIs are explicitly marked as \"internal\" in a couple of ways:"
+msgstr "Beberapa API secara eksplisit ditandai sebagai \"internal\" dalam sepsang jalan:"
+
+#: ../../../../sources/1.9/docs/misc/api-stability.txt:60
+msgid ""
+"Some documentation refers to internals and mentions them as such. If the "
+"documentation says that something is internal, we reserve the right to "
+"change it."
+msgstr "Beberapa dokumentasi mengacu ke internal dan menyebutkan mereka seperti itu. Jika dokumentasi mengatakan sesuatu adalah internal, kami berhak untuk mengubahnya."
+
+#: ../../../../sources/1.9/docs/misc/api-stability.txt:64
+msgid ""
+"Functions, methods, and other objects prefixed by a leading underscore "
+"(``_``). This is the standard Python way of indicating that something is "
+"private; if any method starts with a single ``_``, it's an internal API."
+msgstr "Fungsi, cara, dan obyek lain diawali dengan dipimpin garis bawah (``_``). Ini adalah standar cara Phyton dari mengindikasikan bahwa sesuatu adalah private; jika cara apapun mulai dengan ``_`` tunggal, itu adalah sebuah API internal."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:3
+msgid "Design philosophies"
+msgstr "Filosofi rancangan"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:5
+msgid ""
+"This document explains some of the fundamental philosophies Django's "
+"developers have used in creating the framework. Its goal is to explain the "
+"past and guide the future."
+msgstr "Dokumen ini menjelaskan beberapa dari filosofi dasar pengembang Django yang telah digunakan dalam membuat kerangka. Tujuannya adalah menjelaskan yang lampau dan memandu masa akan datang."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:10
+msgid "Overall"
+msgstr "Keseluruhan"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:15
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:155
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:296
+msgid "Loose coupling"
+msgstr "Kehilangan sambungan"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:19
+msgid ""
+"A fundamental goal of Django's stack is `loose coupling and tight "
+"cohesion`_. The various layers of the framework shouldn't \"know\" about "
+"each other unless absolutely necessary."
+msgstr "Sasaran dasar tumpukan Django adalah `kehilangan sambungan dan mengencangkan kepaduan`_. Bermacam lapisan dari kerangka jangan \"mengetahui\" tentang satu sama lain meskipun sangat butuh."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:23
+msgid ""
+"For example, the template system knows nothing about Web requests, the "
+"database layer knows nothing about data display and the view system doesn't "
+"care which template system a programmer uses."
+msgstr "Sebagai contoh, sistem cetakan tidak mengetahui tentang permintaan jaringan, lapisan basisdata tidak mengetahui tentang tampilan data dan layar sistem tidak perduli sistem cetakan mana yang pemrogram gunakan."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:27
+msgid ""
+"Although Django comes with a full stack for convenience, the pieces of the "
+"stack are independent of another wherever possible."
+msgstr "Meskipun Django datang dengan tumpukan penuh keyakinan, potongan dari tumpukan adalah berdiri sendiri dari lainnya sedapat mungkin."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:35
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:315
+msgid "Less code"
+msgstr "Kode sedikit"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:37
+msgid ""
+"Django apps should use as little code as possible; they should lack "
+"boilerplate. Django should take full advantage of Python's dynamic "
+"capabilities, such as introspection."
+msgstr "Aplikasi Django harus menggunakan sedikit kode sebisa mungkin; mereka kekurangan boilerplate. Django harus mengambil keuntungan penuh dari kemampuan dinamis Phyton, seperti interospeksi."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:44
+msgid "Quick development"
+msgstr "Pengembangan cepat"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:46
+msgid ""
+"The point of a Web framework in the 21st century is to make the tedious "
+"aspects of Web development fast. Django should allow for incredibly quick "
+"Web development."
+msgstr "Titik dari kerangka Jaringan di abad 21 adalah membuat aspek membosankan dari pengembangan Jaringan cepat. Django harus mengizinkan untuk pengembangan luar biasa jaringan cepat."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:53
+msgid "Don't repeat yourself (DRY)"
+msgstr "Jangan Ulangi Diri anda (JUDA)"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:59
+msgid ""
+"Every distinct concept and/or piece of data should live in one, and only "
+"one, place. Redundancy is bad. Normalization is good."
+msgstr "Setiap konsep berbeda dan/atau potongan data harus berada dalam satu, dan hanya satu, tempat. Pengulangan adalah buruk. Normalisasi adalah bagus."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:62
+msgid ""
+"The framework, within reason, should deduce as much as possible from as "
+"little as possible."
+msgstr "Kerangka, dalam alasan, harus menyimpulkan sebanyak mungkin dari sekecil mungkin."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:67
+msgid "The `discussion of DRY on the Portland Pattern Repository`__"
+msgstr "`obrolan DRY di Portland Pattern Repository`__"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:74
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:95
+msgid "Explicit is better than implicit"
+msgstr "Eksplisit lebih baik dari pada implisit"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:76
+msgid ""
+"This is a core Python principle listed in :pep:`20`, and it means Django "
+"shouldn't do too much \"magic.\" Magic shouldn't happen unless there's a "
+"really good reason for it. Magic is worth using only if it creates a huge "
+"convenience unattainable in other ways, and it isn't implemented in a way "
+"that confuses developers who are trying to learn how to use the feature."
+msgstr "Ini adalah prinsip inti Phyton terdaftar di :pep:`20`, dan itu berarti Django tidak harus melakukan banyak \"magic.\" Magic jangan terjadi meskipun terdapat alasan sangat bagus. magic adalah berharga menggunakan jika dia membuat kenyamanan besar tidak terjangkau di jalan lain, dan dia tidak diterapkan di jalan yang membingungkan pengembang yang mencoba mempelajari bagaimana menggunakan fitur."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:85
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:322
+msgid "Consistency"
+msgstr "Konsistensi"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:87
+msgid ""
+"The framework should be consistent at all levels. Consistency applies to "
+"everything from low-level (the Python coding style used) to high-level (the "
+"\"experience\" of using Django)."
+msgstr "Kerangka harus konsisten pada semua tingkatan. Konsistensi berlaku ke semua dari tingkatan-rendah (menggunakan gaya pengkodean Phyton) sampai tingkatan-tinggi (\"pengalaman\" menggunakan Django)."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:92
+msgid "Models"
+msgstr "Model"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:97
+msgid ""
+"Fields shouldn't assume certain behaviors based solely on the name of the "
+"field. This requires too much knowledge of the system and is prone to "
+"errors. Instead, behaviors should be based on keyword arguments and, in some"
+" cases, on the type of the field."
+msgstr "Bidang jangan dianggap kebiasaan tertentu berdasarkan hanya pada nama bidang. Ini membutuhkan terlalu banyak pengetahuan dari sistem dan cenderung menjadi kesalahan. Malahan, kebiasaan harus berdasarkan pada argumen kata kunci dan, di beberapa kasus, pada jenis bidang."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:103
+msgid "Include all relevant domain logic"
+msgstr "Sertakan semua ranah logika yang terhubung"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:105
+msgid ""
+"Models should encapsulate every aspect of an \"object,\" following Martin "
+"Fowler's `Active Record`_ design pattern."
+msgstr "Model harus merangkum setiap aspek dari sebuah \"obyek,\" mengikuti pola rancangan `Active Record`_ Fowler."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:108
+msgid ""
+"This is why both the data represented by a model and information about it "
+"(its human-readable name, options like default ordering, etc.) are defined "
+"in the model class; all the information needed to understand a given model "
+"should be stored *in* the model."
+msgstr "Ini mengapa kedua data dibawakan oleh model dan informasi mengenai dia (dia nama yang dapat dibaca manusia, pilihan seperti pengurutan awal, dll.) ditentukan di kelas model; semua informasi yang dibutuhkan untuk memahami model yang diberikan harus disimpan *di dalam* model."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:116
+msgid "Database API"
+msgstr "API Basisdata"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:118
+msgid "The core goals of the database API are:"
+msgstr "Sasaran inti dari API basisdata adalah:"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:121
+msgid "SQL efficiency"
+msgstr "Efesiensi SQL"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:123
+msgid ""
+"It should execute SQL statements as few times as possible, and it should "
+"optimize statements internally."
+msgstr "Dia harus menjalankan pernyataan SQL sedikit waktu mungkin, dan dia harus mengoptimalkan pernyataan secara internal."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:126
+msgid ""
+"This is why developers need to call ``save()`` explicitly, rather than the "
+"framework saving things behind the scenes silently."
+msgstr "Ini adalah mengapa pengembang butuh memanggil ``save()`` secara eksplisit, dari pada kerangka menyimpan hal-hal dibelakang layar secara sembunyi."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:129
+msgid ""
+"This is also why the ``select_related()`` ``QuerySet`` method exists. It's "
+"an optional performance booster for the common case of selecting \"every "
+"related object.\""
+msgstr "Ini juga mengapa cara ``select_related()`` ``QuerySet`` ada. Dia adalah sebauh pilihan pendorong penampilan untuk kasus umum dari memilih \"setiap obyek terkaut.\""
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:134
+msgid "Terse, powerful syntax"
+msgstr "Terse, sintaks kuat"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:136
+msgid ""
+"The database API should allow rich, expressive statements in as little "
+"syntax as possible. It should not rely on importing other modules or helper "
+"objects."
+msgstr "API basisdata harus mengijinkan kaya, pernyataan ekspresif sebagai sintaks kecil sebisa mungkin. Itu harus tidak bergantung pada mengimpor modul lain atau obyek pembantu."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:139
+msgid ""
+"Joins should be performed automatically, behind the scenes, when necessary."
+msgstr "Penggabungan harus dilakukan otomatis, dibelakang layar, ketika dibutuhkan."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:141
+msgid ""
+"Every object should be able to access every related object, systemwide. This"
+" access should work both ways."
+msgstr "Setiap obyek harus mampu mengakses setiap obyek terhubung, sistem lebar. Akses ini harus bekerja dikedua cara."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:145
+msgid "Option to drop into raw SQL easily, when needed"
+msgstr "Pilihan menjatuhkan kedalam SQL mentah dengan mudah, ketika dibutuhkan."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:147
+msgid ""
+"The database API should realize it's a shortcut but not necessarily an end-"
+"all-be-all. The framework should make it easy to write custom SQL -- entire "
+"statements, or just custom ``WHERE`` clauses as custom parameters to API "
+"calls."
+msgstr "API basisdata harus menyadari jalan pintasnya tetapi tidak perlu akhir-semua-akan-semua. Kerangka harus membuatnya mudah untuk menulis SQL penyesuaian -- seluruh pernyataan, atau hanya klausa ``WHERE`` penyesuaian sebagai parameter penyesuaian ke pemanggilan API."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:152
+msgid "URL design"
+msgstr "Rancangan URL"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:157
+msgid ""
+"URLs in a Django app should not be coupled to the underlying Python code. "
+"Tying URLs to Python function names is a Bad And Ugly Thing."
+msgstr "URL di aplikasi Django tidak boleh bergandengan ke kode Phyton pokok. Mengikat URL ke nama fungsi Phyton adalah Hal Buruk Dan Jelek."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:160
+msgid ""
+"Along these lines, the Django URL system should allow URLs for the same app "
+"to be different in different contexts. For example, one site may put stories"
+" at ``/stories/``, while another may use ``/news/``."
+msgstr "Bersama baris ini, sistem URL Django harus mengizinkan URL utnuk aplikasi sama menjadi berbeda di konteks berbeda. Sebagai contoh, satu situs mungkin menaruh cerita pada ``/stories/``, dimana lainnya mungkin menggunakan ``/news/``."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:165
+msgid "Infinite flexibility"
+msgstr "Fleksibilitas tidak terbatas"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:167
+msgid ""
+"URLs should be as flexible as possible. Any conceivable URL design should be"
+" allowed."
+msgstr "URL harus sefleksibel mungkin. Apapun rancangan URL yang dipikirkan harus diizinkan."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:171
+msgid "Encourage best practices"
+msgstr "Mendorong praktik terbaik"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:173
+msgid ""
+"The framework should make it just as easy (or even easier) for a developer "
+"to design pretty URLs than ugly ones."
+msgstr "Kerangka harus membuatnya semudah (atau bahkan lebih mudah) untuk pengembang merancang URL cantik daripada yang jelek."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:176
+msgid "File extensions in Web-page URLs should be avoided."
+msgstr "Berkas tambahan di URL halaman-Jaringan harus dihindari."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:178
+msgid "Vignette-style commas in URLs deserve severe punishment."
+msgstr "Koma gaya Vignette dalam URL pantas hukuman berat."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:183
+msgid "Definitive URLs"
+msgstr "URL pasti"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:187
+msgid ""
+"Technically, ``foo.com/bar`` and ``foo.com/bar/`` are two different URLs, "
+"and search-engine robots (and some Web traffic-analyzing tools) would treat "
+"them as separate pages. Django should make an effort to \"normalize\" URLs "
+"so that search-engine robots don't get confused."
+msgstr "Secara teknis, ``foo.com/bar`` dan ``foo.com/bar/`` adalah dua URL berbeda, dan robot mesin-pencari (dan beberapa alat penganalisa lalu lintas Jaringan) akan emmperlakukan mereka sebagai halaman terpisah. Django harus membuat sebuah usaha untuk \"menormalkan\" URL sehingga robot mesin-pencari tidak bingung."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:192
+msgid "This is the reasoning behind the :setting:`APPEND_SLASH` setting."
+msgstr "Ini adalah alasan dibelakang pengaturan :setting:`APPEND_SLASH`."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:195
+msgid "Template system"
+msgstr "Sistem cetakan"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:200
+msgid "Separate logic from presentation"
+msgstr "Pisahkan logika dari penyajian"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:202
+msgid ""
+"We see a template system as a tool that controls presentation and "
+"presentation-related logic -- and that's it. The template system shouldn't "
+"support functionality that goes beyond this basic goal."
+msgstr "Kami melihat sistem cetakan sebagai alat yang mengendalikan penyajian dan penyajian-logika terhubung -- dan itu dia. Sistem cetakan jangan mendukung fungsi yang pergi melebihi sasaran dasar ini."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:207
+msgid "Discourage redundancy"
+msgstr "Mencegah pengulangan"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:209
+msgid ""
+"The majority of dynamic websites use some sort of common sitewide design -- "
+"a common header, footer, navigation bar, etc. The Django template system "
+"should make it easy to store those elements in a single place, eliminating "
+"duplicate code."
+msgstr "Kebanyakan dari situs jaringan dinamis menggunakan beberapa urutan rancangan situs lebar umum -- kepala umum, kaku, batang navigasi, dll. Sistem cetakan Django harus membuatnya mudah untuk menyimpan unsur tersebut dalam tempat tunggal, menghilangkan kode ganda."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:214
+msgid ""
+"This is the philosophy behind :ref:`template inheritance <template-"
+"inheritance>`."
+msgstr "Ini adalah filosoi dibelakang :ref:`warisan cetakan <template-inheritance>`."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:218
+msgid "Be decoupled from HTML"
+msgstr "Dipisahkan dari HTML"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:220
+msgid ""
+"The template system shouldn't be designed so that it only outputs HTML. It "
+"should be equally good at generating other text-based formats, or just plain"
+" text."
+msgstr "Sistem cetakan jangan dirancang sehingga dia hanya mengeluarkan HTML. Dia harus sama bagus pada membangkitkan bentuk berbasis-teks, atau hanya teks polos."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:225
+msgid "XML should not be used for template languages"
+msgstr "XML jangan digunakan untuk cetakan bahasa"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:229
+msgid ""
+"Using an XML engine to parse templates introduces a whole new world of human"
+" error in editing templates -- and incurs an unacceptable level of overhead "
+"in template processing."
+msgstr "Menggunakan mesin XML untuk mengurai cetakan memperkenalkan seluruh dunia baru dari kesalahan manusia dalam menyunting cetakan -- dan  membuat sebuah tingkatan tidak diterima dari kelebihan pengolahan cetakan."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:234
+msgid "Assume designer competence"
+msgstr "Menganggap kemampuan perancang"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:236
+msgid ""
+"The template system shouldn't be designed so that templates necessarily are "
+"displayed nicely in WYSIWYG editors such as Dreamweaver. That is too severe "
+"of a limitation and wouldn't allow the syntax to be as nice as it is. Django"
+" expects template authors are comfortable editing HTML directly."
+msgstr "Sistem cetakan jangan dirancang sehingga cetakan perlu ditampilkan di penyunting WYSIWYG seperti Dreamweaver. Yang terlalu parah pembatasan dan tidak akan mengizinkan sintaks menjadi sebaik itu. Django mengharapkan cetakan penulis nyaman menyunting HTML secara langsung."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:242
+msgid "Treat whitespace obviously"
+msgstr "Perlakukan spasi dengan jelas"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:244
+msgid ""
+"The template system shouldn't do magic things with whitespace. If a template"
+" includes whitespace, the system should treat the whitespace as it treats "
+"text -- just display it. Any whitespace that's not in a template tag should "
+"be displayed."
+msgstr "Sistem cetakan jangan melakukan hal magic dengan spasi. Jika cetakan menyertakan spasi, sistem harus memperlakukan spasi seperti dia memperlakukan teks -- tampilkan dia. Spasi apapun yang bukan berada di etiket cetakan harus ditampilkan."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:250
+msgid "Don't invent a programming language"
+msgstr "Jangan menciptakan sebuah bahasa pemrograman"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:252
+msgid ""
+"The goal is not to invent a programming language. The goal is to offer just "
+"enough programming-esque functionality, such as branching and looping, that "
+"is essential for making presentation-related decisions. The :ref:`Django "
+"Template Language (DTL) <template-language-intro>` aims to avoid advanced "
+"logic."
+msgstr "Sasarannya bukan untuk membuat bahasa pemrograman. Sasarannya adalah menawarkan cukup fungsi mirip-pemrograman, seperti percabangan dan perulangan, yang pada dasarnya utnuk membuat keputusan penyajian-terhubung. :ref:`Django Template Language (DTL) <template-language-intro>` bertujuan untuk menghindari logika lanjut."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:257
+msgid ""
+"The Django template system recognizes that templates are most often written "
+"by *designers*, not *programmers*, and therefore should not assume Python "
+"knowledge."
+msgstr "Sistem cetakan Django mengenali bahwa cetakan paling sering ditulis oleh *perancang*, bukan *pemrogram*, dan karena itu jangan mengangap pengetahuan Pyton."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:262
+msgid "Safety and security"
+msgstr "Keselamatan dan keamanan"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:264
+msgid ""
+"The template system, out of the box, should forbid the inclusion of "
+"malicious code -- such as commands that delete database records."
+msgstr "Sistem cetakan, diluar kotak, harus melarang masuknya kode berbahaya -- seperti perintah yang menghapus rekaman basisdata."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:267
+msgid ""
+"This is another reason the template system doesn't allow arbitrary Python "
+"code."
+msgstr "Ini adalah alasan lain sistem cetakan tidak mengizinkan sewenang-wenang kode Pyton."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:270
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:328
+msgid "Extensibility"
+msgstr "Diperpanjang"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:272
+msgid ""
+"The template system should recognize that advanced template authors may want"
+" to extend its technology."
+msgstr "Sistem cetakan harus mengenali penulis cetakan lanjut mungkin ingin memperpanjang teknologinya."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:275
+msgid "This is the philosophy behind custom template tags and filters."
+msgstr "Ini adalah filosofi dibelakang etiket cetakan penyesuaian dan saringan."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:278
+msgid "Views"
+msgstr "View"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:281
+msgid "Simplicity"
+msgstr "Kemudahan"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:283
+msgid ""
+"Writing a view should be as simple as writing a Python function. Developers "
+"shouldn't have to instantiate a class when a function will do."
+msgstr "Menulis tampilan harus semudah menulis fungsi Phyton. Pengembang jangan meng instantiate sebuah kelas ketika fungsi akan melakukannya."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:287
+msgid "Use request objects"
+msgstr "Gunakan obyek permintaan"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:289
+msgid ""
+"Views should have access to a request object -- an object that stores "
+"metadata about the current request. The object should be passed directly to "
+"a view function, rather than the view function having to access the request "
+"data from a global variable. This makes it light, clean and easy to test "
+"views by passing in \"fake\" request objects."
+msgstr "Tampilan harus mempunyai akses untuk meminta obyek -- sebuah obyek yang menyimpan metadata tentang permintaan saat ini. Obyek harus melewati secara langsung ke fungsi tampilan, dari pada fungsi tampilan mempunyai akses permintaan data dari variabel global. Ini membuat cahaya, bersih dan mudah untuk dicoba tampilan dengan melewatkan permintaan \"tiruan\" obyek."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:298
+msgid ""
+"A view shouldn't care about which template system the developer uses -- or "
+"even whether a template system is used at all."
+msgstr "Sebuah tampilan jangan perduli tentang sistem cetakan mana pengembang gunakan -- atau bahkan apakah sistem cetakan digunakan sama sekali."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:302
+msgid "Differentiate between GET and POST"
+msgstr "Membedakan diantara GET dan POST"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:304
+msgid ""
+"GET and POST are distinct; developers should explicitly use one or the "
+"other. The framework should make it easy to distinguish between GET and POST"
+" data."
+msgstr "GET dan POST berbeda; pengembang harus secara eksplisit menggunakan satu atau lainnya. Kerangka harus membuatnya mudah untuk membedakan diantara data GET dan POST."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:310
+msgid "Cache Framework"
+msgstr "Kerangka Tembolok"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:312
+msgid "The core goals of Django's :doc:`cache framework </topics/cache>` are:"
+msgstr "Sasaran inti dari :doc:`kerangka tembolok </topics/cache>` Django adalah:"
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:317
+msgid ""
+"A cache should be as fast as possible.  Hence, all framework code "
+"surrounding the cache backend should be kept to the absolute minimum, "
+"especially for ``get()`` operations."
+msgstr "Tembolok harus secepat mungkin. Oleh karena itu, semua kerangka kode dikelilingi backend tembolok harus menjaga minimal, khususnya untuk operasi ``get()``."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:324
+msgid ""
+"The cache API should provide a consistent interface across the different "
+"cache backends."
+msgstr "API tembolok harus menyediakan antarmuka tetap terhadap backend tembolok berbeda."
+
+#: ../../../../sources/1.9/docs/misc/design-philosophies.txt:330
+msgid ""
+"The cache API should be extensible at the application level based on the "
+"developer's needs (for example, see :ref:`cache_key_transformation`)."
+msgstr "API tembolok harus dapat diperpanjang pada tingkatan aplikasi berdasarkan pada kebutuhan pengembang (sebagai contoh, lihat :ref:`cache_key_transformation`)."
+
+#: ../../../../sources/1.9/docs/misc/distributions.txt:3
+msgid "Third-party distributions of Django"
+msgstr "Penyaluran Pihak-ketiga dari Django"
+
+#: ../../../../sources/1.9/docs/misc/distributions.txt:5
+msgid ""
+"Many third-party distributors are now providing versions of Django "
+"integrated with their package-management systems. These can make "
+"installation and upgrading much easier for users of Django since the "
+"integration includes the ability to automatically install dependencies (like"
+" database adapters) that Django requires."
+msgstr "Banyak penyalur pihak-ketiga sekarang menyediakan versi Django terpadu dengan sistem pengelola-paket mereka. Ini dapat membuat pemasangan dan peningkatan lebih mudah untuk pengguna Django sejak perpaduan menyertakan kemampuan untuk otomatis memasang ketergantungan (seperti penyadur basisdata) yang Django butuhkan."
+
+#: ../../../../sources/1.9/docs/misc/distributions.txt:11
+msgid ""
+"Typically, these packages are based on the latest stable release of Django, "
+"so if you want to use the development version of Django you'll need to "
+"follow the instructions for :ref:`installing the development version "
+"<installing-development-version>` from our Git repository."
+msgstr "Khususnya, paket ini berdasarkan pada terbitan stabil Django, jadi jika anda ingin menggunakan versi pengembangan Django anda akan butuh mengikuti perintah untuk :ref:`memasang versi pengembangan <installing-development-version>` dari gudang Git kami."
+
+#: ../../../../sources/1.9/docs/misc/distributions.txt:16
+msgid ""
+"If you're using Linux or a Unix installation, such as OpenSolaris, check "
+"with your distributor to see if they already package Django. If you're using"
+" a Linux distro and don't know how to find out if a package is available, "
+"then now is a good time to learn.  The Django Wiki contains a list of `Third"
+" Party Distributions`_ to help you out."
+msgstr "Jika anda menggunakan pemasangan Linux atau Unix, seperti OpenSolaris, periksa dengan penyalur anda untuk melihat jika mereka sudah punya paket Django. Jika anda menggunakan distro Linux dan tidak tahu bagaimana menemukan sebuah peket yang tersedia, lalu sekarang waktu yang bagus untuk belajar. Django Wiki mengandung daftar dari `Penyalur Pihak ketiga`_ untuk membantu anda keluar."
+
+#: ../../../../sources/1.9/docs/misc/distributions.txt:26
+msgid "For distributors"
+msgstr "Untuk penyalur"
+
+#: ../../../../sources/1.9/docs/misc/distributions.txt:28
+msgid ""
+"If you'd like to package Django for distribution, we'd be happy to help out!"
+" Please join the |django-developers| mailing list and introduce yourself."
+msgstr "Jika anda ingin memaketkan Django untuk penyaluran, kami akan senang membantu! Silahkan bergabung django-developers| daftar penyuratan dan perkenalkan diri anda."
+
+#: ../../../../sources/1.9/docs/misc/distributions.txt:31
+msgid ""
+"We also encourage all distributors to subscribe to the |django-announce| "
+"mailing list, which is a (very) low-traffic list for announcing new releases"
+" of Django and important bugfixes."
+msgstr "Kami juga mendorong semua penyalur utnuk berlangganan ke daftar penyuratan |django-announce|, yang daftar (sangat) lalu lintas rendah untuk mengumumkan terbitan baru Django dan perbaikan kesalahan penting."
+
+#: ../../../../sources/1.9/docs/misc/index.txt:3
+msgid "Meta-documentation and miscellany"
+msgstr "Dokumentasi-meta dan bunga rampai"
+
+#: ../../../../sources/1.9/docs/misc/index.txt:5
+msgid ""
+"Documentation that we can't find a more organized place for. Like that "
+"drawer in your kitchen with the scissors, batteries, duct tape, and other "
+"junk."
+msgstr "Dokumentasi yang kami tidak dapat temukan lebih tempat terorganisir. Seperti laci di dapur anda dengan gunting, baterai, lakban, dan rongsokan lainnya."
