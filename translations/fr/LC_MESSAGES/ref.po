@@ -3,20 +3,20 @@
 # This file is distributed under the same license as the Django package.
 # 
 # Translators:
-# gustavi <augustin.laville@gustavi.net>, 2014
-# Christophe kryskool <christophe.chauvet@gmail.com>, 2013
+# gustavi <augustin.laville@gustavi.net>, 2014,2016
+# Christophe CHAUVET <christophe.chauvet@gmail.com>, 2013
 # Claude Paroz <claude@2xlibre.net>, 2013-2016
 # Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014-2015
 # mlorant <maxime.lorant@gmail.com>, 2014
 # mlorant <maxime.lorant@gmail.com>, 2014
-# Sébastien Fievet <zyegfryed@gmail.com>, 2014
+# Sébastien Fievet <_@sebastien-fievet.fr>, 2014
 # Xavier Ordoquy <xordoquy@linovia.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-27 08:11-0600\n"
-"PO-Revision-Date: 2016-03-02 14:48+0000\n"
+"POT-Creation-Date: 2016-03-03 07:11-0600\n"
+"PO-Revision-Date: 2016-06-11 15:43+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -3621,28 +3621,42 @@ msgstr "``previous_week``: un objet :class:`~datetime.date` représentant le pre
 msgid "Uses a default ``template_name_suffix`` of ``_archive_week``."
 msgstr "La valeur par défaut de ``template_name_suffix`` est ``_archive_week``."
 
-#: ../../../../sources/1.9/docs/ref/class-based-views/generic-date-based.txt:361
-msgid "**Example myapp/article_archive_week.html**:"
-msgstr "**Exemple myapp/article_archive_week.html** :"
+#: ../../../../sources/1.9/docs/ref/class-based-views/generic-date-based.txt:336
+msgid ""
+"The ``week_format`` attribute is a :func:`~time.strptime` format string used"
+" to parse the week number. The following values are supported:"
+msgstr "L'attribut ``week_format`` est une chaîne de format :func:`~time.strptime` utilisée pour récupérer le numéro de semaine. Les valeurs suivantes sont prises en charge :"
 
 #: ../../../../sources/1.9/docs/ref/class-based-views/generic-date-based.txt:383
 msgid ""
-"In this example, you are outputting the week number. The default "
-"``week_format`` in the ``WeekArchiveView`` uses  week format ``'%U'`` which "
-"is based on the United States week system where the week begins on a Sunday."
-" The ``'%W'`` format uses the ISO week format and its week begins on a "
-"Monday.  The ``'%W'`` format is the same in both the :func:`~time.strftime` "
-"and the :tfilter:`date`."
-msgstr "Dans cet exemple, nous affichons le numéro de la semaine. Par défaut, ``week_format`` dans la classe ``WeekArchiveView`` utilise le format de semaine ``'%U'`` qui se base sur le calendrier américain, où les semaines commencent le dimanche. Le format ``'%W'`` utilise quant à lui le format ISO, où les semaines commencent le lundi. Le format ``'%W'`` est le même que dans :func:`~time.strftime` et :tfilter:`date`."
+"``'%U'``: Based on the United States week system where the week begins on "
+"Sunday. This is the default value."
+msgstr "``'%U'`` : basé sur le système de semaines des États-Unis où la semaine commence un dimanche. Il s'agit de la valeur par défaut."
 
 #: ../../../../sources/1.9/docs/ref/class-based-views/generic-date-based.txt:390
 msgid ""
-"However, the :tfilter:`date` template filter does not have an equivalent "
-"output format that supports the US based week system. The :tfilter:`date` "
-"filter ``'%U'`` outputs the number of seconds since the Unix epoch."
-msgstr "Cependant, le filtre de gabarit :tfilter:`date` n'a pas de format d'affichage équivalent pour prendre en charge le calendrier américain. En effet, le format ``'%U'`` du filtre :tfilter:`date` affiche le nombre de secondes écoulées depuis le début de l'époque Unix."
+"``'%V'``: Similar to ``'%U'``, except it assumes that the week begins on "
+"Monday. This is not the same as the ISO 8601 week number."
+msgstr "``'%V'`` : semblable à ``'%U'``, excepté la semaine qui commence par le lundi. Ce n'est pas la même chose que le numéro de semaine ISO 8601."
 
-#: ../../../../sources/1.9/docs/ref/class-based-views/generic-date-based.txt:399
+#: ../../../../sources/1.9/docs/ref/class-based-views/generic-date-based.txt:370
+msgid "**Example myapp/article_archive_week.html**:"
+msgstr "**Exemple myapp/article_archive_week.html** :"
+
+#: ../../../../sources/1.9/docs/ref/class-based-views/generic-date-based.txt:392
+msgid ""
+"In this example, you are outputting the week number. Keep in mind that week "
+"numbers computed by the :tfilter:`date` template filter with the ``'W'`` "
+"format character are not always the same as those computed by "
+":func:`~time.strftime` and :func:`~time.strptime` with the ``'%W'`` format "
+"string. For year 2015, for example, week numbers output by :tfilter:`date` "
+"are higher by one compared to those output by :func:`~time.strftime`. There "
+"isn't an equivalent for the ``'%U'`` :func:`~time.strftime` format string in"
+" :tfilter:`date`. Therefore, you should avoid using :tfilter:`date` to "
+"generate URLs for ``WeekArchiveView``."
+msgstr "Dans cet exemple, le numéro de semaine est affiché. N'oubliez pas que les numéros de semaine produits par le filtre de gabarit :tfilter:`date` avec le caractère de mise en forme ``'W'`` ne sont pas toujours identiques aux numéros de semaine produits par la chaîne de mise en forme ``'%W'`` de :func:`~time.strftime` et :func:`~time.strptime`. Par exemple, pour l'année 2015, les numéros de semaine produits par :tfilter:`date` sont plus élevés de un par rapport à ceux de :func:`~time.strftime`. Il n'existe pas d'équivalent à la chaîne de format ``'%U'`` de :func:`~time.strftime` pour :tfilter:`date`. Il faudrait donc éviter d'utiliser :tfilter:`date` pour générer des URL pour la vue ``WeekArchiveView``."
+
+#: ../../../../sources/1.9/docs/ref/class-based-views/generic-date-based.txt:407
 msgid ""
 "A day archive page showing all objects in a given day. Days in the future "
 "throw a 404 error, regardless of whether any objects exist for future days, "
@@ -25910,15 +25924,22 @@ msgstr "Cette vérification est effectuée par l'intergiciel ``CsrfViewMiddlewar
 #: ../../../../sources/1.9/docs/ref/csrf.txt:242
 msgid ""
 "In addition, for HTTPS requests, strict referer checking is done by "
-"``CsrfViewMiddleware``.  This is necessary to address a Man-In-The-Middle "
-"attack that is possible under HTTPS when using a session independent nonce, "
-"due to the fact that HTTP 'Set-Cookie' headers are (unfortunately) accepted "
-"by clients that are talking to a site under HTTPS.  (Referer checking is not"
-" done for HTTP requests because the presence of the Referer header is not "
-"reliable enough under HTTP.)"
-msgstr "En outre, pour les requêtes HTTPS, un contrôle strict du référant est fait par le ``CsrfViewMiddleware``. C'est nécessaire pour répondre à une attaque de type « Man-In-The-Middle » qui est possible sous HTTPS lors de l'utilisation d'un nonce cryptographique indépendant de la session, parce que les en-têtes HTTP « Set-Cookie » sont (malheureusement) acceptés par les clients qui parlent à un site en HTTPS. (La vérification du référant n'est pas faite pour les requêtes HTTP car la présence du référant dans l'en-tête n'est pas suffisamment fiable sous HTTP.)"
+"``CsrfViewMiddleware``. This means that even if a subdomain can set or "
+"modify cookies on your domain, it can't force a user to post to your "
+"application since that request won't come from your own exact domain."
+msgstr "De plus, pour les requêtes HTTPS, le contrôle strict du référant est effectué par ``CsrfViewMiddleware``. Cela signifie que même si un sous-domaine peut définir ou modifier des cookies pour votre domaine, il ne peut pas forcer un utilisateur à envoyer des données à votre application car cette requête ne viendrait pas de votre domaine exact."
 
-#: ../../../../sources/1.9/docs/ref/csrf.txt:250
+#: ../../../../sources/1.9/docs/ref/csrf.txt:247
+msgid ""
+"This also addresses a man-in-the-middle attack that's possible under HTTPS "
+"when using a session independent nonce, due to the fact that HTTP ``Set-"
+"Cookie`` headers are (unfortunately) accepted by clients even when they are "
+"talking to a site under HTTPS. (Referer checking is not done for HTTP "
+"requests because the presence of the ``Referer`` header isn't reliable "
+"enough under HTTP.)"
+msgstr "Cela protège aussi contre une attaque de type « Man-In-The-Middle » qui est possible sous HTTPS lors de l'utilisation d'un nonce cryptographique indépendant de la session, parce que les en-têtes HTTP ``Set-Cookie`` sont (malheureusement) acceptés par les clients, même quand ils parlent à un site en HTTPS. (La vérification du référant n'est pas faite pour les requêtes HTTP car la présence de l'en-tête ``Referer`` n'est pas suffisamment fiable sous HTTP.)"
+
+#: ../../../../sources/1.9/docs/ref/csrf.txt:254
 msgid ""
 "If the :setting:`CSRF_COOKIE_DOMAIN` setting is set, the referer is compared"
 " against it. This setting supports subdomains. For example, "
@@ -25945,10 +25966,21 @@ msgid ""
 " 'safe' by :rfc:`2616`). These requests ought never to have any potentially "
 "dangerous side effects , and so a CSRF attack with a GET request ought to be"
 " harmless. :rfc:`2616` defines POST, PUT and DELETE as 'unsafe', and all "
-"other methods are assumed to be unsafe, for maximum protection."
-msgstr "Les requêtes GET sont volontairement ignorées (ainsi que les autres requêtes définies comme « sûres » par la :rfc:`2616`). Ces requêtes ne devraivent jamais avoir d'effets secondaires potentiellement dangereux, et de cette manière une attaque CSRF avec une requête GET doit être inoffensive. La :rfc:`2616` définit les méthodes POST, PUT et DELETE comme « non sûres », et toutes les autres méthodes sont supposées être dangereuses, pour que la protection soit maximale."
+"other methods are also assumed to be unsafe, for maximum protection."
+msgstr "Les requêtes GET sont volontairement ignorées (ainsi que les autres requêtes définies comme « sûres » par la :rfc:`2616`). Ces requêtes ne devraivent jamais avoir d'effets secondaires potentiellement dangereux, et de cette manière une attaque CSRF avec une requête GET doit être inoffensive. La :rfc:`2616` définit les méthodes POST, PUT et DELETE comme « non sûres », et toutes les autres méthodes sont aussi supposées être dangereuses, pour que la protection soit maximale."
 
-#: ../../../../sources/1.9/docs/ref/csrf.txt:270
+#: ../../../../sources/1.9/docs/ref/csrf.txt:272
+msgid ""
+"The CSRF protection cannot protect against man-in-the-middle attacks, so use"
+" :ref:`HTTPS <security-recommendation-ssl>` with :ref:`http-strict-"
+"transport-security`. It also assumes :ref:`validation of the HOST header "
+"<host-headers-virtual-hosting>` and that there aren't any :ref:`cross-site "
+"scripting vulnerabilities <cross-site-scripting>` on your site (because XSS "
+"vulnerabilities already let an attacker do anything a CSRF vulnerability "
+"allows and much worse)."
+msgstr "La protection CRSF ne peut pas protéger contre les attaques de « l'homme du milieu », c'est pourquoi il faut utiliser :ref:`HTTPS <security-recommendation-ssl>` avec :ref:`http-strict-transport-security`. Il suppose également la :ref:`validation de l'en-tête HOST  <host-headers-virtual-hosting>` et que le site ne comporte pas de :ref:`vulnérabilités de scripts inter-sites <cross-site-scripting>` (parce que ce type de vulnérabilité permet déjà à un attaquant de faire ce qu'une vulnérabilité CSRF permet de faire, et plus encore)."
+
+#: ../../../../sources/1.9/docs/ref/csrf.txt:282
 msgid "Checking against the :setting:`CSRF_COOKIE_DOMAIN` setting was added."
 msgstr "Le contrôle en fonction du réglage :setting:`CSRF_COOKIE_DOMAIN` a été ajouté."
 
@@ -26195,6 +26227,58 @@ msgstr ":setting:`CSRF_HEADER_NAME`"
 #: ../../../../sources/1.9/docs/ref/settings.txt:3441
 msgid ":setting:`CSRF_TRUSTED_ORIGINS`"
 msgstr ":setting:`CSRF_TRUSTED_ORIGINS`"
+
+#: ../../../../sources/1.9/docs/ref/csrf.txt:479
+msgid "Frequently Asked Questions"
+msgstr "Questions fréquentes"
+
+#: ../../../../sources/1.9/docs/ref/csrf.txt:482
+msgid ""
+"Is posting an arbitrary CSRF token pair (cookie and POST data) a "
+"vulnerability?"
+msgstr "Est-ce que l'envoi d'une paire de jetons CSRF arbitraires (cookie et données POST) est une vulnérabilité ?"
+
+#: ../../../../sources/1.9/docs/ref/csrf.txt:484
+msgid ""
+"No, this is by design. Without a man-in-the-middle attack, there is no way "
+"for an attacker to send a CSRF token cookie to a victim's browser, so a "
+"successful attack would need to obtain the victim's browser's cookie via XSS"
+" or similar, in which case an attacker usually doesn't need CSRF attacks."
+msgstr "Non, délibérément pas. Sans attaque de « l'homme du milieu », il n'existe aucune possibilité pour un attaquant d'envoyer un cookie de jeton CSRF à destination du navigateur de sa victime ; une attaque réussie devrait pouvoir obtenir le cookie du navigateur de la victime par XSS ou autre moyen similaire, auquel cas l'attaquant n'a généralement pas besoin d'attaquer par CSRF."
+
+#: ../../../../sources/1.9/docs/ref/csrf.txt:489
+msgid ""
+"Some security audit tools flag this as a problem but as mentioned before, an"
+" attacker cannot steal a user's browser's CSRF cookie. \"Stealing\" or "
+"modifying *your own* token using Firebug, Chrome dev tools, etc. isn't a "
+"vulnerability."
+msgstr "Certains outils d'audit de sécurité le signalent comme un problème, mais comme mentionné ci-dessus, un attaquant ne peut pas voler un cookie CSRF du navigateur d'un utilisateur. Pouvoir « voler » ou modifier son propre jeton à l'aide de Firebug, des outils de développement Chrome, etc. ne signifie pas qu'il s'agit d'une vulnérabilité."
+
+#: ../../../../sources/1.9/docs/ref/csrf.txt:494
+msgid ""
+"Is the fact that Django's CSRF protection isn't linked to a session a "
+"problem?"
+msgstr "Le fait que la protection CSRF de Django n'est pas liée à une session pose-t-il un problème ?"
+
+#: ../../../../sources/1.9/docs/ref/csrf.txt:496
+msgid ""
+"No, this is by design. Not linking CSRF protection to a session allows using"
+" the protection on sites such as a `pastebin` that allow submissions from "
+"anonymous users which don't have a session."
+msgstr "Non, délibérément pas. Le fait de ne pas lier la protection CSRF à une session permet d'utiliser la protection sur des sites qui autorisent des envois de données par des utilisateurs anonymes et qui n'ont pas de session."
+
+#: ../../../../sources/1.9/docs/ref/csrf.txt:501
+msgid "Why not use a new token for each request?"
+msgstr "Pourquoi ne pas utiliser un nouveau jeton pour chaque requête ?"
+
+#: ../../../../sources/1.9/docs/ref/csrf.txt:503
+msgid ""
+"Generating a new token for each request is problematic from a UI perspective"
+" because it invalidates all previous forms. Most users would be very unhappy"
+" to find that opening a new tab on your site has invalidated the form they "
+"had just spent time filling out in another tab or that a form they accessed "
+"via the back button could not be filled out."
+msgstr "La génération d'un nouveau jeton pour chaque requête est problématique d'un point de vue interface utilisateur car cela invalide tous les formulaires précédents. Les utilisateurs seraient très mécontents de constater que l'ouverture d'un nouvel onglet de votre site rend invalide le formulaire qu'ils viennent de remplir patiemment dans un autre onglet, ou qu'un formulaire accédé en utilisant le bouton retour ne puisse plus être rempli."
 
 #: ../../../../sources/1.9/docs/ref/databases.txt:3
 msgid "Databases"
@@ -38361,6 +38445,13 @@ msgstr "Si vous avez besoin de créer une relation vers un modèle qui n'a pas e
 
 #: ../../../../sources/1.9/docs/ref/models/fields.txt:1158
 msgid ""
+"Relationships defined this way on :ref:`abstract models <abstract-base-"
+"classes>` are resolved when the model is subclassed as a concrete model and "
+"are not relative to the abstract model's ``app_label``:"
+msgstr "Les relations définies de cette façon pour des :ref:`modèles abstraits <abstract-base-classes>` sont résolues au moment où le modèle est hérité par un modèle concret et ne sont pas en lien avec l'attribut ``app_label`` du modèle abstrait :"
+
+#: ../../../../sources/1.9/docs/ref/models/fields.txt:1187
+msgid ""
 "To refer to models defined in another application, you can explicitly "
 "specify a model with the full application label. For example, if the "
 "``Manufacturer`` model above is defined in another application called "
@@ -40668,15 +40759,15 @@ msgstr "puis vérifier si :"
 #: ../../../../sources/1.9/docs/ref/models/meta.txt:181
 msgid ""
 "``f.auto_created == False``, because the new ``get_field()`` API will find "
-"\"reverse\" relations), and:"
-msgstr "``f.auto_created == False``, parce que la nouvelle API ``get_field()`` va renvoyer les relations « inverses »), et :"
+"\"reverse\" relations, and:"
+msgstr "``f.auto_created == False``, parce que la nouvelle API ``get_field()`` va renvoyer les relations « inverses », et :"
 
 #: ../../../../sources/1.9/docs/ref/models/meta.txt:184
 msgid ""
 "``f.is_relation and f.related_model is None``, because the new "
 "``get_field()`` API will find "
-":class:`~django.contrib.contenttypes.fields.GenericForeignKey` relations;"
-msgstr "``f.is_relation and f.related_model is None``, parce que la nouvelle API ``get_field()`` va renvoyer les relations :class:`~django.contrib.contenttypes.fields.GenericForeignKey`;"
+":class:`~django.contrib.contenttypes.fields.GenericForeignKey` relations."
+msgstr "``f.is_relation and f.related_model is None``, parce que la nouvelle API ``get_field()`` va renvoyer les relations :class:`~django.contrib.contenttypes.fields.GenericForeignKey`."
 
 #: ../../../../sources/1.9/docs/ref/models/meta.txt:188
 msgid ""
@@ -49636,13 +49727,19 @@ msgid ""
 msgstr "C'est utilisé par exemple par le décorateur :func:`~django.contrib.auth.decorators.login_required`."
 
 #: ../../../../sources/1.9/docs/ref/settings.txt:2798
-#: ../../../../sources/1.9/docs/ref/settings.txt:2812
+#: ../../../../sources/1.9/docs/ref/settings.txt:2817
 msgid ""
-"This setting also accepts view function names and :ref:`named URL patterns "
-"<naming-url-patterns>` which can be used to reduce configuration duplication"
-" since you don't have to define the URL in two places (``settings`` and "
-"URLconf)."
-msgstr "Ce réglage accepte aussi des noms de fonctions de vue et des :ref:`motifs d'URL nommés <naming-url-patterns>` qui peuvent être utilisés pour réduire les doublons de configuration étant donné qu'il n'est pas nécessaire de définir les URL à deux endroits (``settings`` et configuration d'URL)."
+"This setting also accepts :ref:`named URL patterns <naming-url-patterns>` "
+"which can be used to reduce configuration duplication since you don't have "
+"to define the URL in two places (``settings`` and URLconf)."
+msgstr "Ce réglage accepte aussi des :ref:`motifs d'URL nommés <naming-url-patterns>` qui peuvent être utilisés pour réduire les doublons de configuration étant donné qu'il n'est pas nécessaire de définir les URL à deux endroits (``settings`` et configuration d'URL)."
+
+#: ../../../../sources/1.9/docs/ref/settings.txt:2804
+#: ../../../../sources/1.9/docs/ref/settings.txt:2823
+msgid ""
+"The setting may also be a dotted Python path to a view function. Support for"
+" this will be removed in Django 1.10."
+msgstr "Ce réglage peut aussi être un chemin Python pointé vers une fonction de vue. Mais cette possibilité sera supprimée dans Django 1.10."
 
 #: ../../../../sources/1.9/docs/ref/settings.txt:2805
 msgid "``LOGIN_URL``"
@@ -49658,19 +49755,7 @@ msgid ""
 ":func:`~django.contrib.auth.decorators.login_required` decorator."
 msgstr "L'URL vers laquelle sont redirigées les requêtes pour un processus de connexion, plus particulièrement lors de l'utilisation du décorateur :func:`~django.contrib.auth.decorators.login_required`."
 
-#: ../../../../sources/1.9/docs/ref/settings.txt:2819
-msgid "LOGOUT_URL"
-msgstr "LOGOUT_URL"
-
-#: ../../../../sources/1.9/docs/ref/settings.txt:2821
-msgid "Default: ``'/accounts/logout/'``"
-msgstr "Valeur par défaut : ``'/accounts/logout/'``"
-
-#: ../../../../sources/1.9/docs/ref/settings.txt:2823
-msgid "LOGIN_URL counterpart."
-msgstr "Contre-partie de LOGIN_URL."
-
-#: ../../../../sources/1.9/docs/ref/settings.txt:2828
+#: ../../../../sources/1.9/docs/ref/settings.txt:2829
 msgid "``PASSWORD_RESET_TIMEOUT_DAYS``"
 msgstr "``PASSWORD_RESET_TIMEOUT_DAYS``"
 

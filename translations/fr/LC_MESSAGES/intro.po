@@ -4,16 +4,17 @@
 # 
 # Translators:
 # annoa <annoa.b@gmail.com>, 2013-2015
+# gustavi <augustin.laville@gustavi.net>, 2016
 # charettes <charette.s@gmail.com>, 2013
-# Christophe kryskool <christophe.chauvet@gmail.com>, 2013
+# Christophe CHAUVET <christophe.chauvet@gmail.com>, 2013
 # Claude Paroz <claude@2xlibre.net>, 2013-2016
 # Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-27 08:11-0600\n"
-"PO-Revision-Date: 2016-03-02 14:54+0000\n"
+"POT-Creation-Date: 2016-03-05 19:12-0600\n"
+"PO-Revision-Date: 2016-06-11 12:52+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -2092,14 +2093,26 @@ msgid ""
 " more details, see the reference documentation for :setting:`DATABASES`."
 msgstr "Si vous utilisez une autre base de données que SQLite, des réglages supplémentaires doivent être indiqués, comme :setting:`USER`, :setting:`PASSWORD` ou :setting:`HOST`. Pour plus de détails, consultez la documentation de référence de :setting:`DATABASES`."
 
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:44
+msgid "For databases other than SQLite"
+msgstr "Pour les bases de données autres que SQLite"
+
 #: ../../../../sources/1.9/docs/intro/tutorial02.txt:46
 msgid ""
-"If you're using PostgreSQL or MySQL, make sure you've created a database by "
-"this point. Do that with \"``CREATE DATABASE database_name;``\" within your "
-"database's interactive prompt."
-msgstr "Si vous utilisez PostgreSQL ou MySQL, assurez-vous maintenant d'avoir créé la base de données. Faites-le avec ``CREATE DATABASE nom_de_la_base;`` dans le shell interactif de votre base de données."
+"If you're using a database besides SQLite, make sure you've created a "
+"database by this point. Do that with \"``CREATE DATABASE database_name;``\" "
+"within your database's interactive prompt."
+msgstr "Si vous utilisez une base de données autre que SQLite, assurez-vous maintenant d'avoir créé la base de données. Faites-le avec ``CREATE DATABASE nom_de_la_base;`` dans le shell interactif de votre base de données."
 
 #: ../../../../sources/1.9/docs/intro/tutorial02.txt:50
+msgid ""
+"Also make sure that the database user provided in :file:`mysite/settings.py`"
+" has \"create database\" privileges. This allows automatic creation of a "
+":ref:`test database <the-test-database>` which will be needed in a later "
+"tutorial."
+msgstr "Vérifiez également que l'utilisateur de base de données indiqué dans le fichier :file:`mysite/settings.py` possède la permission de créer des bases de données. Cela permet de créer automatiquement une :ref:`base de données de test <the-test-database>` qui sera nécessaire plus tard dans le tutoriel."
+
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:55
 msgid ""
 "If you're using SQLite, you don't need to create anything beforehand - the "
 "database file will be created automatically when it is needed."

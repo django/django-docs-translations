@@ -9,14 +9,14 @@
 # Loïs BURG <burg.lois@gmail.com>, 2013
 # Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014-2015
 # Sam Stewart <sam@sapient.com.au>, 2013
-# Sébastien Fievet <zyegfryed@gmail.com>, 2014
+# Sébastien Fievet <_@sebastien-fievet.fr>, 2014
 # chrisglass <tribaal@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-27 08:11-0600\n"
-"PO-Revision-Date: 2016-03-02 14:22+0000\n"
+"POT-Creation-Date: 2016-03-03 07:11-0600\n"
+"PO-Revision-Date: 2016-06-11 16:52+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -3408,7 +3408,18 @@ msgid ""
 "bcrypt rounds."
 msgstr "Cependant, Django peut uniquement mettre à jour les mots de passe utilisant des algorithmes mentionnés dans :setting:`PASSWORD_HASHERS`, il est donc important de ne pas *enlever* les anciens algorithmes de cette liste quand vous passez à de nouveaux systèmes. Si vous le faites, les utilisateurs utilisant des algorithmes non mentionnés ne pourront pas mettre à jour leur mot de passe. Les mots de passe hachés sont mis à jour lorsque le nombre d'itérations PBKDF2 ou de tours bcrypt est augmenté (ou réduit)."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:200
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:198
+msgid ""
+"Be aware that if all the passwords in your database aren't encoded in the "
+"default hasher's algorithm, you may be vulnerable to a user enumeration "
+"timing attack due to a difference between the duration of a login request "
+"for a user with a password encoded in a non-default algorithm and the "
+"duration of a login request for a nonexistent user (which runs the default "
+"hasher). You may be able to mitigate this by :ref:`upgrading older password "
+"hashes <wrapping-password-hashers>`."
+msgstr "Soyez conscients que si tous les mots de passe de votre base de données se sont pas codés avec l'algorithme de hachage par défaut, il est possible que vous soyez vulnérable à une attaque de type énumération de compte basée sur le temps en raison d'une différence entre la durée d'une requête de connexion pour un utilisateur avec mot de passe codé dans un algorithme différent et la durée d'une requête de connexion d'un utilisateur non existant (qui exécute l'algorithme par défaut). Il est possible de relativiser ce problème en :ref:`mettant à jour les anciennes empreintes de mot de passe <wrapping-password-hashers>`."
+
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:208
 msgid "Passwords updates when changing the number of bcrypt rounds was added."
 msgstr "La mise à jour des mots de passe lors du changement du nombre de tours bcrypt a été ajoutée."
 
@@ -3457,7 +3468,36 @@ msgstr "Pour terminer, nous allons ajouter un réglage :setting:`PASSWORD_HASHER
 msgid "Include any other hashers that your site uses in this list."
 msgstr "Incluez tout autre hacheur utilisé par votre site dans cette liste."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:292
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:302
+msgid "Writing your own hasher"
+msgstr "Écriture de son propre algorithme de hachage"
+
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:306
+msgid ""
+"If you write your own password hasher that contains a work factor such as a "
+"number of iterations, you should implement a ``harden_runtime(self, "
+"password, encoded)`` method to bridge the runtime gap between the work "
+"factor supplied in the ``encoded`` password and the default work factor of "
+"the hasher. This prevents a user enumeration timing attack due to  "
+"difference between a login request for a user with a password encoded in an "
+"older number of iterations and a nonexistent user (which runs the default "
+"hasher's default number of iterations)."
+msgstr "Si vous écrivez votre propre algorithme de hachage de mot de passe doté d'un facteur de travail tel qu'un nombre d'itérations, vous devriez implémenter une méthode ``harden_runtime(self, password, encoded)`` pour compenser la différence de temps d'exécution entre le facteur de travail fourni dans le mot de passe ``encoded`` et le facteur de travail par défaut de l'algorithme. Ceci empêche les attaques de type énumération de compte basée sur le temps qui utilise la différence entre les requêtes de connexion d'un utilisateur dont le mot de passe est codé avec un ancien nombre d'itérations et un utilisateur inexistant (qui fait appel au nombre d'itérations par défaut de l'algorithme)."
+
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:315
+msgid ""
+"Taking PBKDF2 as example, if ``encoded`` contains 20,000 iterations and the "
+"hasher's default ``iterations`` is 30,000, the method should run "
+"``password`` through another 10,000 iterations of PBKDF2."
+msgstr "En prenant PBKDF2 comme exemple, si ``encoded`` contient 20'000 itérations et que le nombre d'itérations par défaut de l'algorithme est de 30'000, la méthode devrait faire passer ``password`` à travers 10'000 itérations supplémentaires de PBKDF2."
+
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:319
+msgid ""
+"If your hasher doesn't have a work factor, implement the method as a no-op "
+"(``pass``)."
+msgstr "Si votre algorithme de hachage ne possède pas de facteur de travail, implémentez la méthode comme fictive (``pass``)."
+
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:323
 msgid "Manually managing a user's password"
 msgstr "Gestion manuelle des mots de passe"
 
