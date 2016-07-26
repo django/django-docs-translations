@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) Django Software Foundation and contributors
 # This file is distributed under the same license as the Django package.
-# 
+#
 # Translators:
 # andrewsmedina <andrewsmedina@gmail.com>, 2016
 # Augusto Rocha Nascimento <augusto@khoder.com.br>, 2016
@@ -116,7 +116,7 @@ msgid ""
 "If your authentication mechanism uses a custom HTTP header and not "
 "``REMOTE_USER``, you can subclass ``RemoteUserMiddleware`` and set the "
 "``header`` attribute to the desired ``request.META`` key.  For example::"
-msgstr "Se o seu mecanismo de autenticação utilizar um cabeçalho HTTP costumizado e não o ``REMOTE_USER`, você pode utilizar a subclass ``RemoteUserMiddleware`` e definir o atributo ``header`` para atribuir a chave ``request.META``. Por exemplo::"
+msgstr "Se o seu mecanismo de autenticação utilizar um cabeçalho HTTP custumizado e não o ``REMOTE_USER`, você pode utilizar a subclass ``RemoteUserMiddleware`` e definir o atributo ``header`` para atribuir a chave ``request.META``. Por exemplo::"
 
 #: ../../../../sources/1.9/docs/howto/auth-remote-user.txt:82
 msgid ""
@@ -173,7 +173,7 @@ msgstr ":class:`~django.contrib.auth.middleware.PersistentRemoteUserMiddleware` 
 
 #: ../../../../sources/1.9/docs/howto/custom-file-storage.txt:3
 msgid "Writing a custom storage system"
-msgstr "Escrevendo um sistema de armazenamento costumizado"
+msgstr "Escrevendo um sistema de armazenamento custumizado"
 
 #: ../../../../sources/1.9/docs/howto/custom-file-storage.txt:7
 msgid ""
@@ -2072,7 +2072,7 @@ msgid ""
 " complex conversions between your Python types and your database and "
 "serialization formats. Here are a couple of tips to make things go more "
 "smoothly:"
-msgstr "Escrever um um campo personalizado pode ser um um pouco complicado, particularmente se estiver fazendo conversões complexas entre tipos Python e o banco de dados e formatos de serialização. Aqui algumas dicas par fazer as coisas mais tranquilas."
+msgstr "Escrever um campo personalizado pode ser um pouco complicado, particularmente se estiver fazendo conversões complexas entre tipos Python e o banco de dados e formatos de serialização. Aqui algumas dicas par fazer as coisas mais tranquilas."
 
 #: ../../../../sources/1.9/docs/howto/custom-model-fields.txt:729
 msgid ""
@@ -5682,7 +5682,7 @@ msgid ""
 "also running Django -- for serving static files. This server often runs a "
 "different type of web server -- faster but less full-featured. Some common "
 "choices are:"
-msgstr "A maioria dos grandes sites Django usqm um servidor Web separado -- iesto é, um que nao está servido também um Django -- para servir arquivos estáticos. Este servidor roda um tipo diferente de servidor web -- mais rápido mas sem tantas funcionalidades. Algums opções são:"
+msgstr "A maioria dos grandes sites Django usam um servidor Web separado – isto é, um que não está servindo também um site Django – para servir arquivos estáticos. Este servidor roda um tipo diferente de servidor web – mais rápido, mas sem tantas funcionalidades. Algumas opções são:"
 
 #: ../../../../sources/1.9/docs/howto/static-files/deployment.txt:79
 msgid ""
@@ -5714,7 +5714,7 @@ msgstr "Aqui está como isso pode parar no fabfile::"
 
 #: ../../../../sources/1.9/docs/howto/static-files/deployment.txt:115
 msgid "Serving static files from a cloud service or CDN"
-msgstr "Servido arquivos estáticos de um servidor \"cloud\" ou CDN"
+msgstr "Servindo arquivos estáticos de um servidor \"cloud\" ou CDN"
 
 #: ../../../../sources/1.9/docs/howto/static-files/deployment.txt:117
 msgid ""
@@ -5722,7 +5722,7 @@ msgid ""
 " like Amazon's S3 and/or a CDN (content delivery network). This lets you "
 "ignore the problems of serving static files and can often make for faster-"
 "loading webpages (especially when using a CDN)."
-msgstr "Uma outra tática comum é servir arquivos estáticos de um fornecedor de armazenamento na \"cloud\" como o S3 da Amazom e/ou um CDN (Content delivery network). Isso deixa você ignorar os problemas de servir arquivos estáticos e pode muitas vezes fazer páginas web serem carregads mais rapidamente (especialmente quando em uma CDN)."
+msgstr "Uma outra tática comum é servir arquivos estáticos de um fornecedor de armazenamento na \"cloud\" como o S3 da Amazom e/ou um CDN (Content delivery network). Isso deixa você ignorar os problemas de servir arquivos estáticos e pode muitas vezes fazer páginas web serem carregadas mais rapidamente (especialmente quando em uma CDN)."
 
 #: ../../../../sources/1.9/docs/howto/static-files/deployment.txt:122
 msgid ""
@@ -5739,7 +5739,7 @@ msgid ""
 " the process incredibly simple. If you've written or are using a 3rd party "
 "custom storage backend, you can tell :djadmin:`collectstatic` to use it by "
 "setting :setting:`STATICFILES_STORAGE` to the storage engine."
-msgstr "Existem inúmeras maneiras para fazer isso, mas se o provedor tem uma API um :doc:`um backend personalizado para armazenamento de arquivo </howto/custom-file-storage>` fará o processo incrivelmente simples. Se você escreveu ou está usando um \"backend\" de armazenamento personalizado de terceiros, você pode avisar o :djadmin:`collectstatic` para usá-lo definido :setting:`STATICFILES_STORAGE` para o mecanismo de armazenamento."
+msgstr "Existem inúmeras maneiras para fazer isso, mas se o provedor tem uma API um :doc:`backend personalizado para armazenamento de arquivo </howto/custom-file-storage>` fará o processo incrivelmente simples. Se você escreveu ou está usando um \"backend\" de armazenamento personalizado de terceiros, você pode avisar o :djadmin:`collectstatic` para usá-lo definindo :setting:`STATICFILES_STORAGE` para o mecanismo de armazenamento."
 
 #: ../../../../sources/1.9/docs/howto/static-files/deployment.txt:132
 msgid ""
@@ -5753,7 +5753,7 @@ msgid ""
 "your static files would be pushed through your storage package up to S3. If "
 "you later needed to switch to a different storage provider, it could be as "
 "simple as changing your :setting:`STATICFILES_STORAGE` setting."
-msgstr "Uma vez isso feito, tudo que tem a fazer é executar :djadmin:`collectstatic` e seus arquivos estáticos deveriam ser então colocados através do seu pacote de armazenamento no S3. Se você mais tarde precisar trocar para um provedor de armazenamento diferente, isso deveria ser tão fácil quando alterar suas configurações no :setting:`STATICFILES_STORAGE`. "
+msgstr "Uma vez isso feito, tudo que tem a fazer é executar :djadmin:`collectstatic` e seus arquivos estáticos deveriam ser então colocados através do seu pacote de armazenamento no S3. Se você mais tarde precisar trocar para um provedor de armazenamento diferente, isso deveria ser tão fácil quanto alterar suas configurações no :setting:`STATICFILES_STORAGE`. "
 
 #: ../../../../sources/1.9/docs/howto/static-files/deployment.txt:142
 msgid ""
@@ -5762,19 +5762,19 @@ msgid ""
 "storage backends for many common file storage APIs. A good starting point is"
 " the `overview at djangopackages.com <https://www.djangopackages.com/grids/g"
 "/storage-backends/>`_."
-msgstr "Para detalhes sobre como escrever um destes backends, veja :doc:`/howto/custom-file-storage`. Existem aplicações de terceiros disponíveis que fornecem backends de armazenamento para muitas APIs de armazenamento comuns. Um bom começo é uma  `olhada geral no djangopackages.com <https://www.djangopackages.com/grids/g/storage-backends/>`_."
+msgstr "Para detalhes sobre como escrever um destes backends, veja :doc:`/howto/custom-file-storage`. Existem aplicações de terceiros disponíveis que fornecem backends de armazenamento para muitas APIs de armazenamento comuns. Um bom começo é dar uma  `olhada no djangopackages.com <https://www.djangopackages.com/grids/g/storage-backends/>`_."
 
 #: ../../../../sources/1.9/docs/howto/static-files/deployment.txt:149
 #: ../../../../sources/1.9/docs/howto/static-files/index.txt:184
 msgid "Learn more"
-msgstr "Aprender mais"
+msgstr "Aprenda mais"
 
 #: ../../../../sources/1.9/docs/howto/static-files/deployment.txt:151
 msgid ""
 "For complete details on all the settings, commands, template tags, and other"
 " pieces included in :mod:`django.contrib.staticfiles`, see :doc:`the "
 "staticfiles reference </ref/contrib/staticfiles>`."
-msgstr "Para detalhes completos sobre todas as configurações, comandos, tags de templates, e outras partes incluidas em :mod:`django.contrib.staticfiles`, veja  :doc:`a referencia de arquivos estáticos </ref/contrib/staticfiles>`."
+msgstr "Para detalhes completos sobre todas as configurações, comandos, tags de templates, e outras partes incluídas em :mod:`django.contrib.staticfiles`, veja  :doc:`a referencia de arquivos estáticos </ref/contrib/staticfiles>`."
 
 #: ../../../../sources/1.9/docs/howto/static-files/index.txt:3
 msgid "Managing static files (e.g. images, JavaScript, CSS)"
@@ -6007,7 +6007,7 @@ msgid ""
 "complete details on all the settings, commands, template tags, and other "
 "pieces included in :mod:`django.contrib.staticfiles`, see :doc:`the "
 "staticfiles reference </ref/contrib/staticfiles>`."
-msgstr "Este documento cobriu o básico e alguns padrões de uso comum. Para detalhes completos sobre todas as configurações, comandos, tags de templates, e outras partes incluidas em :mod:`django.contrib.staticfiles`, veja a :doc:`referência de arquivos estáticos </ref/contrib/staticfiles>`."
+msgstr "Este documento cobriu o básico e alguns padrões de uso comum. Para detalhes completos sobre todas as configurações, comandos, tags de templates, e outras partes incluídas em :mod:`django.contrib.staticfiles`, veja a :doc:`referência de arquivos estáticos </ref/contrib/staticfiles>`."
 
 #: ../../../../sources/1.9/docs/howto/upgrade-version.txt:3
 msgid "Upgrading Django to a newer version"
