@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-05 19:12-0600\n"
-"PO-Revision-Date: 2016-04-26 00:28+0000\n"
+"PO-Revision-Date: 2016-06-21 01:35+0000\n"
 "Last-Translator: Fery Setiawan <gembelweb@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/django/django-docs/language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -284,7 +284,7 @@ msgid ""
 "(see the :doc:`databases documentation </ref/databases>` for details), are "
 "only available on the \"mysql\" backend, and will not be made available for "
 "\"mysql_old\"."
-msgstr ""
+msgstr "Juga, catat bahwa beberapa fitur, seperti pengaturan ``DATABASE_OPTIONS`` baru (lihat :doc:`databases documentation </ref/databases>` untuk rincian), hanya tersedia pada backend \"mysql\", dan tidak akan tersedia untuk \"mysql_old\"."
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:57
 msgid "Database constraint names changed"
@@ -315,14 +315,14 @@ msgstr "Jika anda butuh menyiasati ini, terdapat dua cara tersedia:"
 msgid ""
 "Redirect the output of ``manage.py`` to a file, and edit the generated SQL "
 "to use the correct constraint names before executing it."
-msgstr ""
+msgstr "Alihkan keluaran dari ``manage.py`` ke berkas, dan rubah SQL dibangkitkan untuk menggunakan nama batasan yang benar sebelum menjalankannya."
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:76
 msgid ""
 "Examine the output of ``manage.py sqlall`` to see the new-style constraint "
 "names, and use that as a guide to rename existing constraints in your "
 "database."
-msgstr ""
+msgstr "Ujikan keluaran dari ``manage.py sqlall`` untuk melihat bnama batasan gaya-baru, dan gunakan itu sebagai panduan untuk menamai kembali batasan yang ada dalam basisdata anda."
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:81
 msgid "Name changes in ``manage.py``"
@@ -332,25 +332,25 @@ msgstr "Perubahan nama di ``manage.py``"
 msgid ""
 "A few of the options to ``manage.py`` have changed with the addition of "
 "fixture support:"
-msgstr ""
+msgstr "Sedikit pilihan pada ``manage.py`` telah berubah dengan penambahan dukungan perlengkapan tetap:"
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:86
 msgid ""
 "There are new ``dumpdata`` and ``loaddata`` commands which, as you might "
 "expect, will dump and load data to/from the database. These commands can "
 "operate against any of Django's supported serialization formats."
-msgstr ""
+msgstr "Ada perintah ``dumpdata`` dan ``loaddata`` baru yang, mungkin anda harapkan, akan mengeluarkan dan memuat data ke/dari basisdata. Perintah ini dapat beroperasi terhadap bentuk serialisasi terdukung Django apapun."
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:91
 msgid ""
 "The ``sqlinitialdata`` command has been renamed to ``sqlcustom`` to "
 "emphasize that ``loaddata`` should be used for data (and ``sqlcustom`` for "
 "other custom SQL -- views, stored procedures, etc.)."
-msgstr ""
+msgstr "Perintah ``sqlinitialdata`` telah dinamai kembali menjadi ``sqlcustom`` untuk menegaskan bahwa ``loaddata`` harus digunakan untuk data (dan ``sqlcustom`` untuk SQL penyesuaian lain -- view, store procedure, dll.)."
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:95
 msgid "The vestigial ``install`` command has been removed. Use ``syncdb``."
-msgstr ""
+msgstr "Vestigial perintah ``install`` telah dipindahkan. Gunakan ``syncdb``."
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:98
 msgid "Backslash escaping changed"
@@ -405,7 +405,7 @@ msgid ""
 "framework.  Both APIs are available in 0.96, but over the next two releases "
 "we plan to switch completely to the new forms system, and deprecate and "
 "remove the old system."
-msgstr ""
+msgstr "``django.newforms`` adalah pustaka penanganan-formulir baru Django. Dia pengganti untuk ``django.forms``, kerangka kerja form/manipulator/validation lama. Kedua API tersedia dalam 0.96, tetapi diatas dua terbitan selanjutnya kami berencana mengganti seluruhnya ke sistem formulir baru, dan mengusangkan dan memindahkan sistem lama."
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:140
 msgid "There are three elements to this transition:"
@@ -417,7 +417,7 @@ msgid ""
 "allows you to upgrade your code *now* rather than waiting for the backwards-"
 "incompatible change and rushing to fix your code after the fact.  Just "
 "change your import statements like this::"
-msgstr ""
+msgstr "Kami menyalin ``django.forms`` saat ini ke ``django.oldforms``. Ini mengizinkan anda meningkatkan kode anda *sekarang* daripada menunggu untuk perubahan ketidakcocokan-kebelakang dan buru-buru memperbaiki kode anda setelah fakta. Cukup rubah pernyataan impor anda seperti ini::"
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:151
 msgid ""
@@ -426,7 +426,7 @@ msgid ""
 "incompatible change, and anyone still using the old version of "
 "``django.forms`` at that time will need to change their import statements as"
 " described above."
-msgstr ""
+msgstr "Terbitan resmi selanjutnya dari Django akan memindahkan ``django.newforms`` saat ini ke ``django.forms``. Ini akan menjadi perubahan kecocokan-kebelakang, dan siapapun masih menggunakan versi lama dari ``django.forms`` pada waktu itu akan butuh merubah pernyataan impor mereka seperti digambarkan diatas."
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:157
 msgid ""
@@ -438,7 +438,7 @@ msgid ""
 "Although the ``newforms`` library will continue to evolve, it's ready for "
 "use for most common cases. We recommend that anyone new to form handling "
 "skip the old forms system and start with the new."
-msgstr ""
+msgstr "Meskipun pustaka ``newforms`` akan lanjut berkembang, dia siap untuk digunakan untuk kebanyakan kasus umum. Kami menganjurkan bahwa seiapapun baru terhadap penanganan formulir lewati sistem formulir baru dan mulai dengan yang baru."
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:164
 msgid ""
@@ -455,7 +455,7 @@ msgid ""
 "You can now use any callable as the callback in URLconfs (previously, only "
 "strings that referred to callables were allowed). This allows a much more "
 "natural use of URLconfs. For example, this URLconf::"
-msgstr ""
+msgstr "Anda dapat sekarang menggunakan dapat dipanggil apapun sebagai callback dalam URLconf (sebelumnya, hanya deretan karakter yang mengacu pada dapat dipanggil yang diizinkan). Ini mengizinkan lebih banyak penggunaan alami dari URLconf. Sebagai contoh, ini URLconf::"
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:180
 msgid "can now be rewritten as::"
@@ -466,13 +466,13 @@ msgid ""
 "One useful application of this can be seen when using decorators; this "
 "change allows you to apply decorators to views *in your URLconf*. Thus, you "
 "can make a generic view require login very easily::"
-msgstr ""
+msgstr "Satu aplikasi berguna dari ini dapat dilihat ketika menggunakan decorator; perubahan ini mengizinkan anda memberlakukan decorator untuk melihat *dalam URLconf anda*. Dengan demikian, anda dapat membuat tampilan umum dibutuhkan masuk sangat mudah::"
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:207
 msgid ""
 "Note that both syntaxes (strings and callables) are valid, and will continue"
 " to be valid for the foreseeable future."
-msgstr ""
+msgstr "Catat bahwa kedua sintaksis (deretan karakter dan dapat dipanggil) adalah sah, dan akan tetap sah untuk masa akan datang."
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:211
 msgid "The test framework"
@@ -484,7 +484,7 @@ msgid ""
 "boredom (with apologies to Kent Beck). You can write tests based on "
 ":mod:`doctest` or :mod:`unittest` and test your views with a simple test "
 "client."
-msgstr ""
+msgstr "Django sekarang menyertakan sebuah kerangka percobaan sehingga anda dapat memulai mengubah ketakutan dan kebosanan (dengan permintaan maaf kepada Kent Beck). Anda dapat menulis percobaan berdasaran pada :mod:`doctest` atau :mod:`unittest` dan ujikan tampilan anda dengan percobaan klien sederhana."
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:217
 msgid ""
@@ -492,7 +492,7 @@ msgid ""
 " the supported :doc:`serialization formats </topics/serialization>`, that "
 "will be loaded into your database at the start of your tests. This makes "
 "testing with real data much easier."
-msgstr ""
+msgstr "Terdapat juga dukungan untuk \"fixtures\" -- data awal, disimpan pada :doc:`serialisasi bentuk </topics/serialization>` yang didukung, yang akan dimuat kedalam basisdata anda pada awal percobaan anda. Ini membuat percobaan dengan data sesungguhnya lebih mudah."
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:222
 msgid ""
@@ -509,7 +509,7 @@ msgid ""
 "A small change, but a very nice one: dedicated views for adding and updating"
 " users have been added to the admin interface, so you no longer need to "
 "worry about working with hashed passwords in the admin."
-msgstr ""
+msgstr "Sebuah perubahan kecil, tetapi sangat bagus: tampilan ditujukan untuk menambahkan dan memperbaharui pengguna yang telah ditambahkan ke antarmuka admin, sehingga anda tidak lagi khawatir tentang bekerja dengan sandi hash dalam admin."
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:232
 msgid "Thanks"
@@ -520,19 +520,19 @@ msgid ""
 "Since 0.95, a number of people have stepped forward and taken a major new "
 "role in Django's development. We'd like to thank these people for all their "
 "hard work:"
-msgstr ""
+msgstr "Sejak 0,95, sejumlah orang telah melangkah maju dan mengambil peran baru utama dalam pengembangan Django. Kami ingin berterima kasih kepada orang-orang ini untuk semua kerja keras mereka:"
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:238
 msgid ""
 "Russell Keith-Magee and Malcolm Tredinnick for their major code "
 "contributions. This release wouldn't have been possible without them."
-msgstr ""
+msgstr "Russell Keith-Magee dan Malcolm Tredinnick untuk sumbangan kode utama mereka. Terbitan ini tidak akan mungkin tanpa mereka."
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:241
 msgid ""
 "Our new release manager, James Bennett, for his work in getting out 0.95.1, "
 "0.96, and (hopefully) future release."
-msgstr ""
+msgstr "Pengelola terbitan baru kami, James Bennett, untuk pekerjaannya dalam mengeluarkan 0.95.1, 0.96, dan (semoga) terbitan mendatang."
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:244
 msgid ""
@@ -540,7 +540,7 @@ msgid ""
 " Radziej, and Gary Wilson. They agreed to take on the monumental task of "
 "wrangling our tickets into nicely cataloged submission. Figuring out what to"
 " work on is now about a million times easier; thanks again, guys."
-msgstr ""
+msgstr "Pengelola tiket kami Chris Beaven (dikenal sebagai SmileyChris), Simon Greenhill, Michael Radziej, dan Gary Wilson. Mereka setuju untuk mengambil tugas penting dari perselisihan tiket kami kedalam pengajuan katalog yang baik. Mencari tahu apa yang dikerjakan adalah sekarang tentang sejuta waktu lebih mudah; terima kasih kembali, teman-teman."
 
 #: ../../../../sources/1.9/docs/releases/0.96.txt:250
 msgid ""
@@ -548,7 +548,7 @@ msgid ""
 "possibly thank everyone by name -- over 200 developers submitted patches "
 "that went into 0.96 -- but everyone who's contributed to Django is listed in"
 " AUTHORS_."
-msgstr ""
+msgstr "Setiap orang yang mengajukan laoran kesalahan, tambalan, atau komentar tiket. Kami tidak mungkin berterima kasih semuanya berdasarkan nama -- lebih 200 pengembang mengajukan tambalan yang masuk ke 0.96 -- tetapi setiap orang yang menyumbang ke Django didaftarkan dalam AUTHORS_."
 
 #: ../../../../sources/1.9/docs/releases/1.0.txt:3
 msgid "Django 1.0 release notes"
@@ -564,7 +564,7 @@ msgid ""
 "finally here. Django 1.0 represents a the largest milestone in Django's "
 "development to date: a Web framework that a group of perfectionists can "
 "truly be proud of."
-msgstr ""
+msgstr "Kami telah mencari saat ini untuk lebih tiga tahun, dan akhirnya disini, Django 1.0  mewakili batu peringatan yang terbesar dalam pengembangan Django ke tanggal: sebuah Kerangka Jaringan yang terdiri dari kelompok perfeksionis dapat dibanggakan. "
 
 #: ../../../../sources/1.9/docs/releases/1.0.txt:11
 msgid ""
@@ -572,7 +572,7 @@ msgid ""
 "Source project. Django's received contributions from hundreds of developers,"
 " been translated into fifty languages, and today is used by developers on "
 "every continent and in every kind of job."
-msgstr ""
+msgstr "Django 1.0 mewakili lebih 3 tahun dari pengembangan komunitas sebagai proyek Sumber Terbuka. Django menerima bantuan dari ribuan pengembang, telah diterjemahkan kedalam 50 bahasa, dan hari ini digunakan oleh pengembang pada setiap benua dan dalam setiap macam pekerjaan."
 
 #: ../../../../sources/1.9/docs/releases/1.0.txt:16
 msgid ""
@@ -581,7 +581,7 @@ msgid ""
 "revision number 8825. Django 1.0 represents revision 8961 of our public "
 "repository. It seems fitting that our 1.0 release comes at the moment where "
 "community contributions overtake those made privately."
-msgstr ""
+msgstr "Sebuah catatan riwayat menarik: ketika Django pertama kali terbit di Juli 2005, versi terbitan awal dari Django datang dari gudang internal pada angka perbaikan 8825. Django 1.0 mewakili perbaikan 8961 dari gudang umum kami. Dia kelihatannya sesuai bahwa terbitan 1.0 kami datang pada saat dimana bantuan komunitas mengambil alih yang dibuat secara pribadi."
 
 #: ../../../../sources/1.9/docs/releases/1.0.txt:23
 msgid "Stability and forwards-compatibility"
@@ -593,7 +593,7 @@ msgid ""
 " stability and forwards-compatibility. In a nutshell, this means that code "
 "you develop against Django 1.0 will continue to work against 1.1 unchanged, "
 "and you should need to make only minor changes for any 1.X release."
-msgstr ""
+msgstr ":doc:`The release of Django 1.0 </releases/1.0>` datang dengan sebuah janji dari kestabilan API dan kesesuaian-kedepan. Dalam cangkang kacang, ini berarti bahwa kode anda kembangkan terhadap Django 1.0 akan berlanjut bekerja terhadap 1.1 tidak berubah, dan harus butuh membuat hanya perubahan sedikir untuk terbitan 1.X apapun."
 
 #: ../../../../sources/1.9/docs/releases/1.0.txt:30
 msgid ""
@@ -605,13 +605,13 @@ msgid ""
 "Django 1.0 has a number of backwards-incompatible changes from Django 0.96. "
 "If you have apps written against Django 0.96 that you need to port, see our "
 "detailed porting guide:"
-msgstr ""
+msgstr "Django 1.0 mempunyai sejumlah perubahan kesesuaian-kebelakang dari Django 0.96. Jika anda mempunyai aplikasi ditulis terhadap Django 0.96 yang anda butuh menautkannya, lihat panduan tautan rincian kami:"
 
 #: ../../../../sources/1.9/docs/releases/1.0.txt:44
 msgid ""
 "A complete list of backwards-incompatible changes can be found at "
 "https://code.djangoproject.com/wiki/BackwardsIncompatibleChanges."
-msgstr ""
+msgstr "Daftar lengkap dari perubahan kesesuaian-kebelakang dapat ditemukan pada https://code.djangoproject.com/wiki/BackwardsIncompatibleChanges."
 
 #: ../../../../sources/1.9/docs/releases/1.0.txt:48
 msgid "What's new in Django 1.0"
@@ -627,7 +627,7 @@ msgid ""
 " bugs, and edited, added, or removed around 350,000 lines of code. We've "
 "also added 40,000 lines of new documentation, and greatly improved what was "
 "already there."
-msgstr ""
+msgstr "Sejak Django 0.96, kami telah membuat lebih 4,000 kode penyerahan, memperbaiki lebih dari 2,000 kesalahan, dan menyunting, menambahkan, atau memindahkan sekitar 350,000 baris kode. Kami juga telah menambahkan 40,000 baris dari dokumentasi baru, dan secara hebat meningkatkan apa yang telah ada disana."
 
 #: ../../../../sources/1.9/docs/releases/1.0.txt:57
 msgid ""
@@ -650,7 +650,7 @@ msgid ""
 "We can't possibly document everything that's new in 1.0, but the "
 "documentation will be your definitive guide. Anywhere you see something "
 "like:"
-msgstr ""
+msgstr "Kami tidak dapat mungkin mendokumentasikan semuanya yang baru dalam 1.0, tetapi dokumentasi akan menjadi panduan pasti anda. Dimanapun anda melihat sesuatu seperti:"
 
 #: ../../../../sources/1.9/docs/releases/1.0.txt:70
 msgid "This feature is new in Django 1.0"

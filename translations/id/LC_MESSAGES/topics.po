@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the Django package.
 # 
 # Translators:
+# Adiyat Mubarak <adiyatmubarak@gmail.com>, 2016
 # Fery Setiawan <gembelweb@gmail.com>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-03 07:11-0600\n"
-"PO-Revision-Date: 2016-05-05 03:04+0000\n"
+"PO-Revision-Date: 2016-07-01 01:03+0000\n"
 "Last-Translator: Fery Setiawan <gembelweb@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/django/django-docs/language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -207,7 +208,7 @@ msgstr "Menangani otorisasi dalam backend penyesuaian"
 
 #: ../../../../sources/1.9/docs/topics/auth/customizing.txt:171
 msgid "Custom auth backends can provide their own permissions."
-msgstr ""
+msgstr "Penyesuaian backend sah dapat menyediakan perizinan mereka sendiri."
 
 #: ../../../../sources/1.9/docs/topics/auth/customizing.txt:173
 msgid ""
@@ -512,20 +513,20 @@ msgid ""
 "When you define a foreign key or many-to-many relations to the User model, "
 "you should specify the custom model using the :setting:`AUTH_USER_MODEL` "
 "setting. For example::"
-msgstr ""
+msgstr "Ketika anda menentukan foreign key atau hubungan many-to-many pada model User, anda harus menjelaskan penyesuaian model menggunakan pengaturan :setting:`AUTH_USER_MODEL`. Sebagai contoh::"
 
 #: ../../../../sources/1.9/docs/topics/auth/customizing.txt:452
 msgid ""
 "When connecting to signals sent by the ``User`` model, you should specify "
 "the custom model using the :setting:`AUTH_USER_MODEL` setting. For example::"
-msgstr ""
+msgstr "Ketika terhubung ke sinyal yang dikirim oleh model ``User``. anda harus menentukan penyesuaian model menggunakan pengaturan :setting:`AUTH_USER_MODEL`. Sebagai contoh::"
 
 #: ../../../../sources/1.9/docs/topics/auth/customizing.txt:463
 msgid ""
 "Generally speaking, you should reference the User model with the "
 ":setting:`AUTH_USER_MODEL` setting in code that is executed at import time. "
 "``get_user_model()`` only works once Django has imported all models."
-msgstr ""
+msgstr "Secara umum, anda harus mengacu model User dengan pengaturan :setting:`AUTH_USER_MODEL` di kode yang dijalankan pada waktu impor. ``get_user_model()`` hanya bekerja sekali ketika Django telah mengimpor semua model."
 
 #: ../../../../sources/1.9/docs/topics/auth/customizing.txt:470
 msgid "Specifying a custom ``User`` model"
@@ -539,7 +540,7 @@ msgstr "Pertimbangan rancangan model"
 msgid ""
 "Think carefully before handling information not directly related to "
 "authentication in your custom User Model."
-msgstr ""
+msgstr "Berpikir hati-hati sebelum menangani informasi yang tidak langsung terkait pada pembuktian keaslian di penyesuaian Model User anda."
 
 #: ../../../../sources/1.9/docs/topics/auth/customizing.txt:477
 msgid ""
@@ -548,7 +549,7 @@ msgid ""
 " data requirements without risking conflicts with other apps. On the other "
 "hand, queries to retrieve this related information will involve a database "
 "join, which may have an effect on performance."
-msgstr ""
+msgstr "Itu mungkin lebih baik untuk menyimpan  aplikasi-khusus informasi pengguna dalam sebuah model yang mempunyai hubungan dengan model User. Itu mengizinkan setiap aplikasi menentukan persyaratan data pengguna miliknya tanpa mempertaruhkan pertentangan dengan aplikasi lain. Di sisi lain, permintaan untuk mengambil informasi terkait ini akan melibatkan peggabungan basisdata, yang akan mempunyai pengaruh pada penampilan."
 
 #: ../../../../sources/1.9/docs/topics/auth/customizing.txt:483
 msgid ""
@@ -562,7 +563,7 @@ msgid ""
 "be a username, an email address, or any other unique attribute. A non-unique"
 " username field is allowed if you use a custom authentication backend that "
 "can support it."
-msgstr ""
+msgstr "Jika anda menggunakan backend pembuktian keaslian awal, kemudian model anda harus mempunyai bidang unik tunggal yang dapat digunakan untuk tujuan pencirian. Ini dapat berupa nama pengguna, sebauh alamat surel, atau atribut unik lainnya. Bidang nama pengguna tidak unik diizinakn jika anda menggunakan penyesuaian backend pembuktian keaslian yang dapat mendukungnya."
 
 #: ../../../../sources/1.9/docs/topics/auth/customizing.txt:491
 msgid ""
@@ -571,7 +572,7 @@ msgid ""
 "user's given name as the \"short\" identifier, and the user's full name as "
 "the \"long\" identifier. However, there are no constraints on what these two"
 " methods return - if you want, they can return exactly the same value."
-msgstr ""
+msgstr "Model anda harus menyediakan cara terbaik utnuk mengalamatkan pengguna dalam bentuk \"short\" and \"long\".  Penafsiran paling umum dari ini akan digunakan nama diberikan pengguna sebagai penciri \"short\", dan nama lengkap pengguna sebagai penciri \"long\". Bagaimanapun, tidak ada batasan pada apa yang duca cara ini kembalikan - jika anda ingin, mereka dapat mengembalikan nilai sama yang tepat."
 
 #: ../../../../sources/1.9/docs/topics/auth/customizing.txt:500
 msgid ""
@@ -629,14 +630,14 @@ msgstr ""
 msgid ""
 "For example, here is the partial definition for a ``User`` model that "
 "defines two required fields - a date of birth and height::"
-msgstr ""
+msgstr "Sebagai contoh, ini adalah pengertian sebagian untuk model ``User`` yang menentukan dua bidang diwajibkan - tanggal dari kelahiran dan tinggi::"
 
 #: ../../../../sources/1.9/docs/topics/auth/customizing.txt:562
 msgid ""
 "``REQUIRED_FIELDS`` must contain all required fields on your ``User`` model,"
 " but should *not* contain the ``USERNAME_FIELD`` or ``password`` as these "
 "fields will always be prompted for."
-msgstr ""
+msgstr "``REQUIRED_FIELDS`` harus mengandung semua bidang-bidang yang diwajibkan pada model ``User`` anda, tetapi harus *tidak* mengandung ``USERNAME_FIELD`` atau ``password`` ketika bidang-bidang ini akan selalu didorong."
 
 #: ../../../../sources/1.9/docs/topics/auth/customizing.txt:568
 msgid ""
@@ -760,7 +761,7 @@ msgstr ""
 msgid ""
 "Returns an HMAC of the password field. Used for :ref:`session-invalidation-"
 "on-password-change`."
-msgstr ""
+msgstr "Mengembalikan nilai HMAC dari kolom kata sandi. Digunakan untuk  :ref:`session-invalidation-on-password-change`."
 
 #: ../../../../sources/1.9/docs/topics/auth/customizing.txt:670
 msgid ""
@@ -864,13 +865,13 @@ msgstr ""
 msgid ""
 "The following forms are compatible with any subclass of "
 ":class:`~django.contrib.auth.models.AbstractBaseUser`:"
-msgstr ""
+msgstr "Bentuk berikut cocok dengan subkelas apapun dari :class:`~django.contrib.auth.models.AbstractBaseUser`:"
 
 #: ../../../../sources/1.9/docs/topics/auth/customizing.txt:756
 msgid ""
 ":class:`~django.contrib.auth.forms.AuthenticationForm`: Uses the username "
 "field specified by :attr:`~models.CustomUser.USERNAME_FIELD`."
-msgstr ""
+msgstr ":class:`~django.contrib.auth.forms.AuthenticationForm`: Menggunakan bidang nama pengguna ditentukan oleh :attr:`~models.CustomUser.USERNAME_FIELD`."
 
 #: ../../../../sources/1.9/docs/topics/auth/customizing.txt:758
 msgid ":class:`~django.contrib.auth.forms.SetPasswordForm`"
@@ -3798,7 +3799,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/topics/auth/passwords.txt:557
 msgid "Here's a basic example of a validator, with one optional setting::"
-msgstr ""
+msgstr "Ini adalah contoh dasar dari pengecekan, dengan satu pilihan pengaturan::"
 
 #: ../../../../sources/1.9/docs/topics/auth/passwords.txt:580
 msgid ""
@@ -3810,7 +3811,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:3
 msgid "Django's cache framework"
-msgstr ""
+msgstr "Kerangka kerja tembolok Django"
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:5
 msgid ""
@@ -3867,7 +3868,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:49
 msgid "Setting up the cache"
-msgstr ""
+msgstr "Mengatur tembolok"
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:51
 msgid ""
@@ -3885,7 +3886,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:63
 msgid "Memcached"
-msgstr ""
+msgstr "Memcache"
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:65
 msgid ""
@@ -3913,7 +3914,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:85
 msgid "To use Memcached with Django:"
-msgstr ""
+msgstr "Untuk menggunakan Memcache dengan Django:"
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:87
 msgid ""
@@ -3921,7 +3922,7 @@ msgid ""
 "``django.core.cache.backends.memcached.MemcachedCache`` or "
 "``django.core.cache.backends.memcached.PyLibMCCache`` (depending on your "
 "chosen memcached binding)"
-msgstr ""
+msgstr "Setel :setting:`BACKEND <CACHES-BACKEND>` menjadi ``django.core.cache.backends.memcached.MemcachedCache`` atau ``django.core.cache.backends.memcached.PyLibMCCache`` (tergantung pada pengikatan memcache anda pilih)"
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:92
 msgid ""
@@ -3929,19 +3930,19 @@ msgid ""
 "``ip`` is the IP address of the Memcached daemon and ``port`` is the port on"
 " which Memcached is running, or to a ``unix:path`` value, where ``path`` is "
 "the path to a Memcached Unix socket file."
-msgstr ""
+msgstr "Setel :setting:`LOCATION <CACHES-LOCATION>` menjadi nilai-nilai ``ip:port``, dimana ``ip`` adalah alamat IP dari daemon memcache dan ``port`` adalah pangkalan pada Memcache mana yang berjalan, atau menjadi nilai ``unix:path``, dimana ``path`` adalah jalur ke berkas soket Unix Memcache. "
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:97
 msgid ""
 "In this example, Memcached is running on localhost (127.0.0.1) port 11211, "
 "using the ``python-memcached`` binding::"
-msgstr ""
+msgstr "Dalam contoh ini, Memcache berjalan pada localhost (127.0.0.1) pangkalan 11211, menggunakan pengikatan ``python-memcached``::"
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:107
 msgid ""
 "In this example, Memcached is available through a local Unix socket file "
 ":file:`/tmp/memcached.sock` using the ``python-memcached`` binding::"
-msgstr ""
+msgstr "Dalam contoh ini, Memcache tersedia melalui berkas soket Unix lokal :file:`/tmp/memcached.sock` menggunakan pengikatan ``python-memcached``::"
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:117
 msgid ""
@@ -3957,7 +3958,7 @@ msgid ""
 "advantage of this feature, include all server addresses in "
 ":setting:`LOCATION <CACHES-LOCATION>`, either separated by semicolons or as "
 "a list."
-msgstr ""
+msgstr "Satu fitur hebat dari Memcache adalah kemampuan untuk berbagi tembolok terhadap banyak peladen. Ini berarti anda dapat menjalankan daemon Memcache pada banyak mesin, dan program akan memperlakukan kelompok mesin sebagai tembolok *tunggal*, tanpa perlu menggandakan nilai-nilai tembolok pada setiap mesin. Untuk mengambil keuntungan dari fitur ini, sertakan semua alamat peladen dalam :setting:`LOCATION <CACHES-LOCATION>`, baik itu dipisahkan dengan titik koma atau sebagai sebuah daftar."
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:134
 msgid ""
@@ -3986,17 +3987,17 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:174
 msgid "Database caching"
-msgstr ""
+msgstr "Menembolok basisdata"
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:176
 msgid ""
 "Django can store its cached data in your database. This works best if you've"
 " got a fast, well-indexed database server."
-msgstr ""
+msgstr "Django dapat menyimpan data temboloknya dalam basisdata anda. Ini bekerja baik jika anda mendapatkan cepat, peladen basisdata diindeks baik."
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:179
 msgid "To use a database table as your cache backend:"
-msgstr ""
+msgstr "Untuk menggunakan tabel basisdata sebagai backend tembolok anda:"
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:181
 msgid ""
@@ -4009,52 +4010,52 @@ msgid ""
 "Set :setting:`LOCATION <CACHES-LOCATION>` to ``tablename``, the name of the "
 "database table. This name can be whatever you want, as long as it's a valid "
 "table name that's not already being used in your database."
-msgstr ""
+msgstr "Setel :setting:`LOCATION <CACHES-LOCATION>` menjadi ``tablename``, nama dari tabel basisdata. Nama ini dapat menjadi apapun anda inginkan, selama dia adalah nama tabel yang sah yang tidak sedang digunakan dalam basisdata anda."
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:188
 msgid "In this example, the cache table's name is ``my_cache_table``::"
-msgstr ""
+msgstr "Dalam contoh ini, nama tabel tembolok adalah ``my_cache_table``::"
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:198
 msgid "Creating the cache table"
-msgstr ""
+msgstr "Membuat tabel tembolok"
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:200
 msgid ""
 "Before using the database cache, you must create the cache table with this "
 "command::"
-msgstr ""
+msgstr "Sebelum menggunakan basisdata tembolok, anda harus membuat tabel tembolok dengan perintah ini::"
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:205
 msgid ""
 "This creates a table in your database that is in the proper format that "
 "Django's database-cache system expects. The name of the table is taken from "
 ":setting:`LOCATION <CACHES-LOCATION>`."
-msgstr ""
+msgstr "Ini membuat tabel di basisdata anda yaitu dalam bentuk sesuai yang sistem tembolok-basidata harapkan. Nama dari tabel diambil dari :setting:`LOCATION <CACHES-LOCATION>`."
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:209
 msgid ""
 "If you are using multiple database caches, :djadmin:`createcachetable` "
 "creates one table for each cache."
-msgstr ""
+msgstr "Jika anda menggunakan banyak basisdata tembolok, :djadmin:`createcachetable` membuat satu tabel untuk setiap tembolok."
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:212
 msgid ""
 "If you are using multiple databases, :djadmin:`createcachetable` observes "
 "the ``allow_migrate()`` method of your database routers (see below)."
-msgstr ""
+msgstr "Jika anda menggunakan banyak basisdata, :djadmin:`createcachetable` mengamati cara ``allow_migrate()`` dari perute basisdata anda (lihat dibawah)."
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:215
 msgid ""
 "Like :djadmin:`migrate`, :djadmin:`createcachetable` won't touch an existing"
 " table. It will only create missing tables."
-msgstr ""
+msgstr "Seperti :djadmin:`migrate`, :djadmin:`createcachetable` tidak akan menyentuh tabel yang ada. Dia tidak akan membuat tabel-tabel hilang."
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:218
 msgid ""
 "To print the SQL that would be run, rather than run it, use the "
 ":option:`createcachetable --dry-run` option."
-msgstr ""
+msgstr "Untuk mencetak SQL yang akan menjalankan, daripada menjalankannya, gunakan pilihan :option:`createcachetable --dry-run`."
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:222
 #: ../../../../sources/1.9/docs/topics/db/multi-db.txt:3
@@ -4068,14 +4069,14 @@ msgid ""
 "routing, the database cache table appears as a model named ``CacheEntry``, "
 "in an application named ``django_cache``. This model won't appear in the "
 "models cache, but the model details can be used for routing purposes."
-msgstr ""
+msgstr "Jika anda menggunakan penembolokan basisdata dengan banyak basisdata, anda akan juga butuh menyetel perintah perutean untuk tabel tembolok basisdata anda. Untuk tujuan perutean, tabel tembolok basisdata muncul sebagai model dinamai ``CacheEntry``, di aplikasi dinamai ``django_cache``. Model ini tidak akan muncul dalam model tembolok, tetapi rincian model dapat digunakan untuk tujuan perutean."
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:231
 msgid ""
 "For example, the following router would direct all cache read operations to "
 "``cache_replica``, and all write operations to ``cache_primary``. The cache "
 "table will only be synchronized onto ``cache_primary``::"
-msgstr ""
+msgstr "Sebagai contoh, perute berikut akan melangsungkan semua tindakan pembacaan tembolok ke ``cache_replica``, dan semua tindakan penulisan ke ``cache_primary``. Tabel tembolok hanya disinkronisasikan kedalam  ``cache_primary``:: "
 
 #: ../../../../sources/1.9/docs/topics/cache.txt:257
 msgid ""
@@ -8269,7 +8270,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/topics/db/examples/many_to_one.txt:173
 msgid "Querying in the opposite direction::"
-msgstr ""
+msgstr "Meminta di arah berlawanan:"
 
 #: ../../../../sources/1.9/docs/topics/db/examples/many_to_one.txt:187
 msgid ""
@@ -8319,15 +8320,15 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/topics/db/examples/one_to_one.txt:55
 msgid "A Restaurant can access its place::"
-msgstr ""
+msgstr "Sebuah Restaurant dapat mengakses tempatnya::"
 
 #: ../../../../sources/1.9/docs/topics/db/examples/one_to_one.txt:60
 msgid "A Place can access its restaurant, if available::"
-msgstr ""
+msgstr "Sebuah Place dapat mengakses restorannya, jika tersedia::"
 
 #: ../../../../sources/1.9/docs/topics/db/examples/one_to_one.txt:65
 msgid "p2 doesn't have an associated restaurant::"
-msgstr ""
+msgstr "p2 tidak mempunyai restoran terkait::"
 
 #: ../../../../sources/1.9/docs/topics/db/examples/one_to_one.txt:74
 msgid ""

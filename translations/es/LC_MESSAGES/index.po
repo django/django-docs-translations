@@ -6,16 +6,17 @@
 # Abraham Estrada <abraham.estrada@gmail.com>, 2013
 # Ernesto Avilés Vázquez <whippiii@gmail.com>, 2015
 # Ernesto Avilés Vázquez <whippiii@gmail.com>, 2014
-# José Alaguna <alagunajs@gmail.com>, 2015
-# Samuel David Ramirez Mantione <venezuelapoliglota@hotmail.com>, 2015
+# Yusuf (Josè) Luis <alagunajs@gmail.com>, 2015
+# Markus Holtermann <inyoka@markusholtermann.eu>, 2016
+# Samuel David Ramirez Mantione <venezuelapoliglota@hotmail.com>, 2015-2016
 # Sebastián Ramírez Magrí <sebasmagri@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-29 02:09-0600\n"
-"PO-Revision-Date: 2015-12-27 20:32+0000\n"
-"Last-Translator: Samuel David Ramirez Mantione <venezuelapoliglota@hotmail.com>\n"
+"POT-Creation-Date: 2016-07-28 18:06-0500\n"
+"PO-Revision-Date: 2016-04-11 11:00+0000\n"
+"Last-Translator: Markus Holtermann <inyoka@markusholtermann.eu>\n"
 "Language-Team: Spanish (http://www.transifex.com/django/django-docs/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,77 +24,102 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-# f92c4b0cab1e4ca1818dd45f899fa064
-#: ../../../../1.9/docs/index.txt:6
+#: ../../../../sources/1.9/docs/index.txt:3
 msgid "Django documentation"
 msgstr "Documentación de Django"
 
-# bb2698cd9dcd43bbada2f81b850cefad
-#: ../../../../1.9/docs/index.txt:9
+#: ../../../../sources/1.9/docs/index.txt:6
 msgid "Everything you need to know about Django."
-msgstr "Todo lo que necesitas saber sobre Django."
+msgstr "Todo lo que necesita saber sobre Django."
 
-# 679f57f3be37428599942274c1e6f9f5
-#: ../../../../1.9/docs/index.txt:11
+#: ../../../../sources/1.9/docs/index.txt:8
 msgid "Getting help"
 msgstr "Obteniendo ayuda"
 
-# 9b07cda65d4942c6875a074358be01c9
-#: ../../../../1.9/docs/index.txt:13
+#: ../../../../sources/1.9/docs/index.txt:10
 msgid "Having trouble? We'd like to help!"
-msgstr "¿Tienes algún problema? ¡Nos gustaría ayudar!"
+msgstr "¿Tiene algún problema? ¡Nos gustaría ayudar!"
 
-# 4863550f0c2b45dc9a20393338973a39
-#: ../../../../1.9/docs/index.txt:15
+#: ../../../../sources/1.9/docs/index.txt:12
 msgid ""
 "Try the :doc:`FAQ <faq/index>` -- it's got answers to many common questions."
 msgstr "Prueba con las :doc:`Preguntas Frecuentes <faq/index>` -- contienen las respuestas a muchas preguntas comunes."
 
-# c21c36cfe3974d3fb9e44772cd4e6ce0
-#: ../../../../1.9/docs/index.txt:17
+#: ../../../../sources/1.9/docs/index.txt:14
 msgid ""
 "Looking for specific information? Try the :ref:`genindex`, :ref:`modindex` "
 "or the :doc:`detailed table of contents <contents>`."
-msgstr "¿Buscas información específica? Intenta con :ref:`genindex`, :ref:`modindex` o la :doc:`tabla de contenidos detallada <contents>`."
+msgstr "¿Buscando información específica? Intente con :ref:`genindex`, :ref:`modindex` o la :doc:`tabla de contenidos detallada <contents>`."
 
-# fcc531fe36584503a422a9b316f15c7a
-#: ../../../../1.9/docs/index.txt:20
+#: ../../../../sources/1.9/docs/index.txt:17
 msgid ""
 "Search for information in the archives of the |django-users| mailing list, "
 "or `post a question`_."
-msgstr "Buscar información en los archivos de la lista de correos |django-users|, o `publica una pregunta`_."
+msgstr "Busque información en los archivos de la lista de correos |django-users| o `plantee una pregunta`_."
 
-# 49d45d3ef06d4cfbabfe15c08682f2fd
-#: ../../../../1.9/docs/index.txt:23
+#: ../../../../sources/1.9/docs/index.txt:20
 msgid ""
 "Ask a question in the `#django IRC channel`_, or search the `IRC logs`_ to "
 "see if it's been asked before."
-msgstr "Haz una pregunta en el `canal IRC #django`_, o busca en los `registros del IRC`_ para ver si ya la han hecho antes."
+msgstr "Haga una pregunta en el `canal #django IRC`_ o busque los `registros del IRC`_ para ver si ya la han hecho antes."
 
-# 391b470313fe4b209add5f72775371a5
-#: ../../../../1.9/docs/index.txt:26
+#: ../../../../sources/1.9/docs/index.txt:23
 msgid "Report bugs with Django in our `ticket tracker`_."
-msgstr "Reporta errores de Django en nuestro `sistema de seguimiento de fallos`_."
+msgstr "Reporte bugs con Django en nuestro `rastreador de tickets`_."
 
-# 79cc84833ceb47d395cc051def189b81
-#: ../../../../1.9/docs/index.txt:35
+#: ../../../../sources/1.9/docs/index.txt:32
+msgid "How the documentation is organized"
+msgstr "Como está organizada la documentación"
+
+#: ../../../../sources/1.9/docs/index.txt:34
+msgid ""
+"Django has a lot of documentation. A high-level overview of how it's "
+"organized will help you know where to look for certain things:"
+msgstr "Django tiene mucha documentación. Una descripción general de alto nivel de cómo se organiza le ayudará a saber dónde buscar ciertas cosas:"
+
+#: ../../../../sources/1.9/docs/index.txt:37
+msgid ""
+":doc:`Tutorials </intro/index>` take you by the hand through a series of "
+"steps to create a Web application. Start here if you're new to Django or Web"
+" application development. Also look at the \":ref:`index-first-steps`\" "
+"below."
+msgstr ":doc:`Los tutoriales  </intro/index>` lo llevan de la mano a través de una serie de pasos para crear una aplicación Web. Comience aquí si es principiante en Django o en el desarrollo de aplicaciones Web.  Eche un vistazo también al \":ref:`index-first-steps`\" a continuación."
+
+#: ../../../../sources/1.9/docs/index.txt:41
+msgid ""
+":doc:`Topic guides </topics/index>` discuss key topics and concepts at a "
+"fairly high level and provide useful background information and explanation."
+msgstr ":doc:`Las guías temáticas  </topics/index>` discuten los temas y conceptos fundamentalesen un nivel bastante alto y proporcionan información y explicación de antecedentes valiosa."
+
+#: ../../../../sources/1.9/docs/index.txt:44
+msgid ""
+":doc:`Reference guides </ref/index>` contain technical reference for APIs "
+"and other aspects of Django's machinery. They describe how it works and how "
+"to use it but assume that you have a basic understanding of key concepts."
+msgstr ":doc:`Las  guías de referencia </ref/index>` contienen la referencia técnica para las APIs y otros aspectos del sistema de Django. Ellas describen cómo funciona y cómo utilizarla, pero da por sentado que usted tiene un conocimiento básico de los conceptos claves."
+
+#: ../../../../sources/1.9/docs/index.txt:48
+msgid ""
+":doc:`How-to guides </howto/index>` are recipes. They guide you through the "
+"steps involved in addressing key problems and use-cases. They are more "
+"advanced than tutorials and assume some knowledge of how Django works."
+msgstr ":doc: `Las guías de uso </howto/index>` son fórmulas. Lo guian a través de los pasos involucrados en abordar los problemas principales y los casos de uso. Son más avanzadas que los tutoriales y dan por sentado el tener algo de conocimiento sobre cómo funciona Django."
+
+#: ../../../../sources/1.9/docs/index.txt:55
 msgid "First steps"
-msgstr "Primeros pasos"
+msgstr "Los primeros pasos"
 
-# 8f6fa5f419a545d8a1d9ad2d30fe11e5
-#: ../../../../1.9/docs/index.txt:37
+#: ../../../../sources/1.9/docs/index.txt:57
 msgid "Are you new to Django or to programming? This is the place to start!"
-msgstr "¿Eres nuevo con Django o con la programación? ¡Este es el lugar para comenzar!"
+msgstr "¿Es usted nuevo en Django o con la programación? ¡Este es el lugar para comenzar!"
 
-# c0d42fc7d93f4fff8773a4ec1492df74
-#: ../../../../1.9/docs/index.txt:39
+#: ../../../../sources/1.9/docs/index.txt:59
 msgid ""
 "**From scratch:** :doc:`Overview <intro/overview>` | :doc:`Installation "
 "<intro/install>`"
 msgstr "**Desde cero:** :doc:`Visión general <intro/overview>` | :doc:`Instalación <intro/install>`"
 
-# 61cb839089cb49f3944abf6c50efca39
-#: ../../../../1.9/docs/index.txt:43
+#: ../../../../sources/1.9/docs/index.txt:63
 msgid ""
 "**Tutorial:** :doc:`Part 1: Requests and responses <intro/tutorial01>` | "
 ":doc:`Part 2: Models and the admin site <intro/tutorial02>` | :doc:`Part 3: "
@@ -101,60 +127,52 @@ msgid ""
 "views <intro/tutorial04>` | :doc:`Part 5: Testing <intro/tutorial05>` | "
 ":doc:`Part 6: Static files <intro/tutorial06>` | :doc:`Part 7: Customizing "
 "the admin site <intro/tutorial07>`"
-msgstr "** Tutorial: **: doc: `Parte 1: Peticiones y respuestas <intro/tutorial01>` | : doc: `Parte 2: Modelos y el sitio administrativo <intro/tutorial02>` | : doc: `Parte 3: Vistas y plantillas <intro/tutorial03> `| : doc: `Parte 4: Formularios y vistas genéricas <intro/tutorial04>` | : doc: `Parte 5: Pruebas <intro/tutorial05>` | : doc: `Parte 6: Archivos estáticos <intro/tutorial06>` | : doc: `Parte 7: Personalizando del sitio administrativo <intro/tutorial07>`"
+msgstr "**Tutorial:** :doc:`Parte 1: Peticiones y respuestas <intro/tutorial01>` | :doc:`Parte 2: Modelos y el sitio administrativo <intro/tutorial02>` | :doc: `Parte 3: Vistas y plantillas <intro/tutorial03> `| :doc:`Parte 4: Formularios y vistas genéricas <intro/tutorial04>` | :doc:`Parte 5: Pruebas <intro/tutorial05>` | :doc:`Parte 6: Archivos estáticos <intro/tutorial06>` | :doc:`Parte 7: Personalizando el sitio administrativo <intro/tutorial07>`"
 
-# 458b08fb3d6941e4a84dd9cdf855638c
-#: ../../../../1.9/docs/index.txt:52
+#: ../../../../sources/1.9/docs/index.txt:72
 msgid ""
 "**Advanced Tutorials:** :doc:`How to write reusable apps <intro/reusable-"
 "apps>` | :doc:`Writing your first patch for Django <intro/contributing>`"
-msgstr "**Tutoriales avanzados:** :doc:`¿Cómo escribir aplicaciones reusables <intro/reusable-apps>` | :doc:`Creando tu primer parche para Django <intro/contributing>`"
+msgstr "**Tutoriales avanzados:** :doc:`Cómo escribir aplicaciones reutilizables <intro/reusable-apps>` | :doc:`Creando tu primer parche para Django <intro/contributing>`"
 
-# ca75daa3c8df45708a8536b37b51ef1e
-#: ../../../../1.9/docs/index.txt:57
+#: ../../../../sources/1.9/docs/index.txt:77
 msgid "The model layer"
 msgstr "La capa del modelo"
 
-# 7fda3fcfd45a49b08bcb19d660c33be8
-#: ../../../../1.9/docs/index.txt:59
+#: ../../../../sources/1.9/docs/index.txt:79
 msgid ""
 "Django provides an abstraction layer (the \"models\") for structuring and "
 "manipulating the data of your Web application. Learn more about it below:"
-msgstr "Django provee una capa de abstracción (los \"modelos\") para estructurar y manipular los datos de tu aplicación Web. Aprende más sobre esta a continuación:"
+msgstr "Django proporciona una capa de abstracción (los \"modelos\") para estructurar y manipular los datos de su aplicación Web. Aprenda más sobre esta a continuación:"
 
-# 4dbd05b45c274894bfa685845f31e1ad
-#: ../../../../1.9/docs/index.txt:62
+#: ../../../../sources/1.9/docs/index.txt:82
 msgid ""
 "**Models:** :doc:`Introduction to models <topics/db/models>` | :doc:`Field "
 "types <ref/models/fields>` | :doc:`Meta options <ref/models/options>` | "
 ":doc:`Model class <ref/models/class>`"
-msgstr "** Modelos:**: doc: `Introducción a los modelos <topics/db/models>` | : doc: `tipos de campo <ref/models/fields> `| : doc: `opciones meta <ref/models/options>` | : doc: `clase de modelos <ref/models/class>`"
+msgstr "**Modelos:** :doc:`Introducción a los modelos <topics/db/models>` | :doc: `Tipos de campo <ref/models/fields>` | :doc:`Opciones meta <ref/models/options>` | :doc:`Clase de modelos <ref/models/class>`"
 
-# 54b07847aa9b401bb0339576ee29d501
-#: ../../../../1.9/docs/index.txt:68
+#: ../../../../sources/1.9/docs/index.txt:88
 msgid ""
 "**QuerySets:** :doc:`Executing queries <topics/db/queries>` | :doc:`QuerySet"
 " method reference <ref/models/querysets>` | :doc:`Lookup expressions "
 "<ref/models/lookups>`"
-msgstr "**QuerySets:**: doc: `Ejecutando consultas  <topics/db/queries>` | : doc: `referencia de método QuerySet <ref/models/querysets>` | : doc: `expresiones de búsqueda <ref/models/lookups>`"
+msgstr "**QuerySets:** :doc:`Ejecutando consultas  <topics/db/queries>` | :doc:`Referencia de método QuerySet <ref/models/querysets>` | :doc:`Expresiones de búsqueda <ref/models/lookups>`"
 
-# 07a71f0abfac452a8e880715158923f4
-#: ../../../../1.9/docs/index.txt:73
+#: ../../../../sources/1.9/docs/index.txt:93
 msgid ""
 "**Model instances:** :doc:`Instance methods <ref/models/instances>` | "
 ":doc:`Accessing related objects <ref/models/relations>`"
 msgstr "**Instancias de modelos:** :doc:`Métodos de las instancias <ref/models/instances>` | :doc:`Accediendo a objetos relacionados <ref/models/relations>`"
 
-# 12cc2fedc240433d892698910f250856
-#: ../../../../1.9/docs/index.txt:77
+#: ../../../../sources/1.9/docs/index.txt:97
 msgid ""
 "**Migrations:** :doc:`Introduction to Migrations<topics/migrations>` | "
 ":doc:`Operations reference <ref/migration-operations>` | :doc:`SchemaEditor "
 "<ref/schema-editor>` | :doc:`Writing migrations <howto/writing-migrations>`"
-msgstr "** Migraciones:**: doc: `Introducción a las migraciones <topics/migrations>` | : doc: `Referencia de operaciones <ref/migration-operations>` | : doc: `El editor de esquemas <ref/schema-editor>` | : doc: `Escribiendo migraciones <howto/writing-migrations> `"
+msgstr "**Migraciones:** :doc:`Introducción a las migraciones <topics/migrations>` | :doc:`Referencia de operaciones <ref/migration-operations>` | :doc:`SchemaEditor <ref/schema-editor>` | :doc: `Escribiendo migraciones <howto/writing-migrations>`"
 
-# 3980ab2613fe4241bd31cf7e744ac68b
-#: ../../../../1.9/docs/index.txt:83
+#: ../../../../sources/1.9/docs/index.txt:103
 msgid ""
 "**Advanced:** :doc:`Managers <topics/db/managers>` | :doc:`Raw SQL "
 "<topics/db/sql>` | :doc:`Transactions <topics/db/transactions>` | "
@@ -164,48 +182,42 @@ msgid ""
 "<ref/models/expressions>` | :doc:`Conditional Expressions <ref/models"
 "/conditional-expressions>` | :doc:`Database Functions <ref/models/database-"
 "functions>`"
-msgstr "** Avanzado: **: doc: `Administradores <topics/db/managers> `| : doc: `SQL plano  <topics/db/sql> `| : doc: `Transacciones <topics/db/transactions> `| : doc: `Agregación <topics/db/aggregation> `| : doc: `Campos personalizados <howto/custom-model-fields> `| : doc: ` Bases de datos múltiples <topics/db/multi-db> `| : doc: `Búsquedas personalizadas <howto/custom-lookups> `| : doc: `Expresiones de consulta <ref/models/expressions> `| : doc: `Expresiones condicionales <ref/models/conditional-expressions> `| : doc: `Funciones de  base de datos <ref/models/database-functions>`"
+msgstr "**Avanzado:** :doc:`Administradores <topics/db/managers>` | :doc:`SQL plano  <topics/db/sql>` | :doc:`Transacciones <topics/db/transactions>` | :doc:`Agregación <topics/db/aggregation>` | :doc:`Campos personalizados <howto/custom-model-fields>` | :doc:`Bases de datos múltiples <topics/db/multi-db> `| :doc: `Búsquedas personalizadas <howto/custom-lookups>` | :doc:`Expresiones de consulta <ref/models/expressions>` | :doc:`Expresiones condicionales <ref/models/conditional-expressions> `| :doc: `Funciones de  base de datos <ref/models/database-functions>`"
 
-# 81f97a6647da4fff991d3bca53f9b875
-#: ../../../../1.9/docs/index.txt:95
+#: ../../../../sources/1.9/docs/index.txt:115
 msgid ""
 "**Other:** :doc:`Supported databases <ref/databases>` | :doc:`Legacy "
 "databases <howto/legacy-databases>` | :doc:`Providing initial data <howto"
 "/initial-data>` | :doc:`Optimize database access <topics/db/optimization>` |"
 " :doc:`PostgreSQL specific features <ref/contrib/postgres/index>`"
-msgstr "** Otros: **: doc: `bases de datos compatibles <ref/databases> `| : doc: `bases de datos heredadas <howto/legacy-databases> `| : doc: `Proporcionando los datos iniciales <howto/initial-data> `| : doc: `Optimizar el acceso a la  base de datos  <topics/db/optimization>` | : doc: `características específicas de PostgreSQL <ref/contrib/postgres/index> `"
+msgstr "**Otros:** :doc:`Bases de datos soportadas <ref/databases>` | :doc:`Bases de datos heredadas <howto/legacy-databases>` | :doc:`Proporcionando los datos iniciales <howto/initial-data>` | :doc:`Optimizar el acceso a la base de datos  <topics/db/optimization>` | :doc:`Características específicas de PostgreSQL <ref/contrib/postgres/index>`"
 
-# 4373ba3cdab543c79d99068ee14f317a
-#: ../../../../1.9/docs/index.txt:103
+#: ../../../../sources/1.9/docs/index.txt:123
 msgid "The view layer"
 msgstr "La capa de vista"
 
-# 14140893ad2843c6888284b3767c85fa
-#: ../../../../1.9/docs/index.txt:105
+#: ../../../../sources/1.9/docs/index.txt:125
 msgid ""
 "Django has the concept of \"views\" to encapsulate the logic responsible for"
 " processing a user's request and for returning the response. Find all you "
 "need to know about views via the links below:"
-msgstr "Django tiene el concepto de \"vistas\" para encapsular la lógica responsable de procesar una petición del usuario y devolver la respuesta. Encuentra todo lo que necesitas saber sobre las vistas a través de los enlaces que siguen:"
+msgstr "Django tiene el concepto de \"vistas\" para encapsular la lógica responsable de procesar una petición del usuario y devolver la respuesta. Encuentre todo lo que necesita saber sobre las vistas a través de los enlaces que siguen:"
 
-# 318996ac6dfa4dd280eeeec7ea7cd809
-#: ../../../../1.9/docs/index.txt:109
+#: ../../../../sources/1.9/docs/index.txt:129
 msgid ""
 "**The basics:** :doc:`URLconfs <topics/http/urls>` | :doc:`View functions "
 "<topics/http/views>` | :doc:`Shortcuts <topics/http/shortcuts>` | "
 ":doc:`Decorators <topics/http/decorators>`"
 msgstr "**Lo básico:** :doc:`URLconfs <topics/http/urls>` | :doc:`Funciones de vista <topics/http/views>` | :doc:`Atajos <topics/http/shortcuts>` | :doc:`Decoradores <topics/http/decorators>`"
 
-# c5e4c6d261b04e60a841000066dd3afa
-#: ../../../../1.9/docs/index.txt:115
+#: ../../../../sources/1.9/docs/index.txt:135
 msgid ""
 "**Reference:** :doc:`Built-in Views <ref/views>` | :doc:`Request/response "
 "objects <ref/request-response>` | :doc:`TemplateResponse objects <ref"
 "/template-response>`"
-msgstr "**Referencia:** :doc:`Vistas incluidas en Django <ref/views>` | :doc:`Objetos petición/respuesta <ref/request-response>` | :doc:`Objetos TemplateResponse <ref/template-response>`"
+msgstr "**Referencia:** :doc:`Vistas incorporadas en Django <ref/views>` | :doc:`Objetos petición/respuesta <ref/request-response>` | :doc:`Objetos TemplateResponse <ref/template-response>`"
 
-# dc0cfb3baf4a4ee8940f12349c610a9f
-#: ../../../../1.9/docs/index.txt:120
+#: ../../../../sources/1.9/docs/index.txt:140
 msgid ""
 "**File uploads:** :doc:`Overview <topics/http/file-uploads>` | :doc:`File "
 "objects <ref/files/file>` | :doc:`Storage API <ref/files/storage>` | "
@@ -213,8 +225,7 @@ msgid ""
 "file-storage>`"
 msgstr "**Carga de archivos:** :doc:`Visión general <topics/http/file-uploads>` | :doc:`Objetos de archivo <ref/files/file>` | :doc:`API de almacenamiento <ref/files/storage>` | :doc:`Gestión de archivos <topics/files>` | :doc:`Almacenamiento personalizado <howto/custom-file-storage>`"
 
-# 3aac828a9380471aa836ccf01cbc9149
-#: ../../../../1.9/docs/index.txt:127
+#: ../../../../sources/1.9/docs/index.txt:147
 msgid ""
 "**Class-based views:** :doc:`Overview <topics/class-based-views/index>` | "
 ":doc:`Built-in display views <topics/class-based-views/generic-display>` | "
@@ -222,77 +233,66 @@ msgid ""
 ":doc:`Using mixins <topics/class-based-views/mixins>` | :doc:`API reference "
 "<ref/class-based-views/index>` | :doc:`Flattened index<ref/class-based-views"
 "/flattened-index>`"
-msgstr "**Vistas basadas en clases:** :doc:`Visión general <topics/class-based-views/index>` | :doc:`Vistas incluidas para visualización <topics/class-based-views/generic-display>` | :doc:`Vistas incluidas para edición <topics/class-based-views/generic-editing>` | :doc:`Usando Mixins <topics/class-based-views/mixins>` | :doc:`Referencia del API <ref/class-based-views/index>` | :doc:`Índice estático <ref/class-based-views/flattened-index>`"
+msgstr "**Vistas basadas en clases:** :doc:`Visión general <topics/class-based-views/index>` | :doc:`Vistas incorporadas para visualización <topics/class-based-views/generic-display>` | :doc:`Vistas incorpordas para edición <topics/class-based-views/generic-editing>` | :doc:`Usando Mixins <topics/class-based-views/mixins>` | :doc:`Referencia de la API <ref/class-based-views/index>` | :doc:`Índice estático <ref/class-based-views/flattened-index>`"
 
-# 9972e775064f457e88c6a2885f7a7ea3
-#: ../../../../1.9/docs/index.txt:135
+#: ../../../../sources/1.9/docs/index.txt:155
 msgid ""
 "**Advanced:** :doc:`Generating CSV <howto/outputting-csv>` | "
 ":doc:`Generating PDF <howto/outputting-pdf>`"
 msgstr "**Avanzado:** :doc:`Generación de archivos CSV <howto/outputting-csv>` | :doc:`Generación de archivos PDF <howto/outputting-pdf>`"
 
-# 09c850c6c72742d7bef057193d24e733
-#: ../../../../1.9/docs/index.txt:139
+#: ../../../../sources/1.9/docs/index.txt:159
 msgid ""
 "**Middleware:** :doc:`Overview <topics/http/middleware>` | :doc:`Built-in "
 "middleware classes <ref/middleware>`"
-msgstr "**Middleware:** :doc:`Visión general <topics/http/middleware>` | :doc:`Clases de Middleware incluidas <ref/middleware>`"
+msgstr "**Middleware:** :doc:`Visión general <topics/http/middleware>` | :doc:`Clases de Middleware incorporadas <ref/middleware>`"
 
-# 1dedc05282334b14afa7106ba86614b1
-#: ../../../../1.9/docs/index.txt:144
+#: ../../../../sources/1.9/docs/index.txt:164
 msgid "The template layer"
-msgstr "La capa de plantilla"
+msgstr "La capa de plantillas"
 
-# f68dcf0226cc4bd390c63477a0b38469
-#: ../../../../1.9/docs/index.txt:146
+#: ../../../../sources/1.9/docs/index.txt:166
 msgid ""
 "The template layer provides a designer-friendly syntax for rendering the "
 "information to be presented to the user. Learn how this syntax can be used "
 "by designers and how it can be extended by programmers:"
-msgstr "La capa de plantilla provee una sintaxis amigable para diseñadores que permite mostrar la información que se presentará al usuario. Aprende cómo esta sintaxis puede ser usada por los diseñadores y extendida por los programadores:"
+msgstr "La capa de plantillas provee una sintaxis amigable para los diseñadores que permite mostrar la información que se presentará al usuario. Aprenda cómo esta sintaxis puede ser usada por los diseñadores y extendida por los programadores:"
 
-# eea454f9789b43019290f120c48fc541
-#: ../../../../1.9/docs/index.txt:150
+#: ../../../../sources/1.9/docs/index.txt:170
 msgid "**The basics:** :doc:`Overview <topics/templates>`"
-msgstr "**Lo básico:** :doc:`Resumen <topics/templates>`"
+msgstr "**Lo básico:** :doc:`Visión general <topics/templates>`"
 
-# c27bb31ac9644493a909db9183ec01c5
-#: ../../../../1.9/docs/index.txt:153
+#: ../../../../sources/1.9/docs/index.txt:173
 msgid ""
 "**For designers:** :doc:`Language overview <ref/templates/language>` | :doc"
 ":`Built-in tags and filters <ref/templates/builtins>` | :doc:`Humanization "
 "<ref/contrib/humanize>`"
-msgstr "**Para los diseñadores:**: doc: `información general del lenguaje <ref/templates/language>` | : doc: `Etiquetas y filtros integrados <ref/templates/builtins>` | : doc: `Humanización <ref/contrib/humanize>`"
+msgstr "**Para los diseñadores:** :doc:`Información general del lenguaje <ref/templates/language>` | :doc: `Etiquetas y filtros incorporados <ref/templates/builtins>` | :doc:`Humanización <ref/contrib/humanize>`"
 
-# 0c14db1f5ae944c0ae3c67b301511f26
-#: ../../../../1.9/docs/index.txt:158
+#: ../../../../sources/1.9/docs/index.txt:178
 msgid ""
 "**For programmers:** :doc:`Template API <ref/templates/api>` | :doc:`Custom "
 "tags and filters <howto/custom-template-tags>`"
-msgstr "**Para programadores:** :doc:`API de las plantillas <ref/templates/api>` | :doc:`Etiquetas y filtros personalizados  <howto/custom-template-tags>`"
+msgstr "**Para los programadores:** :doc:`API de las plantillas <ref/templates/api>` | :doc:`Etiquetas y filtros personalizados  <howto/custom-template-tags>`"
 
-# 88c9d92a600d4ace823df9ea475989de
-#: ../../../../1.9/docs/index.txt:163
+#: ../../../../sources/1.9/docs/index.txt:183
 msgid "Forms"
 msgstr "Formularios"
 
-# d5afd7c1f5714013a72f55d334bfc846
-#: ../../../../1.9/docs/index.txt:165
+#: ../../../../sources/1.9/docs/index.txt:185
 msgid ""
 "Django provides a rich framework to facilitate the creation of forms and the"
 " manipulation of form data."
 msgstr "Django provee un poderoso framework para facilitar la creación de formularios y la manipulación de sus datos."
 
-# 76dbd7d4f18f41b5a41278be05d51041
-#: ../../../../1.9/docs/index.txt:168
+#: ../../../../sources/1.9/docs/index.txt:188
 msgid ""
 "**The basics:** :doc:`Overview <topics/forms/index>` | :doc:`Form API "
 "<ref/forms/api>` | :doc:`Built-in fields <ref/forms/fields>` | :doc:`Built-"
 "in widgets <ref/forms/widgets>`"
-msgstr "**Lo básico:** :doc:`Visión general <topics/forms/index>` | :doc:`API de formularios <ref/forms/api>` | :doc:`Campos incluidos <ref/forms/fields>` | :doc:`Widgets incluidos <ref/forms/widgets>`"
+msgstr "**Lo básico:** :doc:`Visión general <topics/forms/index>` | :doc:`API de formularios <ref/forms/api>` | :doc:`Campos incorporados <ref/forms/fields>` | :doc:`Widgets incorporados <ref/forms/widgets>`"
 
-# 48a1effadf934b20ae9cc3356e8f3d0a
-#: ../../../../1.9/docs/index.txt:174
+#: ../../../../sources/1.9/docs/index.txt:194
 msgid ""
 "**Advanced:** :doc:`Forms for models <topics/forms/modelforms>` | "
 ":doc:`Integrating media <topics/forms/media>` | :doc:`Formsets "
@@ -300,348 +300,287 @@ msgid ""
 "<ref/forms/validation>`"
 msgstr "**Avanzado:** :doc:`Formularios para modelos <topics/forms/modelforms>` | :doc:`Integración de medios <topics/forms/media>` | :doc:`Juegos de formularios <topics/forms/formsets>` | :doc:`Personalización de la validación <ref/forms/validation>`"
 
-# 14f919d48ee9422fbebfa6c52214f34a
-#: ../../../../1.9/docs/index.txt:181
+#: ../../../../sources/1.9/docs/index.txt:201
 msgid "The development process"
 msgstr "El proceso de desarrollo"
 
-# cd50f9a8f22647e98cae9bebc73d9623
-#: ../../../../1.9/docs/index.txt:183
+#: ../../../../sources/1.9/docs/index.txt:203
 msgid ""
 "Learn about the various components and tools to help you in the development "
 "and testing of Django applications:"
-msgstr "Aprende sobre los diversos componentes y herramientas para ayudarte en el desarrollo y pruebas de aplicaciones Django:"
+msgstr "Aprenda sobre los diversos componentes y herramientas para ayudarse en el desarrollo y pruebas de aplicaciones Django:"
 
-# b61d3da6192d44c3a41d613066e42765
-#: ../../../../1.9/docs/index.txt:186
+#: ../../../../sources/1.9/docs/index.txt:206
 msgid ""
 "**Settings:** :doc:`Overview <topics/settings>` | :doc:`Full list of "
 "settings <ref/settings>`"
 msgstr "**Ajustes:** :doc:`Visión general <topics/settings>` | :doc:`Lista completa de ajustes <ref/settings>`"
 
-# f110d2a2f4334a4d8983dbdec0690c13
-#: ../../../../1.9/docs/index.txt:190
+#: ../../../../sources/1.9/docs/index.txt:210
 msgid "**Applications:** :doc:`Overview <ref/applications>`"
-msgstr "**Aplicaciones:** :doc:`Reseña <ref/applications>`"
+msgstr "**Aplicaciones:** :doc:`Información general <ref/applications>`"
 
-# 2197eaba32e14f9a8942c495ac972bae
-#: ../../../../1.9/docs/index.txt:193
+#: ../../../../sources/1.9/docs/index.txt:213
 msgid "**Exceptions:** :doc:`Overview <ref/exceptions>`"
 msgstr "**Excepciones:** :doc:`Visión general <ref/exceptions>`"
 
-# 8032a14c97704dee8f11410d1e2c3ae7
-#: ../../../../1.9/docs/index.txt:196
+#: ../../../../sources/1.9/docs/index.txt:216
 msgid ""
 "**django-admin and manage.py:** :doc:`Overview <ref/django-admin>` | "
 ":doc:`Adding custom commands <howto/custom-management-commands>`"
-msgstr "** django-admin y manage.py:**: doc: `Información general <ref/django-admin> `| : doc: `Añadiendo comandos personalizados <howto/custom-management-commands> `"
+msgstr "**django-admin y manage.py:** :doc: `Información general <ref/django-admin>` | :doc:`Añadiendo comandos personalizados <howto/custom-management-commands>`"
 
-# dc72e38a0ab748a08f6b2dedc0d5e483
-#: ../../../../1.9/docs/index.txt:200
+#: ../../../../sources/1.9/docs/index.txt:220
 msgid ""
 "**Testing:** :doc:`Introduction <topics/testing/index>` | :doc:`Writing and "
 "running tests <topics/testing/overview>` | :doc:`Included testing tools "
 "<topics/testing/tools>` | :doc:`Advanced topics <topics/testing/advanced>`"
 msgstr "**Pruebas:** :doc:`Introducción <topics/testing/index>` | :doc:`Confección y ejecución de pruebas <topics/testing/overview>` | :doc:`Herramientas de pruebas incluidas <topics/testing/tools>` | :doc:`Temas avanzados <topics/testing/advanced>`"
 
-# c8d27f895f2e491881d3e6a4e8338c2b
-#: ../../../../1.9/docs/index.txt:206
+#: ../../../../sources/1.9/docs/index.txt:226
 msgid ""
 "**Deployment:** :doc:`Overview <howto/deployment/index>` | :doc:`WSGI "
 "servers <howto/deployment/wsgi/index>` | :doc:`Deploying static files <howto"
 "/static-files/deployment>` | :doc:`Tracking code errors by email <howto"
 "/error-reporting>`"
-msgstr "**Implementación:**: doc: `Información general <howto/deployment/index>` | : doc: `Servidores WSGI <howto/deployment/wsgi/index>` | : doc: `Implementando archivos estáticos <howto/static-files/deployment>` | : doc: `Rastreando errores de código por correo electrónico<howto/er ror-reporting>`"
+msgstr "**Implementación:** :doc:`Información general <howto/deployment/index>` | :doc:`Servidores WSGI <howto/deployment/wsgi/index>` | :doc:`Implementando archivos estáticos <howto/static-files/deployment>` | : doc: `Rastreando errores de código por correo electrónico<howto/error-reporting>`"
 
-# f84497bbe95440dfb2814c35c8b5c26b
-#: ../../../../1.9/docs/index.txt:213
+#: ../../../../sources/1.9/docs/index.txt:233
 msgid "The admin"
-msgstr "La administración"
+msgstr "El sitio administrativo"
 
-# 022c4328bb214536beefbfb9813526db
-#: ../../../../1.9/docs/index.txt:215
+#: ../../../../sources/1.9/docs/index.txt:235
 msgid ""
 "Find all you need to know about the automated admin interface, one of "
 "Django's most popular features:"
-msgstr "Encuentre todo lo que necesita saber acerca de la interfaz automatizada de administración, uno de las características más populares de Django:"
+msgstr "Encuentre todo lo que necesita saber acerca de la interfaz administrativa automatizada, una de las funcionalidades más populares de Django:"
 
-# 49262c50af3e422aba9e61abf2884045
-#: ../../../../1.9/docs/index.txt:218
+#: ../../../../sources/1.9/docs/index.txt:238
 msgid ":doc:`Admin site <ref/contrib/admin/index>`"
-msgstr ":doc:`Sitio de administración <ref/contrib/admin/index>`"
+msgstr ":doc:`Sitio administrativo <ref/contrib/admin/index>`"
 
-# 3ef4c4ee5e894df88dc4e9875615b8bb
-#: ../../../../1.9/docs/index.txt:219
+#: ../../../../sources/1.9/docs/index.txt:239
 msgid ":doc:`Admin actions <ref/contrib/admin/actions>`"
-msgstr ":doc:`Acciones de administración <ref/contrib/admin/actions>`"
+msgstr ":doc:`Acciones del sitio administrativo <ref/contrib/admin/actions>`"
 
-# e552cac93f49447d8b7f46ea6669becf
-#: ../../../../1.9/docs/index.txt:220
+#: ../../../../sources/1.9/docs/index.txt:240
 msgid ":doc:`Admin documentation generator<ref/contrib/admin/admindocs>`"
-msgstr ":doc:`Generador de documentación de la administración <ref/contrib/admin/admindocs>`"
+msgstr ":doc:`Generador de documentación del sitio administrativo <ref/contrib/admin/admindocs>`"
 
-# 5d4d7b1b1a214523b05c406735f96aa7
-#: ../../../../1.9/docs/index.txt:223
+#: ../../../../sources/1.9/docs/index.txt:243
 msgid "Security"
 msgstr "Seguridad"
 
-# c57cc172d9844af59c9bff846102a118
-#: ../../../../1.9/docs/index.txt:225
+#: ../../../../sources/1.9/docs/index.txt:245
 msgid ""
 "Security is a topic of paramount importance in the development of Web "
 "applications and Django provides multiple protection tools and mechanisms:"
 msgstr "La seguridad es un tema de suma importancia en el desarrollo de aplicaciones Web y Django provee múltiples herramientas y mecanismos de protección:"
 
-# 384a7e8c484e41ada42092e2fd799298
-#: ../../../../1.9/docs/index.txt:228
+#: ../../../../sources/1.9/docs/index.txt:248
 msgid ":doc:`Security overview <topics/security>`"
-msgstr ":doc:`Visión general de la seguridad <topics/security>`"
+msgstr ":doc:`Información general de la seguridad <topics/security>`"
 
-# 5fff14de979a4fd9a321339e563323d9
-#: ../../../../1.9/docs/index.txt:229
+#: ../../../../sources/1.9/docs/index.txt:249
 msgid ":doc:`Disclosed security issues in Django <releases/security>`"
 msgstr ":doc:`Problemas de seguridad en Django revelados <releases/security>`"
 
-# 7efd5a79c26543dca8c69cdef72dcd7c
-#: ../../../../1.9/docs/index.txt:230
+#: ../../../../sources/1.9/docs/index.txt:250
 msgid ":doc:`Clickjacking protection <ref/clickjacking>`"
 msgstr ":doc:`Protección contra Clickjacking <ref/clickjacking>`"
 
-# 88dbcfcfc5be41f891f33f0ee5ede84d
-#: ../../../../1.9/docs/index.txt:231
+#: ../../../../sources/1.9/docs/index.txt:251
 msgid ":doc:`Cross Site Request Forgery protection <ref/csrf>`"
-msgstr ": doc: `Protección de falsificación de petición en Sitios Cruzados <ref/csrf> `"
+msgstr ":doc:`Protección de Falsificación de Petición entre Sitios  <ref/csrf> `"
 
-# 87f48dfba6be498dabeac840f5701042
-#: ../../../../1.9/docs/index.txt:232
+#: ../../../../sources/1.9/docs/index.txt:252
 msgid ":doc:`Cryptographic signing <topics/signing>`"
 msgstr ":doc:`Firma criptográfica <topics/signing>`"
 
-# 50fc06ff301448918894990961d6b27e
-#: ../../../../1.9/docs/index.txt:233
+#: ../../../../sources/1.9/docs/index.txt:253
 msgid ":ref:`Security Middleware <security-middleware>`"
-msgstr ":ref:`Software intermediario para seguridad <security-middleware>`"
+msgstr ":ref:`Middleware de seguridad <security-middleware>`"
 
-# eb5dd520e8e54a9bb40a1639cc76f172
-#: ../../../../1.9/docs/index.txt:236
+#: ../../../../sources/1.9/docs/index.txt:256
 msgid "Internationalization and localization"
 msgstr "Internacionalización y localización"
 
-# 9f2d32f718ec440ea0eba7c6e968d485
-#: ../../../../1.9/docs/index.txt:238
+#: ../../../../sources/1.9/docs/index.txt:258
 msgid ""
 "Django offers a robust internationalization and localization framework to "
 "assist you in the development of applications for multiple languages and "
 "world regions:"
-msgstr "Django ofrece un robusto framework de internacionalización y localización para ayudarte en el desarrollo de aplicaciones para múltiples idiomas y regiones del mundo:"
+msgstr "Django ofrece un robusto framework de internacionalización y localización para ayudarle en el desarrollo de aplicaciones para múltiples idiomas y regiones del mundo:"
 
-# 480a1d67e1af4b5cb8076bd0680f7875
-#: ../../../../1.9/docs/index.txt:242
+#: ../../../../sources/1.9/docs/index.txt:262
 msgid ""
 ":doc:`Overview <topics/i18n/index>` | :doc:`Internationalization "
 "<topics/i18n/translation>` | :ref:`Localization <how-to-create-language-"
 "files>` | :doc:`Localized Web UI formatting and form input "
 "<topics/i18n/formatting>`"
-msgstr ":doc:`Reseña <topics/i18n/index>` | :doc:`Internacionalización <topics/i18n/translation>` | :ref:`Localización <how-to-create-language-files>` | :doc:`Localización del formateo de interfaz de usuario Web y formulario de entrada <topics/i18n/formatting>`"
+msgstr ":doc:`Información general <topics/i18n/index>` | :doc:`Internacionalización <topics/i18n/translation>` | :ref:`Localización <how-to-create-language-files>` | :doc:`formato localizado de la interfaz Web y entrada de formulario <topics/i18n/formatting>`"
 
-# c731e8592cfb48eb8f96640a79eec31b
-#: ../../../../1.9/docs/index.txt:246
+#: ../../../../sources/1.9/docs/index.txt:266
 msgid ":doc:`Time zones </topics/i18n/timezones>`"
 msgstr ":doc:`Husos horarios </topics/i18n/timezones>`"
 
-# 2b70138458a443669677c257a3083427
-#: ../../../../1.9/docs/index.txt:249
+#: ../../../../sources/1.9/docs/index.txt:269
 msgid "Performance and optimization"
 msgstr "Rendimiento y optimización"
 
-# ef50d0e6695e466fa4bc5e81685e665c
-#: ../../../../1.9/docs/index.txt:251
+#: ../../../../sources/1.9/docs/index.txt:271
 msgid ""
 "There are a variety of techniques and tools that can help get your code "
 "running more efficiently - faster, and using fewer system resources."
-msgstr "Existe una variedad de técnicas y herramientas que lo pueden ayudar a ejecutar el código más eficientemente y con menos uso de recursos del sistema."
+msgstr "Existe una variedad de técnicas y herramientas que lo pueden ayudar a ejecutar el código de forma más eficiente y rápida y con menos uso de recursos del sistema."
 
-# c080cac922de4e7cb83ecacf9eaf65b6
-#: ../../../../1.9/docs/index.txt:254
+#: ../../../../sources/1.9/docs/index.txt:274
 msgid ":doc:`Performance and optimization overview <topics/performance>`"
 msgstr ":doc:`Reseña sobre rendimiento y optimización <topics/performance>`"
 
-# d7af82eee9714a1cbbd6bab7b4f11ddc
-#: ../../../../1.9/docs/index.txt:257
+#: ../../../../sources/1.9/docs/index.txt:277
 msgid "Python compatibility"
 msgstr "Compatibilidad con Python"
 
-# c8525a14a8d94ad98d2028418f2bb245
-#: ../../../../1.9/docs/index.txt:259
+#: ../../../../sources/1.9/docs/index.txt:279
 msgid ""
 "Django aims to be compatible with multiple different flavors and versions of"
 " Python:"
 msgstr "Django pretende ser compatible con múltiples versiones de Python:"
 
-# 818831e99bf54083b748769c307ac1b3
-#: ../../../../1.9/docs/index.txt:262
+#: ../../../../sources/1.9/docs/index.txt:282
 msgid ":doc:`Jython support <howto/jython>`"
 msgstr ":doc:`Soporte para Jython <howto/jython>`"
 
-# 6c7c5123826f49ceb77b68bd43100721
-#: ../../../../1.9/docs/index.txt:263
+#: ../../../../sources/1.9/docs/index.txt:283
 msgid ":doc:`Python 3 compatibility <topics/python3>`"
 msgstr ":doc:`Compatibilidad con Python 3 <topics/python3>`"
 
-# f3905f3ab31e47ee90b3bf98290cac1f
-#: ../../../../1.9/docs/index.txt:266
+#: ../../../../sources/1.9/docs/index.txt:286
 msgid "Geographic framework"
 msgstr "Framework geográfico"
 
-# 637f787f1c8b410892af510323408eea
-#: ../../../../1.9/docs/index.txt:268
+#: ../../../../sources/1.9/docs/index.txt:288
 msgid ""
 ":doc:`GeoDjango <ref/contrib/gis/index>` intends to be a world-class "
 "geographic Web framework. Its goal is to make it as easy as possible to "
 "build GIS Web applications and harness the power of spatially enabled data."
 msgstr ":doc:`GeoDjango <ref/contrib/gis/index>` tiene como propósito ser un framework para el desarrollo geográfico de clase mundial. Su meta es hacer lo más fácil posible construir aplicaciones GIS Web y aprovechar el poder de los datos habilitados de forma espacial."
 
-# 329120d18a8c4185b56b805e80f55c58
-#: ../../../../1.9/docs/index.txt:273
+#: ../../../../sources/1.9/docs/index.txt:293
 msgid "Common Web application tools"
 msgstr "Herramientas comunes para aplicaciones Web"
 
-# 92543e2cfb584654b3bb44035bc525c6
-#: ../../../../1.9/docs/index.txt:275
+#: ../../../../sources/1.9/docs/index.txt:295
 msgid ""
 "Django offers multiple tools commonly needed in the development of Web "
 "applications:"
 msgstr "Django ofrece múltiples herramientas que son necesarias para el desarrollo de aplicaciones Web:"
 
-# 207be963be7d4f29a724c5fe45530211
-#: ../../../../1.9/docs/index.txt:278
+#: ../../../../sources/1.9/docs/index.txt:298
 msgid ""
 "**Authentication:** :doc:`Overview <topics/auth/index>` | :doc:`Using the "
 "authentication system <topics/auth/default>` | :doc:`Password management "
 "<topics/auth/passwords>` | :doc:`Customizing authentication "
 "<topics/auth/customizing>` | :doc:`API Reference <ref/contrib/auth>`"
-msgstr "** Autenticación:**: doc: `Información general <topics/auth/index> `| : doc: `Usando el sistema de autenticación <topics/auth/default>` | : doc: `Gestión de contraseñas <topics/auth/passwords>` | : doc: `Personalizando la autenticación  <topics/auth/customizing>` | : doc: `Referencia de la API <ref/contrib/auth>`"
+msgstr "**Autenticación:** :doc:`Información general <topics/auth/index>` | :doc:`Usando el sistema de autenticación <topics/auth/default>` | :doc:`Gestión de contraseñas <topics/auth/passwords>` | :doc:`Personalizando la autenticación  <topics/auth/customizing>` | :doc:`Referencia de la API <ref/contrib/auth>`"
 
-# f019624111c64c27919fe561a78527ed
-#: ../../../../1.9/docs/index.txt:284
+#: ../../../../sources/1.9/docs/index.txt:304
 msgid ":doc:`Caching <topics/cache>`"
 msgstr ":doc:`Almacenamiento en caché <topics/cache>`"
 
-# 4fef98df8dce42e3b7ec719cf1820b8b
-#: ../../../../1.9/docs/index.txt:285
+#: ../../../../sources/1.9/docs/index.txt:305
 msgid ":doc:`Logging <topics/logging>`"
-msgstr ":doc:`Registro de trazas <topics/logging>`"
+msgstr ":doc:`Registro <topics/logging>`"
 
-# 50befd594745466aa34e9ccb4461eaea
-#: ../../../../1.9/docs/index.txt:286
+#: ../../../../sources/1.9/docs/index.txt:306
 msgid ":doc:`Sending emails <topics/email>`"
 msgstr ":doc:`Enviando correos <topics/email>`"
 
-# 82dcb73f6cd84b72b7fef8210f173463
-#: ../../../../1.9/docs/index.txt:287
+#: ../../../../sources/1.9/docs/index.txt:307
 msgid ":doc:`Syndication feeds (RSS/Atom) <ref/contrib/syndication>`"
-msgstr ":doc:`Formato de redifusión (RSS/Atom) <ref/contrib/syndication>`"
+msgstr ":doc:`Fuentes de redifusión (RSS/Atom) <ref/contrib/syndication>`"
 
-# 12e3845759bf407385d0987786c6754b
-#: ../../../../1.9/docs/index.txt:288
+#: ../../../../sources/1.9/docs/index.txt:308
 msgid ":doc:`Pagination <topics/pagination>`"
 msgstr ":doc:`Paginado <topics/pagination>`"
 
-# 6c19f836afd74223b59e044f54398b52
-#: ../../../../1.9/docs/index.txt:289
+#: ../../../../sources/1.9/docs/index.txt:309
 msgid ":doc:`Messages framework <ref/contrib/messages>`"
 msgstr ":doc:`Framework de mensajes <ref/contrib/messages>`"
 
-# 41a162b3418c42bc8918f95b92a8e3e7
-#: ../../../../1.9/docs/index.txt:290
+#: ../../../../sources/1.9/docs/index.txt:310
 msgid ":doc:`Serialization <topics/serialization>`"
 msgstr ":doc:`Serialización <topics/serialization>`"
 
-# f383eee09f804844baa322a3f65d4658
-#: ../../../../1.9/docs/index.txt:291
+#: ../../../../sources/1.9/docs/index.txt:311
 msgid ":doc:`Sessions <topics/http/sessions>`"
 msgstr ":doc:`Sesiones <topics/http/sessions>`"
 
-# c93d2535e2ea42a08a869cc2a16c9bf4
-#: ../../../../1.9/docs/index.txt:292
+#: ../../../../sources/1.9/docs/index.txt:312
 msgid ":doc:`Sitemaps <ref/contrib/sitemaps>`"
 msgstr ":doc:`Mapas de sitio <ref/contrib/sitemaps>`"
 
-# 852fc47817f14d31a79b783409c407fe
-#: ../../../../1.9/docs/index.txt:293
+#: ../../../../sources/1.9/docs/index.txt:313
 msgid ":doc:`Static files management <ref/contrib/staticfiles>`"
 msgstr ":doc:`Gestión de archivos estáticos <ref/contrib/staticfiles>`"
 
-# cf6953652bb547c7a1963db7951f3269
-#: ../../../../1.9/docs/index.txt:294
+#: ../../../../sources/1.9/docs/index.txt:314
 msgid ":doc:`Data validation <ref/validators>`"
 msgstr ":doc:`Validación de datos <ref/validators>`"
 
-# 6b2ca557334d4fe8abb5edd8d10c80c7
-#: ../../../../1.9/docs/index.txt:297
+#: ../../../../sources/1.9/docs/index.txt:317
 msgid "Other core functionalities"
 msgstr "Otras funcionalidades básicas"
 
-# 2fd6546da5b449c2ae66293d7e2ed9e0
-#: ../../../../1.9/docs/index.txt:299
+#: ../../../../sources/1.9/docs/index.txt:319
 msgid "Learn about some other core functionalities of the Django framework:"
-msgstr "Aprende sobre otras funcionalidades básicas del framework Django"
+msgstr "Aprenda sobre otras funcionalidades básicas del framework Django"
 
-# b2994886ce5e4103a09470856b7fdeff
-#: ../../../../1.9/docs/index.txt:301
+#: ../../../../sources/1.9/docs/index.txt:321
 msgid ""
 ":doc:`Conditional content processing <topics/conditional-view-processing>`"
 msgstr ":doc:`Procesamiento condicional de contenido <topics/conditional-view-processing>`"
 
-# d6e91c405b87491a931465172bf42f31
-#: ../../../../1.9/docs/index.txt:302
+#: ../../../../sources/1.9/docs/index.txt:322
 msgid ":doc:`Content types and generic relations <ref/contrib/contenttypes>`"
 msgstr ":doc:`Tipos de contenido y relaciones genéricas <ref/contrib/contenttypes>`"
 
-# 8d277a024c4e4fbca61a59ea1a8737d9
-#: ../../../../1.9/docs/index.txt:303
+#: ../../../../sources/1.9/docs/index.txt:323
 msgid ":doc:`Flatpages <ref/contrib/flatpages>`"
 msgstr ":doc:`Páginas estáticas <ref/contrib/flatpages>`"
 
-# c5942b2004724e9e8e1e4a2c2aee6ae8
-#: ../../../../1.9/docs/index.txt:304
+#: ../../../../sources/1.9/docs/index.txt:324
 msgid ":doc:`Redirects <ref/contrib/redirects>`"
 msgstr ":doc:`Redirecciones <ref/contrib/redirects>`"
 
-# 5286767d67444f5088de814da3941bcd
-#: ../../../../1.9/docs/index.txt:305
+#: ../../../../sources/1.9/docs/index.txt:325
 msgid ":doc:`Signals <topics/signals>`"
 msgstr ":doc:`Señales <topics/signals>`"
 
-# c8868624f37f4b8aa92b46fa0619ed35
-#: ../../../../1.9/docs/index.txt:306
+#: ../../../../sources/1.9/docs/index.txt:326
 msgid ":doc:`System check framework <topics/checks>`"
 msgstr ":doc:`Framework de comprobación de sistema <topics/checks>`"
 
-# 4cc71a394d06448bab1637e1cd464398
-#: ../../../../1.9/docs/index.txt:307
+#: ../../../../sources/1.9/docs/index.txt:327
 msgid ":doc:`The sites framework <ref/contrib/sites>`"
 msgstr ":doc:`El framework de sitios <ref/contrib/sites>`"
 
-# 60c4567b9b8e46c08c2b187fc2833945
-#: ../../../../1.9/docs/index.txt:308
+#: ../../../../sources/1.9/docs/index.txt:328
 msgid ":doc:`Unicode in Django <ref/unicode>`"
 msgstr ":doc:`Unicode en Django <ref/unicode>`"
 
-# 9e6bb0a32faa4823860271bc1b6fe7c3
-#: ../../../../1.9/docs/index.txt:311
+#: ../../../../sources/1.9/docs/index.txt:331
 msgid "The Django open-source project"
 msgstr "El proyecto de código abierto Django"
 
-# 71624f4940bf40bcb93d0c92cd9d0285
-#: ../../../../1.9/docs/index.txt:313
+#: ../../../../sources/1.9/docs/index.txt:333
 msgid ""
 "Learn about the development process for the Django project itself and about "
 "how you can contribute:"
-msgstr "Aprende sobre el proceso de desarrollo para el proyecto Django en sí y sobre cómo puedes contribuir:"
+msgstr "Aprenda sobre el proceso de desarrollo para el proyecto Django en sí y sobre cómo puede contribuir:"
 
-# fef2f6a73390480d8a521a1dfb9762ea
-#: ../../../../1.9/docs/index.txt:316
+#: ../../../../sources/1.9/docs/index.txt:336
 msgid ""
 "**Community:** :doc:`How to get involved <internals/contributing/index>` | "
 ":doc:`The release process <internals/release-process>` | :doc:`Team "
@@ -649,29 +588,25 @@ msgid ""
 "<internals/team>` | :doc:`Current roles <internals/roles>` | :doc:`The "
 "Django source code repository <internals/git>` | :doc:`Security policies "
 "<internals/security>` | :doc:`Mailing lists <internals/mailing-lists>`"
-msgstr "**Comunidad:** : doc: `Cómo participar <internals/contributing/index>` | : doc: `El proceso de liberación <internals/release-process>` | : doc: `Organización del equipo <internals/organization>` | : doc: `Conozca al equipo <internals/team> `| : doc: ` Actuales funciones <internals/roles>` | : doc: `El repositorio de código fuente de Django <internals/git>`| : doc: `Las políticas de seguridad <internals/security> `| : doc: `Listas de correo <internals/mailing-lists> `"
+msgstr "**Comunidad:** :doc:`Cómo participar <internals/contributing/index>` | :doc:`El proceso de lanzamiento <internals/release-process>` | :doc:`Organización del equipo <internals/organization>` | :doc:`Conozca al equipo <internals/team>` | :doc:`Funciones actuales  <internals/roles>` | :doc:`El repositorio de código fuente de Django <internals/git>`| :doc:`Las políticas de seguridad <internals/security>` | :doc:`Listas de correo <internals/mailing-lists>`"
 
-# 281f5ba4df7c48ee951193372148f8b7
-#: ../../../../1.9/docs/index.txt:326
+#: ../../../../sources/1.9/docs/index.txt:346
 msgid "**Design philosophies:** :doc:`Overview <misc/design-philosophies>`"
-msgstr "**Filosofía de diseño:** :doc:`Visión general <misc/design-philosophies>`"
+msgstr "**Filosofías de diseño:** :doc:`Información general <misc/design-philosophies>`"
 
-# f94491ecf6ca4cf7a635edf852e5a3ca
-#: ../../../../1.9/docs/index.txt:329
+#: ../../../../sources/1.9/docs/index.txt:349
 msgid ""
 "**Documentation:** :doc:`About this documentation <internals/contributing"
 "/writing-documentation>`"
 msgstr "**Documentación:** :doc:`Sobre esta documentación <internals/contributing/writing-documentation>`"
 
-# 48b1a234447f4635a3821be0a9a55c24
-#: ../../../../1.9/docs/index.txt:332
+#: ../../../../sources/1.9/docs/index.txt:352
 msgid "**Third-party distributions:** :doc:`Overview <misc/distributions>`"
 msgstr "**Distribuciones de terceros:** :doc:`Visión general <misc/distributions>`"
 
-# 1b49da642fdd404d84dcdaabc007fa4f
-#: ../../../../1.9/docs/index.txt:335
+#: ../../../../sources/1.9/docs/index.txt:355
 msgid ""
 "**Django over time:** :doc:`API stability <misc/api-stability>` | "
 ":doc:`Release notes and upgrading instructions <releases/index>` | "
 ":doc:`Deprecation Timeline <internals/deprecation>`"
-msgstr "**Django en el tiempo:** :doc:`Estabilidad del API <misc/api-stability>` | :doc:`Notas de liberación e instrucciones de actualización <releases/index>` | :doc:`Linea de tiempo de funcionalidades en desuso <internals/deprecation>`"
+msgstr "**Django en el tiempo:** :doc:`Estabilidad de la API <misc/api-stability>` | :doc:`Notas de versión e instrucciones de actualización <releases/index>` | :doc:`Linea de tiempo de funcionalidades en desuso <internals/deprecation>`"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-03 07:11-0600\n"
-"PO-Revision-Date: 2016-05-04 01:51+0000\n"
+"PO-Revision-Date: 2016-07-26 03:56+0000\n"
 "Last-Translator: Fery Setiawan <gembelweb@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/django/django-docs/language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -669,11 +669,11 @@ msgid ""
 "``CheckMessage``. An instance encapsulates a single reportable error or "
 "warning. It also provides context and hints applicable to the message, and a"
 " unique identifier that is used for filtering purposes."
-msgstr ""
+msgstr "Peringatan dan kesalahan dimunculkan oleh sistem pemeriksaan harus contoh dari ``CheckMessage``. Sebuah instance merangkum kesalahan atau peringatan dapat dilaporkan tunggal. Dia juga menyediakan konteks dan petunjuk yang berlaku pada pesan, dan penciri unik yang digunakan untuk tujuan penyaringan."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:27
 msgid "Constructor arguments are:"
-msgstr ""
+msgstr "Argumen pembangun adalah:"
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:34
 msgid "``level``"
@@ -686,7 +686,7 @@ msgid ""
 "equal to ``ERROR``, then Django will prevent management commands from "
 "executing. Messages with level lower than ``ERROR`` (i.e. warnings) are "
 "reported to the console, but can be silenced."
-msgstr ""
+msgstr "Kesederhanaan dari pesan. Gunakan satu dari nilai-nilai yang sudah ditentukan: ``DEBUG``, ``INFO``, ``WARNING``, ``ERROR``, ``CRITICAL``. Jika tingkatan lebih hebat atau sama dengan ``ERROR``, kemudian Django akan mencegah perintah pengelolaan dari menjalankan. Pesan-pesan dengan tingkatan lebih rendah dari ``ERROR`` (yaitu peringatan) dilaporkan ke konsol, tetapi dapat disenyapkan."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:38
 msgid "``msg``"
@@ -707,7 +707,7 @@ msgid ""
 "A single-line string providing a hint for fixing the problem. If no hint can"
 " be provided, or the hint is self-evident from the error message, the hint "
 "can be omitted, or a value of ``None`` can be used."
-msgstr ""
+msgstr "Deretan karakter baris-tunggal menyediakan petunjuk untuk memperbaiki masalah. Jika tidak ada petunjuk disediakan, atau petunjuk adalah terbukti-sendiri dari pesan kesalahan, petunjuk dapat diabaikan, atau nilai dari ``None`` dapat digunakan."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:50
 msgid "``obj``"
@@ -720,7 +720,7 @@ msgid ""
 "field, or manager or any other object that defines ``__str__`` method (on "
 "Python 2 you need to define ``__unicode__`` method). The method is used "
 "while reporting all messages and its result precedes the message."
-msgstr ""
+msgstr "Pilihan. Sebuah obyek menyediakan konteks untuk pesan (sebagai contoh, model dimana masalah ditemukan). Obyek harus menjadi model, bidang, atau pengelola atau obyek lain apapun yang menentukan cara ``__str__`` (pada Python 2 anda butuh menentukan cara ``__unicode__``). Cara digunakan selagi melaporkan semua pesan dan hasilnya mendahului pesan."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:57
 msgid "``id``"
@@ -733,26 +733,26 @@ msgid ""
 "``CEWID``, indicating the message severity (``C`` for criticals, ``E`` for "
 "errors and so). The number can be allocated by the application, but should "
 "be unique within that application."
-msgstr ""
+msgstr "Deretan karakter pilihan. Sebuah penciri unik untuk masalah. Penciri harus mengikuti corak ``applabel.X001``, dimana ``X`` adalah satu dari huruf ``CEWID``, menunjukkan kesederhanaan pesan (``C`` for kritis, ``E`` untuk kesalahan dan sebagainya). Angka dapat dialokasikan dengan aplikasi, tetapi harus unik dalam aplikasi itu."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:59
 msgid ""
 "There are subclasses to make creating messages with common levels easier. "
 "When using them you can omit the ``level`` argument because it is implied by"
 " the class name."
-msgstr ""
+msgstr "Ada subkelas-subkelas untuk membuat pesan dengan tingkatan umum lebih mudah. Ketika menggunakan mereka anda dapat megnabaikan argumen ``level`` karena dia disisipkan oleh nama kelas."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:70
 msgid "Builtin checks"
-msgstr ""
+msgstr "Pemeriksaan siap pakai"
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:75
 msgid "Builtin tags"
-msgstr ""
+msgstr "Etiket siap pakai"
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:77
 msgid "Django's system checks are organized using the following tags:"
-msgstr ""
+msgstr "Sistem pemeriksaan Django diorganisasikan menggunakan etiket berikut:"
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:79
 msgid "``models``: Checks governing model, field and manager definitions."
@@ -760,27 +760,27 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:80
 msgid "``signals``: Checks on signal declarations and handler registrations."
-msgstr ""
+msgstr "``signals``: Periksa pada pernyataan sinyal dan penangan pendaftaran."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:81
 msgid "``admin``: Checks of any admin site declarations."
-msgstr ""
+msgstr "``admin``: Periksa pernyataan situs admin apapun."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:82
 msgid "``compatibility``: Flagging potential problems with version upgrades."
-msgstr ""
+msgstr "``compatibility``: Masalah potensial penandaan dengan versi ditingkatkan."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:83
 msgid "``security``: Checks security related configuration."
-msgstr ""
+msgstr "``security``: Periksa keamanan konfigurasi terkait."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:84
 msgid "``templates``: Checks template related configuration."
-msgstr ""
+msgstr "``templates``: Periksa cetakan konfigurasi terkait."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:85
 msgid "``caches``: Checks cache related configuration."
-msgstr ""
+msgstr "``caches``: Periksa tembolok konfigurasi terkait."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:86
 msgid "``urls``: Checks URL configuration."
@@ -817,25 +817,25 @@ msgstr "**models.E002**: ``<SETTING>`` acuan ``<model>``, yang belum dipasang, a
 msgid ""
 "**models.E003**: The model has two many-to-many relations through the "
 "intermediate model ``<app_label>.<model>``."
-msgstr ""
+msgstr "**models.E003**: Model mempunyai hubungan many-to-many melalui model menengah ``<app_label>.<model>``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:101
 msgid ""
 "**models.E004**: ``id`` can only be used as a field name if the field also "
 "sets ``primary_key=True``."
-msgstr ""
+msgstr "**models.E004**: ``id`` dapat hanya digunakan sebagai nama bidang jika bidang juga disetel ``primary_key=True``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:103
 msgid ""
 "**models.E005**: The field ``<field name>`` from parent model ``<model>`` "
 "clashes with the field ``<field name>`` from parent model ``<model>``."
-msgstr ""
+msgstr "**models.E005**: Bidang  ``<field name>`` dari model induk ``<model>`` bentrok dengan bidang  ``<field name>`` dari model induk ``<model>``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:105
 msgid ""
 "**models.E006**: The field clashes with the field ``<field name>`` from "
 "model ``<model>``."
-msgstr ""
+msgstr "**models.E006**: Bidang bentrok dengan bidang ``<field name>`` dari model ``<model>``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:107
 msgid ""
@@ -845,80 +845,80 @@ msgstr "**models.E007**: Field ``<field name>`` mempunyai nama kolom ``<column n
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:109
 msgid "**models.E008**: ``index_together`` must be a list or tuple."
-msgstr ""
+msgstr "**models.E008**: ``index_together`` harus berupa daftar atau tuple."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:110
 msgid ""
 "**models.E009**: All ``index_together`` elements must be lists or tuples."
-msgstr ""
+msgstr "**models.E009**: Semua unsur ``index_together`` harus berupa daftar atau tuple."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:111
 msgid "**models.E010**: ``unique_together`` must be a list or tuple."
-msgstr ""
+msgstr "**models.E010**: ``unique_together`` harus berupa daftar atau tuple."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:112
 msgid ""
 "**models.E011**: All ``unique_together`` elements must be lists or tuples."
-msgstr ""
+msgstr "**models.E011**: Semua unsur ``unique_together`` harus berupa daftar atau tuple."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:113
 msgid ""
 "**models.E012**: ``index_together/unique_together`` refers to the non-"
 "existent field ``<field name>``."
-msgstr ""
+msgstr "**models.E012**: ``index_together/unique_together`` mengacu pada bidang tidak ada ``<field name>``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:115
 msgid ""
 "**models.E013**: ``index_together/unique_together`` refers to a "
 "``ManyToManyField`` ``<field name>``, but ``ManyToManyField``\\s are not "
 "supported for that option."
-msgstr ""
+msgstr "**models.E013**: ``index_together/unique_together`` mengacu pada ``ManyToManyField`` ``<field name>``, tetapi ``ManyToManyField`` tidak didukung untuk pilihan itu."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:118
 msgid ""
 "**models.E014**: ``ordering`` must be a tuple or list (even if you want to "
 "order by only one field)."
-msgstr ""
+msgstr "**models.E014**: ``ordering`` harus berupa tuple atau daftar (bahkan jika anda ingin memesan hanya satu bidang)."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:120
 msgid ""
 "**models.E015**: ``ordering`` refers to the non-existent field ``<field "
 "name>``."
-msgstr ""
+msgstr "**models.E015**: ``ordering`` mengacu pada bidang tidak ada ``<field name>``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:122
 msgid ""
 "**models.E016**: ``index_together/unique_together`` refers to field "
 "``<field_name>`` which is not local to model ``<model>``."
-msgstr ""
+msgstr "**models.E016**: ``index_together/unique_together`` mengacu pada bidang ``<field_name>`` yang bukan lokal ke model ``<model>``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:124
 msgid "**models.E017**: Proxy model ``<model>`` contains model fields."
-msgstr ""
+msgstr "**models.E017**: Model proxy ``<model>`` mengandung bidang-bidang model."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:125
 msgid ""
 "**models.E018**: Autogenerated column name too long for field ``<field>``. "
 "Maximum length is ``<maximum length>`` for database ``<alias>``."
-msgstr ""
+msgstr "**models.E018**: Nama kolom otomatis dibangkitkan terlalu panjang untuk bidang  ``<field>``. Panjang maksimum adalah ``<maximum length>`` untuk basisdata ``<alias>``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:127
 msgid ""
 "**models.E019**: Autogenerated column name too long for M2M field ``<M2M "
 "field>``. Maximum length is ``<maximum length>`` for database ``<alias>``."
-msgstr ""
+msgstr "**models.E019**: Nama kolom otomatis dibangkitkan terlalu panjang untuk bidang M2M ``<M2M field>``. Panjang maksimum adalah ``<maximum length>`` untuk basisdata ``<alias>``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:130
 msgid ""
 "**models.E020**: The ``<model>.check()`` class method is currently "
 "overridden."
-msgstr ""
+msgstr "**models.E020**: Cara kelas ``<model>.check()`` saat ini dikesampingkan."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:131
 msgid ""
 "**models.E021**: ``ordering`` and ``order_with_respect_to`` cannot be used "
 "together."
-msgstr ""
+msgstr "**models.E021**: ``ordering`` dan ``order_with_respect_to`` tidak dapat digunakan bersama-sama."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:135
 #: ../../../../sources/1.9/docs/ref/contrib/auth.txt:16
@@ -930,7 +930,7 @@ msgstr "Bidang"
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:137
 msgid "**fields.E001**: Field names must not end with an underscore."
-msgstr ""
+msgstr "**fields.E001**: Nama bidang tidak boleh berakhir dengan garis bawah."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:138
 msgid "**fields.E002**: Field names must not contain ``\"__\"``."
@@ -940,108 +940,108 @@ msgstr "**fields.E002**: Nama bidang tidak harus mengandung ``\"__\"``."
 msgid ""
 "**fields.E003**: ``pk`` is a reserved word that cannot be used as a field "
 "name."
-msgstr ""
+msgstr "**fields.E003**: ``pk`` adalah kata terpesan yang tidak dapat digunakan sebagai nama bidang."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:141
 msgid ""
 "**fields.E004**: ``choices`` must be an iterable (e.g., a list or tuple)."
-msgstr ""
+msgstr "**fields.E004**: ``choices`` harus dapat berulang (sebagai contoh, daftar atau tuple)."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:142
 msgid ""
 "**fields.E005**: ``choices`` must be an iterable returning ``(actual value, "
 "human readable name)`` tuples."
-msgstr ""
+msgstr "**fields.E005**: ``choices`` harus dapat berulang mengembalikan tuple ``(nilai sebenarnya, nama yang dapat dibaca manusia)``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:144
 msgid "**fields.E006**: ``db_index`` must be ``None``, ``True`` or ``False``."
-msgstr ""
+msgstr "**fields.E006**: ``db_index`` harus berupa ``None``, ``True`` atau ``False``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:145
 msgid "**fields.E007**: Primary keys must not have ``null=True``."
-msgstr ""
+msgstr "**fields.E007**: Primary key tidak harus mempunyai ``null=True``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:146
 msgid "**fields.E100**: ``AutoField``\\s must set primary_key=True."
-msgstr ""
+msgstr "**fields.E100**: ``AutoField harus disetel primary_key=True."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:147
 msgid "**fields.E110**: ``BooleanField``\\s do not accept null values."
-msgstr ""
+msgstr "**fields.E110**: ``BooleanField`` tidak menerima nilai-nilai null."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:148
 msgid ""
 "**fields.E120**: ``CharField``\\s must define a ``max_length`` attribute."
-msgstr ""
+msgstr "**fields.E120**: ``CharField`` harus menentukan atribut ``max_length``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:149
 msgid "**fields.E121**: ``max_length`` must be a positive integer."
-msgstr ""
+msgstr "**fields.E121**: ``max_length`` harus integer positif."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:150
 msgid ""
 "**fields.W122**: ``max_length`` is ignored when used with ``IntegerField``."
-msgstr ""
+msgstr "**fields.W122**: ``max_length`` diabaikan ketika digunakan dengan ``IntegerField``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:151
 msgid ""
 "**fields.E130**: ``DecimalField``\\s must define a ``decimal_places`` "
 "attribute."
-msgstr ""
+msgstr "**fields.E130**: ``DecimalField`` harus ditentukan atribut ``decimal_places``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:152
 msgid "**fields.E131**: ``decimal_places`` must be a non-negative integer."
-msgstr ""
+msgstr "**fields.E131**: ``decimal_places`` harus berupa integer bukan-negatif."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:153
 msgid ""
 "**fields.E132**: ``DecimalField``\\s must define a ``max_digits`` attribute."
-msgstr ""
+msgstr "**fields.E132**: ``DecimalField`` harus ditentukan atribut ``max_digits``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:154
 msgid "**fields.E133**: ``max_digits`` must be a non-negative integer."
-msgstr ""
+msgstr "**fields.E133**: ``max_digits`` harus berupa integer bukan-negatif."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:155
 msgid ""
 "**fields.E134**: ``max_digits`` must be greater or equal to "
 "``decimal_places``."
-msgstr ""
+msgstr "**fields.E134**: ``max_digits`` harus lebih besar atau sama dengan ``decimal_places``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:156
 msgid ""
 "**fields.E140**: ``FilePathField``\\s must have either ``allow_files`` or "
 "``allow_folders`` set to True."
-msgstr ""
+msgstr "**fields.E140**: ``FilePathField`` harus mempunyai salah satu ``allow_files`` atau ``allow_folders`` disetel ke True."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:158
 msgid ""
 "**fields.E150**: ``GenericIPAddressField``\\s cannot accept blank values if "
 "null values are not allowed, as blank values are stored as nulls."
-msgstr ""
+msgstr "**fields.E150**: ``GenericIPAddressField`` tidak dapat menerima nilai-nilai kosong jika nilai-nilai null tidak diijinkan, sebagai nilai-nilai kosong disimpan sebagai null."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:160
 msgid ""
 "**fields.E160**: The options ``auto_now``, ``auto_now_add``, and ``default``"
 " are mutually exclusive. Only one of these options may be present."
-msgstr ""
+msgstr "**fields.E160**: Pilihan ``auto_now``, ``auto_now_add``, dan ``default`` saling eksklusif. Hanya satu dari pilihan-pilihan ini mungkin dihadirkan."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:162
 msgid "**fields.W161**: Fixed default value provided."
-msgstr ""
+msgstr "**fields.W161**: Nilai awal tetap disediakan."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:163
 msgid ""
 "**fields.E900**: ``IPAddressField`` has been removed except for support in "
 "historical migrations."
-msgstr ""
+msgstr "**fields.E900**: ``IPAddressField`` telah dipindahkan kecuali untuk dukungan dalam riwayat perpindahan."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:165
 msgid ""
 "**fields.W900**: ``IPAddressField`` has been deprecated. Support for it "
 "(except in historical migrations) will be removed in Django 1.9. *This check"
 " appeared in Django 1.7 and 1.8*."
-msgstr ""
+msgstr "*fields.W900**: ``IPAddressField`` telah diusangkan. Dukung untuk dia (kecuali dalam riwayat perpindahan) akan dipindahkan di Django 1.9. *Pemeriksaan ini muncul di Django 1.7 and 1.8*."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:170
 msgid "File Fields"
@@ -1050,13 +1050,13 @@ msgstr "Bidang Berkas"
 #: ../../../../sources/1.9/docs/ref/checks.txt:172
 msgid ""
 "**fields.E200**: ``unique`` is not a valid argument for a ``FileField``."
-msgstr ""
+msgstr "**fields.E200**: ``unique`` bukan argumen sah untuk ``FileField``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:173
 msgid ""
 "**fields.E201**: ``primary_key`` is not a valid argument for a "
 "``FileField``."
-msgstr ""
+msgstr "**fields.E201**: ``primary_key`` bukan argumen sah untuk ``FileField``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:174
 msgid ""
@@ -1071,13 +1071,13 @@ msgstr "Bidang Terhubung"
 msgid ""
 "**fields.E300**: Field defines a relation with model ``<model>``, which is "
 "either not installed, or is abstract."
-msgstr ""
+msgstr "**fields.E300**: Bidang menentukan hubungan dengan model ``<model>``, yang salah satu tidak dipasang atau abstrak."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:181
 msgid ""
 "**fields.E301**: Field defines a relation with the model ``<model>`` which "
 "has been swapped out."
-msgstr ""
+msgstr "**fields.E301**: Bidang menentukan hubungan dengan model ``<model>`` yang telah ditukar.\t"
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:183
 msgid ""
@@ -1125,17 +1125,17 @@ msgstr ""
 #: ../../../../sources/1.9/docs/ref/checks.txt:198
 msgid ""
 "**fields.E320**: Field specifies ``on_delete=SET_NULL``, but cannot be null."
-msgstr ""
+msgstr "**fields.E320**: Bidang menentukan ``on_delete=SET_NULL``, tetapi tidak dapat berupa null."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:199
 msgid ""
 "**fields.E321**: The field specifies ``on_delete=SET_DEFAULT``, but has no "
 "default value."
-msgstr ""
+msgstr "**fields.E321**: Bidang menentukan ``on_delete=SET_DEFAULT``, tetapi tidak mempunyai nilai awal."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:201
 msgid "**fields.E330**: ``ManyToManyField``\\s cannot be unique."
-msgstr ""
+msgstr "**fields.E330**: ``ManyToManyField`` tidak dapat unik."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:202
 msgid ""
@@ -1196,21 +1196,21 @@ msgstr ""
 msgid ""
 "**fields.E339**: ``<model>.<field name>`` is not a foreign key to "
 "``<model>``."
-msgstr ""
+msgstr "**fields.E339**: ``<model>.<field name>`` bukan foreign key pada ``<model>``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:226
 msgid "**fields.W340**: ``null`` has no effect on ``ManyToManyField``."
-msgstr ""
+msgstr "**fields.W340**: ``null`` tidak mempunyai efek pada ``ManyToManyField``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:227
 msgid "**fields.W341**: ``ManyToManyField`` does not support ``validators``."
-msgstr ""
+msgstr "**fields.W341**: ``ManyToManyField`` tidak mendukung ``validators``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:228
 msgid ""
 "**fields.W342**: Setting ``unique=True`` on a ``ForeignKey`` has the same "
 "effect as using a ``OneToOneField``."
-msgstr ""
+msgstr "**fields.W342**: Mengatur ``unique=True`` pada ``ForeignKey`` mempunyai efek sama ketika menggunakan ``OneToOneField``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:232
 #: ../../../../sources/1.9/docs/ref/signals.txt:3
@@ -1222,11 +1222,11 @@ msgid ""
 "**signals.E001**: ``<handler>`` was connected to the ``<signal>`` signal "
 "with a lazy reference to the ``<model>`` sender, which has not been "
 "installed."
-msgstr ""
+msgstr "**signals.E001**: ``<handler>`` telah terhubung ke sinyal ``<signal>`` dengan acuan malas ke pengirim ``<model>``, yang belum dipasang."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:238
 msgid "Backwards Compatibility"
-msgstr ""
+msgstr "Kesesuaian Kebelakang"
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:240
 msgid ""
@@ -1244,7 +1244,7 @@ msgstr ""
 msgid ""
 "**1_6.W002**: ``BooleanField`` does not have a default value. *This check "
 "was removed in Django 1.8 due to false positives*."
-msgstr ""
+msgstr "**1_6.W002**: ``BooleanField`` tidak mempunyai nilai awal. *Pemeriksaan ini dipindahkan di Django 1.8 karena positif salah*."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:247
 msgid ""
@@ -1286,57 +1286,57 @@ msgstr "Pemeriksaan berikut dilakukan pada setiap :class:`~django.contrib.admin.
 #: ../../../../sources/1.9/docs/ref/checks.txt:270
 msgid ""
 "**admin.E001**: The value of ``raw_id_fields`` must be a list or tuple."
-msgstr ""
+msgstr "**admin.E001**: Nilai dari ``raw_id_fields`` harus berupa daftar atau tuple."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:271
 msgid ""
 "**admin.E002**: The value of ``raw_id_fields[n]`` refers to ``<field "
 "name>``, which is not an attribute of ``<model>``."
-msgstr ""
+msgstr "**admin.E002**: Nilai dari ``raw_id_fields[n]`` mengacu pada ``<field name>``, yang bukan atribut dari ``<model>``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:273
 msgid ""
 "**admin.E003**: The value of ``raw_id_fields[n]`` must be a ``ForeignKey`` "
 "or ``ManyToManyField``."
-msgstr ""
+msgstr "**admin.E003**: Nilai dari ``raw_id_fields[n]`` harus berupa ``ForeignKey`` atau ``ManyToManyField``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:275
 msgid "**admin.E004**: The value of ``fields`` must be a list or tuple."
-msgstr ""
+msgstr "**admin.E004**: Nilai-nilai dari ``fields`` harus berupa daftar atau tuple."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:276
 msgid "**admin.E005**: Both ``fieldsets`` and ``fields`` are specified."
-msgstr ""
+msgstr "**admin.E005**: kedua ``fieldsets`` dan ``fields`` ditentukan."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:277
 msgid "**admin.E006**: The value of ``fields`` contains duplicate field(s)."
-msgstr ""
+msgstr "**admin.E006**: Nilai dari ``fields`` mengandung bidang ganda."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:278
 msgid "**admin.E007**: The value of ``fieldsets`` must be a list or tuple."
-msgstr ""
+msgstr "**admin.E007**: Nilai dari ``fieldsets`` harus berupa daftar atau tuple."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:279
 msgid "**admin.E008**: The value of ``fieldsets[n]`` must be a list or tuple."
-msgstr ""
+msgstr "**admin.E008**: Nilai dari ``fieldsets[n]`` harus berupa daftar atau tuple."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:280
 msgid "**admin.E009**: The value of ``fieldsets[n]`` must be of length 2."
-msgstr ""
+msgstr "**admin.E009**: Nilai dari ``fieldsets[n]`` harus panjang 2."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:281
 msgid "**admin.E010**: The value of ``fieldsets[n][1]`` must be a dictionary."
-msgstr ""
+msgstr "**admin.E010**: Nilai dari ``fieldsets[n][1]`` harus berupa kamus."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:282
 msgid ""
 "**admin.E011**: The value of ``fieldsets[n][1]`` must contain the key "
 "``fields``."
-msgstr ""
+msgstr "**admin.E011**: Nilai dari ``fieldsets[n][1]`` harus mengandung kunci ``fields``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:284
 msgid "**admin.E012**: There are duplicate field(s) in ``fieldsets[n][1]``."
-msgstr ""
+msgstr "**admin.E012**: Ada bidang ganda dalam ``fieldsets[n][1]``."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:285
 msgid ""
@@ -1478,11 +1478,11 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:332
 msgid "**admin.E101**: The value of ``save_as`` must be a boolean."
-msgstr ""
+msgstr "**admin.E101**: Nilai dari ``save_as`` harus boolean."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:333
 msgid "**admin.E102**: The value of ``save_on_top`` must be a boolean."
-msgstr ""
+msgstr "**admin.E102**: Nilai dari ``save_on_top`` harus boolean."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:334
 msgid "**admin.E103**: The value of ``inlines`` must be a list or tuple."
@@ -1571,11 +1571,11 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:361
 msgid "**admin.E118**: The value of ``list_per_page`` must be an integer."
-msgstr ""
+msgstr "**admin.E118**: Nilai dari ``list_per_page`` harus berupa integer."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:362
 msgid "**admin.E119**: The value of ``list_max_show_all`` must be an integer."
-msgstr ""
+msgstr "**admin.E119**: Nilai dari ``list_max_show_all`` harus berupa integer."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:363
 msgid ""
@@ -1655,15 +1655,15 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:392
 msgid "**admin.E203**: The value of ``extra`` must be an integer."
-msgstr "**admin.E203**: Nilai dari ``extra`` harus sebuah integer."
+msgstr "**admin.E203**: Nilai dari ``extra`` harus berupa integer."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:393
 msgid "**admin.E204**: The value of ``max_num`` must be an integer."
-msgstr "**admin.E204**: Nilai ``max_num``harus integer."
+msgstr "**admin.E204**: Nilai ``max_num`` harus berupa integer."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:394
 msgid "**admin.E205**: The value of ``min_num`` must be an integer."
-msgstr "**admin.E205**: Nilai ``min_num`` harus integer."
+msgstr "**admin.E205**: Nilai ``min_num`` harus berupa integer."
 
 #: ../../../../sources/1.9/docs/ref/checks.txt:395
 msgid ""
@@ -14819,17 +14819,17 @@ msgstr ""
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoip.txt:223
 msgid ""
 "GeoIP(R) is a registered trademark of MaxMind, LLC of Boston, Massachusetts."
-msgstr ""
+msgstr "GeoIP(R) adalah merek dagang terdaftar dari MaxMind, LLC dari Boston, Massachusetts."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoip2.txt:3
 msgid "Geolocation with GeoIP2"
-msgstr ""
+msgstr "Geolokasi dengan GeoIP2"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoip2.txt:10
 msgid ""
 "The :class:`GeoIP2` object is a wrapper for the `MaxMind geoip2 Python "
 "library`__. [#]_"
-msgstr ""
+msgstr "Obyek  :class:`GeoIP2` dibugnkus untuk `MaxMind geoip2 Python library`__. [#]_"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoip2.txt:13
 msgid ""
@@ -14861,7 +14861,7 @@ msgstr ""
 msgid ""
 "The basename to use for the GeoIP country data file. Defaults to "
 "``'GeoLite2-Country.mmdb'``."
-msgstr ""
+msgstr "Namadasar untuk digunakan berkas data negara GeoIP. Nilai awal ``'GeoLite2-Country.mmdb'``."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoip2.txt:77
 msgid ""
@@ -14926,25 +14926,25 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoip2.txt:146
 msgid "Returns the country code corresponding to the query."
-msgstr ""
+msgstr "Mengembalikan kode negara terkait pada permintaan"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoip2.txt:150
 msgid "Returns the country name corresponding to the query."
-msgstr ""
+msgstr "Mengembalikan nama negara terkait pada permintaan"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoip2.txt:169
 msgid ""
 "Returns a :class:`~django.contrib.gis.geos.Point` object corresponding to "
 "the query."
-msgstr ""
+msgstr "Mengembalikan obyek :class:`~django.contrib.gis.geos.Point` terkait pada permintaan"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoip2.txt:173
 msgid "GeoIP(R) is a registered trademark of MaxMind, Inc."
-msgstr ""
+msgstr "GeoIP(R) adalah merek dagang terdaftar dari MaxMind, Inc."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:3
 msgid "GeoQuerySet API Reference"
-msgstr ""
+msgstr "Acuan API GeoQuerySet"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:14
 msgid ""
@@ -15016,7 +15016,7 @@ msgstr "Backend"
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:600
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:623
 msgid "SQL Equivalent"
-msgstr ""
+msgstr "Setara SQL"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:41
 msgid "``poly ~ geom``"
@@ -15273,11 +15273,11 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:286
 msgid "PostGIS SQL equivalent::"
-msgstr ""
+msgstr "PostGIS SQL Setara::"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:290
 msgid "SpatiaLite SQL equivalent::"
-msgstr ""
+msgstr "SpatiaLite SQL setara::"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:297
 msgid ""
@@ -15291,7 +15291,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:308
 msgid "Oracle SQL equivalent::"
-msgstr ""
+msgstr "Oracle SQL setara::"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:315
 msgid "``touches``"
@@ -15356,7 +15356,7 @@ msgstr ""
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:479
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:497
 msgid "PostGIS equivalent::"
-msgstr ""
+msgstr "PostGIS Setara::"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:377
 msgid "``right``"
@@ -15436,7 +15436,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:512
 msgid "Distance lookups take the following form::"
-msgstr ""
+msgstr "Pencarian jarak mengambil formulir berikut::"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:516
 msgid ""
@@ -15563,7 +15563,7 @@ msgstr "``SDO_WITHIN_DISTANCE(poly, geom, 5)``"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:631
 msgid "This lookup is not available on SpatiaLite."
-msgstr ""
+msgstr "Pencarian tidak tersedia pada SpatiaLite."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:636
 msgid "``GeoQuerySet`` Methods"
@@ -15732,7 +15732,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:783
 msgid "Geometry Relationships"
-msgstr ""
+msgstr "Hubungan Geometri."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:785
 msgid ""
@@ -15979,7 +15979,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1019
 msgid "Geometry Output"
-msgstr ""
+msgstr "Keluaran Geometri"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1021
 msgid ""
@@ -16057,7 +16057,7 @@ msgstr "``kml``"
 msgid ""
 "Use the :class:`~django.contrib.gis.db.models.functions.AsKML` function "
 "instead."
-msgstr ""
+msgstr "Gunakan fungsi :class:`~django.contrib.gis.db.models.functions.AsKML` sebagai gantinya."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1119
 msgid ""
@@ -16075,7 +16075,7 @@ msgstr "``svg``"
 msgid ""
 "Use the :class:`~django.contrib.gis.db.models.functions.AsSVG` function "
 "instead."
-msgstr ""
+msgstr "Gunakan fungsi :class:`~django.contrib.gis.db.models.functions.AsSVG` sebagai gantinya."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1152
 msgid ""
@@ -16097,7 +16097,7 @@ msgstr "``mem_size``"
 msgid ""
 "Use the :class:`~django.contrib.gis.db.models.functions.MemSize` function "
 "instead."
-msgstr ""
+msgstr "Gunakan fungsi :class:`~django.contrib.gis.db.models.functions.MemSize` sebagai gantinya. "
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1184
 msgid ""
@@ -16113,7 +16113,7 @@ msgstr "``num_geom``"
 msgid ""
 "Use the :class:`~django.contrib.gis.db.models.functions.NumGeometries` "
 "function instead."
-msgstr ""
+msgstr "Gunakan fungsi :class:`~django.contrib.gis.db.models.functions.NumGeometries` sebagai gantinya."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1199
 msgid ""
@@ -16141,11 +16141,11 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1221
 msgid "Spatial Aggregates"
-msgstr ""
+msgstr "Pengumpulan Spasial"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1224
 msgid "Aggregate Methods"
-msgstr ""
+msgstr "Cara Pengumpulan"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1228
 msgid ""
@@ -16159,56 +16159,56 @@ msgstr "``collect``"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1238
 msgid "Use the :class:`Collect` aggregate instead."
-msgstr ""
+msgstr "Gunakan kumpulan :class:`Collect` sebagai gantinya."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1240
 msgid "Shortcut for ``aggregate(Collect(<field>))``."
-msgstr ""
+msgstr "Jalan pintas untuk ``aggregate(Collect(<field>))``."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1243
 msgid "``extent``"
-msgstr ""
+msgstr "``extent``"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1249
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1260
 msgid "Use the :class:`Extent` aggregate instead."
-msgstr ""
+msgstr "Gunakan kumpulan :class:`Extent` sebagai gantinya."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1251
 msgid "Shortcut for ``aggregate(Extent(<field>))``."
-msgstr ""
+msgstr "Jalan pintas untuk ``aggregate(Extent(<field>))``."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1254
 msgid "``extent3d``"
-msgstr ""
+msgstr "``extent3d``"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1262
 msgid "Shortcut for ``aggregate(Extent3D(<field>))``."
-msgstr ""
+msgstr "Jalan pintas untuk ``aggregate(Extent3D(<field>))``."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1265
 msgid "``make_line``"
-msgstr ""
+msgstr "``make_line``"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1271
 msgid "Use the :class:`MakeLine` aggregate instead."
-msgstr ""
+msgstr "Gunakan kumpulan :class:`MakeLine` sebagai gantinya."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1273
 msgid "Shortcut for ``aggregate(MakeLine(<field>))``."
-msgstr ""
+msgstr "Jalan pintas untuk ``aggregate(MakeLine(<field>))``."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1276
 msgid "``unionagg``"
-msgstr ""
+msgstr "``unionagg``"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1282
 msgid "Use the :class:`Union` aggregate instead."
-msgstr ""
+msgstr "Gunakan kumpulan :class:`Union` sebagai gantinya."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1284
 msgid "Shortcut for ``aggregate(Union(<field>))``."
-msgstr ""
+msgstr "Jalan pintas untuk ``aggregate(Union(<field>))``."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1289
 msgid ""
@@ -16219,7 +16219,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1296
 msgid "``tolerance``"
-msgstr ""
+msgstr "``tolerance``"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1296
 msgid ""
@@ -16229,11 +16229,11 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1310
 msgid "``Collect``"
-msgstr ""
+msgstr "``Collect``"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1314
 msgid "*Availability*: PostGIS, Spatialite (≥3.0)"
-msgstr ""
+msgstr "*Tersedia*: PostGIS, Spatialite (≥ 3.0)"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1316
 msgid ""
@@ -16246,11 +16246,11 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1323
 msgid "``Extent``"
-msgstr ""
+msgstr "``Extent``"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1327
 msgid "*Availability*: PostGIS, Oracle, Spatialite (≥3.0)"
-msgstr ""
+msgstr "*Tersedia*: PostGIS, Oracle, Spatialite (≥3.0)"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1329
 msgid ""
@@ -16260,7 +16260,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1339
 msgid "``Extent3D``"
-msgstr ""
+msgstr "``Extent3D``"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1345
 msgid ""
@@ -16271,7 +16271,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1356
 msgid "``MakeLine``"
-msgstr ""
+msgstr "``MakeLine``"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1362
 msgid ""
@@ -16305,7 +16305,7 @@ msgid ""
 "*See* `SDO_RELATE documentation "
 "<https://docs.oracle.com/cd/B19306_01/appdev.102/b14255/sdo_operat.htm#sthref845>`_,"
 " from Ch. 11 of the Oracle Spatial User's Guide and Manual."
-msgstr ""
+msgstr "*Lihat* `SDO_RELATE documentation <https://docs.oracle.com/cd/B19306_01/appdev.102/b14255/sdo_operat.htm#sthref845>`_, dari Bab 11 dari Panduan dan Manual Pengguna Oracle Spatial."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geoquerysets.txt:1396
 msgid ""
@@ -16350,7 +16350,7 @@ msgstr "Fitur"
 msgid ""
 "GeoDjango implements a high-level Python wrapper for the GEOS library, its "
 "features include:"
-msgstr ""
+msgstr "GeoDjango menerapkan pembungkus Python tingkat-tinggi untuk pustaka GEOS, fitur-fiturnya termasuk:"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geos.txt:31
 msgid ""
@@ -16367,7 +16367,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geos.txt:36
 msgid "Mutability: :class:`GEOSGeometry` objects may be modified."
-msgstr ""
+msgstr "Berubah-ubah: obyek :class:`GEOSGeometry` mungkin dirubah."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geos.txt:37
 msgid ""
@@ -16557,7 +16557,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geos.txt:211
 msgid "Returns the coordinates of the geometry as a tuple."
-msgstr ""
+msgstr "Mengembalikan kordinat dari geometri sebagai tuple."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geos.txt:215
 msgid "Returns the dimension of the geometry:"
@@ -16565,19 +16565,19 @@ msgstr "Mengembalikan dimensi dari geometri:"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geos.txt:217
 msgid "``0`` for :class:`Point`\\s and :class:`MultiPoint`\\s"
-msgstr ""
+msgstr "``0`` untuk :class:`Point` dan :class:`MultiPoint`"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geos.txt:218
 msgid "``1`` for :class:`LineString`\\s and :class:`MultiLineString`\\s"
-msgstr ""
+msgstr "``1`` untuk :class:`LineString` dan :class:`MultiLineString`"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geos.txt:219
 msgid "``2`` for :class:`Polygon`\\s and :class:`MultiPolygon`\\s"
-msgstr ""
+msgstr "``2`` untuk :class:`Polygon` dan :class:`MultiPolygon`"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geos.txt:220
 msgid "``-1`` for empty :class:`GeometryCollection`\\s"
-msgstr ""
+msgstr "``-1`` untuk :class:`GeometryCollection` kosong"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geos.txt:221
 msgid ""
@@ -16647,7 +16647,7 @@ msgstr "5"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geos.txt:250
 msgid ":class:`MultiPolygon`"
-msgstr ""
+msgstr ":class:`MultiPolygon`"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geos.txt:250
 msgid "6"
@@ -16663,7 +16663,7 @@ msgstr "7"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geos.txt:256
 msgid "Returns the number of coordinates in the geometry."
-msgstr ""
+msgstr "Mengembalikan angka dari kordinat di geometri."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geos.txt:260
 msgid ""
@@ -16766,7 +16766,7 @@ msgstr ""
 msgid ""
 "Returns an :class:`~django.contrib.gis.gdal.OGRGeometry` object "
 "corresponding to the GEOS geometry."
-msgstr ""
+msgstr "Mengembalikan obyek :class:`~django.contrib.gis.gdal.OGRGeometry` terkait pada permintaan pada geometri GEOS."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geos.txt:355
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geos.txt:586
@@ -17246,18 +17246,18 @@ msgstr ":class:`GEOSGeometry` berhubungan ke data spasial dalam berkas"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geos.txt:835
 msgid "string that contains spatial data"
-msgstr ""
+msgstr "deretan karakter yang mengandung data spasial"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geos.txt:839
 msgid ""
 "a :class:`GEOSGeometry` corresponding to the spatial data in the string"
-msgstr ""
+msgstr ":class:`GEOSGeometry` terkait pada data spasial di deretan karakter"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geos.txt:841
 msgid ""
 "``fromstr(string, srid)`` is equivalent to :class:`GEOSGeometry(string, "
 "srid) <GEOSGeometry>`."
-msgstr ""
+msgstr "``fromstr(string, srid)`` setara dengan :class:`GEOSGeometry(string, srid) <GEOSGeometry>`."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/geos.txt:850
 msgid "I/O Objects"
@@ -17730,7 +17730,7 @@ msgstr "Tidak dapat menemukan pustaka GDAL"
 msgid ""
 "When GeoDjango can't find the GDAL library, the ``HAS_GDAL`` flag will be "
 "false:"
-msgstr ""
+msgstr "Ketika GeoDjango tidak dapat menemukan pustaka GDAL, bendera ``HAS_GDAL`` akan salah:"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/geolibs.txt:243
 msgid ""
@@ -17954,14 +17954,14 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/index.txt:109
 msgid "Ask your question on the `GeoDjango`__ mailing list."
-msgstr ""
+msgstr "Tanyakan pertanyaan anda pada daftar penyuratan `GeoDjango`__."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/index.txt:110
 msgid ""
 "File a ticket on the `Django trac`__ if you think there's a bug.  Make sure "
 "to provide a complete description of the problem, versions used, and specify"
 " the component as \"GIS\"."
-msgstr ""
+msgstr "Arsipkan sebuah tiket pada `Django trac`__ jika anda beripikir ada kesalahan. Pastikan anda menyediakan gambaran lenglap dari masalah, versi yang digunakan, dan tentukan komponen sebagai \"GIS\". "
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/index.txt:120
 msgid "Library environment settings"
@@ -18182,7 +18182,7 @@ msgstr "PROJ"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/index.txt:284
 msgid "SQLite3 (includes the SpatiaLite library)"
-msgstr ""
+msgstr "SQLite3 (menyertakan pustaka SpatiaLite)"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/index.txt:287
 msgid ""
@@ -18280,14 +18280,14 @@ msgid ""
 "First, download the latest `Python 2.7 installer`__ from the Python website."
 " Next, run the installer and keep the defaults -- for example, keep 'Install"
 " for all users' checked and the installation path set as ``C:\\Python27``."
-msgstr ""
+msgstr "Pertama, unduh `Python 2.7 installer`__ terakhir dari situs jaringan Python. Selanjutnya, jalankan pemasang dan jaga awalnya -- sebagai contoh, jaga 'Install for all users' tercentang dan jalur pemasangan disetel sebagai ``C:\\Python27``."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/index.txt:391
 msgid ""
 "You may already have a version of Python installed in ``C:\\python`` as ESRI"
 " products sometimes install a copy there.  *You should still install a fresh"
 " version of Python 2.7.*"
-msgstr ""
+msgstr "Anda mungkin mempunyai versi Python terpasang di ``C:\\Python`` sebagai produk ESRI terkadang memasang salinan disana. *Anda harus masih memasang versi segar dari Python 2.7.*"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/index.txt:400
 msgid ""
@@ -18295,21 +18295,21 @@ msgid ""
 "`EnterpriseDB`__ website.  After downloading, simply run the installer, "
 "follow the on-screen directions, and keep the default options unless you "
 "know the consequences of changing them."
-msgstr ""
+msgstr "Pertama, unduh `PostgreSQL 9.x installer`__ terakhir dari situs jaringan `EnterpriseDB`__. Setelah mengunduh, cukup jalankan pemasang, ikuti arahan layar, dan jaga pilihan awal kecuali kalau anda mengetahui konsekuensi merubah mereka."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/index.txt:407
 msgid ""
 "The PostgreSQL installer creates both a new Windows user to be the 'postgres"
 " service account' and a ``postgres`` database superuser You will be prompted"
 " once to set the password for both accounts -- make sure to remember it!"
-msgstr ""
+msgstr "Pemasang PostgreSQL membuat kedua pengguna Windows baru menjadi 'postgres service account' dan superuser basisdata ``postgres``. Anda akan diarahkan sekali untuk menyetel sandi untuk kedua akun -- pastikan untuk mengingatnya!"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/index.txt:412
 msgid ""
 "When the installer completes, it will ask to launch the Application Stack "
 "Builder (ASB) on exit -- keep this checked, as it is necessary to install "
 ":ref:`postgisasb`."
-msgstr ""
+msgstr "Ketika pemasang lengkap, dia akan menanyakan untuk meluncurkan Application Stack Builder (ASB) pada keluar -- jaga ini tercentang, seperti dia diperlukan untuk memasang install :ref:`postgisasb`."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/index.txt:418
 msgid ""
@@ -18318,7 +18318,7 @@ msgid ""
 ":menuselection:`PostgreSQL 9.x` start menu group will created and contains "
 "shortcuts for the ASB as well as the 'SQL Shell', which will launch a "
 "``psql`` command window."
-msgstr ""
+msgstr "Jika berhasil terpasang, peladen PostgreSQL akan berjalan dalam latar belakang setiap kali sistem dimulai sebagai layanan Window. Sebuah kelompok menu mulai :menuselection:`PostgreSQL 9.x` akan dibuat dan mengandung jalan pintas untuk ASB dan juga 'SQL Shell', yang akan meluncurkan jendela perintah ``psql``."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/index.txt:432
 msgid ""
@@ -18413,13 +18413,13 @@ msgstr "Akhirnya, :ref:`pasang Django <installing-official-release>` di sistem a
 msgid ""
 "GeoDjango uses the :func:`~ctypes.util.find_library` routine from "
 "``ctypes.util`` to locate shared libraries."
-msgstr ""
+msgstr "GeoDjango menggunakan rutin :func:`~ctypes.util.find_library` dari ``ctypes.util`` untuk menempatkan pustaka dibagi. "
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/index.txt:516
 msgid ""
 "The ``psycopg2`` Windows installers are packaged and maintained by `Jason "
 "Erickson <http://www.stickpeople.com/projects/python/win-psycopg/>`_."
-msgstr ""
+msgstr "Pemasang Windows``psycopg2`` dipanketkan dan dirawat oleh `Jason Erickson <http://www.stickpeople.com/projects/python/win-psycopg/>`_."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/postgis.txt:3
 msgid "Installing PostGIS"
@@ -18431,13 +18431,13 @@ msgid ""
 "spatial database. :ref:`geosbuild`, :ref:`proj4` and :ref:`gdalbuild` should"
 " be installed prior to building PostGIS. You might also need additional "
 "libraries, see `PostGIS requirements`_."
-msgstr ""
+msgstr "`PostGIS`__ menambahkan dukungan obyek geografis pada PostgreSQL, merubahnya kedalam basisdata spasial. :ref:`geosbuild`, :ref:`proj4` and :ref:`gdalbuild` harus dipasang sebelum membangun PostGIS. Anda mungkin juga butuh pustaka tambahan, lihat `PostGIS requirements`_."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/postgis.txt:12
 msgid ""
 "The `psycopg2`_ module is required for use as the database adapter when "
 "using GeoDjango with PostGIS."
-msgstr ""
+msgstr "Modul `psycopg2`_ dibutuhkan untuk digunakan sebagai pencocok basisdata ketika menggunakan GeoDjango dengan PostGIS."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/postgis.txt:18
 msgid ""
@@ -18537,11 +18537,11 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/spatialite.txt:14
 msgid "For Mac OS X, follow the :ref:`instructions below<spatialite_macosx>`."
-msgstr ""
+msgstr "Untuk Mac OS X, ikuti :ref:`instructions below<spatialite_macosx>`."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/spatialite.txt:16
 msgid "For Windows, you may find binaries on the `Gaia-SINS`__ home page."
-msgstr ""
+msgstr "Untuk Windows, anda mungkin menemukan biner pada halaman rumah  `Gaia-SINS`__."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/spatialite.txt:18
 msgid ""
@@ -18551,11 +18551,11 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/spatialite.txt:26
 msgid "``SPATIALITE_LIBRARY_PATH`` setting required for SpatiaLite 4.2+"
-msgstr ""
+msgstr "Pengaturan ``SPATIALITE_LIBRARY_PATH`` dibutuhkan untuk SpatiaLite 4.2+"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/spatialite.txt:28
 msgid "If you're using SpatiaLite 4.2+, you must put this in your settings::"
-msgstr ""
+msgstr "Jika anda menggunakan SpatiaLite 4.2+, anda harus menaruh ini dalam pengaturan anda::"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/spatialite.txt:33
 msgid "Installing from source"
@@ -18565,25 +18565,25 @@ msgstr "Memasang dari sumber"
 msgid ""
 ":doc:`GEOS and PROJ.4</ref/contrib/gis/install/geolibs>` should be installed"
 " prior to building SpatiaLite."
-msgstr ""
+msgstr ":doc:`GEOS and PROJ.4</ref/contrib/gis/install/geolibs>` harus dipasang sebelum membangun SpatiaLite."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/spatialite.txt:41
 msgid ""
 "Check first if SQLite is compiled with the `R*Tree module`__. Run the "
 "sqlite3 command line interface and enter the following query::"
-msgstr ""
+msgstr "Periksa pertama jika SQLLite disusun dengan `R*Tree module`__. Jalankan antarmuka baris perintah sqlite3 dan masukkan permintaan berikut::"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/spatialite.txt:46
 msgid ""
 "If you obtain an error, you will have to recompile SQLite from source. "
 "Otherwise, just skip this section."
-msgstr ""
+msgstr "Jika anda mendapatkan sebuah kesalahn, anda akan harus menyusun kembali SQLite dari sumber. Jika tidak, cukup lewati bagian ini."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/spatialite.txt:49
 msgid ""
 "To install from sources, download the latest amalgamation source archive "
 "from the `SQLite download page`__, and extract::"
-msgstr ""
+msgstr "Untuk memasang dari sumber, unduh arsip sumber penggabungan terakhir dari `SQLite download page`__, dan ekstrak::"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/install/spatialite.txt:56
 msgid ""
@@ -20077,13 +20077,13 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/tutorial.txt:252
 msgid "This command should produce the following output:"
-msgstr ""
+msgstr "Perintah ini harus menghasilkan keluaran berikut:"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/tutorial.txt:279
 msgid ""
 "If this looks correct, run :djadmin:`migrate` to create this table in the "
 "database:"
-msgstr ""
+msgstr "Jika ini terlihat benar, jalankan :djadmin:`migrate` untuk membuat tabel ini dalam basisdata:"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/tutorial.txt:292
 msgid "Importing Spatial Data"
@@ -20127,7 +20127,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/tutorial.txt:317
 msgid "First, invoke the Django shell:"
-msgstr ""
+msgstr "Pertama, minta cangkang Django:"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/tutorial.txt:323
 msgid ""
@@ -20198,11 +20198,11 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/tutorial.txt:409
 msgid ":class:`~django.contrib.gis.gdal.Layer` objects may be sliced::"
-msgstr ""
+msgstr "Obyek :class:`~django.contrib.gis.gdal.Layer` mungkin dipotong::"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/tutorial.txt:414
 msgid "And individual features may be retrieved by their feature ID::"
-msgstr ""
+msgstr "Dan fitur-fitur tersendiri dapat diambil berdasarkan ID fitur mereka::"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/tutorial.txt:420
 msgid "Boundary geometries may be exported as WKT and GeoJSON::"
@@ -20331,7 +20331,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/tutorial.txt:568
 msgid "Spatial Queries"
-msgstr ""
+msgstr "Spatial Queries"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/tutorial.txt:572
 msgid ""
@@ -20342,7 +20342,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/tutorial.txt:580
 msgid "Now, define a point of interest [#]_::"
-msgstr ""
+msgstr "Sekarang, tentukan minat [#]_::"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/tutorial.txt:584
 msgid ""
@@ -20399,7 +20399,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/tutorial.txt:645
 msgid "Raw queries"
-msgstr ""
+msgstr "Permintaan mentah"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/tutorial.txt:647
 msgid ""
@@ -20477,7 +20477,7 @@ msgstr ""
 msgid ""
 "Next, edit your ``urls.py`` in the ``geodjango`` application folder as "
 "follows::"
-msgstr ""
+msgstr "Selanjutnya, sunting ``urls.py`` anda dalam pelipat aplikasi ``geodjango`` seperti berikut::"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/tutorial.txt:722
 msgid "Create an admin user:"
@@ -20524,31 +20524,31 @@ msgstr ""
 msgid ""
 "If you meet this requirement, then just substitute the ``OSMGeoAdmin`` "
 "option class in your ``admin.py`` file::"
-msgstr ""
+msgstr "Jika anda memenuhi persyaratan ini, kemudian cukup ganti kelas pilihan ``OSMGeoAdmin`` dalam berkas ``admin.py`` anda::"
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/tutorial.txt:770
 msgid ""
 "Special thanks to Bjørn Sandvik of `thematicmapping.org "
 "<http://thematicmapping.org>`_ for providing and maintaining this dataset."
-msgstr ""
+msgstr "Terima kasih khusus kepada Bjørn Sandvik dari `thematicmapping.org <http://thematicmapping.org>`_ utnuk menyediakan dan merawat kumpulan data ini.  "
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/tutorial.txt:773
 msgid ""
 "GeoDjango basic apps was written by Dane Springmeyer, Josh Livni, and "
 "Christopher Schmidt."
-msgstr ""
+msgstr "Aplikasi dasar GeoDjango ditulis oleh  Dane Springmeyer, Josh Livni, dan Christopher Schmidt."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/tutorial.txt:775
 msgid ""
 "This point is the `University of Houston Law Center "
 "<https://www.law.uh.edu/>`_."
-msgstr ""
+msgstr "Titik ini adalah `University of Houston Law Center <https://www.law.uh.edu/>`_."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/tutorial.txt:777
 msgid ""
 "Open Geospatial Consortium, Inc., `OpenGIS Simple Feature Specification For "
 "SQL <http://www.opengeospatial.org/standards/sfs>`_."
-msgstr ""
+msgstr "Open Geospatial Consortium, Inc., `OpenGIS Simple Feature Specification For SQL <http://www.opengeospatial.org/standards/sfs>`_."
 
 #: ../../../../sources/1.9/docs/ref/contrib/gis/utils.txt:3
 msgid "GeoDjango Utilities"
@@ -20582,7 +20582,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/humanize.txt:19
 msgid "``apnumber``"
-msgstr ""
+msgstr "``apnumber``"
 
 #: ../../../../sources/1.9/docs/ref/contrib/humanize.txt:21
 msgid ""
@@ -20912,7 +20912,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/index.txt:62
 msgid "See the :doc:`contenttypes documentation </ref/contrib/contenttypes>`."
-msgstr ""
+msgstr "Lihat :doc:`contenttypes documentation </ref/contrib/contenttypes>`."
 
 #: ../../../../sources/1.9/docs/ref/contrib/index.txt:65
 msgid "``flatpages``"
@@ -21388,7 +21388,7 @@ msgstr ""
 msgid ""
 "**Outside of templates**, you can use "
 ":func:`~django.contrib.messages.get_messages`::"
-msgstr ""
+msgstr "**Diluar Cetakan**, anda dapat menggunakan :func:`~django.contrib.messages.get_messages`::"
 
 #: ../../../../sources/1.9/docs/ref/contrib/messages.txt:224
 msgid ""
@@ -21445,7 +21445,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/contrib/messages.txt:257
 msgid "Creating custom message levels"
-msgstr ""
+msgstr "Membuat penyesuaian tingkatan pesan"
 
 #: ../../../../sources/1.9/docs/ref/contrib/messages.txt:259
 msgid ""
@@ -23312,7 +23312,7 @@ msgid ""
 ":class:`~django.contrib.sitemaps.Sitemap` classes must subclass "
 "``django.contrib.sitemaps.Sitemap``. They can live anywhere in your "
 "codebase."
-msgstr ""
+msgstr "Kelas-kelas :class:`~django.contrib.sitemaps.Sitemap` harus mengsubkelaskan ``django.contrib.sitemaps.Sitemap``. Mereka dapat tinggal dimana saja dalam basis kode anda."
 
 #: ../../../../sources/1.9/docs/ref/contrib/sitemaps.txt:96
 #: ../../../../sources/1.9/docs/ref/contrib/syndication.txt:50
@@ -23324,7 +23324,7 @@ msgid ""
 "Let's assume you have a blog system, with an ``Entry`` model, and you want "
 "your sitemap to include all the links to your individual blog entries. "
 "Here's how your sitemap class might look::"
-msgstr ""
+msgstr "Mari kita beranggapan anda mempunyai sebuah sistem blog, dengan sebuah model ``Entry``, dan anda ingin peta situs anda meneyrtakan semua tautan ke masukan blog pribadi anda. Ini adalah bagaimana kelas petasitus anda mungkin terlihat::"
 
 #: ../../../../sources/1.9/docs/ref/contrib/sitemaps.txt:115
 #: ../../../../sources/1.9/docs/ref/contrib/syndication.txt:89
@@ -60166,7 +60166,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/validators.txt:16
 msgid "For example, here's a validator that only allows even numbers::"
-msgstr ""
+msgstr "Sebagai contoh, ini adalah pengesah yang hanya mengijinkan angka genap::"
 
 #: ../../../../sources/1.9/docs/ref/validators.txt:28
 msgid ""
@@ -60193,7 +60193,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/validators.txt:53
 msgid "How validators are run"
-msgstr ""
+msgstr "Bagaimana pengesahan berjalan"
 
 #: ../../../../sources/1.9/docs/ref/validators.txt:55
 msgid ""
@@ -60209,7 +60209,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/validators.txt:65
 msgid "Built-in validators"
-msgstr ""
+msgstr "Pengesahan siap pakai"
 
 #: ../../../../sources/1.9/docs/ref/validators.txt:67
 msgid ""
@@ -60221,7 +60221,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/validators.txt:73
 msgid "``RegexValidator``"
-msgstr ""
+msgstr "``RegexValidator``"
 
 #: ../../../../sources/1.9/docs/ref/validators.txt:77
 msgid ""
@@ -60232,16 +60232,16 @@ msgstr ""
 #: ../../../../sources/1.9/docs/ref/validators.txt:79
 #: ../../../../sources/1.9/docs/ref/validators.txt:124
 msgid "If not ``None``, overrides :attr:`.message`."
-msgstr ""
+msgstr "Jika bukan ``None``, kesampingkan :attr:`message`."
 
 #: ../../../../sources/1.9/docs/ref/validators.txt:80
 #: ../../../../sources/1.9/docs/ref/validators.txt:125
 msgid "If not ``None``, overrides :attr:`code`."
-msgstr ""
+msgstr "Jika bukan ``None``, kesampingkan :attr:`code`."
 
 #: ../../../../sources/1.9/docs/ref/validators.txt:81
 msgid "If not ``None``, overrides :attr:`inverse_match`."
-msgstr ""
+msgstr "Jika bukan ``None``, kesampingkan :attr:`inverse_match`."
 
 #: ../../../../sources/1.9/docs/ref/validators.txt:82
 msgid ""
@@ -60290,13 +60290,13 @@ msgstr "``EmailValidator``"
 
 #: ../../../../sources/1.9/docs/ref/validators.txt:126
 msgid "If not ``None``, overrides :attr:`whitelist`."
-msgstr ""
+msgstr "Jika bukan ``None``, kesampingkan :attr:`whitelist`."
 
 #: ../../../../sources/1.9/docs/ref/validators.txt:130
 msgid ""
 "The error message used by :exc:`~django.core.exceptions.ValidationError` if "
 "validation fails. Defaults to ``\"Enter a valid email address\"``."
-msgstr ""
+msgstr "Pesan kesalahan digunakan oleh :exc:`~django.core.exceptions.ValidationError` jika pengecekan gagal. Nilai awal ``\"Enter a valid email address\"``."
 
 #: ../../../../sources/1.9/docs/ref/validators.txt:141
 msgid ""
@@ -60474,7 +60474,7 @@ msgstr "``DecimalValidator``"
 msgid ""
 "Raises :exc:`~django.core.exceptions.ValidationError` with the following "
 "codes:"
-msgstr ""
+msgstr "Memunculkan  :exc:`~django.core.exceptions.ValidationError` dengan kode berikut:"
 
 #: ../../../../sources/1.9/docs/ref/validators.txt:299
 msgid ""
@@ -60495,7 +60495,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/views.txt:3
 msgid "Built-in Views"
-msgstr ""
+msgstr "Tampilan Siap pakai"
 
 #: ../../../../sources/1.9/docs/ref/views.txt:8
 msgid ""
@@ -60579,7 +60579,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/ref/views.txt:77
 msgid "Three things to note about 404 views:"
-msgstr ""
+msgstr "Tiga hal untuk dicatat tentang tampilan 404:"
 
 #: ../../../../sources/1.9/docs/ref/views.txt:79
 msgid ""
@@ -60680,7 +60680,7 @@ msgid ""
 "Django, it may be handled by a component of Django (for example resetting "
 "the session data). If not specifically handled, Django will consider the "
 "current request a 'bad request' instead of a server error."
-msgstr ""
+msgstr "Ketika sebuah :exc:`~django.core.exceptions.SuspiciousOperation` dimunculkan di Django, dia mungkin ditangani oleh komponen dari Django (sebagai contoh mengatur kembali data sesi). Jika tidak secara khusus ditangani, Django akan memperimbangkan permintaan saat ini 'bad request'  daripada kesalahan peladen."
 
 #: ../../../../sources/1.9/docs/ref/views.txt:163
 msgid ""
@@ -60690,7 +60690,7 @@ msgid ""
 "nothing related to the exception that triggered the view is passed to the "
 "template context, as the exception message might contain sensitive "
 "information like filesystem paths."
-msgstr ""
+msgstr "``django.views.defaults.bad_request``, jika tidak sangat mirip pada tampilan ``server_error``, tetapi mengembalikan dengan kode keadaan 400 yang kondisi kesalahan adalah hasil dari pengerjaan klien. Secara awal, tidak ada terhubung pada pengecualian yang memicu tampilan dilewatkan ke konteks cetakan, sebagai pesan pengecualian mungkin mengandung informasi sensitif seperti jalur sistem berkas."
 
 #: ../../../../sources/1.9/docs/ref/views.txt:170
 msgid ""

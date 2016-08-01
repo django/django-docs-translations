@@ -5,14 +5,17 @@
 # Translators:
 # xiu1 <d84ea@hotmail.co.jp>, 2015-2016
 # Eiji Warashina <Eiji.Warashina@gmail.com>, 2016
-# Hiroki KIYOHARA <hirokiky@gmail.com>, 2013-2014
+# Hiroki KIYOHARA <hirokiky@gmail.com>, 2013-2014,2016
 # Hiroshi Yamaki <hiroshi.yamaki@gmail.com>, 2015
+# kazuhiro soga <kazsoga@gmail.com>, 2016
 # Kenjiro Kosaka <inoshirou@gmail.com>, 2014
 # Kosei Kitahara <information@surgo.jp>, 2013
-# Masashi Shibata <contact@c-bata.link>, 2015-2016
+# Masaharu IWAI <iwaim.sub@gmail.com>, 2016
+# MASASHI Shibata <contact@c-bata.link>, 2015-2016
+# Masataka Arai <arai.masataka142@gmail.com>, 2016
 # Riktio Taniguchi <rikiriki1238@gmail.com>, 2015
 # Satoshi Tsuyama <tsuyama@nike.eonet.ne.jp>, 2014
-# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016
+# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016
 # Takayuki Hirai, 2015
 # Takuya Arita <takuya.arita@gmail.com>, 2015
 # Yuma.M, 2015
@@ -21,9 +24,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-24 16:09-0600\n"
-"PO-Revision-Date: 2016-02-27 01:56+0000\n"
-"Last-Translator: Hiroki KIYOHARA <hirokiky@gmail.com>\n"
+"POT-Creation-Date: 2016-03-05 19:12-0600\n"
+"PO-Revision-Date: 2016-06-12 21:21+0000\n"
+"Last-Translator: Masaharu IWAI <iwaim.sub@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -98,7 +101,7 @@ msgid ""
 "If you're having trouble going through this tutorial, please post a message "
 "to |django-developers| or drop by `#django-dev on irc.freenode.net`__ to "
 "chat with other Django users who might be able to help."
-msgstr "もしこのチュートリアルを通じて理解できないことについては、 |django-developers| にメッセージを送るか `#django-dev on irc.freenode.net`__ で他の Django ユーザーとのチャットが助けになるかもしれません。"
+msgstr "もしこのチュートリアルを通じて理解できないことがあれば、 |django-developers| にメッセージを送るか `#django-dev on irc.freenode.net`__ で他の Django ユーザーとのチャットが助けになるでしょう。"
 
 #: ../../../../sources/1.9/docs/intro/contributing.txt:50
 msgid "What does this tutorial cover?"
@@ -267,7 +270,7 @@ msgid ""
 "Git Bash shell on Windows, since activation scripts are only created for the"
 " system shell (``.bat``) and PowerShell (``.ps1``). Use the ``virtualenv`` "
 "package instead:"
-msgstr " ビルトインの\"venv\"は、システムシェル(``.bat``) やPowerShell(``.ps1``)のためだけに作られたアクティベーションスクリプトであるため、WindowsのGit Bash shellを使用していても動作しません。その代わりに``virtualenv``パッケージを使用します:"
+msgstr "ビルトインの ``venv`` は、 Windows 用にはシステムシェル(``.bat``) やPowerShell(``.ps1``)のためだけに作られたアクティベーションスクリプトであるため、WindowsのGit Bash shellを使用していても動作しません。その代わりに``virtualenv``パッケージを使用します:"
 
 #: ../../../../sources/1.9/docs/intro/contributing.txt:156
 msgid "For Ubuntu users"
@@ -277,7 +280,7 @@ msgstr "Ubuntuを使用している方へ"
 msgid ""
 "On some versions of Ubuntu the above command might fail. Use the "
 "``virtualenv`` package instead, first making sure you have ``pip3``:"
-msgstr "いくつかのバージョンのUbuntuでは上記のコマンドは失敗するでしょう。まず``pip3`` を使用し、代わりに``virtualenv``パッケージを使用します。"
+msgstr "いくつかのバージョンのUbuntuでは上記のコマンドは失敗するでしょう。まず ``pip3`` があることを確認し、 ``virtualenv`` パッケージを使用します。"
 
 #: ../../../../sources/1.9/docs/intro/contributing.txt:168
 msgid "The final step in setting up your virtualenv is to activate it:"
@@ -290,13 +293,13 @@ msgstr "もし ``source`` コマンドが使えない場合、代わりに ``.``
 
 #: ../../../../sources/1.9/docs/intro/contributing.txt:182
 msgid "To activate your virtualenv on Windows, run:"
-msgstr "Windows上でvirtualenvを有効にするために, 実行してください:"
+msgstr "Windows上でvirtualenvを有効にするために、実行してください:"
 
 #: ../../../../sources/1.9/docs/intro/contributing.txt:188
 msgid ""
 "You have to activate the virtualenv whenever you open a new terminal window."
 " virtualenvwrapper__ is a useful tool for making this more convenient."
-msgstr "ターミナルの新しいウィンドウを開いた時は、virtualenvを有効にする必要があります。 virtualenvwrapper__ はこれをより簡単にできるツールです。"
+msgstr "ターミナルの新しいウィンドウを開いたときは、virtualenvを有効にする必要があります。 virtualenvwrapper__ はこれをより簡単にできるツールです。"
 
 #: ../../../../sources/1.9/docs/intro/contributing.txt:193
 msgid ""
@@ -305,7 +308,7 @@ msgid ""
 "Also, the name of the currently activated virtualenv is displayed on the "
 "command line to help you keep track of which one you are using. Go ahead and"
 " install the previously cloned copy of Django:"
-msgstr "これより``pip``を通じてインストールした何もかもが、他の環境やシステムワイドなパッケージから分離されて、新しいvirtualenvにインストールされます。また、どの環境を使っているのかがわかるように現在有効なvirtualenvの名前がコマンドラインに表示されます。先ほどクローンしたDjangoのコピーをインストールして作業を続行します:"
+msgstr "これより ``pip`` を通じてインストールした何もかもが、他の環境やシステムワイドなパッケージから分離されて、新しいvirtualenvにインストールされます。また、どの環境を使っているのかがわかるように現在有効なvirtualenvの名前がコマンドラインに表示されます。先ほどクローンしたDjangoのコピーをインストールして作業を続行します:"
 
 #: ../../../../sources/1.9/docs/intro/contributing.txt:203
 msgid ""
@@ -362,13 +365,13 @@ msgid ""
 "changes haven't completely broken Django. If you've never run Django's test "
 "suite before, it's a good idea to run it once beforehand just to get "
 "familiar with what its output is supposed to look like."
-msgstr "Django へ貢献する際、変更したコードが Django の他の領域にバグをの変更はジャンゴの他の領域にバグを混入しないことが非常に重要です。変更後に Django の正常動作を確認するには Django のテストスイートを実行します。すべてのテストに合格した場合は、その変更により Django が壊れていないことが確認できます。Django のテストスイートを実行したことが一度もない場合、その出力結果を把握しておくために、一度テストスイートを実行しておくことを推奨します。"
+msgstr "Django へ貢献する際、変更したコードが Django の他の領域にバグを混入しないことが非常に重要です。変更後に Django の正常動作を確認するには Django のテストスイートを実行します。すべてのテストに合格した場合は、その変更により Django が壊れていないことが確認できます。Django のテストスイートを実行したことが一度もない場合、その出力結果を把握しておくために一度テストスイートを実行しておくことを推奨します。"
 
 #: ../../../../sources/1.9/docs/intro/contributing.txt:248
 msgid ""
 "Before running the test suite, install its dependencies by first ``cd``-ing "
 "into the Django ``tests/`` directory and then running:"
-msgstr "Django のテストスイートを走らせる前に、まずは Djangoの ``tests/`` ディレクトリに ``cd`` で移動して、依存関係をインストールしてください。"
+msgstr "Django のテストスイートを走らせる前に、まずは Djangoの ``tests/`` ディレクトリに ``cd`` で移動して、依存関係をインストールしてください:"
 
 #: ../../../../sources/1.9/docs/intro/contributing.txt:255
 msgid ""
@@ -468,7 +471,7 @@ msgstr "チケット #24788 にテストを書いてみましょう"
 msgid ""
 "Ticket :ticket:`24788` proposes a small feature addition: the ability to "
 "specify the class level attribute ``prefix`` on Form classes, so that::"
-msgstr "チケット :ticket:`24788` は、Formクラスにおいてクラスレベルの属性`prefix`を指定可能にするという小さな機能追加を、このように提案しています:"
+msgstr "チケット :ticket:`24788` は、Formクラスにおいてクラスレベルの属性 ``prefix`` を指定可能にするという小さな機能追加を、このように提案しています:"
 
 #: ../../../../sources/1.9/docs/intro/contributing.txt:335
 msgid ""
@@ -2101,26 +2104,38 @@ msgid ""
 " more details, see the reference documentation for :setting:`DATABASES`."
 msgstr "データベースとして SQLite を使っていない場合、 :setting:`USER` や :setting:`PASSWORD` そして :setting:`HOST などの追加設定を加える必要があります。詳細については  :setting:`DATABASES` のリファレンスドキュメントを参照してください。"
 
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:44
+msgid "For databases other than SQLite"
+msgstr "SQLite 以外のデータベースの場合"
+
 #: ../../../../sources/1.9/docs/intro/tutorial02.txt:46
 msgid ""
-"If you're using PostgreSQL or MySQL, make sure you've created a database by "
-"this point. Do that with \"``CREATE DATABASE database_name;``\" within your "
-"database's interactive prompt."
-msgstr "もし PostgreSQL や MySQL を使っている場合、 database を今のうちに作っておいてください。 \"``CREATE DATABASE database_name;``\" とデータベースのインタラクティブプロンプトで実行してください。"
+"If you're using a database besides SQLite, make sure you've created a "
+"database by this point. Do that with \"``CREATE DATABASE database_name;``\" "
+"within your database's interactive prompt."
+msgstr "もし SQLite 以外を使っている場合、 database を今のうちに作っておいてください。 \"``CREATE DATABASE database_name;``\" とデータベースのインタラクティブプロンプトで実行してください。"
 
 #: ../../../../sources/1.9/docs/intro/tutorial02.txt:50
+msgid ""
+"Also make sure that the database user provided in :file:`mysite/settings.py`"
+" has \"create database\" privileges. This allows automatic creation of a "
+":ref:`test database <the-test-database>` which will be needed in a later "
+"tutorial."
+msgstr ":file:`mysite/settings.py` のデータベースユーザに 「データベース作成」の権限があることを確認します。これは、この後のチュートリアルの :ref:`テストDB <the-test-database>` を自動作成することができます。　"
+
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:55
 msgid ""
 "If you're using SQLite, you don't need to create anything beforehand - the "
 "database file will be created automatically when it is needed."
 msgstr "SQLite を使っている場合は、前もってすることはありません。必要であればデータベースファイルが自動で生成されます。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:53
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:58
 msgid ""
 "While you're editing :file:`mysite/settings.py`, set :setting:`TIME_ZONE` to"
 " your time zone."
 msgstr ":file:`mysite/settings.py` を編集する際、 :setting:`TIME_ZONE` に自分のタイムゾーンも設定します。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:56
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:61
 msgid ""
 "Also, note the :setting:`INSTALLED_APPS` setting at the top of the file. "
 "That holds the names of all Django applications that are activated in this "
@@ -2128,51 +2143,51 @@ msgid ""
 "and distribute them for use by others in their projects."
 msgstr "同じく、ファイル先頭にある :setting:`INSTALLED_APPS` に注意してください。これはこのDjangoインスタンスの中で有効化されているすべてのDjangoアプリケーションの名前を保持しています。アプリは複数のプロジェクトによって使用されることができますし、また、他の開発者が彼らのプロジェクトで使用するためにパッケージして配布することもできます。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:61
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:66
 msgid ""
 "By default, :setting:`INSTALLED_APPS` contains the following apps, all of "
 "which come with Django:"
 msgstr "デフォルトでは、 :settings:`INSTALLED_APPS` には以下のアプリケーションがはいっています。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:64
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:69
 msgid ":mod:`django.contrib.admin` -- The admin site. You'll use it shortly."
 msgstr ":mod:`django.contrib.admin`  - 管理（admin）サイト。まもなく使います"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:66
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:71
 msgid ":mod:`django.contrib.auth` -- An authentication system."
 msgstr ":mod:`django.contrib.auth` - 認証システム"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:68
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:73
 msgid ":mod:`django.contrib.contenttypes` -- A framework for content types."
 msgstr ":mod:`django.contrib.contenttypes` - コンテンツタイプフレームワーク"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:70
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:75
 msgid ":mod:`django.contrib.sessions` -- A session framework."
 msgstr ":mod:`django.contrib.sessions` - セッションフレームワーク"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:72
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:77
 msgid ":mod:`django.contrib.messages` -- A messaging framework."
 msgstr ":mod:`django.contrib.messages` - メッセージフレームワーク"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:74
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:79
 msgid ""
 ":mod:`django.contrib.staticfiles` -- A framework for managing static files."
 msgstr ":mod:`django.contrib.staticfiles` - 静的ファイルの管理フレームワーク"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:77
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:82
 msgid ""
 "These applications are included by default as a convenience for the common "
 "case."
 msgstr "これらの機能はよく使われるのでデフォルトで付属しています。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:79
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:84
 msgid ""
 "Some of these applications make use of at least one database table, though, "
 "so we need to create the tables in the database before we can use them. To "
 "do that, run the following command:"
 msgstr "これらのアプリケーションは最低1つデータベースのテーブルを使うので、使い始まる前にデータベースにテーブルを作る必要があります。以下のコマンドを実行してください:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:87
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:92
 msgid ""
 "The :djadmin:`migrate` command looks at the :setting:`INSTALLED_APPS` "
 "setting and creates any necessary database tables according to the database "
@@ -2184,11 +2199,11 @@ msgid ""
 "to display the tables Django created."
 msgstr ":djadmin:`migrate` コマンドは :setting:`INSTALLED_APPS` の設定を参照するとともに、 :file:`mysite/settings.py` ファイルのデータベース設定に従って必要なすべてのデータベースのテーブルを作成します。このデータベースマイグレーションはアプリと共に配布されます  (これらについては後ほどカバーします)。マイグレーションを実施するたび、メッセージを見ることになります。もしこれに興味を引かれたら、Djangoが作成したテーブルを表示するために、コマンドラインクライアントであなたのデータベースの種類に合わせて ``\\dt`` (PostgreSQL)、``SHOW TABLES;`` (MySQL)、 ``.schema`` (SQLite)、もしくは ``SELECT TABLE_NAME FROM USER_TABLES;`` (Oracle) とタイプしてみましょう。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:96
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:101
 msgid "For the minimalists"
 msgstr "ミニマリストのために"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:98
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:103
 msgid ""
 "Like we said above, the default applications are included for the common "
 "case, but not everybody needs them. If you don't need any or all of them, "
@@ -2198,24 +2213,24 @@ msgid ""
 ":setting:`INSTALLED_APPS`."
 msgstr "すでに述べたように、一般的な場合のためにデフォルトのアプリケーション群が含まれていますが、すべての人がそれを必要とするわけではありません。もしその中のどれかかすべてが必要ない場合、 :djadmin:`migrate` を実行する前に :setting:`INSTALLED_APPS` から適切な行(複数)をコメントアウトしたり削除しても構いません。:djadmin:`migrate` コマンドは :setting:`INSTALLED_APPS` のアプリのためだけに実行されます。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:108
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:113
 msgid "Creating models"
 msgstr "モデルの作成"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:110
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:115
 msgid ""
 "Now we'll define your models -- essentially, your database layout, with "
 "additional metadata."
 msgstr "これからモデルを定義します -- 追加的なメタデータとともにデータベースのレイアウトを行う、必須の作業です。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:113
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:196
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:578
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:118
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:201
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:583
 #: ../../../../sources/1.9/docs/intro/tutorial03.txt:349
 msgid "Philosophy"
 msgstr "設計哲学"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:115
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:120
 msgid ""
 "A model is the single, definitive source of truth about your data. It "
 "contains the essential fields and behaviors of the data you're storing. "
@@ -2223,7 +2238,7 @@ msgid ""
 "data model in one place and automatically derive things from it."
 msgstr "モデルは、手持ちのデータに対する唯一の決定的なソースです。モデルには自分が格納したいデータにとって必要不可欠なフィー ルドと、そのデータの挙動を収めます。 Django は :ref:`DRY 則 <dry>` に従っています。 Django のモデルの目的は、ただ一つの場所でデータモデルを定義し、そこから自動的にデータを取り出すことにあります。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:120
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:125
 msgid ""
 "This includes the migrations - unlike in Ruby On Rails, for example, "
 "migrations are entirely derived from your models file, and are essentially "
@@ -2231,7 +2246,7 @@ msgid ""
 "to match your current models."
 msgstr "これはマイグレーションを含みます - 例えば、Ruby On Railsと違って、Djangoは歴史的に、現在のモデルに合致するようデータベースのスキーマをアップデートするよう進むことを可能とすることで、マイグレーションは完全にモデルのファイルから生成されます。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:125
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:130
 msgid ""
 "In our simple poll app, we'll create two models: ``Question`` and "
 "``Choice``. A ``Question`` has a question and a publication date. A "
@@ -2239,20 +2254,20 @@ msgid ""
 "``Choice`` is associated with a ``Question``."
 msgstr "これから開発する簡単な poll アプリケーションでは、投票項目 (``Question``) と選択肢 (``Choice``) の二つのモデルを作成します。 ``Poll`` には質問事項 (question) と公開日 (publication date) の情報があります。 ``Choice`` には選択肢のテキストと投票数 (vote) という二つのフィールドがあります。各 ``Choice`` は一つの ``Question`` に関連づけられています。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:130
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:135
 msgid ""
 "These concepts are represented by simple Python classes. Edit the "
 ":file:`polls/models.py` file so it looks like this:"
 msgstr "Django では、こうした概念を簡単な Python クラスで表現できます。 :file:`polls/models.py` ファイルを以下のように編集してください:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:149
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:154
 msgid ""
 "The code is straightforward. Each model is represented by a class that "
 "subclasses :class:`django.db.models.Model`. Each model has a number of class"
 " variables, each of which represents a database field in the model."
 msgstr "コードは単純明解ですね。各モデルは一つのクラスで表現され、いずれも :class:`django.db.models.Model` のサブクラスです。各モデルには複数のクラス変数があり、個々のクラス変数はモデルのデータベースフィールドを表現しています。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:153
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:158
 msgid ""
 "Each field is represented by an instance of a "
 ":class:`~django.db.models.Field` class -- e.g., "
@@ -2261,7 +2276,7 @@ msgid ""
 "what type of data each field holds."
 msgstr "各フィールドは :class:`~django.db.models.Field` クラスのインスタンスとして表現されています。例えば、 :class:`~django.db.models.CharField` は文字のフィールドで、 :class:`~django.db.models.DateTimeField` は日時フィー ルドです。こうしたクラスは、各フィールドにどのようなデータ型を記憶させるか を Django に教えます。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:158
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:163
 msgid ""
 "The name of each :class:`~django.db.models.Field` instance (e.g. "
 "``question_text`` or ``pub_date``) is the field's name, in machine-friendly "
@@ -2269,7 +2284,7 @@ msgid ""
 "use it as the column name."
 msgstr ":class:`~django.db.models.Field` インスタンスそれぞれの名前(例: ``question_text`` や ``pub_date``)は、機械可読なフィールド名です。このフィールド名はPythonコードで使うとともに、データベースも列の名前として使うことになります。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:163
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:168
 msgid ""
 "You can use an optional first positional argument to a "
 ":class:`~django.db.models.Field` to designate a human-readable name. That's "
@@ -2280,7 +2295,7 @@ msgid ""
 "machine-readable name will suffice as its human-readable name."
 msgstr ":class:`~django.db.models.Field` の第一固定引数には、オプションとして人間可読なフィールド名も指定できます。このフィールド名は Django の二つの内省機能で使う他、ドキュメントとしての役割も果たします。人間可読なフィールド名を指定しない場合、 Django は機械可読な名前を使います。上の例では、  ``Question.pub_date`` にだけ人間可読なフィールド名を指定しました。モデルの他のフィールドでは、フィールドの機械可読な名前は人間可読な名前としても十分なので定義していません。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:171
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:176
 msgid ""
 "Some :class:`~django.db.models.Field` classes have required arguments. "
 ":class:`~django.db.models.CharField`, for example, requires that you give it"
@@ -2288,14 +2303,14 @@ msgid ""
 "the database schema, but in validation, as we'll soon see."
 msgstr ":class:`~django.db.models.Field` クラスの中には必須の引数を持つものがありま す。例えば `~django.db.models.CharField` には :attr:`~django.db.models.CharField.max_length` を指定する必要があります。この引数はデータベーススキーマで使われる他、後で述べるバリデーションでも使われま す。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:176
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:181
 msgid ""
 "A :class:`~django.db.models.Field` can also have various optional arguments;"
 " in this case, we've set the :attr:`~django.db.models.Field.default` value "
 "of ``votes`` to 0."
 msgstr ":class:`~django.db.models.Field` はいつくかオプションの引数も取れます。今回の場合、 ```votes`` の :attr:`~django.db.models.Field.default` 値を 0 に設定しました。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:180
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:185
 msgid ""
 "Finally, note a relationship is defined, using "
 ":class:`~django.db.models.ForeignKey`. That tells Django each ``Choice`` is "
@@ -2303,62 +2318,62 @@ msgid ""
 "relationships: many-to-one, many-to-many, and one-to-one."
 msgstr "ついに、 :class:`~django.db.models.ForeignKey` を使用したリレーションシップの記述が定義されました。これは、それぞれの``Choice`` が一つの``Question``に関連付けられていることをDjangoに伝えます。Djangoは 多対一、多対多、そして一対一のような一般的なデータベースリレーションシップすべてをサポートします。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:186
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:191
 msgid "Activating models"
 msgstr "モデルを有効にする"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:188
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:193
 msgid ""
 "That small bit of model code gives Django a lot of information. With it, "
 "Django is able to:"
 msgstr "前述のようなほんのわずかなコードをモデルに書くだけで、 Django はたくさんの情報を知れます。このコードを使って、 Django は:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:191
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:196
 msgid "Create a database schema (``CREATE TABLE`` statements) for this app."
 msgstr "アプリケーションのデータベーススキーマを作成 (``CREATE TABLE`` 文を実行) できます。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:192
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:197
 msgid ""
 "Create a Python database-access API for accessing ``Question`` and "
 "``Choice`` objects."
 msgstr "``Question`` や ``Choice`` オブジェクトに Python からアクセスするためのデータベー ス API を作成できます。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:194
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:199
 msgid ""
 "But first we need to tell our project that the ``polls`` app is installed."
 msgstr "でもその前に ``polls`` アプリケーションをインストールしたことをプロジェクトに教えてやる必要があります。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:198
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:203
 msgid ""
 "Django apps are \"pluggable\": You can use an app in multiple projects, and "
 "you can distribute apps, because they don't have to be tied to a given "
 "Django installation."
 msgstr "Django アプリケーションは「プラガブル (pluggable)」です。アプリケーショ ンは特定の Django インストールに結び付いていないので、アプリケーションを複数のプロジェクトで使ったり、単体で配布したりできます。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:202
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:207
 msgid ""
 "Edit the :file:`mysite/settings.py` file again, and change the "
 ":setting:`INSTALLED_APPS` setting to include the string "
 "``'polls.apps.PollsConfig'``. It'll look like this:"
 msgstr ":file:`mysite/settings.py` ファイルをもう一度編集して、 :setting:`INSTALLED_APPS` の設定に文字列``'polls.apps.PollsConfig'``が含まれるよう変更します。そうするとこのようになります:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:219
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:224
 msgid ""
 "Now Django knows to include the ``polls`` app. Let's run another command:"
 msgstr "これで Django は ``polls`` アプリケーションが含まれていると知りました。もうひとつコマンドを実行しましょう:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:225
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:230
 msgid "You should see something similar to the following:"
 msgstr "次のようなものが表示されるはずです:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:235
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:240
 msgid ""
 "By running ``makemigrations``, you're telling Django that you've made some "
 "changes to your models (in this case, you've made new ones) and that you'd "
 "like the changes to be stored as a *migration*."
 msgstr "``makemigrations``を実行することで、Djangoにモデルに変更があったこと(この場合、新しいものを作成しました)を伝え、そして変更を*マイグレーション*の形で保存することができました。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:239
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:244
 msgid ""
 "Migrations are how Django stores changes to your models (and thus your "
 "database schema) - they're just files on disk. You can read the migration "
@@ -2368,7 +2383,7 @@ msgid ""
 "editable in case you want to manually tweak how Django changes things."
 msgstr "マイグレーションはDjangoがモデル(そしてデータベーススキーマでもあります)の変更をディスク上のファイルに保存する方法です。望むならば、新しいモデルをマイグレーションのファイル ``polls/migrations/0001_initial.py`` から読むことも出来ます。安心して下さい、Djangoが作成する度にマイグレーションのファイルを読む必要はありません、しかし、Djangoが行った変更を手動で微調整したいというときのために人間可読なファイルとして設計されています。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:246
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:251
 msgid ""
 "There's a command that will run the migrations for you and manage your "
 "database schema automatically - that's called :djadmin:`migrate`, and we'll "
@@ -2377,48 +2392,48 @@ msgid ""
 "their SQL:"
 msgstr "これは自動でデータベーススキーマを管理するためのマイグレーション実行するとのコマンドです。:djadmin:`migrate` と呼ばれる、あっという間に完了します、しかし最初は、マイグレーションがどんなSQLを実行するのか見てみましょう。:djadmin:`sqlmigrate` コマンドはマイグレーションの名前を引数にとってSQLを返します:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:255
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:260
 msgid ""
 "You should see something similar to the following (we've reformatted it for "
 "readability):"
 msgstr "あなたは次のようなもの (読みやすさのためにそれを再フォーマットした) が表示されるはずです:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:291
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:296
 msgid "Note the following:"
 msgstr "以下に注意してください:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:293
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:298
 msgid ""
 "The exact output will vary depending on the database you are using. The "
 "example above is generated for PostgreSQL."
 msgstr "正確な出力は、使用しているデータベースによって異なります。上記の例では、 PostgreSQL のために生成されます。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:296
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:301
 msgid ""
 "Table names are automatically generated by combining the name of the app "
 "(``polls``) and the lowercase name of the model -- ``question`` and "
 "``choice``. (You can override this behavior.)"
 msgstr "テーブル名はアプリケーションの名前 (``polls``) とモデルの小文字表記 の ``question``  と ``choice`` を組み合わせて自動的に生成されます。 (この挙動はオーバライドできます)"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:300
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:305
 msgid ""
 "Primary keys (IDs) are added automatically. (You can override this, too.)"
 msgstr "主キー (primary key, ID) は自動的に追加されます (この挙動もオーバライド可能です)。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:302
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:307
 msgid ""
 "By convention, Django appends ``\"_id\"`` to the foreign key field name. "
 "(Yes, you can override this, as well.)"
 msgstr "便宜上、 Django は外部キーのフィールド名に ``\"_id\"`` を追加します。もちろんこの挙動もオーバライド可能です。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:305
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:310
 msgid ""
 "The foreign key relationship is made explicit by a ``FOREIGN KEY`` "
 "constraint. Don't worry about the ``DEFERRABLE`` parts; that's just telling "
 "PostgreSQL to not enforce the foreign key until the end of the transaction."
 msgstr "外部キーリレーションシップは``FOREIGN KEY`` 制約で明確化されます。``DEFERRABLE``の部分については心配しないでください; これはただPostgreSQLに外部キーをトランザクション終了まで強制しないよう伝えているだけです。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:309
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:314
 msgid ""
 "It's tailored to the database you're using, so database-specific field types"
 " such as ``auto_increment`` (MySQL), ``serial`` (PostgreSQL), or ``integer "
@@ -2427,7 +2442,7 @@ msgid ""
 "quotes."
 msgstr "これはあなたが使用しているデータベースに合わせて、``auto_increment`` (MySQL)、 ``serial`` (PostgreSQL) もしくは `integer primary key autoincrement`` (SQLite) のようなデータベースに特化した型が自動的に選択され生成されます。フィールド名のクォーティングをダブルクォートにするか、シングルクォートにするかも同じように扱われます。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:315
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:320
 msgid ""
 "The :djadmin:`sqlmigrate` command doesn't actually run the migration on your"
 " database - it just prints it to the screen so that you can see what SQL "
@@ -2436,20 +2451,20 @@ msgid ""
 "changes."
 msgstr ":djadmin:`sqlmigrate` コマンドは実際にはデータベースにマイグレーションを実行しません。ただ、Djangoが必要としているSQLが何であるかをスクリーンに表示するだけです。これはDjangoが何をしようとしているかを確認したり、データベース管理者に変更のためのSQLスクリプトを要求されているときに役に立ちます。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:321
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:326
 msgid ""
 "If you're interested, you can also run :djadmin:`python manage.py check "
 "<check>`; this checks for any problems in your project without making "
 "migrations or touching the database."
 msgstr "もし興味があれば :djadmin:`python manage.py check <check>` を実行することもできます; これはマイグレーションを作成したりデータベースにふれることなくプロジェクトになんの問題がないか確認します 。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:325
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:330
 msgid ""
 "Now, run :djadmin:`migrate` again to create those model tables in your "
 "database:"
 msgstr ":djadmin:`migrate` を再度実行し、 モデルのテーブルをデータベースに作成しましょう。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:336
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:341
 msgid ""
 "The :djadmin:`migrate` command takes all the migrations that haven't been "
 "applied (Django tracks which ones are applied using a special table in your "
@@ -2458,7 +2473,7 @@ msgid ""
 "schema in the database."
 msgstr ":djadmin:`migrate` コマンドはすべての適用されていないマイグレーション(Djangoはデータベース内の``django_migrations``と呼ばれる特別なテーブルを利用してどれが適用されているかを追跡しています)を捕捉してデータベースに対してそれを実行します - 重要なのは、モデルに対して行った変更はデータベースのスキーマに同期するということです。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:342
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:347
 msgid ""
 "Migrations are very powerful and let you change your models over time, as "
 "you develop your project, without the need to delete your database or tables"
@@ -2468,23 +2483,23 @@ msgid ""
 "changes:"
 msgstr "マイグレーションは、データベースやテーブルを削除しまた新しいものを作成する必要なく、プロジェクトを開発するように、いつでもモデルを変更可能とする強力なツールです - データを失うことなしにデータベースをライブでアップグレードするよう特化しています。これらについてチュートリアルの後の部分でより深くカバーします、しかし今は、モデルの変更を実施するための3ステップガイドを覚えておいてください:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:348
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:353
 msgid "Change your models (in ``models.py``)."
 msgstr "モデルを変更する (``models.py`` の中の)"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:349
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:354
 msgid ""
 "Run :djadmin:`python manage.py makemigrations <makemigrations>` to create "
 "migrations for those changes"
 msgstr "これらの変更のためのマイグレーションを作成するために :djadmin:`python manage.py makemigrations <makemigrations>`  を実行します。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:351
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:356
 msgid ""
 "Run :djadmin:`python manage.py migrate <migrate>` to apply those changes to "
 "the database."
 msgstr "データベースにこれらの変更を適用するために :djadmin:`python manage.py migrate <migrate>`  を実行します。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:354
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:359
 msgid ""
 "The reason that there are separate commands to make and apply migrations is "
 "because you'll commit migrations to your version control system and ship "
@@ -2492,23 +2507,23 @@ msgid ""
 " useable by other developers and in production."
 msgstr "マイグレーションの作成と適用のコマンドが分割されている理由は、マイグレーションをバージョン管理システムにコミットし、アプリとともに配布するためです。これによって、あなたの開発が容易になるだけでなく、他の開発者や本番環境にとって使いやすいものになります。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:359
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:364
 msgid ""
 "Read the :doc:`django-admin documentation </ref/django-admin>` for full "
 "information on what the ``manage.py`` utility can do."
 msgstr "``manage.py`` ユーティリティでできることについては :doc:`django-admin のドキュメント </ref/django-admin>` を読んで下さい。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:363
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:368
 msgid "Playing with the API"
 msgstr "API で遊んでみる"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:365
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:370
 msgid ""
 "Now, let's hop into the interactive Python shell and play around with the "
 "free API Django gives you. To invoke the Python shell, use this command:"
 msgstr "さぁ、 Python 対話シェルを起動して、 Django が提供する API で遊んでみましょう。 Python シェルを起動するには、以下のコマンドを実行します:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:372
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:377
 msgid ""
 "We're using this instead of simply typing \"python\", because "
 ":file:`manage.py` sets the ``DJANGO_SETTINGS_MODULE`` environment variable, "
@@ -2516,44 +2531,44 @@ msgid ""
 " file."
 msgstr "単に “python” を実行しないのは、 Django に :file:`mysite/settings.py` ファイルへの import パスを与える ``DJANGO_SETTINGS_MODULE`` の環境変数を :file:`manage.py` で設定しているからです。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:376
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:381
 msgid "Bypassing manage.py"
 msgstr "manage.py を使わずに済ませる方法"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:378
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:383
 msgid ""
 "If you'd rather not use :file:`manage.py`, no problem. Just set the "
 ":envvar:`DJANGO_SETTINGS_MODULE` environment variable to "
 "``mysite.settings``, start a plain Python shell, and set up Django:"
 msgstr ":file:`manage.py` を使用しなくても問題ありません。環境変数 :envvar:`DJANGO_SETTINGS_MODULE` を ``mysite.settings`` に設定して、標準のPython shellを起動しDjangoをセットアップします。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:387
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:392
 msgid ""
 "If this raises an :exc:`AttributeError`, you're probably using a version of "
 "Django that doesn't match this tutorial version. You'll want to either "
 "switch to the older tutorial or the newer Django version."
 msgstr ":exc:`AttributeError` が発生したするのであれば、おそらくこのチュートリアルに合致しないDjangoを使用しているのでしょう。より古いチュートリアルに切り替えるか、Djangoのバージョンを新しくして下さい。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:391
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:396
 msgid ""
 "You must run ``python`` from the same directory :file:`manage.py` is in, or "
 "ensure that directory is on the Python path, so that ``import mysite`` "
 "works."
 msgstr "``import mysite`` の動作のために、:file:`manage.py` があるのと同じディレクトリ、もしくはPythonのパスが通っていることを保証されたディレクトリから``python``を実行しなくてはなりません。 "
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:395
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:400
 msgid ""
 "For more information on all of this, see the :doc:`django-admin "
 "documentation </ref/django-admin>`."
 msgstr "詳しくは :doc:`django-admin.py のドキュメント </ref/django-admin>` を参照してください。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:398
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:403
 msgid ""
 "Once you're in the shell, explore the :doc:`database API "
 "</topics/db/queries>`::"
 msgstr "シェルに入ったら :doc:`データベース API </topics/db/queries>` の世界を探検してみましょう::"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:438
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:443
 msgid ""
 "Wait a minute. ``<Question: Question object>`` is, utterly, an unhelpful "
 "representation of this object. Let's fix that by editing the ``Question`` "
@@ -2562,7 +2577,7 @@ msgid ""
 "``Choice``:"
 msgstr "ちょっと待ってください。 ``<Question: Question object>``はこのオブジェクトの表現としてまったく役に立ちません。(``polls/models.py`` ファイルの中にある) ``Question``モデルを編集してこれを修正しましょう。:meth:`~django.db.models.Model.__str__` メソッドを``Question`` と ``Choice`` の両方に追加します:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:462
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:467
 msgid ""
 "It's important to add :meth:`~django.db.models.Model.__str__` methods to "
 "your models, not only for your own convenience when dealing with the "
@@ -2570,13 +2585,13 @@ msgid ""
 "throughout Django's automatically-generated admin."
 msgstr "あなた自身のインタラクティブシェルでの表示での利便性のためだけではなく、Djangoの自動生成adminでオブジェクトの表現として使用されるという理由からも :meth:`~django.db.models.Model.__str__` メソッドをモデルに追加することは重要です。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:467
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:472
 msgid ""
 "Note these are normal Python methods. Let's add a custom method, just for "
 "demonstration:"
 msgstr "これらは通常の Python メソッドということに注意してください。デモ用にカスタムのメソッドを追加してみましょう:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:484
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:489
 msgid ""
 "Note the addition of ``import datetime`` and ``from django.utils import "
 "timezone``, to reference Python's standard :mod:`datetime` module and "
@@ -2586,13 +2601,13 @@ msgid ""
 "</topics/i18n/timezones>`."
 msgstr "``import datetime`` と ``from django.utils import timezone`` で Python の 標準モジュール :mod:`datetime` と Django のタイムゾーン関連ユーティリティの :mod:`django.utils.timezone` を参照していることに注意してください。 Python でのタイムゾーンの取り扱いに不慣れな場合は、 `タイムゾーンサポートドキュメント </topics/i18n/timezones>` を参照してください。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:490
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:495
 msgid ""
 "Save these changes and start a new Python interactive shell by running "
 "``python manage.py shell`` again::"
 msgstr "変更を保存して、もう一度 ``python manage.py shell`` を実行して新しい Python 対話シェルを始めましょう::"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:569
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:574
 msgid ""
 "For more information on model relations, see :doc:`Accessing related objects"
 " </ref/models/relations>`. For more on how to use double underscores to "
@@ -2601,18 +2616,18 @@ msgid ""
 "reference </topics/db/queries>`."
 msgstr "モデルのリレーションについては :doc:`リレーション先オブジェクトにアクセスする </ref/models/relations>` を参照してください。 API を通じた、フィールドルックアップのためのダブルアンダースコアの使い方は :ref:`フィールドルックアップ <field-lookups-intro>` を参照してください。データーベース API の詳細は :doc:`データベース API リファレンス </topics/db/queries>` を参照してください。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:576
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:581
 msgid "Introducing the Django Admin"
 msgstr "Django Adminの紹介"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:580
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:585
 msgid ""
 "Generating admin sites for your staff or clients to add, change, and delete "
 "content is tedious work that doesn't require much creativity. For that "
 "reason, Django entirely automates creation of admin interfaces for models."
 msgstr "あなたのスタッフや顧客のためのコンテンツ追加、変更そして削除のための管理サイトの生成は、創造性を要求されない退屈な仕事です。そのため、Djangoはモデルのための管理インタフェース群の生成を完全に自動化します。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:584
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:589
 msgid ""
 "Django was written in a newsroom environment, with a very clear separation "
 "between \"content publishers\" and the \"public\" site. Site managers use "
@@ -2621,125 +2636,125 @@ msgid ""
 "creating a unified interface for site administrators to edit content."
 msgstr "Django はニュースルーム環境で開発されました。ニュースルーム環境では、 「コンテンツの作成者 (content publisher)」と「公開 (public) 」サイトをきわめて明確に区別しています。サイト管理者は新たな話題やイベント、 スポーツのスコアなどの入力にシステムを使い、コンテンツは公開用サイト上で表示されます。 Django は、サイト管理者向けの一元化されたコンテンツ編集インタフェースを提供しています。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:590
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:595
 msgid ""
 "The admin isn't intended to be used by site visitors. It's for site "
 "managers."
 msgstr "admin はサイトの訪問者でなく、サイト管理者に使われることを意図しています。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:594
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:599
 msgid "Creating an admin user"
 msgstr "管理ユーザーを作成する"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:596
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:601
 msgid ""
 "First we'll need to create a user who can login to the admin site. Run the "
 "following command:"
 msgstr "まず最初に私達はadminサイトにログインできるユーザーを作成する必要があります。下記のコマンドを実行します:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:603
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:608
 msgid "Enter your desired username and press enter."
 msgstr "好きなユーザー名を入力しEnterを押してください。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:609
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:614
 msgid "You will then be prompted for your desired email address:"
 msgstr "希望するemailアドレスを入力するよう促されます:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:615
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:620
 msgid ""
 "The final step is to enter your password. You will be asked to enter your "
 "password twice, the second time as a confirmation of the first."
 msgstr "最後のステップはパスワードの入力です。2回目のパスワードが1回目と同じことを確認するため、パスワードの入力を2回求められます。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:625
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:630
 msgid "Start the development server"
 msgstr "開発サーバーの起動"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:627
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:632
 msgid ""
 "The Django admin site is activated by default. Let's start the development "
 "server and explore it."
 msgstr "Django adminサイトはデフォルトで有効化されます。開発サーバーを起動して探索を始めましょう。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:630
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:635
 msgid "If the server is not running start it like so:"
 msgstr "もしサーバーが起動していなかったら、このようにして起動しましょう:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:636
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:641
 msgid ""
 "Now, open a Web browser and go to \"/admin/\" on your local domain -- e.g., "
 "http://127.0.0.1:8000/admin/. You should see the admin's login screen:"
 msgstr "次はブラウザを起動して、ローカルドメインの “/admin/” 、つまり http://127.0.0.1:8000/admin/ にアクセスします。以下のような admin のログイ ン画面が表示されるはずです:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:642
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:647
 msgid ""
 "Since :doc:`translation </topics/i18n/translation>` is turned on by default,"
 " the login screen may be displayed in your own language, depending on your "
 "browser's settings and if Django has a translation for this language."
 msgstr ":doc:`translation </topics/i18n/translation>`はデフォルトでonになっています。 あなたのブラウザの設定とDjangoの翻訳状況によって、ログインスクリーンはあなたの言語で表示されるかもしれません。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:647
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:652
 msgid "Enter the admin site"
 msgstr "admin サイトに入る"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:649
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:654
 msgid ""
 "Now, try logging in with the superuser account you created in the previous "
 "step. You should see the Django admin index page:"
 msgstr "今回は、前のステップで作成したスーパーユーザーのアカウントでログインを試してみましょう。Django adminのインデックスページが表示されるはずです:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:655
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:660
 msgid ""
 "You should see a few types of editable content: groups and users. They are "
 "provided by :mod:`django.contrib.auth`, the authentication framework shipped"
 " by Django."
 msgstr "groupsとusersといういくつかのタイプの編集可能なコンテンツが閲覧できるはずです。これらはDjangoに含まれる認証フレームワーク :mod:`django.contrib.auth` によって提供されます。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:660
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:665
 msgid "Make the poll app modifiable in the admin"
 msgstr "Poll アプリを admin 上で編集できるようにする"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:662
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:667
 msgid "But where's our poll app? It's not displayed on the admin index page."
 msgstr "ところで、 polls アプリはどこにあるんでしょう？ admin のインデクスページを見ても表示されていませんね。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:664
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:669
 msgid ""
 "Just one thing to do: we need to tell the admin that ``Question`` objects "
 "have an admin interface. To do this, open the :file:`polls/admin.py` file, "
 "and edit it to look like this:"
 msgstr "やるべきことは一つです: adminに\"Question\"オブジェクト達はadmin インタフェースを持つことを伝える必要があります。これを行うために、ファイル  :file:`polls/admin.py` を開いてこのように編集しましょう:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:678
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:683
 msgid "Explore the free admin functionality"
 msgstr "admin の機能を探究してみる"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:680
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:685
 msgid ""
 "Now that we've registered ``Question``, Django knows that it should be "
 "displayed on the admin index page:"
 msgstr "今では私たちが\"Question\"を登録したので、Djangoはadmin インデクスページにこれを表示すべきだということを知っています:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:686
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:691
 msgid ""
 "Click \"Questions\". Now you're at the \"change list\" page for questions. "
 "This page displays all the questions in the database and lets you choose one"
 " to change it. There's the \"What's up?\" question we created earlier:"
 msgstr "\"Questions\"をクリックしましょう。questionsのための\"change list\"ページが表示されます。このページにはデータベースの中のすべてのquestionsが表示され、あなたはこの中のひとつを変更のために選択することができます。ここに私たちが以前作成した\"What's UP?\" questionもあります:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:693
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:698
 msgid "Click the \"What's up?\" question to edit it:"
 msgstr "\"What's up?\" questionを編集するためにクリックしましょう:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:698
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:703
 msgid "Things to note here:"
 msgstr "以下の点に注意してください:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:700
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:705
 msgid "The form is automatically generated from the ``Question`` model."
 msgstr "フォームは ``Question`` モデルから自動的に生成されます。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:702
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:707
 msgid ""
 "The different model field types (:class:`~django.db.models.DateTimeField`, "
 ":class:`~django.db.models.CharField`) correspond to the appropriate HTML "
@@ -2747,40 +2762,40 @@ msgid ""
 "admin."
 msgstr "モデルのフィールドの型 (:class:`~django.db.models.DateTimeField` 、 :class:`~django.db.models.CharField` など) によって適切な HTML 入力ウィジェッ トが対応しています。各種のフィールドには Django 管理サイトでデー タを表示する方法が定義されています。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:707
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:712
 msgid ""
 "Each :class:`~django.db.models.DateTimeField` gets free JavaScript "
 "shortcuts. Dates get a \"Today\" shortcut and calendar popup, and times get "
 "a \"Now\" shortcut and a convenient popup that lists commonly entered times."
 msgstr "各 :class:`~django.db.models.DateTimeField` は JavaScript ショートカットがついています。日付 (dates) のカラムには「今日 (today)」 へのショートカットとカレンダーポップアップボタンがあります。 時刻 (times) には「現在 (now)」へのショートカットと、よく入力される時刻のリストを表示するポップアップボタンがあります。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:711
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:716
 msgid "The bottom part of the page gives you a couple of options:"
 msgstr "ページの末尾の部分には操作ボタンがいくつか表示されています:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:713
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:718
 msgid ""
 "Save -- Saves changes and returns to the change-list page for this type of "
 "object."
 msgstr "保存 (Save) – 変更を保存して、このモデルのチェンジリストのページに戻ります。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:716
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:721
 msgid ""
 "Save and continue editing -- Saves changes and reloads the admin page for "
 "this object."
 msgstr "保存して編集を続ける (Save and continue editing) – 変更を保存して、このオブジェクトの編集ページをリロードします。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:719
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:724
 msgid ""
 "Save and add another -- Saves changes and loads a new, blank form for this "
 "type of object."
 msgstr "保存してもう一つ追加 (Save and add another) – 変更を保存して、このモデルのオブジェクトを新規追加するための空の編集ページをロードします。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:722
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:727
 msgid "Delete -- Displays a delete confirmation page."
 msgstr "削除 (Delete) – 削除確認ページを表示します。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:724
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:729
 msgid ""
 "If the value of \"Date published\" doesn't match the time when you created "
 "the question in :doc:`Tutorial 1</intro/tutorial01>`, it probably means you "
@@ -2788,7 +2803,7 @@ msgid ""
 " it, reload the page and check that the correct value appears."
 msgstr "もし「Data published」の値があなたが以前 :doc:`チュートリアルその1</intro/tutorial01>` で作成した questionと一致しないのであれば、それはおそらくあなたが :setting:`TIME_ZONE`  で正しい値を設定することを忘れていたことを意味します。これを変更して、ページをリロードし、正しい値が表示されるかチェックします。"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:729
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:734
 msgid ""
 "Change the \"Date published\" by clicking the \"Today\" and \"Now\" "
 "shortcuts. Then click \"Save and continue editing.\" Then click \"History\" "
@@ -2797,7 +2812,7 @@ msgid ""
 "who made the change:"
 msgstr "「今日」や「現在」ショートカットをクリックして、「Date published」を変更してみましょう。変更したら、「保存して編集を続ける」を押します。次に、右上に ある「履歴 (History)」をクリックしてみましょう。ユーザが管理サイト上でオブジェクトに対して行った変更履歴の全てを、変更時刻と変更を行ったユーザ名付きでリストにしたページが表示されます:"
 
-#: ../../../../sources/1.9/docs/intro/tutorial02.txt:737
+#: ../../../../sources/1.9/docs/intro/tutorial02.txt:742
 msgid ""
 "When you're comfortable with the models API and have familiarized yourself "
 "with the admin site, read :doc:`part 3 of this tutorial</intro/tutorial03>` "
@@ -3103,7 +3118,7 @@ msgid ""
 "Load the page by pointing your browser at \"/polls/\", and you should see a "
 "bulleted-list containing the \"What's up\" question from :doc:`Tutorial 2 "
 "</intro/tutorial02>`. The link points to the question's detail page."
-msgstr "ブラウザで \"/polls/\" を開くと、  :doc:`チュートリアルその2 </intro/tutorial02>` で作った、 \"What's up\" という質問の入ったブレットリストを表示します。リンクは質問の詳細ページを指します。"
+msgstr "ブラウザで \"/polls/\" を開くと、 :doc:`チュートリアルその2 </intro/tutorial02>` で作った、 \"What's up\" という質問の入ったブレットリストを表示します。リンクは質問の詳細ページを指します。"
 
 #: ../../../../sources/1.9/docs/intro/tutorial03.txt:260
 msgid "A shortcut: :func:`~django.shortcuts.render`"
@@ -3306,7 +3321,7 @@ msgid ""
 "When you're comfortable with writing views, read :doc:`part 4 of this "
 "tutorial </intro/tutorial04>` to learn about simple form processing and "
 "generic views."
-msgstr "ビューを書けるようになったら、 :doc:`チュートリアルその4  </intro/tutorial04>` に進んで、簡単なフォームの処理と汎用ビューについて学びましょう。"
+msgstr "ビューを書けるようになったら、 :doc:`チュートリアルその4  </intro/tutorial04>`  に進んで、簡単なフォームの処理と汎用ビューについて学びましょう。"
 
 #: ../../../../sources/1.9/docs/intro/tutorial04.txt:3
 msgid "Writing your first Django app, part 4"
@@ -3374,7 +3389,7 @@ msgid ""
 "Now, let's create a Django view that handles the submitted data and does "
 "something with it. Remember, in :doc:`Tutorial 3 </intro/tutorial03>`, we "
 "created a URLconf for the polls application that includes this line:"
-msgstr "送信されたデータを処理するための Django のビューを作成しましょう。:doc:`チュートリアルその 3 </intro/tutorial03>` で、以下のような投票アプリケーションの URLconf を作成したことを思い出しましょう:"
+msgstr "送信されたデータを処理するための Django のビューを作成しましょう。 :doc:`チュートリアルその 3 </intro/tutorial03>` で、以下のような投票アプリケーションの URLconf を作成したことを思い出しましょう:"
 
 #: ../../../../sources/1.9/docs/intro/tutorial04.txt:66
 msgid ""
@@ -3466,11 +3481,11 @@ msgid ""
 "This is almost exactly the same as the ``detail()`` view from :doc:`Tutorial"
 " 3 </intro/tutorial03>`. The only difference is the template name. We'll fix"
 " this redundancy later."
-msgstr ":doc:`Tutorial 3 </intro/tutorial03>` の ``detail()`` とほぼ同じです。テンプレートの名前のみ違います。この冗長さは後で修正することにします。"
+msgstr ":doc:`チュートリアルその 3 </intro/tutorial03>` の ``detail()`` とほぼ同じです。テンプレートの名前のみ違います。この冗長さは後で修正することにします。"
 
 #: ../../../../sources/1.9/docs/intro/tutorial04.txt:163
 msgid "Now, create a ``polls/results.html`` template:"
-msgstr "それでは ``polls/index.html`` テンプレートを作成します:"
+msgstr "それでは ``polls/results.html`` テンプレートを作成します:"
 
 #: ../../../../sources/1.9/docs/intro/tutorial04.txt:178
 msgid ""
@@ -3506,7 +3521,7 @@ msgid ""
 "The ``detail()`` (from :doc:`Tutorial 3 </intro/tutorial03>`) and "
 "``results()`` views are very simple -- and, as mentioned above, redundant. "
 "The ``index()`` view, which displays a list of polls, is similar."
-msgstr "``detail()`` (:doc:`チュートリアルその 3 </intro/tutorial03>`) と ``results()`` ビューはとても簡単で、先程も述べたように冗長です。投票の一覧を表示する ``index()`` ビュー (チュートリアルその 3) も同様です。 "
+msgstr "``detail()`` ( :doc:`チュートリアルその 3 </intro/tutorial03>` ) と ``results()`` ビューはとても簡単で、先程も述べたように冗長です。投票の一覧を表示する ``index()`` ビュー (チュートリアルその 3) も同様です。 "
 
 #: ../../../../sources/1.9/docs/intro/tutorial04.txt:202
 msgid ""
@@ -3659,7 +3674,7 @@ msgstr "汎用ビューの詳細は、:doc:`汎用ビューのドキュメント
 msgid ""
 "When you're comfortable with forms and generic views, read :doc:`part 5 of "
 "this tutorial</intro/tutorial05>` to learn about testing our polls app."
-msgstr "フォームや汎用ビューを使いこなせるようになったら、:doc:`チュートリアルその5 </intro/tutorial05>`に進んで、投票アプリのテストについて学びましょう。 "
+msgstr "フォームや汎用ビューを使いこなせるようになったら、 :doc:`チュートリアルその5 </intro/tutorial05>` に進んで、投票アプリのテストについて学びましょう。 "
 
 #: ../../../../sources/1.9/docs/intro/tutorial05.txt:3
 msgid "Writing your first Django app, part 5"
@@ -3874,7 +3889,7 @@ msgid ""
 "``True`` if the ``Question`` was published within the last day (which is "
 "correct) but also if the ``Question``’s ``pub_date`` field is in the future "
 "(which certainly isn't)."
-msgstr "運よく、 ``polls`` のアプリケーションにはすぐに修正可能な小さなバグがありました。``Question.was_published_recently()``のメソッドは ``Question``が昨日以降に作成された場合に``True``を返すのですが(適切な動作)、 ``Question``の``pub_date`` が未来の日付になっている場合にも``True``を返してしまいます(不適切な動作)。"
+msgstr "運よく、 ``polls`` のアプリケーションにはすぐに修正可能な小さなバグがありました。``Question.was_published_recently()`` のメソッドは ``Question`` が昨日以降に作成された場合に ``True`` を返すのですが(適切な動作)、 ``Question`` の ``pub_date`` が未来の日付になっている場合にも``True``を返してしまいます(不適切な動作)。"
 
 #: ../../../../sources/1.9/docs/intro/tutorial05.txt:137
 msgid ""
@@ -4371,7 +4386,7 @@ msgstr "テストの詳細は、:doc:`Djagnoにおけるテスト </topics/testi
 msgid ""
 "When you're comfortable with testing Django views, read :doc:`part 6 of this"
 " tutorial</intro/tutorial06>` to learn about static files management."
-msgstr "テストやビューを使いこなせるようになったら、:doc:`チュートリアルその6 </intro/tutorial06>`に進んで、静的ファイルの管理について学びましょう。 "
+msgstr "テストやビューを使いこなせるようになったら、 :doc:`チュートリアルその6 </intro/tutorial06>` に進んで、静的ファイルの管理について学びましょう。 "
 
 #: ../../../../sources/1.9/docs/intro/tutorial06.txt:3
 msgid "Writing your first Django app, part 6"
@@ -5071,7 +5086,7 @@ msgid ""
 "common \"How do I ...?\" questions. Here you'll find information about "
 ":doc:`generating PDFs with Django </howto/outputting-pdf>`, :doc:`writing "
 "custom template tags </howto/custom-template-tags>`, and more."
-msgstr "ウェブ開発に必要な知識は、いくつもの領域にまたがって広く、浅く分布しているものです。このセクションには、「〜をするにはどうしたらよいですか？」といった質問に答える、:doc:`HOWTO </howto/index>` が書かれています。たとえば、:doc:`Django で PDF を生成する方法 </howto/outputting-pdf>` や、:doc:`テンプレートタグを自作する方法 </howto/custom-template-tags>` などです。"
+msgstr "ウェブ開発に必要な知識は、いくつもの領域にまたがって広く浅く分布しているものです。このセクションには、「〜をするにはどうしたらよいか？」というような質問に答えてくれる :doc:`How-to </howto/index>` が集まっています。たとえば、:doc:`Django で PDF を生成する方法 </howto/outputting-pdf>` や、:doc:`テンプレートタグを自作する方法 </howto/custom-template-tags>` などの How-to があります。"
 
 #: ../../../../sources/1.9/docs/intro/whatsnext.txt:59
 msgid ""
@@ -5086,7 +5101,7 @@ msgid ""
 "learn. Instead, details about individual classes, functions, methods, and "
 "modules are kept in the :doc:`reference </ref/index>`. This is where you'll "
 "turn to find the details of a particular function or whatever you need."
-msgstr "ガイドや HOWTO ドキュメントは、 Django の全てのクラスや関数、メソッドを解説しているわけではありません。 Django を学ぼうとする人に最初から全てを教えようとしても、溢れてしまうからです。その代わりに、個々のクラスや関数、メソッド、モジュールの解説は :doc:`リファレンス </ref/index>` に書くようにしています。特定の関数の仕様や、どんな機能を使えるかを調べたければ、このセクションを参照してください。"
+msgstr "ガイドや How-to ドキュメントでは、Django のクラスや関数、メソッドのすべてを解説しているわけではありません。初めて Django を学ぼうとする人に一度に全てを教えようとしても、教えたことが記憶からあふれてしまうからです。その代わりに、一つひとつのクラスや関数、メソッド、モジュールの詳しい解説は、 :doc:`リファレンス </ref/index>` に書いてあります。特定の関数の仕様や、使える機能を調べたい場合には、このセクションを参照してください。"
 
 #: ../../../../sources/1.9/docs/intro/whatsnext.txt:69
 msgid ""

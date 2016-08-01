@@ -3,15 +3,21 @@
 # This file is distributed under the same license as the Django package.
 # 
 # Translators:
+# xiu1 <d84ea@hotmail.co.jp>, 2016
 # Eiji Warashina <Eiji.Warashina@gmail.com>, 2016
+# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016
+# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016
 # Tatsuhiko Kono <kono@takenoko-tech.co.jp>, 2016
+# Yuma.M, 2016
+# Yusuke Miyazaki <miyazaki.dev@gmail.com>, 2016
+# Yuuki Ebihara <yuuki.ebihara813@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-24 16:09-0600\n"
-"PO-Revision-Date: 2016-02-26 16:53+0000\n"
-"Last-Translator: Tatsuhiko Kono <kono@takenoko-tech.co.jp>\n"
+"POT-Creation-Date: 2016-03-05 19:12-0600\n"
+"PO-Revision-Date: 2016-06-25 15:11+0000\n"
+"Last-Translator: xiu1 <d84ea@hotmail.co.jp>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,7 +40,7 @@ msgid ""
 "The login cookie isn't being set correctly, because the domain of the cookie"
 " sent out by Django doesn't match the domain in your browser. Try these two "
 "things:"
-msgstr "Django の発行するクッキーのドメインと、ブラウザに格納されたドメインが一致していないために、ログインクッキーが正しく設定されていない場合に起きる症状です。以下の二つの対策を試してみて下さい:"
+msgstr "Django の発行するクッキーのドメインと、ブラウザに格納されたドメインが一致していないために、ログインクッキーが正しく設定されていない場合に起きる症状です。以下の二つの対策を試してみてください。"
 
 #: ../../../../sources/1.9/docs/faq/admin.txt:12
 msgid ""
@@ -43,14 +49,14 @@ msgid ""
 "\"https://www.example.com/admin/\" in your browser, in "
 "\"myproject.settings\" you should set :setting:`SESSION_COOKIE_DOMAIN` = "
 "'www.example.com'."
-msgstr "設定ファイルの :setting:`SESSION_COOKIE_DOMAIN` に正しいドメインを設定してく ださい。例えば、Django のサイトにアクセスするときに、ブラウザで “https://www.example.com/admin/” と入力しているのなら、 “myproject.settings” には set :setting:`SESSION_COOKIE_DOMAIN = 'www.example.com' と設定せねばなりません。"
+msgstr "設定ファイルの :setting:`SESSION_COOKIE_DOMAIN` に正しいドメインを設定します。たとえば、Django のサイトにアクセスするときにブラウザに “https://www.example.com/admin/” と入力している場合、“myproject.settings” には set :setting:`SESSION_COOKIE_DOMAIN = 'www.example.com' と設定する必要があります。"
 
 #: ../../../../sources/1.9/docs/faq/admin.txt:18
 msgid ""
 "I can't log in. When I enter a valid username and password, it brings up the"
 " login page again, with a \"Please enter a correct username and password\" "
 "error."
-msgstr "ログインできません。正しいユーザ名とパスワードを入力したところ、「正しいユーザ名とパスワードを入力してください」というエラーメッセージつきでログインページを表示します。"
+msgstr "ログインできません。正しいユーザ名とパスワードを入力したはずなのに、再度ログインページが開き、「正しいユーザ名とパスワードを入力してください」というエラーメッセージが表示されます。"
 
 #: ../../../../sources/1.9/docs/faq/admin.txt:20
 msgid ""
@@ -58,13 +64,13 @@ msgid ""
 "account has :attr:`~django.contrib.auth.models.User.is_active` and "
 ":attr:`~django.contrib.auth.models.User.is_staff` set to True. The admin "
 "site only allows access to users with those two fields both set to True."
-msgstr "ユーザネームとパスワードが本当に正しいのなら、ユーザアカウントが :attr:`~django.contrib.auth.models.User.is_active` で、かつ :attr:`~django.contrib.auth.models.User.is_staff` が True であるか確かめて下さい。 管理サイトにアクセスできるのは、 is_active と is_staff が共に True のユーザだけです。"
+msgstr "ユーザ名とパスワードが本当に正しい場合、ユーザアカウントが :attr:`~django.contrib.auth.models.User.is_active` で、かつ :attr:`~django.contrib.auth.models.User.is_staff` が True になっているか確認してください。管理サイトにアクセスできるのは、is_active と is_staff がともに True のユーザだけです。"
 
 #: ../../../../sources/1.9/docs/faq/admin.txt:26
 msgid ""
 "How do I automatically set a field's value to the user who last edited the "
 "object in the admin?"
-msgstr "管理サイト上でオブジェクトを編集するときに、あるフィールドに、そのオブジェクトを最後に編集したユーザの情報を自動的に入れる方法はないですか？"
+msgstr "管理サイト上でオブジェクトを編集した時、オブジェクトを最後に編集したユーザの情報を特定のフィールドに自動的に入力する方法はありませんか？"
 
 #: ../../../../sources/1.9/docs/faq/admin.txt:28
 msgid ""
@@ -74,13 +80,13 @@ msgid ""
 "customizing the :meth:`~django.contrib.admin.ModelAdmin.save_model` hook, "
 "you can update an object to reflect the user that edited it. See :ref:`the "
 "documentation on ModelAdmin methods <model-admin-methods>` for an example."
-msgstr ":class:`~django.contrib.admin.ModelAdmin` クラスの用意しているカスタマイズ用のフックを使えば、オブジェクトを保存するときに、リクエストから取り出した情報に基づいてフィールドの値を変更できます。具体的には、 meth:`~django.contrib.admin.ModelAdmin.save_model` フックをカスタマイズして、 オブジェクトのフィールド値にリクエストから取り出した現在のユーザを反映させます。 :ref:`ModelAdmin メソッドのドキュメント<model-admin-methods>` にサンプルがあります。"
+msgstr ":class:`~django.contrib.admin.ModelAdmin` クラスが用意しているカスタマイズ用のフックを利用すれば、オブジェクトを保存するときに、リクエストから取り出した情報に基づいてフィールドの値を変更できます。具体的には、 meth:`~django.contrib.admin.ModelAdmin.save_model` フックをカスタマイズして、 リクエストから取り出した現在のユーザをオブジェクトのフィールド値に反映させることができます。 :ref:`ModelAdmin メソッドのドキュメント<model-admin-methods>` にサンプルがあるので参考にしてください。"
 
 #: ../../../../sources/1.9/docs/faq/admin.txt:36
 msgid ""
 "How do I limit admin access so that objects can only be edited by the users "
 "who created them?"
-msgstr "管理サイト上でオブジェクトを編集するときに、オブジェクトを最初に作成したユーザだけが編集できるよう制限するにはどうすればよいですか？"
+msgstr "管理サイト上で、オブジェクトを最初に作成したユーザだけがオブジェクトを編集できるようにアクセス権を制限するにはどうすればよいですか？"
 
 #: ../../../../sources/1.9/docs/faq/admin.txt:38
 msgid ""
@@ -90,19 +96,19 @@ msgid ""
 "the request, the :meth:`~django.contrib.admin.ModelAdmin.get_queryset` and "
 ":meth:`~django.contrib.admin.ModelAdmin.has_change_permission` can be used "
 "to control the visibility and editability of objects in the admin."
-msgstr ":class:`~django.contrib.admin.ModelAdmin` の用意しているフックには、オブ ジェクトを管理サイト上に表示するかどうかと編集可能かどうかを制御できるものがあります。 :meth:`~django.contrib.admin.ModelAdmin.get_queryset` および :meth:`~django.contrib.admin.ModelAdmin.has_change_permission` フックをカスタマイズすれば、上の質問の答えと同様、リクエストから取り出した 現在のユーザの情報に基づいて、オブジェクトの表示や編集を制御できます。"
+msgstr ":class:`~django.contrib.admin.ModelAdmin` クラスが、管理サイト上の任意のオブジェクトの表示と編集の権限をコントロールするためのカスタマイズ用のフックを提供してくれています。同様のトリックを使ってリクエストから現在のユーザ情報を取り出せば、 :meth:`~django.contrib.admin.ModelAdmin.get_queryset` と :meth:`~django.contrib.admin.ModelAdmin.has_change_permission` を使って、管理サイト上でのオブジェクトの表示と編集の権限をコントロールできます。"
 
 #: ../../../../sources/1.9/docs/faq/admin.txt:46
 msgid ""
 "My admin-site CSS and images showed up fine using the development server, "
 "but they're not displaying when using mod_wsgi."
-msgstr "開発サーバでは管理サイトの CSS や画像がうまく表示されるのに、 mod_wsgi を使うと表示されません。"
+msgstr "開発サーバでは管理サイトの CSS や画像がうまく表示されるのに、mod_wsgi を使った場合には表示されません。"
 
 #: ../../../../sources/1.9/docs/faq/admin.txt:48
 msgid ""
 "See :ref:`serving the admin files <serving-the-admin-files>` in the \"How to"
 " use Django with mod_wsgi\" documentation."
-msgstr "「mod_wsgi で Django を使う」というドキュメントの See :ref:`管理サイト用のファイルを公開する方法 <serving-the-admin-files>` を参照してください。"
+msgstr "「Django を Apache と ``mod_swgi`` とともに使うには？」内の :ref:`管理サイト用のファイルを公開する方法 <serving-the-admin-files>` を参照してください。"
 
 #: ../../../../sources/1.9/docs/faq/admin.txt:52
 msgid ""
@@ -142,7 +148,7 @@ msgstr "おかしな行数カウントが発生するのは、ForeignKeyの値�
 
 #: ../../../../sources/1.9/docs/faq/admin.txt:75
 msgid "How can I customize the functionality of the admin interface?"
-msgstr "adminインターフェースの機能をカスタマイズするにはどうしたら良いですか？"
+msgstr "admin インターフェイスの機能をカスタマイズしたい場合にはどうすればいいですか？"
 
 #: ../../../../sources/1.9/docs/faq/admin.txt:77
 msgid ""
@@ -152,7 +158,7 @@ msgid ""
 "parameter <modeladmin-asset-definitions>`. That parameter is a list of URLs,"
 " as strings, pointing to JavaScript modules that will be included within the"
 " admin form via a ``<script>`` tag."
-msgstr "幾つかの方法があります。\nDjangoが自動的に生成する追加/変更フォームに追加したい場合は、モデルのAdminClassの :ref:`js parameter <modeladmin-asset-definitions>` を介してページに任意のJavaScriptモジュールを埋め込む事ができます。\nこのパラメーターは、<script>タグにてadminのフォーム画面に読み込まれるJavaScriptモジュールのURLである文字列の、リストです。"
+msgstr "いくつかの方法があります。まず、Django が自動的に生成する追加/変更フォームに修正を加えたい場合には、モデルクラス Admin の :ref:`js パラメータ <modeladmin-asset-definitions>` を介して、ページに好きな JavaScript モジュールを組み込むことができます。このパラメータには、JavaScript モジュールへの URL を表す文字列のリストを指定します。各 URL は、<script> タグを使って admin のフォームに埋め込まれます。"
 
 #: ../../../../sources/1.9/docs/faq/admin.txt:84
 msgid ""
@@ -161,17 +167,17 @@ msgid ""
 "Django itself, and you can write custom views that hook into the "
 "authentication system, check permissions and do whatever else they need to "
 "do."
-msgstr ""
+msgstr "自動生成されたフォームをただ修正するのではなく、より柔軟なカスタマイズをしたければ、管理サイト用のカスタムビューを自分で書くことができます。管理サイト自体が Django で動いているので、自分でカスタムビューを書くことで、認証システムやパーミッションのチェック、その他なんでも好きなことができます。"
 
 #: ../../../../sources/1.9/docs/faq/admin.txt:89
 msgid ""
 "If you want to customize the look-and-feel of the admin interface, read the "
 "next question."
-msgstr ""
+msgstr "管理サイトのデザインをカスタマイズしたいならば、次の質問が参考になります。"
 
 #: ../../../../sources/1.9/docs/faq/admin.txt:93
 msgid "The dynamically-generated admin site is ugly! How can I change it?"
-msgstr ""
+msgstr "動的に生成された管理サイトが見難いのですが、どうすれば修正できますか？"
 
 #: ../../../../sources/1.9/docs/faq/admin.txt:95
 msgid ""
@@ -179,24 +185,24 @@ msgid ""
 "presentation by editing the CSS stylesheet and/or associated image files. "
 "The site is built using semantic HTML and plenty of CSS hooks, so any "
 "changes you'd like to make should be possible by editing the stylesheet."
-msgstr ""
+msgstr "デフォルトのデザインが好みでなければ、CSS や関連する画像ファイルを編集することで管理サイトの見栄えを変更することができます。サイトは、構造化された HTML とたくさんの CSS のフックを使って構築されているので、スタイルシートを編集すれば、どんな場所であっても自由にカスタマイズすることができるはずです。"
 
 #: ../../../../sources/1.9/docs/faq/admin.txt:101
 msgid "What browsers are supported for using the admin?"
-msgstr ""
+msgstr "管理サイトをサポートしているブラウザを教えてください。"
 
 #: ../../../../sources/1.9/docs/faq/admin.txt:103
 msgid ""
 "The admin provides a fully-functional experience to `YUI's A-grade`_ "
 "browsers, with the notable exception of IE6, which is not supported."
-msgstr ""
+msgstr "管理サイトは、よく知られた例外である IE6 を除く `YUI's A-grade`_ のブラウザ上で、すべての機能が完全に動作します。"
 
 #: ../../../../sources/1.9/docs/faq/admin.txt:106
 msgid ""
 "There *may* be minor stylistic differences between supported browsers—for "
 "example, some browsers may not support rounded corners. These are considered"
 " acceptable variations in rendering."
-msgstr ""
+msgstr "スタイル上の細かい違いはある可能性があります。たとえば、いくつかのブラウザでは、テキストボックスなどの角を丸くする機能がサポートされていません。また、レンダリングの結果、ブラウザ間で多少の際はあるかもしれません。いずれも許容範囲内であるはずです。"
 
 #: ../../../../sources/1.9/docs/faq/contributing.txt:3
 msgid "FAQ: Contributing code"
@@ -204,24 +210,24 @@ msgstr "FAQ: コードへの貢献"
 
 #: ../../../../sources/1.9/docs/faq/contributing.txt:6
 msgid "How can I get started contributing code to Django?"
-msgstr ""
+msgstr "Django のコードに貢献するにはどうすればいいですか？"
 
 #: ../../../../sources/1.9/docs/faq/contributing.txt:8
 msgid ""
 "Thanks for asking! We've written an entire document devoted to this "
 "question. It's titled :doc:`Contributing to Django "
 "</internals/contributing/index>`."
-msgstr ""
+msgstr "聞いてくれてありがとうございます！この質問に答えるための完全なドキュメントがあります。:doc:`Contributing to Django </internals/contributing/index>` をお読みください。"
 
 #: ../../../../sources/1.9/docs/faq/contributing.txt:12
 msgid ""
 "I submitted a bug fix in the ticket system several weeks ago. Why are you "
 "ignoring my patch?"
-msgstr ""
+msgstr "数週間前、チケットシステムでバグフィックスを送ったのですが、どうして私が送ったパッチは無視されてしまうのでしょうか？"
 
 #: ../../../../sources/1.9/docs/faq/contributing.txt:14
 msgid "Don't worry: We're not ignoring you!"
-msgstr ""
+msgstr "心配しないでください。私たちはあなたを無視していません！"
 
 #: ../../../../sources/1.9/docs/faq/contributing.txt:16
 msgid ""
@@ -230,7 +236,7 @@ msgid ""
 "ticket system contains hundreds of open tickets, of various degrees of "
 "impact on end-user functionality, and Django's developers have to review and"
 " prioritize."
-msgstr ""
+msgstr "「チケットが無視されていること」と「チケットがまだ通っていないこと」との間には違いがあることを理解することが重要です。Djangoのチケットシステムには数百もの未解決のチケットがあり、機能の点でエンドユーザに与える影響の度合いも様々です。そのため、Djangoの開発者はそれらをレビューして優先順位付けをする必要があります。"
 
 #: ../../../../sources/1.9/docs/faq/contributing.txt:21
 msgid ""
@@ -368,7 +374,7 @@ msgstr "FAQ: 一般的な質問"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:6
 msgid "Why does this project exist?"
-msgstr "なぜこんなプロジェクトがあるのですか？"
+msgstr "Django というプロジェクトが作られた経緯を教えてください。"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:8
 msgid ""
@@ -377,13 +383,13 @@ msgid ""
 "journalism deadlines. In the fast-paced newsroom, World Online often has "
 "only a matter of hours to take a complicated Web application from concept to"
 " public launch."
-msgstr "Django は極めて実践的な要請のもとで成長してきました。 Web 新聞を発行している WorldOnline では、効果的な Web アプリケーションを、ジャーナリズムとして成立 する締め切りに間に合うように構築せねばなりません。刻一刻と状況が変化するニュー スルームにあって、WorldOnline には、複雑な Web アプリケーションをコンセプト から立ち上げ公開にもっていくまで数時間の猶予しかないのです。"
+msgstr "Django は極めて実践的な要求のもとで作られてきました。Web 新聞を発行している World Online では、効果的な Web アプリケーションを、ジャーナリズムの世界の短い締め切りに間に合うように構築しなければなりません。ニュースルームというのは非常に変化の早い場所です。そのため、World Online では、複雑な Web アプリケーションをコンセプトを構想してからそれを公開するまでに、たった数時間の猶予しかないということがよくあります。"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:13
 msgid ""
 "At the same time, the World Online Web developers have consistently been "
 "perfectionists when it comes to following best practices of Web development."
-msgstr "同時に、 WorldOnline の Web 開発者たちは、こと Web 開発の王道に関しては一貫 して完璧主義者です。"
+msgstr "しかし同時に、WorldOnline の Web 開発者たちは、特に Web 開発のベストプラクティスに従うことに関しては、一貫して完璧主義者でした。"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:16
 msgid ""
@@ -393,7 +399,7 @@ msgid ""
 "began to extract a generic Web development framework that let them build Web"
 " applications more and more quickly. They tweaked this framework constantly,"
 " adding improvements over two years."
-msgstr " 2003 年、WorldOnline の開発者 (Adrian Holovaty と Simon Willison) は PHP に 見切りをつけ、 Python による Web 開発に取り組みはじめました。集約的で高い双 方向性を備えた Lawrence.com のようなサイト開発の中で、彼らは Web アプリケー ションをより迅速に開発できるように、サイトのコードから汎用の Web 開発フレー ムワークを切り出し、 2 年近くの間ずっと改良を加えながら使い込んできました。"
+msgstr "2003年の秋、World Online の開発者 (Adrian Holovaty と Simon Willison) は PHP に 見切りをつけ、Python による Web 開発に取り組みはじめました。集約的で高い双方向性を備えた Lawrence.com のようなサイトの開発の中で、彼らは Web アプリケーションをより迅速に開発できるように、サイトのコードから汎用の Web 開発フレー ムワークを切り出し、 2 年近くの間ずっと改良を加えながら使い込んできました。"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:23
 msgid ""
@@ -402,7 +408,7 @@ msgid ""
 "projects -- `Apache`_, `Python`_, and `PostgreSQL`_ to name a few -- and "
 "we're thrilled to be able to give something back to the open-source "
 "community."
-msgstr "2005 年の夏、 World Online はこれまでの開発の成果を Django としてオープンソー ス化する決定を下しました。 Django は `Apache`_, `Python`_, そして `PostgreSQL`_ をはじめとする様々なオープンソースプロジェクトなしでは実現し ませんでした。そして今、私達はオープンソースコミュニティに多少なりともお返 しできることにワクワクしているのです。"
+msgstr "2005年の夏、World Online は、これまでの開発の成果を Django としてオープンソー ス化する決定を下しました。 Django は `Apache`_, `Python`_, そして `PostgreSQL`_ をはじめとする様々なオープンソースプロジェクトなしでは実現しませんでした。そして今、私たちはオープンソースコミュニティに多少なりともお返しできることにワクワクしているのです。"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:33
 msgid "What does \"Django\" mean, and how do you pronounce it?"
@@ -413,7 +419,7 @@ msgid ""
 "Django is named after `Django Reinhardt`_, a jazz manouche guitarist from "
 "the 1930s to early 1950s. To this day, he's considered one of the best "
 "guitarists of all time."
-msgstr ""
+msgstr "Django は、1930年代から1950年初頭に活躍した、ジャズの伝説のギタリスト `Django Reinhardt`_ にちなんで名付けられました。今日では、Django は史上最高のギタリストの1人と評価されています。"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:38
 msgid "Listen to his music. You'll like it."
@@ -422,22 +428,22 @@ msgstr "彼の曲を聞いてみてください。きっと気に入ることで
 #: ../../../../sources/1.9/docs/faq/general.txt:40
 msgid ""
 "Django is pronounced **JANG**-oh. Rhymes with FANG-oh. The \"D\" is silent."
-msgstr "Django は **JANG**-oh (‘a’ は伸ばす) と発音します。韻は FANG-oh と 同じです。 “D” は発音しません。"
+msgstr "Django は **JANG**-oh (‘a’ は伸ばす) と発音します。韻は FANG-oh と同じです。 “D” は発音しません。"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:42
 msgid "We've also recorded an `audio clip of the pronunciation`_."
-msgstr "正しい発音の音声ファイル `audio clip of the pronunciation`_ を作成してあるので参考にしてください。"
+msgstr "音声ファイル `audio clip of the pronunciation`_ に発音を録音しておいたので、参考にしてください。"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:48
 msgid "Is Django stable?"
-msgstr "Django は安定していますか？"
+msgstr "Django は安定したプロジェクトですか？"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:50
 msgid ""
 "Yes, it's quite stable. Companies like Disqus, Instagram, Pinterest, and "
 "Mozilla have been using Django for many years. Sites built on Django have "
 "weathered traffic spikes of over 50 thousand hits per second."
-msgstr "そうですね。きわめて安定です。Disqus, Instagram, Pinterest, そして Mozilla のような企業が長年Djangoを使用しています。Djangoによって構築されたサイトは5万ヒット/秒\"50 thousand hits per second\"を超えるトラフィックスパイクにも曝されています。"
+msgstr "はい、とても安定しています。Disqus、Instagram、Pinterest、Mozilla といった企業が、長年 Django を使っています。Django 上に構築されたサイトは、5万ヒット/秒を超えるトラフィックスパイクにも耐えることができます。"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:55
 msgid "Does Django scale?"
@@ -447,53 +453,53 @@ msgstr "Django はスケールしますか？"
 msgid ""
 "Yes. Compared to development time, hardware is cheap, and so Django is "
 "designed to take advantage of as much hardware as you can throw at it."
-msgstr "はい。ハードウェアというものは、開発時間に比べて安いものですし、それゆえ Django はユーザが投入可能なハードウェアをできるだけ活用するべく設計されてい ます。"
+msgstr "はい。ハードウェアというものは、開発時間に比べて安いものですし、それゆえ Django はユーザが投入可能なハードウェアをできるだけ活用できるように設計されてい ます。"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:60
 msgid ""
 "Django uses a \"shared-nothing\" architecture, which means you can add "
 "hardware at any level -- database servers, caching servers or "
 "Web/application servers."
-msgstr "Django は「レイヤ間で何も共有しない \"shared-nothing\"」アーキテクチャなので、 データベースサーバ、キャッシュサーバ、 Web/アプリケーションサーバのどのレベ ルにハードウェアを追加してもかまいません。"
+msgstr "Django は「レイヤ間で何も共有しない (shared-nothing)」アーキテクチャを採用しています。そのため、データベースサーバ、キャッシュサーバ、 Web/アプリケーションサーバのどのレベルにでもハードウェアを追加することができます。"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:63
 msgid ""
 "The framework cleanly separates components such as its database layer and "
 "application layer. And it ships with a simple-yet-powerful :doc:`cache "
 "framework </topics/cache>`."
-msgstr "Django はアプリケーションレイヤからのデータベースレイヤを分離し、シンプルな がら強力な :doc:`キャッシュフレームワーク</topics/cache>` を備えています。"
+msgstr "Django のフレームワークは、データベースレイヤやアプリケーションレイヤなどの各コンポーネントをきれいに分離しています。また、シンプルながら強力な :doc:`キャッシュフレームワーク</topics/cache>` を備えています。"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:68
 msgid "Who's behind this?"
-msgstr "Django の舞台裏には誰がいるのですか？"
+msgstr "Django はどんな組織が支援しているのですか？"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:70
 msgid ""
 "Django was originally developed at World Online, the Web department of a "
 "newspaper in Lawrence, Kansas, USA. Django's now run by an international "
 ":doc:`team of volunteers </internals/team>`."
-msgstr "Django はもともと、World Online という、米国カンザス州ローレンス \"Lawrence, Kansas, USA\" のとある新聞の Web 部門で開発されました。今では、 Django は国 際的な :doc:`ボランティアのチーム</internals/team>` によって運営されています。 "
+msgstr "Django はもともと、アメリカのカンザス州ローレンス (Lawrence, Kansas, USA) にある、World Online という新聞社の Web 開発部門で開発されました。現在は、国際的な :doc:`ボランティアのチーム</internals/team>` が開発を続けています。"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:75
 msgid "Which sites use Django?"
-msgstr "どんなサイトが Django を使っているのですか？"
+msgstr "Django を使っているサイトを教えてください。"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:77
 msgid ""
 "`DjangoSites.org`_ features a constantly growing list of Django-powered "
 "sites."
-msgstr "`DjangoSites.org`_ には Django で作られたサイト一覧という特集ページがあり、 日々内容が増えています。"
+msgstr "`DjangoSites.org`_ を見ると、Django で作られたサイトのリストが見られます。このリストはどんどん長くなっています。"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:84
 msgid ""
 "Django appears to be a MVC framework, but you call the Controller the "
 "\"view\", and the View the \"template\". How come you don't use the standard"
 " names?"
-msgstr "Django は MVC フレームワークのようですが、コントローラ \"Controller\"を「ビュー \"view\"」と呼び、ビュー \"View\" を「テンプレート \"template\"」と呼んでいます。どうして標準的な呼び方をしないのですか？"
+msgstr "Django は MVC フレームワークのように思えるのですが、コントローラ (Controller) を「ビュー  (view)」と呼び、ビュー (View) を「テンプレート (template)」と呼んでいます。なぜ標準的な呼び方をしないのですか？"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:86
 msgid "Well, the standard names are debatable."
-msgstr "そうですね、呼び名には議論の余地があるでしょう。"
+msgstr "たしかに、標準的な名前については議論の余地があるかもしれません。"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:88
 msgid ""
@@ -501,13 +507,13 @@ msgid ""
 "presented to the user. It's not necessarily *how* the data *looks*, but "
 "*which* data is presented. The view describes *which data you see*, not *how"
 " you see it.* It's a subtle distinction."
-msgstr "我々の MVC の解釈では、「ビュー」とはユーザに提示されるデータのことをいいま す。つまり、データが *どのように見えるか* ということではなく、むしろ *どの* データを提示するか です。ビューには *データがどのように見えるか* ではなく *どのデータが表示されるか* が定義されています。この二つは明らかに違います。"
+msgstr "Django の MVC の解釈では、「ビュー」はユーザに表示するデータを記述します。つまり、ビューにはデータの *見せ方* を書く必要はなく、表示したいデータの *選び方* を書くものだと考えます。*ユーザが見るのはどのデータなのか*を書くのであって、*ユーザに対するデータの表示の仕方*を書くわけではないということです。この二つは明らかに違います。"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:93
 msgid ""
 "So, in our case, a \"view\" is the Python callback function for a particular"
 " URL, because that callback function describes which data is presented."
-msgstr "というわけで、我々のケースでは、「ビュー」は特定の URL に対する Python コー ルバック関数になります。なぜなら、コールバック関数はどのデータを提示するか を決めているからです。"
+msgstr "そのため、Django では「ビュー」は特定の URL に対する Python コールバック関数になっています。なぜなら、コールバック関数は、どのデータを提示するかということを書いているからです。"
 
 #: ../../../../sources/1.9/docs/faq/general.txt:96
 msgid ""
@@ -972,74 +978,74 @@ msgstr "FAQ: データベースとモデル"
 
 #: ../../../../sources/1.9/docs/faq/models.txt:8
 msgid "How can I see the raw SQL queries Django is running?"
-msgstr ""
+msgstr "Django が実行している生の SQL クエリを見られますか？"
 
 #: ../../../../sources/1.9/docs/faq/models.txt:10
 msgid ""
 "Make sure your Django :setting:`DEBUG` setting is set to ``True``. Then, "
 "just do this::"
-msgstr ""
+msgstr "Djangoの設定ファイルの :setting:`DEBUG` が ``True`` になっていることを確認します。次に、以下のコードを実行します::"
 
 #: ../../../../sources/1.9/docs/faq/models.txt:18
 msgid ""
 "``connection.queries`` is only available if :setting:`DEBUG` is ``True``. "
 "It's a list of dictionaries in order of query execution. Each dictionary has"
 " the following::"
-msgstr ""
+msgstr "``connection.queries`` は :setting:`DEBUG` が ``True`` の場合のみに、利用することができます。これはクエリの実行順に辞書を並べたリストです。各辞書には以下の項目が入っています::"
 
 #: ../../../../sources/1.9/docs/faq/models.txt:25
 msgid ""
 "``connection.queries`` includes all SQL statements -- INSERTs, UPDATES, "
 "SELECTs, etc. Each time your app hits the database, the query will be "
 "recorded."
-msgstr ""
+msgstr "``connection.queries`` にはINSERT, UPDATE, SELECTなどの全てのSQL文が記録されています。アプリケーションがデータベースを操作するたびに、クエリが記録されてゆきます。"
 
 #: ../../../../sources/1.9/docs/faq/models.txt:28
 msgid ""
 "If you are using :doc:`multiple databases</topics/db/multi-db>`, you can use"
 " the same interface on each member of the ``connections`` dictionary::"
-msgstr ""
+msgstr "もし :doc:`複数のデータベース</topics/db/multi-db>` を利用している場合、 ``connections`` の辞書の各要素に対して、同じコードを実行できます::"
 
 #: ../../../../sources/1.9/docs/faq/models.txt:34
 msgid ""
 "If you need to clear the query list manually at any point in your functions,"
 " just call ``reset_queries()``, like this::"
-msgstr ""
+msgstr "もし、何らかの機能の中で、クエリのリストをクリアする必要がある場合は、以下のように ``reset_queries()`` を実行します::"
 
 #: ../../../../sources/1.9/docs/faq/models.txt:41
 msgid "Can I use Django with a pre-existing database?"
-msgstr ""
+msgstr "既存のデータベースで Django を使えますか？"
 
 #: ../../../../sources/1.9/docs/faq/models.txt:43
 msgid ""
 "Yes. See :doc:`Integrating with a legacy database </howto/legacy-"
 "databases>`."
-msgstr ""
+msgstr "使えます。:doc:`古いデータベースの組み込み方 </howto/legacy-databases>` を参照してください。"
 
 #: ../../../../sources/1.9/docs/faq/models.txt:46
 msgid "If I make changes to a model, how do I update the database?"
-msgstr ""
+msgstr "モデルを変更した時、どのようにデータベースを更新すればよいですか？"
 
 #: ../../../../sources/1.9/docs/faq/models.txt:48
 msgid ""
 "Take a look at Django's support for :mod:`schema migrations "
 "<django.db.migrations>`."
-msgstr ""
+msgstr ":mod:`スキーママイグレーション <django.db.migrations>` に関するページを参照してください。"
 
 #: ../../../../sources/1.9/docs/faq/models.txt:51
 msgid ""
 "If you don't mind clearing data, your project's ``manage.py`` utility has a "
 ":djadmin:`flush` option to reset the database to the state it was in "
 "immediately after :djadmin:`migrate` was executed."
-msgstr ""
+msgstr "データが消えてもかまわないのなら、 ``manage.py`` ユーティリティの :djadmin:`flush` オプションを利用することで、データベースを :djadmin:`migrate` コマンドが実行された直後と同じ状態にすることができます。"
 
 #: ../../../../sources/1.9/docs/faq/models.txt:56
 msgid "Do Django models support multiple-column primary keys?"
-msgstr ""
+msgstr "Django のモデルは複合主キーをサポートしますか？"
 
 #: ../../../../sources/1.9/docs/faq/models.txt:58
 msgid "No. Only single-column primary keys are supported."
-msgstr ""
+msgstr "いいえ。単一の主キーのみをサポートします。"
 
 #: ../../../../sources/1.9/docs/faq/models.txt:60
 msgid ""
@@ -1053,14 +1059,14 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/faq/models.txt:68
 msgid "Does Django support NoSQL databases?"
-msgstr ""
+msgstr "Django で NoSQL データベースは利用できますか？"
 
 #: ../../../../sources/1.9/docs/faq/models.txt:70
 msgid ""
 "NoSQL databases are not officially supported by Django itself. There are, "
 "however, a number of side project and forks which allow NoSQL functionality "
 "in Django, like `Django non-rel`_."
-msgstr ""
+msgstr "NoSQL データベースは Django で公式にはサポートされていません。しかし、`Django non-rel`_ など、多くのプロジェクトが NoSQL を Django で利用できるような機能を提供しています。"
 
 #: ../../../../sources/1.9/docs/faq/models.txt:74
 msgid ""
@@ -1091,7 +1097,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/faq/troubleshooting.txt:3
 msgid "Troubleshooting"
-msgstr ""
+msgstr "トラブルシューティング"
 
 #: ../../../../sources/1.9/docs/faq/troubleshooting.txt:5
 msgid ""
@@ -1188,7 +1194,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/faq/troubleshooting.txt:70
 msgid "https://wiki.python.org/moin/UnicodeDecodeError"
-msgstr ""
+msgstr "https://wiki.python.org/moin/UnicodeDecodeError"
 
 #: ../../../../sources/1.9/docs/faq/usage.txt:3
 msgid "FAQ: Using Django"

@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-03 07:11-0600\n"
-"PO-Revision-Date: 2016-06-11 16:52+0000\n"
+"PO-Revision-Date: 2016-06-12 18:55+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -3423,11 +3423,11 @@ msgstr "Soyez conscients que si tous les mots de passe de votre base de données
 msgid "Passwords updates when changing the number of bcrypt rounds was added."
 msgstr "La mise à jour des mots de passe lors du changement du nombre de tours bcrypt a été ajoutée."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:205
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:213
 msgid "Password upgrading without requiring a login"
 msgstr "Mise à jour des mots de passe sans exiger de connexion"
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:207
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:215
 msgid ""
 "If you have an existing database with an older, weak hash such as MD5 or "
 "SHA1, you might want to upgrade those hashes yourself instead of waiting for"
@@ -3436,7 +3436,7 @@ msgid ""
 "password hasher."
 msgstr "Si une base de données existante comporte des empreintes de mots de passe anciennes et vulnérables de type MD5 ou SHA1, il peut être souhaitable de mettre à jour ces empreintes sans devoir attendre que les utilisateurs concernés se connectent (ce qui pourrait ne jamais arriver si ces utilisateurs ne reviennent plus sur le site). Dans ce cas, vous pouvez utiliser un hacheur de mots de passe « enveloppé »."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:212
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:220
 msgid ""
 "For this example, we'll migrate a collection of SHA1 hashes to use "
 "PBKDF2(SHA1(password)) and add the corresponding password hasher for "
@@ -3446,25 +3446,25 @@ msgid ""
 "user model."
 msgstr "Pour cet exemple, nous allons migrer une série d'empreintes SHA1 afin qu'elles utilisent PBKDF2(SHA1(mot_de_passe)) et ajouter le hacheur de mot de passe correspondant qui se chargera de vérifier le mot de passe de l'utilisateur lors d'une connexion. Nous partons du principe que c'est le modèle d'utilisateur par défaut qui est utilisé et que le projet possède une application ``accounts``. Vous pouvez modifier cet exemple pour qu'il fonctionne avec tout autre algorithme ou avec un modèle d'utilisateur personnalisé."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:218
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:226
 msgid "First, we'll add the custom hasher:"
 msgstr "Nous allons d'abord ajouter le hacheur personnalisé :"
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:238
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:246
 msgid "The data migration might look something like:"
 msgstr "La migration de données pourrait ressembler à ceci :"
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:270
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:278
 msgid ""
 "Be aware that this migration will take on the order of several minutes for "
 "several thousand users, depending on the speed of your hardware."
 msgstr "Il faut savoir que cette migration va prendre plusieurs minutes pour quelques milliers d'utilisateurs, en fonction de la performance de votre matériel."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:273
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:281
 msgid "Finally, we'll add a :setting:`PASSWORD_HASHERS` setting:"
 msgstr "Pour terminer, nous allons ajouter un réglage :setting:`PASSWORD_HASHERS`:"
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:283
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:291
 msgid "Include any other hashers that your site uses in this list."
 msgstr "Incluez tout autre hacheur utilisé par votre site dans cette liste."
 
@@ -3501,14 +3501,14 @@ msgstr "Si votre algorithme de hachage ne possède pas de facteur de travail, im
 msgid "Manually managing a user's password"
 msgstr "Gestion manuelle des mots de passe"
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:296
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:327
 msgid ""
 "The :mod:`django.contrib.auth.hashers` module provides a set of functions to"
 " create and validate hashed password. You can use them independently from "
 "the ``User`` model."
 msgstr "Le module :mod:`django.contrib.auth.hashers` fournit un ensemble de fonctions pour créer et valider les empreintes de mots de passe. Vous pouvez les utiliser indépendamment du modèle ``User``."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:302
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:333
 msgid ""
 "If you'd like to manually authenticate a user by comparing a plain-text "
 "password to the hashed password in the database, use the convenience "
@@ -3518,7 +3518,7 @@ msgid ""
 "otherwise."
 msgstr "Si vous avez besoin d'authentifier manuellement un utilisateur en comparant un mot de passe en clair avec l'empreinte de ce mot de passe en base de données, utilisez la fonction utilitaire :func:`check_password`. Elle accepte deux paramètres : le mot de passe en clair à contrôler et la valeur complète du champ ``password`` d'un utilisateur en base de données comme valeur de comparaison ; la fonction renvoie ``True`` si les valeurs correspondent, sinon ``False``."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:311
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:342
 msgid ""
 "Creates a hashed password in the format used by this application. It takes "
 "one mandatory argument: the password in plain-text. Optionally, you can "
@@ -3532,17 +3532,17 @@ msgid ""
 ":func:`check_password`)."
 msgstr "Crée une empreinte de mot de passe au format utilisé par cette application. Elle demande un paramètre obligatoire : le mot de passe en clair. Il est aussi possible de fournir un sel et un algorithme de hachage à utiliser, si vous ne souhaitez pas utiliser les valeurs par défaut (première ligne du réglage ``PASSWORD_HASHERS``). Les algorithmes actuellement pris en charge sont : ``'pbkdf2_sha256'``, ``'pbkdf2_sha1'``, ``'bcrypt_sha256'`` (voir :ref:`bcrypt_usage`), ``'bcrypt'``, ``'sha1'``, ``'md5'``, ``'unsalted_md5'`` (seulement par rétrocompatibilité) et ``'crypt'`` si la bibliothèque ``crypt`` est installée. Si le paramètre du mot de passe vaut ``None``, un mot de passe inutilisable est renvoyé (un mot de passe qui fera que :func:`check_password` renvoie toujours ``False``) ."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:324
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:355
 msgid ""
 "Checks if the given string is a hashed password that has a chance of being "
 "verified against :func:`check_password`."
 msgstr "Vérifie que la chaîne indiquée est une empreinte de mot de passe qui a une chance d'être validée par :func:`check_password`."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:330
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:361
 msgid "Password validation"
 msgstr "Validation des mots de passe"
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:336
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:367
 msgid ""
 "Users often choose poor passwords. To help mitigate this problem, Django "
 "offers pluggable password validation. You can configure multiple password "
@@ -3550,7 +3550,7 @@ msgid ""
 "it's simple to write your own as well."
 msgstr "Les utilisateurs choisissent souvent des mots de passe faibles. Pour aider à résoudre ce problème, Django offre une validation des mots de passe à options. Vous pouvez configurer plusieurs validateurs de mots de passe en parallèle. Quelques-uns sont inclus dans Django, mais il est facile d'écrire ses propres validateurs."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:341
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:372
 msgid ""
 "Each password validator must provide a help text to explain the requirements"
 " to the user, validate a given password and return an error message if it "
@@ -3559,7 +3559,7 @@ msgid ""
 "behavior."
 msgstr "Chaque validateur de mot de passe doit fournir un texte d'aide pour expliquer les exigences aux utilisateurs, la validation d'un mot de passe donné et un message d'erreur si le mot de passe ne respecte pas les exigences. Facultativement, il peut recevoir les mots de passe qui ont été changés. Les validateurs peuvent également proposer des réglages facultatifs pour spécialiser leur comportement."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:346
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:377
 msgid ""
 "Validation is controlled by the :setting:`AUTH_PASSWORD_VALIDATORS` setting."
 " By default, validators are used in the forms to reset or change passwords. "
@@ -3568,7 +3568,7 @@ msgid ""
 "template, a simple set of validators is enabled."
 msgstr "La validation est contrôlée par le réglage :setting:`AUTH_PASSWORD_VALIDATORS`. Par défaut, les validateurs sont utilisés dans les formulaires pour réinitialiser ou modifier les mots de passe. La liste de ce réglage est vide par défaut, ce qui signifie qu'aucun validateur n'est appliqué. Dans les nouveaux projets créés par le modèle :djadmin:`startproject` par défaut, un ensemble minimal de validateurs sont activés."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:354
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:385
 msgid ""
 "Password validation can prevent the use of many types of weak passwords. "
 "However, the fact that a password passes all the validators doesn't "
@@ -3577,27 +3577,27 @@ msgid ""
 " validators."
 msgstr "La validation des mots de passe peut éviter l'emploi de différents types de mots de passe faibles. Cependant, même si un mot de passe est validé par tous les validateurs, cela ne garantit pas forcément un mot de passe solide. Il existe de nombreux facteurs affaiblissant la solidité d'un mot de passe et qui ne peuvent pas être détectés par les validateurs de mots de passe même les plus avancés."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:361
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:392
 msgid "Enabling password validation"
 msgstr "Activation de la validation des mots de passe"
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:363
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:394
 msgid ""
 "Password validation is configured in the :setting:`AUTH_PASSWORD_VALIDATORS`"
 " setting::"
 msgstr "La validation des mots de passe est configurée par le réglage :setting:`AUTH_PASSWORD_VALIDATORS`::"
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:384
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:415
 msgid "This example enables all four included validators:"
 msgstr "Cet exemple active les quatre validateurs intégrés :"
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:386
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:417
 msgid ""
 "``UserAttributeSimilarityValidator``, which checks the similarity between "
 "the password and a set of attributes of the user."
 msgstr "``UserAttributeSimilarityValidator``, qui vérifie la similitude entre le mot de passe et certains attributs de l'utilisateur."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:388
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:419
 msgid ""
 "``MinimumLengthValidator``, which simply checks whether the password meets a"
 " minimum length. This validator is configured with a custom option: it now "
@@ -3605,53 +3605,53 @@ msgid ""
 "eight."
 msgstr "``MinimumLengthValidator``, qui vérifie simplement la longueur minimale du mot de passe. Ce validateur est configuré avec une option personnalisée : il exige une longueur minimale de 9 caractères, au lieu des 8 par défaut."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:392
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:423
 msgid ""
 "``CommonPasswordValidator``, which checks whether the password occurs in a "
 "list of common passwords. By default, it compares to an included list of "
 "1000 common passwords."
 msgstr "``CommonPasswordValidator``, qui vérifie si le mot de passe se trouve dans une liste de mots de passe courants. Par défaut, cette comparaison se fait avec une liste de 1000 mots de passe courants."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:395
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:426
 msgid ""
 "``NumericPasswordValidator``, which checks whether the password isn't "
 "entirely numeric."
 msgstr "``NumericPasswordValidator``, qui vérifie que le mot de passe n'est pas entièrement numérique."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:398
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:429
 msgid ""
 "For ``UserAttributeSimilarityValidator`` and ``CommonPasswordValidator``, "
 "we're simply using the default settings in this example. "
 "``NumericPasswordValidator`` has no settings."
 msgstr "Pour ``UserAttributeSimilarityValidator`` et ``CommonPasswordValidator``, nous utilisons simplement les réglages par défaut dans cet exemple. ``NumericPasswordValidator`` ne contient pas de réglages."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:402
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:433
 msgid ""
 "The help texts and any errors from password validators are always returned "
 "in the order they are listed in :setting:`AUTH_PASSWORD_VALIDATORS`."
 msgstr "Les textes d'aide et les messages d'erreur des validateurs de mots de passe sont toujours renvoyés dans l'ordre de leur apparition dans :setting:`AUTH_PASSWORD_VALIDATORS`."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:406
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:437
 msgid "Included validators"
 msgstr "Validateurs intégrés"
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:408
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:439
 msgid "Django includes four validators:"
 msgstr "Django fournit quatre validateurs intégrés :"
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:412
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:443
 msgid ""
 "Validates whether the password meets a minimum length. The minimum length "
 "can be customized with the ``min_length`` parameter."
 msgstr "Valide une longueur minimale des mots de passe. Cette longueur minimale peut être personnalisée avec le paramètre ``min_length``."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:417
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:448
 msgid ""
 "Validates whether the password is sufficiently different from certain "
 "attributes of the user."
 msgstr "Valide la non-similitude du mot de passe avec plusieurs attributs de l'utilisateur."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:420
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:451
 msgid ""
 "The ``user_attributes`` parameter should be an iterable of names of user "
 "attributes to compare to. If this argument is not provided, the default is "
@@ -3659,7 +3659,7 @@ msgid ""
 "don't exist are ignored."
 msgstr "Le paramètre ``user_attributes`` correspond à une itération de noms d'attributs utilisateur avec lesquels la comparaison sera effectuée. Si ce paramètre est omis, la liste par défaut contient : ``'username', 'first_name', 'last_name', 'email'``. Les attributs qui n'existent pas sont ignorés."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:425
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:456
 msgid ""
 "The maximum similarity the password can have, before it is rejected, can be "
 "set with the ``max_similarity`` parameter, on a scale of 0 to 1. A setting "
@@ -3668,7 +3668,7 @@ msgid ""
 "value."
 msgstr "Il est possible de définir le degré de similitude admis avant que le mot de passe ne soit rejeté avec le paramètre ``max_similarity`` sur une échelle de 0 à 1. Une valeur de 0 causera le rejet de tous les mots de passe, alors qu'une valeur de 1 ne rejettera que les mots de passe qui sont identiques à l'une des valeurs d'attribut."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:433
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:464
 msgid ""
 "Validates whether the password is not a common password. By default, this "
 "checks against a list of 1000 common password created by `Mark Burnett "
@@ -3676,22 +3676,22 @@ msgid ""
 "top-worst-passwords/>`_."
 msgstr "Valide que le mot de passe ne correspond pas à un mot de passe courant. Par défaut, la vérification se fait avec une list de 1000 mots de passe courants créée par `Mark Burnett <https://web.archive.org/web/20150315154609/https://xato.net/passwords/more-top-worst-passwords/>`_."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:437
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:468
 msgid ""
 "The ``password_list_path`` can be set to the path of a custom file of common"
 " passwords. This file should contain one password per line and may be plain "
 "text or gzipped."
 msgstr "``password_list_path`` peut contenir un chemin vers un fichier personnalisé de mots de passe courants. Ce fichier doit contenir un mot de passe par ligne et peut être soit compressé gzip, soit du texte pur."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:443
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:474
 msgid "Validates whether the password is not entirely numeric."
 msgstr "Vérifie que le mot de passe n'est pas entièrement numérique."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:446
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:477
 msgid "Integrating validation"
 msgstr "Intégration de la validation"
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:448
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:479
 msgid ""
 "There are a few functions in ``django.contrib.auth.password_validation`` "
 "that you can call from your own forms or other code to integrate password "
@@ -3699,7 +3699,7 @@ msgid ""
 " or if you have API calls that allow passwords to be set, for example."
 msgstr "Quelques fonctions dans ``django.contrib.auth.password_validation`` peuvent être appelées depuis vos propres formulaires ou votre code pour intégrer la validation des mots de passe. Cela peut être utile par exemple si vous utilisez des formulaires personnalisés pour la définition des mots de passe ou si vous écrivez des appels d'API permettant la définition de mots de passe."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:455
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:486
 msgid ""
 "Validates a password. If all validators find the password valid, returns "
 "``None``. If one or more validators reject the password, raises a "
@@ -3707,20 +3707,20 @@ msgid ""
 "from the validators."
 msgstr "Valide un mot de passe. Si tous les validateurs estiment que le mot de passe est valide, ``None`` sera renvoyé. Si un ou plusieurs validateurs rejettent le mot de passe, une exception :exc:`~django.core.exceptions.ValidationError` est produite contenant tous les messages d'erreur des validateurs."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:460
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:491
 msgid ""
 "The ``user`` object is optional: if it's not provided, some validators may "
 "not be able to perform any validation and will accept any password."
 msgstr "L'objet ``user`` est facultatif : s'il n'est pas présent, certains validateurs pourraient ne pas être capable de procéder à la validation et accepteront donc n'importe quel mot de passe."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:465
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:496
 msgid ""
 "Informs all validators that the password has been changed. This can be used "
 "by validators such as one that prevents password reuse. This should be "
 "called once the password has been successfully changed."
 msgstr "Informe tous les validateurs que le mot de passe a été changé. Cela peut être utilisé par certains validateurs, par exemple pour éviter de réutiliser un même mot de passe. Cette méthode doit être appelée après que le mot de passe a été modifié avec succès."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:469
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:500
 msgid ""
 "For subclasses of :class:`~django.contrib.auth.models.AbstractBaseUser`, the"
 " password field will be marked as \"dirty\" when calling "
@@ -3728,20 +3728,20 @@ msgid ""
 "triggers a call to ``password_changed()`` after the user is saved."
 msgstr "Pour les sous-classes de :class:`~django.contrib.auth.models.AbstractBaseUser`, le champ mot de passe sera marqué « dirty » lors de l'appel à :meth:`~django.contrib.auth.models.AbstractBaseUser.set_password` qui déclenche un appel à ``password_changed()`` après l'enregistrement de l'utilisateur."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:476
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:507
 msgid ""
 "Returns a list of the help texts of all validators. These explain the "
 "password requirements to the user."
 msgstr "Renvoie une liste des textes d'aide de tous les validateurs. Ceux-ci expliquent les exigences du mot de passe aux utilisateurs."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:481
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:512
 msgid ""
 "Returns an HTML string with all help texts in an ``<ul>``. This is helpful "
 "when adding password validation to forms, as you can pass the output "
 "directly to the ``help_text`` parameter of a form field."
 msgstr "Renvoie une chaîne HTML avec tous les textes d'aide dans une balise ``<ul>``. C'est pratique lors de l'ajout de la validation des mots de passe dans les formulaires, car cela permet de passer directement ce contenu au paramètre ``help_text`` d'un champ de formulaire."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:487
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:518
 msgid ""
 "Returns a set of validator objects based on the ``validator_config`` "
 "parameter. By default, all functions use the validators defined in "
@@ -3755,7 +3755,7 @@ msgid ""
 ":setting:`AUTH_PASSWORD_VALIDATORS` is used by default."
 msgstr "Renvoie un ensemble d'objets validateurs en fonction du paramètre ``validator_config``. Par défaut, toutes les fonctions utilisent les validateurs définis dans :setting:`AUTH_PASSWORD_VALIDATORS`, mais en appelant cette fonction avec un ensemble différent de validateurs et en passant le résultat dans le paramètre ``password_validators`` des autres fonctions, c'est cet ensemble de validateurs qui sera alors utilisé. C'est pratique lorsqu'un certain groupe de validateurs s'applique à la majorité des scénarios, mais qu'il existe certains cas qui demandent un autre ensemble. Si vous utilisez toujours les mêmes validateurs, cette fonction n'est pas utile car la configuration provenant de :setting:`AUTH_PASSWORD_VALIDATORS` est utilisée par défaut."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:498
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:529
 msgid ""
 "The structure of ``validator_config`` is identical to the structure of "
 ":setting:`AUTH_PASSWORD_VALIDATORS`. The return value of this function can "
@@ -3763,24 +3763,24 @@ msgid ""
 " above."
 msgstr "La structure de ``validator_config`` est identique à la structure de :setting:`AUTH_PASSWORD_VALIDATORS`. La valeur renvoyée par cette fonction peut être transmise dans le paramètre ``password_validators`` des fonctions présentées précédemment."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:503
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:534
 msgid ""
 "Note that where the password is passed to one of these functions, this "
 "should always be the clear text password - not a hashed password."
 msgstr "Notez que là où le mot de passe est passé en paramètre d'une de ces fonctions, il s'agit toujours du mot de passe en clair, pas de la version hachée."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:507
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:538
 msgid "Writing your own validator"
 msgstr "Écriture de son propre validateur"
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:509
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:540
 msgid ""
 "If Django's built-in validators are not sufficient, you can write your own "
 "password validators. Validators are fairly simple classes. They must "
 "implement two methods:"
 msgstr "Si les validateurs intégrés à Django ne suffisent pas, vous pouvez écrire votre propre validateur de mot de passe. Les validateurs sont des classes relativement simples. Elles doivent implémenter deux méthodes :"
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:513
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:544
 msgid ""
 "``validate(self, password, user=None)``: validate a password. Return "
 "``None`` if the password is valid, or raise a "
@@ -3790,24 +3790,24 @@ msgid ""
 "error."
 msgstr "``validate(self, password, user=None)``: valide un mot de passe. Renvoie ``None`` si le mot de passe est valide, ou génère une erreur :exc:`~django.core.exceptions.ValidationError` avec un message d'erreur si le mot de passe n'est pas valide. La méthode doit pouvoir gérer un utilisateur ``user`` valant ``None``; si cela signifie que le validateur ne peut pas s'appliquer, renvoyez simplement ``None`` pour signifier qu'il n'y a pas d'erreur."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:519
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:550
 msgid ""
 "``get_help_text()``: provide a help text to explain the requirements to the "
 "user."
 msgstr "``get_help_text()``: fournit un texte d'aide pour expliquer les exigences à l'utilisateur."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:522
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:553
 msgid ""
 "Any items in the ``OPTIONS`` in :setting:`AUTH_PASSWORD_VALIDATORS` for your"
 " validator will be passed to the constructor. All constructor arguments "
 "should have a default value."
 msgstr "Tout ce qui est dans ``OPTIONS`` dans :setting:`AUTH_PASSWORD_VALIDATORS` pour votre validateur sera transmis au constructeur. Tous les paramètres du constructeur doivent posséder une valeur par défaut."
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:526
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:557
 msgid "Here's a basic example of a validator, with one optional setting::"
 msgstr "Voici un exemple basique d'un validateur, avec un réglage facultatif ::"
 
-#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:549
+#: ../../../../sources/1.9/docs/topics/auth/passwords.txt:580
 msgid ""
 "You can also implement ``password_changed(password, user=None``), which will"
 " be called after a successful password change. That can be used to prevent "

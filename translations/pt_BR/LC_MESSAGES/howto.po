@@ -16,6 +16,8 @@
 # Leonam Silva <leohenryster@gmail.com>, 2016
 # Marcelo Moro Brondani <mbrondani@inf.ufsm.br>, 2016
 # Marco Rougeth <marco@rougeth.com>, 2016
+# Patrick Mazulo de Brito <pmazulo@gmail.com>, 2016
+# Raysa Dutra, 2016
 # Sergio Garcia <sergio@ginx.com.br>, 2015
 # Sergio Oliveira <seocam@seocam.com>, 2014
 # Tarsis Azevedo <tarsis.azevedo@gmail.com>, 2016
@@ -24,8 +26,8 @@ msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-05 19:12-0600\n"
-"PO-Revision-Date: 2016-06-30 22:14+0000\n"
-"Last-Translator: Carlos E C Leite <caduado@gmail.com>\n"
+"PO-Revision-Date: 2016-07-31 05:30+0000\n"
+"Last-Translator: Raysa Dutra\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -169,11 +171,11 @@ msgid ""
 "in replacement of "
 ":class:`~django.contrib.auth.middleware.RemoteUserMiddleware` in the "
 "documentation above."
-msgstr ":class:`~django.contrib.auth.middleware.PersistentRemoteUserMiddleware` provê suporte para este caso de uso. Ele manterá a sessão de autenticação até o logout explicito do usuário. A classe pode ser usada como um substituto constante para :class:`~django.contrib.auth.middleware.RemoteUserMiddleware` na documentação acima."
+msgstr "A classe :class:`~django.contrib.auth.middleware.PersistentRemoteUserMiddleware` provê suporte para este caso de uso. Ele manterá a sessão de autenticação até o logout explícito do usuário. A classe pode ser usada como um substituto constante para :class:`~django.contrib.auth.middleware.RemoteUserMiddleware` na documentação acima."
 
 #: ../../../../sources/1.9/docs/howto/custom-file-storage.txt:3
 msgid "Writing a custom storage system"
-msgstr "Escrevendo um sistema de armazenamento costumizado"
+msgstr "Escrevendo um sistema de armazenamento personalizado"
 
 #: ../../../../sources/1.9/docs/howto/custom-file-storage.txt:7
 msgid ""
@@ -200,13 +202,13 @@ msgid ""
 "Your storage class must implement the :meth:`_open()` and :meth:`_save()` "
 "methods, along with any other methods appropriate to your storage class. See"
 " below for more on these methods."
-msgstr "A classe de armazenamento deve implementar  os métodos :meth:`_open()` e :meth:`_save()`, além de qualquer outro método apropriado a sua classe. Veja abaixo mais sobre estes métodos."
+msgstr "A classe de armazenamento deve implementar os métodos :meth:`_open()` e :meth:`_save()`, além de qualquer outro método apropriado para a sua classe de armazenamento. Veja abaixo mais sobre estes métodos."
 
 #: ../../../../sources/1.9/docs/howto/custom-file-storage.txt:35
 msgid ""
 "In addition, if your class provides local file storage, it must override the"
 " ``path()`` method."
-msgstr "E mais, se sua classe permite armazenamento local de arquivo, esta deve sobrescrever o método ``path()``."
+msgstr "Além disso, se sua classe permite armazenamento local de arquivo, deve-se sobrescrever o método ``path()``."
 
 #: ../../../../sources/1.9/docs/howto/custom-file-storage.txt:38
 msgid ""
@@ -216,7 +218,7 @@ msgid ""
 "<migration-serializing>`, you can use the "
 "``django.utils.deconstruct.deconstructible`` class decorator for this "
 "(that's what Django uses on FileSystemStorage)."
-msgstr "Sua classe de armazenamento deve ser  :ref:`\"desconstruível\" <custom-deconstruct-method>` para que possa ser \"serializado\" quando usado em um campo na \"migration\". Uma vez que seus campos têm argumentos que são eles mesmos :ref:`serializáveis <migration-serializing>`, é possível usar o \"decorator\"de classe ``django.utils.deconstruct.deconstructible`` para isso (que é usado pelo Django no FileSystemStorage)."
+msgstr "Sua classe de armazenamento deve ser  :ref:`\"desconstruível\" <custom-deconstruct-method>` para que possa ser \"serializado\" quando usado em um campo na \"migration\". Uma vez que seus campos têm argumentos que são eles mesmos :ref:`serializáveis <migration-serializing>`, é possível usar o \"decorator\" de classe ``django.utils.deconstruct.deconstructible`` para isso (que é usado pelo Django no FileSystemStorage)."
 
 #: ../../../../sources/1.9/docs/howto/custom-file-storage.txt:45
 msgid ""
@@ -255,7 +257,7 @@ msgstr "Note porém que nem todos estes métodos são requeridos e talvez delibe
 msgid ""
 "By way of example, if listing the contents of certain storage backends turns"
 " out to be expensive, you might decide not to implement `Storage.listdir`."
-msgstr "A título de exemplo, se listar o conteúdo de certas infraestruturas de armazenamento acaba por ser caro, você pode decidir não aplicar o `Storage.listdir`."
+msgstr "A título de exemplo, se listar o conteúdo de certas infraestruturas de armazenamento passa a ser custoso, você pode decidir não implementar o `Storage.listdir`."
 
 #: ../../../../sources/1.9/docs/howto/custom-file-storage.txt:61
 msgid ""
@@ -286,7 +288,7 @@ msgid ""
 " uses to open the file. This must return a ``File`` object, though in most "
 "cases, you'll want to return some subclass here that implements logic "
 "specific to the backend storage system."
-msgstr "Chamado por `` Storage.open () ``, este é o mecanismo real da classe de armazenamento utiliza para abrir o arquivo. Isso deve retornar um objeto `` File``, embora na maioria dos casos, você vai querer retornar alguma subclasse aqui que implementa a lógica específica para o back-end do sistema de armazenamento."
+msgstr "Chamado por `` Storage.open () ``, este é o mecanismo real que a classe de armazenamento utiliza para abrir o arquivo. Isso deve retornar um objeto `` File``, embora na maioria dos casos, você vai querer retornar alguma subclasse aqui que implementa uma lógica específica para o back-end do sistema de armazenamento."
 
 #: ../../../../sources/1.9/docs/howto/custom-file-storage.txt:81
 msgid ""
@@ -300,7 +302,7 @@ msgid ""
 "Should return the actual name of name of the file saved (usually the "
 "``name`` passed in, but if the storage needs to change the file name return "
 "the new name instead)."
-msgstr "Deve retornar o nome real do nome do arquivo salvo (geralmente o ``name`` passado, mas se o armazenamento precisa mudar o nome do arquivo retorna então retorna o novo nome)."
+msgstr "Deve retornar o nome real do nome do arquivo salvo (geralmente o ``name`` passado, mas se o armazenamento precisa mudar o nome do arquivo, retorna então o novo nome)."
 
 #: ../../../../sources/1.9/docs/howto/custom-file-storage.txt:91
 msgid ""
@@ -309,7 +311,7 @@ msgid ""
 " to the server or, if ``upload_to`` is a callable, the filename returned by "
 "that method after any path information is removed. Override this to "
 "customize how non-standard characters are converted to safe filenames."
-msgstr "Retorna um nome de arquivo adequado para uso com o sistema de armazenamento subjacente. O argumento ``name`` passado para esse método é o nome do arquivo original enviado para o servidor ou, se `` upload_to`` é um \"callable\" (método), o nome do arquivo retornado por esse método depois de qualquer informação de caminho é removido. Substitua isso para customizar como caracteres fora de padrão são convertidos para nomes de arquivos seguros."
+msgstr "Retorna um nome de arquivo adequado para uso com o sistema de armazenamento subjacente. O argumento ``name`` passado para esse método é o nome do arquivo original enviado para o servidor ou, se `` upload_to`` é um \"callable\" (método), o nome do arquivo retornado por esse método depois de qualquer informação de caminho ser removido. Sobrescreva isso para customizar como caracteres fora de padrão são convertidos para nomes de arquivos seguros."
 
 #: ../../../../sources/1.9/docs/howto/custom-file-storage.txt:99
 msgid ""
@@ -322,7 +324,7 @@ msgid ""
 "The code provided on ``Storage`` retains only alpha-numeric characters, "
 "periods and underscores from the original filename, removing everything "
 "else."
-msgstr "O código fornecido em `` Storage`` guarda apenas os caracteres alfanuméricos, períodos e \"underscore\" do nome do arquivo original, removendo qualquer outra cosa."
+msgstr "O código fornecido em ``Storage`` guarda apenas os caracteres alfanuméricos, pontos e \"underscore\" do nome do arquivo original, removendo qualquer outra cosa."
 
 #: ../../../../sources/1.9/docs/howto/custom-file-storage.txt:107
 msgid ""
@@ -330,7 +332,7 @@ msgid ""
 "taking the provided filename into account. The ``name`` argument passed to "
 "this method will have already cleaned to a filename valid for the storage "
 "system, according to the ``get_valid_name()`` method described above."
-msgstr "Retorna um nome de arquivo que está disponível no mecanismo de armazenamento, possivelmente levando em conta o nome do arquivo fornecido. O argumento ``name`` passado para este método já terá sido limpo para um nome de arquivo válido para o sistema de armazenamento, de acordo com o `` get_valid_name () `` método descrito acima."
+msgstr "Retorna um nome de arquivo que está disponível no mecanismo de armazenamento, possivelmente levando em conta o nome do arquivo fornecido. O argumento ``name`` passado para este método já terá sido limpo para um nome de arquivo válido para o sistema de armazenamento, de acordo com o método ``get_valid_name()`` descrito acima."
 
 #: ../../../../sources/1.9/docs/howto/custom-file-storage.txt:112
 msgid ""
@@ -914,7 +916,7 @@ msgstr "Rever o código do seu comando e o código que este chama para diferenç
 #: ../../../../sources/1.9/docs/howto/static-files/index.txt:143
 #: ../../../../sources/1.9/docs/howto/upgrade-version.txt:69
 msgid "Testing"
-msgstr "ensaio"
+msgstr "Testando"
 
 #: ../../../../sources/1.9/docs/howto/custom-management-commands.txt:206
 msgid ""
@@ -1209,7 +1211,7 @@ msgstr "Exceções de comando"
 #: ../../../../sources/1.9/docs/howto/custom-management-commands.txt:433
 msgid ""
 "Exception class indicating a problem while executing a management command."
-msgstr "classe de exceção que indica um problema ao executar um comando de gestão."
+msgstr "A classe de exceção indica um problema ao executar um comando de gestão."
 
 #: ../../../../sources/1.9/docs/howto/custom-management-commands.txt:435
 msgid ""
@@ -4940,7 +4942,7 @@ msgstr "Você pode também configurar um relatório de erro personalizado escrev
 
 #: ../../../../sources/1.9/docs/howto/index.txt:3
 msgid "\"How-to\" guides"
-msgstr "Guias \"como\""
+msgstr "Guias de \"como fazer\""
 
 #: ../../../../sources/1.9/docs/howto/index.txt:5
 msgid ""
@@ -5767,7 +5769,7 @@ msgstr "Para detalhes sobre como escrever um destes backends, veja :doc:`/howto/
 #: ../../../../sources/1.9/docs/howto/static-files/deployment.txt:149
 #: ../../../../sources/1.9/docs/howto/static-files/index.txt:184
 msgid "Learn more"
-msgstr "Aprender mais"
+msgstr "Aprenda mais"
 
 #: ../../../../sources/1.9/docs/howto/static-files/deployment.txt:151
 msgid ""

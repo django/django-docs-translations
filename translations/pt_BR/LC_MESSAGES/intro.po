@@ -7,6 +7,8 @@
 # Armando Vulcano Junior <vulcano@uol.com.br>, 2015
 # Avraham Serour <tovmeod@gmail.com>, 2016
 # Bernardo Fontes <bernardoxhc@gmail.com>, 2016
+# Bruno Barbosa <bsbruno1@gmail.com>, 2016
+# Carlos E C Leite <caduado@gmail.com>, 2016
 # Carlos E C Leite <caduado@gmail.com>, 2016
 # FilipeCifali <cifali.filipe@gmail.com>, 2016
 # hoisel <danielhoisel@gmail.com>, 2014
@@ -52,8 +54,8 @@ msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-05 19:12-0600\n"
-"PO-Revision-Date: 2016-06-27 19:55+0000\n"
-"Last-Translator: FilipeCifali <cifali.filipe@gmail.com>\n"
+"PO-Revision-Date: 2016-07-26 14:44+0000\n"
+"Last-Translator: Bruno Barbosa <bsbruno1@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -116,7 +118,7 @@ msgstr "Aqueles que não estão familiarizados com sistemas de controle de vers�
 msgid ""
 "For the most part though, this tutorial tries to explain as much as "
 "possible, so that it can be of use to the widest audience."
-msgstr "Para a maior parte, porém, este tutorial tenta explicar o máximo possível para que possa ser amplamente útil usá-lo."
+msgstr "Para a maior parte, porém, este tutorial tenta explicar o máximo possível, tal que possa ser usado por um público mais amplo. "
 
 #: ../../../../sources/1.9/docs/intro/contributing.txt:40
 #: ../../../../sources/1.9/docs/intro/tutorial01.txt:35
@@ -140,7 +142,7 @@ msgid ""
 "time. By the end of this tutorial, you should have a basic understanding of "
 "both the tools and the processes involved. Specifically, we'll be covering "
 "the following:"
-msgstr "Nós iremos guiar o caminho do seu primeiro patch de contribuição com o Django. Ao final deste tutorial, você deve possuir o conhecimento básico tanto para as ferramentas quanto para os processos envolvidos. Nós iremos cobrir especialmente os seguintes tópicos:"
+msgstr "Nós iremos guir você para que contribua com um \"patch\" para o Django pela primeira vez. Ao final deste tutorial, você deve possuir o conhecimento básico tanto para as ferramentas quanto para os processos envolvidos. Nós iremos cobrir especialmente os seguintes tópicos:"
 
 #: ../../../../sources/1.9/docs/intro/contributing.txt:56
 msgid "Installing Git."
@@ -182,7 +184,7 @@ msgid ""
 "information and is a must read for anyone who'd like to become a regular "
 "contributor to Django. If you've got questions, it's probably got the "
 "answers."
-msgstr "Uma vez que você terminar este tutorial, você pode olhar o restante da documentação do Django sendo contribuída, ela contém muitas informações úteis e deve ser lida por quem deseja se tornar um contribuidor do Django. Caso tenha perguntas, a documentação provavelmente contem as respostas."
+msgstr "Uma vez que você terminar este tutorial, você pode olhar o restante da :doc:`Documentação do Django sobre contribuição</internals/contributing/index>` Ela contém muitas informações úteis e deve ser lida por quem deseja se tornar um contribuidor do Django. Caso tenha perguntas, a documentação provavelmente contem as respostas."
 
 #: ../../../../sources/1.9/docs/intro/contributing.txt:71
 msgid "Python 3 required!"
@@ -206,7 +208,7 @@ msgstr "Para usuários do Windows"
 msgid ""
 "When installing Python on Windows, make sure you check the option \"Add "
 "python.exe to Path\", so that it is always available on the command line."
-msgstr "Quando o Python estiver instalado no Windows, tenha certeza que você marcou a opção \"Add python.exe to Path\", então ele sempre vai estar disponível na linha de comando."
+msgstr "Quando instalar o Python no Windows, tenha certeza que você marcou a opção \"Add python.exe to Path\", então ele sempre vai estar disponível na linha de comando."
 
 #: ../../../../sources/1.9/docs/intro/contributing.txt:83
 msgid "Code of Conduct"
@@ -228,7 +230,7 @@ msgid ""
 "For this tutorial, you'll need Git installed to download the current "
 "development version of Django and to generate patch files for the changes "
 "you make."
-msgstr "Para este tutorial será necessário ter o Git instalado para fazer o download da versão corrente de desenvolvimento do Django e para gerar patches para as mudanças que você fizer."
+msgstr "Para este tutorial será necessário ter o Git instalado para fazer o download da versão corrente de desenvolvimento do Django e para gerar arquivos de \"patch\" para as mudanças que você faça."
 
 #: ../../../../sources/1.9/docs/intro/contributing.txt:95
 msgid ""
@@ -316,7 +318,7 @@ msgstr "O passo final na criação da sua virtualenv é ativá-la:"
 #: ../../../../sources/1.9/docs/intro/contributing.txt:174
 msgid ""
 "If the ``source`` command is not available, you can try using a dot instead:"
-msgstr "Se o comando ``fonte`` não estiver disponível, você pode tentar usar um ponto em vez disso:"
+msgstr "Se o comando ``source`` não estiver disponível, você pode tentar usar um ponto em vez disso:"
 
 #: ../../../../sources/1.9/docs/intro/contributing.txt:182
 msgid "To activate your virtualenv on Windows, run:"
@@ -354,7 +356,7 @@ msgid ""
 " we'll rewind Django's version history in git to before that ticket's patch "
 "was applied. This will allow us to go through all of the steps involved in "
 "writing that patch from scratch, including running Django's test suite."
-msgstr "Para este tutorial usaremos o ticket :ticket:`24788` como caso de estudo, então iremos voltar no histórico de versão do Django no git para antes que o \"patch\" deste ticket tenha sido aplicado. Isso nos possibilitará ir através de todos os passos envolvidos em escrever um pacth do início, incluindo rodar o suíte de testes do Django."
+msgstr "Para este tutorial usaremos o ticket :ticket:`24788` como caso de estudo, então iremos voltar no histórico de versão do Django no git para antes que o \"patch\" deste ticket tenha sido aplicado. Isso nos possibilitará ir através de todos os passos envolvidos em escrever um patch do início, incluindo rodar a suíte de testes do Django."
 
 #: ../../../../sources/1.9/docs/intro/contributing.txt:215
 msgid ""
@@ -712,7 +714,7 @@ msgstr "Agora você deve ter um arquivo chamado ``24788.diff`` no diretório rai
 
 #: ../../../../sources/1.9/docs/intro/contributing.txt:597
 msgid "So what do I do next?"
-msgstr "Então, quais são os próximos passos?"
+msgstr "Então,  o que faço a seguir?"
 
 #: ../../../../sources/1.9/docs/intro/contributing.txt:599
 msgid ""
@@ -1577,7 +1579,7 @@ msgstr "Instalando pacotes Python com virtualenv"
 msgid ""
 "Earlier, we installed the polls app as a user library. This has some "
 "disadvantages:"
-msgstr "Anteriormente, nós instalamos nosso app de votação como uma biblioteca de usuário. Isso tem algumas disvantagens:"
+msgstr "Anteriormente, nós instalamos nosso app de votação como uma biblioteca de usuário. Isso tem algumas desvantagens:"
 
 #: ../../../../sources/1.9/docs/intro/reusable-apps.txt:317
 msgid ""
@@ -3573,11 +3575,11 @@ msgstr "Vamos converter a nossa aplicação de enquete para utilizar o sistema d
 
 #: ../../../../sources/1.9/docs/intro/tutorial04.txt:214
 msgid "Convert the URLconf."
-msgstr "Converta a URLconf."
+msgstr "Converta o URLconf."
 
 #: ../../../../sources/1.9/docs/intro/tutorial04.txt:216
 msgid "Delete some of the old, unneeded views."
-msgstr "Delete algumas das antigas, desnecessárias views."
+msgstr "Delete algumas das views antigas, desnecessárias."
 
 #: ../../../../sources/1.9/docs/intro/tutorial04.txt:218
 msgid "Introduce new views based on Django's generic views."
@@ -4040,7 +4042,7 @@ msgid ""
 "can be sure that we won't inadvertently reintroduce this bug, because simply"
 " running the test will warn us immediately. We can consider this little "
 "portion of the application pinned down safely forever."
-msgstr "Muitas outras coisas podem dar errado com a nossa aplicação no futuro, mas você pode ter certeza que não vamos reintroduzir este bug porque simplesmente rodando testes já receberemos o aviso imediatamente. Nós podemos considerar que esta pequena parte da aplicação está a salvo para sempre"
+msgstr "Muitas outras coisas podem dar errado com a nossa aplicação no futuro, mas você pode ter certeza que não vamos reintroduzir este bug inadivertidamente, porque simplesmente rodando os testes já receberemos o aviso imediatamente. Nós podemos considerar que esta pequena parte da aplicação está a salvo para sempre"
 
 #: ../../../../sources/1.9/docs/intro/tutorial05.txt:269
 msgid "More comprehensive tests"
@@ -4302,7 +4304,7 @@ msgstr "Talvez usuários registrados no admin devam ser permitidos a ver ``Quest
 msgid ""
 "At a certain point you are bound to look at your tests and wonder whether "
 "your code is suffering from test bloat, which brings us to:"
-msgstr "Em um certo ponto, você precisará olhar seus testes e se perguntar se o seu código está sofrendo com demaseados testes, o que nos trás a:"
+msgstr "Em um certo ponto, você precisará olhar seus testes e se perguntar se o seu código está sofrendo de inchaço de testes, o que nos trás a:"
 
 #: ../../../../sources/1.9/docs/intro/tutorial05.txt:626
 msgid "When testing, more is better"
@@ -4355,7 +4357,7 @@ msgstr "um método de teste separado para cada conjunto de condições que você
 
 #: ../../../../sources/1.9/docs/intro/tutorial05.txt:650
 msgid "test method names that describe their function"
-msgstr "Nomes de métodos de teste que descrevem a sua função"
+msgstr "nomes de métodos de teste que descrevem a sua função"
 
 #: ../../../../sources/1.9/docs/intro/tutorial05.txt:653
 msgid "Further testing"

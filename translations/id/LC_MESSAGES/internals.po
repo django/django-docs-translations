@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the Django package.
 # 
 # Translators:
+# Adiyat Mubarak <adiyatmubarak@gmail.com>, 2016
 # Fery Setiawan <gembelweb@gmail.com>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-05 19:12-0600\n"
-"PO-Revision-Date: 2016-05-03 05:02+0000\n"
+"PO-Revision-Date: 2016-08-01 09:23+0000\n"
 "Last-Translator: Fery Setiawan <gembelweb@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/django/django-docs/language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -149,7 +150,7 @@ msgid ""
 "Screenshots don't absolve you of other good reporting practices. Make sure "
 "to include URLs, code snippets, and step-by-step instructions on how to "
 "reproduce the behavior visible in the screenshots."
-msgstr ""
+msgstr "Cetak layar tidak membebaskan anda dari praktik pelaporan bagus. pastikan menyertakan URL, potongan kode, dan petunjuk langkah-demi-langkah pada bagaimana membuat kembali kebiasaan nampak dalam cetak layar."
 
 #: ../../../../sources/1.9/docs/internals/contributing/bugs-and-features.txt:86
 msgid ""
@@ -298,7 +299,7 @@ msgstr "Pilihan pada masalah teknis harus diumumkan dan diadakan secara umum pad
 
 #: ../../../../sources/1.9/docs/internals/contributing/committing-code.txt:3
 msgid "Committing code"
-msgstr ""
+msgstr "Menyerahkan kode"
 
 #: ../../../../sources/1.9/docs/internals/contributing/committing-code.txt:5
 msgid ""
@@ -306,7 +307,7 @@ msgid ""
 "in knowing how code gets committed into Django core. If you're a community "
 "member who wants to contribute code to Django, have a look at :doc:`writing-"
 "code/working-with-git` instead."
-msgstr ""
+msgstr "Bagian ini dialamatkan ke :ref:`committers` dan siapapun yang tertatik dalam mengetahui bagaimana kode didiserahkan kedalam inti Django. Jika anda adalah anggota komunitas yang ingin membantu kode pada Django, lihatlah ini :doc:`writing-code/working-with-git` sebagai gantinya."
 
 #: ../../../../sources/1.9/docs/internals/contributing/committing-code.txt:13
 msgid "Handling pull requests"
@@ -325,20 +326,20 @@ msgid ""
 " best pull requests possible. In practice however, committers - who will "
 "likely be more familiar with the commit guidelines - may decide to bring a "
 "commit up to standard themselves."
-msgstr ""
+msgstr "Ketika menyerahkan permintaan menarik, pastikan setiap penyerahan individu cocok dengan panduan penyerahan digambarkan dibawah. Penyumbang diharapkan untuk menyediakan kemungkinan permintaan menarik terbaik. Dalam praktiknya bagaimanapun, penyerah - yang akan lebih akrab dengan panduan penyerahan - mungkin memutuskan membawa penyerahan ke standar mereka sendiri."
 
 #: ../../../../sources/1.9/docs/internals/contributing/committing-code.txt:26
 msgid ""
 "Before merging, but after reviewing, have Jenkins test the pull request by "
 "commenting \"buildbot, test this please\" on the PR. See our `Jenkins wiki "
 "page`_ for more details."
-msgstr ""
+msgstr "Sebelum menggabungkan, tetapi setelah meninjau, lakukan percobaan Jenkins menarik permintaan dengan mengkomentarkan \"buildbot, test this please\" pada PR. Lihat `Jenkins wiki page`_ kami untuk lebih rinci."
 
 #: ../../../../sources/1.9/docs/internals/contributing/committing-code.txt:32
 msgid ""
 "An easy way to checkout a pull request locally is to add an alias to your "
 "``~/.gitconfig`` (``upstream`` is assumed to be ``django/django``)::"
-msgstr ""
+msgstr "Sebuah cara mudah untuk memeriksa penarikan permintaan secara lokal adalah sebuah alias pada ``~/.gitconfig`` anda (``upstream`` dianggap menjadi ``django/django``)::"
 
 #: ../../../../sources/1.9/docs/internals/contributing/committing-code.txt:38
 msgid ""
@@ -369,13 +370,13 @@ msgid ""
 "Avoid using GitHub's \"Merge pull request\" button on the website as it "
 "creates an ugly \"merge commit\" and makes navigating history more "
 "difficult."
-msgstr ""
+msgstr "Hindari menggunakan tombol \"Merge pull request\" Github pada website karena akan membuat \"merge commit\" yang tidak baik dan membuat navigasi riwayat lebih susah."
 
 #: ../../../../sources/1.9/docs/internals/contributing/committing-code.txt:76
 msgid ""
 "When rewriting the commit history of a pull request, the goal is to make "
 "Django's commit history as usable as possible:"
-msgstr ""
+msgstr "Ketika menulis kembali riwayat commit dari pull request, tujuannya adalah membuat riwayat commit django sebaik mungkin:"
 
 #: ../../../../sources/1.9/docs/internals/contributing/committing-code.txt:79
 msgid ""
@@ -541,7 +542,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/committing-code.txt:186
 msgid "Write commit messages for backports using this pattern::"
-msgstr ""
+msgstr "Tulis pesan commit untuk backport menggunakan pola berikut:"
 
 #: ../../../../sources/1.9/docs/internals/contributing/committing-code.txt:192
 msgid "For example::"
@@ -1141,7 +1142,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/triaging-tickets.txt:35
 msgid "Triage workflow"
-msgstr ""
+msgstr "Alur kerja Triage"
 
 #: ../../../../sources/1.9/docs/internals/contributing/triaging-tickets.txt:37
 msgid ""
@@ -1243,7 +1244,7 @@ msgstr "Beberapa tiket membutuhkan sedikit umpan balik daripada ini, tapi kembal
 
 #: ../../../../sources/1.9/docs/internals/contributing/triaging-tickets.txt:99
 msgid "Triage stages"
-msgstr ""
+msgstr "Tahapan-tahapan Triage"
 
 #: ../../../../sources/1.9/docs/internals/contributing/triaging-tickets.txt:101
 msgid ""
@@ -1348,7 +1349,7 @@ msgstr "Tiket ini tidak umum dan keseluruhan kurang berguna sejak mereka tidak m
 
 #: ../../../../sources/1.9/docs/internals/contributing/triaging-tickets.txt:166
 msgid "Other triage attributes"
-msgstr ""
+msgstr "Atribut triage lainnya"
 
 #: ../../../../sources/1.9/docs/internals/contributing/triaging-tickets.txt:168
 msgid ""
@@ -1878,13 +1879,13 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/coding-style.txt:32
 msgid "Use four spaces for indentation."
-msgstr ""
+msgstr "Gunakan empat ruang untuk lekukan."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/coding-style.txt:34
 msgid ""
 "Use underscores, not camelCase, for variable, function and method names "
 "(i.e. ``poll.get_unique_voters()``, not ``poll.getUniqueVoters``)."
-msgstr ""
+msgstr "Gunakan garis bawah, bukan camelCase, untuk variabel, fungsi dan nama-nama cara (yaitu ``poll.get_unique_voters()``, bukan ``poll.getUniqueVoters``)."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/coding-style.txt:37
 msgid ""
@@ -1894,7 +1895,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/coding-style.txt:40
 msgid "In docstrings, follow :pep:`257`. For example::"
-msgstr ""
+msgstr "Dalam docstring, ikuti :pep:`257`. Sebagai contoh::"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/coding-style.txt:48
 msgid ""
@@ -1993,7 +1994,7 @@ msgstr "Gaya tampilan"
 msgid ""
 "In Django views, the first parameter in a view function should be called "
 "``request``."
-msgstr ""
+msgstr "Dalam tampilan Django, parameter pertama dalam sebuah fungsi tampilan harus dipanggil ``request``."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/coding-style.txt:158
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/coding-style.txt:174
@@ -2014,7 +2015,7 @@ msgstr "Gaya model"
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/coding-style.txt:171
 msgid ""
 "Field names should be all lowercase, using underscores instead of camelCase."
-msgstr ""
+msgstr "Nama-nama bidang harus semuanya huruf kecil, menggunakan garis bawah daripada camelCase."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/coding-style.txt:186
 msgid ""
@@ -2065,7 +2066,7 @@ msgstr "``def get_absolute_url()``"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/coding-style.txt:228
 msgid "Any custom methods"
-msgstr ""
+msgstr "Cara penyesuaian apapun"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/coding-style.txt:230
 msgid ""
@@ -2282,13 +2283,13 @@ msgstr "Menulis percobaan"
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/javascript.txt:72
 msgid ""
 "Django's JavaScript tests use `QUnit`_. Here is an example test module:"
-msgstr ""
+msgstr "Percobaan JavasScript Django menggunakan `QUnit`_. Ini adalah sebuah contoh percobaan modul:"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/javascript.txt:100
 msgid ""
 "Please consult the QUnit documentation for information on the types of "
 "`assertions supported by QUnit <https://api.qunitjs.com/category/assert/>`_."
-msgstr ""
+msgstr "Silahkan rundingkan dokumentasi QUnit untuk informasi pada jenis-jenis dari `assertions supported by QUnit <https://api.qunitjs.com/category/assert/>`_."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/javascript.txt:104
 msgid "Running tests"
@@ -2354,7 +2355,7 @@ msgid ""
 "We're always grateful for patches to Django's code. Indeed, bug reports with"
 " associated patches will get fixed *far* more quickly than those without "
 "patches."
-msgstr ""
+msgstr "Kami semua selalu berterima kasih untuk tambalan-tambalan pada kode Django. Memang, laporan kesalahan dengan tambalan terhubung akan diperbaiki *jauh* lebih cepat daripada mereka yang tanpa tambalan."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/submitting-patches.txt:10
 msgid "Typo fixes and trivial documentation changes"
@@ -2408,7 +2409,7 @@ msgstr ""
 msgid ""
 "If a ticket for this issue doesn't exist yet, create one in our `ticket "
 "tracker`_."
-msgstr ""
+msgstr "Jika sebuah tiket untuk masalah ini belum ada, buat satu di `ticket tracker`_ kami."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/submitting-patches.txt:39
 msgid ""
@@ -2538,24 +2539,24 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/submitting-patches.txt:123
 msgid "Submit patches in the format returned by the ``git diff`` command."
-msgstr ""
+msgstr "Ajukan tambalan-tambalan dalam bentuk dikembalikan oleh perintah ``git diff``."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/submitting-patches.txt:125
 msgid ""
 "Attach patches to a ticket in the `ticket tracker`_, using the \"attach "
 "file\" button. Please *don't* put the patch in the ticket description or "
 "comment unless it's a single line patch."
-msgstr ""
+msgstr "Lampirkan tambalan ke sebuah tiket dalam `ticket tracker`_, menggunakan tombol \"attach file\". Tolong *jangan* taruh tambalan dalam gambaran tiket atau komentar meskipun dia hanya sebuah tambalan baris tunggal."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/submitting-patches.txt:129
 msgid ""
 "Name the patch file with a ``.diff`` extension; this will let the ticket "
 "tracker apply correct syntax highlighting, which is quite helpful."
-msgstr ""
+msgstr "Nama berkas tambalan dengan perpanjangan ``.diff``; ini akan membuat pelacak tiket memberlakukan penyorotan sintaksis benar, yang tentunya sangat membantu."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/submitting-patches.txt:132
 msgid "Regardless of the way you submit your work, follow these steps."
-msgstr ""
+msgstr "Tanpa memperhatikan cara anda mengajukan pekerjaan anda, ikuti langkah-langkah ini."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/submitting-patches.txt:134
 msgid ""
@@ -2696,7 +2697,7 @@ msgstr ""
 msgid ""
 "For information on JavaScript patches, see the :ref:`javascript-patches` "
 "documentation."
-msgstr ""
+msgstr "Untuk informasi pada tambalan JavaScript, lihat dokumentasi :ref:`javascript-patches`."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/submitting-patches.txt:250
 msgid "Patch review checklist"
@@ -2730,13 +2731,13 @@ msgstr ""
 msgid ""
 "Does the documentation build without any errors (``make html``, or "
 "``make.bat html`` on Windows, from the ``docs`` directory)?"
-msgstr ""
+msgstr "Apakah dokumentasi dibangun tanpa kesalahan apapun (``make html``, atau ``make.bat html``  pada Windows, dari direktori ``docs``)?"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/submitting-patches.txt:273
 msgid ""
 "Does the documentation follow the writing style guidelines in "
 ":doc:`/internals/contributing/writing-documentation`?"
-msgstr ""
+msgstr "Apakah dokumentasi mengikuti panduan gaya penulisan dalam :doc:`/internals/contributing/writing-documentation`?"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/submitting-patches.txt:275
 msgid "Are there any :ref:`spelling errors <documentation-spelling-check>`?"
@@ -2750,7 +2751,7 @@ msgstr "Kesalahan"
 msgid ""
 "Is there a proper regression test (the test should fail before the fix is "
 "applied)?"
-msgstr ""
+msgstr "Apakah ada percobaan pemulihan yang sesuai (percobaan harus gagal sebelum perbaikan diberlakukan)?"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/submitting-patches.txt:284
 msgid "New Features"
@@ -2825,7 +2826,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:10
 msgid "We appreciate any and all contributions to the test suite!"
-msgstr ""
+msgstr "Kami menghargai apapun dan semua bantuan pada deretan percobaan!"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:12
 msgid ""
@@ -2992,7 +2993,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:122
 msgid "Running the Selenium tests"
-msgstr ""
+msgstr "Menjalankan percobaan Selenium"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:124
 msgid ""
@@ -3022,31 +3023,31 @@ msgstr "docutils_"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:141
 msgid "geoip2_"
-msgstr ""
+msgstr "geoip2_"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:142
 msgid "jinja2_ 2.7+"
-msgstr ""
+msgstr "jinja2_ 2.7+"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:143
 msgid "numpy_"
-msgstr ""
+msgstr "numpy_"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:144
 msgid "Pillow_"
-msgstr ""
+msgstr "Pillow_"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:145
 msgid "PyYAML_"
-msgstr ""
+msgstr "PyYAML_"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:146
 msgid "pytz_"
-msgstr ""
+msgstr "pytz_"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:147
 msgid "setuptools_"
-msgstr ""
+msgstr "setuptools_"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:148
 msgid "memcached_, plus a :ref:`supported Python binding <memcached>`"
@@ -3062,11 +3063,11 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:151
 msgid "selenium_"
-msgstr ""
+msgstr "selenium_"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:152
 msgid "sqlparse_"
-msgstr ""
+msgstr "sqlparse_"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:154
 msgid ""
@@ -3130,7 +3131,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:212
 msgid "Contrib apps"
-msgstr ""
+msgstr "Aplikasi bantuan"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:214
 msgid ""
@@ -3145,7 +3146,7 @@ msgstr "Menyelesaikan masalah"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:224
 msgid "Many test failures with ``UnicodeEncodeError``"
-msgstr ""
+msgstr "Banyak percobaan gagal dengan ``UnicodeEncodeError``"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:226
 msgid ""
@@ -3202,7 +3203,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:264
 msgid "will pair ``test_eq`` with every test label."
-msgstr ""
+msgstr "akan memperbaiki ``test_eq`` dengan setiap label percobaan."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:266
 msgid ""
@@ -3221,7 +3222,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:280
 msgid "Seeing the SQL queries run during a test"
-msgstr ""
+msgstr "Melihat permintaan SQL berjalan selama percobaan"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:282
 msgid ""
@@ -3232,7 +3233,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:290
 msgid "The ``--reverse`` and ``--debug-sql`` options were added."
-msgstr ""
+msgstr "Pilihan ``--reverse`` dan ``--debug-sql`` telah ditambahkan."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:293
 msgid "Seeing the full traceback of a test failure"
@@ -3250,7 +3251,7 @@ msgstr ""
 msgid ""
 "You can also use the ``DJANGO_TEST_PROCESSES`` environment variable for this"
 " purpose."
-msgstr ""
+msgstr "Anda dapat juga menggunakan variabel lingkungan ``DJANGO_TEST_PROCESSES`` untuk tujuan ini."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/unit-tests.txt:306
 msgid ""
@@ -3304,7 +3305,7 @@ msgstr ""
 msgid ""
 "After installing Git the first thing you should do is setup your name and "
 "email::"
-msgstr ""
+msgstr "Setelah memasang Git hal pertama anda harus lakukan adalah menyetel nama dan surel anda::"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/working-with-git.txt:33
 msgid ""
@@ -3315,7 +3316,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/working-with-git.txt:42
 msgid "Setting up local repository"
-msgstr ""
+msgstr "Mengatur gudang lokal"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/working-with-git.txt:44
 msgid ""
@@ -3332,7 +3333,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/working-with-git.txt:55
 msgid "Your GitHub repository will be called \"origin\" in Git."
-msgstr ""
+msgstr "Gudang Github anda akan dipanggil \"origin\" dalam Git."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/working-with-git.txt:57
 msgid ""
@@ -3388,17 +3389,17 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/working-with-git.txt:98
 msgid "Publishing work"
-msgstr ""
+msgstr "Menerbitkan pekerjaan"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/working-with-git.txt:100
 msgid "You can publish your work on GitHub just by doing::"
-msgstr ""
+msgstr "Anda dapat menerbitkan pekerjaan anda pada Github dengan hanya melakukan::"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/working-with-git.txt:104
 msgid ""
 "When you go to your GitHub page you will notice a new branch has been "
 "created."
-msgstr ""
+msgstr "Ketika anda pergi ke halaman Github anda akan diberitahukan sebuah cabang baru telah dibuat."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/working-with-git.txt:106
 msgid ""
@@ -3451,7 +3452,7 @@ msgstr ""
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/working-with-git.txt:133
 msgid ""
 "The test suite must pass and the documentation must build without warnings."
-msgstr ""
+msgstr "Rangkaian percobaan harus dilewati dan dokumentasi harus dibangun tanpa peringatan."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/working-with-git.txt:135
 msgid ""
@@ -3646,7 +3647,7 @@ msgstr "Bekerja pada GitHub jika anda bisa."
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/working-with-git.txt:271
 msgid ""
 "Announce your work on the Trac ticket by linking to your GitHub branch."
-msgstr ""
+msgstr "Umumkan pekerjaan anda di tiket Trac dengan menautkan ke cabang Github anda."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-code/working-with-git.txt:272
 msgid "When you have something ready, make a pull request."
@@ -3679,19 +3680,19 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:10
 msgid "Documentation changes generally come in two forms:"
-msgstr ""
+msgstr "Dokumentasi berubah secara umum datang dalam dua bentuk:"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:12
 msgid ""
 "General improvements: typo corrections, error fixes and better explanations "
 "through clearer writing and more examples."
-msgstr ""
+msgstr "Perbaikan umum: pembenaran kesalahan ketik, perbaikan kesalahan dan penjelasan lebih baik melalui penulisan lebih jelas dan lebih contoh."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:15
 msgid ""
 "New features: documentation of features that have been added to the "
 "framework since the last release."
-msgstr ""
+msgstr "Fitur baru: dokumentasi dari ditur yang telah ditambahkan ke kerangka kerja sejak terbitan terakhir."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:18
 msgid ""
@@ -3752,7 +3753,7 @@ msgstr ""
 msgid ""
 "Then, building the HTML is easy; just ``make html`` (or ``make.bat html`` on"
 " Windows) from the ``docs`` directory."
-msgstr ""
+msgstr "Kemudian, membangun HTML sangat mudah; cukup ``make html`` (atau ``make.bat html`` pada Windows) dari direktori ``docs``."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:63
 msgid ""
@@ -3760,7 +3761,7 @@ msgid ""
 "Primer <sphinx:rst-primer>`. After that, you'll want to read about the :ref"
 ":`Sphinx-specific markup <sphinx:sphinxmarkup>` that's used to manage "
 "metadata, indexing, and cross-references."
-msgstr ""
+msgstr "Untuk mulai membantu, anda akan ingin membaca  :ref:`reStructuredText Primer <sphinx:rst-primer>`. Setelah itu, anda akan ingin membaca tentang :ref:`Sphinx-specific markup <sphinx:sphinxmarkup>` yang digunakan untuk mengelola meta data, pengindeksan, dan acuan-silang."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:69
 msgid "How the documentation is organized"
@@ -3768,19 +3769,19 @@ msgstr "Bagaimana dokumentasi diatur"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:71
 msgid "The documentation is organized into several categories:"
-msgstr ""
+msgstr "Dokumentasi disusun kedalam beberapa kategori:"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:73
 msgid ""
 ":doc:`Tutorials </intro/index>` take the reader by the hand through a series"
 " of steps to create something."
-msgstr ""
+msgstr ":doc:`Tutorials </intro/index>` membawa pembaca dengan tangan melalui rangkaian langkah-langkah untuk membuat sesuatu."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:76
 msgid ""
 "The important thing in a tutorial is to help the reader achieve something "
 "useful, preferably as early as possible, in order to give them confidence."
-msgstr ""
+msgstr "Hal terpenting dalam tutorial ini adalah membantu pembaca mendapatkan sesuatu berguna,  lebih disukai seawal mungkin, agar memberikan mereka rasa nyaman.  "
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:79
 msgid ""
@@ -3795,7 +3796,7 @@ msgstr ""
 msgid ""
 ":doc:`Topic guides </topics/index>` aim to explain a concept or subject at a"
 " fairly high level."
-msgstr ""
+msgstr ":doc:`Topic guides </topics/index>` bertujuan untuk menjelaskan konsep atau subjek pada tingkatan yang cukup tinggi."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:88
 msgid ""
@@ -3808,14 +3809,14 @@ msgstr ""
 msgid ""
 "Providing background context helps a newcomer connect the topic to things "
 "that they already know."
-msgstr ""
+msgstr "Menyediakan konteks latar belakang membantu pendatang baru menghubungkan topik ke hal-hal yang mereka sudah ketahui."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:95
 msgid ""
 ":doc:`Reference guides </ref/index>` contain technical reference for APIs. "
 "They describe the functioning of Django's internal machinery and instruct in"
 " its use."
-msgstr ""
+msgstr ":doc:`Reference guides </ref/index>` mengandung acuan teknis untuk API. Mereka menggambarkan fungsi dari perlengkapan dalam Django dan petunjuk dalam penggunaannya."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:99
 msgid ""
@@ -3835,7 +3836,7 @@ msgstr ""
 msgid ""
 ":doc:`How-to guides </howto/index>` are recipes that take the reader through"
 " steps in key subjects."
-msgstr ""
+msgstr ":doc:`How-to guides </howto/index>` adalah resep yang membawa pembaca melalui langkah-langkah dalam subjek kunci."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:110
 msgid ""
@@ -3865,39 +3866,39 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:126
 msgid "he or she... use they."
-msgstr ""
+msgstr "dia laki-laki atau dia perempuan... gunakan mereka"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:127
 msgid "him or her... use them."
-msgstr ""
+msgstr "dia laki-laki atau dia perempuan... gunakan mereka"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:128
 msgid "his or her... use their."
-msgstr ""
+msgstr "dia laki-laki atau dia perempuan... gunakan mereka"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:129
 msgid "his or hers... use theirs."
-msgstr ""
+msgstr "dia laki-laki atau dia perempuan... gunakan mereka"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:130
 msgid "himself or herself... use themselves."
-msgstr ""
+msgstr "dia laki-laki atau dia perempuan... gunakan mereka"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:133
 msgid "Commonly used terms"
-msgstr ""
+msgstr "Istilah umum digunakan"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:135
 msgid ""
 "Here are some style guidelines on commonly used terms throughout the "
 "documentation:"
-msgstr ""
+msgstr "Ini adalah beberapa panduan pada istilah paling umum digunakan sepanjang dokumentasi:"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:138
 msgid ""
 "**Django** -- when referring to the framework, capitalize Django. It is "
 "lowercase only in Python code and in the djangoproject.com logo."
-msgstr ""
+msgstr "**Django** -- ketika mengacukan ke kerangka kerja, huruf besarkan Django. Huruf kecil hanya dalam kode Python dan dalam logo djangoproject.com."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:141
 msgid "**email** -- no hyphen."
@@ -3938,7 +3939,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:160
 msgid "**website** -- use one word, without capitalization."
-msgstr ""
+msgstr "**website** -- gunakan satu kata, tanpa huruf besar."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:163
 msgid "Django-specific terminology"
@@ -3946,30 +3947,30 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:165
 msgid "**model** -- it's not capitalized."
-msgstr ""
+msgstr "**model** -- itu tidak huruf besar."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:167
 msgid "**template** -- it's not capitalized."
-msgstr ""
+msgstr "**template** -- itu tidak huruf besar."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:169
 msgid ""
 "**URLconf** -- use three capitalized letters, with no space before \"conf.\""
-msgstr ""
+msgstr "**URLconf** -- gunakan tiga huruf besar, tanpa ruang sebelum \"conf.\""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:172
 msgid "**view** -- it's not capitalized."
-msgstr ""
+msgstr "**view** -- itu tidak huruf besar."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:175
 msgid "Guidelines for reStructuredText files"
-msgstr ""
+msgstr "Panduan untuk berkas-berkas reStructuredText"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:177
 msgid ""
 "These guidelines regulate the format of our reST (reStructuredText) "
 "documentation:"
-msgstr ""
+msgstr "Panduan ini mengatur bentuk dari dokumentasi dari reST (reStructuredText) kami:"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:180
 msgid "In section titles, capitalize only initial words and proper nouns."
@@ -4003,11 +4004,11 @@ msgstr ""
 msgid ""
 "Use :mod:`~sphinx.ext.intersphinx` to reference Python's and Sphinx' "
 "documentation."
-msgstr ""
+msgstr "Gunakan :mod:`~sphinx.ext.intersphinx` untuk mengacu dokumentasi Python and Sphinx'."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:202
 msgid "Use these heading styles::"
-msgstr ""
+msgstr "Gunakan gaya kepala ini::"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:221
 msgid "Django-specific markup"
@@ -4029,15 +4030,15 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:234
 msgid "Template tags::"
-msgstr ""
+msgstr "Cetakan etiket::"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:238
 msgid "To link, use ``:ttag:`regroup```."
-msgstr ""
+msgstr "Untuk mengkaitkan, gunakan ``:ttag:`regroup```. "
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:240
 msgid "Template filters::"
-msgstr ""
+msgstr "Cetakan penyaring::"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:244
 msgid "To link, use ``:tfilter:`linebreaksbr```."
@@ -4049,19 +4050,19 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:250
 msgid "To link, use ``:lookup:`exact```."
-msgstr ""
+msgstr "Untuk mengkaitkan, gunakan ``:lookup:`exact```."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:252
 msgid "``django-admin`` commands::"
-msgstr ""
+msgstr "Perintah ``django-admin``::"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:256
 msgid "To link, use ``:djadmin:`migrate```."
-msgstr ""
+msgstr "Untuk mengkaitkan, gunakan ``:djadmin:`migrate```."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:258
 msgid "``django-admin`` command-line options::"
-msgstr ""
+msgstr "Pilihan baris-perintah ``django-admin``::"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:262
 msgid ""
@@ -4201,13 +4202,13 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:421
 msgid "Improving the documentation"
-msgstr ""
+msgstr "Memperbaharui dokumentasi"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:423
 msgid ""
 "A few small improvements can be made to make the documentation read and look"
 " better:"
-msgstr ""
+msgstr "Sedikit perbaharuan kecil dapat dibuat untuk membuat dokumentasi dibaca dan kelihatan lebih baik:"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:426
 msgid ""
@@ -4230,13 +4231,13 @@ msgstr "\\... ini seharusnya menjadi::"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:441
 msgid "That is, use metadata instead of titles."
-msgstr ""
+msgstr "Yaitu, gunakan metadata daripada judul."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:443
 msgid ""
 "Whenever possible, use links. So, use ``:setting:`ADMINS``` instead of "
 "````ADMINS````."
-msgstr ""
+msgstr "Jika memungkinkan, gunakan kaitan. Jadi gunakan ``:setting:`ADMINS``` daripada ````ADMINS````."
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:446
 msgid ""
@@ -4289,7 +4290,7 @@ msgstr ""
 msgid ""
 "`pyenchant <https://pypi.python.org/pypi/pyenchant/>`_ (which requires "
 "`enchant <http://www.abisource.com/projects/enchant/>`_)"
-msgstr ""
+msgstr "`pyenchant <https://pypi.python.org/pypi/pyenchant/>`_ (which requires `enchant <http://www.abisource.com/projects/enchant/>`_)"
 
 #: ../../../../sources/1.9/docs/internals/contributing/writing-documentation.txt:480
 msgid ""
@@ -4376,32 +4377,32 @@ msgstr "2.0"
 msgid ""
 "See the :ref:`Django 1.9 release notes<deprecated-features-1.9>` for more "
 "details on these changes."
-msgstr ""
+msgstr "Lihat :ref:`Django 1.9 release notes<deprecated-features-1.9>` untuk lebih rinci pada perubahan ini."
 
 #: ../../../../sources/1.9/docs/internals/deprecation.txt:18
 msgid ""
 "The ``weak`` argument to ``django.dispatch.signals.Signal.disconnect()`` "
 "will be removed."
-msgstr ""
+msgstr "Argumen ``weak`` pada ``django.dispatch.signals.Signal.disconnect()`` akan dipindahkan."
 
 #: ../../../../sources/1.9/docs/internals/deprecation.txt:21
 msgid "The ``django.forms.extras`` package will be removed."
-msgstr ""
+msgstr "Paket ``django.forms.extras`` akan dipindahkan."
 
 #: ../../../../sources/1.9/docs/internals/deprecation.txt:23
 msgid "The ``assignment_tag`` helper will be removed."
-msgstr ""
+msgstr "Pembantu ``assignment_tag`` akan dipindahkan."
 
 #: ../../../../sources/1.9/docs/internals/deprecation.txt:25
 msgid ""
 "The ``host`` argument to ``assertsRedirects`` will be removed. The "
 "compatibility layer which allows absolute URLs to be considered equal to "
 "relative ones when the path is identical will also be removed."
-msgstr ""
+msgstr "Argumen ``host`` pada ``assertsRedirects`` akan dipindahkan. Lapisan kesesuaian yang mengizinkan URL mutlak untuk di pertimbangkan sama  pada yang relatif ketika jalur sama akan juga dipindahkan."
 
 #: ../../../../sources/1.9/docs/internals/deprecation.txt:29
 msgid "``Field.rel`` will be removed."
-msgstr ""
+msgstr "``Field.rel`` akan dipindahkan."
 
 #: ../../../../sources/1.9/docs/internals/deprecation.txt:31
 msgid "``Field.remote_field.to`` attribute will be removed."
@@ -4411,7 +4412,7 @@ msgstr "Atribut ``Field.remote_field.to`` akan dipindahkan."
 msgid ""
 "The ``on_delete`` argument for ``ForeignKey`` and ``OneToOneField``  will be"
 " required."
-msgstr ""
+msgstr "Argumen ``on_delete`` untuk ``ForeignKey`` dan ``OneToOneField`` akan dibutuhkan."
 
 #: ../../../../sources/1.9/docs/internals/deprecation.txt:36
 msgid "``django.db.models.fields.add_lazy_relation()`` will be removed."
@@ -4513,7 +4514,7 @@ msgstr ""
 msgid ""
 "The ``app_name`` argument to :func:`~django.conf.urls.include()` will be "
 "removed."
-msgstr ""
+msgstr "Artumen ``app_name`` pada :func:`~django.conf.urls.include()` akan dipindahkan."
 
 #: ../../../../sources/1.9/docs/internals/deprecation.txt:81
 msgid ""
@@ -5640,7 +5641,7 @@ msgstr "1.5"
 msgid ""
 "See the :ref:`Django 1.3 release notes<deprecated-features-1.3>` for more "
 "details on these changes."
-msgstr ""
+msgstr "Lihat :ref:`Django 1.3 release notes<deprecated-features-1.3>` untuk lebih rinci pada perubahan ini."
 
 #: ../../../../sources/1.9/docs/internals/deprecation.txt:668
 msgid ""
@@ -5653,7 +5654,7 @@ msgstr ""
 msgid ""
 "The ``mod_python`` request handler will be removed. The ``mod_wsgi`` handler"
 " should be used instead."
-msgstr ""
+msgstr "Penanganan permintaan ``mod_python`` akan dipindahkan. Penanganan ``mod_wsgi`` harus digunakan."
 
 #: ../../../../sources/1.9/docs/internals/deprecation.txt:675
 msgid ""
@@ -5871,7 +5872,7 @@ msgid ""
 "``django.utils.translation.get_partial_date_formats()``. These functions "
 "will be removed; use the locale-aware ``django.utils.formats.get_format()`` "
 "to get the appropriate formats."
-msgstr ""
+msgstr "``django.utils.translation.get_date_formats()`` dan ``django.utils.translation.get_partial_date_formats()``. Fungsi ini telah dipindahkan; gunakan  locale-aware ``django.utils.formats.get_format()`` untuk mendapatkan bentuk yang sesuai."
 
 #: ../../../../sources/1.9/docs/internals/deprecation.txt:812
 msgid ""
@@ -6009,7 +6010,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/git.txt:32
 msgid "The Git repository includes several `branches`_:"
-msgstr ""
+msgstr "Gudang Git menyertakan beberapa `branches`_:"
 
 #: ../../../../sources/1.9/docs/internals/git.txt:34
 msgid ""
@@ -6390,7 +6391,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:27
 msgid "The short version of the steps involved is:"
-msgstr ""
+msgstr "Versi pendek dari langkah-langkah bersangkutan adalah:"
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:29
 msgid ""
@@ -6551,7 +6552,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:126
 msgid ":ref:`Update the django-admin manual page <django-admin-manpage>`::"
-msgstr ""
+msgstr ":ref:`Update the django-admin manual page <django-admin-manpage>`::"
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:133
 msgid "and then commit the changed man page."
@@ -6627,13 +6628,13 @@ msgstr ""
 msgid ""
 "Update the version number in ``django/__init__.py`` for the release. Please "
 "see `notes on setting the VERSION tuple`_ below for details on ``VERSION``."
-msgstr ""
+msgstr "Perbaharui angka versi di ``django/__init__.py`` untuk terbitan. Silahkan lihat  `notes on setting the VERSION tuple`_ dibawah ini untuk rincian pada ``VERSION``."
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:194
 msgid ""
 "In 1.4, the version number in ``docs/conf.py`` and ``setup.py`` should also "
 "be updated. Here's `an example commit updating version numbers`__ for that."
-msgstr ""
+msgstr "Dalam 1.4, angka versi di ``docs/conf.py`` dan ``setup.py`` harus diperbaharui. Ini adalah `an example commit updating version numbers`__ untuk itu."
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:199
 msgid ""
@@ -6648,16 +6649,16 @@ msgstr "Etiket diterbitkan menggunakan ``etiket git``. Sebagai contoh::"
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:207
 msgid "You can check your work by running ``git tag --verify <tag>``."
-msgstr ""
+msgstr "Anda dapat memeriksa pekerjaan anda dengan menjalankan ``git tag --verify <tag>``."
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:209
 msgid "Push your work, including the tag: ``git push --tags``."
-msgstr ""
+msgstr "Dorong pekerjaan anda, termasuk etiket: ``git push --tags``. "
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:211
 msgid ""
 "Make sure you have an absolutely clean tree by running ``git clean -dfx``."
-msgstr ""
+msgstr "Pastikan anda mempunyai pohon sepenuhnya bersih dengan menjalankan ``git clean -dfx``."
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:213
 msgid ""
@@ -6697,7 +6698,7 @@ msgstr "Membuat terbitan tesedia ke umum"
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:285
 msgid "Now you're ready to actually put the release out there. To do this:"
-msgstr ""
+msgstr "Sekarang anda siap benar-benar menaruh terbitan diluar sana. Untuk melakukan ini:"
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:287
 msgid ""
@@ -6719,7 +6720,7 @@ msgstr ""
 msgid ""
 "This just tests that the tarballs are available (i.e. redirects are up) and "
 "that they install correctly, but it'll catch silly mistakes."
-msgstr ""
+msgstr "Ini hanya percobaan dimana tarball tersedia (yaitu pengalihan hidup) dan dimana mereka memasang dengan benar, tetapi dia akan menangkap kesalahan-kesalahan bodoh."
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:317
 msgid ""
@@ -6747,7 +6748,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:336
 msgid "Make the blog post announcing the release live."
-msgstr ""
+msgstr "Buat blog menempatkan pengumuman terbitan langsung."
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:338
 msgid ""
@@ -6856,7 +6857,7 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:407
 msgid "Notes on setting the VERSION tuple"
-msgstr ""
+msgstr "Catatan pada pengaturan tuple VERSION"
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:409
 msgid ""
@@ -6878,20 +6879,20 @@ msgstr "Versi mikro."
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:416
 msgid "Status -- can be one of \"alpha\", \"beta\", \"rc\" or \"final\"."
-msgstr ""
+msgstr "Keadaan -- dapat menjadi satu dari \"alpha\", \"beta\", \"rc\" atau \"final\"."
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:417
 msgid ""
 "Series number, for alpha/beta/RC packages which run in sequence (allowing, "
 "for example, \"beta 1\", \"beta 2\", etc.)."
-msgstr ""
+msgstr "Rangkaian angka, untuk paket alpha/beta/RC yang berjalan dalam urutan (mengizinkan, sebagai contoh, \"beta 1\", \"beta 2\", etc.)."
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:420
 msgid ""
 "For a final release, the status is always \"final\" and the series number is"
 " always 0. A series number of 0 with an \"alpha\" status will be reported as"
 " \"pre-alpha\"."
-msgstr ""
+msgstr "Untuk terbitan akhir, keadaan selalu \"final\" dan rangkaian angka selalu 0. Rangkaian angka dari 0 dengan keadaan \"alpha\" akan dilaporkan sebagai \"pre-alpha\". "
 
 #: ../../../../sources/1.9/docs/internals/howto-release-django.txt:424
 msgid "Some examples:"
@@ -6927,7 +6928,7 @@ msgstr "Daftar penyuratan"
 msgid ""
 "Django has several official mailing lists on Google Groups that are open to "
 "anyone."
-msgstr ""
+msgstr "Django mempunyai beberapa daftar penyuratan resmi di Google Groups yang terbuka untuk siapapun."
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:19
 msgid "``django-users``"
@@ -6937,14 +6938,14 @@ msgstr "``django-users``"
 msgid ""
 "This is the right place if you are looking to ask any question regarding the"
 " installation, usage, or debugging of Django."
-msgstr ""
+msgstr "Ini adalah tempat tepat jika anda mencari menanyakan pertanyaan apapun mengenai pemasangan, penggunaan, atau pengecek kesalahan dari Django."
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:26
 msgid ""
 "If it's the first time you send an email to this list, your email must be "
 "accepted first so don't worry if :ref:`your message does not appear "
 "<message-does-not-appear-on-django-users>` instantly."
-msgstr ""
+msgstr "Jika ini pertama kali anda mengirim surel ke daftar ini, surel anda harus diterima terlebih dahulu jadi jangan khawatir jika :ref:`your message does not appear <message-does-not-appear-on-django-users>` sekarang juga."
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:30
 msgid "`django-users mailing archive`_"
@@ -6956,7 +6957,7 @@ msgstr "`alamat email langganan pengguna-django`_"
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:32
 msgid "`django-users posting email`_"
-msgstr ""
+msgstr "`django-users posting email`_"
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:41
 msgid "``django-core-mentorship``"
@@ -6971,15 +6972,15 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:47
 msgid "`django-core-mentorship mailing archive`_"
-msgstr ""
+msgstr "`django-core-mentorship mailing archive`_"
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:48
 msgid "`django-core-mentorship subscription email address`_"
-msgstr ""
+msgstr "`django-core-mentorship subscription email address`_"
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:49
 msgid "`django-core-mentorship posting email`_"
-msgstr ""
+msgstr "`django-core-mentorship posting email`_"
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:58
 msgid "``django-developers``"
@@ -6988,26 +6989,26 @@ msgstr "``django-developers``"
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:60
 msgid ""
 "The discussion about the development of Django itself takes place here."
-msgstr ""
+msgstr "Obrolan mengenai pengembangan Django iru sendiri mengambil tempat disini."
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:64
 msgid ""
 "Please make use of :ref:`django-users mailing list <django-users-mailing-"
 "list>` if you want to ask for tech support, doing so in this list is "
 "inappropriate."
-msgstr ""
+msgstr "Silahkan menggunakan :ref:`django-users mailing list <django-users-mailing-list>` jika anda ingin meminta dukungan teknis, melakukan itu dalam daftar ini adalah tidak sesuai."
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:68
 msgid "`django-developers mailing archive`_"
-msgstr ""
+msgstr "`django-i18n subscription email address`_"
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:69
 msgid "`django-developers subscription email address`_"
-msgstr ""
+msgstr "`django-developers subscription email address`_"
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:70
 msgid "`django-developers posting email`_"
-msgstr ""
+msgstr "`django-developers posting email`_"
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:79
 msgid "``django-i18n``"
@@ -7021,15 +7022,15 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:84
 msgid "`django-i18n mailing archive`_"
-msgstr ""
+msgstr "`django-i18n posting email`_"
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:85
 msgid "`django-i18n subscription email address`_"
-msgstr ""
+msgstr "`django-i18n subscription email address`_"
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:86
 msgid "`django-i18n posting email`_"
-msgstr ""
+msgstr "`django-i18n posting email`_"
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:95
 msgid "``django-announce``"
@@ -7043,15 +7044,15 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:100
 msgid "`django-announce mailing archive`_"
-msgstr ""
+msgstr "`django-announce mailing archive`_"
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:101
 msgid "`django-announce subscription email address`_"
-msgstr ""
+msgstr "`django-announce subscription email address`_"
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:102
 msgid "`django-announce posting email`_"
-msgstr ""
+msgstr "`django-announce posting email`_"
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:111
 msgid "``django-updates``"
@@ -7065,15 +7066,15 @@ msgstr ""
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:116
 msgid "`django-updates mailing archive`_"
-msgstr ""
+msgstr "`django-updates mailing archive`_"
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:117
 msgid "`django-updates subscription email address`_"
-msgstr ""
+msgstr "`django-updates subscription email address`_"
 
 #: ../../../../sources/1.9/docs/internals/mailing-lists.txt:118
 msgid "`django-updates posting email`_"
-msgstr ""
+msgstr "`django-updates subscription email address`_"
 
 #: ../../../../sources/1.9/docs/internals/organization.txt:3
 msgid "Organization of the Django Project"
@@ -7090,7 +7091,7 @@ msgstr "Proyek Django dikelola oleh tim dari sukarelawan mengejar tiga sasaran:"
 
 #: ../../../../sources/1.9/docs/internals/organization.txt:10
 msgid "Driving the development of the Django Web Framework,"
-msgstr ""
+msgstr "Menggerakkan pengembangan dari Kerangka Kerja Jaringan Django,"
 
 #: ../../../../sources/1.9/docs/internals/organization.txt:11
 msgid "Fostering the ecosystem of Django-related software,"

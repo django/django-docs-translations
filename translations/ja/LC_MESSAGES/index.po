@@ -6,17 +6,18 @@
 # xiu1 <d84ea@hotmail.co.jp>, 2015-2016
 # Hiroki KIYOHARA <hirokiky@gmail.com>, 2013-2014
 # Hiroki KIYOHARA <hirokiky@gmail.com>, 2013
-# Masashi Shibata <contact@c-bata.link>, 2015
-# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016
-# Yusuke Miyazaki <miyazaki.dev@gmail.com>, 2015
+# MASASHI Shibata <contact@c-bata.link>, 2015-2016
+# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016
+# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016
+# Yusuke Miyazaki <miyazaki.dev@gmail.com>, 2015-2016
 # Yuto Horiuchi <hotz07ggl@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-24 16:09-0600\n"
-"PO-Revision-Date: 2016-02-07 11:49+0000\n"
-"Last-Translator: xiu1 <d84ea@hotmail.co.jp>\n"
+"POT-Creation-Date: 2016-07-28 18:06-0500\n"
+"PO-Revision-Date: 2016-03-26 02:46+0000\n"
+"Last-Translator: Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -133,7 +134,7 @@ msgstr "**チュートリアルはこちら:** :doc:`その 1: リクエスト�
 msgid ""
 "**Advanced Tutorials:** :doc:`How to write reusable apps <intro/reusable-"
 "apps>` | :doc:`Writing your first patch for Django <intro/contributing>`"
-msgstr "**高度なチュートリアル:** :doc:`再利用可能なアプリケーションな書き方 <intra/reusable-apps>' | :doc:`Django へのパッチを初めて書くには <intro/contributing>`"
+msgstr "**高度なチュートリアル:** :doc:`再利用可能なアプリケーションの書き方 <intra/reusable-apps>` | :doc:`Django へのパッチを初めて書くには <intro/contributing>`"
 
 #: ../../../../sources/1.9/docs/index.txt:77
 msgid "The model layer"
@@ -143,7 +144,7 @@ msgstr "モデル層"
 msgid ""
 "Django provides an abstraction layer (the \"models\") for structuring and "
 "manipulating the data of your Web application. Learn more about it below:"
-msgstr "Django は Web アプリケーションのデータ構造を定義、操作するための抽象レイヤ (\"モデル\") を提供しています。詳細は以下になります:"
+msgstr "Django は、Web アプリケーションのデータ構造を定義、操作するための抽象レイヤとして、「モデル (models)」と呼ばれるしくみを提供しています。以下で詳細を学びましょう。"
 
 #: ../../../../sources/1.9/docs/index.txt:82
 msgid ""
@@ -157,7 +158,7 @@ msgid ""
 "**QuerySets:** :doc:`Executing queries <topics/db/queries>` | :doc:`QuerySet"
 " method reference <ref/models/querysets>` | :doc:`Lookup expressions "
 "<ref/models/lookups>`"
-msgstr "**クエリセットとは:** :doc:`クエリの実行 <topics/db/queries>` | :doc:`QuerySet メソッドリファレンス <ref/models/querysets>` | `doc:` 条件式 <ref/models/lookups>`"
+msgstr "**クエリセットとは:** :doc:`クエリの実行 <topics/db/queries>` | :doc:`QuerySet メソッドリファレンス <ref/models/querysets>` | :doc:`条件式 <ref/models/lookups>`"
 
 #: ../../../../sources/1.9/docs/index.txt:93
 msgid ""
@@ -170,7 +171,7 @@ msgid ""
 "**Migrations:** :doc:`Introduction to Migrations<topics/migrations>` | "
 ":doc:`Operations reference <ref/migration-operations>` | :doc:`SchemaEditor "
 "<ref/schema-editor>` | :doc:`Writing migrations <howto/writing-migrations>`"
-msgstr "**マイグレーションとは:** :doc:`マイグレーションの解説 <topics/migrations>` | :doc:`操作方法リファレンス <ref/migration-operations>` | :doc:`SchemaEditor <ref/schema-editor>` | :doc: `マイグレーションを書くには <howto/writing-migrations>`"
+msgstr "**マイグレーションとは:** :doc:`マイグレーションの解説 <topics/migrations>` | :doc:`操作方法リファレンス <ref/migration-operations>` | :doc:`SchemaEditor <ref/schema-editor>` | :doc:`マイグレーションを書くには <howto/writing-migrations>`"
 
 #: ../../../../sources/1.9/docs/index.txt:103
 msgid ""
@@ -182,7 +183,7 @@ msgid ""
 "<ref/models/expressions>` | :doc:`Conditional Expressions <ref/models"
 "/conditional-expressions>` | :doc:`Database Functions <ref/models/database-"
 "functions>`"
-msgstr "**モデルの高度な話題:** :doc:`マネジャ (Manager) <topics/db/managers>` | :doc:`素の SQL を扱うには <topics/db/sql>` | :doc:`トランザクション <topics/db/transactions>` | :doc:`アグリゲーション <topics/db/aggregation>` | :doc:`フィールド型を自作するには <howto/custom-model-fields>` | :doc:`複数データベースを扱うには <topics/db/multi-db>` | :doc:`lookupフィルタを自作するには <howto/custom-lookups>` | :doc: `クエリを書くには <ref/models/expressions>` | :doc:`条件分岐をするには <ref/models/conditional-expressions>` | :doc:`データベースの機能 <ref/models/database-functions>`"
+msgstr "**モデルの高度な話題:** :doc:`マネージャ (Manager) <topics/db/managers>` | :doc:`素の SQL を扱うには <topics/db/sql>` | :doc:`トランザクション <topics/db/transactions>` | :doc:`アグリゲーション <topics/db/aggregation>` | :doc:`フィールド型を自作するには <howto/custom-model-fields>` | :doc:`複数データベースを扱うには <topics/db/multi-db>` | :doc:`lookupフィルタを自作するには <howto/custom-lookups>` | :doc:`クエリを書くには <ref/models/expressions>` | :doc:`条件分岐をするには <ref/models/conditional-expressions>` | :doc:`データベースの機能 <ref/models/database-functions>`"
 
 #: ../../../../sources/1.9/docs/index.txt:115
 msgid ""
@@ -201,7 +202,7 @@ msgid ""
 "Django has the concept of \"views\" to encapsulate the logic responsible for"
 " processing a user's request and for returning the response. Find all you "
 "need to know about views via the links below:"
-msgstr "Django には \"ビュー\" という概念があります。ビューはユーザーリクエストを処理し、レスポンスを返すロジックをカプセル化したものです。ビューについて知るべきことは、全て以下のリンクにあります:"
+msgstr "Django には「ビュー (views)」という概念があります。ビューは、ユーザーリクエストを処理してレスポンスを返すロジックをカプセル化したものです。以下のリンクから、ビューについて知るべきことがすべてわかります。"
 
 #: ../../../../sources/1.9/docs/index.txt:129
 msgid ""
@@ -256,11 +257,11 @@ msgid ""
 "The template layer provides a designer-friendly syntax for rendering the "
 "information to be presented to the user. Learn how this syntax can be used "
 "by designers and how it can be extended by programmers:"
-msgstr "テンプレート層はユーザに提示される情報の描画を行います。テンプレートはデザイナーに書きやすいものになっています。テンプレートの構文がデザイナーにどのように使われるか、またプログラマーがどのように拡張できるのかを学びましょう:"
+msgstr "テンプレート層は、ユーザに表示される情報をレンダリングするための、デザイナーにも書きやすい構文を提供します。デザイナーによるテンプレートの構文の使い方や、プログラマーが構文を拡張する方法について学びましょう。"
 
 #: ../../../../sources/1.9/docs/index.txt:170
 msgid "**The basics:** :doc:`Overview <topics/templates>`"
-msgstr "**基本:** :doc: `概要 <topics/templates>`"
+msgstr "**基本:** :doc:`概要 <topics/templates>`"
 
 #: ../../../../sources/1.9/docs/index.txt:173
 msgid ""
@@ -283,7 +284,7 @@ msgstr "フォーム"
 msgid ""
 "Django provides a rich framework to facilitate the creation of forms and the"
 " manipulation of form data."
-msgstr "Django はフォームの作成とフォームデータの操作を容易にする、多機能フレームワークを提供しています。"
+msgstr "Django は、簡単にフォームを作成し、フォームに入力されたデータを簡単に操作できるようにしてくれる、多機能なフレームワークを提供しています。"
 
 #: ../../../../sources/1.9/docs/index.txt:188
 msgid ""
@@ -308,7 +309,7 @@ msgstr "開発プロセス"
 msgid ""
 "Learn about the various components and tools to help you in the development "
 "and testing of Django applications:"
-msgstr "Django アプリケーションの開発とテストに役立つ、さまざまなコンポーネントとツールについて学ましょう:"
+msgstr "Django アプリケーションの開発とテストに役立つ、さまざまなコンポーネントとツールについて学ましょう。"
 
 #: ../../../../sources/1.9/docs/index.txt:206
 msgid ""
@@ -353,7 +354,7 @@ msgstr "管理インタフェース"
 msgid ""
 "Find all you need to know about the automated admin interface, one of "
 "Django's most popular features:"
-msgstr "Django の目玉機能の一つである、自動生成の管理インタフェースのすべてを学べます:"
+msgstr "Django の目玉機能の一つである、自動生成の管理インタフェースのすべてを学べます。"
 
 #: ../../../../sources/1.9/docs/index.txt:238
 msgid ":doc:`Admin site <ref/contrib/admin/index>`"
@@ -375,7 +376,7 @@ msgstr "セキュリティ"
 msgid ""
 "Security is a topic of paramount importance in the development of Web "
 "applications and Django provides multiple protection tools and mechanisms:"
-msgstr "セキュリティは Web アプリケーションを開発するなかで最も重要なトピックです。 Django は複数のプロテクションツールとメカニズムを提供しています:"
+msgstr "セキュリティは Web アプリケーションを開発する中でも最も重要なトピックです。Django は、複数のプロテクションのためのツールとメカニズムを提供しています。"
 
 #: ../../../../sources/1.9/docs/index.txt:248
 msgid ":doc:`Security overview <topics/security>`"
@@ -403,14 +404,14 @@ msgstr ":ref:`ミドルウェアのセキュリティ <security-middleware>`"
 
 #: ../../../../sources/1.9/docs/index.txt:256
 msgid "Internationalization and localization"
-msgstr "国際化と局地化"
+msgstr "国際化と地域化"
 
 #: ../../../../sources/1.9/docs/index.txt:258
 msgid ""
 "Django offers a robust internationalization and localization framework to "
 "assist you in the development of applications for multiple languages and "
 "world regions:"
-msgstr "Django は堅牢な国際化 (internationalization) 、ローカライズ (localization) フレームワークを提供しています。多言語、世界の各地域に対応したアプリケーションを開発する助けになります:"
+msgstr "Django は堅牢な国際化 (internationalization) 、地域化 (localization) フレームワークを提供しています。多言語、世界の各地域に対応したアプリケーションを開発する助けになります。"
 
 #: ../../../../sources/1.9/docs/index.txt:262
 msgid ""
@@ -446,15 +447,15 @@ msgstr "異なる Python への互換性"
 msgid ""
 "Django aims to be compatible with multiple different flavors and versions of"
 " Python:"
-msgstr "Django は複数の異なる Python のバージョン、実装に互換性があります:"
+msgstr "Django は複数の異なる Python のバージョン、実装に互換性があります。"
 
 #: ../../../../sources/1.9/docs/index.txt:282
 msgid ":doc:`Jython support <howto/jython>`"
-msgstr "Jython で動かす"
+msgstr ":doc:`Jython で動かす <howto/jython>`"
 
 #: ../../../../sources/1.9/docs/index.txt:283
 msgid ":doc:`Python 3 compatibility <topics/python3>`"
-msgstr "Python 3 対応"
+msgstr ":doc:`Python 3 対応 <topics/python3>`"
 
 #: ../../../../sources/1.9/docs/index.txt:286
 msgid "Geographic framework"
@@ -475,7 +476,7 @@ msgstr "一般的な Web アプリケーションツール群"
 msgid ""
 "Django offers multiple tools commonly needed in the development of Web "
 "applications:"
-msgstr "Django は Web アプリケーションの開発でいつも必要になるツール群を提供しています:"
+msgstr "Django は Web アプリケーションの開発でいつも必要になるツール群を提供しています。"
 
 #: ../../../../sources/1.9/docs/index.txt:298
 msgid ""
@@ -535,7 +536,7 @@ msgstr "その他のコア機能"
 
 #: ../../../../sources/1.9/docs/index.txt:319
 msgid "Learn about some other core functionalities of the Django framework:"
-msgstr "Django フレームワークの、その他の主要機能について学びましょう:"
+msgstr "Django フレームワークの、その他の主要機能について学びましょう。"
 
 #: ../../../../sources/1.9/docs/index.txt:321
 msgid ""
@@ -578,7 +579,7 @@ msgstr "オープンソースプロジェクトとしての Django"
 msgid ""
 "Learn about the development process for the Django project itself and about "
 "how you can contribute:"
-msgstr "Django プロジェクト自身の開発プロセスと、どのようにプロジェクトに貢献するのかを学びましょう:"
+msgstr "Django プロジェクト自身の開発プロセスと、プロジェクトに貢献する方法について学びましょう。"
 
 #: ../../../../sources/1.9/docs/index.txt:336
 msgid ""
@@ -592,7 +593,7 @@ msgstr "**コミュニティ:** :doc:`参加するには <internals/contributing
 
 #: ../../../../sources/1.9/docs/index.txt:346
 msgid "**Design philosophies:** :doc:`Overview <misc/design-philosophies>`"
-msgstr "**設計哲学:** :doc:`概要 <misc/design-philosophies>`"
+msgstr "**設計思想:** :doc:`概要 <misc/design-philosophies>`"
 
 #: ../../../../sources/1.9/docs/index.txt:349
 msgid ""
