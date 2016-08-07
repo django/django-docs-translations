@@ -1,0 +1,1294 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# 
+# Translators:
+# Nick Mavrakis <mavrakis.n@gmail.com>, 2016
+# Nick Mavrakis <mavrakis.n@gmail.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: django-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-06 10:17-0500\n"
+"PO-Revision-Date: 2016-08-02 11:09+0000\n"
+"Last-Translator: Nick Mavrakis <mavrakis.n@gmail.com>\n"
+"Language-Team: Greek (http://www.transifex.com/django/django-docs/language/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:3
+msgid "FAQ: The admin"
+msgstr "Συχνές Ερωτήσεις: Το admin site"
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:6
+msgid ""
+"I can't log in. When I enter a valid username and password, it just brings "
+"up the login page again, with no error messages."
+msgstr "Δε μπορώ να συνδεθώ. Όταν εισάγω τα σωστά username και password, επαναφορτώνεται η ίδια login σελίδα, χωρίς μηνύματα σφάλματος."
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:8
+msgid ""
+"The login cookie isn't being set correctly, because the domain of the cookie"
+" sent out by Django doesn't match the domain in your browser. Try setting "
+"the :setting:`SESSION_COOKIE_DOMAIN` setting to match your domain. For "
+"example, if you're going to \"https://www.example.com/admin/\" in your "
+"browser, set ``SESSION_COOKIE_DOMAIN = 'www.example.com'``."
+msgstr "Το cookie που αφορά το login δεν έχει σεταριστεί σωστά, επειδή το domain του cookie που έστειλε το Django δεν ταιριάζει με το domain στον browser σας. Δοκιμάστε να θέσετε τη ρύθμιση :setting:`SESSION_COOKIE_DOMAIN` μέσα στο γενικό αρχείο ρυθμίσεων ούτως ώστε να ταιριάζει με το domain σας. Για παράδειγμα, αν επισκέπτεστε τη σελίδα \"https://www.example.com/admin/\" με τον browser, τότε στο γενικό αρχείο ρυθμίσεων του project σας, \"myproject.settings\", θα θέσετε τη ρύθμιση :setting:`SESSION_COOKIE_DOMAIN` = 'www.example.com'."
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:15
+msgid ""
+"I can't log in. When I enter a valid username and password, it brings up the"
+" login page again, with a \"Please enter a correct username and password\" "
+"error."
+msgstr "Δε μπορώ να συνδεθώ. Όταν εισάγω τα σωστά username και password, επαναφορτώνεται η ίδια login σελίδα, με ένα σφάλμα που λέει \"Παρακαλώ εισάγετε το σωστό username και κωδικό\"."
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:17
+msgid ""
+"If you're sure your username and password are correct, make sure your user "
+"account has :attr:`~django.contrib.auth.models.User.is_active` and "
+":attr:`~django.contrib.auth.models.User.is_staff` set to True. The admin "
+"site only allows access to users with those two fields both set to True."
+msgstr "Εάν είστε σίγουροι ότι το όνομα χρήστη και ο κωδικός σας είναι σωστά, σιγουρευτείτε ότι η τιμή της ρύθμισης :attr:`~django.contrib.auth.models.User.is_active` και :attr:`~django.contrib.auth.models.User.is_staff`, του λογαριασμού σας, είναι True. Το admin site επιτρέπει την είσοδο μόνο σε άτομα που η τιμή και των δύο αυτών πεδίων είναι True."
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:23
+msgid ""
+"How do I automatically set a field's value to the user who last edited the "
+"object in the admin?"
+msgstr "Πως μπορώ να σετάρω μια τιμή ενός πεδίου πάνω στον χρήστη που αλληλεπίδρασε τελευταίος με κάποιο object μέσω του admin;"
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:25
+msgid ""
+"The :class:`~django.contrib.admin.ModelAdmin` class provides customization "
+"hooks that allow you to transform an object as it saved, using details from "
+"the request. By extracting the current user from the request, and "
+"customizing the :meth:`~django.contrib.admin.ModelAdmin.save_model` hook, "
+"you can update an object to reflect the user that edited it. See :ref:`the "
+"documentation on ModelAdmin methods <model-admin-methods>` for an example."
+msgstr "Η κλάση :class:`~django.contrib.admin.ModelAdmin` παρέχει παραμετροποιήσιμα  hooks τα οποία σας επιτρέπουν να επιδράσετε με ένα object πριν και μετά την αποθήκευση του, χρησιμοποιώντας πληροφορίες από το request. Αντλώντας τον τρέχον χρήστη από το request και κάνοντας override τη μέθοδο (ή hook, αν θέλετε) :meth:`~django.contrib.admin.ModelAdmin.save_model`, μπορείτε να αλλάξετε το object προκειμένου να δείχνει στον user που το άλλαξε. Δείτε στο :ref:`εγχειρίδιο σχετικά με τις μεθόδους του ModelAdmin <model-admin-methods>` για παραδείγματα."
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:33
+msgid ""
+"How do I limit admin access so that objects can only be edited by the users "
+"who created them?"
+msgstr "Πως μπορώ να περιορίσω την πρόσβαση στο admin site ούτως ώστε τα objects να τα επεξεργάζονται μόνο οι χρήστες που τα δημιούργησαν;"
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:35
+msgid ""
+"The :class:`~django.contrib.admin.ModelAdmin` class also provides "
+"customization hooks that allow you to control the visibility and editability"
+" of objects in the admin. Using the same trick of extracting the user from "
+"the request, the :meth:`~django.contrib.admin.ModelAdmin.get_queryset` and "
+":meth:`~django.contrib.admin.ModelAdmin.has_change_permission` can be used "
+"to control the visibility and editability of objects in the admin."
+msgstr "Η κλάση :class:`~django.contrib.admin.ModelAdmin` παρέχει, επίσης, επιπλέον hooks (μεθόδους, αν θέλετε) τα οποία σας επιτρέπουν να ελέγχετε την προβολή ή όχι καθώς και την δυνατότητα επεξεργασίας των objects στο admin. Χρησιμοποιώντας την ίδια μέθοδο άντλησης του user από το request, οι μέθοδοι :meth:`~django.contrib.admin.ModelAdmin.get_queryset` και :meth:`~django.contrib.admin.ModelAdmin.has_change_permission` μπορούν να χρησιμοποιηθούν προκειμένου να ελέγξετε την προβολή ή όχι καθώς και την δυνατότητα επεξεργασίας των objects στο admin."
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:43
+msgid ""
+"My admin-site CSS and images showed up fine using the development server, "
+"but they're not displaying when using mod_wsgi."
+msgstr "Τα αρχεία CSS και οι εικόνες δουλεύουν στο admin-site μου χρησιμοποιώντας τον development server, αλλά όχι όταν χρησιμοποιώ το mod_wsgi."
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:45
+msgid ""
+"See :ref:`serving the admin files <serving-the-admin-files>` in the \"How to"
+" use Django with mod_wsgi\" documentation."
+msgstr "Δείτε στο :ref:`εξυπηρετώντας τα αρχεία του admin <serving-the-admin-files>` μέσα στο εγχειρίδιο \"Πως να χρησιμοποιήσω το Django με το mod_wsgi\"."
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:49
+msgid ""
+"My \"list_filter\" contains a ManyToManyField, but the filter doesn't "
+"display."
+msgstr "Η επιλογή \"list_filter\" περιέχει ένα πεδίο τύπου ManyToManyField, αλλά το φίλτρο δεν εμφανίζεται."
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:51
+msgid ""
+"Django won't bother displaying the filter for a ``ManyToManyField`` if there"
+" are fewer than two related objects."
+msgstr "Το Django δεν θα εμφανίσει το φίλτρο για πεδία τύπου ``ManyToManyField`` αν υπάρχουν λιγότερα από δύο συσχετισμένα objects."
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:54
+msgid ""
+"For example, if your :attr:`~django.contrib.admin.ModelAdmin.list_filter` "
+"includes :doc:`sites </ref/contrib/sites>`, and there's only one site in "
+"your database, it won't display a \"Site\" filter. In that case, filtering "
+"by site would be meaningless."
+msgstr "Για παράδειγμα, αν η επιλογή :attr:`~django.contrib.admin.ModelAdmin.list_filter` περιέχει τα :doc:`sites </ref/contrib/sites>` και υπάρχει μόνο ένα site στη βάση δεδομένων σας, το φίλτρο \"Ιστότοποι\" δεν θα εμφανιστεί. Δεν έχει νόημα να φιλτράρετε κάτι αν υπάρχει μόνο ένα αποτέλεσμα!"
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:60
+msgid "Some objects aren't appearing in the admin."
+msgstr "Μερικά objects δεν εμφανίζονται στο admin."
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:62
+msgid ""
+"Inconsistent row counts may be caused by missing foreign key values or a "
+"foreign key field incorrectly set to :attr:`null=False "
+"<django.db.models.Field.null>`. If you have a record with a "
+":class:`~django.db.models.ForeignKey` pointing to a non-existent object and "
+"that foreign key is included is "
+":attr:`~django.contrib.admin.ModelAdmin.list_display`, the record will not "
+"be shown in the admin changelist because the Django model is declaring an "
+"integrity constraint that is not implemented at the database level."
+msgstr "Αυτό οφείλετε συνήθως όταν έχετε ένα object του οποίου το :class:`~django.db.models.ForeignKey` δείχνει σε κάποιο ανύπαρκτο object όπου αυτό το foreign key έχει δηλωθεί μέσα στο :attr:`~django.contrib.admin.ModelAdmin.list_display`. Αυτό το object δεν θα εμφανιστεί στη σελίδα changelist του admin γιατί το Django model δηλώνει ένα integrity contraint το οποίο δεν υλοποιείται από τη βάση δεδομένων. Με άλλα λόγια, σε επίπεδο database, οι γραμμές δεν συνάδουν μεταξύ τους είτε γιατί λείπει κάποιο foreign key είτε γιατί κάποιο foreign key field λανθασμένα είναι :attr:`null=False <django.db.models.Field.null>`."
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:72
+msgid "How can I customize the functionality of the admin interface?"
+msgstr "Πως μπορώ να παραμετροποιήσω τη λειτουργία του admin interface;"
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:74
+msgid ""
+"You've got several options. If you want to piggyback on top of an add/change"
+" form that Django automatically generates, you can attach arbitrary "
+"JavaScript modules to the page via the model's class Admin :ref:`js "
+"parameter <modeladmin-asset-definitions>`. That parameter is a list of URLs,"
+" as strings, pointing to JavaScript modules that will be included within the"
+" admin form via a ``<script>`` tag."
+msgstr "Έχετε πολλές επιλογές. Αν θέλετε να ενεργήσετε πάνω στη φόρμα προσθήκη/αλλαγή που το Django δημιουργεί αυτόματα, μπορείτε να εφαρμόσετε δικά σας JavaScript modules στη σελίδα, μέσω της παραμέτρου :ref:`js parameter <modeladmin-asset-definitions>` της κλάσης Admin του μοντέλου. Αυτή η παράμετρος είναι στην ουσία μια λίστα με URLs, σαν strings, τα οποία δείχνουν σε JavaScript modules τα οποία θα συμπεριληφθούν στην φόρμα του admin μέσω του tag ``<script>``."
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:81
+msgid ""
+"If you want more flexibility than simply tweaking the auto-generated forms, "
+"feel free to write custom views for the admin. The admin is powered by "
+"Django itself, and you can write custom views that hook into the "
+"authentication system, check permissions and do whatever else they need to "
+"do."
+msgstr "Αν θέλετε περισσότερη ελευθερία από το να πειράξετε την αυτόματα παραγόμενη φόρμα, μπορείτε να γράψετε δικά σας views για το admin. Το admin υποστηρίζεται από το ίδιο το Django και γι' αυτό το λόγο μπορείτε να γράψετε δικά σας views τα οποία μπορούν να “πατήσουν” π.χ πάνω στο authentication system ή να ελέγξουν για permissions ή οτιδήποτε άλλο μπορείτε να φανταστείτε."
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:86
+msgid ""
+"If you want to customize the look-and-feel of the admin interface, read the "
+"next question."
+msgstr "Αν θέλετε να αλλάξετε την εμφάνιση του, διαβάστε την επόμενη ερώτηση."
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:90
+msgid "The dynamically-generated admin site is ugly! How can I change it?"
+msgstr "Το δυναμικά παραγόμενο admin site είναι άσχημο! Πως μπορώ να το αλλάξω;"
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:92
+msgid ""
+"We like it, but if you don't agree, you can modify the admin site's "
+"presentation by editing the CSS stylesheet and/or associated image files. "
+"The site is built using semantic HTML and plenty of CSS hooks, so any "
+"changes you'd like to make should be possible by editing the stylesheet."
+msgstr "Μας αρέσει, αλλά αν διαφωνείτε, μπορείτε να αλλάξετε την εμφάνιση του επεξεργάζοντας τα αρχεία CSS και/ή τις εικόνες. Το site χτίστηκε χρησιμοποιώντας semantic HTML και πολλά CSS hooks κάτι το οποίο σημαίνει ότι όποιες αλλαγές θελήσετε να κάνετε δεν έχετε παρά να επεξεργαστείτε τα αρχεία CSS."
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:98
+msgid "What browsers are supported for using the admin?"
+msgstr "Ποιους browsers υποστηρίζει το admin;"
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:100
+msgid ""
+"The admin provides a fully-functional experience to `YUI's A-grade`_ "
+"browsers, with the notable exception of IE6, which is not supported."
+msgstr "Το admin παρέχει πλήρη λειτουργικότητα για τους `YUI's A-grade`_ browsers, με εξαίρεση τον IE6, ο οποίος δεν υποστηρίζεται."
+
+#: ../../../../sources/1.10/docs/faq/admin.txt:103
+msgid ""
+"There *may* be minor stylistic differences between supported browsers—for "
+"example, some browsers may not support rounded corners. These are considered"
+" acceptable variations in rendering."
+msgstr "Υπάρχει *πιθανότητα* να υπάρχουν κάποιες μικρές στυλιστικές διαφορές μεταξύ των υποστηριζόμενων browsers. Για παράδειγμα, μερικοί μπορεί να μην υποστηρίζουν τις στρογγυλεμένες γωνίες. Αυτά θεωρούνται αποδεκτές διαφοροποιήσεις στο rendering."
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:3
+msgid "FAQ: Contributing code"
+msgstr "Συχνές Ερωτήσεις: Συνεισφέροντας κώδικα"
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:6
+msgid "How can I get started contributing code to Django?"
+msgstr "Πως μπορώ να ξεκινήσω να συνεισφέρω κώδικα στο Django;"
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:8
+msgid ""
+"Thanks for asking! We've written an entire document devoted to this "
+"question. It's titled :doc:`Contributing to Django "
+"</internals/contributing/index>`."
+msgstr "Ευχαριστούμε για την ερώτηση! Έχουμε γράψει ολόκληρο άρθρο αφιερωμένο για αυτήν ακριβώς την ερώτηση. Έχει τον τίτλο :doc:`Συνεισφέροντας στο Django </internals/contributing/index>`."
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:12
+msgid ""
+"I submitted a bug fix in the ticket system several weeks ago. Why are you "
+"ignoring my patch?"
+msgstr "Κατέθεσα ένα fix για ένα bug μέσω του ticket system πριν από πολλές εβδομάδες. Γιατί αγνοείτε το patch μου;"
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:14
+msgid "Don't worry: We're not ignoring you!"
+msgstr "Μην ανησυχείτε: Δε σας αγνοούμε!"
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:16
+msgid ""
+"It's important to understand there is a difference between \"a ticket is "
+"being ignored\" and \"a ticket has not been attended to yet.\" Django's "
+"ticket system contains hundreds of open tickets, of various degrees of "
+"impact on end-user functionality, and Django's developers have to review and"
+" prioritize."
+msgstr "Είναι σημαντικό να καταλάβετε τη διαφορά μεταξύ \"ενός ticket το οποίο αγνοείται\" και \"ενός ticket στο οποίο δεν έχει δοθεί προσοχή ακόμα\". Το ticket system του Django περιέχει εκατοντάδες ανοικτά tickets (open tickets), πάνω σε διάφορους τομείς που οι developers του Django πρέπει να τα επιθεωρήσουν (review) και να τους αναθέσουν τις κατάλληλες προτεραιότητες (prioritize)."
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:21
+msgid ""
+"On top of that: the people who work on Django are all volunteers. As a "
+"result, the amount of time that we have to work on the framework is limited "
+"and will vary from week to week depending on our spare time. If we're busy, "
+"we may not be able to spend as much time on Django as we might want."
+msgstr "Εκτός αυτού, οι άνθρωποι που δουλεύουν για το Django είναι όλοι εθελοντές. Ως αποτέλεσμα αυτού, ο χρόνος που απαιτείται για την αφιέρωση στο framework είναι περιορισμένος και θα διαφέρει από βδομάδα σε βδομάδα αναλόγως τον ελεύθερο χρόνο μας. Αν είμαστε απασχολημένοι, ίσως να μην μπορέσουμε να αφιερώσουμε τον χρόνο που θέλουμε στο Django."
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:26
+msgid ""
+"The best way to make sure tickets do not get hung up on the way to checkin "
+"is to make it dead easy, even for someone who may not be intimately familiar"
+" with that area of the code, to understand the problem and verify the fix:"
+msgstr "Ο καλύτερος τρόπος να σιγουρευτείτε ότι τα tickets δεν “κρεμάνε” κατά το checkin είναι να κάνετε πολύ κατανοητό, ακόμη και γι' αυτούς που δεν είναι εξοικειωμένοι με αυτό το κομμάτι του κώδικα, το πρόβλημα και να επιβεβαιώσετε το fix:"
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:30
+msgid ""
+"Are there clear instructions on how to reproduce the bug? If this touches a "
+"dependency (such as Pillow), a contrib module, or a specific database, are "
+"those instructions clear enough even for someone not familiar with it?"
+msgstr "Υπάρχουν ξεκάθαρες οδηγίες για το πως να αναπαραχθεί το σφάλμα (bug); Αν το σφάλμα επηρεάζει κάποιο dependency (όπως το Pillow), ένα contrib module, ή κάποια συγκεκριμένη βάση δεδομένων, είναι οι οδηγίες αρκετά ξεκάθαρες ούτως ώστε να τις διαβάσει κάποιος ο οποίος δεν είναι εξοικειωμένος με αυτό;"
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:35
+msgid ""
+"If there are several patches attached to the ticket, is it clear what each "
+"one does, which ones can be ignored and which matter?"
+msgstr "Αν υπάρχουν αρκετά patches για ένα ticket, είναι ξεκάθαρο το τι κάνει το καθένα, ποια μπορούν να αγνοηθούν και ποια είναι μένουν;"
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:38
+msgid ""
+"Does the patch include a unit test? If not, is there a very clear "
+"explanation why not? A test expresses succinctly what the problem is, and "
+"shows that the patch actually fixes it."
+msgstr "Το patch περιέχει κάποιο unit test; Αν όχι, υπάρχει κάποια σαφής εξήγηση γιατί; Ένα τεστ εκφράζει ευκρινώς ποιο είναι το πρόβλημα και δείχνει ότι το patch στην πραγματικότητα το διορθώνει."
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:42
+msgid ""
+"If your patch stands no chance of inclusion in Django, we won't ignore it --"
+" we'll just close the ticket. So if your ticket is still open, it doesn't "
+"mean we're ignoring you; it just means we haven't had time to look at it "
+"yet."
+msgstr "Αν το patch σας δεν συμπεριληφθεί στο Django, δεν το αγνοούμε -- απλά κλείνουμε το ticket (close ticket). Οπότε, αν το ticket σας είναι ακόμη ανοικτό, αυτό δε σημαίνει ότι σας αγνοούμε. Απλά ότι δεν είχαμε χρόνο να το κοιτάξουμε."
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:47
+msgid "When and how might I remind the core team of a patch I care about?"
+msgstr "Πότε και πως μπορώ να υπενθυμίσω στην core ομάδα ένα patch το οποίο με ενδιαφέρει;"
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:49
+msgid ""
+"A polite, well-timed message to the mailing list is one way to get "
+"attention. To determine the right time, you need to keep an eye on the "
+"schedule. If you post your message when the core developers are trying to "
+"hit a feature deadline or manage a planning phase, you're not going to get "
+"the sort of attention you require. However, if you draw attention to a "
+"ticket when the core developers are paying particular attention to bugs -- "
+"just before a bug fixing sprint, or in the lead up to a beta release for "
+"example -- you're much more likely to get a productive response."
+msgstr "Ένας τρόπος να σας δώσουμε προσοχή είναι ένα ευγενικό και επίκαιρο μήνυμα στη mailing list. Αυτό που θα καθορίσει το πόσο επίκαιρο είναι το μήνυμα σας είναι να παρακολουθείτε το schedule. Αν στείλετε το μήνυμα σας όταν οι core developers προσπαθούν να διεκπεραιώσουν ένα feature εντός κάποιου deadline ή βρίσκονται υπό τη φάση κάποιου σχεδιασμού, τότε δεν θα έχετε την προσοχή που περιμένατε. Ωστόσο, όταν στείλετε το μήνυμα σας κατά τη διάρκεια που οι core developers ασχολούνται με τα bugs -- ακριβώς πριν το διορθώσουν ή βρίσκεται πριν την beta έκδοση του -- τότε είναι πολύ πιο πιθανό να έχετε την πολύτιμη ανταπόκριση τους."
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:58
+msgid ""
+"Gentle IRC reminders can also work -- again, strategically timed if "
+"possible. During a bug sprint would be a very good time, for example."
+msgstr "Ένας άλλος τρόπος που μπορεί να δουλέψει είναι οι ευγενικές υπενθυμίσεις μέσω του IRC -- και πάλι, δώστε προσοχή στην περίοδο που στέλνετε το μήνυμα σας. Μία καλή χρονική στιγμή είναι κατά τη διάρκεια του bug sprint (η περίοδος που οι core developers ασχολούνται με την επιδιόρθωση σφαλμάτων)."
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:61
+msgid ""
+"Another way to get traction is to pull several related tickets together. "
+"When the core developers sit down to fix a bug in an area they haven't "
+"touched for a while, it can take a few minutes to remember all the fine "
+"details of how that area of code works. If you collect several minor bug "
+"fixes together into a similarly themed group, you make an attractive target,"
+" as the cost of coming up to speed on an area of code can be spread over "
+"multiple tickets."
+msgstr "Άλλος τρόπος είναι να κάνετε pull πολλά παρόμοια, μεταξύ τους, tickets. Όταν οι core developers ασχολούνται με την επιδιόρθωση ενός bug σε κάποιον τομέα που έχουν να ασχολοηθούν καιρό, μπορεί να τους πάρει μερικά λεπτά για να θυμηθούν όλες τις λεπτομέρειες σχετικά με τη λειτουργία του κώδικα αυτού. Αν συγκεντρώσετε πολλές διορθώσεις που αφορούν τον ίδιο τομέα κώδικα (π.χ template tags ή model fields κλπ) σε ένα γκρουπ, δημιουργείτε έναν ελκυστικό στόχο αφού το όφελος διανέμεται σε πολλαπλά tickets και έτσι επιταχύνονται οι διαδικασίες."
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:68
+msgid ""
+"Please refrain from emailing core developers personally, or repeatedly "
+"raising the same issue over and over. This sort of behavior will not gain "
+"you any additional attention -- certainly not the attention that you need in"
+" order to get your pet bug addressed."
+msgstr "Παρακαλούμε αποφύγετε να στέλνετε προσωπικά email στους core developers ή να κάνετε raise το ίδιο issue επανειλημμένως. Με αυτού του είδους τη συμπεριφορά δεν θα τραβήξετε την προσοχή -- πόσο μάλλον την προσοχή που ζητάτε για να διευθετηθεί το bug σας."
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:74
+msgid "But I've reminded you several times and you keep ignoring my patch!"
+msgstr "Αλλά σας το έχω επισημάνει αρκετές φορές και εσείς συνεχίζετε να αγνοείτε το patch μου!"
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:76
+msgid ""
+"Seriously - we're not ignoring you. If your patch stands no chance of "
+"inclusion in Django, we'll close the ticket. For all the other tickets, we "
+"need to prioritize our efforts, which means that some tickets will be "
+"addressed before others."
+msgstr "Σοβαρά τώρα - δεν σας αγνοούμε. Αν το patch σας δεν έχει καμία πιθανότητα να  ενσωματωθεί στο Django, θα κλείσουμε το ticket. Για όλα τα άλλα tickets, χρειάζεται να θέσουμε κάποιες προτεραιότητες και επομένως μερικά να διευθετηθούν νωρίτερα από κάποια άλλα."
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:81
+msgid ""
+"One of the criteria that is used to prioritize bug fixes is the number of "
+"people that will likely be affected by a given bug. Bugs that have the "
+"potential to affect many people will generally get priority over those that "
+"are edge cases."
+msgstr "Ένα από τα κριτήρια τα οποία χρησιμοποιούμε για να θέσουμε προτεραιότητες στα bug fixes είναι ο αριθμός των ανθρώπων που θα επηρεαστούν από το συγκεκριμένο bug. Τα bugs που ενδεχομένως να επηρεάζουν αρκετό κόσμο θα πάρουν προτεραιότητα εν συγκρίσει με τις ακραίες περιπτώσεις."
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:86
+msgid ""
+"Another reason that bugs might be ignored for while is if the bug is a "
+"symptom of a larger problem. While we can spend time writing, testing and "
+"applying lots of little patches, sometimes the right solution is to rebuild."
+" If a rebuild or refactor of a particular component has been proposed or is "
+"underway, you may find that bugs affecting that component will not get as "
+"much attention. Again, this is just a matter of prioritizing scarce "
+"resources. By concentrating on the rebuild, we can close all the little bugs"
+" at once, and hopefully prevent other little bugs from appearing in the "
+"future."
+msgstr "Ένας άλλος λόγος που ένα bug μπορεί να αγνοηθεί είναι η περίπτωση που το ίδιο αποτελεί ένα σύμπτωμα ενός μεγαλύτερου προβλήματος. Παρόλο που ξοδεύουμε χρόνο για να γράψουμε, τεστάρουμε και εφαρμόσουμε πολλά μικρά patches, μερικές φορές είναι πιο φρόνιμο να το χτίσουμε από την αρχή (rebuild). Αν έχει προταθεί ή είναι καθοδόν κάποιο rebuild ή κάποιο refactor ενός συγκεκριμένου component, θα διαπιστώσετε ότι τα bugs που επηρεάζουν αυτό το component δε θα λάβουν τη δέουσα προσοχή. Για ακόμη μια φορά, αυτό είναι θέμα προτεραιοτήτων. Συγκεντρώνοντας την προσοχή μας σε κάποιο rebuild, μπορούμε να κλείσουμε, μονομιάς, όλα τα μικρά bugs και να ελπίζουμε ότι άλλα bugs μικρής κλίμακας δεν θα εμφανιστούν στο μέλλον."
+
+#: ../../../../sources/1.10/docs/faq/contributing.txt:95
+msgid ""
+"Whatever the reason, please keep in mind that while you may hit a particular"
+" bug regularly, it doesn't necessarily follow that every single Django user "
+"will hit the same bug. Different users use Django in different ways, "
+"stressing different parts of the code under different conditions. When we "
+"evaluate the relative priorities, we are generally trying to consider the "
+"needs of the entire community, not just the severity for one particular "
+"user. This doesn't mean that we think your problem is unimportant -- just "
+"that in the limited time we have available, we will always err on the side "
+"of making 10 people happy rather than making 1 person happy."
+msgstr "Οποιοσδήποτε και αν είναι ο λόγος, παρακαλούμε έχετε υπόψιν σας ότι αν κάποιο συγκεκριμένο bug, εμφανίζεται συχνά στον κώδικα σας, αυτό δεν σημαίνει ότι εμφανίζεται και σε όλους τους άλλους Django χρήστες. Διαφορετικοί χρήστες χρησιμοποιούν το Django με διαφορετικούς τρόπους και υπό διαφορετικές συνθήκες. Όταν αξιοποιούμε τις σχετικές προτεραιότητες, προσπαθούμε, γενικά, να εξετάσουμε τις ανάγκες του συνόλου της κοινότητας και όχι αυστηρά κάποιον συγκεκριμένο χρήστη. Αυτό δεν σημαίνει ότι το πρόβλημα σας είναι ασήμαντο -- αλλά ότι στον ήδη περιορισμένο χρόνο που έχουμε, θα βάλουμε τα δυνατά μας να κάνουμε 10 ανθρώπους χαρούμενους παρά έναν."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:3
+msgid "FAQ: General"
+msgstr "Συχνές Ερωτήσεις: Γενικά"
+
+#: ../../../../sources/1.10/docs/faq/general.txt:6
+msgid "Why does this project exist?"
+msgstr "Γιατί υπάρχει το Django;"
+
+#: ../../../../sources/1.10/docs/faq/general.txt:8
+msgid ""
+"Django grew from a very practical need: World Online, a newspaper Web "
+"operation, is responsible for building intensive Web applications on "
+"journalism deadlines. In the fast-paced newsroom, World Online often has "
+"only a matter of hours to take a complicated Web application from concept to"
+" public launch."
+msgstr "Το Django αναπτύχθηκε από μια ανάγκη πρακτικής φύσεως: Το τμήμα του Web – World Online – της εταιρίας World Company που διατηρεί τρεις εφημερίδες, είναι υπεύθυνο για το χτίσιμο εντατικών Web applications μέσα σε δημοσιογραφικές προθεσμίες. Σε ένα γρήγορα μεταβαλλόμενο περιβάλλον η World Online έχει, συχνά, μόνο μερικές ώρες για να μετατρέψει ένα Web application από μια έννοια σε κάτι που να ανέβει στο internet για το ευρύ κοινό."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:13
+msgid ""
+"At the same time, the World Online Web developers have consistently been "
+"perfectionists when it comes to following best practices of Web development."
+msgstr "Την ίδια στιγμή, οι Web developers της World Online είναι τελειομανείς όταν πρόκειται να ακολουθήσουν καλές πρακτικές του Web development."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:16
+msgid ""
+"In fall 2003, the World Online developers (Adrian Holovaty and Simon "
+"Willison) ditched PHP and began using Python to develop its websites. As "
+"they built intensive, richly interactive sites such as Lawrence.com, they "
+"began to extract a generic Web development framework that let them build Web"
+" applications more and more quickly. They tweaked this framework constantly,"
+" adding improvements over two years."
+msgstr "Το φθινόπωρο του 2003, οι developers της World Online (Adrian Holovaty και Simon Willison) άφησαν πίσω τους την PHP και ξεκίνησαν να χρησιμοποιούν την Python για να αναπτύσσουν ιστοσελίδες. Καθώς έχτιζαν εντατικές, interactive ιστοσελίδες, όπως το Lawrence.com, ξεκίνησαν σιγά-σιγά να δημιουργούν ένα γενικό Web development framework το οποίο τους βοήθησε να χτίζουν Web applications όλο και πιο γρήγορα. Άρχισαν να ασχολούνται όλο και πιο εντατικά με το framework προσθέτοντας του βελτιώσεις και features για πάνω από δύο χρόνια."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:23
+msgid ""
+"In summer 2005, World Online decided to open-source the resulting software, "
+"Django. Django would not be possible without a whole host of open-source "
+"projects -- `Apache`_, `Python`_, and `PostgreSQL`_ to name a few -- and "
+"we're thrilled to be able to give something back to the open-source "
+"community."
+msgstr "Το καλοκαίρι του 2005, η World Online αποφάσισε να μετατρέψει αυτό το λογισμικό σε ανοιχτού κώδικα, το Django. Το Django δεν θα ήταν δυνατόν να δημιουργηθεί χωρίς την πληθώρα ανοικτού λογισμικού projects -- όπως `Apache`_, `Python`_, και `PostgreSQL`_ -- και είμαστε ενθουσιασμένοι που μπορέσαμε να δώσουμε κάτι πίσω στην κοινότητα."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:33
+msgid "What does \"Django\" mean, and how do you pronounce it?"
+msgstr "Τι σημαίνει \"Django\" και πως προφέρεται;"
+
+#: ../../../../sources/1.10/docs/faq/general.txt:35
+msgid ""
+"Django is named after `Django Reinhardt`_, a jazz manouche guitarist from "
+"the 1930s to early 1950s. To this day, he's considered one of the best "
+"guitarists of all time."
+msgstr "Το Django ονομάστηκε έτσι από τον `Django Reinhardt`_, έναν κιθαρίστα της jazz manouche σκηνής από τη δεκαετία του 1930 μέχρι τις αρχές της δεκαετίας του 1950. Μέχρι σήμερα θεωρείται ένας από τους μεγαλύτερους κιθαρίστες όλων των εποχών."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:38
+msgid "Listen to his music. You'll like it."
+msgstr "Ακούστε τη μουσική του. Θα σας αρέσει."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:40
+msgid ""
+"Django is pronounced **JANG**-oh. Rhymes with FANG-oh. The \"D\" is silent."
+msgstr "Το Django προφέρεται ως **JANG**-oh. Κάνει ρίμα με το FANG-oh. Το \"D\" δεν προφέρεται."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:42
+msgid "We've also recorded an `audio clip of the pronunciation`_."
+msgstr "Έχουμε, επίσης, ηχογραφήσει `την προφορά του <http://red-bean.com/~adrian/django_pronunciation.mp3>`_."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:48
+msgid "Is Django stable?"
+msgstr "Είναι το Django σταθερό;"
+
+#: ../../../../sources/1.10/docs/faq/general.txt:50
+msgid ""
+"Yes, it's quite stable. Companies like Disqus, Instagram, Pinterest, and "
+"Mozilla have been using Django for many years. Sites built on Django have "
+"weathered traffic spikes of over 50 thousand hits per second."
+msgstr "Ναι, είναι αρκετά σταθερό. Εταιρίες όπως Disqus, Instagram, Pinterest, και Mozilla χρησιμοποιούν το Django για πολλά χρόνια. Οι ιστοσελίδες που χτίστηκαν βάση του Django έχουν επισκεψιμότητα σε ώρα αιχμής πάνω από 50 χιλιάδες requests το δευτερόλεπτο."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:55
+msgid "Does Django scale?"
+msgstr "Κλιμακώνεται το Django;"
+
+#: ../../../../sources/1.10/docs/faq/general.txt:57
+msgid ""
+"Yes. Compared to development time, hardware is cheap, and so Django is "
+"designed to take advantage of as much hardware as you can throw at it."
+msgstr "Φυσικά. Εν συγκρίσει με το χρόνο ανάπτυξης, το hardware είναι φθηνό και επομένως το Django είναι σχεδιασμένο να εκμεταλλεύεται όσο hardware του προσθέσετε."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:60
+msgid ""
+"Django uses a \"shared-nothing\" architecture, which means you can add "
+"hardware at any level -- database servers, caching servers or "
+"Web/application servers."
+msgstr "Το Django χρησιμοποιεί μια αρχιτεκτονική \"τίποτα κοινόχρηστο\", που σημαίνει ότι μπορείτε να προσθέσετε hardware σε οποιοδήποτε επίπεδο -- database servers, caching server ή Web/application servers."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:63
+msgid ""
+"The framework cleanly separates components such as its database layer and "
+"application layer. And it ships with a simple-yet-powerful :doc:`cache "
+"framework </topics/cache>`."
+msgstr "Το framework ξεχωρίζει πολύ καθαρά τα components μεταξύ τους όπως το επίπεδο του database και του application. Επίσης, δίνεται με ένα πολύ απλό αλλά και ισχυρό παράλληλα :doc:`cache framework </topics/cache>`."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:68
+msgid "Who's behind this?"
+msgstr "Ποιος είναι πίσω απ' αυτό;"
+
+#: ../../../../sources/1.10/docs/faq/general.txt:70
+msgid ""
+"Django was originally developed at World Online, the Web department of a "
+"newspaper in Lawrence, Kansas, USA. Django's now run by an international "
+":doc:`team of volunteers </internals/team>`."
+msgstr "Το Django αναπτύχθηκε, αρχικά, στο World Online, το Web τμήμα μιας εφημερίδας στο Lawrence, στην πολιτεία Kansas, στις ΗΠΑ. Τώρα, πίσω από το Django είναι μια ομάδα από :doc:`διεθνείς εθελοντές </internals/team>`."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:75
+msgid "Which sites use Django?"
+msgstr "Ποιες ιστοσελίδες χρησιμοποιούν το Django;"
+
+#: ../../../../sources/1.10/docs/faq/general.txt:77
+msgid ""
+"`DjangoSites.org`_ features a constantly growing list of Django-powered "
+"sites."
+msgstr "Η ιστοσελίδα `DjangoSites.org`_ προβάλλει μια ολοένα αυξανόμενη λίστα με ιστοσελίδες που χρησιμοποιούν το Django ως backend."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:84
+msgid ""
+"Django appears to be a MVC framework, but you call the Controller the "
+"\"view\", and the View the \"template\". How come you don't use the standard"
+" names?"
+msgstr "Το Django φαίνεται να είναι ένα MVC framework, αλλά εσείς καλείτε τον Controller ως \"view\" και το View ως \"template\". Γιατί δεν χρησιμοποιείτε τα συνήθη ονόματα;"
+
+#: ../../../../sources/1.10/docs/faq/general.txt:86
+msgid "Well, the standard names are debatable."
+msgstr "Ξέρετε, τα συνήθη ονόματα είναι διαπραγματεύσιμα."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:88
+msgid ""
+"In our interpretation of MVC, the \"view\" describes the data that gets "
+"presented to the user. It's not necessarily *how* the data *looks*, but "
+"*which* data is presented. The view describes *which data you see*, not *how"
+" you see it.* It's a subtle distinction."
+msgstr "Στη δική μας ερμηνεία του MVC, το \"view\" περιγράφει τα δεδομένα τα οποία προβάλλονται στον χρήστη. Δεν είναι απαραίτητα το *πως δείχνουν* τα δεδομένα αλλά *ποια* δεδομένα προβάλλονται. Το view περιγράφει *ποια data βλέπετε*, όχι *το πως τα βλέπετε.* Αποτελεί μια λεπτή διάκριση."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:93
+msgid ""
+"So, in our case, a \"view\" is the Python callback function for a particular"
+" URL, because that callback function describes which data is presented."
+msgstr "Επομένως, στη δικιά μας περίπτωση, ένα \"view\" είναι μια Python callback συνάρτηση για ένα συγκεκριμένο URL, επειδή αυτή η callback συνάρτηση περιγράφει ποια data θα προβληθούν."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:96
+msgid ""
+"Furthermore, it's sensible to separate content from presentation -- which is"
+" where templates come in. In Django, a \"view\" describes which data is "
+"presented, but a view normally delegates to a template, which describes "
+"*how* the data is presented."
+msgstr "Επιπροσθέτως, είναι λογικό να διαχωρίζουμε το περιεχόμενο από την παρουσίαση – όπου κάπου εδώ έρχεται η έννοια των templates. Στο Django, το \"view\" περιγράφει ποια data θα προβληθούν, αλλά ένα view συνήθως αναθέτει σε ένα template την προβολή των δεδομένων – το *πως*, δηλαδή, θα προβληθούν τα data."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:101
+msgid ""
+"Where does the \"controller\" fit in, then? In Django's case, it's probably "
+"the framework itself: the machinery that sends a request to the appropriate "
+"view, according to the Django URL configuration."
+msgstr "Σύμφωνα με τα παραπάνω, που κολλάει ο \"controller\"; Στην περίπτωση του Django, είναι μάλλον το ίδιο το framework: ο μηχανισμός που στέλνει το request στο κατάλληλο view, σύμφωνα με τη διαμόρφωση των Django URLs."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:105
+msgid ""
+"If you're hungry for acronyms, you might say that Django is a \"MTV\" "
+"framework -- that is, \"model\", \"template\", and \"view.\" That breakdown "
+"makes much more sense."
+msgstr "Αν διψάτε για ακρωνύμια, θα λέγατε μάλλον ότι το Django είναι ένα \"MTV\" framework -- δηλαδή, \"model\", \"template\", και \"view.\" Αυτή η ανάλυση είναι πιο κατανοητή."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:109
+msgid ""
+"At the end of the day, of course, it comes down to getting stuff done. And, "
+"regardless of how things are named, Django gets stuff done in a way that's "
+"most logical to us."
+msgstr "Τελικώς, το μόνο που μετράει είναι να γίνει η δουλειά. Ανεξαρτήτως το πως ονομάζονται τα πράγματα, το Django κάνει τη δουλειά με τέτοιο τρόπο που είναι ο πιο λογικός σε εμάς."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:114
+msgid "<Framework X> does <feature Y> -- why doesn't Django?"
+msgstr "Το <Framework X> κάνει το <feature Y> -- γιατί όχι το Django?"
+
+#: ../../../../sources/1.10/docs/faq/general.txt:116
+msgid ""
+"We're well aware that there are other awesome Web frameworks out there, and "
+"we're not averse to borrowing ideas where appropriate. However, Django was "
+"developed precisely because we were unhappy with the status quo, so please "
+"be aware that \"because <Framework X> does it\" is not going to be "
+"sufficient reason to add a given feature to Django."
+msgstr "Γνωρίσουμε πολύ καλά ότι πέρα από το Django, υπάρχουν καταπληκτικά Web frameworks εκεί έξω και ότι δεν είμαστε αντίθετοι στην ιδέα να δανειστούμε ιδέες. Ωστόσο, το Django αναπτύχθηκε ακριβώς επειδή δεν είμασταν ικανοποιημένοι με το ήδη υπάρχον καθεστώς, γι' αυτό παρακαλούμε να ξέρετε ότι η λογική του \"αφού το <Framework X> το κάνει αυτό\" δεν είναι αρκετή για να υλοποιηθεί το συγκεκριμένο feature στο Django."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:123
+msgid ""
+"Why did you write all of Django from scratch, instead of using other Python "
+"libraries?"
+msgstr "Γιατί γράψατε το Django από την αρχή, αντί να χρησιμοποιήσετε ήδη υπάρχουσες Python βιβλιοθήκες;"
+
+#: ../../../../sources/1.10/docs/faq/general.txt:125
+msgid ""
+"When Django was originally written a couple of years ago, Adrian and Simon "
+"spent quite a bit of time exploring the various Python Web frameworks "
+"available."
+msgstr "Πριν μερικά χρόνια, όταν πρωτοξεκίνησε να γράφεται το Django, ο Adrian και ο Simon αφιέρωσαν αρκετό χρόνο εξερευνώντας τα διάφορα Python Web frameworks τα οποία ήταν διαθέσιμα."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:129
+msgid "In our opinion, none of them were completely up to snuff."
+msgstr "Κατά τη γνώμη μας, κανένα από αυτά δεν μας κάλυπτε."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:131
+msgid "We're picky. You might even call us perfectionists. (With deadlines.)"
+msgstr "Είμαστε επιλεκτικοί. Μπορείτε, επίσης, να μας προσφωνείτε τελειομανείς. (με προθεσμίες.)"
+
+#: ../../../../sources/1.10/docs/faq/general.txt:133
+msgid ""
+"Over time, we stumbled across open-source libraries that did things we'd "
+"already implemented. It was reassuring to see other people solving similar "
+"problems in similar ways, but it was too late to integrate outside code: "
+"We'd already written, tested and implemented our own framework bits in "
+"several production settings -- and our own code met our needs delightfully."
+msgstr "Με τον καιρό,συναντήσαμε κάποιες ανοικτού λογισμικού βιβλιοθήκες οι οποίες έκαναν πράγματα τα οποία είχαμε ήδη υλοποιήσει. Ήταν καθησυχαστικό να βλέπεις άλλους ανθρώπους να λύνουν παρόμοια προβλήματα με παρόμοιους τρόπους αλλά ήταν ήδη αργά: είχαμε ήδη γράψει, τεστάρει και υλοποιήσει τα δικά μας κομμάτια του framework με ποικίλες ρυθμίσεις σε παραγωγικό περιβάλλον -- και ο κώδικας μας ικανοποιούσε τις ανάγκες μας εξαιρετικά."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:139
+msgid ""
+"In most cases, however, we found that existing frameworks/tools inevitably "
+"had some sort of fundamental, fatal flaw that made us squeamish. No tool fit"
+" our philosophies 100%."
+msgstr "Σε πολλές περιπτώσεις, ωστόσο, βρήκαμε ότι κάποια frameworks/tools είχαν αναπόφευκτα μερικά θεμελιώδη μοιραία ελαττώματα που μας έφεραν τάση προς εμετό. Κανένα εργαλείο δεν ταιριάζει στις φιλοσοφίες μας 100%."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:143
+msgid "Like we said: We're picky."
+msgstr "Όπως είπαμε: είμαστε επιλεκτικοί."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:145
+msgid ""
+"We've documented our philosophies on the :doc:`design philosophies page "
+"</misc/design-philosophies>`."
+msgstr "Έχουμε τεκμηριώσει τις φιλοσοφίες μας στο άρθρο :doc:`φιλοσοφίες σχεδιασμού </misc/design-philosophies>`."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:149
+msgid "Is Django a content-management-system (CMS)?"
+msgstr "Είναι το Django ένα content-management-system (CMS);"
+
+#: ../../../../sources/1.10/docs/faq/general.txt:151
+msgid ""
+"No, Django is not a CMS, or any sort of \"turnkey product\" in and of "
+"itself. It's a Web framework; it's a programming tool that lets you build "
+"websites."
+msgstr "Όχι, το Django δεν είναι ένα CMS ή κάποιο είδος του στυλ \"με το κλειδί στο χέρι\". Είναι ένα Web framework. Όπερ σημαίνει ότι είναι ένα προγραμματιστικό εργαλείο το οποίο σας επιτρέπει να χτίζετε ιστοσελίδες."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:154
+msgid ""
+"For example, it doesn't make much sense to compare Django to something like "
+"Drupal_, because Django is something you use to *create* things like Drupal."
+msgstr "Για παράδειγμα, δεν βγάζει και πολύ νόημα να συγκρίνετε π.χ το Django με το  Drupal_, επειδή το Django είναι κάτι που χρησιμοποιείς για να *δημιουργήσεις* πράγματα όπως το Drupal."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:157
+msgid ""
+"Of course, Django's automatic admin site is fantastic and timesaving -- but "
+"the admin site is one module of Django the framework. Furthermore, although "
+"Django has special conveniences for building \"CMS-y\" apps, that doesn't "
+"mean it's not just as appropriate for building \"non-CMS-y\" apps (whatever "
+"that means!)."
+msgstr "Φυσικά, το αυτοματοποιημένο admin site του Django είναι φανταστικό και σας γλυτώνει από απίστευτο χρόνο – αλλά το admin site είναι ένα module του Django framework. Επιπροσθέτως, παρόλο που το Django έχει ιδιαίτερες ανέσεις για να χτίζει κανείς εφαρμογές που θυμίζουν \"CMS\", αυτό δε σημαίνει ότι δεν μπορεί να χρησιμοποιηθεί για εφαρμογές που δεν θυμίζουν \"CMS\" (οτιδήποτε και αν σημαίνει αυτό!)."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:166
+msgid "How can I download the Django documentation to read it offline?"
+msgstr "Πως μπορώ να κατεβάσω το Django documentation για να το διαβάζω εκτός δικτύου;"
+
+#: ../../../../sources/1.10/docs/faq/general.txt:168
+msgid ""
+"The Django docs are available in the ``docs`` directory of each Django "
+"tarball release. These docs are in reST (reStructuredText) format, and each "
+"text file corresponds to a Web page on the official Django site."
+msgstr "Τα Django docs είναι διαθέσιμα στο φάκελο ``docs`` κάθε Django tarball διανομής. Αυτά τα έγγραφα είναι γραμμένα σε reST (reStructuredText) μορφή και κάθε αρχείο κειμένου αντιστοιχεί σε μια σελίδα στην επίσημη ιστοσελίδα του Django."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:172
+msgid ""
+"Because the documentation is `stored in revision control`_, you can browse "
+"documentation changes just like you can browse code changes."
+msgstr "Επειδή το documentation `είναι αποθηκευμένο σε revision control <https://github.com/django/django/tree/master/docs/>`_, μπορείτε να περιηγηθείτε στις αλλαγές που γίνονται στο documentation όπως ακριβώς συμβαίνει και με τις αλλαγές που γίνονται στον κώδικα."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:175
+msgid ""
+"Technically, the docs on Django's site are generated from the latest "
+"development versions of those reST documents, so the docs on the Django site"
+" may offer more information than the docs that come with the latest Django "
+"release."
+msgstr "Τεχνικώς, τα docs της ιστοσελίδας του Django παράγονται από τις τελευταίες development εκδόσεις αυτών των reST αρχείων, επομένως τα docs στο revision control προσφέρουν περισσότερη πληροφορία από αυτή που έρχεται με την τελευταία διανομή του Django."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:182
+msgid "Where can I find Django developers for hire?"
+msgstr "Που μπορώ να βρω Django developers για πρόσληψη;"
+
+#: ../../../../sources/1.10/docs/faq/general.txt:184
+msgid ""
+"Consult our `developers for hire page`_ for a list of Django developers who "
+"would be happy to help you."
+msgstr "Συμβουλευτείτε τη σελίδα `developers για πρόσληψη`_ για μια λίστα με Django developers οι οποίοι θα χαρούν να σας βοηθήσουν."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:187
+msgid ""
+"You might also be interested in posting a job to https://djangogigs.com/ . "
+"If you want to find Django-capable people in your local area, try "
+"https://people.djangoproject.com/ ."
+msgstr "Ίσως επίσης ενδιαφέρεστε να ανακοινώσετε μια θέση εργασίας στο https://djangogigs.com/ . Αν θέλετε να βρείτε κοντά στην περιοχή σας, ικανούς ανθρώπους που γνωρίζουν το Django, δοκιμάστε το https://people.djangoproject.com/ ."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:194
+msgid "How do I cite Django?"
+msgstr "Πως μπορώ να αναφερθώ στο Django;"
+
+#: ../../../../sources/1.10/docs/faq/general.txt:196
+msgid ""
+"It's difficult to give an official citation format, for two reasons: "
+"citation formats can vary wildly between publications, and citation "
+"standards for software are still a matter of some debate."
+msgstr "Είναι δύσκολο να δώσουμε μία επίσημη μορφή αναφοράς για δύο λόγους: οι μορφές αναφοράς διαφέρουν σημαντικά ανάμεσα σε εκδόσεις και τα στάνταρντ των αναφορών για το λογισμικό είναι ακόμη υπό διαπραγμάτευση."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:200
+msgid "For example, `APA style`_,  would dictate something like::"
+msgstr "Για παράδειγμα, το `APA style`_,  θα υπαγόρευε την αναφορά κάπως έτσι::"
+
+#: ../../../../sources/1.10/docs/faq/general.txt:204
+msgid ""
+"However, the only true guide is what your publisher will accept, so get a "
+"copy of those guidelines and fill in the gaps as best you can."
+msgstr "Ωστόσο, ο μόνος αληθινός οδηγός είναι αυτό που θα αποδεχόταν ο εκδότης σας. Οπότε, δημιουργήστε ένα αντίγραφο από αυτές τις κατευθυντήριες γραμμές και γεμίστε τα κενά στο μέγιστο των δυνατοτήτων σας."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:207
+msgid ""
+"If your referencing style guide requires a publisher name, use \"Django "
+"Software Foundation\"."
+msgstr "Αν ο οδηγός του στυλ αναφοράς σας απαιτεί όνομα εκδότη, τότε χρησιμοποιήστε το \"Django Software Foundation\"."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:210
+msgid "If you need a publishing location, use \"Lawrence, Kansas\"."
+msgstr "Αν χρειάζεστε τοποθεσία έκδοσης, χρησιμοποιήστε την \"Lawrence, Kansas\"."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:212
+msgid "If you need a web address, use https://djangoproject.com."
+msgstr "Αν χρειάζεστε τοποθεσία ιστοσελίδας, χρησιμοποιήστε την https://djangoproject.com."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:214
+msgid "If you need a name, just use \"Django\", without any tagline."
+msgstr "Αν χρειάζεστε όνομα, χρησιμοποιήστε απλά το \"Django\"."
+
+#: ../../../../sources/1.10/docs/faq/general.txt:216
+msgid ""
+"If you need a publication date, use the year of release of the version "
+"you're referencing (e.g., 2013 for v1.5)"
+msgstr "Αν χρειάζεστε ημερομηνία έκδοσης, χρησιμοποιήστε το έτος της διανομής της έκδοσης Django που χρησιμοποιείτε (πχ 2016 για την έκδοση v1.10)"
+
+#: ../../../../sources/1.10/docs/faq/help.txt:3
+msgid "FAQ: Getting Help"
+msgstr "Συχνές Ερωτήσεις: Λαμβάνοντας βοήθεια"
+
+#: ../../../../sources/1.10/docs/faq/help.txt:6
+msgid "How do I do X? Why doesn't Y work? Where can I go to get help?"
+msgstr "Πως κάνω το X; Γιατί το Y δεν δουλεύει; Που να βρω βοήθεια;"
+
+#: ../../../../sources/1.10/docs/faq/help.txt:8
+msgid ""
+"If this FAQ doesn't contain an answer to your question, you might want to "
+"try the |django-users| mailing list. Feel free to ask any question related "
+"to installing, using, or debugging Django."
+msgstr "Αν αυτές οι συχνές ερωτήσεις δεν περιέχουν την απάντηση στην ερώτηση σας, μπορείτε να προσπαθήσετε στην mailing list των |django-users|. Εκεί μπορείτε να ρωτήσετε σχετικά με την εγκατάσταση, χρησιμοποίηση ή αποσφαλμάτωση (debugging) του Django."
+
+#: ../../../../sources/1.10/docs/faq/help.txt:12
+msgid ""
+"If you prefer IRC, the `#django IRC channel`_ on the Freenode IRC network is"
+" an active community of helpful individuals who may be able to solve your "
+"problem."
+msgstr "Αν προτιμάτε το IRC, το κανάλι `#django IRC channel`_ στο δίκτυο Freenode IRC αποτελείται από μια ενεργή κοινότητα με εξυπηρετικούς ανθρώπους οι οποίοι μπορεί να λύσουν το πρόβλημα σας."
+
+#: ../../../../sources/1.10/docs/faq/help.txt:20
+msgid "Why hasn't my message appeared on django-users?"
+msgstr "Γιατί το μήνυμα μου δεν εμφανίστηκε στους django-users;"
+
+#: ../../../../sources/1.10/docs/faq/help.txt:22
+msgid ""
+"|django-users| has a lot of subscribers. This is good for the community, as "
+"it means many people are available to contribute answers to questions. "
+"Unfortunately, it also means that |django-users| is an attractive target for"
+" spammers."
+msgstr "Η λίστα των |django-users| έχει πολλούς συνδρομητές. Αυτό είναι καλό για την κοινότητα γιατί σημαίνει ότι πολλοί άνθρωποι είναι διαθέσιμοι να συνεισφέρουν με την απάντηση τους σε ερωτήσεις. Από την άλλη μεριά, σημαίνει, επίσης, ότι |django-users| είναι ένας ελκυστικός στόχος για τους spammers."
+
+#: ../../../../sources/1.10/docs/faq/help.txt:27
+msgid ""
+"In order to combat the spam problem, when you join the |django-users| "
+"mailing list, we manually moderate the first message you send to the list. "
+"This means that spammers get caught, but it also means that your first "
+"question to the list might take a little longer to get answered. We "
+"apologize for any inconvenience that this policy may cause."
+msgstr "Για την καταπολέμηση του προβλήματος spam, όταν συμμετέχετε στη mailing list των |django-users|, ελέγχουμε χειροκίνητα το πρώτο μήνυμα το οποίο στείλατε στη λίστα. Αυτό σημαίνει ότι, από τη μια, με αυτό τον τρόπο εντοπίζουμε τους spammers αλλά, από την άλλη, ο χρόνος που θα απαιτηθεί να απαντηθεί η πρώτη σας ερώτηση ίσως διαρκέσει λίγο. Ζητάμε συγνώμη για οποιαδήποτε ταλαιπωρία προκαλεί αυτή η πολιτική."
+
+#: ../../../../sources/1.10/docs/faq/help.txt:34
+msgid "Nobody on django-users answered my question! What should I do?"
+msgstr "Κανείς ανάμεσα στους django-users δεν απάντησε την ερώτηση μου! Τι κάνω τώρα;"
+
+#: ../../../../sources/1.10/docs/faq/help.txt:36
+msgid ""
+"Try making your question more specific, or provide a better example of your "
+"problem."
+msgstr "Προσπαθήστε να κάνετε την ερώτηση σας πιο συγκεκριμένη ή να δώσετε μια καλύτερη εξήγηση του προβλήματος σας."
+
+#: ../../../../sources/1.10/docs/faq/help.txt:39
+msgid ""
+"As with most open-source mailing lists, the folks on |django-users| are "
+"volunteers. If nobody has answered your question, it may be because nobody "
+"knows the answer, it may be because nobody can understand the question, or "
+"it may be that everybody that can help is busy. One thing you might try is "
+"to ask the question on IRC -- visit the `#django IRC channel`_ on the "
+"Freenode IRC network."
+msgstr "Όπως με τις περισσότερες ανοικτού λογισμικού mailing lists, οι |django-users| είναι εθελοντές. Αν κανείς δεν έχει απαντήσει στην ερώτηση σας είναι ίσως επειδή κανείς δεν ξέρει την απάντηση ή κανείς δε μπορεί να καταλάβει την ερώτηση σας ή ακόμη γιατί όσοι μπορούν να βοηθήσουν είναι απασχολημένοι. Μπορείτε, εναλλακτικά, να δοκιμάσετε να ρωτήσετε στο IRC -- επισκεφτείτε το `#django IRC channel`_ στο δίκτυο Freenode IRC."
+
+#: ../../../../sources/1.10/docs/faq/help.txt:46
+msgid ""
+"You might notice we have a second mailing list, called |django-developers| "
+"-- but please don't email support questions to this mailing list. This list "
+"is for discussion of the development of Django itself. Asking a tech support"
+" question there is considered quite impolite."
+msgstr "Ίσως να παρατηρήσατε ότι έχουμε μια δεύτερη mailing list, με το όνομα |django-developers|. Παρακαλούμε να μη στέλνετε ερωτήσεις υποστήριξης σε αυτή τη mailing list. Αυτή η λίστα είναι για συζητήσεις σχετικά με την ανάπτυξη του ίδιου του Django. Ρωτώντας μια τεχνικής φύσεως ερώτηση εκεί θα θεωρηθεί αρκετά αγενές."
+
+#: ../../../../sources/1.10/docs/faq/help.txt:52
+msgid "I think I've found a bug! What should I do?"
+msgstr "Νομίζω ότι βρήκα ένα bug! Τι να κάνω;"
+
+#: ../../../../sources/1.10/docs/faq/help.txt:54
+msgid ""
+"Detailed instructions on how to handle a potential bug can be found in our "
+":ref:`Guide to contributing to Django <reporting-bugs>`."
+msgstr "Υπάρχουν αναλυτικές οδηγίες στην αναφορά :ref:`Οδηγός συνεισφοράς στο Django <reporting-bugs>`, σχετικά με το τι να κάνετε σε περίπτωση που βρήκατε κάποιο bug."
+
+#: ../../../../sources/1.10/docs/faq/help.txt:58
+msgid "I think I've found a security problem! What should I do?"
+msgstr "Νομίζω ότι βρήκα ένα πρόβλημα σχετικά με την ασφάλεια! Τι να κάνω;"
+
+#: ../../../../sources/1.10/docs/faq/help.txt:60
+msgid ""
+"If you think you've found a security problem with Django, please send a "
+"message to security@djangoproject.com. This is a private list only open to "
+"long-time, highly trusted Django developers, and its archives are not "
+"publicly readable."
+msgstr "Αν νομίζετε ότι βρήκατε ένα πρόβλημα που να αφορά την ασφάλεια του Django, παρακαλούμε στείλτε ένα μήνυμα στο security@djangoproject.com. Αυτή είναι μια ιδιωτική λίστα η οποία είναι ανοιχτή μόνο σε μακροχρόνιους και έμπιστους Django developers και τα αρχεία της δεν είναι διαθέσιμα δημοσίως."
+
+#: ../../../../sources/1.10/docs/faq/help.txt:64
+msgid ""
+"Due to the sensitive nature of security issues, we ask that if you think you"
+" have found a security problem, *please* don't send a message to one of the "
+"public mailing lists. Django has a :ref:`policy for handling security issues"
+" <reporting-security-issues>`; while a defect is outstanding, we would like "
+"to minimize any damage that could be inflicted through public knowledge of "
+"that defect."
+msgstr "Λόγω της ευαίσθητης φύσεως των θεμάτων ασφαλείας, σε περίπτωση που βρήκατε κάποιο πρόβλημα ασφαλείας, *παρακαλούμε* μη στείλετε μήνυμα σε μια από τις δημόσιες mailing lists. Το Django ακολουθεί μια :ref:`πολιτική για τον χειρισμό θεμάτων ασφαλείας <reporting-security-issues>`. Όσο κάποιο πρόβλημα παραμένει ανεπίλυτο, θα θέλαμε να ελαχιστοποιήσουμε τυχόν ζημιά που θα επιφέρει στο ευρύ κοινό, αν ανακοινωθεί δημοσίως."
+
+#: ../../../../sources/1.10/docs/faq/index.txt:3
+msgid "Django FAQ"
+msgstr "Συχνές Ερωτήσεις για το Django"
+
+#: ../../../../sources/1.10/docs/faq/install.txt:3
+msgid "FAQ: Installation"
+msgstr "Συχνές Ερωτήσεις: Εγκατάσταση"
+
+#: ../../../../sources/1.10/docs/faq/install.txt:6
+msgid "How do I get started?"
+msgstr "Πως ξεκινώ;"
+
+#: ../../../../sources/1.10/docs/faq/install.txt:8
+msgid "`Download the code`_."
+msgstr "`Κατεβάστε τον κώδικα <https://www.djangoproject.com/download/>`_."
+
+#: ../../../../sources/1.10/docs/faq/install.txt:9
+msgid "Install Django (read the :doc:`installation guide </intro/install>`)."
+msgstr "Εγκαταστήστε το Django (δείτε το άρθρο :doc:`οδηγός εγκατάσταση </intro/install>`)."
+
+#: ../../../../sources/1.10/docs/faq/install.txt:10
+msgid "Walk through the :doc:`tutorial </intro/tutorial01>`."
+msgstr "Περιηγηθείτε μέσα στον :doc:`οδηγό μας </intro/tutorial01>`."
+
+#: ../../../../sources/1.10/docs/faq/install.txt:11
+msgid ""
+"Check out the rest of the :doc:`documentation </index>`, and `ask "
+"questions`_ if you run into trouble."
+msgstr "Δείτε το υπόλοιπο :doc:`documentation </index>` του Django και `ρωτήστε την κοινότητα <https://www.djangoproject.com/community/>`_ αν έχετε κάποιο πρόβλημα."
+
+#: ../../../../sources/1.10/docs/faq/install.txt:18
+msgid "What are Django's prerequisites?"
+msgstr "Ποια είναι τα απαιτούμενα για το Django;"
+
+#: ../../../../sources/1.10/docs/faq/install.txt:20
+msgid ""
+"Django requires Python. See the table in the next question for the versions "
+"of Python that work with each version of Django. Other Python libraries may "
+"be required for some uses, but you'll receive an error about it as they're "
+"needed."
+msgstr "Τα Django χρειάζεται την γλώσσα προγραμματισμού Python. Δείτε τον πίνακα στην επόμενη ερώτηση για το ποιες εκδόσεις της Python είναι συμβατές με τις διάφορες εκδόσεις του Django. Άλλες Python βιβλιοθήκες ίσως χρειαστούν για συγκεκριμένες περιπτώσεις αλλά θα λάβετε σχετικό μήνυμα λάθους όταν θα χρειαστούν και δεν τις έχετε εγκατεστειμένες."
+
+#: ../../../../sources/1.10/docs/faq/install.txt:24
+msgid ""
+"For a development environment -- if you just want to experiment with Django "
+"-- you don't need to have a separate Web server installed; Django comes with"
+" its own lightweight development server. For a production environment, "
+"Django follows the WSGI spec, :pep:`3333`, which means it can run on a "
+"variety of server platforms. See :doc:`Deploying Django "
+"</howto/deployment/index>` for some popular alternatives."
+msgstr "Σε αναπτυξιακά περιβάλλοντα -- αν θέλετε να πειραματιστείτε με το Django -- δεν χρειάζεται να έχετε κάποιον ξεχωριστό Web server εγκατεστημένο. Το Django έχει προεγκατεστημένο έναν ελαφρύ αναπτυξιακό server. Για παραγωγικά περιβάλλοντα (production environments), το Django ακολουθεί την προδιαγραφή WSGI :pep:`3333`, που σημαίνει ότι μπορεί να τρέξει σε μια πληθώρα server. Δείτε το άρθρο :doc:`Deploying Django </howto/deployment/index>` για μερικές δημοφιλής εναλλακτικές."
+
+#: ../../../../sources/1.10/docs/faq/install.txt:31
+msgid ""
+"If you want to use Django with a database, which is probably the case, "
+"you'll also need a database engine. PostgreSQL_ is recommended, because "
+"we're PostgreSQL fans, and MySQL_, `SQLite 3`_, and Oracle_ are also "
+"supported."
+msgstr "Αν θέλετε να χρησιμοποιήσετε το Django παρέα με κάποια βάση δεδομένων, που είναι και το πιο πιθανό, θα χρειαστείτε, επίσης, και την αντίστοιχη μηχανή της βάσης δεδομένων (database engine) που θα χρησιμοποιήσετε. Προτείνεται η PostgreSQL_, καθώς είμαστε φαν αυτής αλλά υποστηρίζονται, επίσης και οι MySQL_, `SQLite 3`_ και η Oracle_."
+
+#: ../../../../sources/1.10/docs/faq/install.txt:44
+msgid "What Python version can I use with Django?"
+msgstr "Ποια έκδοση της Python να χρησιμοποιήσω με το Django;"
+
+#: ../../../../sources/1.10/docs/faq/install.txt:47
+msgid "Django version"
+msgstr "Django έκδοση"
+
+#: ../../../../sources/1.10/docs/faq/install.txt:47
+msgid "Python versions"
+msgstr "Python εκδόσεις"
+
+#: ../../../../sources/1.10/docs/faq/install.txt:49
+msgid "1.8"
+msgstr "1.8"
+
+#: ../../../../sources/1.10/docs/faq/install.txt:49
+msgid "2.7, 3.2 (until the end of 2016), 3.3, 3.4, 3.5"
+msgstr "2.7, 3.2 (μέχρι τέλος του 2016), 3.3, 3.4, 3.5"
+
+#: ../../../../sources/1.10/docs/faq/install.txt:50
+msgid "**1.9, 1.10**"
+msgstr "**1.9, 1.10**"
+
+#: ../../../../sources/1.10/docs/faq/install.txt:50
+msgid "**2.7, 3.4, 3.5**"
+msgstr "**2.7, 3.4, 3.5**"
+
+#: ../../../../sources/1.10/docs/faq/install.txt:53
+msgid ""
+"For each version of Python, only the latest micro release (A.B.C) is "
+"officially supported. You can find the latest micro version for each series "
+"on the `Python download page <https://www.python.org/downloads/>`_."
+msgstr "Για κάθε έκδοση της Python, μόνο η τελευταία micro release (A.B.C) υποστηρίζεται επισήμως. Μπορείτε να βρείτε την τελευταία micro version για κάθε σειρά της Python στην `επίσημη σελίδα της <https://www.python.org/downloads/>`_."
+
+#: ../../../../sources/1.10/docs/faq/install.txt:57
+msgid ""
+"Typically, we will support a Python version up to and including the first "
+"Django LTS release whose security support ends after security support for "
+"that version of Python ends. For example, Python 3.3 security support ends "
+"September 2017 and Django 1.8 LTS security support ends April 2018. "
+"Therefore Django 1.8 is the last version to support Python 3.3."
+msgstr "Τυπικά, θα υποστηρίξουμε όποια έκδοση της Python της οποίας η υποστήριξη ασφάλειας λήγει πριν την διανομή του Django LTS (Long Time Support) του οποίου η υποστήριξη ασφάλειας λήγει μετά από αυτή της Python. Ας δούμε ένα παράδειγμα, η υποστήριξη σχετικά με θέματα ασφαλείας της Python 3.3 λήγει τον Σεπτέμβριο του 2017 και η υποστήριξη σχετικά με θέματα ασφαλείας του Django 1.8 LTS λήγει τον Απρίλιο του 2018. Επομένωνς, το Django 1.8 είναι η τελευταία έκδοση Django που θα υποστηρίξει την Python 3.3."
+
+#: ../../../../sources/1.10/docs/faq/install.txt:64
+msgid "What Python version should I use with Django?"
+msgstr "Ποια έκδοση της Python θα πρέπει να χρησιμοποιήσω με το Django;"
+
+#: ../../../../sources/1.10/docs/faq/install.txt:66
+msgid ""
+"As of Django 1.6, Python 3 support is considered stable and you can safely "
+"use it in production. See also :doc:`/topics/python3`. However, the "
+"community is still in the process of migrating third-party packages and "
+"applications to Python 3."
+msgstr "Από την έκδοση 1.6 του Django, η υποστήριξη της Python 3 θεωρείται σταθερή και μπορείτε να την χρησιμοποιήσετε με ασφάλεια στην παραγωγή. Δείτε επίσης το άρθρο :doc:`μετάβαση στην Python 3 </topics/python3>`. Ωστόσο, η κοινότητα βρίσκεται ήδη στη διαδικασία της μεταφοράς των πακέτων και εφαρμογών τρίτων από την Python 2 στην Python 3."
+
+#: ../../../../sources/1.10/docs/faq/install.txt:71
+msgid ""
+"If you're starting a new project, and the dependencies you plan to use work "
+"on Python 3, you should use Python 3. If they don't, consider contributing "
+"to the porting efforts, or stick to Python 2."
+msgstr "Αν ξεκινάτε καινούργιο project και τα dependencies (πακέτα τρίτων και εφαρμογές) που σκοπεύετε να χρησιμοποιήσετε δουλεύουν με την Python 3, τότε θα πρέπει να χρησιμοποιήσετε αυτή. Αν δεν δουλεύουν, σκεφτείτε μήπως μπορείτε να συνεισφέρετε στην μετάβαση των πακέτων αυτών στην Python 3 ή απλώς να χρησιμοποιήσετε την Python 2."
+
+#: ../../../../sources/1.10/docs/faq/install.txt:75
+msgid ""
+"Since newer versions of Python are often faster, have more features, and are"
+" better supported, all else being equal, we recommend that you use the "
+"latest 2.x.y or 3.x.y release."
+msgstr "Από τη στιγμή που οι νεώτερες εκδόσεις της Python είναι συχνά ταχύτερες, έχουν περισσότερα features και υποστηρίζονται καλύτερα (με όλα τα υπόλοιπα χαρακτηριστικά να είναι ίσα), προτείνουμε να χρησιμοποιείτε την τελευταία από κάθε έκδοση της Python, δηλαδή τις 2.x.y ή 3.x.y."
+
+#: ../../../../sources/1.10/docs/faq/install.txt:79
+msgid ""
+"You don't lose anything in Django by using an older release, but you don't "
+"take advantage of the improvements and optimizations in newer Python "
+"releases. Third-party applications for use with Django are, of course, free "
+"to set their own version requirements."
+msgstr "Δεν χάνετε τίποτα χρησιμοποιώντας μια παλαιότερη έκδοση της Python στο Django, αλλά δεν επωφελείστε των βελτιώσεων και των νέων χαρακτηριστικών στην τελευταία έκδοση της Python. Οι εφαρμογές τρίτων οι οποίες δουλεύουν με το Django είναι, φυσικά, ελεύθερες να θέσουν τις δικές τους απαιτήσεις σχετικά με το ποιες εκδόσεις της Python ή όχι υποστηρίζουν."
+
+#: ../../../../sources/1.10/docs/faq/install.txt:85
+msgid "Should I use the stable version or development version?"
+msgstr "Να χρησιμοποιώ τη σταθερή έκδοση ή την αναπτυξιακή;"
+
+#: ../../../../sources/1.10/docs/faq/install.txt:87
+msgid ""
+"Generally, if you're using code in production, you should be using a stable "
+"release. The Django project publishes a full stable release every nine "
+"months or so, with bugfix updates in between. These stable releases contain "
+"the API that is covered by our backwards compatibility guarantees; if you "
+"write code against stable releases, you shouldn't have any problems "
+"upgrading when the next official version is released."
+msgstr "Γενικά, αν χρησιμοποιείτε κώδικα ο οποίος θα βγει στην παραγωγή (δηλαδή στο internet) θα πρέπει να χρησιμοποιείτε την σταθερή έκδοση (stable release). Το Django project εκδίδει μια πλήρης σταθερή διανομή κάθε εννέα μήνες περίπου, όπου κάθε μια περιέχει διορθώσεις σφαλμάτων (bugfixes). Αυτές οι σταθερές διανομές περιέχουν το API για το οποίο εγγυόμαστε τη λειτουργία του. Αν γράφετε κώδικα με βάση τις σταθερές διανομές δεν θα έχετε κανένα πρόβλημα όταν αναβαθμίζετε σε κάποια επόμενη επίσημη διανομή, αρκεί βέβαια να διαβάζετε τις ανακοινώσεις της καινούργιας διανομής (release notes) γιατί μερικά πράγματα μπορεί αν έχουν αλλάξει."
+
+#: ../../../../sources/1.10/docs/faq/models.txt:3
+msgid "FAQ: Databases and models"
+msgstr "Συχνές Ερωτήσεις: Βάσεις δεδομένων και Μοντέλα"
+
+#: ../../../../sources/1.10/docs/faq/models.txt:8
+msgid "How can I see the raw SQL queries Django is running?"
+msgstr "Πως μπορώ να δω το SQL ερώτημα που κάνει το Django στο παρασκήνιο;"
+
+#: ../../../../sources/1.10/docs/faq/models.txt:10
+msgid ""
+"Make sure your Django :setting:`DEBUG` setting is set to ``True``. Then, "
+"just do this::"
+msgstr "Σιγουρευτείτε ότι η ρύθμιση του Django :setting:`DEBUG` είναι ``True``. Έπειτα, τρέξτε την εντολή `python manage.py shell` και γράψτε::"
+
+#: ../../../../sources/1.10/docs/faq/models.txt:18
+msgid ""
+"``connection.queries`` is only available if :setting:`DEBUG` is ``True``. "
+"It's a list of dictionaries in order of query execution. Each dictionary has"
+" the following::"
+msgstr "Το ``connection.queries`` είναι διαθέσιμο μόνο αν η ρύθμιση :setting:`DEBUG` είναι ``True``. Στην ουσία είναι μια λίστα από dictionaries με την σειρά που θα εκτελεστούν τα ερωτήματα. Κάθε dictionary περιέχει τα ακόλουθα::"
+
+#: ../../../../sources/1.10/docs/faq/models.txt:25
+msgid ""
+"``connection.queries`` includes all SQL statements -- INSERTs, UPDATES, "
+"SELECTs, etc. Each time your app hits the database, the query will be "
+"recorded."
+msgstr "Το ``connection.queries`` περιλαμβάνει όλες τις SQL εντολές -- INSERTs, UPDATES, SELECTs, κλπ. Κάθε φορά που η εφαρμογή σας (ο κώδικας, αν θέλετε) αλληλεπιδρά με τη βάση δεδομένων η εντολή θα καταγράφεται."
+
+#: ../../../../sources/1.10/docs/faq/models.txt:28
+msgid ""
+"If you are using :doc:`multiple databases</topics/db/multi-db>`, you can use"
+" the same interface on each member of the ``connections`` dictionary::"
+msgstr "Αν χρησιμοποιείτε :doc:`πολλαπλές βάσεις δεδομένων </topics/db/multi-db>`, μπορείτε να χρησιμοποιείτε την ίδια μέθοδο αλλά αλλάζοντας το key του ``connections`` dictionary ούτως ώστε να ταιριάζει με το όνομα της βάσης δεδομένων σας::"
+
+#: ../../../../sources/1.10/docs/faq/models.txt:34
+msgid ""
+"If you need to clear the query list manually at any point in your functions,"
+" just call ``reset_queries()``, like this::"
+msgstr "Αν χρειαστεί να αδειάσετε χειροκίνητα τη λίστα με τα ερωτήματα δεν έχετε παρά να καλέσετε τη συνάρτηση ``reset_queries()``, ως εξής::"
+
+#: ../../../../sources/1.10/docs/faq/models.txt:41
+msgid "Can I use Django with a pre-existing database?"
+msgstr "Μπορώ να χρησιμοποιήσω το Django με μια ήδη υπάρχουσα βάση δεδομένων;"
+
+#: ../../../../sources/1.10/docs/faq/models.txt:43
+msgid ""
+"Yes. See :doc:`Integrating with a legacy database </howto/legacy-"
+"databases>`."
+msgstr "Βεβαίως. Δείτε στο άρθρο :doc:`Χρησιμοποιώντας μια υπάρχουσα βάση δεδομένων </howto/legacy-databases>`."
+
+#: ../../../../sources/1.10/docs/faq/models.txt:46
+msgid "If I make changes to a model, how do I update the database?"
+msgstr "Αν κάνω αλλαγές σε κάποιο μοντέλο, πως ενημερώνω τη βάση δεδομένων;"
+
+#: ../../../../sources/1.10/docs/faq/models.txt:48
+msgid ""
+"Take a look at Django's support for :mod:`schema migrations "
+"<django.db.migrations>`."
+msgstr "Ρίξτε μια ματιά στην υποστήριξη του Django για τα :mod:`schema migrations <django.db.migrations>`."
+
+#: ../../../../sources/1.10/docs/faq/models.txt:51
+msgid ""
+"If you don't mind clearing data, your project's ``manage.py`` utility has a "
+":djadmin:`flush` option to reset the database to the state it was in "
+"immediately after :djadmin:`migrate` was executed."
+msgstr "Αν δεν ενδιαφέρεστε να διαγραφούν τα δεδομένα, το ``manage.py`` έχει την επιλογή :djadmin:`flush` η οποία επαναφέρει τη βάση δεδομένων στη κατάσταση που ήταν αμέσως μετά την εκτέλεση του :djadmin:`migrate`."
+
+#: ../../../../sources/1.10/docs/faq/models.txt:56
+msgid "Do Django models support multiple-column primary keys?"
+msgstr "Υποστηρίζουν τα Django μοντέλα primary keys πολλαπλών-στηλών;"
+
+#: ../../../../sources/1.10/docs/faq/models.txt:58
+msgid "No. Only single-column primary keys are supported."
+msgstr "Όχι. Υποστηρίζονται μόνο τα primary keys που ανήκουν σε μια στήλη."
+
+#: ../../../../sources/1.10/docs/faq/models.txt:60
+msgid ""
+"But this isn't an issue in practice, because there's nothing stopping you "
+"from adding other constraints (using the ``unique_together`` model option or"
+" creating the constraint directly in your database), and enforcing the "
+"uniqueness at that level. Single-column primary keys are needed for things "
+"such as the admin interface to work; e.g., you need a simple way of being "
+"able to specify an object to edit or delete."
+msgstr "Αλλά αυτό δεν αποτελεί σοβαρό θέμα στη πράξη, επειδή κανείς δε θα σας εμποδίσει από το να προσθέσετε και άλλα constraints (χρησιμοποιώντας την επιλογή του μοντέλου ``unique_together`` ή δημιουργώντας ένα constraint απ’ ευθείας στη βάση δεδομένων), ενισχύοντας στην ουσία την μοναδικότητα σε αυτό το επίπεδο. Τα μοναδικής-στήλης primary keys χρειάζονται για να δουλέψει το admin interface του Django, π.χ χρειάζεστε έναν απλό τρόπο προκειμένου να καθορίσετε ένα object για να το επεξεργαστείτε ή να το διαγράψετε."
+
+#: ../../../../sources/1.10/docs/faq/models.txt:68
+msgid "Does Django support NoSQL databases?"
+msgstr "Υποστηρίζονται οι βάσεις δεδομένων NoSQL στο Django;"
+
+#: ../../../../sources/1.10/docs/faq/models.txt:70
+msgid ""
+"NoSQL databases are not officially supported by Django itself. There are, "
+"however, a number of side project and forks which allow NoSQL functionality "
+"in Django, like `Django non-rel`_."
+msgstr "Οι βάσεις δεδομένων NoSQL δεν υποστηρίζονται επισήμως από το ίδιο το Django. Υπάρχουν, ωστόσο, αρκετά projects τρίτων όπως και forks τα οποία επιτρέπουν τη λειτουργία NoSQL με το Django, όπως είναι το `Django non-rel`_."
+
+#: ../../../../sources/1.10/docs/faq/models.txt:74
+msgid ""
+"You can also take a look on `the wiki page`_ which discusses some "
+"alternatives."
+msgstr "Μπορείτε, επίσης, να ρίξετε μια ματιά στη `σελίδα του wiki <https://code.djangoproject.com/wiki/NoSqlSupport>`_ η οποία συζητά μερικές εναλλακτικές λύσεις."
+
+#: ../../../../sources/1.10/docs/faq/models.txt:80
+msgid ""
+"How do I add database-specific options to my CREATE TABLE statements, such "
+"as specifying MyISAM as the table type?"
+msgstr "Πως προσθέτω δικές μου επιλογές στις εντολές της βάσης δεδομένων CREATE TABLE, όπως προσδιορίζοντας το MyISAM ως τύπο πίνακα;"
+
+#: ../../../../sources/1.10/docs/faq/models.txt:82
+msgid ""
+"We try to avoid adding special cases in the Django code to accommodate all "
+"the database-specific options such as table type, etc. If you'd like to use "
+"any of these options, create a migration with a "
+":class:`~django.db.migrations.operations.RunSQL` operation that contains "
+"``ALTER TABLE`` statements that do what you want to do."
+msgstr "Προσπαθούμε να αποφύγουμε την εισαγωγή ειδικών περιπτώσεων στο κώδικα του Django όπως είναι ο τύπος του πίνακα κλπ, οι οποίες αφορούν επιλογές συγκεκριμένων βάσεων δεδομένων. Αν θέλετε να χρησιμοποιήσετε τέτοιου είδους επιλογές, δημιουργήστε ένα migration με τη λειτουργία :class:`~django.db.migrations.operations.RunSQL` η οποία θα περιέχει τις δηλώσεις του τύπου ``ALTER TABLE`` οι οποίες θα κάνουν αυτό που θέλετε."
+
+#: ../../../../sources/1.10/docs/faq/models.txt:88
+msgid ""
+"For example, if you're using MySQL and want your tables to use the MyISAM "
+"table type, use the following SQL::"
+msgstr "Για παράδειγμα, αν χρησιμοποιείτε τη MySQL και θέλετε οι πίνακες σας να χρησιμοποιήσουν τον τύπο πίνακα MyISAM, χρησιμοποιήστε την ακόλουθη SQL εντολή::"
+
+#: ../../../../sources/1.10/docs/faq/troubleshooting.txt:3
+msgid "Troubleshooting"
+msgstr "Αντιμετώπιση προβλημάτων"
+
+#: ../../../../sources/1.10/docs/faq/troubleshooting.txt:5
+msgid ""
+"This page contains some advice about errors and problems commonly "
+"encountered during the development of Django applications."
+msgstr "Αυτή η σελίδα περιέχει μερικές συμβουλές για σφάλματα και προβλήματα που προκύπτουν συχνά κατά τη διάρκεια ανάπτυξης των Django εφαρμογών."
+
+#: ../../../../sources/1.10/docs/faq/troubleshooting.txt:11
+msgid "Problems running django-admin"
+msgstr "Προβλήματα στην εκτέλεση της εντολής django-admin"
+
+#: ../../../../sources/1.10/docs/faq/troubleshooting.txt:14
+msgid "\"command not found: django-admin\""
+msgstr "\"command not found: django-admin\""
+
+#: ../../../../sources/1.10/docs/faq/troubleshooting.txt:16
+msgid ""
+":doc:`django-admin </ref/django-admin>` should be on your system path if you"
+" installed Django via ``python setup.py``. If it's not on your path, you can"
+" find it in ``site-packages/django/bin``, where ``site-packages`` is a "
+"directory within your Python installation. Consider symlinking to :doc"
+":`django-admin </ref/django-admin>` from some place on your path, such as "
+":file:`/usr/local/bin`."
+msgstr "Η εντολή :doc:`django-admin </ref/django-admin>` θα πρέπει να βρίσκεται στο system path του υπολογιστή σας, αν έχετε εγκαταστήσει το Django μέσω της εντολής ``python setup.py``. Αν δεν βρίσκεται στο system path, τότε μπορείτε να το βρείτε στο φάκελο ``site-packages/django/bin``, όπου το ``site-packages`` είναι ένας φάκελος μέσα στον φάκελο εγκατάστασης της Python. Δοκιμάστε να κάνετε symlink το :doc:`django-admin </ref/django-admin>` από κάποιο σημείο που βρίσκεται ήδη στο path σας, όπως είναι το :file:`/usr/local/bin`."
+
+#: ../../../../sources/1.10/docs/faq/troubleshooting.txt:23
+msgid ""
+"If ``django-admin`` doesn't work but ``django-admin.py`` does, you're "
+"probably using a version of Django that doesn't match the version of this "
+"documentation. ``django-admin`` is new in Django 1.7."
+msgstr "Αν το ``django-admin`` δε δουλεύει αλλά το ``django-admin.py`` δουλεύει, τότε ίσως χρησιμοποιείτε μια έκδοση του Django η οποία δεν ταιριάζει με το παρών documentation. Το ``django-admin`` είναι καινούργιο στο Django 1.7."
+
+#: ../../../../sources/1.10/docs/faq/troubleshooting.txt:28
+msgid "Mac OS X permissions"
+msgstr "Mac OS X δικαιώματα"
+
+#: ../../../../sources/1.10/docs/faq/troubleshooting.txt:30
+msgid ""
+"If you're using Mac OS X, you may see the message \"permission denied\" when"
+" you try to run ``django-admin``. This is because, on Unix-based systems "
+"like OS X, a file must be marked as \"executable\" before it can be run as a"
+" program. To do this, open Terminal.app and navigate (using the ``cd`` "
+"command) to the directory where :doc:`django-admin </ref/django-admin>` is "
+"installed, then run the command ``sudo chmod +x django-admin``."
+msgstr "Αν χρησιμοποιείτε Mac OS X, ίσως δείτε το μήνυμα \"permission denied\" όταν προσπαθείτε να τρέξετε την εντολή ``django-admin``. Αυτό οφείλεται στο γεγονός ότι στα συστήματα που βασίζονται στο Unix, όπως το OS X, ένα αρχείο πρέπει να οριστεί ως \"εκτελεστέο\" (executable) πριν το τρέξετε ως πρόγραμμα. Για να το κάνετε αυτό ανοίξτε το Terminal.app και περιηγηθείτε (χρησιμοποιώντας την εντολή ``cd``) στο φάκελο όπου η εντολή :doc:`django-admin </ref/django-admin>` είναι εγκατεστημένη. Έπειτα τρέξτε την εντολή ``sudo chmod +x django-admin``."
+
+#: ../../../../sources/1.10/docs/faq/troubleshooting.txt:38
+msgid "Miscellaneous"
+msgstr "Διάφορα"
+
+#: ../../../../sources/1.10/docs/faq/troubleshooting.txt:41
+msgid "I'm getting a ``UnicodeDecodeError``. What am I doing wrong?"
+msgstr "Λαμβάνω το σφάλμα ``UnicodeDecodeError``. Τι κάνω λάθος;"
+
+#: ../../../../sources/1.10/docs/faq/troubleshooting.txt:43
+msgid ""
+"This class of errors happen when a bytestring containing non-ASCII sequences"
+" is transformed into a Unicode string and the specified encoding is "
+"incorrect. The output generally looks like this::"
+msgstr "Αυτού του είδους τα σφάλματα προκύπτουν όταν μια ακολουθία από bytes (bytestring) η οποία περιέχει ακολουθίες χαρακτήρων εκτός του ASCII κώδικα μετατρέπεται σε μια ακολουθία χαρακτήρων Unicode και η προσδιοριζόμενη κωδικοποίηση που χρησιμοποιήθηκε είναι λάθος. Η έξοδος, γενικά, μοιάζει με::"
+
+#: ../../../../sources/1.10/docs/faq/troubleshooting.txt:50
+msgid ""
+"The resolution mostly depends on the context, however here are two common "
+"pitfalls producing this error:"
+msgstr "Βέβαια αυτό διαφέρει ανά περίπτωση αλλά θα δούμε παρακάτω δύο κοινές παγίδες που παράγουν αυτό το σφάλμα:"
+
+#: ../../../../sources/1.10/docs/faq/troubleshooting.txt:53
+msgid ""
+"Your system locale may be a default ASCII locale, like the \"C\" locale on "
+"UNIX-like systems (can be checked by the ``locale`` command). If it's the "
+"case, please refer to your system documentation to learn how you can change "
+"this to a UTF-8 locale."
+msgstr "Οι ρυθμίσεις locale του συστήματος σας ίσως είναι προεπιλεγμένες στο ASCII locale, όπως το \"C\" locale στα UNIX συστήματα (αυτό μπορεί να ελεγχεί από κονσόλα με την εντολή ``locale``). Αν ισχύει κάτι τέτοιο, παρακαλούμε αναφερθείτε στο documentation του συστήματος σας για να δείτε πως να το αλλάξετε σε UTF-8 locale."
+
+#: ../../../../sources/1.10/docs/faq/troubleshooting.txt:58
+msgid "You created raw bytestrings, which is easy to do on Python 2::"
+msgstr "Δημιουργήσατε ακολουθίες από bytes (raw bytestrings), το οποίο είναι εύκολο να γίνει στην Python 2::"
+
+#: ../../../../sources/1.10/docs/faq/troubleshooting.txt:62
+msgid ""
+"Either use the ``u''`` prefix or even better, add the ``from __future__ "
+"import unicode_literals`` line at the top of your file so that your code "
+"will be compatible with Python 3.2 which doesn't support the ``u''`` prefix."
+msgstr "Είτε χρησιμοποιήστε το πρόθεμα ``u''`` ή ακόμη καλύτερα, προσθέστε τη γραμμή ``from __future__ import unicode_literals`` στην αρχή του αρχείου σας προκειμένου ο κώδικας σας να είναι συμβατός με την Python 3.2 η οποία δεν υποστηρίζει το πρόθεμα ``u''``."
+
+#: ../../../../sources/1.10/docs/faq/troubleshooting.txt:67
+msgid "Related resources:"
+msgstr "Σχετικές πηγές:"
+
+#: ../../../../sources/1.10/docs/faq/troubleshooting.txt:69
+msgid ":doc:`Unicode in Django </ref/unicode>`"
+msgstr ":doc:`Το unicode στο Django </ref/unicode>`"
+
+#: ../../../../sources/1.10/docs/faq/troubleshooting.txt:70
+msgid "https://wiki.python.org/moin/UnicodeDecodeError"
+msgstr "https://wiki.python.org/moin/UnicodeDecodeError"
+
+#: ../../../../sources/1.10/docs/faq/usage.txt:3
+msgid "FAQ: Using Django"
+msgstr "Συχνές Ερωτήσεις: Χρησιμοποιώντας το Django"
+
+#: ../../../../sources/1.10/docs/faq/usage.txt:6
+msgid "Why do I get an error about importing DJANGO_SETTINGS_MODULE?"
+msgstr "Γιατί λαμβάνω σφάλμα σχετικά με το import του DJANGO_SETTINGS_MODULE;"
+
+#: ../../../../sources/1.10/docs/faq/usage.txt:8
+msgid "Make sure that:"
+msgstr "Σιγουρευτείτε ότι:"
+
+#: ../../../../sources/1.10/docs/faq/usage.txt:10
+msgid ""
+"The environment variable DJANGO_SETTINGS_MODULE is set to a fully-qualified "
+"Python module (i.e. \"mysite.settings\")."
+msgstr "Η environment variable DJANGO_SETTINGS_MODULE είναι ρυθμισμένη ως ένα Python module (π.χ \"mysite.settings\") και όχι ως π.χ \"mysite/settings/\"."
+
+#: ../../../../sources/1.10/docs/faq/usage.txt:13
+msgid ""
+"Said module is on ``sys.path`` (``import mysite.settings`` should work)."
+msgstr "Το παραπάνω module (π.χ \"mysite.settings\") βρίσκεται μέσα στο ``sys.path`` (το ``import mysite.settings`` θα πρέπει να δουλεύει)."
+
+#: ../../../../sources/1.10/docs/faq/usage.txt:15
+msgid "The module doesn't contain syntax errors (of course)."
+msgstr "Το module δεν περιέχει συντακτικά λάθη (βεβαίως)."
+
+#: ../../../../sources/1.10/docs/faq/usage.txt:18
+msgid "I can't stand your template language. Do I have to use it?"
+msgstr "Δεν αντέχω τη γλώσσα των templates σας. Είμαι υποχρεωμένος να τη χρησιμοποιώ;"
+
+#: ../../../../sources/1.10/docs/faq/usage.txt:20
+msgid ""
+"We happen to think our template engine is the best thing since chunky bacon,"
+" but we recognize that choosing a template language runs close to religion. "
+"There's nothing about Django that requires using the template language, so "
+"if you're attached to Jinja2, Mako, or whatever, feel free to use those."
+msgstr "Τυγχάνει να πιστεύουμε ότι η μηχανή των templates μας είναι ότι καλύτερο συνέβη μετά το μπέϊκον αλλά αναγνωρίζουμε την δυνατότητα επιλογής ανάμεσα σε γλώσσες templates η οποία είναι καθαρά υποκειμενική. Το Django δεν απαιτεί να χρησιμοποιήσετε τη δική του template γλώσσα, οπότε αν θέλετε μπορείτε να χρησιμοποιήσετε τις Jinja2, Mako, ή οποιαδήποτε άλλη επιθυμείτε."
+
+#: ../../../../sources/1.10/docs/faq/usage.txt:26
+msgid "Do I have to use your model/database layer?"
+msgstr "Είναι υποχρεωτικό να χρησιμοποιώ το δικό σας επίπεδο μοντέλων/βάσεις δεδομένων;"
+
+#: ../../../../sources/1.10/docs/faq/usage.txt:28
+msgid ""
+"Nope. Just like the template system, the model/database layer is decoupled "
+"from the rest of the framework."
+msgstr "Όχι. Όπως ακριβώς με το σύστημα των templates έτσι και το επίπεδο των μοντέλων/βάσεις δεδομένων είναι απόλυτα διαχωρισμένο από το υπόλοιπο framework."
+
+#: ../../../../sources/1.10/docs/faq/usage.txt:31
+msgid ""
+"The one exception is: If you use a different database library, you won't get"
+" to use Django's automatically-generated admin site. That app is coupled to "
+"the Django database layer."
+msgstr "Η μοναδική εξαίρεση είναι η εξής: Αν χρησιμοποιήσετε μια διαφορετική βιβλιοθήκη βάσης δεδομένων, δε θα έχετε στη διάθεση σας το αυτόματα-παραγόμενο Django admin site. Αυτή η εφαρμογή (admin site) είναι συνδεδεμένη με το επίπεδο της βάσης δεδομένων του Django."
+
+#: ../../../../sources/1.10/docs/faq/usage.txt:36
+msgid "How do I use image and file fields?"
+msgstr "Πως χρησιμοποιώ τα πεδία ImageField και FileField;"
+
+#: ../../../../sources/1.10/docs/faq/usage.txt:38
+msgid ""
+"Using a :class:`~django.db.models.FileField` or an "
+":class:`~django.db.models.ImageField` in a model takes a few steps:"
+msgstr "Απαιτούνται μερικά βήματα για να επωφεληθείτε των πεδίων :class:`~django.db.models.FileField` ή/και :class:`~django.db.models.ImageField` που είναι δηλωμένα σε ένα μοντέλο:"
+
+#: ../../../../sources/1.10/docs/faq/usage.txt:41
+msgid ""
+"In your settings file, you'll need to define :setting:`MEDIA_ROOT` as the "
+"full path to a directory where you'd like Django to store uploaded files. "
+"(For performance, these files are not stored in the database.) Define "
+":setting:`MEDIA_URL` as the base public URL of that directory. Make sure "
+"that this directory is writable by the Web server's user account."
+msgstr "Μέσα στο γενικό αρχείο ρυθμίσεων του project σας (settings file), θα χρειαστεί να ορίσετε το :setting:`MEDIA_ROOT` ως ένα μονοπάτι στο φάκελο που θα αποθηκεύονται τα αρχεία που ανεβαίνουν (uploaded). (Για λόγους καλύτερης απόδοσης, αυτά τα αρχεία δεν αποθηκεύονται στη βάση δεδομένων). Δηλώστε το :setting:`MEDIA_URL` ως το βασικό δημόσιο URL αυτού του φακέλου. Βεβαιωθείτε ότι αυτός ο φάκελος έχει δικαιώματα εγγραφής από το λογαριασμό χρήστη στο Web server. Αν δουλεύετε τοπικά στον υπολογιστή σας, τότε το πιο πιθανόν είναι να έχετε δικαιώματα εγγραφής στο φάκελο που ορίσατε."
+
+#: ../../../../sources/1.10/docs/faq/usage.txt:48
+msgid ""
+"Add the :class:`~django.db.models.FileField` or "
+":class:`~django.db.models.ImageField` to your model, defining the "
+":attr:`~django.db.models.FileField.upload_to` option to specify a "
+"subdirectory of :setting:`MEDIA_ROOT` to use for uploaded files."
+msgstr "Προσθέστε το πεδίο :class:`~django.db.models.FileField` ή/και το :class:`~django.db.models.ImageField` στο μοντέλο σας, προσδιορίζοντας το όρισμα :attr:`~django.db.models.FileField.upload_to` προκειμένου να προσδιοριστεί ο υπο-φάκελος του :setting:`MEDIA_ROOT` που θα χρησιμοποιηθεί για τα ανεβασμένα αρχεία σας. Αν π.χ έχετε ορίσει την επιλογή :setting:`MEDIA_ROOT` ως \"mysite/media_remote/\" και το όρισμα :attr:`~django.db.models.FileField.upload_to` ως \"images/avatars/\" τότε όλες οι εικόνες θα αποθηκευτούν στη τοποθεσία \"mysite/media_remote/images/avatars/\"."
+
+#: ../../../../sources/1.10/docs/faq/usage.txt:53
+msgid ""
+"All that will be stored in your database is a path to the file (relative to "
+":setting:`MEDIA_ROOT`). You'll most likely want to use the convenience "
+":attr:`~django.db.models.fields.files.FieldFile.url` attribute provided by "
+"Django. For example, if your :class:`~django.db.models.ImageField` is called"
+" ``mug_shot``, you can get the absolute path to your image in a template "
+"with ``{{ object.mug_shot.url }}``."
+msgstr "Το μόνο που θα αποθηκευτεί στη βάση δεδομένων σας είναι το μονοπάτι στο αρχείο (σχετικό του :setting:`MEDIA_ROOT`). Το πιο πιθανό είναι να χρησιμοποιήσετε το βολικό attribute :attr:`~django.db.models.fields.files.FieldFile.url` που σας παρέχει το Django. Για παράδειγμα, αν το :class:`~django.db.models.ImageField` ονομάζεται ``mug_shot``, μπορείτε να δείτε το απόλυτο μονοπάτι (absolute path) της εικόνας σας, στο template, ως ``{{ object.mug_shot.url }}``."
+
+#: ../../../../sources/1.10/docs/faq/usage.txt:62
+msgid "How do I make a variable available to all my templates?"
+msgstr "Πως μπορώ να κάνω μια μεταβλητή ορατή σε όλα τα templates;"
+
+#: ../../../../sources/1.10/docs/faq/usage.txt:64
+msgid ""
+"Sometimes your templates just all need the same thing. A common example "
+"would be dynamically-generated menus. At first glance, it seems logical to "
+"simply add a common dictionary to the template context."
+msgstr "Μερικές φορές τα templates σας χρειάζονται τα ίδια πράγματα. Ένα συνηθισμένο παράδειγμα είναι τα δυναμικά παραγόμενα μενού. Στην αρχή, μπορεί να φανεί λογικό να προσθέσετε ένα κοινό dictionary στο template context."
+
+#: ../../../../sources/1.10/docs/faq/usage.txt:68
+msgid ""
+"The correct solution is to use a ``RequestContext``. Details on how to do "
+"this are here: :ref:`subclassing-context-requestcontext`."
+msgstr "Η σωστή λύση είναι να χρησιμοποιήσετε ένα ``RequestContext``. Λεπτομέρειες στο πως να το χρησιμοποιήσετε μπορείτε να βρείτε στην αναφορά :ref:`κάνοντας subclassing to context <subclassing-context-requestcontext>`."

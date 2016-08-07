@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# 
+# Translators:
+# Nick Mavrakis <mavrakis.n@gmail.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: django-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-06 10:17-0500\n"
+"PO-Revision-Date: 2016-07-25 09:39+0000\n"
+"Last-Translator: Stavros Korokithakis <stavros@korokithakis.net>\n"
+"Language-Team: Greek (http://www.transifex.com/django/django-docs/language/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../../../sources/1.10/docs/glossary.txt:3
+msgid "Glossary"
+msgstr "Λεξιλόγιο"
+
+#: ../../../../sources/1.10/docs/glossary.txt:6
+msgid "concrete model"
+msgstr "Μη αφηρημένο μοντέλο"
+
+#: ../../../../sources/1.10/docs/glossary.txt:8
+msgid ""
+"A non-abstract (:attr:`abstract=False <django.db.models.Options.abstract>`) "
+"model."
+msgstr "Ένα μη αφηρημένο (:attr:`abstract=False <django.db.models.Options.abstract>`) μοντέλο"
+
+#: ../../../../sources/1.10/docs/glossary.txt:10
+msgid "field"
+msgstr "πεδίο"
+
+#: ../../../../sources/1.10/docs/glossary.txt:12
+msgid ""
+"An attribute on a :term:`model`; a given field usually maps directly to a "
+"single database column."
+msgstr "Ένα attribute ενός :term:`μοντέλου <model>`. Ένα πεδίο, συνήθως, αντιστοιχεί σε μια στήλη στη βάση δεδομένων."
+
+#: ../../../../sources/1.10/docs/glossary.txt:15
+#: ../../../../sources/1.10/docs/glossary.txt:26
+msgid "See :doc:`/topics/db/models`."
+msgstr "Δείτε στο άρθρο :doc:`Μοντέλα </topics/db/models>`."
+
+#: ../../../../sources/1.10/docs/glossary.txt:16
+msgid "generic view"
+msgstr "generic view"
+
+#: ../../../../sources/1.10/docs/glossary.txt:18
+msgid ""
+"A higher-order :term:`view` function that provides an abstract/generic "
+"implementation of a common idiom or pattern found in view development."
+msgstr "Μια συνάρτηση :term:`view` η οποία παρέχει μια αφηρημένη/γενική υλοποίηση κοινών πρακτικών ή μοτίβων τα οποία εμφανίζονται κατά την ανάπτυξη ενός view."
+
+#: ../../../../sources/1.10/docs/glossary.txt:21
+msgid "See :doc:`/topics/class-based-views/index`."
+msgstr "Δείτε στο άρθρο :doc:`/topics/class-based-views/index`."
+
+#: ../../../../sources/1.10/docs/glossary.txt:22
+msgid "model"
+msgstr "μοντέλο"
+
+#: ../../../../sources/1.10/docs/glossary.txt:24
+msgid "Models store your application's data."
+msgstr "Τα μοντέλα αποθηκεύουν τα δεδομένα της εφαρμογής σας."
+
+#: ../../../../sources/1.10/docs/glossary.txt:27
+msgid "MTV"
+msgstr "MTV"
+
+#: ../../../../sources/1.10/docs/glossary.txt:29
+msgid ""
+"\"Model-template-view\"; a software pattern, similar in style to MVC, but a "
+"better description of the way Django does things."
+msgstr "\"Model-template-view\"; ένα μοτίβο του software, σχεδιαστικά όμοιο με το MVC, αλλά πιο περιγραφικό και συνδεδεμένο με το Django."
+
+#: ../../../../sources/1.10/docs/glossary.txt:32
+msgid "See :ref:`the FAQ entry <faq-mtv>`."
+msgstr "Δείτε τις διαφορές στις :ref:`συχνές ερωτήσεις <faq-mtv>`."
+
+#: ../../../../sources/1.10/docs/glossary.txt:33
+msgid "MVC"
+msgstr "MVC"
+
+#: ../../../../sources/1.10/docs/glossary.txt:35
+msgid ""
+"`Model-view-controller`__; a software pattern. Django :ref:`follows MVC to "
+"some extent <faq-mtv>`."
+msgstr "`Model-view-controller`__; ένα μοτίβο του software. Το Django :ref:`ακολουθεί το MVC μέχρι ένα σημείο <faq-mtv>`."
+
+#: ../../../../sources/1.10/docs/glossary.txt:39
+msgid "project"
+msgstr "project"
+
+#: ../../../../sources/1.10/docs/glossary.txt:41
+msgid ""
+"A Python package -- i.e. a directory of code -- that contains all the "
+"settings for an instance of Django. This would include database "
+"configuration, Django-specific options and application-specific settings."
+msgstr "Ένα Python πακέτο -- π.χ ένας φάκελος με αρχεία που περιέχουν τις απαραίτητες ρυθμίσεις για να ένα instance του Django. Αυτές οι ρυθμίσεις περιλαμβάνουν τη ρύθμιση της βάσης δεδομένων, επιλογές αποκλειστικά για να τρέξει το Django και διάφορες ρυθμίσεις για να τρέξει η εφαρμογή σας."
+
+#: ../../../../sources/1.10/docs/glossary.txt:45
+msgid "property"
+msgstr "property"
+
+#: ../../../../sources/1.10/docs/glossary.txt:47
+msgid ""
+"Also known as \"managed attributes\", and a feature of Python since version "
+"2.2. This is a neat way to implement attributes whose usage resembles "
+"attribute access, but whose implementation uses method calls."
+msgstr "Επίσης γνωστό και ως \"managed attributes\". Αποτελεί feature της Python από την έκδοση 2.2. Αυτός είναι ένας ωραίος τρόπος να υλοποιηθούν τα attributes των οποίων η χρήση μοιάζει με την πρόσβαση σε attribute αλλά η υλοποίηση τους χρησιμοποιεί κλήσεις μεθόδων."
+
+#: ../../../../sources/1.10/docs/glossary.txt:51
+msgid "See :class:`property`."
+msgstr "Δείτε στο :class:`property`."
+
+#: ../../../../sources/1.10/docs/glossary.txt:52
+msgid "queryset"
+msgstr "queryset"
+
+#: ../../../../sources/1.10/docs/glossary.txt:54
+msgid ""
+"An object representing some set of rows to be fetched from the database."
+msgstr "Ένα object το οποίο αναπαριστά ένα σετ από γραμμές (rows) που θα ληφθούν από τη βάση δεδομένων."
+
+#: ../../../../sources/1.10/docs/glossary.txt:56
+msgid "See :doc:`/topics/db/queries`."
+msgstr "Δείτε στο άρθρο :doc:`Πραγματοποιώντας queries </topics/db/queries>`."
+
+#: ../../../../sources/1.10/docs/glossary.txt:57
+msgid "slug"
+msgstr "slug"
+
+#: ../../../../sources/1.10/docs/glossary.txt:59
+msgid ""
+"A short label for something, containing only letters, numbers, underscores "
+"or hyphens. They're generally used in URLs. For example, in a typical blog "
+"entry URL:"
+msgstr "Μια μικρή ετικέτα για κάτι που αποτελείται μόνο από γράμματα, αριθμούς, κάτω παύλες ή παύλες. Συνήθως χρησιμοποιούνται στα URLs. Για παράδειγμα, σε ένα τυπικό blog URL:"
+
+#: ../../../../sources/1.10/docs/glossary.txt:67
+msgid "the last bit (``spring``) is the slug."
+msgstr "η τελευταία λέξη (``spring``) αποτελεί το slug."
+
+#: ../../../../sources/1.10/docs/glossary.txt:68
+msgid "template"
+msgstr "template"
+
+#: ../../../../sources/1.10/docs/glossary.txt:70
+msgid ""
+"A chunk of text that acts as formatting for representing data. A template "
+"helps to abstract the presentation of data from the data itself."
+msgstr "Ένα κομμάτι κειμένου το οποίο μορφοποιεί τα δεδομένα προς εμφάνιση. Ένα template βοηθά στο διαχωρισμό της εμφάνισης των δεδομένων από τα ίδια τα δεδομένα."
+
+#: ../../../../sources/1.10/docs/glossary.txt:74
+msgid "See :doc:`/topics/templates`."
+msgstr "Δείτε στο άρθρο :doc:`/topics/templates`."
+
+#: ../../../../sources/1.10/docs/glossary.txt:75
+msgid "view"
+msgstr "view"
+
+#: ../../../../sources/1.10/docs/glossary.txt:77
+msgid "A function responsible for rendering a page."
+msgstr "Μια συνάρτηση η οποία είναι υπεύθυνη για να κάνει render μια σελίδα."
