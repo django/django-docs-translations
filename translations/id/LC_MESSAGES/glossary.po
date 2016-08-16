@@ -1,0 +1,163 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+#
+# Translators:
+# Fery Setiawan <gembelweb@gmail.com>, 2015
+# Sutrisno Efendi <kangfend@gmail.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: django-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-15 15:25-0500\n"
+"PO-Revision-Date: 2016-02-10 14:13+0000\n"
+"Last-Translator: Sutrisno Efendi <kangfend@gmail.com>\n"
+"Language-Team: Indonesian (http://www.transifex.com/django/django-docs/"
+"language/id/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: id\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Glossary"
+msgstr "Glosarium"
+
+msgid "concrete model"
+msgstr "model berwujud"
+
+msgid ""
+"A non-abstract (:attr:`abstract=False <django.db.models.Options.abstract>`) "
+"model."
+msgstr ""
+"Model (:attr:`abstract=False <django.db.models.Options.abstract>`) bukan-"
+"abstrak."
+
+msgid "field"
+msgstr "bidang"
+
+msgid ""
+"An attribute on a :term:`model`; a given field usually maps directly to a "
+"single database column."
+msgstr ""
+"Sebuah atribut pada :term:`model`; bidang yang diberikan biasanya memetakan "
+"langsung ke kolom basisdata tunggal."
+
+msgid "See :doc:`/topics/db/models`."
+msgstr "Lihat :doc:`/topics/db/models`."
+
+msgid "generic view"
+msgstr "pandangan umum"
+
+msgid ""
+"A higher-order :term:`view` function that provides an abstract/generic "
+"implementation of a common idiom or pattern found in view development."
+msgstr ""
+"Fungsi :term:`view` urutan-tertinggi yang menyediakan sebuah penerapan "
+"abstrak/umum dari dialek atau corak umum ditemukan dalam pengembangan "
+"tampilan."
+
+msgid "See :doc:`/topics/class-based-views/index`."
+msgstr "Lihat  :doc:`/topics/class-based-views/index`."
+
+msgid "model"
+msgstr "model"
+
+msgid "Models store your application's data."
+msgstr "Model menyimpan data aplikasi anda."
+
+msgid "MTV"
+msgstr "MTV"
+
+msgid ""
+"\"Model-template-view\"; a software pattern, similar in style to MVC, but a "
+"better description of the way Django does things."
+msgstr ""
+"\"Model-template-view\"; pola perangkat lunak, mirip dengan gaya pada MVC, "
+"tetapi gambaran lebih baik dari Django lakukan."
+
+msgid "See :ref:`the FAQ entry <faq-mtv>`."
+msgstr "Lihat :ref:`Masukan FAQ <faq-mtv>`."
+
+msgid "MVC"
+msgstr "MVC"
+
+msgid ""
+"`Model-view-controller`__; a software pattern. Django :ref:`follows MVC to "
+"some extent <faq-mtv>`."
+msgstr ""
+"`Model-view-controller`__; pola perangkat lunak :ref:`mengikuti MVC ke "
+"beberapa tingkatan <faq-mtv>`."
+
+msgid "project"
+msgstr "proyek"
+
+msgid ""
+"A Python package -- i.e. a directory of code -- that contains all the "
+"settings for an instance of Django. This would include database "
+"configuration, Django-specific options and application-specific settings."
+msgstr ""
+"Sebuah Paket Phyton -- yaitu direktori kode -- yang mengandung semua "
+"pengaturan dari instance Django. Ini akan memasukkan konfigurasi basisdata, "
+"pilihan spesifik-Django dan pengaturan spesidik-aplikasi."
+
+msgid "property"
+msgstr "properti"
+
+msgid ""
+"Also known as \"managed attributes\", and a feature of Python since version "
+"2.2. This is a neat way to implement attributes whose usage resembles "
+"attribute access, but whose implementation uses method calls."
+msgstr ""
+"Juga dikenal sebagai \"mengelola atribut\", dan sebuah fitur Phyton sejak "
+"versi 2.2. Ini adalah cara serasi untuk menerapkan atribut yang "
+"penggunaannya menyerupai akses atribut, tetapi yang penerapannya menggunakan "
+"cara pemanggilan."
+
+msgid "See :class:`property`."
+msgstr "Lihat :class:`property`."
+
+msgid "queryset"
+msgstr "queryset"
+
+msgid ""
+"An object representing some set of rows to be fetched from the database."
+msgstr ""
+"Sebuah obyek mewakili beberapa kumpulan baris untuk diambil dari basisdata."
+
+msgid "See :doc:`/topics/db/queries`."
+msgstr "Lihat :doc:`/topics/db/queries`."
+
+msgid "slug"
+msgstr "slug"
+
+msgid ""
+"A short label for something, containing only letters, numbers, underscores "
+"or hyphens. They're generally used in URLs. For example, in a typical blog "
+"entry URL:"
+msgstr ""
+"Label pendek untuk sesuatu, mengandung hanya huruf, angka, garis bawah atau "
+"penghubung. Mereka umumnya digunakna dalam URL. Sebagai contoh, dalam URL "
+"masukan blok yang khas:"
+
+msgid "the last bit (``spring``) is the slug."
+msgstr "bit terakhir (``spring``) adalah slug."
+
+msgid "template"
+msgstr "cetakan"
+
+msgid ""
+"A chunk of text that acts as formatting for representing data. A template "
+"helps to abstract the presentation of data from the data itself."
+msgstr ""
+"Sebuah potongan teka yang bertindak sebagai membentuk untuk mewakili data. "
+"Sebuah cetakan membantu untuk membentuk kehadiran data dari data itu sendiri."
+
+msgid "See :doc:`/topics/templates`."
+msgstr "Lihat :doc:`/topics/templates`."
+
+msgid "view"
+msgstr "lihat"
+
+msgid "A function responsible for rendering a page."
+msgstr "Sebuah fungsi bertangguna jawab untuk membuat halaman."

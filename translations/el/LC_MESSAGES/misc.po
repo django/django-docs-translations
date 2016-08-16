@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) Django Software Foundation and contributors
 # This file is distributed under the same license as the Django package.
-# 
+#
 # Translators:
 # Nick Mavrakis <mavrakis.n@gmail.com>, 2016
 msgid ""
@@ -11,644 +11,764 @@ msgstr ""
 "POT-Creation-Date: 2016-08-06 10:17-0500\n"
 "PO-Revision-Date: 2016-07-16 15:59+0000\n"
 "Last-Translator: Nick Mavrakis <mavrakis.n@gmail.com>\n"
-"Language-Team: Greek (http://www.transifex.com/django/django-docs/language/el/)\n"
+"Language-Team: Greek (http://www.transifex.com/django/django-docs/language/"
+"el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../../../sources/1.10/docs/misc/api-stability.txt:3
 msgid "API stability"
 msgstr "Σταθερότητα του API"
 
-#: ../../../../sources/1.10/docs/misc/api-stability.txt:5
 msgid ""
 "Django promises API stability and forwards-compatibility since version 1.0. "
 "In a nutshell, this means that code you develop against a version of Django "
 "will continue to work with future releases. You may need to make minor "
 "changes when upgrading the version of Django your project uses: see the "
-"\"Backwards incompatible changes\" section of the :doc:`release note "
-"</releases/index>` for the version or versions to which you are upgrading."
-msgstr "Το Django δεσμεύεται όχι μόνο για τη σταθερότητα του API αλλά και για τη μελλοντική του, από την έκδοση 1.0, συμβατότητα. Με άλλα λόγια, ο κώδικας που γράφετε, χρησιμοποιώντας μια έκδοση του Django, θα συνεχίσει να λειτουργεί και με μελλοντικές εκδόσεις. Θα χρειαστεί, μόνο, να κάνετε μερικές μικροαλλαγές όταν αναβαθμίζετε την έκδοση του Django για το project σας: δείτε στην ενότητα \"Αλλαγές μη συμβατές με παλαιότερες εκδόσεις\" του άρθρου :doc:`σημειώσεις διανομής </releases/index>` για την έκδοση (ή τις εκδόσεις) στην οποία αναβαθμίζετε."
+"\"Backwards incompatible changes\" section of the :doc:`release note </"
+"releases/index>` for the version or versions to which you are upgrading."
+msgstr ""
+"Το Django δεσμεύεται όχι μόνο για τη σταθερότητα του API αλλά και για τη "
+"μελλοντική του, από την έκδοση 1.0, συμβατότητα. Με άλλα λόγια, ο κώδικας "
+"που γράφετε, χρησιμοποιώντας μια έκδοση του Django, θα συνεχίσει να "
+"λειτουργεί και με μελλοντικές εκδόσεις. Θα χρειαστεί, μόνο, να κάνετε "
+"μερικές μικροαλλαγές όταν αναβαθμίζετε την έκδοση του Django για το project "
+"σας: δείτε στην ενότητα \"Αλλαγές μη συμβατές με παλαιότερες εκδόσεις\" του "
+"άρθρου :doc:`σημειώσεις διανομής </releases/index>` για την έκδοση (ή τις "
+"εκδόσεις) στην οποία αναβαθμίζετε."
 
-#: ../../../../sources/1.10/docs/misc/api-stability.txt:13
 msgid "What \"stable\" means"
 msgstr "Τι σημαίνει \"σταθερότητα\""
 
-#: ../../../../sources/1.10/docs/misc/api-stability.txt:15
 msgid "In this context, stable means:"
 msgstr "Μέσα σε αυτό το πλαίσιο, σταθερότητα σημαίνει:"
 
-#: ../../../../sources/1.10/docs/misc/api-stability.txt:17
 msgid ""
 "All the public APIs (everything in this documentation) will not be moved or "
 "renamed without providing backwards-compatible aliases."
-msgstr "Όλα τα δημόσια APIs (το οτιδήποτε μέσα σε αυτό το εγχειρίδιο) δεν θα μετακινηθούν ή μετονομαστούν χωρίς πρώτα να ορίσουν τα κατάλληλα aliases προκειμένου να είναι συμβατά με παλαιότερες εκδόσεις."
+msgstr ""
+"Όλα τα δημόσια APIs (το οτιδήποτε μέσα σε αυτό το εγχειρίδιο) δεν θα "
+"μετακινηθούν ή μετονομαστούν χωρίς πρώτα να ορίσουν τα κατάλληλα aliases "
+"προκειμένου να είναι συμβατά με παλαιότερες εκδόσεις."
 
-#: ../../../../sources/1.10/docs/misc/api-stability.txt:20
 msgid ""
 "If new features are added to these APIs -- which is quite possible -- they "
 "will not break or change the meaning of existing methods. In other words, "
 "\"stable\" does not (necessarily) mean \"complete.\""
-msgstr "Όταν προστεθούν νέα features σε αυτά τα δημόσια APIs -- που είναι αρκετά συχνό φαινόμενο -- δε θα σπάσουν ή αλλάξουν την έννοια των ήδη υπαρχουσών μεθόδων. Με άλλα λόγια, \"σταθερότητα\" δεν σημαίνει (απαραιτήτως) \"τελικό\", δηλαδή, αν προσθέσουμε μια μέθοδο Χ σε κάποιο API και στο μέλλον την εμπλουτίσουμε να δέχεται περισσότερα ορίσματα αλλά εσείς συνεχίζετε να χρησιμοποιείτε την πρώτη έκδοση της μεθόδου αυτής, τότε η μέθοδος που χρησιμοποιείτε παραμένει \"σταθερή\" (στη λειτουργία της) αλλά όχι στο \"τελικό\" της στάδιο (καθώς προστέθηκαν νέα features σε αυτή)."
+msgstr ""
+"Όταν προστεθούν νέα features σε αυτά τα δημόσια APIs -- που είναι αρκετά "
+"συχνό φαινόμενο -- δε θα σπάσουν ή αλλάξουν την έννοια των ήδη υπαρχουσών "
+"μεθόδων. Με άλλα λόγια, \"σταθερότητα\" δεν σημαίνει (απαραιτήτως) \"τελικό"
+"\", δηλαδή, αν προσθέσουμε μια μέθοδο Χ σε κάποιο API και στο μέλλον την "
+"εμπλουτίσουμε να δέχεται περισσότερα ορίσματα αλλά εσείς συνεχίζετε να "
+"χρησιμοποιείτε την πρώτη έκδοση της μεθόδου αυτής, τότε η μέθοδος που "
+"χρησιμοποιείτε παραμένει \"σταθερή\" (στη λειτουργία της) αλλά όχι στο "
+"\"τελικό\" της στάδιο (καθώς προστέθηκαν νέα features σε αυτή)."
 
-#: ../../../../sources/1.10/docs/misc/api-stability.txt:24
 msgid ""
 "If, for some reason, an API declared stable must be removed or replaced, it "
 "will be declared deprecated but will remain in the API for at least two "
 "feature releases. Warnings will be issued when the deprecated method is "
 "called."
-msgstr "Αν, για κάποιο λόγο, ένα API, δηλωμένο ως σταθερό, χρειαστεί να αφαιρεθεί ή να αντικατασταθεί, θα οριστεί ως deprecated και θα παραμείνει στο Django για τις επόμενες δύο διανομές, τουλάχιστον. Αν χρησιμοποιείτε, στον κώδικα σας, αυτό το API τότε θα εμφανίζονται κατάλληλα warnings για να σας ενημερώνουν σχετικά με το deprecation του API αυτού."
+msgstr ""
+"Αν, για κάποιο λόγο, ένα API, δηλωμένο ως σταθερό, χρειαστεί να αφαιρεθεί ή "
+"να αντικατασταθεί, θα οριστεί ως deprecated και θα παραμείνει στο Django για "
+"τις επόμενες δύο διανομές, τουλάχιστον. Αν χρησιμοποιείτε, στον κώδικα σας, "
+"αυτό το API τότε θα εμφανίζονται κατάλληλα warnings για να σας ενημερώνουν "
+"σχετικά με το deprecation του API αυτού."
 
-#: ../../../../sources/1.10/docs/misc/api-stability.txt:29
 msgid ""
 "See :ref:`official-releases` for more details on how Django's version "
 "numbering scheme works, and how features will be deprecated."
-msgstr "Δείτε στις :ref:`επίσημες διανομές <official-releases>` για περισσότερες πληροφορίες σχετικά με την αρίθμηση των εκδόσεων του Django και την πολιτική του deprecation του Django."
+msgstr ""
+"Δείτε στις :ref:`επίσημες διανομές <official-releases>` για περισσότερες "
+"πληροφορίες σχετικά με την αρίθμηση των εκδόσεων του Django και την πολιτική "
+"του deprecation του Django."
 
-#: ../../../../sources/1.10/docs/misc/api-stability.txt:32
 msgid ""
 "We'll only break backwards compatibility of these APIs if a bug or security "
 "hole makes it completely unavoidable."
-msgstr "Ο μοναδικός λόγος που θα μας αναγκάσει να \"σπάσουμε\" τη συμβατότητα με παλαιότερες εκδόσεις είναι κάποιο σφάλμα στο API ή κάποιο κενό ασφάλειας."
+msgstr ""
+"Ο μοναδικός λόγος που θα μας αναγκάσει να \"σπάσουμε\" τη συμβατότητα με "
+"παλαιότερες εκδόσεις είναι κάποιο σφάλμα στο API ή κάποιο κενό ασφάλειας."
 
-#: ../../../../sources/1.10/docs/misc/api-stability.txt:36
 msgid "Stable APIs"
 msgstr "Σταθερά APIs"
 
-#: ../../../../sources/1.10/docs/misc/api-stability.txt:38
 msgid ""
-"In general, everything covered in the documentation -- with the exception of"
-" anything in the :doc:`internals area </internals/index>` is considered "
+"In general, everything covered in the documentation -- with the exception of "
+"anything in the :doc:`internals area </internals/index>` is considered "
 "stable."
-msgstr "Γενικά, οτιδήποτε είναι γραμμένο στο εγχειρίδιο του Django, με εξαίρεση αυτά που είναι γραμμένα στα :doc:`εσωτερικά του Django </internals/index>`, θεωρείται σταθερό."
+msgstr ""
+"Γενικά, οτιδήποτε είναι γραμμένο στο εγχειρίδιο του Django, με εξαίρεση αυτά "
+"που είναι γραμμένα στα :doc:`εσωτερικά του Django </internals/index>`, "
+"θεωρείται σταθερό."
 
-#: ../../../../sources/1.10/docs/misc/api-stability.txt:42
 msgid "Exceptions"
 msgstr "Εξαιρέσεις"
 
-#: ../../../../sources/1.10/docs/misc/api-stability.txt:44
 msgid ""
 "There are a few exceptions to this stability and backwards-compatibility "
 "promise."
-msgstr "Ωστόσο, υπάρχουν μερικές εξαιρέσεις στην ανωτέρω υπόσχεση σχετικά με τη σταθερότητα και την συμβατότητα με παλαιότερες εκδόσεις."
+msgstr ""
+"Ωστόσο, υπάρχουν μερικές εξαιρέσεις στην ανωτέρω υπόσχεση σχετικά με τη "
+"σταθερότητα και την συμβατότητα με παλαιότερες εκδόσεις."
 
-#: ../../../../sources/1.10/docs/misc/api-stability.txt:48
 msgid "Security fixes"
 msgstr "Διορθώσεις σε θέματα ασφάλειας"
 
-#: ../../../../sources/1.10/docs/misc/api-stability.txt:50
 msgid ""
 "If we become aware of a security problem -- hopefully by someone following "
-"our :ref:`security reporting policy <reporting-security-issues>` -- we'll do"
-" everything necessary to fix it. This might mean breaking backwards "
+"our :ref:`security reporting policy <reporting-security-issues>` -- we'll do "
+"everything necessary to fix it. This might mean breaking backwards "
 "compatibility; security trumps the compatibility guarantee."
-msgstr "Αν αντιληφθούμε κάποιο πρόβλημα σχετικά με την ασφάλεια -- από κάποιον που ακολούθησε την :ref:`διαδικασία αναφοράς σφαλμάτων για θέματα ασφάλειας <reporting-security-issues>` -- θα κάνουμε ότι είναι δυνατόν για να το φτιάξουμε. Αν χρειαστεί, για λόγους ασφάλειας, θα \"σπάσουμε\" τη συμβατότητα με παλαιότερες εκδόσεις. Βλέπετε, η ασφάλεια προέχει της συμβατότητας."
+msgstr ""
+"Αν αντιληφθούμε κάποιο πρόβλημα σχετικά με την ασφάλεια -- από κάποιον που "
+"ακολούθησε την :ref:`διαδικασία αναφοράς σφαλμάτων για θέματα ασφάλειας "
+"<reporting-security-issues>` -- θα κάνουμε ότι είναι δυνατόν για να το "
+"φτιάξουμε. Αν χρειαστεί, για λόγους ασφάλειας, θα \"σπάσουμε\" τη "
+"συμβατότητα με παλαιότερες εκδόσεις. Βλέπετε, η ασφάλεια προέχει της "
+"συμβατότητας."
 
-#: ../../../../sources/1.10/docs/misc/api-stability.txt:56
 msgid "APIs marked as internal"
 msgstr "APIs που έχουν οριστεί ως εσωτερικά"
 
-#: ../../../../sources/1.10/docs/misc/api-stability.txt:58
 msgid "Certain APIs are explicitly marked as \"internal\" in a couple of ways:"
-msgstr "Κάποια συγκεκριμένα APIs έχουν οριστεί ως \"εσωτερικά\" με δύο τρόπους:"
+msgstr ""
+"Κάποια συγκεκριμένα APIs έχουν οριστεί ως \"εσωτερικά\" με δύο τρόπους:"
 
-#: ../../../../sources/1.10/docs/misc/api-stability.txt:60
 msgid ""
 "Some documentation refers to internals and mentions them as such. If the "
 "documentation says that something is internal, we reserve the right to "
 "change it."
-msgstr "Μερικά σημεία στο εγχειρίδιο αναφέρονται στα \"εσωτερικά\" και τα αποκαλούν κατ’ αυτό τον τρόπο. Αν το εγχειρίδιο αναφέρει ότι κάτι είναι εσωτερικό, διατηρούμε το δικαίωμα να το αλλάξουμε."
+msgstr ""
+"Μερικά σημεία στο εγχειρίδιο αναφέρονται στα \"εσωτερικά\" και τα αποκαλούν "
+"κατ’ αυτό τον τρόπο. Αν το εγχειρίδιο αναφέρει ότι κάτι είναι εσωτερικό, "
+"διατηρούμε το δικαίωμα να το αλλάξουμε."
 
-#: ../../../../sources/1.10/docs/misc/api-stability.txt:64
 msgid ""
 "Functions, methods, and other objects prefixed by a leading underscore "
 "(``_``). This is the standard Python way of indicating that something is "
 "private; if any method starts with a single ``_``, it's an internal API."
-msgstr "Συναρτήσεις, μέθοδοι και άλλα objects με το πρόθεμα της κάτω παύλας (``_``). Αυτός είναι ο συνήθης τρόπος στην Python για να προσδιορίσουμε κάτι ως private. Αν κάποια μέθοδος ξεκινάει με μια ``_``, τότε θεωρείται εσωτερικό API."
+msgstr ""
+"Συναρτήσεις, μέθοδοι και άλλα objects με το πρόθεμα της κάτω παύλας (``_``). "
+"Αυτός είναι ο συνήθης τρόπος στην Python για να προσδιορίσουμε κάτι ως "
+"private. Αν κάποια μέθοδος ξεκινάει με μια ``_``, τότε θεωρείται εσωτερικό "
+"API."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:3
 msgid "Design philosophies"
 msgstr "Φιλοσοφίες σχεδιασμού"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:5
 msgid ""
 "This document explains some of the fundamental philosophies Django's "
 "developers have used in creating the framework. Its goal is to explain the "
 "past and guide the future."
-msgstr "Αυτό το άρθρο εξηγεί μερικές από τις θεμελιώδεις φιλοσοφίες των developers του Django οι οποίοι ακολουθώντας τες, έχτισαν το framework. Ο στόχος τους είναι να εξηγήσει το παρελθόν και να οδηγήσει το μέλλον."
+msgstr ""
+"Αυτό το άρθρο εξηγεί μερικές από τις θεμελιώδεις φιλοσοφίες των developers "
+"του Django οι οποίοι ακολουθώντας τες, έχτισαν το framework. Ο στόχος τους "
+"είναι να εξηγήσει το παρελθόν και να οδηγήσει το μέλλον."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:10
 msgid "Overall"
 msgstr "Γενικά"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:15
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:155
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:296
 msgid "Loose coupling"
 msgstr "Ανεξαρτητοποίηση μεταξύ οντοτήτων (loose coupling)"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:19
 msgid ""
 "A fundamental goal of Django's stack is `loose coupling and tight "
 "cohesion`_. The various layers of the framework shouldn't \"know\" about "
 "each other unless absolutely necessary."
-msgstr "Ένας θεμελιώδης στόχος των πολλαπλών επιπέδων του Django (models, views, templates κλπ) είναι: `ανεξαρτητοποίηση των οντοτήτων και η σταθερή συνοχή του καθενός <http://c2.com/cgi/wiki?CouplingAndCohesion>`_. Τα διάφορα επίπεδα του framework δεν θα πρέπει να \"γνωρίζουν\" το ένα το άλλο εκτός και αν κριθεί απολύτως αναγκαίο."
+msgstr ""
+"Ένας θεμελιώδης στόχος των πολλαπλών επιπέδων του Django (models, views, "
+"templates κλπ) είναι: `ανεξαρτητοποίηση των οντοτήτων και η σταθερή συνοχή "
+"του καθενός <http://c2.com/cgi/wiki?CouplingAndCohesion>`_. Τα διάφορα "
+"επίπεδα του framework δεν θα πρέπει να \"γνωρίζουν\" το ένα το άλλο εκτός "
+"και αν κριθεί απολύτως αναγκαίο."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:23
 msgid ""
 "For example, the template system knows nothing about Web requests, the "
 "database layer knows nothing about data display and the view system doesn't "
 "care which template system a programmer uses."
-msgstr "Για παράδειγμα, το σύστημα των templates δε ξέρει απολύτως τίποτα σχετικά με τα Web requests, το επίπεδο της βάσης δεδομένων δε ξέρει τίποτα για την εμφάνιση των δεδομένων και, τέλος, δεν ενδιαφέρει το σύστημα των views ποιο σύστημα template χρησιμοποιεί ο προγραμματιστής."
+msgstr ""
+"Για παράδειγμα, το σύστημα των templates δε ξέρει απολύτως τίποτα σχετικά με "
+"τα Web requests, το επίπεδο της βάσης δεδομένων δε ξέρει τίποτα για την "
+"εμφάνιση των δεδομένων και, τέλος, δεν ενδιαφέρει το σύστημα των views ποιο "
+"σύστημα template χρησιμοποιεί ο προγραμματιστής."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:27
 msgid ""
 "Although Django comes with a full stack for convenience, the pieces of the "
 "stack are independent of another wherever possible."
-msgstr "Παρόλο που, για λόγους ευκολίας, το Django περιέχει όλα τα επίπεδα προεγκατεστημένα, καθένα από αυτά είναι ανεξάρτητο του άλλου, όπου αυτό είναι δυνατόν."
+msgstr ""
+"Παρόλο που, για λόγους ευκολίας, το Django περιέχει όλα τα επίπεδα "
+"προεγκατεστημένα, καθένα από αυτά είναι ανεξάρτητο του άλλου, όπου αυτό "
+"είναι δυνατόν."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:35
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:315
 msgid "Less code"
 msgstr "Λιγότερος κώδικας"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:37
 msgid ""
 "Django apps should use as little code as possible; they should lack "
 "boilerplate. Django should take full advantage of Python's dynamic "
 "capabilities, such as introspection."
-msgstr "Οι Django εφαρμογές (apps) θα πρέπει να χρησιμοποιούν όσο το δυνατόν λιγότερο κώδικα. Με άλλα λόγια θα πρέπει να στερούνται στερεότυπους κώδικες. Το Django θα πρέπει να εκμεταλλευτεί πλήρως τις δυναμικές ικανότητες της Python όπως είναι η ενδοσκόπηση (introspection)."
+msgstr ""
+"Οι Django εφαρμογές (apps) θα πρέπει να χρησιμοποιούν όσο το δυνατόν "
+"λιγότερο κώδικα. Με άλλα λόγια θα πρέπει να στερούνται στερεότυπους κώδικες. "
+"Το Django θα πρέπει να εκμεταλλευτεί πλήρως τις δυναμικές ικανότητες της "
+"Python όπως είναι η ενδοσκόπηση (introspection)."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:44
 msgid "Quick development"
 msgstr "Γρήγορη ανάπτυξη"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:46
 msgid ""
 "The point of a Web framework in the 21st century is to make the tedious "
 "aspects of Web development fast. Django should allow for incredibly quick "
 "Web development."
-msgstr "Ο στόχος ενός Web framework, στον 21ο αιώνα, είναι να κάνει τις ανιαρές πτυχές του Web development γρήγορες. Το Django κάνει τη διαδικασία του Web development εξαιρετικά γρήγορη."
+msgstr ""
+"Ο στόχος ενός Web framework, στον 21ο αιώνα, είναι να κάνει τις ανιαρές "
+"πτυχές του Web development γρήγορες. Το Django κάνει τη διαδικασία του Web "
+"development εξαιρετικά γρήγορη."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:53
 msgid "Don't repeat yourself (DRY)"
 msgstr "Μην επαναλαμβάνεστε (Don't repeat yourself, DRY)"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:59
 msgid ""
 "Every distinct concept and/or piece of data should live in one, and only "
 "one, place. Redundancy is bad. Normalization is good."
-msgstr "Κάθε ξεχωριστή έννοια ή/και κάποιο κομμάτι δεδομένων θα πρέπει να βρίσκεται σε ένα και μόνο ένα σημείο. Ο πλεονασμός είναι κακός. Η ομαλοποίηση είναι καλή."
+msgstr ""
+"Κάθε ξεχωριστή έννοια ή/και κάποιο κομμάτι δεδομένων θα πρέπει να βρίσκεται "
+"σε ένα και μόνο ένα σημείο. Ο πλεονασμός είναι κακός. Η ομαλοποίηση είναι "
+"καλή."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:62
 msgid ""
 "The framework, within reason, should deduce as much as possible from as "
 "little as possible."
-msgstr "Το framework, μέσα σε λογικά πλαίσια, θα πρέπει να εξάγει όσο το δυνατόν περισσότερα από όσο το δυνατόν λιγότερα."
+msgstr ""
+"Το framework, μέσα σε λογικά πλαίσια, θα πρέπει να εξάγει όσο το δυνατόν "
+"περισσότερα από όσο το δυνατόν λιγότερα."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:67
 msgid "The `discussion of DRY on the Portland Pattern Repository`__"
-msgstr "    `Συζήτηση για το DRY στο Portland Pattern Repository <http://c2.com/cgi/wiki?DontRepeatYourself>`__"
+msgstr ""
+"    `Συζήτηση για το DRY στο Portland Pattern Repository <http://c2.com/cgi/"
+"wiki?DontRepeatYourself>`__"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:74
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:95
 msgid "Explicit is better than implicit"
-msgstr "Το να λες κάτι ρητά είναι καλύτερο απ’ το να το υπονοείς (Explicit is better than implicit)"
+msgstr ""
+"Το να λες κάτι ρητά είναι καλύτερο απ’ το να το υπονοείς (Explicit is better "
+"than implicit)"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:76
 msgid ""
 "This is a core Python principle listed in :pep:`20`, and it means Django "
 "shouldn't do too much \"magic.\" Magic shouldn't happen unless there's a "
 "really good reason for it. Magic is worth using only if it creates a huge "
 "convenience unattainable in other ways, and it isn't implemented in a way "
 "that confuses developers who are trying to learn how to use the feature."
-msgstr "Αυτό είναι η θεμελιώδης αρχή της Python η οποία περιλαμβάνεται στο :pep:`20` και σημαίνει ότι το Django δεν θα πρέπει να κάνει πολλά \"μαγικά.\" Τα μαγικά δεν πρέπει να υπάρχουν εκτός και αν υπάρχει ένας πολύ καλός λόγος. Τα μαγικά αξίζει να γίνουν αν προσφέρουν τεράστια ευκολία η οποία είναι ανέφικτη με άλλους τρόπους και η υλοποίηση τους έχει γίνει με τέτοιο τρόπο που να μην μπερδεύει τους προγραμματιστές οι οποίοι προσπαθούν να καταλάβουν πως να χρησιμοποιήσουν το feature."
+msgstr ""
+"Αυτό είναι η θεμελιώδης αρχή της Python η οποία περιλαμβάνεται στο :pep:`20` "
+"και σημαίνει ότι το Django δεν θα πρέπει να κάνει πολλά \"μαγικά.\" Τα "
+"μαγικά δεν πρέπει να υπάρχουν εκτός και αν υπάρχει ένας πολύ καλός λόγος. Τα "
+"μαγικά αξίζει να γίνουν αν προσφέρουν τεράστια ευκολία η οποία είναι "
+"ανέφικτη με άλλους τρόπους και η υλοποίηση τους έχει γίνει με τέτοιο τρόπο "
+"που να μην μπερδεύει τους προγραμματιστές οι οποίοι προσπαθούν να καταλάβουν "
+"πως να χρησιμοποιήσουν το feature."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:85
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:322
 msgid "Consistency"
 msgstr "Συνοχή"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:87
 msgid ""
 "The framework should be consistent at all levels. Consistency applies to "
 "everything from low-level (the Python coding style used) to high-level (the "
 "\"experience\" of using Django)."
-msgstr "Το framework θα πρέπει να έχει συνοχή σε όλα τα επίπεδα. Η έννοια της συνοχής εφαρμόζεται στα πάντα, από τα χαμηλού επιπέδου (το στυλ του Python κώδικα που χρησιμοποιείται) μέχρι τα υψηλού επιπέδου (η \"εμπειρία\" πάνω στο Django)."
+msgstr ""
+"Το framework θα πρέπει να έχει συνοχή σε όλα τα επίπεδα. Η έννοια της "
+"συνοχής εφαρμόζεται στα πάντα, από τα χαμηλού επιπέδου (το στυλ του Python "
+"κώδικα που χρησιμοποιείται) μέχρι τα υψηλού επιπέδου (η \"εμπειρία\" πάνω "
+"στο Django)."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:92
 msgid "Models"
 msgstr "Μοντέλα"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:97
 msgid ""
 "Fields shouldn't assume certain behaviors based solely on the name of the "
 "field. This requires too much knowledge of the system and is prone to "
-"errors. Instead, behaviors should be based on keyword arguments and, in some"
-" cases, on the type of the field."
-msgstr "Τα πεδία (fields) δεν θα πρέπει να υποθέτουν κάποιες συμπεριφορές βασιζόμενα μόνο και μόνο στο όνομα του πεδίου. Αυτό απαιτεί πολλή γνώση από το σύστημα και είναι ευάλωτο σε λάθη. Αντιθέτως, οι συμπεριφορές θα πρέπει να βασίζονται στα keyword arguments και, σε μερικές περιπτώσεις, στον τύπο του πεδίου."
+"errors. Instead, behaviors should be based on keyword arguments and, in some "
+"cases, on the type of the field."
+msgstr ""
+"Τα πεδία (fields) δεν θα πρέπει να υποθέτουν κάποιες συμπεριφορές βασιζόμενα "
+"μόνο και μόνο στο όνομα του πεδίου. Αυτό απαιτεί πολλή γνώση από το σύστημα "
+"και είναι ευάλωτο σε λάθη. Αντιθέτως, οι συμπεριφορές θα πρέπει να "
+"βασίζονται στα keyword arguments και, σε μερικές περιπτώσεις, στον τύπο του "
+"πεδίου."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:103
 msgid "Include all relevant domain logic"
 msgstr "Περίληψη όλων των σχετικών με το μοντέλο πληροφορίες"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:105
 msgid ""
 "Models should encapsulate every aspect of an \"object,\" following Martin "
 "Fowler's `Active Record`_ design pattern."
-msgstr "Τα μοντέλα θα πρέπει να ενσωματώσουν όλες τις έννοιες που αφορούν ένα \"object,\" σύμφωνα με το άρθρο `Active Record`_ του Martin Fowler σχετικά με πρακτικές σχεδιασμού."
+msgstr ""
+"Τα μοντέλα θα πρέπει να ενσωματώσουν όλες τις έννοιες που αφορούν ένα "
+"\"object,\" σύμφωνα με το άρθρο `Active Record`_ του Martin Fowler σχετικά "
+"με πρακτικές σχεδιασμού."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:108
 msgid ""
 "This is why both the data represented by a model and information about it "
 "(its human-readable name, options like default ordering, etc.) are defined "
 "in the model class; all the information needed to understand a given model "
 "should be stored *in* the model."
-msgstr "Να λοιπόν γιατί τα δεδομένα που αναπαριστώνται από το μοντέλο και οι πληροφορίες σχετικά με αυτά (το όνομα όπως θα εμφανίζεται στον χρήστη, επιλογές όπως προεπιλεγμένη ταξινόμηση κλπ) ορίζονται μέσα στην κλάση του μοντέλου. Όλη η πληροφορία που χρειάζεται για να κατανοηθεί ένα μοντέλο θα πρέπει να αποθηκεύεται *μέσα* στο μοντέλο."
+msgstr ""
+"Να λοιπόν γιατί τα δεδομένα που αναπαριστώνται από το μοντέλο και οι "
+"πληροφορίες σχετικά με αυτά (το όνομα όπως θα εμφανίζεται στον χρήστη, "
+"επιλογές όπως προεπιλεγμένη ταξινόμηση κλπ) ορίζονται μέσα στην κλάση του "
+"μοντέλου. Όλη η πληροφορία που χρειάζεται για να κατανοηθεί ένα μοντέλο θα "
+"πρέπει να αποθηκεύεται *μέσα* στο μοντέλο."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:116
 msgid "Database API"
 msgstr "Το API της βάσης δεδομένων"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:118
 msgid "The core goals of the database API are:"
 msgstr "Οι βασικοί στόχοι του API της βάσης δεδομένων είναι:"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:121
 msgid "SQL efficiency"
 msgstr "Αποδοτικότητα της SQL"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:123
 msgid ""
 "It should execute SQL statements as few times as possible, and it should "
 "optimize statements internally."
-msgstr "Το framework θα πρέπει να εκτελεί όσο το δυνατόν λιγότερες φορές τις SQL εντολές και να τις βελτιστοποιεί στο εσωτερικό του."
+msgstr ""
+"Το framework θα πρέπει να εκτελεί όσο το δυνατόν λιγότερες φορές τις SQL "
+"εντολές και να τις βελτιστοποιεί στο εσωτερικό του."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:126
 msgid ""
 "This is why developers need to call ``save()`` explicitly, rather than the "
 "framework saving things behind the scenes silently."
-msgstr "Να γιατί οι developers χρειάζεται να καλούν την μέθοδο ``save()`` ρητώς, παρά να επαφίενται στο framework να αποθηκεύει σιωπηλά τα objects στο παρασκήνιο."
+msgstr ""
+"Να γιατί οι developers χρειάζεται να καλούν την μέθοδο ``save()`` ρητώς, "
+"παρά να επαφίενται στο framework να αποθηκεύει σιωπηλά τα objects στο "
+"παρασκήνιο."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:129
 msgid ""
 "This is also why the ``select_related()`` ``QuerySet`` method exists. It's "
 "an optional performance booster for the common case of selecting \"every "
 "related object.\""
-msgstr "Επίσης, αυτός είναι ο λόγος της ύπαρξης της μεθόδου ``select_related()`` του ``QuerySet``. Είναι ένας προαιρετικός αρωγός απόδοσης για συνηθισμένες περιπτώσεις του τύπου \"επέλεξε κάθε συσχετισμένο object\"."
+msgstr ""
+"Επίσης, αυτός είναι ο λόγος της ύπαρξης της μεθόδου ``select_related()`` του "
+"``QuerySet``. Είναι ένας προαιρετικός αρωγός απόδοσης για συνηθισμένες "
+"περιπτώσεις του τύπου \"επέλεξε κάθε συσχετισμένο object\"."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:134
 msgid "Terse, powerful syntax"
 msgstr "Λακωνική, ισχυρή σύνταξη"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:136
 msgid ""
 "The database API should allow rich, expressive statements in as little "
 "syntax as possible. It should not rely on importing other modules or helper "
 "objects."
-msgstr "Το API της βάσης δεδομένων θα πρέπει να επιτρέπει πλούσια και εκφραστικά statements με όσο το δυνατόν λιγότερη σύνταξη. Δεν θα πρέπει να βασίζεται στην εισαγωγή (import) άλλων modules ή βοηθητικών objects."
+msgstr ""
+"Το API της βάσης δεδομένων θα πρέπει να επιτρέπει πλούσια και εκφραστικά "
+"statements με όσο το δυνατόν λιγότερη σύνταξη. Δεν θα πρέπει να βασίζεται "
+"στην εισαγωγή (import) άλλων modules ή βοηθητικών objects."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:139
 msgid ""
 "Joins should be performed automatically, behind the scenes, when necessary."
-msgstr "Οι εντολές “JOIN” της SQL θα πρέπει να γίνονται αυτομάτως, στο παρασκήνιο, όταν είναι απαραίτητο."
+msgstr ""
+"Οι εντολές “JOIN” της SQL θα πρέπει να γίνονται αυτομάτως, στο παρασκήνιο, "
+"όταν είναι απαραίτητο."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:141
 msgid ""
-"Every object should be able to access every related object, systemwide. This"
-" access should work both ways."
-msgstr "Κάθε object θα πρέπει να έχει πρόσβαση σε κάθε συσχετισμένο object, μέσα σε όλο το σύστημα. Αυτού του είδους η πρόσβαση θα πρέπει να δουλεύει και ανάποδα."
+"Every object should be able to access every related object, systemwide. This "
+"access should work both ways."
+msgstr ""
+"Κάθε object θα πρέπει να έχει πρόσβαση σε κάθε συσχετισμένο object, μέσα σε "
+"όλο το σύστημα. Αυτού του είδους η πρόσβαση θα πρέπει να δουλεύει και "
+"ανάποδα."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:145
 msgid "Option to drop into raw SQL easily, when needed"
 msgstr "Επιλογή να μπορεί γράφεται SQL εύκολα, όποτε χρειάζεται"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:147
 msgid ""
 "The database API should realize it's a shortcut but not necessarily an end-"
 "all-be-all. The framework should make it easy to write custom SQL -- entire "
 "statements, or just custom ``WHERE`` clauses as custom parameters to API "
 "calls."
-msgstr "Το API της βάσης δεδομένων θα πρέπει να συνειδητοποιήσει ότι είναι μια συντόμευση και όχι απαραίτητα ένα API που τα κάνει όλα. Το framework θα πρέπει να κάνει εύκολη τη γραφή προσαρμοσμένων SQL εντολών -- είτε ολόκληρων είτε προσαρμοσμένων ``WHERE`` εντολών μόνο, ως παραμέτρους στις κλήσεις του API."
+msgstr ""
+"Το API της βάσης δεδομένων θα πρέπει να συνειδητοποιήσει ότι είναι μια "
+"συντόμευση και όχι απαραίτητα ένα API που τα κάνει όλα. Το framework θα "
+"πρέπει να κάνει εύκολη τη γραφή προσαρμοσμένων SQL εντολών -- είτε ολόκληρων "
+"είτε προσαρμοσμένων ``WHERE`` εντολών μόνο, ως παραμέτρους στις κλήσεις του "
+"API."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:152
 msgid "URL design"
 msgstr "Σχεδιασμός URL"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:157
 msgid ""
 "URLs in a Django app should not be coupled to the underlying Python code. "
 "Tying URLs to Python function names is a Bad And Ugly Thing."
-msgstr "Τα URLs μέσα σε μια Django εφαρμογή (app) δεν θα πρέπει να εμπλέκονται με τον Python κώδικα που είναι γραμμένος. Η σύνδεση των URLs σε ονόματα Python συναρτήσεων είναι Κακό Και Άσχημο Πράγμα."
+msgstr ""
+"Τα URLs μέσα σε μια Django εφαρμογή (app) δεν θα πρέπει να εμπλέκονται με "
+"τον Python κώδικα που είναι γραμμένος. Η σύνδεση των URLs σε ονόματα Python "
+"συναρτήσεων είναι Κακό Και Άσχημο Πράγμα."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:160
 msgid ""
 "Along these lines, the Django URL system should allow URLs for the same app "
-"to be different in different contexts. For example, one site may put stories"
-" at ``/stories/``, while another may use ``/news/``."
-msgstr "Σύμφωνα με τα ανωτέρω, το σύστημα URL του Django θα πρέπει να επιτρέπει τα URLs της ίδιας εφαρμογής να είναι διαφορετικά ανάμεσα σε διαφορετικά πλαίσια (contexts). Για παράδειγμα, ένα site μπορεί να φιλοξενήσει την εφαρμογή “stories”  στη διεύθυνση ``/stories/`` ενώ ένα άλλο να φιλοξενήσει την ίδια εφαρμογή στη διεύθυνση ``/news/``."
+"to be different in different contexts. For example, one site may put stories "
+"at ``/stories/``, while another may use ``/news/``."
+msgstr ""
+"Σύμφωνα με τα ανωτέρω, το σύστημα URL του Django θα πρέπει να επιτρέπει τα "
+"URLs της ίδιας εφαρμογής να είναι διαφορετικά ανάμεσα σε διαφορετικά πλαίσια "
+"(contexts). Για παράδειγμα, ένα site μπορεί να φιλοξενήσει την εφαρμογή "
+"“stories”  στη διεύθυνση ``/stories/`` ενώ ένα άλλο να φιλοξενήσει την ίδια "
+"εφαρμογή στη διεύθυνση ``/news/``."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:165
 msgid "Infinite flexibility"
 msgstr "Απεριόριστη ευελιξία"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:167
 msgid ""
-"URLs should be as flexible as possible. Any conceivable URL design should be"
-" allowed."
-msgstr "Τα URLs θα πρέπει να είναι όσο το δυνατόν πιο ευέλικτα. Κάθε νοητή σχεδίαση ενός URL θα πρέπει να επιτρέπεται."
+"URLs should be as flexible as possible. Any conceivable URL design should be "
+"allowed."
+msgstr ""
+"Τα URLs θα πρέπει να είναι όσο το δυνατόν πιο ευέλικτα. Κάθε νοητή σχεδίαση "
+"ενός URL θα πρέπει να επιτρέπεται."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:171
 msgid "Encourage best practices"
 msgstr "Ενθάρρυνση καλών πρακτικών"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:173
 msgid ""
 "The framework should make it just as easy (or even easier) for a developer "
 "to design pretty URLs than ugly ones."
-msgstr "Το framework θα πρέπει να κάνει εύκολη (αν όχι ευκολότερη), για τον developer, τη σχεδίαση όμορφων παρά άσχημων URLs."
+msgstr ""
+"Το framework θα πρέπει να κάνει εύκολη (αν όχι ευκολότερη), για τον "
+"developer, τη σχεδίαση όμορφων παρά άσχημων URLs."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:176
 msgid "File extensions in Web-page URLs should be avoided."
 msgstr "Οι καταλήξεις αρχείων στα URLs ιστοσελίδων πρέπει να αποφεύγονται."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:178
 msgid "Vignette-style commas in URLs deserve severe punishment."
 msgstr "Τα κόμματα, τύπου Vignette, στα URLs χρήζουν αυστηρής τιμωρίας."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:183
 msgid "Definitive URLs"
 msgstr "Οριστικά URLs"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:187
 msgid ""
 "Technically, ``foo.com/bar`` and ``foo.com/bar/`` are two different URLs, "
 "and search-engine robots (and some Web traffic-analyzing tools) would treat "
 "them as separate pages. Django should make an effort to \"normalize\" URLs "
 "so that search-engine robots don't get confused."
-msgstr "Σε τεχνικό επίπεδο, το ``foo.com/bar`` και ``foo.com/bar/`` είναι δύο διαφορετικά URLs και τα ρομπότ των μηχανών αναζήτησης (όπως επίσης και μερικά εργαλεία ανάλυσης της κίνησης στο Web) θα τα μεταχειριστούν ως διαφορετικές σελίδες. Το Django θα πρέπει να καταβάλλει προσπάθεια προκειμένου να \"ομαλοποιήσει\" τα URLs ούτως ώστε τα ρομπότ των μηχανών αναζήτησης να μην μπερδευτούν."
+msgstr ""
+"Σε τεχνικό επίπεδο, το ``foo.com/bar`` και ``foo.com/bar/`` είναι δύο "
+"διαφορετικά URLs και τα ρομπότ των μηχανών αναζήτησης (όπως επίσης και "
+"μερικά εργαλεία ανάλυσης της κίνησης στο Web) θα τα μεταχειριστούν ως "
+"διαφορετικές σελίδες. Το Django θα πρέπει να καταβάλλει προσπάθεια "
+"προκειμένου να \"ομαλοποιήσει\" τα URLs ούτως ώστε τα ρομπότ των μηχανών "
+"αναζήτησης να μην μπερδευτούν."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:192
 msgid "This is the reasoning behind the :setting:`APPEND_SLASH` setting."
 msgstr "Αυτό είναι ο λόγος πίσω από τη ρύθμιση :setting:`APPEND_SLASH`."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:195
 msgid "Template system"
 msgstr "Σύστημα template"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:200
 msgid "Separate logic from presentation"
 msgstr "Διαχωρισμός μεταξύ λογικής και παρουσίασης"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:202
 msgid ""
 "We see a template system as a tool that controls presentation and "
 "presentation-related logic -- and that's it. The template system shouldn't "
 "support functionality that goes beyond this basic goal."
-msgstr "Βλέπουμε το σύστημα του template ως ένα εργαλείο που ελέγχει την παρουσίαση και ότι έχει να κάνει με την λογική πίσω από την παρουσίαση. Μόνο αυτό. Το σύστημα template δεν θα πρέπει να πάει παραπέρα από αυτό τον στόχο."
+msgstr ""
+"Βλέπουμε το σύστημα του template ως ένα εργαλείο που ελέγχει την παρουσίαση "
+"και ότι έχει να κάνει με την λογική πίσω από την παρουσίαση. Μόνο αυτό. Το "
+"σύστημα template δεν θα πρέπει να πάει παραπέρα από αυτό τον στόχο."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:207
 msgid "Discourage redundancy"
 msgstr "Αποθάρρυνση του πλεονασμού"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:209
 msgid ""
 "The majority of dynamic websites use some sort of common sitewide design -- "
 "a common header, footer, navigation bar, etc. The Django template system "
 "should make it easy to store those elements in a single place, eliminating "
 "duplicate code."
-msgstr "Η πλειονότητα των δυναμικών ιστοσελίδων χρησιμοποιεί ένα είδος κοινού σχεδιασμού ολόκληρου του site -- κοινό header, footer, μπάρα πλοήγησης κλπ. Το σύστημα template του Django θα πρέπει να κάνει εύκολη την αποθήκευση αυτών των στοιχείων σε ένα μέρος, εξαλείφοντας τη χρήση επαναλαμβανόμενου κώδικα."
+msgstr ""
+"Η πλειονότητα των δυναμικών ιστοσελίδων χρησιμοποιεί ένα είδος κοινού "
+"σχεδιασμού ολόκληρου του site -- κοινό header, footer, μπάρα πλοήγησης κλπ. "
+"Το σύστημα template του Django θα πρέπει να κάνει εύκολη την αποθήκευση "
+"αυτών των στοιχείων σε ένα μέρος, εξαλείφοντας τη χρήση επαναλαμβανόμενου "
+"κώδικα."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:214
 msgid ""
 "This is the philosophy behind :ref:`template inheritance <template-"
 "inheritance>`."
-msgstr "Αυτή είναι η φιλοσοφία πίσω από την :ref:`κληρονομικότητα του template <template-inheritance>`."
+msgstr ""
+"Αυτή είναι η φιλοσοφία πίσω από την :ref:`κληρονομικότητα του template "
+"<template-inheritance>`."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:218
 msgid "Be decoupled from HTML"
 msgstr "Μη συσχέτιση με την HTML"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:220
 msgid ""
 "The template system shouldn't be designed so that it only outputs HTML. It "
-"should be equally good at generating other text-based formats, or just plain"
-" text."
-msgstr "Το σύστημα template δεν θα πρέπει να σχεδιαστεί για να παράγει μόνο HTML. Θα πρέπει να είναι εξίσου καλό στο να παράγει και άλλες μορφές που βασίζονται στο κείμενο ή απλώς σκέτο κείμενο."
+"should be equally good at generating other text-based formats, or just plain "
+"text."
+msgstr ""
+"Το σύστημα template δεν θα πρέπει να σχεδιαστεί για να παράγει μόνο HTML. Θα "
+"πρέπει να είναι εξίσου καλό στο να παράγει και άλλες μορφές που βασίζονται "
+"στο κείμενο ή απλώς σκέτο κείμενο."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:225
 msgid "XML should not be used for template languages"
 msgstr "Η XML δεν θα πρέπει να χρησιμοποιείται σε γλώσσες template"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:229
 msgid ""
-"Using an XML engine to parse templates introduces a whole new world of human"
-" error in editing templates -- and incurs an unacceptable level of overhead "
+"Using an XML engine to parse templates introduces a whole new world of human "
+"error in editing templates -- and incurs an unacceptable level of overhead "
 "in template processing."
-msgstr "Η χρήση μιας XML μηχανής για να αναλύσει τα templates εισάγει έναν εντελώς νέο κόσμο από ανθρώπινα λάθη κατά την επεξεργασία τους. Παράλληλα προσθέτει ένα απαράδεκτο overhead κατά την επεξεργασία του template."
+msgstr ""
+"Η χρήση μιας XML μηχανής για να αναλύσει τα templates εισάγει έναν εντελώς "
+"νέο κόσμο από ανθρώπινα λάθη κατά την επεξεργασία τους. Παράλληλα προσθέτει "
+"ένα απαράδεκτο overhead κατά την επεξεργασία του template."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:234
 msgid "Assume designer competence"
 msgstr "Υποθέτει τη συμμετοχή του designer"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:236
 msgid ""
 "The template system shouldn't be designed so that templates necessarily are "
 "displayed nicely in WYSIWYG editors such as Dreamweaver. That is too severe "
-"of a limitation and wouldn't allow the syntax to be as nice as it is. Django"
-" expects template authors are comfortable editing HTML directly."
-msgstr "Το σύστημα template δεν θα πρέπει να σχεδιαστεί με τρόπο που τα templates να εμφανίζονται, απαραιτήτως, ως WYSIWYG επεξεργαστές, όπως το Dreamweaver. Αυτό αποτελεί σημαντικό περιορισμό και δεν επιτρέπει στη σύνταξη να είναι τόσο όμορφη όσο θα έπρεπε να είναι. Το Django υποθέτει ότι οι συντάκτες των templates είναι εξοικειωμένοι με την επεξεργασία της HTML."
+"of a limitation and wouldn't allow the syntax to be as nice as it is. Django "
+"expects template authors are comfortable editing HTML directly."
+msgstr ""
+"Το σύστημα template δεν θα πρέπει να σχεδιαστεί με τρόπο που τα templates να "
+"εμφανίζονται, απαραιτήτως, ως WYSIWYG επεξεργαστές, όπως το Dreamweaver. "
+"Αυτό αποτελεί σημαντικό περιορισμό και δεν επιτρέπει στη σύνταξη να είναι "
+"τόσο όμορφη όσο θα έπρεπε να είναι. Το Django υποθέτει ότι οι συντάκτες των "
+"templates είναι εξοικειωμένοι με την επεξεργασία της HTML."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:242
 msgid "Treat whitespace obviously"
 msgstr "Διαχείριση των κενών χαρακτήρων με τον προφανή τρόπο"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:244
 msgid ""
-"The template system shouldn't do magic things with whitespace. If a template"
-" includes whitespace, the system should treat the whitespace as it treats "
+"The template system shouldn't do magic things with whitespace. If a template "
+"includes whitespace, the system should treat the whitespace as it treats "
 "text -- just display it. Any whitespace that's not in a template tag should "
 "be displayed."
-msgstr "Το σύστημα template δεν θα πρέπει να κάνει μαγικά πράγματα με τους κενούς χαρακτήρες (whitespace). Αν ένα template περιέχει κενά, τότε το σύστημα θα τα διαχειριστεί ως κείμενο και θα τα εμφανίσει. Κάθε κενό που δεν βρίσκεται μέσα σε κάποιο template tag θα εμφανίζεται."
+msgstr ""
+"Το σύστημα template δεν θα πρέπει να κάνει μαγικά πράγματα με τους κενούς "
+"χαρακτήρες (whitespace). Αν ένα template περιέχει κενά, τότε το σύστημα θα "
+"τα διαχειριστεί ως κείμενο και θα τα εμφανίσει. Κάθε κενό που δεν βρίσκεται "
+"μέσα σε κάποιο template tag θα εμφανίζεται."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:250
 msgid "Don't invent a programming language"
 msgstr "Όχι στην εφεύρεση μια γλώσσας προγραμματισμού"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:252
 msgid ""
 "The goal is not to invent a programming language. The goal is to offer just "
 "enough programming-esque functionality, such as branching and looping, that "
 "is essential for making presentation-related decisions. The :ref:`Django "
 "Template Language (DTL) <template-language-intro>` aims to avoid advanced "
 "logic."
-msgstr "Ο στόχος δεν είναι να εφεύρουμε μια γλώσσα προγραμματισμού. Ο στόχος είναι να προσφέρουμε ένα είδος προγραμματιστικής λειτουργίας στο template όπως ο βρόγχος επανάληψης και οι δομές ελέγχου, κάτι το οποίο είναι ζωτικής σημασίας όταν σχεδιάζουμε ένα template. H :ref:`Γλώσσα Template του Django (DTL) <template-language-intro>` αποφεύγει τις προχωρημένες λογικές."
+msgstr ""
+"Ο στόχος δεν είναι να εφεύρουμε μια γλώσσα προγραμματισμού. Ο στόχος είναι "
+"να προσφέρουμε ένα είδος προγραμματιστικής λειτουργίας στο template όπως ο "
+"βρόγχος επανάληψης και οι δομές ελέγχου, κάτι το οποίο είναι ζωτικής "
+"σημασίας όταν σχεδιάζουμε ένα template. H :ref:`Γλώσσα Template του Django "
+"(DTL) <template-language-intro>` αποφεύγει τις προχωρημένες λογικές."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:257
 msgid ""
 "The Django template system recognizes that templates are most often written "
 "by *designers*, not *programmers*, and therefore should not assume Python "
 "knowledge."
-msgstr "Το σύστημα template του Django αναγνωρίζει ότι τα templates γράφονται συχνά από *designers*, όχι από *προγραμματιστές* και, επομένως, δεν θα πρέπει να απαιτεί από τον συντάκτη να έχει γνώσεις Python."
+msgstr ""
+"Το σύστημα template του Django αναγνωρίζει ότι τα templates γράφονται συχνά "
+"από *designers*, όχι από *προγραμματιστές* και, επομένως, δεν θα πρέπει να "
+"απαιτεί από τον συντάκτη να έχει γνώσεις Python."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:262
 msgid "Safety and security"
 msgstr "Ασφάλεια και προστασία"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:264
 msgid ""
 "The template system, out of the box, should forbid the inclusion of "
 "malicious code -- such as commands that delete database records."
-msgstr "Το σύστημα template, εξ ορισμού, θα πρέπει να μην επιτρέπει την εισαγωγή κακόβουλου κώδικα -- όπως εντολές οι οποίες διαγράφουν δεδομένα από την βάση δεδομένων."
+msgstr ""
+"Το σύστημα template, εξ ορισμού, θα πρέπει να μην επιτρέπει την εισαγωγή "
+"κακόβουλου κώδικα -- όπως εντολές οι οποίες διαγράφουν δεδομένα από την βάση "
+"δεδομένων."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:267
 msgid ""
 "This is another reason the template system doesn't allow arbitrary Python "
 "code."
-msgstr "Αυτός είναι ένας άλλος λόγος που το σύστημα template δεν επιτρέπει την εισαγωγή Python κώδικα."
+msgstr ""
+"Αυτός είναι ένας άλλος λόγος που το σύστημα template δεν επιτρέπει την "
+"εισαγωγή Python κώδικα."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:270
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:328
 msgid "Extensibility"
 msgstr "Επεκτασιμότητα"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:272
 msgid ""
-"The template system should recognize that advanced template authors may want"
-" to extend its technology."
-msgstr "Το σύστημα template θα πρέπει να παρέχει στους προχωρημένους συντάκτες template τη δυνατότητα επέκτασης και περαιτέρω παραμετροποίησης του."
+"The template system should recognize that advanced template authors may want "
+"to extend its technology."
+msgstr ""
+"Το σύστημα template θα πρέπει να παρέχει στους προχωρημένους συντάκτες "
+"template τη δυνατότητα επέκτασης και περαιτέρω παραμετροποίησης του."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:275
 msgid "This is the philosophy behind custom template tags and filters."
-msgstr "Αυτή είναι η φιλοσοφία πίσω από τα παραμετροποιήσιμα φίλτρα και template tags."
+msgstr ""
+"Αυτή είναι η φιλοσοφία πίσω από τα παραμετροποιήσιμα φίλτρα και template "
+"tags."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:278
 msgid "Views"
 msgstr "Views"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:281
 msgid "Simplicity"
 msgstr "Απλότητα"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:283
 msgid ""
 "Writing a view should be as simple as writing a Python function. Developers "
 "shouldn't have to instantiate a class when a function will do."
-msgstr "Η σύνταξη ενός view θα πρέπει να είναι τόσο απλή όσο μιας Python συνάρτησης. Οι developers δεν θα πρέπει να αρχικοποιούν (instantiate) μια κλάση όταν μπορούν να χρησιμοποιήσουν, απλώς, μια συνάρτηση."
+msgstr ""
+"Η σύνταξη ενός view θα πρέπει να είναι τόσο απλή όσο μιας Python συνάρτησης. "
+"Οι developers δεν θα πρέπει να αρχικοποιούν (instantiate) μια κλάση όταν "
+"μπορούν να χρησιμοποιήσουν, απλώς, μια συνάρτηση."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:287
 msgid "Use request objects"
 msgstr "Χρήση των request objects"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:289
 msgid ""
 "Views should have access to a request object -- an object that stores "
 "metadata about the current request. The object should be passed directly to "
 "a view function, rather than the view function having to access the request "
 "data from a global variable. This makes it light, clean and easy to test "
 "views by passing in \"fake\" request objects."
-msgstr "Τα views θα πρέπει να έχουν πρόσβαση σε ένα request object -- ένα object, δηλαδή, που αποθηκεύει metadata σχετικά με το τρέχον request (αυτό που έκανε ο χρήστης). Το object θα πρέπει να περαστεί απ’ ευθείας στη συνάρτηση view, παρά η συνάρτηση view να έχει πρόσβαση στα request data μέσω μιας global μεταβλητής. Αυτό το καθιστά ελαφρύ, καθαρό και εύκολο να ελεγχθούν τα views περνώντας ως όρισμα \"ψεύτικα\" request objects."
+msgstr ""
+"Τα views θα πρέπει να έχουν πρόσβαση σε ένα request object -- ένα object, "
+"δηλαδή, που αποθηκεύει metadata σχετικά με το τρέχον request (αυτό που έκανε "
+"ο χρήστης). Το object θα πρέπει να περαστεί απ’ ευθείας στη συνάρτηση view, "
+"παρά η συνάρτηση view να έχει πρόσβαση στα request data μέσω μιας global "
+"μεταβλητής. Αυτό το καθιστά ελαφρύ, καθαρό και εύκολο να ελεγχθούν τα views "
+"περνώντας ως όρισμα \"ψεύτικα\" request objects."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:298
 msgid ""
 "A view shouldn't care about which template system the developer uses -- or "
 "even whether a template system is used at all."
-msgstr "Ένα view δεν θα πρέπει να ενδιαφέρεται για το σύστημα template που χρησιμοποιεί ο developer -- ή ακόμη και για το αν χρησιμοποιείται κάποιο."
+msgstr ""
+"Ένα view δεν θα πρέπει να ενδιαφέρεται για το σύστημα template που "
+"χρησιμοποιεί ο developer -- ή ακόμη και για το αν χρησιμοποιείται κάποιο."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:302
 msgid "Differentiate between GET and POST"
 msgstr "Διαφοροποίηση μεταξύ GET και POST"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:304
 msgid ""
 "GET and POST are distinct; developers should explicitly use one or the "
-"other. The framework should make it easy to distinguish between GET and POST"
-" data."
-msgstr "Το GET και το POST είναι ξεχωριστά. Οι developers θα πρέπει να δηλώνουν ρητώς ποια μέθοδο θα χρησιμοποιούν. Το framework θα πρέπει να κάνει εύκολο το διαχωρισμό μεταξύ των GET και POST δεδομένων."
+"other. The framework should make it easy to distinguish between GET and POST "
+"data."
+msgstr ""
+"Το GET και το POST είναι ξεχωριστά. Οι developers θα πρέπει να δηλώνουν "
+"ρητώς ποια μέθοδο θα χρησιμοποιούν. Το framework θα πρέπει να κάνει εύκολο "
+"το διαχωρισμό μεταξύ των GET και POST δεδομένων."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:310
 msgid "Cache Framework"
 msgstr "Cache Framework"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:312
 msgid "The core goals of Django's :doc:`cache framework </topics/cache>` are:"
-msgstr "Οι βασικοί στόχοι του :doc:`cache framework </topics/cache>` του Django είναι:"
+msgstr ""
+"Οι βασικοί στόχοι του :doc:`cache framework </topics/cache>` του Django "
+"είναι:"
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:317
 msgid ""
 "A cache should be as fast as possible.  Hence, all framework code "
 "surrounding the cache backend should be kept to the absolute minimum, "
 "especially for ``get()`` operations."
-msgstr "Μια cache θα πρέπει να είναι όσο γίνεται πιο γρήγορη. Επομένως, όλος ο κώδικας του framework που περιβάλλει την cache backend θα πρέπει να διατηρείται σε χαμηλά επίπεδα, ειδικά για περιπτώσεις που ζητάμε κάτι από την cache (``get()``)."
+msgstr ""
+"Μια cache θα πρέπει να είναι όσο γίνεται πιο γρήγορη. Επομένως, όλος ο "
+"κώδικας του framework που περιβάλλει την cache backend θα πρέπει να "
+"διατηρείται σε χαμηλά επίπεδα, ειδικά για περιπτώσεις που ζητάμε κάτι από "
+"την cache (``get()``)."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:324
 msgid ""
 "The cache API should provide a consistent interface across the different "
 "cache backends."
-msgstr "Το API της cache θα πρέπει να παρέχει ένα interface με συνοχή ανάμεσα σε διαφορετικά cache backends."
+msgstr ""
+"Το API της cache θα πρέπει να παρέχει ένα interface με συνοχή ανάμεσα σε "
+"διαφορετικά cache backends."
 
-#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:330
 msgid ""
 "The cache API should be extensible at the application level based on the "
 "developer's needs (for example, see :ref:`cache_key_transformation`)."
-msgstr "Το API της cache θα πρέπει να είναι επεκτάσιμο σε επίπεδο εφαρμογής ανάλογα με τις απαιτήσεις του developer (για παράδειγμα, δείτε στην :ref:`αλλαγή κλειδιών της cache <cache_key_transformation>`)."
+msgstr ""
+"Το API της cache θα πρέπει να είναι επεκτάσιμο σε επίπεδο εφαρμογής ανάλογα "
+"με τις απαιτήσεις του developer (για παράδειγμα, δείτε στην :ref:`αλλαγή "
+"κλειδιών της cache <cache_key_transformation>`)."
 
-#: ../../../../sources/1.10/docs/misc/distributions.txt:3
 msgid "Third-party distributions of Django"
 msgstr "Διανομές του Django από τρίτους"
 
-#: ../../../../sources/1.10/docs/misc/distributions.txt:5
 msgid ""
 "Many third-party distributors are now providing versions of Django "
 "integrated with their package-management systems. These can make "
 "installation and upgrading much easier for users of Django since the "
-"integration includes the ability to automatically install dependencies (like"
-" database adapters) that Django requires."
-msgstr "Πολλοί διανομείς παρέχουν εκδόσεις του Django οι οποίες είναι ενσωματωμένες με τον διαχειριστή πακέτων του συστήματος. Αυτό μπορεί να κάνει την εγκατάσταση ή/και την αναβάθμιση του Django παιχνιδάκι για τους χρήστες, αφού ο διαχειριστής πακέτων αναλαμβάνει και την εγκατάσταση των dependencies (όπως adapters για τη βάση δεδομένων, πχ για την PostgreSQL θα χρειαστεί το psycopg2) που απαιτεί το Django, αυτόματα. Η μόνη προσοχή που πρέπει να δώσετε είναι η έκδοση του Django που έρχεται με τον διαχειριστή πακέτων καθώς ενδέχεται να μην είναι η τρέχουσα σταθερή αλλά κάποια προηγούμενη."
+"integration includes the ability to automatically install dependencies (like "
+"database adapters) that Django requires."
+msgstr ""
+"Πολλοί διανομείς παρέχουν εκδόσεις του Django οι οποίες είναι ενσωματωμένες "
+"με τον διαχειριστή πακέτων του συστήματος. Αυτό μπορεί να κάνει την "
+"εγκατάσταση ή/και την αναβάθμιση του Django παιχνιδάκι για τους χρήστες, "
+"αφού ο διαχειριστής πακέτων αναλαμβάνει και την εγκατάσταση των dependencies "
+"(όπως adapters για τη βάση δεδομένων, πχ για την PostgreSQL θα χρειαστεί το "
+"psycopg2) που απαιτεί το Django, αυτόματα. Η μόνη προσοχή που πρέπει να "
+"δώσετε είναι η έκδοση του Django που έρχεται με τον διαχειριστή πακέτων "
+"καθώς ενδέχεται να μην είναι η τρέχουσα σταθερή αλλά κάποια προηγούμενη."
 
-#: ../../../../sources/1.10/docs/misc/distributions.txt:11
 msgid ""
 "Typically, these packages are based on the latest stable release of Django, "
 "so if you want to use the development version of Django you'll need to "
 "follow the instructions for :ref:`installing the development version "
 "<installing-development-version>` from our Git repository."
-msgstr "Αν θέλετε να χρησιμοποιήσετε την αναπτυξιακή έκδοση (development version) του Django θα πρέπει να ακολουθήσετε τις οδηγίες :ref:`εγκατάστασης της αναπτυξιακής έκδοσης <installing-development-version>`. Η αναπτυξιακή έκδοση του Django υπάρχει στο Git repository."
+msgstr ""
+"Αν θέλετε να χρησιμοποιήσετε την αναπτυξιακή έκδοση (development version) "
+"του Django θα πρέπει να ακολουθήσετε τις οδηγίες :ref:`εγκατάστασης της "
+"αναπτυξιακής έκδοσης <installing-development-version>`. Η αναπτυξιακή έκδοση "
+"του Django υπάρχει στο Git repository."
 
-#: ../../../../sources/1.10/docs/misc/distributions.txt:16
 msgid ""
 "If you're using Linux or a Unix installation, such as OpenSolaris, check "
-"with your distributor to see if they already package Django. If you're using"
-" a Linux distro and don't know how to find out if a package is available, "
-"then now is a good time to learn.  The Django Wiki contains a list of `Third"
-" Party Distributions`_ to help you out."
-msgstr "Αν χρησιμοποιείτε Linux ή κάποια Unix εγκατάσταση, όπως η OpenSolaris, δείτε μέσω του διανομέα σας αν έχουν διαθέσιμο ως πακέτο το Django. Αν χρησιμοποιείτε μια διανομή Linux και δεν ξέρετε πως να βρείτε αν ένα πακέτο είναι διαθέσιμο, τότε τώρα είναι μια καλή ευκαιρία για να μάθετε. Το Django Wiki περιέχει μια λίστα με `Διανομείς τρίτων πακέτων <https://code.djangoproject.com/wiki/Distributions>`_ για να σας βοηθήσει."
+"with your distributor to see if they already package Django. If you're using "
+"a Linux distro and don't know how to find out if a package is available, "
+"then now is a good time to learn.  The Django Wiki contains a list of `Third "
+"Party Distributions`_ to help you out."
+msgstr ""
+"Αν χρησιμοποιείτε Linux ή κάποια Unix εγκατάσταση, όπως η OpenSolaris, δείτε "
+"μέσω του διανομέα σας αν έχουν διαθέσιμο ως πακέτο το Django. Αν "
+"χρησιμοποιείτε μια διανομή Linux και δεν ξέρετε πως να βρείτε αν ένα πακέτο "
+"είναι διαθέσιμο, τότε τώρα είναι μια καλή ευκαιρία για να μάθετε. Το Django "
+"Wiki περιέχει μια λίστα με `Διανομείς τρίτων πακέτων <https://code."
+"djangoproject.com/wiki/Distributions>`_ για να σας βοηθήσει."
 
-#: ../../../../sources/1.10/docs/misc/distributions.txt:26
 msgid "For distributors"
 msgstr "Για τους διανομείς"
 
-#: ../../../../sources/1.10/docs/misc/distributions.txt:28
 msgid ""
-"If you'd like to package Django for distribution, we'd be happy to help out!"
-" Please join the |django-developers| mailing list and introduce yourself."
-msgstr "Αν θέλετε να πακετάρετε το Django για διανομή, θα χαρούμε να σας βοηθήσουμε! Παρακαλούμε κάντε join στη mailing list |django-developers| και συστηθείτε."
+"If you'd like to package Django for distribution, we'd be happy to help out! "
+"Please join the |django-developers| mailing list and introduce yourself."
+msgstr ""
+"Αν θέλετε να πακετάρετε το Django για διανομή, θα χαρούμε να σας βοηθήσουμε! "
+"Παρακαλούμε κάντε join στη mailing list |django-developers| και συστηθείτε."
 
-#: ../../../../sources/1.10/docs/misc/distributions.txt:31
 msgid ""
 "We also encourage all distributors to subscribe to the |django-announce| "
-"mailing list, which is a (very) low-traffic list for announcing new releases"
-" of Django and important bugfixes."
-msgstr "Επίσης ενθαρρύνουμε όλους τους διανομής να εγγραφούν στη mailing list |django-announce|, η οποία είναι μια (πολύ) χαμηλής κίνησης λίστα σχετικά με ανακοινώσεις νέων εκδόσεων του Django καθώς και σημαντικών διορθώσεων σφαλμάτων."
+"mailing list, which is a (very) low-traffic list for announcing new releases "
+"of Django and important bugfixes."
+msgstr ""
+"Επίσης ενθαρρύνουμε όλους τους διανομής να εγγραφούν στη mailing list |"
+"django-announce|, η οποία είναι μια (πολύ) χαμηλής κίνησης λίστα σχετικά με "
+"ανακοινώσεις νέων εκδόσεων του Django καθώς και σημαντικών διορθώσεων "
+"σφαλμάτων."
 
-#: ../../../../sources/1.10/docs/misc/index.txt:3
 msgid "Meta-documentation and miscellany"
 msgstr "Εγχειρίδιο Meta και πολλά άλλα"
 
-#: ../../../../sources/1.10/docs/misc/index.txt:5
 msgid ""
 "Documentation that we can't find a more organized place for. Like that "
 "drawer in your kitchen with the scissors, batteries, duct tape, and other "
 "junk."
-msgstr "Αυτό αποτελεί ένα εγχειρίδιο για το οποίο δεν βρήκαμε καταλληλότερη θέση παρά αυτή εδώ. Όπως ακριβώς συμβαίνει με ένα συρτάρι της κουζίνας σας μέσα στο οποίο έχετε ψαλίδια, μπαταρίες, σελοτέιπ και άλλα, ασύνδετα με την κουζίνα, μικροπράγματα."
+msgstr ""
+"Αυτό αποτελεί ένα εγχειρίδιο για το οποίο δεν βρήκαμε καταλληλότερη θέση "
+"παρά αυτή εδώ. Όπως ακριβώς συμβαίνει με ένα συρτάρι της κουζίνας σας μέσα "
+"στο οποίο έχετε ψαλίδια, μπαταρίες, σελοτέιπ και άλλα, ασύνδετα με την "
+"κουζίνα, μικροπράγματα."
