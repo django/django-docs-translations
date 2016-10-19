@@ -3,8 +3,10 @@
 # This file is distributed under the same license as the Django package.
 #
 # Translators:
+# Asai Takuya <takuya.waseda.1119@gmail.com>, 2016
 # xiu1 <d84ea@hotmail.co.jp>, 2016
 # Eiji Warashina <Eiji.Warashina@gmail.com>, 2016
+# osamunmun <osamu.takayasu@gmail.com>, 2016
 # Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016
 # Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016
 # Tatsuhiko Kono <kono@takenoko-tech.co.jp>, 2016
@@ -16,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-12 18:25-0500\n"
-"PO-Revision-Date: 2016-08-03 20:22+0000\n"
-"Last-Translator: TSUBASA FUJII <qz2501@gmail.com>\n"
+"POT-Creation-Date: 2016-10-18 18:24-0500\n"
+"PO-Revision-Date: 2016-10-17 14:41+0000\n"
+"Last-Translator: osamunmun <osamu.takayasu@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -44,6 +46,12 @@ msgid ""
 "example, if you're going to \"https://www.example.com/admin/\" in your "
 "browser, set ``SESSION_COOKIE_DOMAIN = 'www.example.com'``."
 msgstr ""
+"Django から送信されたクッキーのドメインはお使いのブラウザの\n"
+"ドメインと一致していないため、ログインクッキーは正しく設定されていません。あ"
+"なたのドメインと同じものに :setting:`SESSION_COOKIE_DOMAIN` を設定してみてく"
+"ださい。\n"
+"例えばお使いのブラウザで \"https://www.example.com/admin/\" に飛ぶ場合には "
+"``SESSION_COOKIE_DOMAIN = 'www.example.com'`` と設定します。"
 
 msgid ""
 "I can't log in. When I enter a valid username and password, it brings up the "
@@ -339,6 +347,8 @@ msgstr ""
 
 msgid "When and how might I remind the core team of a patch I care about?"
 msgstr ""
+"いつ、どのようにしてコアチームに自分が送ったパッチのリマインドをしてもよいの"
+"でしょうか？"
 
 msgid ""
 "A polite, well-timed message to the mailing list is one way to get "
@@ -350,11 +360,21 @@ msgid ""
 "just before a bug fixing sprint, or in the lead up to a beta release for "
 "example -- you're much more likely to get a productive response."
 msgstr ""
+"丁寧で、程よいタイミングでのメーリングリストへのメッセージが、リマインドの一"
+"つの方法です。程よいタイミングを見極めるためには、スケジュールを良く見る必要"
+"があります。もし、コア開発者が機能を締め切りに間に合わせようとしていたり、プ"
+"ランニングフェーズを管理していたりするときにメッセージを投稿しても、あなたの"
+"求める注意を惹くことはできないでしょう。一方で、例えばバグ修正スプリントの直"
+"前やベータリリースに至るまでの間で、コア開発者が特定のバグに注意を払っている"
+"ときにチケットに注意を促せば、生産的な回答を得られる可能性は高いでしょう。"
 
 msgid ""
 "Gentle IRC reminders can also work -- again, strategically timed if "
 "possible. During a bug sprint would be a very good time, for example."
 msgstr ""
+"丁寧なIRCのリマインダーでも良いでしょう。繰り返しになりますが、可能ならタイミ"
+"ングを見計らってください。例えば、バグスプリントの期間はとても良いタイミング"
+"でしょう。"
 
 msgid ""
 "Another way to get traction is to pull several related tickets together. "
@@ -365,6 +385,12 @@ msgid ""
 "as the cost of coming up to speed on an area of code can be spread over "
 "multiple tickets."
 msgstr ""
+"注意を引くための他の方法としては、いくつかの関連するチケットを一緒に扱うこと"
+"です。コア開発者たちがしばらくタッチしていないエリアのバグを直すためときは、"
+"そのエリアのコードがどのように動くかの詳細を全て思い出すのに数分かかるはずで"
+"す。もしあなたが似たテーマのグループのいくつかのマイナーなバグ修正を纏めれ"
+"ば、そのコードのエリアの動作を思い出すまでのコストが複数のチケットに適用でき"
+"るので、魅力的なターゲットとなります。"
 
 msgid ""
 "Please refrain from emailing core developers personally, or repeatedly "
@@ -372,6 +398,9 @@ msgid ""
 "you any additional attention -- certainly not the attention that you need in "
 "order to get your pet bug addressed."
 msgstr ""
+"コア開発者に個人的にメールすることや、繰り返し同じissueを何度も何度もあげるこ"
+"とは控えてください。このような振る舞いでは、あなたのペットのバグを解決するた"
+"めに必要な注意をひくことはできないでしょう。"
 
 msgid "But I've reminded you several times and you keep ignoring my patch!"
 msgstr ""
@@ -780,7 +809,7 @@ msgstr ""
 "てみてください。"
 
 msgid "How do I cite Django?"
-msgstr ""
+msgstr "Django の引用に関して"
 
 msgid ""
 "It's difficult to give an official citation format, for two reasons: "
@@ -979,11 +1008,23 @@ msgstr "1.8"
 msgid "2.7, 3.2 (until the end of 2016), 3.3, 3.4, 3.5"
 msgstr "2.7, 3.2 (2016年末まで ), 3.3, 3.4, 3.5"
 
-msgid "**1.9, 1.10**"
-msgstr "**1.9, 1.10**"
+msgid "1.9, 1.10"
+msgstr "1.9, 1.10"
 
-msgid "**2.7, 3.4, 3.5**"
-msgstr "**2.7, 3.4, 3.5**"
+msgid "2.7, 3.4, 3.5"
+msgstr "2.7, 3.4, 3.5"
+
+msgid "1.11"
+msgstr "1.11"
+
+msgid "2.7, 3.4, 3.5, 3.6"
+msgstr "2.7, 3.4, 3.5, 3.6"
+
+msgid "2.0"
+msgstr "2.0"
+
+msgid "3.5+"
+msgstr "3.5+"
 
 msgid ""
 "For each version of Python, only the latest micro release (A.B.C) is "

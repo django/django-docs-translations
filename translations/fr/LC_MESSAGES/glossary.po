@@ -8,26 +8,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-02 03:09-0500\n"
+"POT-Creation-Date: 2016-10-18 18:24-0500\n"
 "PO-Revision-Date: 2015-04-02 12:12+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
-"Language-Team: French (http://www.transifex.com/projects/p/django-docs/"
-"language/fr/)\n"
+"Language-Team: French (http://www.transifex.com/django/django-docs/language/"
+"fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-# 976c02011ec74668abf345e9c51e83b2
 msgid "Glossary"
 msgstr "Glossaire"
 
-# 5b54a50d90354af19e42afc0df50bb37
 msgid "concrete model"
 msgstr "modèle concret"
 
-# 77da45f923a6478086f37d9838aecd44
 msgid ""
 "A non-abstract (:attr:`abstract=False <django.db.models.Options.abstract>`) "
 "model."
@@ -35,11 +32,9 @@ msgstr ""
 "Un modèle non abstrait (:attr:`abstract=False <django.db.models.Options."
 "abstract>`)."
 
-# 57833d3e60a549f8a63dcf67c2c100aa
 msgid "field"
 msgstr "champ"
 
-# 50018c6785804a6cb8ff5346dd9cbea5
 msgid ""
 "An attribute on a :term:`model`; a given field usually maps directly to a "
 "single database column."
@@ -47,16 +42,12 @@ msgstr ""
 "Un attribut d'un :term:`modèle` ; un champ donné correspond habituellement à "
 "une seule colonne de la base de données."
 
-# ea727eabfc5248f3b9dc9c400ea20a09
-# 5e145d2f79964360b739bc6bda0cbb6c
 msgid "See :doc:`/topics/db/models`."
 msgstr "Voir :doc:`/topics/db/models`."
 
-# a63b32d4f7c74aba9b7d95bda2810eeb
 msgid "generic view"
 msgstr "vue générique"
 
-# 14824a50bf9e42bbaa5f2f7c16f5a5d2
 msgid ""
 "A higher-order :term:`view` function that provides an abstract/generic "
 "implementation of a common idiom or pattern found in view development."
@@ -65,23 +56,18 @@ msgstr ""
 "implémentation abstraite/générique d'un idiome fréquent dans le "
 "développement de vues."
 
-# 19c4ca0939594b199925922ce450c3ae
 msgid "See :doc:`/topics/class-based-views/index`."
 msgstr "Voir :doc:`/topics/class-based-views/index`."
 
-# 98a9d62e8a3f4333a5b43e5464c34bb3
 msgid "model"
 msgstr "modèle"
 
-# e51257a58f0b43979d4d05460883aa88
 msgid "Models store your application's data."
 msgstr "Les modèles stockent les données de vos applications."
 
-# ea9b976cbc55419a9e2fe041651394e1
 msgid "MTV"
 msgstr "MTV"
 
-# c14749ed407049ec927a90a483a3ad74
 msgid ""
 "\"Model-template-view\"; a software pattern, similar in style to MVC, but a "
 "better description of the way Django does things."
@@ -89,15 +75,12 @@ msgstr ""
 "« Modèle-template-vue » ; un patron logiciel, du même style que MVC mais "
 "décrivant mieux la manière dont Django fonctionne."
 
-# 15c1b610123d466c9194fa098dff6912
 msgid "See :ref:`the FAQ entry <faq-mtv>`."
 msgstr "Voir :ref:`l'item de la FAQ <faq-mtv>`."
 
-# 9567955767994f42b5cdedb8335a845e
 msgid "MVC"
 msgstr "MVC"
 
-# 108d623a4a924b2bb2362a6195acd3df
 msgid ""
 "`Model-view-controller`__; a software pattern. Django :ref:`follows MVC to "
 "some extent <faq-mtv>`."
@@ -105,11 +88,9 @@ msgstr ""
 "`Modèle-vue-contrôleur`__ ; un patron logiciel. Django est mieux décrit par :"
 "ref:`le patron MVC<faq-mtv>`."
 
-# 257dda969d854e04b3f312484d9bf617
 msgid "project"
 msgstr "projet"
 
-# b86815fd1b4c488d933d056f8fc20016
 msgid ""
 "A Python package -- i.e. a directory of code -- that contains all the "
 "settings for an instance of Django. This would include database "
@@ -120,11 +101,9 @@ msgstr ""
 "de données, des options spécifiques à Django et des réglages liés aux "
 "applications."
 
-# 292e3f65aa3047998bcee2a5f874f124
 msgid "property"
 msgstr "propriété"
 
-# dd1c0c416f544686963f3758e4d0425f
 msgid ""
 "Also known as \"managed attributes\", and a feature of Python since version "
 "2.2. This is a neat way to implement attributes whose usage resembles "
@@ -135,29 +114,23 @@ msgstr ""
 "l'utilisation ressemble à l'accès à des attributs mais dont l'implémentation "
 "utilise des appels de méthodes."
 
-# cde1ef13a3f34168a0f2e70b163b7957
 msgid "See :class:`property`."
 msgstr "Voir :class:`property`."
 
-# 9afd5dbcb23940169b4cce2dc6bed0d6
 msgid "queryset"
 msgstr "queryset"
 
-# c858b8907d704d63b8f008adfcec4e02
 msgid ""
 "An object representing some set of rows to be fetched from the database."
 msgstr ""
 "Un objet représentant un ensemble de lignes à extraire de la base de données."
 
-# 9ef39c6de17b48b08317e2f1196bdb08
 msgid "See :doc:`/topics/db/queries`."
 msgstr "Voir :doc:`/topics/db/queries`."
 
-# b0bf67836aef4605a665bf61d41fdb9b
 msgid "slug"
 msgstr "slug"
 
-# ae16605b554a45569a3f3366739e0429
 msgid ""
 "A short label for something, containing only letters, numbers, underscores "
 "or hyphens. They're generally used in URLs. For example, in a typical blog "
@@ -167,15 +140,12 @@ msgstr ""
 "des chiffres, des soulignements ou des tirets. Ils sont utilisés en général "
 "dans les URL. Par exemple, dans l'URL d'un article de blog typique :"
 
-# 919f8830609e43398abc449fa6711a6d
 msgid "the last bit (``spring``) is the slug."
 msgstr "le dernier élément (``spring``) est le slug."
 
-# 7fa04f533d1e4326afe44930f8091e54
 msgid "template"
 msgstr "template"
 
-# 8603035a70e343aabbd8a094782e8e52
 msgid ""
 "A chunk of text that acts as formatting for representing data. A template "
 "helps to abstract the presentation of data from the data itself."
@@ -184,14 +154,11 @@ msgstr ""
 "Un template aide à faire la séparation claire entre des données et leur "
 "présentation."
 
-# c2a2da5c0f8246148955f292c62500bb
 msgid "See :doc:`/topics/templates`."
 msgstr "Voir :doc:`/topics/templates`."
 
-# a04163dd6eec4262bfce06114f8a8698
 msgid "view"
 msgstr "vue"
 
-# a9d5090d72fa4b35957e863b0154f4e9
 msgid "A function responsible for rendering a page."
 msgstr "Une fonction responsable du rendu d'une page."
