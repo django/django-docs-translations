@@ -1,0 +1,656 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+# 
+# Translators:
+# Adrian Antończyk <linkedin@antonczyk.it>, 2015
+# m_aciek <maciej.olko@gmail.com>, 2016
+# p <inactive+poczciwiec@transifex.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: django-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-04 00:26-0500\n"
+"PO-Revision-Date: 2016-08-11 17:39+0000\n"
+"Last-Translator: m_aciek <maciej.olko@gmail.com>\n"
+"Language-Team: Polish (http://www.transifex.com/django/django-docs/language/pl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../../../sources/1.10/docs/misc/api-stability.txt:3
+msgid "API stability"
+msgstr "Stabilność API"
+
+#: ../../../../sources/1.10/docs/misc/api-stability.txt:5
+msgid ""
+"Django promises API stability and forwards-compatibility since version 1.0. "
+"In a nutshell, this means that code you develop against a version of Django "
+"will continue to work with future releases. You may need to make minor "
+"changes when upgrading the version of Django your project uses: see the "
+"\"Backwards incompatible changes\" section of the :doc:`release note "
+"</releases/index>` for the version or versions to which you are upgrading."
+msgstr "Django gwarantuje stabliność i kompatybilność wsteczną API od wersji 1.0. W skrócie, to znaczy, że kod, który pisałeś w jakiejś wersji Django będzie wciąż działał z przyszłymi wydaniami. Możesz musieć wprowadzić małe zmiany podczas upgrade'owania wersji Django, z której korzysta twój projekt: zobacz sekcje „Zmiany niekompatybilne wstecz” :doc:`notatek o wydaniach </releases/index>` dla wersji z której lub wersji z których się upgrade'ujesz."
+
+#: ../../../../sources/1.10/docs/misc/api-stability.txt:13
+msgid "What \"stable\" means"
+msgstr "Co oznacza \"stabilny\" (ang. stable)"
+
+#: ../../../../sources/1.10/docs/misc/api-stability.txt:15
+msgid "In this context, stable means:"
+msgstr "W tym kontekście, stabilny oznacza:"
+
+#: ../../../../sources/1.10/docs/misc/api-stability.txt:17
+msgid ""
+"All the public APIs (everything in this documentation) will not be moved or "
+"renamed without providing backwards-compatible aliases."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/api-stability.txt:20
+msgid ""
+"If new features are added to these APIs -- which is quite possible -- they "
+"will not break or change the meaning of existing methods. In other words, "
+"\"stable\" does not (necessarily) mean \"complete.\""
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/api-stability.txt:24
+msgid ""
+"If, for some reason, an API declared stable must be removed or replaced, it "
+"will be declared deprecated but will remain in the API for at least two "
+"feature releases. Warnings will be issued when the deprecated method is "
+"called."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/api-stability.txt:29
+msgid ""
+"See :ref:`official-releases` for more details on how Django's version "
+"numbering scheme works, and how features will be deprecated."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/api-stability.txt:32
+msgid ""
+"We'll only break backwards compatibility of these APIs if a bug or security "
+"hole makes it completely unavoidable."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/api-stability.txt:36
+msgid "Stable APIs"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/api-stability.txt:38
+msgid ""
+"In general, everything covered in the documentation -- with the exception of"
+" anything in the :doc:`internals area </internals/index>` is considered "
+"stable."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/api-stability.txt:42
+msgid "Exceptions"
+msgstr "Wyjątki"
+
+#: ../../../../sources/1.10/docs/misc/api-stability.txt:44
+msgid ""
+"There are a few exceptions to this stability and backwards-compatibility "
+"promise."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/api-stability.txt:48
+msgid "Security fixes"
+msgstr "Poprawki bezpieczeństwa"
+
+#: ../../../../sources/1.10/docs/misc/api-stability.txt:50
+msgid ""
+"If we become aware of a security problem -- hopefully by someone following "
+"our :ref:`security reporting policy <reporting-security-issues>` -- we'll do"
+" everything necessary to fix it. This might mean breaking backwards "
+"compatibility; security trumps the compatibility guarantee."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/api-stability.txt:56
+msgid "APIs marked as internal"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/api-stability.txt:58
+msgid "Certain APIs are explicitly marked as \"internal\" in a couple of ways:"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/api-stability.txt:60
+msgid ""
+"Some documentation refers to internals and mentions them as such. If the "
+"documentation says that something is internal, we reserve the right to "
+"change it."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/api-stability.txt:64
+msgid ""
+"Functions, methods, and other objects prefixed by a leading underscore "
+"(``_``). This is the standard Python way of indicating that something is "
+"private; if any method starts with a single ``_``, it's an internal API."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:3
+msgid "Design philosophies"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:5
+msgid ""
+"This document explains some of the fundamental philosophies Django's "
+"developers have used in creating the framework. Its goal is to explain the "
+"past and guide the future."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:10
+msgid "Overall"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:15
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:155
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:296
+msgid "Loose coupling"
+msgstr "Luźne powiązanie"
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:19
+msgid ""
+"A fundamental goal of Django's stack is `loose coupling and tight "
+"cohesion`_. The various layers of the framework shouldn't \"know\" about "
+"each other unless absolutely necessary."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:23
+msgid ""
+"For example, the template system knows nothing about Web requests, the "
+"database layer knows nothing about data display and the view system doesn't "
+"care which template system a programmer uses."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:27
+msgid ""
+"Although Django comes with a full stack for convenience, the pieces of the "
+"stack are independent of another wherever possible."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:35
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:315
+msgid "Less code"
+msgstr "Mniej kodu"
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:37
+msgid ""
+"Django apps should use as little code as possible; they should lack "
+"boilerplate. Django should take full advantage of Python's dynamic "
+"capabilities, such as introspection."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:44
+msgid "Quick development"
+msgstr "Szybki rozwój"
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:46
+msgid ""
+"The point of a Web framework in the 21st century is to make the tedious "
+"aspects of Web development fast. Django should allow for incredibly quick "
+"Web development."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:53
+msgid "Don't repeat yourself (DRY)"
+msgstr "Nie powtarzaj się (DRY)"
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:59
+msgid ""
+"Every distinct concept and/or piece of data should live in one, and only "
+"one, place. Redundancy is bad. Normalization is good."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:62
+msgid ""
+"The framework, within reason, should deduce as much as possible from as "
+"little as possible."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:67
+msgid "The `discussion of DRY on the Portland Pattern Repository`__"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:74
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:95
+msgid "Explicit is better than implicit"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:76
+msgid ""
+"This is a core Python principle listed in :pep:`20`, and it means Django "
+"shouldn't do too much \"magic.\" Magic shouldn't happen unless there's a "
+"really good reason for it. Magic is worth using only if it creates a huge "
+"convenience unattainable in other ways, and it isn't implemented in a way "
+"that confuses developers who are trying to learn how to use the feature."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:85
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:322
+msgid "Consistency"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:87
+msgid ""
+"The framework should be consistent at all levels. Consistency applies to "
+"everything from low-level (the Python coding style used) to high-level (the "
+"\"experience\" of using Django)."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:92
+msgid "Models"
+msgstr "Modele"
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:97
+msgid ""
+"Fields shouldn't assume certain behaviors based solely on the name of the "
+"field. This requires too much knowledge of the system and is prone to "
+"errors. Instead, behaviors should be based on keyword arguments and, in some"
+" cases, on the type of the field."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:103
+msgid "Include all relevant domain logic"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:105
+msgid ""
+"Models should encapsulate every aspect of an \"object,\" following Martin "
+"Fowler's `Active Record`_ design pattern."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:108
+msgid ""
+"This is why both the data represented by a model and information about it "
+"(its human-readable name, options like default ordering, etc.) are defined "
+"in the model class; all the information needed to understand a given model "
+"should be stored *in* the model."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:116
+msgid "Database API"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:118
+msgid "The core goals of the database API are:"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:121
+msgid "SQL efficiency"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:123
+msgid ""
+"It should execute SQL statements as few times as possible, and it should "
+"optimize statements internally."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:126
+msgid ""
+"This is why developers need to call ``save()`` explicitly, rather than the "
+"framework saving things behind the scenes silently."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:129
+msgid ""
+"This is also why the ``select_related()`` ``QuerySet`` method exists. It's "
+"an optional performance booster for the common case of selecting \"every "
+"related object.\""
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:134
+msgid "Terse, powerful syntax"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:136
+msgid ""
+"The database API should allow rich, expressive statements in as little "
+"syntax as possible. It should not rely on importing other modules or helper "
+"objects."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:139
+msgid ""
+"Joins should be performed automatically, behind the scenes, when necessary."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:141
+msgid ""
+"Every object should be able to access every related object, systemwide. This"
+" access should work both ways."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:145
+msgid "Option to drop into raw SQL easily, when needed"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:147
+msgid ""
+"The database API should realize it's a shortcut but not necessarily an end-"
+"all-be-all. The framework should make it easy to write custom SQL -- entire "
+"statements, or just custom ``WHERE`` clauses as custom parameters to API "
+"calls."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:152
+msgid "URL design"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:157
+msgid ""
+"URLs in a Django app should not be coupled to the underlying Python code. "
+"Tying URLs to Python function names is a Bad And Ugly Thing."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:160
+msgid ""
+"Along these lines, the Django URL system should allow URLs for the same app "
+"to be different in different contexts. For example, one site may put stories"
+" at ``/stories/``, while another may use ``/news/``."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:165
+msgid "Infinite flexibility"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:167
+msgid ""
+"URLs should be as flexible as possible. Any conceivable URL design should be"
+" allowed."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:171
+msgid "Encourage best practices"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:173
+msgid ""
+"The framework should make it just as easy (or even easier) for a developer "
+"to design pretty URLs than ugly ones."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:176
+msgid "File extensions in Web-page URLs should be avoided."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:178
+msgid "Vignette-style commas in URLs deserve severe punishment."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:183
+msgid "Definitive URLs"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:187
+msgid ""
+"Technically, ``foo.com/bar`` and ``foo.com/bar/`` are two different URLs, "
+"and search-engine robots (and some Web traffic-analyzing tools) would treat "
+"them as separate pages. Django should make an effort to \"normalize\" URLs "
+"so that search-engine robots don't get confused."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:192
+msgid "This is the reasoning behind the :setting:`APPEND_SLASH` setting."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:195
+msgid "Template system"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:200
+msgid "Separate logic from presentation"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:202
+msgid ""
+"We see a template system as a tool that controls presentation and "
+"presentation-related logic -- and that's it. The template system shouldn't "
+"support functionality that goes beyond this basic goal."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:207
+msgid "Discourage redundancy"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:209
+msgid ""
+"The majority of dynamic websites use some sort of common sitewide design -- "
+"a common header, footer, navigation bar, etc. The Django template system "
+"should make it easy to store those elements in a single place, eliminating "
+"duplicate code."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:214
+msgid ""
+"This is the philosophy behind :ref:`template inheritance <template-"
+"inheritance>`."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:218
+msgid "Be decoupled from HTML"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:220
+msgid ""
+"The template system shouldn't be designed so that it only outputs HTML. It "
+"should be equally good at generating other text-based formats, or just plain"
+" text."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:225
+msgid "XML should not be used for template languages"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:229
+msgid ""
+"Using an XML engine to parse templates introduces a whole new world of human"
+" error in editing templates -- and incurs an unacceptable level of overhead "
+"in template processing."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:234
+msgid "Assume designer competence"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:236
+msgid ""
+"The template system shouldn't be designed so that templates necessarily are "
+"displayed nicely in WYSIWYG editors such as Dreamweaver. That is too severe "
+"of a limitation and wouldn't allow the syntax to be as nice as it is. Django"
+" expects template authors are comfortable editing HTML directly."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:242
+msgid "Treat whitespace obviously"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:244
+msgid ""
+"The template system shouldn't do magic things with whitespace. If a template"
+" includes whitespace, the system should treat the whitespace as it treats "
+"text -- just display it. Any whitespace that's not in a template tag should "
+"be displayed."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:250
+msgid "Don't invent a programming language"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:252
+msgid ""
+"The goal is not to invent a programming language. The goal is to offer just "
+"enough programming-esque functionality, such as branching and looping, that "
+"is essential for making presentation-related decisions. The :ref:`Django "
+"Template Language (DTL) <template-language-intro>` aims to avoid advanced "
+"logic."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:257
+msgid ""
+"The Django template system recognizes that templates are most often written "
+"by *designers*, not *programmers*, and therefore should not assume Python "
+"knowledge."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:262
+msgid "Safety and security"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:264
+msgid ""
+"The template system, out of the box, should forbid the inclusion of "
+"malicious code -- such as commands that delete database records."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:267
+msgid ""
+"This is another reason the template system doesn't allow arbitrary Python "
+"code."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:270
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:328
+msgid "Extensibility"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:272
+msgid ""
+"The template system should recognize that advanced template authors may want"
+" to extend its technology."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:275
+msgid "This is the philosophy behind custom template tags and filters."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:278
+msgid "Views"
+msgstr "Widoki"
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:281
+msgid "Simplicity"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:283
+msgid ""
+"Writing a view should be as simple as writing a Python function. Developers "
+"shouldn't have to instantiate a class when a function will do."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:287
+msgid "Use request objects"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:289
+msgid ""
+"Views should have access to a request object -- an object that stores "
+"metadata about the current request. The object should be passed directly to "
+"a view function, rather than the view function having to access the request "
+"data from a global variable. This makes it light, clean and easy to test "
+"views by passing in \"fake\" request objects."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:298
+msgid ""
+"A view shouldn't care about which template system the developer uses -- or "
+"even whether a template system is used at all."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:302
+msgid "Differentiate between GET and POST"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:304
+msgid ""
+"GET and POST are distinct; developers should explicitly use one or the "
+"other. The framework should make it easy to distinguish between GET and POST"
+" data."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:310
+msgid "Cache Framework"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:312
+msgid "The core goals of Django's :doc:`cache framework </topics/cache>` are:"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:317
+msgid ""
+"A cache should be as fast as possible.  Hence, all framework code "
+"surrounding the cache backend should be kept to the absolute minimum, "
+"especially for ``get()`` operations."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:324
+msgid ""
+"The cache API should provide a consistent interface across the different "
+"cache backends."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/design-philosophies.txt:330
+msgid ""
+"The cache API should be extensible at the application level based on the "
+"developer's needs (for example, see :ref:`cache_key_transformation`)."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/distributions.txt:3
+msgid "Third-party distributions of Django"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/distributions.txt:5
+msgid ""
+"Many third-party distributors are now providing versions of Django "
+"integrated with their package-management systems. These can make "
+"installation and upgrading much easier for users of Django since the "
+"integration includes the ability to automatically install dependencies (like"
+" database adapters) that Django requires."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/distributions.txt:11
+msgid ""
+"Typically, these packages are based on the latest stable release of Django, "
+"so if you want to use the development version of Django you'll need to "
+"follow the instructions for :ref:`installing the development version "
+"<installing-development-version>` from our Git repository."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/distributions.txt:16
+msgid ""
+"If you're using Linux or a Unix installation, such as OpenSolaris, check "
+"with your distributor to see if they already package Django. If you're using"
+" a Linux distro and don't know how to find out if a package is available, "
+"then now is a good time to learn.  The Django Wiki contains a list of `Third"
+" Party Distributions`_ to help you out."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/distributions.txt:26
+msgid "For distributors"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/distributions.txt:28
+msgid ""
+"If you'd like to package Django for distribution, we'd be happy to help out!"
+" Please join the |django-developers| mailing list and introduce yourself."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/distributions.txt:31
+msgid ""
+"We also encourage all distributors to subscribe to the |django-announce| "
+"mailing list, which is a (very) low-traffic list for announcing new releases"
+" of Django and important bugfixes."
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/index.txt:3
+msgid "Meta-documentation and miscellany"
+msgstr ""
+
+#: ../../../../sources/1.10/docs/misc/index.txt:5
+msgid ""
+"Documentation that we can't find a more organized place for. Like that "
+"drawer in your kitchen with the scissors, batteries, duct tape, and other "
+"junk."
+msgstr ""
