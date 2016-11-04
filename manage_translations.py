@@ -17,7 +17,7 @@ from argparse import ArgumentParser
 from subprocess import PIPE, Popen, call, check_output
 
 # intro and index ressources must be fully translated for these languages
-ACTIVE_LANGUAGES = ['el', 'es', 'fr', 'id', 'ja', 'pt_BR']
+ACTIVE_LANGUAGES = ['el', 'es', 'fr', 'id', 'ja', 'pl', 'pt_BR']
 # See https://www.transifex.com/django/django-docs/content/
 ALL_RESOURCES = [
     'contents', 'faq', 'glossary', 'howto', 'index', 'internals', 'intro', 'misc',
