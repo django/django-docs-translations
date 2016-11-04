@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) Django Software Foundation and contributors
 # This file is distributed under the same license as the Django package.
-# 
+#
 # Translators:
 # Adrian Antończyk <linkedin@antonczyk.it>, 2015
 # m_aciek <maciej.olko@gmail.com>, 2016
@@ -12,160 +12,151 @@ msgstr ""
 "POT-Creation-Date: 2016-11-04 00:26-0500\n"
 "PO-Revision-Date: 2016-10-23 00:20+0000\n"
 "Last-Translator: m_aciek <maciej.olko@gmail.com>\n"
-"Language-Team: Polish (http://www.transifex.com/django/django-docs/language/pl/)\n"
+"Language-Team: Polish (http://www.transifex.com/django/django-docs/language/"
+"pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pl\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
 
-#: ../../../../sources/1.10/docs/glossary.txt:3
 msgid "Glossary"
 msgstr "Słownik"
 
-#: ../../../../sources/1.10/docs/glossary.txt:6
 msgid "concrete model"
 msgstr "model konkretny"
 
-#: ../../../../sources/1.10/docs/glossary.txt:8
 msgid ""
 "A non-abstract (:attr:`abstract=False <django.db.models.Options.abstract>`) "
 "model."
-msgstr "Nieabstrakcyjny (:attr:`abstract=False <django.db.models.Options.abstract>`) model."
+msgstr ""
+"Nieabstrakcyjny (:attr:`abstract=False <django.db.models.Options.abstract>`) "
+"model."
 
-#: ../../../../sources/1.10/docs/glossary.txt:10
 msgid "field"
 msgstr "pole"
 
-#: ../../../../sources/1.10/docs/glossary.txt:12
 msgid ""
 "An attribute on a :term:`model`; a given field usually maps directly to a "
 "single database column."
-msgstr "Atrybut :term:`model`\\u; pole zazwyczaj jest mapowane bezpośrednio na pojedynczą kolumnę bazy danych."
+msgstr ""
+"Atrybut :term:`model`\\u; pole zazwyczaj jest mapowane bezpośrednio na "
+"pojedynczą kolumnę bazy danych."
 
-#: ../../../../sources/1.10/docs/glossary.txt:15
-#: ../../../../sources/1.10/docs/glossary.txt:26
 msgid "See :doc:`/topics/db/models`."
 msgstr "Zobacz :doc:`/topics/db/models`."
 
-#: ../../../../sources/1.10/docs/glossary.txt:16
 msgid "generic view"
 msgstr "widok generyczny"
 
-#: ../../../../sources/1.10/docs/glossary.txt:18
 msgid ""
 "A higher-order :term:`view` function that provides an abstract/generic "
 "implementation of a common idiom or pattern found in view development."
-msgstr "Funkcja :term:`view` wyższego rzędu, która dostarcza abstrakcyjną lub generyczną implementację wspólnego idiomu lub wzorca dostępnego w dewelopmencie widoków."
+msgstr ""
+"Funkcja :term:`view` wyższego rzędu, która dostarcza abstrakcyjną lub "
+"generyczną implementację wspólnego idiomu lub wzorca dostępnego w "
+"dewelopmencie widoków."
 
-#: ../../../../sources/1.10/docs/glossary.txt:21
 msgid "See :doc:`/topics/class-based-views/index`."
 msgstr "Zobacz :doc:`/topics/class-based-views/index`."
 
-#: ../../../../sources/1.10/docs/glossary.txt:22
 msgid "model"
 msgstr "model"
 
-#: ../../../../sources/1.10/docs/glossary.txt:24
 msgid "Models store your application's data."
 msgstr "Modele przechowują dane aplikacji"
 
-#: ../../../../sources/1.10/docs/glossary.txt:27
 msgid "MTV"
 msgstr "MTV"
 
-#: ../../../../sources/1.10/docs/glossary.txt:29
 msgid ""
 "\"Model-template-view\"; a software pattern, similar in style to MVC, but a "
 "better description of the way Django does things."
-msgstr "„Model-template-view”; wzorzec oprogramowania, podobny do MVC, ale w lepszy sposób opisuje, w jaki sposób robi to Django."
+msgstr ""
+"„Model-template-view”; wzorzec oprogramowania, podobny do MVC, ale w lepszy "
+"sposób opisuje, w jaki sposób robi to Django."
 
-#: ../../../../sources/1.10/docs/glossary.txt:32
 msgid "See :ref:`the FAQ entry <faq-mtv>`."
 msgstr "Zobacz :ref:`wpis w FAQ <faq-mtv>`."
 
-#: ../../../../sources/1.10/docs/glossary.txt:33
 msgid "MVC"
 msgstr "MVC"
 
-#: ../../../../sources/1.10/docs/glossary.txt:35
 msgid ""
 "`Model-view-controller`__; a software pattern. Django :ref:`follows MVC to "
 "some extent <faq-mtv>`."
-msgstr "`Model-view-controller`__; wzorzec w oprogramowaniu. Django :ref:`w pewnym stopniu spełnia MVC <faq-mtv>`."
+msgstr ""
+"`Model-view-controller`__; wzorzec w oprogramowaniu. Django :ref:`w pewnym "
+"stopniu spełnia MVC <faq-mtv>`."
 
-#: ../../../../sources/1.10/docs/glossary.txt:39
 msgid "project"
 msgstr "projekt"
 
-#: ../../../../sources/1.10/docs/glossary.txt:41
 msgid ""
 "A Python package -- i.e. a directory of code -- that contains all the "
 "settings for an instance of Django. This would include database "
 "configuration, Django-specific options and application-specific settings."
-msgstr "Pakiet Pythona -- na przykład katalog z kodem -- który zawiera wszystkie ustawienia dla instancji Django. Zawiera się w tym konfiguracja bazy danych, ustawienia Django i ustawienia aplikacji."
+msgstr ""
+"Pakiet Pythona -- na przykład katalog z kodem -- który zawiera wszystkie "
+"ustawienia dla instancji Django. Zawiera się w tym konfiguracja bazy danych, "
+"ustawienia Django i ustawienia aplikacji."
 
-#: ../../../../sources/1.10/docs/glossary.txt:45
 msgid "property"
 msgstr "właściwość"
 
-#: ../../../../sources/1.10/docs/glossary.txt:47
 msgid ""
 "Also known as \"managed attributes\", and a feature of Python since version "
 "2.2. This is a neat way to implement attributes whose usage resembles "
 "attribute access, but whose implementation uses method calls."
-msgstr "Znana też jako „zarządzany atrybut” i funkcjonalność Pythona od wersji 2.2. To sprytna metoda, aby zaimplementować atrybuty, których użycie przypomina dostęp do atrybutów, ale których implementacja wykorzystuje wywołania metod."
+msgstr ""
+"Znana też jako „zarządzany atrybut” i funkcjonalność Pythona od wersji 2.2. "
+"To sprytna metoda, aby zaimplementować atrybuty, których użycie przypomina "
+"dostęp do atrybutów, ale których implementacja wykorzystuje wywołania metod."
 
-#: ../../../../sources/1.10/docs/glossary.txt:51
 msgid "See :class:`property`."
 msgstr "Patrz :class:`property`."
 
-#: ../../../../sources/1.10/docs/glossary.txt:52
 msgid "queryset"
 msgstr "queryset"
 
-#: ../../../../sources/1.10/docs/glossary.txt:54
 msgid ""
 "An object representing some set of rows to be fetched from the database."
 msgstr "Obiekt reprezentujący pewien zestaw wierszy do pobrania z bazy danych."
 
-#: ../../../../sources/1.10/docs/glossary.txt:56
 msgid "See :doc:`/topics/db/queries`."
 msgstr "Patrz :doc:`/topics/db/queries`."
 
-#: ../../../../sources/1.10/docs/glossary.txt:57
 msgid "slug"
 msgstr "slug"
 
-#: ../../../../sources/1.10/docs/glossary.txt:59
 msgid ""
 "A short label for something, containing only letters, numbers, underscores "
 "or hyphens. They're generally used in URLs. For example, in a typical blog "
 "entry URL:"
-msgstr "Krótka etykieta dla czegoś, zawierająca tylko litery, cyfry, podkreślniki lub dywizy. Zazwyczaj używana w URL-ach. Na przykład w typowym URL-u wpisu na blogu:"
+msgstr ""
+"Krótka etykieta dla czegoś, zawierająca tylko litery, cyfry, podkreślniki "
+"lub dywizy. Zazwyczaj używana w URL-ach. Na przykład w typowym URL-u wpisu "
+"na blogu:"
 
-#: ../../../../sources/1.10/docs/glossary.txt:67
 msgid "the last bit (``spring``) is the slug."
 msgstr "ostatni kawałek (``spring``) to slug."
 
-#: ../../../../sources/1.10/docs/glossary.txt:68
 msgid "template"
 msgstr "szablon"
 
-#: ../../../../sources/1.10/docs/glossary.txt:70
 msgid ""
 "A chunk of text that acts as formatting for representing data. A template "
 "helps to abstract the presentation of data from the data itself."
-msgstr "Kawałek tekstu, który zachowuje się jak formatowanie dla reprezentacji danych. Szablon pomaga wyodrębnić prezentację danych od samych danych."
+msgstr ""
+"Kawałek tekstu, który zachowuje się jak formatowanie dla reprezentacji "
+"danych. Szablon pomaga wyodrębnić prezentację danych od samych danych."
 
-#: ../../../../sources/1.10/docs/glossary.txt:74
 msgid "See :doc:`/topics/templates`."
 msgstr "Zobacz :doc:`/topics/templates`."
 
-#: ../../../../sources/1.10/docs/glossary.txt:75
 msgid "view"
 msgstr "widok"
 
-#: ../../../../sources/1.10/docs/glossary.txt:77
 msgid "A function responsible for rendering a page."
 msgstr "Funkcja odpowiedzialna za wyrenderowanie strony."
