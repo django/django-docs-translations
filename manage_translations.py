@@ -36,6 +36,15 @@ def _current_version():
         return branch_name.split('/')[1].replace('.x', '')
 
 
+def to_language(locale):
+    """Turns a locale name (en_US) into a language name (en-us)."""
+    p = locale.find('_')
+    if p >= 0:
+        return locale[:p].lower() + '-' + locale[p + 1:].lower()
+    else:
+        return locale.lower()
+
+
 def fetch(resources=None, languages=None):
     """
     Fetch translations from Transifex, remove source lines.
@@ -83,7 +92,7 @@ def robots_txt(*args):
             if perc < 90:
                 # Write a line in robots.txt
                 robots_content.append('Disallow: /%(lang)s/%(version)s/%(res)s' % {
-                    'lang': lang,
+                    'lang': to_language(lang),
                     'version': version,
                     'res': res,
                 })
