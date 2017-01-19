@@ -9,7 +9,7 @@
 # GwynBleidD <gbd.lin@gmail.com>, 2016
 # lukaszkoziara <koziara.lukasz@gmail.com>, 2015
 # Łukasz Hryniuk, 2013
-# m_aciek <maciej.olko@gmail.com>, 2016
+# m_aciek <maciej.olko@gmail.com>, 2016-2017
 # m_aciek <maciej.olko@gmail.com>, 2016
 # p <inactive+poczciwiec@transifex.com>, 2014
 # Tomasz Kajtoch <tomekkaj@tomekkaj.pl>, 2016
@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-25 07:35-0600\n"
-"PO-Revision-Date: 2016-11-23 22:33+0000\n"
+"POT-Creation-Date: 2017-01-17 13:35-0600\n"
+"PO-Revision-Date: 2017-01-11 10:41+0000\n"
 "Last-Translator: m_aciek <maciej.olko@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/django/django-docs/language/"
 "pl/)\n"
@@ -86,11 +86,11 @@ msgid ""
 "started. However, you'll probably want to read some more about these "
 "different tools if you plan on contributing to Django regularly."
 msgstr ""
-"Ci z was, którzy nie są zaznajomieni z systemami kontroli wersji i Trac "
+"Ci z was, którzy nie są zaznajomieni z systemami kontroli wersji i Trakiem "
 "przekonają się, że w tym poradniku i jego odnośnikach znajdą wystarczająco "
-"informacji, aby zacząć pracę. Pomimo tego, prawdopodobnie będziesz "
-"potrzebować przeczytać nieco więcej o tych różniących się narzędziach jeśli "
-"planujesz regularnie współtworzyć Django."
+"informacji, aby zacząć pracę. Pomimo tego, prawdopodobnie będziecie "
+"potrzebować przeczytać nieco więcej o tych różnych narzędziach, jeśli "
+"planujecie regularnie współtworzyć Django."
 
 msgid ""
 "For the most part though, this tutorial tries to explain as much as "
@@ -108,10 +108,10 @@ msgid ""
 "to |django-developers| or drop by `#django-dev on irc.freenode.net`__ to "
 "chat with other Django users who might be able to help."
 msgstr ""
-"Jeśli masz problemy z przejściem tego tutoriala, prosimy napisz wiadomość do "
-"|django-developers| lub wpadnij na `#django-dev on irc.freenode.net`__ aby "
-"czatować z innymi użytkownikami Django, który mogą być w stanie udzielić "
-"pomocy."
+"Jeśli masz problemy z przejściem tego samouczka, prosimy napisz wiadomość do "
+"|django-developers| lub wpadnij na `#django-dev na irc.freenode.net`__\\, "
+"aby czatować z innymi użytkownikami Django, którzy mogą być w stanie "
+"udzielić ci pomocy."
 
 msgid "What does this tutorial cover?"
 msgstr "Co zawiera ten przewodnik?"
@@ -1083,20 +1083,18 @@ msgid "You've got three easy options to install Django:"
 msgstr "Istnieją trzy proste sposoby, aby zainstalować Django:"
 
 msgid ""
-"Install a version of Django :doc:`provided by your operating system "
-"distribution </misc/distributions>`. This is the quickest option for those "
-"who have operating systems that distribute Django."
-msgstr ""
-"Zainstaluj wersję Django :doc:`dostarczaną przez dystrybucję twojego systemu "
-"operacyjnego </misc/distributions>`. To najszybsza opcja dla tych, którzy "
-"mają systemy operacyjne, które dystrybuują Django."
-
-msgid ""
 ":ref:`Install an official release <installing-official-release>`. This is "
 "the best approach for most users."
 msgstr ""
 ":ref:`Zainstaluj oficjalne wydanie <installing-official-release>`. To "
 "najlepsze podejście dla większości użytkowników."
+
+msgid ""
+"Install a version of Django :ref:`provided by your operating system "
+"distribution <installing-distribution-package>`."
+msgstr ""
+"Zainstaluj wersję Django :ref:`dostarczaną przez dystrybucję twojego systemu "
+"operacyjnego <installing-distribution-package>`."
 
 msgid ""
 ":ref:`Install the latest development version <installing-development-"

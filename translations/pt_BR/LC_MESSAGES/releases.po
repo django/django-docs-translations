@@ -23,8 +23,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-25 07:35-0600\n"
-"PO-Revision-Date: 2016-11-24 09:49+0000\n"
+"POT-Creation-Date: 2017-01-17 13:35-0600\n"
+"PO-Revision-Date: 2017-01-05 08:38+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
@@ -4802,7 +4802,7 @@ msgstr ""
 msgid "Django 1.10.4 release notes"
 msgstr ""
 
-msgid "*Under development*"
+msgid "*December 1, 2016*"
 msgstr ""
 
 msgid "Django 1.10.4 fixes several bugs in 1.10.3."
@@ -4823,6 +4823,64 @@ msgstr ""
 msgid ""
 "Made ``Model.delete(keep_parents=True)`` preserve parent reverse "
 "relationships in multi-table inheritance (:ticket:`27407`)."
+msgstr ""
+
+msgid ""
+"Fixed a ``QuerySet.update()`` crash on SQLite when updating a "
+"``DateTimeField`` with an ``F()`` expression and a ``timedelta`` (:ticket:"
+"`27544`)."
+msgstr ""
+
+msgid ""
+"Prevented ``LocaleMiddleware`` from redirecting on URLs that should return "
+"404 when using ``prefix_default_language=False`` (:ticket:`27402`)."
+msgstr ""
+
+msgid ""
+"Prevented an unnecessary index from being created on an InnoDB "
+"``ForeignKey`` when the field was added after the model was created (:ticket:"
+"`27558`)."
+msgstr ""
+
+msgid "Django 1.10.5 release notes"
+msgstr ""
+
+msgid "*January 4, 2017*"
+msgstr ""
+
+msgid "Django 1.10.5 fixes several bugs in 1.10.4."
+msgstr ""
+
+msgid ""
+"Fixed a crash in the debug view if ``request.user`` can't be retrieved, such "
+"as if the database is unavailable (:ticket:`27567`)."
+msgstr ""
+
+msgid ""
+"Fixed occasional missing plural forms in ``JavaScriptCatalog`` (:ticket:"
+"`27418`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in the ``timesince`` and ``timeuntil`` filters that "
+"caused incorrect results for dates in a leap year (:ticket:`27637`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression where ``collectstatic`` overwrote newer files in remote "
+"storages (:ticket:`27658`)."
+msgstr ""
+
+msgid "Django 1.10.6 release notes"
+msgstr ""
+
+msgid "*Under development*"
+msgstr ""
+
+msgid "Django 1.10.6 fixes several bugs in 1.10.5."
+msgstr ""
+
+msgid "..."
 msgstr ""
 
 msgid "Django 1.2 release notes"
@@ -21558,6 +21616,12 @@ msgid "Django 1.9.12 release notes"
 msgstr ""
 
 msgid "Django 1.9.12 fixes a regression in 1.9.11."
+msgstr ""
+
+msgid "Django 1.9.13 release notes"
+msgstr ""
+
+msgid "Django 1.9.13 fixes a bug in 1.9.12."
 msgstr ""
 
 msgid "Django 1.9.2 release notes"
