@@ -16,6 +16,7 @@
 # Filipe Cifali Stangler <cifali.filipe@gmail.com>, 2016
 # Cloves Oliveira <clovesolivier23@gmail.com>, 2016
 # hoisel <danielhoisel@gmail.com>, 2014
+# Danilo Favato <dfavato@gmail.com>, 2017
 # Edgard Mota <edgardmota@gmail.com>, 2016
 # Eduardo Cereto Carvalho, 2013
 # Elyézer Rezende <elyezermr@gmail.com>, 2013
@@ -23,7 +24,7 @@
 # Eric Hideki <hidekinhow@hotmail.com>, 2015
 # Felippe Raposo <raposo.felippe@gmail.com>, 2016
 # Gilson Filho <me@gilsondev.in>, 2015
-# Guilherme Batista Ferreira <guilherme@uft.edu.br>, 2014
+# Guilherme Ferreira <guilherme@uft.edu.br>, 2014
 # Guilherme Portela <guilhermeportela@gmx.com>, 2015
 # Heitor Augusto Borges Pereira <heitoor@gmail.com>, 2016
 # hoisel <danielhoisel@gmail.com>, 2014
@@ -58,9 +59,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-31 10:29-0500\n"
-"PO-Revision-Date: 2017-03-01 23:48+0000\n"
-"Last-Translator: beatorizu <betrizaf@gmail.com>\n"
+"POT-Creation-Date: 2017-04-21 12:11-0500\n"
+"PO-Revision-Date: 2017-04-11 19:18+0000\n"
+"Last-Translator: Danilo Favato <dfavato@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -576,6 +577,10 @@ msgid ""
 "example. All changes made in this branch will be specific to the ticket and "
 "won't affect the main copy of the code that we cloned earlier."
 msgstr ""
+"Você pode escolher qualquer nome para o branch, \"ticket_24788\" é um "
+"exemplo. Todas as mudanças feitas nesse branch serão específicas para o "
+"ticket e não afetarão a copia principal do código que foi clonado "
+"anteriormente."
 
 msgid "Writing some tests for your ticket"
 msgstr "Escrevendo alguns testes para o seu ticket"
@@ -859,6 +864,9 @@ msgid ""
 "the differences between your current copy of Django (with your changes) and "
 "the revision that you initially checked out earlier in the tutorial:"
 msgstr ""
+"Agora é hora de rever todas as mudanças feitas no patch. Para visualizar as "
+"diferenças entre a sua a sua versão do Django (com as suas mudanças) e a "
+"revisão que você havia inicialmente baixado pelo tutorial:"
 
 msgid "Use the arrow keys to move up and down."
 msgstr "Use as teclas direcionais para mover para cima e para baixo."
@@ -868,6 +876,9 @@ msgid ""
 "command line. If the patch's content looked okay, it's time to commit the "
 "changes."
 msgstr ""
+"Uma vez que você tenha terminado de revisar o patch, pressione a tecla ``q`` "
+"para retornar à linha de comando. Se o conteúdo do patch estiver ok é hora "
+"de commitar as mudanças."
 
 msgid "Committing the changes in the patch"
 msgstr "Cometendo as alterações no patch"
@@ -2015,11 +2026,8 @@ msgstr ""
 msgid ""
 "We'll assume you have :doc:`Django installed </intro/install>` already. You "
 "can tell Django is installed and which version by running the following "
-"command:"
+"command in a shell prompt (indicated by the $ prefix):"
 msgstr ""
-"Vamos assumir que você já tem o  :doc:`Django instalado </intro/install>`. "
-"Você pode verificar se o Django está instalado e qual versão está rodando "
-"executando o seguinte comando:"
 
 msgid ""
 "If Django is installed, you should see the version of your installation. If "
@@ -2267,20 +2275,16 @@ msgstr ""
 "de comando. Por exemplo, este comando iniciará o servidor na porta 8080:"
 
 msgid ""
-"If you want to change the server's IP, pass it along with the port. So to "
-"listen on all public IPs (useful if you want to show off your work on other "
-"computers on your network), use:"
+"If you want to change the server's IP, pass it along with the port. For "
+"example, to listen on all available public IPs (which is useful if you are "
+"running Vagrant or want to show off your work on other computers on the "
+"network), use:"
 msgstr ""
-"Se você quer mudar o IP do servidor, passe-o junto com a porta. Para então "
-"escutar em todos os IPs públicos (útil se você quer mostrar seu trabalho em "
-"outros computadores), use:"
 
 msgid ""
-"Full docs for the development server can be found in the :djadmin:"
-"`runserver` reference."
+"**0** is a shortcut for **0.0.0.0**. Full docs for the development server "
+"can be found in the :djadmin:`runserver` reference."
 msgstr ""
-"A documentação completa para o servidor de  desenvolvimento está na "
-"referência :djadmin:`runserver`."
 
 msgid "Automatic reloading of :djadmin:`runserver`"
 msgstr "Releitura automática de :djadmin:`runserver`"
