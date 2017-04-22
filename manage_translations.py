@@ -13,6 +13,7 @@ from __future__ import division
 
 import os
 import re
+import sys
 from argparse import ArgumentParser
 from subprocess import PIPE, Popen, call, check_output
 
@@ -49,6 +50,9 @@ def fetch(resources=None, languages=None):
     """
     Fetch translations from Transifex, remove source lines.
     """
+    if call("tx --version", shell=True) != 0:
+        sys.stderr.write("The Transifex client app is required (pip install transifex-client).\n")
+        exit(1)
     if languages is None:
         languages = ACTIVE_LANGUAGES
     for lang in languages:
