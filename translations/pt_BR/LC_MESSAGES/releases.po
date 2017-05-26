@@ -10,6 +10,7 @@
 # Carlos E C Leite <caduado@gmail.com>, 2016
 # Carlos Schneider <carlosaschjr@gmail.com>, 2016
 # Filipe Cifali Stangler <cifali.filipe@gmail.com>, 2016
+# Claudio Rogerio Carvalho Filho <excriptbrasil@gmail.com>, 2017
 # Fabio Oliveira <fabio20rj@gmail.com>, 2016
 # Lucas Infante <maccinza@gmail.com>, 2014
 # rafaelribeiroo <pereiraribeirorafael@gmail.com>, 2016
@@ -23,8 +24,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-21 12:11-0500\n"
-"PO-Revision-Date: 2017-04-22 01:44+0000\n"
+"POT-Creation-Date: 2017-05-25 13:21-0500\n"
+"PO-Revision-Date: 2017-05-23 13:14+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
@@ -595,6 +596,8 @@ msgid ""
 "See :doc:`the testing documentation </topics/testing/index>` for the full "
 "details."
 msgstr ""
+"Veja a documentação :doc:`the testing </topics/testing/index>` para ver os "
+"detalhes completos."
 
 msgid "Improvements to the admin interface"
 msgstr "Melhorias para a interface de administrador "
@@ -3305,7 +3308,7 @@ msgstr ""
 
 msgid ""
 "The :djadmin:`shell` command supports tab completion on systems using "
-"``libedit``, e.g. Mac OSX."
+"``libedit``, e.g. macOS."
 msgstr ""
 
 msgid ""
@@ -3510,7 +3513,7 @@ msgid ""
 msgstr ""
 
 msgid "Validators"
-msgstr ""
+msgstr "Validadores"
 
 msgid ""
 ":class:`~django.core.validators.URLValidator` now limits the length of "
@@ -5536,6 +5539,15 @@ msgid "Support for GDAL 1.7 and 1.8 is dropped."
 msgstr ""
 
 msgid ""
+"The widgets in ``contrib.gis.forms.widgets`` and the admin's "
+"``OpenLayersWidget`` use the :doc:`form rendering API </ref/forms/"
+"renderers>` rather than ``loader.render_to_string()``. If you're using a "
+"custom widget template, you'll need to be sure your form renderer can locate "
+"it. For example, you could use the :class:`~django.forms.renderers."
+"TemplatesSetting` renderer."
+msgstr ""
+
+msgid ""
 "``collectstatic`` may now fail during post-processing when using a hashed "
 "static files storage if a reference loop exists (e.g. ``'foo.css'`` "
 "references ``'bar.css'`` which itself references ``'foo.css'``) or if the "
@@ -5718,15 +5730,18 @@ msgid ""
 "localization."
 msgstr ""
 
-msgid "``django.Template.render()`` prohibits non-dict context"
+msgid ""
+"``django.template.backends.django.Template.render()`` prohibits non-dict "
+"context"
 msgstr ""
 
 msgid ""
-"For compatibility with multiple template engines, ``django.Template."
-"render()`` must receive a dictionary of context rather than ``Context`` or "
-"``RequestContext``. If you were passing either of the two classes, pass a "
-"dictionary instead -- doing so is backwards-compatible with older versions "
-"of Django."
+"For compatibility with multiple template engines, ``django.template.backends."
+"django.Template.render()`` (returned from high-level template loader APIs "
+"such as ``loader.get_template()``) must receive a dictionary of context "
+"rather than ``Context`` or ``RequestContext``. If you were passing either of "
+"the two classes, pass a dictionary instead -- doing so is backwards-"
+"compatible with older versions of Django."
 msgstr ""
 
 msgid "Model state changes in migration operations"
@@ -5890,6 +5905,19 @@ msgstr ""
 msgid "Support for IPython < 1.0 is removed from the ``shell`` command."
 msgstr ""
 
+msgid ""
+"The signature of private API ``Widget.build_attrs()`` changed from "
+"``extra_attrs=None, **kwargs`` to ``base_attrs, extra_attrs=None``."
+msgstr ""
+
+msgid ""
+"File-like objects (e.g., :class:`~io.StringIO` and :class:`~io.BytesIO`) "
+"uploaded to an :class:`~django.db.models.ImageField` using the test client "
+"now require a ``name`` attribute with a value that passes the :data:`~django."
+"core.validators.validate_image_file_extension` validator. See the note in :"
+"meth:`.Client.post`."
+msgstr ""
+
 msgid "Features deprecated in 1.11"
 msgstr ""
 
@@ -5997,10 +6025,24 @@ msgstr ""
 msgid "Django 1.11.1 release notes"
 msgstr ""
 
-msgid "*Under development*"
+msgid "*May 6, 2017*"
 msgstr ""
 
-msgid "Django 1.11.1 fixes several bugs in 1.11."
+msgid "Django 1.11.1 adds a minor feature and fixes several bugs in 1.11."
+msgstr ""
+
+msgid "Allowed disabling server-side cursors on PostgreSQL"
+msgstr ""
+
+msgid ""
+"The change in Django 1.11 to make :meth:`.QuerySet.iterator()` use server-"
+"side cursors on PostgreSQL prevents running Django with `pgBouncer` in "
+"transaction pooling mode. To reallow that, use the :setting:"
+"`DISABLE_SERVER_SIDE_CURSORS <DATABASE-DISABLE_SERVER_SIDE_CURSORS>` setting "
+"in :setting:`DATABASES`."
+msgstr ""
+
+msgid "See :ref:`transaction-pooling-server-side-cursors` for more discussion."
 msgstr ""
 
 msgid ""
@@ -6050,6 +6092,11 @@ msgid ""
 msgstr ""
 
 msgid ""
+"Fixed change password link in the ``contrib.auth`` admin for ``el``, "
+"``es_MX``, and ``pt`` translations (:ticket:`28100`)."
+msgstr ""
+
+msgid ""
 "Restored the output of the ``class`` attribute in the ``<ul>`` of widgets "
 "that use the ``multiple_input.html`` template. This fixes ``ModelAdmin."
 "radio_fields`` with ``admin.HORIZONTAL`` (:ticket:`28059`)."
@@ -6067,6 +6114,133 @@ msgid ""
 "Fixed a regression where ``CheckboxSelectMultiple``, ``NullBooleanSelect``, "
 "``RadioSelect``, ``SelectMultiple``, and ``Select`` localized option values "
 "(:ticket:`28075`)."
+msgstr ""
+
+msgid ""
+"Corrected the stack level of unordered queryset pagination warnings (:ticket:"
+"`28109`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression causing incorrect queries for ``__in`` subquery lookups "
+"when models use ``ForeignKey.to_field`` (:ticket:`28101`)."
+msgstr ""
+
+msgid ""
+"Fixed crash when overriding the template of ``django.views.static."
+"directory_index()`` (:ticket:`28122`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in formset ``min_num`` validation with unchanged forms "
+"that have initial data (:ticket:`28130`)."
+msgstr ""
+
+msgid "Prepared for ``cx_Oracle`` 6.0 support (:ticket:`28138`)."
+msgstr ""
+
+msgid ""
+"Updated the ``contrib.postgres`` ``SplitArrayWidget`` to use template-based "
+"widget rendering (:ticket:`28040`)."
+msgstr ""
+
+msgid ""
+"Fixed crash in ``BaseGeometryWidget.get_context()`` when overriding existing "
+"``attrs`` (:ticket:`28105`)."
+msgstr ""
+
+msgid ""
+"Prevented ``AddIndex`` and ``RemoveIndex`` from mutating model state (:"
+"ticket:`28043`)."
+msgstr ""
+
+msgid ""
+"Prevented migrations from dropping database indexes from ``Meta.indexes`` "
+"when changing ``Field.db_index`` to ``False`` (:ticket:`28052`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in choice ordering in form fields with grouped and non-"
+"grouped options (:ticket:`28157`)."
+msgstr ""
+
+msgid ""
+"Fixed crash in  ``BaseInlineFormSet._construct_form()`` when using "
+"``save_as_new`` (:ticket:`28159`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression where ``Model._state.db`` wasn't set correctly on multi-"
+"table inheritance parent models after saving a child model (:ticket:`28166`)."
+msgstr ""
+
+msgid ""
+"Corrected the return type of ``ArrayField(CITextField())`` values retrieved "
+"from the database (:ticket:`28161`)."
+msgstr ""
+
+msgid ""
+"Fixed ``QuerySet.prefetch_related()`` crash when fetching relations in "
+"nested ``Prefetch`` objects (:ticket:`27554`)."
+msgstr ""
+
+msgid ""
+"Prevented hiding GDAL errors if it's not installed when using ``contrib."
+"gis`` (:ticket:`28160`). (It's a required dependency as of Django 1.11.)"
+msgstr ""
+
+msgid ""
+"Fixed a regression causing ``__in`` lookups on a foreign key to fail when "
+"using the foreign key's parent model as the lookup value (:ticket:`28175`)."
+msgstr ""
+
+msgid "Django 1.11.2 release notes"
+msgstr ""
+
+msgid "*Under development*"
+msgstr ""
+
+msgid "Django 1.11.2 fixes several bugs in 1.11.1."
+msgstr ""
+
+msgid ""
+"Added detection for GDAL 2.1 and 2.0, and removed detection for unsupported "
+"versions 1.7 and 1.8 (:ticket:`28181`)."
+msgstr ""
+
+msgid ""
+"Changed ``contrib.gis`` to raise ``ImproperlyConfigured`` rather than "
+"``GDALException`` if ``gdal`` isn't installed, to allow third-party apps to "
+"catch that exception (:ticket:`28178`)."
+msgstr ""
+
+msgid ""
+"Fixed ``django.utils.http.is_safe_url()`` crash on invalid IPv6 URLs (:"
+"ticket:`28142`)."
+msgstr ""
+
+msgid ""
+"Fixed regression causing pickling of model fields to crash (:ticket:`28188`)."
+msgstr ""
+
+msgid ""
+"Fixed ``django.contrib.auth.authenticate()`` when multiple authentication "
+"backends don't accept a positional ``request`` argument (:ticket:`28207`)."
+msgstr ""
+
+msgid ""
+"Fixed introspection of index field ordering on PostgreSQL (:ticket:`28197`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression where ``Model._state.adding`` wasn't set correctly on "
+"multi-table inheritance parent models after saving a child model (:ticket:"
+"`28210`)."
+msgstr ""
+
+msgid ""
+"Allowed ``DjangoJSONEncoder`` to serialize ``django.utils.deprecation."
+"CallableBool`` (:ticket:`28230`)."
 msgstr ""
 
 msgid "Django 1.2 release notes"
@@ -6466,16 +6640,16 @@ msgid ""
 msgstr ""
 
 msgid "``django.contrib.gis.db.backends.postgis``"
-msgstr ""
+msgstr "``django.contrib.gis.db.backends.postgis``"
 
 msgid "``django.contrib.gis.db.backends.mysql``"
-msgstr ""
+msgstr "``django.contrib.gis.db.backends.mysql``"
 
 msgid "``django.contrib.gis.db.backends.oracle``"
-msgstr ""
+msgstr "``django.contrib.gis.db.backends.oracle``"
 
 msgid "``django.contrib.gis.db.backends.spatialite``"
-msgstr ""
+msgstr "``django.contrib.gis.db.backends.spatialite``"
 
 msgid ""
 "GeoDjango now supports the rich capabilities added in the PostGIS 1.5 "
