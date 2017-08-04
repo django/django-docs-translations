@@ -1,0 +1,629 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+#
+# Translators:
+# cyberowl <dr.cyberowl@gmail.com>, 2014
+# hoseung2 <ghyutjik123@gmail.com>, 2017
+# hj.park <imcreator3@gmail.com>, 2017
+# Hyungsuk Yoon <youhanmir@gmail.com>, 2016
+# JunoJunho <wnsgh611@gmail.com>, 2015
+# Kyoung Up, Jung <perhapsspy@gmail.com>, 2016
+# Kyoung Up, Jung <perhapsspy@gmail.com>, 2016
+# seok woojing <woojing.seok@gmail.com>, 2016-2017
+# Subin Choi <os1742@gmail.com>, 2016
+# Yeonsu Bak <yeonsubak@gmail.com>, 2015
+# Yong Choi <sk8er.choi@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: django-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-02 09:23-0500\n"
+"PO-Revision-Date: 2017-08-03 14:56+0000\n"
+"Last-Translator: hj.park <imcreator3@gmail.com>\n"
+"Language-Team: Korean (http://www.transifex.com/django/django-docs/language/"
+"ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Django documentation"
+msgstr "Django 문서"
+
+msgid "Everything you need to know about Django."
+msgstr "장고에 대해 알아야할 모든것"
+
+msgid "Getting help"
+msgstr "도움말"
+
+msgid "Having trouble? We'd like to help!"
+msgstr "문제가 있나요? 도와드리고 싶어요!"
+
+msgid ""
+"Try the :doc:`FAQ <faq/index>` -- it's got answers to many common questions."
+msgstr ""
+":doc:`FAQ <faq/index>`\\ 를 참고하세요 -- 가장 흔한 질문에 대한 답변들입니다."
+
+msgid ""
+"Looking for specific information? Try the :ref:`genindex`, :ref:`modindex` "
+"or the :doc:`detailed table of contents <contents>`."
+msgstr ""
+"특정 정보를 찾으시나요? :ref:`genindex`, :ref:`modindex` 또는 :doc:`상세한 목"
+"차 <contents>` 를 이용하세요."
+
+msgid ""
+"Search for information in the archives of the |django-users| mailing list, "
+"or `post a question`_."
+msgstr ""
+"|django-users| 메일링 리스트 기록 저장소에서 정보를 검색하거나 새로운 질문을 "
+"작성하세요 `post a question`_."
+
+msgid ""
+"Ask a question in the `#django IRC channel`_, or search the `IRC logs`_ to "
+"see if it's been asked before."
+msgstr ""
+"`#django IRC channel`_ 에서 질문하거나, 이전에 있었던 질문인지 `IRC logs`_ 에"
+"서 찾아보세요."
+
+msgid "Report bugs with Django in our `ticket tracker`_."
+msgstr "`ticket tracker`_ 를 통해 장고로 버그를 레포트 하세요"
+
+msgid "How the documentation is organized"
+msgstr "이 문서의 구조"
+
+msgid ""
+"Django has a lot of documentation. A high-level overview of how it's "
+"organized will help you know where to look for certain things:"
+msgstr ""
+"Django는 문서가 아주 많습니다. 높은 수준에서의 개요를 알면 원하는 정보를 어"
+"떤 문서에서 찾을지 알 수 있습니다."
+
+msgid ""
+":doc:`Tutorials </intro/index>` take you by the hand through a series of "
+"steps to create a Web application. Start here if you're new to Django or Web "
+"application development. Also look at the \":ref:`index-first-steps`\" below."
+msgstr ""
+":doc:`Tutorials </intro/index>`\\ 는 단계별로 친절하게 웹 어플리케이션을 제작"
+"을 도와줍니다. 처음 Django를 접하거나 웹 개발에 입문 단계라면 여기서 시작하십"
+"시오. 또한 하단의 \":ref:`index-first-steps`\"를 읽어보십시오."
+
+msgid ""
+":doc:`Topic guides </topics/index>` discuss key topics and concepts at a "
+"fairly high level and provide useful background information and explanation."
+msgstr ""
+":doc:`주제 안내 </topics/index>`  주요 주제와 개념을 높은 수준에서 논의하고 "
+"유용한 배경 지식과 설명을 제공합니다."
+
+msgid ""
+":doc:`Reference guides </ref/index>` contain technical reference for APIs "
+"and other aspects of Django's machinery. They describe how it works and how "
+"to use it but assume that you have a basic understanding of key concepts."
+msgstr ""
+":doc:`레퍼런스 가이드 </ref/index>` API와 Django의 여러 기능들에 대한 기술적 "
+"레퍼런스를 담고 있습니다. 이 가이드는 독자가 기본적인 주요  개념에 대해 이해"
+"하고 있다고 가정하고, 어떻게 동작하고 사용하는지 설명합니다."
+
+msgid ""
+":doc:`How-to guides </howto/index>` are recipes. They guide you through the "
+"steps involved in addressing key problems and use-cases. They are more "
+"advanced than tutorials and assume some knowledge of how Django works."
+msgstr ""
+":doc:`How-to 가이드 </howto/index>` 는 레시피 입니다. 주요 문제와 사용 사례들"
+"의 해결 방법들을 단계별로 안내해 줍니다.  여기서는 Django가 어떻가 동작하는"
+"지 알고 있다고 가정하고 Tutorials보다 심화된 내용을 다룹니다."
+
+msgid "First steps"
+msgstr "첫걸음"
+
+msgid "Are you new to Django or to programming? This is the place to start!"
+msgstr "Django 또는 프로그래밍이 처음이신가요? 이곳에서 시작하세요!"
+
+msgid ""
+"**From scratch:** :doc:`Overview <intro/overview>` | :doc:`Installation "
+"<intro/install>`"
+msgstr ""
+"**바닥부터 시작하기** :doc:`개요 <intro/overview>` | :doc:`설치 <intro/"
+"install>`"
+
+msgid ""
+"**Tutorial:** :doc:`Part 1: Requests and responses <intro/tutorial01>` | :"
+"doc:`Part 2: Models and the admin site <intro/tutorial02>` | :doc:`Part 3: "
+"Views and templates <intro/tutorial03>` | :doc:`Part 4: Forms and generic "
+"views <intro/tutorial04>` | :doc:`Part 5: Testing <intro/tutorial05>` | :doc:"
+"`Part 6: Static files <intro/tutorial06>` | :doc:`Part 7: Customizing the "
+"admin site <intro/tutorial07>`"
+msgstr ""
+"**튜토리얼:** :doc:`Part 1: 요청과 응답 <intro/tutorial01>` | :doc:`Part 2: "
+"모델과 관리자 페이지 <intro/tutorial02>` | :doc:`Part 3: 뷰와 템플릿 <intro/"
+"tutorial03>` | :doc:`Part 4: 폼과 기본 뷰 <intro/tutorial04>` | :doc:`Part "
+"5: 테스팅 <intro/tutorial05>` | :doc:`Part 6: 정적 파일 <intro/tutorial06>` "
+"| :doc:`Part 7: 관리자 페이지 커스터마이징 <intro/tutorial07>`"
+
+msgid ""
+"**Advanced Tutorials:** :doc:`How to write reusable apps <intro/reusable-"
+"apps>` | :doc:`Writing your first patch for Django <intro/contributing>`"
+msgstr ""
+"**심화 튜토리얼:** :doc:`재사용 가능한 앱을 작성하는 방법 <intro/reusable-"
+"apps>` | :doc:`Django의 첫 패치를 작성하기 <intro/contributing>`"
+
+msgid "The model layer"
+msgstr "모델 계층"
+
+msgid ""
+"Django provides an abstraction layer (the \"models\") for structuring and "
+"manipulating the data of your Web application. Learn more about it below:"
+msgstr ""
+"Django는 웹 애플리케이션의 데이터를 구조화하고 조작하기 위한 추상적인 계층"
+"(\"모델\")을 제공합니다. 더 알아보세요:"
+
+msgid ""
+"**Models:** :doc:`Introduction to models <topics/db/models>` | :doc:`Field "
+"types <ref/models/fields>` | :doc:`Indexes <ref/models/indexes>` | :doc:"
+"`Meta options <ref/models/options>` | :doc:`Model class <ref/models/class>`"
+msgstr ""
+"**Models:** :doc:`모델 소개 <topics/db/models>` | :doc:`필드 유형 <ref/"
+"models/fields>` | :doc:`색인 <ref/models/indexes>` | :doc:`메타 옵션 <ref/"
+"models/options>` | :doc:`모델 클래스 <ref/models/class>`"
+
+msgid ""
+"**QuerySets:** :doc:`Making queries <topics/db/queries>` | :doc:`QuerySet "
+"method reference <ref/models/querysets>` | :doc:`Lookup expressions <ref/"
+"models/lookups>`"
+msgstr ""
+"**쿼리집합:** :doc:`쿼리 만들기 <topics/db/queries>` | :doc:`QuerySet 메소드 "
+"참조 <ref/models/querysets>` | :doc:`조회 표현식 <ref/models/lookups>`"
+
+msgid ""
+"**Model instances:** :doc:`Instance methods <ref/models/instances>` | :doc:"
+"`Accessing related objects <ref/models/relations>`"
+msgstr ""
+"**모델 인스턴스** :doc:`인스턴스 메소드 <ref/models/instances>` | :doc:`관련 "
+"객체에 접근하기 <ref/models/relations>`"
+
+msgid ""
+"**Migrations:** :doc:`Introduction to Migrations<topics/migrations>` | :doc:"
+"`Operations reference <ref/migration-operations>` | :doc:`SchemaEditor <ref/"
+"schema-editor>` | :doc:`Writing migrations <howto/writing-migrations>`"
+msgstr ""
+"**마이그레이션:** :doc:`마이그레이션 소개<topics/migrations>` | :doc:`연산자 "
+"레퍼런스 <ref/migration-operations>` | :doc:`스키마에디터<ref/schema-"
+"editor>` | :doc:`마이그레션 작성하기 <howto/writing-migrations>`"
+
+msgid ""
+"**Advanced:** :doc:`Managers <topics/db/managers>` | :doc:`Raw SQL <topics/"
+"db/sql>` | :doc:`Transactions <topics/db/transactions>` | :doc:`Aggregation "
+"<topics/db/aggregation>` | :doc:`Search <topics/db/search>` | :doc:`Custom "
+"fields <howto/custom-model-fields>` | :doc:`Multiple databases <topics/db/"
+"multi-db>` | :doc:`Custom lookups <howto/custom-lookups>` | :doc:`Query "
+"Expressions <ref/models/expressions>` | :doc:`Conditional Expressions <ref/"
+"models/conditional-expressions>` | :doc:`Database Functions <ref/models/"
+"database-functions>`"
+msgstr ""
+"**심화:** :doc:`매니저<topics/db/managers>` | :doc:`Raw SQL <topics/db/sql>` "
+"| :doc:`트랜잭션<topics/db/transactions>` | :doc:`집계<topics/db/"
+"aggregation>` | :doc:`검색<topics/db/search>` | :doc:`맞춤 필드 <howto/"
+"custom-model-fields>` | :doc:`다중 데이터베이스 <topics/db/multi-db>` | :doc:"
+"`맞춤 룩업 <howto/custom-lookups>` | :doc:`쿼리 표현식 <ref/models/"
+"expressions>` | :doc:`조건식 <ref/models/conditional-expressions>` | :doc:`데"
+"이터베이스 함수 <ref/models/database-functions>`"
+
+msgid ""
+"**Other:** :doc:`Supported databases <ref/databases>` | :doc:`Legacy "
+"databases <howto/legacy-databases>` | :doc:`Providing initial data <howto/"
+"initial-data>` | :doc:`Optimize database access <topics/db/optimization>` | :"
+"doc:`PostgreSQL specific features <ref/contrib/postgres/index>`"
+msgstr ""
+"**그 외:** :doc:`지원되는 데이터베이스 <ref/databases>` | :doc:`레거시 데이터"
+"베이스 <howto/legacy-databases>` | :doc:`초기 데이터 제공 <howto/initial-"
+"data>` | :doc:`데이터베이스 접근 최적화 <topics/db/optimization>` | :doc:"
+"`PostgreSQL만의 기능<ref/contrib/postgres/index>`"
+
+msgid "The view layer"
+msgstr "뷰 계층"
+
+msgid ""
+"Django has the concept of \"views\" to encapsulate the logic responsible for "
+"processing a user's request and for returning the response. Find all you "
+"need to know about views via the links below:"
+msgstr ""
+"Django는 사용자의 요청을 처리하고 결과를 반환하기 위한 로직을 캡슐화한 \"뷰"
+"\"의 개념을 갖고 있습니다. 뷰에 대하여 알아야할 모든 것을 아래 링크에서 찾아"
+"보세요."
+
+msgid ""
+"**The basics:** :doc:`URLconfs <topics/http/urls>` | :doc:`View functions "
+"<topics/http/views>` | :doc:`Shortcuts <topics/http/shortcuts>` | :doc:"
+"`Decorators <topics/http/decorators>`"
+msgstr ""
+"**기초** :doc:`URLconfs <topics/http/urls>` | :doc:`뷰 함수 <topics/http/"
+"views>` | :doc:`단축 함수들 <topics/http/shortcuts>` | :doc:`데코레이터 "
+"<topics/http/decorators>`"
+
+msgid ""
+"**Reference:** :doc:`Built-in Views <ref/views>` | :doc:`Request/response "
+"objects <ref/request-response>` | :doc:`TemplateResponse objects <ref/"
+"template-response>`"
+msgstr ""
+"**레퍼런스** :doc:`내장된 뷰 <ref/views>` | :doc:`Request/response 객체 <ref/"
+"request-response>` | :doc:`TemplateResponse 객체 <ref/template-response>`"
+
+msgid ""
+"**File uploads:** :doc:`Overview <topics/http/file-uploads>` | :doc:`File "
+"objects <ref/files/file>` | :doc:`Storage API <ref/files/storage>` | :doc:"
+"`Managing files <topics/files>` | :doc:`Custom storage <howto/custom-file-"
+"storage>`"
+msgstr ""
+"**파일 업로드** :doc:`개요 <topics/http/file-uploads>` | :doc:`File 객체 "
+"<ref/files/file>` | :doc:`스토리지 API <ref/files/storage>` | :doc:`파일 다루"
+"기 <topics/files>` | :doc:`커스텀 스토리지 <howto/custom-file-storage>`"
+
+msgid ""
+"**Class-based views:** :doc:`Overview <topics/class-based-views/index>` | :"
+"doc:`Built-in display views <topics/class-based-views/generic-display>` | :"
+"doc:`Built-in editing views <topics/class-based-views/generic-editing>` | :"
+"doc:`Using mixins <topics/class-based-views/mixins>` | :doc:`API reference "
+"<ref/class-based-views/index>` | :doc:`Flattened index<ref/class-based-views/"
+"flattened-index>`"
+msgstr ""
+"**클래스 기반 views:** :doc:`개요 <topics/class-based-views/index>` | :doc:`"
+"내장된 디스플레이 뷰 <topics/class-based-views/generic-display>` | :doc:`내장"
+"된 편집 뷰 <topics/class-based-views/generic-editing>` | :doc:`믹스인 사용하"
+"기 <topics/class-based-views/mixins>` | :doc:`API 레퍼런스 <ref/class-based-"
+"views/index>` | :doc:`Flattened index<ref/class-based-views/flattened-index>`"
+
+msgid ""
+"**Advanced:** :doc:`Generating CSV <howto/outputting-csv>` | :doc:"
+"`Generating PDF <howto/outputting-pdf>`"
+msgstr ""
+"**심화:** :doc:`CSV 생성 <howto/outputting-csv>` | :doc:`PDF 생성 <howto/"
+"outputting-pdf>`"
+
+msgid ""
+"**Middleware:** :doc:`Overview <topics/http/middleware>` | :doc:`Built-in "
+"middleware classes <ref/middleware>`"
+msgstr ""
+"**미들웨어:** :doc:`개요 <topics/http/middleware>` | :doc:`내장된 미들웨어 클"
+"래스 <ref/middleware>`"
+
+msgid "The template layer"
+msgstr "템플릿 계층"
+
+msgid ""
+"The template layer provides a designer-friendly syntax for rendering the "
+"information to be presented to the user. Learn how this syntax can be used "
+"by designers and how it can be extended by programmers:"
+msgstr ""
+"템플릿 계층은 사용자에게 표시할 정보를 표현하기 위해 디자이너에게 친숙한 문법"
+"을 제공합니다. 디자이너들이 이 문법을 사용하는 방법과 프로그래머들이 확장하"
+"기 위한 방법을 알아보세요."
+
+msgid "**The basics:** :doc:`Overview <topics/templates>`"
+msgstr "**기초:** :doc:`개요 <topics/templates>`"
+
+msgid ""
+"**For designers:** :doc:`Language overview <ref/templates/language>` | :doc:"
+"`Built-in tags and filters <ref/templates/builtins>` | :doc:`Humanization "
+"<ref/contrib/humanize>`"
+msgstr ""
+"**디자이너:** :doc:`언어 개요 <ref/templates/language>` | :doc:`빌트인 태그"
+"와 필터 <ref/templates/builtins>` | :doc:`휴머나이제이션 <ref/contrib/"
+"humanize>`"
+
+msgid ""
+"**For programmers:** :doc:`Template API <ref/templates/api>` | :doc:`Custom "
+"tags and filters <howto/custom-template-tags>`"
+msgstr ""
+"**프로그래머:** :doc:`템플릿 API <ref/templates/api>` | :doc:`맞춤 태그와 필"
+"터 <howto/custom-template-tags>`"
+
+msgid "Forms"
+msgstr "폼"
+
+msgid ""
+"Django provides a rich framework to facilitate the creation of forms and the "
+"manipulation of form data."
+msgstr ""
+"Django는 쉽게 폼을 만들고 폼 데이터를 다루기 위한 풍부한 프레임워크를 제공합"
+"니다."
+
+msgid ""
+"**The basics:** :doc:`Overview <topics/forms/index>` | :doc:`Form API <ref/"
+"forms/api>` | :doc:`Built-in fields <ref/forms/fields>` | :doc:`Built-in "
+"widgets <ref/forms/widgets>`"
+msgstr ""
+"**기초:** :doc:`개요 <topics/forms/index>` | :doc:`폼 API <ref/forms/api>` "
+"| :doc:`내장된 필드 <ref/forms/fields>` | :doc:`내장된 위젯 <ref/forms/"
+"widgets>`"
+
+msgid ""
+"**Advanced:** :doc:`Forms for models <topics/forms/modelforms>` | :doc:"
+"`Integrating media <topics/forms/media>` | :doc:`Formsets <topics/forms/"
+"formsets>` | :doc:`Customizing validation <ref/forms/validation>`"
+msgstr ""
+"**고급:** :doc:`모델을 위한 폼 <topics/forms/modelforms>` | :doc:`미디어 통"
+"합 <topics/forms/media>` | :doc:`폼셋 <topics/forms/formsets>` | :doc:`맞춤 "
+"유효성 검증 <ref/forms/validation>`"
+
+msgid "The development process"
+msgstr "개발 프로세스"
+
+msgid ""
+"Learn about the various components and tools to help you in the development "
+"and testing of Django applications:"
+msgstr ""
+"여러 구성 요소들과 Django 애플리케이션의 개발과 테스트를 도와줄 다양한 도구들"
+"을 알아보세요:"
+
+msgid ""
+"**Settings:** :doc:`Overview <topics/settings>` | :doc:`Full list of "
+"settings <ref/settings>`"
+msgstr ""
+"**설정:** :doc:`개요<topics/settings>` | :doc:`전체 설정 목록 <ref/settings>`"
+
+msgid "**Applications:** :doc:`Overview <ref/applications>`"
+msgstr "**애플리케이션.** :doc:`개요 <ref/applications>`"
+
+msgid "**Exceptions:** :doc:`Overview <ref/exceptions>`"
+msgstr "**예외:** :doc:`개요 <ref/exceptions>`"
+
+msgid ""
+"**django-admin and manage.py:** :doc:`Overview <ref/django-admin>` | :doc:"
+"`Adding custom commands <howto/custom-management-commands>`"
+msgstr ""
+"**django-admin과 manage.py:** :doc:`개요 <ref/django-admin>` | :doc:`맞춤 명"
+"령 추가하기 <howto/custom-management-commands>`"
+
+msgid ""
+"**Testing:** :doc:`Introduction <topics/testing/index>` | :doc:`Writing and "
+"running tests <topics/testing/overview>` | :doc:`Included testing tools "
+"<topics/testing/tools>` | :doc:`Advanced topics <topics/testing/advanced>`"
+msgstr ""
+"**테스팅:** :doc:`소개 <topics/testing/index>` | :doc:`테스트를 작성하고 실행"
+"하기 <topics/testing/overview>` | :doc:`내장된 테스팅 도구 <topics/testing/"
+"tools>` | :doc:`심화 주제 <topics/testing/advanced>`"
+
+msgid ""
+"**Deployment:** :doc:`Overview <howto/deployment/index>` | :doc:`WSGI "
+"servers <howto/deployment/wsgi/index>` | :doc:`Deploying static files <howto/"
+"static-files/deployment>` | :doc:`Tracking code errors by email <howto/error-"
+"reporting>`"
+msgstr ""
+"**배포:** :doc:`개요 <howto/deployment/index>` | :doc:`WSGI 서버 <howto/"
+"deployment/wsgi/index>` | :doc:`정적 파일 배포  <howto/static-files/"
+"deployment>` | :doc:`이메일로 에러 코드 추적 <howto/error-reporting>`"
+
+msgid "The admin"
+msgstr "관리자"
+
+msgid ""
+"Find all you need to know about the automated admin interface, one of "
+"Django's most popular features:"
+msgstr ""
+"Django의 가장 인기 있는 기능 중 하나인 자동적 관리 인터페이스를 이해하기 위"
+"한 모든 것들을 찾아보세요:"
+
+msgid ":doc:`Admin site <ref/contrib/admin/index>`"
+msgstr ":doc:`Admin 사이트 <ref/contrib/admin/index>`"
+
+msgid ":doc:`Admin actions <ref/contrib/admin/actions>`"
+msgstr ":doc:`Admin 액션 <ref/contrib/admin/actions>`"
+
+msgid ":doc:`Admin documentation generator<ref/contrib/admin/admindocs>`"
+msgstr ":doc:`Admin 문서 생성기 <ref/contrib/admin/admindocs>`"
+
+msgid "Security"
+msgstr "보안"
+
+msgid ""
+"Security is a topic of paramount importance in the development of Web "
+"applications and Django provides multiple protection tools and mechanisms:"
+msgstr ""
+"보안은 웹 애플리케이션 개발에서 다른 무엇보다 가장 중요한 문제이며 Django는 "
+"다양한 보안도구와 방법들을 제공합니다:"
+
+msgid ":doc:`Security overview <topics/security>`"
+msgstr ":doc:`보안 개요 <topics/security>`"
+
+msgid ":doc:`Disclosed security issues in Django <releases/security>`"
+msgstr ":doc:`Django에서 알려진 보안 문제 <releases/security>`"
+
+msgid ":doc:`Clickjacking protection <ref/clickjacking>`"
+msgstr ":doc:`클릭재킹 방어 <ref/clickjacking>`"
+
+msgid ":doc:`Cross Site Request Forgery protection <ref/csrf>`"
+msgstr ":doc:`사이트 간 요청 위조 <ref/csrf>`"
+
+msgid ":doc:`Cryptographic signing <topics/signing>`"
+msgstr ":doc:`암호화 서명 <topics/signing>`"
+
+msgid ":ref:`Security Middleware <security-middleware>`"
+msgstr ":ref:`보안 미들웨어 <security-middleware>`"
+
+msgid "Internationalization and localization"
+msgstr "국제화와 지역화"
+
+msgid ""
+"Django offers a robust internationalization and localization framework to "
+"assist you in the development of applications for multiple languages and "
+"world regions:"
+msgstr ""
+"Django는 강력한 국제화와 지역화 프레임워크를 제공하여, 여러 언어와 세계 여러 "
+"지역을 위한 어플리케이션 개발을 지원합니다:"
+
+msgid ""
+":doc:`Overview <topics/i18n/index>` | :doc:`Internationalization <topics/"
+"i18n/translation>` | :ref:`Localization <how-to-create-language-files>` | :"
+"doc:`Localized Web UI formatting and form input <topics/i18n/formatting>`"
+msgstr ""
+":doc:`개요 <topics/i18n/index>` | :doc:`국제화 <topics/i18n/translation>` | :"
+"ref:`지역화 <how-to-create-language-files>` | :doc:`지역화 된 웹 UI 형식과 "
+"폼 입력 <topics/i18n/formatting>`"
+
+msgid ":doc:`Time zones </topics/i18n/timezones>`"
+msgstr ":doc:`표준 시간대 </topics/i18n/timezones>`"
+
+msgid "Performance and optimization"
+msgstr "성능과 최적화"
+
+msgid ""
+"There are a variety of techniques and tools that can help get your code "
+"running more efficiently - faster, and using fewer system resources."
+msgstr ""
+"코드를 더욱 빠르고 더 적은 시스템 자원을 사용하여 효율적으로 실행 할 수 있는 "
+"다양한 기법과 도구들이 있습니다."
+
+msgid ":doc:`Performance and optimization overview <topics/performance>`"
+msgstr ":doc:`성능과 최적화 개요 <topics/performance>`"
+
+msgid "Python compatibility"
+msgstr "파이썬 호환성"
+
+msgid ""
+"Django aims to be compatible with multiple different flavors and versions of "
+"Python:"
+msgstr "Django는 다양한 파이썬 버전과 호환되길 목표로 합니다:"
+
+msgid ":doc:`Jython support <howto/jython>`"
+msgstr ":doc:`Jython 지원 <howto/jython>`"
+
+msgid ":doc:`Python 3 compatibility <topics/python3>`"
+msgstr ":doc:`파이썬 3 호환성 <topics/python3>`"
+
+msgid "Geographic framework"
+msgstr "지리 프레임워크"
+
+msgid ""
+":doc:`GeoDjango <ref/contrib/gis/index>` intends to be a world-class "
+"geographic Web framework. Its goal is to make it as easy as possible to "
+"build GIS Web applications and harness the power of spatially enabled data."
+msgstr ""
+":doc:`GeoDjango <ref/contrib/gis/index>` 세계 최고 수준의 지리 웹 프레임워크"
+"가 되려고 합니다. 가능한 GIS 웹 어플리케이션을 쉽게 만들고,  공간 데이터의 성"
+"능을 충분히 활용하는 것이 목표입니다."
+
+msgid "Common Web application tools"
+msgstr "일반적인 웹 어플리케이션 도구"
+
+msgid ""
+"Django offers multiple tools commonly needed in the development of Web "
+"applications:"
+msgstr ""
+"Django는 웹 어플리케이션 개발에 일반적으로 요구되는 다양한 툴을 제공합니다:"
+
+msgid ""
+"**Authentication:** :doc:`Overview <topics/auth/index>` | :doc:`Using the "
+"authentication system <topics/auth/default>` | :doc:`Password management "
+"<topics/auth/passwords>` | :doc:`Customizing authentication <topics/auth/"
+"customizing>` | :doc:`API Reference <ref/contrib/auth>`"
+msgstr ""
+"**인증:** :doc:`개요 <topics/auth/index>` | :doc:`인증 시스템 사용하기  "
+"<topics/auth/default>` | :doc:`비밀번호 관리 <topics/auth/passwords>` | :doc:"
+"`맞춤 인증 <topics/auth/customizing>` | :doc:`API 참조 <ref/contrib/auth>`"
+
+msgid ":doc:`Caching <topics/cache>`"
+msgstr ":doc:`캐싱 <topics/cache>`"
+
+msgid ":doc:`Logging <topics/logging>`"
+msgstr ":doc:`로깅 <topics/logging>`"
+
+msgid ":doc:`Sending emails <topics/email>`"
+msgstr ":doc:`이메일 보내기 <topics/email>`"
+
+msgid ":doc:`Syndication feeds (RSS/Atom) <ref/contrib/syndication>`"
+msgstr ":doc:`신디케이션 피드 (RSS/Atom) <ref/contrib/syndication>`"
+
+msgid ":doc:`Pagination <topics/pagination>`"
+msgstr ":doc:`페이지네이션 <topics/pagination>`"
+
+msgid ":doc:`Messages framework <ref/contrib/messages>`"
+msgstr ":doc:`메세지 프레임워크 <ref/contrib/messages>`"
+
+msgid ":doc:`Serialization <topics/serialization>`"
+msgstr ":doc:`직렬화 <topics/serialization>`"
+
+msgid ":doc:`Sessions <topics/http/sessions>`"
+msgstr ":doc:`세션 <topics/http/sessions>`"
+
+msgid ":doc:`Sitemaps <ref/contrib/sitemaps>`"
+msgstr ":doc:`사이트맵 <ref/contrib/sitemaps>`"
+
+msgid ":doc:`Static files management <ref/contrib/staticfiles>`"
+msgstr ":doc:`정적 파일 관리 <ref/contrib/staticfiles>`"
+
+msgid ":doc:`Data validation <ref/validators>`"
+msgstr ":doc:`데이터 유효성 검증 <ref/validators>`"
+
+msgid "Other core functionalities"
+msgstr "다른 핵심 기능들"
+
+msgid "Learn about some other core functionalities of the Django framework:"
+msgstr "Django 프레임워크의 다른 핵심 기능들에 대해 좀 더 배우기: "
+
+msgid ""
+":doc:`Conditional content processing <topics/conditional-view-processing>`"
+msgstr ":doc:`조건부 콘텐츠 처리 <topics/conditional-view-processing>`"
+
+msgid ":doc:`Content types and generic relations <ref/contrib/contenttypes>`"
+msgstr ":doc:`콘텐츠 타입과 제네릭 릴레이션 <ref/contrib/contenttypes>`"
+
+msgid ":doc:`Flatpages <ref/contrib/flatpages>`"
+msgstr ":doc:`플랫페이지 <ref/contrib/flatpages>`"
+
+msgid ":doc:`Redirects <ref/contrib/redirects>`"
+msgstr ":doc:`리다이렉션 <ref/contrib/redirects>`"
+
+msgid ":doc:`Signals <topics/signals>`"
+msgstr ":doc:`시그널 <topics/signals>`"
+
+msgid ":doc:`System check framework <topics/checks>`"
+msgstr ":doc:`시스템 확인 프레임워크 <topics/checks>`"
+
+msgid ":doc:`The sites framework <ref/contrib/sites>`"
+msgstr ":doc:`sites 프레임워크 <ref/contrib/sites>`"
+
+msgid ":doc:`Unicode in Django <ref/unicode>`"
+msgstr ":doc:`Django의 유니코드 <ref/unicode>`"
+
+msgid "The Django open-source project"
+msgstr "Django 오픈 소스 프로젝트"
+
+msgid ""
+"Learn about the development process for the Django project itself and about "
+"how you can contribute:"
+msgstr "Django의 개발과정에 대해 알아보고 어떻게 기여할 수 있는지 알아보세요:"
+
+msgid ""
+"**Community:** :doc:`How to get involved <internals/contributing/index>` | :"
+"doc:`The release process <internals/release-process>` | :doc:`Team "
+"organization <internals/organization>` | :doc:`The Django source code "
+"repository <internals/git>` | :doc:`Security policies <internals/security>` "
+"| :doc:`Mailing lists <internals/mailing-lists>`"
+msgstr ""
+"**Community:** :doc:`참여 방법<internals/contributing/index>` | :doc:`방출 과"
+"정 <internals/release-process>` | :doc:`팀 구성 <internals/organization>` | :"
+"doc:`Django 소스 코드 저장소<internals/git>` | :doc:`보안 정책 <internals/"
+"security>` | :doc:`메일링 리스트 <internals/mailing-lists>`"
+
+msgid "**Design philosophies:** :doc:`Overview <misc/design-philosophies>`"
+msgstr "**디자인 철학:** :doc:`개요 <misc/design-philosophies>`"
+
+msgid ""
+"**Documentation:** :doc:`About this documentation <internals/contributing/"
+"writing-documentation>`"
+msgstr ""
+"**문서:** :doc:`이 문서에 대하여 <internals/contributing/writing-"
+"documentation>`"
+
+msgid "**Third-party distributions:** :doc:`Overview <misc/distributions>`"
+msgstr "**써드파티 분포:** :doc:`개요<misc/distributions>`"
+
+msgid ""
+"**Django over time:** :doc:`API stability <misc/api-stability>` | :doc:"
+"`Release notes and upgrading instructions <releases/index>` | :doc:"
+"`Deprecation Timeline <internals/deprecation>`"
+msgstr ""
+"**Django와의 장기간 계획** :doc:`API 안정성 <misc/api-stability>` | :doc:`릴"
+"리즈 노트와 업그레이드 지침 <releases/index>` | :doc:`디플리케이션 타임라인 "
+"<internals/deprecation>`"

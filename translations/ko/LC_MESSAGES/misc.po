@@ -1,0 +1,557 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+#
+# Translators:
+# DoJun Lee <leedoe0709@ssu.ac.kr>, 2017
+# Hwang, Geon Gu <under_09@naver.com>, 2017
+# Hyungsuk Yoon <youhanmir@gmail.com>, 2016
+# Minseok Choi <cms9597@gmail.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: django-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-02 09:23-0500\n"
+"PO-Revision-Date: 2017-08-03 14:56+0000\n"
+"Last-Translator: DoJun Lee <leedoe0709@ssu.ac.kr>\n"
+"Language-Team: Korean (http://www.transifex.com/django/django-docs/language/"
+"ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "API stability"
+msgstr "API 안정성"
+
+msgid ""
+"Django promises API stability and forwards-compatibility since version 1.0. "
+"In a nutshell, this means that code you develop against a version of Django "
+"will continue to work with future releases. You may need to make minor "
+"changes when upgrading the version of Django your project uses: see the "
+"\"Backwards incompatible changes\" section of the :doc:`release note </"
+"releases/index>` for the version or versions to which you are upgrading."
+msgstr ""
+"쟝고는 API의 안정성과 앞으로의 호환성에 대해서 1.0 버전 부터 보장하고 있습니"
+"다. 요컨대, 새로 나올 쟝고 버전에서도 기존에 작성한 코드는 문제 없이 돌아갈 "
+"것이라는 뜻 입니다. 그렇지만 업그레이드 시에 프로젝트 별 소소한 변경 작업 들"
+"은 해줘야 할 수 있습니다. 이에 대해서는 \"이전 버전과 호환되지 않는 변경사항"
+"\" 섹션에서 :doc:`릴리즈 노트 </releases/index>` 기존 버전 혹은 업그레이드 대"
+"상 버전의 문서를 참조하시기 바랍니다."
+
+msgid "What \"stable\" means"
+msgstr "\"안정적인 것\"의 의미"
+
+msgid "In this context, stable means:"
+msgstr "이 문맥에서, 안정적인 것은 다음을 의미합니다:"
+
+msgid ""
+"All the public APIs (everything in this documentation) will not be moved or "
+"renamed without providing backwards-compatible aliases."
+msgstr ""
+"공개된 모든 API(이 문서에 있든 모든것)들이 이전 버전과 호환되는 별명을 제공하"
+"지 않고 이동되거나 이름이 바뀌지 않을 것 입니다."
+
+msgid ""
+"If new features are added to these APIs -- which is quite possible -- they "
+"will not break or change the meaning of existing methods. In other words, "
+"\"stable\" does not (necessarily) mean \"complete.\""
+msgstr ""
+"이 API들에 새로운 기능이 추가된다면, 이 기능들은 이미 존재하는 메소드들의 의"
+"미를 바꾸거나 중단시키지 않을 것 입니다. 다시 말하면 \"안정적인 것\"의 의미"
+"는 (어쩔 수 없이) \"완벽한 것\"이 아닙니다."
+
+msgid ""
+"If, for some reason, an API declared stable must be removed or replaced, it "
+"will be declared deprecated but will remain in the API for at least two "
+"feature releases. Warnings will be issued when the deprecated method is "
+"called."
+msgstr ""
+"만약 어떤 이유로 안정적인 것에 선언된 API가 삭제되야 하거나 대체되야 한다면, "
+"이것은 사용 금지로 선언될 것 입니다 그러나 이것은 앞으로 두번의 릴리스에서 "
+"API에 포함될 것 입니다. 사용이 금지된 메소드가 호출될 때 경고들이 발생될 것 "
+"입니다."
+
+msgid ""
+"See :ref:`official-releases` for more details on how Django's version "
+"numbering scheme works, and how features will be deprecated."
+msgstr ""
+
+msgid ""
+"We'll only break backwards compatibility of these APIs if a bug or security "
+"hole makes it completely unavoidable."
+msgstr ""
+
+msgid "Stable APIs"
+msgstr "안정적인 API들"
+
+msgid ""
+"In general, everything covered in the documentation -- with the exception of "
+"anything in the :doc:`internals area </internals/index>` is considered "
+"stable."
+msgstr ""
+
+msgid "Exceptions"
+msgstr "예외"
+
+msgid ""
+"There are a few exceptions to this stability and backwards-compatibility "
+"promise."
+msgstr "안정성, 하위 호환성 보장에 대한 몇가지 예외가 여기 있다."
+
+msgid "Security fixes"
+msgstr "보안 패치"
+
+msgid ""
+"If we become aware of a security problem -- hopefully by someone following "
+"our :ref:`security reporting policy <reporting-security-issues>` -- we'll do "
+"everything necessary to fix it. This might mean breaking backwards "
+"compatibility; security trumps the compatibility guarantee."
+msgstr ""
+
+msgid "APIs marked as internal"
+msgstr ""
+
+msgid "Certain APIs are explicitly marked as \"internal\" in a couple of ways:"
+msgstr ""
+
+msgid ""
+"Some documentation refers to internals and mentions them as such. If the "
+"documentation says that something is internal, we reserve the right to "
+"change it."
+msgstr ""
+
+msgid ""
+"Functions, methods, and other objects prefixed by a leading underscore "
+"(``_``). This is the standard Python way of indicating that something is "
+"private; if any method starts with a single ``_``, it's an internal API."
+msgstr ""
+
+msgid "Design philosophies"
+msgstr "디자인 철학"
+
+msgid ""
+"This document explains some of the fundamental philosophies Django's "
+"developers have used in creating the framework. Its goal is to explain the "
+"past and guide the future."
+msgstr ""
+
+msgid "Overall"
+msgstr ""
+
+msgid "Loose coupling"
+msgstr ""
+
+msgid ""
+"A fundamental goal of Django's stack is `loose coupling and tight "
+"cohesion`_. The various layers of the framework shouldn't \"know\" about "
+"each other unless absolutely necessary."
+msgstr ""
+"Django 스택의 근본적인 목표는 `느슨한 결합, 탄탄한 응집`이다. 프레임워크의 다"
+"양한 층들은 서로에 대해 정말로 필요하기 전에는 알아서는 안된다."
+
+msgid ""
+"For example, the template system knows nothing about Web requests, the "
+"database layer knows nothing about data display and the view system doesn't "
+"care which template system a programmer uses."
+msgstr ""
+
+msgid ""
+"Although Django comes with a full stack for convenience, the pieces of the "
+"stack are independent of another wherever possible."
+msgstr ""
+
+msgid "Less code"
+msgstr "적은 코드"
+
+msgid ""
+"Django apps should use as little code as possible; they should lack "
+"boilerplate. Django should take full advantage of Python's dynamic "
+"capabilities, such as introspection."
+msgstr ""
+
+msgid "Quick development"
+msgstr "신속한 개발"
+
+msgid ""
+"The point of a Web framework in the 21st century is to make the tedious "
+"aspects of Web development fast. Django should allow for incredibly quick "
+"Web development."
+msgstr ""
+
+msgid "Don't repeat yourself (DRY)"
+msgstr ""
+
+msgid ""
+"Every distinct concept and/or piece of data should live in one, and only "
+"one, place. Redundancy is bad. Normalization is good."
+msgstr ""
+
+msgid ""
+"The framework, within reason, should deduce as much as possible from as "
+"little as possible."
+msgstr ""
+
+msgid "The `discussion of DRY on the Portland Pattern Repository`__"
+msgstr ""
+
+msgid "Explicit is better than implicit"
+msgstr "분명한 것이 내포된 것 보다 낫다"
+
+msgid ""
+"This is a core Python principle listed in :pep:`20`, and it means Django "
+"shouldn't do too much \"magic.\" Magic shouldn't happen unless there's a "
+"really good reason for it. Magic is worth using only if it creates a huge "
+"convenience unattainable in other ways, and it isn't implemented in a way "
+"that confuses developers who are trying to learn how to use the feature."
+msgstr ""
+
+msgid "Consistency"
+msgstr ""
+
+msgid ""
+"The framework should be consistent at all levels. Consistency applies to "
+"everything from low-level (the Python coding style used) to high-level (the "
+"\"experience\" of using Django)."
+msgstr ""
+
+msgid "Models"
+msgstr "모델"
+
+msgid ""
+"Fields shouldn't assume certain behaviors based solely on the name of the "
+"field. This requires too much knowledge of the system and is prone to "
+"errors. Instead, behaviors should be based on keyword arguments and, in some "
+"cases, on the type of the field."
+msgstr ""
+
+msgid "Include all relevant domain logic"
+msgstr ""
+
+msgid ""
+"Models should encapsulate every aspect of an \"object,\" following Martin "
+"Fowler's `Active Record`_ design pattern."
+msgstr ""
+
+msgid ""
+"This is why both the data represented by a model and information about it "
+"(its human-readable name, options like default ordering, etc.) are defined "
+"in the model class; all the information needed to understand a given model "
+"should be stored *in* the model."
+msgstr ""
+
+msgid "Database API"
+msgstr "데이터베이스 API"
+
+msgid "The core goals of the database API are:"
+msgstr "데이터베이스 API의 핵심 목표는"
+
+msgid "SQL efficiency"
+msgstr ""
+
+msgid ""
+"It should execute SQL statements as few times as possible, and it should "
+"optimize statements internally."
+msgstr ""
+
+msgid ""
+"This is why developers need to call ``save()`` explicitly, rather than the "
+"framework saving things behind the scenes silently."
+msgstr ""
+
+msgid ""
+"This is also why the ``select_related()`` ``QuerySet`` method exists. It's "
+"an optional performance booster for the common case of selecting \"every "
+"related object.\""
+msgstr ""
+
+msgid "Terse, powerful syntax"
+msgstr ""
+
+msgid ""
+"The database API should allow rich, expressive statements in as little "
+"syntax as possible. It should not rely on importing other modules or helper "
+"objects."
+msgstr ""
+
+msgid ""
+"Joins should be performed automatically, behind the scenes, when necessary."
+msgstr ""
+
+msgid ""
+"Every object should be able to access every related object, systemwide. This "
+"access should work both ways."
+msgstr ""
+
+msgid "Option to drop into raw SQL easily, when needed"
+msgstr ""
+
+msgid ""
+"The database API should realize it's a shortcut but not necessarily an end-"
+"all-be-all. The framework should make it easy to write custom SQL -- entire "
+"statements, or just custom ``WHERE`` clauses as custom parameters to API "
+"calls."
+msgstr ""
+
+msgid "URL design"
+msgstr ""
+
+msgid ""
+"URLs in a Django app should not be coupled to the underlying Python code. "
+"Tying URLs to Python function names is a Bad And Ugly Thing."
+msgstr ""
+
+msgid ""
+"Along these lines, the Django URL system should allow URLs for the same app "
+"to be different in different contexts. For example, one site may put stories "
+"at ``/stories/``, while another may use ``/news/``."
+msgstr ""
+
+msgid "Infinite flexibility"
+msgstr ""
+
+msgid ""
+"URLs should be as flexible as possible. Any conceivable URL design should be "
+"allowed."
+msgstr ""
+
+msgid "Encourage best practices"
+msgstr ""
+
+msgid ""
+"The framework should make it just as easy (or even easier) for a developer "
+"to design pretty URLs than ugly ones."
+msgstr ""
+
+msgid "File extensions in Web-page URLs should be avoided."
+msgstr ""
+
+msgid "Vignette-style commas in URLs deserve severe punishment."
+msgstr ""
+
+msgid "Definitive URLs"
+msgstr ""
+
+msgid ""
+"Technically, ``foo.com/bar`` and ``foo.com/bar/`` are two different URLs, "
+"and search-engine robots (and some Web traffic-analyzing tools) would treat "
+"them as separate pages. Django should make an effort to \"normalize\" URLs "
+"so that search-engine robots don't get confused."
+msgstr ""
+
+msgid "This is the reasoning behind the :setting:`APPEND_SLASH` setting."
+msgstr ""
+
+msgid "Template system"
+msgstr ""
+
+msgid "Separate logic from presentation"
+msgstr ""
+
+msgid ""
+"We see a template system as a tool that controls presentation and "
+"presentation-related logic -- and that's it. The template system shouldn't "
+"support functionality that goes beyond this basic goal."
+msgstr ""
+
+msgid "Discourage redundancy"
+msgstr ""
+
+msgid ""
+"The majority of dynamic websites use some sort of common sitewide design -- "
+"a common header, footer, navigation bar, etc. The Django template system "
+"should make it easy to store those elements in a single place, eliminating "
+"duplicate code."
+msgstr ""
+
+msgid ""
+"This is the philosophy behind :ref:`template inheritance <template-"
+"inheritance>`."
+msgstr ""
+
+msgid "Be decoupled from HTML"
+msgstr ""
+
+msgid ""
+"The template system shouldn't be designed so that it only outputs HTML. It "
+"should be equally good at generating other text-based formats, or just plain "
+"text."
+msgstr ""
+
+msgid "XML should not be used for template languages"
+msgstr ""
+
+msgid ""
+"Using an XML engine to parse templates introduces a whole new world of human "
+"error in editing templates -- and incurs an unacceptable level of overhead "
+"in template processing."
+msgstr ""
+
+msgid "Assume designer competence"
+msgstr ""
+
+msgid ""
+"The template system shouldn't be designed so that templates necessarily are "
+"displayed nicely in WYSIWYG editors such as Dreamweaver. That is too severe "
+"of a limitation and wouldn't allow the syntax to be as nice as it is. Django "
+"expects template authors are comfortable editing HTML directly."
+msgstr ""
+
+msgid "Treat whitespace obviously"
+msgstr ""
+
+msgid ""
+"The template system shouldn't do magic things with whitespace. If a template "
+"includes whitespace, the system should treat the whitespace as it treats "
+"text -- just display it. Any whitespace that's not in a template tag should "
+"be displayed."
+msgstr ""
+
+msgid "Don't invent a programming language"
+msgstr ""
+
+msgid ""
+"The goal is not to invent a programming language. The goal is to offer just "
+"enough programming-esque functionality, such as branching and looping, that "
+"is essential for making presentation-related decisions. The :ref:`Django "
+"Template Language (DTL) <template-language-intro>` aims to avoid advanced "
+"logic."
+msgstr ""
+
+msgid ""
+"The Django template system recognizes that templates are most often written "
+"by *designers*, not *programmers*, and therefore should not assume Python "
+"knowledge."
+msgstr ""
+
+msgid "Safety and security"
+msgstr ""
+
+msgid ""
+"The template system, out of the box, should forbid the inclusion of "
+"malicious code -- such as commands that delete database records."
+msgstr ""
+
+msgid ""
+"This is another reason the template system doesn't allow arbitrary Python "
+"code."
+msgstr ""
+
+msgid "Extensibility"
+msgstr ""
+
+msgid ""
+"The template system should recognize that advanced template authors may want "
+"to extend its technology."
+msgstr ""
+
+msgid "This is the philosophy behind custom template tags and filters."
+msgstr ""
+
+msgid "Views"
+msgstr "뷰"
+
+msgid "Simplicity"
+msgstr ""
+
+msgid ""
+"Writing a view should be as simple as writing a Python function. Developers "
+"shouldn't have to instantiate a class when a function will do."
+msgstr ""
+
+msgid "Use request objects"
+msgstr ""
+
+msgid ""
+"Views should have access to a request object -- an object that stores "
+"metadata about the current request. The object should be passed directly to "
+"a view function, rather than the view function having to access the request "
+"data from a global variable. This makes it light, clean and easy to test "
+"views by passing in \"fake\" request objects."
+msgstr ""
+
+msgid ""
+"A view shouldn't care about which template system the developer uses -- or "
+"even whether a template system is used at all."
+msgstr ""
+
+msgid "Differentiate between GET and POST"
+msgstr ""
+
+msgid ""
+"GET and POST are distinct; developers should explicitly use one or the "
+"other. The framework should make it easy to distinguish between GET and POST "
+"data."
+msgstr ""
+
+msgid "Cache Framework"
+msgstr ""
+
+msgid "The core goals of Django's :doc:`cache framework </topics/cache>` are:"
+msgstr ""
+
+msgid ""
+"A cache should be as fast as possible.  Hence, all framework code "
+"surrounding the cache backend should be kept to the absolute minimum, "
+"especially for ``get()`` operations."
+msgstr ""
+
+msgid ""
+"The cache API should provide a consistent interface across the different "
+"cache backends."
+msgstr ""
+
+msgid ""
+"The cache API should be extensible at the application level based on the "
+"developer's needs (for example, see :ref:`cache_key_transformation`)."
+msgstr ""
+
+msgid "Third-party distributions of Django"
+msgstr ""
+
+msgid ""
+"Many third-party distributors are now providing versions of Django "
+"integrated with their package-management systems. These can make "
+"installation and upgrading much easier for users of Django since the "
+"integration includes the ability to automatically install dependencies (like "
+"database adapters) that Django requires."
+msgstr ""
+
+msgid ""
+"Typically, these packages are based on the latest stable release of Django, "
+"so if you want to use the development version of Django you'll need to "
+"follow the instructions for :ref:`installing the development version "
+"<installing-development-version>` from our Git repository."
+msgstr ""
+
+msgid ""
+"If you're using Linux or a Unix installation, such as OpenSolaris, check "
+"with your distributor to see if they already package Django. If you're using "
+"a Linux distro and don't know how to find out if a package is available, "
+"then now is a good time to learn.  The Django Wiki contains a list of `Third "
+"Party Distributions`_ to help you out."
+msgstr ""
+
+msgid "For distributors"
+msgstr ""
+
+msgid ""
+"If you'd like to package Django for distribution, we'd be happy to help out! "
+"Please join the |django-developers| mailing list and introduce yourself."
+msgstr ""
+
+msgid ""
+"We also encourage all distributors to subscribe to the |django-announce| "
+"mailing list, which is a (very) low-traffic list for announcing new releases "
+"of Django and important bugfixes."
+msgstr ""
+
+msgid "Meta-documentation and miscellany"
+msgstr ""
+
+msgid ""
+"Documentation that we can't find a more organized place for. Like that "
+"drawer in your kitchen with the scissors, batteries, duct tape, and other "
+"junk."
+msgstr ""

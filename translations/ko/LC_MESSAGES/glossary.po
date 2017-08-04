@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+#
+# Translators:
+# minsung kang, 2015
+# Subin Choi <os1742@gmail.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: django-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-02 09:23-0500\n"
+"PO-Revision-Date: 2017-08-03 14:55+0000\n"
+"Last-Translator: Subin Choi <os1742@gmail.com>\n"
+"Language-Team: Korean (http://www.transifex.com/django/django-docs/language/"
+"ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Glossary"
+msgstr "용어"
+
+msgid "concrete model"
+msgstr "구상 모델"
+
+msgid ""
+"A non-abstract (:attr:`abstract=False <django.db.models.Options.abstract>`) "
+"model."
+msgstr ""
+"비추상(:attr: `abstract=False <django.db.models.Options.abstract>`) 모델"
+
+msgid "field"
+msgstr "필드"
+
+msgid ""
+"An attribute on a :term:`model`; a given field usually maps directly to a "
+"single database column."
+msgstr ""
+":term:`model` 의 어트리뷰트. 하나의 field는 종종 데이터베이스의 한 컬럼에 대"
+"응됨."
+
+msgid "See :doc:`/topics/db/models`."
+msgstr ":doc:`/topics/db/models` 참조."
+
+msgid "generic view"
+msgstr "generic view"
+
+msgid ""
+"A higher-order :term:`view` function that provides an abstract/generic "
+"implementation of a common idiom or pattern found in view development."
+msgstr ""
+"뷰 개발에 있어 일반적인 idiom 또는 패턴에 대한 추상적/일반적 구현을 제공하는 "
+"보다 높은 order의 :term:`view` 함수."
+
+msgid "See :doc:`/topics/class-based-views/index`."
+msgstr ":doc:`/topics/class-based-views/index` 참조."
+
+msgid "model"
+msgstr "모델"
+
+msgid "Models store your application's data."
+msgstr "모델은 애플리케이션의 데이터를 저장합니다."
+
+msgid "MTV"
+msgstr "MTV"
+
+msgid ""
+"\"Model-template-view\"; a software pattern, similar in style to MVC, but a "
+"better description of the way Django does things."
+msgstr ""
+"\"모델-템플릿-뷰\". 소프트웨어의 패턴으로서, MVC와 유사하지만, 그보다 Django"
+"의 방식을 더 잘 설명하는 용어."
+
+msgid "See :ref:`the FAQ entry <faq-mtv>`."
+msgstr ":ref:`the FAQ entry <faq-mtv>` 참조."
+
+msgid "MVC"
+msgstr "MVC"
+
+msgid ""
+"`Model-view-controller`__; a software pattern. Django :ref:`follows MVC to "
+"some extent <faq-mtv>`."
+msgstr ""
+"`모델-뷰-컨트롤러`__. 소프트웨어 패턴. Django는 :ref:`MVC를 따름 <faq-mtv>`."
+
+msgid "project"
+msgstr "프로젝트"
+
+msgid ""
+"A Python package -- i.e. a directory of code -- that contains all the "
+"settings for an instance of Django. This would include database "
+"configuration, Django-specific options and application-specific settings."
+msgstr ""
+"Django의 인스턴스에 대한 모든 설정을 담은 파이썬 패키지 -- 디렉토리 또는 코"
+"드 --. 데이터베이스 설정, Django 설정 및 애플리케이션 설정 등을 포함."
+
+msgid "property"
+msgstr "속성"
+
+msgid ""
+"Also known as \"managed attributes\", and a feature of Python since version "
+"2.2. This is a neat way to implement attributes whose usage resembles "
+"attribute access, but whose implementation uses method calls."
+msgstr ""
+"\"managed attributes\"라고도 하며, 파이썬 버전 2.2부터 제공되는 기능. 어트리"
+"뷰트 접근과 유사한 사용법을 갖는 어트리뷰트를 구현하는 깔끔한 방법이지만, 그 "
+"구현은 함수 호출을 사용함."
+
+msgid "See :class:`property`."
+msgstr ":class:`property` 참조"
+
+msgid "queryset"
+msgstr "queryset"
+
+msgid ""
+"An object representing some set of rows to be fetched from the database."
+msgstr "데이터베이스로부터 얻어낸 행의 집합을 나타내는 개체."
+
+msgid "See :doc:`/topics/db/queries`."
+msgstr ":doc:`/topics/db/queries` 참조."
+
+msgid "slug"
+msgstr "slug"
+
+msgid ""
+"A short label for something, containing only letters, numbers, underscores "
+"or hyphens. They're generally used in URLs. For example, in a typical blog "
+"entry URL:"
+msgstr ""
+"짧은 라벨로서, 문자, 숫자, 밑줄 또는 하이픈만을 포함. 일반적으로 URL에 사용. "
+"예를 들어, 블로그 엔트리 URL은 다음과 같다고 할 때,"
+
+msgid "the last bit (``spring``) is the slug."
+msgstr "마지막 부분(``spring``)이 슬러그입니다."
+
+msgid "template"
+msgstr "템플릿"
+
+msgid ""
+"A chunk of text that acts as formatting for representing data. A template "
+"helps to abstract the presentation of data from the data itself."
+msgstr ""
+"데이터를 표현하기 위한 형식으로서 쓰이는 텍스트의 덩어리. 템플릿은 데이터 자"
+"체와 그에 대한 표현을 분리하여 추상화하는 데에 도움이 됨."
+
+msgid "See :doc:`/topics/templates`."
+msgstr ":doc:`/topics/templates` 참조."
+
+msgid "view"
+msgstr "뷰"
+
+msgid "A function responsible for rendering a page."
+msgstr "페이지 렌더링를 담당하는 함수."
