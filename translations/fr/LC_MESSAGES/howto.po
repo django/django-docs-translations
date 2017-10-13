@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the Django package.
 #
 # Translators:
+# Adrien Brunet <abrunet@centrale-marseille.fr>, 2017
 # Amirouche <amirouche.boubekki@gmail.com>, 2013
 # annoa <annoa.b@gmail.com>, 2013-2014
 # Claude Paroz <claude@2xlibre.net>, 2013-2017
@@ -14,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-02 09:23-0500\n"
-"PO-Revision-Date: 2017-08-04 09:01+0000\n"
-"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
+"POT-Creation-Date: 2017-10-10 09:43-0500\n"
+"PO-Revision-Date: 2017-09-23 18:52+0000\n"
+"Last-Translator: Adrien Brunet <abrunet@centrale-marseille.fr>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/"
 "fr/)\n"
 "MIME-Version: 1.0\n"
@@ -1174,6 +1175,42 @@ msgstr ""
 "Des informations sur la manière de tester des commandes d'administration "
 "personnalisées peuvent être consultées dans la :ref:`documentation sur les "
 "tests <topics-testing-management-commands>`."
+
+msgid "Overriding commands"
+msgstr "Surcharge des commandes"
+
+msgid ""
+"Django registers the built-in commands and then searches for commands in :"
+"setting:`INSTALLED_APPS` in reverse. During the search, if a command name "
+"duplicates an already registered command, the newly discovered command "
+"overrides the first."
+msgstr ""
+"Django enregistre les commandes intégrées et recherche ensuite les commandes "
+"dans l'ordre inverse de :setting:`INSTALLED_APPS`. Pendant la recherche, si "
+"le nom d'une commande est un duplicata d'une commande déjà enregistrée, la "
+"commande nouvellement découverte surcharge la première."
+
+msgid ""
+"In other words, to override a command, the new command must have the same "
+"name and its app must be before the overridden command's app in :setting:"
+"`INSTALLED_APPS`."
+msgstr ""
+"En d'autres termes, pour surcharger une commande, la nouvelle commande doit "
+"avoir le même nom et son application doit se trouver avant l'application de "
+"la commande dont on souhaite la surcharge dans :setting:`INSTALLED_APPS`."
+
+msgid ""
+"Management commands from third-party apps that have been unintentionally "
+"overridden can be made available under a new name by creating a new command "
+"in one of your project's apps (ordered before the third-party app in :"
+"setting:`INSTALLED_APPS`) which imports the ``Command`` of the overridden "
+"command."
+msgstr ""
+"Les commandes de gestions des applications tierces qui ont été "
+"involontairement surchargées peuvent être mises à disposition sous un "
+"nouveau nom en créant une nouvelle commande dans une des applications du "
+"projet (placée avant l'application tierce dans :setting:`INSTALLED_APPS`) "
+"qui importe la ``Command`` de la commande surchargée."
 
 msgid "Command objects"
 msgstr "Objets de commandes"
@@ -7439,7 +7476,7 @@ msgid ""
 "for gathering static files in a single directory so you can serve them "
 "easily."
 msgstr ""
-":mod:`django.contrib.staticfiles` fournit un commande de gestion de "
+":mod:`django.contrib.staticfiles` fournit une commande de gestion de "
 "commodité pour rassembler les fichiers statiques dans un seul répertoire "
 "pour pouvoir plus facilement en faire le service."
 

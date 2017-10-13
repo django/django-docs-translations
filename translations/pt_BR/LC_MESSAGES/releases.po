@@ -10,10 +10,10 @@
 # Carlos E C Leite <caduado@gmail.com>, 2016
 # Carlos Schneider <carlosaschjr@gmail.com>, 2016
 # Filipe Cifali Stangler <cifali.filipe@gmail.com>, 2016
-# Claudio Rogerio Carvalho Filho <excriptbrasil@gmail.com>, 2017
+# Claudio Rogerio <excriptbrasil@gmail.com>, 2017
 # Fabio Oliveira <fabio20rj@gmail.com>, 2016
 # Lucas Infante <maccinza@gmail.com>, 2014
-# rafaelribeiroo <pereiraribeirorafael@gmail.com>, 2016
+# rafaelribeiroo <pereiraribeirorafael@gmail.com>, 2016-2017
 # Raphael Mendonça, 2016
 # Raysa Dutra, 2016
 # Roger Camargo <huogerac@gmail.com>, 2016
@@ -24,8 +24,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-02 09:23-0500\n"
-"PO-Revision-Date: 2017-08-03 14:56+0000\n"
+"POT-Creation-Date: 2017-10-10 09:43-0500\n"
+"PO-Revision-Date: 2017-10-11 00:24+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
@@ -36,10 +36,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 msgid "Django version 0.95 release notes"
-msgstr "Notas de lançamento do Django versão 0.95"
+msgstr "Notas de lançamento da versão 0.95 do Django"
 
 msgid "Welcome to the Django 0.95 release."
-msgstr "Bem-vindo ao Django 0.95."
+msgstr "Bem-vindo (a) à versão 0.95 do Django"
 
 msgid ""
 "This represents a significant advance in Django development since the 0.91 "
@@ -52,7 +52,7 @@ msgstr ""
 "é apresentado abaixo. "
 
 msgid "Suitability and API stability"
-msgstr "Estabilidade da API e cabimento"
+msgstr "Adequação e estabilidade da API"
 
 msgid ""
 "This release is intended to provide a stable reference point for developers "
@@ -146,7 +146,8 @@ msgid ""
 msgstr ""
 
 msgid "Django now has support for managing database transactions."
-msgstr "O Django agora suporta gerenciar as transações de bancos de dados."
+msgstr ""
+"Atualmente, o Django suporta gerenciamento das transações de bancos de dados."
 
 msgid ""
 "We've added the ability to write custom authentication and authorization "
@@ -264,7 +265,7 @@ msgid "Django version 0.96 release notes"
 msgstr "Notas de lançamento do Django versão 0.96 "
 
 msgid "Welcome to Django 0.96!"
-msgstr "Bem vindo ao Django 0.96"
+msgstr "Bem-vindo (a) à versão 0.96 do Django"
 
 msgid ""
 "The primary goal for 0.96 is a cleanup and stabilization of the features "
@@ -433,7 +434,7 @@ msgstr ""
 "SQL customizados -- views, stored procedures, etc.)."
 
 msgid "The vestigial ``install`` command has been removed. Use ``syncdb``."
-msgstr "O comando vestigial `ìnstall`` foi removido. Use ``syncdb``."
+msgstr "O comando ``install`` foi removido. Use ``syncdb``."
 
 msgid "Backslash escaping changed"
 msgstr "Escape da contrabarra modificado"
@@ -3133,7 +3134,7 @@ msgstr ""
 
 msgid ""
 "You can :ref:`more easily customize <customize-staticfiles-ignore-patterns>` "
-"the ``collectstatic --ignore_patterns`` option with a custom ``AppConfig``."
+"the ``collectstatic --ignore`` option with a custom ``AppConfig``."
 msgstr ""
 
 msgid "Cache"
@@ -3441,7 +3442,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Added the :attr:`HttpResponse.content_type <django.http.HttpRequest."
+"Added the :attr:`HttpRequest.content_type <django.http.HttpRequest."
 "content_type>` and :attr:`~django.http.HttpRequest.content_params` "
 "attributes which are parsed from the ``CONTENT_TYPE`` header."
 msgstr ""
@@ -3956,7 +3957,7 @@ msgstr ""
 
 msgid ""
 "Private API ``django.forms.models.model_to_dict()`` returns a queryset "
-"rather than a list of primary keys for ``ManyToManyField``\\s ."
+"rather than a list of primary keys for ``ManyToManyField``\\s."
 msgstr ""
 
 msgid ""
@@ -4968,6 +4969,27 @@ msgid ""
 "`27993`)."
 msgstr ""
 
+msgid "Django 1.10.8 release notes"
+msgstr ""
+
+msgid "*September 5, 2017*"
+msgstr ""
+
+msgid "Django 1.10.8 fixes a security issue in 1.10.7."
+msgstr ""
+
+msgid ""
+"CVE-2017-12794: Possible XSS in traceback section of technical 500 debug page"
+msgstr ""
+
+msgid ""
+"In older versions, HTML autoescaping was disabled in a portion of the "
+"template for the technical 500 debug page. Given the right circumstances, "
+"this allowed a cross-site scripting attack. This vulnerability shouldn't "
+"affect most production sites since you shouldn't run with ``DEBUG = True`` "
+"(which makes this page accessible) in your production settings."
+msgstr ""
+
 msgid "Django 1.11 release notes"
 msgstr ""
 
@@ -4996,7 +5018,7 @@ msgstr ""
 
 msgid ""
 "The Django 1.11.x series is the last to support Python 2. The next major "
-"release, Django 2.0, will only support Python 3.5+."
+"release, Django 2.0, will only support Python 3.4+."
 msgstr ""
 
 msgid "Deprecating warnings are no longer loud by default"
@@ -6448,15 +6470,106 @@ msgstr ""
 msgid "Django 1.11.5 release notes"
 msgstr ""
 
-msgid "*Under development*"
-msgstr ""
-
-msgid "Django 1.11.5 fixes several bugs in 1.11.4."
+msgid "Django 1.11.5 fixes a security issue and several bugs in 1.11.4."
 msgstr ""
 
 msgid ""
 "Fixed GEOS version parsing if the version has a commit hash at the end (new "
 "in GEOS 3.6.2) (:ticket:`28441`)."
+msgstr ""
+
+msgid "Added compatibility for ``cx_Oracle`` 6 (:ticket:`28498`)."
+msgstr ""
+
+msgid ""
+"Fixed select widget rendering when option values are tuples (:ticket:"
+"`28502`)."
+msgstr ""
+
+msgid ""
+"Django 1.11 inadvertently changed the sequence and trigger naming scheme on "
+"Oracle. This causes errors on INSERTs for some tables if "
+"``'use_returning_into': False`` is in the ``OPTIONS`` part of ``DATABASES``. "
+"The pre-1.11 naming scheme is now restored. Unfortunately, it necessarily "
+"requires an update to Oracle tables created with Django 1.11.[1-4]. Use the "
+"upgrade script in :ticket:`28451` comment 8 to update sequence and trigger "
+"names to use the pre-1.11 naming scheme."
+msgstr ""
+
+msgid ""
+"Added POST request support to ``LogoutView``, for equivalence with the "
+"function-based ``logout()`` view (:ticket:`28513`)."
+msgstr ""
+
+msgid ""
+"Omitted ``pages_per_range`` from ``BrinIndex.deconstruct()`` if it's "
+"``None`` (:ticket:`25809`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression where ``SelectDateWidget`` localized the years in the "
+"select box (:ticket:`28530`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in 1.11.4 where ``runserver`` crashed with non-Unicode "
+"system encodings on Python 2 + Windows (:ticket:`28487`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 1.10 where changes to a ``ManyToManyField`` "
+"weren't logged in the admin change history (:ticket:`27998`) and prevented "
+"``ManyToManyField`` initial data in model forms from being affected by "
+"subsequent model changes (:ticket:`28543`)."
+msgstr ""
+
+msgid ""
+"Fixed non-deterministic results or an ``AssertionError`` crash in some "
+"queries with multiple joins (:ticket:`26522`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in ``contrib.auth``'s ``login()`` and ``logout()`` views "
+"where they ignored positional arguments (:ticket:`28550`)."
+msgstr ""
+
+msgid "Django 1.11.6 release notes"
+msgstr ""
+
+msgid "*October 5, 2017*"
+msgstr ""
+
+msgid "Django 1.11.6 fixes several bugs in 1.11.5."
+msgstr ""
+
+msgid ""
+"Made the ``CharField`` form field convert whitespace-only values to the "
+"``empty_value`` when ``strip`` is enabled (:ticket:`28555`)."
+msgstr ""
+
+msgid ""
+"Fixed crash when using the name of a model's autogenerated primary key "
+"(``id``) in an ``Index``'s ``fields`` (:ticket:`28597`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 1.9 where a custom view error handler such as "
+"``handler404`` that accesses ``csrf_token`` could cause CSRF verification "
+"failures on other pages (:ticket:`28488`)."
+msgstr ""
+
+msgid "Django 1.11.7 release notes"
+msgstr ""
+
+msgid "*Expected November 1, 2017*"
+msgstr ""
+
+msgid "Django 1.11.7 fixes several bugs in 1.11.6."
+msgstr ""
+
+msgid ""
+"Prevented ``cache.get_or_set()`` from caching ``None`` if the ``default`` "
+"argument is a callable that returns ``None`` (:ticket:`28601`)."
 msgstr ""
 
 msgid "Django 1.2 release notes"
@@ -16920,7 +17033,7 @@ msgid ""
 msgstr ""
 
 msgid "``util`` modules renamed to ``utils``"
-msgstr ""
+msgstr "Módulo ``util`` renomeado para ``utils``"
 
 msgid ""
 "The following instances of ``util.py`` in the Django codebase have been "
@@ -25200,4 +25313,23 @@ msgstr ""
 msgid ""
 "Django 1.8 `(patch) <https://github.com/django/django/"
 "commit/4a6b945dffe8d10e7cec107d93e6efaebfbded29>`__"
+msgstr ""
+
+msgid "September 5, 2017 - :cve:`2017-12794`"
+msgstr ""
+
+msgid ""
+"Possible XSS in traceback section of technical 500 debug page. `Full "
+"description <https://www.djangoproject.com/weblog/2017/sep/05/security-"
+"releases/>`__"
+msgstr ""
+
+msgid ""
+"Django 1.11 `(patch) <https://github.com/django/django/commit/"
+"e35a0c56086924f331e9422daa266e907a4784cc>`__"
+msgstr ""
+
+msgid ""
+"Django 1.10 `(patch) <https://github.com/django/django/"
+"commit/58e08e80e362db79eb0fd775dc81faad90dca47a>`__"
 msgstr ""

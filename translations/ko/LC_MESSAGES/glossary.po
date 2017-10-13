@@ -4,14 +4,15 @@
 #
 # Translators:
 # minsung kang, 2015
+# Noh Seho <iam@sehonoh.kr>, 2017
 # Subin Choi <os1742@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-02 09:23-0500\n"
-"PO-Revision-Date: 2017-08-03 14:55+0000\n"
-"Last-Translator: Subin Choi <os1742@gmail.com>\n"
+"POT-Creation-Date: 2017-10-10 09:43-0500\n"
+"PO-Revision-Date: 2017-09-19 16:41+0000\n"
+"Last-Translator: Noh Seho <iam@sehonoh.kr>\n"
 "Language-Team: Korean (http://www.transifex.com/django/django-docs/language/"
 "ko/)\n"
 "MIME-Version: 1.0\n"
@@ -46,7 +47,7 @@ msgid "See :doc:`/topics/db/models`."
 msgstr ":doc:`/topics/db/models` 참조."
 
 msgid "generic view"
-msgstr "generic view"
+msgstr "제네릭 뷰"
 
 msgid ""
 "A higher-order :term:`view` function that provides an abstract/generic "
@@ -65,26 +66,27 @@ msgid "Models store your application's data."
 msgstr "모델은 애플리케이션의 데이터를 저장합니다."
 
 msgid "MTV"
-msgstr "MTV"
+msgstr "모델-템플릿-뷰(MTV, Model-Template-View)"
 
 msgid ""
 "\"Model-template-view\"; a software pattern, similar in style to MVC, but a "
 "better description of the way Django does things."
 msgstr ""
-"\"모델-템플릿-뷰\". 소프트웨어의 패턴으로서, MVC와 유사하지만, 그보다 Django"
-"의 방식을 더 잘 설명하는 용어."
+"\"모델-템플릿-뷰(MTV, Model-Template-View)\". 소프트웨어의 패턴으로서, 모델-"
+"뷰-컨트롤러(MVC, Model-View-Controller)와 유사하지만, 그보다 장고의 방식을 "
+"더 잘 설명하는 용어."
 
 msgid "See :ref:`the FAQ entry <faq-mtv>`."
 msgstr ":ref:`the FAQ entry <faq-mtv>` 참조."
 
 msgid "MVC"
-msgstr "MVC"
+msgstr "모델-뷰-컨트롤러(MVC, Model-View-Controller)"
 
 msgid ""
 "`Model-view-controller`__; a software pattern. Django :ref:`follows MVC to "
 "some extent <faq-mtv>`."
 msgstr ""
-"`모델-뷰-컨트롤러`__. 소프트웨어 패턴. Django는 :ref:`MVC를 따름 <faq-mtv>`."
+"`모델-뷰-컨트롤러`__. 소프트웨어 패턴. 장고는 :ref:`MVC를 따름 <faq-mtv>`."
 
 msgid "project"
 msgstr "프로젝트"
@@ -94,8 +96,8 @@ msgid ""
 "settings for an instance of Django. This would include database "
 "configuration, Django-specific options and application-specific settings."
 msgstr ""
-"Django의 인스턴스에 대한 모든 설정을 담은 파이썬 패키지 -- 디렉토리 또는 코"
-"드 --. 데이터베이스 설정, Django 설정 및 애플리케이션 설정 등을 포함."
+"장고 인스턴스에 대한 모든 설정을 담은 파이썬 패키지 -- 디렉토리 또는 코드 "
+"--. 데이터베이스 설정, 장고 설정 및 애플리케이션 설정 등을 포함."
 
 msgid "property"
 msgstr "속성"
@@ -113,7 +115,7 @@ msgid "See :class:`property`."
 msgstr ":class:`property` 참조"
 
 msgid "queryset"
-msgstr "queryset"
+msgstr "쿼리셋(queryset)"
 
 msgid ""
 "An object representing some set of rows to be fetched from the database."

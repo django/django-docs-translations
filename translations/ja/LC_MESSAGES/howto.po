@@ -4,14 +4,15 @@
 #
 # Translators:
 # Asai Takuya <takuya.waseda.1119@gmail.com>, 2016
+# Kinyonez Jackson <masashima21st@gmail.com>, 2017
 # IWAI, Masaharu <iwaim.sub@gmail.com>, 2016
 # mnamihdk, 2017
 # Pawllo2 <pawllothesecond@gmail.com>, 2017
 # Ryouta Mizuhara <ham_katsu@outlook.jp>, 2016
-# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016-2017
+# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016-2017
 # Suguru YAMAMOTO <sgryjp@gmail.com>, 2017
 # Suzuki Takahiro <bur8787@gmail.com>, 2016
-# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016
+# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016
 # Takashi Sugawara <aimaimokomoko@gmail.com>, 2017
 # Takuya Arita <takuya.arita@gmail.com>, 2015
 # Yoshihiro Furudate <aheadlink.changat@gmail.com>, 2016
@@ -20,9 +21,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-02 09:23-0500\n"
-"PO-Revision-Date: 2017-08-03 14:56+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2017-10-10 09:43-0500\n"
+"PO-Revision-Date: 2017-09-30 00:42+0000\n"
+"Last-Translator: Kinyonez Jackson <masashima21st@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -128,15 +129,22 @@ msgid ""
 "still have all of the same permissions checking that is implemented in "
 "``ModelBackend``."
 msgstr ""
+"``RemoteUserBackend``を``ModelBackend``から継承した後も、``ModelBackend``に"
+"よってチェックが行われ、すべてのパーミッションが維持されます。"
 
 msgid ""
 "Users with :attr:`is_active=False <django.contrib.auth.models.User."
 "is_active>` won't be allowed to authenticate. Use :class:`~django.contrib."
 "auth.backends.AllowAllUsersRemoteUserBackend` if you want to allow them to."
 msgstr ""
+":attr:`is_active=False <django.contrib.auth.models.User.is_active>` 属性を持"
+"つユーザは認証が許可されません。許可したい場合は、:class:`~django.contrib."
+"auth.backends.AllowAllUsersRemoteUserBackend`を使用してください。"
 
 msgid "In older versions, inactive users weren't rejected as described above."
 msgstr ""
+"過去のバージョンでは、上記のようにインアクティブユーザが拒否されることはあり"
+"ませんでした。"
 
 msgid ""
 "If your authentication mechanism uses a custom HTTP header and not "
@@ -863,6 +871,30 @@ msgid ""
 msgstr ""
 "カスタム管理コマンドのテストに関する情報は :ref:`テストに関するページ "
 "<topics-testing-management-commands>` で得ることができます。"
+
+msgid "Overriding commands"
+msgstr ""
+
+msgid ""
+"Django registers the built-in commands and then searches for commands in :"
+"setting:`INSTALLED_APPS` in reverse. During the search, if a command name "
+"duplicates an already registered command, the newly discovered command "
+"overrides the first."
+msgstr ""
+
+msgid ""
+"In other words, to override a command, the new command must have the same "
+"name and its app must be before the overridden command's app in :setting:"
+"`INSTALLED_APPS`."
+msgstr ""
+
+msgid ""
+"Management commands from third-party apps that have been unintentionally "
+"overridden can be made available under a new name by creating a new command "
+"in one of your project's apps (ordered before the third-party app in :"
+"setting:`INSTALLED_APPS`) which imports the ``Command`` of the overridden "
+"command."
+msgstr ""
 
 msgid "Command objects"
 msgstr "Command オブジェクト"

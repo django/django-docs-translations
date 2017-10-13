@@ -14,6 +14,7 @@
 # Nirvana <kimqqyun@gmail.com>, 2016
 # Pelly Ryu <hermement@gmail.com>, 2016
 # Seacbyul Lee <femizkim@gmail.com>, 2017
+# Noh Seho <iam@sehonoh.kr>, 2017
 # seok woojing <woojing.seok@gmail.com>, 2016-2017
 # seungho, kim <raccoonyy@gmail.com>, 2016
 # Subin Choi <os1742@gmail.com>, 2016
@@ -23,9 +24,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-02 09:23-0500\n"
-"PO-Revision-Date: 2017-08-03 14:56+0000\n"
-"Last-Translator: 이지현 <wlgus5781@gmail.com>\n"
+"POT-Creation-Date: 2017-10-10 09:43-0500\n"
+"PO-Revision-Date: 2017-09-23 18:54+0000\n"
+"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Korean (http://www.transifex.com/django/django-docs/language/"
 "ko/)\n"
 "MIME-Version: 1.0\n"
@@ -75,10 +76,10 @@ msgid ""
 "itself. But if you don't, `Dive Into Python`__ is a fantastic (and free) "
 "online book for beginning Python programmers."
 msgstr ""
-"이 튜토리얼을 진행하기 위해서는, Django 에 대한 기본적인 이해가 필요합니다. :"
+"이 튜토리얼을 진행하기 위해서는, 장고에 대한 기본적인 이해가 필요합니다. :"
 "doc:`첫번째 Django 앱 작성해보기</intro/tutorial01>` 를 무난하게 따라할 정도"
-"면 됩니다. 또한, Python 대한 깊은 이해가 필요합니다만 그렇지 않다면 `Dive "
-"Into Python`__ 은 파이선 초심자에게 훌륭한 교재가 될 것입니다."
+"면 됩니다. 또한, 파이썬에 대한 적당한 이해도 필요합니다만, 그렇지 않다면 "
+"`Dive Into Python`__ 을 읽어보는 것을 권장합니다."
 
 msgid ""
 "Those of you who are unfamiliar with version control systems and Trac will "
@@ -1296,13 +1297,10 @@ msgstr ""
 "은 로드할 때 컴파일되어 있기 때문에 엄청나게 빠릅니다."
 
 msgid ""
-"Once one of the regexes matches, Django imports and calls the given view, "
-"which is a simple Python function. Each view gets passed a request object -- "
-"which contains request metadata -- and the values captured in the regex."
+"Once one of the regexes matches, Django calls the given view, which is a "
+"Python function. Each view gets passed a request object -- which contains "
+"request metadata -- and the values captured in the regex."
 msgstr ""
-"한번 정규 표현식 하나가 매치되면 Django는 간단한 파이썬 함수인 view를 import"
-"하고 호출 합니다. 각 view는 request object -- 각 요청에 대한 메타 데이터를 담"
-"고 있는 -- 와 정규표현식으로 URL로 부터 포착한 값을 전달 받게 됩니다."
 
 msgid ""
 "For example, if a user requested the URL \"/articles/2005/05/39323/\", "

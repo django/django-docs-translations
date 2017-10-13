@@ -9,12 +9,12 @@
 # JUN OKAZAKI <okazakijun54392@gmail.com>, 2017
 # BanjinS <banjin-s@qbooks.jp>, 2016
 # Makoto Mori <makomori@sfc.wide.ad.jp>, 2016
-# MASASHI Shibata <contact@c-bata.link>, 2016
+# Masashi SHIBATA <contact@c-bata.link>, 2016
 # mnamihdk, 2017
 # ohkawa <ookawa.m@gmail.com>, 2016
 # Pawllo2 <pawllothesecond@gmail.com>, 2017
 # salexkidd <salexkidd@gmail.com>, 2015
-# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016-2017
+# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016-2017
 # Takashi Sugawara <aimaimokomoko@gmail.com>, 2017
 # Yoshihiro Furudate <aheadlink.changat@gmail.com>, 2016
 # Yuuki Ebihara <yuuki.ebihara813@gmail.com>, 2016
@@ -23,9 +23,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-02 09:23-0500\n"
-"PO-Revision-Date: 2017-08-03 14:56+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2017-10-10 09:43-0500\n"
+"PO-Revision-Date: 2017-09-27 12:57+0000\n"
+"Last-Translator: mnamihdk\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -6533,6 +6533,37 @@ msgid ""
 msgstr ""
 
 msgid ""
+"The objects in the changelist page can be filtered with lookups from the "
+"URL's query string. This is how :attr:`list_filter` works, for example. The "
+"lookups are similar to what's used in :meth:`.QuerySet.filter` (e.g. "
+"``user__email=user@example.com``). Since the lookups in the query string can "
+"be manipulated by the user, they must be sanitized to prevent unauthorized "
+"data exposure."
+msgstr ""
+
+msgid ""
+"The ``lookup_allowed()`` method is given a lookup path from the query string "
+"(e.g. ``'user__email'``) and the corresponding value (e.g. ``'user@example."
+"com'``), and returns a boolean indicating whether filtering the changelist's "
+"``QuerySet`` using the parameters is permitted. If ``lookup_allowed()`` "
+"returns ``False``, ``DisallowedModelAdminLookup`` (subclass of :exc:`~django."
+"core.exceptions.SuspiciousOperation`) is raised."
+msgstr ""
+
+msgid ""
+"By default, ``lookup_allowed()`` allows access to a model's local fields, "
+"field paths used in :attr:`~ModelAdmin.list_filter` (but not paths from :"
+"meth:`~ModelAdmin.get_list_filter`), and lookups required for :attr:`~django."
+"db.models.ForeignKey.limit_choices_to` to function correctly in :attr:"
+"`~django.contrib.admin.ModelAdmin.raw_id_fields`."
+msgstr ""
+
+msgid ""
+"Override this method to customize the lookups permitted for your :class:"
+"`~django.contrib.admin.ModelAdmin` subclass."
+msgstr ""
+
+msgid ""
 "Should return ``True`` if adding an object is permitted, ``False`` otherwise."
 msgstr ""
 
@@ -9324,7 +9355,7 @@ msgid ""
 "Note that the order of :setting:`MIDDLEWARE` matters. Generally, you can "
 "put :class:`~django.contrib.flatpages.middleware.FlatpageFallbackMiddleware` "
 "at the end of the list. This means it will run first when processing the "
-"response, and ensures that any other response-processing middlewares see the "
+"response, and ensures that any other response-processing middleware see the "
 "real flatpage response rather than the 404."
 msgstr ""
 
@@ -9996,7 +10027,7 @@ msgid ":lookup:`equals`"
 msgstr ""
 
 msgid ":lookup:`exact`"
-msgstr ""
+msgstr ":lookup:`exact`"
 
 msgid ":lookup:`intersects`"
 msgstr ""
@@ -12398,6 +12429,17 @@ msgid ""
 "g., ``/home/john/lib/libgdal.so``)."
 msgstr ""
 
+msgid "Exceptions"
+msgstr "例外"
+
+msgid "The base GDAL exception, indicating a GDAL-related error."
+msgstr ""
+
+msgid ""
+"An exception raised when an error occurs when constructing or using a "
+"spatial reference system object."
+msgstr ""
+
 msgid "Geolocation with GeoIP"
 msgstr ""
 
@@ -12612,22 +12654,6 @@ msgid "Here is an example of its usage::"
 msgstr ""
 
 msgid ""
-"A string specifying the directory where the GeoIP data files are located. "
-"This setting is *required* unless manually specified with ``path`` keyword "
-"when initializing the :class:`GeoIP2` object."
-msgstr ""
-
-msgid ""
-"The basename to use for the GeoIP country data file. Defaults to ``'GeoLite2-"
-"Country.mmdb'``."
-msgstr ""
-
-msgid ""
-"The basename to use for the GeoIP city data file. Defaults to ``'GeoLite2-"
-"City.mmdb'``."
-msgstr ""
-
-msgid ""
 "The ``GeoIP`` object does not require any parameters to use the default "
 "settings. However, at the very least the :setting:`GEOIP_PATH` setting "
 "should be set with the path of the location of your GeoIP datasets. The "
@@ -12682,6 +12708,27 @@ msgstr ""
 msgid ""
 "Returns a :class:`~django.contrib.gis.geos.Point` object corresponding to "
 "the query."
+msgstr ""
+
+msgid ""
+"A string specifying the directory where the GeoIP data files are located. "
+"This setting is *required* unless manually specified with ``path`` keyword "
+"when initializing the :class:`GeoIP2` object."
+msgstr ""
+
+msgid ""
+"The basename to use for the GeoIP country data file. Defaults to ``'GeoLite2-"
+"Country.mmdb'``."
+msgstr ""
+
+msgid ""
+"The basename to use for the GeoIP city data file. Defaults to ``'GeoLite2-"
+"City.mmdb'``."
+msgstr ""
+
+msgid ""
+"The exception raised when an error occurs in a call to the underlying "
+"``geoip2`` library."
 msgstr ""
 
 msgid "GeoIP(R) is a registered trademark of MaxMind, Inc."
@@ -14948,9 +14995,6 @@ msgid ""
 "The setting must be the *full* path to the **C** shared library; in other "
 "words you want to use ``libgeos_c.so``, not ``libgeos.so``."
 msgstr ""
-
-msgid "Exceptions"
-msgstr "例外"
 
 msgid "The base GEOS exception, indicates a GEOS-related error."
 msgstr ""
@@ -19076,7 +19120,7 @@ msgstr ""
 
 msgid ""
 "Stores a range of timestamps. Based on a :class:`~django.db.models."
-"DateTimeField`. Represented by a ``tztsrange`` in the database and a :class:"
+"DateTimeField`. Represented by a ``tstzrange`` in the database and a :class:"
 "`~psycopg2:psycopg2.extras.DateTimeTZRange` in Python."
 msgstr ""
 
@@ -19375,7 +19419,7 @@ msgid ""
 msgstr ""
 
 msgid "Widgets"
-msgstr ""
+msgstr "ウィジェット"
 
 msgid "``RangeWidget``"
 msgstr ""
@@ -21025,7 +21069,10 @@ msgstr ""
 msgid ""
 "Overrides the core :djadmin:`runserver` command if the ``staticfiles`` app "
 "is :setting:`installed<INSTALLED_APPS>` and adds automatic serving of static "
-"files and the following new options."
+"files. File serving doesn't run through :setting:`MIDDLEWARE`."
+msgstr ""
+
+msgid "The command adds these options:"
 msgstr ""
 
 msgid ""
@@ -26008,7 +26055,7 @@ msgid ""
 msgstr ""
 
 msgid "The ``File`` object"
-msgstr ""
+msgstr "``File``オブジェクト"
 
 msgid ""
 "The :mod:`django.core.files` module and its submodules contain built-in "
@@ -32039,8 +32086,9 @@ msgid ""
 "Accepts a list of at least two text fields or expressions and returns the "
 "concatenated text. Each argument must be of a text or char type. If you want "
 "to concatenate a ``TextField()`` with a ``CharField()``, then be sure to "
-"tell Django that the ``output_field`` should be a ``TextField()``. This is "
-"also required when concatenating a ``Value`` as in the example below."
+"tell Django that the ``output_field`` should be a ``TextField()``. "
+"Specifying an ``output_field`` is also required when concatenating a "
+"``Value`` as in the example below."
 msgstr ""
 
 msgid ""
@@ -33220,10 +33268,10 @@ msgid ""
 "django-localflavor.readthedocs.io/>`_), which contains assorted pieces of "
 "code that are useful for particular countries and cultures."
 msgstr ""
-"ビルトインのフィールドがトリックをしない場合、`django-localflavor <https://"
-"github.com/django/django-localflavor>`_ (`ドキュメント <https://django-"
-"localflavor.readthedocs.io/>`_) を試すことができます。これは、特定の国や文化"
-"に役立つコードの、分類された場所を含んでいます。"
+"備え付けのフィールドでは目的を達することができない場合、`django-localflavor "
+"<https://github.com/django/django-localflavor>`_ (`ドキュメント <https://"
+"django-localflavor.readthedocs.io/>`_) を試すことができます。ここには特定の国"
+"や文化に有用なコード部品が、各種取り揃えられています。"
 
 msgid ""
 "Also, you can easily :doc:`write your own custom model fields </howto/custom-"
@@ -34669,11 +34717,11 @@ msgid "``ForeignKey``"
 msgstr "``ForeignKey``"
 
 msgid ""
-"A many-to-one relationship. Requires a positional argument: the class to "
-"which the model is related."
+"A many-to-one relationship. Requires two positional arguments: the class to "
+"which the model is related and the :attr:`~ForeignKey.on_delete` option. "
+"(``on_delete`` isn't actually required, but not providing it gives a "
+"deprecation warning. It will be required in Django 2.0.)"
 msgstr ""
-"多対 1 のリレーションシップです。位置の引数、つまりモデルが関連するクラスが必"
-"要です。"
 
 msgid ""
 "To create a recursive relationship -- an object that has a many-to-one "
@@ -34701,8 +34749,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-"This sort of reference can be useful when resolving circular import "
-"dependencies between two applications."
+"This sort of reference, called a lazy relationship, can be useful when "
+"resolving circular import dependencies between two applications."
 msgstr ""
 
 msgid ""
@@ -37320,6 +37368,14 @@ msgstr ""
 msgid "``index_together``"
 msgstr ""
 
+msgid "Use the :attr:`~Options.indexes` option instead."
+msgstr ""
+
+msgid ""
+"The newer :attr:`~Options.indexes` option provides more functionality than "
+"``index_together``. ``index_together`` may be deprecated in the future."
+msgstr ""
+
 msgid "Sets of field names that, taken together, are indexed::"
 msgstr ""
 
@@ -37680,12 +37736,6 @@ msgstr ""
 msgid ""
 "If ``Blog`` had ``ordering = ['name']``, then the first queryset would be "
 "identical to::"
-msgstr ""
-
-msgid ""
-"It is also possible to order a queryset by a related field, without "
-"incurring the cost of a JOIN, by referring to the ``_id`` of the related "
-"field::"
 msgstr ""
 
 msgid ""
@@ -41467,7 +41517,7 @@ msgid ""
 ":class:`StreamingHttpResponse` should only be used in situations where it is "
 "absolutely required that the whole content isn't iterated before "
 "transferring the data to the client. Because the content can't be accessed, "
-"many middlewares can't function normally. For example the ``ETag`` and "
+"many middleware can't function normally. For example the ``ETag`` and "
 "``Content-Length`` headers can't be generated for streaming responses."
 msgstr ""
 
@@ -53156,7 +53206,8 @@ msgstr ""
 
 msgid ""
 "Here, ``friends()`` will be called twice. Since the instance ``person`` in "
-"the view and the template are the same, ``@cached_property`` can avoid that::"
+"the view and the template are the same, decorating the ``friends()`` method "
+"with ``@cached_property`` can avoid that::"
 msgstr ""
 
 msgid ""

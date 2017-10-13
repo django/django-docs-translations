@@ -25,7 +25,7 @@
 # Natan Oliveira Cruz Reis <natanoliveiracruz@gmail.com>, 2016
 # Nilo Menezes <pythonnilo@gmail.com>, 2016
 # Paulo Sérgio Jr <paulo.psw@gmail.com>, 2016
-# rafaelribeiroo <pereiraribeirorafael@gmail.com>, 2016
+# rafaelribeiroo <pereiraribeirorafael@gmail.com>, 2016-2017
 # Rafael Lott <rafael.lott2@gmail.com>, 2016
 # Raysa Dutra, 2016
 # Renne Rocha, 2013,2015
@@ -35,9 +35,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-21 12:11-0500\n"
-"PO-Revision-Date: 2017-04-12 01:42+0000\n"
-"Last-Translator: Carlos E C Leite <caduado@gmail.com>\n"
+"POT-Creation-Date: 2017-10-10 09:43-0500\n"
+"PO-Revision-Date: 2017-09-23 18:54+0000\n"
+"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -694,7 +694,7 @@ msgstr ""
 "que é mais lógica para nós."
 
 msgid "<Framework X> does <feature Y> -- why doesn't Django?"
-msgstr "<Framework X> faz <Feature Y>, por que o Django não?"
+msgstr "<Framework X> faz <feature Y> -- por que o Django não?"
 
 msgid ""
 "We're well aware that there are other awesome Web frameworks out there, and "
@@ -1106,8 +1106,14 @@ msgstr "2.7, 3.4, 3.5, 3.6"
 msgid "2.0"
 msgstr "2.0"
 
-msgid "3.5+"
-msgstr "3.5+"
+msgid "3.4, 3.5, 3.6"
+msgstr ""
+
+msgid "2.1"
+msgstr ""
+
+msgid "3.5, 3.6, 3.7"
+msgstr ""
 
 msgid ""
 "For each version of Python, only the latest micro release (A.B.C) is "
@@ -1380,25 +1386,17 @@ msgstr ""
 "provavelmente está usando uma versão antiga do Django que não coincide com a "
 "versão desta documentação.  ``django-admin`` é novo no Django 1.7."
 
-msgid "Mac OS X permissions"
-msgstr "Permissões no Mac OS X"
+msgid "macOS permissions"
+msgstr ""
 
 msgid ""
-"If you're using Mac OS X, you may see the message \"permission denied\" when "
+"If you're using macOS, you may see the message \"permission denied\" when "
 "you try to run ``django-admin``. This is because, on Unix-based systems like "
-"OS X, a file must be marked as \"executable\" before it can be run as a "
+"macOS, a file must be marked as \"executable\" before it can be run as a "
 "program. To do this, open Terminal.app and navigate (using the ``cd`` "
 "command) to the directory where :doc:`django-admin </ref/django-admin>` is "
 "installed, then run the command ``sudo chmod +x django-admin``."
 msgstr ""
-"Se você está usando Mac OS X talvez você veja a mensagem: \"permission denied"
-"\" quando você estiver tentando executar ``django-admin``. Isso ocorre "
-"porque, em sistemas parecidos com OS X baseados em Unix um arquivo precisa "
-"ser marcado como \"executável\" antes dele poder ser executado como um "
-"programa. Para fazer isso, abra o Terminal.app e navegue (usando o comando "
-"``cd``) até o diretório em que o :doc:`django-admin </ref/django-admin>` "
-"está instalado, então logo após execute o comando: ``sudo chmod +x django-"
-"admin``."
 
 msgid "Miscellaneous"
 msgstr "Variados"
