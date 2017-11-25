@@ -10,8 +10,8 @@
 # Bernardo Fontes <bernardoxhc@gmail.com>, 2016
 # beatorizu <betrizaf@gmail.com>, 2017
 # Bruno Barbosa <bsbruno1@gmail.com>, 2016
-# Carlos E C Leite <caduado@gmail.com>, 2016
-# Carlos E C Leite <caduado@gmail.com>, 2016
+# Carlos Leite <caduado@gmail.com>, 2016
+# Carlos Leite <caduado@gmail.com>, 2016
 # Carlos Schneider <carlosaschjr@gmail.com>, 2016
 # Filipe Cifali Stangler <cifali.filipe@gmail.com>, 2016
 # Cloves Oliveira <clovesolivier23@gmail.com>, 2016
@@ -34,6 +34,7 @@
 # Lafaiet Silva <coldmetall@gmail.com>, 2016
 # Lucas Infante <maccinza@gmail.com>, 2014-2015
 # Lucas Infante <maccinza@gmail.com>, 2014
+# Marcelo Junior <marcelo.jr63@gmail.com>, 2017
 # Marco Rougeth <marco@rougeth.com>, 2015
 # Neto Alves <netoj96@live.com>, 2015
 # Nicolas Zachow Coelho <nicolas@nicolas.eti.br>, 2016
@@ -43,7 +44,7 @@
 # Patrick Mazulo de Brito <pmazulo@gmail.com>, 2015
 # Paulo Dambros <dambroz@hotmail.com>, 2016
 # Paulo Maciel <paulosouzamaciel@gmail.com>, 2016
-# rafaelribeiroo <pereiraribeirorafael@gmail.com>, 2016
+# Rafael Ribeiro <pereiraribeirorafael@gmail.com>, 2016
 # Renne Rocha, 2013
 # Renne Rocha, 2013
 # Rodrigo Boniatti <boniatti.rodrigo@gmail.com>, 2015
@@ -59,9 +60,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-02 09:23-0500\n"
-"PO-Revision-Date: 2017-08-03 14:56+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2017-11-23 13:43-0600\n"
+"PO-Revision-Date: 2017-11-22 21:49+0000\n"
+"Last-Translator: Marcelo Junior <marcelo.jr63@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -1373,14 +1374,10 @@ msgstr ""
 "compiladas durante o tempo de carga."
 
 msgid ""
-"Once one of the regexes matches, Django imports and calls the given view, "
-"which is a simple Python function. Each view gets passed a request object -- "
-"which contains request metadata -- and the values captured in the regex."
+"Once one of the regexes matches, Django calls the given view, which is a "
+"Python function. Each view gets passed a request object -- which contains "
+"request metadata -- and the values captured in the regex."
 msgstr ""
-"Uma vez que uma das expressões regulares case, o Django importa e chama a "
-"view indicada, que é uma simples função Python. Cada view recebe um objeto "
-"request -- que contém os metadados da requisição -- e os valores capturados "
-"na expressão regular."
 
 msgid ""
 "For example, if a user requested the URL \"/articles/2005/05/39323/\", "
@@ -4710,7 +4707,7 @@ msgstr "Testes não só identificam problemas, mas também os previnem"
 msgid ""
 "It's a mistake to think of tests merely as a negative aspect of development."
 msgstr ""
-"É um erro pensar dos testes simplesmente como um aspecto negativo do "
+"É um erro pensar nos testes simplesmente como um aspecto negativo do "
 "desenvolvimento."
 
 msgid ""
@@ -4845,7 +4842,8 @@ msgstr ""
 "`shell`::"
 
 msgid "Since things in the future are not 'recent', this is clearly wrong."
-msgstr "Desde coisas no futuro não são 'recent', é claramente um erro."
+msgstr ""
+"Desde que coisas no futuro não são 'recent', isto é claramente um erro."
 
 msgid "Create a test to expose the bug"
 msgstr "Criar um teste para expor um bug"

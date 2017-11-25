@@ -8,9 +8,9 @@
 # amcorreia <mutley.sandro@gmail.com>, 2017
 # andrewsmedina <andrewsmedina@gmail.com>, 2016
 # andrewsmedina <andrewsmedina@gmail.com>, 2016
-# Carlos E C Leite <caduado@gmail.com>, 2016-2017
+# Carlos Leite <caduado@gmail.com>, 2016-2017
 # Filipe Cifali Stangler <cifali.filipe@gmail.com>, 2016
-# Claudio Rogerio Carvalho Filho <excriptbrasil@gmail.com>, 2017
+# Claudio Rogerio <excriptbrasil@gmail.com>, 2017
 # Edson Heneman <ehenemann@gmail.com>, 2016-2017
 # elizeuelieber <elizeuelieber@live.com>, 2016
 # elizeuelieber <elizeuelieber@live.com>, 2016
@@ -18,14 +18,15 @@
 # Gilson Filho <me@gilsondev.in>, 2016
 # José Luiz Coe <joseluizcoe@gmail.com>, 2016
 # Júlia Kastrup <jkastrupb@gmail.com>, 2016
+# Kaio Cesar <tecnico.kaio@gmail.com>, 2017
 # Lucas Infante <maccinza@gmail.com>, 2014
 # Marcelo Bitencourt <mwbit@hotmail.com>, 2016
 # Michel Souza <michel.ekio@gmail.com>, 2015
 # Pedro Duarte <coinbr@gmail.com>, 2016
 # Pedro Henrique Almeida Cruz <pedrohenriqueacruz@gmail.com>, 2015
-# rafaelribeiroo <pereiraribeirorafael@gmail.com>, 2016
+# Rafael Ribeiro <pereiraribeirorafael@gmail.com>, 2016
 # Rafael Dias <rafaeldiasmello@gmail.com>, 2016
-# rafaelribeiroo <pereiraribeirorafael@gmail.com>, 2016
+# Rafael Ribeiro <pereiraribeirorafael@gmail.com>, 2016
 # Raphael Mendonça, 2016
 # Raphael Mendonça, 2016
 # Raysa Dutra, 2016
@@ -38,8 +39,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-25 13:21-0500\n"
-"PO-Revision-Date: 2017-05-23 13:30+0000\n"
+"POT-Creation-Date: 2017-11-23 13:43-0600\n"
+"PO-Revision-Date: 2017-11-24 02:04+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
@@ -5796,10 +5797,10 @@ msgstr ""
 msgid ""
 "You can also increment or decrement a key that already exists using the "
 "``incr()`` or ``decr()`` methods, respectively. By default, the existing "
-"cache value will incremented or decremented by 1. Other increment/decrement "
-"values can be specified by providing an argument to the increment/decrement "
-"call. A ValueError will be raised if you attempt to increment or decrement a "
-"nonexistent cache key.::"
+"cache value will be incremented or decremented by 1. Other increment/"
+"decrement values can be specified by providing an argument to the increment/"
+"decrement call. A ValueError will be raised if you attempt to increment or "
+"decrement a nonexistent cache key.::"
 msgstr ""
 
 msgid ""
@@ -11022,9 +11023,11 @@ msgstr ""
 "AutoField` no modelo base::"
 
 msgid ""
-"Or use a common ancestor to hold the :class:`~django.db.models.AutoField`::"
+"Or use a common ancestor to hold the :class:`~django.db.models.AutoField`. "
+"This requires using an explicit :class:`~django.db.models.OneToOneField` "
+"from each parent model to the common ancestor to avoid a clash between the "
+"fields that are automatically generated and inherited by the child::"
 msgstr ""
-"Ou use um acestral comum para manter a :class:`~django.db.models.AutoField`::"
 
 msgid "Field name \"hiding\" is not permitted"
 msgstr "O nome de campo \"hiding\" não é permitido."
@@ -11982,13 +11985,15 @@ msgid ""
 "`~django.db.models.query.QuerySet.prefetch_related` thoroughly, and use them:"
 msgstr ""
 
-msgid "in view code,"
+msgid ""
+"in :doc:`managers and default managers </topics/db/managers>` where "
+"appropriate. Be aware when your manager is and is not used; sometimes this "
+"is tricky so don't make assumptions."
 msgstr ""
 
 msgid ""
-"and in :doc:`managers and default managers </topics/db/managers>` where "
-"appropriate. Be aware when your manager is and is not used; sometimes this "
-"is tricky so don't make assumptions."
+"in view code or other layers, possibly making use of :func:`~django.db."
+"models.prefetch_related_objects` where needed."
 msgstr ""
 
 msgid "Don't retrieve things you don't need"
@@ -14315,6 +14320,20 @@ msgstr ""
 msgid "is equivalent to::"
 msgstr ""
 
+msgid "Calling stored procedures"
+msgstr ""
+
+msgid ""
+"Calls a database stored procedure with the given name and optional sequence "
+"of input parameters."
+msgstr ""
+
+msgid "For example, given this stored procedure in an Oracle database:"
+msgstr ""
+
+msgid "This will call it::"
+msgstr ""
+
 msgid "Tablespaces"
 msgstr "Tablespaces"
 
@@ -14561,6 +14580,22 @@ msgstr ""
 msgid ""
 "If you catch exceptions raised by raw SQL queries, Django's behavior is "
 "unspecified and database-dependent."
+msgstr ""
+
+msgid ""
+"You may need to manually revert model state when rolling back a transaction."
+msgstr ""
+
+msgid ""
+"The values of a model's fields won't be reverted when a transaction rollback "
+"happens. This could lead to an inconsistent model state unless you manually "
+"restore the original field values."
+msgstr ""
+
+msgid ""
+"For example, given ``MyModel`` with an ``active`` field, this snippet "
+"ensures that the ``if obj.active`` check at the end uses the correct value "
+"if updating ``active`` to ``True`` fails in the transaction::"
 msgstr ""
 
 msgid ""
@@ -17876,8 +17911,8 @@ msgid "But if :setting:`STATIC_URL` is ``'http://static.example.com/'``::"
 msgstr ""
 
 msgid ""
-"Or if :mod:`~django.contrib.staticfiles` is configured using the `~django."
-"contib.staticfiles.ManifestStaticFilesStorage`::"
+"Or if :mod:`~django.contrib.staticfiles` is configured using the :class:"
+"`~django.contrib.staticfiles.storage.ManifestStaticFilesStorage`::"
 msgstr ""
 
 msgid ""
@@ -24769,9 +24804,10 @@ msgstr ""
 
 msgid ""
 "By default :djadmin:`django-admin makemessages <makemessages>` examines "
-"every file that has the ``.html`` or ``.txt`` file extension. In case you "
-"want to override that default, use the ``--extension`` or ``-e`` option to "
-"specify the file extensions to examine::"
+"every file that has the ``.html``, ``.txt`` or ``.py`` file extension. If "
+"you want to override that default, use the :option:`--extension "
+"<makemessages --extension>` or ``-e`` option to specify the file extensions "
+"to examine::"
 msgstr ""
 
 msgid ""
@@ -25215,7 +25251,7 @@ msgid ""
 "middleware order matters, follow these guidelines:"
 msgstr ""
 
-msgid "Make sure it's one of the first middlewares installed."
+msgid "Make sure it's one of the first middleware installed."
 msgstr ""
 
 msgid ""
@@ -26459,11 +26495,9 @@ msgid "``django``"
 msgstr "``django``"
 
 msgid ""
-"``django`` is the catch-all logger. No messages are posted directly to this "
-"logger."
+"The catch-all logger for messages in the  ``django`` hierarchy. No messages "
+"are posted using this name but instead using one of the loggers below."
 msgstr ""
-"``django`` é o logger que coleta tudo. Nenhuma mensagen é postada "
-"diretamente para esse logger."
 
 msgid "``django.request``"
 msgstr "``django.request``"
@@ -26797,31 +26831,26 @@ msgid "When :setting:`DEBUG` is ``True``:"
 msgstr "Quando :setting:`DEBUG` é ``True``:"
 
 msgid ""
-"The ``django`` catch-all logger sends all messages at the ``INFO`` level or "
-"higher to the console."
+"The ``django`` logger sends messages in the ``django`` hierarchy (except "
+"``django.server``) at the ``INFO`` level or higher to the console."
 msgstr ""
-"O logger ``django`` coleta tudo e envia todas as mensagens no level ``INFO`` "
-"ou maior para o console."
 
 msgid "When :setting:`DEBUG` is ``False``:"
 msgstr "Quando :setting:`DEBUG` é ``False``:"
 
 msgid ""
-"The ``django`` logger send messages with ``ERROR`` or ``CRITICAL`` level to :"
-"class:`AdminEmailHandler`."
+"The ``django`` logger sends messages in the ``django`` hierarchy (except "
+"``django.server``)  with ``ERROR`` or ``CRITICAL`` level to :class:"
+"`AdminEmailHandler`."
 msgstr ""
-"O logger ``django`` envia todas as mensagens com o level ``ERROR`` ou "
-"``CRITICAL`` para a classe :class:`AdminEmailHandler`."
 
 msgid "Independent of the value of :setting:`DEBUG`:"
 msgstr "Independentemente do valor de :setting:`DEBUG`:"
 
 msgid ""
-"The :ref:`django-server-logger` logger sends all messages at the ``INFO`` "
-"level or higher to the console."
+"The :ref:`django-server-logger` logger sends messages at the ``INFO`` level "
+"or higher to the console."
 msgstr ""
-"O logger :ref:`django-server-logger` envia todas as mensagens no level "
-"``INFO`` ou maior para o console."
 
 msgid ""
 "See also :ref:`Configuring logging <configuring-logging>` to learn how you "
@@ -29888,7 +29917,7 @@ msgstr ""
 "problemas devem ser resolvidos no design do seu projeto."
 
 msgid "Serializing Django objects"
-msgstr ""
+msgstr "Serialização de objetos Django"
 
 msgid ""
 "Django's serialization framework provides a mechanism for \"translating\" "
@@ -29896,17 +29925,25 @@ msgid ""
 "based and used for sending Django data over a wire, but it's possible for a "
 "serializer to handle any format (text-based or not)."
 msgstr ""
+"A framework Django tem um mecanismo de serialização para \"traduzir\" "
+"modelos Django de outros formatos. Geralmente outros formatos serão textos e "
+"utilizados para enviar dados Django sob um meio, mas isto é possível para "
+"uma serializador manipular qualquer formato (baseado em texto ou não). "
 
 msgid ""
 "If you just want to get some data from your tables into a serialized form, "
 "you could use the :djadmin:`dumpdata` management command."
 msgstr ""
+"Se você apenas quer obtér alguns dados através de suas tabelas dentro de um "
+"form serializado, você pode utilizar o :djadmin:`dumpdata` management "
+"command."
 
 msgid "Serializing data"
-msgstr ""
+msgstr "Serialização de dados"
 
 msgid "At the highest level, serializing data is a very simple operation::"
 msgstr ""
+"no mais alto nível, serialização de dados é uma operação muito simples::"
 
 msgid ""
 "The arguments to the ``serialize`` function are the format to serialize the "
@@ -29914,14 +29951,21 @@ msgid ""
 "QuerySet` to serialize. (Actually, the second argument can be any iterator "
 "that yields Django model instances, but it'll almost always be a QuerySet)."
 msgstr ""
+"Os argumentos para a função ``serialize´´ estão no formado para serializar "
+"os dados para (veja `Serialization formats`_) e um :class:`~django.db.models."
+"query.QuerySet` para serializar. (Na verdade, o segundo argumento pode ser "
+"qualquer iterador que produz instâncias do modelo Django, mas quase sempre "
+"será um QuerySet)."
 
 msgid "You can also use a serializer object directly::"
-msgstr ""
+msgstr "Você pode também usar diretamente um objeto serializador::"
 
 msgid ""
 "This is useful if you want to serialize data directly to a file-like object "
 "(which includes an :class:`~django.http.HttpResponse`)::"
 msgstr ""
+"Isto é útil se você quer serializar diretamentos os dados para um arquivo "
+"como objeto (qual inclui uma :class:`~django.http.HttpResponse`)::"
 
 msgid ""
 "Calling :func:`~django.core.serializers.get_serializer` with an unknown :ref:"
@@ -33377,6 +33421,15 @@ msgstr ""
 msgid ""
 "Don't forget to also include in :setting:`PASSWORD_HASHERS` any hashing "
 "algorithm used in fixtures, if any."
+msgstr ""
+
+msgid "Preserving the test database"
+msgstr ""
+
+msgid ""
+"The :option:`test --keepdb` option preserves the test database between test "
+"runs. It skips the create and destroy actions which can greatly decrease the "
+"time to run tests."
 msgstr ""
 
 msgid "Testing tools"

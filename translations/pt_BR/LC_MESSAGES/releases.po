@@ -6,14 +6,14 @@
 # André Filipe de Assunção e Brito <decko@birosca.mobi>, 2016
 # andrewsmedina <andrewsmedina@gmail.com>, 2016
 # beatorizu <betrizaf@gmail.com>, 2016
-# Carlos E C Leite <caduado@gmail.com>, 2016
-# Carlos E C Leite <caduado@gmail.com>, 2016
+# Carlos Leite <caduado@gmail.com>, 2016
+# Carlos Leite <caduado@gmail.com>, 2016
 # Carlos Schneider <carlosaschjr@gmail.com>, 2016
 # Filipe Cifali Stangler <cifali.filipe@gmail.com>, 2016
 # Claudio Rogerio <excriptbrasil@gmail.com>, 2017
 # Fabio Oliveira <fabio20rj@gmail.com>, 2016
 # Lucas Infante <maccinza@gmail.com>, 2014
-# rafaelribeiroo <pereiraribeirorafael@gmail.com>, 2016-2017
+# Rafael Ribeiro <pereiraribeirorafael@gmail.com>, 2016-2017
 # Raphael Mendonça, 2016
 # Raysa Dutra, 2016
 # Roger Camargo <huogerac@gmail.com>, 2016
@@ -24,8 +24,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-10 09:43-0500\n"
-"PO-Revision-Date: 2017-10-11 00:24+0000\n"
+"POT-Creation-Date: 2017-11-23 13:43-0600\n"
+"PO-Revision-Date: 2017-11-22 00:20+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
@@ -5909,6 +5909,14 @@ msgid ""
 msgstr ""
 
 msgid ""
+"If you have a middleware that modifies a response's content and appears "
+"before ``CommonMiddleware`` in the ``MIDDLEWARE`` or ``MIDDLEWARE_CLASSES`` "
+"settings, you must reorder your middleware so that responses aren't modified "
+"after ``Content-Length`` is set, or have the response modifying middleware "
+"reset the ``Content-Length`` header."
+msgstr ""
+
+msgid ""
 ":meth:`~django.apps.AppConfig.get_model` and :meth:`~django.apps.AppConfig."
 "get_models` now raise :exc:`~django.core.exceptions.AppRegistryNotReady` if "
 "they're called before models of all applications have been loaded. "
@@ -6561,7 +6569,7 @@ msgstr ""
 msgid "Django 1.11.7 release notes"
 msgstr ""
 
-msgid "*Expected November 1, 2017*"
+msgid "*November 1, 2017*"
 msgstr ""
 
 msgid "Django 1.11.7 fixes several bugs in 1.11.6."
@@ -6570,6 +6578,49 @@ msgstr ""
 msgid ""
 "Prevented ``cache.get_or_set()`` from caching ``None`` if the ``default`` "
 "argument is a callable that returns ``None`` (:ticket:`28601`)."
+msgstr ""
+
+msgid "Fixed the Basque ``DATE_FORMAT`` string (:ticket:`28710`)."
+msgstr ""
+
+msgid ""
+"Made ``QuerySet.reverse()`` affect ``nulls_first`` and ``nulls_last`` (:"
+"ticket:`28722`)."
+msgstr ""
+
+msgid ""
+"Fixed unquoted table names in ``Subquery`` SQL when using ``OuterRef`` (:"
+"ticket:`28689`)."
+msgstr ""
+
+msgid "Django 1.11.8 release notes"
+msgstr ""
+
+msgid "*Expected December 1, 2017*"
+msgstr ""
+
+msgid "Django 1.11.8 fixes several bugs in 1.11.7."
+msgstr ""
+
+msgid ""
+"Reallowed, following a regression in Django 1.10, ``AuthenticationForm`` to "
+"raise the inactive user error when using ``ModelBackend`` (:ticket:`28645`)."
+msgstr ""
+
+msgid ""
+"Added support for ``QuerySet.values()`` and ``values_list()`` for "
+"``union()``, ``difference()``, and ``intersection()`` queries (:ticket:"
+"`28781`)."
+msgstr ""
+
+msgid ""
+"Fixed incorrect index name truncation when using a namespaced ``db_table`` (:"
+"ticket:`28792`)."
+msgstr ""
+
+msgid ""
+"Made ``QuerySet.iterator()`` use server-side cursors on PostgreSQL after "
+"``values()`` and ``values_list()`` (:ticket:`28817`)."
 msgstr ""
 
 msgid "Django 1.2 release notes"
@@ -18356,7 +18407,7 @@ msgstr ""
 
 msgid ""
 ":class:`~django.contrib.auth.forms.PasswordResetForm` now has a method :meth:"
-"`~django.contrib.auth.forms.PasswordResetForm.send_email` that can be "
+"`~django.contrib.auth.forms.PasswordResetForm.send_mail` that can be "
 "overridden to customize the mail to be sent."
 msgstr ""
 

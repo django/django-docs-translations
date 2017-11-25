@@ -9,8 +9,8 @@
 # andrewsmedina <andrewsmedina@gmail.com>, 2016-2017
 # Arthur Silva <arxdsilva@gmail.com>, 2016
 # Augusto Rocha Nascimento <augusto@khoder.com.br>, 2016
-# Carlos E C Leite <caduado@gmail.com>, 2016
-# Carlos E C Leite <caduado@gmail.com>, 2014,2016
+# Carlos Leite <caduado@gmail.com>, 2016
+# Carlos Leite <caduado@gmail.com>, 2014,2016
 # Carlos Schneider <carlosaschjr@gmail.com>, 2016
 # Filipe Cifali Stangler <cifali.filipe@gmail.com>, 2016
 # hoisel <danielhoisel@gmail.com>, 2014
@@ -19,6 +19,7 @@
 # Gilson Filho <me@gilsondev.in>, 2016
 # Guilherme Ferreira <guilherme@uft.edu.br>, 2014
 # Hugo Cosme <hugutux@gmail.com>, 2015
+# Igor Cavalcante <igorcavlim@gmail.com>, 2017
 # Jessica Temporal, 2016-2017
 # Kaio Cesar <tecnico.kaio@gmail.com>, 2015
 # Leonam Silva <leohenryster@gmail.com>, 2016
@@ -37,9 +38,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-02 09:23-0500\n"
-"PO-Revision-Date: 2017-08-03 14:56+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2017-11-23 13:43-0600\n"
+"PO-Revision-Date: 2017-11-21 03:08+0000\n"
+"Last-Translator: Igor Cavalcante <igorcavlim@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -1163,6 +1164,33 @@ msgstr ""
 "Informações sobre como testar comandos de gerenciamento personalizados pode "
 "ser encontradas na :ref:`documentação de teste <topics-testing-management-"
 "commands>`."
+
+msgid "Overriding commands"
+msgstr "Sobrescrevendo comandos."
+
+msgid ""
+"Django registers the built-in commands and then searches for commands in :"
+"setting:`INSTALLED_APPS` in reverse. During the search, if a command name "
+"duplicates an already registered command, the newly discovered command "
+"overrides the first."
+msgstr ""
+"Django registra os comandos internos e depois procura os comandos em :"
+"setting:`INSTALLED_APPS`. Durante a busca, se for encontrado um comando que "
+"já tiver sido registrado, o comando encontrado substitui o primeiro."
+
+msgid ""
+"In other words, to override a command, the new command must have the same "
+"name and its app must be before the overridden command's app in :setting:"
+"`INSTALLED_APPS`."
+msgstr ""
+
+msgid ""
+"Management commands from third-party apps that have been unintentionally "
+"overridden can be made available under a new name by creating a new command "
+"in one of your project's apps (ordered before the third-party app in :"
+"setting:`INSTALLED_APPS`) which imports the ``Command`` of the overridden "
+"command."
+msgstr ""
 
 msgid "Command objects"
 msgstr "Objetos Command"
@@ -6621,7 +6649,7 @@ msgstr ""
 "arquivos PDF com o Django"
 
 msgid "Overriding templates"
-msgstr ""
+msgstr "Sobrescrevendo templates"
 
 msgid ""
 "In your project, you might want to override a template in another Django "

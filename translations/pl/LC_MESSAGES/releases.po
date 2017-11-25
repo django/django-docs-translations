@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-02 09:23-0500\n"
-"PO-Revision-Date: 2017-08-03 14:56+0000\n"
+"POT-Creation-Date: 2017-11-23 13:43-0600\n"
+"PO-Revision-Date: 2017-11-22 00:20+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Polish (http://www.transifex.com/django/django-docs/language/"
 "pl/)\n"
@@ -3136,7 +3136,7 @@ msgstr ""
 
 msgid ""
 "You can :ref:`more easily customize <customize-staticfiles-ignore-patterns>` "
-"the ``collectstatic --ignore_patterns`` option with a custom ``AppConfig``."
+"the ``collectstatic --ignore`` option with a custom ``AppConfig``."
 msgstr ""
 
 msgid "Cache"
@@ -3444,7 +3444,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Added the :attr:`HttpResponse.content_type <django.http.HttpRequest."
+"Added the :attr:`HttpRequest.content_type <django.http.HttpRequest."
 "content_type>` and :attr:`~django.http.HttpRequest.content_params` "
 "attributes which are parsed from the ``CONTENT_TYPE`` header."
 msgstr ""
@@ -3959,7 +3959,7 @@ msgstr ""
 
 msgid ""
 "Private API ``django.forms.models.model_to_dict()`` returns a queryset "
-"rather than a list of primary keys for ``ManyToManyField``\\s ."
+"rather than a list of primary keys for ``ManyToManyField``\\s."
 msgstr ""
 
 msgid ""
@@ -5051,6 +5051,27 @@ msgid ""
 "`27993`)."
 msgstr ""
 
+msgid "Django 1.10.8 release notes"
+msgstr ""
+
+msgid "*September 5, 2017*"
+msgstr ""
+
+msgid "Django 1.10.8 fixes a security issue in 1.10.7."
+msgstr ""
+
+msgid ""
+"CVE-2017-12794: Possible XSS in traceback section of technical 500 debug page"
+msgstr ""
+
+msgid ""
+"In older versions, HTML autoescaping was disabled in a portion of the "
+"template for the technical 500 debug page. Given the right circumstances, "
+"this allowed a cross-site scripting attack. This vulnerability shouldn't "
+"affect most production sites since you shouldn't run with ``DEBUG = True`` "
+"(which makes this page accessible) in your production settings."
+msgstr ""
+
 msgid "Django 1.11 release notes"
 msgstr ""
 
@@ -5079,7 +5100,7 @@ msgstr ""
 
 msgid ""
 "The Django 1.11.x series is the last to support Python 2. The next major "
-"release, Django 2.0, will only support Python 3.5+."
+"release, Django 2.0, will only support Python 3.4+."
 msgstr ""
 
 msgid "Deprecating warnings are no longer loud by default"
@@ -5970,6 +5991,14 @@ msgid ""
 msgstr ""
 
 msgid ""
+"If you have a middleware that modifies a response's content and appears "
+"before ``CommonMiddleware`` in the ``MIDDLEWARE`` or ``MIDDLEWARE_CLASSES`` "
+"settings, you must reorder your middleware so that responses aren't modified "
+"after ``Content-Length`` is set, or have the response modifying middleware "
+"reset the ``Content-Length`` header."
+msgstr ""
+
+msgid ""
 ":meth:`~django.apps.AppConfig.get_model` and :meth:`~django.apps.AppConfig."
 "get_models` now raise :exc:`~django.core.exceptions.AppRegistryNotReady` if "
 "they're called before models of all applications have been loaded. "
@@ -6531,15 +6560,149 @@ msgstr ""
 msgid "Django 1.11.5 release notes"
 msgstr ""
 
-msgid "*Under development*"
-msgstr ""
-
-msgid "Django 1.11.5 fixes several bugs in 1.11.4."
+msgid "Django 1.11.5 fixes a security issue and several bugs in 1.11.4."
 msgstr ""
 
 msgid ""
 "Fixed GEOS version parsing if the version has a commit hash at the end (new "
 "in GEOS 3.6.2) (:ticket:`28441`)."
+msgstr ""
+
+msgid "Added compatibility for ``cx_Oracle`` 6 (:ticket:`28498`)."
+msgstr ""
+
+msgid ""
+"Fixed select widget rendering when option values are tuples (:ticket:"
+"`28502`)."
+msgstr ""
+
+msgid ""
+"Django 1.11 inadvertently changed the sequence and trigger naming scheme on "
+"Oracle. This causes errors on INSERTs for some tables if "
+"``'use_returning_into': False`` is in the ``OPTIONS`` part of ``DATABASES``. "
+"The pre-1.11 naming scheme is now restored. Unfortunately, it necessarily "
+"requires an update to Oracle tables created with Django 1.11.[1-4]. Use the "
+"upgrade script in :ticket:`28451` comment 8 to update sequence and trigger "
+"names to use the pre-1.11 naming scheme."
+msgstr ""
+
+msgid ""
+"Added POST request support to ``LogoutView``, for equivalence with the "
+"function-based ``logout()`` view (:ticket:`28513`)."
+msgstr ""
+
+msgid ""
+"Omitted ``pages_per_range`` from ``BrinIndex.deconstruct()`` if it's "
+"``None`` (:ticket:`25809`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression where ``SelectDateWidget`` localized the years in the "
+"select box (:ticket:`28530`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in 1.11.4 where ``runserver`` crashed with non-Unicode "
+"system encodings on Python 2 + Windows (:ticket:`28487`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 1.10 where changes to a ``ManyToManyField`` "
+"weren't logged in the admin change history (:ticket:`27998`) and prevented "
+"``ManyToManyField`` initial data in model forms from being affected by "
+"subsequent model changes (:ticket:`28543`)."
+msgstr ""
+
+msgid ""
+"Fixed non-deterministic results or an ``AssertionError`` crash in some "
+"queries with multiple joins (:ticket:`26522`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in ``contrib.auth``'s ``login()`` and ``logout()`` views "
+"where they ignored positional arguments (:ticket:`28550`)."
+msgstr ""
+
+msgid "Django 1.11.6 release notes"
+msgstr ""
+
+msgid "*October 5, 2017*"
+msgstr ""
+
+msgid "Django 1.11.6 fixes several bugs in 1.11.5."
+msgstr ""
+
+msgid ""
+"Made the ``CharField`` form field convert whitespace-only values to the "
+"``empty_value`` when ``strip`` is enabled (:ticket:`28555`)."
+msgstr ""
+
+msgid ""
+"Fixed crash when using the name of a model's autogenerated primary key "
+"(``id``) in an ``Index``'s ``fields`` (:ticket:`28597`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 1.9 where a custom view error handler such as "
+"``handler404`` that accesses ``csrf_token`` could cause CSRF verification "
+"failures on other pages (:ticket:`28488`)."
+msgstr ""
+
+msgid "Django 1.11.7 release notes"
+msgstr ""
+
+msgid "*November 1, 2017*"
+msgstr ""
+
+msgid "Django 1.11.7 fixes several bugs in 1.11.6."
+msgstr ""
+
+msgid ""
+"Prevented ``cache.get_or_set()`` from caching ``None`` if the ``default`` "
+"argument is a callable that returns ``None`` (:ticket:`28601`)."
+msgstr ""
+
+msgid "Fixed the Basque ``DATE_FORMAT`` string (:ticket:`28710`)."
+msgstr ""
+
+msgid ""
+"Made ``QuerySet.reverse()`` affect ``nulls_first`` and ``nulls_last`` (:"
+"ticket:`28722`)."
+msgstr ""
+
+msgid ""
+"Fixed unquoted table names in ``Subquery`` SQL when using ``OuterRef`` (:"
+"ticket:`28689`)."
+msgstr ""
+
+msgid "Django 1.11.8 release notes"
+msgstr ""
+
+msgid "*Expected December 1, 2017*"
+msgstr ""
+
+msgid "Django 1.11.8 fixes several bugs in 1.11.7."
+msgstr ""
+
+msgid ""
+"Reallowed, following a regression in Django 1.10, ``AuthenticationForm`` to "
+"raise the inactive user error when using ``ModelBackend`` (:ticket:`28645`)."
+msgstr ""
+
+msgid ""
+"Added support for ``QuerySet.values()`` and ``values_list()`` for "
+"``union()``, ``difference()``, and ``intersection()`` queries (:ticket:"
+"`28781`)."
+msgstr ""
+
+msgid ""
+"Fixed incorrect index name truncation when using a namespaced ``db_table`` (:"
+"ticket:`28792`)."
+msgstr ""
+
+msgid ""
+"Made ``QuerySet.iterator()`` use server-side cursors on PostgreSQL after "
+"``values()`` and ``values_list()`` (:ticket:`28817`)."
 msgstr ""
 
 msgid "Django 1.2 release notes"
@@ -18326,7 +18489,7 @@ msgstr ""
 
 msgid ""
 ":class:`~django.contrib.auth.forms.PasswordResetForm` now has a method :meth:"
-"`~django.contrib.auth.forms.PasswordResetForm.send_email` that can be "
+"`~django.contrib.auth.forms.PasswordResetForm.send_mail` that can be "
 "overridden to customize the mail to be sent."
 msgstr ""
 
@@ -25079,4 +25242,23 @@ msgstr ""
 msgid ""
 "Django 1.8 `(patch) <https://github.com/django/django/"
 "commit/4a6b945dffe8d10e7cec107d93e6efaebfbded29>`__"
+msgstr ""
+
+msgid "September 5, 2017 - :cve:`2017-12794`"
+msgstr ""
+
+msgid ""
+"Possible XSS in traceback section of technical 500 debug page. `Full "
+"description <https://www.djangoproject.com/weblog/2017/sep/05/security-"
+"releases/>`__"
+msgstr ""
+
+msgid ""
+"Django 1.11 `(patch) <https://github.com/django/django/commit/"
+"e35a0c56086924f331e9422daa266e907a4784cc>`__"
+msgstr ""
+
+msgid ""
+"Django 1.10 `(patch) <https://github.com/django/django/"
+"commit/58e08e80e362db79eb0fd775dc81faad90dca47a>`__"
 msgstr ""

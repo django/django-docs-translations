@@ -8,8 +8,10 @@
 # Eiji Warashina <Eiji.Warashina@gmail.com>, 2016
 # JUN OKAZAKI <okazakijun54392@gmail.com>, 2017
 # BanjinS <banjin-s@qbooks.jp>, 2016
+# Kosuke Yamashima <Renet.pc@gmail.com>, 2017
 # Makoto Mori <makomori@sfc.wide.ad.jp>, 2016
 # Masashi SHIBATA <contact@c-bata.link>, 2016
+# Mitsuhiro Sorakubo <msorakubo@msn.com>, 2017
 # mnamihdk, 2017
 # ohkawa <ookawa.m@gmail.com>, 2016
 # Pawllo2 <pawllothesecond@gmail.com>, 2017
@@ -23,9 +25,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-10 09:43-0500\n"
-"PO-Revision-Date: 2017-09-27 12:57+0000\n"
-"Last-Translator: mnamihdk\n"
+"POT-Creation-Date: 2017-11-23 13:43-0600\n"
+"PO-Revision-Date: 2017-11-13 01:20+0000\n"
+"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -29585,6 +29587,9 @@ msgid ""
 "DOCTYPE html>``. For example, it uses boolean attributes such as ``checked`` "
 "rather than the XHTML style of ``checked='checked'``."
 msgstr ""
+"Built-in widgets によって作られる HTML は、``<!DOCTYPE html>`` を対象とした "
+"HTML5 シンタックスを使います。例えば、XHTML スタイルである "
+"``checked='checked'`` よりも、``checked`` といった boolean 属性を使います。"
 
 msgid ""
 "Widgets should not be confused with the :doc:`form fields </ref/forms/"
@@ -38198,15 +38203,18 @@ msgid ""
 "of the type of the first ``QuerySet`` even if the arguments are ``QuerySet``"
 "\\s of other models. Passing different models works as long as the "
 "``SELECT`` list is the same in all ``QuerySet``\\s (at least the types, the "
-"names don't matter as long as the types in the same order)."
+"names don't matter as long as the types in the same order). In such cases, "
+"you must use the column names from the first ``QuerySet`` in ``QuerySet`` "
+"methods applied to the resulting ``QuerySet``. For example::"
 msgstr ""
 
 msgid ""
-"In addition, only ``LIMIT``, ``OFFSET``, ``COUNT(*)``, and ``ORDER BY`` (i."
-"e. slicing, :meth:`count`, and :meth:`order_by`) are allowed on the "
-"resulting ``QuerySet``. Further, databases place restrictions on what "
-"operations are allowed in the combined queries. For example, most databases "
-"don't allow ``LIMIT`` or ``OFFSET`` in the combined queries."
+"In addition, only ``LIMIT``, ``OFFSET``, ``COUNT(*)``, ``ORDER BY``, and "
+"specifying columns (i.e. slicing, :meth:`count`, :meth:`order_by`, and :meth:"
+"`values()`/:meth:`values_list()`) are allowed on the resulting ``QuerySet``. "
+"Further, databases place restrictions on what operations are allowed in the "
+"combined queries. For example, most databases don't allow ``LIMIT`` or "
+"``OFFSET`` in the combined queries."
 msgstr ""
 
 msgid "``COUNT(*)`` support was added."
@@ -38435,7 +38443,7 @@ msgstr ""
 msgid ""
 "This will fetch the best pizza and all the toppings for the best pizza for "
 "each restaurant. This will be done in 3 database queries - one for the "
-"restaurants, one for the 'best pizzas', and one for one for the toppings."
+"restaurants, one for the 'best pizzas', and one for the toppings."
 msgstr ""
 
 msgid ""
@@ -39097,14 +39105,18 @@ msgid ""
 "or created object and ``created`` is a boolean specifying whether a new "
 "object was created."
 msgstr ""
+"(Object, created) のタプルを返します。\"Object\"は受け取ったものか作られたも"
+"のです。そして\"created\"はそのObjectが作られたものかどうかのBooleanです。"
 
 msgid "This is meant as a shortcut to boilerplatish code. For example::"
-msgstr ""
+msgstr "これは手っ取り早い定型的なコードです。例えば::"
 
 msgid ""
 "This pattern gets quite unwieldy as the number of fields in a model goes up. "
 "The above example can be rewritten using ``get_or_create()`` like so::"
 msgstr ""
+"このパターンはかなり扱いにくい as the number of fields in a モデル goes up. "
+"上記の例は\"get_or_create()\"を使ってこのように書きなおすことができます::"
 
 msgid ""
 "Any keyword arguments passed to ``get_or_create()`` — *except* an optional "
@@ -39207,6 +39219,8 @@ msgid ""
 "updated object and ``created`` is a boolean specifying whether a new object "
 "was created."
 msgstr ""
+"(Object, created) のタプルを返します。\"Object\"は受け取ったものか更新したも"
+"のです。そして\"created\"はそのObjectが更新されたものかどうかのBooleanです。"
 
 msgid ""
 "The ``update_or_create`` method tries to fetch an object from database based "
