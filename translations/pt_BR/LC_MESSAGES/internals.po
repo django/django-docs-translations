@@ -4,9 +4,9 @@
 #
 # Translators:
 # amcorreia <mutley.sandro@gmail.com>, 2016
-# Carlos E C Leite <caduado@gmail.com>, 2016-2017
-# Carlos E C Leite <caduado@gmail.com>, 2016
-# Claudio Rogerio Carvalho Filho <excriptbrasil@gmail.com>, 2017
+# Carlos Leite <caduado@gmail.com>, 2016-2017
+# Carlos Leite <caduado@gmail.com>, 2016
+# Claudio Rogerio <excriptbrasil@gmail.com>, 2017
 # Edson Heneman <ehenemann@gmail.com>, 2016
 # Gilson Filho <me@gilsondev.in>, 2016
 # Gustavo Fonseca <gustavofonsecamail@gmail.com>, 2017
@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-25 13:21-0500\n"
-"PO-Revision-Date: 2017-05-23 12:46+0000\n"
+"POT-Creation-Date: 2017-12-18 15:16-0600\n"
+"PO-Revision-Date: 2017-12-03 01:15+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
@@ -2183,6 +2183,28 @@ msgstr ""
 msgid "Use four spaces for indentation."
 msgstr "Utilize quatro espaços para identação."
 
+msgid "Use four space hanging indentation rather than vertical alignment::"
+msgstr ""
+
+msgid "Instead of::"
+msgstr ""
+
+msgid ""
+"This makes better use of space and avoids having to realign strings if the "
+"length of the first line changes."
+msgstr ""
+
+msgid ""
+"Use single quotes for strings, or a double quote if the the string contains "
+"a single quote. Don't waste time doing unrelated refactoring of existing "
+"code to conform to this style."
+msgstr ""
+
+msgid ""
+"Avoid use of \"we\" in comments, e.g. \"Loop over\" rather than \"We loop "
+"over\"."
+msgstr ""
+
 msgid ""
 "Use underscores, not camelCase, for variable, function and method names (i."
 "e. ``poll.get_unique_voters()``, not ``poll.getUniqueVoters()``)."
@@ -2341,15 +2363,6 @@ msgstr ""
 
 msgid "Don't do this, either::"
 msgstr "Não faça isso também::"
-
-msgid ""
-"If you define a ``__str__`` method (previously ``__unicode__`` before Python "
-"3 was supported), decorate the model class with :func:`~django.utils."
-"encoding.python_2_unicode_compatible`."
-msgstr ""
-"Se você definir um método ``__str__`` (previamente ``__unicode__`` antes do "
-"Python 3 passar a ser suportado), utilize o decorator :func:`~django.utils."
-"encoding.python_2_unicode_compatible` na classe."
 
 msgid ""
 "The order of model inner classes and standard methods should be as follows "
@@ -2686,12 +2699,9 @@ msgstr ""
 "cobertura de código:"
 
 msgid ""
-"Execute ``python -m http.server`` (or ``python -m SimpleHTTPServer`` on "
-"Python 2) from the root directory (not from inside ``js_tests``)."
+"Execute ``python -m http.server`` from the root directory (not from inside "
+"``js_tests``)."
 msgstr ""
-"Execute o comando ``python -m http.server`` (ou ``python -m "
-"SimpleHTTPServer`` no Python 2) do diretório raiz (não de dentro do "
-"diretório ``js_tests``)."
 
 msgid "Open http://localhost:8000/js_tests/tests.html in your web browser."
 msgstr ""
@@ -3324,17 +3334,11 @@ msgstr ""
 "termos procurados se necessário."
 
 msgid ""
-"If you have trouble installing the requirements, you can skip that step, "
-"except on Python 2, where you must ``pip install mock``. See :ref:`running-"
-"unit-tests-dependencies` for details on installing the optional test "
-"dependencies. If you don't have an optional dependency installed, the tests "
-"that require it will be skipped."
+"If you have trouble installing the requirements, you can skip that step. "
+"See :ref:`running-unit-tests-dependencies` for details on installing the "
+"optional test dependencies. If you don't have an optional dependency "
+"installed, the tests that require it will be skipped."
 msgstr ""
-"Se você tiver problemas instalando as dependências, você pode pular esse "
-"passo, exceto no Python 2, onde você deve executar ``pip install mock``. "
-"Veja em :ref:`running-unit-tests-dependencies` para mais detalhes sobre "
-"instalação opcional de dependências de testes. Se você não tem uma "
-"dependência de teste instalada, os testes que a exigem, devem ser ignorada."
 
 msgid ""
 "Running the tests requires a Django settings module that defines the "
@@ -3384,9 +3388,9 @@ msgid ""
 "By default, ``tox`` runs the test suite with the bundled test settings file "
 "for SQLite, ``flake8``, ``isort``, and the documentation spelling checker. "
 "In addition to the system dependencies noted elsewhere in this "
-"documentation, the commands ``python2`` and ``python3`` must be on your path "
-"and linked to the appropriate versions of Python. A list of default "
-"environments can be seen as follows::"
+"documentation, the command ``python3`` must be on your path and linked to "
+"the appropriate version of Python. A list of default environments can be "
+"seen as follows::"
 msgstr ""
 
 msgid "Testing other Python versions and database backends"
@@ -3620,9 +3624,6 @@ msgstr "bcrypt_"
 msgid "docutils_"
 msgstr "docutils_"
 
-msgid "enum34_ (Python 2 only)"
-msgstr "enum34_ (somente Python 2)"
-
 msgid "geoip2_"
 msgstr "geoip2_"
 
@@ -3646,9 +3647,6 @@ msgstr "setuptools_"
 
 msgid "memcached_, plus a :ref:`supported Python binding <memcached>`"
 msgstr "memcached_, e um :ref:`Python binding suportado<memcached>`"
-
-msgid "mock_ (for Python 2)"
-msgstr "mock_ (for Python 2)"
 
 msgid "gettext_ (:ref:`gettext_on_windows`)"
 msgstr "gettext_ (:ref:`gettext_on_windows`)"
@@ -5175,6 +5173,36 @@ msgstr ""
 "deprecation-policy>`. Mais detalhes sobre cada item geralmente podem ser "
 "encontrados nas notas da release de duas versões anteriores."
 
+msgid "3.0"
+msgstr ""
+
+msgid ""
+"See the :ref:`Django 2.0 release notes<deprecated-features-2.0>` for more "
+"details on these changes."
+msgstr ""
+
+msgid "The ``django.db.backends.postgresql_psycopg2`` module will be removed."
+msgstr ""
+
+msgid "``django.shortcuts.render_to_response()`` will be removed."
+msgstr ""
+
+msgid "The ``DEFAULT_CONTENT_TYPE`` setting will be removed."
+msgstr ""
+
+msgid "``HttpRequest.xreadlines()`` will be removed."
+msgstr ""
+
+msgid ""
+"Support for the ``context`` argument of ``Field.from_db_value()`` and "
+"``Expression.convert_value()`` will be removed."
+msgstr ""
+
+msgid ""
+"The ``field_name`` keyword argument of ``QuerySet.earliest()`` and "
+"``latest()`` will be removed."
+msgstr ""
+
 msgid "2.1"
 msgstr "2.1"
 
@@ -5396,11 +5424,8 @@ msgstr ""
 "``content_type``."
 
 msgid ""
-"The ``app_name`` argument to :func:`~django.conf.urls.include()` will be "
-"removed."
+"The ``app_name`` argument to ``django.conf.urls.include()`` will be removed."
 msgstr ""
-"O argumento ``app_name`` em :func:`~django.conf.urls.include()` será "
-"removido."
 
 msgid ""
 "Support for passing a 3-tuple as the first argument to ``include()`` will be "
@@ -6337,12 +6362,9 @@ msgstr ""
 
 msgid ""
 "The ``SEND_BROKEN_LINK_EMAILS`` setting will be removed. Add the :class:"
-"`django.middleware.common.BrokenLinkEmailsMiddleware` middleware to your :"
-"setting:`MIDDLEWARE_CLASSES` setting instead."
+"`django.middleware.common.BrokenLinkEmailsMiddleware` middleware to your "
+"``MIDDLEWARE_CLASSES`` setting instead."
 msgstr ""
-"O setting ``SEND_BROKEN_LINK_EMAILS`` será removido. Para substitui-lo, "
-"adicione o :class:`django.middleware.common.BrokenLinkEmailsMiddleware` "
-"middleware  :setting:`MIDDLEWARE_CLASSES` no seu setting."
 
 msgid ""
 "``django.middleware.doc.XViewMiddleware`` will be removed. Use ``django."
@@ -6736,15 +6758,11 @@ msgstr ""
 "gis.geoip`` na 1.4 -- o atalho em ``django.contrib.gis.utils`` será removido."
 
 msgid ""
-"``django.conf.urls.defaults`` will be removed. The functions :func:`~django."
-"conf.urls.include`, ``patterns()`` and :func:`~django.conf.urls.url` plus :"
-"data:`~django.conf.urls.handler404`, :data:`~django.conf.urls.handler500`, "
-"are now available through :mod:`django.conf.urls` ."
+"``django.conf.urls.defaults`` will be removed. The functions ``include()``, "
+"``patterns()``, and ``url()``, plus :data:`~django.conf.urls.handler404` "
+"and :data:`~django.conf.urls.handler500` are now available through ``django."
+"conf.urls``."
 msgstr ""
-"``django.conf.urls.defaults`` será removida. A função :func:`~django.conf."
-"urls.include`, ``patterns()`` e :func:`~django.conf.urls.url` além de :data:"
-"`~django.conf.urls.handler404`, :data:`~django.conf.urls.handler500`, agora "
-"estão disponíveis através de :mod:`django.conf.urls` ."
 
 msgid ""
 "The functions ``setup_environ()`` and ``execute_manager()`` will be removed "
@@ -8113,6 +8131,12 @@ msgstr ""
 "para todos os outros); você pode fazer isso usando o site do admin."
 
 msgid ""
+"Create new ``DocumentRelease`` objects for each language that has an entry "
+"for the previous release. Update djangoproject.com's `robots.docs.txt`__ "
+"file by copying entries from the previous release."
+msgstr ""
+
+msgid ""
 "Post the release announcement to the |django-announce|, |django-developers|, "
 "and |django-users| mailing lists. This should include a link to the "
 "announcement blog post. If this is a security release, also include oss-"
@@ -8367,6 +8391,11 @@ msgstr "``django-developers``"
 
 msgid "The discussion about the development of Django itself takes place here."
 msgstr "A discussão sobre o desenvolvimento do Django em si acontece aqui."
+
+msgid ""
+"Before asking a question about how to contribute, read :doc:`/internals/"
+"contributing/index`. Many frequently asked questions are answered there."
+msgstr ""
 
 msgid ""
 "Please make use of :ref:`django-users mailing list <django-users-mailing-"

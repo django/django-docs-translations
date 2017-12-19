@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the Django package.
 #
 # Translators:
+# Adriano Ramos <adriano157@gmail.com>, 2017
 # amcorreia <mutley.sandro@gmail.com>, 2016
 # Barbara Moraes Vicente <bar.mvicente@gmail.com>, 2016
 # Bernardo Fontes <bernardoxhc@gmail.com>, 2016
@@ -12,7 +13,7 @@
 # Daniel Silva <xtecnico2@gmail.com>, 2016
 # Diego Rocha <diego@diegorocha.com.br>, 2016
 # Ely Araujo <christie.araujo@uol.com.br>, 2015
-# Felipe Lube <felipe.lubra@gmail.com>, 2016
+# Felipe Lube de Bragança <felipe.lubra@gmail.com>, 2016
 # Felipe Nogueira de Souza <felipensouza@live.com>, 2017
 # Felipe Rodrigues <bidu.pub@gmail.com>, 2016
 # Hugo Tácito <hugotacito@gmail.com>, 2016
@@ -36,9 +37,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-23 13:43-0600\n"
-"PO-Revision-Date: 2017-11-03 18:27+0000\n"
-"Last-Translator: Felipe Nogueira de Souza <felipensouza@live.com>\n"
+"POT-Creation-Date: 2017-12-18 15:16-0600\n"
+"PO-Revision-Date: 2017-12-10 16:18+0000\n"
+"Last-Translator: Adriano Ramos <adriano157@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -184,21 +185,12 @@ msgid ""
 "Inconsistent row counts may be caused by missing foreign key values or a "
 "foreign key field incorrectly set to :attr:`null=False <django.db.models."
 "Field.null>`. If you have a record with a :class:`~django.db.models."
-"ForeignKey` pointing to a non-existent object and that foreign key is "
+"ForeignKey` pointing to a nonexistent object and that foreign key is "
 "included is :attr:`~django.contrib.admin.ModelAdmin.list_display`, the "
 "record will not be shown in the admin changelist because the Django model is "
 "declaring an integrity constraint that is not implemented at the database "
 "level."
 msgstr ""
-"Contagens inconsistentes de linhas podem ser causadas por chaves "
-"estrangeiras ausentes ou um campo de chave estrangeira configurado "
-"incorretamente para :attr:`null=False <django.db.models.Field.null>`. Se "
-"você possui um registro com :class:`~django.db.models.ForeignKey` apontando "
-"para um objeto inexistente e a chave estrangeira inserida for :attr:`~django."
-"contrib.admin.ModelAdmin.list_display`, o registro não será mostrado na "
-"administração de lista de mudanças porque o modelo do Django está declarando "
-"uma restrição de integridade que não é implementada a nível de banco de "
-"dados."
 
 msgid "How can I customize the functionality of the admin interface?"
 msgstr ""
@@ -1143,34 +1135,16 @@ msgid "What Python version should I use with Django?"
 msgstr "Qual versão do Python eu devo usar com Django?"
 
 msgid ""
-"As of Django 1.6, Python 3 support is considered stable and you can safely "
-"use it in production. See also :doc:`/topics/python3`. However, the "
-"community is still in the process of migrating third-party packages and "
-"applications to Python 3."
+"Python 3 is recommended. Django 1.11 is the last version to support Python "
+"2.7. Support for Python 2.7 and Django 1.11 ends in 2020."
 msgstr ""
-"Assim como o Django 1.6, o suporte do Python 3 é considerado estável e você "
-"pode usá-lo com segurança em produção. Veja também :doc:`/topics/python3`. "
-"No entanto, a comunidade ainda está em processo de migração de pacotes e "
-"aplicações de terceiros para o Python 3. "
-
-msgid ""
-"If you're starting a new project, and the dependencies you plan to use work "
-"on Python 3, you should use Python 3. If they don't, consider contributing "
-"to the porting efforts, or stick to Python 2."
-msgstr ""
-"Se você estiver iniciando um novo projeto e as dependências que você planeja "
-"usar funcionam em Python 3, você deveria utilizar Python 3. Se elas não "
-"funcionam, considere contribuir para os esforços de portabilidade, ou fique "
-"com o Python 2."
+"Python 3 é recomendado. Django 1.11 é a última versão a suportar Python 2.7. "
+"Suporte para Python 2.7 e Django 1.11 termina em 2020."
 
 msgid ""
 "Since newer versions of Python are often faster, have more features, and are "
-"better supported, all else being equal, we recommend that you use the latest "
-"2.x.y or 3.x.y release."
+"better supported, the latest version of Python 3 is recommended."
 msgstr ""
-"Como as versões mais recentes do Python são frequentemente mais rápidas, têm "
-"mais funcionalidades e são melhores suportadas, considerando tudo isso, nós "
-"recomendamos que você use no mínimo o release 2.x.y ou 3.x.y mais recente."
 
 msgid ""
 "You don't lose anything in Django by using an older release, but you don't "
@@ -1433,18 +1407,6 @@ msgstr ""
 "\" nos sistemas baseados em UNIX (você pode checar com o comando "
 "``locale``). Se este é o caso, por favor, consulte a documentação do sistema "
 "para aprender como mudar para o locale: UTF-8."
-
-msgid "You created raw bytestrings, which is easy to do on Python 2::"
-msgstr "Você criou um raw bytestrings, o que é fácil de fazer em Python 2::"
-
-msgid ""
-"Either use the ``u''`` prefix or even better, add the ``from __future__ "
-"import unicode_literals`` line at the top of your file so that your code "
-"will be compatible with Python 3.2 which doesn't support the ``u''`` prefix."
-msgstr ""
-"Use o prefixo ``u''`` ou até melhor, adicione a linha ``from __future__ "
-"import unicode_literals`` no topo do arquivo para torná-lo compatível com "
-"Python 3.2, que não suporta o prefixo ``u''``."
 
 msgid "Related resources:"
 msgstr "Recursos relacionados:"
