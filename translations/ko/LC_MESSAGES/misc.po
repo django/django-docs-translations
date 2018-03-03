@@ -6,14 +6,15 @@
 # DoJun Lee <leedoe0709@ssu.ac.kr>, 2017
 # Hwang, Geon Gu <under_09@naver.com>, 2017
 # Hyungsuk Yoon <youhanmir@gmail.com>, 2016
+# Jaeyoung Heo <jay.jaeyoung@gmail.com>, 2017
 # Minseok Choi <cms9597@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-02 09:23-0500\n"
-"PO-Revision-Date: 2017-08-03 14:56+0000\n"
-"Last-Translator: DoJun Lee <leedoe0709@ssu.ac.kr>\n"
+"POT-Creation-Date: 2017-12-27 13:18-0600\n"
+"PO-Revision-Date: 2017-12-20 12:46+0000\n"
+"Last-Translator: Jaeyoung Heo <jay.jaeyoung@gmail.com>\n"
 "Language-Team: Korean (http://www.transifex.com/django/django-docs/language/"
 "ko/)\n"
 "MIME-Version: 1.0\n"
@@ -77,11 +78,15 @@ msgid ""
 "See :ref:`official-releases` for more details on how Django's version "
 "numbering scheme works, and how features will be deprecated."
 msgstr ""
+":ref:`official-releases`를 보시면 장고 버전 숫자를 만드는 기준에 대한 자세한 "
+"설명이 있고, 어떻게 기능들이 비활성화 되는지 알 수 있습니다."
 
 msgid ""
 "We'll only break backwards compatibility of these APIs if a bug or security "
 "hole makes it completely unavoidable."
 msgstr ""
+"저희는 버그나 보안 문제가 완전히 피할 수 없는 문제가 되지 않는 이상 이전 버"
+"전 호환성을 지킵니다."
 
 msgid "Stable APIs"
 msgstr "안정적인 API들"
@@ -109,12 +114,16 @@ msgid ""
 "everything necessary to fix it. This might mean breaking backwards "
 "compatibility; security trumps the compatibility guarantee."
 msgstr ""
+"저희가 보안 문제를 인지하면, :ref:`security reporting policy <reporting-"
+"security-issues>` 를 따라주세요. 저희는 그것을 해결하기 위해 무엇이든 할것입"
+"니다. 이것은 하위버전 호환성을 깰 수도 있다는 말입니다. 보안 문제는 호환성을 "
+"보장 보다 우선시 됩니다."
 
 msgid "APIs marked as internal"
-msgstr ""
+msgstr "API들은 내부것으로 표시됩니다."
 
 msgid "Certain APIs are explicitly marked as \"internal\" in a couple of ways:"
-msgstr ""
+msgstr "어떤 API들은 다양한 방법으로 \"internal\"로 표시됩니다."
 
 msgid ""
 "Some documentation refers to internals and mentions them as such. If the "
