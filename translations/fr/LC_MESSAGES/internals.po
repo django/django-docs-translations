@@ -5,7 +5,7 @@
 # Translators:
 # Laville Augustin <augustin.laville@gustavi.net>, 2014,2016
 # Christophe CHAUVET <christophe.chauvet@gmail.com>, 2013
-# Claude Paroz <claude@2xlibre.net>, 2014-2017
+# Claude Paroz <claude@2xlibre.net>, 2014-2018
 # Laurent Paoletti <lp@providenz.fr>, 2014
 # Mathieu Dupuy <deronnax@gmail.com>, 2014
 # mlorant <maxime.lorant@gmail.com>, 2014-2015
@@ -13,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-18 15:16-0600\n"
-"PO-Revision-Date: 2017-12-03 01:15+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2018-03-06 14:21-0600\n"
+"PO-Revision-Date: 2018-03-07 16:24+0000\n"
+"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/"
 "fr/)\n"
 "MIME-Version: 1.0\n"
@@ -103,7 +103,7 @@ msgid ""
 "**Do** ask on |django-users| or `#django`_ *first* if you're not sure if "
 "what you're seeing is a bug."
 msgstr ""
-"**Demandez d'abord** sur |django-users| ou `#django` si vous n'êtes pas sûr "
+"**Demandez d'abord** sur |django-users| ou `#django`_ si vous n'êtes pas sûr "
 "que ce que vous voyez est réellement une anomalie."
 
 msgid ""
@@ -559,8 +559,7 @@ msgstr ""
 
 msgid ""
 "Separate bug fixes from feature changes. Bugfixes may need to be backported "
-"to the stable branch, according to the :ref:`backwards-compatibility policy "
-"<backwards-compatibility-policy>`."
+"to the stable branch, according to :ref:`supported-versions-policy`."
 msgstr ""
 
 msgid ""
@@ -888,7 +887,7 @@ msgid ""
 msgstr ""
 "Les traductions de Transifex ne sont intégrées dans le dépôt Django qu'au "
 "moment d'une nouvelle :term:`publication principale`. Nous essayons de les "
-"mettre à jour une seconde fois lors d'une des publications mineures "
+"mettre à jour une seconde fois lors d'une des :term:`publications mineures` "
 "suivantes, mais cela dépend de la disponibilité du gestionnaire des "
 "traductions. Ne manquez donc pas la période de gel des chaînes (entre la "
 "version de prépublication et la version majeure) pour saisir l'opportunité "
@@ -3906,13 +3905,13 @@ msgid "To link, use ``:lookup:`exact```."
 msgstr ""
 
 msgid "``django-admin`` commands::"
-msgstr ""
+msgstr "Commandes ``django-admin``::"
 
 msgid "To link, use ``:djadmin:`migrate```."
 msgstr ""
 
 msgid "``django-admin`` command-line options::"
-msgstr ""
+msgstr "Options de ligne de commande ``django-admin``::"
 
 msgid ""
 "To link, use ``:option:`command_name --traceback``` (or omit "
@@ -4088,7 +4087,7 @@ msgid ""
 "need to update this file when updating the documentation, as it's updated "
 "once as part of the release process."
 msgstr ""
-"Sphinx peut générer une page de manuel pour la commande doc:`django-admin </"
+"Sphinx peut générer une page de manuel pour la commande :doc:`django-admin </"
 "ref/django-admin>`. Ceci est configuré dans ``docs/conf.py``. Au contraire "
 "d'autres productions de documentation, cette page de manuel devrait être "
 "contenue dans le dépôt de Django et dans ses publications comme ``docs/man/"
@@ -6736,7 +6735,7 @@ msgid ""
 "and its community."
 msgstr ""
 "Le projet Django n'est pas une entité légalement constituée. La `fondation "
-"Django Software`, une organisation à but non lucratif, gère les affaires "
+"Django Software`_, une organisation à but non lucratif, gère les affaires "
 "financières et légales liées au projet Django. En dehors de ces domaines, la "
 "fondation laisse le projet Django gérer le développement du logiciel Django, "
 "son écosystème et sa communauté."
