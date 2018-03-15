@@ -1,0 +1,155 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+#
+# Translators:
+# Kevin Sze <leiarix@gmail.com>, 2014
+# Ronald White <ouyanghongyu@gmail.com>, 2014-2015
+# Xiang Yu <bupt.aswmtjdsj@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: django-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-13 14:25-0500\n"
+"PO-Revision-Date: 2017-09-19 16:41+0000\n"
+"Last-Translator: Ronald White <ouyanghongyu@gmail.com>\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
+"language/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Glossary"
+msgstr "词汇表"
+
+msgid "concrete model"
+msgstr "具体的模型"
+
+msgid ""
+"A non-abstract (:attr:`abstract=False <django.db.models.Options.abstract>`) "
+"model."
+msgstr ""
+"一个非抽象 (:attr:`abstract=False <django.db.models.Options.abstract>`) 模型."
+
+msgid "field"
+msgstr "域"
+
+msgid ""
+"An attribute on a :term:`model`; a given field usually maps directly to a "
+"single database column."
+msgstr ""
+"一个属性在 :term:`model` 中; 一个给定的字段通常被映射到数据库表的一个字段上."
+
+msgid "See :doc:`/topics/db/models`."
+msgstr "参见 :doc:`/topics/db/models` 。"
+
+msgid "generic view"
+msgstr "通用视图"
+
+msgid ""
+"A higher-order :term:`view` function that provides an abstract/generic "
+"implementation of a common idiom or pattern found in view development."
+msgstr ""
+"一个高阶的 :term:`view` 函数针对开发中常见的习惯用法或模式, 提供了一个抽象/通"
+"用的实现."
+
+msgid "See :doc:`/topics/class-based-views/index`."
+msgstr "参见 :doc: `/topics/class-based-views/index` 。"
+
+msgid "model"
+msgstr "模型"
+
+msgid "Models store your application's data."
+msgstr "模型存储你的应用程序的数据."
+
+msgid "MTV"
+msgstr "MTV"
+
+msgid ""
+"\"Model-template-view\"; a software pattern, similar in style to MVC, but a "
+"better description of the way Django does things."
+msgstr ""
+"\"Model-template-view\"; 一个软件模式, 风格类似于MVC, 但是更好的描述了Django"
+"所做的事."
+
+msgid "See :ref:`the FAQ entry <faq-mtv>`."
+msgstr "参见 :ref:`the FAQ entry <faq-mtv>` 。"
+
+msgid "MVC"
+msgstr "MVC"
+
+msgid ""
+"`Model-view-controller`__; a software pattern. Django :ref:`follows MVC to "
+"some extent <faq-mtv>`."
+msgstr ""
+"`Model-view-controller`__; 一个软件开发模式. Django :ref:`在某种程度上这样实"
+"现MVC <faq-mtv>`."
+
+msgid "project"
+msgstr "项目"
+
+msgid ""
+"A Python package -- i.e. a directory of code -- that contains all the "
+"settings for an instance of Django. This would include database "
+"configuration, Django-specific options and application-specific settings."
+msgstr ""
+"一个Python包 -- 即一个代码目录 -- 它包含Django的一个实例中所有的设置. 这包括"
+"数据库配置, Django的特定选项和特定应用程序设置."
+
+msgid "property"
+msgstr "属性"
+
+msgid ""
+"Also known as \"managed attributes\", and a feature of Python since version "
+"2.2. This is a neat way to implement attributes whose usage resembles "
+"attribute access, but whose implementation uses method calls."
+msgstr ""
+"也被称为 \"管理属性\", 自Python 2.2版本以来的功能. 这是用一个巧妙的方法来实现"
+"的类属性, 其用法类似于属性的访问, 但其实现是使用的方法调用."
+
+msgid "See :class:`property`."
+msgstr "参见 :class:`property`."
+
+msgid "queryset"
+msgstr "查询集"
+
+msgid ""
+"An object representing some set of rows to be fetched from the database."
+msgstr "一个对象表示了从数据库中取到的某些行."
+
+msgid "See :doc:`/topics/db/queries`."
+msgstr "参见 :doc:`/topics/db/queries` 。"
+
+msgid "slug"
+msgstr "斜杠"
+
+msgid ""
+"A short label for something, containing only letters, numbers, underscores "
+"or hyphens. They're generally used in URLs. For example, in a typical blog "
+"entry URL:"
+msgstr ""
+"一个简短标记的东西, 只包含字母, 数字, 下划线或连字符. 他们一般选用的URL. 例"
+"如, 在一个典型的博客文章的网址:"
+
+msgid "the last bit (``spring``) is the slug."
+msgstr "最末尾 (``spring``) 是一个斜杠."
+
+msgid "template"
+msgstr "模板"
+
+msgid ""
+"A chunk of text that acts as formatting for representing data. A template "
+"helps to abstract the presentation of data from the data itself."
+msgstr ""
+"一个文本块, 作为用来来表示数据的格式. 模板有助于从数据本身表现抽象数据."
+
+msgid "See :doc:`/topics/templates`."
+msgstr "参见 :doc:`/topics/templates` 。"
+
+msgid "view"
+msgstr "视图"
+
+msgid "A function responsible for rendering a page."
+msgstr "负责渲染页面的函数."

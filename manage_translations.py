@@ -18,7 +18,12 @@ from argparse import ArgumentParser
 from subprocess import PIPE, Popen, call, check_output
 
 # intro and index ressources must be fully translated for these languages
-ACTIVE_LANGUAGES = ['el', 'es', 'fr', 'id', 'ja', 'ko', 'pl', 'pt_BR']
+ACTIVE_LANGUAGES = ['el', 'es', 'fr', 'id', 'ja', 'ko', 'pl', 'pt_BR', 'zh_Hans']
+TX_LANG_MAP = {
+    'zh_Hans': 'zh_CN',
+    'zh_Hant': 'zh_TW',
+}
+
 # See https://www.transifex.com/django/django-docs/content/
 ALL_RESOURCES = [
     'contents', 'faq', 'glossary', 'howto', 'index', 'internals', 'intro', 'misc',
@@ -56,7 +61,8 @@ def fetch(resources=None, languages=None):
     if languages is None:
         languages = ACTIVE_LANGUAGES
     for lang in languages:
-        call('tx pull -l %(lang)s --minimum-perc=5' % {'lang': lang}, shell=True)
+        tx_lang = TX_LANG_MAP.get(lang, lang)
+        call('tx pull -l %(lang)s --minimum-perc=5' % {'lang': tx_lang}, shell=True)
         lang_dir = 'translations/%(lang)s/LC_MESSAGES/' % {'lang': lang}
         for po_file in os.listdir(lang_dir):
             if not po_file.endswith(".po"):
