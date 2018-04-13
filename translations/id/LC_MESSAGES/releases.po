@@ -5,13 +5,14 @@
 # Translators:
 # Fery Setiawan <gembelweb@gmail.com>, 2015-2017
 # oon arfiandwi (OonID) <oon.arfiandwi@gmail.com>, 2016
+# oon arfiandwi (OonID) <oon.arfiandwi@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-18 15:16-0600\n"
-"PO-Revision-Date: 2017-12-13 13:55+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2017-12-27 13:18-0600\n"
+"PO-Revision-Date: 2018-03-31 07:32+0000\n"
+"Last-Translator: oon arfiandwi (OonID) <oon.arfiandwi@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/django/django-docs/"
 "language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -933,9 +934,6 @@ msgstr ""
 "dengan ``Jython`_, sebuah penerapan dari Python ditulis dalam Java, yang "
 "menjalankan kode Python pada Java Virtual Machine. Django sekarang cocok "
 "dengan terbitan Jython 2.5 yang akan datang."
-
-msgid "See :doc:`/howto/jython`."
-msgstr "Lihat :doc:`/howto/jython`."
 
 msgid "Generic relations in forms and admin"
 msgstr "Hubungan umum di formulir dan admin"
@@ -5920,6 +5918,8 @@ msgid ""
 "The following settings are removed, and you must upgrade to the :setting:"
 "`TEMPLATES` setting:"
 msgstr ""
+"Pengaturan berikut telah dihapus, anda harus ubah menjadi pengaturan :"
+"setting:`TEMPLATES`:"
 
 msgid "``ALLOWED_INCLUDE_ROOTS``"
 msgstr "``ALLOWED_INCLUDE_ROOTS``"
@@ -7615,6 +7615,8 @@ msgid ""
 "This section describes changes that may be needed in third-party database "
 "backends."
 msgstr ""
+"Bagian ini menjelaskan perubahan yang mungkin diperlukan oleh backend basis "
+"data pihak ketiga."
 
 msgid ""
 "The ``DatabaseOperations.time_trunc_sql()`` method is added to support "
@@ -9046,7 +9048,7 @@ msgid "Django 1.11.8 release notes"
 msgstr "Catatan terbitan Django 1.11.8"
 
 msgid "*December 2, 2017*"
-msgstr ""
+msgstr "*2 Desember 2017*"
 
 msgid "Django 1.11.8 fixes several bugs in 1.11.7."
 msgstr "Django 1.11.8 memperbaiki beberapa kesalahan di 1.11.7."
@@ -9094,13 +9096,13 @@ msgid ""
 msgstr ""
 
 msgid "Django 1.11.9 release notes"
-msgstr ""
+msgstr "Catatan rilis Django 1.11.9"
 
 msgid "*Expected January 1, 2018*"
-msgstr ""
+msgstr "*Diharapkan 1 January 2018*"
 
 msgid "Django 1.11.9 fixes several bugs in 1.11.8."
-msgstr ""
+msgstr "Django 1.11.9 memperbaiki sejumlah bugs dari 1.11.8."
 
 msgid ""
 "Fixed a regression in Django 1.11 that added newlines between "
@@ -35191,6 +35193,29 @@ msgstr ""
 msgid ""
 "Fixed a regression on SQLite where ``DecimalField`` returned a result with "
 "trailing zeros in the fractional part truncated (:ticket:`28915`)."
+msgstr ""
+
+msgid "Fixed crash in the ``testserver`` command startup (:ticket:`28941`)."
+msgstr ""
+
+msgid ""
+"Fixed crash when coercing a translatable URL pattern to ``str`` (:ticket:"
+"`28947`)."
+msgstr ""
+
+msgid ""
+"Fixed crash on SQLite when renaming a field in a model referenced by a "
+"``ManyToManyField`` (:ticket:`28884`)."
+msgstr ""
+
+msgid ""
+"Fixed a crash when chaining ``values()`` or ``values_list()`` after "
+"``QuerySet.select_for_update(of=(...))`` (:ticket:`28944`)."
+msgstr ""
+
+msgid ""
+"Fixed admin changelist crash when using a query expression in the page's "
+"ordering (:ticket:`28958`)."
 msgstr ""
 
 msgid "Release notes"

@@ -3,23 +3,35 @@
 # This file is distributed under the same license as the Django package.
 #
 # Translators:
+# Arthur Wu <dandelionstill@gmail.com>, 2018
 # Bestony <xiqingongzi@gmail.com>, 2018
+# CabbSir <cabbsir@gmail.com>, 2018
 # David <huangtao0202@gmail.com>, 2018
+# Dogify <595572594@qq.com>, 2018
+# FPlust Lu <fplustlu@gmail.com>, 2018
 # Frost Ming <mianghong@gmail.com>, 2018
+# JINGMING DAI <d664216@gmail.com>, 2018
+# Kwen Stephen <hyuncankun@outlook.com>, 2018
 # kyle xu <tsingx@hotmail.com>, 2017
 # radish sx <radishxtop@gmail.com>, 2017
 # raingolee <raingolee@gmail.com>, 2018
+# ryan rain <holidaylover2010@gmail.com>, 2018
+# Vincent Chan, 2018
 # Xiang Yu <bupt.aswmtjdsj@gmail.com>, 2013
 # xin.wang <asimplelife@live.com>, 2018
+# ykh <614457662@qq.com>, 2018
+# zwithz1998, 2018
 # 吴彬 <xiake21x@qq.com>, 2016
+# 奇泽 吴 <wuqize5109@163.com>, 2018
 # 尔茂 (￣︶￣)↗ 涨 <973657283@qq.com>, 2018
+# 空 镜 <87647703@qq.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-13 14:25-0500\n"
-"PO-Revision-Date: 2018-03-15 08:01+0000\n"
-"Last-Translator: Frost Ming <mianghong@gmail.com>\n"
+"POT-Creation-Date: 2018-04-13 07:19-0500\n"
+"PO-Revision-Date: 2018-04-12 11:31+0000\n"
+"Last-Translator: Manjusakka Lee <me@manjusaka.me>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +41,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "Authentication using ``REMOTE_USER``"
-msgstr "用 ``REMOTE_USER``进行身份验证"
+msgstr "使用 ``REMOTE_USER`` 进行身份验证"
 
 msgid ""
 "This document describes how to make use of external authentication sources "
@@ -40,8 +52,8 @@ msgid ""
 "`WebAuth`_, `mod_auth_sspi`_, etc."
 msgstr ""
 "这篇文档讲述了如何在你的 Django 应用中使用外部身份验证资源(在web服务器上设置 "
-"``REMOTE_USER``的地方)。这种类型的身份验证方法一般用在内部网站，比如使用单点"
-"登录方案的集成了Windows 身份验证的IIS或者在Apache中的 `mod_authnz_ldap`_, "
+"``REMOTE_USER``的地方)。这种类型的身份验证方法一般用在使用了单点登录方案的内"
+"部网站上，比如 IIS 和 Windows 一体化验证或者 Apache 和 `mod_authnz_ldap`_, "
 "`CAS`_, `Cosign`_, `WebAuth`_, `mod_auth_sspi`_等等。"
 
 msgid ""
@@ -220,7 +232,7 @@ msgid ""
 "Your custom storage system must be a subclass of ``django.core.files.storage."
 "Storage``::"
 msgstr ""
-"你自定义的存储系统必须为 ``jango.core.files.storage.Storage``:: 的一个子类。"
+"你自定义的存储系统必须为 ``Django.core.files.storage.Storage``:: 的一个子类。"
 
 msgid ""
 "Django must be able to instantiate your storage system without any "
@@ -251,11 +263,14 @@ msgid ""
 "deconstructible`` class decorator for this (that's what Django uses on "
 "FileSystemStorage)."
 msgstr ""
+"您的存储类必须是：ref：`deconstructible`，以便在迁移中的字段上使用它时可以序"
+"列化。 只要你的字段有自己的参数：ref：`serializable`，你可以使用django.utils."
+"deconstruct.deconstructible类装饰器（这是Django在FileSystemStorage上使用的）"
 
 msgid ""
 "By default, the following methods raise `NotImplementedError` and will "
 "typically have to be overridden:"
-msgstr ""
+msgstr "通常，下面的方法会引发一个 NotImplementedError，并通常必须被重写。"
 
 msgid ":meth:`Storage.delete`"
 msgstr ":meth:`Storage.delete`"
@@ -277,27 +292,34 @@ msgid ""
 "omitted. As it happens, it is possible to leave each method unimplemented "
 "and still have a working Storage."
 msgstr ""
+"可是，记住并非所有这些方法都是需要的，并且可能故意被省略。正因为如此，让每个"
+"方法未实现并仍然拥有一个可用储存是可能的。"
 
 msgid ""
 "By way of example, if listing the contents of certain storage backends turns "
 "out to be expensive, you might decide not to implement `Storage.listdir`."
 msgstr ""
+"举例来说，如果列出某些存储后端的内容会比较消耗性能，那么您可以决定不实现"
+"`Storage.listdir`方法。"
 
 msgid ""
 "Another example would be a backend that only handles writing to files. In "
 "this case, you would not need to implement any of the above methods."
 msgstr ""
+"另一个例子是只处理写入文件的后端。在这种情况下，你不需要实现上述任何方法。"
 
 msgid ""
 "Ultimately, which of these methods are implemented is up to you. Leaving "
 "some methods unimplemented will result in a partial (possibly broken) "
 "interface."
 msgstr ""
+"最终，你决定实现这些方法中的哪一个。一些方法未实现结果会生成部分（可能会损坏"
+"的）接口。"
 
 msgid ""
 "You'll also usually want to use hooks specifically designed for custom "
 "storage objects. These are:"
-msgstr ""
+msgstr "你可能也经常会用到专为自定义存储对象设计的钩子函数。他们是："
 
 msgid "**Required**."
 msgstr "**要求**."
@@ -308,18 +330,25 @@ msgid ""
 "cases, you'll want to return some subclass here that implements logic "
 "specific to the backend storage system."
 msgstr ""
+"使用“Storage.open()”方法才是存储类用来打开文件的真正机制，这个方法必须要返回"
+"一个文件对象。尽管在大多数时候，你想要这个方法返回一个继承于特定逻辑的后台存"
+"储系统的子类。"
 
 msgid ""
 "Called by ``Storage.save()``. The ``name`` will already have gone through "
 "``get_valid_name()`` and ``get_available_name()``, and the ``content`` will "
 "be a ``File`` object itself."
 msgstr ""
+"被称为``Storage.save()``。这个 ``name`` 会早已经历``get_valid_name()`` 和 "
+"``get_available_name()``，并且 ``content`` 将会成为 ``File``对象自身。"
 
 msgid ""
 "Should return the actual name of name of the file saved (usually the "
 "``name`` passed in, but if the storage needs to change the file name return "
 "the new name instead)."
 msgstr ""
+"应该返回保存的文件名的实际名称（通常是传入“name”，但如果内存需要改变文件名，"
+"则返回新名称）。"
 
 msgid ""
 "Returns a filename suitable for use with the underlying storage system. The "
@@ -328,11 +357,16 @@ msgid ""
 "that method after any path information is removed. Override this to "
 "customize how non-standard characters are converted to safe filenames."
 msgstr ""
+"返回适用于底层存储系统的文件名。 传递给此方法的``name``参数既不是发送给服务器"
+"的原始文件名，如果``upload_to``是可调用的，则在删除任何路径信息后由该方法返回"
+"的文件名。 重写此操作可以自定义如何将非标准字符转换为安全文件名。"
 
 msgid ""
 "The code provided on ``Storage`` retains only alpha-numeric characters, "
 "periods and underscores from the original filename, removing everything else."
 msgstr ""
+"“Storage”上提供的代码仅保留原始文件名中的字母数字字符，句点和下划线，并删除其"
+"他所有内容。"
 
 msgid ""
 "Returns a filename that is available in the storage mechanism, possibly "
@@ -352,6 +386,7 @@ msgid ""
 "character alphanumeric string is appended to the filename before the "
 "extension."
 msgstr ""
+"如果已经存在一个 ``name`` 的文件，则会在扩展后缀前添加下划线和7位随机字母。"
 
 msgid "Custom Lookups"
 msgstr "自定义查找"
@@ -595,7 +630,7 @@ msgstr ""
 "样的不区分大小写的查询::"
 
 msgid "Writing alternative implementations for existing lookups"
-msgstr ""
+msgstr "为现有的查找编写代替实现"
 
 msgid ""
 "Sometimes different database vendors require different SQL for the same "
@@ -903,7 +938,7 @@ msgid ""
 msgstr ""
 
 msgid "Default value is ``False``."
-msgstr ""
+msgstr "默认值是 ``False``。"
 
 msgid ""
 "Make sure you know what you are doing if you decide to change the value of "
@@ -1564,7 +1599,7 @@ msgid ""
 msgstr ""
 
 msgid "A string"
-msgstr ""
+msgstr "一个字符串"
 
 msgid "``None`` (if the field allows ``null=True``)"
 msgstr ""
@@ -1825,7 +1860,7 @@ msgid ""
 msgstr ""
 
 msgid "Development server won't automatically restart"
-msgstr ""
+msgstr "开发服务器并不会自动重启"
 
 msgid ""
 "After adding the ``templatetags``  module, you will need to restart your "
@@ -1918,10 +1953,10 @@ msgid ""
 msgstr ""
 
 msgid "Here's an example filter definition::"
-msgstr ""
+msgstr "这是一个过滤器定义的例子："
 
 msgid "And here's an example of how that filter would be used:"
-msgstr ""
+msgstr "这个例子展示了如何使用这个过滤器："
 
 msgid ""
 "Most filters don't take arguments. In this case, just leave the argument out "
@@ -1929,7 +1964,7 @@ msgid ""
 msgstr ""
 
 msgid "Registering custom filters"
-msgstr ""
+msgstr "注册自定义过滤器"
 
 msgid ""
 "Once you've written your filter definition, you need to register it with "
@@ -2153,13 +2188,13 @@ msgid ""
 msgstr ""
 
 msgid "Then:"
-msgstr ""
+msgstr "接下来："
 
 msgid "would be equivalent to:"
 msgstr ""
 
 msgid "Filters and time zones"
-msgstr ""
+msgstr "过滤器和时区"
 
 msgid ""
 "If you write a custom filter that operates on :class:`~datetime.datetime` "
@@ -3362,7 +3397,7 @@ msgid "See Gunicorn's `deployment documentation`_ for additional tips."
 msgstr ""
 
 msgid "How to deploy with WSGI"
-msgstr ""
+msgstr "如何使用 WSGI 进行部署"
 
 msgid ""
 "Django's primary deployment platform is WSGI_, the Python standard for web "
@@ -3408,7 +3443,7 @@ msgid ""
 msgstr ""
 
 msgid "Configuring the settings module"
-msgstr ""
+msgstr "配置 settings 模块"
 
 msgid ""
 "When the WSGI server loads your application, Django needs to import the "
@@ -3441,7 +3476,7 @@ msgid ""
 msgstr ""
 
 msgid "Applying WSGI middleware"
-msgstr ""
+msgstr "应用 WSGI 中间件"
 
 msgid ""
 "To apply `WSGI middleware`_ you can simply wrap the application object. For "
@@ -4717,11 +4752,8 @@ msgid "In your settings file, define :setting:`STATIC_URL`, for example::"
 msgstr ""
 
 msgid ""
-"In your templates, either hardcode the url like ``/static/my_app/example."
-"jpg`` or, preferably, use the :ttag:`static` template tag to build the URL "
-"for the given relative path by using the configured :setting:"
-"`STATICFILES_STORAGE` storage (this makes it much easier when you want to "
-"switch to a content delivery network (CDN) for serving static files)."
+"In your templates, use the :ttag:`static` template tag to build the URL for "
+"the given relative path using the configured :setting:`STATICFILES_STORAGE`."
 msgstr ""
 
 msgid ""
@@ -5059,7 +5091,7 @@ msgid ""
 msgstr ""
 
 msgid "How to install Django on Windows"
-msgstr ""
+msgstr "如何在Windows上安装Django"
 
 msgid ""
 "This document will guide you through installing Python 3.5 and Django on "
@@ -5083,6 +5115,8 @@ msgid ""
 "Django is a Python web framework, thus requiring Python to be installed on "
 "your machine. At the time of writing, Python 3.5 is the latest version."
 msgstr ""
+"Django 是一个 Python Web 框架，因此需要在您的机器上安装 Python。在本文撰写"
+"时，Python 最新的版本是 3.5。"
 
 msgid ""
 "To install Python on your machine go to https://python.org/downloads/. The "
@@ -5097,7 +5131,7 @@ msgid ""
 msgstr ""
 
 msgid "About ``pip``"
-msgstr ""
+msgstr "关于 ``pip``"
 
 msgid ""
 "`pip`_ is a package manage for Python. It makes installing and uninstalling "
@@ -5110,9 +5144,11 @@ msgid ""
 "To install pip on your machine, go to https://pip.pypa.io/en/latest/"
 "installing/, and follow the ``Installing with get-pip.py`` instructions."
 msgstr ""
+"想要在您的机器上安装 pip，请转至 https://pip.pypa.io/en/latest/installing/，"
+"并按照“Installing with get-pip.py”说明进行操作"
 
 msgid "Install ``virtualenv`` and ``virtualenvwrapper``"
-msgstr ""
+msgstr "安装 ``virtualenv`` 和 ``virtualenvwrapper``"
 
 msgid ""
 "`virtualenv`_ and `virtualenvwrapper`_ provide a dedicated environment for "
@@ -5122,7 +5158,7 @@ msgid ""
 msgstr ""
 
 msgid "Then create a virtual environment for your project::"
-msgstr ""
+msgstr "然后为您的项目创建一个虚拟环境::"
 
 msgid ""
 "The virtual environment will be activated automatically and you'll see "
@@ -5135,7 +5171,7 @@ msgstr "安装Django"
 
 msgid ""
 "Django can be installed easily using ``pip`` within your virtual environment."
-msgstr ""
+msgstr "Django可以轻松地在你的虚拟环境中使用``pip``安装"
 
 msgid ""
 "In the command prompt, ensure your virtual environment is active, and "
@@ -5143,7 +5179,7 @@ msgid ""
 msgstr ""
 
 msgid "This will download and install the latest Django release."
-msgstr ""
+msgstr "这将下载并安装最新的Django版本。"
 
 msgid ""
 "After the installation has completed, you can verify your Django "
@@ -5363,7 +5399,7 @@ msgid ""
 msgstr ""
 
 msgid "Here's a sample migration:"
-msgstr ""
+msgstr "这是一个迁移示例："
 
 msgid ""
 "Also consider what you want to happen when the migration is unapplied. You "
@@ -5371,9 +5407,12 @@ msgid ""
 "the data from the new application. Adjust the second argument of the :mod:"
 "`~django.db.migrations.operations.RunPython` operation accordingly."
 msgstr ""
+"另外在迁移未执行时，请考虑好什么是你想要发生的。你可以什么都不做（就像上面的"
+"示例）或者从新应用中移除一些或全部的数据。相应的调整 :mod:`~django.db."
+"migrations.operations.RunPython` 操作的第二个参数。"
 
 msgid "Changing an unmanaged model to managed"
-msgstr ""
+msgstr "将非托管模型变为托管的"
 
 msgid ""
 "If you want to change an unmanaged model (:attr:`managed=False <django.db."
@@ -5382,3 +5421,7 @@ msgid ""
 "model, since schema changes that appear in the migration that contains the "
 "operation to change ``Meta.managed`` may not be applied."
 msgstr ""
+"如果你想要将非托管模型 (:attr:`managed=False <django.db.models.Options."
+"managed>`) 变为托管的，你必须移除 ``managed=False`` 并且在对此模型做其他模式"
+"相关的改变前生成一次迁移，因为如果迁移中出现模式改变，对 ``Meta.managed`` 的"
+"修改操作不会被执行。"

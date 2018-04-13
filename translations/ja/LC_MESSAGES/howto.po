@@ -11,7 +11,7 @@
 # Pawllo2 <pawllothesecond@gmail.com>, 2017
 # Ryouta Mizuhara <ham_katsu@outlook.jp>, 2016
 # TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016-2017
-# Suguru YAMAMOTO <sgryjp@gmail.com>, 2017
+# Suguru Yamamoto <sgryjp@gmail.com>, 2017
 # Suzuki Takahiro <bur8787@gmail.com>, 2016
 # TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016
 # Takashi Sugawara <aimaimokomoko@gmail.com>, 2017
@@ -23,9 +23,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-02 15:28-0600\n"
-"PO-Revision-Date: 2018-02-12 06:07+0000\n"
-"Last-Translator: Tetsuya Yamada <yamada.tetsuya258@gmail.com>\n"
+"POT-Creation-Date: 2018-04-13 07:19-0500\n"
+"PO-Revision-Date: 2018-03-29 02:00+0000\n"
+"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -2629,7 +2629,7 @@ msgid ""
 msgstr ""
 
 msgid "Notes:"
-msgstr ""
+msgstr "メモ: "
 
 msgid ""
 "``parser`` is the template parser object. We don't need it in this example."
@@ -4358,10 +4358,25 @@ msgstr ""
 msgid ""
 "It's sometimes useful to pre-populate your database with hard-coded data "
 "when you're first setting up an app. You can provide initial data with "
-"fixtures or migrations."
+"migrations or fixtures."
 msgstr ""
 
-msgid "Providing initial data with fixtures"
+msgid "Providing initial data with migrations"
+msgstr ""
+
+msgid ""
+"If you want to automatically load initial data for an app, create a :ref:"
+"`data migration <data-migrations>`. Migrations are run when setting up the "
+"test database, so the data will be available there, subject to :ref:`some "
+"limitations <test-case-serialized-rollback>`."
+msgstr ""
+
+msgid "Providing data with fixtures"
+msgstr ""
+
+msgid ""
+"You can also provide data using fixtures, however, this data isn't loaded "
+"automatically, except if you use :attr:`.TransactionTestCase.fixtures`."
 msgstr ""
 
 msgid ""
@@ -4411,16 +4426,6 @@ msgstr ""
 msgid ""
 "Fixtures are also used by the :ref:`testing framework <topics-testing-"
 "fixtures>` to help set up a consistent test environment."
-msgstr ""
-
-msgid "Providing initial data with migrations"
-msgstr ""
-
-msgid ""
-"If you want to automatically load initial data for an app, don't use "
-"fixtures. Instead, create a migration for your application with :class:"
-"`~django.db.migrations.operations.RunPython` or :class:`~django.db."
-"migrations.operations.RunSQL` operations."
 msgstr ""
 
 msgid "Django on Jython"
@@ -5188,18 +5193,9 @@ msgstr ""
 "なります。"
 
 msgid ""
-"In your templates, either hardcode the url like ``/static/my_app/example."
-"jpg`` or, preferably, use the :ttag:`static` template tag to build the URL "
-"for the given relative path by using the configured :setting:"
-"`STATICFILES_STORAGE` storage (this makes it much easier when you want to "
-"switch to a content delivery network (CDN) for serving static files)."
+"In your templates, use the :ttag:`static` template tag to build the URL for "
+"the given relative path using the configured :setting:`STATICFILES_STORAGE`."
 msgstr ""
-"テンプレート中で、静的ファイルへの URL を ``/static/my_app/myexample.jpg`` の"
-"ようにハードコーディングするか、または、より望ましい方法として :ttag:"
-"`static` テンプレートタグを記述して、設定した :setting:`STATICFILES_STORAGE` "
-"ストレージを使うことにより、指定した相対パスから URL を動的に構築します (この"
-"方法は特に、静的ファイルを配信する CDN を切り替えたくなった時に、作業を簡単に"
-"してくれます)。"
 
 msgid ""
 "Store your static files in a folder called ``static`` in your app. For "

@@ -4,6 +4,7 @@
 #
 # Translators:
 # albertoalcolea <albertoalcolea@gmail.com>, 2014
+# Carlton Gibson <carlton.gibson@gmail.com>, 2018
 # Cristian Vargas <cristianvargasvalencia@gmail.com>, 2016
 # Ernesto Avilés Vázquez <whippiii@gmail.com>, 2015
 # Ernesto Avilés Vázquez <whippiii@gmail.com>, 2014
@@ -18,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-18 15:16-0600\n"
-"PO-Revision-Date: 2017-12-03 01:26+0000\n"
+"POT-Creation-Date: 2018-04-13 07:19-0500\n"
+"PO-Revision-Date: 2018-03-29 02:00+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Spanish (http://www.transifex.com/django/django-docs/language/"
 "es/)\n"
@@ -236,7 +237,7 @@ msgid ""
 "arguments. This means that any settings should be taken from ``django.conf."
 "settings``::"
 msgstr ""
-"Djando debe ser capaz de crear una instancia de tu sistema de almacenamiento "
+"Django debe ser capaz de crear una instancia de tu sistema de almacenamiento "
 "sin pasarle argumentos. Esto significa que cualquier ajuste debe ser tomado "
 "de ``django.conf.settings``::"
 
@@ -929,7 +930,8 @@ msgstr ""
 
 msgid ""
 "A boolean indicating whether the locale set in settings should be preserved "
-"during the execution of the command instead of being forcibly set to 'en-us'."
+"during the execution of the command instead of translations being "
+"deactivated."
 msgstr ""
 
 msgid "Default value is ``False``."
@@ -939,10 +941,9 @@ msgid ""
 "Make sure you know what you are doing if you decide to change the value of "
 "this option in your custom command if it creates database content that is "
 "locale-sensitive and such content shouldn't contain any translations (like "
-"it happens e.g. with :mod:`django.contrib.auth` permissions) as making the "
-"locale differ from the de facto default 'en-us' might cause unintended "
-"effects. See the `Management commands and locales`_ section above for "
-"further details."
+"it happens e.g. with :mod:`django.contrib.auth` permissions) as activating "
+"any locale might cause unintended effects. See the `Management commands and "
+"locales`_ section above for further details."
 msgstr ""
 
 msgid ""
@@ -4075,10 +4076,25 @@ msgstr ""
 msgid ""
 "It's sometimes useful to pre-populate your database with hard-coded data "
 "when you're first setting up an app. You can provide initial data with "
-"fixtures or migrations."
+"migrations or fixtures."
 msgstr ""
 
-msgid "Providing initial data with fixtures"
+msgid "Providing initial data with migrations"
+msgstr ""
+
+msgid ""
+"If you want to automatically load initial data for an app, create a :ref:"
+"`data migration <data-migrations>`. Migrations are run when setting up the "
+"test database, so the data will be available there, subject to :ref:`some "
+"limitations <test-case-serialized-rollback>`."
+msgstr ""
+
+msgid "Providing data with fixtures"
+msgstr ""
+
+msgid ""
+"You can also provide data using fixtures, however, this data isn't loaded "
+"automatically, except if you use :attr:`.TransactionTestCase.fixtures`."
 msgstr ""
 
 msgid ""
@@ -4130,93 +4146,18 @@ msgid ""
 "fixtures>` to help set up a consistent test environment."
 msgstr ""
 
-msgid "Providing initial data with migrations"
+msgid "Django on Jython"
+msgstr "Django sobre Jython"
+
+msgid ""
+"Jython_ is an implementation of Python that runs on the Java platform (JVM)."
 msgstr ""
 
 msgid ""
-"If you want to automatically load initial data for an app, don't use "
-"fixtures. Instead, create a migration for your application with :class:"
-"`~django.db.migrations.operations.RunPython` or :class:`~django.db."
-"migrations.operations.RunSQL` operations."
-msgstr ""
-
-msgid "Running Django on Jython"
-msgstr ""
-
-msgid ""
-"Jython_ is an implementation of Python that runs on the Java platform (JVM). "
-"This document will get you up and running with Django on top of Jython."
-msgstr ""
-
-msgid "Installing Jython"
-msgstr ""
-
-msgid ""
-"Django works with Jython versions 2.7b2 and higher. See the Jython_ website "
-"for download and installation instructions."
-msgstr ""
-
-msgid "Creating a servlet container"
-msgstr ""
-
-msgid ""
-"If you just want to experiment with Django, skip ahead to the next section; "
-"Django includes a lightweight Web server you can use for testing, so you "
-"won't need to set up anything else until you're ready to deploy Django in "
-"production."
-msgstr ""
-
-msgid ""
-"If you want to use Django on a production site, use a Java servlet "
-"container, such as `Apache Tomcat`_. Full JavaEE applications servers such "
-"as `GlassFish`_ or `JBoss`_ are also OK, if you need the extra features they "
-"include."
-msgstr ""
-
-msgid "Installing Django"
-msgstr ""
-
-msgid ""
-"The next step is to install Django itself. This is exactly the same as "
-"installing Django on standard Python, so see :ref:`removing-old-versions-of-"
-"django` and :ref:`install-django-code` for instructions."
-msgstr ""
-
-msgid "Installing Jython platform support libraries"
-msgstr ""
-
-msgid ""
-"The `django-jython`_ project contains database backends and management "
-"commands for Django/Jython development. Note that the builtin Django "
-"backends won't work on top of Jython."
-msgstr ""
-
-msgid ""
-"To install it, follow the `installation instructions`_ detailed on the "
-"project website. Also, read the `database backends`_ documentation there."
-msgstr ""
-
-msgid "Differences with Django on Jython"
-msgstr ""
-
-msgid ""
-"At this point, Django on Jython should behave nearly identically to Django "
-"running on standard Python. However, are a few differences to keep in mind:"
-msgstr ""
-
-msgid ""
-"Remember to use the ``jython`` command instead of ``python``. The "
-"documentation uses ``python`` for consistency, but if you're using Jython "
-"you'll want to mentally replace ``python`` with ``jython`` every time it "
-"occurs."
-msgstr ""
-
-msgid ""
-"Similarly, you'll need to use the ``JYTHONPATH`` environment variable "
-"instead of ``PYTHONPATH``."
-msgstr ""
-
-msgid "Any part of Django that requires `Pillow`_ will not work."
+"If you want to use Jython (which supports only Python 2.7 at the time of "
+"this writing), you must use Django 1.11.x (the last series to support Python "
+"2). Jython support may be readded to Django if a Python 3 compatible Jython "
+"is released."
 msgstr ""
 
 msgid "Integrating Django with a legacy database"
@@ -4818,11 +4759,8 @@ msgid "In your settings file, define :setting:`STATIC_URL`, for example::"
 msgstr ""
 
 msgid ""
-"In your templates, either hardcode the url like ``/static/my_app/example."
-"jpg`` or, preferably, use the :ttag:`static` template tag to build the URL "
-"for the given relative path by using the configured :setting:"
-"`STATICFILES_STORAGE` storage (this makes it much easier when you want to "
-"switch to a content delivery network (CDN) for serving static files)."
+"In your templates, use the :ttag:`static` template tag to build the URL for "
+"the given relative path using the configured :setting:`STATICFILES_STORAGE`."
 msgstr ""
 
 msgid ""
@@ -5003,7 +4941,7 @@ msgstr ""
 
 msgid ""
 "Older version of Django will eventually no longer receive security updates. "
-"(see :ref:`backwards-compatibility-policy`)."
+"(see :ref:`supported-versions-policy`)."
 msgstr ""
 
 msgid ""
