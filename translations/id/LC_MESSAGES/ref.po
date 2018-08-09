@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-27 13:18-0600\n"
-"PO-Revision-Date: 2018-06-22 10:10+0000\n"
-"Last-Translator: Fery Setiawan <gembelweb@gmail.com>\n"
+"POT-Creation-Date: 2018-08-08 19:30-0500\n"
+"PO-Revision-Date: 2018-08-07 01:54+0000\n"
+"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Indonesian (http://www.transifex.com/django/django-docs/"
 "language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -319,11 +319,9 @@ msgid "This attribute defaults to ``label.title()``."
 msgstr "Atribut awal ke ``label.title()``."
 
 msgid ""
-"Filesystem path to the application directory, e.g. ``'/usr/lib/python3.4/"
+"Filesystem path to the application directory, e.g. ``'/usr/lib/pythonX.Y/"
 "dist-packages/django/contrib/admin'``."
 msgstr ""
-"Jalur sistem berkas pada direktori aplikasi, sebagai contoh ``'/usr/lib/"
-"python3.4/dist-packages/django/contrib/admin'``."
 
 msgid ""
 "In most cases, Django can automatically detect and set this, but you can "
@@ -398,9 +396,6 @@ msgstr ""
 "Membutuhkan aplikasi regristrar untuk sepenuhnya dikumpulkan meskipun "
 "argumen ``require_ready`` disetel menjadi ``False``. ``require_ready`` "
 "berperilaku tepat seperti dalam :meth:`apps.get_model()`."
-
-msgid "The ``require_ready`` keyword argument was added."
-msgstr "Argumen kata kunci ``require_ready`` telah ditambahkan."
 
 msgid ""
 "Subclasses can override this method to perform initialization tasks such as "
@@ -1093,8 +1088,10 @@ msgstr "**fields.E008**: Semua ``validators`` harus dapat dipanggil."
 msgid "**fields.E100**: ``AutoField``\\s must set primary_key=True."
 msgstr "**fields.E100**: ``AutoField harus disetel primary_key=True."
 
-msgid "**fields.E110**: ``BooleanField``\\s do not accept null values."
-msgstr "**fields.E110**: ``BooleanField`` tidak menerima nilai-nilai null."
+msgid ""
+"**fields.E110**: ``BooleanField``\\s do not accept null values. *This check "
+"appeared before support for null values was added in Django 2.1.*"
+msgstr ""
 
 msgid ""
 "**fields.E120**: ``CharField``\\s must define a ``max_length`` attribute."
@@ -1512,20 +1509,15 @@ msgstr ""
 "tuple."
 
 msgid ""
-"**models.E012**: ``index_together/unique_together`` refers to the "
+"**models.E012**: ``indexes/index_together/unique_together`` refers to the "
 "nonexistent field ``<field name>``."
 msgstr ""
-"**models.E012**: ``index_together/unique_together`` mengacu pada bidang yang "
-"tidak ada ````."
 
 msgid ""
-"**models.E013**: ``index_together/unique_together`` refers to a "
+"**models.E013**: ``indexes/index_together/unique_together`` refers to a "
 "``ManyToManyField`` ``<field name>``, but ``ManyToManyField``\\s are not "
 "supported for that option."
 msgstr ""
-"**models.E013**: ``index_together/unique_together`` mengacu pada "
-"``ManyToManyField`` ``<field name>``, tetapi ``ManyToManyField`` tidak "
-"didukung untuk pilihan itu."
 
 msgid ""
 "**models.E014**: ``ordering`` must be a tuple or list (even if you want to "
@@ -1540,11 +1532,9 @@ msgid ""
 msgstr "**models.E015**: ``ordering`` mengacu pada bidang yang tidak ada ````."
 
 msgid ""
-"**models.E016**: ``index_together/unique_together`` refers to field "
+"**models.E016**: ``indexes/index_together/unique_together`` refers to field "
 "``<field_name>`` which is not local to model ``<model>``."
 msgstr ""
-"**models.E016**: ``index_together/unique_together`` mengacu pada bidang "
-"``<field_name>`` yang bukan lokal ke model ``<model>``."
 
 msgid "**models.E017**: Proxy model ``<model>`` contains model fields."
 msgstr ""
@@ -1602,6 +1592,16 @@ msgid ""
 msgstr ""
 "**models.E024**: Nama model ``1`` tidak dapat mengandung garis bawah ganda "
 "ketika itu bertabrakan dengan sintaksis pencarian permintaan."
+
+msgid ""
+"**models.E025**: The property ``<property name>`` clashes with a related "
+"field accessor."
+msgstr ""
+
+msgid ""
+"**models.E026**: The model cannot have more than one field with "
+"``primary_key=True``."
+msgstr ""
 
 msgid "Security"
 msgstr "Keamanan"
@@ -2378,6 +2378,11 @@ msgstr ""
 "**admin.E128**: Nilai dari ``date_hierarchy`` harus berupa ``DateField`` "
 "atau ``DateTimeField``."
 
+msgid ""
+"**admin.E129**: ``<modeladmin>`` must define a ``has_<foo>_permission()`` "
+"method for the ``<action>`` action."
+msgstr ""
+
 msgid "``InlineModelAdmin``"
 msgstr "``InlineModelAdmin``"
 
@@ -2596,6 +2601,25 @@ msgstr ""
 msgid "**contenttypes.E005**: Model names must be at most 100 characters."
 msgstr ""
 "**contenttypes.E005**: Nama-nama model harus paling banyak 100 karakter."
+
+msgid "``postgres``"
+msgstr "``postgres``"
+
+msgid ""
+"The following checks are performed on :mod:`django.contrib.postgres` model "
+"fields:"
+msgstr ""
+
+msgid "**postgres.E001**: Base field for array has errors: ..."
+msgstr ""
+
+msgid "**postgres.E002**: Base field for array cannot be a related field."
+msgstr ""
+
+msgid ""
+"**postgres.E003**: ``<field>`` default should be a callable instead of an "
+"instance so that it's not shared between all field instances."
+msgstr ""
 
 msgid "``sites``"
 msgstr "``sites``"
@@ -3926,6 +3950,12 @@ msgid "**Example myapp/article_list.html**:"
 msgstr "**Contoh myapp/article_list.html**:"
 
 msgid ""
+"If you're using pagination, you can adapt the :ref:`example template from "
+"the pagination docs <using-paginator-in-view>`. Change instances of "
+"``contacts`` in that example template to ``page_obj``."
+msgstr ""
+
+msgid ""
 "A base view for displaying a list of objects. It is not intended to be used "
 "directly, but rather as a parent class of the :class:`django.views.generic."
 "list.ListView` or other views representing lists of objects."
@@ -4961,6 +4991,11 @@ msgstr ""
 "sebuah URL disusun dari bidang ``parent_id`` pada sebuah model."
 
 msgid ""
+"Retrieves the target object and calls its ``delete()`` method, then "
+"redirects to the success URL."
+msgstr ""
+
+msgid ""
 "Returns the url to redirect to when the nominated object has been "
 "successfully deleted. Returns :attr:`~django.views.generic.edit."
 "DeletionMixin.success_url` by default."
@@ -5863,14 +5898,11 @@ msgstr ""
 "akan dipanggil."
 
 msgid ""
-"If you wish to override this behavior, simply write a custom action which "
-"accomplishes deletion in your preferred manner -- for example, by calling "
-"``Model.delete()`` for each of the selected items."
+"If you wish to override this behavior, you can override :meth:`.ModelAdmin."
+"delete_queryset` or write a custom action which does deletion in your "
+"preferred manner -- for example, by calling ``Model.delete()`` for each of "
+"the selected items."
 msgstr ""
-"Jika anda berharap untuk menimpa perilaku ini, cukup tulis sebuah tindakan "
-"penyesuaian yang menyelesaikan penghapus di cara yang dipilih -- sebagai "
-"contoh, dengan memanggil ``Model.delete()`` untuk setiap dari barang "
-"terpilih."
 
 msgid ""
 "For more background on bulk deletion, see the documentation on :ref:`object "
@@ -6272,6 +6304,49 @@ msgstr ""
 "namanya dimulai dengan 'J' untuk dapat menghapus obyek-obyek dalam jumlah "
 "besar, Saya dapat melakukan berikut::"
 
+msgid "Setting permissions for actions"
+msgstr ""
+
+msgid ""
+"Actions may limit their availability to users with specific permissions by "
+"setting an ``allowed_permissions`` attribute on the action function::"
+msgstr ""
+
+msgid ""
+"The ``make_published()`` action will only be available to users that pass "
+"the :meth:`.ModelAdmin.has_change_permission` check."
+msgstr ""
+
+msgid ""
+"If ``allowed_permissions`` has more than one permission, the action will be "
+"available as long as the user passes at least one of the checks."
+msgstr ""
+
+msgid ""
+"Available values for ``allowed_permissions`` and the corresponding method "
+"checks are:"
+msgstr ""
+
+msgid "``'add'``: :meth:`.ModelAdmin.has_add_permission`"
+msgstr ""
+
+msgid "``'change'``: :meth:`.ModelAdmin.has_change_permission`"
+msgstr ""
+
+msgid "``'delete'``: :meth:`.ModelAdmin.has_delete_permission`"
+msgstr ""
+
+msgid "``'view'``: :meth:`.ModelAdmin.has_view_permission`"
+msgstr ""
+
+msgid ""
+"You can specify any other value as long as you implement a corresponding "
+"``has_<value>_permission(self, request)`` method on the ``ModelAdmin``."
+msgstr ""
+
+msgid "For example::"
+msgstr "Sebagai contoh::"
+
 msgid "The Django admin documentation generator"
 msgstr "Pembangkit dokumentasi admin Django"
 
@@ -6405,9 +6480,6 @@ msgstr "**konteks**, atau daftar dari variabel tersedia di cetakan tampilan."
 msgid "The name of the template or templates that are used for that view."
 msgstr ""
 "Nama dari cetakan atau cetakan-cetakan yang digunakan untuk tampilan itu."
-
-msgid "For example::"
-msgstr "Sebagai contoh::"
 
 msgid "Template tags and filters reference"
 msgstr "Etiket cetakan dan acuan saringan"
@@ -6680,6 +6752,12 @@ msgstr ""
 "kecuali itu tidak memanggil :func:`~django.contrib.admin.autodiscover()`."
 
 msgid ""
+"A dotted import path to the default admin site's class or to a callable that "
+"returns a site instance. Defaults to ``'django.contrib.admin.sites."
+"AdminSite'``. See :ref:`overriding-default-admin-site` for usage."
+msgstr ""
+
+msgid ""
 "This function attempts to import an ``admin`` module in each installed "
 "application. Such modules are expected to register models with the admin."
 msgstr ""
@@ -6769,11 +6847,6 @@ msgstr ""
 "tersedia, sebagai contoh jika semua tanggal berada di satu bulan, itu akan "
 "menampilkan hanya penelesuran tingkat-hari."
 
-msgid "The ability to reference fields on related models was added."
-msgstr ""
-"Kemampuan untuk mengacukan bidang-bidang pada model-model terkait telah "
-"ditambahkan."
-
 msgid ""
 "``date_hierarchy`` uses :meth:`QuerySet.datetimes() <django.db.models.query."
 "QuerySet.datetimes>` internally. Please refer to its documentation for some "
@@ -6860,15 +6933,11 @@ msgstr ""
 "fieldsets`."
 
 msgid ""
-"The ``fields`` option, unlike :attr:`~ModelAdmin.list_display`, may only "
-"contain names of fields on the model or the form specified by :attr:"
-"`~ModelAdmin.form`. It may contain callables only if they are listed in :"
-"attr:`~ModelAdmin.readonly_fields`."
+"The ``fields`` option accepts the same types of values as :attr:`~ModelAdmin."
+"list_display`, except that callables aren't accepted. Names of model and "
+"model admin methods will only be used if they're listed in :attr:"
+"`~ModelAdmin.readonly_fields`."
 msgstr ""
-"Pilihan ``fields``, tidak seperti :attr:`~ModelAdmin.list_display`, mungkin "
-"hanya mengandung nama-nama bidang pada model atau formulir ditentukan oleh :"
-"attr:`~ModelAdmin.form`. Itu mungkin mengandung hanya callable jika mereka "
-"berada didaftar di :attr:`~ModelAdmin.readonly_fields`."
 
 msgid ""
 "To display multiple fields on the same line, wrap those fields in their own "
@@ -7027,13 +7096,9 @@ msgstr ""
 msgid ""
 "Note that this value is *not* HTML-escaped when it's displayed in the admin "
 "interface. This lets you include HTML if you so desire. Alternatively you "
-"can use plain text and ``django.utils.html.escape()`` to escape any HTML "
+"can use plain text and :func:`django.utils.html.escape` to escape any HTML "
 "special characters."
 msgstr ""
-"Catat bahwa nilai ini *bukan* pelolosan-HTML ketika itu diperlihatkan dalam "
-"antarmuka admin. Ini membuat anda menyertakan HTML jika anda inginkan. Cara "
-"lain anda dapat menggunakan teks polos dan ``django.utils.html.escape()`` "
-"untuk meloloskan karakter khusus HTML apapun."
 
 msgid ""
 "By default, a :class:`~django.db.models.ManyToManyField` is displayed in the "
@@ -7188,35 +7253,24 @@ msgstr ""
 "Jika anda tidak menyetel ``list_display``, situs admin akan menampilkan "
 "kolom tunggal yang menampilkan perwakilan ``__str__()`` untuk setiap obyek."
 
-msgid "You have four possible values that can be used in ``list_display``:"
+msgid "There are four types of values that can be used in ``list_display``:"
 msgstr ""
-"Anda mempunyai empat nilai kemungkinan yang dapat digunakan dalam "
-"``list_display``:"
 
-msgid "A field of the model. For example::"
-msgstr "Sebuah bidang dari model. Sebagai contoh::"
-
-msgid ""
-"A callable that accepts one parameter for the model instance. For example::"
+msgid "The name of a model field. For example::"
 msgstr ""
-"Sebuah callable yang menerima satu parameter untuk instance model. Sebagai "
-"contoh::"
+
+msgid "A callable that accepts one argument, the model instance. For example::"
+msgstr ""
 
 msgid ""
-"A string representing an attribute on the ``ModelAdmin``. This behaves same "
-"as the callable. For example::"
+"A string representing a ``ModelAdmin`` method that accepts one argument, the "
+"model instance. For example::"
 msgstr ""
-"Deretan karakter mewakilkan sebuah atribut pada ``ModelAdmin``. Ini "
-"berperilaku sama sebagai callable. Sebagai contoh::"
 
 msgid ""
-"A string representing an attribute on the model. This behaves almost the "
-"same as the callable, but ``self`` in this context is the model instance. "
-"Here's a full model example::"
+"A string representing a model attribute or method (without any required "
+"arguments). For example::"
 msgstr ""
-"Deretan karakter mewakilkan sebuah atribut pada model. Ini berperilaku "
-"hampir sama sebagai callable, tetapi ``self`` di konteks ini adalah instance "
-"model. Ini adalah contoh model penuh::"
 
 msgid "A few special cases to note about ``list_display``:"
 msgstr "Sedikit kasus khusus untuk dicatat tentang ``list_display``:"
@@ -7242,12 +7296,9 @@ msgstr ""
 "untuk lebih pada metode penyesuaian di ``list_display``.)"
 
 msgid ""
-"If the field is a ``BooleanField`` or ``NullBooleanField``, Django will "
-"display a pretty \"on\" or \"off\" icon instead of ``True`` or ``False``."
+"If the field is a ``BooleanField``, Django will display a pretty \"on\" or "
+"\"off\" icon instead of ``True`` or ``False``."
 msgstr ""
-"Jika bidang adalah sebuah ``BooleanField`` atau ``NullBooleanField``, Django "
-"akan menampilkan ikon \"on\" atau \"off\" cantik daripada ``True`` atau "
-"``False``."
 
 msgid ""
 "If the string given is a method of the model, ``ModelAdmin`` or a callable, "
@@ -7346,6 +7397,14 @@ msgstr ""
 "berdasarkan nilai pada hubungan terkait. Contoh ini termasuk sebuah kolom "
 "\"author first name\" di daftar tampilan dan mengizinkan mengurutkan itu "
 "dengan nama pertama::"
+
+msgid ""
+":doc:`Query expressions </ref/models/expressions>` may be used in "
+"``admin_order_field``. For example::"
+msgstr ""
+
+msgid "Support for expressions in ``admin_order_field`` was added."
+msgstr ""
 
 msgid ""
 "Elements of ``list_display`` can also be properties. Please note however, "
@@ -7707,15 +7766,9 @@ msgid ""
 "generate the value for ``SlugField`` fields from one or more other fields. "
 "The generated value is produced by concatenating the values of the source "
 "fields, and then by transforming that result into a valid slug (e.g. "
-"substituting dashes for spaces)."
+"substituting dashes for spaces; lowercasing ASCII letters; and removing "
+"various English stop words such as 'a', 'an', 'as', and similar)."
 msgstr ""
-"Ketika disetel, bidang-bdiang yang diberikan akan menggunakan sedikit "
-"JavaScript untuk mengumpulkan dari bidang-bdiang yang ditugaskan. Penggunaan "
-"utama untuk fungsionalitas ini adalah untuk secara otomatis membangkitkan "
-"nilai untuk bidang-bidang ``SlugField`` dari satu atau lebih bidang-bidang. "
-"Nilai yang dibangkitkan dihasilkan oleh penggabungan nilai-nilai dari bidang-"
-"bidang sumber, dan kemudian dengan merubah hasil itu menjadi sebuah keong "
-"sah (sebagai contoh mengganti tanda garis untuk ruang)."
 
 msgid ""
 "Fields are prepopulated on add forms but not on change forms. It's usually "
@@ -7790,6 +7843,11 @@ msgid ""
 msgstr ""
 "Anda harus menentukan :attr:`~ModelAdmin.search_fields` di obyek "
 "``ModelAdmin`` terkait karena pencarian lengkap otomatis menggunakan itu."
+
+msgid ""
+"To avoid unauthorized data disclosure, users must have the ``view`` or "
+"``change`` permission to the related object in order to use autocomplete."
+msgstr ""
 
 msgid ""
 "Ordering and pagination of the results are controlled by the related "
@@ -7982,87 +8040,63 @@ msgstr ""
 msgid ""
 "When somebody does a search in the admin search box, Django splits the "
 "search query into words and returns all objects that contain each of the "
-"words, case insensitive, where each word must be in at least one of "
-"``search_fields``. For example, if ``search_fields`` is set to "
-"``['first_name', 'last_name']`` and a user searches for ``john lennon``, "
-"Django will do the equivalent of this SQL ``WHERE`` clause::"
-msgstr ""
-"Ketika seseorang melakukan sebuah pencarian di kotak pencarian admin, Django "
-"membagi permintaan pencarian menjadi kata-kata dan mengembalikan semua obyek "
-"yang mengandung setiap kata-kata, huruf tidak sensitif, dimana setiap kata "
-"harus setidaknya satu dari ``search_fields``. Sebagai contoh, jika "
-"``search_fields`` disetel menjadi ``['first_name', 'last_name']`` dan "
-"pengguna mencari ``john lennon``, Django akan melakukan setara dari kalusa "
-"``WHERE`` SQL ini::"
-
-msgid ""
-"For faster and/or more restrictive searches, prefix the field name with an "
-"operator:"
-msgstr ""
-"Untuk tercepat dan/atau pencarian lebih ketak, awalan nama bidang dengan "
-"sebuah penghubung:"
-
-msgid "``^``"
-msgstr "``^``"
-
-msgid ""
-"Use the '^' operator to match starting at the beginning of the field. For "
-"example, if ``search_fields`` is set to ``['^first_name', '^last_name']`` "
-"and a user searches for ``john lennon``, Django will do the equivalent of "
-"this SQL ``WHERE`` clause::"
-msgstr ""
-"Gunakan penghubung '^' untuk mencocokkan permulaan pada awalan dari bidang. "
-"Sebagai contoh jika ``search_fields`` disetel menjadi ``['^first_name', "
-"'^last_name']`` dan pengguna mencari untuk ``john lennon``, Django akan "
-"melakukan setara dari klausa ``WHERE`` SQL ini::"
-
-msgid ""
-"This query is more efficient than the normal ``'%john%'`` query, because the "
-"database only needs to check the beginning of a column's data, rather than "
-"seeking through the entire column's data. Plus, if the column has an index "
-"on it, some databases may be able to use the index for this query, even "
-"though it's a ``LIKE`` query."
-msgstr ""
-"Permintaan ini lebih efesien daripada permintaan ``'%john%'`` biasa, karena "
-"basisdata hanya butuh memeriksa permulaan dari sebuah data kolom, daripada "
-"mencari melalui keseluruhan data kolom. Ditambah, jika kolom mempunyai "
-"sebuah indeks pada nya, beberapa basisdata mungkin dapat menggunakan indeks "
-"untuk permintaan ini, meskipun itu adalah sebuah permintaan ``LIKE``."
-
-msgid "``=``"
-msgstr "``=``"
-
-msgid ""
-"Use the '=' operator for case-insensitive exact matching. For example, if "
-"``search_fields`` is set to ``['=first_name', '=last_name']`` and a user "
+"words, case-insensitive (using the :lookup:`icontains` lookup), where each "
+"word must be in at least one of ``search_fields``. For example, if "
+"``search_fields`` is set to ``['first_name', 'last_name']`` and a user "
 "searches for ``john lennon``, Django will do the equivalent of this SQL "
 "``WHERE`` clause::"
 msgstr ""
-"Gunakan penghubung '=' untuk pencocokan tepat kasus-tidak sensitif. Sebagai "
-"contoh jika ``search_fields`` disetel menjadi ```['=first_name', "
-"'=last_name']`` dan pengguna mencari untuk ``john lennon``, Django akan "
-"melakukan setara dari klausa ``WHERE`` SQL ini::"
 
 msgid ""
-"Note that the query input is split by spaces, so, following this example, "
-"it's currently not possible to search for all records in which "
-"``first_name`` is exactly ``'john winston'`` (containing a space)."
+"If you don't want to use ``icontains`` as the lookup, you can use any lookup "
+"by appending it the field. For example, you could use :lookup:`exact` by "
+"setting ``search_fields`` to ``['first_name__exact']``."
 msgstr ""
-"Catat bahwa masukan permintaan dipisah oleh ruang, jadi, ikuti contoh ini, "
-"itu saat ini tidak memungkinkan mencari semua rekaman yang ``first_name`` "
-"adalah persis ``'john winston'`` (mengandung sebuah ruang)."
-
-msgid "``@``"
-msgstr "``@``"
 
 msgid ""
-"Using the '@' operator to perform a full text match. This is like the "
-"default search method but uses an index. Currently this is only available "
-"for MySQL."
+"Beware that because query terms are split and ANDed as described earlier, "
+"searching with :lookup:`exact` only works with a single search word since "
+"two or more words can't all be an exact match unless all words are the same."
 msgstr ""
-"Menggunakan penghubung '@' untuk melakukan pencocokan teks penuh. Ini "
-"seperti metode pencarian awalan tetapi menggunakan sebuah indeks. Saat ini "
-"ini hanya tersedia untuk MySQL."
+
+msgid "The ability to specify a field lookup was added."
+msgstr ""
+
+msgid ""
+"Some (older) shortcuts for specifying a field lookup are also available. You "
+"can prefix a field in ``search_fields`` with the following characters and "
+"it's equivalent to adding ``__<lookup>`` to the field:"
+msgstr ""
+
+msgid "Prefix"
+msgstr ""
+
+msgid "Lookup"
+msgstr "Cari"
+
+msgid "^"
+msgstr ""
+
+msgid ":lookup:`startswith`"
+msgstr ""
+
+msgid "="
+msgstr ""
+
+msgid ":lookup:`iexact`"
+msgstr ":lookup:`iexact`"
+
+msgid "@"
+msgstr ""
+
+msgid ":lookup:`search`"
+msgstr ""
+
+msgid "None"
+msgstr "None"
+
+msgid ":lookup:`icontains`"
+msgstr ""
 
 msgid ""
 "If you need to customize search you can use :meth:`ModelAdmin."
@@ -8092,6 +8126,24 @@ msgstr ""
 "Awalan dari ``show_full_result_count=True`` membangkitkan sebuah permintaan "
 "untuk melakukan perhitungan penuh pada tabel yang dapat mahal jika isi tabel "
 "mengandung sejumlah nomor dari baris."
+
+msgid ""
+"By default, the change list page allows sorting by all model fields (and "
+"callables that have the ``admin_order_field`` property) specified in :attr:"
+"`list_display`."
+msgstr ""
+
+msgid ""
+"If you want to disable sorting for some columns, set ``sortable_by`` to a "
+"collection (e.g. ``list``, ``tuple``, or ``set``) of the subset of :attr:"
+"`list_display` that you want to be sortable. An empty collection disables "
+"sorting for all columns."
+msgstr ""
+
+msgid ""
+"If you need to specify this list dynamically, implement a :meth:`~ModelAdmin."
+"get_sortable_by` method instead."
+msgstr ""
 
 msgid ""
 "Set ``view_on_site`` to control whether or not to display the \"View on site"
@@ -8217,6 +8269,12 @@ msgstr ""
 "Mengesampingkan metode ini mengizinkan melakukan tindakan menghapus pra- "
 "atau pasca-. Panggil ``super().delete_model()`` untuk menghapus obyek "
 "menggunakan :meth:`.Model.delete`."
+
+msgid ""
+"The ``delete_queryset()`` method is given the ``HttpRequest`` and a "
+"``QuerySet`` of objects to be deleted. Override this method to customize the "
+"deletion process for the \"delete selected objects\" :doc:`action <actions>`."
+msgstr ""
 
 msgid ""
 "The ``save_formset`` method is given the ``HttpRequest``, the parent "
@@ -8424,20 +8482,28 @@ msgstr ""
 "`~ModelAdmin.search_fields`."
 
 msgid ""
+"The ``get_sortable_by()`` method is passed the ``HttpRequest`` and is "
+"expected to return a collection (e.g. ``list``, ``tuple``, or ``set``) of "
+"field names that will be sortable in the change list page."
+msgstr ""
+
+msgid ""
+"Its default implementation returns :attr:`sortable_by` if it's set, "
+"otherwise it defers to :meth:`get_list_display`."
+msgstr ""
+
+msgid "For example, to prevent one or more columns from being sortable::"
+msgstr ""
+
+msgid ""
 "The ``get_inline_instances`` method is given the ``HttpRequest`` and the "
 "``obj`` being edited (or ``None`` on an add form) and is expected to return "
 "a ``list`` or ``tuple`` of :class:`~django.contrib.admin.InlineModelAdmin` "
 "objects, as described below in the :class:`~django.contrib.admin."
 "InlineModelAdmin` section. For example, the following would return inlines "
-"without the default filtering based on add, change, and delete permissions::"
+"without the default filtering based on add, change, delete, and view "
+"permissions::"
 msgstr ""
-"Metode ``get_inline_instances`` memberikan ``HttpRequest`` dan ``obj`` "
-"sedang disunting (atau ``None`` pada sebuah formulir tambah) dan diharapkan "
-"mengembalikan sebuah ``list`` atau ``tuple`` dari obyek :class:`~django."
-"contrib.admin.InlineModelAdmin`, seperti digambarkan dibawah di bagian :"
-"class:`~django.contrib.admin.InlineModelAdmin`. Sebagai contoh, berikut akan "
-"mengembalikan berderet tanpa awalan penyaringan berdasarkan pada perizinan "
-"tambah, rubah, dan hapus::"
 
 msgid ""
 "If you override this method, make sure that the returned inlines are "
@@ -8725,53 +8791,50 @@ msgstr ""
 "class:`~django.contrib.admin.ModelAdmin` anda."
 
 msgid ""
+"Should return ``True`` if viewing ``obj`` is permitted, ``False`` otherwise. "
+"If obj is ``None``, should return ``True`` or ``False`` to indicate whether "
+"viewing of objects of this type is permitted in general (e.g., ``False`` "
+"will be interpreted as meaning that the current user is not permitted to "
+"view any object of this type)."
+msgstr ""
+
+msgid ""
+"The default implementation returns ``True`` if the user has either the "
+"\"change\" or \"view\" permission."
+msgstr ""
+
+msgid ""
 "Should return ``True`` if adding an object is permitted, ``False`` otherwise."
 msgstr ""
 "Harus mengembalikan ``True`` jika menambahkan sebuah obyek diizinkan, "
 "``False`` sebaliknya."
 
 msgid ""
-"Should return ``True`` if editing obj is permitted, ``False`` otherwise. If "
-"obj is ``None``, should return ``True`` or ``False`` to indicate whether "
-"editing of objects of this type is permitted in general (e.g., ``False`` "
-"will be interpreted as meaning that the current user is not permitted to "
-"edit any object of this type)."
+"Should return ``True`` if editing ``obj`` is permitted, ``False`` otherwise. "
+"If ``obj`` is ``None``, should return ``True`` or ``False`` to indicate "
+"whether editing of objects of this type is permitted in general (e.g., "
+"``False`` will be interpreted as meaning that the current user is not "
+"permitted to edit any object of this type)."
 msgstr ""
-"Harus mengembalikan ``True`` jika menyunting obyek diizinkan, ``False`` "
-"sebaliknya. Jika obyek adalah ``None``, harus mengembalikan ``True`` atau "
-"``False`` untuk menandakan apakah menyunting obyek dari jenis ini diizinkan "
-"secara umum (sebagai contoh, ``False`` akan ditafsirkan sebagai arti bahwa "
-"pengguna tidak diizinkan menyunting obyek apapun dari jenis ini)."
 
 msgid ""
-"Should return ``True`` if deleting obj is permitted, ``False`` otherwise. If "
-"obj is ``None``, should return ``True`` or ``False`` to indicate whether "
-"deleting objects of this type is permitted in general (e.g., ``False`` will "
-"be interpreted as meaning that the current user is not permitted to delete "
-"any object of this type)."
+"Should return ``True`` if deleting ``obj`` is permitted, ``False`` "
+"otherwise. If ``obj`` is ``None``, should return ``True`` or ``False`` to "
+"indicate whether deleting objects of this type is permitted in general (e."
+"g., ``False`` will be interpreted as meaning that the current user is not "
+"permitted to delete any object of this type)."
 msgstr ""
-"Harus mengembalikan ``True`` jika menghapus obyek diizinkan, ``False`` "
-"sebaliknya. Jika obyek adalah ``None``, harus mengembalikan ``True`` atau "
-"``False`` untuk menandakan apakah menghapus obyek dari jenis ini diizinkan "
-"secara umum (sebagai contoh, ``False`` akan ditafsirkan sebagai arti bahwa "
-"pengguna saat ini tidak diizinkan menghapus obyek apapun dari jenis ini)."
 
 msgid ""
 "Should return ``True`` if displaying the module on the admin index page and "
 "accessing the module's index page is permitted, ``False`` otherwise. Uses :"
 "meth:`User.has_module_perms() <django.contrib.auth.models.User."
 "has_module_perms>` by default. Overriding it does not restrict access to the "
-"add, change or delete views, :meth:`~ModelAdmin.has_add_permission`, :meth:"
+"view, add, change, or delete views, :meth:`~ModelAdmin."
+"has_view_permission`, :meth:`~ModelAdmin.has_add_permission`, :meth:"
 "`~ModelAdmin.has_change_permission`, and :meth:`~ModelAdmin."
 "has_delete_permission` should be used for that."
 msgstr ""
-"Harus mengembalikan ``True`` jika memperlihatkan modul pada halaman indeks "
-"admin dan mengakses halaman indeks admin diizinkan, ``False`` sebaliknya. "
-"Gunakan :meth:`User.has_module_perms() <django.contrib.auth.models.User."
-"has_module_perms>` secara awalan. Mengutamakan itu tidak membatasi akses "
-"untuk menambah, merubah atau menghapus tampilan, :meth:`~ModelAdmin."
-"has_add_permission`, :meth:`~ModelAdmin.has_change_permission`, dan :meth:"
-"`~ModelAdmin.has_delete_permission` harus digunakan untuk itu."
 
 msgid ""
 "The ``get_queryset`` method on a ``ModelAdmin`` returns a :class:`~django.db."
@@ -8888,6 +8951,45 @@ msgstr ""
 "Metode ini harus mengembalikan sebuah kamus di formulir ``{'fieldname': "
 "'fieldval'}``::"
 
+msgid ""
+"A hook for customizing the deletion process of the :meth:`delete_view` and "
+"the \"delete selected\" :doc:`action <actions>`."
+msgstr ""
+
+msgid ""
+"The ``objs`` argument is a homogeneous iterable of objects (a ``QuerySet`` "
+"or a list of model instances) to be deleted, and ``request`` is the :class:"
+"`~django.http.HttpRequest`."
+msgstr ""
+
+msgid ""
+"This method must return a 4-tuple of ``(deleted_objects, model_count, "
+"perms_needed, protected)``."
+msgstr ""
+
+msgid ""
+"``deleted_objects`` is a list of strings representing all the objects that "
+"will be deleted. If there are any related objects to be deleted, the list is "
+"nested and includes those related objects. The list is formatted in the "
+"template using the :tfilter:`unordered_list` filter."
+msgstr ""
+
+msgid ""
+"``model_count`` is a dictionary mapping each model's :attr:`~django.db."
+"models.Options.verbose_name_plural` to the number of objects that will be "
+"deleted."
+msgstr ""
+
+msgid ""
+"``perms_needed`` is a set of :attr:`~django.db.models.Options.verbose_name`"
+"\\s of the models that the user doesn't have permission to delete."
+msgstr ""
+
+msgid ""
+"``protected`` is a list of strings representing of all the protected related "
+"objects that can't be deleted. The list is displayed in the template."
+msgstr ""
+
 msgid "Other methods"
 msgstr "Cara lain"
 
@@ -8989,15 +9091,13 @@ msgstr "JavaScript admin Django memanfaatkan pustaka `jQuery`_"
 
 msgid ""
 "To avoid conflicts with user-supplied scripts or libraries, Django's jQuery "
-"(version 2.2.3) is namespaced as ``django.jQuery``. If you want to use "
+"(version 3.3.1) is namespaced as ``django.jQuery``. If you want to use "
 "jQuery in your own admin JavaScript without including a second copy, you can "
 "use the ``django.jQuery`` object on changelist and add/edit views."
 msgstr ""
-"Untuk menghindari pertentangan dengan tulisan dipasok-pengguna atau pustaka, "
-"jQuery (versi 2.2.3) Django adalah namespace sebagai ``django.jQuery``. Jika "
-"anda ingin menggunakan jQuery di JavaScript admin anda sendiri tanpa "
-"menyertakan salinan kedua, anda dapat menggunakan obyek ``django.jQuery`` "
-"pada daftar rubah dan tampilan tambah/rubah."
+
+msgid "jQuery was upgraded from 2.2.3 to 3.3.1."
+msgstr ""
 
 msgid ""
 "The :class:`ModelAdmin` class requires jQuery by default, so there is no "
@@ -9164,20 +9264,11 @@ msgstr ":meth:`~ModelAdmin.formfield_for_foreignkey`"
 msgid ":meth:`~ModelAdmin.formfield_for_manytomany`"
 msgstr ":meth:`~ModelAdmin.formfield_for_manytomany`"
 
-msgid ":meth:`~ModelAdmin.has_add_permission`"
-msgstr ":meth:`~ModelAdmin.has_add_permission`"
-
-msgid ":meth:`~ModelAdmin.has_change_permission`"
-msgstr ":meth:`~ModelAdmin.has_change_permission`"
-
-msgid ":meth:`~ModelAdmin.has_delete_permission`"
-msgstr ":meth:`~ModelAdmin.has_delete_permission`"
-
 msgid ":meth:`~ModelAdmin.has_module_permission`"
 msgstr ":meth:`~ModelAdmin.has_module_permission`"
 
-msgid "The ``InlineModelAdmin`` class adds:"
-msgstr "Kelas ``InlineModelAdmin`` menambahkan:"
+msgid "The ``InlineModelAdmin`` class adds or customizes:"
+msgstr ""
 
 msgid "The model which the inline is using. This is required."
 msgstr "Model yang di berderet sedang menggunakan. Ini adalah diwajibkan."
@@ -9389,6 +9480,25 @@ msgstr ""
 "Timpa metode ini untuk secara program menentukan nomor minimal dari formulir "
 "berderet tambahan. Sebagai contoh, ini mungkin berdasarkan pada instance "
 "model (dilewatkan sebagai argumen kata kunci ``obj``)::"
+
+msgid ""
+"Should return ``True`` if adding an inline object is permitted, ``False`` "
+"otherwise. ``obj`` is the parent object being edited or ``None`` when adding "
+"a new parent."
+msgstr ""
+
+msgid "The ``obj`` argument was added."
+msgstr ""
+
+msgid ""
+"Should return ``True`` if editing an inline object is permitted, ``False`` "
+"otherwise. ``obj`` is the parent object being edited."
+msgstr ""
+
+msgid ""
+"Should return ``True`` if deleting an inline object is permitted, ``False`` "
+"otherwise. ``obj`` is the parent object being edited."
+msgstr ""
 
 msgid ""
 "Working with a model with two or more foreign keys to the same parent model"
@@ -9724,14 +9834,29 @@ msgstr ""
 "Tidak setiap cetakan di ``contrib/admin/templates/admin`` mungkin ditimpa "
 "per aplikasi atau per model. Berikut dapat:"
 
+msgid "``actions.html``"
+msgstr ""
+
 msgid "``app_index.html``"
 msgstr "``app_index.html``"
 
 msgid "``change_form.html``"
 msgstr "``change_form.html``"
 
+msgid "``change_form_object_tools.html``"
+msgstr ""
+
 msgid "``change_list.html``"
 msgstr "``change_list.html``"
+
+msgid "``change_list_object_tools.html``"
+msgstr ""
+
+msgid "``change_list_results.html``"
+msgstr ""
+
+msgid "``date_hierarchy.html``"
+msgstr ""
 
 msgid "``delete_confirmation.html``"
 msgstr "``delete_confirmation.html``"
@@ -9739,11 +9864,27 @@ msgstr "``delete_confirmation.html``"
 msgid "``object_history.html``"
 msgstr "``object_history.html``"
 
+msgid "``pagination.html``"
+msgstr ""
+
 msgid "``popup_response.html``"
 msgstr "``popup_response.html``"
 
-msgid "The ability to override the ``popup_response.html`` template was added."
-msgstr "Kemampuan menimpa cetakan ``popup_response.html`` telah ditambahkan."
+msgid "``prepopulated_fields_js.html``"
+msgstr ""
+
+msgid "``search_form.html``"
+msgstr ""
+
+msgid "``submit_line.html``"
+msgstr ""
+
+msgid ""
+"The ability to override the ``actions.html``, ``change_form_object_tools."
+"html``, ``change_list_object_tools.html``, ``change_list_results.html``, "
+"``date_hierarchy.html``, ``pagination.html``, ``prepopulated_fields_js."
+"html``, ``search_form.html``, and ``submit_line.html`` templates was added."
+msgstr ""
 
 msgid ""
 "For those templates that cannot be overridden in this way, you may still "
@@ -9795,6 +9936,11 @@ msgstr ""
 "``django.contrib.admin.sites.AdminSite``; secara awalan, sebuah instance "
 "dari kelas ini dibuat sebagai ``django.contrib.admin.site`` dan anda dapat "
 "mendaftar model-model anda dan instance-instance ``ModelAdmin`` dengan itu."
+
+msgid ""
+"If you want to customize the default admin site, you can :ref:`override it "
+"<overriding-default-admin-site>`."
+msgstr ""
 
 msgid ""
 "When constructing an instance of an ``AdminSite``, you can provide a unique "
@@ -9980,11 +10126,9 @@ msgid "``name``: plural name of the model"
 msgstr "``name``: nama jamak dari model"
 
 msgid ""
-"``perms``: a ``dict`` tracking ``add``, ``change``, and ``delete`` "
+"``perms``: a ``dict`` tracking ``add``, ``change``, ``delete``, and ``view`` "
 "permissions"
 msgstr ""
-"``perms``: sebuah ``dict`` melacak perizinan ``add``, ``change``, dan "
-"``delete``"
 
 msgid "``admin_url``: admin changelist URL for the model"
 msgstr "``admin_url``: URL daftar rubah admin untuk model"
@@ -10075,6 +10219,16 @@ msgstr ""
 "``myproject.admin`` anda. Ini berarti anda butuh menaruh ``'django.contrib."
 "admin.apps.SimpleAdminConfig'`` daripada ``'django.contrib.admin'`` dalam "
 "pengaturan :setting:`INSTALLED_APPS` anda."
+
+msgid "Overriding the default admin site"
+msgstr ""
+
+msgid ""
+"You can override the default ``django.contrib.admin.site`` by setting the :"
+"attr:`~.SimpleAdminConfig.default_site` attribute of a custom ``AppConfig`` "
+"to the dotted import path of either a ``AdminSite`` subclass or a callable "
+"that returns a site instance."
+msgstr ""
 
 msgid "Multiple admin sites in the same URLconf"
 msgstr "Banyak situs admin di URLconf yang sama"
@@ -10817,6 +10971,13 @@ msgstr ""
 "set_unusable_password()` telah dipanggil untuk pengguna ini."
 
 msgid ""
+"In older versions, this also returns ``False`` if the password is ``None`` "
+"or an empty string, or if the password uses a hasher that's not in the :"
+"setting:`PASSWORD_HASHERS` setting. That behavior is considered a bug as it "
+"prevents users with such passwords from requesting a password reset."
+msgstr ""
+
+msgid ""
 "Returns a set of permission strings that the user has, through their groups."
 msgstr ""
 "Mengembalikan deretan karakter kumpulan perizinan yang pengguna punyai, "
@@ -11183,9 +11344,6 @@ msgid ""
 msgstr ""
 "Obyek :class:`~django.http.HttpRequest`, jika satu telah disediakan pada :"
 "func:`~django.contrib.auth.authenticate`."
-
-msgid "The ``request`` argument was added."
-msgstr "Argumen ``request`` te;ah ditambahkan."
 
 msgid "Authentication backends"
 msgstr "Backend pembuktian keaslian"
@@ -12631,15 +12789,11 @@ msgid "Displaying ``registration_required`` flatpages"
 msgstr "Menampilkan flatpage ``registration_required``"
 
 msgid ""
-"By default, the :ttag:`get_flatpages` templatetag will only show flatpages "
+"By default, the :ttag:`get_flatpages` template tag will only show flatpages "
 "that are marked ``registration_required = False``. If you want to display "
 "registration-protected flatpages, you need to specify an authenticated user "
 "using a ``for`` clause."
 msgstr ""
-"Secara awalan, etiket cetakan :ttag:`get_flatpages` akan hanya menampilkan "
-"flagpage yang ditandai ``registration_required = False``. Jika anda ingin "
-"menampilkan flatpage pendaftaran-terlindungi, anda butuh menentukan sebuah "
-"pengguna terautentifikasi menggunakan klausa ``for``."
 
 msgid "For example:"
 msgstr "Sebagai contoh:"
@@ -12732,13 +12886,6 @@ msgid ""
 msgstr ""
 "Tautan pada URL dari OpenLayers JavaScript. Awalan pada ``'https://cdnjs."
 "cloudflare.com/ajax/libs/openlayers/2.13.1/OpenLayers.js'``."
-
-msgid ""
-"Older versions default to ``'http://openlayers.org/api/2.13.1/OpenLayers."
-"js'``."
-msgstr ""
-"Versi terlama awalan pada ``'http://openlayers.org/api/2.13.1/OpenLayers."
-"js'``."
 
 msgid ""
 "Defaults to ``True``.  When set to ``False``, disables editing of existing "
@@ -13467,14 +13614,14 @@ msgstr ":class:`Centroid`"
 msgid ":class:`Difference`"
 msgstr ":class:`Difference`"
 
-msgid "X (≥ 5.6.1)"
-msgstr "X (≥ 5.6.1)"
-
 msgid ":class:`Distance`"
 msgstr ":class:`Distance`"
 
 msgid ":class:`Envelope`"
 msgstr ":class:`Envelope`"
+
+msgid ":class:`ForcePolygonCW`"
+msgstr ""
 
 msgid ":class:`ForceRHR`"
 msgstr ":class:`ForceRHR`"
@@ -13841,15 +13988,6 @@ msgid ""
 "the inner ``Media`` class (see :ref:`assets-as-a-static-definition`)."
 msgstr ""
 
-msgid ""
-"Older versions use ``OpenLayers.js`` from ``openlayers.org`` which isn't "
-"suitable for production use since it offers no guaranteed uptime and runs on "
-"a slow server."
-msgstr ""
-
-msgid "Also, the widget nows uses OpenLayers 3 instead of OpenLayers 2."
-msgstr "Juga, widget sekarang menggunakan OpenLayer 3 daripada OpenLayer 2."
-
 msgid "``OSMWidget``"
 msgstr "``OSMWidget``"
 
@@ -13875,11 +14013,6 @@ msgid ""
 "The :class:`OpenLayersWidget` note about JavaScript file hosting above also "
 "applies here. See also this `FAQ answer`_ about ``https`` access to map "
 "tiles."
-msgstr ""
-
-msgid ""
-"OpenLayers 2.x has been dropped in favor of OpenLayers 3. If you extend the "
-"``gis/openlayers-osm.html`` template, please review your custom template."
 msgstr ""
 
 msgid "Geographic Database Functions"
@@ -13923,11 +14056,10 @@ msgid "``Area``"
 msgstr "``Area``"
 
 msgid ""
-"*Availability*: MySQL, Oracle, `PostGIS <https://postgis.net/docs/ST_Area."
-"html>`__, SpatiaLite"
+"*Availability*: `MySQL <https://dev.mysql.com/doc/refman/en/gis-polygon-"
+"property-functions.html#function_area>`__, Oracle, `PostGIS <https://postgis."
+"net/docs/ST_Area.html>`__, SpatiaLite"
 msgstr ""
-"*Tersedia*: MySQL, Oracle, `PostGIS <https://postgis.net/docs/ST_Area."
-"html>`__, SpatiaLite"
 
 msgid ""
 "Accepts a single geographic field or expression and returns the area of the "
@@ -13939,22 +14071,14 @@ msgid ""
 "geographic SRSes."
 msgstr ""
 
-msgid ""
-"In older versions, a raw value was returned on MySQL when used on projected "
-"SRS."
-msgstr ""
-"Dalam versi terlama, nilai mentah dikembalikan pada MySQL ketika digunakan "
-"pada SRS yang diproyeksikan."
-
 msgid "``AsGeoJSON``"
 msgstr "``AsGeoJSON``"
 
 msgid ""
-"*Availability*: MySQL (≥ 5.7.5), `PostGIS <https://postgis.net/docs/"
-"ST_AsGeoJSON.html>`__, SpatiaLite"
+"*Availability*: `MySQL <https://dev.mysql.com/doc/refman/en/spatial-geojson-"
+"functions.html#function_st-asgeojson>`__ (≥ 5.7.5), `PostGIS <https://"
+"postgis.net/docs/ST_AsGeoJSON.html>`__, SpatiaLite"
 msgstr ""
-"*Ketersediaan*: MySQL (≥ 5.7.5), `PostGIS <https://postgis.net/docs/"
-"ST_AsGeoJSON.html>`__, SpatiaLite"
 
 msgid ""
 "Accepts a single geographic field or expression and returns a `GeoJSON "
@@ -14031,9 +14155,6 @@ msgstr "``versi``"
 
 msgid "Specifies the GML version to use: 2 (default) or 3."
 msgstr "Menentukan versi GML untuk menggunakan: 2 (awalan) atau 3."
-
-msgid "Oracle support was added."
-msgstr "Dukungan Oracle telah ditambahkan."
 
 msgid "``AsKML``"
 msgstr "``AsKML``"
@@ -14133,11 +14254,10 @@ msgid "``Centroid``"
 msgstr "``Centroid``"
 
 msgid ""
-"*Availability*: MySQL, `PostGIS <https://postgis.net/docs/ST_Centroid."
-"html>`__, Oracle, SpatiaLite"
+"*Availability*: `MySQL <https://dev.mysql.com/doc/refman/en/gis-polygon-"
+"property-functions.html#function_st-centroid>`__, `PostGIS <https://postgis."
+"net/docs/ST_Centroid.html>`__, Oracle, SpatiaLite"
 msgstr ""
-"*Tersedia*: MySQL, `PostGIS <https://postgis.net/docs/ST_Centroid.html>`__, "
-"Oracle, SpatiaLite"
 
 msgid ""
 "Accepts a single geographic field or expression and returns the ``centroid`` "
@@ -14150,11 +14270,10 @@ msgid "``Difference``"
 msgstr "``Difference``"
 
 msgid ""
-"*Availability*: MySQL (≥ 5.6.1), `PostGIS <https://postgis.net/docs/"
-"ST_Difference.html>`__, Oracle, SpatiaLite"
+"*Availability*: `MySQL <https://dev.mysql.com/doc/refman/en/spatial-operator-"
+"functions.html#function_st-difference>`__, `PostGIS <https://postgis.net/"
+"docs/ST_Difference.html>`__, Oracle, SpatiaLite"
 msgstr ""
-"*Tersedia*: MySQL (≥ 5.6.1), `PostGIS <https://postgis.net/docs/"
-"ST_Difference.html>`__, Oracle, SpatiaLite"
 
 msgid ""
 "Accepts two geographic fields or expressions and returns the geometric "
@@ -14169,11 +14288,10 @@ msgid "``Distance``"
 msgstr "``Distance``"
 
 msgid ""
-"*Availability*: MySQL (≥ 5.6.1), `PostGIS <https://postgis.net/docs/"
-"ST_Distance.html>`__, Oracle, SpatiaLite"
+"*Availability*: `MySQL <https://dev.mysql.com/doc/refman/en/spatial-relation-"
+"functions-object-shapes.html#function_st-distance>`__, `PostGIS <https://"
+"postgis.net/docs/ST_Distance.html>`__, Oracle, SpatiaLite"
 msgstr ""
-"*Tersedia*: MySQL (≥ 5.6.1), `PostGIS <https://postgis.net/docs/ST_Distance."
-"html>`__, Oracle, SpatiaLite"
 
 msgid ""
 "Accepts two geographic fields or expressions and returns the distance "
@@ -14219,19 +14337,36 @@ msgid "``Envelope``"
 msgstr "``Envelope``"
 
 msgid ""
-"*Availability*: MySQL, `PostGIS <https://postgis.net/docs/ST_Envelope."
-"html>`__, SpatiaLite"
+"*Availability*: `MySQL <https://dev.mysql.com/doc/refman/en/gis-general-"
+"property-functions.html#function_st-envelope>`__, `PostGIS <https://postgis."
+"net/docs/ST_Envelope.html>`__, SpatiaLite"
 msgstr ""
-"*Tersedia*: MySQL, `PostGIS <https://postgis.net/docs/ST_Envelope.html>`__, "
-"SpatiaLite"
 
 msgid ""
 "Accepts a single geographic field or expression and returns the geometry "
 "representing the bounding box of the geometry."
 msgstr ""
 
+msgid "``ForcePolygonCW``"
+msgstr ""
+
+msgid ""
+"*Availability*: `PostGIS <https://postgis.net/docs/ST_ForcePolygonCW."
+"html>`__, SpatiaLite"
+msgstr ""
+
+msgid ""
+"Accepts a single geographic field or expression and returns a modified "
+"version of the polygon/multipolygon in which all exterior rings are oriented "
+"clockwise and all interior rings are oriented counterclockwise. Non-"
+"polygonal geometries are returned unchanged."
+msgstr ""
+
 msgid "``ForceRHR``"
 msgstr "``ForceRHR``"
+
+msgid "Use :class:`ForcePolygonCW` instead."
+msgstr ""
 
 msgid "*Availability*: `PostGIS <https://postgis.net/docs/ST_ForceRHR.html>`__"
 msgstr "*Tersedia*: `PostGIS <https://postgis.net/docs/ST_ForceRHR.html>`__"
@@ -14246,11 +14381,10 @@ msgid "``GeoHash``"
 msgstr "``GeoHash``"
 
 msgid ""
-"*Availability*: MySQL (≥ 5.7.5), `PostGIS <https://postgis.net/docs/"
-"ST_GeoHash.html>`__, SpatiaLite (LWGEOM)"
+"*Availability*: `MySQL <https://dev.mysql.com/doc/refman/en/spatial-geohash-"
+"functions.html#function_st-geohash>`__ (≥ 5.7.5), `PostGIS <https://postgis."
+"net/docs/ST_GeoHash.html>`__, SpatiaLite (LWGEOM)"
 msgstr ""
-"*Ketersediaan*: MySQL (≥ 5.7.5), `PostGIS <https://postgis.net/docs/"
-"ST_GeoHash.html>`__, SpatiaLite (LWGEOM)"
 
 msgid ""
 "Accepts a single geographic field or expression and returns a `GeoHash`__ "
@@ -14270,11 +14404,10 @@ msgid "``Intersection``"
 msgstr "``Intersection``"
 
 msgid ""
-"*Availability*: MySQL (≥ 5.6.1), `PostGIS <https://postgis.net/docs/"
-"ST_Intersection.html>`__, Oracle, SpatiaLite"
+"*Availability*: `MySQL <https://dev.mysql.com/doc/refman/en/spatial-operator-"
+"functions.html#function_st-intersection>`__, `PostGIS <https://postgis.net/"
+"docs/ST_Intersection.html>`__, Oracle, SpatiaLite"
 msgstr ""
-"*Tersedia*: MySQL (≥ 5.6.1), `PostGIS <https://postgis.net/docs/"
-"ST_Intersection.html>`__, Oracle, SpatiaLite"
 
 msgid ""
 "Accepts two geographic fields or expressions and returns the geometric "
@@ -14287,11 +14420,10 @@ msgid "``IsValid``"
 msgstr "``IsValid``"
 
 msgid ""
-"*Availability*: MySQL (≥ 5.7.5), `PostGIS <https://postgis.net/docs/"
-"ST_IsValid.html>`__, Oracle, SpatiaLite (LWGEOM)"
+"*Availability*: `MySQL <https://dev.mysql.com/doc/refman/en/spatial-"
+"convenience-functions.html#function_st-isvalid>`__ (≥ 5.7.5), `PostGIS "
+"<https://postgis.net/docs/ST_IsValid.html>`__, Oracle, SpatiaLite (LWGEOM)"
 msgstr ""
-"*Ketersediaan*: MySQL (≥ 5.7.5), `PostGIS <https://postgis.net/docs/"
-"ST_IsValid.html>`__, Oracle, SpatiaLite (LWGEOM)"
 
 msgid ""
 "Accepts a geographic field or expression and tests if the value is well "
@@ -14302,18 +14434,14 @@ msgstr ""
 "berbentuk bagus. Mengembalikan ``True`` jika nilainya adalah geometri sah "
 "dan ``False`` sebaliknya."
 
-msgid "SpatiaLite and Oracle support was added."
-msgstr "Dukungan SpatiaLite dan Oracle telah ditambahkan."
-
 msgid "``Length``"
 msgstr "``Length``"
 
 msgid ""
-"*Availability*: MySQL, Oracle, `PostGIS <https://postgis.net/docs/ST_Length."
-"html>`__, SpatiaLite"
+"*Availability*: `MySQL <https://dev.mysql.com/doc/refman/en/gis-linestring-"
+"property-functions.html#function_st-length>`__, Oracle, `PostGIS <https://"
+"postgis.net/docs/ST_Length.html>`__, SpatiaLite"
 msgstr ""
-"*Tersedia*: MySQL, Oracle, `PostGIS <https://postgis.net/docs/ST_Length."
-"html>`__, SpatiaLite"
 
 msgid ""
 "Accepts a single geographic linestring or multilinestring field or "
@@ -14330,9 +14458,6 @@ msgstr ""
 
 msgid "MySQL doesn't support length calculations on geographic SRSes."
 msgstr "MySQL tidak mendukung dukungan perhitungan panjang pada geografis SRS."
-
-msgid "In older versions, a raw value was returned on MySQL."
-msgstr "Dalam versi terlama, nilai mentah dikembalikan pada MySQL."
 
 msgid "``LineLocatePoint``"
 msgstr "``LineLocatePoint``"
@@ -14368,9 +14493,6 @@ msgid ""
 "input."
 msgstr ""
 
-msgid "SpatiaLite support was added."
-msgstr "Dukungan SpatiaLite  telah ditambahkan."
-
 msgid "``MemSize``"
 msgstr "``MemSize``"
 
@@ -14386,11 +14508,11 @@ msgid "``NumGeometries``"
 msgstr "``NumGeometries``"
 
 msgid ""
-"*Availability*: MySQL, `PostGIS <https://postgis.net/docs/ST_NumGeometries."
-"html>`__, Oracle, SpatiaLite"
+"*Availability*: `MySQL <https://dev.mysql.com/doc/refman/en/gis-"
+"geometrycollection-property-functions.html#function_st-numgeometries>`__, "
+"`PostGIS <https://postgis.net/docs/ST_NumGeometries.html>`__, Oracle, "
+"SpatiaLite"
 msgstr ""
-"*Tersedia*: MySQL, `PostGIS <https://postgis.net/docs/ST_NumGeometries."
-"html>`__, Oracle, SpatiaLite"
 
 msgid ""
 "Accepts a single geographic field or expression and returns the number of "
@@ -14405,11 +14527,10 @@ msgid "``NumPoints``"
 msgstr "``NumPoints``"
 
 msgid ""
-"*Availability*: MySQL, `PostGIS <https://postgis.net/docs/ST_NPoints."
-"html>`__, Oracle, SpatiaLite"
+"*Availability*: `MySQL <https://dev.mysql.com/doc/refman/en/gis-linestring-"
+"property-functions.html#function_st-numpoints>`__, `PostGIS <https://postgis."
+"net/docs/ST_NPoints.html>`__, Oracle, SpatiaLite"
 msgstr ""
-"*Tersedia*: MySQL, `PostGIS <https://postgis.net/docs/ST_NPoints.html>`__, "
-"Oracle, SpatiaLite"
 
 msgid ""
 "Accepts a single geographic field or expression and returns the number of "
@@ -14420,10 +14541,6 @@ msgid "On MySQL, returns ``None`` for any non-``LINESTRING`` geometry."
 msgstr ""
 "Pada MySQL, mengembalikan ``None`` untuk geometri bukan-``LINESTRING`` "
 "apapun."
-
-msgid "SpatiaLite support for non-``LINESTRING`` geometries was added."
-msgstr ""
-"SpatiaLite mendukung untuk geometri bukan-``LINESTRING`` telah ditambahkan."
 
 msgid "``Perimeter``"
 msgstr "``Perimeter``"
@@ -14528,11 +14645,10 @@ msgid "``SymDifference``"
 msgstr "``SymDifference``"
 
 msgid ""
-"*Availability*: MySQL (≥ 5.6.1), `PostGIS <https://postgis.net/docs/"
-"ST_SymDifference.html>`__, Oracle, SpatiaLite"
+"*Availability*: `MySQL <https://dev.mysql.com/doc/refman/en/spatial-operator-"
+"functions.html#function_st-symdifference>`__, `PostGIS <https://postgis.net/"
+"docs/ST_SymDifference.html>`__, Oracle, SpatiaLite"
 msgstr ""
-"*Tersedia*: MySQL (≥ 5.6.1), `PostGIS <https://postgis.net/docs/"
-"ST_SymDifference.html>`__, Oracle, SpatiaLite"
 
 msgid ""
 "Accepts two geographic fields or expressions and returns the geometric "
@@ -14582,11 +14698,10 @@ msgid "``Union``"
 msgstr "``Union``"
 
 msgid ""
-"*Availability*: MySQL (≥ 5.6.1), `PostGIS <https://postgis.net/docs/ST_Union."
-"html>`__, Oracle, SpatiaLite"
+"*Availability*: `MySQL <https://dev.mysql.com/doc/refman/en/spatial-operator-"
+"functions.html#function_st-union>`__, `PostGIS <https://postgis.net/docs/"
+"ST_Union.html>`__, Oracle, SpatiaLite"
 msgstr ""
-"*Tersedia*: MySQL (≥ 5.6.1), `PostGIS <https://postgis.net/docs/ST_Union."
-"html>`__, Oracle, SpatiaLite"
 
 msgid ""
 "Accepts two geographic fields or expressions and returns the union of both "
@@ -15561,14 +15676,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Added the ability to pass the ``size``, ``shape``, and ``offset`` parameters "
-"when creating :class:`GDALRaster` objects. The parameters can be passed "
-"through the ``ds_input`` dictionary. This allows to finely control initial "
-"pixel values. The functionality is similar to the :meth:`GDALBand."
-"data()<django.contrib.gis.gdal.GDALBand.data>` method."
-msgstr ""
-
-msgid ""
 "Added the ability to read and write rasters in GDAL's memory-based virtual "
 "filesystem. ``GDALRaster`` objects can now be converted to and from binary "
 "data in-memory."
@@ -15673,9 +15780,9 @@ msgstr ""
 
 msgid ""
 "The only parameter that is set differently from the source raster is the "
-"name. The default value of the the raster name is the name of the source "
-"raster appended with ``'_copy' + source_driver_name``. For file-based "
-"rasters it is recommended to provide the file path of the target raster."
+"name. The default value of the raster name is the name of the source raster "
+"appended with ``'_copy' + source_driver_name``. For file-based rasters it is "
+"recommended to provide the file path of the target raster."
 msgstr ""
 
 msgid ""
@@ -16471,9 +16578,6 @@ msgstr ""
 msgid "Case"
 msgstr "Kasus"
 
-msgid "Lookup"
-msgstr "Cari"
-
 msgid "SQL Equivalent"
 msgstr "Setara SQL"
 
@@ -16760,6 +16864,21 @@ msgstr ""
 "*Tersedia*: `PostGIS <https://postgis.net/docs/ST_Equals.html>`__, Oracle, "
 "MySQL, SpatiaLite, PGRaster (Perubahan)"
 
+msgid "Tests if the geometry field is spatially equal to the lookup geometry."
+msgstr ""
+
+msgid "``ST_Equals(poly, geom)``"
+msgstr ""
+
+msgid "``SDO_EQUAL(poly, geom)``"
+msgstr ""
+
+msgid "``MBREquals(poly, geom)``"
+msgstr ""
+
+msgid "``Equals(poly, geom)``"
+msgstr ""
+
 msgid "``exact``, ``same_as``"
 msgstr "``exact``, ``same_as``"
 
@@ -16769,6 +16888,15 @@ msgid ""
 msgstr ""
 "*Tersedia*: `PostGIS <https://postgis.net/docs/ST_Geometry_Same.html>`__, "
 "Oracle, MySQL, SpatiaLite, PGRaster (Timbal balik)"
+
+msgid ""
+"Tests if the geometry field is \"equal\" to the lookup geometry. On Oracle "
+"and SpatiaLite it tests spatial equality, while on MySQL and PostGIS it "
+"tests equality of bounding boxes."
+msgstr ""
+
+msgid "``poly ~= geom``"
+msgstr ""
 
 msgid "``intersects``"
 msgstr "``intersects``"
@@ -16814,9 +16942,6 @@ msgstr "``ST_IsValid(poly)``"
 
 msgid "``SDO_GEOM.VALIDATE_GEOMETRY_WITH_CONTEXT(poly, 0.05) = 'TRUE'``"
 msgstr "``SDO_GEOM.VALIDATE_GEOMETRY_WITH_CONTEXT(poly, 0.05) = 'TRUE'``"
-
-msgid "Oracle and SpatiaLite support was added."
-msgstr "Dukungan Oracle dan SpatiaLite telah ditambahkan."
 
 msgid "``overlaps``"
 msgstr "``overlaps``"
@@ -17093,9 +17218,6 @@ msgstr ""
 "html>`__ paling sederhana digunakan dengan sistem kordinat yang sudah "
 "dihitung. Raster dirubah ke geometri untuk pencarian berdasarkan spheroid."
 
-msgid "Support for the ``'spheroid'`` option on SQLite was added."
-msgstr ""
-
 msgid "``distance_gt``"
 msgstr "``distance_gt``"
 
@@ -17294,7 +17416,7 @@ msgstr ""
 
 msgid ""
 "For an explanation of this routine, read `Quirks of the \"Contains\" Spatial "
-"Predicate <http://lin-ear-th-inking.blogspot.com/2007/06/subtleties-of-ogc-"
+"Predicate <https://lin-ear-th-inking.blogspot.com/2007/06/subtleties-of-ogc-"
 "covers-spatial.html>`_ by Martin Davis (a PostGIS developer)."
 msgstr ""
 
@@ -17432,11 +17554,6 @@ msgid ""
 "equals_exact`, not :meth:`~GEOSGeometry.equals`, i.e. it requires the "
 "compared geometries to have the same coordinates in the same positions with "
 "the same SRIDs::"
-msgstr ""
-
-msgid ""
-"Older versions didn't check the ``srid`` when comparing ``GEOSGeometry`` "
-"objects using the equality operator."
 msgstr ""
 
 msgid "Geometry Objects"
@@ -17788,6 +17905,19 @@ msgid ""
 "from this geometry is less than or equal to the given ``width``. The "
 "optional ``quadsegs`` keyword sets the number of segments used to "
 "approximate a quarter circle (defaults is 8)."
+msgstr ""
+
+msgid "Same as :meth:`buffer`, but allows customizing the style of the buffer."
+msgstr ""
+
+msgid ""
+"``end_cap_style`` can be round (``1``), flat (``2``), or square (``3``)."
+msgstr ""
+
+msgid "``join_style`` can be round (``1``), mitre (``2``), or bevel (``3``)."
+msgstr ""
+
+msgid "Mitre ratio limit (``mitre_limit``) only affects mitered join style."
 msgstr ""
 
 msgid ""
@@ -18299,8 +18429,8 @@ msgstr "Geometry Engine Open Source"
 msgid "Yes"
 msgstr "Ya"
 
-msgid "3.5, 3.4"
-msgstr "3.5, 3.4"
+msgid "3.6, 3.5, 3.4"
+msgstr ""
 
 msgid "`PROJ.4`_"
 msgstr "`PROJ.4`_"
@@ -18341,8 +18471,8 @@ msgstr "Tambahan spasial untuk PostgreSQL"
 msgid "Yes (PostgreSQL only)"
 msgstr "Ya (hanya PostgreSQL)"
 
-msgid "2.3, 2.2, 2.1"
-msgstr "2.3, 2.2, 2.1"
+msgid "2.4, 2.3, 2.2, 2.1"
+msgstr ""
 
 msgid "`SpatiaLite`__"
 msgstr "`SpatiaLite`__"
@@ -18353,8 +18483,8 @@ msgstr "Tambahan spasial untuk SQLite"
 msgid "Yes (SQLite only)"
 msgstr "Ya (hanya SQLite )"
 
-msgid "4.3, 4.2, 4.1, 4.0"
-msgstr "4.3, 4.2, 4.1, 4.0"
+msgid "4.3, 4.2, 4.1"
+msgstr ""
 
 msgid ""
 "Note that older or more recent versions of these libraries *may* also work "
@@ -18363,13 +18493,6 @@ msgstr ""
 "Catat bahwa terlama atau lebih versi saat ini dari pustaka-pustaka ini "
 "*mungkin* juga bekerja sepenuhnya baik dengan GeoDjango. Jarak tempuh anda "
 "mungkin beragam."
-
-msgid ""
-"In older versions, GDAL is required only for SQLite. Now it's required for "
-"all databases."
-msgstr ""
-"Di versi terlama, GDAL hanya dibutuhkan untuk SQLite. Sekarang itu "
-"dibutuhkan untuk semua basisdata."
 
 msgid ""
 "The GeoDjango interfaces to GEOS, GDAL, and GeoIP may be used independently "
@@ -18434,10 +18557,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-"First, download GEOS 3.4.2 from the GEOS website and untar the source "
-"archive::"
+"First, download GEOS from the GEOS website and untar the source archive::"
 msgstr ""
-"Pertama, unduh GEOS 3.4.2 dari situs jaringan GEOS dan untar arsip sumber::"
 
 msgid ""
 "Next, change into the directory where GEOS was unpacked, run the configure "
@@ -18648,8 +18769,8 @@ msgstr "PostgreSQL"
 msgid "GEOS, GDAL, PROJ.4, PostGIS"
 msgstr "GEOS, GDAL, PROJ.4, PostGIS"
 
-msgid "9.3+"
-msgstr "9.3+"
+msgid "9.4+"
+msgstr ""
 
 msgid "Requires PostGIS."
 msgstr "Membutuhkan PostGIS."
@@ -18657,8 +18778,8 @@ msgstr "Membutuhkan PostGIS."
 msgid "GEOS, GDAL"
 msgstr "GEOS, GDAL"
 
-msgid "5.5+"
-msgstr "5.5+"
+msgid "5.6+"
+msgstr ""
 
 msgid ""
 "Not OGC-compliant; :ref:`limited functionality <mysql-spatial-limitations>`."
@@ -18676,11 +18797,11 @@ msgstr "SQLite"
 msgid "GEOS, GDAL, PROJ.4, SpatiaLite"
 msgstr "GEOS, GDAL, PROJ.4, SpatiaLite"
 
-msgid "3.6.+"
-msgstr "3.6.+"
+msgid "3.7.15+"
+msgstr ""
 
-msgid "Requires SpatiaLite 4.0+"
-msgstr "Membutuhkan SpatiaLite 4.0+"
+msgid "Requires SpatiaLite 4.1+"
+msgstr ""
 
 msgid ""
 "See also `this comparison matrix`__ on the OSGeo Wiki for PostgreSQL/PostGIS/"
@@ -18694,6 +18815,14 @@ msgstr "Pustaka geospasial"
 
 msgid "Database installation"
 msgstr "Pemasangan basisdata"
+
+msgid ":setting:`DATABASES` configuration"
+msgstr ""
+
+msgid ""
+"Set the :setting:`ENGINE <DATABASE-ENGINE>` setting to one of the :ref:"
+"`spatial backends <spatial-backends>`."
+msgstr ""
 
 msgid "Add ``django.contrib.gis`` to :setting:`INSTALLED_APPS`"
 msgstr "Tambah ``django.contrib.gis`` ke :setting:`INSTALLED_APPS`"
@@ -18851,7 +18980,7 @@ msgid "Postgres.app"
 msgstr "Postgres.app"
 
 msgid ""
-"`Postgres.app <http://postgresapp.com/>`_ is a standalone PostgreSQL server "
+"`Postgres.app <https://postgresapp.com/>`_ is a standalone PostgreSQL server "
 "that includes the PostGIS extension. You will also need to install ``gdal`` "
 "and ``libgeoip`` with :ref:`homebrew`."
 msgstr ""
@@ -19215,10 +19344,14 @@ msgid "``SPATIALITE_LIBRARY_PATH`` setting required for SpatiaLite 4.2+"
 msgstr ""
 "Pengaturan ``SPATIALITE_LIBRARY_PATH`` dibutuhkan untuk SpatiaLite 4.2+"
 
-msgid "If you're using SpatiaLite 4.2+, you must put this in your settings::"
+msgid ""
+"If you're using SpatiaLite 4.2+, you must put this in your ``settings.py``::"
 msgstr ""
-"Jika anda menggunakan SpatiaLite 4.2+, anda harus menaruh ini dalam "
-"pengaturan anda::"
+
+msgid ""
+"Your operating system may require a different variant such as "
+"``mod_spatialite.so`` (observed with Debian Buster and Ubuntu 18.04)."
+msgstr ""
 
 msgid "Installing from source"
 msgstr "Memasang dari sumber"
@@ -19879,8 +20012,35 @@ msgid ""
 "raster data."
 msgstr ""
 
+msgid "The base class for geometry fields."
+msgstr ""
+
+msgid "Stores a :class:`~django.contrib.gis.geos.Point`."
+msgstr ""
+
+msgid "Stores a :class:`~django.contrib.gis.geos.LineString`."
+msgstr ""
+
+msgid "Stores a :class:`~django.contrib.gis.geos.Polygon`."
+msgstr ""
+
+msgid "Stores a :class:`~django.contrib.gis.geos.MultiPoint`."
+msgstr ""
+
+msgid "Stores a :class:`~django.contrib.gis.geos.MultiLineString`."
+msgstr ""
+
+msgid "Stores a :class:`~django.contrib.gis.geos.MultiPolygon`."
+msgstr ""
+
+msgid "Stores a :class:`~django.contrib.gis.geos.GeometryCollection`."
+msgstr ""
+
 msgid "``RasterField``"
 msgstr "``RasterField``"
+
+msgid "Stores a :class:`~django.contrib.gis.gdal.GDALRaster`."
+msgstr ""
 
 msgid "``RasterField`` is currently only implemented for the PostGIS backend."
 msgstr ""
@@ -20810,13 +20970,9 @@ msgstr "Selanjutnya, mulai peladen pengembangan Django:"
 msgid ""
 "Finally, browse to ``http://localhost:8000/admin/``, and log in with the "
 "user you just created. Browse to any of the ``WorldBorder`` entries -- the "
-"borders may be edited by clicking on a polygon and dragging the vertexes to "
+"borders may be edited by clicking on a polygon and dragging the vertices to "
 "the desired position."
 msgstr ""
-"Akhirnya, lihat ke ``http://localhost:8000/admin/``, dan masuk dengan "
-"pengguna anda baru buat. Lihat pada setiap dari masukan ``WorldBorder`` -- "
-"pembatas mungkin disunting dengan mengklik pada sebuah poligon dan menyeret "
-"verteks ke tempat yang diinginkan."
 
 msgid ""
 "With the :class:`~django.contrib.gis.admin.OSMGeoAdmin`, GeoDjango uses a "
@@ -21182,9 +21338,6 @@ msgstr ""
 
 msgid "See the :doc:`messages documentation </ref/contrib/messages>`."
 msgstr "Lihat :doc:`dokumentasi pesan </ref/contrib/messages>`."
-
-msgid "``postgres``"
-msgstr "``postgres``"
 
 msgid "A collection of PostgreSQL specific features."
 msgstr "Kumpulan fitus khusus PostgreSQL."
@@ -22233,10 +22386,6 @@ msgstr ""
 "anda melewati kedua."
 
 msgid ""
-"Added the ability to store nulls. Previously, they were cast to strings."
-msgstr ""
-
-msgid ""
 "On occasions it may be useful to require or restrict the keys which are "
 "valid for a given field. This can be done using the :class:`~django.contrib."
 "postgres.validators.KeysValidator`."
@@ -22379,9 +22528,6 @@ msgid ""
 "writing to the ``jsonb`` field. ``JSONField`` uses ``jsonb``."
 msgstr ""
 
-msgid "**As a result, this field requires PostgreSQL ≥ 9.4**."
-msgstr ""
-
 msgid "Querying ``JSONField``"
 msgstr "Meminta ``JSONField``"
 
@@ -22413,6 +22559,18 @@ msgstr ""
 msgid ""
 "If only one key or index is used, the SQL operator ``->`` is used. If "
 "multiple operators are used then the ``#>`` operator is used."
+msgstr ""
+
+msgid "To query for ``null`` in JSON data, use ``None`` as a value::"
+msgstr ""
+
+msgid "To query for missing keys, use the ``isnull`` lookup::"
+msgstr ""
+
+msgid ""
+"In older versions, using ``None`` as a  lookup value matches objects that "
+"don't have the key rather than objects that have the key with a ``None`` "
+"value."
 msgstr ""
 
 msgid ""
@@ -22765,9 +22923,6 @@ msgid ""
 "the server."
 msgstr ""
 
-msgid "Added the ability to store nulls."
-msgstr ""
-
 msgid ""
 "A field which accepts JSON encoded data for a :class:`~django.contrib."
 "postgres.fields.JSONField`. It is represented by an HTML ``<textarea>``."
@@ -22847,9 +23002,6 @@ msgid "``RandomUUID``"
 msgstr ""
 
 msgid "Returns a version 4 UUID."
-msgstr ""
-
-msgid "Requires PostgreSQL 9.4 or greater."
 msgstr ""
 
 msgid ""
@@ -24810,12 +24962,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Previous versions didn't make multiple passes to ensure file hashes "
-"converged, so often times file hashes weren't correct. The "
-"``max_post_process_passes`` attribute was added."
-msgstr ""
-
-msgid ""
 "To enable the ``ManifestStaticFilesStorage`` you have to make sure the "
 "following requirements are met:"
 msgstr ""
@@ -24848,11 +24994,6 @@ msgid ""
 "``ValueError`` is raised. This behavior can be disabled by subclassing "
 "``ManifestStaticFilesStorage`` and setting the ``manifest_strict`` attribute "
 "to ``False`` -- nonexistent paths will remain unchanged."
-msgstr ""
-
-msgid ""
-"The ``manifest_strict`` attribute was added. In older versions, the behavior "
-"is the same as ``manifest_strict=False``."
 msgstr ""
 
 msgid ""
@@ -25483,7 +25624,7 @@ msgstr ""
 msgid ""
 "All parameters should be strings, except ``categories``, which should be a "
 "sequence of strings. Beware that some control characters are `not allowed "
-"<http://www.w3.org/International/questions/qa-controls>`_ in XML documents. "
+"<https://www.w3.org/International/questions/qa-controls>`_ in XML documents. "
 "If your content has some of them, you might encounter a :exc:`ValueError` "
 "when producing the feed."
 msgstr ""
@@ -25579,8 +25720,8 @@ msgid ""
 "callbacks. They are:"
 msgstr ""
 
-msgid "``SyndicationFeed.root_attributes(self, )``"
-msgstr "``SyndicationFeed.root_attributes(self, )``"
+msgid "``SyndicationFeed.root_attributes(self)``"
+msgstr ""
 
 msgid ""
 "Return a ``dict`` of attributes to add to the root feed element (``feed``/"
@@ -25845,11 +25986,6 @@ msgid ""
 msgstr ""
 "Kegagalan CSRF adalah tercatat sebagai peringatan pada pencatat :ref:`django."
 "security.csrf 1`."
-
-msgid ""
-"In older versions, CSRF failures are logged to the ``django.request`` logger."
-msgstr ""
-"Dalam versi terlama, kegagalan CSRF dicatat pada pencatat ``django.request``."
 
 msgid "The CSRF protection is based on the following things:"
 msgstr "Perlindungan CSRF berdasarkan pada hal-hal berikut:"
@@ -26173,6 +26309,9 @@ msgstr ":setting:`CSRF_COOKIE_NAME`"
 msgid ":setting:`CSRF_COOKIE_PATH`"
 msgstr ":setting:`CSRF_COOKIE_PATH`"
 
+msgid ":setting:`CSRF_COOKIE_SAMESITE`"
+msgstr ""
+
 msgid ":setting:`CSRF_COOKIE_SECURE`"
 msgstr ":setting:`CSRF_COOKIE_SECURE`"
 
@@ -26237,7 +26376,7 @@ msgid ""
 "For security reasons, CSRF tokens are rotated each time a user logs in. Any "
 "page with a form generated before a login will have an old, invalid CSRF "
 "token and need to be reloaded. This might happen if a user uses the back "
-"button after a login or if they log in in a different browser tab."
+"button after a login or if they log in a different browser tab."
 msgstr ""
 
 msgid "Databases"
@@ -26363,7 +26502,7 @@ msgid "PostgreSQL notes"
 msgstr "Catatan PostgreSQL"
 
 msgid ""
-"Django supports PostgreSQL 9.3 and higher. `psycopg2`_ 2.5.4 or higher is "
+"Django supports PostgreSQL 9.4 and higher. `psycopg2`_ 2.5.4 or higher is "
 "required, though the latest release is recommended."
 msgstr ""
 
@@ -26545,8 +26684,8 @@ msgstr "Catatan MySQL"
 msgid "Version support"
 msgstr "Versi dukungan"
 
-msgid "Django supports MySQL 5.5 and higher."
-msgstr "Django mendukung MySQL 5.5 dan lebih tinggi."
+msgid "Django supports MySQL 5.6 and higher."
+msgstr ""
 
 msgid ""
 "Django's ``inspectdb`` feature uses the ``information_schema`` database, "
@@ -26570,34 +26709,17 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Until MySQL 5.5.4, the default engine was MyISAM_ [#]_. The main drawbacks "
-"of MyISAM are that it doesn't support transactions or enforce foreign-key "
-"constraints. On the plus side, it was the only engine that supported full-"
-"text indexing and searching until MySQL 5.6.4."
+"MySQL's default storage engine is InnoDB_. This engine is fully "
+"transactional and supports foreign key references. It's the recommended "
+"choice. However, the InnoDB autoincrement counter is lost on a MySQL restart "
+"because it does not remember the ``AUTO_INCREMENT`` value, instead "
+"recreating it as \"max(id)+1\". This may result in an inadvertent reuse of :"
+"class:`~django.db.models.AutoField` values."
 msgstr ""
 
 msgid ""
-"Since MySQL 5.5.5, the default storage engine is InnoDB_. This engine is "
-"fully transactional and supports foreign key references. It's probably the "
-"best choice at this point. However, note that the InnoDB autoincrement "
-"counter is lost on a MySQL restart because it does not remember the "
-"``AUTO_INCREMENT`` value, instead recreating it as \"max(id)+1\". This may "
-"result in an inadvertent reuse of :class:`~django.db.models.AutoField` "
-"values."
-msgstr ""
-
-msgid ""
-"If you upgrade an existing project to MySQL 5.5.5 and subsequently add some "
-"tables, ensure that your tables are using the same storage engine (i.e. "
-"MyISAM vs. InnoDB). Specifically, if tables that have a ``ForeignKey`` "
-"between them use different storage engines, you may see an error like the "
-"following when running ``migrate``::"
-msgstr ""
-
-msgid ""
-"Unless this was changed by the packager of your MySQL package. We've had "
-"reports that the Windows Community Server installer sets up InnoDB as the "
-"default storage engine, for example."
+"The main drawbacks of MyISAM_ are that it doesn't support transactions or "
+"enforce foreign-key constraints."
 msgstr ""
 
 msgid "MySQL DB API Drivers"
@@ -26951,6 +27073,9 @@ msgstr ""
 msgid "SQLite notes"
 msgstr "Catatan SQLite"
 
+msgid "Django supports SQLite 3.7.15 and later."
+msgstr ""
+
 msgid ""
 "SQLite_ provides an excellent development alternative for applications that "
 "are predominantly read-only or require a smaller installation footprint. As "
@@ -27112,17 +27237,18 @@ msgid "CREATE TRIGGER WITH ADMIN OPTION"
 msgstr ""
 
 msgid ""
-"Note that, while the RESOURCE role has the required CREATE TABLE, CREATE "
-"SEQUENCE, CREATE PROCEDURE and CREATE TRIGGER privileges, and a user granted "
-"RESOURCE WITH ADMIN OPTION can grant RESOURCE, such a user cannot grant the "
-"individual privileges (e.g. CREATE TABLE), and thus RESOURCE WITH ADMIN "
-"OPTION is not usually sufficient for running tests."
+"While the ``RESOURCE`` role has the required ``CREATE TABLE``, ``CREATE "
+"SEQUENCE``, ``CREATE PROCEDURE``, and ``CREATE TRIGGER`` privileges, and a "
+"user granted ``RESOURCE WITH ADMIN OPTION`` can grant ``RESOURCE``, such a "
+"user cannot grant the individual privileges (e.g. ``CREATE TABLE``), and "
+"thus ``RESOURCE WITH ADMIN OPTION`` is not usually sufficient for running "
+"tests."
 msgstr ""
 
 msgid ""
 "Some test suites also create views; to run these, the user also needs the "
-"CREATE VIEW WITH ADMIN OPTION privilege. In particular, this is needed for "
-"Django's own test suite."
+"``CREATE VIEW WITH ADMIN OPTION`` privilege. In particular, this is needed "
+"for Django's own test suite."
 msgstr ""
 
 msgid ""
@@ -27165,7 +27291,8 @@ msgstr ""
 msgid ""
 "If you plan to run Django in a multithreaded environment (e.g. Apache using "
 "the default MPM module on any modern operating system), then you **must** "
-"set the ``threaded`` option of your Oracle database configuration to True::"
+"set the ``threaded`` option of your Oracle database configuration to "
+"``True``::"
 msgstr ""
 
 msgid "Failure to do this may result in crashes and other odd behavior."
@@ -27180,12 +27307,12 @@ msgid ""
 "This behavior may result in a ``DatabaseError`` in certain unusual setups, "
 "such as when inserting into a remote table, or into a view with an ``INSTEAD "
 "OF`` trigger. The ``RETURNING INTO`` clause can be disabled by setting the "
-"``use_returning_into`` option of the database configuration to False::"
+"``use_returning_into`` option of the database configuration to ``False``::"
 msgstr ""
 
 msgid ""
 "In this case, the Oracle backend will use a separate ``SELECT`` query to "
-"retrieve AutoField values."
+"retrieve ``AutoField`` values."
 msgstr ""
 
 msgid "Naming issues"
@@ -27222,13 +27349,13 @@ msgid "NULL and empty strings"
 msgstr ""
 
 msgid ""
-"Django generally prefers to use the empty string ('') rather than NULL, but "
-"Oracle treats both identically. To get around this, the Oracle backend "
-"ignores an explicit ``null`` option on fields that have the empty string as "
-"a possible value and generates DDL as if ``null=True``. When fetching from "
-"the database, it is assumed that a ``NULL`` value in one of these fields "
-"really means the empty string, and the data is silently converted to reflect "
-"this assumption."
+"Django generally prefers to use the empty string (``''``) rather than "
+"``NULL``, but Oracle treats both identically. To get around this, the Oracle "
+"backend ignores an explicit ``null`` option on fields that have the empty "
+"string as a possible value and generates DDL as if ``null=True``. When "
+"fetching from the database, it is assumed that a ``NULL`` value in one of "
+"these fields really means the empty string, and the data is silently "
+"converted to reflect this assumption."
 msgstr ""
 
 msgid ""
@@ -27661,8 +27788,13 @@ msgstr ""
 msgid ""
 "Introspects the database tables in the database pointed-to by the :setting:"
 "`NAME` setting and outputs a Django model module (a ``models.py`` file) to "
-"standard output. You may choose what tables to inspect by passing their "
-"names as arguments."
+"standard output."
+msgstr ""
+
+msgid ""
+"You may choose what tables or views to inspect by passing their names as "
+"arguments. If no arguments are provided, models are created for views only "
+"if the :option:`--include-views` option is used."
 msgstr ""
 
 msgid ""
@@ -27729,6 +27861,9 @@ msgid ""
 msgstr ""
 
 msgid "Specifies the database to introspect. Defaults to ``default``."
+msgstr ""
+
+msgid "If this option is provided, models are also created for database views."
 msgstr ""
 
 msgid "``loaddata``"
@@ -28071,11 +28206,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Makes ``makemigrations`` exit with error code 1 when no migrations are "
-"created (or would have been created, if combined with ``--dry-run``)."
-msgstr ""
-
-msgid ""
 "Makes ``makemigrations`` exit with a non-zero status when model changes "
 "without migrations are detected."
 msgstr ""
@@ -28117,12 +28247,9 @@ msgid "Specifies the database to migrate. Defaults to ``default``."
 msgstr "Menentukan basisdata untuk perpindahan. Awal ke ``default``. "
 
 msgid ""
-"Tells Django to mark the migrations as having been applied or unapplied, but "
-"without actually running the SQL to change your database schema."
+"Marks the migrations up to the target one (following the rules above) as "
+"applied, but without actually running the SQL to change your database schema."
 msgstr ""
-"Beritahu Django untuk menandai perpindahan sebagai telah di berlakukan atau "
-"tidak diberlakukan, tetapi tanpa sebenarnya menjalankan SQL untuk merubah "
-"skema basisdata"
 
 msgid ""
 "This is intended for advanced users to manipulate the current migration "
@@ -28359,9 +28486,6 @@ msgid ""
 "select` on that platform."
 msgstr ""
 
-msgid "In older versions, the REPL is also output on UNIX systems."
-msgstr ""
-
 msgid "``showmigrations``"
 msgstr "``showmigrations``"
 
@@ -28394,9 +28518,6 @@ msgstr ""
 msgid ""
 "``app_label``\\s arguments limit the output, however, dependencies of "
 "provided apps may also be included."
-msgstr ""
-
-msgid "In older versions, ``showmigrations --plan`` ignores app labels."
 msgstr ""
 
 msgid "Specifies the database to examine. Defaults to ``default``."
@@ -28564,6 +28685,9 @@ msgid ""
 "``docs_version`` -- the version of the documentation: ``'dev'`` or ``'1.x'``"
 msgstr ""
 
+msgid "``django_version`` -- the version of Django, e.g.``'2.0.3'``"
+msgstr ""
+
 msgid ""
 "When the app template files are rendered with the Django template engine (by "
 "default all ``*.py`` files), Django will also replace all stray template "
@@ -28573,8 +28697,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-"To work around this problem, you can use the :ttag:`templatetag` templatetag "
-"to \"escape\" the various parts of the template syntax."
+"To work around this problem, you can use the :ttag:`templatetag` template "
+"tag to \"escape\" the various parts of the template syntax."
 msgstr ""
 
 msgid ""
@@ -29267,8 +29391,8 @@ msgstr ""
 msgid ""
 "If you use the Bash shell, consider installing the Django bash completion "
 "script, which lives in ``extras/django_bash_completion`` in the Django "
-"distribution. It enables tab-completion of ``django-admin`` and ``manage."
-"py`` commands, so you can, for instance..."
+"source distribution. It enables tab-completion of ``django-admin`` and "
+"``manage.py`` commands, so you can, for instance..."
 msgstr ""
 
 msgid "Type ``django-admin``."
@@ -29399,9 +29523,6 @@ msgid ""
 "``EmptyResultSet`` may be raised during query generation if a query won't "
 "return any results. Most Django projects won't encounter this exception, but "
 "it might be useful for implementing custom lookups and expressions."
-msgstr ""
-
-msgid "In older versions, it's only importable from ``django.db.models.sql``."
 msgstr ""
 
 msgid "``FieldDoesNotExist``"
@@ -29757,9 +29878,6 @@ msgid ""
 "``fileno``, ``flush``, ``isatty``, ``newlines``, ``read``, ``readinto``, "
 "``readline``, ``readlines``, ``seek``, ``tell``, ``truncate``, ``write``, "
 "``writelines``, ``readable()``, ``writable()``, and ``seekable()``."
-msgstr ""
-
-msgid "The ``readable()`` and ``writable()`` methods were added."
 msgstr ""
 
 msgid "The ``ContentFile`` class"
@@ -30664,11 +30782,6 @@ msgid ""
 "\"text\">``, the data will be in the ``value`` attribute. If a field is "
 "represented by an ``<input type=\"checkbox\">``, then that HTML will include "
 "``checked`` if appropriate::"
-msgstr ""
-
-msgid ""
-"The ``checked`` attribute was changed to use HTML5 boolean syntax rather "
-"than ``checked=\"checked\"``."
 msgstr ""
 
 msgid ""
@@ -31717,11 +31830,12 @@ msgstr ""
 
 msgid ""
 "Validates that the given value is a string which can be converted into a "
-"``timedelta``."
+"``timedelta``. The value must be between :attr:`datetime.timedelta.min` and :"
+"attr:`datetime.timedelta.max`."
 msgstr ""
 
-msgid "Error message keys: ``required``, ``invalid``."
-msgstr "Kunci pesan kesalahan: ``required``, ``invalid``."
+msgid "Error message keys: ``required``, ``invalid``, ``overflow``."
+msgstr ""
 
 msgid ""
 "Accepts any format understood by :func:`~django.utils.dateparse."
@@ -32508,11 +32622,6 @@ msgid "The form rendering API"
 msgstr "Formulir membangun API"
 
 msgid ""
-"In older versions, widgets are rendered using Python. All APIs described in "
-"this document are new."
-msgstr ""
-
-msgid ""
 "Django's form widgets are rendered using Django's :doc:`template engines "
 "system </topics/templates>`."
 msgstr ""
@@ -33149,6 +33258,14 @@ msgid ""
 "the widget::"
 msgstr ""
 
+msgid "You can also modify a widget in the form definition::"
+msgstr ""
+
+msgid ""
+"Or if the field isn't declared directly on the form (such as model form "
+"fields), you can use the :attr:`Form.fields` attribute::"
+msgstr ""
+
 msgid "Django will then include the extra attributes in the rendered output:"
 msgstr ""
 
@@ -33271,11 +33388,6 @@ msgstr ""
 msgid ""
 "Renders a widget to HTML using the given renderer. If ``renderer`` is "
 "``None``, the renderer from the :setting:`FORM_RENDERER` setting is used."
-msgstr ""
-
-msgid ""
-"The ``renderer`` argument was added. Support for subclasses that don't "
-"accept it will be removed in Django 2.1."
 msgstr ""
 
 msgid ""
@@ -33648,7 +33760,7 @@ msgstr "``SelectMultiple``"
 
 msgid ""
 "Similar to :class:`Select`, but allows multiple selection: ``<select "
-"multiple=\"multiple\">...</select>``"
+"multiple>...</select>``"
 msgstr ""
 
 msgid "``RadioSelect``"
@@ -33712,7 +33824,7 @@ msgstr ""
 "``option_template_name``: ``'django/forms/widgets/checkbox_option.html'``"
 
 msgid ""
-"Similar to :class:`SelectMultiple`, but rendered as a list of check buttons:"
+"Similar to :class:`SelectMultiple`, but rendered as a list of checkboxes:"
 msgstr ""
 
 msgid ""
@@ -33917,22 +34029,7 @@ msgid ""
 "treat them as separate URLs -- so it's best practice to normalize URLs."
 msgstr ""
 
-msgid ""
-"Handles ETags based on the :setting:`USE_ETAGS` setting. If :setting:"
-"`USE_ETAGS` is set to ``True``, Django will calculate an ETag for each "
-"request by MD5-hashing the page content, and it'll take care of sending "
-"``Not Modified`` responses, if appropriate."
-msgstr ""
-
 msgid "Sets the ``Content-Length`` header for non-streaming responses."
-msgstr ""
-
-msgid "Older versions didn't set the ``Content-Length`` header."
-msgstr ""
-
-msgid ""
-"The :setting:`USE_ETAGS` setting is deprecated in favor of using :class:"
-"`~django.middleware.http.ConditionalGetMiddleware` for ETag processing."
 msgstr ""
 
 msgid ""
@@ -33944,51 +34041,6 @@ msgstr ""
 msgid ""
 "Sends broken link notification emails to :setting:`MANAGERS` (see :doc:`/"
 "howto/error-reporting`)."
-msgstr ""
-
-msgid "Exception middleware"
-msgstr "Middleware pengecualian"
-
-msgid ""
-"Catches exceptions raised during the request/response cycle and returns the "
-"appropriate response."
-msgstr ""
-
-msgid ""
-":class:`~django.http.Http404` is processed by :data:`~django.conf.urls."
-"handler404` (or a more friendly debug page if :setting:`DEBUG=True <DEBUG>`)."
-msgstr ""
-
-msgid ""
-":class:`~django.core.exceptions.PermissionDenied` is processed by :data:"
-"`~django.conf.urls.handler403`."
-msgstr ""
-":class:`~django.core.exceptions.PermissionDenied` diolah oleh :data:`~django."
-"conf.urls.handler403`."
-
-msgid ""
-"``MultiPartParserError`` is processed by :data:`~django.conf.urls."
-"handler400`."
-msgstr ""
-"``MultiPartParserError`` diolah oleh :data:`~django.conf.urls.handler400`."
-
-msgid ""
-":class:`~django.core.exceptions.SuspiciousOperation` is processed by :data:"
-"`~django.conf.urls.handler400`  (or a more friendly debug page if :setting:"
-"`DEBUG=True <DEBUG>`)."
-msgstr ""
-
-msgid ""
-"Any other exception is processed by :data:`~django.conf.urls.handler500` (or "
-"a more friendly debug page if :setting:`DEBUG=True <DEBUG>`)."
-msgstr ""
-
-msgid ""
-"Django uses this middleware regardless of whether or not you include it in :"
-"setting:`MIDDLEWARE`, however, you may want to subclass if your own "
-"middleware needs to transform any of these exceptions into the appropriate "
-"responses. :class:`~django.middleware.locale.LocaleMiddleware` does this, "
-"for example."
 msgstr ""
 
 msgid "GZip middleware"
@@ -34047,11 +34099,6 @@ msgid ""
 "``Last-Modified`` header, and the request has ``If-None-Match`` or ``If-"
 "Modified-Since``, the response is replaced by an :class:`~django.http."
 "HttpResponseNotModified`."
-msgstr ""
-
-msgid ""
-"In older versions, the middleware set the ``Content-Length`` and ``Date`` "
-"headers and didn't set the ``ETag`` header."
 msgstr ""
 
 msgid "Locale middleware"
@@ -34372,16 +34419,21 @@ msgstr ""
 msgid "After ``UpdateCacheMiddleware``: Modifies ``Vary`` header."
 msgstr "Setelah ``UpdateCacheMiddleware``: Rubah kepala ``Vary``."
 
+msgid ":class:`~django.contrib.sessions.middleware.SessionMiddleware`"
+msgstr ":class:`~django.contrib.sessions.middleware.SessionMiddleware`"
+
 msgid ":class:`~django.middleware.http.ConditionalGetMiddleware`"
 msgstr ":class:`~django.middleware.http.ConditionalGetMiddleware`"
 
 msgid ""
-"Before ``CommonMiddleware``: uses its ``ETag`` header when :setting:"
-"`USE_ETAGS` = ``True``."
+"Before any middleware that may change the response (it sets the ``ETag`` "
+"header)."
 msgstr ""
 
-msgid ":class:`~django.contrib.sessions.middleware.SessionMiddleware`"
-msgstr ":class:`~django.contrib.sessions.middleware.SessionMiddleware`"
+msgid ""
+"After ``GZipMiddleware`` so it won't calculate an ``ETag`` header on gzipped "
+"contents."
+msgstr ""
 
 msgid ":class:`~django.middleware.locale.LocaleMiddleware`"
 msgstr ":class:`~django.middleware.locale.LocaleMiddleware`"
@@ -34395,14 +34447,9 @@ msgid ":class:`~django.middleware.common.CommonMiddleware`"
 msgstr ":class:`~django.middleware.common.CommonMiddleware`"
 
 msgid ""
-"Before any middleware that may change the response (it sets the ``ETag`` and "
-"``Content-Length`` headers). A middleware that appears before "
-"``CommonMiddleware`` and changes the response must reset the headers."
-msgstr ""
-
-msgid ""
-"After ``GZipMiddleware`` so it won't calculate an ``ETag`` header on gzipped "
-"contents."
+"Before any middleware that may change the response (it sets the ``Content-"
+"Length`` header). A middleware that appears before ``CommonMiddleware`` and "
+"changes the response must reset ``Content-Length``."
 msgstr ""
 
 msgid ""
@@ -34924,9 +34971,6 @@ msgid ""
 "``clear_delayed_apps_cache()`` method to make related models available::"
 msgstr ""
 
-msgid "This requirement and the ``clear_delayed_apps_cache()`` method is new."
-msgstr "Persyaratan ini dan metode ``clear_delayed_apps_cache()`` adalah baru."
-
 msgid ""
 "``to_state`` in the database_backwards method is the *older* state; that is, "
 "the one that will be the current state once the migration has finished "
@@ -35302,8 +35346,9 @@ msgstr "Nilai-nilai ``week``"
 msgid ""
 "The ``week`` ``lookup_type`` is calculated based on `ISO-8601 <https://en."
 "wikipedia.org/wiki/ISO-8601>`_, i.e., a week starts on a Monday. The first "
-"week is the one with the majority of the days, i.e., a week that starts on "
-"or before Thursday. The value returned is in the range 1 to 52 or 53."
+"week of a year is the one that contains the year's first Thursday, i.e. the "
+"first week has the majority (four or more) of its days in the year. The "
+"value returned is in the range 1 to 52 or 53."
 msgstr ""
 
 msgid ""
@@ -35413,6 +35458,9 @@ msgstr ""
 msgid "\"month\": 2015-06-01 00:00:00+00:00"
 msgstr "\"month\": 2015-06-01 00:00:00+00:00"
 
+msgid "\"week\": 2015-06-15 00:00:00+00:00"
+msgstr ""
+
 msgid "\"day\": 2015-06-15 00:00:00+00:00"
 msgstr "\"day\": 2015-06-15 00:00:00+00:00"
 
@@ -35440,6 +35488,9 @@ msgstr ""
 
 msgid "\"month\": 2015-06-01 00:00:00+10:00"
 msgstr "\"month\": 2015-06-01 00:00:00+10:00"
+
+msgid "\"week\": 2015-06-16 00:00:00+10:00"
+msgstr ""
 
 msgid "\"day\": 2015-06-16 00:00:00+10:00"
 msgstr "\"day\": 2015-06-16 00:00:00+10:00"
@@ -35472,6 +35523,9 @@ msgstr ""
 
 msgid "``DateField`` truncation"
 msgstr "Pemotongan ``DateField``"
+
+msgid "Truncates to midnight on the Monday of the week."
+msgstr ""
 
 msgid ""
 "These are logically equivalent to ``Trunc('date_field', kind)``. They "
@@ -35525,6 +35579,20 @@ msgstr ""
 msgid "Text functions"
 msgstr ""
 
+msgid "``Chr``"
+msgstr ""
+
+msgid ""
+"Accepts a numeric field or expression and returns the text representation of "
+"the expression as a single character. It works the same as Python's :func:"
+"`chr` function."
+msgstr ""
+
+msgid ""
+"Like :class:`Length`, it can be registered as a transform on "
+"``IntegerField``. The default lookup name is ``chr``."
+msgstr ""
+
 msgid "``Concat``"
 msgstr "``Concat``"
 
@@ -35541,6 +35609,14 @@ msgid ""
 "This function will never have a null result. On backends where a null "
 "argument results in the entire expression being null, Django will ensure "
 "that each null part is converted to an empty string first."
+msgstr ""
+
+msgid "``Left``"
+msgstr ""
+
+msgid ""
+"Returns the first ``length`` characters of the given text field or "
+"expression."
 msgstr ""
 
 msgid ""
@@ -35562,6 +35638,78 @@ msgstr ""
 
 msgid ""
 "It can also be registered as a transform as described in :class:`Length`."
+msgstr ""
+
+msgid "``LPad``"
+msgstr ""
+
+msgid ""
+"Returns the value of the given text field or expression padded on the left "
+"side with ``fill_text`` so that the resulting value is ``length`` characters "
+"long. The default ``fill_text`` is a space."
+msgstr ""
+
+msgid "``LTrim``"
+msgstr ""
+
+msgid ""
+"Similar to :class:`~django.db.models.functions.Trim`, but removes only "
+"leading spaces."
+msgstr ""
+
+msgid "``Ord``"
+msgstr ""
+
+msgid ""
+"Accepts a single text field or expression and returns the Unicode code point "
+"value for the first character of that expression. It works similar to "
+"Python's :func:`ord` function, but an exception isn't raised if the "
+"expression is more than one character long."
+msgstr ""
+
+msgid ""
+"It can also be registered as a transform as described in :class:`Length`. "
+"The default lookup name is ``ord``."
+msgstr ""
+
+msgid "``Repeat``"
+msgstr ""
+
+msgid ""
+"Returns the value of the given text field or expression repeated ``number`` "
+"times."
+msgstr ""
+
+msgid "``Replace``"
+msgstr ""
+
+msgid ""
+"Replaces all occurrences of ``text`` with ``replacement`` in ``expression``. "
+"The default replacement text is the empty string. The arguments to the "
+"function are case-sensitive."
+msgstr ""
+
+msgid "``Right``"
+msgstr ""
+
+msgid ""
+"Returns the last ``length`` characters of the given text field or expression."
+msgstr ""
+
+msgid "``RPad``"
+msgstr ""
+
+msgid ""
+"Similar to :class:`~django.db.models.functions.LPad`, but pads on the right "
+"side."
+msgstr ""
+
+msgid "``RTrim``"
+msgstr ""
+
+msgid ""
+"Similar to :class:`~django.db.models.functions.Trim`, but removes only "
+"trailing spaces."
 msgstr ""
 
 msgid "``StrIndex``"
@@ -35588,6 +35736,14 @@ msgid ""
 "starting at position ``pos``. The position is 1-indexed, so the position "
 "must be greater than 0. If ``length`` is ``None``, then the rest of the "
 "string will be returned."
+msgstr ""
+
+msgid "``Trim``"
+msgstr ""
+
+msgid ""
+"Returns the value of the given text field or expression with leading and "
+"trailing spaces removed."
 msgstr ""
 
 msgid "``Upper``"
@@ -35769,9 +35925,12 @@ msgid "Supported arithmetic"
 msgstr ""
 
 msgid ""
-"Django supports addition, subtraction, multiplication, division, modulo "
-"arithmetic, and the power operator on query expressions, using Python "
+"Django supports negation, addition, subtraction, multiplication, division, "
+"modulo arithmetic, and the power operator on query expressions, using Python "
 "constants, variables, and even other expressions."
+msgstr ""
+
+msgid "Support for negation was added."
 msgstr ""
 
 msgid "Some examples"
@@ -35928,6 +36087,20 @@ msgstr ""
 msgid ""
 "When referencing relational fields such as ``ForeignKey``, ``F()`` returns "
 "the primary key value rather than a model instance::"
+msgstr ""
+
+msgid "Using ``F()`` to sort null values"
+msgstr ""
+
+msgid ""
+"Use ``F()`` and the ``nulls_first`` or ``nulls_last`` keyword argument to :"
+"meth:`.Expression.asc` or :meth:`~.Expression.desc` to control the ordering "
+"of a field's null values. By default, the ordering depends on your database."
+msgstr ""
+
+msgid ""
+"For example, to sort companies that haven't been contacted "
+"(``last_contacted`` is null) after companies that have been contacted::"
 msgstr ""
 
 msgid "``Func()`` expressions"
@@ -36527,7 +36700,7 @@ msgstr ""
 msgid ""
 "Tells Django that this expression contains a :class:`~django.db.models."
 "expressions.Window` expression. It's used, for example, to disallow window "
-"function expressions in queries that modify data. Defaults to ``True``."
+"function expressions in queries that modify data."
 msgstr ""
 
 msgid ""
@@ -36595,16 +36768,12 @@ msgstr ""
 msgid "Returns the expression ready to be sorted in ascending order."
 msgstr ""
 
-msgid "``nulls_first`` and ``nulls_last`` define how null values are sorted."
-msgstr ""
-
-msgid "The ``nulls_last`` and ``nulls_first`` parameters were added."
+msgid ""
+"``nulls_first`` and ``nulls_last`` define how null values are sorted. See :"
+"ref:`using-f-to-sort-null-values` for example usage."
 msgstr ""
 
 msgid "Returns the expression ready to be sorted in descending order."
-msgstr ""
-
-msgid "The ``nulls_first`` and ``nulls_last`` parameters were added."
 msgstr ""
 
 msgid ""
@@ -36818,11 +36987,6 @@ msgid ""
 "denote the empty string regardless of this attribute."
 msgstr ""
 
-msgid ""
-"If you want to accept :attr:`~Field.null` values with :class:`BooleanField`, "
-"use :class:`NullBooleanField` instead."
-msgstr ""
-
 msgid "``blank``"
 msgstr "``blank``"
 
@@ -36843,7 +37007,8 @@ msgstr "``choices``"
 msgid ""
 "An iterable (e.g., a list or tuple) consisting itself of iterables of "
 "exactly two items (e.g. ``[(A, B), (A, B) ...]``) to use as choices for this "
-"field. If this is given, the default form widget will be a select box with "
+"field. If choices are given, they're enforced by :ref:`model validation "
+"<validating-objects>` and the default form widget will be a select box with "
 "these choices instead of the standard text field."
 msgstr ""
 
@@ -37012,7 +37177,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Alternatively you can use plain text and ``django.utils.html.escape()`` to "
+"Alternatively you can use plain text and :func:`django.utils.html.escape` to "
 "escape any HTML special characters. Ensure that you escape any help text "
 "that may come from untrusted users to avoid a cross-site scripting attack."
 msgstr ""
@@ -37060,9 +37225,6 @@ msgstr ""
 msgid ""
 "Note that when ``unique`` is ``True``, you don't need to specify :attr:"
 "`~Field.db_index`, because ``unique`` implies the creation of an index."
-msgstr ""
-
-msgid "In older versions, ``unique=True`` can't be used on :class:`FileField`."
 msgstr ""
 
 msgid "``unique_for_date``"
@@ -37170,8 +37332,15 @@ msgstr "``BinaryField``"
 msgid ""
 "A field to store raw binary data. It only supports ``bytes`` assignment. Be "
 "aware that this field has limited functionality. For example, it is not "
-"possible to filter a queryset on a ``BinaryField`` value. It is also not "
-"possible to include a ``BinaryField`` in a :class:`~django.forms.ModelForm`."
+"possible to filter a queryset on a ``BinaryField`` value."
+msgstr ""
+
+msgid ""
+"By default, ``BinaryField`` sets :attr:`~Field.editable` to ``False``, in "
+"which case it can't be included in a :class:`~django.forms.ModelForm`."
+msgstr ""
+
+msgid "Older versions don't allow setting ``editable`` to ``True``."
 msgstr ""
 
 msgid "Abusing ``BinaryField``"
@@ -37187,18 +37356,20 @@ msgid "A true/false field."
 msgstr "Sebuah bidang true/false."
 
 msgid ""
-"The default form widget for this field is a :class:`~django.forms."
-"CheckboxInput`."
-msgstr ""
-
-msgid ""
-"If you need to accept :attr:`~Field.null` values then use :class:"
-"`NullBooleanField` instead."
+"The default form widget for this field is :class:`~django.forms."
+"CheckboxInput`, or :class:`~django.forms.NullBooleanSelect` if :attr:"
+"`null=True <Field.null>`."
 msgstr ""
 
 msgid ""
 "The default value of ``BooleanField`` is ``None`` when :attr:`Field.default` "
 "isn't defined."
+msgstr ""
+
+msgid ""
+"In older versions, this field doesn't permit ``null=True``, so you have to "
+"use :class:`NullBooleanField` instead. Using the latter is now discouraged "
+"as it's likely to be deprecated in a future version of Django."
 msgstr ""
 
 msgid "A string field, for small- to large-sized strings."
@@ -37774,9 +37945,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Like a :class:`BooleanField`, but allows ``NULL`` as one of the options. Use "
-"this instead of a :class:`BooleanField` with ``null=True``. The default form "
-"widget for this field is a :class:`~django.forms.NullBooleanSelect`."
+"Like :class:`BooleanField` with ``null=True``. Use that instead of this "
+"field as it's likely to be deprecated in a future version of Django."
 msgstr ""
 
 msgid "``PositiveIntegerField``"
@@ -37980,6 +38150,12 @@ msgstr ""
 msgid ""
 "Cascade deletes. Django emulates the behavior of the SQL constraint ON "
 "DELETE CASCADE and also deletes the object containing the ForeignKey."
+msgstr ""
+
+msgid ""
+":meth:`.Model.delete` isn't called on related models, but the :data:`~django."
+"db.models.signals.pre_delete` and :data:`~django.db.models.signals."
+"post_delete` signals are sent for all deleted objects."
 msgstr ""
 
 msgid ""
@@ -38559,6 +38735,12 @@ msgid ""
 "serialize its value:"
 msgstr ""
 
+msgid "Returns the field's value for the given model instance."
+msgstr ""
+
+msgid "This method is often used by :meth:`value_to_string`."
+msgstr ""
+
 msgid "Converts ``obj`` to a string. Used to serialize the value of the field."
 msgstr ""
 "Merubah ``obj`` menjadi sebuah string. Digunakan untuk menserialisasikan "
@@ -38739,7 +38921,8 @@ msgstr "Pilihan ``Index``"
 msgid "Creates an index (B-Tree) in the database."
 msgstr "Membuat sebuah index (B-tree) dalam basisdata."
 
-msgid "A list of the name of the fields on which the index is desired."
+msgid ""
+"A list or tuple of the name of the fields on which the index is desired."
 msgstr ""
 
 msgid ""
@@ -38754,17 +38937,8 @@ msgid ""
 "In that case, a descending index is created as a normal index."
 msgstr ""
 
-msgid "Support for column ordering on SQLite"
-msgstr "Mendukung untuk pengurutan kolom pada SQLite"
-
-msgid ""
-"Column ordering is supported on SQLite 3.3.0+ and only for some database "
-"file formats. Refer to the `SQLite docs <https://www.sqlite.org/"
-"lang_createindex.html>`_ for specifics."
+msgid "Older versions don't accept a tuple."
 msgstr ""
-"Pengurutan kolom didukung pada SQLite 3.3.0+ dan hanya untuk beberapa bentuk "
-"berkas. Mengacu pada `SQLite docs <https://www.sqlite.org/lang_createindex."
-"html>`_ untuk seluk-beluknya."
 
 msgid ""
 "The name of the index. If ``name`` isn't provided Django will auto-generate "
@@ -38892,13 +39066,7 @@ msgid ""
 "present in the database."
 msgstr ""
 
-msgid ""
-"The previously loaded related instances for which the relation's value is no "
-"longer valid are removed from the reloaded instance. For example, if you "
-"have a foreign key from the reloaded instance to another model with name "
-"``Author``, then if ``obj.author_id != obj.author.id``, ``obj.author`` will "
-"be thrown away, and when next accessed it will be reloaded with the value of "
-"``obj.author_id``."
+msgid "Any cached relations are cleared from the reloaded instance."
 msgstr ""
 
 msgid ""
@@ -39641,6 +39809,11 @@ msgid ""
 msgstr ""
 
 msgid ""
+"Returns a dictionary of each lookup name registered in the class mapped to "
+"the :class:`Lookup` class."
+msgstr ""
+
+msgid ""
 "Returns a :class:`Transform` named ``transform_name``. The default "
 "implementation looks recursively on all parent classes to check if any has "
 "the registered transform named ``transform_name``, returning the first match."
@@ -39838,9 +40011,10 @@ msgstr ""
 msgid ""
 "``field_name`` can be the name of a field on the model, a field on an "
 "abstract or inherited model, or a field defined on another model that points "
-"to the model. In the latter case, the ``field_name`` will be the "
-"``related_name`` defined by the user or the name automatically generated by "
-"Django itself."
+"to the model. In the latter case, the ``field_name`` will be (in order of "
+"preference) the :attr:`~.ForeignKey.related_query_name` set by the user, "
+"the :attr:`~.ForeignKey.related_name` set by the user, or the name "
+"automatically generated by Django."
 msgstr ""
 
 msgid ""
@@ -40335,8 +40509,8 @@ msgstr "``permissions``"
 
 msgid ""
 "Extra permissions to enter into the permissions table when creating this "
-"object. Add, delete and change permissions are automatically created for "
-"each model. This example specifies an extra permission, "
+"object. Add, change, delete, and view permissions are automatically created "
+"for each model. This example specifies an extra permission, "
 "``can_deliver_pizzas``::"
 msgstr ""
 
@@ -40349,11 +40523,14 @@ msgid "``default_permissions``"
 msgstr "``default_permissions``"
 
 msgid ""
-"Defaults to ``('add', 'change', 'delete')``. You may customize this list, "
-"for example, by setting this to an empty list if your app doesn't require "
-"any of the default permissions. It must be specified on the model before the "
-"model is created by :djadmin:`migrate` in order to prevent any omitted "
-"permissions from being created."
+"Defaults to ``('add', 'change', 'delete', 'view')``. You may customize this "
+"list, for example, by setting this to an empty list if your app doesn't "
+"require any of the default permissions. It must be specified on the model "
+"before the model is created by :djadmin:`migrate` in order to prevent any "
+"omitted permissions from being created."
+msgstr ""
+
+msgid "The ``view`` permission was added."
 msgstr ""
 
 msgid "``proxy``"
@@ -41031,6 +41208,14 @@ msgid ""
 msgstr ""
 
 msgid ""
+"You can use built-in and :doc:`custom lookups </howto/custom-lookups>` in "
+"ordering. For example::"
+msgstr ""
+
+msgid "Support for lookups was added."
+msgstr ""
+
+msgid ""
 "An aggregate within a ``values()`` clause is applied before other arguments "
 "within the same ``values()`` clause. If you need to group by another value, "
 "add it to an earlier ``values()`` clause instead. For example::"
@@ -41068,6 +41253,14 @@ msgid ""
 msgstr ""
 
 msgid ""
+"Combining transforms and aggregates requires the use of two :meth:`annotate` "
+"calls, either explicitly or as keyword arguments to :meth:`values`. As "
+"above, if the transform has been registered on the relevant field type the "
+"first :meth:`annotate` can be omitted, thus the following examples are "
+"equivalent::"
+msgstr ""
+
+msgid ""
 "It is useful when you know you're only going to need values from a small "
 "number of the available fields and you won't need the functionality of a "
 "model instance object. It's more efficient to select only the fields you "
@@ -41099,9 +41292,6 @@ msgid ""
 "pronounced if you include multiple such fields in your ``values()`` query, "
 "in which case all possible combinations will be returned."
 msgstr ""
-
-msgid "Support for ``**expressions`` was added."
-msgstr "Dukungan untuk ``**expressions`` telah ditambahkan."
 
 msgid "``values_list()``"
 msgstr "``values_list()``"
@@ -41173,9 +41363,6 @@ msgid ""
 "not having any author::"
 msgstr ""
 
-msgid "Support for expressions in ``*fields`` was added."
-msgstr ""
-
 msgid "The ``named`` parameter was added."
 msgstr ""
 
@@ -41190,8 +41377,9 @@ msgstr ""
 
 msgid ""
 "``field`` should be the name of a ``DateField`` of your model. ``kind`` "
-"should be either ``\"year\"``, ``\"month\"`` or ``\"day\"``. Each ``datetime."
-"date`` object in the result list is \"truncated\" to the given ``type``."
+"should be either ``\"year\"``, ``\"month\"``, ``\"week\"``, or ``\"day\"``. "
+"Each :class:`datetime.date` object in the result list is \"truncated\" to "
+"the given ``type``."
 msgstr ""
 
 msgid "``\"year\"`` returns a list of all distinct year values for the field."
@@ -41202,6 +41390,11 @@ msgid ""
 msgstr ""
 
 msgid ""
+"``\"week\"`` returns a list of all distinct year/week values for the field. "
+"All dates will be a Monday."
+msgstr ""
+
+msgid ""
 "``\"day\"`` returns a list of all distinct year/month/day values for the "
 "field."
 msgstr ""
@@ -41209,6 +41402,9 @@ msgstr ""
 msgid ""
 "``order``, which defaults to ``'ASC'``, should be either ``'ASC'`` or "
 "``'DESC'``. This specifies how to order the results."
+msgstr ""
+
+msgid "\"week\" support was added."
 msgstr ""
 
 msgid "``datetimes()``"
@@ -41224,9 +41420,9 @@ msgid "``field_name`` should be the name of a ``DateTimeField`` of your model."
 msgstr ""
 
 msgid ""
-"``kind`` should be either ``\"year\"``, ``\"month\"``, ``\"day\"``, ``\"hour"
-"\"``, ``\"minute\"`` or ``\"second\"``. Each ``datetime.datetime`` object in "
-"the result list is \"truncated\" to the given ``type``."
+"``kind`` should be either ``\"year\"``, ``\"month\"``, ``\"week\"``, ``\"day"
+"\"``, ``\"hour\"``, ``\"minute\"``, or ``\"second\"``. Each :class:`datetime."
+"datetime` object in the result list is \"truncated\" to the given ``type``."
 msgstr ""
 
 msgid ""
@@ -41314,9 +41510,6 @@ msgid ""
 "Further, databases place restrictions on what operations are allowed in the "
 "combined queries. For example, most databases don't allow ``LIMIT`` or "
 "``OFFSET`` in the combined queries."
-msgstr ""
-
-msgid "``COUNT(*)`` support was added."
 msgstr ""
 
 msgid "``intersection()``"
@@ -41556,9 +41749,6 @@ msgid ""
 "RelatedManager.set`, on :class:`related managers<django.db.models.fields."
 "related.RelatedManager>`, any prefetched cache for the relation will be "
 "cleared."
-msgstr ""
-
-msgid "The clearing of the prefetched cache described above was added."
 msgstr ""
 
 msgid ""
@@ -42232,9 +42422,6 @@ msgid ""
 "models.expressions.Window` expressions."
 msgstr ""
 
-msgid "The ``skip_locked`` argument was added."
-msgstr "Argumen ``skip_locked`` telah ditambahkan."
-
 msgid "The ``of`` argument was added."
 msgstr ""
 
@@ -42254,6 +42441,30 @@ msgid ""
 "``raw()`` always triggers a new query and doesn't account for previous "
 "filtering. As such, it should generally be called from the ``Manager`` or "
 "from a fresh ``QuerySet`` instance."
+msgstr ""
+
+msgid "Operators that return new ``QuerySet``\\s"
+msgstr ""
+
+msgid "Combined querysets must use the same model."
+msgstr ""
+
+msgid "AND (``&``)"
+msgstr ""
+
+msgid "Combines two ``QuerySet``\\s using the SQL ``AND`` operator."
+msgstr ""
+
+msgid "The following are equivalent::"
+msgstr ""
+
+msgid "SQL equivalent:"
+msgstr ""
+
+msgid "OR (``|``)"
+msgstr ""
+
+msgid "Combines two ``QuerySet``\\s using the SQL ``OR`` operator."
 msgstr ""
 
 msgid "Methods that do not return ``QuerySet``\\s"
@@ -42344,8 +42555,18 @@ msgstr ""
 msgid ""
 "Any keyword arguments passed to ``get_or_create()`` — *except* an optional "
 "one called ``defaults`` — will be used in a :meth:`get()` call. If an object "
-"is found, ``get_or_create()`` returns a tuple of that object and ``False``. "
-"If multiple objects are found, ``get_or_create`` raises :exc:`~django.core."
+"is found, ``get_or_create()`` returns a tuple of that object and ``False``."
+msgstr ""
+
+msgid ""
+"You can specify more complex conditions for the retrieved object by chaining "
+"``get_or_create()`` with ``filter()`` and using :class:`Q objects <django.db."
+"models.Q>`. For example, to retrieve Robert or Bob Marley if either exists, "
+"and create the latter otherwise::"
+msgstr ""
+
+msgid ""
+"If multiple objects are found, ``get_or_create()`` raises :exc:`~django.core."
 "exceptions.MultipleObjectsReturned`. If an object is *not* found, "
 "``get_or_create()`` will instantiate and save a new object, returning a "
 "tuple of the new object and ``True``. The new object will be created roughly "
@@ -42424,9 +42645,6 @@ msgid ""
 "either because ``title`` field should be unique."
 msgstr ""
 
-msgid "Added support for callable values in ``defaults``."
-msgstr ""
-
 msgid "``update_or_create()``"
 msgstr "``update_or_create()``"
 
@@ -42465,6 +42683,12 @@ msgid ""
 "uniqueness is not enforced at the database level."
 msgstr ""
 
+msgid ""
+"Like :meth:`get_or_create` and :meth:`create`, if you're using manually "
+"specified primary keys and an object needs to be created but the key already "
+"exists in the database, an :exc:`~django.db.IntegrityError` is raised."
+msgstr ""
+
 msgid "``bulk_create()``"
 msgstr "``bulk_create()``"
 
@@ -42496,6 +42720,15 @@ msgid "It does not work with many-to-many relationships."
 msgstr ""
 
 msgid ""
+"It casts ``objs`` to a list, which fully evaluates ``objs`` if it's a "
+"generator. The cast allows inspecting all objects so that any objects with a "
+"manually set primary key can be inserted first. If you want to insert "
+"objects in batches without evaluating the entire generator at once, you can "
+"use this technique as long as the objects don't have any manually set "
+"primary keys::"
+msgstr ""
+
+msgid ""
 "The ``batch_size`` parameter controls how many objects are created in a "
 "single query. The default is to create all objects in one batch, except for "
 "SQLite where the default is such that at most 999 variables per query are "
@@ -42507,7 +42740,7 @@ msgstr "``count()``"
 
 msgid ""
 "Returns an integer representing the number of objects in the database "
-"matching the ``QuerySet``. The ``count()`` method never raises exceptions."
+"matching the ``QuerySet``."
 msgstr ""
 
 msgid ""
@@ -42634,9 +42867,6 @@ msgid ""
 "between the number of rows transferred and the data discarded if the loop is "
 "exited early."
 msgstr ""
-
-msgid "PostgreSQL support for server-side cursors was added."
-msgstr "Dukungan PostgreSQL untuk jarum sisi-peladen telah ditambahkan."
 
 msgid "The ``chunk_size`` parameter was added."
 msgstr ""
@@ -42941,6 +43171,47 @@ msgid ""
 "queryset-methods` for more details."
 msgstr ""
 
+msgid "``explain()``"
+msgstr ""
+
+msgid ""
+"Returns a string of the ``QuerySet``’s execution plan, which details how the "
+"database would execute the query, including any indexes or joins that would "
+"be used. Knowing these details may help you improve the performance of slow "
+"queries."
+msgstr ""
+
+msgid "For example, when using PostgreSQL::"
+msgstr ""
+
+msgid "The output differs significantly between databases."
+msgstr ""
+
+msgid ""
+"``explain()`` is supported by all built-in database backends except Oracle "
+"because an implementation there isn't straightforward."
+msgstr ""
+
+msgid ""
+"The ``format`` parameter changes the output format from the databases's "
+"default, usually text-based. PostgreSQL supports ``'TEXT'``, ``'JSON'``, "
+"``'YAML'``, and ``'XML'``. MySQL supports ``'TEXT'`` (also called "
+"``'TRADITIONAL'``) and ``'JSON'``."
+msgstr ""
+
+msgid ""
+"Some databases accept flags that can return more information about the "
+"query. Pass these flags as keyword arguments. For example, when using "
+"PostgreSQL::"
+msgstr ""
+
+msgid ""
+"On some databases, flags may cause the query to be executed which could have "
+"adverse effects on your database. For example, PostgreSQL's ``ANALYZE`` flag "
+"could result in changes to data if there are triggers or if a function is "
+"called, even for a ``SELECT`` query."
+msgstr ""
+
 msgid "``Field`` lookups"
 msgstr "Pencarian ``Field``"
 
@@ -43044,7 +43315,9 @@ msgstr ""
 msgid "``in``"
 msgstr "``in``"
 
-msgid "In a given iterable; often a list, tuple, or queryset."
+msgid ""
+"In a given iterable; often a list, tuple, or queryset. It's not a common use "
+"case, but strings (being iterables) are accepted."
 msgstr ""
 
 msgid ""
@@ -43226,7 +43499,7 @@ msgstr "``week``"
 msgid ""
 "For date and datetime fields, return the week number (1-52 or 53) according "
 "to `ISO-8601 <https://en.wikipedia.org/wiki/ISO-8601>`_, i.e., weeks start "
-"on a Monday and the first week starts on or before Thursday."
+"on a Monday and the first week contains the year's first Thursday."
 msgstr ""
 
 msgid "``week_day``"
@@ -43713,10 +43986,16 @@ msgstr ""
 
 msgid ""
 "Using ``add()`` with a many-to-many relationship, however, will not call any "
-"``save()`` methods, but rather create the relationships using :meth:"
-"`QuerySet.bulk_create() <django.db.models.query.QuerySet.bulk_create>`. If "
-"you need to execute some custom logic when a relationship is created, listen "
-"to the :data:`~django.db.models.signals.m2m_changed` signal."
+"``save()`` methods (the ``bulk`` argument doesn't exist), but rather create "
+"the relationships using :meth:`QuerySet.bulk_create() <django.db.models."
+"query.QuerySet.bulk_create>`. If you need to execute some custom logic when "
+"a relationship is created, listen to the :data:`~django.db.models.signals."
+"m2m_changed` signal, which will trigger ``pre_add`` and ``post_add`` actions."
+msgstr ""
+
+msgid ""
+"Using ``add()`` on a relation that already exists won't duplicate the "
+"relation, but it will still trigger signals."
 msgstr ""
 
 msgid ""
@@ -43764,6 +44043,10 @@ msgid ""
 "signals.post_save` signals and comes at the expense of performance."
 msgstr ""
 
+msgid ""
+"For many-to-many relationships, the ``bulk`` keyword argument doesn't exist."
+msgstr ""
+
 msgid "Removes all objects from the related object set::"
 msgstr ""
 
@@ -43788,8 +44071,10 @@ msgid ""
 "is added at once."
 msgstr ""
 
-msgid "The ``bulk`` argument is passed on to :meth:`add`."
-msgstr "Argumen ``bulk`` dilewatkan pada :meth:`add`."
+msgid ""
+"For :class:`~django.db.models.ForeignKey` objects, the ``bulk`` argument is "
+"passed on to :meth:`add` and :meth:`remove`."
+msgstr ""
 
 msgid ""
 "Note that since ``set()`` is a compound operation, it is subject to race "
@@ -43937,8 +44222,8 @@ msgstr ""
 
 msgid ""
 "A dictionary-like object containing all uploaded files. Each key in "
-"``FILES`` is the ``name`` from the ``<input type=\"file\" name=\"\" />``. "
-"Each value in ``FILES`` is an :class:`~django.core.files.uploadedfile."
+"``FILES`` is the ``name`` from the ``<input type=\"file\" name=\"\">``. Each "
+"value in ``FILES`` is an :class:`~django.core.files.uploadedfile."
 "UploadedFile`."
 msgstr ""
 
@@ -44122,6 +44407,14 @@ msgstr ""
 
 msgid "Example: ``\"/music/bands/the_beatles/?print=true\"``"
 msgstr "Contoh: ``\"/music/bands/the_beatles/?print=true\"``"
+
+msgid ""
+"Like :meth:`get_full_path`, but uses :attr:`path_info` instead of :attr:"
+"`path`."
+msgstr ""
+
+msgid "Example: ``\"/minfo/music/bands/the_beatles/?print=true\"``"
+msgstr ""
 
 msgid ""
 "Returns the absolute URI form of ``location``. If no location is provided, "
@@ -44570,6 +44863,16 @@ msgid ""
 msgstr ""
 
 msgid ""
+"Use ``samesite='Strict'`` or ``samesite='Lax'`` to tell the browser not to "
+"send this cookie when performing a cross-origin request. `SameSite`_ isn't "
+"supported by all browsers, so it's not a replacement for Django's CSRF "
+"protection, but rather a defense in depth measure."
+msgstr ""
+
+msgid "The ``samesite`` argument was added."
+msgstr ""
+
+msgid ""
 "Both :rfc:`2109` and :rfc:`6265` state that user agents should support "
 "cookies of at least 4096 bytes. For many browsers this is also the maximum "
 "size. Django will not raise an exception if there's an attempt to store a "
@@ -44746,7 +45049,7 @@ msgstr ""
 "Tanpa melewatkan ``safe=False``, sebuah :exc:`TypeError` akan dimunculkan."
 
 msgid ""
-"Before the `5th edition of ECMAScript <http://www.ecma-international.org/"
+"Before the `5th edition of ECMAScript <https://www.ecma-international.org/"
 "ecma-262/5.1/index.html#sec-11.1.4>`_ it was possible to poison the "
 "JavaScript ``Array`` constructor. For this reason, Django does not allow "
 "passing non-dict objects to the :class:`~django.http.JsonResponse` "
@@ -44833,7 +45136,41 @@ msgid ""
 "wsgi server, otherwise it streams the file out in small chunks."
 msgstr ""
 
-msgid "``FileResponse`` expects a file open in binary mode like so::"
+msgid ""
+"If ``as_attachment=True``, the ``Content-Disposition`` header is set, which "
+"asks the browser to offer the file to the user as a download."
+msgstr ""
+
+msgid ""
+"If ``open_file`` doesn't have a name or if the name of ``open_file`` isn't "
+"appropriate, provide a custom file name using the ``filename``  parameter."
+msgstr ""
+
+msgid ""
+"The ``Content-Length``, ``Content-Type``, and ``Content-Disposition`` "
+"headers are automatically set when they can be guessed from contents of "
+"``open_file``."
+msgstr ""
+
+msgid ""
+"The ``as_attachment`` and ``filename`` keywords argument were added. Also, "
+"``FileResponse`` sets the ``Content`` headers if it can guess them."
+msgstr ""
+
+msgid ""
+"``FileResponse`` accepts any file-like object with binary content, for "
+"example a file open in binary mode like so::"
+msgstr ""
+
+msgid ""
+"The file will be closed automatically, so don't open it with a context "
+"manager."
+msgstr ""
+
+msgid ""
+"This method is automatically called during the response initialization and "
+"set various headers (``Content-Length``, ``Content-Type``, and ``Content-"
+"Disposition``) depending on ``open_file``."
 msgstr ""
 
 msgid "``SchemaEditor``"
@@ -45132,17 +45469,6 @@ msgid ""
 "This validation only applies via :meth:`~django.http.HttpRequest."
 "get_host()`; if your code accesses the ``Host`` header directly from "
 "``request.META`` you are bypassing this security protection."
-msgstr ""
-
-msgid "In older versions, ``ALLOWED_HOSTS`` wasn't checked when running tests."
-msgstr ""
-"Dalam versi terlama, ``ALLOWED_HOSTS`` tidak diperiksa ketika menjalankan "
-"percobaan. "
-
-msgid ""
-"In older versions, ``ALLOWED_HOSTS`` wasn't checked if ``DEBUG=True``. This "
-"was also changed in Django 1.10.3, 1.9.11, and 1.8.16 to prevent a DNS "
-"rebinding attack."
 msgstr ""
 
 msgid "``APPEND_SLASH``"
@@ -45445,6 +45771,20 @@ msgid ""
 "This is useful if you have multiple Django instances running under the same "
 "hostname. They can use different cookie paths, and each instance will only "
 "see its own CSRF cookie."
+msgstr ""
+
+msgid "``CSRF_COOKIE_SAMESITE``"
+msgstr ""
+
+msgid "Default: ``'Lax'``"
+msgstr ""
+
+msgid ""
+"The value of the `SameSite`_ flag on the CSRF cookie. This flag prevents the "
+"cookie from being sent in cross-site requests."
+msgstr ""
+
+msgid "See :setting:`SESSION_COOKIE_SAMESITE` for details about ``SameSite``."
 msgstr ""
 
 msgid "``CSRF_COOKIE_SECURE``"
@@ -45862,11 +46202,6 @@ msgstr ""
 msgid ""
 "The password to use when connecting to the Oracle database that will be used "
 "when running tests. If not provided, Django will generate a random password."
-msgstr ""
-
-msgid ""
-"Older versions used a hardcoded default password. This was also changed in "
-"1.10.3, 1.9.11, and 1.8.16 to fix possible security implications."
 msgstr ""
 
 msgid "``TBLSPACE``"
@@ -46588,10 +46923,10 @@ msgid "``FORMAT_MODULE_PATH``"
 msgstr ""
 
 msgid ""
-"A full Python path to a Python package that contains format definitions for "
-"project locales. If not ``None``, Django will check for a ``formats.py`` "
-"file, under the directory named as the current locale, and will use the "
-"formats defined in this file."
+"A full Python path to a Python package that contains custom format "
+"definitions for project locales. If not ``None``, Django will check for a "
+"``formats.py`` file, under the directory named as the current locale, and "
+"will use the formats defined in this file."
 msgstr ""
 
 msgid ""
@@ -46610,14 +46945,50 @@ msgid ""
 "precedence over the same formats in packages farther down."
 msgstr ""
 
-msgid ""
-"Available formats are :setting:`DATE_FORMAT`, :setting:`TIME_FORMAT`, :"
-"setting:`DATETIME_FORMAT`, :setting:`YEAR_MONTH_FORMAT`, :setting:"
-"`MONTH_DAY_FORMAT`, :setting:`SHORT_DATE_FORMAT`, :setting:"
-"`SHORT_DATETIME_FORMAT`, :setting:`FIRST_DAY_OF_WEEK`, :setting:"
-"`DECIMAL_SEPARATOR`, :setting:`THOUSAND_SEPARATOR` and :setting:"
-"`NUMBER_GROUPING`."
+msgid "Available formats are:"
 msgstr ""
+
+msgid ":setting:`DATE_FORMAT`"
+msgstr ":setting:`DATE_FORMAT`"
+
+msgid ":setting:`DATE_INPUT_FORMATS`"
+msgstr ":setting:`DATE_INPUT_FORMATS`"
+
+msgid ":setting:`DATETIME_FORMAT`,"
+msgstr ""
+
+msgid ":setting:`DATETIME_INPUT_FORMATS`"
+msgstr ":setting:`DATETIME_INPUT_FORMATS`"
+
+msgid ":setting:`DECIMAL_SEPARATOR`"
+msgstr ":setting:`DECIMAL_SEPARATOR`"
+
+msgid ":setting:`FIRST_DAY_OF_WEEK`"
+msgstr ":setting:`FIRST_DAY_OF_WEEK`"
+
+msgid ":setting:`MONTH_DAY_FORMAT`"
+msgstr ":setting:`MONTH_DAY_FORMAT`"
+
+msgid ":setting:`NUMBER_GROUPING`"
+msgstr ":setting:`NUMBER_GROUPING`"
+
+msgid ":setting:`SHORT_DATE_FORMAT`"
+msgstr ":setting:`SHORT_DATE_FORMAT`"
+
+msgid ":setting:`SHORT_DATETIME_FORMAT`"
+msgstr ":setting:`SHORT_DATETIME_FORMAT`"
+
+msgid ":setting:`THOUSAND_SEPARATOR`"
+msgstr ":setting:`THOUSAND_SEPARATOR`"
+
+msgid ":setting:`TIME_FORMAT`"
+msgstr ":setting:`TIME_FORMAT`"
+
+msgid ":setting:`TIME_INPUT_FORMATS`"
+msgstr ":setting:`TIME_INPUT_FORMATS`"
+
+msgid ":setting:`YEAR_MONTH_FORMAT`"
+msgstr ":setting:`YEAR_MONTH_FORMAT`"
 
 msgid "``IGNORABLE_404_URLS``"
 msgstr ""
@@ -47061,9 +47432,6 @@ msgid ""
 "setting:`USE_THOUSAND_SEPARATOR`."
 msgstr ""
 
-msgid "Support for non-uniform digit grouping was added."
-msgstr ""
-
 msgid "``PREPEND_WWW``"
 msgstr ""
 
@@ -47225,13 +47593,9 @@ msgstr ""
 msgid ""
 "This takes some explanation. By default, ``is_secure()`` is able to "
 "determine whether a request is secure by looking at whether the requested "
-"URL uses \"https://\". This is important for Django's CSRF protection, and "
+"URL uses ``https://``. This is important for Django's CSRF protection, and "
 "may be used by your own code or third-party apps."
 msgstr ""
-"Ini mengambil beberapa penjelasan. Secara awal, ``is_secure()`` dapat "
-"menentukan apakah sebuah permintaan aman dengan mencari apakah URL diminta "
-"menggunakan \"https://\". Ini adalah penting untuk perlindungan CSRF Django, "
-"dan mungkin digunakan oleh kode anda sendiri atau aplikasi pihak ketiga."
 
 msgid ""
 "If your Django app is behind a proxy, though, the proxy may be \"swallowing"
@@ -47625,21 +47989,6 @@ msgid ""
 "the system time zone."
 msgstr ""
 
-msgid "``USE_ETAGS``"
-msgstr ""
-
-msgid ""
-"A boolean that specifies whether to output the ``ETag`` header. This saves "
-"bandwidth but slows down performance. This is used by the :class:`~django."
-"middleware.common.CommonMiddleware` and in the :doc:`cache framework </"
-"topics/cache>`."
-msgstr ""
-
-msgid ""
-"This setting is deprecated in favor of using ``ConditionalGetMiddleware``, "
-"which sets an ETag regardless of this setting."
-msgstr ""
-
 msgid "``USE_I18N``"
 msgstr ""
 
@@ -47884,8 +48233,12 @@ msgid "Default: ``3``"
 msgstr ""
 
 msgid ""
-"The number of days a password reset link is valid for. Used by the :mod:"
-"`django.contrib.auth` password reset mechanism."
+"The minimum number of days a password reset link is valid for. Depending on "
+"when the link is generated, it will be valid for up to a day longer."
+msgstr ""
+
+msgid ""
+"Used by the :class:`~django.contrib.auth.views.PasswordResetConfirmView`."
 msgstr ""
 
 msgid "``PASSWORD_HASHERS``"
@@ -48078,6 +48431,48 @@ msgid ""
 "This is useful if you have multiple Django instances running under the same "
 "hostname. They can use different cookie paths, and each instance will only "
 "see its own session cookie."
+msgstr ""
+
+msgid "``SESSION_COOKIE_SAMESITE``"
+msgstr ""
+
+msgid ""
+"The value of the `SameSite`_ flag on the session cookie. This flag prevents "
+"the cookie from being sent in cross-site requests thus preventing CSRF "
+"attacks and making some methods of stealing session cookie impossible."
+msgstr ""
+
+msgid "Possible values for the setting are:"
+msgstr ""
+
+msgid ""
+"``'Strict'``: prevents the cookie from being sent by the browser to the "
+"target site in all cross-site browsing context, even when following a "
+"regular link."
+msgstr ""
+
+msgid ""
+"For example, for a GitHub-like website this would mean that if a logged-in "
+"user follows a link to a private GitHub project posted on a corporate "
+"discussion forum or email, GitHub will not receive the session cookie and "
+"the user won't be able to access the project. A bank website, however, most "
+"likely doesn't want to allow any transactional pages to be linked from "
+"external sites so the ``'Strict'`` flag would be appropriate."
+msgstr ""
+
+msgid ""
+"``'Lax'`` (default): provides a balance between security and usability for "
+"websites that want to maintain user's logged-in session after the user "
+"arrives from an external link."
+msgstr ""
+
+msgid ""
+"In the GitHub scenario, the session cookie would be allowed when following a "
+"regular link from an external website and be blocked in CSRF-prone request "
+"methods (e.g. ``POST``)."
+msgstr ""
+
+msgid "``None``: disables the flag."
 msgstr ""
 
 msgid "``SESSION_COOKIE_SECURE``"
@@ -48490,23 +48885,8 @@ msgstr ""
 msgid "Globalization (``i18n``/``l10n``)"
 msgstr ""
 
-msgid ":setting:`DATE_FORMAT`"
-msgstr ":setting:`DATE_FORMAT`"
-
-msgid ":setting:`DATE_INPUT_FORMATS`"
-msgstr ":setting:`DATE_INPUT_FORMATS`"
-
 msgid ":setting:`DATETIME_FORMAT`"
 msgstr ":setting:`DATETIME_FORMAT`"
-
-msgid ":setting:`DATETIME_INPUT_FORMATS`"
-msgstr ":setting:`DATETIME_INPUT_FORMATS`"
-
-msgid ":setting:`DECIMAL_SEPARATOR`"
-msgstr ":setting:`DECIMAL_SEPARATOR`"
-
-msgid ":setting:`FIRST_DAY_OF_WEEK`"
-msgstr ":setting:`FIRST_DAY_OF_WEEK`"
 
 msgid ":setting:`FORMAT_MODULE_PATH`"
 msgstr ":setting:`FORMAT_MODULE_PATH`"
@@ -48532,27 +48912,6 @@ msgstr ":setting:`LANGUAGES`"
 msgid ":setting:`LOCALE_PATHS`"
 msgstr ":setting:`LOCALE_PATHS`"
 
-msgid ":setting:`MONTH_DAY_FORMAT`"
-msgstr ":setting:`MONTH_DAY_FORMAT`"
-
-msgid ":setting:`NUMBER_GROUPING`"
-msgstr ":setting:`NUMBER_GROUPING`"
-
-msgid ":setting:`SHORT_DATE_FORMAT`"
-msgstr ":setting:`SHORT_DATE_FORMAT`"
-
-msgid ":setting:`SHORT_DATETIME_FORMAT`"
-msgstr ":setting:`SHORT_DATETIME_FORMAT`"
-
-msgid ":setting:`THOUSAND_SEPARATOR`"
-msgstr ":setting:`THOUSAND_SEPARATOR`"
-
-msgid ":setting:`TIME_FORMAT`"
-msgstr ":setting:`TIME_FORMAT`"
-
-msgid ":setting:`TIME_INPUT_FORMATS`"
-msgstr ":setting:`TIME_INPUT_FORMATS`"
-
 msgid ":setting:`TIME_ZONE`"
 msgstr ":setting:`TIME_ZONE`"
 
@@ -48567,9 +48926,6 @@ msgstr ":setting:`USE_THOUSAND_SEPARATOR`"
 
 msgid ":setting:`USE_TZ`"
 msgstr ":setting:`USE_TZ`"
-
-msgid ":setting:`YEAR_MONTH_FORMAT`"
-msgstr ":setting:`YEAR_MONTH_FORMAT`"
 
 msgid "HTTP"
 msgstr "HTTP"
@@ -48600,9 +48956,6 @@ msgstr ":setting:`SECURE_PROXY_SSL_HEADER`"
 
 msgid ":setting:`SIGNING_BACKEND`"
 msgstr ":setting:`SIGNING_BACKEND`"
-
-msgid ":setting:`USE_ETAGS`"
-msgstr ":setting:`USE_ETAGS`"
 
 msgid ":setting:`USE_X_FORWARDED_HOST`"
 msgstr ":setting:`USE_X_FORWARDED_HOST`"
@@ -49728,10 +50081,6 @@ msgid "See :ref:`template-loaders` for details."
 msgstr "Lihat :ref:`template-loaders`  untuk lebih rinci."
 
 msgid ""
-"Enabling of the cached template loader when ``debug`` is ``False`` was added."
-msgstr ""
-
-msgid ""
 "``string_if_invalid`` is the output, as a string, that the template system "
 "should use for invalid (e.g. misspelled) variables."
 msgstr ""
@@ -50225,13 +50574,14 @@ msgstr ""
 msgid "``django.template.context_processors.i18n``"
 msgstr "``django.template.context_processors.i18n``"
 
-msgid ""
-"If this processor is enabled, every ``RequestContext`` will contain these "
-"two variables:"
-msgstr ""
-
 msgid "``LANGUAGES`` -- The value of the :setting:`LANGUAGES` setting."
 msgstr "``LANGUAGES`` -- Nilai dari pengaturan :setting:`LANGUAGES`."
+
+msgid ""
+"``LANGUAGE_BIDI`` -- ``True`` if the current language is a right-to-left "
+"language, e.g. Hebrew, Arabic. ``False`` if it's a left-to-right language, e."
+"g. English, French, German."
+msgstr ""
 
 msgid ""
 "``LANGUAGE_CODE`` -- ``request.LANGUAGE_CODE``, if it exists. Otherwise, the "
@@ -50240,8 +50590,10 @@ msgstr ""
 "``LANGUAGE_CODE`` -- ``request.LANGUAGE_CODE``, jika dia ada. Sebaliknya, "
 "nilai dari pengaturan :setting:`LANGUAGE_CODE`."
 
-msgid "See :doc:`/topics/i18n/index` for more."
-msgstr "Lihat :doc:`/topics/i18n/index` untuk lebih."
+msgid ""
+"See :ref:`i18n template tags <i18n-template-tags>` for template tags that "
+"generate the same values."
+msgstr ""
 
 msgid "``django.template.context_processors.media``"
 msgstr "``django.template.context_processors.media``"
@@ -50288,6 +50640,11 @@ msgstr ""
 
 msgid "``django.contrib.messages.context_processors.messages``"
 msgstr "``django.contrib.messages.context_processors.messages``"
+
+msgid ""
+"If this processor is enabled, every ``RequestContext`` will contain these "
+"two variables:"
+msgstr ""
 
 msgid ""
 "``messages`` -- A list of messages (as strings) that have been set via the :"
@@ -50389,11 +50746,6 @@ msgid ""
 "particular filesystem loader::"
 msgstr ""
 
-msgid ""
-"The ability to specify directories for a particular filesystem loader was "
-"added."
-msgstr ""
-
 msgid "``django.template.loaders.app_directories.Loader``"
 msgstr "``django.template.loaders.app_directories.Loader``"
 
@@ -50465,8 +50817,10 @@ msgid ""
 msgstr ""
 
 msgid ""
-"This loader is automatically enabled if :setting:`DEBUG` is ``False`` and :"
-"setting:`OPTIONS['loaders'] <TEMPLATES-OPTIONS>` isn't specified."
+"This loader is automatically enabled if :setting:`OPTIONS['loaders'] "
+"<TEMPLATES-OPTIONS>` isn't specified and :setting:`OPTIONS['debug'] "
+"<TEMPLATES-OPTIONS>` is ``False`` (the latter option defaults to the value "
+"of :setting:`DEBUG`)."
 msgstr ""
 
 msgid ""
@@ -50480,11 +50834,6 @@ msgid ""
 "packages, or that you wrote yourself, you should ensure that the ``Node`` "
 "implementation for each tag is thread-safe. For more information, see :ref:"
 "`template tag thread safety considerations <template_tag_thread_safety>`."
-msgstr ""
-
-msgid ""
-"The automatic enabling of the cached template loader when ``debug`` is "
-"``False`` was added."
 msgstr ""
 
 msgid "``django.template.loaders.locmem.Loader``"
@@ -51213,34 +51562,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"If the included template causes an exception while it's rendered (including "
-"if it's missing or has syntax errors), the behavior varies depending on the :"
-"class:`template engine's <django.template.Engine>` ``debug`` option (if not "
-"set, this option defaults to the value of :setting:`DEBUG`). When debug mode "
-"is turned on, an exception like :exc:`~django.template.TemplateDoesNotExist` "
-"or :exc:`~django.template.TemplateSyntaxError` will be raised. When debug "
-"mode is turned off, ``{% include %}`` logs a warning to the ``django."
-"template`` logger with the exception that happens while rendering the "
-"included template and returns an empty string."
-msgstr ""
-"Jika cetakan disertakan menyebabkan sebuah pengecualian selagi dibangun "
-"(termasuk jika itu hilang atau mempunyai kesalahan sintaksis), kebiasaan "
-"beragam tergantung pada pilihan :class:`template engine's <django.template."
-"Engine>` ``debug`` (jika tidak disetel, awal pilihan ini pada nilai dari :"
-"setting:`DEBUG`). Ketika suasana mencari kesalahan dinyalakan, sebuah "
-"pengecualian seperti :exc:`~django.template.TemplateDoesNotExist` atau :exc:"
-"`~django.template.TemplateSyntaxError` akan muncul. Ketika suasana mencari "
-"kesalahan dimatikan, ``{% include %}`` mencatat sebuah peringatan pada "
-"pencatat ``django.template`` denagn pengecualian yang terjadi selagi "
-"membangun cetakan disertakan dan mengembalikan sebuah deretan karakter "
-"kosong."
-
-msgid ""
-"Silencing exceptions raised while rendering the ``{% include %}`` template "
-"tag is deprecated. In Django 2.1, the exception will be raised."
-msgstr ""
-
-msgid ""
 "The :ttag:`include` tag should be considered as an implementation of "
 "\"render this subtemplate and include the HTML\", not as \"parse this "
 "subtemplate and include its contents as if it were part of the parent\". "
@@ -51431,11 +51752,6 @@ msgstr ""
 msgid ""
 "``list`` -- a list of all items in this group (e.g., a list of all cities "
 "with country='India')."
-msgstr ""
-
-msgid ""
-"The group object was changed from a dictionary to a :py:func:`~collections."
-"namedtuple`."
 msgstr ""
 
 msgid ""
@@ -51841,6 +52157,253 @@ msgstr "Bentuk karakter"
 msgid "Example output"
 msgstr "Contoh keluaran"
 
+msgid "**Day**"
+msgstr ""
+
+msgid "d"
+msgstr "d"
+
+msgid "Day of the month, 2 digits with leading zeros."
+msgstr "Hari dari bulan, 2 angka dengan dimulai nol."
+
+msgid "``'01'`` to ``'31'``"
+msgstr "``'01'`` sampai ``'31'``"
+
+msgid "j"
+msgstr "j"
+
+msgid "Day of the month without leading zeros."
+msgstr ""
+
+msgid "``'1'`` to ``'31'``"
+msgstr "``'1'`` sampai ``'31'``"
+
+msgid "D"
+msgstr "D"
+
+msgid "Day of the week, textual, 3 letters."
+msgstr ""
+
+msgid "``'Fri'``"
+msgstr ""
+
+msgid "l"
+msgstr "I"
+
+msgid "Day of the week, textual, long."
+msgstr ""
+
+msgid "``'Friday'``"
+msgstr "``'Jumat'``"
+
+msgid "S"
+msgstr "S"
+
+msgid "English ordinal suffix for day of the month, 2 characters."
+msgstr ""
+
+msgid "``'st'``, ``'nd'``, ``'rd'`` or ``'th'``"
+msgstr ""
+
+msgid "w"
+msgstr "w"
+
+msgid "Day of the week, digits without leading zeros."
+msgstr ""
+
+msgid "``'0'`` (Sunday) to ``'6'`` (Saturday)"
+msgstr "``'0'`` (Minggu) sampai ``'6'`` (Sabtu)"
+
+msgid "z"
+msgstr "z"
+
+msgid "Day of the year."
+msgstr "Hari dari tahun."
+
+msgid "``0`` to ``365``"
+msgstr "``0`` sampai ``365``"
+
+msgid "**Week**"
+msgstr ""
+
+msgid "W"
+msgstr "W"
+
+msgid "ISO-8601 week number of year, with weeks starting on Monday."
+msgstr ""
+
+msgid "``1``, ``53``"
+msgstr "``1``, ``53``"
+
+msgid "**Month**"
+msgstr ""
+
+msgid "m"
+msgstr "m"
+
+msgid "Month, 2 digits with leading zeros."
+msgstr ""
+
+msgid "``'01'`` to ``'12'``"
+msgstr "``'01'`` sampai ``'12'``"
+
+msgid "n"
+msgstr "n"
+
+msgid "Month without leading zeros."
+msgstr "Bulan tanpa dimulai dengan nol."
+
+msgid "``'1'`` to ``'12'``"
+msgstr "``'1'`` sampai ``'12'``"
+
+msgid "M"
+msgstr "M"
+
+msgid "Month, textual, 3 letters."
+msgstr ""
+
+msgid "``'Jan'``"
+msgstr "``'Jan'``"
+
+msgid "b"
+msgstr "b"
+
+msgid "Month, textual, 3 letters, lowercase."
+msgstr ""
+
+msgid "``'jan'``"
+msgstr "``'jan'``"
+
+msgid "E"
+msgstr "E"
+
+msgid ""
+"Month, locale specific alternative representation usually used for long date "
+"representation."
+msgstr ""
+
+msgid "``'listopada'`` (for Polish locale, as opposed to ``'Listopad'``)"
+msgstr ""
+
+msgid "F"
+msgstr "F"
+
+msgid "Month, textual, long."
+msgstr ""
+
+msgid "``'January'``"
+msgstr "``'Januari'``"
+
+msgid "Month abbreviation in Associated Press style. Proprietary extension."
+msgstr ""
+
+msgid "``'Jan.'``, ``'Feb.'``, ``'March'``, ``'May'``"
+msgstr "``'Jan.'``, ``'Feb.'``, ``'Maret'``, ``'Mei'``"
+
+msgid "t"
+msgstr "t"
+
+msgid "Number of days in the given month."
+msgstr ""
+
+msgid "``28`` to ``31``"
+msgstr "``28`` sampai ``31``"
+
+msgid "**Year**"
+msgstr ""
+
+msgid "y"
+msgstr "y"
+
+msgid "Year, 2 digits."
+msgstr "Tahun, 2 angka."
+
+msgid "``'99'``"
+msgstr "``'99'``"
+
+msgid "Y"
+msgstr "Y"
+
+msgid "Year, 4 digits."
+msgstr "Tahun, 4 angka."
+
+msgid "``'1999'``"
+msgstr "``'1999'``"
+
+msgid "L"
+msgstr "L"
+
+msgid "Boolean for whether it's a leap year."
+msgstr ""
+
+msgid "``True`` or ``False``"
+msgstr "``True`` atau ``False``"
+
+msgid "o"
+msgstr "o"
+
+msgid ""
+"ISO-8601 week-numbering year, corresponding to the ISO-8601 week number (W) "
+"which uses leap weeks. See Y for the more common year format."
+msgstr ""
+
+msgid "**Time**"
+msgstr ""
+
+msgid "g"
+msgstr "g"
+
+msgid "Hour, 12-hour format without leading zeros."
+msgstr ""
+
+msgid "G"
+msgstr "G"
+
+msgid "Hour, 24-hour format without leading zeros."
+msgstr ""
+
+msgid "``'0'`` to ``'23'``"
+msgstr "``'0'`` sampai ``'23'``"
+
+msgid "h"
+msgstr "h"
+
+msgid "Hour, 12-hour format."
+msgstr ""
+
+msgid "H"
+msgstr "H"
+
+msgid "Hour, 24-hour format."
+msgstr ""
+
+msgid "``'00'`` to ``'23'``"
+msgstr "``'00'`` sampai ``'23'``"
+
+msgid "i"
+msgstr "i"
+
+msgid "Minutes."
+msgstr "Menit."
+
+msgid "``'00'`` to ``'59'``"
+msgstr "``'00'`` sampai ``'59'``"
+
+msgid "s"
+msgstr "s"
+
+msgid "Seconds, 2 digits with leading zeros."
+msgstr ""
+
+msgid "u"
+msgstr "u"
+
+msgid "Microseconds."
+msgstr "Mikrodetik"
+
+msgid "``000000`` to ``999999``"
+msgstr "``000000`` sampai ``999999``"
+
 msgid "a"
 msgstr "a"
 
@@ -51861,17 +52424,84 @@ msgstr "``'AM'`` atau ``'PM'``."
 msgid "``'AM'``"
 msgstr "``'AM'``"
 
-msgid "b"
-msgstr "b"
+msgid "f"
+msgstr "f"
 
-msgid "Month, textual, 3 letters, lowercase."
+msgid ""
+"Time, in 12-hour hours and minutes, with minutes left off if they're zero. "
+"Proprietary extension."
 msgstr ""
 
-msgid "``'jan'``"
-msgstr "``'jan'``"
+msgid "``'1'``, ``'1:30'``"
+msgstr "``'1'``, ``'1:30'``"
 
-msgid "Not implemented."
-msgstr "Tidak diterapkan."
+msgid "P"
+msgstr "P"
+
+msgid ""
+"Time, in 12-hour hours, minutes and 'a.m.'/'p.m.', with minutes left off if "
+"they're zero and the special-case strings 'midnight' and 'noon' if "
+"appropriate. Proprietary extension."
+msgstr ""
+
+msgid ""
+"``'1 a.m.'``, ``'1:30 p.m.'``, ``'midnight'``, ``'noon'``, ``'12:30 p.m.'``"
+msgstr ""
+
+msgid "**Timezone**"
+msgstr ""
+
+msgid "e"
+msgstr ""
+
+msgid ""
+"Timezone name. Could be in any format, or might return an empty string, "
+"depending on the datetime."
+msgstr ""
+
+msgid "``''``, ``'GMT'``, ``'-500'``, ``'US/Eastern'``, etc."
+msgstr "``''``, ``'GMT'``, ``'-500'``, ``'US/Eastern'``, etc."
+
+msgid "I"
+msgstr "I"
+
+msgid "Daylight Savings Time, whether it's in effect or not."
+msgstr ""
+
+msgid "``'1'`` or ``'0'``"
+msgstr "``'1'`` atau ``'0'``"
+
+msgid "O"
+msgstr "O"
+
+msgid "Difference to Greenwich time in hours."
+msgstr ""
+
+msgid "``'+0200'``"
+msgstr "``'+0200'``"
+
+msgid "T"
+msgstr "T"
+
+msgid "Time zone of this machine."
+msgstr "Zona waktu dari mesin ini."
+
+msgid "``'EST'``, ``'MDT'``"
+msgstr ""
+
+msgid "Z"
+msgstr "Z"
+
+msgid ""
+"Time zone offset in seconds. The offset for timezones west of UTC is always "
+"negative, and for those east of UTC is always positive."
+msgstr ""
+
+msgid "``-43200`` to ``43200``"
+msgstr "``-43200`` sampai ``43200``"
+
+msgid "**Date/Time**"
+msgstr ""
 
 msgid "c"
 msgstr "c"
@@ -51887,207 +52517,6 @@ msgid ""
 "the datetime is naive"
 msgstr ""
 
-msgid "d"
-msgstr "d"
-
-msgid "Day of the month, 2 digits with leading zeros."
-msgstr "Hari dari bulan, 2 angka dengan dimulai nol."
-
-msgid "``'01'`` to ``'31'``"
-msgstr "``'01'`` sampai ``'31'``"
-
-msgid "D"
-msgstr "D"
-
-msgid "Day of the week, textual, 3 letters."
-msgstr ""
-
-msgid "``'Fri'``"
-msgstr ""
-
-msgid "e"
-msgstr ""
-
-msgid ""
-"Timezone name. Could be in any format, or might return an empty string, "
-"depending on the datetime."
-msgstr ""
-
-msgid "``''``, ``'GMT'``, ``'-500'``, ``'US/Eastern'``, etc."
-msgstr "``''``, ``'GMT'``, ``'-500'``, ``'US/Eastern'``, etc."
-
-msgid "E"
-msgstr "E"
-
-msgid ""
-"Month, locale specific alternative representation usually used for long date "
-"representation."
-msgstr ""
-
-msgid "``'listopada'`` (for Polish locale, as opposed to ``'Listopad'``)"
-msgstr ""
-
-msgid "f"
-msgstr "f"
-
-msgid ""
-"Time, in 12-hour hours and minutes, with minutes left off if they're zero. "
-"Proprietary extension."
-msgstr ""
-
-msgid "``'1'``, ``'1:30'``"
-msgstr "``'1'``, ``'1:30'``"
-
-msgid "F"
-msgstr "F"
-
-msgid "Month, textual, long."
-msgstr ""
-
-msgid "``'January'``"
-msgstr "``'Januari'``"
-
-msgid "g"
-msgstr "g"
-
-msgid "Hour, 12-hour format without leading zeros."
-msgstr ""
-
-msgid "``'1'`` to ``'12'``"
-msgstr "``'1'`` sampai ``'12'``"
-
-msgid "G"
-msgstr "G"
-
-msgid "Hour, 24-hour format without leading zeros."
-msgstr ""
-
-msgid "``'0'`` to ``'23'``"
-msgstr "``'0'`` sampai ``'23'``"
-
-msgid "h"
-msgstr "h"
-
-msgid "Hour, 12-hour format."
-msgstr ""
-
-msgid "``'01'`` to ``'12'``"
-msgstr "``'01'`` sampai ``'12'``"
-
-msgid "H"
-msgstr "H"
-
-msgid "Hour, 24-hour format."
-msgstr ""
-
-msgid "``'00'`` to ``'23'``"
-msgstr "``'00'`` sampai ``'23'``"
-
-msgid "i"
-msgstr "i"
-
-msgid "Minutes."
-msgstr "Menit."
-
-msgid "``'00'`` to ``'59'``"
-msgstr "``'00'`` sampai ``'59'``"
-
-msgid "I"
-msgstr "I"
-
-msgid "Daylight Savings Time, whether it's in effect or not."
-msgstr ""
-
-msgid "``'1'`` or ``'0'``"
-msgstr "``'1'`` atau ``'0'``"
-
-msgid "j"
-msgstr "j"
-
-msgid "Day of the month without leading zeros."
-msgstr ""
-
-msgid "``'1'`` to ``'31'``"
-msgstr "``'1'`` sampai ``'31'``"
-
-msgid "l"
-msgstr "I"
-
-msgid "Day of the week, textual, long."
-msgstr ""
-
-msgid "``'Friday'``"
-msgstr "``'Jumat'``"
-
-msgid "L"
-msgstr "L"
-
-msgid "Boolean for whether it's a leap year."
-msgstr ""
-
-msgid "``True`` or ``False``"
-msgstr "``True`` atau ``False``"
-
-msgid "m"
-msgstr "m"
-
-msgid "Month, 2 digits with leading zeros."
-msgstr ""
-
-msgid "M"
-msgstr "M"
-
-msgid "Month, textual, 3 letters."
-msgstr ""
-
-msgid "``'Jan'``"
-msgstr "``'Jan'``"
-
-msgid "n"
-msgstr "n"
-
-msgid "Month without leading zeros."
-msgstr "Bulan tanpa dimulai dengan nol."
-
-msgid "Month abbreviation in Associated Press style. Proprietary extension."
-msgstr ""
-
-msgid "``'Jan.'``, ``'Feb.'``, ``'March'``, ``'May'``"
-msgstr "``'Jan.'``, ``'Feb.'``, ``'Maret'``, ``'Mei'``"
-
-msgid "o"
-msgstr "o"
-
-msgid ""
-"ISO-8601 week-numbering year, corresponding to the ISO-8601 week number (W) "
-"which uses leap weeks. See Y for the more common year format."
-msgstr ""
-
-msgid "``'1999'``"
-msgstr "``'1999'``"
-
-msgid "O"
-msgstr "O"
-
-msgid "Difference to Greenwich time in hours."
-msgstr ""
-
-msgid "``'+0200'``"
-msgstr "``'+0200'``"
-
-msgid "P"
-msgstr "P"
-
-msgid ""
-"Time, in 12-hour hours, minutes and 'a.m.'/'p.m.', with minutes left off if "
-"they're zero and the special-case strings 'midnight' and 'noon' if "
-"appropriate. Proprietary extension."
-msgstr ""
-
-msgid ""
-"``'1 a.m.'``, ``'1:30 p.m.'``, ``'midnight'``, ``'noon'``, ``'12:30 p.m.'``"
-msgstr ""
-
 msgid "r"
 msgstr "r"
 
@@ -52097,106 +52526,11 @@ msgstr ""
 msgid "``'Thu, 21 Dec 2000 16:01:07 +0200'``"
 msgstr "``'Kam, 21 Des 2000 16:01:07 +0200'``"
 
-msgid "s"
-msgstr "s"
-
-msgid "Seconds, 2 digits with leading zeros."
-msgstr ""
-
-msgid "S"
-msgstr "S"
-
-msgid "English ordinal suffix for day of the month, 2 characters."
-msgstr ""
-
-msgid "``'st'``, ``'nd'``, ``'rd'`` or ``'th'``"
-msgstr ""
-
-msgid "t"
-msgstr "t"
-
-msgid "Number of days in the given month."
-msgstr ""
-
-msgid "``28`` to ``31``"
-msgstr "``28`` sampai ``31``"
-
-msgid "T"
-msgstr "T"
-
-msgid "Time zone of this machine."
-msgstr "Zona waktu dari mesin ini."
-
-msgid "``'EST'``, ``'MDT'``"
-msgstr ""
-
-msgid "u"
-msgstr "u"
-
-msgid "Microseconds."
-msgstr "Mikrodetik"
-
-msgid "``000000`` to ``999999``"
-msgstr "``000000`` sampai ``999999``"
-
 msgid "U"
 msgstr "U"
 
 msgid "Seconds since the Unix Epoch (January 1 1970 00:00:00 UTC)."
 msgstr ""
-
-msgid "w"
-msgstr "w"
-
-msgid "Day of the week, digits without leading zeros."
-msgstr ""
-
-msgid "``'0'`` (Sunday) to ``'6'`` (Saturday)"
-msgstr "``'0'`` (Minggu) sampai ``'6'`` (Sabtu)"
-
-msgid "W"
-msgstr "W"
-
-msgid "ISO-8601 week number of year, with weeks starting on Monday."
-msgstr ""
-
-msgid "``1``, ``53``"
-msgstr "``1``, ``53``"
-
-msgid "y"
-msgstr "y"
-
-msgid "Year, 2 digits."
-msgstr "Tahun, 2 angka."
-
-msgid "``'99'``"
-msgstr "``'99'``"
-
-msgid "Y"
-msgstr "Y"
-
-msgid "Year, 4 digits."
-msgstr "Tahun, 4 angka."
-
-msgid "z"
-msgstr "z"
-
-msgid "Day of the year."
-msgstr "Hari dari tahun."
-
-msgid "``0`` to ``365``"
-msgstr "``0`` sampai ``365``"
-
-msgid "Z"
-msgstr "Z"
-
-msgid ""
-"Time zone offset in seconds. The offset for timezones west of UTC is always "
-"negative, and for those east of UTC is always positive."
-msgstr ""
-
-msgid "``-43200`` to ``43200``"
-msgstr "``-43200`` sampai ``43200``"
 
 msgid ""
 "If ``value`` is a :py:class:`~datetime.datetime` object (e.g., the result of "
@@ -52357,8 +52691,9 @@ msgstr "``escapejs``"
 
 msgid ""
 "Escapes characters for use in JavaScript strings. This does *not* make the "
-"string safe for use in HTML, but does protect you from syntax errors when "
-"using templates to generate JavaScript/JSON."
+"string safe for use in HTML or JavaScript template literals, but does "
+"protect you from syntax errors when using templates to generate JavaScript/"
+"JSON."
 msgstr ""
 
 msgid ""
@@ -52542,6 +52877,36 @@ msgstr ""
 "Jika ``value`` adalah daftar ``['a', 'b', 'c']``, keluaran akan menjadi "
 "deretan karakter ``\"a // b // c\"``."
 
+msgid "``json_script``"
+msgstr ""
+
+msgid ""
+"Safely outputs a Python object as JSON, wrapped in a ``<script>`` tag, ready "
+"for use with JavaScript."
+msgstr ""
+
+msgid "**Argument:** HTML \"id\" of the ``<script>`` tag."
+msgstr ""
+
+msgid ""
+"If ``value`` is the dictionary ``{'hello': 'world'}``, the output will be:"
+msgstr ""
+
+msgid "The resulting data can be accessed in JavaScript like this:"
+msgstr ""
+
+msgid ""
+"XSS attacks are mitigated by escaping the characters \"<\", \">\" and \"&\". "
+"For example if ``value`` is ``{'hello': 'world</script>&amp;'}``, the output "
+"is:"
+msgstr ""
+
+msgid ""
+"This is compatible with a strict Content Security Policy that prohibits in-"
+"page script execution. It also maintains a clean separation between passive "
+"data and executable code."
+msgstr ""
+
 msgid "``last``"
 msgstr "``last``"
 
@@ -52593,12 +52958,12 @@ msgstr "``linebreaks``"
 
 msgid ""
 "Replaces line breaks in plain text with appropriate HTML; a single newline "
-"becomes an HTML line break (``<br />``) and a new line followed by a blank "
+"becomes an HTML line break (``<br>``) and a new line followed by a blank "
 "line becomes a paragraph break (``</p>``)."
 msgstr ""
 
 msgid ""
-"If ``value`` is ``Joel\\nis a slug``, the output will be ``<p>Joel<br />is a "
+"If ``value`` is ``Joel\\nis a slug``, the output will be ``<p>Joel<br>is a "
 "slug</p>``."
 msgstr ""
 
@@ -52606,12 +52971,12 @@ msgid "``linebreaksbr``"
 msgstr "``linebreaksbr``"
 
 msgid ""
-"Converts all newlines in a piece of plain text to HTML line breaks (``<br /"
-">``)."
+"Converts all newlines in a piece of plain text to HTML line breaks "
+"(``<br>``)."
 msgstr ""
 
 msgid ""
-"If ``value`` is ``Joel\\nis a slug``, the output will be ``Joel<br />is a "
+"If ``value`` is ``Joel\\nis a slug``, the output will be ``Joel<br>is a "
 "slug``."
 msgstr ""
 
@@ -53389,10 +53754,10 @@ msgid ""
 "Variables look like this: ``{{ variable }}``. When the template engine "
 "encounters a variable, it evaluates that variable and replaces it with the "
 "result. Variable names consist of any combination of alphanumeric characters "
-"and the underscore (``\"_\"``). The dot (``\".\"``) also appears in variable "
-"sections, although that has a special meaning, as indicated below. "
-"Importantly, *you cannot have spaces or punctuation characters in variable "
-"names.*"
+"and the underscore (``\"_\"``) but may not start with an underscore. The dot "
+"(``\".\"``) also appears in variable sections, although that has a special "
+"meaning, as indicated below. Importantly, *you cannot have spaces or "
+"punctuation characters in variable names.*"
 msgstr ""
 
 msgid "Use a dot (``.``) to access attributes of a variable."
@@ -53440,6 +53805,11 @@ msgid ""
 "If you use a variable that doesn't exist, the template system will insert "
 "the value of the ``string_if_invalid`` option, which is set to ``''`` (the "
 "empty string) by default."
+msgstr ""
+
+msgid ""
+"Variable attributes that begin with an underscore may not be accessed as "
+"they're generally considered private."
 msgstr ""
 
 msgid "You can modify variables for display by using **filters**."
@@ -54758,8 +55128,8 @@ msgstr ""
 
 msgid ""
 "By default, this is :func:`django.views.defaults.bad_request`. If you "
-"implement a custom view, be sure it returns an :class:`~django.http."
-"HttpResponseBadRequest`."
+"implement a custom view, be sure it accepts ``request`` and ``exception`` "
+"arguments and returns an :class:`~django.http.HttpResponseBadRequest`."
 msgstr ""
 
 msgid "``handler403``"
@@ -54773,8 +55143,8 @@ msgstr ""
 
 msgid ""
 "By default, this is :func:`django.views.defaults.permission_denied`. If you "
-"implement a custom view, be sure it returns an :class:`~django.http."
-"HttpResponseForbidden`."
+"implement a custom view, be sure it accepts ``request`` and ``exception`` "
+"arguments and returns an :class:`~django.http.HttpResponseForbidden`."
 msgstr ""
 
 msgid "``handler404``"
@@ -54787,8 +55157,8 @@ msgstr ""
 
 msgid ""
 "By default, this is :func:`django.views.defaults.page_not_found`. If you "
-"implement a custom view, be sure it returns an :class:`~django.http."
-"HttpResponseNotFound`."
+"implement a custom view, be sure it accepts ``request`` and ``exception`` "
+"arguments and returns an :class:`~django.http.HttpResponseNotFound`."
 msgstr ""
 
 msgid "``handler500``"
@@ -54870,9 +55240,6 @@ msgstr ""
 msgid "Adds some useful headers to the given ``HttpResponse`` object:"
 msgstr ""
 
-msgid "``ETag``"
-msgstr "``ETag``"
-
 msgid "``Expires``"
 msgstr "``Expires``"
 
@@ -54885,14 +55252,6 @@ msgstr ""
 msgid ""
 "``cache_timeout`` is in seconds. The :setting:`CACHE_MIDDLEWARE_SECONDS` "
 "setting is used by default."
-msgstr ""
-
-msgid "In older versions, the ``Last-Modified`` header was also set."
-msgstr "Dalam versi terlamam, kepala ``Last-Modified`` juga disetel."
-
-msgid ""
-"Since the ``USE_ETAGS`` setting is deprecated, this function won't set the "
-"``ETag`` header when the deprecation ends in Django 2.1."
 msgstr ""
 
 msgid ""
@@ -55231,11 +55590,6 @@ msgid ""
 "date/time."
 msgstr ""
 
-msgid ""
-"In older versions, it returned the current date/time without any timezone "
-"information."
-msgstr ""
-
 msgid "``Enclosure``"
 msgstr "``Enclosure``"
 
@@ -55320,6 +55674,11 @@ msgid ""
 msgstr ""
 
 msgid ""
+"``cached_property`` doesn't work properly with a mangled__ name unless it's "
+"passed a ``name`` of the form ``_Class__attribute``::"
+msgstr ""
+
+msgid ""
 "Django offers many utility functions (particularly in ``django.utils``) that "
 "take a string as their first argument and do something to that string. These "
 "functions are used by template filters as well as directly in other code."
@@ -55378,9 +55737,8 @@ msgstr ""
 
 msgid ""
 "Returns the given text with ampersands, quotes and angle brackets encoded "
-"for use in HTML. The input is first passed through :func:`~django.utils."
-"encoding.force_text` and the output has :func:`~django.utils.safestring."
-"mark_safe` applied."
+"for use in HTML. The input is first coerced to a string and the output has :"
+"func:`~django.utils.safestring.mark_safe` applied."
 msgstr ""
 
 msgid ""
@@ -55452,10 +55810,8 @@ msgstr ""
 
 msgid ""
 "If you are looking for a more robust solution, take a look at the `bleach "
-"<https://pypi.python.org/pypi/bleach>`_ Python library."
+"<https://pypi.org/project/bleach/>`_ Python library."
 msgstr ""
-"Jika anda sedang mencari pemecahan yang lebih kuat, lihatlah pada pustaka "
-"Python `bleach <https://pypi.python.org/pypi/bleach>`_."
 
 msgid ""
 "The ``__html__()`` method on a class helps non-Django templates detect "
@@ -55475,6 +55831,9 @@ msgstr "``django.utils.http``"
 msgid ""
 "A version of Python's :func:`urllib.parse.urlencode` function that can "
 "operate on ``MultiValueDict`` and non-string values."
+msgstr ""
+
+msgid "Use :func:`http_date` instead, which follows the latest RFC."
 msgstr ""
 
 msgid ""
@@ -55564,9 +55923,6 @@ msgid ""
 msgstr ""
 
 msgid "String marked safe will become unsafe again if modified. For example::"
-msgstr ""
-
-msgid "Added support for decorator usage."
 msgstr ""
 
 msgid "``django.utils.text``"
@@ -55671,9 +56027,6 @@ msgstr ""
 msgid ""
 "This function doesn't work on naive datetimes; use :func:`make_aware` "
 "instead."
-msgstr ""
-
-msgid "In older versions, ``value`` is a required argument."
 msgstr ""
 
 msgid ""
@@ -55793,17 +56146,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Use :meth:`django.utils.text.format_lazy` instead. "
-"``string_concat(*strings)`` can be replaced by ``format_lazy('{}' * "
-"len(strings), *strings)``."
-msgstr ""
-
-msgid ""
-"Lazy variant of string concatenation, needed for translations that are "
-"constructed from multiple parts."
-msgstr ""
-
-msgid ""
 "Fetches the translation object for a given language and activates it as the "
 "current translation object for the current thread."
 msgstr ""
@@ -55861,6 +56203,24 @@ msgid ""
 "If ``check_path`` is ``True``, the function first checks the requested URL "
 "for whether its path begins with a language code listed in the :setting:"
 "`LANGUAGES` setting."
+msgstr ""
+
+msgid ""
+"Returns ``lang_code`` if it's in the :setting:`LANGUAGES` setting, possibly "
+"selecting a more generic variant. For example, ``'es'`` is returned if "
+"``lang_code`` is ``'es-ar'`` and ``'es'`` is in :setting:`LANGUAGES` but "
+"``'es-ar'`` isn't."
+msgstr ""
+
+msgid ""
+"If ``strict`` is ``False`` (the default), a country-specific variant may be "
+"returned when neither the language code nor its generic variant is found. "
+"For example, if only ``'es-co'`` is in :setting:`LANGUAGES`, that's returned "
+"for ``lang_code``\\s like ``'es'`` and ``'es-ar'``. Those matches aren't "
+"returned if ``strict=True``."
+msgstr ""
+
+msgid "Raises :exc:`LookupError` if nothing is found."
 msgstr ""
 
 msgid "Turns a language name (en-us) into a locale name (en_US)."
@@ -56097,7 +56457,7 @@ msgstr "``MaxValueValidator``"
 
 msgid ""
 "Raises a :exc:`~django.core.exceptions.ValidationError` with a code of "
-"``'max_value'`` if ``value`` is greater than ``max_value``."
+"``'max_value'`` if ``value`` is greater than ``limit_value``."
 msgstr ""
 
 msgid "``MinValueValidator``"
@@ -56105,7 +56465,7 @@ msgstr "``MinValueValidator``"
 
 msgid ""
 "Raises a :exc:`~django.core.exceptions.ValidationError` with a code of "
-"``'min_value'`` if ``value`` is less than ``min_value``."
+"``'min_value'`` if ``value`` is less than ``limit_value``."
 msgstr ""
 
 msgid "``MaxLengthValidator``"
@@ -56113,7 +56473,7 @@ msgstr "``MaxLengthValidator``"
 
 msgid ""
 "Raises a :exc:`~django.core.exceptions.ValidationError` with a code of "
-"``'max_length'`` if the length of ``value`` is greater than ``max_length``."
+"``'max_length'`` if the length of ``value`` is greater than ``limit_value``."
 msgstr ""
 
 msgid "``MinLengthValidator``"
@@ -56121,7 +56481,7 @@ msgstr "``MinLengthValidator``"
 
 msgid ""
 "Raises a :exc:`~django.core.exceptions.ValidationError` with a code of "
-"``'min_length'`` if the length of ``value`` is less than ``min_length``."
+"``'min_length'`` if the length of ``value`` is less than ``limit_value``."
 msgstr ""
 
 msgid "``DecimalValidator``"

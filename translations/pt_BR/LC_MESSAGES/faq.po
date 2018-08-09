@@ -17,6 +17,7 @@
 # Felipe Lube de Bragança <felipe.lubra@gmail.com>, 2016
 # Felipe Nogueira de Souza <felipensouza@live.com>, 2017
 # Felipe Rodrigues <bidu.pub@gmail.com>, 2016
+# Gutierri Barboza <github+me@gutierri.me>, 2018
 # Hugo Tácito <hugotacito@gmail.com>, 2016
 # Kaio Brito <kaio-henrique@hotmail.com>, 2015
 # Lafaiet Silva <coldmetall@gmail.com>, 2016
@@ -38,8 +39,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-02 15:28-0600\n"
-"PO-Revision-Date: 2018-02-01 13:46+0000\n"
+"POT-Creation-Date: 2018-08-08 07:27-0500\n"
+"PO-Revision-Date: 2018-08-01 13:56+0000\n"
 "Last-Translator: Alexandre Proença <alexandre.proenca@hotmail.com.br>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
@@ -1095,18 +1096,6 @@ msgstr "Versão do Django"
 msgid "Python versions"
 msgstr "Versões do Python"
 
-msgid "1.8"
-msgstr "1.8"
-
-msgid "2.7, 3.2 (until the end of 2016), 3.3, 3.4, 3.5"
-msgstr "2.7, 3.2 (até o fim de 2016), 3.3, 3.4, 3.5"
-
-msgid "1.9, 1.10"
-msgstr "1.9, 1.10"
-
-msgid "2.7, 3.4, 3.5"
-msgstr "2.7, 3.4, 3.5"
-
 msgid "1.11"
 msgstr "1.11"
 
@@ -1116,11 +1105,11 @@ msgstr "2.7, 3.4, 3.5, 3.6"
 msgid "2.0"
 msgstr "2.0"
 
-msgid "3.4, 3.5, 3.6"
-msgstr "3.4, 3.5, 3.6"
+msgid "3.4, 3.5, 3.6, 3.7"
+msgstr "3.4, 3.5, 3.6, 3.7"
 
-msgid "2.1"
-msgstr "2.1"
+msgid "2.1, 2.2"
+msgstr "2.1, 2.2"
 
 msgid "3.5, 3.6, 3.7"
 msgstr "3.5, 3.6, 3.7"
@@ -1392,6 +1381,13 @@ msgid ""
 "command) to the directory where :doc:`django-admin </ref/django-admin>` is "
 "installed, then run the command ``sudo chmod +x django-admin``."
 msgstr ""
+"Se você está usando macOS, você pode ver a mensagem \"permissão negada\" "
+"quando tentar rodar o \"django-admin\". Isso acontece porque, sistemas "
+"baseados em Unix (Unix-based) como o macOS, um arquivo precisa ser marcado "
+"como \"executável\" antes de poder ser executado como um programa. Para "
+"fazer isso, abra o terminal e navegue (usando o comando \"cd\") até o "
+"diretório onde :doc:`django-admin 1` está instalado, então rode o comando "
+"\"sudo chmod +x django-admin\". "
 
 msgid "Miscellaneous"
 msgstr "Variados"

@@ -5,9 +5,11 @@
 # Translators:
 # Dogify <595572594@qq.com>, 2018
 # asdf asdf <328134421@qq.com>, 2018
-# Bestony <xiqingongzi@gmail.com>, 2018
+# Bai HuanCheng (Bestony) <xiqingongzi@gmail.com>, 2018
 # CabbSir <cabbsir@gmail.com>, 2018
+# Dogify <595572594@qq.com>, 2018
 # Floyd Li <floyd.li@outlook.com>, 2017
+# Fossen <fossen@fossen.cn>, 2018
 # Gao Liang <gaoliangim@gmail.com>, 2018
 # Hao Jin <jinhao7773@gmail.com>, 2018
 # David <huangtao0202@gmail.com>, 2017
@@ -32,21 +34,21 @@
 # William ZHOU <wzzyj8@gmail.com>, 2018
 # Xiang Yu <bupt.aswmtjdsj@gmail.com>, 2014
 # Frost Ming <mianghong@gmail.com>, 2017
-# yongqing zhang <497533265@qq.com>, 2018
+# zyqzyq <497533265@qq.com>, 2018
 # Zhengyang Wang <sufforest@gmail.com>, 2018
 # zhimiao li <untildied@gmail.com>, 2018
 # zwithz1998, 2018
 # 吴彬 <xiake21x@qq.com>, 2016-2017
 # Dogify <595572594@qq.com>, 2018
-# 珩硕 徐 <geofvt@gmail.com>, 2017
+# ercJuL <geofvt@gmail.com>, 2017
 # 陈寅 <296120962@qq.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-13 07:19-0500\n"
-"PO-Revision-Date: 2018-04-12 11:30+0000\n"
-"Last-Translator: Manjusakka Lee <me@manjusaka.me>\n"
+"POT-Creation-Date: 2018-08-08 07:27-0500\n"
+"PO-Revision-Date: 2018-07-30 06:31+0000\n"
+"Last-Translator: Dogify <595572594@qq.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -297,8 +299,8 @@ msgid ""
 "is to make it dead easy, even for someone who may not be intimately familiar "
 "with that area of the code, to understand the problem and verify the fix:"
 msgstr ""
-"确保工单在签入过程中不被挂起的最佳方法是让它所描述的问题非常易于理解，即便是"
-"对相关领域并不熟悉的人也能理解并修复问题："
+"确保工单在签入过程中不被挂起的最佳方法是让它所描述的问题通俗易懂，即便是对相"
+"关领域并不熟悉的人也能理解并修复问题："
 
 msgid ""
 "Are there clear instructions on how to reproduce the bug? If this touches a "
@@ -711,7 +713,7 @@ msgstr ""
 "并不意味着它不仅适合于构建 \"非CMS-y\"的应用 (不管那意味着什么)。"
 
 msgid "How can I download the Django documentation to read it offline?"
-msgstr "我如何下载 Django 文档进行离线阅读?"
+msgstr "我如何下载 Django 文档进行离线阅读？"
 
 msgid ""
 "The Django docs are available in the ``docs`` directory of each Django "
@@ -827,7 +829,7 @@ msgstr ""
 "感到抱歉。"
 
 msgid "Nobody on `django-users` answered my question! What should I do?"
-msgstr "没有在`Django-users`邮件列表上回答我的问题，我应该怎么办呢？"
+msgstr "没人在 `Django-users` 邮件列表上回答我的问题！我应该怎么办呢？"
 
 msgid ""
 "Try making your question more specific, or provide a better example of your "
@@ -897,19 +899,19 @@ msgid "Django FAQ"
 msgstr "Django FAQ"
 
 msgid "FAQ: Installation"
-msgstr "FAQ: 安装"
+msgstr "FAQ：安装"
 
 msgid "How do I get started?"
-msgstr "我如何开始?"
+msgstr "如何开始？"
 
 msgid "`Download the code`_."
-msgstr "`下载代码`_."
+msgstr "`下载代码`_ 。"
 
 msgid "Install Django (read the :doc:`installation guide </intro/install>`)."
-msgstr "安装 Django (阅读 :doc:`安装指南 </intro/install>`)."
+msgstr "安装 Django （阅读 :doc:`安装指南 </intro/install>`）。"
 
 msgid "Walk through the :doc:`tutorial </intro/tutorial01>`."
-msgstr "查看 :doc:`tutorial 1`"
+msgstr "查看 :doc:`教程第 1 部分` 。"
 
 msgid ""
 "Check out the rest of the :doc:`documentation </index>`, and `ask "
@@ -949,29 +951,17 @@ msgid ""
 "supported."
 msgstr ""
 "有时候，你可能会想在 Django 上使用数据库，那么你需要一个数据库引擎。我们推荐"
-"使用 PostgreSQL，因为我们是 PostgreSQL 的忠实粉丝，但是 Django 也同样支持"
-"MySQL，SQLite3 和 Oracle。"
+"使用 PostgreSQL_ ，因为我们是 PostgreSQL 的忠实粉丝，但是 Django 也同样支持"
+"MySQL_ ，`SQLite3`_ 和 Oracle_ 。"
 
 msgid "What Python version can I use with Django?"
-msgstr "我应该使用哪个版本的Python来配合Django?"
+msgstr "我应该使用哪个版本的 Python 来配合 Django?"
 
 msgid "Django version"
-msgstr "Django版本"
+msgstr "Django 版本"
 
 msgid "Python versions"
-msgstr "Python版本"
-
-msgid "1.8"
-msgstr "1.8"
-
-msgid "2.7, 3.2 (until the end of 2016), 3.3, 3.4, 3.5"
-msgstr "2.7, 3.2 (截至2016年底), 3.3, 3.4, 3.5"
-
-msgid "1.9, 1.10"
-msgstr "1.9， 1.10"
-
-msgid "2.7, 3.4, 3.5"
-msgstr "2.7， 3.4， 3.5"
+msgstr "Python 版本"
 
 msgid "1.11"
 msgstr "1.11"
@@ -982,11 +972,11 @@ msgstr "2.7，3.4，3.5，3.6"
 msgid "2.0"
 msgstr "2.0"
 
-msgid "3.4, 3.5, 3.6"
-msgstr "3.4，3.5，3.6"
+msgid "3.4, 3.5, 3.6, 3.7"
+msgstr "3.4，3.5，3.6，3.7"
 
-msgid "2.1"
-msgstr "2.1"
+msgid "2.1, 2.2"
+msgstr "2.1，2.2"
 
 msgid "3.5, 3.6, 3.7"
 msgstr "3.5，3.6，3.7"
