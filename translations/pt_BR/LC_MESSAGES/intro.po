@@ -53,6 +53,7 @@
 # Rodrigo <rprior@infranology.com.br>, 2015
 # Sergio Garcia <sergio@ginx.com.br>, 2015
 # tito gonzales <produtoramediterraneo@gmail.com>, 2013
+# Vanessa Barreiros <vanessa@vinta.com.br>, 2018
 # Wanderley S <wandss@gmail.com>, 2016
 # Wellington Moraes da Silva <mswell@outlook.com>, 2016
 # Wiliam Souza <wiliamsouza83@gmail.com>, 2015
@@ -61,9 +62,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-08 19:30-0500\n"
-"PO-Revision-Date: 2018-08-02 01:06+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2018-08-31 05:24-0500\n"
+"PO-Revision-Date: 2018-08-19 05:59+0000\n"
+"Last-Translator: Vanessa Barreiros <vanessa@vinta.com.br>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -391,6 +392,9 @@ msgid ""
 "this tutorial, you should always use the current version of the master "
 "branch when working on your own patch for a ticket!**"
 msgstr ""
+"**Tenha em mente que, mesmo que estejamos usando uma versão não atualizada "
+"do Django para este tutorial, você deve sempre utilizar a versão atual da "
+"branch master enquanto estiver trabalhando no seu patch para um ticket!**"
 
 msgid ""
 "The patch for this ticket was written by Paweł Marczewski, and it was "
@@ -510,6 +514,14 @@ msgid ""
 "a couple failures related to deprecation warnings that you can ignore. These "
 "failures have since been fixed in Django."
 msgstr ""
+"Uma vez que os testes estejam completos, você deve ser informado através de "
+"uma mensagem se o seu teste passou ou falhou. Uma vez que você não fez "
+"nenhuma alteração no código do Django ainda, todos os testes *devem* passar. "
+"Se você recebeu falhas ou erros, verifique se você seguiu todos os passos "
+"anteriores corretamente. Para mais informações, veja o :ref:`running-unit-"
+"tests`. Se estiver usando Python 3.5+, haverá algum alerta sobre falhas "
+"relacionadas a alertas de pontos obsoletos que você pode ignorar. Estas "
+"falhas já foram corrigidas no Django."
 
 msgid ""
 "Note that the latest Django master may not always be stable. When developing "

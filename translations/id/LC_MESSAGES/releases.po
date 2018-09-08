@@ -6,12 +6,13 @@
 # Fery Setiawan <gembelweb@gmail.com>, 2015-2018
 # oon arfiandwi (OonID) <oon.arfiandwi@gmail.com>, 2016
 # oon arfiandwi (OonID) <oon.arfiandwi@gmail.com>, 2018
+# Sutrisno Efendi <kangfend@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-08 19:30-0500\n"
-"PO-Revision-Date: 2018-08-09 01:26+0000\n"
+"POT-Creation-Date: 2018-08-31 05:24-0500\n"
+"PO-Revision-Date: 2018-08-31 12:34+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Indonesian (http://www.transifex.com/django/django-docs/"
 "language/id/)\n"
@@ -8595,7 +8596,7 @@ msgid "Django 1.11.10 release notes"
 msgstr ""
 
 msgid "*February 1, 2018*"
-msgstr ""
+msgstr "*1 Februari 2018*"
 
 msgid "Django 1.11.10 fixes a security issue and several bugs in 1.11.9."
 msgstr ""
@@ -8643,7 +8644,7 @@ msgid "Django 1.11.11 release notes"
 msgstr ""
 
 msgid "*March 6, 2018*"
-msgstr ""
+msgstr "*6 Maret 2018*"
 
 msgid "Django 1.11.11 fixes two security issues in 1.11.10."
 msgstr ""
@@ -8686,10 +8687,10 @@ msgid "Django 1.11.12 release notes"
 msgstr ""
 
 msgid "*April 2, 2018*"
-msgstr ""
+msgstr "*2 April 2018*"
 
 msgid "Django 1.11.12 fixes two bugs in 1.11.11."
-msgstr ""
+msgstr "Django 1.11.12 memperbaiki dua kesalahan yang ada pada 1.11.11."
 
 msgid ""
 "Fixed a regression in Django 1.11.8 where combining two annotated "
@@ -8704,13 +8705,13 @@ msgid ""
 msgstr ""
 
 msgid "Django 1.11.13 release notes"
-msgstr ""
+msgstr "Catatan rilis Django 1.11.13"
 
 msgid "*May 1, 2018*"
-msgstr ""
+msgstr "*1 Mei 2018*"
 
 msgid "Django 1.11.13 fixes several bugs in 1.11.12."
-msgstr ""
+msgstr "Django 1.11.13 memperbaiki beberapa kesalahan yang ada pada 1.11.12."
 
 msgid ""
 "Fixed a regression in Django 1.11.8 where altering a field with a unique "
@@ -8734,7 +8735,7 @@ msgid "Django 1.11.14 release notes"
 msgstr ""
 
 msgid "*July 2, 2018*"
-msgstr ""
+msgstr "*2 Juli 2018*"
 
 msgid "Django 1.11.14 fixes several bugs in 1.11.13."
 msgstr ""
@@ -35832,6 +35833,13 @@ msgid ""
 "postgres`` fields (:ticket:`29307`)."
 msgstr ""
 
+msgid ""
+"Fixed a regression in Django 2.0.4 where ``QuerySet.values()`` or "
+"``values_list()`` after combining an annotated and unannotated queryset with "
+"``union()``, ``difference()``, or ``intersection()`` crashed due to "
+"mismatching columns (:ticket:`29286`)."
+msgstr ""
+
 msgid "Django 2.0.6 release notes"
 msgstr ""
 
@@ -36010,12 +36018,6 @@ msgstr ""
 msgid ""
 ":djadmin:`createsuperuser` now gives a prompt to allow bypassing the :"
 "setting:`AUTH_PASSWORD_VALIDATORS` checks."
-msgstr ""
-
-msgid ""
-":class:`~django.contrib.auth.forms.UserCreationForm` and :class:`~django."
-"contrib.auth.forms.UserChangeForm` no longer need to be rewritten for a "
-"custom user model."
 msgstr ""
 
 msgid ""
@@ -36341,6 +36343,14 @@ msgid ""
 msgstr ""
 
 msgid ""
+"Since the admin's ``actions.html``, ``change_list_results.html``, "
+"``date_hierarchy.html``, ``pagination.html``, ``prepopulated_fields_js."
+"html``, ``search_form.html``, and ``submit_line.html`` templates can now be "
+"overridden per app or per model, you may need to rename existing templates "
+"with those names that were written for a different purpose."
+msgstr ""
+
+msgid ""
 "``QuerySet.raw()`` now caches its results like regular querysets. Use "
 "``iterator()`` if you don't want caching."
 msgstr ""
@@ -36477,6 +36487,9 @@ msgstr ""
 msgid "Django 2.1.1 release notes"
 msgstr ""
 
+msgid "*August 31, 2018*"
+msgstr ""
+
 msgid "Django 2.1.1 fixes several bugs in 2.1."
 msgstr ""
 
@@ -36500,6 +36513,57 @@ msgid ""
 "Fixed translation failure of ``DurationField``'s \"overflow\" error message "
 "(:ticket:`29623`)."
 msgstr ""
+
+msgid ""
+"Fixed a regression where the admin change form crashed if the user doesn't "
+"have the 'add' permission to a model that uses ``TabularInline`` (:ticket:"
+"`29637`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression where a ``related_query_name`` reverse accessor wasn't "
+"set up when a ``GenericRelation`` is declared on an abstract base model (:"
+"ticket:`29653`)."
+msgstr ""
+
+msgid ""
+"Fixed the test client's JSON serialization of a request data dictionary for "
+"structured content type suffixes (:ticket:`29662`)."
+msgstr ""
+
+msgid ""
+"Made the admin change view redirect to the changelist view after a POST if "
+"the user has the 'view' permission (:ticket:`29663`)."
+msgstr ""
+
+msgid ""
+"Fixed admin change view crash for view-only users if the form has an extra "
+"form field (:ticket:`29682`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 2.0.5 where ``QuerySet.values()`` or "
+"``values_list()`` after combining querysets with ``extra()`` with "
+"``union()``, ``difference()``, or ``intersection()`` crashed due to "
+"mismatching columns (:ticket:`29694`)."
+msgstr ""
+
+msgid ""
+"Fixed crash if ``InlineModelAdmin.has_add_permission()`` doesn't accept the "
+"``obj`` argument (:ticket:`29723`)."
+msgstr ""
+
+msgid "Django 2.1.2 release notes"
+msgstr ""
+
+msgid "*Expected October 1, 2018*"
+msgstr ""
+
+msgid "Django 2.1.2 fixes several bugs in 2.1.1"
+msgstr ""
+
+msgid "..."
+msgstr "..."
 
 msgid "Release notes"
 msgstr "Catatan terbitan"

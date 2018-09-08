@@ -4,15 +4,15 @@
 #
 # Translators:
 # Adrian Antończyk <linkedin@antonczyk.it>, 2015
-# m_aciek <maciej.olko@gmail.com>, 2016-2017
+# m_aciek <maciej.olko@gmail.com>, 2016-2018
 # p <inactive+poczciwiec@transifex.com>, 2014
 # Tomasz Kajtoch <tomekkaj@tomekkaj.pl>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-08 19:30-0500\n"
-"PO-Revision-Date: 2018-08-09 01:26+0000\n"
+"POT-Creation-Date: 2018-08-31 05:24-0500\n"
+"PO-Revision-Date: 2018-08-31 12:34+0000\n"
 "Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
 "Language-Team: Polish (http://www.transifex.com/django/django-docs/language/"
 "pl/)\n"
@@ -2320,7 +2320,7 @@ msgid ""
 msgstr ""
 
 msgid "Proxy models"
-msgstr ""
+msgstr "Modele proxy"
 
 msgid ""
 "You can now create :ref:`proxy models <proxy-models>`: subclasses of "
@@ -25242,6 +25242,13 @@ msgid ""
 "postgres`` fields (:ticket:`29307`)."
 msgstr ""
 
+msgid ""
+"Fixed a regression in Django 2.0.4 where ``QuerySet.values()`` or "
+"``values_list()`` after combining an annotated and unannotated queryset with "
+"``union()``, ``difference()``, or ``intersection()`` crashed due to "
+"mismatching columns (:ticket:`29286`)."
+msgstr ""
+
 msgid "Django 2.0.6 release notes"
 msgstr ""
 
@@ -25420,12 +25427,6 @@ msgstr ""
 msgid ""
 ":djadmin:`createsuperuser` now gives a prompt to allow bypassing the :"
 "setting:`AUTH_PASSWORD_VALIDATORS` checks."
-msgstr ""
-
-msgid ""
-":class:`~django.contrib.auth.forms.UserCreationForm` and :class:`~django."
-"contrib.auth.forms.UserChangeForm` no longer need to be rewritten for a "
-"custom user model."
 msgstr ""
 
 msgid ""
@@ -25751,6 +25752,14 @@ msgid ""
 msgstr ""
 
 msgid ""
+"Since the admin's ``actions.html``, ``change_list_results.html``, "
+"``date_hierarchy.html``, ``pagination.html``, ``prepopulated_fields_js."
+"html``, ``search_form.html``, and ``submit_line.html`` templates can now be "
+"overridden per app or per model, you may need to rename existing templates "
+"with those names that were written for a different purpose."
+msgstr ""
+
+msgid ""
 "``QuerySet.raw()`` now caches its results like regular querysets. Use "
 "``iterator()`` if you don't want caching."
 msgstr ""
@@ -25887,6 +25896,9 @@ msgstr ""
 msgid "Django 2.1.1 release notes"
 msgstr ""
 
+msgid "*August 31, 2018*"
+msgstr ""
+
 msgid "Django 2.1.1 fixes several bugs in 2.1."
 msgstr ""
 
@@ -25911,6 +25923,57 @@ msgid ""
 "(:ticket:`29623`)."
 msgstr ""
 
+msgid ""
+"Fixed a regression where the admin change form crashed if the user doesn't "
+"have the 'add' permission to a model that uses ``TabularInline`` (:ticket:"
+"`29637`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression where a ``related_query_name`` reverse accessor wasn't "
+"set up when a ``GenericRelation`` is declared on an abstract base model (:"
+"ticket:`29653`)."
+msgstr ""
+
+msgid ""
+"Fixed the test client's JSON serialization of a request data dictionary for "
+"structured content type suffixes (:ticket:`29662`)."
+msgstr ""
+
+msgid ""
+"Made the admin change view redirect to the changelist view after a POST if "
+"the user has the 'view' permission (:ticket:`29663`)."
+msgstr ""
+
+msgid ""
+"Fixed admin change view crash for view-only users if the form has an extra "
+"form field (:ticket:`29682`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 2.0.5 where ``QuerySet.values()`` or "
+"``values_list()`` after combining querysets with ``extra()`` with "
+"``union()``, ``difference()``, or ``intersection()`` crashed due to "
+"mismatching columns (:ticket:`29694`)."
+msgstr ""
+
+msgid ""
+"Fixed crash if ``InlineModelAdmin.has_add_permission()`` doesn't accept the "
+"``obj`` argument (:ticket:`29723`)."
+msgstr ""
+
+msgid "Django 2.1.2 release notes"
+msgstr ""
+
+msgid "*Expected October 1, 2018*"
+msgstr ""
+
+msgid "Django 2.1.2 fixes several bugs in 2.1.1"
+msgstr ""
+
+msgid "..."
+msgstr "…"
+
 msgid "Release notes"
 msgstr "Informacje o wydaniach"
 
@@ -25930,14 +25993,13 @@ msgid ""
 "release from the one after your current Django version, up to and including "
 "the new version."
 msgstr ""
-"Ci, którzy :doc:`upgrade'ują się do nowej wersji Django</howto/upgrade-"
-"version>`, będą potrzebowali sprawdzić wszystkie zmiany niekompatybilne "
-"wstecz i :doc:`zdezaprobowane funkcjonalności</internals/deprecation>` dla "
-"każdego „ostatecznego” wydania od pierwszego po twojej bieżącej wersji "
-"Django, aż do nowej wersji włącznie."
+":doc:`Upgrade'ujący się do nowej wersji Django</howto/upgrade-version>` "
+"muszą sprawdzić wszystkie zmiany niekompatybilne wstecz i :doc:"
+"`zdezaprobowane funkcjonalności</internals/deprecation>` dla każdego wydania "
+"„final” od tego po ich bieżącej wersji Django, aż do nowej wersji włącznie."
 
 msgid "Final releases"
-msgstr "Wydania ostateczne"
+msgstr "Wydania final"
 
 msgid ""
 "Below are release notes through Django |version| and its patch releases. "
@@ -25949,13 +26011,13 @@ msgstr ""
 "wydaniach dla wszystkich wcześniejszych wydań."
 
 msgid "2.1 release"
-msgstr ""
+msgstr "Wydanie 2.1"
 
 msgid "2.0 release"
-msgstr ""
+msgstr "Wydanie 2.0"
 
 msgid "1.11 release"
-msgstr ""
+msgstr "Wydanie 1.11"
 
 msgid "1.10 release"
 msgstr "Wydanie 1.10"

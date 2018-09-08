@@ -4,6 +4,7 @@
 #
 # Translators:
 # Asai Takuya <takuya.waseda.1119@gmail.com>, 2016
+# Eiichi Sugiyama <barcarunrunbiscabarca@gmail.com>, 2018
 # Kashun YOSHIDA, 2018
 # Kinyonez Jackson <masashima21st@gmail.com>, 2017
 # IWAI, Masaharu <iwaim.sub@gmail.com>, 2016
@@ -14,20 +15,21 @@
 # TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016-2017
 # Suguru Yamamoto <sgryjp@gmail.com>, 2017
 # Suzuki Takahiro <bur8787@gmail.com>, 2016
-# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016
+# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016,2018
 # Takashi Sugawara <aimaimokomoko@gmail.com>, 2017
 # Takuya Arita <takuya.arita@gmail.com>, 2015
 # Tetsuya Yamada <yamada.tetsuya258@gmail.com>, 2018
 # T N <takninnovationresearch@gmail.com>, 2018
 # Yoshihiro Furudate <aheadlink.changat@gmail.com>, 2016
 # Pawllo2 <pawllothesecond@gmail.com>, 2017
+# 堀田 圭佑 <keisuke.h.611@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-08 19:30-0500\n"
-"PO-Revision-Date: 2018-08-05 02:04+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2018-08-31 05:24-0500\n"
+"PO-Revision-Date: 2018-09-04 08:53+0000\n"
+"Last-Translator: 堀田 圭佑 <keisuke.h.611@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -164,6 +166,14 @@ msgid ""
 "check that your web server doesn't allow a spoofed header using underscores "
 "in place of dashes."
 msgstr ""
+"もし ``RemoteUserMiddleware`` のサブクラスをカスタム HTTP ヘッダーとともに使"
+"う場合は、慎重になってください. フロントエンドの Web サーバは、必ず、いつもで"
+"も適切な認証のチェックに基づいたヘッダーを設置または削除してください。決して"
+"偽の（もしくは『スプーフィングされた』）ヘッダー値を送ってくるエンドユーザー"
+"を許可してはいけません。例えば、 HTTP ヘッダの ``X-Auth-User`` と ``X-"
+"Auth_User`` は両方とも ``request.META`` のキー ``HTTP_X_AUTH_USER`` に正規化"
+"されてしまうので、 ダッシュの代わりにアンダースコアを使ったスプーフィングされ"
+"たヘッダーを許容していないかもまた必ずチェックしてください。"
 
 msgid ""
 "This warning doesn't apply to ``RemoteUserMiddleware`` in its default "
@@ -171,6 +181,10 @@ msgid ""
 "start with ``HTTP_`` in ``request.META`` can only be set by your WSGI "
 "server, not directly from an HTTP request header."
 msgstr ""
+"この警告は、``header = 'REMOTE_USER'`` になっているデフォルト設定の "
+"``RemoteUserMiddleware`` には適用されません。それは、 ``request.META`` 内の "
+"``HTTP_`` で始まらないキーは、HTTP リクエストヘッダーに直接設置されるのではな"
+"く、 WSGI サーバによって設置されるからです。"
 
 msgid ""
 "If you need more control, you can create your own authentication backend "
@@ -182,7 +196,7 @@ msgstr ""
 "メソッドをいくつかオーバライドしてください。"
 
 msgid "Using ``REMOTE_USER`` on login pages only"
-msgstr ""
+msgstr "REMOTE_USERログインページのみの使用"
 
 msgid ""
 "The ``RemoteUserMiddleware`` authentication middleware assumes that the HTTP "
@@ -194,6 +208,13 @@ msgid ""
 "and after successful authentication, the application is supposed to maintain "
 "the authenticated session itself."
 msgstr ""
+"``RemoteUserMiddleware`` 認証ミドルウェアは、 HTTP リクエストヘッダーの "
+"``REMOTE_USER`` が認証されたリクエストに存在していることを仮定している。これ"
+"が ``htpasswd`` を利用した Basic 認証なら、妥当で実用的かもしれません。しか"
+"し、ネゴシエート(GSSAPI/ケルベロス)や他の資源を利用した認証メソッドでは、フロ"
+"ントエンド HTTP サーバの認証では、通常、ひとつもしくはいくつかのログイン URL "
+"のみ設置します。そして、認証が成功した後、アプリケーションは認証されたセッ"
+"ションそれ自体を維持しようとします。"
 
 msgid ""
 ":class:`~django.contrib.auth.middleware.PersistentRemoteUserMiddleware` "
@@ -202,6 +223,11 @@ msgid ""
 "in replacement of :class:`~django.contrib.auth.middleware."
 "RemoteUserMiddleware` in the documentation above."
 msgstr ""
+":class:`~django.contrib.auth.middleware.PersistentRemoteUserMiddleware` は、"
+"この使用事例の補助を提供する。これは、はっきりとユーザーにログアウトされるま"
+"で、認証されたセッションを維持しようとする。このクラスは、このドキュメントの"
+"上にある :class:`~django.contrib.auth.middleware.RemoteUserMiddleware` の当座"
+"の代替として使うことができる。"
 
 msgid "Writing a custom storage system"
 msgstr "カスタムストレージシステムの作成"
@@ -304,7 +330,7 @@ msgid ""
 msgstr ""
 
 msgid "**Required**."
-msgstr ""
+msgstr "**必須**"
 
 msgid ""
 "Called by ``Storage.open()``, this is the actual mechanism the storage class "
@@ -358,7 +384,7 @@ msgid ""
 msgstr ""
 
 msgid "Custom Lookups"
-msgstr ""
+msgstr "カスタムのルックアップ"
 
 msgid ""
 "Django offers a wide variety of :ref:`built-in lookups <field-lookups>` for "
@@ -369,24 +395,34 @@ msgid ""
 msgstr ""
 
 msgid "A simple lookup example"
-msgstr ""
+msgstr "シンプルなルックアップの例"
 
 msgid ""
 "Let's start with a simple custom lookup. We will write a custom lookup "
 "``ne`` which works opposite to ``exact``. ``Author.objects."
 "filter(name__ne='Jack')`` will translate to the SQL::"
 msgstr ""
+"シンプルなカスタムルックアップからはじめましょう。これから、``ne`` というカス"
+"タムルックアップを書いていきます。このルックアップは、``exact`` と反対の動作"
+"をします。``Author.objects.filter(name__ne='Jack')`` は、次の SQL に変換され"
+"ます。"
 
 msgid ""
 "This SQL is backend independent, so we don't need to worry about different "
 "databases."
 msgstr ""
+"この SQL はバックエンドに依存しない書き方になっているため、別のデータベースに"
+"ついて心配する必要はありません。"
 
 msgid ""
 "There are two steps to making this work. Firstly we need to implement the "
 "lookup, then we need to tell Django about it. The implementation is quite "
 "straightforward::"
 msgstr ""
+"このルックアップを動作させるためには、2つのステップが必要です。第1に、ルック"
+"アップを実装する必要があります。第2に、Django に実装したルックアップの情報を"
+"伝えて上げる必要があります。実装に関しては、次のようにとてもわかりやすい形で"
+"す。"
 
 msgid ""
 "To register the ``NotEqual`` lookup we will just need to call "
@@ -394,9 +430,13 @@ msgid ""
 "In this case, the lookup makes sense on all ``Field`` subclasses, so we "
 "register it with ``Field`` directly::"
 msgstr ""
+"``NotEqual`` ルックアップを登録する方法は、ルックアップを利用できるようにした"
+"いフィールドクラス上で ``register_lookup`` を呼び出すだけです。今回のルック"
+"アップは、``Field`` のすべてのサブクラス上で意味を持つため、親クラスの "
+"``Field`` 上で直接登録しましょう。"
 
 msgid "Lookup registration can also be done using a decorator pattern::"
-msgstr ""
+msgstr "ルックアップは、デコレータパタンを使っても登録できます。"
 
 msgid ""
 "We can now use ``foo__ne`` for any field ``foo``. You will need to ensure "
@@ -452,7 +492,7 @@ msgid ""
 msgstr ""
 
 msgid "A simple transformer example"
-msgstr ""
+msgstr "シンプルな変換の例"
 
 msgid ""
 "The custom lookup above is great, but in some cases you may want to be able "
@@ -543,7 +583,7 @@ msgid ""
 msgstr ""
 
 msgid "The implementation is::"
-msgstr ""
+msgstr "実装は次のようになります。"
 
 msgid ""
 "There are a couple of notable things going on. First, "
@@ -638,7 +678,7 @@ msgid ""
 msgstr ""
 
 msgid "How Django determines the lookups and transforms which are used"
-msgstr ""
+msgstr "Django がルックアップと変換のいずれを使うかを決定する仕組み"
 
 msgid ""
 "In some cases you may wish to dynamically change which ``Transform`` or "
@@ -5466,6 +5506,14 @@ msgid ""
 "of the ``staticfiles`` application and assumes the static content has "
 "already been collected under :setting:`STATIC_ROOT`."
 msgstr ""
+"ビルトインのテストクライアント (たとえば、ビルトインの :class:"
+"`LiveServerTestCase <django.test.LiveServerTestCase>`) ではなく実際の HTTP リ"
+"クエストを使用してテストを実行している場合、テスト環境が現実の環境をできるだ"
+"け忠実に再現できるように、他のコンテンツと同じように静的アセットも配信する必"
+"要があります。しかし、``LiveServerTestCase`` はとても基本的な静的ファイル配信"
+"機能しかないため、``staticfiles`` アプリケーションの探索機能はなく、すでに静"
+"的コンテンツは :setting:`STATIC_ROOT` に集められていることを前提にしていま"
+"す。"
 
 msgid ""
 "Because of this, ``staticfiles`` ships its own :class:`django.contrib."
@@ -5703,6 +5751,8 @@ msgid ""
 "If you installed Django with pip_, you can use the ``--upgrade`` or ``-U`` "
 "flag:"
 msgstr ""
+"Django を pip_ でインストールした場合は、``--upgrade`` か ``-U`` フラグが使用"
+"できます。"
 
 msgid ""
 "When the new environment is set up, :doc:`run the full test suite </topics/"
@@ -6058,7 +6108,7 @@ msgid ""
 msgstr ""
 
 msgid "Controlling the order of migrations"
-msgstr ""
+msgstr "マイグレーションの順序をコントロールする"
 
 msgid ""
 "Django determines the order in which migrations should be applied not by the "
@@ -6095,7 +6145,7 @@ msgid ""
 msgstr ""
 
 msgid "Migrating data between third-party apps"
-msgstr ""
+msgstr "サードパーティのアプリ間でデータをマイグレーションする"
 
 msgid ""
 "You can use a data migration to move data from one third-party application "
@@ -6123,7 +6173,7 @@ msgid ""
 msgstr ""
 
 msgid "Changing an unmanaged model to managed"
-msgstr ""
+msgstr "未管理状態のモデルを管理状態に変更する"
 
 msgid ""
 "If you want to change an unmanaged model (:attr:`managed=False <django.db."
