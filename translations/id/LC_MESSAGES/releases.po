@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-31 05:24-0500\n"
-"PO-Revision-Date: 2018-08-31 12:34+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2018-10-11 11:30-0500\n"
+"PO-Revision-Date: 2018-10-10 12:40+0000\n"
+"Last-Translator: Ramiro Morales\n"
 "Language-Team: Indonesian (http://www.transifex.com/django/django-docs/"
 "language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -4818,16 +4818,9 @@ msgid ""
 "was added in Django 1.7.2 as an attempt to allow unpickling models outside "
 "of Django, such as in an RQ worker, without calling ``django.setup()``, but "
 "it creates the possibility of a deadlock. To adapt your code in the case of "
-"RQ, you can `provide your own worker script <http://python-rq.org/docs/"
+"RQ, you can `provide your own worker script <https://python-rq.org/docs/"
 "workers/>`_ that calls ``django.setup()``."
 msgstr ""
-"Pendaftaran aplikasi tidak lagi otomatis dikumpulkan ketika membongkar "
-"model. Ini telah ditambahkan di Django 1.7.2 sebagai sebuah usaha untuk "
-"mengizinkan membongkar model diluar Django, seperti di pekerja RQ, tanpa "
-"memanggil ``django.setup()``, tetapi itu membuat kemungkinan dari sebuah "
-"kebuntuan. Untuk menyesuaikan kode anda dalam kasus RQ, anda dapat `provide "
-"your own worker script <http://python-rq.org/docs/workers/>`_ yang memanggil "
-"``django.setup()``."
 
 msgid "Removed null assignment check for non-null foreign key fields"
 msgstr ""
@@ -6392,13 +6385,9 @@ msgstr "Kerentanan pengikatan kembali DNS ketika ``DEBUG=True``"
 msgid ""
 "Older versions of Django don't validate the ``Host`` header against "
 "``settings.ALLOWED_HOSTS`` when ``settings.DEBUG=True``. This makes them "
-"vulnerable to a `DNS rebinding attack <http://benmmurphy.github.io/"
+"vulnerable to a `DNS rebinding attack <https://benmmurphy.github.io/"
 "blog/2016/07/11/rails-webconsole-dns-rebinding/>`_."
 msgstr ""
-"Versi terlama dari Django tidak mensahkan kepala ``Host`` terhadap "
-"``settings.ALLOWED_HOSTS`` ketika ``settings.DEBUG=True``. Ini membuat "
-"mereka rentan pada `DNS rebinding attack <http://benmmurphy.github.io/"
-"blog/2016/07/11/rails-webconsole-dns-rebinding/>`_."
 
 msgid ""
 "While Django doesn't ship a module that allows remote code execution, this "
@@ -7064,7 +7053,7 @@ msgstr ""
 msgid ""
 "The OpenLayers-based form widgets now use ``OpenLayers.js`` from ``https://"
 "cdnjs.cloudflare.com`` which is more suitable for production use than the "
-"old ``http://openlayers.org`` source. They are also updated to use "
+"old ``https://openlayers.org/`` source. They are also updated to use "
 "OpenLayers 3."
 msgstr ""
 
@@ -7914,7 +7903,7 @@ msgstr ""
 "seperti digambarkan dalam :ref:`writing your own migration operation 1`."
 
 msgid "Server-side cursors on PostgreSQL"
-msgstr ""
+msgstr "Kursor sisi-peladen pada PostgreSQL"
 
 msgid ""
 "The change to make :meth:`.QuerySet.iterator()` use server-side cursors on "
@@ -8593,16 +8582,17 @@ msgstr ""
 "`28175`). "
 
 msgid "Django 1.11.10 release notes"
-msgstr ""
+msgstr "Catatan terbitan Django 1.11.10"
 
 msgid "*February 1, 2018*"
 msgstr "*1 Februari 2018*"
 
 msgid "Django 1.11.10 fixes a security issue and several bugs in 1.11.9."
 msgstr ""
+"Django 1.11.10 memperbaiki masalah keamanan dan beberapa kesalahan di 1.11.9."
 
 msgid "CVE-2018-6188: Information leakage in ``AuthenticationForm``"
-msgstr ""
+msgstr "CVE-2018-6188: Kebocoran informasi dalam ``AuthenticationForm``"
 
 msgid ""
 "A regression in Django 1.11.8 made :class:`~django.contrib.auth.forms."
@@ -8641,13 +8631,13 @@ msgid ""
 msgstr ""
 
 msgid "Django 1.11.11 release notes"
-msgstr ""
+msgstr "Catatan terbitan Django 1.11.11"
 
 msgid "*March 6, 2018*"
 msgstr "*6 Maret 2018*"
 
 msgid "Django 1.11.11 fixes two security issues in 1.11.10."
-msgstr ""
+msgstr "Django 1.11.11 memperbaiki dua masalah keamanan di 1.11.10."
 
 msgid ""
 "CVE-2018-7536: Denial-of-service possibility in ``urlize`` and "
@@ -8684,7 +8674,7 @@ msgid "The backtracking problem in the regular expression is fixed."
 msgstr ""
 
 msgid "Django 1.11.12 release notes"
-msgstr ""
+msgstr "Catatan terbitan Django 1.11.12"
 
 msgid "*April 2, 2018*"
 msgstr "*2 April 2018*"
@@ -8732,13 +8722,13 @@ msgid ""
 msgstr ""
 
 msgid "Django 1.11.14 release notes"
-msgstr ""
+msgstr "Catatan terbitan Django 1.11.14"
 
 msgid "*July 2, 2018*"
 msgstr "*2 Juli 2018*"
 
 msgid "Django 1.11.14 fixes several bugs in 1.11.13."
-msgstr ""
+msgstr "Django 1.11.14 memperbaiki beberapa kesalahan yang ada pada 1.11.13."
 
 msgid ""
 "Fixed ``WKBWriter.write()`` and ``write_hex()`` for empty polygons on GEOS "
@@ -8751,13 +8741,13 @@ msgid ""
 msgstr ""
 
 msgid "Django 1.11.15 release notes"
-msgstr ""
+msgstr "Catatan terbitan Django 1.11.15"
 
 msgid "*August 1, 2018*"
-msgstr ""
+msgstr "*1 Agustus 2018*"
 
 msgid "Django 1.11.15 fixes a security issue in 1.11.14."
-msgstr ""
+msgstr "Django 1.11.15 memperbaiki masalah keamanan di 1.11.14."
 
 msgid "CVE-2018-14574: Open redirect possibility in ``CommonMiddleware``"
 msgstr ""
@@ -8777,18 +8767,30 @@ msgid ""
 msgstr ""
 
 msgid "Django 1.11.16 release notes"
-msgstr ""
+msgstr "Catatan terbitan Django 1.11.16"
 
-msgid "*Expected September 1, 2018*"
+msgid "*October 1, 2018*"
 msgstr ""
 
 msgid "Django 1.11.16 fixes a data loss bug in 1.11.15."
-msgstr ""
+msgstr "Django 1.11.16 memperbaiki kesalahan kehilangan data di 1.11.15."
 
 msgid ""
 "Fixed a race condition in ``QuerySet.update_or_create()`` that could result "
 "in data loss (:ticket:`29499`)."
 msgstr ""
+
+msgid "Django 1.11.17 release notes"
+msgstr ""
+
+msgid "*Expected November 1, 2018*"
+msgstr ""
+
+msgid "Django 1.11.17 fixes several bugs in 1.11.16."
+msgstr ""
+
+msgid "..."
+msgstr "..."
 
 msgid "Django 1.11.2 release notes"
 msgstr "Catatan terbitan Django 1.11.2"
@@ -9376,7 +9378,7 @@ msgid "Django 1.11.9 release notes"
 msgstr "Catatan rilis Django 1.11.9"
 
 msgid "*January 1, 2018*"
-msgstr ""
+msgstr "*1 Januari 2018*"
 
 msgid "Django 1.11.9 fixes several bugs in 1.11.8."
 msgstr "Django 1.11.9 memperbaiki sejumlah bugs dari 1.11.8."
@@ -11783,7 +11785,7 @@ msgstr ""
 "howto/static-files/index>`."
 
 msgid "``unittest2`` support"
-msgstr ""
+msgstr "Dukungan ``unittest2``"
 
 msgid ""
 "Python 2.7 introduced some major changes to the ``unittest`` library, adding "
@@ -18325,13 +18327,10 @@ msgstr ""
 "integer"
 
 msgid ""
-"The ``slugify`` template filter is now available as a standard python "
+"The ``slugify`` template filter is now available as a standard Python "
 "function at :func:`django.utils.text.slugify`. Similarly, ``remove_tags`` is "
 "available at ``django.utils.html.remove_tags()``."
 msgstr ""
-"Penyaring cetakan ``slugify`` sekarang tersedia sebagai sebuah standar "
-"fungsi python pada :func:`django.utils.text.slugify`. Demikian pula, "
-"``remove_tags`` tersedia pada ``django.utils.html.remove_tags()``."
 
 msgid ""
 "Uploaded files are no longer created as executable by default. If you need "
@@ -33346,8 +33345,14 @@ msgstr ""
 "pada nilai dari ``app_name``. Sebagai contoh, pola URL di pengajaran "
 "tambahan berubah dari:"
 
+msgid "mysite/urls.py"
+msgstr "mysite/urls.py"
+
 msgid "to:"
 msgstr "kepada:"
+
+msgid "polls/urls.py"
+msgstr "polls/urls.py"
 
 msgid ""
 "This change also means that the old way of including an ``AdminSite`` "
@@ -33357,6 +33362,9 @@ msgstr ""
 "Perubahan ini juga berarti bahwa cara lama dari menyertakan sebuah instance "
 "``AdminSite`` adalah diusangkan. Sebagai gantinya, lewatkan ``admin.site."
 "urls`` secara langsung ke :func:`~django.conf.urls.url()`:"
+
+msgid "urls.py"
+msgstr "urls.py"
 
 msgid "URL application namespace required if setting an instance namespace"
 msgstr ""
@@ -35376,7 +35384,7 @@ msgid ""
 msgstr ""
 
 msgid "Features removed in 2.0"
-msgstr ""
+msgstr "Fitur-fitur dipindahkan di 2.0"
 
 msgid ""
 "These features have reached the end of their deprecation cycle and are "
@@ -35411,7 +35419,7 @@ msgid ""
 msgstr ""
 
 msgid "``Field.rel`` and ``Field.remote_field.to`` are removed."
-msgstr ""
+msgstr "``Field.rel`` dan ``Field.remote_field.to`` dipindahkan."
 
 msgid ""
 "The ``on_delete`` argument for ``ForeignKey`` and ``OneToOneField`` is now "
@@ -35420,7 +35428,7 @@ msgid ""
 msgstr ""
 
 msgid "``django.db.models.fields.add_lazy_relation()`` is removed."
-msgstr ""
+msgstr "``django.db.models.fields.add_lazy_relation()`` dipindahkan."
 
 msgid ""
 "When time zone support is enabled, database backends that don't support time "
@@ -35430,10 +35438,10 @@ msgid ""
 msgstr ""
 
 msgid "``django.contrib.auth.tests.utils.skipIfCustomUser()`` is removed."
-msgstr ""
+msgstr "``django.contrib.auth.tests.utils.skipIfCustomUser()`` dipindahkan."
 
 msgid "The ``GeoManager`` and ``GeoQuerySet`` classes are removed."
-msgstr ""
+msgstr "Kelas ``GeoManager`` dan ``GeoQuerySet`` dipindahkan."
 
 msgid "The ``django.contrib.gis.geoip`` module is removed."
 msgstr ""
@@ -35442,16 +35450,16 @@ msgid "The ``supports_recursion`` check for template loaders is removed from:"
 msgstr ""
 
 msgid "``django.template.engine.Engine.find_template()``"
-msgstr ""
+msgstr "``django.template.engine.Engine.find_template()``"
 
 msgid "``django.template.loader_tags.ExtendsNode.find_template()``"
-msgstr ""
+msgstr "``django.template.loader_tags.ExtendsNode.find_template()``"
 
 msgid "``django.template.loaders.base.Loader.supports_recursion()``"
-msgstr ""
+msgstr "``django.template.loaders.base.Loader.supports_recursion()``"
 
 msgid "``django.template.loaders.cached.Loader.supports_recursion()``"
-msgstr ""
+msgstr "``django.template.loaders.cached.Loader.supports_recursion()``"
 
 msgid ""
 "The ``load_template`` and ``load_template_sources`` template loader methods "
@@ -35462,22 +35470,22 @@ msgid "The ``template_dirs`` argument for template loaders is removed:"
 msgstr ""
 
 msgid "``django.template.loaders.base.Loader.get_template()``"
-msgstr ""
+msgstr "``django.template.loaders.base.Loader.get_template()``"
 
 msgid "``django.template.loaders.cached.Loader.cache_key()``"
-msgstr ""
+msgstr "``django.template.loaders.cached.Loader.cache_key()``"
 
 msgid "``django.template.loaders.cached.Loader.get_template()``"
-msgstr ""
+msgstr "``django.template.loaders.cached.Loader.get_template()``"
 
 msgid "``django.template.loaders.cached.Loader.get_template_sources()``"
-msgstr ""
+msgstr "``django.template.loaders.cached.Loader.get_template_sources()``"
 
 msgid "``django.template.loaders.filesystem.Loader.get_template_sources()``"
-msgstr ""
+msgstr "``django.template.loaders.filesystem.Loader.get_template_sources()``"
 
 msgid "``django.template.loaders.base.Loader.__call__()`` is removed."
-msgstr ""
+msgstr "``django.template.loaders.base.Loader.__call__()`` dipindahkan."
 
 msgid ""
 "Support for custom error views that don't accept an ``exception`` parameter "
@@ -35720,6 +35728,12 @@ msgid ""
 msgstr ""
 "Diperbaiki kegagalan daftar rubah admin ketika menggunakan sebuah pernyataan "
 "permintaan dalam pengurutan halaman (:ticket:`28958`)."
+
+msgid "Django 2.0.10 release notes"
+msgstr ""
+
+msgid "Django 2.0.10 fixes several bugs in 2.0.9."
+msgstr ""
 
 msgid "Django 2.0.2 release notes"
 msgstr ""
@@ -36272,7 +36286,7 @@ msgstr ""
 
 msgid ""
 "If you have a custom permission with a codename of the form "
-"``can_view_<modelname>``, the new view permission handling in the admin will "
+"``view_<modelname>``, the new view permission handling in the admin will "
 "allow view access to the changelist and detail pages for those models. If "
 "this is unwanted, you must change your custom permission codename."
 msgstr ""
@@ -36556,14 +36570,61 @@ msgstr ""
 msgid "Django 2.1.2 release notes"
 msgstr ""
 
-msgid "*Expected October 1, 2018*"
+msgid ""
+"Django 2.1.2 fixes a security issue and several bugs in 2.1.1. Also, the "
+"latest string translations from Transifex are incorporated."
 msgstr ""
 
-msgid "Django 2.1.2 fixes several bugs in 2.1.1"
+msgid "CVE-2018-16984: Password hash disclosure to \"view only\" admin users"
 msgstr ""
 
-msgid "..."
-msgstr "..."
+msgid ""
+"If an admin user has the change permission to the user model, only part of "
+"the password hash is displayed in the change form. Admin users with the view "
+"(but not change) permission to the user model were displayed the entire "
+"hash. While it's typically infeasible to reverse a strong password hash, if "
+"your site uses weaker password hashing algorithms such as MD5 or SHA1, it "
+"could be a problem."
+msgstr ""
+
+msgid ""
+"Fixed a regression where nonexistent joins in ``F()`` no longer raised "
+"``FieldError`` (:ticket:`29727`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression where files starting with a tilde or underscore weren't "
+"ignored by the migrations loader (:ticket:`29749`)."
+msgstr ""
+
+msgid ""
+"Made migrations detect changes to ``Meta.default_related_name`` (:ticket:"
+"`29755`)."
+msgstr ""
+
+msgid "Added compatibility for ``cx_Oracle`` 7 (:ticket:`29759`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 2.0 where unique index names weren't quoted (:"
+"ticket:`29778`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression where sliced queries with multiple columns with the same "
+"name crashed on Oracle 12.1 (:ticket:`29630`)."
+msgstr ""
+
+msgid ""
+"Fixed a crash when a user with the view (but not change) permission made a "
+"POST request to an admin user change form (:ticket:`29809`)."
+msgstr ""
+
+msgid "Django 2.1.3 release notes"
+msgstr ""
+
+msgid "Django 2.1.3 fixes several bugs in 2.1.2"
+msgstr ""
 
 msgid "Release notes"
 msgstr "Catatan terbitan"
@@ -38562,4 +38623,17 @@ msgstr ""
 msgid ""
 "Django 1.11 `(patch) <https://github.com/django/django/commit/"
 "d6eaee092709aad477a9894598496c6deec532ff>`__"
+msgstr ""
+
+msgid "October 1, 2018 - :cve:`2018-16984`"
+msgstr ""
+
+msgid ""
+"Password hash disclosure to \"view only\" admin users. `Full description "
+"<https://www.djangoproject.com/weblog/2018/oct/01/security-release/>`__"
+msgstr ""
+
+msgid ""
+"Django 2.1 `(patch) <https://github.com/django/django/commit/"
+"c4bd5b597e0aa2432e4c867b86650f18af117851>`__"
 msgstr ""

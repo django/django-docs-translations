@@ -5,15 +5,17 @@
 # Translators:
 # Alvaro Leonel <alvaro.lqueiroz@gmail.com>, 2016
 # amcorreia <mutley.sandro@gmail.com>, 2016
-# amcorreia <mutley.sandro@gmail.com>, 2017
+# amcorreia <mutley.sandro@gmail.com>, 2016-2017
 # andrewsmedina <andrewsmedina@gmail.com>, 2016
 # andrewsmedina <andrewsmedina@gmail.com>, 2016
 # Carlos Leite <caduado@gmail.com>, 2016-2017
 # Filipe Cifali Stangler <cifali.filipe@gmail.com>, 2016
 # Claudio Rogerio <excriptbrasil@gmail.com>, 2017
+# Claudio Rogerio <excriptbrasil@gmail.com>, 2017
 # Edson Heneman <ehenemann@gmail.com>, 2016-2017
 # elizeuelieber <elizeuelieber@live.com>, 2016
 # elizeuelieber <elizeuelieber@live.com>, 2016
+# Filipe Cifali Stangler <cifali.filipe@gmail.com>, 2016
 # Filipe Cifali Stangler <cifali.filipe@gmail.com>, 2016
 # Gilson Filho <me@gilsondev.in>, 2016
 # José Luiz Coe <joseluizcoe@gmail.com>, 2016
@@ -27,8 +29,10 @@
 # Rafael Ribeiro <pereiraribeirorafael@gmail.com>, 2016
 # Rafael Dias <rafaeldiasmello@gmail.com>, 2016
 # Rafael Ribeiro <pereiraribeirorafael@gmail.com>, 2016
+# Rafael Ribeiro <pereiraribeirorafael@gmail.com>, 2016
 # Raphael Mendonça, 2016
 # Raphael Mendonça, 2016
+# Raysa Dutra, 2016
 # Raysa Dutra, 2016
 # Rodrigo Boniatti <boniatti.rodrigo@gmail.com>, 2015-2016
 # Udson Silva <udson2112@gmail.com>, 2016
@@ -39,9 +43,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-08 19:30-0500\n"
-"PO-Revision-Date: 2018-08-07 00:43+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2018-10-11 11:30-0500\n"
+"PO-Revision-Date: 2018-10-10 13:44+0000\n"
+"Last-Translator: Ramiro Morales\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -60,6 +64,11 @@ msgid ""
 "points of the provided system are extensible or replaceable. This document "
 "provides details about how the auth system can be customized."
 msgstr ""
+"A autenticação que vem com o Django é boa o suficiente para os casos mais "
+"comuns, mas você pode ter necessidades não atendidas pelo padrão out-of-the-"
+"box. Personalizar a autenticação em seus projetos requer entender que pontos "
+"do sistema fornecido são extensíveis ou substituíveis. Este documento "
+"fornece detalhes sobre como o sistema de autenticação pode ser personalizado."
 
 msgid ""
 ":ref:`Authentication backends <authentication-backends>` provide an "
@@ -475,12 +484,10 @@ msgstr ""
 "``permissions`` :ref:`model Meta attribute <meta-options>`."
 
 msgid ""
-"This example Task model creates three custom permissions, i.e., actions "
-"users can or cannot do with Task instances, specific to your application::"
+"This example ``Task`` model creates two custom permissions, i.e., actions "
+"users can or cannot do with ``Task`` instances, specific to your "
+"application::"
 msgstr ""
-"Este modelos \"Task\" de exemplo cria três permissões personalizadas, isto "
-"é, ações que usuários podem ou não podem fazer com instâncias de \"Tasks\", "
-"específicas para sua aplicação::"
 
 msgid ""
 "The only thing this does is create those extra permissions when you run :"
@@ -488,16 +495,9 @@ msgid ""
 "is connected to the :data:`~django.db.models.signals.post_migrate` signal). "
 "Your code is in charge of checking the value of these permissions when a "
 "user is trying to access the functionality provided by the application "
-"(viewing tasks, changing the status of tasks, closing tasks.) Continuing the "
-"above example, the following checks if a user may view tasks::"
+"(changing the status of tasks or closing tasks.) Continuing the above "
+"example, the following checks if a user may close tasks::"
 msgstr ""
-"A única coisa que isso faz é criar aquelas permissões extras quando você "
-"roda :djadmin:`manage.py migrate <migrate>` ( a função que cria permissões "
-"está conectada com o sinal :data:`~django.db.models.signals.post_migrate`). "
-"Seu código está encarregado de verificar o valor destas permissões quando um "
-"usuário está tentando acessar a funcionalidade fornecida pela aplicação (ver "
-"tarefas, edita o status de tarefas, fechar tarefas). Continuando o exemplo "
-"acima, as seguintes verificam se um usuário pode ver \"Tasks\"::"
 
 msgid "Extending the existing ``User`` model"
 msgstr "Estendendo o modelo ``Usuário`` existente"
@@ -639,7 +639,7 @@ msgstr ""
 "primeira vez."
 
 msgid "Also, register the model in the app's ``admin.py``::"
-msgstr ""
+msgstr "Além disso, registre o model no app's ''admin.py''::"
 
 msgid "Changing to a custom user model mid-project"
 msgstr "Mudando para um modelo \"user\" personalizado no meio do projeto"
@@ -761,6 +761,11 @@ msgid ""
 "importing models, so you could use ``models."
 "ForeignKey(get_user_model(), ...)``."
 msgstr ""
+"De um modo geral, é mais fácil se referir ao modelo do usuário com o :"
+"setting:`AUTH_USER_MODEL` definindo no código que é executado no momento da "
+"importação, no entanto também é possível chamar ``get_user_model()`` "
+"enquanto o Django esta importando modelos, para que você possa usar ``models."
+"ForeignKey(get_user_model(), ...)``."
 
 msgid ""
 "If your app is tested with multiple user models, using "
@@ -1769,14 +1774,10 @@ msgstr "Permissões padrão"
 
 msgid ""
 "When ``django.contrib.auth`` is listed in your :setting:`INSTALLED_APPS` "
-"setting, it will ensure that three default permissions -- add, change and "
-"delete -- are created for each Django model defined in one of your installed "
-"applications."
+"setting, it will ensure that four default permissions -- add, change, "
+"delete, and view -- are created for each Django model defined in one of your "
+"installed applications."
 msgstr ""
-"Quando o ``django.contrib.auth`` está listado na sua definição de :setting:"
-"`INSTALLED_APPS`, ele se assegurará de três permissões padrão -- add, change "
-"e delete -- serão criadas para cada modelo do Django definido em cada uma "
-"das suas aplicações instaladas."
 
 msgid ""
 "These permissions will be created when you run :djadmin:`manage.py migrate "
@@ -4163,8 +4164,14 @@ msgstr ""
 msgid "First, we'll add the custom hasher:"
 msgstr "Primeiro, vamos adicionar um hasher customizado:"
 
+msgid "accounts/hashers.py"
+msgstr ""
+
 msgid "The data migration might look something like:"
 msgstr "A migração pode parecer algo como:"
+
+msgid "accounts/migrations/0002_migrate_sha1_passwords.py"
+msgstr ""
 
 msgid ""
 "Be aware that this migration will take on the order of several minutes for "
@@ -4176,6 +4183,9 @@ msgstr ""
 msgid "Finally, we'll add a :setting:`PASSWORD_HASHERS` setting:"
 msgstr ""
 "Finalmente, vamos adicionar a configuração :setting:`PASSWORD_HASHERS`:"
+
+msgid "mysite/settings.py"
+msgstr ""
 
 msgid "Include any other hashers that your site uses in this list."
 msgstr "Inclua quaisquer outros hashers que seu site usa nessa lista."
@@ -6482,7 +6492,13 @@ msgstr ""
 msgid "Given a simple contact form:"
 msgstr ""
 
+msgid "forms.py"
+msgstr ""
+
 msgid "The view can be constructed using a ``FormView``:"
+msgstr ""
+
+msgid "views.py"
 msgstr ""
 
 msgid "Notes:"
@@ -6554,6 +6570,9 @@ msgid ""
 "our ``Author`` class:"
 msgstr ""
 
+msgid "models.py"
+msgstr ""
+
 msgid ""
 "Then we can use :class:`CreateView` and friends to do the actual work. "
 "Notice how we're just configuring the generic class-based views here; we "
@@ -6581,6 +6600,9 @@ msgid ""
 msgstr ""
 
 msgid "Finally, we hook these new views into the URLconf:"
+msgstr ""
+
+msgid "urls.py"
 msgstr ""
 
 msgid ""
@@ -7849,7 +7871,7 @@ msgstr ""
 
 msgid ""
 "The second way to generate summary values is to generate an independent "
-"summary for each object in a ``QuerySet``. For example, if you are "
+"summary for each object in a :class:`.QuerySet`. For example, if you are "
 "retrieving a list of books, you may want to know how many authors "
 "contributed to each book. Each Book has a many-to-many relationship with the "
 "Author; we want to summarize this relationship for each book in the "
@@ -7857,14 +7879,14 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Per-object summaries can be generated using the ``annotate()`` clause. When "
-"an ``annotate()`` clause is specified, each object in the ``QuerySet`` will "
-"be annotated with the specified values."
+"Per-object summaries can be generated using the :meth:`~.QuerySet.annotate` "
+"clause. When an ``annotate()`` clause is specified, each object in the "
+"``QuerySet`` will be annotated with the specified values."
 msgstr ""
 
 msgid ""
-"The syntax for these annotations is identical to that used for the "
-"``aggregate()`` clause. Each argument to ``annotate()`` describes an "
+"The syntax for these annotations is identical to that used for the :meth:`~."
+"QuerySet.aggregate` clause. Each argument to ``annotate()`` describes an "
 "aggregate that is to be calculated. For example, to annotate books with the "
 "number of authors:"
 msgstr ""
@@ -10955,6 +10977,9 @@ msgid ""
 "``models`` directory:"
 msgstr ""
 
+msgid "myapp/models/__init__.py"
+msgstr ""
+
 msgid ""
 "Explicitly importing each model rather than using ``from .models import *`` "
 "has the advantages of not cluttering the namespace, making code more "
@@ -11602,8 +11627,10 @@ msgstr ""
 msgid ""
 "As general programming practice, this goes without saying. Find out :ref:"
 "`what queries you are doing and what they are costing you <faq-see-raw-sql-"
-"queries>`. You may also want to use an external project like django-debug-"
-"toolbar_, or a tool that monitors your database directly."
+"queries>`. Use :meth:`.QuerySet.explain` to understand how specific "
+"``QuerySet``\\s are executed by your database. You may also want to use an "
+"external project like django-debug-toolbar_, or a tool that monitors your "
+"database directly."
 msgstr ""
 
 msgid ""
@@ -11717,6 +11744,16 @@ msgid ""
 "When you have a lot of objects, the caching behavior of the ``QuerySet`` can "
 "cause a large amount of memory to be used. In this case, :meth:`~django.db."
 "models.query.QuerySet.iterator()` may help."
+msgstr ""
+
+msgid "Use ``explain()``"
+msgstr ""
+
+msgid ""
+":meth:`.QuerySet.explain` gives you detailed information about how the "
+"database executes a query, including indexes and joins that are used. These "
+"details may help you find queries that could be rewritten more efficiently, "
+"or identify indexes that could be added to improve performance."
 msgstr ""
 
 msgid "Do database work in the database rather than in Python"
@@ -18653,8 +18690,10 @@ msgid ""
 "``initial`` parameter when instantiating the model formset class returned "
 "by :func:`~django.forms.models.modelformset_factory`. However, with model "
 "formsets, the initial values only apply to extra forms, those that aren't "
-"attached to an existing model instance. If the extra forms with initial data "
-"aren't changed by the user, they won't be validated or saved."
+"attached to an existing model instance. If the length of ``initial`` exceeds "
+"the number of extra forms, the excess initial data is ignored. If the extra "
+"forms with initial data aren't changed by the user, they won't be validated "
+"or saved."
 msgstr ""
 
 msgid "Saving objects in the formset"
@@ -21918,6 +21957,9 @@ msgstr ""
 "esta aplicação de modo que ela leve em consideração o nome de domínio da "
 "instância quando criar e mostrar as enquetes ('polls')."
 
+msgid "polls/urls.py"
+msgstr ""
+
 msgid "Using this setup, the following lookups are possible:"
 msgstr "Usando esta definição, os seguintes filtros são possíveis:"
 
@@ -22249,6 +22291,14 @@ msgstr ""
 
 msgid ""
 "Use the :setting:`CSRF_FAILURE_VIEW` setting to override the CSRF error view."
+msgstr ""
+
+msgid "Testing custom error views"
+msgstr ""
+
+msgid ""
+"To test the response of a custom error handler, raise the appropriate "
+"exception in a test view. For example::"
 msgstr ""
 
 msgid "Format localization"
@@ -23348,8 +23398,9 @@ msgstr ""
 
 msgid ""
 "Since string extraction is done by the ``xgettext`` command, only syntaxes "
-"supported by ``gettext`` are supported by Django. Python f-strings_ and "
-"`JavaScript template strings`_ are not yet supported by ``xgettext``."
+"supported by ``gettext`` are supported by Django. Python :py:ref:`f-strings "
+"<f-strings>` and `JavaScript template strings`_ are not yet supported by "
+"``xgettext``."
 msgstr ""
 
 msgid "Comments for translators"
@@ -25665,16 +25716,11 @@ msgstr ""
 
 msgid ""
 "By convention, the logger name is usually ``__name__``, the name of the "
-"python module that contains the logger. This allows you to filter and handle "
+"Python module that contains the logger. This allows you to filter and handle "
 "logging calls on a per-module basis. However, if you have some other way of "
 "organizing your logging messages, you can provide any dot-separated name to "
 "identify your logger::"
 msgstr ""
-"Por convenção, o nome do logger é ``__name__``, o nome do módulo python que "
-"contém o logger. Isso permite que você filtre e manipule chamadas de log "
-"para cada módulo em específico. Contudo, se você tiver alguma outra forma de "
-"organizar as suas mensagens de log, você pode fornecer qualquer nome "
-"separado por pontos para identificar o seu logger::"
 
 msgid ""
 "The dotted paths of logger names define a hierarchy. The ``project."
@@ -26031,6 +26077,9 @@ msgstr ""
 "<default-logging-configuration>`. Segue um exemplo de uma configuração que "
 "desabilita a configuração de logs do Django e então configura o log "
 "manualemente:"
+
+msgid "settings.py"
+msgstr ""
 
 msgid ""
 "Setting :setting:`LOGGING_CONFIG` to ``None`` only means that the automatic "
@@ -31365,7 +31414,7 @@ msgid ""
 "By default, ``available_apps`` is set to ``None``. After each test, Django "
 "calls :djadmin:`flush` to reset the database state. This empties all tables "
 "and emits the :data:`~django.db.models.signals.post_migrate` signal, which "
-"re-creates one content type and three permissions for each model. This "
+"recreates one content type and four permissions for each model. This "
 "operation gets expensive proportionally to the number of models."
 msgstr ""
 
@@ -31441,6 +31490,9 @@ msgstr ""
 msgid "Let's take a look inside a couple of those files:"
 msgstr ""
 
+msgid "runtests.py"
+msgstr ""
+
 msgid ""
 "This is the script that you invoke to run the test suite. It sets up the "
 "Django environment, creates the test database and runs the tests."
@@ -31451,6 +31503,9 @@ msgid ""
 "necessary to use the Django test runner. You may want to add command-line "
 "options for controlling verbosity, passing in specific test labels to run, "
 "etc."
+msgstr ""
+
+msgid "tests/test_settings.py"
 msgstr ""
 
 msgid ""
@@ -33454,6 +33509,19 @@ msgid ""
 "applied after :func:`~django.test.override_settings`."
 msgstr ""
 
+msgid "Considerations with Python 3.5"
+msgstr ""
+
+msgid ""
+"If using Python 3.5 (or older, if using an older version of Django), avoid "
+"mixing  ``remove`` with ``append`` and ``prepend`` in :func:`~django.test."
+"modify_settings`. In some cases it matters whether a value is first added "
+"and then removed or vice versa, and dictionary key order isn't preserved "
+"until Python 3.6. Instead, apply the decorator twice to guarantee the order "
+"of operations. For example, to ensure that ``SessionMiddleware`` appears "
+"first in ``MIDDLEWARE``::"
+msgstr ""
+
 msgid ""
 "The settings file contains some settings that are only consulted during "
 "initialization of Django internals. If you change them with "
@@ -33985,3 +34053,4 @@ msgid ""
 "supports transactions (e.g., it would run under PostgreSQL, but *not* under "
 "MySQL with MyISAM tables)::"
 msgstr ""
+"result of ``get_user_model()`` in a module-level variable, you may need to "

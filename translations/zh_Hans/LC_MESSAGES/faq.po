@@ -6,12 +6,13 @@
 # Dogify <595572594@qq.com>, 2018
 # asdf asdf <328134421@qq.com>, 2018
 # Bai HuanCheng (Bestony) <xiqingongzi@gmail.com>, 2018
+# Bai HuanCheng (Bestony) <xiqingongzi@gmail.com>, 2018
 # CabbSir <cabbsir@gmail.com>, 2018
 # Dogify <595572594@qq.com>, 2018
 # Floyd Li <floyd.li@outlook.com>, 2017
 # Fossen <fossen@fossen.cn>, 2018
 # Gao Liang <gaoliangim@gmail.com>, 2018
-# Hao Jin <jinhao7773@gmail.com>, 2018
+# Hao Jin (金浩) <jinhao7773@gmail.com>, 2018
 # David <huangtao0202@gmail.com>, 2017
 # Hypo Chen <i@ihypo.net>, 2018
 # James fan <fjl2401@163.com>, 2017
@@ -25,7 +26,7 @@
 # Lu Cao <abc3966@126.com>, 2017
 # Lucas H. Xu <xuh@bu.edu>, 2016
 # Manjusakka Lee <me@manjusaka.me>, 2018
-# Mr.LiuSG <mr-liusg@users.noreply.github.com>, 2018
+# mr.liusg <mr-liusg@users.noreply.github.com>, 2018
 # PACI <emkqson@outlook.com>, 2018
 # qiang wu <wuqiangroy@live.com>, 2018
 # radish sx <radishxtop@gmail.com>, 2017-2018
@@ -46,9 +47,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-08 07:27-0500\n"
-"PO-Revision-Date: 2018-07-30 06:31+0000\n"
-"Last-Translator: Dogify <595572594@qq.com>\n"
+"POT-Creation-Date: 2018-10-11 11:30-0500\n"
+"PO-Revision-Date: 2018-10-09 23:10+0000\n"
+"Last-Translator: Bai HuanCheng (Bestony) <xiqingongzi@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -490,8 +491,8 @@ msgid ""
 "the 1930s to early 1950s. To this day, he's considered one of the best "
 "guitarists of all time."
 msgstr ""
-"Django 的名字来源于 Django Reinhardt，一个吉普赛吉他工作室从 1930 年到 50 年"
-"代初期，直到今天，他们依然被认为是史上最好的吉他手之一。"
+"Django 的名字来源于 Django Reinhardt，一个活跃在1930 年到 1950 年代初期的吉普"
+"赛吉他工作室，直到今天，他们依然被认为是史上最好的吉他手之一。"
 
 msgid "Listen to his music. You'll like it."
 msgstr "聆听他的音乐. 你会喜欢它的."
@@ -537,8 +538,8 @@ msgid ""
 "application layer. And it ships with a simple-yet-powerful :doc:`cache "
 "framework </topics/cache>`."
 msgstr ""
-"该框架将组件完全分离，如数据库层和应用程序层。它附带了一个简单但强大的: "
-"doc : `缓存框架`。"
+"该框架将组件完全分离，如数据库层和应用程序层。它附带了一个简单但强大的 :doc:`"
+"缓存框架</topics/cache> `."
 
 msgid "Who's behind this?"
 msgstr "谁在这背后？"
@@ -612,7 +613,7 @@ msgid ""
 "makes much more sense."
 msgstr ""
 "如果你想要首字母缩写, 你可能会说 Django 是一个 \"MTV \" 框架--即 \"模型"
-"(Model) \"、 \"模板(Template) \" 和 \"视图(View)). 这种划分有意义。"
+"(Model) \"、 \"模板(Template)\" 和 \"视图(View). 这种划分更有意义。"
 
 msgid ""
 "At the end of the day, of course, it comes down to getting stuff done. And, "
@@ -679,9 +680,7 @@ msgstr "正如我们所说的：我们很挑剔"
 msgid ""
 "We've documented our philosophies on the :doc:`design philosophies page </"
 "misc/design-philosophies>`."
-msgstr ""
-"我们的设计理念请参照 :doc:`design philosophies page </misc/design-"
-"philosophies>`."
+msgstr "我们的设计理念请参照 :doc:`设计哲学页面 </misc/design-philosophies>`."
 
 msgid "Is Django a content-management-system (CMS)?"
 msgstr "Django 是个内容管理系统(CMS)吗?"
@@ -1322,8 +1321,8 @@ msgid ""
 "Using a :class:`~django.db.models.FileField` or an :class:`~django.db.models."
 "ImageField` in a model takes a few steps:"
 msgstr ""
-"使用：类：`~django.db.models.FileField` 或：类：`~django.db.models."
-"ImageField` 模型中采取的一些步骤："
+"在模型中使用 :class:`~django.db.models.FileField` 或 :class:`~django.db."
+"models.ImageField`  ，你还需要完成如下步骤："
 
 msgid ""
 "In your settings file, you'll need to define :setting:`MEDIA_ROOT` as the "
@@ -1368,12 +1367,12 @@ msgid ""
 "would be dynamically-generated menus. At first glance, it seems logical to "
 "simply add a common dictionary to the template context."
 msgstr ""
-"有时候你的模板往往需要相同的东西。一个常见的例子是动态生成的菜单。乍一看，在"
-"模板上下文中添加一个通用字典似乎是合乎逻辑的。"
+"有时候你的模板会需要相同的东西。一个常见的例子是动态生成的菜单。乍一看，在模"
+"板上下文中添加一个通用字典似乎是合乎逻辑的。"
 
 msgid ""
 "The correct solution is to use a ``RequestContext``. Details on how to do "
 "this are here: :ref:`subclassing-context-requestcontext`."
 msgstr ""
-"正确的解决方案是使用\"RequestContext”。关于如何做到这一点就是使用: :ref:"
+"正确的解决方案是使用\"RequestContext”。关于如何使用它请查看: :ref:"
 "`subclassing-context-requestcontext`。"

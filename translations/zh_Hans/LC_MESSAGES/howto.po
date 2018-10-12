@@ -14,6 +14,7 @@
 # Kwen Stephen <hyuncankun@outlook.com>, 2018
 # kyle xu <tsingx@hotmail.com>, 2017
 # Le Yang <youngleocn@qq.com>, 2018
+# shengzhulst <lishiting1996@outlook.com>, 2018
 # mrgaolei <gaolei@liheran.com>, 2018
 # radish sx <radishxtop@gmail.com>, 2017
 # raingolee <raingolee@gmail.com>, 2018
@@ -36,9 +37,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-08 19:30-0500\n"
-"PO-Revision-Date: 2018-08-05 02:04+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2018-10-11 11:30-0500\n"
+"PO-Revision-Date: 2018-10-12 00:19+0000\n"
+"Last-Translator: Ramiro Morales\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -467,6 +468,9 @@ msgid ""
 "names are always lowercase strings containing only letters, but the only "
 "hard requirement is that it must not contain the string ``__``."
 msgstr ""
+"仔细观察实现过程，最开始我们需要“lookup_name”这个属性。这个可以保证ORM理解如"
+"何编译“name_ne”和使用“NotEqual”来建立结构化查询语言SQL。按照惯例，这些名"
+"字“name_ne”是小写字母字符串，但是很麻烦的是必须有“__”字符串"
 
 msgid ""
 "We then need to define the ``as_sql`` method. This takes a ``SQLCompiler`` "
@@ -477,6 +481,11 @@ msgid ""
 "that string. In most cases, you don't need to use it directly and can pass "
 "it on to ``process_lhs()`` and ``process_rhs()``."
 msgstr ""
+"之后我们需要定义一个“as_sql”方法。这方法需要一个“SQLCompiler” 对象, 被叫做编"
+"译器，和一个有效的数据库连接。“SQLCompller”对象没有文档，我们只需要知道它有一"
+"个compile()方法可以返回一个元组包括SQL字符串，和插入这个字符串的参数。大部分"
+"情况下，你不需要直接使用这个对象你可以把它传送"
+"给“process_lhs()”和“process_rhs()”"
 
 msgid ""
 "A ``Lookup`` works against two values, ``lhs`` and ``rhs``, standing for "
@@ -487,6 +496,10 @@ msgid ""
 "is a reference to the ``name`` field of the ``Author`` model, and ``'Jack'`` "
 "is the right-hand side."
 msgstr ""
+"“Lookup”工作依靠两个值, “lhs”和“rhs”,代表左右手边，左手是一个字段参考，但它可"
+"以是任何来解释ref：应用程序的检索表达。右手是一个用户给的数值。举个例子："
+"``Author.objects.filter(name__ne='Jack')``，左手是一个参考对应着Author模型的"
+"名字，“Jack”是右手端。"
 
 msgid ""
 "We call ``process_lhs`` and ``process_rhs`` to convert them into the values "
@@ -499,6 +512,12 @@ msgid ""
 "depend on the object we have, so we still need to include them in the "
 "parameters we return."
 msgstr ""
+"我们调用“process_lhs”和“process_rhs”转化他们成为我们想要的用来检索的值通过之"
+"前我们提到的“编译器”。这个方法返回一个元组包含SQL数据库和插入SQL数据库一些参"
+"数，刚好就是我们‘as_sql’需要返回的。使用前面的例子，“process_lhs”返回"
+"``('\"author\".\"name\"', [])`` ，“process_lhs”返回``('\"%s\"', ['Jack'])``."
+"在这个例子里面没有左手边的参数，但是这需要看情况而定，我们还需要包括这些参数"
+"当我们返回的时候。"
 
 msgid ""
 "Finally we combine the parts into an SQL expression with ``<>``, and supply "
@@ -3235,21 +3254,9 @@ msgid ""
 "Django includes default views and templates for several HTTP error codes. "
 "You may want to override the default templates by creating the following "
 "templates in your root template directory: ``404.html``, ``500.html``, ``403."
-"html``, and ``400.html``. The default views should suffice for 99% of Web "
-"applications, but if you desire to customize them, see these instructions "
-"which also contain details about the default templates:"
-msgstr ""
-
-msgid ":ref:`http_not_found_view`"
-msgstr ""
-
-msgid ":ref:`http_internal_server_error_view`"
-msgstr ""
-
-msgid ":ref:`http_forbidden_view`"
-msgstr ""
-
-msgid ":ref:`http_bad_request_view`"
+"html``, and ``400.html``. The :ref:`default error views <error-views>` that "
+"use these templates should suffice for 99% of Web applications, but you can :"
+"ref:`customize them <customizing-error-views>` as well."
 msgstr ""
 
 msgid "Deploying Django"
@@ -4523,6 +4530,11 @@ msgid ""
 "APP_DIRS>`."
 msgstr ""
 
+msgid ""
+"Read :ref:`overriding-built-in-widget-templates` if you're looking to do "
+"that."
+msgstr ""
+
 msgid "Overriding from the project's templates directory"
 msgstr ""
 
@@ -5219,6 +5231,9 @@ msgid ""
 "`allow_migrate()` method of database routers as ``**hints``:"
 msgstr ""
 
+msgid "myapp/dbrouters.py"
+msgstr ""
+
 msgid "Then, to leverage this in your migrations, do the following::"
 msgstr ""
 
@@ -5268,9 +5283,15 @@ msgid ""
 "``AlterField``, and add imports of ``uuid`` and ``models``. For example:"
 msgstr ""
 
+msgid "0006_remove_uuid_null.py"
+msgstr ""
+
 msgid ""
 "Edit the first migration file. The generated migration class should look "
 "similar to this:"
+msgstr ""
+
+msgid "0004_add_uuid_field.py"
 msgstr ""
 
 msgid ""
@@ -5284,6 +5305,9 @@ msgid ""
 "operations.RunPython` or :class:`~django.db.migrations.operations.RunSQL` "
 "operation to generate a unique value (UUID in the example) for each existing "
 "row. Also add an import of ``uuid``. For example:"
+msgstr ""
+
+msgid "0005_populate_uuid_values.py"
 msgstr ""
 
 msgid ""
@@ -5386,6 +5410,9 @@ msgstr ""
 
 msgid "Here's a sample migration:"
 msgstr "这是一个迁移示例："
+
+msgid "myapp/migrations/0124_move_old_app_to_new_app.py"
+msgstr ""
 
 msgid ""
 "Also consider what you want to happen when the migration is unapplied. You "
