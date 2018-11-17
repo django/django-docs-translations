@@ -11,6 +11,7 @@
 # Fábio C. Barrionuevo da Luz <bnafta@gmail.com>, 2014-2015
 # João Gehlen <joaogehlen91@gmail.com>, 2016
 # Lucas Infante <maccinza@gmail.com>, 2014-2015
+# Marcelo Moro Brondani <mbrondani@inf.ufsm.br>, 2018
 # Marco Rougeth <marco@rougeth.com>, 2015
 # Rafael Lott <rafael.lott2@gmail.com>, 2016
 # Renne Rocha, 2013
@@ -21,9 +22,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-18 15:16-0600\n"
-"PO-Revision-Date: 2017-12-03 00:44+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2018-11-16 16:30-0600\n"
+"PO-Revision-Date: 2018-11-11 01:36+0000\n"
+"Last-Translator: Ramiro Morales\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -64,12 +65,8 @@ msgstr ""
 "Busque informações nos arquivos da lista de e-mails |usuários-django| ou "
 "`publique uma pergunta`_."
 
-msgid ""
-"Ask a question in the `#django IRC channel`_, or search the `IRC logs`_ to "
-"see if it's been asked before."
+msgid "Ask a question in the `#django IRC channel`_."
 msgstr ""
-"Faça uma pergunta no `canal de IRC #django`_, ou procure nos `logs do IRC`_ "
-"para ver se esta pergunta já não foi respondida anteriormente."
 
 msgid "Report bugs with Django in our `ticket tracker`_."
 msgstr "Relate bugs do Django no nosso `ticket tracker`_."
@@ -184,6 +181,9 @@ msgid ""
 "method reference <ref/models/querysets>` | :doc:`Lookup expressions <ref/"
 "models/lookups>`"
 msgstr ""
+"**QuerySets:** :doc:`Fazendo consultas <topics/db/queries>` | :doc:"
+"`Referência do método QuerySet <ref/models/querysets>` | :doc:`Expressões de "
+"pesquisa <ref/models/lookups>`"
 
 msgid ""
 "**Model instances:** :doc:`Instance methods <ref/models/instances>` | :doc:"
@@ -499,19 +499,6 @@ msgstr ""
 
 msgid ":doc:`Performance and optimization overview <topics/performance>`"
 msgstr ":doc:`Visão geral do desempenho e otimização <topics/performance>`"
-
-msgid "Python compatibility"
-msgstr "Compatibilidade com o Python"
-
-msgid ""
-"Django aims to be compatible with multiple different flavors and versions of "
-"Python:"
-msgstr ""
-"Django pretente ser compatível com vários sabores e versões diferentes do "
-"Python:"
-
-msgid ":doc:`Jython support <howto/jython>`"
-msgstr ":doc:`Suporte ao Jython <howto/jython>`"
 
 msgid "Geographic framework"
 msgstr "Framework geográfico"

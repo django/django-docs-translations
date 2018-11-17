@@ -4,6 +4,7 @@
 #
 # Translators:
 # Eiichi Sugiyama <barcarunrunbiscabarca@gmail.com>, 2018
+# matsuand, 2018
 # TAKAHASHI Shuuji <shuuji3@gmail.com>, 2017
 # TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016
 # Takashi Sugawara <aimaimokomoko@gmail.com>, 2018
@@ -12,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-31 05:24-0500\n"
-"PO-Revision-Date: 2018-08-22 04:30+0000\n"
-"Last-Translator: Eiichi Sugiyama <barcarunrunbiscabarca@gmail.com>\n"
+"POT-Creation-Date: 2018-11-16 16:30-0600\n"
+"PO-Revision-Date: 2018-10-26 10:50+0000\n"
+"Last-Translator: matsuand\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -262,7 +263,7 @@ msgid ""
 msgstr ""
 
 msgid "Committing code"
-msgstr ""
+msgstr "コードのコミット"
 
 msgid ""
 "This section is addressed to the committers and to anyone interested in "
@@ -272,12 +273,14 @@ msgid ""
 msgstr ""
 
 msgid "Handling pull requests"
-msgstr ""
+msgstr "プルリクエストの取り扱い"
 
 msgid ""
 "Since Django is now hosted at GitHub, most patches are provided in the form "
 "of pull requests."
 msgstr ""
+"Django は GitHub により提供されているので、ほとんどのパッチはプルリクエストの"
+"形で入手できます。"
 
 msgid ""
 "When committing a pull request, make sure each individual commit matches the "
@@ -362,7 +365,7 @@ msgid ""
 msgstr ""
 
 msgid "Committing guidelines"
-msgstr ""
+msgstr "コミットガイドライン"
 
 msgid ""
 "In addition, please follow the following guidelines when committing code to "
@@ -1705,6 +1708,9 @@ msgstr ""
 msgid "For example (comments are for explanatory purposes only):"
 msgstr ""
 
+msgid "django/contrib/admin/example.py"
+msgstr ""
+
 msgid "Use convenience imports whenever available. For example, do this::"
 msgstr ""
 
@@ -2906,6 +2912,9 @@ msgid ""
 "In order to make sure the models defined within the context of :func:"
 "`~django.test.utils.isolate_apps` instances are correctly installed, you "
 "should pass the set of targeted ``app_label`` as arguments:"
+msgstr ""
+
+msgid "tests/app_label/tests.py"
 msgstr ""
 
 msgid "The decorator can also be applied to classes::"
@@ -5789,6 +5798,9 @@ msgid "An install of some required Python packages::"
 msgstr ""
 
 msgid "Access to Django's record on PyPI. Create a file with your credentials:"
+msgstr ""
+
+msgid "~/.pypirc"
 msgstr ""
 
 msgid "Access to the ``djangoproject.com`` server to upload files."

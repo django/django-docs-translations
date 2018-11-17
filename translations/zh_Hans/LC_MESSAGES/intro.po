@@ -15,6 +15,7 @@
 # Hao Jin (金浩) <jinhao7773@gmail.com>, 2018
 # Chown Hobby, 2016
 # Hourann Lin <tdkgn@outlook.com>, 2018
+# Junkai Shao <skaifun.dev@gmail.com>, 2018
 # Kevin Lee <rootkitcn@live.com>, 2017
 # Kevin Sze <leiarix@gmail.com>, 2014
 # Ralph Wen <ralph.wen@gmail.com>, 2013
@@ -34,9 +35,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-11 11:30-0500\n"
-"PO-Revision-Date: 2018-10-07 22:40+0000\n"
-"Last-Translator: Bai HuanCheng (Bestony) <xiqingongzi@gmail.com>\n"
+"POT-Creation-Date: 2018-11-16 16:30-0600\n"
+"PO-Revision-Date: 2018-11-09 01:07+0000\n"
+"Last-Translator: Ramiro Morales\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -134,7 +135,7 @@ msgid "Installing Git."
 msgstr "安装 Git。"
 
 msgid "Downloading a copy of Django's development version."
-msgstr ""
+msgstr "下载一份Django开发版的拷贝。"
 
 msgid "Running Django's test suite."
 msgstr "运行 Django 的测试套件。"
@@ -296,11 +297,11 @@ msgid ""
 "command line to help you keep track of which one you are using. Anything you "
 "install through ``pip`` while this name is displayed will be installed in "
 "that virtual environment, isolated from other environments and system-wide "
-"packages. Go ahead and install the previously cloned copy of Django:"
+"packages."
 msgstr ""
-"当前激活的虚拟环境的名称会被展示在命令行，这可以让你看到你正在使用的虚拟环"
-"境。任何你通过 ``pip`` 安装的的软件包都会被安装到这个虚拟环境中，而且它们和其"
-"他虚拟环境和系统级的软件包是独立的。现在可以去安装之前拷贝的Django了。"
+
+msgid "Go ahead and install the previously cloned copy of Django:"
+msgstr ""
 
 msgid ""
 "The installed version of Django is now pointing at your local copy. You will "
@@ -549,8 +550,8 @@ msgid "Next we'll be adding the ``make_toast()`` function."
 msgstr ""
 
 msgid ""
-"Navigate to the ``django/`` folder and open the ``shortcuts.py`` file. Add "
-"the bottom, add the function::"
+"Navigate to the ``django/`` folder and open the ``shortcuts.py`` file. At "
+"the bottom, add::"
 msgstr ""
 
 msgid ""
@@ -4820,13 +4821,17 @@ msgid ""
 "The ``{% static %}`` template tag generates the absolute URL of static files."
 msgstr "``{% static %}`` 模板标签会生成静态文件的绝对路径。"
 
-msgid ""
-"That's all you need to do for development. Reload ``http://localhost:8000/"
-"polls/`` and you should see that the question links are green (Django "
-"style!) which means that your stylesheet was properly loaded."
+msgid "That's all you need to do for development."
 msgstr ""
-"以上就是你全部需要做的事。浏览器重载 ``http://localhost:8000/polls/``，然后你"
-"可以看到投票链接是绿色的（Django 样式），这意味着你的样式表被正确加载了。"
+
+msgid "Start the server (or restart it if it's already running):"
+msgstr ""
+
+msgid ""
+"Reload ``http://localhost:8000/polls/`` and you should see that the question "
+"links are green (Django style!) which means that your stylesheet was "
+"properly loaded."
+msgstr ""
 
 msgid "Adding a background-image"
 msgstr "添加一个背景图"
