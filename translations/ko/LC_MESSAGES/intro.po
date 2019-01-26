@@ -8,6 +8,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016
 # Jeho Sung <scheho@gmail.com>, 2016
 # Le Tartuffe <magno79@gmail.com>, 2016
+# Jisung Kim <kimjs3115@gmail.com>, 2018
 # Jongyeal Kang <orthoped.kjy@gmail.com>, 2018
 # JunoJunho <wnsgh611@gmail.com>, 2015
 # Nirvana <kimqqyun@gmail.com>, 2016
@@ -22,14 +23,14 @@
 # seungho, kim <raccoonyy@gmail.com>, 2016
 # Subin Choi <os1742@gmail.com>, 2016
 # Yeonsu Bak <yeonsubak@gmail.com>, 2015
-# Yong Choi <sk8er.choi@gmail.com>, 2015
+# Yong Choi <sk8er.choi@gmail.com>, 2015,2019
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-16 16:30-0600\n"
-"PO-Revision-Date: 2018-11-15 16:28+0000\n"
-"Last-Translator: Park Seong Heum <bb0162@live.co.kr>\n"
+"POT-Creation-Date: 2019-01-11 20:28-0600\n"
+"PO-Revision-Date: 2019-01-25 06:58+0000\n"
+"Last-Translator: Yong Choi <sk8er.choi@gmail.com>\n"
 "Language-Team: Korean (http://www.transifex.com/django/django-docs/language/"
 "ko/)\n"
 "MIME-Version: 1.0\n"
@@ -130,7 +131,7 @@ msgid "Installing Git."
 msgstr "GIT 설치"
 
 msgid "Downloading a copy of Django's development version."
-msgstr "Django의 개발 버전의 다운로드"
+msgstr "Django의 개발 버전 다운로드"
 
 msgid "Running Django's test suite."
 msgstr "장고의 테스트 스위트를 실행."
@@ -240,13 +241,17 @@ msgid "Download the Django source code repository using the following command:"
 msgstr "다음 명령을 통해 Django 소스코드 저장소를 다운로드하십시오."
 
 msgid "Low bandwidth connection?"
-msgstr "낮은 대역폭 연결상태?"
+msgstr "인터넷이 느린가요 (대역폭이 낮나요) ?"
 
 msgid ""
 "You can add the ``--depth 1`` argument to ``git clone`` to skip downloading "
 "all of Django's commit history, which reduces data transfer from  ~250 MB to "
 "~70 MB."
 msgstr ""
+"``git clone`` 명령어 뒤에 ``--depth 1`` 인자를 추가하면 Django의 이전 수정 이"
+"력을 무시하고 최신 수정 이력만 남은 소스코드를 다운로드 받을 수 있습니다. 이"
+"로써 다운로드 받아야할 데이터 용량이 250MB 정도에서 70MB 정도로 줄어들게 된답"
+"니다."
 
 msgid ""
 "Now that you have a local copy of Django, you can install it just like you "
@@ -364,13 +369,13 @@ msgid ""
 "backend. SQLite is the database backend for the default settings. To run the "
 "tests using a different backend, see :ref:`running-unit-tests-settings`."
 msgstr ""
-"건너띈 테스트는 보통 테스트를 수행하기 위해 필요한 외부 라이브러리가 없는 경"
+"건너뛴 테스트는 보통 테스트를 수행하기 위해 필요한 외부 라이브러리가 없는 경"
 "우 발생합니다. :ref:`running-unit-tests-dependencies` 를 참조하여, 변경과 관"
-"련한 모든 테스트를 수행하기 위한 의존성을 확인하고 이를 설치하십시요. 특정한 "
-"데이터베이스 백엔드를 필요로 하는 테스트의 경우, 해당 데이터베이스 백엔드를 "
-"사용하지 않으면 자동으로 테스트를 건너 띕니다. ``SQLite`` 는 기본 데이터베이"
-"스 백엔드 입니다. 다른 백엔드를 테스트 하고 싶다면 :ref:`running-unit-tests-"
-"settings` 를 참조하세요."
+"련한 모든 테스트를 수행하기 위한 의존성을 확인하고 이를 설치하십시오(이 튜토"
+"리얼에서는 필요하지 않습니다). 특정한 데이터베이스 백엔드를 필요로 하는 테스"
+"트의 경우, 해당 데이터베이스 백엔드를 사용하지 않으면 자동으로 테스트를 건너"
+"뜁니다. ``SQLite`` 는 기본 데이터베이스 백엔드입니다. 다른 백엔드를 테스트하"
+"고 싶다면 :ref:`running-unit-tests-settings` 를 참조하세요."
 
 msgid ""
 "Once the tests complete, you should be greeted with a message informing you "
@@ -642,7 +647,7 @@ msgid ""
 "command line. If the patch's content looked okay, it's time to commit the "
 "changes."
 msgstr ""
-"패치 미리보기가 끝나면``q`` 키를 눌러 명령 행으로 돌아갑니다. 패치의 내용이 "
+"패치 미리보기가 끝나면 ``q`` 키를 눌러 명령행으로 돌아갑니다. 패치의 내용이 "
 "괜찮아 보이면 변경 사항을 커밋해야합니다."
 
 msgid "Committing the changes in the patch"
@@ -655,12 +660,12 @@ msgid ""
 "This opens up a text editor to type the commit message. Follow the :ref:"
 "`commit message guidelines <committing-guidelines>` and write a message like:"
 msgstr ""
-"그러면 커밋 메시지 를 입력하기위한 텍스트 편집기가 열립니다. : ref :`commit "
-"message guidelines <committing-guidelines>에 따라 다음과 같은 메시지 를 작성"
+"그러면 커밋 메시지 를 입력하기 위한 텍스트 편집기가 열립니다. : ref :`commit "
+"message guidelines <committing-guidelines>`에 따라 다음과 같은 메시지를 작성"
 "하십시오."
 
 msgid "Pushing the commit and making a pull request"
-msgstr " commit 푸시 및 pull request 요청"
+msgstr "commit 푸시 및 pull request 만들기"
 
 msgid ""
 "After committing the patch, send it to your fork on GitHub (substitute "
@@ -680,7 +685,7 @@ msgid ""
 "Please don't do it for this tutorial, but on the next page that displays a "
 "preview of the patch, you would click \"Create pull request\"."
 msgstr ""
-"이 자습서에서는하지 말고, 패치의 미리보기를 표시하는 다음 페이지에서 \"pull "
+"이 자습서에서는 하지 말고, 패치의 미리보기를 표시하는 다음 페이지에서 \"pull "
 "request 만들기\"를 클릭하십시오."
 
 msgid "Next steps"
@@ -709,7 +714,7 @@ msgid ""
 "Before you get too into writing patches for Django, there's a little more "
 "information on contributing that you should probably take a look at:"
 msgstr ""
-"Django 를 위한 패치를 작성하기 전에, 한번 꼭 보셔야 할 정보들이 있습니다. "
+"Django를 위한 패치를 작성하기 전에, 한번 꼭 보셔야 할 정보들이 있습니다. "
 
 msgid ""
 "You should make sure to read Django's documentation on :doc:`claiming "
@@ -790,9 +795,9 @@ msgid ""
 msgstr ""
 "티켓에 패치가있는 경우 두 번째 눈으로 검토해야합니다. pull request을 제출 한 "
 "후 티켓에 \"패치가 있음\", \"테스트가 필요 없음\"등의 플래그를 설정하여 티켓 "
-"메타 데이터를 업데이트하여 다른 사람들이 검토 할 수 있도록합니다. 기여한다고"
-"해서 항상 패치를 처음부터 작성하는 것은 아닙니다. 기존 패치를 검토하는 것도 "
-"매우 도움이됩니다. 참조 : 자세한 내용은 doc :`/ internals / contributing / "
+"메타 데이터를 업데이트하여 다른 사람들이 검토할 수 있도록합니다. 기여한다고해"
+"서 항상 패치를 처음부터 작성하는 것은 아닙니다. 기존 패치를 검토하는 것도 매"
+"우 도움이됩니다. 참조 : 자세한 내용은 doc :`/ internals / contributing / "
 "triaging-tickets`를 참조하십시오."
 
 msgid "Getting started"

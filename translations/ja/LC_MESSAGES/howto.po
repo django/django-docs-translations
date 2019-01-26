@@ -12,11 +12,13 @@
 # mtb_beta <mtb.toya0403@gmail.com>, 2018
 # mnamihdk, 2017
 # Pawllo2 <pawllothesecond@gmail.com>, 2017-2018
+# Ryosuke Sakurai, 2019
 # Ryouta Mizuhara <ham_katsu@outlook.jp>, 2016
-# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016-2017
+# Shinichi Katsumata <shinichi.katsumata@gmail.com>, 2019
+# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016-2017
 # Suguru Yamamoto <sgryjp@gmail.com>, 2017
 # Suzuki Takahiro <bur8787@gmail.com>, 2016
-# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016,2018
+# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016,2018
 # Takashi Sugawara <aimaimokomoko@gmail.com>, 2017
 # Takuya Arita <takuya.arita@gmail.com>, 2015
 # Tetsuya Yamada <yamada.tetsuya258@gmail.com>, 2018
@@ -28,9 +30,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-16 16:30-0600\n"
-"PO-Revision-Date: 2018-11-13 13:35+0000\n"
-"Last-Translator: Pawllo2 <pawllothesecond@gmail.com>\n"
+"POT-Creation-Date: 2019-01-11 20:28-0600\n"
+"PO-Revision-Date: 2019-01-19 10:44+0000\n"
+"Last-Translator: Shinichi Katsumata <shinichi.katsumata@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -518,6 +520,13 @@ msgid ""
 "that string. In most cases, you don't need to use it directly and can pass "
 "it on to ``process_lhs()`` and ``process_rhs()``."
 msgstr ""
+"次に、\"as_sql\" メソッドを定義する必要があります。これには \"compiler\" とい"
+"う\"SQL Compiler\" オブジェクトと、アクティブなデータベース接続を必要としま"
+"す。\"SQL Compiler\" オブジェクトについてのドキュメントはありませんが、それが"
+"SQL文字列を含むタプルと文字列に挿入されるパラメータを返す``compile()`` メソッ"
+"ドを持つ、ということだけ知っていれば十分です。ほとんどの場合、これを直接用い"
+"る必要はなく、``process_lhs()`` および ``process_rhs()`` に渡すことができま"
+"す。"
 
 msgid ""
 "A ``Lookup`` works against two values, ``lhs`` and ``rhs``, standing for "
@@ -921,7 +930,7 @@ msgstr "管理コマンドとロケール"
 
 msgid ""
 "By default, management commands are executed with the current active locale."
-msgstr ""
+msgstr "デフォルトでは、管理コマンドは現在アクティブなロケールで実行されます。"
 
 msgid ""
 "If, for some reason, your custom management command must run without an "
@@ -929,6 +938,10 @@ msgid ""
 "inserted into the database), deactivate translations using the "
 "``@no_translations`` decorator on your :meth:`~BaseCommand.handle` method::"
 msgstr ""
+"何らかの理由でカスタム django-admin コマンドをアクティブなロケールなしで実行"
+"する必要がある場合 (たとえば、翻訳されたコンテンツがデータベースに挿入されな"
+"いようにする)、:meth:`~BaseCommand.handle` method:: メソッドで"
+"@no_translationsデコレータを使用して翻訳を無効にします。"
 
 msgid ""
 "Since translation deactivation requires access to configured settings, the "
@@ -6192,7 +6205,10 @@ msgstr ""
 
 msgid ""
 "The ``atomic`` attribute doesn't have an effect on databases that don't "
-"support DDL transactions (e.g. MySQL, Oracle)."
+"support DDL transactions (e.g. MySQL, Oracle). (MySQL's `atomic DDL "
+"statement support <https://dev.mysql.com/doc/refman/en/atomic-ddl.html>`_ "
+"refers to individual statements rather than multiple statements wrapped in a "
+"transaction that can be rolled back.)"
 msgstr ""
 
 msgid "Controlling the order of migrations"

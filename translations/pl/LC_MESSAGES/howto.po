@@ -4,6 +4,7 @@
 #
 # Translators:
 # Adrian Antończyk <linkedin@antonczyk.it>, 2015
+# Jakub Komosa <inbox@jakubkomosa.pl>, 2019
 # Kamil Pluciński <kamil.plucinski97@gmail.com>, 2018
 # m_aciek <maciej.olko@gmail.com>, 2016-2018
 # Piotr Muskalski <piotr.muskalski@gmail.com>, 2018
@@ -11,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-31 05:24-0500\n"
-"PO-Revision-Date: 2018-08-22 20:39+0000\n"
-"Last-Translator: m_aciek <maciej.olko@gmail.com>\n"
+"POT-Creation-Date: 2019-01-11 20:28-0600\n"
+"PO-Revision-Date: 2019-01-07 18:58+0000\n"
+"Last-Translator: Jakub Komosa <inbox@jakubkomosa.pl>\n"
 "Language-Team: Polish (http://www.transifex.com/django/django-docs/language/"
 "pl/)\n"
 "MIME-Version: 1.0\n"
@@ -326,7 +327,7 @@ msgstr ""
 "specjalnie do trzymania niestandardowych obiektów pamięci. To są:"
 
 msgid "**Required**."
-msgstr ""
+msgstr "**Wymagany**."
 
 msgid ""
 "Called by ``Storage.open()``, this is the actual mechanism the storage class "
@@ -3246,21 +3247,9 @@ msgid ""
 "Django includes default views and templates for several HTTP error codes. "
 "You may want to override the default templates by creating the following "
 "templates in your root template directory: ``404.html``, ``500.html``, ``403."
-"html``, and ``400.html``. The default views should suffice for 99% of Web "
-"applications, but if you desire to customize them, see these instructions "
-"which also contain details about the default templates:"
-msgstr ""
-
-msgid ":ref:`http_not_found_view`"
-msgstr ""
-
-msgid ":ref:`http_internal_server_error_view`"
-msgstr ""
-
-msgid ":ref:`http_forbidden_view`"
-msgstr ""
-
-msgid ":ref:`http_bad_request_view`"
+"html``, and ``400.html``. The :ref:`default error views <error-views>` that "
+"use these templates should suffice for 99% of Web applications, but you can :"
+"ref:`customize them <customizing-error-views>` as well."
 msgstr ""
 
 msgid "Deploying Django"
@@ -4533,6 +4522,11 @@ msgid ""
 "APP_DIRS>`."
 msgstr ""
 
+msgid ""
+"Read :ref:`overriding-built-in-widget-templates` if you're looking to do "
+"that."
+msgstr ""
+
 msgid "Overriding from the project's templates directory"
 msgstr ""
 
@@ -5225,6 +5219,9 @@ msgid ""
 "`allow_migrate()` method of database routers as ``**hints``:"
 msgstr ""
 
+msgid "myapp/dbrouters.py"
+msgstr ""
+
 msgid "Then, to leverage this in your migrations, do the following::"
 msgstr ""
 
@@ -5274,9 +5271,15 @@ msgid ""
 "``AlterField``, and add imports of ``uuid`` and ``models``. For example:"
 msgstr ""
 
+msgid "0006_remove_uuid_null.py"
+msgstr ""
+
 msgid ""
 "Edit the first migration file. The generated migration class should look "
 "similar to this:"
+msgstr ""
+
+msgid "0004_add_uuid_field.py"
 msgstr ""
 
 msgid ""
@@ -5290,6 +5293,9 @@ msgid ""
 "operations.RunPython` or :class:`~django.db.migrations.operations.RunSQL` "
 "operation to generate a unique value (UUID in the example) for each existing "
 "row. Also add an import of ``uuid``. For example:"
+msgstr ""
+
+msgid "0005_populate_uuid_values.py"
 msgstr ""
 
 msgid ""
@@ -5328,7 +5334,10 @@ msgstr ""
 
 msgid ""
 "The ``atomic`` attribute doesn't have an effect on databases that don't "
-"support DDL transactions (e.g. MySQL, Oracle)."
+"support DDL transactions (e.g. MySQL, Oracle). (MySQL's `atomic DDL "
+"statement support <https://dev.mysql.com/doc/refman/en/atomic-ddl.html>`_ "
+"refers to individual statements rather than multiple statements wrapped in a "
+"transaction that can be rolled back.)"
 msgstr ""
 
 msgid "Controlling the order of migrations"
@@ -5387,6 +5396,9 @@ msgid ""
 msgstr ""
 
 msgid "Here's a sample migration:"
+msgstr ""
+
+msgid "myapp/migrations/0124_move_old_app_to_new_app.py"
 msgstr ""
 
 msgid ""

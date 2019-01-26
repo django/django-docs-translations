@@ -5,20 +5,26 @@
 # Translators:
 # Aris Chow <arischow@gmail.com>, 2018
 # Arthur Wu <dandelionstill@gmail.com>, 2018
-# Bai HuanCheng (Bestony) <xiqingongzi@gmail.com>, 2018
+# b1c58ea15303be9e49500f6966759e5d, 2018
+# Bai HuanCheng (Bestony) <xiqingongzi@gmail.com>, 2018-2019
+# BAKEZQ <zhongquan789@126.com>, 2018
 # belitex, 2018
+# belitex, 2018
+# BobDu <i@bobdu.cc>, 2018
 # Brian Wang <singeeking@gmail.com>, 2018
+# charloai <charlo@charlo.xin>, 2018
 # charloai <charlo@charlo.xin>, 2018
 # Cy <ll_faw@hotmail.com>, 2018
 # Danfi <tdanfi@gmail.com>, 2018
 # Danfi <tdanfi@gmail.com>, 2018
 # flypopo <flypopo.reg@qq.com>, 2018
 # Hongjie Tian <tianhongjie07@gmail.com>, 2017
-# jiamin lu <www.ljm969087551@qq.com>, 2018
+# ausaki <www.ljm969087551@qq.com>, 2018
 # JINGMING DAI <d664216@gmail.com>, 2018
 # jinwen wu <toono@qq.com>, 2018
 # Junkai Shao <skaifun.dev@gmail.com>, 2018
 # Kai Song <songkaiape@gmail.com>, 2017
+# Kevin Sze <leiarix@gmail.com>, 2014
 # Kevin Sze <leiarix@gmail.com>, 2014
 # Liping Wang <lynn.config@gmail.com>, 2016
 # marcus ma <freebird0221@gmail.com>, 2018
@@ -34,12 +40,15 @@
 # Wang XinHe <wang__xin_he@163.com>, 2018
 # zwwhdls <zwwhdls@hotmail.com>, 2018
 # XingFive <haoxingwu@hotmail.com>, 2018
+# XingFive <haoxingwu@hotmail.com>, 2018
 # yly <lokidri@outlook.com>, 2018
 # Zhengyang Wang <sufforest@gmail.com>, 2018
 # BAKEZQ <zhongquan789@126.com>, 2018
+# zwwhdls <zwwhdls@hotmail.com>, 2018
 # 吴彬 <xiake21x@qq.com>, 2016
 # 小明 王 <qing_chun_dou@126.com>, 2018
 # 得鑫 李 <lidexin911@126.com>, 2018
+# 思源曹 <seeran@outlook.com>, 2018
 # BobDu <i@bobdu.cc>, 2018
 # 文隆 胡 <xcluas@gmail.com>, 2018
 # 景隆 王 <Arsenal591@126.com>, 2018
@@ -49,8 +58,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-16 16:30-0600\n"
-"PO-Revision-Date: 2018-11-17 00:29+0000\n"
+"POT-Creation-Date: 2019-01-11 20:28-0600\n"
+"PO-Revision-Date: 2019-01-26 02:29+0000\n"
 "Last-Translator: Bai HuanCheng (Bestony) <xiqingongzi@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
@@ -15684,10 +15693,10 @@ msgid ""
 "value of the appropriate prefix. If the :mod:`django.contrib.staticfiles` "
 "app is installed, it will be used to serve assets."
 msgstr ""
-"用于指定资源的路径可以是相对的也可以是绝对的。如果路径以 ``/`` 、 ``http://"
-"`` 或 ``https://`` 开头，则它将被解释为绝对路径，并保持原样。所有其他路径都会"
-"以相应值作为前缀。如果在settings中设置了 :mod:`django.contrib.staticfiles` ，"
-"就可以用来服务于资源。"
+"用于指定资源的路径可以是相对路径的也可以是绝对路径的。如果路径以 ``/`` 、 "
+"``http://`` 或 ``https://`` 开头，则它将被解释为绝对路径，并保持原样。所有其"
+"他路径都会以相应值作为前缀。如果在settings中设置了 :mod:`django.contrib."
+"staticfiles` ，就可以用来服务于资源。"
 
 msgid ""
 "Whether or not you use :mod:`django.contrib.staticfiles`,  the :setting:"
@@ -17841,7 +17850,7 @@ msgid ""
 msgstr ""
 
 msgid "How to use sessions"
-msgstr ""
+msgstr "如何使用会话"
 
 msgid ""
 "Django provides full support for anonymous sessions. The session framework "
@@ -17850,16 +17859,19 @@ msgid ""
 "cookies. Cookies contain a session ID -- not the data itself (unless you're "
 "using the :ref:`cookie based backend<cookie-session-backend>`)."
 msgstr ""
+"Django 是支持匿名会话的。会话框架允许您基于每个站点访问者存储和检索任意数据。"
+"它在服务器端存储数据并提供cookie的发送和接收。Cookie包含会话ID - 而不是数据本"
+"身（除非您使用基于cookie的后端）。"
 
 msgid "Enabling sessions"
-msgstr ""
+msgstr "打开会话"
 
 msgid ""
 "Sessions are implemented via a piece of :doc:`middleware </ref/middleware>`."
-msgstr ""
+msgstr "会话通过配置一个中间件实现的"
 
 msgid "To enable session functionality, do the following:"
-msgstr ""
+msgstr "为了打开会话，需要做下面的操作"
 
 msgid ""
 "Edit the :setting:`MIDDLEWARE` setting and make sure it contains ``'django."
@@ -17867,6 +17879,9 @@ msgid ""
 "py`` created by ``django-admin startproject`` has ``SessionMiddleware`` "
 "activated."
 msgstr ""
+"编辑设置中的 `MIDDLEWARE`，并确保他包含了 `'django.contrib.sessions."
+"middleware.SessionMiddleware'`。通过 `django-admin startproject` 创建的默认 "
+"`settings.py` 文件是已经打开了 `SessionMiddleware` 这项设置的。"
 
 msgid ""
 "If you don't want to use sessions, you might as well remove the "
@@ -17874,6 +17889,9 @@ msgid ""
 "sessions'`` from your :setting:`INSTALLED_APPS`. It'll save you a small bit "
 "of overhead."
 msgstr ""
+"如果你不想使用会话功能，你可以从配置的 `MIDDLEWARE 中删除 "
+"`SessionMiddleware`，并且从 `INSTALLED_APPS` 中删除 `'django.contrib."
+"sessions'`。它将会为您节省一点开销。"
 
 msgid "Configuring the session engine"
 msgstr ""
@@ -23960,6 +23978,13 @@ msgid ""
 msgstr ""
 
 msgid ""
+"All loggers except :ref:`django-server-logger` propagate logging to their "
+"parents, up to the root ``django`` logger. The ``console`` and "
+"``mail_admins`` handlers are attached to the root logger to provide the "
+"behavior described above."
+msgstr ""
+
+msgid ""
 "See also :ref:`Configuring logging <configuring-logging>` to learn how you "
 "can complement or replace this default logging configuration."
 msgstr ""
@@ -24052,12 +24077,13 @@ msgstr ""
 
 msgid ""
 "PostgreSQL is the most capable of all the databases here in terms of schema "
-"support; the only caveat is that adding columns with default values will "
-"cause a full rewrite of the table, for a time proportional to its size."
+"support."
 msgstr ""
 
 msgid ""
-"For this reason, it's recommended you always create new columns with "
+"The only caveat is that prior to PostgreSQL 11, adding columns with default "
+"values causes a full rewrite of the table, for a time proportional to its "
+"size. For this reason, it's recommended you always create new columns with "
 "``null=True``, as this way they will be added immediately."
 msgstr ""
 

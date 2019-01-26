@@ -5,14 +5,14 @@
 # Translators:
 # Adrian Antończyk <linkedin@antonczyk.it>, 2015
 # Kamil Pluciński <kamil.plucinski97@gmail.com>, 2018
-# m_aciek <maciej.olko@gmail.com>, 2016-2018
+# m_aciek <maciej.olko@gmail.com>, 2016-2019
 # p <inactive+poczciwiec@transifex.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-31 05:24-0500\n"
-"PO-Revision-Date: 2018-08-22 20:47+0000\n"
+"POT-Creation-Date: 2019-01-11 20:28-0600\n"
+"PO-Revision-Date: 2019-01-07 23:30+0000\n"
 "Last-Translator: m_aciek <maciej.olko@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/django/django-docs/language/"
 "pl/)\n"
@@ -25,7 +25,7 @@ msgstr ""
 "%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 msgid "Reporting bugs and requesting features"
-msgstr "Zgłaszanie błędów i prośby o funkcjonalności"
+msgstr "Zgłaszanie błędów i próśb o funkcjonalności"
 
 msgid ""
 "Please report security issues **only** to security@djangoproject.com.  This "
@@ -43,8 +43,8 @@ msgid ""
 "Otherwise, before reporting a bug or requesting a new feature on the `ticket "
 "tracker <https://code.djangoproject.com/>`_, consider these points:"
 msgstr ""
-"W przeciwnym razie, zanim powiadomisz o błędzie lub poprosisz o nową "
-"funkcjonalność w `systemie zgłoszeń <https://code.djangoproject.com/>`, "
+"W pozostałych przypadkach, zanim powiadomisz o błędzie lub poprosisz o nową "
+"funkcjonalność w `systemie zgłoszeń <https://code.djangoproject.com/>`_, "
 "rozważ następujące punkty:"
 
 msgid ""
@@ -646,6 +646,9 @@ msgid ""
 "improve Django. We're always open to suggestions. You can also interact on "
 "the `#django-dev IRC channel`_."
 msgstr ""
+"Dołącz do grupy mailingowej |django-developers| i dziel się pomysłami jak "
+"ulepszać Django. Zawsze jesteśmy otwarci na sugestie. Możesz też udzielać "
+"się na `kanale IRC #django-dev`_."
 
 msgid ""
 ":doc:`Submit patches <writing-code/submitting-patches>` for new and/or fixed "
@@ -1783,6 +1786,9 @@ msgid ""
 msgstr ""
 
 msgid "For example (comments are for explanatory purposes only):"
+msgstr ""
+
+msgid "django/contrib/admin/example.py"
 msgstr ""
 
 msgid "Use convenience imports whenever available. For example, do this::"
@@ -2984,6 +2990,9 @@ msgid ""
 "In order to make sure the models defined within the context of :func:"
 "`~django.test.utils.isolate_apps` instances are correctly installed, you "
 "should pass the set of targeted ``app_label`` as arguments:"
+msgstr ""
+
+msgid "tests/app_label/tests.py"
 msgstr ""
 
 msgid "The decorator can also be applied to classes::"
@@ -5850,6 +5859,9 @@ msgid "An install of some required Python packages::"
 msgstr ""
 
 msgid "Access to Django's record on PyPI. Create a file with your credentials:"
+msgstr ""
+
+msgid "~/.pypirc"
 msgstr ""
 
 msgid "Access to the ``djangoproject.com`` server to upload files."

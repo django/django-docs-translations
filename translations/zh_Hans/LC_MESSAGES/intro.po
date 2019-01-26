@@ -8,8 +8,10 @@
 # Bai HuanCheng (Bestony) <xiqingongzi@gmail.com>, 2018
 # Bai HuanCheng (Bestony) <xiqingongzi@gmail.com>, 2018
 # Brian Wang <singeeking@gmail.com>, 2017
+# blacklin <chinalinzhijie@gmail.com>, 2018
 # Chown Hobby, 2016
 # David <huangtao0202@gmail.com>, 2017
+# Dogify <595572594@qq.com>, 2019
 # Floyd Li <floyd.li@outlook.com>, 2017
 # Fulong Sun <sunfulong@neusoft.edu.cn>, 2016
 # Hao Jin (金浩) <jinhao7773@gmail.com>, 2018
@@ -35,9 +37,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-16 16:30-0600\n"
-"PO-Revision-Date: 2018-11-09 01:07+0000\n"
-"Last-Translator: Ramiro Morales\n"
+"POT-Creation-Date: 2019-01-11 20:28-0600\n"
+"PO-Revision-Date: 2019-01-15 02:20+0000\n"
+"Last-Translator: Dogify <595572594@qq.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -241,13 +243,15 @@ msgid "Download the Django source code repository using the following command:"
 msgstr "使用下面的命令来下载 Django 的源码库："
 
 msgid "Low bandwidth connection?"
-msgstr ""
+msgstr "网速太慢？"
 
 msgid ""
 "You can add the ``--depth 1`` argument to ``git clone`` to skip downloading "
 "all of Django's commit history, which reduces data transfer from  ~250 MB to "
 "~70 MB."
 msgstr ""
+"你可以在用命令``git clone`` 下载仓库的时候加上参数``--depth 1`` 来跳过Django"
+"的提交历史，这大约能把下载大小从250MB减少到70MB"
 
 msgid ""
 "Now that you have a local copy of Django, you can install it just like you "
@@ -301,7 +305,7 @@ msgid ""
 msgstr ""
 
 msgid "Go ahead and install the previously cloned copy of Django:"
-msgstr ""
+msgstr "下一步安装之前克隆的 Django 副本："
 
 msgid ""
 "The installed version of Django is now pointing at your local copy. You will "
@@ -323,11 +327,17 @@ msgid ""
 "Django's test suite before, it's a good idea to run it once beforehand to "
 "get familiar with its output."
 msgstr ""
+"当你贡献代码给 Django 的时候，你修改的代码千万不要给其它部分引入新的 bug。 有"
+"个办法可以在你更改代码之后检查 Django 是否能正常工作，就是运行 Django 的测试"
+"套件。如果所有的测试用例都通过，你就有理由相信你的改动完全没有破坏 Django。如"
+"果你从来没有运行过 Django 的测试套件，那么比较好的做法是事先运行一遍，熟悉下"
+"正常情况下应该输出什么结果。"
 
 msgid ""
 "Before running the test suite, install its dependencies by ``cd``-ing into "
 "the Django ``tests/`` directory and then running:"
 msgstr ""
+"运行测试套件之前，先 ``cd`` 进入 Django 的 ``test/`` 目录，安装其依赖，运行："
 
 msgid ""
 "If you encounter an error during the installation, your system might be "
@@ -478,7 +488,7 @@ msgid "Now for our hands-on example."
 msgstr "现在看我们的操作示例。"
 
 msgid "Writing a test for ticket #99999"
-msgstr ""
+msgstr "为工单 #99999 写测试"
 
 msgid ""
 "In order to resolve this ticket, we'll add a ``make_toast()`` function to "
@@ -547,7 +557,7 @@ msgid "Writing the code for your ticket"
 msgstr "为你的工单编写代码"
 
 msgid "Next we'll be adding the ``make_toast()`` function."
-msgstr ""
+msgstr "接下来我们将添加 ``make_toast()``函数"
 
 msgid ""
 "Navigate to the ``django/`` folder and open the ``shortcuts.py`` file. At "

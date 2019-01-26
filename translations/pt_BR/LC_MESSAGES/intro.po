@@ -21,11 +21,13 @@
 # Eduardo Cereto Carvalho, 2013
 # Elyézer Rezende <elyezermr@gmail.com>, 2013
 # Élysson Mendes Rezende <elyssonmr@gmail.com>, 2013
+# Emanuel Martins <emanuel.breno@gmail.com>, 2018
 # Eric Hideki <hidekinhow@hotmail.com>, 2015
 # Felippe Raposo <raposo.felippe@gmail.com>, 2016
 # Gilson Filho <me@gilsondev.in>, 2015
 # Guilherme Ferreira <guilherme@uft.edu.br>, 2014
 # Guilherme Portela <guilhermeportela@gmx.com>, 2015
+# Gustavo de Carvalho Sales <gt.salles@gmail.com>, 2019
 # Heitor Augusto Borges Pereira <heitoor@gmail.com>, 2016
 # hoisel <danielhoisel@gmail.com>, 2014
 # Humberto Rocha <humrochagf@gmail.com>, 2016
@@ -47,7 +49,7 @@
 # Paulo Maciel <paulosouzamaciel@gmail.com>, 2016
 # Rafael Ribeiro <pereiraribeirorafael@gmail.com>, 2016
 # Renne Rocha, 2013
-# Renne Rocha, 2013
+# Renne Rocha, 2013,2018
 # Rodrigo Boniatti <boniatti.rodrigo@gmail.com>, 2015
 # Rodrigo Ramos de Oliveira <rodrigo@zayit.com.br>, 2015
 # Rodrigo <rprior@infranology.com.br>, 2015
@@ -62,9 +64,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-11 11:30-0500\n"
-"PO-Revision-Date: 2018-10-04 01:15+0000\n"
-"Last-Translator: Lucas Infante <maccinza@gmail.com>\n"
+"POT-Creation-Date: 2019-01-11 20:28-0600\n"
+"PO-Revision-Date: 2019-01-11 11:51+0000\n"
+"Last-Translator: Gustavo de Carvalho Sales <gt.salles@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -174,7 +176,7 @@ msgid "Installing Git."
 msgstr "Instalando Git."
 
 msgid "Downloading a copy of Django's development version."
-msgstr ""
+msgstr "Baixando uma cópia da versão de desenvolvimento do Django."
 
 msgid "Running Django's test suite."
 msgstr "Executando suite de testes do Django."
@@ -292,13 +294,16 @@ msgstr ""
 "Baixe o código fonte do repositório do Django usando o seguinte comando:"
 
 msgid "Low bandwidth connection?"
-msgstr ""
+msgstr "Conexão de baixa largura de banda?"
 
 msgid ""
 "You can add the ``--depth 1`` argument to ``git clone`` to skip downloading "
 "all of Django's commit history, which reduces data transfer from  ~250 MB to "
 "~70 MB."
 msgstr ""
+"Você pode adicionar o argumento ``--depth 1`` ao executar ``git clone`` para "
+"evitar baixar todo o histórico de commits do Django, o que pode reduzir os "
+"dados transferidos de ~250MB para ~70MB."
 
 msgid ""
 "Now that you have a local copy of Django, you can install it just like you "
@@ -307,21 +312,29 @@ msgid ""
 "allows you to keep a separate directory of installed packages for each of "
 "your projects so that they don't interfere with each other."
 msgstr ""
+"Agora que você tem uma cópia local do Django, você pode instalá-lo da mesma "
+"forma que você instalaria qualquer pacote usando ``pip``. A maneira mais "
+"conveniente de fazer isso é usando um *ambiente virtual* que é um recurso "
+"embutido no Python que permite que você mantenha um diretório separado para "
+"os pacotes instalados de cada um dos seus projetos para que uns não "
+"interfiram com os outros."
 
 msgid ""
 "It's a good idea to keep all your virtual environments in one place, for "
 "example in ``.virtualenvs/`` in your home directory."
 msgstr ""
+"É uma boa ideia manter todos os seus virtualenvs em um lugar, por exemplo em "
+"``.virtualenvs/`` no seu diretório pessoal."
 
 msgid "Create a new virtual environment by running:"
-msgstr ""
+msgstr "Crie um novo ambiente virtual executando:"
 
 msgid "The path is where the new environment will be saved on your computer."
 msgstr "O caminho é o local onde o novo ambiente será salvo em seu computador."
 
 msgid ""
 "The final step in setting up your virtual environment is to activate it:"
-msgstr ""
+msgstr "O último passo para configurar o seu ambiente virtual é ativá-lo:"
 
 msgid ""
 "If the ``source`` command is not available, you can try using a dot instead:"
@@ -330,21 +343,32 @@ msgstr ""
 "ponto em vez disso:"
 
 msgid "To activate your virtual environment on Windows, run:"
-msgstr ""
+msgstr "Para ativar seu ambiente virtual no Windows, execute:"
 
 msgid ""
 "You have to activate the virtual environment whenever you open a new "
 "terminal window. virtualenvwrapper__ is a useful tool for making this more "
 "convenient."
 msgstr ""
+"Você precisa ativar o ambiente virtual sempre que abrir uma nova janela do "
+"terminal. virtualenvwrapper__ é uma ferramenta útil para tornar isto mais "
+"conveniente."
 
 msgid ""
 "The name of the currently activated virtual environment is displayed on the "
 "command line to help you keep track of which one you are using. Anything you "
 "install through ``pip`` while this name is displayed will be installed in "
 "that virtual environment, isolated from other environments and system-wide "
-"packages. Go ahead and install the previously cloned copy of Django:"
+"packages."
 msgstr ""
+"O nome do ambiente virtual atualmente ativado é mostrado na linha de comando "
+"para ajudar você a acompanhar qual deles você está usando. Qualquer coisa "
+"que você instalar através do ``pip`` enquanto esse nome é exibido será "
+"instalado nesse ambiente virtual, isolado de outros ambientes e dos pacotes "
+"globais do sistema."
+
+msgid "Go ahead and install the previously cloned copy of Django:"
+msgstr "Vá em frente e instale a cópia anteriormente clonada do Django:"
 
 msgid ""
 "The installed version of Django is now pointing at your local copy. You will "
@@ -372,6 +396,8 @@ msgid ""
 "Before running the test suite, install its dependencies by ``cd``-ing into "
 "the Django ``tests/`` directory and then running:"
 msgstr ""
+"Antes de executar a suíte de testes, instale as dependências entrando no "
+"diretório de testes do Django com o comando ``cd tests/`` e então executando:"
 
 msgid ""
 "If you encounter an error during the installation, your system might be "
@@ -396,6 +422,9 @@ msgid ""
 "and it takes at least a few minutes run, depending on the speed of your "
 "computer."
 msgstr ""
+"Agora, sente-se e relaxe.  A suíte de testes completa do Django tem milhares "
+"de testes e leva pelo menos alguns minutos para executar, dependendo da "
+"velocidade do seu computador."
 
 msgid ""
 "While Django's test suite is running, you'll see a stream of characters "
@@ -612,8 +641,8 @@ msgid "Next we'll be adding the ``make_toast()`` function."
 msgstr ""
 
 msgid ""
-"Navigate to the ``django/`` folder and open the ``shortcuts.py`` file. Add "
-"the bottom, add the function::"
+"Navigate to the ``django/`` folder and open the ``shortcuts.py`` file. At "
+"the bottom, add::"
 msgstr ""
 
 msgid ""
@@ -1806,7 +1835,7 @@ msgid ""
 "isolated Python environments, each with its own copy of the libraries and "
 "package namespace."
 msgstr ""
-"Em geral, essas situações somente vem a tona quando se mantém vários "
+"Em geral, essas situações somente vêm a tona quando se mantém vários "
 "projetos Django. Neste caso, a melhor solução é usar o `virtualenv <https://"
 "virtualenv.pypa.io/>`_. Esta ferramenta permite que você mantenha múltiplos "
 "ambientes Python isolados, cada um com sua própria cópia de bibliotecas e "
@@ -5254,15 +5283,17 @@ msgid ""
 msgstr ""
 "O modelo tag ``{% static %}`` gera a URL absoluta para arquivos estáticos."
 
-msgid ""
-"That's all you need to do for development. Reload ``http://localhost:8000/"
-"polls/`` and you should see that the question links are green (Django "
-"style!) which means that your stylesheet was properly loaded."
+msgid "That's all you need to do for development."
 msgstr ""
-"Isso é tudo que você precisa fazer para o desenvolvimento. Recarregue "
-"`http://localhost:8000/polls/`` e você deve ver que os links das questões "
-"estão verdes (Django style!) isso significa que seu stylesheet foi "
-"corretamente carregado."
+
+msgid "Start the server (or restart it if it's already running):"
+msgstr ""
+
+msgid ""
+"Reload ``http://localhost:8000/polls/`` and you should see that the question "
+"links are green (Django style!) which means that your stylesheet was "
+"properly loaded."
+msgstr ""
 
 msgid "Adding a background-image"
 msgstr "Adicionar uma imagem de fundo"

@@ -8,15 +8,17 @@
 # hj.park <imcreator3@gmail.com>, 2017
 # Noh Seho <iam@sehonoh.kr>, 2018
 # silee9019 <silee9019@gmail.com>, 2015
+# Song M. Kim <songmink@hawaii.edu>, 2018
 # yangbeom <yangbeomsu@gmail.com>, 2016
+# Yongjin Jo <wnrhd114@gmail.com>, 2018
 # Yoon Kim, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-31 05:24-0500\n"
-"PO-Revision-Date: 2018-08-24 13:32+0000\n"
-"Last-Translator: Noh Seho <iam@sehonoh.kr>\n"
+"POT-Creation-Date: 2019-01-11 20:28-0600\n"
+"PO-Revision-Date: 2018-12-14 05:55+0000\n"
+"Last-Translator: Yongjin Jo <wnrhd114@gmail.com>\n"
 "Language-Team: Korean (http://www.transifex.com/django/django-docs/language/"
 "ko/)\n"
 "MIME-Version: 1.0\n"
@@ -191,6 +193,13 @@ msgid ""
 "and after successful authentication, the application is supposed to maintain "
 "the authenticated session itself."
 msgstr ""
+"인증 미들웨어인 \"RemoteUserMiddleware\"는 HTTP 요청 헤더인 \"REMOTE_USER"
+"\"가 모든 인증된 요청과 함께 존재한다는 것을 가정합니다. 이것은 Basic HTTP "
+"Auth가 \"htpasswd\" 또는 기타 간단한 메커니즘들과 함께일 때 기대거나 실용적이"
+"지만,  Negotiate (GSSAPI / Kerberos) 또는 기타 자원 집약적인 인증 방법과 함"
+"께 일 때는, 프런트 엔드 HTTP 서버에서의 인증은 일반적으로 하나 또는 몇 개의 "
+"로그인 URL을 설정해야하고, 인증이 성공하면 응용 프로그램은 인증된 세션 자체"
+"가 유지 관리된다라는 조건이여야합니다."
 
 msgid ""
 ":class:`~django.contrib.auth.middleware.PersistentRemoteUserMiddleware` "
@@ -199,6 +208,11 @@ msgid ""
 "in replacement of :class:`~django.contrib.auth.middleware."
 "RemoteUserMiddleware` in the documentation above."
 msgstr ""
+":class:`~django.contrib.auth.middleware.PersistentRemoteUserMiddleware`는 사"
+"용 사례에 대한 지원을 제공합니다. 이것은 사용자에 의하여 명시적으로 로그아웃"
+"할 때까지 인증된 세션을 유지 관리할 것 입니다. 이 클래스는 위의 문서에서 :"
+"class:`~django.contrib.auth.middleware.RemoteUserMiddleware` 일시 대체품으로 "
+"사용되어질 수 있습니다. "
 
 msgid "Writing a custom storage system"
 msgstr "커스텀 저장 시스템 작성하기"
@@ -208,6 +222,9 @@ msgid ""
 "files on some remote system -- you can do so by defining a custom storage "
 "class. You'll need to follow these steps:"
 msgstr ""
+"만일 사용자 정의 파일 스토리지를 제공하고자 하는 경우 -- 흔한 예로 원격 시스"
+"템에 파일을 저장할 때 -- 사용자 정의 스토리지 클래스를 정의하면 됩니다. 다음 "
+"단계들을 진행해주세요."
 
 msgid ""
 "Your custom storage system must be a subclass of ``django.core.files.storage."
@@ -1675,7 +1692,7 @@ msgid ""
 msgstr ""
 
 msgid "Converting field data for serialization"
-msgstr ""
+msgstr "직렬화를 위한 필드 데이터 변환"
 
 msgid ""
 "To customize how the values are serialized by a serializer, you can "
@@ -1686,7 +1703,7 @@ msgid ""
 msgstr ""
 
 msgid "Some general advice"
-msgstr ""
+msgstr "일반적인 조언"
 
 msgid ""
 "Writing a custom field can be a tricky process, particularly if you're doing "
@@ -1712,7 +1729,7 @@ msgid ""
 msgstr ""
 
 msgid "Writing a ``FileField`` subclass"
-msgstr ""
+msgstr "``FileField``의 하위 클래스 작성"
 
 msgid ""
 "In addition to the above methods, fields that deal with files have a few "
@@ -1737,7 +1754,7 @@ msgid ""
 msgstr ""
 
 msgid "A few suggestions"
-msgstr ""
+msgstr "몇 가지 제안들"
 
 msgid ""
 "In addition to the above details, there are a few guidelines which can "
@@ -1760,7 +1777,7 @@ msgid ""
 msgstr ""
 
 msgid "Custom template tags and filters"
-msgstr ""
+msgstr "사용자 정의 템플릿 태그와 필터"
 
 msgid ""
 "Django's template language comes with a wide variety of :doc:`built-in tags "
@@ -1773,7 +1790,7 @@ msgid ""
 msgstr ""
 
 msgid "Code layout"
-msgstr ""
+msgstr "코드 레이아웃"
 
 msgid ""
 "The most common place to specify custom template tags and filters is inside "
@@ -1792,7 +1809,7 @@ msgid ""
 msgstr ""
 
 msgid "Development server won't automatically restart"
-msgstr ""
+msgstr "개발 서버는 자동으로 다시 시작되지 않습니다"
 
 msgid ""
 "After adding the ``templatetags``  module, you will need to restart your "
@@ -1972,7 +1989,7 @@ msgid ""
 msgstr ""
 
 msgid "Template filter code falls into one of two situations:"
-msgstr ""
+msgstr "템플릿 필터 코드 두 가지 상황 중 하나에 속합니다:"
 
 msgid ""
 "Your filter does not introduce any HTML-unsafe characters (``<``, ``>``, "
@@ -3171,21 +3188,9 @@ msgid ""
 "Django includes default views and templates for several HTTP error codes. "
 "You may want to override the default templates by creating the following "
 "templates in your root template directory: ``404.html``, ``500.html``, ``403."
-"html``, and ``400.html``. The default views should suffice for 99% of Web "
-"applications, but if you desire to customize them, see these instructions "
-"which also contain details about the default templates:"
-msgstr ""
-
-msgid ":ref:`http_not_found_view`"
-msgstr ""
-
-msgid ":ref:`http_internal_server_error_view`"
-msgstr ""
-
-msgid ":ref:`http_forbidden_view`"
-msgstr ""
-
-msgid ":ref:`http_bad_request_view`"
+"html``, and ``400.html``. The :ref:`default error views <error-views>` that "
+"use these templates should suffice for 99% of Web applications, but you can :"
+"ref:`customize them <customizing-error-views>` as well."
 msgstr ""
 
 msgid "Deploying Django"
@@ -4454,6 +4459,11 @@ msgid ""
 "APP_DIRS>`."
 msgstr ""
 
+msgid ""
+"Read :ref:`overriding-built-in-widget-templates` if you're looking to do "
+"that."
+msgstr ""
+
 msgid "Overriding from the project's templates directory"
 msgstr ""
 
@@ -5161,6 +5171,9 @@ msgid ""
 "`allow_migrate()` method of database routers as ``**hints``:"
 msgstr ""
 
+msgid "myapp/dbrouters.py"
+msgstr ""
+
 msgid "Then, to leverage this in your migrations, do the following::"
 msgstr ""
 
@@ -5210,9 +5223,15 @@ msgid ""
 "``AlterField``, and add imports of ``uuid`` and ``models``. For example:"
 msgstr ""
 
+msgid "0006_remove_uuid_null.py"
+msgstr ""
+
 msgid ""
 "Edit the first migration file. The generated migration class should look "
 "similar to this:"
+msgstr ""
+
+msgid "0004_add_uuid_field.py"
 msgstr ""
 
 msgid ""
@@ -5226,6 +5245,9 @@ msgid ""
 "operations.RunPython` or :class:`~django.db.migrations.operations.RunSQL` "
 "operation to generate a unique value (UUID in the example) for each existing "
 "row. Also add an import of ``uuid``. For example:"
+msgstr ""
+
+msgid "0005_populate_uuid_values.py"
 msgstr ""
 
 msgid ""
@@ -5264,7 +5286,10 @@ msgstr ""
 
 msgid ""
 "The ``atomic`` attribute doesn't have an effect on databases that don't "
-"support DDL transactions (e.g. MySQL, Oracle)."
+"support DDL transactions (e.g. MySQL, Oracle). (MySQL's `atomic DDL "
+"statement support <https://dev.mysql.com/doc/refman/en/atomic-ddl.html>`_ "
+"refers to individual statements rather than multiple statements wrapped in a "
+"transaction that can be rolled back.)"
 msgstr ""
 
 msgid "Controlling the order of migrations"
@@ -5323,6 +5348,9 @@ msgid ""
 msgstr ""
 
 msgid "Here's a sample migration:"
+msgstr ""
+
+msgid "myapp/migrations/0124_move_old_app_to_new_app.py"
 msgstr ""
 
 msgid ""
