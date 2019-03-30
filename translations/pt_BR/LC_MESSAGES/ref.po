@@ -6,6 +6,7 @@
 # amcorreia <mutley.sandro@gmail.com>, 2016
 # andrewsmedina <andrewsmedina@gmail.com>, 2016
 # beatorizu <betrizaf@gmail.com>, 2016
+# Bruce de Sá <contato@publidex.com.br>, 2019
 # Bruno Barbosa <bsbruno1@gmail.com>, 2016
 # cacarrara <caiocarrara@gmail.com>, 2016
 # Carlos Leite <caduado@gmail.com>, 2016-2017
@@ -35,8 +36,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-11 20:28-0600\n"
-"PO-Revision-Date: 2019-01-12 13:23+0000\n"
+"POT-Creation-Date: 2019-03-21 11:30-0500\n"
+"PO-Revision-Date: 2019-02-26 02:09+0000\n"
 "Last-Translator: Ramiro Morales\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
@@ -19611,7 +19612,7 @@ msgid ""
 msgstr ""
 
 msgid "Some examples::"
-msgstr ""
+msgstr "Alguns exemplos::"
 
 msgid ""
 "A field which accepts JSON encoded data for an :class:`~django.contrib."
@@ -31361,7 +31362,7 @@ msgid ""
 msgstr ""
 
 msgid "Conditional Expressions"
-msgstr ""
+msgstr "Expressões Condicionais"
 
 msgid ""
 "Conditional expressions let you use :keyword:`if` ... :keyword:`elif` ... :"
@@ -31372,10 +31373,10 @@ msgid ""
 msgstr ""
 
 msgid "The conditional expression classes"
-msgstr ""
+msgstr "As classes de expressão condicional"
 
 msgid "We'll be using the following model in the subsequent examples::"
-msgstr ""
+msgstr "Nós estaremos usando o seguinte modelo nos exemplos subsequentes::"
 
 msgid "``When``"
 msgstr ""
@@ -31388,9 +31389,15 @@ msgid ""
 "class:`~django.db.models.Q` objects. The result is provided using the "
 "``then`` keyword."
 msgstr ""
+"O objeto ``When()`` é usado para encapsular uma condição e seu resultado "
+"para uso em uma expressão condicional. Usar o objecto ``When()`` é similar "
+"ao uso do método :meth:`~django.db.models.query.QuerySet.filter`.  A "
+"condição pode ser especificada usando :ref:`field lookups <field-lookups>` "
+"ou objetos :class:`~django.db.models.Q`. O resultado é retornado usando a "
+"palavra-chave ``then``."
 
 msgid "Keep in mind that each of these values can be an expression."
-msgstr ""
+msgstr "Tenha em mente que cada um desses valores pode ser uma expressão."
 
 msgid ""
 "Since the ``then`` keyword argument is reserved for the result of the "
@@ -31410,7 +31417,7 @@ msgid ""
 msgstr ""
 
 msgid "A simple example::"
-msgstr ""
+msgstr "Um exemplo simples::"
 
 msgid ""
 "``Case()`` accepts any number of ``When()`` objects as individual arguments. "
@@ -31439,25 +31446,31 @@ msgid ""
 msgstr ""
 
 msgid "Advanced queries"
-msgstr ""
+msgstr "Queries avançadas"
 
 msgid ""
 "Conditional expressions can be used in annotations, aggregations, lookups, "
 "and updates. They can also be combined and nested with other expressions. "
 "This allows you to make powerful conditional queries."
 msgstr ""
+"Expressões condicionais podem ser usadas em anotações, agregações, consultas "
+"e atualizações. Eles também podem ser combinados e aninhados com outras "
+"expressões. Isso permite que você faça consultas condicionais poderosas."
 
 msgid "Conditional update"
-msgstr ""
+msgstr "Atualização condicional"
 
 msgid ""
 "Let's say we want to change the ``account_type`` for our clients to match "
 "their registration dates. We can do this using a conditional expression and "
 "the :meth:`~django.db.models.query.QuerySet.update` method::"
 msgstr ""
+"Digamos que queremos mudar o ``account_type`` dos nossos clientes que "
+"correspondam às datas de registro. Podemos fazer isso usando uma expressão "
+"condicional e o método :meth:`~django.db.models.query.QuerySet.update`::"
 
 msgid "Conditional aggregation"
-msgstr ""
+msgstr "Agregação condicional"
 
 msgid ""
 "What if we want to find out how many clients there are for each "
@@ -32766,10 +32779,10 @@ msgid ""
 msgstr ""
 
 msgid "You can query using ``NOT EXISTS`` with ``~Exists()``."
-msgstr ""
+msgstr "Você pode consultar usando ``NOT EXISTS`` com ``~Exists()``."
 
 msgid "Filtering on a ``Subquery`` expression"
-msgstr ""
+msgstr "Filtrando em uma expressão ``Subquery``"
 
 msgid ""
 "It's not possible to filter directly using ``Subquery`` and ``Exists``, e."
@@ -32782,7 +32795,7 @@ msgid ""
 msgstr ""
 
 msgid "Using aggregates within a ``Subquery`` expression"
-msgstr ""
+msgstr "Usando agregações com uma expressão ``Subquery``"
 
 msgid ""
 "Aggregates may be used within a ``Subquery``, but they require a specific "
@@ -34663,11 +34676,10 @@ msgid ""
 "the many-to-many relationship. By default, this table name is generated "
 "using the name of the many-to-many field and the name of the table for the "
 "model that contains it. Since some databases don't support table names above "
-"a certain length, these table names will be automatically truncated to 64 "
-"characters and a uniqueness hash will be used. This means you might see "
-"table names like ``author_books_9cdf4``; this is perfectly normal.  You can "
-"manually provide the name of the join table using the :attr:"
-"`~ManyToManyField.db_table` option."
+"a certain length, these table names will be automatically truncated and a "
+"uniqueness hash will be used, e.g. ``author_books_9cdf``. You can manually "
+"provide the name of the join table using the :attr:`~ManyToManyField."
+"db_table` option."
 msgstr ""
 
 msgid ""

@@ -9,6 +9,7 @@
 # andrewsmedina <andrewsmedina@gmail.com>, 2016-2017
 # Arthur Silva <arxdsilva@gmail.com>, 2016
 # Augusto Rocha Nascimento <augusto@khoder.com.br>, 2016
+# Bruce de Sá <contato@publidex.com.br>, 2019
 # Carlos Leite <caduado@gmail.com>, 2016
 # Carlos Leite <caduado@gmail.com>, 2014,2016
 # Carlos Schneider <carlosaschjr@gmail.com>, 2016
@@ -16,6 +17,7 @@
 # Filipe Cifali Stangler <cifali.filipe@gmail.com>, 2016
 # hoisel <danielhoisel@gmail.com>, 2014
 # Eduardo Henrique da S. Freitas <eduardohitek@gmail.com>, 2015
+# Felipe Araújo Nunes de Lima <filipizaum@gmail.com>, 2019
 # Fernandes Macedo <masedos@gmail.com>, 2016
 # Gilson Filho <me@gilsondev.in>, 2016
 # Guilherme Ferreira <guilherme@uft.edu.br>, 2014
@@ -44,9 +46,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-11 20:28-0600\n"
-"PO-Revision-Date: 2019-01-18 19:32+0000\n"
-"Last-Translator: Gustavo de Carvalho Sales <gt.salles@gmail.com>\n"
+"POT-Creation-Date: 2019-03-21 11:30-0500\n"
+"PO-Revision-Date: 2019-03-20 15:06+0000\n"
+"Last-Translator: Felipe Araújo Nunes de Lima <filipizaum@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -7131,6 +7133,10 @@ msgid ""
 "`PYTHONWARNINGS` environment variable. For example, to show warnings while "
 "running tests:"
 msgstr ""
+"Em Python, avisos de código obsoleto são silenciados por padrão. Você deve "
+"ativá-los usando a opção de linha de comando Python ``-Wa``, ou então a "
+"variável de ambiente :envvar:`PYTHONWARNINGS`. Por exemplo, para exibir "
+"alerta durante a execução de testes:"
 
 msgid ""
 "If you're not using the Django test runner, you may need to also ensure that "
@@ -7593,6 +7599,11 @@ msgid ""
 "refers to individual statements rather than multiple statements wrapped in a "
 "transaction that can be rolled back.)"
 msgstr ""
+"O atributo ``atomic`` não tem nenhum efeito em bancos de dados que não "
+"suportam transações DDL (ex. MySQL, Oracle). (`O suporte para transações DDL "
+"atômicas <https://dev.mysql.com/doc/refman/en/atomic-ddl.html>`_  do MySQL  "
+"refere-se a instruções individuais, em vez de várias instruções envolvidas "
+"em uma transação que pode ser revertida.)"
 
 msgid "Controlling the order of migrations"
 msgstr "Controlando a ordem das migrações"

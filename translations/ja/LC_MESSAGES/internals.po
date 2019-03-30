@@ -4,18 +4,19 @@
 #
 # Translators:
 # Eiichi Sugiyama <barcarunrunbiscabarca@gmail.com>, 2018
+# KZ <kzt206@gmail.com>, 2019
 # matsuand, 2018
-# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2017
-# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016
+# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2017
+# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016
 # Takashi Sugawara <aimaimokomoko@gmail.com>, 2018
 # T N <takninnovationresearch@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-16 16:30-0600\n"
-"PO-Revision-Date: 2018-10-26 10:50+0000\n"
-"Last-Translator: matsuand\n"
+"POT-Creation-Date: 2019-03-21 11:30-0500\n"
+"PO-Revision-Date: 2019-02-19 14:27+0000\n"
+"Last-Translator: KZ <kzt206@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -49,11 +50,15 @@ msgid ""
 "Check that someone hasn't already filed the bug or feature request by "
 "`searching`_ or running `custom queries`_ in the ticket tracker."
 msgstr ""
+"ticket tracker で、`searching`_または`custom queries`を動かすことで、ほかの人"
+"がバグや機能のリクエストをファイルしていないことを確認してください。"
 
 msgid ""
 "Don't use the ticket system to ask support questions. Use the |django-users| "
 "list or the `#django`_ IRC channel for that."
 msgstr ""
+"ticketシステムをサポート問い合わせに使用しないでください。django-users リス"
+"ト、もしくはIRCチャンネルにて#djangoを使用してください。"
 
 msgid ""
 "Don't reopen issues that have been marked \"wontfix\" without finding "
@@ -107,6 +112,8 @@ msgid ""
 "To understand the lifecycle of your ticket once you have created it, refer "
 "to :doc:`triaging-tickets`."
 msgstr ""
+"以前に作成されたticketのライフサイクルを理解するため、ドキュメントのtriaging-"
+"tiketsを参照してください。"
 
 msgid "Reporting user interface bugs and features"
 msgstr "UIのバグもしくは機能について報告する"
@@ -199,7 +206,7 @@ msgid "See also: :ref:`documenting-new-features`."
 msgstr ""
 
 msgid "How we make decisions"
-msgstr ""
+msgstr "どのように決定が下されるか"
 
 msgid ""
 "Whenever possible, we strive for a rough consensus. To that end, we'll often "
@@ -5933,8 +5940,8 @@ msgid ""
 "branch and rebase it on the branch you are about to merge it into (``git "
 "checkout security/1.5.x; git rebase stable/1.5.x``) and then switch back and "
 "do the merge. Make sure the commit message for each security fix explains "
-"that the commit is a security fix and that an announcement will follow "
-"(`example security commit`__)."
+"that the commit is a security fix and that an announcement will follow (:"
+"commit:`example security commit <bf39978a53f117ca02e9a0c78b76664a41a54745>`)."
 msgstr ""
 
 msgid ""

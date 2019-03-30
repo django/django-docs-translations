@@ -8,13 +8,14 @@
 # Kamil Pluciński <kamil.plucinski97@gmail.com>, 2018
 # m_aciek <maciej.olko@gmail.com>, 2016-2018
 # Piotr Muskalski <piotr.muskalski@gmail.com>, 2018
+# Stefan Ocetkiewicz <stefan.ocetkiewicz@gmail.com>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-11 20:28-0600\n"
-"PO-Revision-Date: 2019-01-07 18:58+0000\n"
-"Last-Translator: Jakub Komosa <inbox@jakubkomosa.pl>\n"
+"POT-Creation-Date: 2019-03-21 11:30-0500\n"
+"PO-Revision-Date: 2019-03-29 15:43+0000\n"
+"Last-Translator: Stefan Ocetkiewicz <stefan.ocetkiewicz@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/django/django-docs/language/"
 "pl/)\n"
 "MIME-Version: 1.0\n"
@@ -5128,6 +5129,9 @@ msgid ""
 "To install pip on your machine, go to https://pip.pypa.io/en/latest/"
 "installing/, and follow the ``Installing with get-pip.py`` instructions."
 msgstr ""
+"Aby zainstalować pip na waszym komputerze, przejdźcie pod adres https://pip."
+"pypa.io/en/latest/installing/ i zapoznajcie się z instrukcjami dostępnymi "
+"pod hasłem \"Installing with get-pip.py\"."
 
 msgid "Install ``virtualenv`` and ``virtualenvwrapper``"
 msgstr ""
@@ -5154,6 +5158,8 @@ msgstr "Instaluj Django"
 msgid ""
 "Django can be installed easily using ``pip`` within your virtual environment."
 msgstr ""
+"Django można łatwo zainstalować, używając polecenia ``pip`` wewnątrz waszego "
+"środowiska wirtualnego."
 
 msgid ""
 "In the command prompt, ensure your virtual environment is active, and "
@@ -5167,6 +5173,8 @@ msgid ""
 "After the installation has completed, you can verify your Django "
 "installation by executing ``django-admin --version`` in the command prompt."
 msgstr ""
+"Po zakończeniu instalacji możecie zweryfikować zainstalowane Django "
+"wykonując komendę ``django-admin --version`` w wierszu polecenia."
 
 msgid ""
 "See :ref:`database-installation` for information on database installation "
@@ -5220,7 +5228,7 @@ msgid ""
 msgstr ""
 
 msgid "myapp/dbrouters.py"
-msgstr ""
+msgstr "myapp/dbrouters.py"
 
 msgid "Then, to leverage this in your migrations, do the following::"
 msgstr ""
@@ -5272,7 +5280,7 @@ msgid ""
 msgstr ""
 
 msgid "0006_remove_uuid_null.py"
-msgstr ""
+msgstr "0006_remove_uuid_null.py"
 
 msgid ""
 "Edit the first migration file. The generated migration class should look "
@@ -5280,7 +5288,7 @@ msgid ""
 msgstr ""
 
 msgid "0004_add_uuid_field.py"
-msgstr ""
+msgstr "0004_add_uuid_field.py"
 
 msgid ""
 "Change ``unique=True`` to ``null=True`` -- this will create the intermediary "
@@ -5296,7 +5304,7 @@ msgid ""
 msgstr ""
 
 msgid "0005_populate_uuid_values.py"
-msgstr ""
+msgstr "0005_populate_uuid_values.py"
 
 msgid ""
 "Now you can apply the migrations as usual with the :djadmin:`migrate` "
@@ -5341,7 +5349,7 @@ msgid ""
 msgstr ""
 
 msgid "Controlling the order of migrations"
-msgstr ""
+msgstr "Kontrolowanie kolejności migracji"
 
 msgid ""
 "Django determines the order in which migrations should be applied not by the "

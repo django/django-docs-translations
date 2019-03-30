@@ -3,16 +3,17 @@
 # This file is distributed under the same license as the Django package.
 #
 # Translators:
+# G Vr <vrg@scita.gr>, 2019
 # Nick Mavrakis <mavrakis.n@gmail.com>, 2016-2017
 # Nick Mavrakis <mavrakis.n@gmail.com>, 2016
-# George M, 2017
+# 437c9d6e19936ed69f57bed9e0fe4716, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-11 11:30-0500\n"
-"PO-Revision-Date: 2018-10-04 01:15+0000\n"
-"Last-Translator: Nick Mavrakis <mavrakis.n@gmail.com>\n"
+"POT-Creation-Date: 2019-03-21 11:30-0500\n"
+"PO-Revision-Date: 2019-03-22 02:02+0000\n"
+"Last-Translator: Ramiro Morales\n"
 "Language-Team: Greek (http://www.transifex.com/django/django-docs/language/"
 "el/)\n"
 "MIME-Version: 1.0\n"
@@ -263,6 +264,11 @@ msgid ""
 "allows you to keep a separate directory of installed packages for each of "
 "your projects so that they don't interfere with each other."
 msgstr ""
+"Τώρα που έχετε ένα τοπικό αντίγραφο του Django, μπορείτε να το εγκαταστήσετε "
+"με το ``pip``, όπως θα εγκαθιστούσατε οποιοδήποτε άλλο πακέτο. ;Ένας καλός "
+"τρόπος είναι η δημιουργία *virtual environment* (απομονωμένο περιβάλλον "
+"εργασίας), που θα σας επιτρέψει να έχετε ένα χωριστό φάκελο με τα απαραίτητα "
+"πακέτα για κάθε πρότζεκτ σας."
 
 msgid ""
 "It's a good idea to keep all your virtual environments in one place, for "
@@ -300,7 +306,10 @@ msgid ""
 "command line to help you keep track of which one you are using. Anything you "
 "install through ``pip`` while this name is displayed will be installed in "
 "that virtual environment, isolated from other environments and system-wide "
-"packages. Go ahead and install the previously cloned copy of Django:"
+"packages."
+msgstr ""
+
+msgid "Go ahead and install the previously cloned copy of Django:"
 msgstr ""
 
 msgid ""
@@ -593,8 +602,8 @@ msgid "Next we'll be adding the ``make_toast()`` function."
 msgstr ""
 
 msgid ""
-"Navigate to the ``django/`` folder and open the ``shortcuts.py`` file. Add "
-"the bottom, add the function::"
+"Navigate to the ``django/`` folder and open the ``shortcuts.py`` file. At "
+"the bottom, add::"
 msgstr ""
 
 msgid ""
@@ -1751,7 +1760,8 @@ msgstr ""
 
 msgid ""
 "For more information on packaging, see Python's `Tutorial on Packaging and "
-"Distributing Projects <https://packaging.python.org/distributing/>`_."
+"Distributing Projects <https://packaging.python.org/tutorials/packaging-"
+"projects/>`_."
 msgstr ""
 
 msgid "Using your own package"
@@ -1832,8 +1842,8 @@ msgstr "Να ανεβάσετε το package στην ιστοσελίδα σα�
 msgid ""
 "Post the package on a public repository, such as `the Python Package Index "
 "(PyPI)`_. `packaging.python.org <https://packaging.python.org>`_ has `a good "
-"tutorial <https://packaging.python.org/distributing/#uploading-your-project-"
-"to-pypi>`_ for doing this."
+"tutorial <https://packaging.python.org/tutorials/packaging-projects/"
+"#uploading-the-distribution-archives>`_ for doing this."
 msgstr ""
 
 msgid "Installing Python packages with virtualenv"
@@ -5593,15 +5603,17 @@ msgid ""
 msgstr ""
 "Το template tag ``{% static %}`` παράγει το absolute URL των static files."
 
-msgid ""
-"That's all you need to do for development. Reload ``http://localhost:8000/"
-"polls/`` and you should see that the question links are green (Django "
-"style!) which means that your stylesheet was properly loaded."
+msgid "That's all you need to do for development."
 msgstr ""
-"Αυτό χρειάζεστε, μόνο, για το development. Ανανεώστε τη σελίδα ``http://"
-"localhost:8000/polls/`` και θα δείτε ότι τα question links είναι πράσινα "
-"(στυλ Django!), που σημαίνει ότι το stylesheet φορτώθηκε και διαβάστηκε "
-"επιτυχώς."
+
+msgid "Start the server (or restart it if it's already running):"
+msgstr ""
+
+msgid ""
+"Reload ``http://localhost:8000/polls/`` and you should see that the question "
+"links are green (Django style!) which means that your stylesheet was "
+"properly loaded."
+msgstr ""
 
 msgid "Adding a background-image"
 msgstr "Προσθέτοντας μια background-image"

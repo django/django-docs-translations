@@ -6,7 +6,8 @@
 # Adrien Brunet <abrunet@centrale-marseille.fr>, 2017
 # annoa <annoa.b@gmail.com>, 2014,2016
 # Baptiste Mispelon <bmispelon@gmail.com>, 2014
-# Claude Paroz <claude@2xlibre.net>, 2013-2018
+# Claude Paroz <claude@2xlibre.net>, 2013-2019
+# Laville Augustin <augustin.laville@gustavi.net>, 2019
 # b0d756377bb6551ae3df331b1e178e59, 2013
 # Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014-2015
 # Sam Stewart <sam@sapient.com.au>, 2013
@@ -16,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-11 20:28-0600\n"
-"PO-Revision-Date: 2018-12-25 09:41+0000\n"
+"POT-Creation-Date: 2019-03-21 11:30-0500\n"
+"PO-Revision-Date: 2019-03-02 14:13+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/"
 "fr/)\n"
@@ -225,12 +226,12 @@ msgstr ""
 msgid ""
 "The ``get_user`` method takes a ``user_id`` -- which could be a username, "
 "database ID or whatever, but has to be the primary key of your user object "
-"-- and returns a user object."
+"-- and returns a user object or ``None``."
 msgstr ""
 "La méthode ``get_user`` accepte un paramètre ``user_id``, qui peut être un "
 "nom d'utilisateur, un identifiant de base de données ou toute autre valeur, "
 "mais qui doit représenter la clé primaire de votre objet utilisateur. Elle "
-"renvoie un objet utilisateur."
+"renvoie un objet utilisateur ou ``None``."
 
 msgid ""
 "The ``authenticate`` method takes a ``request`` argument and credentials as "
@@ -3958,6 +3959,9 @@ msgstr "Limitation des tentatives de connexion"
 
 msgid "Authentication against third-parties (OAuth, for example)"
 msgstr "Authentification à des services externes (OAuth, par exemple)"
+
+msgid "Object-level permissions"
+msgstr "Permissions au niveau des objets"
 
 msgid "Installation"
 msgstr "Installation"
@@ -14713,11 +14717,11 @@ msgstr ""
 "stockés en base de données),"
 
 msgid ""
-"three ``Permission`` for each model (including those not stored in that "
+"the ``Permission``\\s for each model (including those not stored in that "
 "database)."
 msgstr ""
-"trois objets ``Permission`` pour chaque modèle (y compris ceux qui ne sont "
-"pas stockés en base de données)."
+"les ``Permission`` pour chaque modèle (y compris ceux qui ne sont pas "
+"stockés en base de données)."
 
 msgid ""
 "For common setups with multiple databases, it isn't useful to have these "
@@ -33036,11 +33040,9 @@ msgstr ""
 "d'un environnement virtualenv."
 
 msgid ""
-"After you've created and activated a virtual environment, enter the command "
-"``pip install Django`` at the shell prompt."
+"After you've created and activated a virtual environment, enter the command:"
 msgstr ""
-"Après avoir créé et activé un environnement virtuel, saisissez la commande "
-"``pip install Django`` dans le terminal."
+"Après avoir créé et activé un environnement virtuel, entrez la commande :"
 
 msgid "Installing a distribution-specific package"
 msgstr "Installation d'un paquet de la distribution"

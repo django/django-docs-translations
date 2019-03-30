@@ -5,7 +5,7 @@
 # Translators:
 # Laville Augustin <augustin.laville@gustavi.net>, 2014,2016
 # Christophe CHAUVET <christophe.chauvet@gmail.com>, 2013
-# Claude Paroz <claude@2xlibre.net>, 2014-2018
+# Claude Paroz <claude@2xlibre.net>, 2014-2019
 # Laurent Paoletti <lp@providenz.fr>, 2014
 # Mathieu Dupuy <deronnax@gmail.com>, 2014
 # mlorant <maxime.lorant@gmail.com>, 2014-2015
@@ -13,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-16 16:30-0600\n"
-"PO-Revision-Date: 2018-11-17 14:01+0000\n"
-"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
+"POT-Creation-Date: 2019-03-21 11:30-0500\n"
+"PO-Revision-Date: 2019-02-02 01:45+0000\n"
+"Last-Translator: Ramiro Morales\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/"
 "fr/)\n"
 "MIME-Version: 1.0\n"
@@ -408,6 +408,10 @@ msgid ""
 "request builders that doesn't run automatically, such as Oracle or Selenium. "
 "See the `Jenkins wiki page`_ for instructions."
 msgstr ""
+"Il peut être souhaitable de demander à Jenkins de tester la requête de "
+"contribution à l'aide d'un des constructeurs qui ne se lance pas "
+"automatiquement, tel que Oracle ou Selenium. Voir la `page de Wiki de "
+"Jenkins`_ pour plus d'instructions."
 
 msgid ""
 "An easy way to checkout a pull request locally is to add an alias to your "
@@ -949,6 +953,8 @@ msgid ""
 "Open a ticket in Django's ticket system, set its ``Component`` field to "
 "``Translations``, and attach the patch to it."
 msgstr ""
+"Ouvrez un ticket dans le système des tickets Django, définissez le champ "
+"``Component`` à ``Translations`` et joignez-y le correctif."
 
 msgid "Documentation"
 msgstr "Documentation"
@@ -1055,12 +1061,19 @@ msgid ""
 "suggest a documentation patch! See also the guide on :doc:`writing-"
 "documentation`."
 msgstr ""
+"La documentation de Django est bien faite mais elle peut toujours être "
+"améliorée. Avez-vous trouvé une faute d'orthographe ? Pensez-vous que "
+"quelque chose devrait être clarifié ? Lancez-vous et proposez un correctif "
+"de la documentation ! Voir aussi le guide sur :doc:`writing-documentation`."
 
 msgid ""
 "The `reports page`_ contains links to many useful Trac queries, including "
 "several that are useful for triaging tickets and reviewing patches as "
 "suggested above."
 msgstr ""
+"La `page des rapports`_ contient des liens vers de nombreuses requêtes Trac "
+"utiles, y compris certaines orientées sur le triage des tickets et la "
+"relecture de correctifs comme suggéré ci-dessus."
 
 msgid "Guidelines"
 msgstr "Lignes de conduite"
@@ -6730,8 +6743,8 @@ msgid ""
 "branch and rebase it on the branch you are about to merge it into (``git "
 "checkout security/1.5.x; git rebase stable/1.5.x``) and then switch back and "
 "do the merge. Make sure the commit message for each security fix explains "
-"that the commit is a security fix and that an announcement will follow "
-"(`example security commit`__)."
+"that the commit is a security fix and that an announcement will follow (:"
+"commit:`example security commit <bf39978a53f117ca02e9a0c78b76664a41a54745>`)."
 msgstr ""
 
 msgid ""

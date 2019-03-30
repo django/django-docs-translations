@@ -6,22 +6,23 @@
 # amcorreia <mutley.sandro@gmail.com>, 2016
 # Carlos Leite <caduado@gmail.com>, 2016-2017
 # Carlos Leite <caduado@gmail.com>, 2016
-# Claudio Rogerio <excriptbrasil@gmail.com>, 2017
+# Claudio Rogerio, 2017
 # Edson Heneman <ehenemann@gmail.com>, 2016
 # Gilson Filho <me@gilsondev.in>, 2016
 # Gustavo Fonseca <gustavofonsecamail@gmail.com>, 2017
+# Humberto Rayashi <rayashi@gmail.com>, 2019
 # Jessica Temporal, 2016
 # Lucas Infante <maccinza@gmail.com>, 2014
-# Otávio Reis Perkles <otaviocha@gmail.com>, 2018
+# Otávio Reis <otaviocha@gmail.com>, 2018
 # Raphael Mendonça, 2016
 # Welington Carlos <wcarlos3@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-08 19:30-0500\n"
-"PO-Revision-Date: 2018-08-02 01:43+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2019-03-21 11:30-0500\n"
+"PO-Revision-Date: 2019-02-19 11:19+0000\n"
+"Last-Translator: Humberto Rayashi <rayashi@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -2170,7 +2171,7 @@ msgid "Use four space hanging indentation rather than vertical alignment::"
 msgstr ""
 
 msgid "Instead of::"
-msgstr ""
+msgstr "Ao invés de::"
 
 msgid ""
 "This makes better use of space and avoids having to realign strings if the "
@@ -2290,6 +2291,9 @@ msgstr ""
 msgid "For example (comments are for explanatory purposes only):"
 msgstr ""
 "Por exemplo (os comentários existem somente para propósitos de explicação):"
+
+msgid "django/contrib/admin/example.py"
+msgstr ""
 
 msgid "Use convenience imports whenever available. For example, do this::"
 msgstr ""
@@ -3356,7 +3360,7 @@ msgstr ""
 "problemas comuns."
 
 msgid "Running tests using ``tox``"
-msgstr ""
+msgstr "Executando testes usando ``tox``"
 
 msgid ""
 "`Tox <https://tox.readthedocs.io/>`_ is a tool for running tests in "
@@ -3408,7 +3412,7 @@ msgid ""
 msgstr ""
 
 msgid "Running the JavaScript tests"
-msgstr ""
+msgstr "Executando os testes JavaScript"
 
 msgid ""
 "Django includes a set of :ref:`JavaScript unit tests <javascript-tests>` for "
@@ -3929,6 +3933,9 @@ msgstr ""
 "instâncias de :func:`~django.test.utils.isolate_apps` estão corretamente "
 "instalados, você deve passar a definição dos ``app_label`` alvo como "
 "argumentos:"
+
+msgid "tests/app_label/tests.py"
+msgstr ""
 
 msgid "The decorator can also be applied to classes::"
 msgstr "O decorador pode também ser aplicado a classes::"
@@ -4518,7 +4525,7 @@ msgstr ""
 "formatos."
 
 msgid "To build the documentation locally, install Sphinx:"
-msgstr ""
+msgstr "Para construir a documentação localmente, instale Sphinx:"
 
 msgid "Then from the ``docs`` directory, build the HTML:"
 msgstr ""
@@ -4903,7 +4910,7 @@ msgid "with this one::"
 msgstr ""
 
 msgid "Notice two things:"
-msgstr ""
+msgstr "Note duas coisas:"
 
 msgid ""
 "You usually will replace occurrences of the ``.. code-block:: console`` "
@@ -4925,7 +4932,7 @@ msgid "(No changes from what ``.. code-block:: console`` would have rendered)."
 msgstr ""
 
 msgid "The second one will show:"
-msgstr ""
+msgstr "O segundo irá mostrar:"
 
 msgid "Documenting new features"
 msgstr "Documentando novas funcionalidades"
@@ -7755,6 +7762,9 @@ msgid "Access to Django's record on PyPI. Create a file with your credentials:"
 msgstr ""
 "Acesso ao registro do Django no PyPI. Criar um arquivo com suas credenciais:"
 
+msgid "~/.pypirc"
+msgstr ""
+
 msgid "Access to the ``djangoproject.com`` server to upload files."
 msgstr ""
 "Acessar o servidor de ``djangoproject.com`` para atualizar os arquivos."
@@ -7924,15 +7934,9 @@ msgid ""
 "branch and rebase it on the branch you are about to merge it into (``git "
 "checkout security/1.5.x; git rebase stable/1.5.x``) and then switch back and "
 "do the merge. Make sure the commit message for each security fix explains "
-"that the commit is a security fix and that an announcement will follow "
-"(`example security commit`__)."
+"that the commit is a security fix and that an announcement will follow (:"
+"commit:`example security commit <bf39978a53f117ca02e9a0c78b76664a41a54745>`)."
 msgstr ""
-"Se o git se recusar a fazer o merge com a flag ``--ff-only``, vá para a "
-"branch security-patch e faça o rebase dela na branch que você está prestes a "
-"fazer o seu merge (``git checkout security/1.5.x; git rebase stable/1.5.x``) "
-"e então volte e faça o merge. Certifique-se de que a mensagem de commit para "
-"cada correção de segurança explica que o commit é uma correção de segurança "
-"e que um anúncio será feito (`example security commit`__)."
 
 msgid ""
 "For a feature release, remove the ``UNDER DEVELOPMENT`` header at the top of "

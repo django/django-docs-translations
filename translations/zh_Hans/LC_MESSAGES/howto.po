@@ -4,9 +4,9 @@
 #
 # Translators:
 # Arthur Wu <dandelionstill@gmail.com>, 2018
-# Bai HuanCheng (Bestony) <xiqingongzi@gmail.com>, 2018
+# HuanCheng Bai <xiqingongzi@gmail.com>, 2018
 # belitex, 2018
-# Bai HuanCheng (Bestony) <xiqingongzi@gmail.com>, 2018
+# HuanCheng Bai <xiqingongzi@gmail.com>, 2018
 # CabbSir <cabbsir@gmail.com>, 2018
 # Cell, 2018
 # David <huangtao0202@gmail.com>, 2018
@@ -21,16 +21,18 @@
 # kyle xu <tsingx@hotmail.com>, 2017
 # Le Yang <youngleocn@qq.com>, 2018
 # shengzhulst <lishiting1996@outlook.com>, 2018
+# MattGook <matthewpangwm@gmail.com>, 2019
 # mrgaolei <gaolei@liheran.com>, 2018
 # radish sx <radishxtop@gmail.com>, 2017
 # raingolee <raingolee@gmail.com>, 2018
 # ryan rain <holidaylover2010@gmail.com>, 2018
+# tianlong zhou <tlongzou@gmail.com>, 2019
 # Vincent Chan, 2018
 # Xiang Yu <bupt.aswmtjdsj@gmail.com>, 2013
 # xin.wang <asimplelife@live.com>, 2018
-# Yicheng Wang <engine74396@gmail.com>, 2018
+# enginewang <engine74396@gmail.com>, 2018
 # ykh <614457662@qq.com>, 2018
-# y x <lxfyok@gmail.com>, 2018
+# VinCiLord <lxfyok@gmail.com>, 2018
 # zwithz1998, 2018
 # 吴彬 <xiake21x@qq.com>, 2016
 # 奇泽 吴 <wuqize5109@163.com>, 2018
@@ -44,9 +46,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-16 16:30-0600\n"
-"PO-Revision-Date: 2018-11-15 12:58+0000\n"
-"Last-Translator: Yicheng Wang <engine74396@gmail.com>\n"
+"POT-Creation-Date: 2019-03-21 11:30-0500\n"
+"PO-Revision-Date: 2019-03-27 10:18+0000\n"
+"Last-Translator: MattGook <matthewpangwm@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -692,8 +694,8 @@ msgid ""
 "else than a plain integer value (for example an ``F()`` reference) we can't "
 "do the transformations in Python."
 msgstr ""
-"最后的查询直接在数据库中进行反转（``27``到``-27``）。 这样做的原因是，如果"
-"``self.rhs``不是普通的整数值（例如``F（）``引用），我们就不能在Python中进行转"
+"最后的查询直接在数据库中进行反转（ `27` 到 `-27` ）。 这样做的原因是，如果 "
+"`self.rhs` 不是普通的整数值（例如 `F()` 引用），我们就不能在Python中进行转"
 "换。"
 
 msgid ""
@@ -755,6 +757,8 @@ msgid ""
 "We can change the behavior on a specific backend by creating a subclass of "
 "``NotEqual`` with an ``as_mysql`` method::"
 msgstr ""
+"我们可以通过使用 ``as_mysql`` 方法创建 ``NotEqual`` 的子类来更改特定后端的行"
+"为::"
 
 msgid ""
 "We can then register it with ``Field``. It takes the place of the original "
@@ -5436,7 +5440,10 @@ msgstr ""
 
 msgid ""
 "The ``atomic`` attribute doesn't have an effect on databases that don't "
-"support DDL transactions (e.g. MySQL, Oracle)."
+"support DDL transactions (e.g. MySQL, Oracle). (MySQL's `atomic DDL "
+"statement support <https://dev.mysql.com/doc/refman/en/atomic-ddl.html>`_ "
+"refers to individual statements rather than multiple statements wrapped in a "
+"transaction that can be rolled back.)"
 msgstr ""
 
 msgid "Controlling the order of migrations"

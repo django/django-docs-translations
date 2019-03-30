@@ -15,11 +15,12 @@
 # Ryosuke Sakurai, 2019
 # Ryouta Mizuhara <ham_katsu@outlook.jp>, 2016
 # Shinichi Katsumata <shinichi.katsumata@gmail.com>, 2019
-# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016-2017
+# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016-2017,2019
 # Suguru Yamamoto <sgryjp@gmail.com>, 2017
 # Suzuki Takahiro <bur8787@gmail.com>, 2016
 # Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016,2018
 # Takashi Sugawara <aimaimokomoko@gmail.com>, 2017
+# Takeshi Kondo <take.she12@gmail.com>, 2019
 # Takuya Arita <takuya.arita@gmail.com>, 2015
 # Tetsuya Yamada <yamada.tetsuya258@gmail.com>, 2018
 # T N <takninnovationresearch@gmail.com>, 2018
@@ -30,9 +31,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-11 20:28-0600\n"
-"PO-Revision-Date: 2019-01-19 10:44+0000\n"
-"Last-Translator: Shinichi Katsumata <shinichi.katsumata@gmail.com>\n"
+"POT-Creation-Date: 2019-03-21 11:30-0500\n"
+"PO-Revision-Date: 2019-02-24 10:27+0000\n"
+"Last-Translator: Takeshi Kondo <take.she12@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -510,6 +511,11 @@ msgid ""
 "names are always lowercase strings containing only letters, but the only "
 "hard requirement is that it must not contain the string ``__``."
 msgstr ""
+"実装の詳細について見ると、最初に必要な属性は ``lookup_name`` です。この属性が"
+"あると、ORM が ``name_ne`` を解釈できるようになり、``NotEqual`` を使って SQL "
+"を生成できます。慣習として、こうした名前は常に小文字のアルファベットのみから"
+"なる文字列にしますが、必ず守らなければならない制約は、文字列 ``__`` を決して"
+"含んではならないということです。"
 
 msgid ""
 "We then need to define the ``as_sql`` method. This takes a ``SQLCompiler`` "
@@ -555,6 +561,9 @@ msgid ""
 "all the parameters for the query. We then return a tuple containing the "
 "generated SQL string and the parameters."
 msgstr ""
+"最後に、これらの部分を `` <> ``を使ってSQL式にまとめ、クエリのすべてのパラ"
+"メータを指定します。その後、生成されたSQL文字列とパラメータを含むタプルを返し"
+"ます。"
 
 msgid "A simple transformer example"
 msgstr "シンプルな変換の例"
@@ -682,7 +691,7 @@ msgid ""
 msgstr ""
 
 msgid "A bilateral transformer example"
-msgstr ""
+msgstr "双方向変換の例"
 
 msgid ""
 "The ``AbsoluteValue`` example we discussed previously is a transformation "
@@ -985,7 +994,7 @@ msgid ""
 msgstr ""
 "別の言い方をすると、コマンドをオーバーライドするためには、新しいコマンドは、"
 "オーバーライドするコマンドと同じ名前でなければなりません。そして、そのアプリ"
-"は、 :setting:`INSTALLED_APPS` で、オーバーライドするコマンドのアプリよりも前"
+"は、:setting:`INSTALLED_APPS` で、オーバーライドするコマンドのアプリよりも前"
 "にある必要があります。"
 
 msgid ""
@@ -1033,8 +1042,8 @@ msgid ""
 "A short description of the command, which will be printed in the help "
 "message when the user runs the command ``python manage.py help <command>``."
 msgstr ""
-"コマンドに関する短い説明、ユーザーが ``python manage.py help <command>`` を実"
-"行する事でヘルプメッセージとして表示されます。"
+"コマンドに関する短い説明。ユーザーが ``python manage.py help <command>`` を実"
+"行することでヘルプメッセージとして表示されます。"
 
 msgid ""
 "If your command defines mandatory positional arguments, you can customize "
@@ -1050,6 +1059,9 @@ msgid ""
 "``True``, the output will automatically be wrapped with ``BEGIN;`` and "
 "``COMMIT;``. Default value is ``False``."
 msgstr ""
+"コマンドが SQL 文を出力するかどうかを決めるブール値。``True`` の場合、出力文"
+"が自動的に ``BEGIN;`` と ``COMMIT;`` で囲まれます。デフォルトの値は "
+"``False`` です。"
 
 msgid ""
 "A boolean; if ``True``, the command prints a warning if the set of "
@@ -1081,7 +1093,7 @@ msgid ""
 "in that section)."
 msgstr ""
 "カラーパレットの調整と利用可能なスタイルについては :ref:`syntax-coloring` を"
-"参照してください(このセクションに記述されている \"roles\" のアルファベットを"
+"参照してください (このセクションに記述されている \"roles\" のアルファベットを"
 "大文字にすると利用できます)。"
 
 msgid ""
@@ -1158,6 +1170,9 @@ msgid ""
 "It may return a string which will be printed to ``stdout`` (wrapped by "
 "``BEGIN;`` and ``COMMIT;`` if :attr:`output_transaction` is ``True``)."
 msgstr ""
+"``stdout`` に出力される文字列を返すことができる (:attr:`output_transaction` "
+"が ``True`` の場合、文字列は ``BEGIN;`` と ``COMMIT;`` で挟まれて出力されま"
+"す)。"
 
 msgid ""
 "Uses the system check framework to inspect the entire Django project for "
@@ -1331,7 +1346,7 @@ msgid "Background theory"
 msgstr ""
 
 msgid "Database storage"
-msgstr ""
+msgstr "データベースストレージ"
 
 msgid ""
 "The simplest way to think of a model field is that it provides a way to take "
@@ -1365,7 +1380,7 @@ msgid ""
 msgstr ""
 
 msgid "What does a field class do?"
-msgstr ""
+msgstr "フィールドクラスが行うこと"
 
 msgid ""
 "All of Django's fields (and when we say *fields* in this document, we always "
@@ -1413,7 +1428,7 @@ msgid ""
 msgstr ""
 
 msgid "Writing a field subclass"
-msgstr ""
+msgstr "フィールドサブクラスを書く"
 
 msgid ""
 "When planning your :class:`~django.db.models.Field` subclass, first give "
@@ -1466,63 +1481,68 @@ msgid "The ``Field.__init__()`` method takes the following parameters:"
 msgstr ""
 
 msgid ":attr:`~django.db.models.Field.verbose_name`"
-msgstr ""
+msgstr ":attr:`~django.db.models.Field.verbose_name`"
 
 msgid "``name``"
-msgstr ""
+msgstr "``name``"
 
 msgid ":attr:`~django.db.models.Field.primary_key`"
-msgstr ""
+msgstr ":attr:`~django.db.models.Field.primary_key`"
 
 msgid ":attr:`~django.db.models.CharField.max_length`"
-msgstr ""
+msgstr ":attr:`~django.db.models.CharField.max_length`"
 
 msgid ":attr:`~django.db.models.Field.unique`"
-msgstr ""
+msgstr ":attr:`~django.db.models.Field.unique`"
 
 msgid ":attr:`~django.db.models.Field.blank`"
-msgstr ""
+msgstr ":attr:`~django.db.models.Field.blank`"
 
 msgid ":attr:`~django.db.models.Field.null`"
-msgstr ""
+msgstr ":attr:`~django.db.models.Field.null`"
 
 msgid ":attr:`~django.db.models.Field.db_index`"
-msgstr ""
+msgstr ":attr:`~django.db.models.Field.db_index`"
 
 msgid ""
 "``rel``: Used for related fields (like :class:`ForeignKey`). For advanced "
 "use only."
 msgstr ""
+"``rel``: 関連フィールドに使用される (:class:`ForeignKey` など)。上級者向けで"
+"す。"
 
 msgid ":attr:`~django.db.models.Field.default`"
-msgstr ""
+msgstr ":attr:`~django.db.models.Field.default`"
 
 msgid ":attr:`~django.db.models.Field.editable`"
-msgstr ""
+msgstr ":attr:`~django.db.models.Field.editable`"
 
 msgid ""
 "``serialize``: If ``False``, the field will not be serialized when the model "
 "is passed to Django's :doc:`serializers </topics/serialization>`. Defaults "
 "to ``True``."
 msgstr ""
+"``serialize``: ``False`` の場合、Django の :doc:`serializers </topics/"
+"serialization>` にモデルが渡されたときに、フィールドをシリアライズしません。"
+"デフォルトの値は ``True`` です。"
 
 msgid ":attr:`~django.db.models.Field.unique_for_date`"
-msgstr ""
+msgstr ":attr:`~django.db.models.Field.unique_for_date`"
 
 msgid ":attr:`~django.db.models.Field.unique_for_month`"
-msgstr ""
+msgstr ":attr:`~django.db.models.Field.unique_for_month`"
 
 msgid ":attr:`~django.db.models.Field.unique_for_year`"
-msgstr ""
+msgstr ":attr:`~django.db.models.Field.unique_for_year`"
 
 msgid ":attr:`~django.db.models.Field.choices`"
-msgstr ""
+msgstr ":attr:`~django.db.models.Field.choices`"
 
 msgid ":attr:`~django.db.models.Field.help_text`"
-msgstr ""
+msgstr ":attr:`~django.db.models.Field.help_text`"
 
 msgid ":attr:`~django.db.models.Field.db_column`"
-msgstr ""
+msgstr ":attr:`~django.db.models.Field.db_column`"
 
 msgid ""
 ":attr:`~django.db.models.Field.db_tablespace`: Only for index creation, if "
@@ -1615,7 +1635,7 @@ msgid ""
 msgstr ""
 
 msgid "Changing a custom field's base class"
-msgstr ""
+msgstr "カスタムフィールドのベースクラスを変更する"
 
 msgid ""
 "You can't change the base class of a custom field because Django won't "
@@ -1640,7 +1660,7 @@ msgid ""
 msgstr ""
 
 msgid "Documenting your custom field"
-msgstr ""
+msgstr "カスタムフィールドのドキュメントを書く"
 
 msgid ""
 "As always, you should document your field type, so users will know what it "
@@ -1661,7 +1681,7 @@ msgid ""
 msgstr ""
 
 msgid "Useful methods"
-msgstr ""
+msgstr "便利なメソッド"
 
 msgid ""
 "Once you've created your :class:`~django.db.models.Field` subclass, you "
@@ -1671,7 +1691,7 @@ msgid ""
 msgstr ""
 
 msgid "Custom database types"
-msgstr ""
+msgstr "カスタムデータベースタイプ"
 
 msgid ""
 "Say you've created a PostgreSQL custom type called ``mytype``. You can "
@@ -1693,7 +1713,7 @@ msgid ""
 msgstr ""
 
 msgid "For example::"
-msgstr ""
+msgstr "例:"
 
 msgid ""
 "The :meth:`~Field.db_type` and :meth:`~Field.rel_db_type` methods are called "
@@ -1767,10 +1787,10 @@ msgid ""
 msgstr ""
 
 msgid "A string"
-msgstr ""
+msgstr "文字列"
 
 msgid "``None`` (if the field allows ``null=True``)"
-msgstr ""
+msgstr "``None`` (フィールドが ``null=True`` を許す場合)"
 
 msgid ""
 "In our ``HandField`` class, we're storing the data as a VARCHAR field in the "
@@ -3316,16 +3336,23 @@ msgid ""
 "development and in production. Django defaults to per-process :ref:`local-"
 "memory caching <local-memory-caching>` which may not be desirable."
 msgstr ""
+"もしキャッシュを使うなら、開発環境と本番環境とでコネクションパラメータは異な"
+"るでしょう。そうでない場合、デフォルトはref:`local-memory-caching`のper-"
+"processに設定されています。"
 
 msgid ""
 "Cache servers often have weak authentication. Make sure they only accept "
 "connections from your application servers."
 msgstr ""
+"キャッシュサーバーは認証に弱点を持っています。あなたのアプリケーションからの"
+"コネクションだけを受け入れるようにしてください。"
 
 msgid ""
 "If you're using Memcached, consider using :ref:`cached sessions <cached-"
 "sessions-backend>` to improve performance."
 msgstr ""
+"もしあなたがMemcachedを使うなら、より性能を向上させるために :ref:`cached "
+"sessions` を使うことも検討してください。"
 
 msgid ":setting:`DATABASES`"
 msgstr ":setting:`DATABASES`"

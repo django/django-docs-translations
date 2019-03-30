@@ -20,13 +20,14 @@
 # Masashi SHIBATA <contact@c-bata.link>, 2015-2016
 # Masashi SHIBATA <contact@c-bata.link>, 2017
 # Masataka Arai <arai.masataka142@gmail.com>, 2016
+# sutefu7, 2019
 # matsuand, 2018
 # Mitsuhiro Sorakubo <msorakubo@msn.com>, 2016
 # mnamihdk, 2017
 # Pawllo2 <pawllothesecond@gmail.com>, 2017-2018
 # Riktio Taniguchi <rikiriki1238@gmail.com>, 2015
 # Satoshi Tsuyama <tsuyama@nike.eonet.ne.jp>, 2014
-# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2017
+# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2017,2019
 # Suguru Yamamoto <sgryjp@gmail.com>, 2017
 # Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016,2018
 # Takayuki Hirai, 2015
@@ -43,8 +44,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-11 20:28-0600\n"
-"PO-Revision-Date: 2018-11-21 15:28+0000\n"
+"POT-Creation-Date: 2019-03-21 11:30-0500\n"
+"PO-Revision-Date: 2019-03-22 06:02+0000\n"
 "Last-Translator: Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
@@ -333,6 +334,7 @@ msgstr ""
 
 msgid "Go ahead and install the previously cloned copy of Django:"
 msgstr ""
+"先に進んで、以前にクローンしたDjangoのコピーをインストールしてください:"
 
 msgid ""
 "The installed version of Django is now pointing at your local copy. You will "
@@ -403,6 +405,11 @@ msgid ""
 "Meanwhile, ``x`` and ``s`` indicated expected failures and skipped tests, "
 "respectively. Dots indicate passing tests."
 msgstr ""
+"Django のテストスイートを実行中に、各テストの完了時のステータスを表す一連の文"
+"字が表示されます。 ``E`` はテストにエラーが発生したことを表し、 ``F`` はテス"
+"トのアサーションが失敗したことを表しています。これらは共にテスト失敗となりま"
+"す。``x`` と ``s`` はそれぞれ期待する失敗とスキップを表しています。ドットはテ"
+"ストの成功を表しています。"
 
 msgid ""
 "Skipped tests are typically due to missing external libraries required to "
@@ -465,14 +472,18 @@ msgid ""
 "For this tutorial, we'll work on a \"fake ticket\" as a case study. Here are "
 "the imaginary details:"
 msgstr ""
+"このチュートリアルでは、ケーススタディとして「架空のチケット」を使って作業を"
+"進めます。以下はその架空の詳細です。"
 
 msgid "Ticket #99999 -- Allow making toast"
-msgstr ""
+msgstr "チケット #99999 -- トーストを焼くようにする"
 
 msgid ""
 "Django should provide a function ``django.shortcuts.make_toast()`` that "
 "returns ``'toast'``."
 msgstr ""
+"Django は、``toast`` を返す関数 ``django.shortcuts.make_toast()`` を提供しな"
+"ければなりません。"
 
 msgid "We'll now implement this feature and associated tests."
 msgstr ""
@@ -663,6 +674,9 @@ msgid ""
 "This is a new feature, so it should be documented. Open the file ``docs/"
 "topics/http/shortcuts.txt`` and add the following at the end of the file::"
 msgstr ""
+"これは新たな機能です。したがってドキュメントを作る必要があります。ファイル "
+"``docs/topics/http/shortcuts.txt`` を開いて、このファイルの最終行に以下を加え"
+"ます。"
 
 msgid ""
 "Since this new feature will be in an upcoming release it is also added to "
@@ -670,6 +684,10 @@ msgid ""
 "the latest version in ``docs/releases/``, which at time of writing is ``2.2."
 "txt``. Add a note under the \"Minor Features\" header::"
 msgstr ""
+"この新機能は将来のリリースとともに、Django 次期バージョンのリリースノートにも"
+"含まれます。ファイル ``docs/releases/`` の最新バージョン (これを書いてる時点"
+"では ``2.2.txt``) のリリースノートを開き、\"Minor Feature\" ヘッダの下にノー"
+"トを追記してください。"
 
 msgid ""
 "For more information on writing documentation, including an explanation of "
@@ -1711,11 +1729,9 @@ msgstr ""
 
 msgid ""
 "For more information on packaging, see Python's `Tutorial on Packaging and "
-"Distributing Projects <https://packaging.python.org/distributing/>`_."
+"Distributing Projects <https://packaging.python.org/tutorials/packaging-"
+"projects/>`_."
 msgstr ""
-"パッケージングに関するより豊富な情報は `Tutorial on Packaging and "
-"Distributing Projects <https://packaging.python.org/en/latest/distributing."
-"html>`_ にあります。"
 
 msgid "Using your own package"
 msgstr "自分のパッケージを使ってみる"
@@ -1788,13 +1804,9 @@ msgstr "自身の Web サイトにアップロードする"
 msgid ""
 "Post the package on a public repository, such as `the Python Package Index "
 "(PyPI)`_. `packaging.python.org <https://packaging.python.org>`_ has `a good "
-"tutorial <https://packaging.python.org/distributing/#uploading-your-project-"
-"to-pypi>`_ for doing this."
+"tutorial <https://packaging.python.org/tutorials/packaging-projects/"
+"#uploading-the-distribution-archives>`_ for doing this."
 msgstr ""
-"公開されているリポジトリに投稿する。例えば `the Python Package Index "
-"(PyPI)`_. `packaging.python.org <https://packaging.python.org>`_ には `よくで"
-"きたチュートリアル <https://packaging.python.org/en/latest/distributing."
-"html#uploading-your-project-to-pypi>`_ があります。"
 
 msgid "Installing Python packages with virtualenv"
 msgstr "virtualenv に Python パッケージをインストールする"

@@ -9,6 +9,7 @@
 # Avraham Serour <tovmeod@gmail.com>, 2016
 # Bernardo Fontes <bernardoxhc@gmail.com>, 2016
 # beatorizu <betrizaf@gmail.com>, 2017
+# Bruce de Sá <contato@publidex.com.br>, 2019
 # Bruno Barbosa <bsbruno1@gmail.com>, 2016
 # Carlos Leite <caduado@gmail.com>, 2016
 # Carlos Leite <caduado@gmail.com>, 2016
@@ -19,6 +20,7 @@
 # Danilo Favato <dfavato@gmail.com>, 2017
 # Edgard Mota <edgardmota@gmail.com>, 2016
 # Eduardo Cereto Carvalho, 2013
+# Eduardo de Santana Medeiros Alexandre <eduardo.ufpb@gmail.com>, 2019
 # Elyézer Rezende <elyezermr@gmail.com>, 2013
 # Élysson Mendes Rezende <elyssonmr@gmail.com>, 2013
 # Emanuel Martins <emanuel.breno@gmail.com>, 2018
@@ -56,17 +58,18 @@
 # Sergio Garcia <sergio@ginx.com.br>, 2015
 # tito gonzales <produtoramediterraneo@gmail.com>, 2013
 # Vanessa Barreiros <vanessa@vinta.com.br>, 2018
+# Vinicios Mesquita <vinicios.mesquita@gmail.com>, 2019
 # Wanderley S <wandss@gmail.com>, 2016
 # Wellington Moraes da Silva <mswell@outlook.com>, 2016
 # Wiliam Souza <wiliamsouza83@gmail.com>, 2015
-# Yuri Hernani Heupa <yurihernaniheupa@gmail.com>, 2015
+# Yuri Heupa <yurihernaniheupa@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-11 20:28-0600\n"
-"PO-Revision-Date: 2019-01-11 11:51+0000\n"
-"Last-Translator: Gustavo de Carvalho Sales <gt.salles@gmail.com>\n"
+"POT-Creation-Date: 2019-03-21 11:30-0500\n"
+"PO-Revision-Date: 2019-03-22 02:02+0000\n"
+"Last-Translator: Ramiro Morales\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -294,7 +297,7 @@ msgstr ""
 "Baixe o código fonte do repositório do Django usando o seguinte comando:"
 
 msgid "Low bandwidth connection?"
-msgstr "Conexão de baixa largura de banda?"
+msgstr "Conexão com baixa largura de banda?"
 
 msgid ""
 "You can add the ``--depth 1`` argument to ``git clone`` to skip downloading "
@@ -391,6 +394,13 @@ msgid ""
 "Django's test suite before, it's a good idea to run it once beforehand to "
 "get familiar with its output."
 msgstr ""
+"Ao contribuir com o Django é muito importante que as suas mudanças de código "
+"não criem bugs nas outras áreas do projeto. Uma forma de verificar é testar "
+"se tudo continua funcionando depois de suas alterações, rodando a suite de "
+"testes do Django. Se todos os testes passarem, tudo indica que suas mudanças "
+"não quebraram outras partes do Django. Se você nunca executou a suite de "
+"testes do Django antes, é uma boa ideia testar de antemão para se "
+"familiarizar com suas saídas."
 
 msgid ""
 "Before running the test suite, install its dependencies by ``cd``-ing into "
@@ -487,23 +497,27 @@ msgstr ""
 "`usar um banco de dados diferente para testes<running-unit-tests-settings>`."
 
 msgid "Working on a feature"
-msgstr ""
+msgstr "Trabalhando em um recurso"
 
 msgid ""
 "For this tutorial, we'll work on a \"fake ticket\" as a case study. Here are "
 "the imaginary details:"
 msgstr ""
+"Para este tutorial, nós iremos trabalhar em um \"ticket falso\" como um caso "
+"de estudo. Aqui estão os detalhes imaginários."
 
 msgid "Ticket #99999 -- Allow making toast"
-msgstr ""
+msgstr "Ticket #99999 -- Permitir fazer torradas."
 
 msgid ""
 "Django should provide a function ``django.shortcuts.make_toast()`` that "
 "returns ``'toast'``."
 msgstr ""
+"Django deve prover uma função ``django.shortcuts.make_toast()`` que retorna "
+"``'toast'``."
 
 msgid "We'll now implement this feature and associated tests."
-msgstr ""
+msgstr "Nós iremos agora implementar este recurso e seus testes associados."
 
 msgid "Creating a branch for your patch"
 msgstr "Criando uma branch para seu patch"
@@ -578,7 +592,7 @@ msgid ""
 msgstr ""
 
 msgid "This test checks that the ``make_toast()`` returns ``'toast'``."
-msgstr ""
+msgstr "Este testa verifica que o ``make_toast()`` returna ``'toast'``."
 
 msgid "But this testing thing looks kinda hard..."
 msgstr "Mas esse lance de testar parece difícil..."
@@ -638,12 +652,14 @@ msgid "Writing the code for your ticket"
 msgstr "Escrevendo o código para o seu ticket"
 
 msgid "Next we'll be adding the ``make_toast()`` function."
-msgstr ""
+msgstr "Em seguida nós adicionaremos a função ``make_toast()``."
 
 msgid ""
 "Navigate to the ``django/`` folder and open the ``shortcuts.py`` file. At "
 "the bottom, add::"
 msgstr ""
+"Navegue até a pasta ``django/`` e abra o arquivo ``shortcuts.py``. No seu "
+"final adicione::"
 
 msgid ""
 "Now we need to make sure that the test we wrote earlier passes, so we can "
@@ -1725,7 +1741,8 @@ msgstr ""
 
 msgid ""
 "For more information on packaging, see Python's `Tutorial on Packaging and "
-"Distributing Projects <https://packaging.python.org/distributing/>`_."
+"Distributing Projects <https://packaging.python.org/tutorials/packaging-"
+"projects/>`_."
 msgstr ""
 
 msgid "Using your own package"
@@ -1801,8 +1818,8 @@ msgstr "Enviar o pacote para seu site."
 msgid ""
 "Post the package on a public repository, such as `the Python Package Index "
 "(PyPI)`_. `packaging.python.org <https://packaging.python.org>`_ has `a good "
-"tutorial <https://packaging.python.org/distributing/#uploading-your-project-"
-"to-pypi>`_ for doing this."
+"tutorial <https://packaging.python.org/tutorials/packaging-projects/"
+"#uploading-the-distribution-archives>`_ for doing this."
 msgstr ""
 
 msgid "Installing Python packages with virtualenv"
@@ -2238,6 +2255,10 @@ msgid ""
 "``mysite/urls.py``, add an import for ``django.urls.include`` and insert an :"
 "func:`~django.urls.include` in the ``urlpatterns`` list, so you have:"
 msgstr ""
+"O próximo passo é apontar  na raiz do URLconf para o módulo ``polls.urls``. "
+"No arquivo ``mysite/urls.py``, adicione um importador para ``django.urls."
+"include`` e insira um  :func:`~django.urls.include`  na lista de  "
+"``urlpatterns`` , então você tem:"
 
 msgid "mysite/urls.py"
 msgstr ""
@@ -2283,7 +2304,7 @@ msgstr ""
 "\" `ìndex``."
 
 msgid "Page not found?"
-msgstr ""
+msgstr "Página não encontrada?"
 
 msgid ""
 "If you get an error page here, check that you're going to http://"
@@ -4575,6 +4596,8 @@ msgid ""
 "Confirm the bug by using the :djadmin:`shell` to check the method on a "
 "question whose date lies in the future:"
 msgstr ""
+"Confirme o bug utilizando :djadmin:`shell` para verificar o método numa "
+"questão em que a data encontra-se no futuro:"
 
 msgid "Since things in the future are not 'recent', this is clearly wrong."
 msgstr ""
@@ -5284,10 +5307,10 @@ msgstr ""
 "O modelo tag ``{% static %}`` gera a URL absoluta para arquivos estáticos."
 
 msgid "That's all you need to do for development."
-msgstr ""
+msgstr "Isso é tudo que você precisa fazer para o desenvolvimento."
 
 msgid "Start the server (or restart it if it's already running):"
-msgstr ""
+msgstr "Inicie o servidor (ou reinicie se estiver em execução):"
 
 msgid ""
 "Reload ``http://localhost:8000/polls/`` and you should see that the question "
@@ -6194,6 +6217,10 @@ msgid ""
 "the ``docs/`` directory contains all of the documentation. You can update "
 "your Git checkout to get the latest changes."
 msgstr ""
+"Se você estiver utilizando a versão em desenvolvimento do Django (também "
+"conhecida como a branch master), o diretório ``docs/`` contém toda a "
+"documentação. Você pode atualizar o seu repositório GIT para baixar as "
+"últimas alterações."
 
 msgid ""
 "One low-tech way of taking advantage of the text documentation is by using "
@@ -6266,6 +6293,8 @@ msgid ""
 "As we add features to Django's development version, we update the "
 "documentation in the same Git commit transaction."
 msgstr ""
+"Enquanto nós adicionamos funcionalidades à versão em desenvolvimento do "
+"Django, nós atualizamos a documentação na mesma transação do Git commit."
 
 msgid ""
 "To distinguish feature changes/additions in the docs, we use the phrase: "
