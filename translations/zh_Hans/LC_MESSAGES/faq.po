@@ -5,11 +5,11 @@
 # Translators:
 # Dogify <595572594@qq.com>, 2018
 # asdf asdf <328134421@qq.com>, 2018
-# HuanCheng Bai <xiqingongzi@gmail.com>, 2018
-# HuanCheng Bai <xiqingongzi@gmail.com>, 2018
+# Bai HuanCheng <xiqingongzi@gmail.com>, 2018
+# Bai HuanCheng <xiqingongzi@gmail.com>, 2018
 # CabbSir <cabbsir@gmail.com>, 2018
 # blacklin <chinalinzhijie@gmail.com>, 2018
-# Dogify <595572594@qq.com>, 2018
+# Dogify <595572594@qq.com>, 2018-2019
 # Floyd Li <floyd.li@outlook.com>, 2017
 # Fossen <fossen@fossen.cn>, 2018
 # Frost Ming <mianghong@gmail.com>, 2019
@@ -49,9 +49,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-21 11:30-0500\n"
-"PO-Revision-Date: 2019-03-14 00:07+0000\n"
-"Last-Translator: HuanCheng Bai <xiqingongzi@gmail.com>\n"
+"POT-Creation-Date: 2019-04-19 03:29-0500\n"
+"PO-Revision-Date: 2019-04-19 01:42+0000\n"
+"Last-Translator: Dogify <595572594@qq.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -555,6 +555,27 @@ msgstr ""
 "Django 现在由一个国际`志愿者小组<https://www.djangoproject.com/foundation/"
 "teams/>`运行。"
 
+msgid "How is Django licensed?"
+msgstr "Django 是如何授权的？"
+
+msgid ""
+"Django is distributed under :source:`the 3-clause BSD license <LICENSE>`. "
+"This is an open source license granting broad permissions to modify and "
+"redistribute Django."
+msgstr ""
+"Djaon 基于 :source:`the 3-clause BSD license <LICENSE>` 发布。这是一份开源协"
+"议，它允许你修改和再次分发 Django。"
+
+msgid "Why does Django include Python's license file?"
+msgstr "为什么 Django 包含 Python 的协议文件？"
+
+msgid ""
+"Django includes code from the Python standard library. Python is distributed "
+"under a permissive open source license. :source:`A copy of the Python "
+"license <LICENSE.python>` is included with Django for compliance with "
+"Python's terms."
+msgstr ""
+
 msgid "Which sites use Django?"
 msgstr "哪些站点使用 Django?"
 
@@ -725,11 +746,9 @@ msgstr ""
 "reST（reStructuredText）格式，每个文本文件都对应官方 Django 网站上的页面。"
 
 msgid ""
-"Because the documentation is `stored in revision control`_, you can browse "
-"documentation changes just like you can browse code changes."
+"Because the documentation is :source:`stored in revision control <docs>`, "
+"you can browse documentation changes just like you can browse code changes."
 msgstr ""
-"由于文档存储在`stored in revision control`_，你可以浏览文档更改，就像浏览代码"
-"更改一样。"
 
 msgid ""
 "Technically, the docs on Django's site are generated from the latest "
@@ -948,12 +967,8 @@ msgstr ""
 msgid ""
 "If you want to use Django with a database, which is probably the case, "
 "you'll also need a database engine. PostgreSQL_ is recommended, because "
-"we're PostgreSQL fans, and MySQL_, `SQLite 3`_, and Oracle_ are also "
-"supported."
+"we're PostgreSQL fans, and MySQL_, `SQLite`_, and Oracle_ are also supported."
 msgstr ""
-"有时候，你可能会想在 Django 上使用数据库，那么你需要一个数据库引擎。我们推荐"
-"使用 PostgreSQL_ ，因为我们是 PostgreSQL 的忠实粉丝，但是 Django 也同样支持"
-"MySQL_ ，`SQLite3`_ 和 Oracle_ 。"
 
 msgid "What Python version can I use with Django?"
 msgstr "我应该使用哪个版本的 Python 来配合 Django?"

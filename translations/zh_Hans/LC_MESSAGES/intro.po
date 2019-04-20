@@ -5,8 +5,8 @@
 # Translators:
 # Dogify <595572594@qq.com>, 2018
 # xin.wang <asimplelife@live.com>, 2018
-# HuanCheng Bai <xiqingongzi@gmail.com>, 2018
-# HuanCheng Bai <xiqingongzi@gmail.com>, 2018
+# Bai HuanCheng <xiqingongzi@gmail.com>, 2018
+# Bai HuanCheng <xiqingongzi@gmail.com>, 2018
 # Brian Wang <singeeking@gmail.com>, 2017
 # blacklin <chinalinzhijie@gmail.com>, 2018
 # Chown Hobby, 2016
@@ -38,9 +38,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-21 11:30-0500\n"
-"PO-Revision-Date: 2019-03-22 02:02+0000\n"
-"Last-Translator: Ramiro Morales\n"
+"POT-Creation-Date: 2019-04-19 03:29-0500\n"
+"PO-Revision-Date: 2019-04-19 01:39+0000\n"
+"Last-Translator: Dogify <595572594@qq.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -1308,9 +1308,9 @@ msgstr ""
 "来推送 RRS 和 Atom。"
 
 msgid ""
-"More sexy automatically-generated admin features -- this overview barely "
-"scratched the surface."
-msgstr "更多令人心动的自动化管理功能：概述里面仅仅浅尝辄止。"
+"More attractive automatically-generated admin features -- this overview "
+"barely scratched the surface."
+msgstr "功能丰富的自动生成的后台——这份概要只是简单介绍了下。"
 
 msgid ""
 "The next obvious steps are for you to `download Django`_, read :doc:`the "
@@ -1368,14 +1368,14 @@ msgstr ""
 msgid ""
 "Let's say you were starting a new project that needed a polls app like the "
 "one we've been working on. How do you make this app reusable? Luckily, "
-"you're well on the way already. In :doc:`Tutorial 3 </intro/tutorial03>`, we "
+"you're well on the way already. In :doc:`Tutorial 1 </intro/tutorial01>`, we "
 "saw how we could decouple polls from the project-level URLconf using an "
 "``include``. In this tutorial, we'll take further steps to make the app easy "
 "to use in new projects and ready to publish for others to install and use."
 msgstr ""
 "假设你现在创建了一个新的项目，并且需要一个类似我们之前做的投票应用。你该如何"
-"复用这个应用呢？庆幸的是，其实你已经知道了一些。在 :doc:`教程 3 </intro/"
-"tutorial03>`，我们使用过 ``include`` 从项目级别的 URLconf 分割出 polls。在本"
+"复用这个应用呢？庆幸的是，其实你已经知道了一些。在 :doc:`教程 1 </intro/"
+"tutorial01>`，我们使用过 ``include`` 从项目级别的 URLconf 分割出 polls。在本"
 "教程中，我们将进一步使这个应用易用于新的项目中，并发布给其他人安装使用。"
 
 msgid "Package? App?"
@@ -1581,6 +1581,8 @@ msgid ""
 "Distributing Projects <https://packaging.python.org/tutorials/packaging-"
 "projects/>`_."
 msgstr ""
+"更多关于打包的信息，见 Python 的 `关于打包和发布项目的教程 <https://"
+"packaging.python.org/tutorials/packaging-projects/>`_。"
 
 msgid "Using your own package"
 msgstr "使用你自己的包名"
@@ -1651,6 +1653,10 @@ msgid ""
 "tutorial <https://packaging.python.org/tutorials/packaging-projects/"
 "#uploading-the-distribution-archives>`_ for doing this."
 msgstr ""
+"将你的包发布至公共仓库，比如 `the Python Package Index (PyPI)`_。 `packaging."
+"python.org <https://packaging.python.org>`_ 有一个不错的 `教程 <https://"
+"packaging.python.org/tutorials/packaging-projects/#uploading-the-"
+"distribution-archives>`_ 说明如何发布至公共仓库。"
 
 msgid "Installing Python packages with virtualenv"
 msgstr "通过 virtualenv 安装 Python 包"
@@ -2090,11 +2096,10 @@ msgstr ""
 "一例外。"
 
 msgid ""
-"You have now wired an ``index`` view into the URLconf. Lets verify it's "
-"working, run the following command:"
+"You have now wired an ``index`` view into the URLconf. Verify it's working "
+"with the following command:"
 msgstr ""
-"你现在把 ``index`` 视图添加进了 URLconf。可以验证是否正常工作，运行下面的命"
-"令:"
+"你现在把 ``index`` 视图添加进了 URLconf。通过以下命令验证是否正常工作："
 
 msgid ""
 "Go to http://localhost:8000/polls/ in your browser, and you should see the "
@@ -5611,11 +5616,11 @@ msgstr "在新特性被添加时，或 Django 的 API 或行为有变化时，�
 
 msgid ""
 "Django's documentation is kept in the same source control system as its "
-"code. It lives in the `docs`_ directory of our Git repository. Each document "
-"online is a separate text file in the repository."
+"code. It lives in the :source:`docs` directory of our Git repository. Each "
+"document online is a separate text file in the repository."
 msgstr ""
 "Django  的文档以和它的代码一样，以代码版本管理系统方式进行管理。它被保存在 "
-"git 仓库的 `docs`_ 目录内。每份在线文档都是仓库内的一份独立文本文件。"
+"git 仓库的 :source:`docs` 目录内。每份在线文档都是仓库内的一份独立文本文件。"
 
 msgid "Where to get it"
 msgstr "从哪里获取这个"

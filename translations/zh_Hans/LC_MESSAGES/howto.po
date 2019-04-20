@@ -4,9 +4,9 @@
 #
 # Translators:
 # Arthur Wu <dandelionstill@gmail.com>, 2018
-# HuanCheng Bai <xiqingongzi@gmail.com>, 2018
+# Bai HuanCheng <xiqingongzi@gmail.com>, 2018
 # belitex, 2018
-# HuanCheng Bai <xiqingongzi@gmail.com>, 2018
+# Bai HuanCheng <xiqingongzi@gmail.com>, 2018
 # CabbSir <cabbsir@gmail.com>, 2018
 # Cell, 2018
 # David <huangtao0202@gmail.com>, 2018
@@ -14,6 +14,7 @@
 # FPlust Lu <fplustlu@gmail.com>, 2018
 # Frost Ming <mianghong@gmail.com>, 2018
 # JINGMING DAI <d664216@gmail.com>, 2018
+# Jin Song <jinsong0926@hotmail.com>, 2019
 # Kevin Lee <rootkitcn@live.com>, 2018
 # kurtchen1988 <kurtcobain1988824@hotmail.com>, 2018
 # kurtchen1988 <kurtcobain1988824@hotmail.com>, 2018
@@ -46,9 +47,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-21 11:30-0500\n"
-"PO-Revision-Date: 2019-03-27 10:18+0000\n"
-"Last-Translator: MattGook <matthewpangwm@gmail.com>\n"
+"POT-Creation-Date: 2019-04-19 03:29-0500\n"
+"PO-Revision-Date: 2019-04-03 12:32+0000\n"
+"Last-Translator: Jin Song <jinsong0926@hotmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -674,12 +675,12 @@ msgid ""
 "``AbsoluteValue`` lookup, that is the ``lhs`` is always an instance of "
 "``AbsoluteValue``."
 msgstr ""
-"这里有几件值得注意的事情。 首先，``AbsoluteValueLessThan``没有调用"
-"``process_lhs（）``。 相反，它会跳过由``AbsoluteValue``完成的``lhs``的转换，"
-"并使用原始的``lhs``。 也就是说，我们希望得到``\"experiments\".\"change\"``而"
-"不是``ABS（“实验”。“改变”）``。 直接引用``self.lhs.lhs``是安全的，因为"
-"``AbsoluteValueLessThan``只能从``AbsoluteValue``查找访问，即``lhs``总是"
-"``AbsoluteValue`的实例`。"
+"这里有几件值得注意的事情。 首先， ``AbsoluteValueLessThan`` 没有调用"
+"``process_lhs()`` 。 相反，它会跳过由 ``AbsoluteValue`` 完成的 ``lhs`` 的转"
+"换，并使用原始的 ``lhs`` 。 也就是说，我们希望得到 ``\"experiments\".\"change"
+"\"`` 而不是 ``ABS(\"experiments\".\"change\")`` 。 直接引用 ``self.lhs.lhs`` "
+"是安全的，因为 ``AbsoluteValueLessThan`` 只能从 ``AbsoluteValue`` lookup 访"
+"问，即 ``lhs`` 总是 ``AbsoluteValue`` 的实例。"
 
 msgid ""
 "Notice also that  as both sides are used multiple times in the query the "
@@ -707,7 +708,7 @@ msgid ""
 msgstr ""
 
 msgid "A bilateral transformer example"
-msgstr ""
+msgstr "双边变压器的例子"
 
 msgid ""
 "The ``AbsoluteValue`` example we discussed previously is a transformation "
@@ -1063,6 +1064,19 @@ msgstr ""
 msgid ""
 "If you implement ``__init__`` in your subclass of :class:`BaseCommand`, you "
 "must call :class:`BaseCommand`’s ``__init__``::"
+msgstr ""
+
+msgid ""
+"Returns a ``CommandParser`` instance, which is an :class:`~argparse."
+"ArgumentParser` subclass with a few customizations for Django."
+msgstr ""
+
+msgid ""
+"You can customize the instance by overriding this method and calling "
+"``super()`` with ``kwargs`` of :class:`~argparse.ArgumentParser` parameters."
+msgstr ""
+
+msgid "``kwargs`` was added."
 msgstr ""
 
 msgid ""
@@ -1462,10 +1476,11 @@ msgid "Field deconstruction"
 msgstr ""
 
 msgid ""
-"The counterpoint to writing your ``__init__()`` method is writing the "
-"``deconstruct()`` method. This method tells Django how to take an instance "
-"of your new field and reduce it to a serialized form - in particular, what "
-"arguments to pass to ``__init__()`` to re-create it."
+"The counterpoint to writing your ``__init__()`` method is writing the :meth:"
+"`~.Field.deconstruct` method. It's used during :doc:`model migrations </"
+"topics/migrations>` to tell Django how to take an instance of your new field "
+"and reduce it to a serialized form - in particular, what arguments to pass "
+"to ``__init__()`` to re-create it."
 msgstr ""
 
 msgid ""
@@ -1498,8 +1513,10 @@ msgid ""
 msgstr ""
 
 msgid ""
-"If you add a new keyword argument, you need to write code to put its value "
-"into ``kwargs`` yourself::"
+"If you add a new keyword argument, you need to write code in "
+"``deconstruct()`` that puts its value into ``kwargs`` yourself. You should "
+"also omit the value from ``kwargs`` when it isn't necessary to reconstruct "
+"the state of the field, such as when the default value is being used::"
 msgstr ""
 
 msgid ""

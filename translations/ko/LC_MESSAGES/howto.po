@@ -11,6 +11,7 @@
 # silee9019 <silee9019@gmail.com>, 2015
 # Song M. Kim <songmink@hawaii.edu>, 2018
 # yangbeom <yangbeomsu@gmail.com>, 2016
+# Yeon Haeng Cho <ntype.joe@gmail.com>, 2019
 # Yong Choi <sk8er.choi@gmail.com>, 2019
 # Yongjin Jo <wnrhd114@gmail.com>, 2018
 # Yongtaek Jun <guardian.yong@gmail.com>, 2019
@@ -19,9 +20,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-21 11:30-0500\n"
-"PO-Revision-Date: 2019-03-07 10:19+0000\n"
-"Last-Translator: Yongtaek Jun <guardian.yong@gmail.com>\n"
+"POT-Creation-Date: 2019-04-19 03:29-0500\n"
+"PO-Revision-Date: 2019-04-10 14:01+0000\n"
+"Last-Translator: Yeon Haeng Cho <ntype.joe@gmail.com>\n"
 "Language-Team: Korean (http://www.transifex.com/django/django-docs/language/"
 "ko/)\n"
 "MIME-Version: 1.0\n"
@@ -865,7 +866,7 @@ msgid ""
 msgstr ""
 
 msgid "Attributes"
-msgstr ""
+msgstr "속성"
 
 msgid ""
 "All attributes can be set in your derived class and can be used in :class:"
@@ -917,7 +918,7 @@ msgid ""
 msgstr ""
 
 msgid "Methods"
-msgstr ""
+msgstr "메소드"
 
 msgid ""
 ":class:`BaseCommand` has a few methods that can be overridden but only the :"
@@ -930,6 +931,19 @@ msgstr ""
 msgid ""
 "If you implement ``__init__`` in your subclass of :class:`BaseCommand`, you "
 "must call :class:`BaseCommand`’s ``__init__``::"
+msgstr ""
+
+msgid ""
+"Returns a ``CommandParser`` instance, which is an :class:`~argparse."
+"ArgumentParser` subclass with a few customizations for Django."
+msgstr ""
+
+msgid ""
+"You can customize the instance by overriding this method and calling "
+"``super()`` with ``kwargs`` of :class:`~argparse.ArgumentParser` parameters."
+msgstr ""
+
+msgid "``kwargs`` was added."
 msgstr ""
 
 msgid ""
@@ -1329,10 +1343,11 @@ msgid "Field deconstruction"
 msgstr ""
 
 msgid ""
-"The counterpoint to writing your ``__init__()`` method is writing the "
-"``deconstruct()`` method. This method tells Django how to take an instance "
-"of your new field and reduce it to a serialized form - in particular, what "
-"arguments to pass to ``__init__()`` to re-create it."
+"The counterpoint to writing your ``__init__()`` method is writing the :meth:"
+"`~.Field.deconstruct` method. It's used during :doc:`model migrations </"
+"topics/migrations>` to tell Django how to take an instance of your new field "
+"and reduce it to a serialized form - in particular, what arguments to pass "
+"to ``__init__()`` to re-create it."
 msgstr ""
 
 msgid ""
@@ -1365,8 +1380,10 @@ msgid ""
 msgstr ""
 
 msgid ""
-"If you add a new keyword argument, you need to write code to put its value "
-"into ``kwargs`` yourself::"
+"If you add a new keyword argument, you need to write code in "
+"``deconstruct()`` that puts its value into ``kwargs`` yourself. You should "
+"also omit the value from ``kwargs`` when it isn't necessary to reconstruct "
+"the state of the field, such as when the default value is being used::"
 msgstr ""
 
 msgid ""

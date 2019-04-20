@@ -5,7 +5,7 @@
 # Translators:
 # Adrien Brunet <abrunet@centrale-marseille.fr>, 2017
 # Christophe CHAUVET <christophe.chauvet@gmail.com>, 2013
-# Claude Paroz <claude@2xlibre.net>, 2013-2018
+# Claude Paroz <claude@2xlibre.net>, 2013-2019
 # Jean-Baptiste Mora, 2014
 # Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014
 # Mathieu Dupuy <deronnax@gmail.com>, 2014
@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-06 14:21-0600\n"
-"PO-Revision-Date: 2018-03-07 16:20+0000\n"
+"POT-Creation-Date: 2019-04-19 03:29-0500\n"
+"PO-Revision-Date: 2019-04-02 15:21+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/"
 "fr/)\n"
@@ -621,6 +621,32 @@ msgstr ""
 "internationale de volontaires <https://www.djangoproject.com/foundation/"
 "teams/>`_."
 
+msgid "How is Django licensed?"
+msgstr "Quelle est la licence de Django ?"
+
+msgid ""
+"Django is distributed under :source:`the 3-clause BSD license <LICENSE>`. "
+"This is an open source license granting broad permissions to modify and "
+"redistribute Django."
+msgstr ""
+"Django est distribué sous licence :source:`BSD 3 clauses <LICENSE>`. Il "
+"s'agit d'une licence libre accordant des permissions larges de modification "
+"et de redistribution de Django."
+
+msgid "Why does Django include Python's license file?"
+msgstr "Pourquoi Django inclut-il le fichier de licence de Python ?"
+
+msgid ""
+"Django includes code from the Python standard library. Python is distributed "
+"under a permissive open source license. :source:`A copy of the Python "
+"license <LICENSE.python>` is included with Django for compliance with "
+"Python's terms."
+msgstr ""
+"Django inclut du code de la bibliothèque Python standard. Python est "
+"distribué sous licence libre permissive. :source:`Une copie de la licence de "
+"Python <LICENSE.python>` est incluse dans Django par respect des conditions "
+"de Python."
+
 msgid "Which sites use Django?"
 msgstr "Quels sites utilisent Django ?"
 
@@ -826,12 +852,12 @@ msgstr ""
 "page Web sur le site officiel de Django."
 
 msgid ""
-"Because the documentation is `stored in revision control`_, you can browse "
-"documentation changes just like you can browse code changes."
+"Because the documentation is :source:`stored in revision control <docs>`, "
+"you can browse documentation changes just like you can browse code changes."
 msgstr ""
-"Grâce au fait que la documentation est `versionnée`_, vous pouvez naviguer à "
-"travers les modifications de la documentation tout comme vous le feriez avec "
-"le code."
+"Grâce au fait que la documentation est :source:`versionnée <docs>`, vous "
+"pouvez naviguer à travers les modifications de la documentation tout comme "
+"vous le feriez avec le code."
 
 msgid ""
 "Technically, the docs on Django's site are generated from the latest "
@@ -1087,13 +1113,12 @@ msgstr ""
 msgid ""
 "If you want to use Django with a database, which is probably the case, "
 "you'll also need a database engine. PostgreSQL_ is recommended, because "
-"we're PostgreSQL fans, and MySQL_, `SQLite 3`_, and Oracle_ are also "
-"supported."
+"we're PostgreSQL fans, and MySQL_, `SQLite`_, and Oracle_ are also supported."
 msgstr ""
 "Si vous souhaitez utiliser Django avec une base de données, ce qui est "
 "probablement le cas, vous aurez également besoin d'un moteur de base de "
 "données. PostgreSQL_ est recommandé, parce que nous sommes des admirateurs "
-"de PostgreSQL, mais MySQL_, `SQLite 3`_ et Oracle_ sont également pris en "
+"de PostgreSQL, mais MySQL_, `SQLite`_ et Oracle_ sont également pris en "
 "charge."
 
 msgid "What Python version can I use with Django?"
@@ -1105,32 +1130,20 @@ msgstr "Version de Django"
 msgid "Python versions"
 msgstr "Versions de Python"
 
-msgid "1.8"
-msgstr "1.8"
-
-msgid "2.7, 3.2 (until the end of 2016), 3.3, 3.4, 3.5"
-msgstr "2.7, 3.2 (jusqu'à fin 2016), 3.3, 3.4, 3.5"
-
-msgid "1.9, 1.10"
-msgstr "1.9, 1.10"
-
-msgid "2.7, 3.4, 3.5"
-msgstr "2.7, 3.4, 3.5"
-
 msgid "1.11"
 msgstr "1.11"
 
-msgid "2.7, 3.4, 3.5, 3.6"
-msgstr "2.7, 3.4, 3.5, 3.6"
+msgid "2.7, 3.4, 3.5, 3.6, 3.7 (added in 1.11.17)"
+msgstr "2.7, 3.4, 3.5, 3.6, 3.7 (ajoutée dans 1.11.17)"
 
 msgid "2.0"
 msgstr "2.0"
 
-msgid "3.4, 3.5, 3.6"
-msgstr "3.4, 3.5, 3.6"
+msgid "3.4, 3.5, 3.6, 3.7"
+msgstr "3.4, 3.5, 3.6, 3.7"
 
-msgid "2.1"
-msgstr "2.1"
+msgid "2.1, 2.2"
+msgstr "2.1, 2.2"
 
 msgid "3.5, 3.6, 3.7"
 msgstr "3.5, 3.6, 3.7"
