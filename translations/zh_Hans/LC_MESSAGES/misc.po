@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) Django Software Foundation and contributors
 # This file is distributed under the same license as the Django package.
-#
+# 
 # Translators:
-# Bai HuanCheng (Bestony) <xiqingongzi@gmail.com>, 2018
+# Bai HuanCheng <xiqingongzi@gmail.com>, 2018
 # bing zhou <1996944@qq.com>, 2018
 # Wonderay <wonder.zhimin@gmail.com>, 2018
 # Fossen <fossen@fossen.cn>, 2018
 # Haotian Wang <twistoy.wang@gmail.com>, 2018
 # huanqun yang <15810163905@163.com>, 2018
-# Ronald White <ouyanghongyu@gmail.com>, 2014
+# Ronald White <tkliuxing@me.com>, 2014
 # qiang wu <wuqiangroy@live.com>, 2018
 # Wang XinHe <wang__xin_he@163.com>, 2018
 # Xiang Yu <bupt.aswmtjdsj@gmail.com>, 2014
@@ -17,647 +17,652 @@
 # zwithz1998, 2018
 # z l <aikuuer@gmail.com>, 2018
 # 曾毅 <1494136313@qq.com>, 2018
+# 陈李俊 <595572594@qq.com>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-11 11:30-0500\n"
-"PO-Revision-Date: 2018-10-05 21:38+0000\n"
-"Last-Translator: Bai HuanCheng (Bestony) <xiqingongzi@gmail.com>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
-"language/zh_CN/)\n"
+"POT-Creation-Date: 2019-05-03 06:25-0500\n"
+"PO-Revision-Date: 2019-05-02 01:55+0000\n"
+"Last-Translator: 陈李俊 <595572594@qq.com>\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: ../../../../sources/2.2/docs/misc/api-stability.txt:3
 msgid "API stability"
 msgstr "API 的稳定性"
 
+#: ../../../../sources/2.2/docs/misc/api-stability.txt:5
 msgid ""
 "Django promises API stability and forwards-compatibility since version 1.0. "
 "In a nutshell, this means that code you develop against a version of Django "
 "will continue to work with future releases. You may need to make minor "
 "changes when upgrading the version of Django your project uses: see the "
-"\"Backwards incompatible changes\" section of the :doc:`release note </"
-"releases/index>` for the version or versions to which you are upgrading."
-msgstr ""
-"从 1.0 版本开始，Django 保证 API 的稳定性和向前兼容。简而言之，这意味着你现在"
-"写的代码在将来的版本中依旧可以使用。如果你给你的项目升级了 Django 版本，你可"
-"能需要更改项目中的小细节，这些可以在每个版本或者你所升级的版本发行说明中的 "
-"“向后不兼容改动” 小节进行查看</releases/index>。"
+"\"Backwards incompatible changes\" section of the :doc:`release note "
+"</releases/index>` for the version or versions to which you are upgrading."
+msgstr "从 1.0 版本开始，Django 保证 API 的稳定性和向前兼容。简而言之，这意味着你现在写的代码在将来的版本中依旧可以使用。如果你给你的项目升级了 Django 版本，你可能需要更改项目中的小细节，这些可以在每个版本或者你所升级的版本发行说明中的 “向后不兼容改动” 小节中查看 :doc:`发布说明</releases/index>`。"
 
+#: ../../../../sources/2.2/docs/misc/api-stability.txt:13
 msgid "What \"stable\" means"
 msgstr "什么是“稳定性”？"
 
+#: ../../../../sources/2.2/docs/misc/api-stability.txt:15
 msgid "In this context, stable means:"
 msgstr "在此处，稳定意味着："
 
+#: ../../../../sources/2.2/docs/misc/api-stability.txt:17
 msgid ""
 "All the public APIs (everything in this documentation) will not be moved or "
 "renamed without providing backwards-compatible aliases."
-msgstr ""
-"所有发布的API (在文档中的一切API) 在不提供向后兼容的别名的情况下，都不会被移"
-"除或者重命名。"
+msgstr "所有发布的 API （在文档中的一切 API ）在不提供向后兼容的别名的情况下，都不会被移除或者重命名。"
 
+#: ../../../../sources/2.2/docs/misc/api-stability.txt:20
 msgid ""
 "If new features are added to these APIs -- which is quite possible -- they "
 "will not break or change the meaning of existing methods. In other words, "
 "\"stable\" does not (necessarily) mean \"complete.\""
-msgstr ""
-"如果文档中的 API 添加了新特性（这是极有可能的），新特性不会导致现有方法罢工或"
-"者修改方法的含义。也就是说，“稳定性”并不意味着“不变性”。"
+msgstr "如果文档中的 API 添加了新特性（这是极有可能的），新特性不会导致现有方法罢工或者修改方法的含义。也就是说，“稳定性”并不意味着“不变性”。"
 
+#: ../../../../sources/2.2/docs/misc/api-stability.txt:24
 msgid ""
 "If, for some reason, an API declared stable must be removed or replaced, it "
 "will be declared deprecated but will remain in the API for at least two "
 "feature releases. Warnings will be issued when the deprecated method is "
 "called."
-msgstr ""
-"假如因为某些原因，一个“稳定的” API 必须被移除或者被代替，它将会被弃用但仍然会"
-"被保留直到至少有两个新特性发布。当调用即将被弃用的方法时，会产生警告。"
+msgstr "假如因为某些原因，一个“稳定的” API 必须被移除或者被代替，它将会被弃用但仍然会被保留直到至少有两个新特性发布。当调用即将被弃用的方法时，会产生警告。"
 
+#: ../../../../sources/2.2/docs/misc/api-stability.txt:29
 msgid ""
 "See :ref:`official-releases` for more details on how Django's version "
 "numbering scheme works, and how features will be deprecated."
-msgstr ""
-"有关 Django 是如何编写版本号以及一些功能是如何被弃用的详细信息，请看： ref:"
-"`official-releases` "
+msgstr "有关 Django 是如何编写版本号以及一些功能是如何被弃用的详细信息，请看： :ref:`official-releases`。"
 
+#: ../../../../sources/2.2/docs/misc/api-stability.txt:32
 msgid ""
 "We'll only break backwards compatibility of these APIs if a bug or security "
 "hole makes it completely unavoidable."
-msgstr ""
-"我们只有在某些 API 中的一个 bug 或者 安全问题导致问题完全不能避免的时候，我们"
-"才会移除对这些 API 的向后兼容。"
+msgstr "我们只有在某些 API 中的一个 bug 或者 安全问题导致问题完全不能避免的时候，我们才会移除对这些 API 的向后兼容。"
 
+#: ../../../../sources/2.2/docs/misc/api-stability.txt:36
 msgid "Stable APIs"
-msgstr "稳定的API"
+msgstr "稳定的 API"
 
+#: ../../../../sources/2.2/docs/misc/api-stability.txt:38
 msgid ""
-"In general, everything covered in the documentation -- with the exception of "
-"anything in the :doc:`internals area </internals/index>` is considered "
+"In general, everything covered in the documentation -- with the exception of"
+" anything in the :doc:`internals area </internals/index>` is considered "
 "stable."
-msgstr ""
-"一般来说，文档中的一切都确定是稳定的，除开 `internals area </internals/"
-"index>` 。"
+msgstr "一般来说，文档中的一切都确定是稳定的，除开 :doc:`internals area </internals/index>`。"
 
+#: ../../../../sources/2.2/docs/misc/api-stability.txt:42
 msgid "Exceptions"
 msgstr "例外"
 
+#: ../../../../sources/2.2/docs/misc/api-stability.txt:44
 msgid ""
 "There are a few exceptions to this stability and backwards-compatibility "
 "promise."
 msgstr "这种稳定性和向后兼容性承诺有一些例外。"
 
+#: ../../../../sources/2.2/docs/misc/api-stability.txt:48
 msgid "Security fixes"
 msgstr "安全修复"
 
+#: ../../../../sources/2.2/docs/misc/api-stability.txt:50
 msgid ""
 "If we become aware of a security problem -- hopefully by someone following "
-"our :ref:`security reporting policy <reporting-security-issues>` -- we'll do "
-"everything necessary to fix it. This might mean breaking backwards "
+"our :ref:`security reporting policy <reporting-security-issues>` -- we'll do"
+" everything necessary to fix it. This might mean breaking backwards "
 "compatibility; security trumps the compatibility guarantee."
-msgstr ""
-"如果我们发现了安全问题 --希望报告者遵照我们的 :ref：`安全报告政策<reporting-"
-"security-issues>`--我们会尽一切努力解决它。 这可能意味着打破向后兼容性; 安全"
-"性优先于兼容性保证。"
+msgstr "如果我们发现了安全问题 --希望报告者遵照我们的 :ref:`安全报告政策 <reporting-security-issues>`--我们会尽一切努力解决它。 这可能意味着打破向后兼容性; 安全性优先于兼容性保证。"
 
+#: ../../../../sources/2.2/docs/misc/api-stability.txt:56
 msgid "APIs marked as internal"
-msgstr "标记为内部的API"
+msgstr "标记为内部的 API"
 
+#: ../../../../sources/2.2/docs/misc/api-stability.txt:58
 msgid "Certain APIs are explicitly marked as \"internal\" in a couple of ways:"
 msgstr "某些API在几种方式中被明确标记为 \"内部\" :"
 
+#: ../../../../sources/2.2/docs/misc/api-stability.txt:60
 msgid ""
 "Some documentation refers to internals and mentions them as such. If the "
 "documentation says that something is internal, we reserve the right to "
 "change it."
-msgstr ""
-"一些文档提及了这些API并标为“内部”，如果确实如此，我们保留修改它的权利。"
+msgstr "一些文档提及了这些 API 并标为“内部”，如果确实如此，我们保留修改它的权利。"
 
+#: ../../../../sources/2.2/docs/misc/api-stability.txt:64
 msgid ""
 "Functions, methods, and other objects prefixed by a leading underscore "
 "(``_``). This is the standard Python way of indicating that something is "
 "private; if any method starts with a single ``_``, it's an internal API."
-msgstr ""
-"一些函数，方法以及其他对象以下划线“_”开头，这是Python声明其为“私有”的标准方"
-"式，如果一个方法以单下划线“_”开头，那么这意味着它是Django内部的一个API"
+msgstr "一些函数，方法以及其他对象以下划线“_”开头，这是 Python 声明其为“私有”的标准方式，如果一个方法以单下划线“_”开头，那么这意味着它是 Django 内部的一个 API。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:3
 msgid "Design philosophies"
 msgstr "设计理念"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:5
 msgid ""
 "This document explains some of the fundamental philosophies Django's "
 "developers have used in creating the framework. Its goal is to explain the "
 "past and guide the future."
-msgstr ""
-"本文档解释了 Django 开发人员在开发 Django 时使用的一些基本哲学， 它的目标是解"
-"释过去并指导未来"
+msgstr "本文档解释了 Django 开发人员在开发 Django 时使用的一些基本哲学， 它的目标是解释过去并指导未来"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:10
 msgid "Overall"
 msgstr "总体"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:15
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:155
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:296
 msgid "Loose coupling"
 msgstr "松耦合"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:19
 msgid ""
 "A fundamental goal of Django's stack is `loose coupling and tight "
 "cohesion`_. The various layers of the framework shouldn't \"know\" about "
 "each other unless absolutely necessary."
-msgstr ""
-"Django 栈的基本目标是降低耦合度同时加强聚合度。框架里的不同层（Layers）不应该"
-"知道对方的代码，除非它们确实需要。"
+msgstr "Django 栈的基本目标是 `低耦合高内聚`_。框架里的不同层（Layers）不应该知道对方的代码，除非它们确实需要。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:23
 msgid ""
 "For example, the template system knows nothing about Web requests, the "
 "database layer knows nothing about data display and the view system doesn't "
 "care which template system a programmer uses."
-msgstr ""
-"例如，模板系统不需要知道用户的 Web 请求，数据库层不需要了解如果显示数据，而视"
-"图并不关心程序员所使用的模板系统。"
+msgstr "例如，模板系统不需要知道用户的 Web 请求，数据库层不需要了解如果显示数据，而视图并不关心程序员所使用的模板系统。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:27
 msgid ""
 "Although Django comes with a full stack for convenience, the pieces of the "
 "stack are independent of another wherever possible."
-msgstr ""
-"尽管为了方便 Django 带有一个完整的堆栈，但堆栈的各个部分尽可能独立于另一个堆"
-"栈。"
+msgstr "尽管为了方便 Django 带有一个完整的堆栈，但堆栈的各个部分尽可能独立于另一个堆栈。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:35
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:315
 msgid "Less code"
 msgstr "更少的代码"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:37
 msgid ""
 "Django apps should use as little code as possible; they should lack "
 "boilerplate. Django should take full advantage of Python's dynamic "
 "capabilities, such as introspection."
-msgstr ""
-"Django应用的代码应该尽可能地精简，Django应该充分利用Python的动态能力，比如自"
-"省机制（introspection）"
+msgstr "Django 应用的代码应该尽可能地精简，Django 应该充分利用 Python 的动态能力，比如自省机制（introspection）。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:44
 msgid "Quick development"
 msgstr "快速开发"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:46
 msgid ""
 "The point of a Web framework in the 21st century is to make the tedious "
 "aspects of Web development fast. Django should allow for incredibly quick "
 "Web development."
-msgstr ""
-"在 21 世纪，Web 框架的核心一点是让 Web 开发中枯燥的事情处理得更加快速，"
-"Django 可以做到快速的 Web 开发。"
+msgstr "在 21 世纪，Web 框架的核心一点是让 Web 开发中枯燥的事情处理得更加快速，Django 可以做到快速的 Web 开发。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:53
 msgid "Don't repeat yourself (DRY)"
 msgstr "不要重复地造轮子 (DRY)"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:59
 msgid ""
 "Every distinct concept and/or piece of data should live in one, and only "
 "one, place. Redundancy is bad. Normalization is good."
-msgstr ""
-"每个独特的概念或数据片应该存在且只存在于一个地方。避免冗余，做好标准化。"
+msgstr "每个独特的概念或数据片应该存在且只存在于一个地方。避免冗余，做好标准化。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:62
 msgid ""
 "The framework, within reason, should deduce as much as possible from as "
 "little as possible."
 msgstr "合理的框架应该从尽可能少的信息中推断出尽可能多的需求。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:67
 msgid "The `discussion of DRY on the Portland Pattern Repository`__"
 msgstr "`波特兰模式知识库中关于DRY的讨论`__"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:74
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:95
 msgid "Explicit is better than implicit"
 msgstr "明确优于隐式"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:76
 msgid ""
 "This is a core Python principle listed in :pep:`20`, and it means Django "
 "shouldn't do too much \"magic.\" Magic shouldn't happen unless there's a "
 "really good reason for it. Magic is worth using only if it creates a huge "
 "convenience unattainable in other ways, and it isn't implemented in a way "
 "that confuses developers who are trying to learn how to use the feature."
-msgstr ""
-"这是在 :pep:`20` 列出的核心 Python 原则，这意味着 Django 不应该使用太多的“魔"
-"术”。除非有一个很好的理由，否则不应该出现魔术。只有当魔术创造了巨大的便利，并"
-"且使用其他方式难以实现时，它才值得使用，而且它的实现方式并不会让试图学习如何"
-"使用该功能的开发人员感到困惑。"
+msgstr "这是在 :pep:`20` 列出的核心 Python 原则，这意味着 Django 不应该使用太多的“魔术”。除非有一个很好的理由，否则不应该出现魔术。只有当魔术创造了巨大的便利，并且使用其他方式难以实现时，它才值得使用，而且它的实现方式并不会让试图学习如何使用该功能的开发人员感到困惑。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:85
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:322
 msgid "Consistency"
 msgstr "一致性"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:87
 msgid ""
 "The framework should be consistent at all levels. Consistency applies to "
 "everything from low-level (the Python coding style used) to high-level (the "
 "\"experience\" of using Django)."
-msgstr ""
-"框架应在所有层级上保持一致。一致性适用于从低级（Python 的编码风格）到高级（使"
-"用 Django 的“经验”）的所有内容。"
+msgstr "框架应在所有层级上保持一致。一致性适用于从低级（Python 的编码风格）到高级（使用 Django 的“经验”）的所有内容。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:92
 msgid "Models"
 msgstr "模型"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:97
 msgid ""
 "Fields shouldn't assume certain behaviors based solely on the name of the "
 "field. This requires too much knowledge of the system and is prone to "
-"errors. Instead, behaviors should be based on keyword arguments and, in some "
-"cases, on the type of the field."
-msgstr ""
-"字段不应该仅仅根据字段的名称来假定某些行为。这需要对系统有太多了解，并且容易"
-"出现错误。相反，其行为应该基于关键字参数，并且在某些情况下，应该基于字段的类"
-"型。"
+"errors. Instead, behaviors should be based on keyword arguments and, in some"
+" cases, on the type of the field."
+msgstr "字段不应该仅仅根据字段的名称来假定某些行为。这需要对系统有太多了解，并且容易出现错误。相反，其行为应该基于关键字参数，并且在某些情况下，应该基于字段的类型。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:103
 msgid "Include all relevant domain logic"
 msgstr "包括所有相关领域逻辑"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:105
 msgid ""
 "Models should encapsulate every aspect of an \"object,\" following Martin "
 "Fowler's `Active Record`_ design pattern."
-msgstr ""
-"模型应该封装一个“对象”的各个方面，遵循 Martin Fowler 的“Active Record”设计模"
-"式。"
+msgstr "模型应该封装一个“对象”的各个方面，遵循 Martin Fowler 的 `Active Record`_ 设计模式。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:108
 msgid ""
 "This is why both the data represented by a model and information about it "
 "(its human-readable name, options like default ordering, etc.) are defined "
 "in the model class; all the information needed to understand a given model "
 "should be stored *in* the model."
-msgstr ""
-"这就是为什么在模型类中要同时定义一个模型表现的数据以及关于它的信息（包括其人"
-"类可读的名称，默认排序等选项）；所有用于理解给定模型所需的信息都应该存储在模"
-"型中。"
+msgstr "这就是为什么在模型类中要同时定义一个模型表现的数据以及关于它的信息（包括其人类可读的名称，默认排序等选项）；所有用于理解给定模型所需的信息都应该存储在模型中。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:116
 msgid "Database API"
 msgstr "数据库API"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:118
 msgid "The core goals of the database API are:"
 msgstr "数据库API的主要用处："
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:121
 msgid "SQL efficiency"
 msgstr "SQL效率"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:123
 msgid ""
 "It should execute SQL statements as few times as possible, and it should "
 "optimize statements internally."
 msgstr "应该尽可能少地执行SQL语句，并且应该在内部优化语句。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:126
 msgid ""
 "This is why developers need to call ``save()`` explicitly, rather than the "
 "framework saving things behind the scenes silently."
-msgstr ""
-"这就是为什么开发者需要显式地调用“save()”，而不是由框架静默地在幕后保存东西。"
+msgstr "这就是为什么开发者需要显式地调用 ``save()``，而不是由框架静默地在幕后保存东西。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:129
 msgid ""
 "This is also why the ``select_related()`` ``QuerySet`` method exists. It's "
 "an optional performance booster for the common case of selecting \"every "
 "related object.\""
-msgstr ""
-"这也是为什么``select_related()`` ``QuerySet``方法存在的原因。在查询“每个关联"
-"的对象”的常见情况下，它是一个可选的性能提升器。"
+msgstr "这也是为什么 ``select_related()`` ``QuerySet`` 方法存在的原因。在查询“每个关联的对象”的常见情况下，它是一个可选的性能提升器。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:134
 msgid "Terse, powerful syntax"
 msgstr "简洁, 强大的语法"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:136
 msgid ""
 "The database API should allow rich, expressive statements in as little "
 "syntax as possible. It should not rely on importing other modules or helper "
 "objects."
-msgstr ""
-"数据库 API 应该允许用尽可能少的语法，来表达丰富、达意的语句。它不应该依赖于导"
-"入其他模块或辅助对象。"
+msgstr "数据库 API 应该允许用尽可能少的语法，来表达丰富、达意的语句。它不应该依赖于导入其他模块或辅助对象。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:139
 msgid ""
 "Joins should be performed automatically, behind the scenes, when necessary."
 msgstr "当必要时, 在幕后插入应该是自动进行的."
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:141
 msgid ""
-"Every object should be able to access every related object, systemwide. This "
-"access should work both ways."
-msgstr ""
-"每一个对象都应该能够访问所有相关的对象, 系统范围. 这种访问应该是双向的."
+"Every object should be able to access every related object, systemwide. This"
+" access should work both ways."
+msgstr "每一个对象都应该能够访问所有相关的对象, 系统范围. 这种访问应该是双向的."
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:145
 msgid "Option to drop into raw SQL easily, when needed"
 msgstr "当有必要时, 可方便地选择使用原始 SQL 语句"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:147
 msgid ""
 "The database API should realize it's a shortcut but not necessarily an end-"
 "all-be-all. The framework should make it easy to write custom SQL -- entire "
 "statements, or just custom ``WHERE`` clauses as custom parameters to API "
 "calls."
-msgstr ""
-"应该认识到数据库 API 只是一个便捷的方法，但并不必须是最终的全部手段。框架应该"
-"可以很容易地编写自定义的 SQL——完整的语句，或者仅仅是自定义“WHERE”子句作为 "
-"API 调用时的自定义参数。"
+msgstr "应该认识到数据库 API 只是一个便捷的方法，但并不必须是最终的全部手段。框架应该可以很容易地编写自定义的 SQL——完整的语句，或者仅仅是自定义 ``WHERE`` 子句作为 API 调用时的自定义参数。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:152
 msgid "URL design"
 msgstr "URL 设计"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:157
 msgid ""
 "URLs in a Django app should not be coupled to the underlying Python code. "
 "Tying URLs to Python function names is a Bad And Ugly Thing."
-msgstr ""
-"Django 应用中的 URL 不应该与底层 Python 代码耦合。将 URL 与 Python 函数名联系"
-"起来是一件很糟糕且丑陋的做法。"
+msgstr "Django 应用中的 URL 不应该与底层 Python 代码耦合。将 URL 与 Python 函数名联系起来是一件很糟糕且丑陋的做法。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:160
 msgid ""
 "Along these lines, the Django URL system should allow URLs for the same app "
-"to be different in different contexts. For example, one site may put stories "
-"at ``/stories/``, while another may use ``/news/``."
-msgstr ""
-"按照这些方法，Django URL 系统应该允许同一应用的 URL 在不同的上下文中有所不"
-"同。例如，一个网站可以在“/stories/”中放置故事，而另一个网站则可以使用“/"
-"news/”。"
+"to be different in different contexts. For example, one site may put stories"
+" at ``/stories/``, while another may use ``/news/``."
+msgstr "按照这些方法，Django URL 系统应该允许同一应用的 URL 在不同的上下文中有所不同。例如，一个网站可以在 ``/stories/`` 中放置故事，而另一个网站则可以使用 ``/news/``。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:165
 msgid "Infinite flexibility"
 msgstr "无限的灵活性"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:167
 msgid ""
-"URLs should be as flexible as possible. Any conceivable URL design should be "
-"allowed."
+"URLs should be as flexible as possible. Any conceivable URL design should be"
+" allowed."
 msgstr "URL 应该尽可能灵活。任何可想到的 URL 设计都应该被允许。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:171
 msgid "Encourage best practices"
 msgstr "鼓励最佳实践"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:173
 msgid ""
 "The framework should make it just as easy (or even easier) for a developer "
 "to design pretty URLs than ugly ones."
-msgstr ""
-"框架可以做到让开发者简单（或更加简单）地设计出漂亮的，而不是难看的 URL。"
+msgstr "框架可以做到让开发者简单（或更加简单）地设计出漂亮的，而不是难看的 URL。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:176
 msgid "File extensions in Web-page URLs should be avoided."
 msgstr "在 URL 中应避免出现文件后缀名。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:178
 msgid "Vignette-style commas in URLs deserve severe punishment."
 msgstr "在 URL 中使用 Vignette 式的逗号应该受到严厉的惩罚。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:183
 msgid "Definitive URLs"
 msgstr "定义URL"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:187
 msgid ""
 "Technically, ``foo.com/bar`` and ``foo.com/bar/`` are two different URLs, "
 "and search-engine robots (and some Web traffic-analyzing tools) would treat "
 "them as separate pages. Django should make an effort to \"normalize\" URLs "
 "so that search-engine robots don't get confused."
-msgstr ""
-"技术上，``foo.com/bar`` 和 ``foo.com/bar/`` 是两条不同的 URL，搜索引擎爬虫"
-"（以及某些 Web 流量分析工具）会将其视为独立的页面。Django 会将其转为 \"标准"
-"\" 的 URL，让搜索引擎爬虫正确识别。"
+msgstr "技术上，``foo.com/bar`` 和 ``foo.com/bar/`` 是两条不同的 URL，搜索引擎爬虫（以及某些 Web 流量分析工具）会将其视为独立的页面。Django 会将其转为 \"标准\" 的 URL，让搜索引擎爬虫正确识别。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:192
 msgid "This is the reasoning behind the :setting:`APPEND_SLASH` setting."
-msgstr "详细请参考：setting:`APPEND_SLASH` setting."
+msgstr "详细请参考 :setting:`APPEND_SLASH` 配置。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:195
 msgid "Template system"
 msgstr "模板系统"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:200
 msgid "Separate logic from presentation"
 msgstr "逻辑分离的解决方案"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:202
 msgid ""
 "We see a template system as a tool that controls presentation and "
 "presentation-related logic -- and that's it. The template system shouldn't "
 "support functionality that goes beyond this basic goal."
-msgstr ""
-"我们将模板系统看作一个工具，用于控制表现方式和表示方式相关的逻辑。模板系统不"
-"应该支持超出这个基本目标的功能。"
+msgstr "我们将模板系统看作一个工具，用于控制表现方式和表示方式相关的逻辑。模板系统不应该支持超出这个基本目标的功能。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:207
 msgid "Discourage redundancy"
 msgstr "避免冗余"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:209
 msgid ""
 "The majority of dynamic websites use some sort of common sitewide design -- "
 "a common header, footer, navigation bar, etc. The Django template system "
 "should make it easy to store those elements in a single place, eliminating "
 "duplicate code."
-msgstr ""
-"大多数动态网站会使用一些网站整体通用的设计——一个通用的页眉、页脚、导航栏，等"
-"等。Django 模板系统应该可以很容易地将这些元素存储在一个地方，从而减少重复的代"
-"码。"
+msgstr "大多数动态网站会使用一些网站整体通用的设计——一个通用的页眉、页脚、导航栏，等等。Django 模板系统应该可以很容易地将这些元素存储在一个地方，从而减少重复的代码。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:214
 msgid ""
 "This is the philosophy behind :ref:`template inheritance <template-"
 "inheritance>`."
 msgstr "这是 :ref:`模板继承 <template-inheritance>` 背后的理念。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:218
 msgid "Be decoupled from HTML"
 msgstr "从 HTML 中解耦"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:220
 msgid ""
 "The template system shouldn't be designed so that it only outputs HTML. It "
-"should be equally good at generating other text-based formats, or just plain "
-"text."
-msgstr ""
-"模板系统不应该被设计成只能输出 HTML。它应该同样擅长生成其他基于文本的格式，或"
-"者仅仅是纯文本。"
+"should be equally good at generating other text-based formats, or just plain"
+" text."
+msgstr "模板系统不应该被设计成只能输出 HTML。它应该同样擅长生成其他基于文本的格式，或者仅仅是纯文本。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:225
 msgid "XML should not be used for template languages"
 msgstr "XML不应被用于模板语言"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:229
 msgid ""
-"Using an XML engine to parse templates introduces a whole new world of human "
-"error in editing templates -- and incurs an unacceptable level of overhead "
+"Using an XML engine to parse templates introduces a whole new world of human"
+" error in editing templates -- and incurs an unacceptable level of overhead "
 "in template processing."
-msgstr ""
-"使用 XML 引擎去解析模板会在编辑模板的过程中引入很多人为错误，并在模板处理中导"
-"致不可接受的开销。"
+msgstr "使用 XML 引擎去解析模板会在编辑模板的过程中引入很多人为错误，并在模板处理中导致不可接受的开销。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:234
 msgid "Assume designer competence"
 msgstr "承担设计能力"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:236
 msgid ""
 "The template system shouldn't be designed so that templates necessarily are "
 "displayed nicely in WYSIWYG editors such as Dreamweaver. That is too severe "
-"of a limitation and wouldn't allow the syntax to be as nice as it is. Django "
-"expects template authors are comfortable editing HTML directly."
-msgstr ""
-"模板系统不应该有的设计是，使得模板可以在WYSIWYG（所见即所得）编辑器中也能显示"
-"得很好，比如 Dreamweaver。因为这是一个非常严重的限制，会让模板的语法不够好。"
-"Django 期望模板编写者有能力直接编辑 HTML 文本。"
+"of a limitation and wouldn't allow the syntax to be as nice as it is. Django"
+" expects template authors are comfortable editing HTML directly."
+msgstr "模板系统不应该有的设计是，使得模板可以在WYSIWYG（所见即所得）编辑器中也能显示得很好，比如 Dreamweaver。因为这是一个非常严重的限制，会让模板的语法不够好。Django 期望模板编写者有能力直接编辑 HTML 文本。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:242
 msgid "Treat whitespace obviously"
 msgstr "更加直接的处理空格"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:244
 msgid ""
-"The template system shouldn't do magic things with whitespace. If a template "
-"includes whitespace, the system should treat the whitespace as it treats "
+"The template system shouldn't do magic things with whitespace. If a template"
+" includes whitespace, the system should treat the whitespace as it treats "
 "text -- just display it. Any whitespace that's not in a template tag should "
 "be displayed."
-msgstr ""
-"模板系统不应该用空白符来做神奇的事情。如果模板包含空白符，系统应该在处理文本"
-"时处理空格——只是显示它。任何不在模板标签中的空白符都应该显示出来。"
+msgstr "模板系统不应该用空白符来做神奇的事情。如果模板包含空白符，系统应该在处理文本时处理空格——只是显示它。任何不在模板标签中的空白符都应该显示出来。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:250
 msgid "Don't invent a programming language"
 msgstr "不要发明一种编程语言"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:252
 msgid ""
 "The goal is not to invent a programming language. The goal is to offer just "
 "enough programming-esque functionality, such as branching and looping, that "
 "is essential for making presentation-related decisions. The :ref:`Django "
 "Template Language (DTL) <template-language-intro>` aims to avoid advanced "
 "logic."
-msgstr ""
-"模板系统的目标不是发明一种编程语言。它的目标是提供足够的具有编程风格的功能，"
-"比如分支和循环，这对于做出表现相关的决策是至关重要的。:ref:`Django 模板语言"
-"（DTL）<template-language-intro>' 旨在避免高级逻辑。"
+msgstr "模板系统的目标不是发明一种编程语言。它的目标是提供足够的具有编程风格的功能，比如分支和循环，这对于做出表现相关的决策是至关重要的。:ref:`Django 模板语言（DTL）<template-language-intro>` 旨在避免高级逻辑。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:257
 msgid ""
 "The Django template system recognizes that templates are most often written "
 "by *designers*, not *programmers*, and therefore should not assume Python "
 "knowledge."
-msgstr ""
-"Django 模板系统认为模板通常是由设计师编写的，而不是程序员，因此不应该假设他了"
-"解 Python。"
+msgstr "Django 模板系统认为模板通常是由 *设计师* 编写的，而不是 *程序员*，因此不应该假设他了解 Python。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:262
 msgid "Safety and security"
 msgstr "安全与保障"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:264
 msgid ""
 "The template system, out of the box, should forbid the inclusion of "
 "malicious code -- such as commands that delete database records."
 msgstr "开箱即用的模板系统禁止包含恶意代码，例如删除数据库记录的代码。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:267
 msgid ""
 "This is another reason the template system doesn't allow arbitrary Python "
 "code."
 msgstr "这就是模板系统不允许有任意Python代码的另一个原因。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:270
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:328
 msgid "Extensibility"
 msgstr "可扩展性"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:272
 msgid ""
-"The template system should recognize that advanced template authors may want "
-"to extend its technology."
+"The template system should recognize that advanced template authors may want"
+" to extend its technology."
 msgstr "模板系统应该认识到, 高阶的模板作者可能想扩展它."
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:275
 msgid "This is the philosophy behind custom template tags and filters."
 msgstr "这是自定义的模板标签和过滤器背后的理念."
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:278
 msgid "Views"
 msgstr "视图"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:281
 msgid "Simplicity"
 msgstr "简洁"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:283
 msgid ""
 "Writing a view should be as simple as writing a Python function. Developers "
 "shouldn't have to instantiate a class when a function will do."
-msgstr ""
-"编写视图应该和编写Python函数一样简单。开发人员不应该在函数执行时实例化一个"
-"类。"
+msgstr "编写视图应该和编写 Python 函数一样简单。开发人员不应该在函数执行时实例化一个类。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:287
 msgid "Use request objects"
 msgstr "使用请求对象"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:289
 msgid ""
 "Views should have access to a request object -- an object that stores "
 "metadata about the current request. The object should be passed directly to "
 "a view function, rather than the view function having to access the request "
 "data from a global variable. This makes it light, clean and easy to test "
 "views by passing in \"fake\" request objects."
-msgstr ""
-"视图应该能够访问一个请求对象——一个储存关于当前请求的元数据的对象。对象应该直"
-"接传递给视图函数，而不是必须从全局变量访问请求数据的视图函数。这使得通过传"
-"入“假”请求对象来测试视图变得轻松、干净和容易。"
+msgstr "视图应该能够访问一个请求对象——一个储存关于当前请求的元数据的对象。对象应该直接传递给视图函数，而不是必须从全局变量访问请求数据的视图函数。这使得通过传入“假”请求对象来测试视图变得轻松、干净和容易。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:298
 msgid ""
 "A view shouldn't care about which template system the developer uses -- or "
 "even whether a template system is used at all."
 msgstr "视图不应该关心开发人员使用哪种模板——甚至根本不用模板系统。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:302
 msgid "Differentiate between GET and POST"
 msgstr "GET 方法和 POST 方法的区别"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:304
 msgid ""
 "GET and POST are distinct; developers should explicitly use one or the "
-"other. The framework should make it easy to distinguish between GET and POST "
-"data."
-msgstr ""
-"GET 和 POST 是不同的；开发人员应该明确地使用其中一个或另一个。框架应该使得 "
-"GET 和 POST 数据很容易区分。"
+"other. The framework should make it easy to distinguish between GET and POST"
+" data."
+msgstr "GET 和 POST 是不同的；开发人员应该明确地使用其中一个或另一个。框架应该使得 GET 和 POST 数据很容易区分。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:310
 msgid "Cache Framework"
 msgstr "缓存框架"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:312
 msgid "The core goals of Django's :doc:`cache framework </topics/cache>` are:"
-msgstr " :doc:`cache framework</topics/cache>`的核心目的是："
+msgstr " :doc:`缓存框架 </topics/cache>` 的核心目的是："
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:317
 msgid ""
 "A cache should be as fast as possible.  Hence, all framework code "
 "surrounding the cache backend should be kept to the absolute minimum, "
 "especially for ``get()`` operations."
-msgstr ""
-"缓存应该尽可能快。因此，围绕缓存后端的所有框架代码都应该保持在绝对的最小值，"
-"特别是对于“get()”操作。"
+msgstr "缓存应该尽可能快。因此，围绕缓存后端的所有框架代码都应该保持在绝对的最小值，特别是对于 ``get()`` 操作。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:324
 msgid ""
 "The cache API should provide a consistent interface across the different "
 "cache backends."
 msgstr "缓存API应该为不同的缓存后端提供一致的接口。"
 
+#: ../../../../sources/2.2/docs/misc/design-philosophies.txt:330
 msgid ""
 "The cache API should be extensible at the application level based on the "
 "developer's needs (for example, see :ref:`cache_key_transformation`)."
-msgstr ""
-"缓存API应该基于开发者的需求，在应用程序级别上是可扩展的（例如，参见:"
-"ref:'cache_key_transformation'）。"
+msgstr "缓存API应该基于开发者的需求，在应用程序级别上是可扩展的（例如，参见 :ref:`cache_key_transformation`）。"
 
+#: ../../../../sources/2.2/docs/misc/distributions.txt:3
 msgid "Third-party distributions of Django"
 msgstr "Django 的第三方发布包"
 
+#: ../../../../sources/2.2/docs/misc/distributions.txt:5
 msgid ""
 "Many third-party distributors are now providing versions of Django "
 "integrated with their package-management systems. These can make "
 "installation and upgrading much easier for users of Django since the "
-"integration includes the ability to automatically install dependencies (like "
-"database adapters) that Django requires."
-msgstr ""
-"许多第三方分销商现在正在提供与他们的软件包管理系统集成的Django版本。这些可以"
-"使Django的用户更容易安装和升级，因为集成包括了自动安装Django需要的依赖关系"
-"（如数据库适配器）的功能。"
+"integration includes the ability to automatically install dependencies (like"
+" database adapters) that Django requires."
+msgstr "许多第三方分销商现在正在提供与他们的软件包管理系统集成的 Django 版本。这些可以使 Django 的用户更容易安装和升级，因为集成包括了自动安装 Django 需要的依赖关系（如数据库适配器）的功能。"
 
+#: ../../../../sources/2.2/docs/misc/distributions.txt:11
 msgid ""
 "Typically, these packages are based on the latest stable release of Django, "
 "so if you want to use the development version of Django you'll need to "
 "follow the instructions for :ref:`installing the development version "
 "<installing-development-version>` from our Git repository."
-msgstr ""
-"通常，这些包基于 Django 的最新稳定版本，因此如果您想使用 Django 的开发版本，"
-"则需要从我们的 Git 库中安装 :ref:`installing the development version "
-"<installing-development-version> 。"
+msgstr "通常，这些包基于 Django 的最新稳定版本，因此如果您想使用 Django 的开发版本，则需要从我们的 Git 库中安装 :ref:`installing the development version <installing-development-version>`。"
 
+#: ../../../../sources/2.2/docs/misc/distributions.txt:16
 msgid ""
 "If you're using Linux or a Unix installation, such as OpenSolaris, check "
-"with your distributor to see if they already package Django. If you're using "
-"a Linux distro and don't know how to find out if a package is available, "
-"then now is a good time to learn.  The Django Wiki contains a list of `Third "
-"Party Distributions`_ to help you out."
-msgstr ""
-"如果您正在使用 Linux 或 Unix 的安装版，比如 OpenSolaris，请与您的经销商联系，"
-"看看他们是否已经打包了Django。如果您使用的是Linux发行版，并且不知道如何弄清一"
-"个包是否可用，那么现在是学习的好时机。Django Wiki 包含一个“第三方发行版”列"
-"表，以帮助您解决问题。"
+"with your distributor to see if they already package Django. If you're using"
+" a Linux distro and don't know how to find out if a package is available, "
+"then now is a good time to learn.  The Django Wiki contains a list of `Third"
+" Party Distributions`_ to help you out."
+msgstr "如果您正在使用 Linux 或 Unix 的安装版，比如 OpenSolaris，请与您的经销商联系，看看他们是否已经打包了Django。如果您使用的是Linux发行版，并且不知道如何弄清一个包是否可用，那么现在是学习的好时机。Django Wiki 包含一个“第三方发行版”列表，以帮助您解决问题。"
 
+#: ../../../../sources/2.2/docs/misc/distributions.txt:26
 msgid "For distributors"
 msgstr "对于发布者"
 
+#: ../../../../sources/2.2/docs/misc/distributions.txt:28
 msgid ""
-"If you'd like to package Django for distribution, we'd be happy to help out! "
-"Please join the |django-developers| mailing list and introduce yourself."
-msgstr ""
-"如果你希望将 Django 应用打包发布，我们非常乐意提供帮助。请订阅 |django-"
-"developers| 的邮件列表并且介绍你自己。"
+"If you'd like to package Django for distribution, we'd be happy to help out!"
+" Please join the |django-developers| mailing list and introduce yourself."
+msgstr "如果你希望将 Django 应用打包发布，我们非常乐意提供帮助。请订阅 |django-developers| 的邮件列表并且介绍你自己。"
 
+#: ../../../../sources/2.2/docs/misc/distributions.txt:31
 msgid ""
 "We also encourage all distributors to subscribe to the |django-announce| "
-"mailing list, which is a (very) low-traffic list for announcing new releases "
-"of Django and important bugfixes."
-msgstr ""
-"我们还鼓励所有的发行者订阅 |django-announce| 邮件列表，这是一个（非常）低流量"
-"的列表，用于发布Django的新版本和重要的bug修复。"
+"mailing list, which is a (very) low-traffic list for announcing new releases"
+" of Django and important bugfixes."
+msgstr "我们还鼓励所有的发行者订阅 |django-announce| 邮件列表，这是一个（非常）低流量的列表，用于发布 Django 的新版本和重要的bug修复。"
 
+#: ../../../../sources/2.2/docs/misc/index.txt:3
 msgid "Meta-documentation and miscellany"
 msgstr "元文件和杂记"
 
+#: ../../../../sources/2.2/docs/misc/index.txt:5
 msgid ""
 "Documentation that we can't find a more organized place for. Like that "
 "drawer in your kitchen with the scissors, batteries, duct tape, and other "
 "junk."
-msgstr ""
-"我们无法为这部分文档找到一个更有条理的地方。就像你厨房里的某个抽屉里，有剪"
-"刀、电池、胶带和其他垃圾。"
+msgstr "我们无法为这部分文档找到一个更有条理的地方。就像你厨房里的某个抽屉里，有剪刀、电池、胶带和其他垃圾。"

@@ -69,8 +69,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-30 03:26-0500\n"
-"PO-Revision-Date: 2019-04-30 19:44+0000\n"
+"POT-Creation-Date: 2019-05-03 06:25-0500\n"
+"PO-Revision-Date: 2019-05-03 13:22+0000\n"
 "Last-Translator: Blg Mengde <kid.blg@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -4667,7 +4667,7 @@ msgstr "这个例子是基于 ``pylibmc`` 后端的设置，改设置支持二�
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:486
 msgid "The per-site cache"
-msgstr ""
+msgstr "站点缓存"
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:488
 msgid ""
@@ -4676,30 +4676,30 @@ msgid ""
 "``'django.middleware.cache.UpdateCacheMiddleware'`` and "
 "``'django.middleware.cache.FetchFromCacheMiddleware'`` to your "
 ":setting:`MIDDLEWARE` setting, as in this example::"
-msgstr ""
+msgstr "一旦缓存设置完毕，使用缓存最简便的方式就是缓存整个站点。你需要在 :setting:`MIDDLEWARE` 设置中添加 ``'django.middleware.cache.UpdateCacheMiddleware'`` 和 ``'django.middleware.cache.FetchFromCacheMiddleware'`` ，像下面这个例子一样："
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:502
 msgid ""
 "No, that's not a typo: the \"update\" middleware must be first in the list, "
 "and the \"fetch\" middleware must be last. The details are a bit obscure, "
 "but see `Order of MIDDLEWARE`_ below if you'd like the full story."
-msgstr ""
+msgstr "这不是打印错误：\"update\" 中间件必须放在列表首位，并且 \"fetch\" 中间件必须在最后一位。细节有些模糊，如果你想知道完整内容，参阅下面的  `Order of MIDDLEWARE`_ 。"
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:506
 msgid ""
 "Then, add the following required settings to your Django settings file:"
-msgstr ""
+msgstr "最后，在 Django 设置文件里添加下面的必需配置："
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:508
 msgid ""
 ":setting:`CACHE_MIDDLEWARE_ALIAS` -- The cache alias to use for storage."
-msgstr ""
+msgstr ":setting:`CACHE_MIDDLEWARE_ALIAS` -- 用于存储的缓存别名。"
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:509
 msgid ""
 ":setting:`CACHE_MIDDLEWARE_SECONDS` -- The number of seconds each page "
 "should be cached."
-msgstr ""
+msgstr ":setting:`CACHE_MIDDLEWARE_SECONDS` -- 应缓存每个页面的秒数。"
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:511
 msgid ""
@@ -4707,7 +4707,7 @@ msgid ""
 "multiple sites using the same Django installation, set this to the name of "
 "the site, or some other string that is unique to this Django instance, to "
 "prevent key collisions. Use an empty string if you don't care."
-msgstr ""
+msgstr ":setting:`CACHE_MIDDLEWARE_KEY_PREFIX` -- 如果使用相同的 Django installation ，通过多站点进行缓存共享，请将此值设置为站点名，或者设置成在Django 实例中唯一的其他字符串，以此防止键冲突。如果你不介意，可以设置成空字符串。"
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:516
 msgid ""
@@ -4717,29 +4717,29 @@ msgid ""
 "and are cached separately. This middleware expects that a HEAD request is "
 "answered with the same response headers as the corresponding GET request; in"
 " which case it can return a cached GET response for HEAD request."
-msgstr ""
+msgstr "在请求和响应标头允许的情况下，``FetchFromCacheMiddleware`` 缓存状态为200的 GET 和 HEAD 响应。对于具有不同查询参数的相同URL的请求的响应被认为是单独的页面，并分别缓存。这个中间件期望一个HEAD请求的响应头与相应的GET请求具有相同的响应头；在这种情况下，它可以为HEAD请求返回一个缓存的GET响应。"
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:523
 msgid ""
 "Additionally, ``UpdateCacheMiddleware`` automatically sets a few headers in "
 "each :class:`~django.http.HttpResponse`:"
-msgstr ""
+msgstr "另外，``UpdateCacheMiddleware`` 在每个 :class:`~django.http.HttpResponse` 里会自动设置一些 headers 。"
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:526
 msgid ""
 "Sets the ``Expires`` header to the current date/time plus the defined "
 ":setting:`CACHE_MIDDLEWARE_SECONDS`."
-msgstr ""
+msgstr "设置 ``Expires`` header 为当前日期/时间加上定义的 :setting:`CACHE_MIDDLEWARE_SECONDS` 。"
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:529
 msgid ""
 "Sets the ``Cache-Control`` header to give a max age for the page -- again, "
 "from the :setting:`CACHE_MIDDLEWARE_SECONDS` setting."
-msgstr ""
+msgstr "设置  ``Cache-Control`` header 为缓存页面的最长时间，同样，在 :setting:`CACHE_MIDDLEWARE_SECONDS` 里设置。"
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:532
 msgid "See :doc:`/topics/http/middleware` for more on middleware."
-msgstr ""
+msgstr "查看 :doc:`/topics/http/middleware` 获取更多中间件信息。"
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:534
 msgid ""
@@ -4751,7 +4751,7 @@ msgid ""
 "decorator) or disable caching for a view (using the "
 ":func:`~django.views.decorators.cache.never_cache` decorator). See the "
 "`using other headers`__ section for more on these decorators."
-msgstr ""
+msgstr "如果一个视图设置了它自己的缓存过期时间（比如在它的 ``Cache-Control`` header 里有 ``max-age`` 部分），然后页面将被缓存起来直到过期，而不是 :setting:`CACHE_MIDDLEWARE_SECONDS` 。使用在 ``django.views.decorators.cache`` 的装饰器，你可以很轻松的设置视图的过期时间（使用 :func:`~django.views.decorators.cache.cache_control` 装饰器）或者禁用视图缓存（使用 :func:`~django.views.decorators.cache.never_cache` 装饰器）。有关这些装饰器的更多信息，请查看 `using other headers` 部分。"
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:545
 msgid ""
@@ -4759,18 +4759,18 @@ msgid ""
 "include the name of the active :term:`language<language code>` -- see also "
 ":ref:`how-django-discovers-language-preference`). This allows you to easily "
 "cache multilingual sites without having to create the cache key yourself."
-msgstr ""
+msgstr "如果设置 :setting:`USE_I18N` 为 ``True`` ，然后已生成的缓存键将包含动态 :term:`language<language code>` 的名称（参阅 :ref:`how-django-discovers-language-preference`）。这将允许你轻松缓存使用多语言的站点，而不用再创建缓存键。"
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:550
 msgid ""
 "Cache keys also include the active :term:`language <language code>` when "
 ":setting:`USE_L10N` is set to ``True`` and the :ref:`current time zone "
 "<default-current-time-zone>` when :setting:`USE_TZ` is set to ``True``."
-msgstr ""
+msgstr "当 :setting:`USE_L10N` 设置为 ``True`` 时，缓存键也包含动态 :term:`language <language code>` ，并且当 :setting:`USE_TZ` 设置为 ``True`` 时，也包含 :ref:`current time zone <default-current-time-zone>` 。"
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:557
 msgid "The per-view cache"
-msgstr ""
+msgstr "视图缓存"
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:561
 msgid ""
@@ -4778,7 +4778,7 @@ msgid ""
 " individual views. ``django.views.decorators.cache`` defines a "
 "``cache_page`` decorator that will automatically cache the view's response "
 "for you. It's easy to use::"
-msgstr ""
+msgstr "使用缓存框架的通用办法是对单独的视图结果进行缓存。``django.views.decorators.cache`` 定义了一个 ``cache_page`` 装饰器，它将自动缓存视图的响应。使用方法很简单："
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:572
 msgid ""
@@ -4787,21 +4787,21 @@ msgid ""
 "15 minutes. (Note that we've written it as ``60 * 15`` for the purpose of "
 "readability. ``60 * 15`` will be evaluated to ``900`` -- that is, 15 minutes"
 " multiplied by 60 seconds per minute.)"
-msgstr ""
+msgstr "``cache_page`` 使用了一个单独的参数：缓存过期时间，以秒为单位。在上面的例子里，``my_view()`` 视图的结果将缓存15分钟。（注意，我们用 ``60 * 15`` 这样的方式编写，目的是方便阅读。 ``60 * 15`` 将计算为 ``900``，也就是15分钟乘以每分钟60秒。）"
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:578
 msgid ""
 "The per-view cache, like the per-site cache, is keyed off of the URL. If "
 "multiple URLs point at the same view, each URL will be cached separately. "
 "Continuing the ``my_view`` example, if your URLconf looks like this::"
-msgstr ""
+msgstr "和缓存站点一样，对视图缓存，以 URL 为键。如果许多 URL 指向相同的视图，每个 URL 将被单独缓存。继续以 ``my_view`` 为例，如果你的 URLconf 是这样的："
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:586
 msgid ""
 "then requests to ``/foo/1/`` and ``/foo/23/`` will be cached separately, as "
 "you may expect. But once a particular URL (e.g., ``/foo/23/``) has been "
 "requested, subsequent requests to that URL will use the cache."
-msgstr ""
+msgstr "那么 ``/foo/1/`` 和 ``/foo/23/`` 的请求将被分别缓存，正如你所料。但一旦部分 URL （比如 ``/foo/23/`` ）已经被请求，那么随后的请求都将使用缓存。"
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:590
 msgid ""
@@ -4809,7 +4809,7 @@ msgid ""
 "directs the decorator to use a specific cache (from your :setting:`CACHES` "
 "setting) when caching view results. By default, the ``default`` cache will "
 "be used, but you can specify any cache you want::"
-msgstr ""
+msgstr "``cache_page`` 也可以传递可选关键字参数 ``cache``，它指引装饰器在缓存视图结果时使用特定的缓存（来自 :setting:`CACHES` 设置）。默认情况下，将使用默认缓存，但你可以指定任何你想要的缓存："
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:600
 msgid ""
@@ -4817,14 +4817,14 @@ msgid ""
 "takes an optional keyword argument, ``key_prefix``, which works in the same "
 "way as the :setting:`CACHE_MIDDLEWARE_KEY_PREFIX` setting for the "
 "middleware.  It can be used like this::"
-msgstr ""
+msgstr "你可以基于每个视图覆盖缓存前缀。``cache_page`` 传递了一个可选关键字参数 ``key_prefix`` ，它的工作方式与中间件的 :setting:`CACHE_MIDDLEWARE_KEY_PREFIX` 相同。可以这样使用它："
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:609
 msgid ""
 "The ``key_prefix`` and ``cache`` arguments may be specified together. The "
 "``key_prefix`` argument and the :setting:`KEY_PREFIX <CACHES-KEY_PREFIX>` "
 "specified under :setting:`CACHES` will be concatenated."
-msgstr ""
+msgstr "``key_prefix`` 和 ``cache`` 参数可能需要被一起指定。``key_prefix`` 参数和 :setting:`CACHES` 下指定的 :setting:`KEY_PREFIX <CACHES-KEY_PREFIX>` 将被连接起来。"
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:614
 msgid "Specifying per-view cache in the URLconf"

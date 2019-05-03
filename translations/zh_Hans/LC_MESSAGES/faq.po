@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) Django Software Foundation and contributors
 # This file is distributed under the same license as the Django package.
-#
+# 
 # Translators:
-# Dogify <595572594@qq.com>, 2018
+# 陈李俊 <595572594@qq.com>, 2018
 # asdf asdf <328134421@qq.com>, 2018
 # Bai HuanCheng <xiqingongzi@gmail.com>, 2018
 # Bai HuanCheng <xiqingongzi@gmail.com>, 2018
 # CabbSir <cabbsir@gmail.com>, 2018
 # blacklin <chinalinzhijie@gmail.com>, 2018
-# Dogify <595572594@qq.com>, 2018-2019
+# 陈李俊 <595572594@qq.com>, 2018-2019
 # Floyd Li <floyd.li@outlook.com>, 2017
 # Fossen <fossen@fossen.cn>, 2018
 # Frost Ming <mianghong@gmail.com>, 2019
@@ -42,69 +42,65 @@
 # zhimiao li <untildied@gmail.com>, 2018
 # zwithz1998, 2018
 # 吴彬 <xiake21x@qq.com>, 2016-2017
-# Dogify <595572594@qq.com>, 2018
+# 陈李俊 <595572594@qq.com>, 2018
 # ercJuL <geofvt@gmail.com>, 2017
 # 陈寅 <296120962@qq.com>, 2018
+# 陈李俊 <595572594@qq.com>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-19 03:29-0500\n"
-"PO-Revision-Date: 2019-04-19 01:42+0000\n"
-"Last-Translator: Dogify <595572594@qq.com>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
-"language/zh_CN/)\n"
+"POT-Creation-Date: 2019-05-03 06:25-0500\n"
+"PO-Revision-Date: 2019-05-03 03:11+0000\n"
+"Last-Translator: 陈李俊 <595572594@qq.com>\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:3
 msgid "FAQ: The admin"
-msgstr "FAQ: 管理"
+msgstr "FAQ：管理"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:6
 msgid ""
 "I can't log in. When I enter a valid username and password, it just brings "
 "up the login page again, with no error messages."
-msgstr ""
-"无法登录。当我输入有效的用户名和密码后，页面再跳转到登录页面，没有显示任何错"
-"误信息。"
+msgstr "无法登录。当我输入有效的用户名和密码后，页面再跳转到登录页面，没有显示任何错误信息。"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:8
 msgid ""
-"The login cookie isn't being set correctly, because the domain of the cookie "
-"sent out by Django doesn't match the domain in your browser. Try setting "
+"The login cookie isn't being set correctly, because the domain of the cookie"
+" sent out by Django doesn't match the domain in your browser. Try setting "
 "the :setting:`SESSION_COOKIE_DOMAIN` setting to match your domain. For "
 "example, if you're going to \"https://www.example.com/admin/\" in your "
 "browser, set ``SESSION_COOKIE_DOMAIN = 'www.example.com'``."
-msgstr ""
-"登陆 cookie 没有被正确设置，这是因为由 Django 发出的 cookie 中的域名和浏览器"
-"页面的域名不匹配。可以通过修改设置中的 \"SESSION_COOKIE_DOMAIN\" 选项来匹配你"
-"的域名。例如，如果你需要在浏览器中访问 \"https://www.example.com/admin/\"，设"
-"置 ``SESSION_COOKIE_DOMAIN = 'www.example.com'``。"
+msgstr "登陆 cookie 没有被正确设置，这是因为由 Django 发出的 cookie 中的域名和浏览器页面的域名不匹配。可以通过修改设置中的 :setting:`SESSION_COOKIE_DOMAIN` 选项来匹配你的域名。例如，如果你需要在浏览器中访问 \"https://www.example.com/admin/\"，设置 ``SESSION_COOKIE_DOMAIN = 'www.example.com'``。"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:15
 msgid ""
-"I can't log in. When I enter a valid username and password, it brings up the "
-"login page again, with a \"Please enter a correct username and password\" "
+"I can't log in. When I enter a valid username and password, it brings up the"
+" login page again, with a \"Please enter a correct username and password\" "
 "error."
-msgstr ""
-"我无法登陆。当我输入有效的用户名和密码后，它又跳转到了登录界面，并且显示一"
-"个“请输入正确的用户名和密码”的错误。"
+msgstr "我无法登陆。当我输入有效的用户名和密码后，它又跳转到了登录界面，并且显示一个“请输入正确的用户名和密码”的错误。"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:17
 msgid ""
 "If you're sure your username and password are correct, make sure your user "
-"account has :attr:`~django.contrib.auth.models.User.is_active` and :attr:"
-"`~django.contrib.auth.models.User.is_staff` set to True. The admin site only "
-"allows access to users with those two fields both set to True."
-msgstr ""
-"如果你确定你的用户名和密码都是对的，请检查你的用户账户中的“django.contrib."
-"auth.models.User.is_active”和“django.contrib.auth.models.User.is_staff”被设为"
-"True。管理员页面只允许这两项同时被设为True的用户访问。"
+"account has :attr:`~django.contrib.auth.models.User.is_active` and "
+":attr:`~django.contrib.auth.models.User.is_staff` set to True. The admin "
+"site only allows access to users with those two fields both set to True."
+msgstr "如果你确定你的用户名和密码都是对的，请检查你的用户账户中的 :attr:`~django.contrib.auth.models.User.is_active` 和 :attr:`~django.contrib.auth.models.User.is_staff` 被设为 True。管理员页面只允许这两项同时被设为 True 的用户访问。"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:23
 msgid ""
 "How do I automatically set a field's value to the user who last edited the "
 "object in the admin?"
 msgstr "在管理面板中，如何将字段的值自动设置为最后编辑它的用户？"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:25
 msgid ""
 "The :class:`~django.contrib.admin.ModelAdmin` class provides customization "
 "hooks that allow you to transform an object as it saved, using details from "
@@ -112,316 +108,281 @@ msgid ""
 "customizing the :meth:`~django.contrib.admin.ModelAdmin.save_model` hook, "
 "you can update an object to reflect the user that edited it. See :ref:`the "
 "documentation on ModelAdmin methods <model-admin-methods>` for an example."
-msgstr ""
-":class:`~django.contrib.admin.ModelAdmin`类提供了自定义钩子（hooks），它允许"
-"你使用请求中的详细数据来修改一个已保存的对象。你可以从request中取出当前的用户"
-"对象，然后通过自定义 :meth:`~django.contrib.admin.ModelAdmin.save_model`钩子"
-"（hook）来更新一个反映用户编辑了的对象。\n"
-"参见：ref:`the documentation on ModelAdmin methods 1` 中的示例。"
+msgstr ":class:`~django.contrib.admin.ModelAdmin` 类提供了自定义钩子（hooks），它允许你使用请求中的详细数据来修改一个已保存的对象。你可以从request中取出当前的用户对象，然后通过自定义 :meth:`~django.contrib.admin.ModelAdmin.save_model` 钩子（hook）来更新一个反映用户编辑了的对象。参见 :ref:`the documentation on ModelAdmin methods <model-admin-methods>` 中的示例。"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:33
 msgid ""
 "How do I limit admin access so that objects can only be edited by the users "
 "who created them?"
 msgstr "我们如何设定管理权限，以便对象只能由创建它们的用户进行编辑？"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:35
 msgid ""
 "The :class:`~django.contrib.admin.ModelAdmin` class also provides "
-"customization hooks that allow you to control the visibility and editability "
-"of objects in the admin. Using the same trick of extracting the user from "
-"the request, the :meth:`~django.contrib.admin.ModelAdmin.get_queryset` and :"
-"meth:`~django.contrib.admin.ModelAdmin.has_change_permission` can be used to "
-"control the visibility and editability of objects in the admin."
-msgstr ""
-":class:`~django.contrib.admin.ModelAdmin` 类也提供了自定义沟子(Hook)来控制管"
-"理面板中的对象是否可见以及可修改。使用相同的技巧从 request 中提取出当前用户对"
-"象，然后自定义:meth:`~django.contrib.admin.ModelAdmin.get_queryset` 和 :meth:"
-"`~django.contrib.admin.ModelAdmin.has_change_permission` 来控制管理面板中的对"
-"象是否可见以及可修改。"
+"customization hooks that allow you to control the visibility and editability"
+" of objects in the admin. Using the same trick of extracting the user from "
+"the request, the :meth:`~django.contrib.admin.ModelAdmin.get_queryset` and "
+":meth:`~django.contrib.admin.ModelAdmin.has_change_permission` can be used "
+"to control the visibility and editability of objects in the admin."
+msgstr ":class:`~django.contrib.admin.ModelAdmin` 类也提供了自定义沟子(Hook)来控制管理面板中的对象是否可见以及可修改。使用相同的技巧从 request 中提取出当前用户对象，然后自定义 :meth:`~django.contrib.admin.ModelAdmin.get_queryset` 和 :meth:`~django.contrib.admin.ModelAdmin.has_change_permission` 来控制管理面板中的对象是否可见以及可修改。"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:43
 msgid ""
 "My admin-site CSS and images showed up fine using the development server, "
 "but they're not displaying when using mod_wsgi."
-msgstr ""
-"管理界面的 CSS 和图片在开发模式下正常加载，但是在使用 mod_wsgi 进行部署的情况"
-"下却无法进行加载？"
+msgstr "管理界面的 CSS 和图片在开发模式下正常加载，但是在使用 mod_wsgi 进行部署的情况下却无法进行加载？"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:45
 msgid ""
-"See :ref:`serving the admin files <serving-the-admin-files>` in the \"How to "
-"use Django with mod_wsgi\" documentation."
-msgstr ""
-"请仔细阅读“如何通过 mod_wsgi 部署 Django”下的<serving-the-admin-files>“部署 "
-"admin 模块的静态文件”"
+"See :ref:`serving the admin files <serving-the-admin-files>` in the \"How to"
+" use Django with mod_wsgi\" documentation."
+msgstr "请仔细阅读“如何利用 mod_wsgi 部署 Django”文档中的 :ref:`部署 admin 模块的静态文件 <serving-the-admin-files>`。"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:49
 msgid ""
 "My \"list_filter\" contains a ManyToManyField, but the filter doesn't "
 "display."
 msgstr "我的“list_filter”包含一个 ManyToManyField (多对多字段)，但过滤器不显示"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:51
 msgid ""
-"Django won't bother displaying the filter for a ``ManyToManyField`` if there "
-"are fewer than two related objects."
-msgstr ""
-"如果相关联对象少于 2 个，Django 则不会显示``ManyToManyField(多对多字段)``的过"
-"滤器"
+"Django won't bother displaying the filter for a ``ManyToManyField`` if there"
+" are fewer than two related objects."
+msgstr "如果相关联对象少于 2 个，Django 则不会显示 ``ManyToManyField(多对多字段)`` 的过滤器"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:54
 msgid ""
 "For example, if your :attr:`~django.contrib.admin.ModelAdmin.list_filter` "
 "includes :doc:`sites </ref/contrib/sites>`, and there's only one site in "
 "your database, it won't display a \"Site\" filter. In that case, filtering "
 "by site would be meaningless."
-msgstr ""
-"例如，如果您的：attr：`~django.contrib.admin.ModelAdmin.list_filter`包含："
-"doc：`sites 1`，并且你的数据库中只有一个站点，则不会显示“站点”过滤器。在这种"
-"情况下，按网站过滤将毫无意义。"
+msgstr "例如，如果您的 :attr:`~django.contrib.admin.ModelAdmin.list_filter` 包含 :doc:`sites 1`，并且你的数据库中只有一个站点，则不会显示“站点”过滤器。在这种情况下，按网站过滤将毫无意义。"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:60
 msgid "Some objects aren't appearing in the admin."
 msgstr "有些对象没有在管理中出现。"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:62
 msgid ""
 "Inconsistent row counts may be caused by missing foreign key values or a "
-"foreign key field incorrectly set to :attr:`null=False <django.db.models."
-"Field.null>`. If you have a record with a :class:`~django.db.models."
-"ForeignKey` pointing to a nonexistent object and that foreign key is "
-"included is :attr:`~django.contrib.admin.ModelAdmin.list_display`, the "
-"record will not be shown in the admin changelist because the Django model is "
-"declaring an integrity constraint that is not implemented at the database "
-"level."
-msgstr ""
-"不一致的行计数可能由缺少外键值或由将外键字段错误地设置为：attr：`null = "
-"False <django.db.models.Field.null>`造成。如果你有一个指向不存在对象的 "
-"class：`~django.db.models.ForeignKey` 的记录，并且包含的​​外键是：attr："
-"`~django.contrib.admin.ModelAdmin.list_display`，将不会显示在管理更改列表中，"
-"因为 Django 模型正在声明未作用在数据库级别的完整性约束。"
+"foreign key field incorrectly set to :attr:`null=False "
+"<django.db.models.Field.null>`. If you have a record with a "
+":class:`~django.db.models.ForeignKey` pointing to a nonexistent object and "
+"that foreign key is included is "
+":attr:`~django.contrib.admin.ModelAdmin.list_display`, the record will not "
+"be shown in the admin changelist because the Django model is declaring an "
+"integrity constraint that is not implemented at the database level."
+msgstr "不一致的行计数可能由缺少外键值或由将外键字段错误地设置为 :attr:`null = False <django.db.models.Field.null>` 造成。如果你有一个指向不存在对象的  :class:`~django.db.models.ForeignKey` 的记录，并且包含的​​外键是 :attr:`~django.contrib.admin.ModelAdmin.list_display`，将不会显示在管理更改列表中，因为 Django 模型正在声明未作用在数据库级别的完整性约束。"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:72
 msgid "How can I customize the functionality of the admin interface?"
 msgstr "如何个性化管理员后台接口的功能？"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:74
 msgid ""
-"You've got several options. If you want to piggyback on top of an add/change "
-"form that Django automatically generates, you can attach arbitrary "
+"You've got several options. If you want to piggyback on top of an add/change"
+" form that Django automatically generates, you can attach arbitrary "
 "JavaScript modules to the page via the model's class Admin :ref:`js "
-"parameter <modeladmin-asset-definitions>`. That parameter is a list of URLs, "
-"as strings, pointing to JavaScript modules that will be included within the "
-"admin form via a ``<script>`` tag."
-msgstr ""
-"你有几个选择。 如果您想要在 Django 自动生成的添加/更改表单上加载，您可以通过"
-"模型的类 Admin：ref：`js parameter <modeladmin-asset-definitions>`将任意 "
-"JavaScript 模块附加到页面上。 该参数是一个 URL 列表，作为字符串，指向将通"
-"过“<script>”标签包含在管理表单中的 JavaScript 模块。"
+"parameter <modeladmin-asset-definitions>`. That parameter is a list of URLs,"
+" as strings, pointing to JavaScript modules that will be included within the"
+" admin form via a ``<script>`` tag."
+msgstr "你有几个选择。 如果您想要在 Django 自动生成的添加/更改表单上加载，您可以通过模型的类 Admin :ref:`js parameter <modeladmin-asset-definitions>`将任意 JavaScript 模块附加到页面上。 该参数是一个 URL 列表，作为字符串，指向将通过 ``<script>`` 标签包含在管理表单中的 JavaScript 模块。"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:81
 msgid ""
 "If you want more flexibility than simply tweaking the auto-generated forms, "
 "feel free to write custom views for the admin. The admin is powered by "
 "Django itself, and you can write custom views that hook into the "
 "authentication system, check permissions and do whatever else they need to "
 "do."
-msgstr ""
-"如果您想要比简单调整后自动生成的表单更灵活，请随时为 Admin 模块编写自定义视"
-"图。 Admin 模版是由Django 官方提供支持的模块，你可以编写自定义的视图关联到认"
-"证，检查权限，并完成任何他们需要做的业务逻辑。"
+msgstr "如果您想要比简单调整后自动生成的表单更灵活，请随时为 Admin 模块编写自定义视图。 Admin 模版是由Django 官方提供支持的模块，你可以编写自定义的视图关联到认证，检查权限，并完成任何他们需要做的业务逻辑。"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:86
 msgid ""
 "If you want to customize the look-and-feel of the admin interface, read the "
 "next question."
 msgstr "如果您想自定义管理界面的外观，请阅读下一个问题"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:90
 msgid "The dynamically-generated admin site is ugly! How can I change it?"
 msgstr "动态生成的管理页面太丑了。我该怎么换掉它？"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:92
 msgid ""
 "We like it, but if you don't agree, you can modify the admin site's "
 "presentation by editing the CSS stylesheet and/or associated image files. "
 "The site is built using semantic HTML and plenty of CSS hooks, so any "
 "changes you'd like to make should be possible by editing the stylesheet."
-msgstr ""
-"如果你不喜欢它，你可以通过修改 CSS 样式文件以及关联的图片来定制管理员界面。这"
-"个网站使用 HTML 语法和大量的 CSS 钩子，所以任何你想要的改变都应该可以通过修"
-"改 CSS 样式表来实现。"
+msgstr "如果你不喜欢它，你可以通过修改 CSS 样式文件以及关联的图片来定制管理员界面。这个网站使用 HTML 语法和大量的 CSS 钩子，所以任何你想要的改变都应该可以通过修改 CSS 样式表来实现。"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:98
 msgid "What browsers are supported for using the admin?"
 msgstr "Admin 适配了哪些浏览器？"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:100
 msgid ""
 "The admin provides a fully-functional experience to `YUI's A-grade`_ "
 "browsers, with the notable exception of IE6, which is not supported."
 msgstr "除了 IE6，admin 为 `YUI's A-grade` 浏览器提供了一个全功能的体验。"
 
+#: ../../../../sources/2.2/docs/faq/admin.txt:103
 msgid ""
 "There *may* be minor stylistic differences between supported browsers—for "
-"example, some browsers may not support rounded corners. These are considered "
-"acceptable variations in rendering."
-msgstr ""
-"在支持的浏览器之间可能会有细微的风格差异，例如，某些浏览器可能不支持圆角。在"
-"渲染页面的时候会认为这些是可接受的差异。"
+"example, some browsers may not support rounded corners. These are considered"
+" acceptable variations in rendering."
+msgstr "在支持的浏览器之间可能会有细微的风格差异，例如，某些浏览器可能不支持圆角。在渲染页面的时候会认为这些是可接受的差异。"
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:3
 msgid "FAQ: Contributing code"
-msgstr "FAQ: 贡献代码"
+msgstr "FAQ：贡献代码"
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:6
 msgid "How can I get started contributing code to Django?"
 msgstr "如何为 Django 贡献代码?"
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:8
 msgid ""
 "Thanks for asking! We've written an entire document devoted to this "
-"question. It's titled :doc:`Contributing to Django </internals/contributing/"
-"index>`."
-msgstr ""
-"感谢反馈！我们已经为这个问题编写了一个详细的文档。参见:doc:`Contributing to "
-"Django 1`."
+"question. It's titled :doc:`Contributing to Django "
+"</internals/contributing/index>`."
+msgstr "感谢反馈！我们已经为这个问题编写了一个详细的文档。参见:doc:`Contributing to Django 1`."
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:12
 msgid ""
 "I submitted a bug fix in the ticket system several weeks ago. Why are you "
 "ignoring my patch?"
 msgstr "我几周之前提交了一个工单系统 bug 的修复。为什么忽略我的提议？"
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:14
 msgid "Don't worry: We're not ignoring you!"
 msgstr "别担心:我们不会忽略你!"
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:16
 msgid ""
 "It's important to understand there is a difference between \"a ticket is "
 "being ignored\" and \"a ticket has not been attended to yet.\" Django's "
 "ticket system contains hundreds of open tickets, of various degrees of "
-"impact on end-user functionality, and Django's developers have to review and "
-"prioritize."
-msgstr ""
-"重要的是要明白，“工单被忽略”和“工单还没有被查看”是有区别的。 Django 的工单系"
-"统包含数百个打开的工单，对最终用户功能有不同程度的影响，Django 的开发人员必须"
-"检查并确定优先级。"
+"impact on end-user functionality, and Django's developers have to review and"
+" prioritize."
+msgstr "重要的是要明白，“工单被忽略”和“工单还没有被查看”是有区别的。 Django 的工单系统包含数百个打开的工单，对最终用户功能有不同程度的影响，Django 的开发人员必须检查并确定优先级。"
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:21
 msgid ""
 "On top of that: the people who work on Django are all volunteers. As a "
 "result, the amount of time that we have to work on the framework is limited "
 "and will vary from week to week depending on our spare time. If we're busy, "
 "we may not be able to spend as much time on Django as we might want."
-msgstr ""
-"另外：所有的 Django 工作都是由志愿者完成的。因此，我们花在这个框架上的总时间"
-"是有限的，它取决于我们的空闲时间，并且每周都会有所不同。如果我们很忙，我们可"
-"能无法在 Django 上花费太多的时间，尽管我们不愿如此。"
+msgstr "另外：所有的 Django 工作都是由志愿者完成的。因此，我们花在这个框架上的总时间是有限的，它取决于我们的空闲时间，并且每周都会有所不同。如果我们很忙，我们可能无法在 Django 上花费太多的时间，尽管我们不愿如此。"
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:26
 msgid ""
 "The best way to make sure tickets do not get hung up on the way to checkin "
-"is to make it dead easy, even for someone who may not be intimately familiar "
-"with that area of the code, to understand the problem and verify the fix:"
-msgstr ""
-"确保工单在签入过程中不被挂起的最佳方法是让它所描述的问题通俗易懂，即便是对相"
-"关领域并不熟悉的人也能理解并修复问题："
+"is to make it dead easy, even for someone who may not be intimately familiar"
+" with that area of the code, to understand the problem and verify the fix:"
+msgstr "确保工单在签入过程中不被挂起的最佳方法是让它所描述的问题通俗易懂，即便是对相关领域并不熟悉的人也能理解并修复问题："
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:30
 msgid ""
 "Are there clear instructions on how to reproduce the bug? If this touches a "
 "dependency (such as Pillow), a contrib module, or a specific database, are "
 "those instructions clear enough even for someone not familiar with it?"
-msgstr ""
-"是否有明确的用以重现 bug 的说明？ 是否触及依赖项（如Pillow），contrib 模块或"
-"特定数据库？这些说明对于不熟悉它的人是否也足够明确？"
+msgstr "是否有明确的用以重现 bug 的说明？ 是否触及依赖项（如Pillow），contrib 模块或特定数据库？这些说明对于不熟悉它的人是否也足够明确？"
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:35
 msgid ""
 "If there are several patches attached to the ticket, is it clear what each "
 "one does, which ones can be ignored and which matter?"
-msgstr ""
-"如果工单附有多个补充，是否能够明确每个补充是做什么的、哪些补充可以忽略，哪些"
-"补充很重要？"
+msgstr "如果工单附有多个补充，是否能够明确每个补充是做什么的、哪些补充可以忽略，哪些补充很重要？"
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:38
 msgid ""
 "Does the patch include a unit test? If not, is there a very clear "
 "explanation why not? A test expresses succinctly what the problem is, and "
 "shows that the patch actually fixes it."
-msgstr ""
-"补丁是否包括单元测试？如果没有，那么是否可以解释清楚原因？测试可以简洁地表达"
-"了问题所在，并显示补丁真的修复了问题。"
+msgstr "补丁是否包括单元测试？如果没有，那么是否可以解释清楚原因？测试可以简洁地表达了问题所在，并显示补丁真的修复了问题。"
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:42
 msgid ""
-"If your patch stands no chance of inclusion in Django, we won't ignore it -- "
-"we'll just close the ticket. So if your ticket is still open, it doesn't "
-"mean we're ignoring you; it just means we haven't had time to look at it yet."
-msgstr ""
-"如果你的补丁没有被加入到 Django，并不意味我们忽视它了——我们只是关闭这个工单。"
-"所以如果你的工单一直处于开启状态，也并不意味着我们忽视了你；这只是意味着我们"
-"还没来得及看它。"
+"If your patch stands no chance of inclusion in Django, we won't ignore it --"
+" we'll just close the ticket. So if your ticket is still open, it doesn't "
+"mean we're ignoring you; it just means we haven't had time to look at it "
+"yet."
+msgstr "如果你的补丁没有被加入到 Django，并不意味我们忽视它了——我们只是关闭这个工单。所以如果你的工单一直处于开启状态，也并不意味着我们忽视了你；这只是意味着我们还没来得及看它。"
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:47
 msgid "When and how might I remind the team of a patch I care about?"
 msgstr "何时以及如何提醒团队我所关注的补丁？"
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:49
 msgid ""
 "A polite, well-timed message to the mailing list is one way to get "
 "attention. To determine the right time, you need to keep an eye on the "
 "schedule. If you post your message right before a release deadline, you're "
 "not likely to get the sort of attention you require."
-msgstr ""
-"一种获得关注的方式是向邮件列表发送一个礼貌的，适时的消息。为了确保时间合适，"
-"你需要留意时间表。如果你在发布截止日期之前发送消息，则不太可能获得您需要的关"
-"注。"
+msgstr "一种获得关注的方式是向邮件列表发送一个礼貌的，适时的消息。为了确保时间合适，你需要留意时间表。如果你在发布截止日期之前发送消息，则不太可能获得您需要的关注。"
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:54
 msgid ""
 "Gentle IRC reminders can also work -- again, strategically timed if "
 "possible. During a bug sprint would be a very good time, for example."
-msgstr ""
-"温和的 IRC 提醒也可以发挥作用——还是如此：如果可能的话，选取一个合适的时间。 "
-"例如，在修复 bug 的冲刺期间就是一个不错的时机。"
+msgstr "温和的 IRC 提醒也可以发挥作用——还是如此：如果可能的话，选取一个合适的时间。 例如，在修复 bug 的冲刺期间就是一个不错的时机。"
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:57
 msgid ""
 "Another way to get traction is to pull several related tickets together. "
 "When the someone sits down to review a bug in an area they haven't touched "
 "for a while, it can take a few minutes to remember all the fine details of "
-"how that area of code works. If you collect several minor bug fixes together "
-"into a similarly themed group, you make an attractive target, as the cost of "
-"coming up to speed on an area of code can be spread over multiple tickets."
-msgstr ""
-"另一种方法获得关注的方法是将几个相关的工单放在一起。当某人坐下来审阅一个他们"
-"已经有一段时间没有接触的区域中的bug时，可能需要几分钟的时间来想起该区域代码如"
-"何工作的所有细节。如果您将几个小错误的修复集中到一个类似主题的组中，那么您将"
-"成为一个有吸引力的目标，因为在一个区域的代码上提速工作的成本可以被用到多个工"
-"单上。"
+"how that area of code works. If you collect several minor bug fixes together"
+" into a similarly themed group, you make an attractive target, as the cost "
+"of coming up to speed on an area of code can be spread over multiple "
+"tickets."
+msgstr "另一种方法获得关注的方法是将几个相关的工单放在一起。当某人坐下来审阅一个他们已经有一段时间没有接触的区域中的bug时，可能需要几分钟的时间来想起该区域代码如何工作的所有细节。如果您将几个小错误的修复集中到一个类似主题的组中，那么您将成为一个有吸引力的目标，因为在一个区域的代码上提速工作的成本可以被用到多个工单上。"
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:64
 msgid ""
 "Please refrain from emailing anyone personally or repeatedly raising the "
 "same issue over and over. This sort of behavior will not gain you any "
 "additional attention -- certainly not the attention that you need in order "
 "to get your issue addressed."
-msgstr ""
-"请不要通过电子邮件向任何人发邮件或反复提出同样的问题。 这种行为不会让你有任何"
-"额外的关注——当然也不会给你带来解决问题所需的关注。"
+msgstr "请不要通过电子邮件向任何人发邮件或反复提出同样的问题。 这种行为不会让你有任何额外的关注——当然也不会给你带来解决问题所需的关注。"
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:70
 msgid "But I've reminded you several times and you keep ignoring my patch!"
 msgstr "但是我已经提醒你好几遍了，你依然继续忽略我的补丁！"
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:72
 msgid ""
 "Seriously - we're not ignoring you. If your patch stands no chance of "
 "inclusion in Django, we'll close the ticket. For all the other tickets, we "
 "need to prioritize our efforts, which means that some tickets will be "
 "addressed before others."
-msgstr ""
-"说真的 - 我们不会无视你的。 如果你的补丁没有包含在 Django 的工单，我们将关闭"
-"工单。 对于所有其他的工单，我们需要优先考虑我们的努力，这意味着一些工单将在其"
-"他人之前解决。 "
+msgstr "说真的 - 我们不会无视你的。 如果你的补丁没有包含在 Django 的工单，我们将关闭工单。 对于所有其他的工单，我们需要优先考虑我们的努力，这意味着一些工单将在其他人之前解决。 "
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:77
 msgid ""
 "One of the criteria that is used to prioritize bug fixes is the number of "
 "people that will likely be affected by a given bug. Bugs that have the "
 "potential to affect many people will generally get priority over those that "
 "are edge cases."
-msgstr ""
-"确定 bug 修复优先级的标准之一是对于特定 bug 而言，可能会受到影响的人数。有可"
-"能影响许多人的 bug 一般会优先于那些边缘情况下的 bug。"
+msgstr "确定 bug 修复优先级的标准之一是对于特定 bug 而言，可能会受到影响的人数。有可能影响许多人的 bug 一般会优先于那些边缘情况下的 bug。"
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:82
 msgid ""
 "Another reason that bugs might be ignored for while is if the bug is a "
 "symptom of a larger problem. While we can spend time writing, testing and "
-"applying lots of little patches, sometimes the right solution is to rebuild. "
-"If a rebuild or refactor of a particular component has been proposed or is "
+"applying lots of little patches, sometimes the right solution is to rebuild."
+" If a rebuild or refactor of a particular component has been proposed or is "
 "underway, you may find that bugs affecting that component will not get as "
 "much attention. Again, this is just a matter of prioritizing scarce "
-"resources. By concentrating on the rebuild, we can close all the little bugs "
-"at once, and hopefully prevent other little bugs from appearing in the "
+"resources. By concentrating on the rebuild, we can close all the little bugs"
+" at once, and hopefully prevent other little bugs from appearing in the "
 "future."
-msgstr ""
-"错误可能会被忽略的另一个原因是，如果错误是一个更大的问题的表现。 虽然我们可以"
-"花时间编写，测试和应用大量的小补丁，但有时候正确的解决方案是重建。 如果某个特"
-"定组件的重建或重构已经提出或正在进行中，那么您可能会发现影响该组件的错误不会"
-"得到太多关注。 再次，这只是优先考虑稀缺资源的问题。 通过集中重建，我们可以一"
-"次性关闭所有的 BUG，并且希望能够防止未来出现其他小 BUG。"
+msgstr "错误可能会被忽略的另一个原因是，如果错误是一个更大的问题的表现。 虽然我们可以花时间编写，测试和应用大量的小补丁，但有时候正确的解决方案是重建。 如果某个特定组件的重建或重构已经提出或正在进行中，那么您可能会发现影响该组件的错误不会得到太多关注。 再次，这只是优先考虑稀缺资源的问题。 通过集中重建，我们可以一次性关闭所有的 BUG，并且希望能够防止未来出现其他小 BUG。"
 
+#: ../../../../sources/2.2/docs/faq/contributing.txt:91
 msgid ""
-"Whatever the reason, please keep in mind that while you may hit a particular "
-"bug regularly, it doesn't necessarily follow that every single Django user "
+"Whatever the reason, please keep in mind that while you may hit a particular"
+" bug regularly, it doesn't necessarily follow that every single Django user "
 "will hit the same bug. Different users use Django in different ways, "
 "stressing different parts of the code under different conditions. When we "
 "evaluate the relative priorities, we are generally trying to consider the "
@@ -429,433 +390,416 @@ msgid ""
 "user. This doesn't mean that we think your problem is unimportant -- just "
 "that in the limited time we have available, we will always err on the side "
 "of making 10 people happy rather than making 1 person happy."
-msgstr ""
-"不管什么原因，请记住，你可能会经常碰到一个特定的 bug，但并不一定每个 Django "
-"用户都会遇到同样的 bug。 不同的用户以不同的方式使用 Django，在不同的条件下执"
-"行代码的不同部分。 我们评估相对优先事项时，会考虑整个社区的需求，而不仅仅是一"
-"个特定用户的问题严重程度。 当然，这并不意味着我们认为你的问题不重要，只是在有"
-"限的可用时间内，我们总是希望让 10 个人的问题得到解决，而不是只解决 1 个人的问"
-"题。"
+msgstr "不管什么原因，请记住，你可能会经常碰到一个特定的 bug，但并不一定每个 Django 用户都会遇到同样的 bug。 不同的用户以不同的方式使用 Django，在不同的条件下执行代码的不同部分。 我们评估相对优先事项时，会考虑整个社区的需求，而不仅仅是一个特定用户的问题严重程度。 当然，这并不意味着我们认为你的问题不重要，只是在有限的可用时间内，我们总是希望让 10 个人的问题得到解决，而不是只解决 1 个人的问题。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:3
 msgid "FAQ: General"
-msgstr "FAQ: 概述"
+msgstr "FAQ：概述"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:6
 msgid "Why does this project exist?"
 msgstr "这个项目因何存在。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:8
 msgid ""
 "Django grew from a very practical need: World Online, a newspaper Web "
 "operation, is responsible for building intensive Web applications on "
 "journalism deadlines. In the fast-paced newsroom, World Online often has "
-"only a matter of hours to take a complicated Web application from concept to "
-"public launch."
-msgstr ""
-"Django 从一个非常实际的需求成长而来：World Web 是一家新闻网站，负责在新闻截止"
-"期限内建立密集的 Web 应用程序。 在快节奏的新闻编辑室，World Online 往往需要几"
-"个小时内将一个复杂的 Web 应用程序从概念推向发布上线。"
+"only a matter of hours to take a complicated Web application from concept to"
+" public launch."
+msgstr "Django 从一个非常实际的需求成长而来：World Web 是一家新闻网站，负责在新闻截止期限内建立密集的 Web 应用程序。 在快节奏的新闻编辑室，World Online 往往需要几个小时内将一个复杂的 Web 应用程序从概念推向发布上线。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:13
 msgid ""
 "At the same time, the World Online Web developers have consistently been "
 "perfectionists when it comes to following best practices of Web development."
-msgstr ""
-"与此同时，World Online 的 Web开发者在 Web 开发的最佳实践方面一直是完美主义"
-"者。"
+msgstr "与此同时，World Online 的 Web开发者在 Web 开发的最佳实践方面一直是完美主义者。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:16
 msgid ""
 "In fall 2003, the World Online developers (Adrian Holovaty and Simon "
 "Willison) ditched PHP and began using Python to develop its websites. As "
 "they built intensive, richly interactive sites such as Lawrence.com, they "
-"began to extract a generic Web development framework that let them build Web "
-"applications more and more quickly. They tweaked this framework constantly, "
-"adding improvements over two years."
-msgstr ""
-"在2003年秋季，世界在线开发者（Adrian Holovaty 和 Simon Willison）放弃 PHP 而"
-"开始使用 Python 开发网站。 当他们构建了密集的，强互动性的网站时（如 Lawrence."
-"com），他们开始提取一个通用的 Web 开发框架，使他们可以更快地构建 Web 应用程"
-"序。 两年内他们经常调整和改进这个框架。"
+"began to extract a generic Web development framework that let them build Web"
+" applications more and more quickly. They tweaked this framework constantly,"
+" adding improvements over two years."
+msgstr "在2003年秋季，世界在线开发者（Adrian Holovaty 和 Simon Willison）放弃 PHP 而开始使用 Python 开发网站。 当他们构建了密集的，强互动性的网站时（如 Lawrence.com），他们开始提取一个通用的 Web 开发框架，使他们可以更快地构建 Web 应用程序。 两年内他们经常调整和改进这个框架。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:23
 msgid ""
 "In summer 2005, World Online decided to open-source the resulting software, "
 "Django. Django would not be possible without a whole host of open-source "
 "projects -- `Apache`_, `Python`_, and `PostgreSQL`_ to name a few -- and "
 "we're thrilled to be able to give something back to the open-source "
 "community."
-msgstr ""
-"在 2005 年夏天，World Online 决定开源 Django。如果没有大量的开源项目  - "
-"“Apache”，“Python” 和 “PostgreSQL” 等等，Django 是不可能完成的 - 我们很高兴能"
-"够回馈一些东西给开源社区。"
+msgstr "在 2005 年夏天，World Online 决定开源 Django。如果没有大量的开源项目  - “Apache”，“Python” 和 “PostgreSQL” 等等，Django 是不可能完成的 - 我们很高兴能够回馈一些东西给开源社区。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:33
 msgid "What does \"Django\" mean, and how do you pronounce it?"
 msgstr "“Django”是什么意思，怎么发音？"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:35
 msgid ""
 "Django is named after `Django Reinhardt`_, a jazz manouche guitarist from "
 "the 1930s to early 1950s. To this day, he's considered one of the best "
 "guitarists of all time."
-msgstr ""
-"Django 的名字来源于 Django Reinhardt，一个活跃在1930 年到 1950 年代初期的吉普"
-"赛吉他工作室，直到今天，他们依然被认为是史上最好的吉他手之一。"
+msgstr "Django 的名字来源于 Django Reinhardt，一个活跃在1930 年到 1950 年代初期的吉普赛吉他工作室，直到今天，他们依然被认为是史上最好的吉他手之一。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:38
 msgid "Listen to his music. You'll like it."
 msgstr "聆听他的音乐. 你会喜欢它的."
 
+#: ../../../../sources/2.2/docs/faq/general.txt:40
 msgid ""
 "Django is pronounced **JANG**-oh. Rhymes with FANG-oh. The \"D\" is silent."
 msgstr "Django 发音为 **JANG**，使用 FANG 来押韵，字母 \"D \"是不发声的."
 
+#: ../../../../sources/2.2/docs/faq/general.txt:42
 msgid "We've also recorded an `audio clip of the pronunciation`_."
 msgstr "我们也记录了一段 `发音的音频片段`_."
 
+#: ../../../../sources/2.2/docs/faq/general.txt:48
 msgid "Is Django stable?"
 msgstr "Django 稳定吗?"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:50
 msgid ""
 "Yes, it's quite stable. Companies like Disqus, Instagram, Pinterest, and "
 "Mozilla have been using Django for many years. Sites built on Django have "
 "weathered traffic spikes of over 50 thousand hits per second."
-msgstr ""
-"是的，它相当稳定。 Disqus, Instagram, Pinterest, 还有 Mozilla 等公司使用 "
-"Django 很多年了。使用 Django 搭建的网站能承受每秒 50000 次点击的流量峰值。"
+msgstr "是的，它相当稳定。 Disqus, Instagram, Pinterest, 还有 Mozilla 等公司使用 Django 很多年了。使用 Django 搭建的网站能承受每秒 50000 次点击的流量峰值。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:55
 msgid "Does Django scale?"
 msgstr "Django 可扩展吗?"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:57
 msgid ""
 "Yes. Compared to development time, hardware is cheap, and so Django is "
 "designed to take advantage of as much hardware as you can throw at it."
-msgstr ""
-"是的，与程序调试时间相比，硬件很便宜，所以 Django 被设计的尽可能多的利用硬件"
-"的性能。"
+msgstr "是的，与程序调试时间相比，硬件很便宜，所以 Django 被设计的尽可能多的利用硬件的性能。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:60
 msgid ""
 "Django uses a \"shared-nothing\" architecture, which means you can add "
-"hardware at any level -- database servers, caching servers or Web/"
-"application servers."
-msgstr ""
-"Django 使用“无共享”体系结构，这意味着您可以在任何级别添加硬件——数据库服务器，"
-"缓存服务器或 Web /应用程序服务器。"
+"hardware at any level -- database servers, caching servers or "
+"Web/application servers."
+msgstr "Django 使用“无共享”体系结构，这意味着您可以在任何级别添加硬件——数据库服务器，缓存服务器或 Web /应用程序服务器。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:63
 msgid ""
 "The framework cleanly separates components such as its database layer and "
 "application layer. And it ships with a simple-yet-powerful :doc:`cache "
 "framework </topics/cache>`."
-msgstr ""
-"该框架将组件完全分离，如数据库层和应用程序层。它附带了一个简单但强大的 :doc:`"
-"缓存框架</topics/cache> `."
+msgstr "该框架将组件完全分离，如数据库层和应用程序层。它附带了一个简单但强大的 :doc:`缓存框架</topics/cache> `."
 
+#: ../../../../sources/2.2/docs/faq/general.txt:68
 msgid "Who's behind this?"
 msgstr "谁在这背后？"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:70
 msgid ""
 "Django was originally developed at World Online, the Web department of a "
 "newspaper in Lawrence, Kansas, USA. Django's now run by an international "
 "`team of volunteers <https://www.djangoproject.com/foundation/teams/>`_."
-msgstr ""
-"Django 最初是在美国堪萨斯州劳伦斯市一家报纸的网络部门 World Online 开发的。"
-"Django 现在由一个国际`志愿者小组<https://www.djangoproject.com/foundation/"
-"teams/>`运行。"
+msgstr "Django 最初是在美国堪萨斯州劳伦斯市一家报纸的网络部门 World Online 开发的。Django 现在由一个国际 `志愿者小组<https://www.djangoproject.com/foundation/teams/>`_ 运行。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:75
 msgid "How is Django licensed?"
 msgstr "Django 是如何授权的？"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:77
 msgid ""
 "Django is distributed under :source:`the 3-clause BSD license <LICENSE>`. "
 "This is an open source license granting broad permissions to modify and "
 "redistribute Django."
-msgstr ""
-"Djaon 基于 :source:`the 3-clause BSD license <LICENSE>` 发布。这是一份开源协"
-"议，它允许你修改和再次分发 Django。"
+msgstr "Djaon 基于 :source:`the 3-clause BSD license <LICENSE>` 发布。这是一份开源协议，它允许你修改和再次分发 Django。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:82
 msgid "Why does Django include Python's license file?"
 msgstr "为什么 Django 包含 Python 的协议文件？"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:84
 msgid ""
-"Django includes code from the Python standard library. Python is distributed "
-"under a permissive open source license. :source:`A copy of the Python "
+"Django includes code from the Python standard library. Python is distributed"
+" under a permissive open source license. :source:`A copy of the Python "
 "license <LICENSE.python>` is included with Django for compliance with "
 "Python's terms."
-msgstr ""
+msgstr "Django 包含源自 Python 的标准库。Python 是在开源许可协议下发布的。Django 包含了 `一份 Python 协议 <LICENSE.python>`，这是为了遵守 Python 的要求。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:89
 msgid "Which sites use Django?"
 msgstr "哪些站点使用 Django?"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:91
 msgid ""
 "`DjangoSites.org`_ features a constantly growing list of Django-powered "
 "sites."
-msgstr ""
-"`DjangoSites.org` 的特色是提供一个不断增长的使用 Django 搭建的网站的列表。"
+msgstr "`DjangoSites.org` 的特色是提供一个不断增长的使用 Django 搭建的网站的列表。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:98
 msgid ""
-"Django appears to be a MVC framework, but you call the Controller the \"view"
-"\", and the View the \"template\". How come you don't use the standard names?"
-msgstr ""
-"Django 似乎是一个 MVC 框架，但是您将控制器称为“视图”，并视图称为“模板”。 为什"
-"么不使用标准命名？"
+"Django appears to be a MVC framework, but you call the Controller the "
+"\"view\", and the View the \"template\". How come you don't use the standard"
+" names?"
+msgstr "Django 似乎是一个 MVC 框架，但是您将控制器称为“视图”，并视图称为“模板”。 为什么不使用标准命名？"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:100
 msgid "Well, the standard names are debatable."
 msgstr "当然，标准化的名称是有争议的。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:102
 msgid ""
 "In our interpretation of MVC, the \"view\" describes the data that gets "
 "presented to the user. It's not necessarily *how* the data *looks*, but "
-"*which* data is presented. The view describes *which data you see*, not *how "
-"you see it.* It's a subtle distinction."
-msgstr ""
-"在我们对 MVC 的解释中，“视图”描述了呈现给用户的数据。数据看起来怎么样并不重"
-"要，重要的是哪些数据被呈现。该视图描述了*您看到了哪些数据*，而不是*您怎么看到"
-"数据。*这是一个微妙的区别。"
+"*which* data is presented. The view describes *which data you see*, not *how"
+" you see it.* It's a subtle distinction."
+msgstr "在我们对 MVC 的解释中，“视图”描述了呈现给用户的数据。数据看起来怎么样并不重要，重要的是哪些数据被呈现。该视图描述了 *您看到了哪些数据*，而不是 *您怎么看到数据*。这是一个微妙的区别。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:107
 msgid ""
-"So, in our case, a \"view\" is the Python callback function for a particular "
-"URL, because that callback function describes which data is presented."
-msgstr ""
-"所以，在我们的例子里，一个\"视图(view)\"是 Python 中针对一个特定 URL 的回调函"
-"数，此回调函数描述了需要展示的数据。"
+"So, in our case, a \"view\" is the Python callback function for a particular"
+" URL, because that callback function describes which data is presented."
+msgstr "所以，在我们的例子里，一个\"视图(view)\"是 Python 中针对一个特定 URL 的回调函数，此回调函数描述了需要展示的数据。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:110
 msgid ""
-"Furthermore, it's sensible to separate content from presentation -- which is "
-"where templates come in. In Django, a \"view\" describes which data is "
+"Furthermore, it's sensible to separate content from presentation -- which is"
+" where templates come in. In Django, a \"view\" describes which data is "
 "presented, but a view normally delegates to a template, which describes "
 "*how* the data is presented."
-msgstr ""
-"此外，将内容和展示效果分开是很明智的，展示效果就是模板。在 Django 里面，一个"
-"视图（view）描述了哪些数据会被展示，但是一个视图通常代表了一个模板，这个模板"
-"描述了数据是如何被展示的。"
+msgstr "此外，将内容和展示效果分开是很明智的，展示效果就是模板。在 Django 里面，一个视图（view）描述了哪些数据会被展示，但是一个视图通常代表了一个模板，这个模板描述了数据是如何被展示的。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:115
 msgid ""
 "Where does the \"controller\" fit in, then? In Django's case, it's probably "
 "the framework itself: the machinery that sends a request to the appropriate "
 "view, according to the Django URL configuration."
-msgstr ""
-"那控制器（Controller）在什么位置？在 Django 中，控制器可能指的是框架本身，框"
-"架会根据 Django 的 URL 配置，将请求分发到适当的视图（view）。"
+msgstr "那控制器（Controller）在什么位置？在 Django 中，控制器可能指的是框架本身，框架会根据 Django 的 URL 配置，将请求分发到适当的视图（view）。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:119
 msgid ""
 "If you're hungry for acronyms, you might say that Django is a \"MTV\" "
 "framework -- that is, \"model\", \"template\", and \"view.\" That breakdown "
 "makes much more sense."
-msgstr ""
-"如果你想要首字母缩写, 你可能会说 Django 是一个 \"MTV \" 框架--即 \"模型"
-"(Model) \"、 \"模板(Template)\" 和 \"视图(View). 这种划分更有意义。"
+msgstr "如果你想要首字母缩写, 你可能会说 Django 是一个 \"MTV \" 框架--即 \"模型(Model) \"、 \"模板(Template)\" 和 \"视图(View). 这种划分更有意义。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:123
 msgid ""
 "At the end of the day, of course, it comes down to getting stuff done. And, "
 "regardless of how things are named, Django gets stuff done in a way that's "
 "most logical to us."
-msgstr ""
-"当然, 在一天结束的时候, 它完成了工作。而且, 不管工作是怎样的, Django 以一种对"
-"我们来说最合乎逻辑的方式完成了。"
+msgstr "当然, 在一天结束的时候, 它完成了工作。而且, 不管工作是怎样的, Django 以一种对我们来说最合乎逻辑的方式完成了。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:128
 msgid "<Framework X> does <feature Y> -- why doesn't Django?"
 msgstr "<Framework X>可以做到<feature Y>--为什么 Django 不能呢？"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:130
 msgid ""
 "We're well aware that there are other awesome Web frameworks out there, and "
 "we're not averse to borrowing ideas where appropriate. However, Django was "
 "developed precisely because we were unhappy with the status quo, so please "
 "be aware that \"because <Framework X> does it\" is not going to be "
 "sufficient reason to add a given feature to Django."
-msgstr ""
-"我们清楚的知道，其他还有很棒的 web 框架，而且我们也不反对在适当的情况下借鉴想"
-"法。但是，Django 的开发恰恰是因为我们对现状的不满，所以请注意“因为<Framework "
-"X>所以”不会成为将特定功能加到 Django 的充分理由。"
+msgstr "我们清楚的知道，其他还有很棒的 web 框架，而且我们也不反对在适当的情况下借鉴想法。但是，Django 的开发恰恰是因为我们对现状的不满，所以请注意“因为<Framework X>所以”不会成为将特定功能加到 Django 的充分理由。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:137
 msgid ""
 "Why did you write all of Django from scratch, instead of using other Python "
 "libraries?"
 msgstr "为什么你要从头开始写所有的 Django 项目，而不是使用其他 Python 库？"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:139
 msgid ""
 "When Django was originally written, Adrian and Simon spent quite a bit of "
 "time exploring the various Python Web frameworks available."
-msgstr ""
-"当 Django 最初设计时，Adrian 和 Simon 花了很多时间去研究各种各样已经存在的 "
-"Python Web 框架。"
+msgstr "当 Django 最初设计时，Adrian 和 Simon 花了很多时间去研究各种各样已经存在的 Python Web 框架。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:142
 msgid "In our opinion, none of them were completely up to snuff."
 msgstr "在我们看来，没有一个能完全达到所需的标准。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:144
 msgid "We're picky. You might even call us perfectionists. (With deadlines.)"
 msgstr "我们很挑剔。甚至你可以说我们是完美主义者。（有截止期限的）"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:146
 msgid ""
 "Over time, we stumbled across open-source libraries that did things we'd "
 "already implemented. It was reassuring to see other people solving similar "
 "problems in similar ways, but it was too late to integrate outside code: "
 "We'd already written, tested and implemented our own framework bits in "
 "several production settings -- and our own code met our needs delightfully."
-msgstr ""
-"随着时间的推移，我们偶然发现那些我们已经完成的开源库。很高兴看到其他人用类似"
-"的办法解决类似的问题，但是将外部代码整合已经太晚了：我们已经在几种生成环境中"
-"编写，测试并实现了我们的框架--而且我们自己的代码愉快的满足了我们的需求。"
+msgstr "随着时间的推移，我们偶然发现那些我们已经完成的开源库。很高兴看到其他人用类似的办法解决类似的问题，但是将外部代码整合已经太晚了：我们已经在几种生成环境中编写，测试并实现了我们的框架--而且我们自己的代码愉快的满足了我们的需求。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:152
 msgid ""
 "In most cases, however, we found that existing frameworks/tools inevitably "
-"had some sort of fundamental, fatal flaw that made us squeamish. No tool fit "
-"our philosophies 100%."
-msgstr ""
-"然而，在大多数情况下，我们发现有的框架／工具不可避免地存在某种致使我们过于拘"
-"谨的基本致命缺陷。没有工具可以100%符合我们的原理。"
+"had some sort of fundamental, fatal flaw that made us squeamish. No tool fit"
+" our philosophies 100%."
+msgstr "然而，在大多数情况下，我们发现有的框架／工具不可避免地存在某种致使我们过于拘谨的基本致命缺陷。没有工具可以100%符合我们的原理。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:156
 msgid "Like we said: We're picky."
 msgstr "正如我们所说的：我们很挑剔"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:158
 msgid ""
-"We've documented our philosophies on the :doc:`design philosophies page </"
-"misc/design-philosophies>`."
+"We've documented our philosophies on the :doc:`design philosophies page "
+"</misc/design-philosophies>`."
 msgstr "我们的设计理念请参照 :doc:`设计哲学页面 </misc/design-philosophies>`."
 
+#: ../../../../sources/2.2/docs/faq/general.txt:162
 msgid "Is Django a content-management-system (CMS)?"
 msgstr "Django 是个内容管理系统(CMS)吗?"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:164
 msgid ""
 "No, Django is not a CMS, or any sort of \"turnkey product\" in and of "
 "itself. It's a Web framework; it's a programming tool that lets you build "
 "websites."
-msgstr ""
-"Django 不是一个 CMS 或任何意义上的“一站式解决方案”。它是一个 Web 框架；它是一"
-"个让你建立网站的编程工具。"
+msgstr "Django 不是一个 CMS 或任何意义上的“一站式解决方案”。它是一个 Web 框架；它是一个让你建立网站的编程工具。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:167
 msgid ""
 "For example, it doesn't make much sense to compare Django to something like "
 "Drupal_, because Django is something you use to *create* things like Drupal."
-msgstr ""
-"例如，将 Django 和 Drupal_ 进行比较毫无意义，因为 Django 是用来创建 Drupal 之"
-"类的框架。"
+msgstr "例如，将 Django 和 Drupal_ 进行比较毫无意义，因为 Django 是用来创建 Drupal 之类的框架。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:170
 msgid ""
 "Of course, Django's automatic admin site is fantastic and timesaving -- but "
 "the admin site is one module of Django the framework. Furthermore, although "
 "Django has special conveniences for building \"CMS-y\" apps, that doesn't "
 "mean it's not just as appropriate for building \"non-CMS-y\" apps (whatever "
 "that means!)."
-msgstr ""
-"当然，Django 的 admin site 很好用而且实现很便捷  -- 但 admin site 是 Django "
-"框架的一个模块。 此外，尽管 Django 为构建 \"CMS-y\" 应用提供了特殊的便利，但"
-"并不意味着它不仅适合于构建 \"非CMS-y\"的应用 (不管那意味着什么)。"
+msgstr "当然，Django 的 admin site 很好用而且实现很便捷  -- 但 admin site 是 Django 框架的一个模块。 此外，尽管 Django 为构建 \"CMS-y\" 应用提供了特殊的便利，但并不意味着它不仅适合于构建 \"非CMS-y\"的应用 (不管那意味着什么)。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:179
 msgid "How can I download the Django documentation to read it offline?"
 msgstr "我如何下载 Django 文档进行离线阅读？"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:181
 msgid ""
 "The Django docs are available in the ``docs`` directory of each Django "
 "tarball release. These docs are in reST (reStructuredText) format, and each "
 "text file corresponds to a Web page on the official Django site."
-msgstr ""
-"Django 文档可以在每个 Django 版本压缩包的 \"docs\" 目录中找到。这些文档采用 "
-"reST（reStructuredText）格式，每个文本文件都对应官方 Django 网站上的页面。"
+msgstr "Django 文档可以在每个 Django 版本压缩包的 \"docs\" 目录中找到。这些文档采用 reST（reStructuredText）格式，每个文本文件都对应官方 Django 网站上的页面。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:185
 msgid ""
 "Because the documentation is :source:`stored in revision control <docs>`, "
 "you can browse documentation changes just like you can browse code changes."
-msgstr ""
+msgstr "由于文档存储在 `stored in revision control <docs>`_ ，你可以浏览文档的修改历史，就像浏览代码修改历史一样。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:188
 msgid ""
 "Technically, the docs on Django's site are generated from the latest "
-"development versions of those reST documents, so the docs on the Django site "
-"may offer more information than the docs that come with the latest Django "
+"development versions of those reST documents, so the docs on the Django site"
+" may offer more information than the docs that come with the latest Django "
 "release."
-msgstr ""
-"从技术上讲，Django 网站上的文档通常是由这些最新开发版本的 reST 文档生成，所"
-"以 Django 网站上提供的文档内容可能多于最新 Django 版本中的文档内容。"
+msgstr "从技术上讲，Django 网站上的文档通常是由这些最新开发版本的 reST 文档生成，所以 Django 网站上提供的文档内容可能多于最新 Django 版本中的文档内容。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:193
 msgid "How do I cite Django?"
 msgstr "如何引用 Django？"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:195
 msgid ""
 "It's difficult to give an official citation format, for two reasons: "
 "citation formats can vary wildly between publications, and citation "
 "standards for software are still a matter of some debate."
-msgstr ""
-"出于两个原因，很难提供正式的引文格式：出版物之间的引文格式可能会有很大差异，"
-"软件的引用标准仍然是一些争议的问题。"
+msgstr "出于两个原因，很难提供正式的引文格式：出版物之间的引文格式可能会有很大差异，软件的引用标准仍然是一些争议的问题。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:199
 msgid "For example, `APA style`_,  would dictate something like::"
 msgstr "例如，`APA style`_，命令类似::"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:203
 msgid ""
 "However, the only true guide is what your publisher will accept, so get a "
 "copy of those guidelines and fill in the gaps as best you can."
-msgstr ""
-"但是，唯一真正的指南就是您出版商将接受的内容，因此请获得这些指南的副本并尽可"
-"能填补空缺。"
+msgstr "但是，唯一真正的指南就是您出版商将接受的内容，因此请获得这些指南的副本并尽可能填补空缺。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:206
 msgid ""
 "If your referencing style guide requires a publisher name, use \"Django "
 "Software Foundation\"."
-msgstr ""
-"如果您的引用样式指南需要发布者名称，请使用\"Django Software Foundation\"。"
+msgstr "如果您的引用样式指南需要发布者名称，请使用\"Django Software Foundation\"。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:209
 msgid "If you need a publishing location, use \"Lawrence, Kansas\"."
 msgstr "如果您需要发布位置，请使用\"Lawrence, Kansas\"。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:211
 msgid "If you need a web address, use https://djangoproject.com."
 msgstr "如果你需要一个网址，使用 https://djangoproject.com。"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:213
 msgid "If you need a name, just use \"Django\", without any tagline."
 msgstr "如果你需要一个名字，只需使用“django”，没有任何修饰符号"
 
+#: ../../../../sources/2.2/docs/faq/general.txt:215
 msgid ""
 "If you need a publication date, use the year of release of the version "
 "you're referencing (e.g., 2013 for v1.5)"
-msgstr ""
-"如果您需要发布日期，请使用您所引用版本的发布年份（例如，2013 for v1.5）"
+msgstr "如果您需要发布日期，请使用您所引用版本的发布年份（例如，2013 for v1.5）"
 
+#: ../../../../sources/2.2/docs/faq/help.txt:3
 msgid "FAQ: Getting Help"
-msgstr "FAQ:获取帮助"
+msgstr "FAQ：获取帮助"
 
+#: ../../../../sources/2.2/docs/faq/help.txt:6
 msgid "How do I do X? Why doesn't Y work? Where can I go to get help?"
 msgstr "我该如何做 X？Y为什么不工作？我可以去哪里寻求帮助？"
 
+#: ../../../../sources/2.2/docs/faq/help.txt:8
 msgid ""
 "If this FAQ doesn't contain an answer to your question, you might want to "
 "try the |django-users| mailing list. Feel free to ask any question related "
 "to installing, using, or debugging Django."
-msgstr ""
-"如果FAQ没有包含对你问题的回答，你可以试试 |django-users|  的邮件列表，随意问"
-"任何有关安装，使用或调试 Django 的问题。"
+msgstr "如果 FAQ 没有包含对你问题的回答，你可以试试 |django-users| 的邮件列表，随意问任何有关安装，使用或调试 Django 的问题。"
 
+#: ../../../../sources/2.2/docs/faq/help.txt:12
 msgid ""
-"If you prefer IRC, the `#django IRC channel`_ on the Freenode IRC network is "
-"an active community of helpful individuals who may be able to solve your "
+"If you prefer IRC, the `#django IRC channel`_ on the Freenode IRC network is"
+" an active community of helpful individuals who may be able to solve your "
 "problem."
-msgstr ""
-"如果你更喜欢IRC，Freenode IRC网络上的`#django IRC channel`_ 是一个有帮助的个"
-"人谁可能能够解决您的问题积极的社区。"
+msgstr "如果你更喜欢IRC，Freenode IRC网络上的 `#django IRC channel`_ 是一个有帮助的个人谁可能能够解决您的问题积极的社区。"
 
+#: ../../../../sources/2.2/docs/faq/help.txt:20
 msgid "Why hasn't my message appeared on `django-users`?"
-msgstr "为什么我的信息没有出现在 `django-users`上面？"
+msgstr "为什么我的信息没有出现在 `django-users` 上面？"
 
+#: ../../../../sources/2.2/docs/faq/help.txt:22
 msgid ""
 "|django-users| has a lot of subscribers. This is good for the community, as "
 "it means many people are available to contribute answers to questions. "
-"Unfortunately, it also means that |django-users| is an attractive target for "
-"spammers."
-msgstr ""
-"|django-users| 有很多订阅者。这对社区是好事, 因为这意味着有许多人可以来回答问"
-"题. 不过这也意味着 |django-users| 对垃圾邮件发送者来说是一个充满吸引力的目"
-"标。"
+"Unfortunately, it also means that |django-users| is an attractive target for"
+" spammers."
+msgstr "|django-users| 有很多订阅者。这对社区是好事, 因为这意味着有许多人可以来回答问题. 不过这也意味着 |django-users| 对垃圾邮件发送者来说是一个充满吸引力的目标。"
 
+#: ../../../../sources/2.2/docs/faq/help.txt:27
 msgid ""
 "In order to combat the spam problem, when you join the |django-users| "
 "mailing list, we manually moderate the first message you send to the list. "
 "This means that spammers get caught, but it also means that your first "
 "question to the list might take a little longer to get answered. We "
 "apologize for any inconvenience that this policy may cause."
-msgstr ""
-"为了解决垃圾邮件问题, 当你加入 |django-users| 邮件列表，我们会手工的调整你向"
-"该邮件列表发送的第一封邮件，这意味着如果有垃圾邮件发送者，将会被发现， 但也同"
-"时意味着你的第一封求助邮件会用很长的时间才获得回复，我们对这种策略带来的不便"
-"感到抱歉。"
+msgstr "为了解决垃圾邮件问题, 当你加入 |django-users| 邮件列表，我们会手工的调整你向该邮件列表发送的第一封邮件，这意味着如果有垃圾邮件发送者，将会被发现， 但也同时意味着你的第一封求助邮件会用很长的时间才获得回复，我们对这种策略带来的不便感到抱歉。"
 
+#: ../../../../sources/2.2/docs/faq/help.txt:34
 msgid "Nobody on `django-users` answered my question! What should I do?"
 msgstr "没人在 `Django-users` 邮件列表上回答我的问题！我应该怎么办呢？"
 
+#: ../../../../sources/2.2/docs/faq/help.txt:36
 msgid ""
 "Try making your question more specific, or provide a better example of your "
 "problem."
 msgstr "试着更加具体地介绍你的问题，或提供一个关于你问题的更好的例子。"
 
+#: ../../../../sources/2.2/docs/faq/help.txt:39
 msgid ""
 "As with most open-source mailing lists, the folks on |django-users| are "
 "volunteers. If nobody has answered your question, it may be because nobody "
@@ -863,189 +807,189 @@ msgid ""
 "it may be that everybody that can help is busy. One thing you might try is "
 "to ask the question on IRC -- visit the `#django IRC channel`_ on the "
 "Freenode IRC network."
-msgstr ""
-"像大多数开源软件的的邮件列表，`Django-users`邮件列表上的人员大部分都是志愿"
-"者，如果没有人回答你的问题，可能因为是没有人能理解这个问题，或者因为其他人员"
-"太忙。你可以试一下在IRC频道上问一下你的问题，请访问Freenode上的`#django IRC "
-"channel`。"
+msgstr "像大多数开源软件的的邮件列表，`Django-users` 邮件列表上的人员大部分都是志愿者，如果没有人回答你的问题，可能因为是没有人能理解这个问题，或者因为其他人员太忙。你可以试一下在IRC频道上问一下你的问题，请访问Freenode上的 `#django IRC channel`。"
 
+#: ../../../../sources/2.2/docs/faq/help.txt:46
 msgid ""
 "You might notice we have a second mailing list, called |django-developers| "
 "-- but please don't email support questions to this mailing list. This list "
-"is for discussion of the development of Django itself. Asking a tech support "
-"question there is considered quite impolite."
-msgstr ""
-"你也许注意到了我们还有第二个邮箱列表 |django-developers|，但是，请不要向这个"
-"邮件列表咨询支持问题。 这个邮件列表仅供讨论 Django 自身的发展过程。咨询技术支"
-"持问题略显粗鲁。"
+"is for discussion of the development of Django itself. Asking a tech support"
+" question there is considered quite impolite."
+msgstr "你也许注意到了我们还有第二个邮箱列表 |django-developers|，但是，请不要向这个邮件列表咨询支持问题。 这个邮件列表仅供讨论 Django 自身的发展过程。咨询技术支持问题略显粗鲁。"
 
+#: ../../../../sources/2.2/docs/faq/help.txt:52
 msgid "I think I've found a bug! What should I do?"
-msgstr "我认为我找到了个bug！我应该做什么呢？"
+msgstr "我认为我找到了个 bug！我应该做什么呢？"
 
+#: ../../../../sources/2.2/docs/faq/help.txt:54
 msgid ""
-"Detailed instructions on how to handle a potential bug can be found in our :"
-"ref:`Guide to contributing to Django <reporting-bugs>`."
-msgstr ""
-"如何处理一个潜在的 bug 可以详细参考我们的指南 `Guide to contributing to "
-"Django <reporting-bugs>`。"
+"Detailed instructions on how to handle a potential bug can be found in our "
+":ref:`Guide to contributing to Django <reporting-bugs>`."
+msgstr "如何处理一个潜在的 bug 可以详细参考我们的 :ref:`为 Django 做贡献指南 <reporting-bugs>`。"
 
+#: ../../../../sources/2.2/docs/faq/help.txt:58
 msgid "I think I've found a security problem! What should I do?"
 msgstr "我认为我已经发现了个安全问题！我应该做什么？"
 
+#: ../../../../sources/2.2/docs/faq/help.txt:60
 msgid ""
 "If you think you've found a security problem with Django, please send a "
 "message to security@djangoproject.com. This is a private list only open to "
 "long-time, highly trusted Django developers, and its archives are not "
 "publicly readable."
-msgstr ""
-"如果你认为你找到了一个 Django 的安全问题， 请告诉 security@djangoproject."
-"com。这是一个仅供值得信赖的 Django 开发者使用的长期有效的私人邮箱；并且该邮箱"
-"的档案不公开。"
+msgstr "如果你认为你找到了一个 Django 的安全问题， 请告诉 security@djangoproject.com。这是一个仅供值得信赖的 Django 开发者使用的长期有效的私人邮箱；并且该邮箱的档案不公开。"
 
+#: ../../../../sources/2.2/docs/faq/help.txt:64
 msgid ""
-"Due to the sensitive nature of security issues, we ask that if you think you "
-"have found a security problem, *please* don't send a message to one of the "
-"public mailing lists. Django has a :ref:`policy for handling security issues "
-"<reporting-security-issues>`; while a defect is outstanding, we would like "
+"Due to the sensitive nature of security issues, we ask that if you think you"
+" have found a security problem, *please* don't send a message to one of the "
+"public mailing lists. Django has a :ref:`policy for handling security issues"
+" <reporting-security-issues>`; while a defect is outstanding, we would like "
 "to minimize any damage that could be inflicted through public knowledge of "
 "that defect."
-msgstr ""
-"由于人们对安全问题有一种与生俱来的敏感，如果你认为你找到了安全问题，请不要给"
-"公共邮箱发送消息。这里可以看到 Django 对于安全问题的处理政策 <reporting-"
-"security-issues>；当重大缺陷发现的时候，我们会尽可能的降低人们对缺陷的认知所"
-"带来的任何损失。"
+msgstr "由于人们对安全问题有一种与生俱来的敏感，如果你认为你找到了安全问题，请不要给公共邮箱发送消息。这里可以看到 Django 对于 :ref:`安全问题的处理政策 <reporting-security-issues>`；当重大缺陷发现的时候，我们会尽可能的降低人们对缺陷的认知所带来的任何损失。"
 
+#: ../../../../sources/2.2/docs/faq/index.txt:3
 msgid "Django FAQ"
 msgstr "Django FAQ"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:3
 msgid "FAQ: Installation"
 msgstr "FAQ：安装"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:6
 msgid "How do I get started?"
 msgstr "如何开始？"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:8
 msgid "`Download the code`_."
 msgstr "`下载代码`_ 。"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:9
 msgid "Install Django (read the :doc:`installation guide </intro/install>`)."
 msgstr "安装 Django （阅读 :doc:`安装指南 </intro/install>`）。"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:10
 msgid "Walk through the :doc:`tutorial </intro/tutorial01>`."
-msgstr "查看 :doc:`教程第 1 部分` 。"
+msgstr "查看 :doc:`教程第 1 部分 </intro/tutorial01>` 。"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:11
 msgid ""
 "Check out the rest of the :doc:`documentation </index>`, and `ask "
 "questions`_ if you run into trouble."
 msgstr "阅读剩下的指南</index>，如果你遇到任何问题，提问是一个不错的解决方法。"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:18
 msgid "What are Django's prerequisites?"
-msgstr "使用Django，需要做好什么准备？"
+msgstr "使用 Django，需要做好什么准备？"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:20
 msgid ""
 "Django requires Python. See the table in the next question for the versions "
 "of Python that work with each version of Django. Other Python libraries may "
 "be required for some uses, but you'll receive an error about it as they're "
 "needed."
-msgstr ""
-"Django 要求先安装 Python。参见下个问题中的表格，它介绍了各个 Django 版本所支"
-"持的 Python 版本。某些情况下可能需要一些额外的 Python 库，如果未安装，你会在"
-"这些库被用到时获得一个错误提示。"
+msgstr "Django 要求先安装 Python。参见下个问题中的表格，它介绍了各个 Django 版本所支持的 Python 版本。某些情况下可能需要一些额外的 Python 库，如果未安装，你会在这些库被用到时获得一个错误提示。"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:24
 msgid ""
 "For a development environment -- if you just want to experiment with Django "
-"-- you don't need to have a separate Web server installed; Django comes with "
-"its own lightweight development server. For a production environment, Django "
-"follows the WSGI spec, :pep:`3333`, which means it can run on a variety of "
-"server platforms. See :doc:`Deploying Django </howto/deployment/index>` for "
-"some popular alternatives."
-msgstr ""
-"对于开发环境——如果你用 Django 进行实验——你不需要安装单独的Web服务器；Django "
-"带有自己的轻量级开发服务器。对于生产环境， Django 遵循了 WSGI 规范：`pep: "
-"3333`， 这意味着它能够运行在各种服务器平台上。请参阅文档 `Django 部署</howto/"
-"deployment/index>` 获取更多的流行方案。"
+"-- you don't need to have a separate Web server installed; Django comes with"
+" its own lightweight development server. For a production environment, "
+"Django follows the WSGI spec, :pep:`3333`, which means it can run on a "
+"variety of server platforms. See :doc:`Deploying Django "
+"</howto/deployment/index>` for some popular alternatives."
+msgstr "对于开发环境——如果你用 Django 进行实验——你不需要安装单独的Web服务器；Django 带有自己的轻量级开发服务器。对于生产环境， Django 遵循了 WSGI 规范：`pep: 3333`， 这意味着它能够运行在各种服务器平台上。请参阅文档 `Django 部署</howto/deployment/index>` 获取更多的流行方案。"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:31
 msgid ""
 "If you want to use Django with a database, which is probably the case, "
 "you'll also need a database engine. PostgreSQL_ is recommended, because "
-"we're PostgreSQL fans, and MySQL_, `SQLite`_, and Oracle_ are also supported."
-msgstr ""
+"we're PostgreSQL fans, and MySQL_, `SQLite`_, and Oracle_ are also "
+"supported."
+msgstr "有时候，你可能会想在 Django 上使用数据库，那么你需要一个数据库引擎。我们推荐使用 PostgreSQL_ ，因为我们是 PostgreSQL 的忠实粉丝，但是 Django 也同样支持MySQL_ ，`SQLite3`_ 和 Oracle_ 。"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:44
 msgid "What Python version can I use with Django?"
 msgstr "我应该使用哪个版本的 Python 来配合 Django?"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:47
 msgid "Django version"
 msgstr "Django 版本"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:47
 msgid "Python versions"
 msgstr "Python 版本"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:49
 msgid "1.11"
 msgstr "1.11"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:49
 msgid "2.7, 3.4, 3.5, 3.6, 3.7 (added in 1.11.17)"
-msgstr "2.7, 3.4, 3.5, 3.6, 3.7 (1.11.17添加)"
+msgstr "2.7, 3.4, 3.5, 3.6, 3.7 (1.11.17 添加)"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:50
 msgid "2.0"
 msgstr "2.0"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:50
 msgid "3.4, 3.5, 3.6, 3.7"
 msgstr "3.4，3.5，3.6，3.7"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:51
 msgid "2.1, 2.2"
 msgstr "2.1，2.2"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:51
 msgid "3.5, 3.6, 3.7"
 msgstr "3.5，3.6，3.7"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:54
 msgid ""
 "For each version of Python, only the latest micro release (A.B.C) is "
 "officially supported. You can find the latest micro version for each series "
 "on the `Python download page <https://www.python.org/downloads/>`_."
-msgstr ""
-"对于每个版本的Python，官方仅支持最新的三级版本（A.B.C）。你可以在`Python下载"
-"页面 <https://www.python.org/downloads/>`_ 找到每个系列的微版本。"
+msgstr "对于每个版本的Python，官方仅支持最新的三级版本（A.B.C）。你可以在 `Python下载页面 <https://www.python.org/downloads/>`_ 找到每个系列的微版本。"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:58
 msgid ""
 "Typically, we will support a Python version up to and including the first "
 "Django LTS release whose security support ends after security support for "
 "that version of Python ends. For example, Python 3.3 security support ends "
 "September 2017 and Django 1.8 LTS security support ends April 2018. "
 "Therefore Django 1.8 is the last version to support Python 3.3."
-msgstr ""
-"一般来说，我们会支持一个 Python 版本直到其第一个发布的 Django LTS 安全支持停"
-"止。而 Django LTS 版本安全支持停止是跟随这其对应版本的 Python 安全支持结束"
-"的。例如，Python 3.3 安全支持在2017年9月结束，然后 Django 1.8 LTS 安全支持在"
-"2018年4月结束。因此 Django 1.8 是支持 Python 3.3 的最后一版。"
+msgstr "一般来说，我们会支持一个 Python 版本直到其第一个发布的 Django LTS 安全支持停止。而 Django LTS 版本安全支持停止是跟随这其对应版本的 Python 安全支持结束的。例如，Python 3.3 安全支持在 2017 年 9 月结束，然后 Django 1.8 LTS 安全支持在 2018 年 4 月结束。因此 Django 1.8 是支持 Python 3.3 的最后一版。"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:65
 msgid "What Python version should I use with Django?"
 msgstr "我应该选用什么版本的 Python 来使用 Django ？"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:67
 msgid ""
 "Python 3 is recommended. Django 1.11 is the last version to support Python "
 "2.7. Support for Python 2.7 and Django 1.11 ends in 2020."
-msgstr ""
-"我们推荐 Python 3。Django 1.11 是支持 Python 2.7 的最后一版。Python 2.7 和 "
-"Django 1.11 的支持将会在2020年结束。"
+msgstr "我们推荐 Python 3。Django 1.11 是支持 Python 2.7 的最后一版。Python 2.7 和 Django 1.11 的支持将会在2020年结束。"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:70
 msgid ""
-"Since newer versions of Python are often faster, have more features, and are "
-"better supported, the latest version of Python 3 is recommended."
-msgstr ""
-"因为新版本的 Python 通常会更快，拥有更多特性，而且有更好的支持，推荐使用 "
-"Python 3 的最新版本。"
+"Since newer versions of Python are often faster, have more features, and are"
+" better supported, the latest version of Python 3 is recommended."
+msgstr "因为新版本的 Python 通常会更快，拥有更多特性，而且有更好的支持，推荐使用 Python 3 的最新版本。"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:73
 msgid ""
 "You don't lose anything in Django by using an older release, but you don't "
 "take advantage of the improvements and optimizations in newer Python "
 "releases. Third-party applications for use with Django are, of course, free "
 "to set their own version requirements."
-msgstr ""
-"使用旧版本的 Django 你不会丢失任何东西，但是你不能得到新版本 Python 的改进和"
-"优化。当然，Django 的第三方插件可以自由设置他们的版本要求。"
+msgstr "使用旧版本的 Django 你不会丢失任何东西，但是你不能得到新版本 Python 的改进和优化。当然，Django 的第三方插件可以自由设置他们的版本要求。"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:79
 msgid "Should I use the stable version or development version?"
 msgstr "我应该使用稳定版本还是开发版本？"
 
+#: ../../../../sources/2.2/docs/faq/install.txt:81
 msgid ""
 "Generally, if you're using code in production, you should be using a stable "
 "release. The Django project publishes a full stable release every nine "
@@ -1053,343 +997,327 @@ msgid ""
 "the API that is covered by our backwards compatibility guarantees; if you "
 "write code against stable releases, you shouldn't have any problems "
 "upgrading when the next official version is released."
-msgstr ""
-"一般来说，如果你在生产中使用Django，你应该使用稳定版本。Django每9个月发布一次"
-"稳定版本，之后会间断发布修复补丁的版本。这些稳定版本包含的API都是先后兼容的；"
-"如果你是按照稳定版本来进行编写代码，那你在下一个正式版本升级的时候不应该出现"
-"问题。"
+msgstr "一般来说，如果你在生产中使用 Django，你应该使用稳定版本。Django 每 9 个月发布一次稳定版本，之后会间断发布修复补丁的版本。这些稳定版本包含的 API 都是向后兼容的；如果你是按照稳定版本来进行编写代码，那你在下一个正式版本升级的时候不应该出现问题。"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:3
 msgid "FAQ: Databases and models"
 msgstr "FAQ：数据库和模型"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:8
 msgid "How can I see the raw SQL queries Django is running?"
 msgstr "我该如何在Django运行的过程中看到SQL查询？"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:10
 msgid ""
 "Make sure your Django :setting:`DEBUG` setting is set to ``True``. Then, "
 "just do this::"
-msgstr "首先确保你的Django设置中的`DEBUG`选项为``True``. 然后， 这样做："
+msgstr "首先确保你的 Django 设置中的 `DEBUG` 选项为 ``True``。然后，这样做::"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:18
 msgid ""
 "``connection.queries`` is only available if :setting:`DEBUG` is ``True``. "
-"It's a list of dictionaries in order of query execution. Each dictionary has "
-"the following::"
-msgstr ""
-"``connection.queries`` 只有在 :setting:`DEBUG` 为 ``True``时才可用. 它是按顺"
-"序执行的字典列表，每个字典包括::"
+"It's a list of dictionaries in order of query execution. Each dictionary has"
+" the following::"
+msgstr "``connection.queries`` 只有在 :setting:`DEBUG` 为 ``True``时才可用. 它是按顺序执行的字典列表，每个字典包括::"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:25
 msgid ""
 "``connection.queries`` includes all SQL statements -- INSERTs, UPDATES, "
 "SELECTs, etc. Each time your app hits the database, the query will be "
 "recorded."
-msgstr ""
-"``connection.queries`` 包含了所有的SQL 语句 -- INSERT, UPDATES, SELECT, 等. "
-"每次你的应用访问了数据库，查询都会被记录下来。"
+msgstr "``connection.queries`` 包含了所有的SQL 语句 -- INSERT, UPDATES, SELECT, 等. 每次你的应用访问了数据库，查询都会被记录下来。"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:28
 msgid ""
-"If you are using :doc:`multiple databases</topics/db/multi-db>`, you can use "
-"the same interface on each member of the ``connections`` dictionary::"
-msgstr ""
-"如果你在使用:doc:`multiple databases1`,， 你可以对``connections`` 字典::中每"
-"个成员使用相同的接口。"
+"If you are using :doc:`multiple databases</topics/db/multi-db>`, you can use"
+" the same interface on each member of the ``connections`` dictionary::"
+msgstr "如果你在使用 :doc:`multiple databases1`，你可以对 ``connections`` 字典的每个成员使用相同的接口::"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:34
 msgid ""
-"If you need to clear the query list manually at any point in your functions, "
-"just call ``reset_queries()``, like this::"
-msgstr ""
-"如果你需要在你的函数中去手动的清空所有的查询点，只需要调用"
-"``reset_queries()``,  像这样::"
+"If you need to clear the query list manually at any point in your functions,"
+" just call ``reset_queries()``, like this::"
+msgstr "如果你需要在你的函数中去手动的清空所有的查询点，只需要调用 ``reset_queries()``，像这样::"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:41
 msgid "Can I use Django with a pre-existing database?"
-msgstr "我可以让Django用一个之前已经存在的数据库吗？"
+msgstr "我可以让 Django 用一个之前已经存在的数据库吗？"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:43
 msgid ""
-"Yes. See :doc:`Integrating with a legacy database </howto/legacy-databases>`."
-msgstr ""
-"是的，可以看这篇文档：\n"
-":doc:`Integrating with a legacy database 1`。"
+"Yes. See :doc:`Integrating with a legacy database </howto/legacy-"
+"databases>`."
+msgstr "是的，可以看这篇文档 :doc:`导入已有数据库 </howto/legacy-databases>`。"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:46
 msgid "If I make changes to a model, how do I update the database?"
 msgstr "如果我对一个模型做了改动，我该如何去更新数据库？"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:48
 msgid ""
-"Take a look at Django's support for :mod:`schema migrations <django.db."
-"migrations>`."
-msgstr ""
-"看看Django对数据模型改动的支持：:mod:`schema migrations <django.db."
-"migrations>` （模型迁移）"
+"Take a look at Django's support for :mod:`schema migrations "
+"<django.db.migrations>`."
+msgstr "看看Django对数据模型改动的支持：:mod:`schema migrations <django.db.migrations>` （模型迁移）"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:51
 msgid ""
-"If you don't mind clearing data, your project's ``manage.py`` utility has a :"
-"djadmin:`flush` option to reset the database to the state it was in "
+"If you don't mind clearing data, your project's ``manage.py`` utility has a "
+":djadmin:`flush` option to reset the database to the state it was in "
 "immediately after :djadmin:`migrate` was executed."
-msgstr ""
-"如果你不介意清除数据，工程目录下的``manage.py`` 工具使用 :djadmin:`flush` 选"
-"项去立即重置数据库到 执行 :djadmin:`migrate` 后的状态"
+msgstr "如果你不介意清除数据，工程目录下的 ``manage.py`` 工具使用 :djadmin:`flush` 选项去立即重置数据库到 执行 :djadmin:`migrate` 后的状态"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:56
 msgid "Do Django models support multiple-column primary keys?"
-msgstr "Django支持多列主键吗？"
+msgstr "Django 支持多列主键吗？"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:58
 msgid "No. Only single-column primary keys are supported."
 msgstr "不，只支持单列主键。"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:60
 msgid ""
 "But this isn't an issue in practice, because there's nothing stopping you "
-"from adding other constraints (using the ``unique_together`` model option or "
-"creating the constraint directly in your database), and enforcing the "
+"from adding other constraints (using the ``unique_together`` model option or"
+" creating the constraint directly in your database), and enforcing the "
 "uniqueness at that level. Single-column primary keys are needed for things "
 "such as the admin interface to work; e.g., you need a simple way of being "
 "able to specify an object to edit or delete."
-msgstr ""
-"但这在实践中并不是一个问题，因为无法阻止你添加其他的约束（使用 "
-"``unique_together`` 模型选项或者在你的数据库中直接创建约束），并强化这一级别"
-"的独特性。管理员界面（admin interface）需要单列主键才能工作；例如，你需要一种"
-"能够指定要编辑或删除的对象的简单方法。"
+msgstr "但这在实践中并不是一个问题，因为无法阻止你添加其他的约束（使用 ``unique_together`` 模型选项或者在你的数据库中直接创建约束），并强化这一级别的独特性。管理员界面（admin interface）需要单列主键才能工作；例如，你需要一种能够指定要编辑或删除的对象的简单方法。"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:68
 msgid "Does Django support NoSQL databases?"
 msgstr "Django 支持 NoSQL 数据库吗？"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:70
 msgid ""
 "NoSQL databases are not officially supported by Django itself. There are, "
 "however, a number of side project and forks which allow NoSQL functionality "
 "in Django, like `Django non-rel`_."
-msgstr ""
-"Django 官方不支持 NoSQL 数据库，不过有一些项目和拷贝向 Django 中添加了 NoSQL "
-"的功能，如：`Django non-rel`_"
+msgstr "Django 官方不支持 NoSQL 数据库，不过有一些项目和拷贝向 Django 中添加了 NoSQL 的功能，如：`Django non-rel`_"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:74
 msgid ""
 "You can also take a look on `the wiki page`_ which discusses some "
 "alternatives."
-msgstr "你也可以看一下`the wiki page`_ 来讨论一些替代方案。"
+msgstr "你也可以看一下 `the wiki page`_ 来讨论一些替代方案。"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:80
 msgid ""
 "How do I add database-specific options to my CREATE TABLE statements, such "
 "as specifying MyISAM as the table type?"
-msgstr ""
-"如何将特定于数据库的选项添加到我的 CREATE TABLE 语句中，例如将 MylSAM 指定为"
-"表类型？"
+msgstr "如何将特定于数据库的选项添加到我的 CREATE TABLE 语句中，例如将 MylSAM 指定为表类型？"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:82
 msgid ""
 "We try to avoid adding special cases in the Django code to accommodate all "
 "the database-specific options such as table type, etc. If you'd like to use "
-"any of these options, create a migration with a :class:`~django.db."
-"migrations.operations.RunSQL` operation that contains ``ALTER TABLE`` "
-"statements that do what you want to do."
-msgstr ""
-"我们尽量避免在 Django 代码中添加特例来容纳所有特定于数据库的选项，如表数据"
-"等。如果您想使用这些选项中的任何一个，请使用：class : `~ django.db."
-"migrations.operations.RunSQL`  操作来创建迁移，包含＂ALTER TABLE＂语句，它们"
-"可以执行您想要的操作。"
+"any of these options, create a migration with a "
+":class:`~django.db.migrations.operations.RunSQL` operation that contains "
+"``ALTER TABLE`` statements that do what you want to do."
+msgstr "我们尽量避免在 Django 代码中添加特例来容纳所有特定于数据库的选项，如表数据等。如果您想使用这些选项中的任何一个，请使用：class : `~ django.db.migrations.operations.RunSQL`  操作来创建迁移，包含＂ALTER TABLE＂语句，它们可以执行您想要的操作。"
 
+#: ../../../../sources/2.2/docs/faq/models.txt:88
 msgid ""
 "For example, if you're using MySQL and want your tables to use the MyISAM "
 "table type, use the following SQL::"
-msgstr ""
-"例如，如果你使用 MySQL 并且你想让你的数据表使用 MyISAM 表类型，使用如下 SQL "
-"语句："
+msgstr "例如，如果你使用 MySQL 并且你想让你的数据表使用 MyISAM 表类型，使用如下 SQL 语句："
 
+#: ../../../../sources/2.2/docs/faq/troubleshooting.txt:3
 msgid "Troubleshooting"
 msgstr "错误调试"
 
+#: ../../../../sources/2.2/docs/faq/troubleshooting.txt:5
 msgid ""
 "This page contains some advice about errors and problems commonly "
 "encountered during the development of Django applications."
 msgstr "本页包含了开发Django应用过程中一些常见错误和问题的处理建议。"
 
+#: ../../../../sources/2.2/docs/faq/troubleshooting.txt:11
 msgid "Problems running ``django-admin``"
-msgstr "运行``django-admin``时遇到的问题"
+msgstr "运行 ``django-admin`` 时遇到的问题"
 
+#: ../../../../sources/2.2/docs/faq/troubleshooting.txt:14
 msgid "\"command not found: `django-admin`\""
-msgstr "“未找到`django-admin`命令”"
+msgstr "“未找到 `django-admin` 命令”"
 
+#: ../../../../sources/2.2/docs/faq/troubleshooting.txt:16
 msgid ""
-":doc:`django-admin </ref/django-admin>` should be on your system path if you "
-"installed Django via ``python setup.py``. If it's not on your path, you can "
-"find it in ``site-packages/django/bin``, where ``site-packages`` is a "
-"directory within your Python installation. Consider symlinking to :doc:"
-"`django-admin </ref/django-admin>` from some place on your path, such as :"
-"file:`/usr/local/bin`."
-msgstr ""
-"如果你是通过运行 ``python setup.py`` 安装的Django， :doc:`django-admin ` </"
-"ref/django-admin>应该已经处于你的系统环境变量PATH中。如果没有，你可以在目录 "
-"``site-packages/django/bin``，这里的目录 ``site-packages``在你的Python安装目"
-"录中。 当然你可以考虑在其他位置使用符号链接到 :doc:`django-admin ` , 比如 :"
-"file:`/usr/local/bin`。"
+":doc:`django-admin </ref/django-admin>` should be on your system path if you"
+" installed Django via ``python setup.py``. If it's not on your path, you can"
+" find it in ``site-packages/django/bin``, where ``site-packages`` is a "
+"directory within your Python installation. Consider symlinking to :doc"
+":`django-admin </ref/django-admin>` from some place on your path, such as "
+":file:`/usr/local/bin`."
+msgstr "如果你是通过运行 ``python setup.py`` 安装的Django， :doc:`django-admin ` </ref/django-admin>应该已经处于你的系统环境变量PATH中。如果没有，你可以在目录 ``site-packages/django/bin``，这里的目录 ``site-packages``在你的Python安装目录中。 当然你可以考虑在其他位置使用符号链接到 :doc:`django-admin ` , 比如 :file:`/usr/local/bin`。"
 
+#: ../../../../sources/2.2/docs/faq/troubleshooting.txt:23
 msgid ""
 "If ``django-admin`` doesn't work but ``django-admin.py`` does, you're "
 "probably using a version of Django that doesn't match the version of this "
 "documentation. ``django-admin`` is new in Django 1.7."
-msgstr ""
-"如果 ``django-admin`` 报错但是``django-admin.py``却可以，那说明可能你使用的"
-"Django版本和本文档的版本不一致。``django-admin``是 Django 1.7中的新命令。"
+msgstr "如果 ``django-admin`` 报错但是``django-admin.py``却可以，那说明可能你使用的Django版本和本文档的版本不一致。``django-admin``是 Django 1.7中的新命令。"
 
+#: ../../../../sources/2.2/docs/faq/troubleshooting.txt:28
 msgid "macOS permissions"
-msgstr "macOS的权限问题"
+msgstr "macOS 的权限问题"
 
+#: ../../../../sources/2.2/docs/faq/troubleshooting.txt:30
 msgid ""
 "If you're using macOS, you may see the message \"permission denied\" when "
-"you try to run ``django-admin``. This is because, on Unix-based systems like "
-"macOS, a file must be marked as \"executable\" before it can be run as a "
+"you try to run ``django-admin``. This is because, on Unix-based systems like"
+" macOS, a file must be marked as \"executable\" before it can be run as a "
 "program. To do this, open Terminal.app and navigate (using the ``cd`` "
 "command) to the directory where :doc:`django-admin </ref/django-admin>` is "
 "installed, then run the command ``sudo chmod +x django-admin``."
-msgstr ""
-"如果你正在使用 macOS，你可能看到“permission denied”提示，当你尝试运行"
-"``django-admin``的时候。这是因为在像 macOS 这种类Unix系统中，一个文件在它被当"
-"作程序执行之前必须被标记为“可执行”。为了解决这个问题，打开终端并且进入 :doc:"
-"`django-admin `的安装目录（使用``cd``命令），然后执行命令``sudo chmod +x "
-"django-admin``."
+msgstr "如果你正在使用 macOS，你可能看到“permission denied”提示，当你尝试运行``django-admin``的时候。这是因为在像 macOS 这种类Unix系统中，一个文件在它被当作程序执行之前必须被标记为“可执行”。为了解决这个问题，打开终端并且进入 :doc:`django-admin `的安装目录（使用``cd``命令），然后执行命令``sudo chmod +x django-admin``."
 
+#: ../../../../sources/2.2/docs/faq/troubleshooting.txt:38
 msgid "Miscellaneous"
 msgstr "杂项"
 
+#: ../../../../sources/2.2/docs/faq/troubleshooting.txt:41
 msgid "I'm getting a ``UnicodeDecodeError``. What am I doing wrong?"
 msgstr "我遇到了错误信息 ``UnicodeDecodeError``。 我哪里做错了？"
 
+#: ../../../../sources/2.2/docs/faq/troubleshooting.txt:43
 msgid ""
-"This class of errors happen when a bytestring containing non-ASCII sequences "
-"is transformed into a Unicode string and the specified encoding is "
+"This class of errors happen when a bytestring containing non-ASCII sequences"
+" is transformed into a Unicode string and the specified encoding is "
 "incorrect. The output generally looks like this::"
-msgstr ""
-"当包含非ASCII序列的字符串被转换为Unicode字符串，并且指定的编码不正确时，会发"
-"生此类错误。 输出一般看起来像这样::"
+msgstr "当包含非ASCII序列的字符串被转换为Unicode字符串，并且指定的编码不正确时，会发生此类错误。 输出一般看起来像这样::"
 
+#: ../../../../sources/2.2/docs/faq/troubleshooting.txt:50
 msgid ""
 "The resolution mostly depends on the context, however here are two common "
 "pitfalls producing this error:"
 msgstr "解决方案主要取决于上下文，但是这里有两个常见的陷阱产生这个错误："
 
+#: ../../../../sources/2.2/docs/faq/troubleshooting.txt:53
 msgid ""
 "Your system locale may be a default ASCII locale, like the \"C\" locale on "
 "UNIX-like systems (can be checked by the ``locale`` command). If it's the "
 "case, please refer to your system documentation to learn how you can change "
 "this to a UTF-8 locale."
-msgstr ""
-"您的系统语言环境可能是默认的ASCII，比如类UNIX系统上的 “C” （可通过命令 "
-"``locale`` 进行检查）。如果是这种情况，请参考您的系统文档以了解如何将其更改为"
-"UTF-8语言环境。"
+msgstr "您的系统语言环境可能是默认的ASCII，比如类UNIX系统上的 “C” （可通过命令 ``locale`` 进行检查）。如果是这种情况，请参考您的系统文档以了解如何将其更改为UTF-8语言环境。"
 
+#: ../../../../sources/2.2/docs/faq/troubleshooting.txt:58
 msgid "Related resources:"
 msgstr "关联资源："
 
+#: ../../../../sources/2.2/docs/faq/troubleshooting.txt:60
 msgid ":doc:`Unicode in Django </ref/unicode>`"
 msgstr "：文档：`Django 中的 Unicode</ref/unicode>`"
 
+#: ../../../../sources/2.2/docs/faq/troubleshooting.txt:61
 msgid "https://wiki.python.org/moin/UnicodeDecodeError"
 msgstr "https://wiki.python.org/moin/UnicodeDecodeError"
 
+#: ../../../../sources/2.2/docs/faq/usage.txt:3
 msgid "FAQ: Using Django"
 msgstr "FAQ: 使用Django"
 
+#: ../../../../sources/2.2/docs/faq/usage.txt:6
 msgid "Why do I get an error about importing DJANGO_SETTINGS_MODULE?"
 msgstr "为什么我在导入 DJANGO_SETTINGS_MODULE 时收到错误提示？"
 
+#: ../../../../sources/2.2/docs/faq/usage.txt:8
 msgid "Make sure that:"
 msgstr "保证："
 
+#: ../../../../sources/2.2/docs/faq/usage.txt:10
 msgid ""
 "The environment variable DJANGO_SETTINGS_MODULE is set to a fully-qualified "
 "Python module (i.e. \"mysite.settings\")."
-msgstr ""
-"环境变量 DJANGO_SETTINGS_MODULE 被设置成一个完全合格的 Python 模块（即 "
-"\"mysite.settings\"）。"
+msgstr "环境变量 DJANGO_SETTINGS_MODULE 被设置成一个完全合格的 Python 模块（即 \"mysite.settings\"）。"
 
+#: ../../../../sources/2.2/docs/faq/usage.txt:13
 msgid ""
 "Said module is on ``sys.path`` (``import mysite.settings`` should work)."
 msgstr "所述模块在 ``sys.path`` (需引入 ``import mysite.settings`` 才会工作）"
 
+#: ../../../../sources/2.2/docs/faq/usage.txt:15
 msgid "The module doesn't contain syntax errors (of course)."
 msgstr "模块未包含语法错误（当然啦）。"
 
+#: ../../../../sources/2.2/docs/faq/usage.txt:18
 msgid "I can't stand your template language. Do I have to use it?"
 msgstr "我不喜欢 Django 的模板语言，能不能不使用它？"
 
+#: ../../../../sources/2.2/docs/faq/usage.txt:20
 msgid ""
-"We happen to think our template engine is the best thing since chunky bacon, "
-"but we recognize that choosing a template language runs close to religion. "
+"We happen to think our template engine is the best thing since chunky bacon,"
+" but we recognize that choosing a template language runs close to religion. "
 "There's nothing about Django that requires using the template language, so "
 "if you're attached to Jinja2, Mako, or whatever, feel free to use those."
-msgstr ""
-"我们认为我们的的模板引擎是最好的，但是我们意识到选择一个模板语言和信仰宗教相"
-"似。Django 没有什么必须的模板语言，如果你愿意使用 Jinja2、Mako 或其他的，请随"
-"意使用。"
+msgstr "我们认为我们的的模板引擎是最好的，但是我们意识到选择一个模板语言和信仰宗教相似。Django 没有什么必须的模板语言，如果你愿意使用 Jinja2、Mako 或其他的，请随意使用。"
 
+#: ../../../../sources/2.2/docs/faq/usage.txt:26
 msgid "Do I have to use your model/database layer?"
 msgstr "我是否必须使用你的模型/数据库层？"
 
+#: ../../../../sources/2.2/docs/faq/usage.txt:28
 msgid ""
 "Nope. Just like the template system, the model/database layer is decoupled "
 "from the rest of the framework."
 msgstr "不。就像模板系统，模型/数据库层是与框架的其余部分分离的。"
 
+#: ../../../../sources/2.2/docs/faq/usage.txt:31
 msgid ""
-"The one exception is: If you use a different database library, you won't get "
-"to use Django's automatically-generated admin site. That app is coupled to "
+"The one exception is: If you use a different database library, you won't get"
+" to use Django's automatically-generated admin site. That app is coupled to "
 "the Django database layer."
-msgstr ""
-"唯一例外的是：如果你使用其他的数据库库，你没办法使用 Django 自动生成的后台界"
-"面。这个应用是和 Django 数据库层耦合的。"
+msgstr "唯一例外的是：如果你使用其他的数据库库，你没办法使用 Django 自动生成的后台界面。这个应用是和 Django 数据库层耦合的。"
 
+#: ../../../../sources/2.2/docs/faq/usage.txt:36
 msgid "How do I use image and file fields?"
 msgstr "我要怎么使用图片和文件字段？"
 
+#: ../../../../sources/2.2/docs/faq/usage.txt:38
 msgid ""
-"Using a :class:`~django.db.models.FileField` or an :class:`~django.db.models."
-"ImageField` in a model takes a few steps:"
-msgstr ""
-"在模型中使用 :class:`~django.db.models.FileField` 或 :class:`~django.db."
-"models.ImageField`  ，你还需要完成如下步骤："
+"Using a :class:`~django.db.models.FileField` or an "
+":class:`~django.db.models.ImageField` in a model takes a few steps:"
+msgstr "在模型中使用 :class:`~django.db.models.FileField` 或 :class:`~django.db.models.ImageField`  ，你还需要完成如下步骤："
 
+#: ../../../../sources/2.2/docs/faq/usage.txt:41
 msgid ""
 "In your settings file, you'll need to define :setting:`MEDIA_ROOT` as the "
 "full path to a directory where you'd like Django to store uploaded files. "
-"(For performance, these files are not stored in the database.) Define :"
-"setting:`MEDIA_URL` as the base public URL of that directory. Make sure that "
-"this directory is writable by the Web server's user account."
-msgstr ""
-"在你的 setting 文件中，你需要定义：setting: `MEDIA_ROOT` 作为 Django 存储上传"
-"文件目录的完整路径。（为了提高性能，这些文件不会储存在数据库中）定义： "
-"setting: `MEDIA_URL` 作为该目录的基本公共 URL， 确保该目录能够被 Web 服务器的"
-"账户写入。"
+"(For performance, these files are not stored in the database.) Define "
+":setting:`MEDIA_URL` as the base public URL of that directory. Make sure "
+"that this directory is writable by the Web server's user account."
+msgstr "在你的 setting 文件中，你需要定义：setting: `MEDIA_ROOT` 作为 Django 存储上传文件目录的完整路径。（为了提高性能，这些文件不会储存在数据库中）定义： setting: `MEDIA_URL` 作为该目录的基本公共 URL， 确保该目录能够被 Web 服务器的账户写入。"
 
+#: ../../../../sources/2.2/docs/faq/usage.txt:48
 msgid ""
-"Add the :class:`~django.db.models.FileField` or :class:`~django.db.models."
-"ImageField` to your model, defining the :attr:`~django.db.models.FileField."
-"upload_to` option to specify a subdirectory of :setting:`MEDIA_ROOT` to use "
-"for uploaded files."
-msgstr ""
-"在你的模型中添加 :class:`~django.db.models.FileField` 或者 :class:`~django."
-"db.models.ImageField` ，可以通过定义:attr:`~django.db.models.FileField."
-"upload_to` 在 :setting:`MEDIA_ROOT` 中明确一个子目录用来上传文件。"
+"Add the :class:`~django.db.models.FileField` or "
+":class:`~django.db.models.ImageField` to your model, defining the "
+":attr:`~django.db.models.FileField.upload_to` option to specify a "
+"subdirectory of :setting:`MEDIA_ROOT` to use for uploaded files."
+msgstr "在你的模型中添加 :class:`~django.db.models.FileField` 或者 :class:`~django.db.models.ImageField` ，可以通过定义:attr:`~django.db.models.FileField.upload_to` 在 :setting:`MEDIA_ROOT` 中明确一个子目录用来上传文件。"
 
+#: ../../../../sources/2.2/docs/faq/usage.txt:53
 msgid ""
-"All that will be stored in your database is a path to the file (relative to :"
-"setting:`MEDIA_ROOT`). You'll most likely want to use the convenience :attr:"
-"`~django.db.models.fields.files.FieldFile.url` attribute provided by Django. "
-"For example, if your :class:`~django.db.models.ImageField` is called "
-"``mug_shot``, you can get the absolute path to your image in a template with "
-"``{{ object.mug_shot.url }}``."
-msgstr ""
-"所有将被储存在数据库中的文件路径相同（相对于：setting: MEDIA_ROOT`）。你很想"
-"用由 Django 提供的：attr:`~django.db.models.fields.files.FieldFile.url`，比"
-"如， 如果：class:`~django.db.models.ImageField` 被叫做 ``mug_shot``， 你就可"
-"以得到 ``{{ object.mug_shot.url }}`` 图片模板的绝对路径。"
+"All that will be stored in your database is a path to the file (relative to "
+":setting:`MEDIA_ROOT`). You'll most likely want to use the convenience "
+":attr:`~django.db.models.fields.files.FieldFile.url` attribute provided by "
+"Django. For example, if your :class:`~django.db.models.ImageField` is called"
+" ``mug_shot``, you can get the absolute path to your image in a template "
+"with ``{{ object.mug_shot.url }}``."
+msgstr "所有将被储存在数据库中的文件路径相同（相对于：setting: MEDIA_ROOT`）。你很想用由 Django 提供的：attr:`~django.db.models.fields.files.FieldFile.url`，比如， 如果：class:`~django.db.models.ImageField` 被叫做 ``mug_shot``， 你就可以得到 ``{{ object.mug_shot.url }}`` 图片模板的绝对路径。"
 
+#: ../../../../sources/2.2/docs/faq/usage.txt:62
 msgid "How do I make a variable available to all my templates?"
 msgstr "我如何让一个变量可用于我的所有模板之中？"
 
+#: ../../../../sources/2.2/docs/faq/usage.txt:64
 msgid ""
 "Sometimes your templates just all need the same thing. A common example "
 "would be dynamically-generated menus. At first glance, it seems logical to "
 "simply add a common dictionary to the template context."
-msgstr ""
-"有时候你的模板会需要相同的东西。一个常见的例子是动态生成的菜单。乍一看，在模"
-"板上下文中添加一个通用字典似乎是合乎逻辑的。"
+msgstr "有时候你的模板会需要相同的东西。一个常见的例子是动态生成的菜单。乍一看，在模板上下文中添加一个通用字典似乎是合乎逻辑的。"
 
+#: ../../../../sources/2.2/docs/faq/usage.txt:68
 msgid ""
 "The correct solution is to use a ``RequestContext``. Details on how to do "
 "this are here: :ref:`subclassing-context-requestcontext`."
-msgstr ""
-"正确的解决方案是使用\"RequestContext”。关于如何使用它请查看: :ref:"
-"`subclassing-context-requestcontext`。"
+msgstr "正确的解决方案是使用\"RequestContext”。关于如何使用它请查看: :ref:`subclassing-context-requestcontext`。"
