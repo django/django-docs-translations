@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Django package.
 #
 # Translators:
-# Dogify <595572594@qq.com>, 2018
+# 陈李俊 <595572594@qq.com>, 2018
 # xin.wang <asimplelife@live.com>, 2018
 # Bai HuanCheng <xiqingongzi@gmail.com>, 2018
 # Bai HuanCheng <xiqingongzi@gmail.com>, 2018
@@ -11,7 +11,7 @@
 # blacklin <chinalinzhijie@gmail.com>, 2018
 # Chown Hobby, 2016
 # David <huangtao0202@gmail.com>, 2017
-# Dogify <595572594@qq.com>, 2019
+# 陈李俊 <595572594@qq.com>, 2019
 # Floyd Li <floyd.li@outlook.com>, 2017
 # Fulong Sun <sunfulong@neusoft.edu.cn>, 2016
 # Hao Jin (金浩) <jinhao7773@gmail.com>, 2018
@@ -32,15 +32,16 @@
 # BAKEZQ <zhongquan789@126.com>, 2018
 # 冬冬 李 <lsongzhi@163.com>, 2018
 # 吴彬 <xiake21x@qq.com>, 2016
-# Dogify <595572594@qq.com>, 2018
+# 陈李俊 <595572594@qq.com>, 2018
 # 翔 付 <fuxiang2000@live.cn>, 2018
+# 陈李俊 <595572594@qq.com>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-19 03:29-0500\n"
-"PO-Revision-Date: 2019-04-19 01:39+0000\n"
-"Last-Translator: Dogify <595572594@qq.com>\n"
+"POT-Creation-Date: 2019-05-03 06:25-0500\n"
+"PO-Revision-Date: 2019-05-03 03:12+0000\n"
+"Last-Translator: 陈李俊 <595572594@qq.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -93,7 +94,7 @@ msgstr ""
 "使用教程前，我们希望你至少对于 Django 的运行方式有一定的认识。 这意味着你可以"
 "很容易地通读 :doc:`编写第一个 Django 应用 </intro/tutorial01>`。 除此之外，你"
 "应该对于 Python 有很好的理解。 如果不太熟悉 Python，我们为您推荐  `Dive Into "
-"Python`__，对于初学Python的程序员来说这是一本很棒（而且免费）的在线电子书。"
+"Python`__ 对于初学Python的程序员来说这是一本很棒（而且免费）的在线电子书。"
 
 msgid ""
 "Those of you who are unfamiliar with version control systems and Trac will "
@@ -218,7 +219,7 @@ msgid ""
 "found, you'll have to download and install it, see `Git's download page`__."
 msgstr ""
 "要检查你是否已经安装 Git，命令行输入 ``git``。如果提示这个命令无法找到，你必"
-"须下载并安装它，参考 `Git's download page`__。"
+"须下载并安装它，参考 `Git's download page`__ 。"
 
 msgid ""
 "If you're not that familiar with Git, you can always find out more about its "
@@ -251,8 +252,8 @@ msgid ""
 "all of Django's commit history, which reduces data transfer from  ~250 MB to "
 "~70 MB."
 msgstr ""
-"你可以在用命令``git clone`` 下载仓库的时候加上参数``--depth 1`` 来跳过Django"
-"的提交历史，这大约能把下载大小从250MB减少到70MB"
+"你可以在用命令 ``git clone`` 下载仓库的时候加上参数 ``--depth 1`` 来跳过 "
+"Django 的提交历史，这大约能把下载大小从250MB减少到70MB"
 
 msgid ""
 "Now that you have a local copy of Django, you can install it just like you "
@@ -270,7 +271,7 @@ msgid ""
 "example in ``.virtualenvs/`` in your home directory."
 msgstr ""
 "将你的虚拟环境都放在一个位置是明智的做法，例如将它们放置在你主目录下的 ``."
-"virtualenvs/``中。 "
+"virtualenvs/`` 中。"
 
 msgid "Create a new virtual environment by running:"
 msgstr "通过运行以下命令创建一个虚拟环境："
@@ -284,7 +285,7 @@ msgstr "设置虚拟环境的最后一步是激活它；"
 
 msgid ""
 "If the ``source`` command is not available, you can try using a dot instead:"
-msgstr "如果 ``source`` 命令不可用，你可以试试 . ："
+msgstr "如果 ``source`` 命令不可用，你可以试试："
 
 msgid "To activate your virtual environment on Windows, run:"
 msgstr "在Windows下采用如下命令进行激活虚拟环境："
@@ -376,10 +377,10 @@ msgid ""
 "Meanwhile, ``x`` and ``s`` indicated expected failures and skipped tests, "
 "respectively. Dots indicate passing tests."
 msgstr ""
-"当Django的测试套件被执行时，您将看到一个代表测试运行状态的字符流。 其中字符"
-"``E``表示测试中出现异常， ``F``表示测试中的一个断言失败，这两种情况都被认为测"
-"试结果失败。而``x``和``s``分别表示与期望结果不同和跳过测试，逗点则表示测试被"
-"通过了。 "
+"当Django的测试套件被执行时，您将看到一个代表测试运行状态的字符流。 其中字符 "
+"``E`` 表示测试中出现异常， ``F`` 表示测试中的一个断言失败，这两种情况都被认为"
+"测试结果失败。而 ``x`` 和 ``s`` 分别表示与期望结果不同和跳过测试，逗点则表示"
+"测试被通过了。 "
 
 msgid ""
 "Skipped tests are typically due to missing external libraries required to "
@@ -436,8 +437,8 @@ msgid ""
 "For this tutorial, we'll work on a \"fake ticket\" as a case study. Here are "
 "the imaginary details:"
 msgstr ""
-"这次教程中，我们将学习去完成一个名叫\"fake ticket\" 的例子。\n"
-"下面是关于这个例子的大体构想:"
+"这次教程中，我们将学习去完成一个名叫 \"fake ticket\" 的例子。下面是关于这个例"
+"子的大体构想:"
 
 msgid "Ticket #99999 -- Allow making toast"
 msgstr "Ticket #99999 -- 允许发表祝辞"
@@ -463,8 +464,8 @@ msgid ""
 "won't affect the main copy of the code that we cloned earlier."
 msgstr ""
 "你可以选择任意你想要的分支名，ticket_99999只是一个例子。你在该分支上做出的所"
-"有更改，\n"
-"将只会针对该分支即ticket_99999产生影响，而不会影响到我们早先克隆的原始代码。"
+"有更改，将只会针对该分支即ticket_99999产生影响，而不会影响到我们早先克隆的原"
+"始代码。"
 
 msgid "Writing some tests for your ticket"
 msgstr "为你的工单写一些测试用例"
@@ -510,7 +511,7 @@ msgid ""
 "the top-level ``django`` module. First we are going to write a test that "
 "tries to use the function and check that its output looks correct."
 msgstr ""
-"为了解决这次的工单问题，我们将在最上层的django模块中添加一个函数 "
+"为了解决这次的工单问题，我们将在最上层的 django 模块中添加一个函数 "
 "``make_toast()``。首先我们来写一个测试用例，用于测试该函数，并且验证一下它的"
 "输出项是否正确。"
 
@@ -518,11 +519,11 @@ msgid ""
 "Navigate to Django's ``tests/shortcuts/`` folder and create a new file "
 "``test_make_toast.py``. Add the following code::"
 msgstr ""
-"前往Django的``tests/shortcuts/``文件夹，创建一个名为``test_make_toast.py``的"
-"新文件。添加如下代码::"
+"前往Django的 ``tests/shortcuts/`` 文件夹，创建一个名为 ``test_make_toast."
+"py`` 的新文件。添加如下代码:: "
 
 msgid "This test checks that the ``make_toast()`` returns ``'toast'``."
-msgstr "上述测试是用来检测``make_toast()`` 函数是否会返回``'toast'``的."
+msgstr "上述测试是用来检测 ``make_toast()`` 函数是否会返回 ``'toast'` `的。"
 
 msgid "But this testing thing looks kinda hard..."
 msgstr "但这种测试看起来有点困难……"
@@ -563,8 +564,8 @@ msgid ""
 "directory and run:"
 msgstr ""
 "由于我们还没有对 ``django.shortcuts`` 进行任何修改，这次测试将会失败。现在让"
-"我们来运行一下``shortcuts`` 目录中的所有测试，以便确定它们真的都会产生失败的"
-"结果。使用``cd``命令进入Django的 ``tests/`` 文件夹，然后运行:"
+"我们来运行一下 ``shortcuts`` 目录中的所有测试，以便确定它们真的都会产生失败的"
+"结果。使用 ``cd`` 命令进入Django的 ``tests/`` 文件夹，然后运行:"
 
 msgid ""
 "If the tests ran correctly, you should see one failure corresponding to the "
@@ -582,21 +583,20 @@ msgid "Writing the code for your ticket"
 msgstr "为你的工单编写代码"
 
 msgid "Next we'll be adding the ``make_toast()`` function."
-msgstr "接下来我们将添加 ``make_toast()``函数"
+msgstr "接下来我们将添加 ``make_toast()`` 函数"
 
 msgid ""
 "Navigate to the ``django/`` folder and open the ``shortcuts.py`` file. At "
 "the bottom, add::"
-msgstr "打开``django/`` 文件夹中的``shortcuts.py`` 文件，在文件末尾追加::"
+msgstr "打开 ``django/`` 文件夹中的 ``shortcuts.py`` 文件，在文件末尾追加::"
 
 msgid ""
 "Now we need to make sure that the test we wrote earlier passes, so we can "
 "see whether the code we added is working correctly. Again, navigate to the "
 "Django ``tests/`` directory and run:"
 msgstr ""
-"现在我们需要保证之前所写的测试会正常通过，以便我们判断所追加的代码是否正"
-"确。\n"
-"再来一次，现跳转到Django的``tests/``目录，然后执行:"
+"现在我们需要保证之前所写的测试会正常通过，以便我们判断所追加的代码是否正确。"
+"再来一次，现跳转到Django的 ``tests/`` 目录，然后执行:"
 
 msgid ""
 "Everything should pass. If it doesn't, make sure you correctly added the "
@@ -633,8 +633,8 @@ msgid ""
 "This is a new feature, so it should be documented. Open the file ``docs/"
 "topics/http/shortcuts.txt`` and add the following at the end of the file::"
 msgstr ""
-"这是一项新功能，所以应该为它建立一个说明，打开文件``docs/topics/http/"
-"shortcuts.txt``，然后在文件末尾追加下记内容::"
+"这是一项新功能，所以应该为它建立一个说明，打开文件 ``docs/topics/http/"
+"shortcuts.txt`` ，然后在文件末尾追加下记内容::"
 
 msgid ""
 "Since this new feature will be in an upcoming release it is also added to "
@@ -643,7 +643,7 @@ msgid ""
 "txt``. Add a note under the \"Minor Features\" header::"
 msgstr ""
 "由于这一新功能将在即将到来的版本中被加入，所以下个版本的发布说明里也加入了相"
-"关内容。打开 ``docs/releases/2.2.txt``文件，即发布说明的最新版本文件，在小标"
+"关内容。打开 ``docs/releases/2.2.txt`` 文件，即发布说明的最新版本文件，在小标"
 "题\"Minor Features\"下面添加一个说明:: "
 
 msgid ""
@@ -847,7 +847,7 @@ msgid ""
 "If you're new to programming entirely, you might want to start with this "
 "`list of Python resources for non-programmers`_"
 msgstr ""
-"如果你毫无编程经验，可能需要从 `适合零编程经验者的 Python 学习资源`_起步"
+"如果你毫无编程经验，可能需要从 `适合零编程经验者的 Python 学习资源`_ 起步"
 
 msgid ""
 "If you already know a few other languages and want to get up to speed with "
@@ -1820,7 +1820,7 @@ msgid ""
 "project. Its name doesn't matter to Django; you can rename it to anything "
 "you like."
 msgstr ""
-"最外层的:file: `mysite/` 根目录只是你项目的容器， Django 不关心它的名字，你可"
+"最外层的 :file:`mysite/` 根目录只是你项目的容器， Django 不关心它的名字，你可"
 "以将它重命名为任何你喜欢的名字。"
 
 msgid ""
@@ -5786,5 +5786,5 @@ msgid ""
 "previous versions. Be sure you are using the version of the docs "
 "corresponding to the version of Django you are using!"
 msgstr ""
-" `main documentation Web page` _ 包含了指向所有旧版本文档的链接。确保你正在阅"
+" `main documentation Web page`_ 包含了指向所有旧版本文档的链接。确保你正在阅"
 "读和你使用的 Django 版本匹配的文档！"
