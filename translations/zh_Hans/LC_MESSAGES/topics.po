@@ -70,7 +70,7 @@ msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-03 06:25-0500\n"
-"PO-Revision-Date: 2019-05-03 13:22+0000\n"
+"PO-Revision-Date: 2019-05-04 12:30+0000\n"
 "Last-Translator: Blg Mengde <kid.blg@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -661,7 +661,7 @@ msgid ""
 " that you would keep your user model as simple as possible, focused on "
 "authentication, and following the minimum requirements Django expects custom"
 " user models to meet."
-msgstr ""
+msgstr "将所有用户相关的信息保存在一个模型中，不需要额外的或者更复杂的数据库查询来检索相关模型。另一方面，将特定 app 的用户信息存储在你自定义的用户模型相关的模型中可能更合适。这使得每个 app 指定它自己的数据需求，而不和其他 app 发生冲突或破坏。这意味着你可以尽可能保持你的用户模型简单，专注于验证，并满足 Django 期望的自定义用户模型的最低需求。"
 
 #: ../../../../sources/2.2/docs/topics/auth/customizing.txt:526
 msgid ""
@@ -4828,7 +4828,7 @@ msgstr "``key_prefix`` 和 ``cache`` 参数可能需要被一起指定。``key_p
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:614
 msgid "Specifying per-view cache in the URLconf"
-msgstr ""
+msgstr "在 URLconf 中指定视图缓存"
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:616
 msgid ""
@@ -4840,17 +4840,17 @@ msgid ""
 "people who might want to use them without being cached. The solution to "
 "these problems is to specify the per-view cache in the URLconf rather than "
 "next to the view functions themselves."
-msgstr ""
+msgstr "上一节的例子硬编码了视图被缓存的事实，因为 ``cache_page`` 改变了  ``my_view`` 函数。这种方法将你的视图和缓存系统耦合起来，这样并不理想。例如，你可能想在其他没有缓存的站点上重用这个视图函数，或者你可能想分发这个视图给那些想使用视图但不想缓存它们的人员。解决这些问题的办法是在 URLconf 中指定视图缓存，而不是视图函数旁边指定。"
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:625
 msgid ""
 "Doing so is easy: simply wrap the view function with ``cache_page`` when you"
 " refer to it in the URLconf. Here's the old URLconf from earlier::"
-msgstr ""
+msgstr "方法很简单：当你在 URLconf 中引用它时，用 ``cache_page`` 简单包装视图函数。这是之前的旧的 URLconf ："
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:632
 msgid "Here's the same thing, with ``my_view`` wrapped in ``cache_page``::"
-msgstr ""
+msgstr "将 ``my_view`` 包含在 ``cache_page`` 中："
 
 #: ../../../../sources/2.2/docs/topics/cache.txt:643
 msgid "Template fragment caching"
