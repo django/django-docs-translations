@@ -12,9 +12,10 @@
 # el buve, 2015
 # el buve, 2015
 # Ernesto Avilés Vázquez <whippiii@gmail.com>, 2015
+# Héctor Alonso Lozada Echezuría <imatsu@gmail.com>, 2019
 # juancb <cruzbenitojuan@gmail.com>, 2016
 # juanda097 <juanda097@protonmail.ch>, 2014-2015
-# LECbg, 2017
+# LECbg, 2017,2019
 # LECbg, 2017
 # Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2017
 # Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2017-2018
@@ -25,9 +26,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-19 03:29-0500\n"
-"PO-Revision-Date: 2019-04-14 13:32+0000\n"
-"Last-Translator: Ramiro Morales\n"
+"POT-Creation-Date: 2019-06-21 02:19-0500\n"
+"PO-Revision-Date: 2019-06-21 19:03+0000\n"
+"Last-Translator: Héctor Alonso Lozada Echezuría <imatsu@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/django/django-docs/language/"
 "es/)\n"
 "MIME-Version: 1.0\n"
@@ -500,6 +501,9 @@ msgid ""
 "example. All changes made in this branch will be specific to the ticket and "
 "won't affect the main copy of the code that we cloned earlier."
 msgstr ""
+"Puede elegir cualquier nombre que desee para la rama, por ejemplo "
+"\"ticket_99999\". Todos los cambios realizados en esta rama será específico "
+"para el ticket y no afecta la copia principal del código previamente clonado"
 
 msgid "Writing some tests for your ticket"
 msgstr "Escribiendo algunas pruebas para su reporte"
@@ -556,6 +560,9 @@ msgid ""
 "the top-level ``django`` module. First we are going to write a test that "
 "tries to use the function and check that its output looks correct."
 msgstr ""
+"Para resolver este ticket, agregaremos una función ``make_toast()`` al "
+"inicio de del módulo de ``django``. Primero vamos a escribir una prueba que "
+"intente usar la función y verificar que su salida se vea correcta."
 
 msgid ""
 "Navigate to Django's ``tests/shortcuts/`` folder and create a new file "
@@ -566,6 +573,7 @@ msgstr ""
 
 msgid "This test checks that the ``make_toast()`` returns ``'toast'``."
 msgstr ""
+"Esta prueba comprueba que la función ``make_toast()`` devuelve ``'toast'``"
 
 msgid "But this testing thing looks kinda hard..."
 msgstr "Pero este asunto de las pruebas parece un poco difícil..."
@@ -1758,11 +1766,11 @@ msgid ""
 "well as preventing the package from affecting system services and other "
 "users of the machine."
 msgstr ""
-"Los siguientes pasos instalan ``django-polls``como un usuario de biblioteca. "
-"Per-user installs tiene muchas ventajas con respecto a la instalación de "
-"paquetes a nivel de sistema, tal como estar disponible para ser utilizables "
-"en sistemas donde no tiene acceso de administrador así como impedir que el "
-"paquete afecte servicios del sistema y a otros usuarios de la computadora."
+"Los siguientes pasos instalan ``django-polls`` como una librería de usuario. "
+"La instalación a nivel de usuario tiene muchas ventajas con respecto a "
+"instalar el paquete a nivel de sistema, como poder ser usado en sistemas "
+"donde no se tiene acceso de administrador así como impedir que el paquete "
+"afecte servicios del sistema y a otros usuarios del ordenador."
 
 msgid ""
 "Note that per-user installations can still affect the behavior of system "

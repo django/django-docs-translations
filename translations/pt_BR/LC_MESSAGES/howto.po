@@ -42,15 +42,15 @@
 # Tarsis Azevedo <tarsis.azevedo@gmail.com>, 2016
 # Udson Silva <udson2112@gmail.com>, 2016
 # Victor Magno <me@victormagno.com>, 2016
-# wcreis <wesley.c.reis@gmail.com>, 2016
+# wcreis <wesley.c.reis@gmail.com>, 2016,2019
 # Willian Morais <williandmorais@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-19 03:29-0500\n"
-"PO-Revision-Date: 2019-04-12 00:23+0000\n"
-"Last-Translator: Filipe Cifali Stangler <cifali.filipe@gmail.com>\n"
+"POT-Creation-Date: 2019-06-21 02:19-0500\n"
+"PO-Revision-Date: 2019-06-19 13:48+0000\n"
+"Last-Translator: Ramiro Morales\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -1059,23 +1059,18 @@ msgstr ""
 
 msgid ""
 "The new custom command can be called using ``python manage.py closepoll "
-"<poll_id>``."
+"<poll_ids>``."
 msgstr ""
 "O novo comando personalizado pode ser chamado usando ``python manage.py "
-"closepoll <poll_id>``."
+"closepoll <poll_ids>``."
 
 msgid ""
 "The ``handle()`` method takes one or more ``poll_ids`` and sets ``poll."
 "opened`` to ``False`` for each one. If the user referenced any nonexistent "
 "polls, a :exc:`CommandError` is raised. The ``poll.opened`` attribute does "
-"not exist in the :doc:`tutorial</intro/tutorial01>` and was added to ``polls."
+"not exist in the :doc:`tutorial</intro/tutorial02>` and was added to ``polls."
 "models.Question`` for this example."
 msgstr ""
-"O método ``handle()`` recebe um ou mais ``poll_ids`` e definie ``poll."
-"opened`` como ``False`` para cada um. Se o usuário referenciar uma enquete "
-"inexistente, uma :exc:`CommandError` é gerada. O atributo ``poll.opened`` "
-"não existe no :doc:`tutorial</intro/tutorial01>` e foi adicionado ao ``polls."
-"models.Question`` para este exemplo."
 
 msgid "Accepting optional arguments"
 msgstr "Aceitando argumentos opcionais"
@@ -6186,11 +6181,11 @@ msgstr ""
 "\"file-loke\"."
 
 msgid ""
-"For each row in your CSV file, call ``writer.writerow``, passing it an "
-"iterable object such as a list or tuple."
+"For each row in your CSV file, call ``writer.writerow``, passing it an :term:"
+"`iterable`."
 msgstr ""
-"Para cada linha no seu arquivo CSV, chame ``writer.writerow``, passando-o "
-"para um objeto interável tal como uma lista ou tupla."
+"Para cada linha no seu arquivo CSV, chamar o método ``writer.writerow``, "
+"passando um :term:`iterable`."
 
 msgid ""
 "The CSV module takes care of quoting for you, so you don't have to worry "

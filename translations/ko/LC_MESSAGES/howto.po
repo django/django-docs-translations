@@ -6,6 +6,7 @@
 # bgchoi <choi.byunggil@gmail.com>, 2017
 # Hwang, Geon Gu <under_09@naver.com>, 2016
 # hj.park <imcreator3@gmail.com>, 2017
+# Jins <jsgd1254@gmail.com>, 2019
 # Noh Seho <iam@sehonoh.kr>, 2018
 # SeongSoo Cho <ppiyakk2@printf.kr>, 2019
 # silee9019 <silee9019@gmail.com>, 2015
@@ -20,9 +21,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-19 03:29-0500\n"
-"PO-Revision-Date: 2019-04-10 14:01+0000\n"
-"Last-Translator: Yeon Haeng Cho <ntype.joe@gmail.com>\n"
+"POT-Creation-Date: 2019-06-21 02:19-0500\n"
+"PO-Revision-Date: 2019-06-19 13:48+0000\n"
+"Last-Translator: Ramiro Morales\n"
 "Language-Team: Korean (http://www.transifex.com/django/django-docs/language/"
 "ko/)\n"
 "MIME-Version: 1.0\n"
@@ -32,7 +33,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "Authentication using ``REMOTE_USER``"
-msgstr "``REMOTE_USER``\\를 사용하여 인증"
+msgstr "``REMOTE_USER``를 사용하여 인증"
 
 msgid ""
 "This document describes how to make use of external authentication sources "
@@ -242,17 +243,24 @@ msgid ""
 "arguments. This means that any settings should be taken from ``django.conf."
 "settings``::"
 msgstr ""
+"Django는 어떤 인자없이도 너의 저장 시스템을 인스턴스화 할 수 있습니다. 이는 "
+"\"django.conf.settings\"로 부터 설정을 받아 사용한다는 것을 의미합니다."
 
 msgid ""
 "Your storage class must implement the :meth:`_open()` and :meth:`_save()` "
 "methods, along with any other methods appropriate to your storage class. See "
 "below for more on these methods."
 msgstr ""
+"당신의 저장 클래스는 적절한 다른 메소드와 함께 :meth:'_open()'과 :"
+"meth:'_save()' 메소드로 구현돼야합니다. 더 많은 메소드를 아래에서 볼 수 있습"
+"니다."
 
 msgid ""
 "In addition, if your class provides local file storage, it must override the "
 "``path()`` method."
 msgstr ""
+"추가적으로, 만약 당신의 클래스가 로컬 파일 저장을 하면 \"path()\" 메소드로 오"
+"버라이드 되어야만 합니다."
 
 msgid ""
 "Your storage class must be :ref:`deconstructible <custom-deconstruct-"
@@ -293,11 +301,15 @@ msgid ""
 "By way of example, if listing the contents of certain storage backends turns "
 "out to be expensive, you might decide not to implement `Storage.listdir`."
 msgstr ""
+"한 예시로, 만약 특정 콘텐츠를 지니고 있는 리스트를 백엔드에 저장하는게 고비용"
+"이 될 경우 당신은 'Storage.listdir'을 구현하지 않아도 된다."
 
 msgid ""
 "Another example would be a backend that only handles writing to files. In "
 "this case, you would not need to implement any of the above methods."
 msgstr ""
+"다른 예시로 파일을 쓰기만 하는 백엔드가 있는 경우 당신은 위의 메소드를 구현"
+"할 필요가 없을 수 있다."
 
 msgid ""
 "Ultimately, which of these methods are implemented is up to you. Leaving "
@@ -757,14 +769,14 @@ msgstr ""
 
 msgid ""
 "The new custom command can be called using ``python manage.py closepoll "
-"<poll_id>``."
+"<poll_ids>``."
 msgstr ""
 
 msgid ""
 "The ``handle()`` method takes one or more ``poll_ids`` and sets ``poll."
 "opened`` to ``False`` for each one. If the user referenced any nonexistent "
 "polls, a :exc:`CommandError` is raised. The ``poll.opened`` attribute does "
-"not exist in the :doc:`tutorial</intro/tutorial01>` and was added to ``polls."
+"not exist in the :doc:`tutorial</intro/tutorial02>` and was added to ``polls."
 "models.Question`` for this example."
 msgstr ""
 
@@ -2449,7 +2461,7 @@ msgid ""
 msgstr ""
 
 msgid "Notes:"
-msgstr ""
+msgstr "각주:"
 
 msgid ""
 "``parser`` is the template parser object. We don't need it in this example."
@@ -2557,6 +2569,8 @@ msgid ""
 "This is not a very common situation, but it's useful if you're rendering a "
 "template yourself. For example::"
 msgstr ""
+"이는 매우 흔한 상황은 아니지만 만약 당신이 템플릿을 스스로 렌더링한다면 유용"
+"하다. 예를 들어::"
 
 msgid ""
 "If we had neglected to pass in the current ``context.autoescape`` value to "
@@ -2585,7 +2599,7 @@ msgstr ""
 
 msgid ""
 "A naive implementation of ``CycleNode`` might look something like this::"
-msgstr ""
+msgstr "\"CycleNode\"의 안일한 구현은 이와 같이 보일 것이다::"
 
 msgid ""
 "But, suppose we have two templates rendering the template snippet from above "
@@ -2651,7 +2665,7 @@ msgid ""
 msgstr ""
 
 msgid "Registering the tag"
-msgstr ""
+msgstr "태그를 등록한다."
 
 msgid ""
 "Finally, register the tag with your module's ``Library`` instance, as "
@@ -2697,7 +2711,7 @@ msgid "Initially, ``token.split_contents()`` will return three values:"
 msgstr ""
 
 msgid "The tag name ``format_time``."
-msgstr ""
+msgstr "태그 이름은 \"format_time\""
 
 msgid ""
 "The string ``'blog_entry.date_updated'`` (without the surrounding quotes)."
@@ -2710,7 +2724,7 @@ msgid ""
 msgstr ""
 
 msgid "Now your tag should begin to look like this::"
-msgstr ""
+msgstr "이제 너의 태그는 이렇게 보이기 시작해야한다."
 
 msgid ""
 "You also have to change the renderer to retrieve the actual contents of the "
@@ -2730,7 +2744,7 @@ msgid ""
 msgstr ""
 
 msgid "Setting a variable in the context"
-msgstr ""
+msgstr "컨텍스트에 변수를 설정"
 
 msgid ""
 "The above examples simply output a value. Generally, it's more flexible if "
@@ -4296,8 +4310,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-"For each row in your CSV file, call ``writer.writerow``, passing it an "
-"iterable object such as a list or tuple."
+"For each row in your CSV file, call ``writer.writerow``, passing it an :term:"
+"`iterable`."
 msgstr ""
 
 msgid ""

@@ -13,16 +13,17 @@
 # Muse Knight <410143748@qq.com>, 2018
 # qiang wu <wuqiangroy@live.com>, 2018
 # Vincent <Intelligent.vincent@gmail.com>, 2018
-# Wang XinHe <wang__xin_he@163.com>, 2018
+# 汪心禾 <wang__xin_he@163.com>, 2018
 # xuyi wang <xuyi.wg@gmail.com>, 2018
 # 吴彬 <xiake21x@qq.com>, 2016
+# 郝逸先(Henry) <haoyixian1994@hotmail.com>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-08 19:30-0500\n"
-"PO-Revision-Date: 2018-08-02 01:43+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
+"POT-Creation-Date: 2019-06-21 02:19-0500\n"
+"PO-Revision-Date: 2019-06-20 19:02+0000\n"
+"Last-Translator: 郝逸先(Henry) <haoyixian1994@hotmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -361,17 +362,21 @@ msgid ""
 "An easy way to checkout a pull request locally is to add an alias to your "
 "``~/.gitconfig`` (``upstream`` is assumed to be ``django/django``)::"
 msgstr ""
+"你可以通过在\"~/.gitconfig\"文件中添加别名的方式来更简单地在本地获取新的pull "
+"request. (例如将\"~/.gitconfig\"中的upstream设置为\"django/django\")::"
 
 msgid ""
 "Now you can simply run ``git pr ####`` to checkout the corresponding pull "
 "request."
-msgstr ""
+msgstr "现在你可以轻松地通过执行\"git pr ####\"来获取对应的pull request."
 
 msgid ""
 "At this point, you can work on the code. Use ``git rebase -i`` and ``git "
 "commit --amend`` to make sure the commits have the expected level of "
 "quality. Once you're ready:"
 msgstr ""
+"到了这个阶段,你可以着手于代码.使用\"git rebase -i\"和\"git commit --ammend\" "
+"来确保你的提交准确无误. 一旦你准备好了:"
 
 msgid ""
 "Force push to the branch after rebasing on master but before merging and "
@@ -1759,8 +1764,8 @@ msgstr ""
 
 msgid ""
 "On each line, alphabetize the items with the upper case items grouped before "
-"the lower case items."
-msgstr "在每行中，大写字母的导入排在小写字母的导入之后。"
+"the lowercase items."
+msgstr ""
 
 msgid ""
 "Break long lines using parentheses and indent continuation lines by 4 "
@@ -1779,6 +1784,9 @@ msgstr ""
 
 msgid "For example (comments are for explanatory purposes only):"
 msgstr "例如（注释仅作为解释用途）："
+
+msgid "django/contrib/admin/example.py"
+msgstr ""
 
 msgid "Use convenience imports whenever available. For example, do this::"
 msgstr "尽可能使用便利的导入，例如：这样做"
@@ -1858,11 +1866,9 @@ msgstr "其他自定义方法"
 
 msgid ""
 "If ``choices`` is defined for a given model field, define each choice as a "
-"tuple of tuples, with an all-uppercase name as a class attribute on the "
+"list of tuples, with an all-uppercase name as a class attribute on the "
 "model. Example::"
 msgstr ""
-"如果模型字段定义了choices字段，那么定义的元组的名称都应该大写相当于类的属性。"
-"例如："
 
 msgid "Use of ``django.conf.settings``"
 msgstr ""
@@ -2049,7 +2055,7 @@ msgid ""
 msgstr ""
 
 msgid "Writing tests"
-msgstr ""
+msgstr "编写测试"
 
 msgid "Django's JavaScript tests use `QUnit`_. Here is an example test module:"
 msgstr ""
@@ -2775,6 +2781,9 @@ msgstr ""
 msgid "pytz_ (required)"
 msgstr ""
 
+msgid "pywatchman_"
+msgstr ""
+
 msgid "setuptools_"
 msgstr ""
 
@@ -2787,7 +2796,7 @@ msgstr ""
 msgid "selenium_"
 msgstr ""
 
-msgid "sqlparse_"
+msgid "sqlparse_ (required)"
 msgstr ""
 
 msgid ""
@@ -2823,6 +2832,11 @@ msgstr ""
 msgid ""
 "Each of these dependencies is optional. If you're missing any of them, the "
 "associated tests will be skipped."
+msgstr ""
+
+msgid ""
+"To run some of the autoreload tests, you'll need to install the Watchman_ "
+"service."
 msgstr ""
 
 msgid "Code coverage"
@@ -2988,6 +3002,9 @@ msgid ""
 "In order to make sure the models defined within the context of :func:"
 "`~django.test.utils.isolate_apps` instances are correctly installed, you "
 "should pass the set of targeted ``app_label`` as arguments:"
+msgstr ""
+
+msgid "tests/app_label/tests.py"
 msgstr ""
 
 msgid "The decorator can also be applied to classes::"
@@ -3931,6 +3948,46 @@ msgid ""
 "the :ref:`deprecation policy <internal-release-deprecation-policy>`. More "
 "details about each item can often be found in the release notes of two "
 "versions prior."
+msgstr ""
+
+msgid "3.1"
+msgstr ""
+
+msgid ""
+"See the :ref:`Django 2.2 release notes <deprecated-features-2.2>` for more "
+"details on these changes."
+msgstr ""
+
+msgid "``django.utils.timezone.FixedOffset`` will be removed."
+msgstr ""
+
+msgid "``django.core.paginator.QuerySetPaginator`` will be removed."
+msgstr ""
+
+msgid "A model's ``Meta.ordering`` will no longer affect ``GROUP BY`` queries."
+msgstr ""
+
+msgid ""
+"``django.contrib.postgres.fields.FloatRangeField`` and ``django.contrib."
+"postgres.forms.FloatRangeField`` will be removed."
+msgstr ""
+
+msgid "The ``FILE_CHARSET`` setting will be removed."
+msgstr ""
+
+msgid ""
+"``django.contrib.staticfiles.storage.CachedStaticFilesStorage`` will be "
+"removed."
+msgstr ""
+
+msgid ""
+"``RemoteUserBackend.configure_user()`` will require ``request`` as the first "
+"positional argument."
+msgstr ""
+
+msgid ""
+"Support for ``SimpleTestCase.allow_database_queries`` and "
+"``TransactionTestCase.multi_db`` will be removed."
 msgstr ""
 
 msgid "3.0"
@@ -5890,6 +5947,9 @@ msgstr ""
 msgid "Access to Django's record on PyPI. Create a file with your credentials:"
 msgstr ""
 
+msgid "~/.pypirc"
+msgstr ""
+
 msgid "Access to the ``djangoproject.com`` server to upload files."
 msgstr ""
 
@@ -5920,10 +5980,9 @@ msgstr ""
 
 msgid ""
 "If this is a security release, send out pre-notification **one week** before "
-"the release. We maintain a list of who gets these pre-notification emails in "
-"the private ``django-core`` repository. Send the mail to "
-"``security@djangoproject.com`` and BCC the pre-notification recipients. This "
-"email should be signed by the key you'll use for the release and should "
+"the release. The template for that email and a list of the recipients are in "
+"the private ``django-security`` GitHub wiki. BCC the pre-notification "
+"recipients. Sign the email with the key you'll use for the release and "
 "include `CVE IDs <https://cveform.mitre.org/>`_ (requested with Vendor: "
 "djangoproject, Product: django) and patches for each issue being fixed. "
 "Also, :ref:`notify django-announce <security-disclosure>` of the upcoming "
@@ -6020,8 +6079,8 @@ msgid ""
 "branch and rebase it on the branch you are about to merge it into (``git "
 "checkout security/1.5.x; git rebase stable/1.5.x``) and then switch back and "
 "do the merge. Make sure the commit message for each security fix explains "
-"that the commit is a security fix and that an announcement will follow "
-"(`example security commit`__)."
+"that the commit is a security fix and that an announcement will follow (:"
+"commit:`example security commit <bf39978a53f117ca02e9a0c78b76664a41a54745>`)."
 msgstr ""
 
 msgid ""
