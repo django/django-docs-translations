@@ -8,6 +8,7 @@
 # Hwayoung Choe <jesschoe84@gmail.com>, 2016
 # Hyungsuk Yoon <youhanmir@gmail.com>, 2016
 # Jaeyoung Heo <jay.jaeyoung@gmail.com>, 2017-2018
+# 전세옥 <jso4967@gmail.com>, 2019
 # Lee MK, 2017
 # Subin Choi <os1742@gmail.com>, 2016
 # Taehwan Kim <maxtortime@ajou.ac.kr>, 2017
@@ -17,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-21 11:30-0500\n"
-"PO-Revision-Date: 2019-02-08 05:56+0000\n"
-"Last-Translator: Yong Choi <sk8er.choi@gmail.com>\n"
+"POT-Creation-Date: 2019-08-09 05:19-0500\n"
+"PO-Revision-Date: 2019-07-17 07:12+0000\n"
+"Last-Translator: 전세옥 <jso4967@gmail.com>\n"
 "Language-Team: Korean (http://www.transifex.com/django/django-docs/language/"
 "ko/)\n"
 "MIME-Version: 1.0\n"
@@ -569,6 +570,31 @@ msgstr ""
 "되었습니다. 장고는 현재 자원봉사팀에 의해 작동되고 있습니다. `team of "
 "volunteers <https://www.djangoproject.com/foundation/teams/>`_."
 
+msgid "How is Django licensed?"
+msgstr "장고의 라이선스는 어떤가요?"
+
+msgid ""
+"Django is distributed under :source:`the 3-clause BSD license <LICENSE>`. "
+"This is an open source license granting broad permissions to modify and "
+"redistribute Django."
+msgstr ""
+"장고는 현재 :source:`the 3-clause BSD license 1` 라이선스를 적용하고 있습니"
+"다. 이 라이선스는 오픈소스 라이선스로, 장고를 재배포하거나 수정할 수 있는 폭 "
+"넓은 권한을 부여해줍니다."
+
+msgid "Why does Django include Python's license file?"
+msgstr "왜 장고는 파이썬의 라이선스 파일을 포함하고 있나요?"
+
+msgid ""
+"Django includes code from the Python standard library. Python is distributed "
+"under a permissive open source license. :source:`A copy of the Python "
+"license <LICENSE.python>` is included with Django for compliance with "
+"Python's terms."
+msgstr ""
+"장고는 파이썬 표준 라이브러리의 코드를 포함하고 있습니다. 파이썬은 너그러운 "
+"오픈소스 라이선스를 적용하고 있습니다. 장고가 파이썬의 방식을 준수하기 위해 :"
+"source:`A copy of the Python license <LICENSE.python>`는 장고에도 포함됩니다."
+
 msgid "Which sites use Django?"
 msgstr "어떤 사이트들이 장고를 사용하나요?"
 
@@ -749,11 +775,12 @@ msgstr ""
 "이트의 페이지와 연동됩니다."
 
 msgid ""
-"Because the documentation is `stored in revision control`_, you can browse "
-"documentation changes just like you can browse code changes."
+"Because the documentation is :source:`stored in revision control <docs>`, "
+"you can browse documentation changes just like you can browse code changes."
 msgstr ""
-"문서가 교정 컨트롤러에 저장되어 있기 때문에, 코드가 변하는것을 찾아볼 수 있듯"
-"이 문서가 변하는 것도 찾아볼 수 있습니다. "
+"장고 문서는 :source:`stored in revision control 1`으로 저장되어 있기 때문에, "
+"코드의 변경들을 탐색할  수 있는 것 처럼 문서의 변화도 쉽게 검색할 수 있습니"
+"다."
 
 msgid ""
 "Technically, the docs on Django's site are generated from the latest "
@@ -987,12 +1014,11 @@ msgstr ""
 msgid ""
 "If you want to use Django with a database, which is probably the case, "
 "you'll also need a database engine. PostgreSQL_ is recommended, because "
-"we're PostgreSQL fans, and MySQL_, `SQLite 3`_, and Oracle_ are also "
-"supported."
+"we're PostgreSQL fans, and MySQL_, `SQLite`_, and Oracle_ are also supported."
 msgstr ""
-"만약 장고에 데이터베이스를 사용한다면, 경우에 따라 다르지만 아마 데이터베이"
-"스 엔진이 필요할 것입니다. PostgreSQL이 추천됩니다. 왜냐하면 우리는 "
-"PostgreSQL의 팬이기 때문입니다. MySQL_, `SQLite 3`_, Oracle_\\도 지원합니다."
+"장고와 데이터베이스를 함께 사용하고 싶으시다면, 데이터베이스 엔진이 필요하실 "
+"겁니다. 저희는 PostgreSQL을 추천합니다. MySQL_이나, `SQLite`_ 그리고 Oracle_ "
+"또한 지원은 합니다."
 
 msgid "What Python version can I use with Django?"
 msgstr "장고와 어떤 파이썬 버전을 사용해야 하나요?"

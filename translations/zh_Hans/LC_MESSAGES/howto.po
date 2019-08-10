@@ -14,7 +14,7 @@
 # FPlust Lu <fplustlu@gmail.com>, 2018
 # Frost Ming <mianghong@gmail.com>, 2018
 # JINGMING DAI <d664216@gmail.com>, 2018
-# Jin Song <jinsong0926@hotmail.com>, 2019
+# Json0926 <jinsong0926@hotmail.com>, 2019
 # Kevin Lee <rootkitcn@live.com>, 2018
 # kurtchen1988 <kurtcobain1988824@hotmail.com>, 2018
 # kurtchen1988 <kurtcobain1988824@hotmail.com>, 2018
@@ -29,6 +29,7 @@
 # ryan rain <holidaylover2010@gmail.com>, 2018
 # tianlong zhou <tlongzou@gmail.com>, 2019
 # Vincent Chan, 2018
+# Vincent <Intelligent.vincent@gmail.com>, 2019
 # Xiang Yu <bupt.aswmtjdsj@gmail.com>, 2013
 # xin.wang <asimplelife@live.com>, 2018
 # enginewang <engine74396@gmail.com>, 2018
@@ -48,9 +49,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-21 02:19-0500\n"
-"PO-Revision-Date: 2019-06-19 13:48+0000\n"
-"Last-Translator: Ramiro Morales\n"
+"POT-Creation-Date: 2019-08-09 05:19-0500\n"
+"PO-Revision-Date: 2019-07-12 08:03+0000\n"
+"Last-Translator: Vincent <Intelligent.vincent@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -948,6 +949,10 @@ msgid ""
 "not exist in the :doc:`tutorial</intro/tutorial02>` and was added to ``polls."
 "models.Question`` for this example."
 msgstr ""
+"``handle()`` 方法接受一个或多个 ``poll_ids``，并将每个 ``poll.opened`` 设置"
+"为 ``False``。若用户传入了不存在的 polls，将会抛出 :exc:`CommandError`。:doc:"
+"`教程 </intro/tutorial01>` 中不存在 ``poll.opened`` 属性，只是这里为了本例添"
+"加至 ``polls.models.Question`` 的。"
 
 msgid "Accepting optional arguments"
 msgstr "接受可选参数"

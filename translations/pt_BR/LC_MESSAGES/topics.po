@@ -11,8 +11,8 @@
 # andrewsmedina <andrewsmedina@gmail.com>, 2016
 # Carlos Leite <caduado@gmail.com>, 2016-2017
 # Filipe Cifali Stangler <cifali.filipe@gmail.com>, 2016
-# Claudio Rogerio Carvalho Filho, 2017
-# Claudio Rogerio Carvalho Filho, 2017
+# Claudio Rogerio Carvalho Filho <excriptbrasil@gmail.com>, 2017
+# Claudio Rogerio Carvalho Filho <excriptbrasil@gmail.com>, 2017
 # Edson Heneman <ehenemann@gmail.com>, 2016-2017
 # elizeuelieber <elizeuelieber@live.com>, 2016
 # elizeuelieber <elizeuelieber@live.com>, 2016
@@ -44,8 +44,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-21 02:19-0500\n"
-"PO-Revision-Date: 2019-06-14 02:08+0000\n"
+"POT-Creation-Date: 2019-08-09 05:19-0500\n"
+"PO-Revision-Date: 2019-07-29 13:16+0000\n"
 "Last-Translator: Ramiro Morales\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
@@ -1284,6 +1284,17 @@ msgstr ""
 "sobrescrever qualquer das definições que se referem a campos do ``django."
 "contrib.auth.models.AbstractUser``e que não estejam no sua classe de usuário "
 "personalizado. "
+
+msgid ""
+"If you are using a custom ``ModelAdmin`` which is a subclass of ``django."
+"contrib.auth.admin.UserAdmin``, then you need to add your custom fields to "
+"``fieldsets`` (for fields to be used in editing users) and to "
+"``add_fieldsets`` (for fields to be used when creating a user). For example::"
+msgstr ""
+
+msgid ""
+"See :ref:`a full example <custom-users-admin-full-example>` for more details."
+msgstr ""
 
 msgid "Custom users and permissions"
 msgstr "Usuários personalizados e permissões"
@@ -7416,8 +7427,7 @@ msgstr ""
 msgid ""
 "``get_success_url()`` is just providing somewhere to redirect to, which gets "
 "used in the default implementation of ``form_valid()``. We have to provide "
-"our own ``post()`` as noted earlier, and override ``get_context_data()`` to "
-"make the :class:`~django.forms.Form` available in the context data."
+"our own ``post()`` as noted earlier."
 msgstr ""
 
 msgid "A better solution"
@@ -9767,7 +9777,7 @@ msgstr ""
 
 msgid ""
 "You can also use ``add()``, ``create()``, or ``set()`` to create "
-"relationships, as long as your specify ``through_defaults`` for any required "
+"relationships, as long as you specify ``through_defaults`` for any required "
 "fields::"
 msgstr ""
 
@@ -11961,7 +11971,13 @@ msgid ""
 "Adding an index to your database may help to improve ordering performance."
 msgstr ""
 
-msgid "Insert in bulk"
+msgid "Use bulk methods"
+msgstr ""
+
+msgid "Use bulk methods to reduce the number of SQL statements."
+msgstr ""
+
+msgid "Create in bulk"
 msgstr ""
 
 msgid ""
@@ -11979,9 +11995,32 @@ msgid ""
 "use case."
 msgstr ""
 
+msgid "Update in bulk"
+msgstr ""
+
 msgid ""
-"This also applies to :class:`ManyToManyFields <django.db.models."
-"ManyToManyField>`, so doing::"
+"When updating objects, where possible, use the :meth:`~django.db.models."
+"query.QuerySet.bulk_update()` method to reduce the number of SQL queries. "
+"Given a list or queryset of objects::"
+msgstr ""
+
+msgid "The following example::"
+msgstr ""
+
+msgid ""
+"Note that there are a number of :meth:`caveats to this method <django.db."
+"models.query.QuerySet.bulk_update>`, so make sure it's appropriate for your "
+"use case."
+msgstr ""
+
+msgid "Insert in bulk"
+msgstr ""
+
+msgid ""
+"When inserting objects into :class:`ManyToManyFields <django.db.models."
+"ManyToManyField>`, use :meth:`~django.db.models.fields.related."
+"RelatedManager.add` with multiple objects to reduce the number of SQL "
+"queries. For example::"
 msgstr ""
 
 msgid "...where ``Bands`` and ``Artists`` have a many-to-many relationship."
@@ -20451,7 +20490,7 @@ msgid ""
 "com``, they can use it to send their session key to you since a subdomain is "
 "permitted to set cookies on ``*.example.com``. When you visit ``good.example."
 "com``, you'll be logged in as the attacker and might inadvertently enter "
-"your sensitive personal data (e.g. credit card info) into the attackers "
+"your sensitive personal data (e.g. credit card info) into the attacker's "
 "account."
 msgstr ""
 
@@ -21146,7 +21185,9 @@ msgstr ""
 msgid ""
 "A ``to_python(self, value)`` method, which handles converting the matched "
 "string into the type that should be passed to the view function. It should "
-"raise ``ValueError`` if it can't convert the given value."
+"raise ``ValueError`` if it can't convert the given value. A ``ValueError`` "
+"is interpreted as no match and as a consequence a 404 response is sent to "
+"the user."
 msgstr ""
 
 msgid ""

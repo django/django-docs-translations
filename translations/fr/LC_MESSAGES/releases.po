@@ -16,9 +16,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-21 02:19-0500\n"
-"PO-Revision-Date: 2019-06-22 08:48+0000\n"
-"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
+"POT-Creation-Date: 2019-08-09 05:19-0500\n"
+"PO-Revision-Date: 2019-08-09 00:35+0000\n"
+"Last-Translator: Ramiro Morales\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/"
 "fr/)\n"
 "MIME-Version: 1.0\n"
@@ -7487,6 +7487,123 @@ msgid ""
 "You may customize the validator by passing a ``validator_class`` kwarg to "
 "``AdminURLFieldWidget.__init__()``, e.g. when using :attr:`~django.contrib."
 "admin.ModelAdmin.formfield_overrides`."
+msgstr ""
+
+msgid "Django 1.11.22 release notes"
+msgstr ""
+
+msgid "*July 1, 2019*"
+msgstr ""
+
+msgid "Django 1.11.22 fixes a security issue in 1.11.21."
+msgstr ""
+
+msgid ""
+"CVE-2019-12781: Incorrect HTTP detection with reverse-proxy connecting via "
+"HTTPS"
+msgstr ""
+
+msgid ""
+"When deployed behind a reverse-proxy connecting to Django via HTTPS, :attr:"
+"`django.http.HttpRequest.scheme` would incorrectly detect client requests "
+"made via HTTP as using HTTPS. This entails incorrect results for :meth:"
+"`~django.http.HttpRequest.is_secure`, and :meth:`~django.http.HttpRequest."
+"build_absolute_uri`, and that HTTP requests would not be redirected to HTTPS "
+"in accordance with :setting:`SECURE_SSL_REDIRECT`."
+msgstr ""
+
+msgid ""
+"``HttpRequest.scheme`` now respects :setting:`SECURE_PROXY_SSL_HEADER`, if "
+"it is configured, and the appropriate header is set on the request, for both "
+"HTTP and HTTPS requests."
+msgstr ""
+
+msgid ""
+"If you deploy Django behind a reverse-proxy that forwards HTTP requests, and "
+"that connects to Django via HTTPS, be sure to verify that your application "
+"correctly handles code paths relying on ``scheme``, ``is_secure()``, "
+"``build_absolute_uri()``, and ``SECURE_SSL_REDIRECT``."
+msgstr ""
+
+msgid "Django 1.11.23 release notes"
+msgstr ""
+
+msgid "*August 1, 2019*"
+msgstr ""
+
+msgid "Django 1.11.23 fixes security issues in 1.11.22."
+msgstr ""
+
+msgid ""
+"CVE-2019-14232: Denial-of-service possibility in ``django.utils.text."
+"Truncator``"
+msgstr ""
+
+msgid ""
+"If ``django.utils.text.Truncator``'s ``chars()`` and ``words()`` methods "
+"were passed the ``html=True`` argument, they were extremely slow to evaluate "
+"certain inputs due to a catastrophic backtracking vulnerability in a regular "
+"expression. The ``chars()`` and ``words()`` methods are used to implement "
+"the :tfilter:`truncatechars_html` and :tfilter:`truncatewords_html` template "
+"filters, which were thus vulnerable."
+msgstr ""
+
+msgid ""
+"The regular expressions used by ``Truncator`` have been simplified in order "
+"to avoid potential backtracking issues. As a consequence, trailing "
+"punctuation may now at times be included in the truncated output."
+msgstr ""
+
+msgid "CVE-2019-14233: Denial-of-service possibility in ``strip_tags()``"
+msgstr ""
+
+msgid ""
+"Due to the behavior of the underlying ``HTMLParser``, :func:`django.utils."
+"html.strip_tags` would be extremely slow to evaluate certain inputs "
+"containing large sequences of nested incomplete HTML entities. The "
+"``strip_tags()`` method is used to implement the corresponding :tfilter:"
+"`striptags` template filter, which was thus also vulnerable."
+msgstr ""
+
+msgid ""
+"``strip_tags()`` now avoids recursive calls to ``HTMLParser`` when progress "
+"removing tags, but necessarily incomplete HTML entities, stops being made."
+msgstr ""
+
+msgid ""
+"Remember that absolutely NO guarantee is provided about the results of "
+"``strip_tags()`` being HTML safe. So NEVER mark safe the result of a "
+"``strip_tags()`` call without escaping it first, for example with :func:"
+"`django.utils.html.escape`."
+msgstr ""
+
+msgid ""
+"CVE-2019-14234: SQL injection possibility in key and index lookups for "
+"``JSONField``/``HStoreField``"
+msgstr ""
+
+msgid ""
+":lookup:`Key and index lookups <jsonfield.key>` for :class:`~django.contrib."
+"postgres.fields.JSONField` and :lookup:`key lookups <hstorefield.key>` for :"
+"class:`~django.contrib.postgres.fields.HStoreField` were subject to SQL "
+"injection, using a suitably crafted dictionary, with dictionary expansion, "
+"as the ``**kwargs`` passed to ``QuerySet.filter()``."
+msgstr ""
+
+msgid ""
+"CVE-2019-14235: Potential memory exhaustion in ``django.utils.encoding."
+"uri_to_iri()``"
+msgstr ""
+
+msgid ""
+"If passed certain inputs, :func:`django.utils.encoding.uri_to_iri` could "
+"lead to significant memory usage due to excessive recursion when re-percent-"
+"encoding invalid UTF-8 octet sequences."
+msgstr ""
+
+msgid ""
+"``uri_to_iri()`` now avoids recursion when re-percent-encoding invalid UTF-8 "
+"octet sequences."
 msgstr ""
 
 msgid "Django 1.11.3 release notes"
@@ -28435,6 +28552,18 @@ msgid ""
 "``obj`` argument (:ticket:`29723`)."
 msgstr ""
 
+msgid "Django 2.1.10 release notes"
+msgstr ""
+
+msgid "Django 2.1.10 fixes a security issue in 2.1.9."
+msgstr ""
+
+msgid "Django 2.1.11 release notes"
+msgstr ""
+
+msgid "Django 2.1.11 fixes security issues in 2.1.10."
+msgstr ""
+
 msgid "Django 2.1.2 release notes"
 msgstr "Notes de publication de Django 2.1.2"
 
@@ -29722,16 +29851,65 @@ msgstr ""
 msgid "Django 2.2.3 release notes"
 msgstr ""
 
-msgid "*Expected July 1, 2019*"
-msgstr ""
-
-msgid "Django 2.2.3 fixes several bugs in 2.2.2."
+msgid ""
+"Django 2.2.3 fixes a security issue and several bugs in 2.2.2. Also, the "
+"latest string translations from Transifex are incorporated."
 msgstr ""
 
 msgid ""
 "Fixed a regression in Django 2.2 where :class:`~django.db.models.Avg`, :"
 "class:`~django.db.models.StdDev`, and :class:`~django.db.models.Variance` "
 "crash with ``filter`` argument (:ticket:`30542`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 2.2.2 where auto-reloader crashes with "
+"``AttributeError``, e.g. when using ``ipdb`` (:ticket:`30588`)."
+msgstr ""
+
+msgid "Django 2.2.4 release notes"
+msgstr ""
+
+msgid "Django 2.2.4 fixes security issues and several bugs in 2.2.3."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 2.2 when ordering a ``QuerySet.union()``, "
+"``intersection()``, or ``difference()`` by a field type present more than "
+"once results in the wrong ordering being used (:ticket:`30628`)."
+msgstr ""
+
+msgid ""
+"Fixed a migration crash on PostgreSQL when adding a check constraint with a "
+"``contains`` lookup on :class:`~django.contrib.postgres.fields."
+"DateRangeField` or :class:`~django.contrib.postgres.fields."
+"DateTimeRangeField`, if the right hand side of an expression is the same "
+"type (:ticket:`30621`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 2.2 where auto-reloader crashes if a file path "
+"contains nulls characters (``'\\x00'``) (:ticket:`30506`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 2.2 where auto-reloader crashes if a "
+"translation directory cannot be resolved (:ticket:`30647`)."
+msgstr ""
+
+msgid "Django 2.2.5 release notes"
+msgstr ""
+
+msgid "*Expected September 2, 2019*"
+msgstr ""
+
+msgid "Django 2.2.5 fixes several bugs in 2.2.4."
+msgstr ""
+
+msgid ""
+"Relaxed the system check added in Django 2.2 for models to reallow use of "
+"the same ``db_table`` by multiple models when database routers are installed "
+"(:ticket:`30673`)."
 msgstr ""
 
 msgid "Release notes"
@@ -31195,4 +31373,98 @@ msgstr ""
 
 msgid ""
 "Django 1.11 :commit:`(patch) <c238701859a52d584f349cce15d56c8e8137c52b>`"
+msgstr ""
+
+msgid "July 1, 2019 - :cve:`2019-12781`"
+msgstr ""
+
+msgid ""
+"Incorrect HTTP detection with reverse-proxy connecting via HTTPS. `Full "
+"description <https://www.djangoproject.com/weblog/2019/jul/01/security-"
+"releases/>`__"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <77706a3e4766da5d5fb75c4db22a0a59a28e6cd6>`"
+msgstr ""
+
+msgid "Django 2.1 :commit:`(patch) <1e40f427bb8d0fb37cc9f830096a97c36c97af6f>`"
+msgstr ""
+
+msgid ""
+"Django 1.11 :commit:`(patch) <32124fc41e75074141b05f10fc55a4f01ff7f050>`"
+msgstr ""
+
+msgid "August 1, 2019 - :cve:`2019-14232`"
+msgstr ""
+
+msgid ""
+"Denial-of-service possibility in ``django.utils.text.Truncator``. `Full "
+"description <https://www.djangoproject.com/weblog/2019/aug/01/security-"
+"releases/>`__"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <c3289717c6f21a8cf23daff1c78c0c014b94041f>`"
+msgstr ""
+
+msgid "Django 2.1 :commit:`(patch) <c23723a1551340cc7d3126f04fcfd178fa224193>`"
+msgstr ""
+
+msgid ""
+"Django 1.11 :commit:`(patch) <42a66e969023c00536256469f0e8b8a099ef109d>`"
+msgstr ""
+
+msgid "August 1, 2019 - :cve:`2019-14233`"
+msgstr ""
+
+msgid ""
+"Denial-of-service possibility in ``strip_tags()``. `Full description "
+"<https://www.djangoproject.com/weblog/2019/aug/01/security-releases/>`__"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <e34f3c0e9ee5fc9022428fe91640638bafd4cda7>`"
+msgstr ""
+
+msgid "Django 2.1 :commit:`(patch) <5ff8e791148bd451180124d76a55cb2b2b9556eb>`"
+msgstr ""
+
+msgid ""
+"Django 1.11 :commit:`(patch) <52479acce792ad80bb0f915f20b835f919993c72>`"
+msgstr ""
+
+msgid "August 1, 2019 - :cve:`2019-14234`"
+msgstr ""
+
+msgid ""
+"SQL injection possibility in key and index lookups for ``JSONField``/"
+"``HStoreField``. `Full description <https://www.djangoproject.com/"
+"weblog/2019/aug/01/security-releases/>`__"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <4f5b58f5cd3c57fee9972ab074f8dc6895d8f387>`"
+msgstr ""
+
+msgid "Django 2.1 :commit:`(patch) <f74b3ae3628c26e1b4f8db3d13a91d52a833a975>`"
+msgstr ""
+
+msgid ""
+"Django 1.11 :commit:`(patch) <ed682a24fca774818542757651bfba576c3fc3ef>`"
+msgstr ""
+
+msgid "August 1, 2019 - :cve:`2019-14235`"
+msgstr ""
+
+msgid ""
+"Potential memory exhaustion in ``django.utils.encoding.uri_to_iri()``. `Full "
+"description <https://www.djangoproject.com/weblog/2019/aug/01/security-"
+"releases/>`__"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <cf694e6852b0da7799f8b53f1fb2f7d20cf17534>`"
+msgstr ""
+
+msgid "Django 2.1 :commit:`(patch) <5d50a2e5fa36ad23ab532fc54cf4073de84b3306>`"
+msgstr ""
+
+msgid ""
+"Django 1.11 :commit:`(patch) <869b34e9b3be3a4cfcb3a145f218ffd3f5e3fd79>`"
 msgstr ""

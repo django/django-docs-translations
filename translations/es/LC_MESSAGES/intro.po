@@ -11,7 +11,7 @@
 # Carlton Gibson <carlton.gibson@gmail.com>, 2018
 # el buve, 2015
 # el buve, 2015
-# Ernesto Avilés Vázquez <whippiii@gmail.com>, 2015
+# Ernesto Avilés, 2015
 # Héctor Alonso Lozada Echezuría <imatsu@gmail.com>, 2019
 # juancb <cruzbenitojuan@gmail.com>, 2016
 # juanda097 <juanda097@protonmail.ch>, 2014-2015
@@ -26,9 +26,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-21 02:19-0500\n"
-"PO-Revision-Date: 2019-06-21 19:03+0000\n"
-"Last-Translator: Héctor Alonso Lozada Echezuría <imatsu@gmail.com>\n"
+"POT-Creation-Date: 2019-08-09 05:19-0500\n"
+"PO-Revision-Date: 2019-07-16 00:32+0000\n"
+"Last-Translator: Ramiro Morales\n"
 "Language-Team: Spanish (http://www.transifex.com/django/django-docs/language/"
 "es/)\n"
 "MIME-Version: 1.0\n"
@@ -1118,21 +1118,17 @@ msgid "Install it"
 msgstr "Instálelo"
 
 msgid ""
-"Next, run the Django command-line utility to create the database tables "
+"Next, run the Django command-line utilities to create the database tables "
 "automatically:"
 msgstr ""
-"A continuación ejecute la utilidad de la línea de comandos de Django para "
-"crear las tablas de base de datos de forma automática:"
 
 msgid ""
-"The :djadmin:`migrate` command looks at all your available models and "
-"creates tables in your database for whichever tables don't already exist, as "
-"well as optionally providing :doc:`much richer schema control </topics/"
+"The :djadmin:`makemigrations` command looks at all your available models and "
+"creates migrations for whichever tables don't already exist. :djadmin:"
+"`migrate` runs the migrations and creates tables in your database, as well "
+"as optionally providing :doc:`much richer schema control </topics/"
 "migrations>`."
 msgstr ""
-"El comando :djadmin:`migrate` analiza todos sus modelos disponibles y crea "
-"cualquier tabla faltante en su base de datos, así como ofrece opcionalmente :"
-"doc:`un control de esquema mucho más rico </topics/migrations>`."
 
 msgid "Enjoy the free API"
 msgstr "Disfrute de la API sin restricciones"
