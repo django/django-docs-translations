@@ -24,11 +24,11 @@
 # Guilherme Ferreira <guilherme@uft.edu.br>, 2014
 # Gustavo de Carvalho Sales <gt.salles@gmail.com>, 2019
 # Gustavo Efeiche <gustavo.efeiche@gmail.com>, 2018
-# Gutierri Barboza <github+me@gutierri.me>, 2018
+# gutierri <github+me@gutierri.me>, 2018
 # Hugo Cosme <hugutux@gmail.com>, 2015
 # Igor Cavalcante <igorcavlim@gmail.com>, 2017
 # Jessica Temporal, 2016-2017
-# João Paulo Andrade <joaopaulo.a.p@gmail.com>, 2018
+# João Paulo Andrade <joaopaulo.a.p@gmail.com>, 2018-2019
 # Kaio Cesar <tecnico.kaio@gmail.com>, 2015
 # Leonam Silva <leohenryster@gmail.com>, 2016
 # Lucas Machado <lfg.machado@hotmail.com>, 2019
@@ -48,9 +48,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-21 02:19-0500\n"
-"PO-Revision-Date: 2019-06-19 13:48+0000\n"
-"Last-Translator: Ramiro Morales\n"
+"POT-Creation-Date: 2019-09-27 17:25-0500\n"
+"PO-Revision-Date: 2019-08-12 21:09+0000\n"
+"Last-Translator: João Paulo Andrade <joaopaulo.a.p@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -1071,6 +1071,11 @@ msgid ""
 "not exist in the :doc:`tutorial</intro/tutorial02>` and was added to ``polls."
 "models.Question`` for this example."
 msgstr ""
+"O método \"handle()\" usa um ou mais \"poll_ids\" e altera o \"poll.opened\" "
+"para \"False\" para cada um. Se o usuário referenciar qualquer polls "
+"inexistente, uma exceção será levantada :exc:`CommandError`. O atributo "
+"\"poll.opened\" não existe no :doc:`tutorial</intro/tutorial02>` e foi "
+"adicionado em \"polls.models.Question\" para este exemplo."
 
 msgid "Accepting optional arguments"
 msgstr "Aceitando argumentos opcionais"

@@ -30,6 +30,7 @@
 # tianlong zhou <tlongzou@gmail.com>, 2019
 # Vincent Chan, 2018
 # Vincent <Intelligent.vincent@gmail.com>, 2019
+# Wehao Guo <kinggreenhall@gmail.com>, 2019
 # Xiang Yu <bupt.aswmtjdsj@gmail.com>, 2013
 # xin.wang <asimplelife@live.com>, 2018
 # enginewang <engine74396@gmail.com>, 2018
@@ -49,9 +50,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-09 05:19-0500\n"
-"PO-Revision-Date: 2019-07-12 08:03+0000\n"
-"Last-Translator: Vincent <Intelligent.vincent@gmail.com>\n"
+"POT-Creation-Date: 2019-09-27 17:25-0500\n"
+"PO-Revision-Date: 2019-08-29 18:40+0000\n"
+"Last-Translator: Wehao Guo <kinggreenhall@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -168,8 +169,8 @@ msgid ""
 "``REMOTE_USER``, you can subclass ``RemoteUserMiddleware`` and set the "
 "``header`` attribute to the desired ``request.META`` key.  For example::"
 msgstr ""
-"如果你的验证机制使用一个自定义的 HTTP 头部而不是 ``REMOTE_USER``，你可以构建"
-"一个 ``RemoteUserMiddleWare`` 的子类然后把 ``header`` 属性设成你希望的 "
+"如果你的验证机制使用一个自定义的 HTTP header 而不是 ``REMOTE_USER``，你可以构"
+"建一个 ``RemoteUserMiddleWare`` 的子类然后把 ``header`` 属性设成你希望的 "
 "``request.META`` 键值。例如::"
 
 msgid ""

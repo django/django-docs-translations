@@ -4,17 +4,18 @@
 #
 # Translators:
 # Kashun YOSHIDA, 2017
-# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2017,2019
-# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2017
-# T N <takninnovationresearch@gmail.com>, 2018
+# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2017,2019
+# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2017
+# Takuya N <takninnovationresearch@gmail.com>, 2018
 # Kashun YOSHIDA, 2017
+# gsk3beta, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-09 05:19-0500\n"
-"PO-Revision-Date: 2019-07-25 19:10+0000\n"
-"Last-Translator: Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>\n"
+"POT-Creation-Date: 2019-09-27 17:25-0500\n"
+"PO-Revision-Date: 2019-09-10 03:39+0000\n"
+"Last-Translator: gsk3beta\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -314,11 +315,15 @@ msgid ""
 "It should execute SQL statements as few times as possible, and it should "
 "optimize statements internally."
 msgstr ""
+"SQLステートメントはなるべく少ない回数実行されるべきで、またステートメントは内"
+"部で最適化されるべきです。"
 
 msgid ""
 "This is why developers need to call ``save()`` explicitly, rather than the "
 "framework saving things behind the scenes silently."
 msgstr ""
+"フレームワークが舞台裏で黙って保存するのではなく、開発者が明示的に "
+"``save()`` を呼び出す必要があるのはこのためです。"
 
 msgid ""
 "This is also why the ``select_related()`` ``QuerySet`` method exists. It's "

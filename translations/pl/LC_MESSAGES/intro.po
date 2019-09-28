@@ -13,13 +13,14 @@
 # m_aciek <maciej.olko@gmail.com>, 2016-2019
 # m_aciek <maciej.olko@gmail.com>, 2016
 # p <inactive+poczciwiec@transifex.com>, 2014
+# Stefan Ocetkiewicz <stefan.ocetkiewicz@gmail.com>, 2019
 # Tomasz Kajtoch <tomekkaj@tomekkaj.pl>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-09 05:19-0500\n"
-"PO-Revision-Date: 2019-07-16 05:31+0000\n"
+"POT-Creation-Date: 2019-09-27 17:25-0500\n"
+"PO-Revision-Date: 2019-09-16 17:46+0000\n"
 "Last-Translator: m_aciek <maciej.olko@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/django/django-docs/language/"
 "pl/)\n"
@@ -1144,6 +1145,10 @@ msgid ""
 "as optionally providing :doc:`much richer schema control </topics/"
 "migrations>`."
 msgstr ""
+"Komenda :djadmin:`makemigrations` sprawdza wszystkie dostępne modele pod "
+"kątem tabel w bazie danych, które jeszcze nie istnieją. :djadmin:`migrate`  "
+"uruchamia migracje i tworzy tabele w bazie danych oraz opcjonalnie daje :doc:"
+"` o wiele bogatszą kontrolę nad schematem </topics/migrations>`."
 
 msgid "Enjoy the free API"
 msgstr "Ciesz się wolnym API"
@@ -3074,12 +3079,8 @@ msgstr ""
 "prompta, ale także dlatego, że reprezentacje obiektów są używane w "
 "automatycznie generowanym panelu administracyjnym Django."
 
-msgid ""
-"Note these are normal Python methods. Let's add a custom method, just for "
-"demonstration:"
-msgstr ""
-"Zwróć uwagę, że są to normalne metody Pythona. Dodajmy własną metodę, tylko "
-"na pokaz:"
+msgid "Let's also add a custom method to this model:"
+msgstr "Dodajmy też własną metodę do tego modelu:"
 
 msgid ""
 "Note the addition of ``import datetime`` and ``from django.utils import "
@@ -4690,6 +4691,20 @@ msgstr "W terminalu możemy uruchomić nasz test:"
 
 msgid "and you'll see something like::"
 msgstr "i zobaczysz coś takiego::"
+
+msgid "Different error?"
+msgstr "Inny błąd?"
+
+msgid ""
+"If instead you're getting a ``NameError`` here, you may have missed a step "
+"in :ref:`Part 2 <tutorial02-import-timezone>` where we added imports of "
+"``datetime`` and ``timezone`` to ``polls/models.py``. Copy the imports from "
+"that section, and try running your tests again."
+msgstr ""
+"Jeśli dostajesz tutaj ``NameError``, być może ominąłeś krok w :ref:`części 2 "
+"<tutorial02-import-timezone>`, gdzie dodaliśmy importy ``datetime`` i "
+"``timezone`` do ``polls/models.py``. Skopiuj importy z tamtej sekcji i "
+"spróbuj uruchomić testy ponownie."
 
 msgid "What happened is this:"
 msgstr "To, co się stało, to to:"

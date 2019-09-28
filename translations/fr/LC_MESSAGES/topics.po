@@ -5,6 +5,7 @@
 # Translators:
 # Adrien Brunet <abrunet@centrale-marseille.fr>, 2017
 # annoa <annoa.b@gmail.com>, 2014,2016
+# Anthony SKORSKI <skorski.anthony@gmail.com>, 2019
 # Baptiste Mispelon <bmispelon@gmail.com>, 2014
 # Claude Paroz <claude@2xlibre.net>, 2013-2019
 # Laville Augustin <augustin.laville@gustavi.net>, 2019
@@ -17,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-09 05:19-0500\n"
-"PO-Revision-Date: 2019-07-29 16:59+0000\n"
+"POT-Creation-Date: 2019-09-27 17:25-0500\n"
+"PO-Revision-Date: 2019-09-28 10:24+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/"
 "fr/)\n"
@@ -29385,7 +29386,7 @@ msgstr ""
 "Lorsque vous activez la prise en charge des fuseaux horaires, Django "
 "interprète les dates/heures saisies dans les formulaires dans le :ref:"
 "`fuseau horaire actuel <default-current-time-zone>` et place des objets "
-"``datetime`` conscients dans "
+"``datetime`` conscients dans ``cleaned_data``."
 
 msgid ""
 "If the current time zone raises an exception for datetimes that don't exist "
@@ -34917,6 +34918,23 @@ msgstr ""
 "au moment où les migrations essaieront de modifier ces tables, vous "
 "obtiendrez des erreurs."
 
+msgid "Reverting migrations"
+msgstr "Annulation de migrations"
+
+msgid ""
+"Any migration can be reverted with :djadmin:`migrate` by using the number of "
+"previous migrations::"
+msgstr ""
+"Toute migration peut être annulée avec :djadmin:`migrate` en utilisant le "
+"numéro d'une migration précédente ::"
+
+msgid ""
+"If you want to revert all migrations applied for an app, use the name "
+"``zero``::"
+msgstr ""
+"Si vous souhaitez annuler toutes les migrations appliquées d'une "
+"application, utilisez le terme ``zero``::"
+
 msgid "Historical models"
 msgstr "Modèles historiques"
 
@@ -35444,8 +35462,8 @@ msgid ""
 msgstr ""
 "``int``, ``float``, ``bool``, ``str``, ``bytes``, ``None``, ``NoneType``"
 
-msgid "``list``, ``set``, ``tuple``, ``dict``"
-msgstr "``list``, ``set``, ``tuple``, ``dict``"
+msgid "``list``, ``set``, ``tuple``, ``dict``, ``range``."
+msgstr "``list``, ``set``, ``tuple``, ``dict``, ``range``."
 
 msgid ""
 "``datetime.date``, ``datetime.time``, and ``datetime.datetime`` instances "
@@ -39009,6 +39027,19 @@ msgid ""
 msgstr ""
 "Les applications peuvent profiter de l'infrastructure des signaux et fournir "
 "leurs propres signaux."
+
+msgid "When to use custom signals"
+msgstr "Quand utiliser des signaux personnalisés"
+
+msgid ""
+"Signals are implicit function calls which make debugging harder. If the "
+"sender and receiver of your custom signal are both within your project, "
+"you're better off using an explicit function call."
+msgstr ""
+"Les signaux sont des appels de fonctions implicites qui compliquent le "
+"débogage. Si l'expéditeur et le destinataire de votre signal personnalisé "
+"sont tous deux dans votre projet, il est alors préférable d'utiliser un "
+"appel de fonction explicite."
 
 msgid "Defining signals"
 msgstr "Définition de signaux"

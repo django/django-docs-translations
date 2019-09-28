@@ -6,13 +6,14 @@
 # amcorreia <mutley.sandro@gmail.com>, 2016
 # Carlos Leite <caduado@gmail.com>, 2016-2017
 # Carlos Leite <caduado@gmail.com>, 2016
-# Claudio Rogerio Carvalho Filho, 2017
+# Claudio Rogerio Carvalho Filho <excriptbrasil@gmail.com>, 2017
 # Edson Heneman <ehenemann@gmail.com>, 2016
 # Filipe Cifali Stangler <cifali.filipe@gmail.com>, 2019
 # Gilson Filho <me@gilsondev.in>, 2016
 # Gustavo Fonseca <gustavofonsecamail@gmail.com>, 2017
 # Humberto Rayashi <rayashi@gmail.com>, 2019
 # Jessica Temporal, 2016
+# João Paulo Andrade <joaopaulo.a.p@gmail.com>, 2019
 # Lucas Infante <maccinza@gmail.com>, 2014
 # Otávio Reis <otaviocha@gmail.com>, 2018
 # Raphael Mendonça, 2016
@@ -21,9 +22,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-19 03:29-0500\n"
-"PO-Revision-Date: 2019-04-11 23:11+0000\n"
-"Last-Translator: Filipe Cifali Stangler <cifali.filipe@gmail.com>\n"
+"POT-Creation-Date: 2019-09-27 17:25-0500\n"
+"PO-Revision-Date: 2019-09-06 00:30+0000\n"
+"Last-Translator: Ramiro Morales\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -377,6 +378,10 @@ msgid ""
 "who wants to contribute code to Django, look at :doc:`writing-code/working-"
 "with-git` instead."
 msgstr ""
+"Esta seção é destinada para os committers e para qualquer interessado em "
+"entender como o código é enviado para o Django. Se você é membro de uma "
+"comunidade e quer contribuir com código para o Django, veja o :doc:`writing-"
+"code/working-with-git`."
 
 msgid "Handling pull requests"
 msgstr "Manipulando pull requests"
@@ -2385,13 +2390,9 @@ msgstr "Quaisquer métodos customizados."
 
 msgid ""
 "If ``choices`` is defined for a given model field, define each choice as a "
-"tuple of tuples, with an all-uppercase name as a class attribute on the "
+"list of tuples, with an all-uppercase name as a class attribute on the "
 "model. Example::"
 msgstr ""
-"Se ``choices`` está definido para um dado campo de um modelo, defina cada "
-"choice com uma tupla de tuplas, sendo que o nome da tupla deve ser escrito "
-"inteiramente em maiúsculas e a tupla deve ser um atributo de classe do "
-"modelo. Exemplo::"
 
 msgid "Use of ``django.conf.settings``"
 msgstr "Utilização do ``django.conf.settings``"
@@ -4689,6 +4690,14 @@ msgstr "dele ou dela... use deles."
 
 msgid "himself or herself... use themselves."
 msgstr "ele mesmo ou ela mesma... use eles mesmos."
+
+msgid ""
+"Try to avoid using words that minimize the difficulty involved in a task or "
+"operation, such as \"easily\", \"simply\", \"just\", \"merely\", "
+"\"straightforward\", and so on. People's experience may not match your "
+"expectations, and they may become frustrated when they do not find a step as "
+"\"straightforward\" or \"simple\" as it is implied to be."
+msgstr ""
 
 msgid "Commonly used terms"
 msgstr "Termos usados com frequência"

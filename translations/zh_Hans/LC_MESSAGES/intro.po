@@ -20,12 +20,13 @@
 # Junkai Shao <skaifun.dev@gmail.com>, 2018
 # Kevin Lee <rootkitcn@live.com>, 2017
 # Kevin Sze <leiarix@gmail.com>, 2014
+# Lu Linfeng <xmmilk@gmail.com>, 2019
 # Ralph Wen <ralph.wen@gmail.com>, 2013
 # spaceoi <zhangzhaoyu@gmail.com>, 2016
 # Suntravel Chris <chrisfromcn@gmail.com>, 2019
 # Tuzi.Li <lzjwh1996@foxmail.com>, 2016
 # Vincent <Intelligent.vincent@gmail.com>, 2018
-# 汪心禾 <wang__xin_he@163.com>, 2018
+# 汪心禾 <wangxinhe06@gmail.com>, 2018
 # xin.wang <asimplelife@live.com>, 2018
 # xinyu liu <happy_lucky52@163.com>, 2017
 # spaceoi <zhangzhaoyu@gmail.com>, 2016
@@ -39,8 +40,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-21 02:19-0500\n"
-"PO-Revision-Date: 2019-05-05 08:38+0000\n"
+"POT-Creation-Date: 2019-09-27 17:25-0500\n"
+"PO-Revision-Date: 2019-09-24 01:58+0000\n"
 "Last-Translator: Dogify <595572594@qq.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
@@ -1025,18 +1026,21 @@ msgid "Install it"
 msgstr "应用数据模型"
 
 msgid ""
-"Next, run the Django command-line utility to create the database tables "
+"Next, run the Django command-line utilities to create the database tables "
 "automatically:"
-msgstr "然后，运行 Django 命令行工具来创建数据库表："
+msgstr "接下来，运行Django命令行实用程序以自动创建数据库表："
 
 msgid ""
-"The :djadmin:`migrate` command looks at all your available models and "
-"creates tables in your database for whichever tables don't already exist, as "
-"well as optionally providing :doc:`much richer schema control </topics/"
+"The :djadmin:`makemigrations` command looks at all your available models and "
+"creates migrations for whichever tables don't already exist. :djadmin:"
+"`migrate` runs the migrations and creates tables in your database, as well "
+"as optionally providing :doc:`much richer schema control </topics/"
 "migrations>`."
 msgstr ""
-"这个 :djadmin:`migrate` 命令查找你所有可用的模型并将在数据库中创建那些不存在"
-"的表，还可提供了可选的 :doc:`丰富 schema 控制</topics/migrations>`。"
+"该 :djadmin:`makemigrations` 命令查找所有可用的models，为任意一个在数据库中不"
+"存在对应数据表的model创建 migrations 脚本文件。:djadmin:`migrate` 命令则运行"
+"这些 migrations 自动创建数据库表。还提供可选的  :doc:`更丰富的控制模式 </"
+"topics/migrations>`。"
 
 msgid "Enjoy the free API"
 msgstr "享用便捷的 API"
@@ -2780,11 +2784,8 @@ msgstr ""
 "能给你在命令行里使用带来方便，Django 自动生成的 admin 里也使用这个方法来表示"
 "对象。"
 
-msgid ""
-"Note these are normal Python methods. Let's add a custom method, just for "
-"demonstration:"
-msgstr ""
-"注意：这些都是常规的 Python方法。让我们添加一个自定义的方法，这只是为了演示："
+msgid "Let's also add a custom method to this model:"
+msgstr "让我们再为此模型添加一个自定义方法："
 
 msgid ""
 "Note the addition of ``import datetime`` and ``from django.utils import "
@@ -4263,6 +4264,19 @@ msgstr "在终端中，我们通过输入以下代码运行测试::"
 
 msgid "and you'll see something like::"
 msgstr "你将会看到运行结果::"
+
+msgid "Different error?"
+msgstr "不一样的错误？"
+
+msgid ""
+"If instead you're getting a ``NameError`` here, you may have missed a step "
+"in :ref:`Part 2 <tutorial02-import-timezone>` where we added imports of "
+"``datetime`` and ``timezone`` to ``polls/models.py``. Copy the imports from "
+"that section, and try running your tests again."
+msgstr ""
+"若在此处你得到了一个 ``NameError`` 错误，你可能漏了 :ref:`第二步 <tutorial02-"
+"import-timezone>` 中将 ``datetime`` 和 ``timezone`` 导入 ``polls/model.py`` "
+"的步骤。复制这些语句，然后试着重新运行测试。"
 
 msgid "What happened is this:"
 msgstr "发生了什么呢？以下是自动化测试的运行过程："
