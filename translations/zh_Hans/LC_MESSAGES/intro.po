@@ -30,6 +30,7 @@
 # xin.wang <asimplelife@live.com>, 2018
 # xinyu liu <happy_lucky52@163.com>, 2017
 # spaceoi <zhangzhaoyu@gmail.com>, 2016
+# ZheJiao <jiaozhe1987@163.com>, 2019
 # BAKEZQ <zhongquan789@126.com>, 2018
 # 冬冬 李 <lsongzhi@163.com>, 2018
 # 吴彬 <xiake21x@qq.com>, 2016
@@ -40,9 +41,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-27 17:25-0500\n"
-"PO-Revision-Date: 2019-09-24 01:58+0000\n"
-"Last-Translator: Dogify <595572594@qq.com>\n"
+"POT-Creation-Date: 2019-11-28 01:16-0600\n"
+"PO-Revision-Date: 2019-11-06 00:41+0000\n"
+"Last-Translator: Ramiro Morales\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -315,12 +316,22 @@ msgid "Go ahead and install the previously cloned copy of Django:"
 msgstr "下一步安装之前克隆的 Django 副本："
 
 msgid ""
-"The installed version of Django is now pointing at your local copy. You will "
-"immediately see any changes you make to it, which is of great help when "
-"writing your first patch."
+"The installed version of Django is now pointing at your local copy by "
+"installing in editable mode. You will immediately see any changes you make "
+"to it, which is of great help when writing your first patch."
 msgstr ""
-"现在安装的 Django 版本就是你本地副本的版本。你将立刻见到任何你对它的修改，这"
-"对你编写第一个补丁很有帮助。"
+
+msgid "Creating projects with a local copy of Django"
+msgstr "使用 Django 本地副本创建项目"
+
+msgid ""
+"It may be helpful to test your local changes with a Django project. First "
+"you have to create a new virtual environment, :ref:`install the previously "
+"cloned local copy of Django in editable mode <intro-contributing-install-"
+"local-copy>`, and create a new Django project outside of your local copy of "
+"Django. You will immediately see any changes you make to Django in your new "
+"project, which is of great help when writing your first patch."
+msgstr ""
 
 msgid "Running Django's test suite for the first time"
 msgstr "首先运行 Django 的测试套件"
@@ -1525,16 +1536,16 @@ msgstr ""
 "议能够限制未来会使用你的代码的人。"
 
 msgid ""
-"Next we'll create a ``setup.py`` file which provides details about how to "
-"build and install the app.  A full explanation of this file is beyond the "
-"scope of this tutorial, but the `setuptools docs <https://setuptools."
-"readthedocs.io/en/latest/>`_ have a good explanation. Create a file ``django-"
-"polls/setup.py`` with the following contents:"
+"Next we'll create ``setup.cfg`` and ``setup.py`` files which detail how to "
+"build and install the app. A full explanation of these files is beyond the "
+"scope of this tutorial, but the `setuptools documentation <https://"
+"setuptools.readthedocs.io/en/latest/>`_ has a good explanation. Create the "
+"files ``django-polls/setup.cfg`` and ``django-polls/setup.py`` with the "
+"following contents:"
 msgstr ""
-"下一步我们将创建 ``setup.py`` 用于说明如何构建和安装应用的细节。关于此文件的"
-"完整介绍超出了此教程的范围，但是 `setuptools docs <https://setuptools."
-"readthedocs.io/en/latest/>`_ 有详细的介绍。创建文件 ``django-polls/setup."
-"py`` 包含以下内容："
+
+msgid "django-polls/setup.cfg"
+msgstr ""
 
 msgid "django-polls/setup.py"
 msgstr "django-polls/setup.py"

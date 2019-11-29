@@ -11,10 +11,12 @@
 # Jins <jsgd1254@gmail.com>, 2019
 # 전세옥 <jso4967@gmail.com>, 2019
 # Noh Seho <iam@sehonoh.kr>, 2018
+# Peace Kim, 2019
 # SeongSoo Cho <ppiyakk2@printf.kr>, 2019
 # silee9019 <silee9019@gmail.com>, 2015
 # Song M. Kim <songmink@hawaii.edu>, 2018
 # yangbeom <yangbeomsu@gmail.com>, 2016
+# Yang Chan Woo <oizys18@gmail.com>, 2019
 # Yeon Haeng Cho <ntype.joe@gmail.com>, 2019
 # Yong Choi <sk8er.choi@gmail.com>, 2019
 # Yongjin Jo <wnrhd114@gmail.com>, 2018
@@ -24,9 +26,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-27 17:25-0500\n"
-"PO-Revision-Date: 2019-09-18 23:54+0000\n"
-"Last-Translator: ByungChul Kim <bcking92@gmail.com>\n"
+"POT-Creation-Date: 2019-11-28 01:16-0600\n"
+"PO-Revision-Date: 2019-11-19 13:22+0000\n"
+"Last-Translator: Ramiro Morales\n"
 "Language-Team: Korean (http://www.transifex.com/django/django-docs/language/"
 "ko/)\n"
 "MIME-Version: 1.0\n"
@@ -74,8 +76,8 @@ msgid ""
 "RemoteUserMiddleware` to the :setting:`MIDDLEWARE` setting **after** the :"
 "class:`django.contrib.auth.middleware.AuthenticationMiddleware`::"
 msgstr ""
-"처음으로,  :class:`django.contrib.auth.middleware.AuthenticationMiddleware`"
-"\\를 설정하기 전에 :setting:`MIDDLEWARE`\\에 :class:`django.contrib.auth."
+"우선,  :class:`django.contrib.auth.middleware.AuthenticationMiddleware`\\를 "
+"설정하기 전에 :setting:`MIDDLEWARE`\\에 :class:`django.contrib.auth."
 "middleware.RemoteUserMiddleware`\\를 추가해야 합니다."
 
 msgid ""
@@ -278,6 +280,8 @@ msgid ""
 "By default, the following methods raise `NotImplementedError` and will "
 "typically have to be overridden:"
 msgstr ""
+"디폴트로, 다음의 메소드는 'NotImplementedError'를 일으키고, 일반적으로 오버라"
+"이드 되어야 합니다. "
 
 msgid ":meth:`Storage.delete`"
 msgstr ":meth:`Storage.delete`"
@@ -299,6 +303,9 @@ msgid ""
 "omitted. As it happens, it is possible to leave each method unimplemented "
 "and still have a working Storage."
 msgstr ""
+"하지만 앞의 모든 메소드들이 필수적인 것은 아니며, 자율적으로 생략될 수 있다"
+"는 것을 유의하십시오. 그럴 경우에 각 메소드를 미구현 상태로 내버려 두면서도 "
+"작동하는 저장소를 만들 수 있습니다."
 
 msgid ""
 "By way of example, if listing the contents of certain storage backends turns "
@@ -319,11 +326,16 @@ msgid ""
 "some methods unimplemented will result in a partial (possibly broken) "
 "interface."
 msgstr ""
+"궁극적으로, 어떠한 메소드가 구현될 것인가는 당신이 정할 수 있습니다. 몇 몇의 "
+"메소드를 미구현 상태로 내버려둔다면 완전하지 않은(혹은 망가진) 인터페이스를 "
+"낳을 것입니다."
 
 msgid ""
 "You'll also usually want to use hooks specifically designed for custom "
 "storage objects. These are:"
 msgstr ""
+"당신은 또한 커스텀 저장 객체를 위해 특별히 제작된 훅을 사용하고 싶을 것입니"
+"다. 이것들은:"
 
 msgid "**Required**."
 msgstr "**필수**."
@@ -1508,7 +1520,7 @@ msgid ""
 msgstr ""
 
 msgid "For example::"
-msgstr ""
+msgstr "예시::"
 
 msgid ""
 "The :meth:`~Field.db_type` and :meth:`~Field.rel_db_type` methods are called "
@@ -2672,7 +2684,7 @@ msgstr "태그를 등록한다."
 
 msgid ""
 "Finally, register the tag with your module's ``Library`` instance, as "
-"explained in :ref:`writing custom template filters<howto-writing-custom-"
+"explained in :ref:`writing custom template tags<howto-writing-custom-"
 "template-tags>` above. Example::"
 msgstr ""
 
@@ -3812,10 +3824,11 @@ msgstr ""
 msgid ""
 "When :setting:`DEBUG` is ``False``, Django will email the users listed in "
 "the :setting:`ADMINS` setting whenever your code raises an unhandled "
-"exception and results in an internal server error (HTTP status code 500). "
-"This gives the administrators immediate notification of any errors. The :"
-"setting:`ADMINS` will get a description of the error, a complete Python "
-"traceback, and details about the HTTP request that caused the error."
+"exception and results in an internal server error (strictly speaking, for "
+"any response with an HTTP status code of 500 or greater). This gives the "
+"administrators immediate notification of any errors. The :setting:`ADMINS` "
+"will get a description of the error, a complete Python traceback, and "
+"details about the HTTP request that caused the error."
 msgstr ""
 
 msgid ""

@@ -9,7 +9,8 @@
 # amcorreia <mutley.sandro@gmail.com>, 2016-2017
 # andrewsmedina <andrewsmedina@gmail.com>, 2016
 # andrewsmedina <andrewsmedina@gmail.com>, 2016
-# Carlos Leite <caduado@gmail.com>, 2016-2017
+# Carlos E C Leite - Cadu <caduado@gmail.com>, 2016-2017
+# Carlos E C Leite - Cadu <caduado@gmail.com>, 2019
 # Filipe Cifali Stangler <cifali.filipe@gmail.com>, 2016
 # Claudio Rogerio Carvalho Filho <excriptbrasil@gmail.com>, 2017
 # Claudio Rogerio Carvalho Filho <excriptbrasil@gmail.com>, 2017
@@ -44,8 +45,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-09 05:19-0500\n"
-"PO-Revision-Date: 2019-07-29 13:16+0000\n"
+"POT-Creation-Date: 2019-11-28 01:16-0600\n"
+"PO-Revision-Date: 2019-11-27 00:35+0000\n"
 "Last-Translator: Ramiro Morales\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
@@ -242,6 +243,9 @@ msgid ""
 "database ID or whatever, but has to be the primary key of your user object "
 "-- and returns a user object or ``None``."
 msgstr ""
+"O método ``get_user`` recebe um ``user_id`` -- o qual pode ser um username, "
+"ID do banco de dados ou outr coisa qualquer, mas tem que ser uma chave-"
+"primária do seu objeto user -- e retorna um objeto user ou ``None``."
 
 msgid ""
 "The ``authenticate`` method takes a ``request`` argument and credentials as "
@@ -1044,7 +1048,7 @@ msgid ""
 msgstr ""
 
 msgid "Writing a manager for a custom user model"
-msgstr ""
+msgstr "Escrevendo um manager para um modelo de usuário customizado"
 
 msgid ""
 "You should also define a custom manager for your user model. If your user "
@@ -4196,7 +4200,7 @@ msgstr ""
 "Finalmente, vamos adicionar a configuração :setting:`PASSWORD_HASHERS`:"
 
 msgid "mysite/settings.py"
-msgstr ""
+msgstr "mysite/settings.py"
 
 msgid "Include any other hashers that your site uses in this list."
 msgstr "Inclua quaisquer outros hashers que seu site usa nessa lista."
@@ -7912,9 +7916,8 @@ msgid "Combining multiple aggregations"
 msgstr ""
 
 msgid ""
-"Combining multiple aggregations with ``annotate()`` will `yield the wrong "
-"results <https://code.djangoproject.com/ticket/10060>`_ because joins are "
-"used instead of subqueries:"
+"Combining multiple aggregations with ``annotate()`` will :ticket:`yield the "
+"wrong results <10060>` because joins are used instead of subqueries:"
 msgstr ""
 
 msgid ""
@@ -11235,7 +11238,9 @@ msgstr ""
 
 msgid ""
 "Now we'll need to handle routing. First we want a router that knows to send "
-"queries for the ``auth`` app to ``auth_db``::"
+"queries for the ``auth`` and ``contenttypes`` apps to ``auth_db`` (``auth`` "
+"models are linked to ``ContentType``, so they must be stored in the same "
+"database)::"
 msgstr ""
 
 msgid ""
@@ -11852,14 +11857,13 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Also, be aware that there is some (small extra) overhead incurred inside "
-"Django when constructing a model with deferred fields. Don't be too "
-"aggressive in deferring fields without profiling as the database has to read "
-"most of the non-text, non-VARCHAR data from the disk for a single row in the "
-"results, even if it ends up only using a few columns. The ``defer()`` and "
-"``only()`` methods are most useful when you can avoid loading a lot of text "
-"data or for fields that might take a lot of processing to convert back to "
-"Python. As always, profile first, then optimize."
+"Don't be too aggressive in deferring fields without profiling as the "
+"database has to read most of the non-text, non-VARCHAR data from the disk "
+"for a single row in the results, even if it ends up only using a few "
+"columns. The ``defer()`` and ``only()`` methods are most useful when you can "
+"avoid loading a lot of text data or for fields that might take a lot of "
+"processing to convert back to Python. As always, profile first, then "
+"optimize."
 msgstr ""
 
 msgid "Use ``QuerySet.count()``"
@@ -12024,6 +12028,41 @@ msgid ""
 msgstr ""
 
 msgid "...where ``Bands`` and ``Artists`` have a many-to-many relationship."
+msgstr ""
+
+msgid ""
+"When inserting different pairs of objects into :class:`~django.db.models."
+"ManyToManyField` or when the custom :attr:`~django.db.models.ManyToManyField."
+"through` table is defined, use :meth:`~django.db.models.query.QuerySet."
+"bulk_create()` method to reduce the number of SQL queries. For example::"
+msgstr ""
+
+msgid ""
+"...where ``Pizza`` and ``Topping`` have a many-to-many relationship. Note "
+"that there are a number of :meth:`caveats to this method <django.db.models."
+"query.QuerySet.bulk_create>`, so make sure it's appropriate for your use "
+"case."
+msgstr ""
+
+msgid "Remove in bulk"
+msgstr ""
+
+msgid ""
+"When removing objects from :class:`ManyToManyFields <django.db.models."
+"ManyToManyField>`, use :meth:`~django.db.models.fields.related."
+"RelatedManager.remove` with multiple objects to reduce the number of SQL "
+"queries. For example::"
+msgstr ""
+
+msgid ""
+"When removing different pairs of objects from :class:`ManyToManyFields "
+"<django.db.models.ManyToManyField>`, use :meth:`~django.db.models.query."
+"QuerySet.delete` on a :class:`~django.db.models.Q` expression with multiple :"
+"attr:`~django.db.models.ManyToManyField.through`  model instances to reduce "
+"the number of SQL queries. For example::"
+msgstr ""
+
+msgid "...where ``Pizza`` and ``Topping`` have a many-to-many relationship."
 msgstr ""
 
 msgid "Making queries"
@@ -16075,6 +16114,13 @@ msgid ""
 "core.files.storage.FileSystemStorage`)::"
 msgstr ""
 
+msgid ""
+"Whilst :class:`~django.db.models.ImageField` non-image data attributes, such "
+"as ``height``, ``width``, and ``size`` are available on the instance, the "
+"underlying image data cannot be used without reopening the image. For "
+"example::"
+msgstr ""
+
 msgid "The ``File`` object"
 msgstr "O ``File`` objeto"
 
@@ -16179,20 +16225,20 @@ msgid ""
 msgstr ""
 
 msgid ""
-"You now have created a formset named ``ArticleFormSet``. The formset gives "
-"you the ability to iterate over the forms in the formset and display them as "
-"you would with a regular form::"
+"You now have created a formset class named ``ArticleFormSet``. Instantiating "
+"the formset gives you the ability to iterate over the forms in the formset "
+"and display them as you would with a regular form::"
 msgstr ""
 
 msgid ""
 "As you can see it only displayed one empty form. The number of empty forms "
 "that is displayed is controlled by the ``extra`` parameter. By default, :"
 "func:`~django.forms.formsets.formset_factory` defines one extra form; the "
-"following example will display two blank forms::"
+"following example will create a formset class to display two blank forms::"
 msgstr ""
 
 msgid ""
-"Iterating over the ``formset`` will render the forms in the order they were "
+"Iterating over a formset will render the forms in the order they were "
 "created. You can change this order by providing an alternate implementation "
 "for the ``__iter__()`` method."
 msgstr ""
@@ -17979,6 +18025,12 @@ msgstr ":class:`DecimalField`"
 msgid ":class:`~django.forms.DecimalField`"
 msgstr ":class:`~django.forms.DecimalField`"
 
+msgid ":class:`DurationField`"
+msgstr ""
+
+msgid ":class:`~django.forms.DurationField`"
+msgstr ""
+
 msgid ":class:`EmailField`"
 msgstr ":class:`EmailField`"
 
@@ -18009,8 +18061,8 @@ msgstr ":class:`ForeignKey`"
 msgid ":class:`~django.forms.ModelChoiceField` (see below)"
 msgstr ":class:`~django.forms.ModelChoiceField` (veja abaixo)"
 
-msgid "``ImageField``"
-msgstr "``ImageField``"
+msgid ":class:`ImageField`"
+msgstr ""
 
 msgid ":class:`~django.forms.ImageField`"
 msgstr ":class:`~django.forms.ImageField`"
@@ -18074,6 +18126,12 @@ msgstr ":class:`URLField`"
 
 msgid ":class:`~django.forms.URLField`"
 msgstr ":class:`~django.forms.URLField`"
+
+msgid ":class:`UUIDField`"
+msgstr ""
+
+msgid ":class:`~django.forms.UUIDField`"
+msgstr ""
 
 msgid ""
 "As you might expect, the ``ForeignKey`` and ``ManyToManyField`` model field "
@@ -18629,6 +18687,12 @@ msgid ""
 "with a particular model."
 msgstr ""
 
+msgid ""
+"When using :ref:`multi-table inheritance <multi-table-inheritance>`, forms "
+"generated by a formset factory will contain a parent link field (by default "
+"``<parent_model_name>_ptr``) instead of an ``id`` field."
+msgstr ""
+
 msgid "Changing the queryset"
 msgstr ""
 
@@ -18752,9 +18816,9 @@ msgstr ""
 msgid ""
 "Also, ``extra=0`` doesn't prevent creation of new model instances as you "
 "can :ref:`add additional forms with JavaScript <understanding-the-"
-"managementform>` or just send additional POST data. Formsets `don't yet "
-"provide functionality <https://code.djangoproject.com/ticket/26142>`_ for an "
-"\"edit only\" view that prevents creation of new instances."
+"managementform>` or just send additional POST data. Formsets :ticket:`don't "
+"yet provide functionality <26142>` for an \"edit only\" view that prevents "
+"creation of new instances."
 msgstr ""
 
 msgid ""
@@ -21962,7 +22026,7 @@ msgstr ""
 "instância quando criar e mostrar as enquetes ('polls')."
 
 msgid "polls/urls.py"
-msgstr ""
+msgstr "polls/urls.py"
 
 msgid "Using this setup, the following lookups are possible:"
 msgstr "Usando esta definição, os seguintes filtros são possíveis:"
@@ -26868,6 +26932,19 @@ msgid ""
 "migrations try to modify those tables."
 msgstr ""
 
+msgid "Reverting migrations"
+msgstr ""
+
+msgid ""
+"Any migration can be reverted with :djadmin:`migrate` by using the number of "
+"previous migrations::"
+msgstr ""
+
+msgid ""
+"If you want to revert all migrations applied for an app, use the name "
+"``zero``::"
+msgstr ""
+
 msgid "Historical models"
 msgstr ""
 
@@ -26917,11 +26994,11 @@ msgid ""
 msgstr ""
 
 msgid ""
-"In addition, the base classes of the model are just stored as pointers, so "
-"you must always keep base classes around for as long as there is a migration "
-"that contains a reference to them. On the plus side, methods and managers "
-"from these base classes inherit normally, so if you absolutely need access "
-"to these you can opt to move them into a superclass."
+"In addition, the concrete base classes of the model are stored as pointers, "
+"so you must always keep base classes around for as long as there is a "
+"migration that contains a reference to them. On the plus side, methods and "
+"managers from these base classes inherit normally, so if you absolutely need "
+"access to these you can opt to move them into a superclass."
 msgstr ""
 
 msgid ""
@@ -27191,8 +27268,8 @@ msgid ""
 "``int``, ``float``, ``bool``, ``str``, ``bytes``, ``None``, ``NoneType``"
 msgstr ""
 
-msgid "``list``, ``set``, ``tuple``, ``dict``"
-msgstr "``list``, ``set``, ``tuple``, ``dict``"
+msgid "``list``, ``set``, ``tuple``, ``dict``, ``range``."
+msgstr ""
 
 msgid ""
 "``datetime.date``, ``datetime.time``, and ``datetime.datetime`` instances "
@@ -29986,7 +30063,9 @@ msgstr ""
 
 msgid ""
 "To receive a signal, register a *receiver* function using the :meth:`Signal."
-"connect` method. The receiver function is called when the signal is sent."
+"connect` method. The receiver function is called when the signal is sent. "
+"All of the signal's receiver functions are called one at a time, in the "
+"order they were registered."
 msgstr ""
 
 msgid ""
@@ -30143,6 +30222,15 @@ msgstr ""
 msgid ""
 "Your applications can take advantage of the signal infrastructure and "
 "provide its own signals."
+msgstr ""
+
+msgid "When to use custom signals"
+msgstr ""
+
+msgid ""
+"Signals are implicit function calls which make debugging harder. If the "
+"sender and receiver of your custom signal are both within your project, "
+"you're better off using an explicit function call."
 msgstr ""
 
 msgid "Defining signals"
@@ -31529,6 +31617,21 @@ msgid ""
 "key reset is a relatively expensive database operation."
 msgstr ""
 
+msgid "Enforce running test classes sequentially"
+msgstr ""
+
+msgid ""
+"If you have test classes that cannot be run in parallel (e.g. because they "
+"share a common resource), you can use ``django.test.testcases."
+"SerializeMixin`` to run them sequentially. This mixin uses a filesystem "
+"``lockfile``."
+msgstr ""
+
+msgid ""
+"For example, you can use ``__file__`` to determine that all test classes in "
+"the same file that inherit from ``SerializeMixin`` will run sequentially::"
+msgstr ""
+
 msgid "Using the Django test runner to test reusable applications"
 msgstr ""
 
@@ -32359,7 +32462,7 @@ msgid ""
 "Caches are not cleared after each test, and running \"manage.py test fooapp"
 "\" can insert data from the tests into the cache of a live system if you run "
 "your tests in production because, unlike databases, a separate \"test cache"
-"\" is not used. This behavior `may change`_ in the future."
+"\" is not used. This behavior :ticket:`may change <11505>` in the future."
 msgstr ""
 
 msgid "Understanding the test output"
