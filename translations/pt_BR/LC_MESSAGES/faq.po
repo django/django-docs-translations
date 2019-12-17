@@ -5,11 +5,12 @@
 # Translators:
 # Adriano Ramos <adriano157@gmail.com>, 2017
 # Alexandre Proença <alexandre.proenca@hotmail.com.br>, 2018
+# Amanda Savluchinske <amandasavluchinske@gmail.com>, 2019
 # amcorreia <mutley.sandro@gmail.com>, 2016
 # Barbara Moraes Vicente <bar.mvicente@gmail.com>, 2016
 # Bernardo Fontes <bernardoxhc@gmail.com>, 2016
-# Carlos E C Leite - Cadu <caduado@gmail.com>, 2016-2017
-# Carlos E C Leite - Cadu <caduado@gmail.com>, 2016
+# Carlos Leite <caduado@gmail.com>, 2016-2017
+# Carlos Leite <caduado@gmail.com>, 2016
 # Filipe Cifali Stangler <cifali.filipe@gmail.com>, 2016
 # Daniel Silva <xtecnico2@gmail.com>, 2016
 # Diego Rocha <diego@diegorocha.com.br>, 2016
@@ -42,9 +43,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-06 09:49-0600\n"
-"PO-Revision-Date: 2019-12-03 01:51+0000\n"
-"Last-Translator: Ramiro Morales\n"
+"POT-Creation-Date: 2019-12-13 05:44-0600\n"
+"PO-Revision-Date: 2019-12-11 00:55+0000\n"
+"Last-Translator: Amanda Savluchinske <amandasavluchinske@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -232,6 +233,12 @@ msgid ""
 "authentication system, check permissions and do whatever else they need to "
 "do."
 msgstr ""
+"Se você quiser mais flexibilidade do que o que é possível por ajustes aos "
+"formulários gerados automaticamente, sinta-se a vontade para escrever views "
+"personalizadas para a parte administrativa. A parte administrativa é feita "
+"no Django também, e com isso você pode escrever views personalizadas que se "
+"acoplem ao sistema de autenticação, chequem permissões ou façam qualquer "
+"outra coisa que precisem fazer."
 
 msgid ""
 "If you want to customize the look-and-feel of the admin interface, read the "
@@ -1058,11 +1065,18 @@ msgid ""
 "be required for some use cases, but you'll receive an error about them as "
 "they're needed."
 msgstr ""
+"O Django requer Python. Veja a tabela na próxima questão para visualizar as "
+"versões de Python que funcionam com cada versão do Django. Outras "
+"bibliotecas Python podem ser requeridas para alguns casos de uso, mas você "
+"receberá um erro sobre elas na medida que forem necessárias."
 
 msgid ""
 "For a development environment -- if you just want to experiment with Django "
 "-- you don't need to have a separate Web server installed or database server."
 msgstr ""
+"Para um ambiente de desenvolvimento -- se você só quer experimentar com "
+"Django -- você não precisa ter um servidor web separado instalado ou um "
+"servidor de banco de dados."
 
 msgid ""
 "Django comes with its own :djadmin:`lightweight development "
@@ -1106,16 +1120,16 @@ msgid "3.5, 3.6, 3.7"
 msgstr "3.5, 3.6, 3.7"
 
 msgid "2.2"
-msgstr ""
+msgstr "2.2"
 
 msgid "3.5, 3.6, 3.7, 3.8 (added in 2.2.8)"
-msgstr ""
+msgstr "3.5, 3.6, 3.7, 3.8 (adicionado na 2.2.8)"
 
 msgid "3.0"
-msgstr ""
+msgstr "3.0"
 
 msgid "3.6, 3.7, 3.8"
-msgstr ""
+msgstr "3.6, 3.7, 3.8"
 
 msgid ""
 "For each version of Python, only the latest micro release (A.B.C) is "
@@ -1192,6 +1206,8 @@ msgid ""
 "Make sure your Django :setting:`DEBUG` setting is set to ``True``. Then do "
 "this::"
 msgstr ""
+"Assegure que sua configuração do Django :setting:`DEBUG` está configurada "
+"para ``True``. Então faça isso::"
 
 msgid ""
 "``connection.queries`` is only available if :setting:`DEBUG` is ``True``. "

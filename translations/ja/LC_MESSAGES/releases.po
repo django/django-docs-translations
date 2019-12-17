@@ -7,6 +7,7 @@
 # Pawllo2 <pawllothesecond@gmail.com>, 2017
 # TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016-2017,2019
 # TAKAHASHI Shuuji <shuuji3@gmail.com>, 2018-2019
+# Takuya N <takninnovationresearch@gmail.com>, 2019
 # Tatsuya Matoba <mtb.toya0403@gmail.com>, 2019
 # Takuya N <takninnovationresearch@gmail.com>, 2018
 # 安藤 勝紀 <e2katsuki@gmail.com>, 2019
@@ -14,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-06 09:49-0600\n"
-"PO-Revision-Date: 2019-12-07 01:52+0000\n"
+"POT-Creation-Date: 2019-12-13 05:44-0600\n"
+"PO-Revision-Date: 2019-12-13 00:34+0000\n"
 "Last-Translator: Ramiro Morales\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
@@ -68,7 +69,7 @@ msgid ""
 msgstr ""
 
 msgid "Changes and new features"
-msgstr ""
+msgstr "変更と新機能"
 
 msgid ""
 "The major changes in this release (for developers currently using the 0.91 "
@@ -210,7 +211,7 @@ msgid ""
 msgstr ""
 
 msgid "Backwards-incompatible changes"
-msgstr ""
+msgstr "後方互換性のない変更"
 
 msgid ""
 "The following changes may require you to update your code when you switch "
@@ -218,7 +219,7 @@ msgid ""
 msgstr ""
 
 msgid "``MySQLdb`` version requirement"
-msgstr ""
+msgstr "要求される ``MySQLdb`` バージョン"
 
 msgid ""
 "Due to a bug in older versions of the ``MySQLdb`` Python module (which "
@@ -226,6 +227,10 @@ msgid ""
 "requires version 1.2.1p2 or higher of ``MySQLdb``, and will raise exceptions "
 "if you attempt to use an older version."
 msgstr ""
+"(Django が MySQL データベースに接続する際、利用する) ``MySQLdb`` Python モ"
+"ジュールの古いバージョンに含まれるバグがあるため、 Django で MySQL バックエン"
+"ドを利用する場合は ``MySQLdb`` バージョン 1.2.1p2 以上を要求するようになりま"
+"した。古いバージョンを利用しようとした場合は例外が発生します。"
 
 msgid ""
 "If you're currently unable to upgrade your copy of ``MySQLdb`` to meet this "
@@ -253,7 +258,7 @@ msgid ""
 msgstr ""
 
 msgid "Database constraint names changed"
-msgstr ""
+msgstr "データベース名の制約変更"
 
 msgid ""
 "The format of the constraint names Django generates for foreign key "
@@ -308,7 +313,7 @@ msgid "The vestigial ``install`` command has been removed. Use ``syncdb``."
 msgstr ""
 
 msgid "Backslash escaping changed"
-msgstr ""
+msgstr "バックスラッシュのエスケープ方式の変更"
 
 msgid ""
 "The Django database API now escapes backslashes given as query parameters. "
@@ -595,7 +600,7 @@ msgid "See :doc:`/ref/unicode`."
 msgstr "詳しくは :doc:`/ref/unicode` を参照。"
 
 msgid "An improved ORM"
-msgstr "ORM の改良"
+msgstr "改善された ORM"
 
 msgid ""
 "Django's object-relational mapper -- the component which provides the "
@@ -7141,7 +7146,7 @@ msgid "Django 1.11.26 release notes"
 msgstr ""
 
 msgid "*November 4, 2019*"
-msgstr ""
+msgstr "2019年11月4日"
 
 msgid "Django 1.11.26 fixes a regression in 1.11.25."
 msgstr ""
@@ -7151,6 +7156,22 @@ msgid ""
 "``has_keys``, or ``has_any_keys`` lookup on :class:`~django.contrib.postgres."
 "fields.JSONField`, if the right or left hand side of an expression is a key "
 "transform (:ticket:`30826`)."
+msgstr ""
+
+msgid "Django 1.11.27 release notes"
+msgstr ""
+
+msgid "*Expected January 2, 2020*"
+msgstr ""
+
+msgid "Django 1.11.27 fixes a data loss bug in 1.11.26."
+msgstr ""
+
+msgid ""
+"Fixed a data loss possibility in :class:`~django.contrib.postgres.forms."
+"SplitArrayField`. When using with ``ArrayField(BooleanField())``, all values "
+"after the first ``True`` value were marked as checked instead of preserving "
+"passed values (:ticket:`31073`)."
 msgstr ""
 
 msgid "Django 1.11.3 release notes"
@@ -8755,6 +8776,10 @@ msgid ""
 "ticket:`bug <13560>` that affected datetime form field widgets when "
 "localization was enabled."
 msgstr ""
+"Django 1.2.1 は 1.2.0 の直後にリリースされ、2個の小さな修正を含んでいます: 1"
+"つはドキュメントパッケージングスクリプトで、もう1つは地域化を有効にしている場"
+"合に起こる、日時フォームフィールドウィジェットに関する :ticket:`bug <13560>` "
+"です。"
 
 msgid "Django 1.2.2 release notes"
 msgstr ""
@@ -26997,13 +27022,15 @@ msgid "Django 2.1.14 fixes a regression in 2.1.13."
 msgstr ""
 
 msgid "Django 2.1.15 release notes"
-msgstr ""
+msgstr "Django 2.1.15 リリースノート"
 
 msgid "*December 2, 2019*"
-msgstr ""
+msgstr "*2019年12月2日*"
 
 msgid "Django 2.1.15 fixes a security issue and a data loss bug in 2.1.14."
 msgstr ""
+"Django 2.1.15 は 2.1.14 に含まれるセキュリティ脆弱性とデータ損失のバグを修正"
+"しています。"
 
 msgid "CVE-2019-19118: Privilege escalation in the Django admin."
 msgstr ""
@@ -28123,7 +28150,7 @@ msgid ""
 msgstr ""
 
 msgid "Django 2.2.8 release notes"
-msgstr ""
+msgstr "Django 2.2.8 リリースノート"
 
 msgid ""
 "Django 2.2.8 fixes a security issue, several bugs in 2.2.7, and adds "
@@ -28142,8 +28169,14 @@ msgid ""
 "``default`` entry was empty (:ticket:`31021`)."
 msgstr ""
 
-msgid "Django 3.0 release notes"
+msgid "Django 2.2.9 release notes"
 msgstr ""
+
+msgid "Django 2.2.9 fixes a data loss bug in 2.2.8."
+msgstr ""
+
+msgid "Django 3.0 release notes"
+msgstr "Django 3.0 リリースノート"
 
 msgid "Welcome to Django 3.0!"
 msgstr ""
@@ -28156,6 +28189,12 @@ msgid ""
 "of their deprecation cycle, and we've :ref:`begun the deprecation process "
 "for some features <deprecated-features-3.0>`."
 msgstr ""
+"このリリースノートは :ref:`新機能 <whats-new-3.0>` の内容のみならず、Django "
+"2.2 以前からアップグレードするときに気をつけなければならない、いくつかの :"
+"ref:`後方互換性のない変更 <backwards-incompatible-3.0>` を含んでいます。機能"
+"廃止サイクルを迎えた :ref:`機能を削除<removed-features-3.0>` したり、 :ref:`"
+"いくつかの機能を廃止サイクルに移行した <deprecated-features-3.0>` りしていま"
+"す。"
 
 msgid ""
 "Django 3.0 supports Python 3.6, 3.7, and 3.8. We **highly recommend** and "
@@ -28520,7 +28559,7 @@ msgstr ""
 
 msgid ""
 "For use in, for example, Django templates, :attr:`.HttpRequest.headers` now "
-"allows look ups using underscores (e.g. ``user_agent``) in place of hyphens."
+"allows lookups using underscores (e.g. ``user_agent``) in place of hyphens."
 msgstr ""
 
 msgid "Security"
@@ -28827,6 +28866,12 @@ msgstr ""
 msgid "Support for ``sqlparse`` < 0.2.2 is removed."
 msgstr ""
 
+msgid ""
+"``RegexPattern``, used by :func:`~django.urls.re_path`, no longer returns "
+"keyword arguments with ``None`` values to be passed to the view for the "
+"optional named groups that are missing."
+msgstr ""
+
 msgid "Features deprecated in 3.0"
 msgstr ""
 
@@ -28933,10 +28978,7 @@ msgid ""
 msgstr ""
 
 msgid "Django 3.0.1 release notes"
-msgstr ""
-
-msgid "*Expected January 2, 2020*"
-msgstr ""
+msgstr "Django 3.0.1 リリースノート"
 
 msgid "Django 3.0.1 fixes several bugs in 3.0."
 msgstr ""
@@ -28944,7 +28986,7 @@ msgstr ""
 msgid ""
 "Fixed a regression in Django 3.0 by restoring the ability to use Django "
 "inside Jupyter and other environments that force an async context, by adding "
-"and option to disable :ref:`async-safety` mechanism with "
+"an option to disable :ref:`async-safety` mechanism with "
 "``DJANGO_ALLOW_ASYNC_UNSAFE`` environment variable (:ticket:`31056`)."
 msgstr ""
 

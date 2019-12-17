@@ -35,6 +35,7 @@
 # Takayuki Hirai, 2015
 # Takayuki SHIMIZUKAWA <shimizukawa@gmail.com>, 2018
 # Takeuchi Takaki <takakim114@gmail.com>, 2018
+# Takuya N <takninnovationresearch@gmail.com>, 2019
 # Takuya N <takninnovationresearch@gmail.com>, 2018
 # Yoshihiro Furudate <aheadlink.changat@gmail.com>, 2016
 # Yuuichiro Kato <y1row.kato@gmail.com>, 2018
@@ -43,8 +44,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-06 09:49-0600\n"
-"PO-Revision-Date: 2019-12-06 14:04+0000\n"
+"POT-Creation-Date: 2019-12-13 05:44-0600\n"
+"PO-Revision-Date: 2019-12-13 01:30+0000\n"
 "Last-Translator: Ramiro Morales\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
@@ -55,22 +56,27 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "Asynchronous support"
-msgstr ""
+msgstr "非同期サポート"
 
 msgid ""
 "Django has developing support for asynchronous (\"async\") Python, but does "
 "not yet support asynchronous views or middleware; they will be coming in a "
 "future release."
 msgstr ""
+"Django は非同期 (\"async\") Python の試験的サポートをしていますが、ビューやミ"
+"ドルウェアの非同期サポートはなされていません。今後のリリースでサポートされる"
+"予定です。"
 
 msgid ""
 "There is limited support for other parts of the async ecosystem; namely, "
 "Django can natively talk :doc:`ASGI </howto/deployment/asgi/index>`, and "
 "some async safety support."
 msgstr ""
+"async エコシステムの他の部分のサポートは限定的です。つまり、 Django はネイ"
+"ティブで :doc:`ASGI` を話し、部分的に非同期安全性をサポートしています。"
 
 msgid "Async-safety"
-msgstr ""
+msgstr "非同期安全性"
 
 msgid ""
 "Certain key parts of Django are not able to operate safely in an "
@@ -1116,13 +1122,15 @@ msgid ""
 "``i``, ``l``, ``I``, and ``1`` (lowercase letter i, lowercase letter L, "
 "uppercase letter i, and the number one)"
 msgstr ""
+"``i``, ``l``, ``I`` と ``1`` (小文字の i、小文字の L、大文字の i、そして数字"
+"の 1)"
 
 msgid ""
 "``o``, ``O``, and ``0`` (lowercase letter o, uppercase letter o, and zero)"
-msgstr ""
+msgstr "``o``, ``O`` と ``0`` (小文字の o、大文字の o、そして数字の 0)"
 
 msgid "Extending Django's default ``User``"
-msgstr ""
+msgstr "Django 標準の ``User`` を拡張する"
 
 msgid ""
 "If you're entirely happy with Django's :class:`~django.contrib.auth.models."
@@ -2230,7 +2238,7 @@ msgid ""
 msgstr ""
 
 msgid "``login_url``"
-msgstr ""
+msgstr "``login_url``"
 
 msgid ""
 "Lets you specify the URL that users who don't pass the test will be "
@@ -2239,7 +2247,7 @@ msgid ""
 msgstr ""
 
 msgid "``redirect_field_name``"
-msgstr ""
+msgstr "``redirect_field_name``"
 
 msgid ""
 "Same as for :func:`~django.contrib.auth.decorators.login_required`. Setting "
@@ -2269,7 +2277,7 @@ msgid ""
 msgstr ""
 
 msgid "Stacking ``UserPassesTestMixin``"
-msgstr ""
+msgstr "``UserPassesTestMixin`` を重ねる"
 
 msgid ""
 "Due to the way ``UserPassesTestMixin`` is implemented, you cannot stack them "
@@ -2282,7 +2290,7 @@ msgid ""
 msgstr ""
 
 msgid "The ``permission_required`` decorator"
-msgstr ""
+msgstr "``permission_required`` デコレータ"
 
 msgid ""
 "It's a relatively common task to check whether a user has a particular "
@@ -22052,12 +22060,15 @@ msgstr ""
 
 msgid ""
 "The keyword arguments are made up of any named parts matched by the path "
-"expression, overridden by any arguments specified in the optional ``kwargs`` "
-"argument to :func:`django.urls.path` or :func:`django.urls.re_path`."
+"expression that are provided, overridden by any arguments specified in the "
+"optional ``kwargs`` argument to :func:`django.urls.path` or :func:`django."
+"urls.re_path`."
 msgstr ""
-"URL パス表現でマッチした名前付き部分からはキーワード引数が作られます。ただ"
-"し、 :func:`django.urls.path` や :func:`django.urls.re_path` に ``kwargs`` オ"
-"プション引数が指定されていた場合は、その中の引数で上書きされます。"
+
+msgid ""
+"In older versions, the keyword arguments with ``None`` values are made up "
+"also for not provided named parts."
+msgstr ""
 
 msgid ""
 "If no URL pattern matches, or if an exception is raised during any point in "

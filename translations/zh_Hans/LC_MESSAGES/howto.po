@@ -13,6 +13,7 @@
 # Dogify <595572594@qq.com>, 2018-2019
 # FPlust Lu <fplustlu@gmail.com>, 2018
 # Frost Ming <mianghong@gmail.com>, 2018
+# Howie Zhao <zhao_h_r@163.com>, 2019
 # JINGMING DAI <d664216@gmail.com>, 2018
 # Json0926 <jinsong0926@hotmail.com>, 2019
 # Kevin Lee <rootkitcn@live.com>, 2018
@@ -52,9 +53,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-06 09:49-0600\n"
-"PO-Revision-Date: 2019-12-02 13:57+0000\n"
-"Last-Translator: Ramiro Morales\n"
+"POT-Creation-Date: 2019-12-13 05:44-0600\n"
+"PO-Revision-Date: 2019-12-11 03:23+0000\n"
+"Last-Translator: Howie Zhao <zhao_h_r@163.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -859,6 +860,8 @@ msgid ""
 "Django will register a ``manage.py`` command for each Python module in that "
 "directory whose name doesn't begin with an underscore. For example::"
 msgstr ""
+"为达此目的，只需为应用添加一个 ``management/commands`` 目录。Django 会为每个"
+"名字不以下划线开头的 Python 模块注册一个 ``manage.py`` 命令。比如::"
 
 msgid ""
 "In this example, the ``closepoll`` command will be made available to any "
