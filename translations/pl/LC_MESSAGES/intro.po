@@ -10,7 +10,7 @@
 # GwynBleidD <gbd.lin@gmail.com>, 2016
 # lukaszkoziara <koziara.lukasz@gmail.com>, 2015
 # Łukasz Hryniuk, 2013
-# m_aciek <maciej.olko@gmail.com>, 2016-2019
+# m_aciek <maciej.olko@gmail.com>, 2016-2020
 # m_aciek <maciej.olko@gmail.com>, 2016
 # p <inactive+poczciwiec@transifex.com>, 2014
 # Stefan Ocetkiewicz <stefan.ocetkiewicz@gmail.com>, 2019
@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-13 05:44-0600\n"
-"PO-Revision-Date: 2019-12-07 11:59+0000\n"
+"POT-Creation-Date: 2020-01-24 06:49-0600\n"
+"PO-Revision-Date: 2020-01-19 13:41+0000\n"
 "Last-Translator: m_aciek <maciej.olko@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/django/django-docs/language/"
 "pl/)\n"
@@ -1185,10 +1185,10 @@ msgstr "Ciesz się wolnym API"
 msgid ""
 "With that, you've got a free, and rich, :doc:`Python API </topics/db/"
 "queries>` to access your data. The API is created on the fly, no code "
-"generation necessary:"
+"generation necessary::"
 msgstr ""
 "Przez wolne i bogate :doc:`pythonowe API </topics/db/queries>` masz dostęp "
-"do swoich danych. API jest tworzone w locie, nie wymaga generowania kodu:"
+"do swoich danych. API jest tworzone w locie, nie wymaga generowania kodu::"
 
 msgid ""
 "A dynamic admin interface: it's not just scaffolding -- it's the whole house"
@@ -1976,15 +1976,11 @@ msgstr ""
 "wskazówki jak usunąć stare wersje Django i zainstalować nową."
 
 msgid ""
-"If you're having trouble going through this tutorial, please post a message "
-"to |django-users| or drop by `#django on irc.freenode.net <irc://irc."
-"freenode.net/django>`_ to chat with other Django users who might be able to "
-"help."
+"If you're having trouble going through this tutorial, please head over to "
+"the :doc:`Getting Help</faq/help>` section of the FAQ."
 msgstr ""
-"Jeśli masz problemy z przejściem tego tutoriala, prosimy napisz wiadomość do "
-"|django-users| lub wpadnij na `#django na irc.freenode.net <irc://irc."
-"freenode.net/django>`_, aby czatować z innymi użytkownikami Django, który "
-"mogą być w stanie udzielić pomocy."
+"Jeśli masz trudności w przejściu tego tutorialu, przejdź do sekcji :doc:"
+"`Uzyskiwanie pomocy </faq/help>` często zadawanych pytań."
 
 msgid "Creating a project"
 msgstr "Tworzenie projektu"
@@ -3688,6 +3684,13 @@ msgstr "Umieść następujący kod w tym szablonie:"
 
 msgid "polls/templates/polls/index.html"
 msgstr "polls/templates/polls/index.html"
+
+msgid ""
+"To make the tutorial shorter, all template examples use incomplete HTML. In "
+"your own projects you should use `complete HTML documents`__."
+msgstr ""
+"Aby skrócić tutorial, wszystkie przykłady szablonów używają niepełnego HTML-"
+"a. W swoich projektach powinieneś używać `pełnych dokumentów HTML`__."
 
 msgid ""
 "Now let's update our ``index`` view in ``polls/views.py`` to use the "

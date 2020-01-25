@@ -9,9 +9,10 @@
 # amcorreia <mutley.sandro@gmail.com>, 2016
 # Barbara Moraes Vicente <bar.mvicente@gmail.com>, 2016
 # Bernardo Fontes <bernardoxhc@gmail.com>, 2016
-# Carlos Leite <caduado@gmail.com>, 2016-2017
-# Carlos Leite <caduado@gmail.com>, 2016
+# Carlos C. Leite <caduado@gmail.com>, 2016-2017
+# Carlos C. Leite <caduado@gmail.com>, 2016,2019
 # Filipe Cifali Stangler <cifali.filipe@gmail.com>, 2016
+# Cloves Oliveira <clovesolivier23@gmail.com>, 2020
 # Daniel Silva <xtecnico2@gmail.com>, 2016
 # Diego Rocha <diego@diegorocha.com.br>, 2016
 # Ely Araujo <christie.araujo@uol.com.br>, 2015
@@ -28,6 +29,7 @@
 # Leonam Silva <leohenryster@gmail.com>, 2016
 # Lucas da Silva Trindade <lucasktrindade@hotmail.com>, 2016
 # Lucas Infante <maccinza@gmail.com>, 2015
+# Lucas Sanches <sanches.lz@hotmail.com>, 2019
 # Magnun Leno <magnun.leno@gmail.com>, 2015
 # Marco Rougeth <marco@rougeth.com>, 2015-2016
 # Natan Oliveira Cruz Reis <natanoliveiracruz@gmail.com>, 2016
@@ -43,9 +45,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-13 05:44-0600\n"
-"PO-Revision-Date: 2019-12-11 00:55+0000\n"
-"Last-Translator: Amanda Savluchinske <amandasavluchinske@gmail.com>\n"
+"POT-Creation-Date: 2020-01-24 06:49-0600\n"
+"PO-Revision-Date: 2020-01-11 01:12+0000\n"
+"Last-Translator: Cloves Oliveira <clovesolivier23@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -466,6 +468,15 @@ msgid ""
 "concentrating on the rebuild, we can close all the little bugs at once, and "
 "hopefully prevent other little bugs from appearing in the future."
 msgstr ""
+"Outra razão desses bugs serem momentaneamente ignorados, é se um bug for um "
+"sintoma de um problema maior. Enquanto passamos um tempo escrevendo, "
+"testando e aplicando várias pequenas correções, algumas vezes a solução "
+"correta é reconstruir. Se reconstruir ou refatorar um dado componente foi "
+"proposta ou está em andamento, você pode achar que aqueles bugs que afetam "
+"aquele componente não receberam muita atenção. Novamente, isso é uma questão "
+"de priorização de recursos escassos. Por concentrar em reconstrução, podemos "
+"fechar todos os pequenos bugs de uma vez, e esperamos prevenir o "
+"aparecimento de outros pequenos bugs no futuro."
 
 msgid ""
 "Whatever the reason, please keep in mind that while you may hit a particular "
@@ -1084,6 +1095,11 @@ msgid ""
 "spec, :pep:`3333`, which means it can run on a variety of web servers. See :"
 "doc:`Deploying Django </howto/deployment/index>` for more information."
 msgstr ""
+"Django vem com seu próprio :djadmin:`servidor de "
+"desenvolvimento<runserver>`. Para um ambiente de produção, o Django segue as "
+"especificações WSGI, :pep:`3333`, o que significa que é possível executar em "
+"uma variedade de servidores web. Veja a documentação :doc:`Implementando o "
+"Django</howto/deployment/index>` para mais informações."
 
 msgid ""
 "Django runs `SQLite`_ by default, which is included in Python installations. "
@@ -1091,6 +1107,10 @@ msgid ""
 "officially support MariaDB_, MySQL_, `SQLite`_, and Oracle_. See :doc:"
 "`Supported Databases </ref/databases>` for more information."
 msgstr ""
+"Django executa `SQLite` por padrão, pois é incluso na instalação do Python. "
+"Para um ambiente de produção, recomendamos usar o PostgreSQL; mas também "
+"suportamos oficialmente MariaDB, MySQL, `SQLite` e Oracle. Veja :doc:Bancos "
+"de Dados Suportados</ref/databases>` para mais informações."
 
 msgid "What Python version can I use with Django?"
 msgstr "Qual versão do Python eu posso usar com Django?"
@@ -1206,7 +1226,7 @@ msgid ""
 "Make sure your Django :setting:`DEBUG` setting is set to ``True``. Then do "
 "this::"
 msgstr ""
-"Assegure que sua configuração do Django :setting:`DEBUG` está configurada "
+"Assegure-se que sua configuração do Django :setting:`DEBUG` está configurada "
 "para ``True``. Então faça isso::"
 
 msgid ""
@@ -1239,6 +1259,8 @@ msgid ""
 "If you need to clear the query list manually at any point in your functions, "
 "call ``reset_queries()``, like this::"
 msgstr ""
+"Se você precisar limpar uma lista de consulta em qualquer ponto das suas "
+"funções, chame o método ``reset_queries()``, dessa maneira:"
 
 msgid "Can I use Django with a pre-existing database?"
 msgstr "Posso usar o Django em um banco de dados pré-existente?"
@@ -1294,9 +1316,12 @@ msgid ""
 "however, a number of side projects and forks which allow NoSQL functionality "
 "in Django."
 msgstr ""
+"Os bancos de dados NoSQL não são oficialmente suportados pelo Django. Há, "
+"entretanto, um número amplo de projetos e forks que permitem as "
+"funcionalidades do NoSQL no Django."
 
 msgid "You can take a look on `the wiki page`_ which discusses some projects."
-msgstr ""
+msgstr "Você pode olhar na página wiki - que discute alguns projetos."
 
 msgid ""
 "How do I add database-specific options to my CREATE TABLE statements, such "
@@ -1538,8 +1563,14 @@ msgid ""
 "dynamically generated menus. At first glance, it seems logical to add a "
 "common dictionary to the template context."
 msgstr ""
+"Algumas vezes todos os templates precisarão da mesma coisa. Um exemplo comum "
+"são os menus gerados dinamicamente. À primeira vista, parece lógico "
+"adicionar um dicionário comum ao contexto do template"
 
 msgid ""
 "The best way to do this in Django is to use a ``RequestContext``. Details on "
 "how to do this are here: :ref:`subclassing-context-requestcontext`."
 msgstr ""
+"A melhor maneira de fazer isso no Django é usar um ``RequestContext``. "
+"Detalhes de como fazer isso estão aqui: :ref:`subclassing-context-"
+"requestcontext`."

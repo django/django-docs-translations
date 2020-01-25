@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Django package.
 #
 # Translators:
-# Fery Setiawan <gembelweb@gmail.com>, 2015-2019
+# Fery Setiawan <gembelweb@gmail.com>, 2015-2020
 # oon arfiandwi <oon.arfiandwi@gmail.com>, 2019
 # oon arfiandwi <oon.arfiandwi@gmail.com>, 2018
 # rodin <romihardiyanto@gmail.com>, 2016
@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-06 09:49-0600\n"
-"PO-Revision-Date: 2019-12-03 01:51+0000\n"
-"Last-Translator: Ramiro Morales\n"
+"POT-Creation-Date: 2020-01-24 06:49-0600\n"
+"PO-Revision-Date: 2020-01-10 12:44+0000\n"
+"Last-Translator: Fery Setiawan <gembelweb@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/django/django-docs/"
 "language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -1032,6 +1032,8 @@ msgid ""
 "For a development environment -- if you just want to experiment with Django "
 "-- you don't need to have a separate Web server installed or database server."
 msgstr ""
+"Untuk lingkungan pengembangan -- jika anda hanya ingin mencoba Django -- "
+"anda tidak butuh memiliki peladen Jaringan terpisah atau peladen basisdata."
 
 msgid ""
 "Django comes with its own :djadmin:`lightweight development "
@@ -1039,6 +1041,11 @@ msgid ""
 "spec, :pep:`3333`, which means it can run on a variety of web servers. See :"
 "doc:`Deploying Django </howto/deployment/index>` for more information."
 msgstr ""
+"Django datang dengan :djadmin:`lightweight development server<runserver>` "
+"nya sendiri. Untuk lingkungan produksi, Django mengikuti spesifikasi WSGI, :"
+"pep:`3333`, yang berarti dia dapat berjalan pada beragam peladen jaringan. "
+"Lihat :doc:`Deploying Django </howto/deployment/index>` untuk informasi "
+"lebih."
 
 msgid ""
 "Django runs `SQLite`_ by default, which is included in Python installations. "
@@ -1084,7 +1091,7 @@ msgid "3.0"
 msgstr "3.0"
 
 msgid "3.6, 3.7, 3.8"
-msgstr ""
+msgstr "3.6, 3.7, 3.8"
 
 msgid ""
 "For each version of Python, only the latest micro release (A.B.C) is "
@@ -1163,6 +1170,8 @@ msgid ""
 "Make sure your Django :setting:`DEBUG` setting is set to ``True``. Then do "
 "this::"
 msgstr ""
+"Pastikan pengaturan Django anda :setting:`DEBUG` disetel menjadi ``True``. "
+"Kemudian lakukan ini::"
 
 msgid ""
 "``connection.queries`` is only available if :setting:`DEBUG` is ``True``. "

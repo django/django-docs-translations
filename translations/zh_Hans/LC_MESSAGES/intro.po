@@ -21,6 +21,7 @@
 # Kevin Lee <rootkitcn@live.com>, 2017
 # Kevin Sze <leiarix@gmail.com>, 2014
 # Lu Linfeng <xmmilk@gmail.com>, 2019
+# nico zhang <nicozhangw@gmail.com>, 2019
 # Ralph Wen <ralph.wen@gmail.com>, 2013
 # spaceoi <zhangzhaoyu@gmail.com>, 2016
 # Suntravel Chris <chrisfromcn@gmail.com>, 2019
@@ -41,8 +42,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-06 09:49-0600\n"
-"PO-Revision-Date: 2019-12-05 12:44+0000\n"
+"POT-Creation-Date: 2020-01-24 06:49-0600\n"
+"PO-Revision-Date: 2020-01-18 01:15+0000\n"
 "Last-Translator: Ramiro Morales\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
@@ -1049,10 +1050,8 @@ msgstr "享用便捷的 API"
 msgid ""
 "With that, you've got a free, and rich, :doc:`Python API </topics/db/"
 "queries>` to access your data. The API is created on the fly, no code "
-"generation necessary:"
+"generation necessary::"
 msgstr ""
-"接下来，你就可以使用一套便捷而丰富的 :doc:`Python API </topics/db/queries>`  "
-"访问你的数据。这些 API 是即时创建的，而不用显式的生成代码："
 
 msgid ""
 "A dynamic admin interface: it's not just scaffolding -- it's the whole house"
@@ -1346,6 +1345,11 @@ msgid ""
 "existing Python packages or Django apps and compose them into your own web "
 "project. You only need to write the parts that make your project unique."
 msgstr ""
+"可重用性是 Python 的根本。`The Python Package Index (PyPI) <https://pypi."
+"python.org/pypi>`_ 有许大量的包，都可被用在你自己的 Python 项目中。同样可以"
+"在 `Django Packages <https://djangopackages.org>`_ 中查找已发布的可重用应用，"
+"也可将其引入到你的项目中。Django 本身也是一个 Python 包，也就是说你可以将已有"
+"的 Python 包或 Django 应用并入你的项目。你只需要编写属于你的那部分即可。"
 
 msgid ""
 "Let's say you were starting a new project that needed a polls app like the "
@@ -1718,14 +1722,9 @@ msgstr ""
 "本，安装新版本的流程和建议。"
 
 msgid ""
-"If you're having trouble going through this tutorial, please post a message "
-"to |django-users| or drop by `#django on irc.freenode.net <irc://irc."
-"freenode.net/django>`_ to chat with other Django users who might be able to "
-"help."
+"If you're having trouble going through this tutorial, please head over to "
+"the :doc:`Getting Help</faq/help>` section of the FAQ."
 msgstr ""
-"如果你在阅读或实践本教程中遇到困难, 请发消息给 |django-users| 或加入 "
-"`#django on irc.freenode.net <irc://irc.freenode.net/django>`_ 来和其他的 "
-"Django 用户交流，他们也许能帮到你。"
 
 msgid "Creating a project"
 msgstr "创建项目"
@@ -3235,6 +3234,11 @@ msgstr "将下面的代码输入到刚刚创建的模板文件中："
 
 msgid "polls/templates/polls/index.html"
 msgstr "polls/templates/polls/index.html"
+
+msgid ""
+"To make the tutorial shorter, all template examples use incomplete HTML. In "
+"your own projects you should use `complete HTML documents`__."
+msgstr ""
 
 msgid ""
 "Now let's update our ``index`` view in ``polls/views.py`` to use the "
