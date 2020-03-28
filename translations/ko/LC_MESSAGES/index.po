@@ -8,6 +8,7 @@
 # hoseung2 <ghyutjik123@gmail.com>, 2017
 # hj.park <imcreator3@gmail.com>, 2017
 # Hyungsuk Yoon <youhanmir@gmail.com>, 2016
+# Jubeen Lee <ljb7977@gmail.com>, 2020
 # JunoJunho <wnsgh611@gmail.com>, 2015
 # Kyoung Up, Jung <perhapsspy@gmail.com>, 2016
 # Kyoung Up, Jung <perhapsspy@gmail.com>, 2016
@@ -20,9 +21,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-06 09:49-0600\n"
-"PO-Revision-Date: 2019-12-04 01:03+0000\n"
-"Last-Translator: Ramiro Morales\n"
+"POT-Creation-Date: 2020-03-27 01:53-0500\n"
+"PO-Revision-Date: 2020-03-28 07:45+0000\n"
+"Last-Translator: Jubeen Lee <ljb7977@gmail.com>\n"
 "Language-Team: Korean (http://www.transifex.com/django/django-docs/language/"
 "ko/)\n"
 "MIME-Version: 1.0\n"
@@ -36,81 +37,6 @@ msgstr "Django 문서"
 
 msgid "Everything you need to know about Django."
 msgstr "장고에 대해 알아야할 모든것"
-
-msgid "Getting help"
-msgstr "도움말"
-
-msgid "Having trouble? We'd like to help!"
-msgstr "문제가 있나요? 도와드리고 싶어요!"
-
-msgid ""
-"Try the :doc:`FAQ <faq/index>` -- it's got answers to many common questions."
-msgstr ""
-":doc:`FAQ <faq/index>`\\ 를 참고하세요 -- 가장 흔한 질문에 대한 답변들입니다."
-
-msgid ""
-"Looking for specific information? Try the :ref:`genindex`, :ref:`modindex` "
-"or the :doc:`detailed table of contents <contents>`."
-msgstr ""
-"특정 정보를 찾으시나요? :ref:`genindex`, :ref:`modindex` 또는 :doc:`상세한 목"
-"차 <contents>` 를 이용하세요."
-
-msgid ""
-"Search for information in the archives of the |django-users| mailing list, "
-"or `post a question`_."
-msgstr ""
-"|django-users| 메일링 리스트 기록 저장소에서 정보를 검색하거나 새로운 질문을 "
-"작성하세요 `post a question`_."
-
-msgid "Ask a question in the `#django IRC channel`_."
-msgstr "`#django IRC 채널`_\\에 질문하세요."
-
-msgid "Report bugs with Django in our `ticket tracker`_."
-msgstr "`ticket tracker`_ 를 통해 장고로 버그를 레포트 하세요"
-
-msgid "How the documentation is organized"
-msgstr "이 문서의 구조"
-
-msgid ""
-"Django has a lot of documentation. A high-level overview of how it's "
-"organized will help you know where to look for certain things:"
-msgstr ""
-"Django는 문서가 아주 많습니다. 높은 수준에서의 개요를 알면 원하는 정보를 어"
-"떤 문서에서 찾을지 알 수 있습니다."
-
-msgid ""
-":doc:`Tutorials </intro/index>` take you by the hand through a series of "
-"steps to create a Web application. Start here if you're new to Django or Web "
-"application development. Also look at the \":ref:`index-first-steps`\" below."
-msgstr ""
-":doc:`튜토리얼 </intro/index>`\\ 은 단계별로 친절하게 웹 애플리케이션을 제작"
-"을 도와줍니다. 처음 Django를 접하거나 웹 개발에 입문 단계라면 여기서 시작하세"
-"요. 또한 하단의 \":ref:`index-first-steps`\"을 읽어보세요."
-
-msgid ""
-":doc:`Topic guides </topics/index>` discuss key topics and concepts at a "
-"fairly high level and provide useful background information and explanation."
-msgstr ""
-":doc:`주제 안내 </topics/index>`  주요 주제와 개념을 높은 수준에서 논의하고 "
-"유용한 배경 지식과 설명을 제공합니다."
-
-msgid ""
-":doc:`Reference guides </ref/index>` contain technical reference for APIs "
-"and other aspects of Django's machinery. They describe how it works and how "
-"to use it but assume that you have a basic understanding of key concepts."
-msgstr ""
-":doc:`레퍼런스 가이드 </ref/index>` API와 Django의 여러 기능들에 대한 기술적 "
-"레퍼런스를 담고 있습니다. 이 가이드는 독자가 기본적인 주요  개념에 대해 이해"
-"하고 있다고 가정하고, 어떻게 동작하고 사용하는지 설명합니다."
-
-msgid ""
-":doc:`How-to guides </howto/index>` are recipes. They guide you through the "
-"steps involved in addressing key problems and use-cases. They are more "
-"advanced than tutorials and assume some knowledge of how Django works."
-msgstr ""
-":doc:`How-to 가이드 </howto/index>`\\ 는 레시피입니다. 주요 문제와 사용 사례"
-"들의 해결 방법들을 단계별로 안내해 줍니다.  여기서는 Django가 어떻가 동작하는"
-"지 알고 있다고 가정하고 튜토리얼보다 심화된 내용을 다룹니다."
 
 msgid "First steps"
 msgstr "첫걸음"
@@ -145,6 +71,75 @@ msgid ""
 msgstr ""
 "**심화 튜토리얼:** :doc:`재사용 가능한 앱을 작성하는 방법 <intro/reusable-"
 "apps>` | :doc:`Django의 첫 패치를 작성하기 <intro/contributing>`"
+
+msgid "Getting help"
+msgstr "도움말"
+
+msgid "Having trouble? We'd like to help!"
+msgstr "문제가 있나요? 도와드리고 싶어요!"
+
+msgid ""
+"Try the :doc:`FAQ <faq/index>` -- it's got answers to many common questions."
+msgstr ""
+":doc:`FAQ <faq/index>`\\ 를 참고하세요 -- 가장 흔한 질문에 대한 답변들입니다."
+
+msgid ""
+"Looking for specific information? Try the :ref:`genindex`, :ref:`modindex` "
+"or the :doc:`detailed table of contents <contents>`."
+msgstr ""
+"특정 정보를 찾으시나요? :ref:`genindex`, :ref:`modindex` 또는 :doc:`상세한 목"
+"차 <contents>` 를 이용하세요."
+
+msgid ""
+"Not found anything? See :doc:`faq/help` for information on getting support "
+"and asking questions to the community."
+msgstr ""
+"해결법을 못 찾으셨나요? :doc:`faq/help` 에서 도움을 받는 방법과 커뮤니티에 질"
+"문하는 법을 확인하세요."
+
+msgid "Report bugs with Django in our `ticket tracker`_."
+msgstr "`ticket tracker`_ 를 통해 장고로 버그를 레포트 하세요"
+
+msgid "How the documentation is organized"
+msgstr "이 문서의 구조"
+
+msgid ""
+"Django has a lot of documentation. A high-level overview of how it's "
+"organized will help you know where to look for certain things:"
+msgstr ""
+"Django는 문서가 아주 많습니다. 높은 수준에서의 개요를 알면 원하는 정보를 어"
+"떤 문서에서 찾을지 알 수 있습니다."
+
+msgid ""
+":doc:`Tutorials </intro/index>` take you by the hand through a series of "
+"steps to create a Web application. Start here if you're new to Django or Web "
+"application development. Also look at the \":ref:`index-first-steps`\"."
+msgstr ""
+
+msgid ""
+":doc:`Topic guides </topics/index>` discuss key topics and concepts at a "
+"fairly high level and provide useful background information and explanation."
+msgstr ""
+":doc:`주제 안내 </topics/index>`  주요 주제와 개념을 높은 수준에서 논의하고 "
+"유용한 배경 지식과 설명을 제공합니다."
+
+msgid ""
+":doc:`Reference guides </ref/index>` contain technical reference for APIs "
+"and other aspects of Django's machinery. They describe how it works and how "
+"to use it but assume that you have a basic understanding of key concepts."
+msgstr ""
+":doc:`레퍼런스 가이드 </ref/index>` API와 Django의 여러 기능들에 대한 기술적 "
+"레퍼런스를 담고 있습니다. 이 가이드는 독자가 기본적인 주요  개념에 대해 이해"
+"하고 있다고 가정하고, 어떻게 동작하고 사용하는지 설명합니다."
+
+msgid ""
+":doc:`How-to guides </howto/index>` are recipes. They guide you through the "
+"steps involved in addressing key problems and use-cases. They are more "
+"advanced than tutorials and assume some knowledge of how Django works."
+msgstr ""
+":doc:`How-to 가이드 </howto/index>`\\ 는 레시피입니다. 주요 문제와 사용 사례"
+"들의 해결 방법들을 단계별로 안내해 줍니다.  여기서는 Django가 어떻가 동작하는"
+"지 알고 있다고 가정하고 튜토리얼보다 심화된 내용을 다룹니다."
 
 msgid "The model layer"
 msgstr "모델 계층"

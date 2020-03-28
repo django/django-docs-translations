@@ -4,6 +4,7 @@
 #
 # Translators:
 # andrewsmedina <andrewsmedina@gmail.com>, 2013,2016
+# Carlos C. Leite <caduado@gmail.com>, 2020
 # Carlos C. Leite <caduado@gmail.com>, 2016-2017
 # Carlos C. Leite <caduado@gmail.com>, 2015-2016
 # Carlos Schneider <carlosaschjr@gmail.com>, 2016
@@ -13,7 +14,7 @@
 # Gustavo de Carvalho Sales <gt.salles@gmail.com>, 2018
 # João Gehlen <joaogehlen91@gmail.com>, 2016
 # Lucas Infante <maccinza@gmail.com>, 2014-2015
-# Marcelo Moro Brondani <mbrondani@inf.ufsm.br>, 2018
+# Marcelo Moro Brondani <mbrondani@inf.ufsm.br>, 2018,2020
 # Marco Rougeth <marco@rougeth.com>, 2015
 # Rafael Lott <rafael.lott2@gmail.com>, 2016
 # Renne Rocha, 2013
@@ -24,9 +25,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-24 06:49-0600\n"
-"PO-Revision-Date: 2020-01-03 13:02+0000\n"
-"Last-Translator: Ramiro Morales\n"
+"POT-Creation-Date: 2020-03-27 01:53-0500\n"
+"PO-Revision-Date: 2020-03-28 11:11+0000\n"
+"Last-Translator: Carlos C. Leite <caduado@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -97,14 +98,11 @@ msgstr ""
 "`modindex` ou the :doc:`tabela detalhada de conteúdos <contents>`."
 
 msgid ""
-"Search for information in the archives of the |django-users| mailing list, "
-"or `post a question`_."
+"Not found anything? See :doc:`faq/help` for information on getting support "
+"and asking questions to the community."
 msgstr ""
-"Busque informações nos arquivos da lista de e-mails |usuários-django| ou "
-"`publique uma pergunta`_."
-
-msgid "Ask a question in the `#django IRC channel`_."
-msgstr "Faça uma pergunta no `canal de IRC #django`_."
+"Não encontrou nada ? Veja o :doc:`faq/help` para informações sobre como "
+"obter suporte e pergunte a comunidade."
 
 msgid "Report bugs with Django in our `ticket tracker`_."
 msgstr "Relate bugs do Django no nosso `ticket tracker`_."
@@ -124,6 +122,10 @@ msgid ""
 "steps to create a Web application. Start here if you're new to Django or Web "
 "application development. Also look at the \":ref:`index-first-steps`\"."
 msgstr ""
+":doc:`Tutoriais</intro/index>` lhe acompanha, através de uma série de passos "
+"para criar uma aplicação Web. Comece aqui se você é novo no Django ou no "
+"desenvolvimento de aplicações Web. Veja também o \":ref:`index-first-steps`"
+"\" abaixo."
 
 msgid ""
 ":doc:`Topic guides </topics/index>` discuss key topics and concepts at a "
@@ -209,6 +211,14 @@ msgid ""
 "models/conditional-expressions>` | :doc:`Database Functions <ref/models/"
 "database-functions>` | :doc:`Asynchronous Support <topics/async>`"
 msgstr ""
+"**Avançado:** :doc:`Managers <topics/db/managers>` | :doc:`Raw SQL <topics/"
+"db/sql>` | :doc:`Transações de dados <topics/db/transactions>` | :doc:"
+"`Agregação de dados  <topics/db/aggregation>` | :doc:`Campos personalizados "
+"de modelo <howto/custom-model-fields>` | :doc:`Multiple\n"
+"os bancos de dados <topics/db/multi-db>` | :doc:`Pesquisa customizada <howto/"
+"custom-lookups>` | :doc:`Expressões de consulta <ref/models/expressions>` | :"
+"doc:`Expressões  condicionais <ref/models/conditional-expressions>` | :doc:"
+"`Funções de base de dados <ref/models/database-functions>`"
 
 msgid ""
 "**Other:** :doc:`Supported databases <ref/databases>` | :doc:`Legacy "
@@ -399,6 +409,10 @@ msgid ""
 "deployment>` | :doc:`Tracking code errors by email <howto/error-reporting>` "
 "| :doc:`Deployment checklist <howto/deployment/checklist>`"
 msgstr ""
+"**Implantação:** :doc:`Visão Geral <howto/deployment/index>` | :doc:"
+"`Servidores WSGI <howto/deployment/wsgi/index>` | :doc:`Implantando arquivos "
+"estáticos <howto/static-files/deployment>` | :doc:`Reportando códigos de "
+"erros por e-mail <howto/error-reporting>`"
 
 msgid "The admin"
 msgstr "O Admin"

@@ -16,9 +16,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-13 05:44-0600\n"
-"PO-Revision-Date: 2019-12-13 00:34+0000\n"
-"Last-Translator: Ramiro Morales\n"
+"POT-Creation-Date: 2020-03-27 01:53-0500\n"
+"PO-Revision-Date: 2020-03-25 11:38+0000\n"
+"Last-Translator: Transifex Bot <>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/"
 "fr/)\n"
 "MIME-Version: 1.0\n"
@@ -7651,10 +7651,29 @@ msgstr ""
 msgid "Django 1.11.27 release notes"
 msgstr ""
 
-msgid "*Expected January 2, 2020*"
+msgid "*December 18, 2019*"
 msgstr ""
 
-msgid "Django 1.11.27 fixes a data loss bug in 1.11.26."
+msgid "Django 1.11.27 fixes a security issue and a data loss bug in 1.11.26."
+msgstr ""
+
+msgid "CVE-2019-19844: Potential account hijack via password reset form"
+msgstr ""
+
+msgid ""
+"By submitting a suitably crafted email address making use of Unicode "
+"characters, that compared equal to an existing user email when lower-cased "
+"for comparison, an attacker could be sent a password reset token for the "
+"matched account."
+msgstr ""
+
+msgid ""
+"In order to avoid this vulnerability, password reset requests now compare "
+"the submitted email using the stricter, recommended algorithm for case-"
+"insensitive comparison of two identifiers from `Unicode Technical Report 36, "
+"section 2.11.2(B)(2)`__. Upon a match, the email containing the reset token "
+"will be sent to the email address on record rather than the submitted "
+"address."
 msgstr ""
 
 msgid ""
@@ -7662,6 +7681,42 @@ msgid ""
 "SplitArrayField`. When using with ``ArrayField(BooleanField())``, all values "
 "after the first ``True`` value were marked as checked instead of preserving "
 "passed values (:ticket:`31073`)."
+msgstr ""
+
+msgid "Django 1.11.28 release notes"
+msgstr ""
+
+msgid "*February 3, 2020*"
+msgstr ""
+
+msgid "Django 1.11.28 fixes a security issue in 1.11.27."
+msgstr ""
+
+msgid "CVE-2020-7471: Potential SQL injection via ``StringAgg(delimiter)``"
+msgstr ""
+
+msgid ""
+":class:`~django.contrib.postgres.aggregates.StringAgg` aggregation function "
+"was subject to SQL injection, using a suitably crafted ``delimiter``."
+msgstr ""
+
+msgid "Django 1.11.29 release notes"
+msgstr ""
+
+msgid "*March 4, 2020*"
+msgstr ""
+
+msgid "Django 1.11.29 fixes a security issue in 1.11.28."
+msgstr ""
+
+msgid ""
+"CVE-2020-9402: Potential SQL injection via ``tolerance`` parameter in GIS "
+"functions and aggregates on Oracle"
+msgstr ""
+
+msgid ""
+"GIS functions and aggregates on Oracle were subject to SQL injection, using "
+"a suitably crafted ``tolerance``."
 msgstr ""
 
 msgid "Django 1.11.3 release notes"
@@ -29950,6 +30005,39 @@ msgid ""
 "with ``condition`` contains ``|`` (``OR``) operator (:ticket:`30412`)."
 msgstr ""
 
+msgid "Django 2.2.10 release notes"
+msgstr ""
+
+msgid "Django 2.2.10 fixes a security issue in 2.2.9."
+msgstr ""
+
+msgid "Django 2.2.11 release notes"
+msgstr ""
+
+msgid "Django 2.2.11 fixes a security issue and a data loss bug in 2.2.10."
+msgstr ""
+
+msgid ""
+"Fixed a data loss possibility in the :meth:`~django.db.models.query.QuerySet."
+"select_for_update`. When using related fields or parent link fields with :"
+"ref:`multi-table-inheritance` in the ``of`` argument, the corresponding "
+"models were not locked (:ticket:`31246`)."
+msgstr ""
+
+msgid "Django 2.2.12 release notes"
+msgstr ""
+
+msgid "*Expected April 1, 2020*"
+msgstr ""
+
+msgid "Django 2.2.12 fixes a bug in 2.2.11."
+msgstr ""
+
+msgid ""
+"Added the ability to handle ``.po`` files containing different plural "
+"equations for the same language (:ticket:`30439`)."
+msgstr ""
+
 msgid "Django 2.2.2 release notes"
 msgstr "Notes de publication de Django 2.2.2"
 
@@ -30125,7 +30213,7 @@ msgstr ""
 msgid "Django 2.2.9 release notes"
 msgstr ""
 
-msgid "Django 2.2.9 fixes a data loss bug in 2.2.8."
+msgid "Django 2.2.9 fixes a security issue and a data loss bug in 2.2.8."
 msgstr ""
 
 msgid "Django 3.0 release notes"
@@ -30211,6 +30299,14 @@ msgstr ""
 "WSGI. Django prévoit de prendre en charge les deux à l'avenir. Les "
 "fonctionnalités asychrones ne seront toutefois disponibles que pour les "
 "applications fonctionnant avec ASGI."
+
+msgid ""
+"At this stage async support only applies to the outer ASGI application. "
+"Internally everything remains synchronous. Asynchronous middleware, views, "
+"etc. are not yet supported. You can, however, use ASGI middleware around "
+"Django's application, allowing you to combine Django with other ASGI "
+"frameworks."
+msgstr ""
 
 msgid ""
 "There is no need to switch your applications over unless you want to start "
@@ -30725,16 +30821,11 @@ msgstr ""
 "qu'ils continuent à fonctionner."
 
 msgid ""
-":setting:`SECURE_CONTENT_TYPE_NOSNIFF` setting now defaults to ``True``. "
-"With the enabled :setting:`SECURE_CONTENT_TYPE_NOSNIFF`, the :class:`~django."
-"middleware.security.SecurityMiddleware` sets the :ref:`x-content-type-"
-"options` header on all responses that do not already have it."
+":setting:`SECURE_CONTENT_TYPE_NOSNIFF` now defaults to ``True``. With this "
+"enabled, :class:`~django.middleware.security.SecurityMiddleware` sets the :"
+"ref:`x-content-type-options` header on all responses that do not already "
+"have it."
 msgstr ""
-"Le réglage :setting:`SECURE_CONTENT_TYPE_NOSNIFF` vaut dorénavant ``True`` "
-"par défaut. Avec le réglage :setting:`SECURE_CONTENT_TYPE_NOSNIFF` activé, "
-"l'intergiciel :class:`~django.middleware.security.SecurityMiddleware` "
-"définit l'en-tête :ref:`x-content-type-options` sur toutes les réponses qui "
-"ne l'ont pas encore."
 
 msgid ""
 ":class:`~django.middleware.security.SecurityMiddleware` can now send the :"
@@ -30802,6 +30893,30 @@ msgstr ""
 
 msgid "Backwards incompatible changes in 3.0"
 msgstr "Changements incompatibles avec les anciennes versions dans Django 3.0"
+
+msgid "``Model.save()`` when providing a default for the primary key"
+msgstr ""
+
+msgid ""
+":meth:`.Model.save` no longer attempts to find a row when saving a new "
+"``Model`` instance and a default value for the primary key is provided, and "
+"always performs a single ``INSERT`` query. In older Django versions, ``Model."
+"save()`` performed either an ``INSERT`` or an ``UPDATE`` based on whether or "
+"not the row exists."
+msgstr ""
+
+msgid ""
+"This makes calling ``Model.save()`` while providing a default primary key "
+"value equivalent to passing :ref:`force_insert=True <ref-models-force-"
+"insert>` to model's ``save()``. Attempts to use a new ``Model`` instance to "
+"update an existing row will result in an ``IntegrityError``."
+msgstr ""
+
+msgid ""
+"In order to update an existing model for a specific primary key value, use "
+"the :meth:`~django.db.models.query.QuerySet.update_or_create` method or "
+"``QuerySet.filter(pk=…).update(…)`` instead. For example::"
+msgstr ""
 
 msgid ""
 "The second argument of ``DatabaseIntrospection.get_geometry_type()`` is now "
@@ -31316,7 +31431,7 @@ msgstr ""
 msgid "Django 3.0.1 release notes"
 msgstr "Notes de publication de Django 3.0.1"
 
-msgid "Django 3.0.1 fixes several bugs in 3.0."
+msgid "Django 3.0.1 fixes a security issue and several bugs in 3.0."
 msgstr ""
 
 msgid ""
@@ -31337,6 +31452,134 @@ msgid ""
 "expressions.Window` expressions to be used in conditions outside of queryset "
 "filters, e.g. in :class:`~django.db.models.expressions.When` conditions (:"
 "ticket:`31060`)."
+msgstr ""
+
+msgid "Django 3.0.2 release notes"
+msgstr ""
+
+msgid "*January 2, 2020*"
+msgstr ""
+
+msgid "Django 3.0.2 fixes several bugs in 3.0.1."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 that didn't include columns referenced by a "
+"``Subquery()`` in the ``GROUP BY`` clause (:ticket:`31094`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 where ``QuerySet.exists()`` crashed if a "
+"queryset contained an aggregation over a ``Subquery()`` (:ticket:`31109`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 that caused a migration crash on PostgreSQL "
+"10+ when adding a foreign key and changing data in the same migration (:"
+"ticket:`31106`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 where loading fixtures crashed for models "
+"defining a :attr:`~django.db.models.Field.default` for the primary key (:"
+"ticket:`31071`)."
+msgstr ""
+
+msgid "Django 3.0.3 release notes"
+msgstr ""
+
+msgid "Django 3.0.3 fixes a security issue and several bugs in 3.0.2."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 that caused a crash when subtracting "
+"``DateField``, ``DateTimeField``, or ``TimeField`` from a ``Subquery()`` "
+"annotation (:ticket:`31133`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 where ``QuerySet.values()`` and "
+"``values_list()`` crashed if a queryset contained an aggregation and "
+"``Exists()`` annotation (:ticket:`31136`)."
+msgstr ""
+
+msgid ""
+"Relaxed the system check added in Django 3.0 to reallow use of a sublanguage "
+"in the :setting:`LANGUAGE_CODE` setting, when a base language is available "
+"in Django but the sublanguage is not (:ticket:`31141`)."
+msgstr ""
+
+msgid ""
+"Added support for using enumeration types ``TextChoices``, "
+"``IntegerChoices``, and ``Choices`` in templates (:ticket:`31154`)."
+msgstr ""
+
+msgid ""
+"Fixed a system check to ensure the ``max_length`` attribute fits the longest "
+"choice, when a named group contains only non-string values (:ticket:`31155`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 2.2 that caused a crash of :class:`~django."
+"contrib.postgres.aggregates.ArrayAgg` and :class:`~django.contrib.postgres."
+"aggregates.StringAgg` with ``filter`` argument when used in a ``Subquery`` (:"
+"ticket:`31097`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 2.2.7 that caused :meth:`~django.db.models."
+"Model.get_FOO_display` to work incorrectly when overriding inherited choices "
+"(:ticket:`31124`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 that caused a crash of ``QuerySet."
+"prefetch_related()`` for ``GenericForeignKey`` with a custom ``ContentType`` "
+"foreign key (:ticket:`31190`)."
+msgstr ""
+
+msgid "Django 3.0.4 release notes"
+msgstr ""
+
+msgid "Django 3.0.4 fixes a security issue and several bugs in 3.0.3."
+msgstr ""
+
+msgid ""
+"Fixed a data loss possibility when using caching from async code (:ticket:"
+"`31253`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 that caused a file response using a "
+"temporary file to be closed incorrectly (:ticket:`31240`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 that caused misplacing parameters in logged "
+"SQL queries on Oracle (:ticket:`31271`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0.3 that caused misplacing parameters of SQL "
+"queries when subtracting ``DateField`` or ``DateTimeField`` expressions on "
+"MySQL (:ticket:`31312`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 that didn't include subqueries spanning "
+"multivalued relations in the ``GROUP BY`` clause (:ticket:`31150`)."
+msgstr ""
+
+msgid "Django 3.0.5 release notes"
+msgstr ""
+
+msgid "Django 3.0.5 fixes several bugs in 3.0.4."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 where ``QuerySet.values()`` and "
+"``values_list()`` crashed if a queryset contained an aggregation and "
+"``Subquery()`` annotation that collides with a field name (:ticket:`31377`)."
 msgstr ""
 
 msgid "Release notes"
@@ -32914,4 +33157,59 @@ msgid "Django 2.2 :commit:`(patch) <36f580a17f0b3cb087deadf3b65eea024f479c21>`"
 msgstr ""
 
 msgid "Django 2.1 :commit:`(patch) <103ebe2b5ff1b2614b85a52c239f471904d26244>`"
+msgstr ""
+
+msgid "December 18, 2019 - :cve:`2019-19844`"
+msgstr ""
+
+msgid ""
+"Potential account hijack via password reset form. `Full description <https://"
+"www.djangoproject.com/weblog/2019/dec/18/security-releases/>`__"
+msgstr ""
+
+msgid "Django 3.0 :commit:`(patch) <302a4ff1e8b1c798aab97673909c7a3dfda42c26>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <4d334bea06cac63dc1272abcec545b85136cca0e>`"
+msgstr ""
+
+msgid ""
+"Django 1.11 :commit:`(patch) <f4cff43bf921fcea6a29b726eb66767f67753fa2>`"
+msgstr ""
+
+msgid "February 3, 2020 - :cve:`2020-7471`"
+msgstr ""
+
+msgid ""
+"Potential SQL injection via ``StringAgg(delimiter)``. `Full description "
+"<https://www.djangoproject.com/weblog/2020/feb/03/security-releases/>`__"
+msgstr ""
+
+msgid "Django 3.0 :commit:`(patch) <505826b469b16ab36693360da9e11fd13213421b>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <c67a368c16e4680b324b4f385398d638db4d8147>`"
+msgstr ""
+
+msgid ""
+"Django 1.11 :commit:`(patch) <001b0634cd309e372edb6d7d95d083d02b8e37bd>`"
+msgstr ""
+
+msgid "March 4, 2020 - :cve:`2020-9402`"
+msgstr ""
+
+msgid ""
+"Potential SQL injection via ``tolerance`` parameter in GIS functions and "
+"aggregates on Oracle. `Full description <https://www.djangoproject.com/"
+"weblog/2020/mar/04/security-releases/>`__"
+msgstr ""
+
+msgid "Django 3.0 :commit:`(patch) <26a5cf834526e291db00385dd33d319b8271fc4c>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <fe886a3b58a93cfbe8864b485f93cb6d426cd1f2>`"
+msgstr ""
+
+msgid ""
+"Django 1.11 :commit:`(patch) <02d97f3c9a88adc890047996e5606180bd1c6166>`"
 msgstr ""

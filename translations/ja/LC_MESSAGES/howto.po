@@ -9,7 +9,7 @@
 # Kashun YOSHIDA, 2018
 # Kinyonez Jackson <masashima21st@gmail.com>, 2017
 # IWAI, Masaharu <iwaim.sub@gmail.com>, 2016
-# sutefu7, 2019
+# sutefu7, 2019-2020
 # matsuand, 2018
 # Tatsuya Matoba <mtb.toya0403@gmail.com>, 2018
 # mnamihdk, 2017
@@ -17,10 +17,10 @@
 # Ryosuke Sakurai, 2019
 # Ryouta Mizuhara <ham_katsu@outlook.jp>, 2016
 # Shinichi Katsumata <shinichi.katsumata@gmail.com>, 2019
-# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016-2017,2019
+# Shuuji TAKAHASHI <shuuji3@gmail.com>, 2016-2017,2019
 # Suguru Yamamoto <sgryjp@gmail.com>, 2017
 # Suzuki Takahiro <bur8787@gmail.com>, 2016
-# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016,2018-2019
+# Shuuji TAKAHASHI <shuuji3@gmail.com>, 2016,2018-2019
 # Takashi Sugawara <aimaimokomoko@gmail.com>, 2017
 # Takayuki Hirayama <hirayama@cancerscan.jp>, 2020
 # Takeshi Kondo <take.she12@gmail.com>, 2019
@@ -37,9 +37,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-20 09:50-0600\n"
-"PO-Revision-Date: 2020-02-03 15:43+0000\n"
-"Last-Translator: Takayuki Hirayama <hirayama@cancerscan.jp>\n"
+"POT-Creation-Date: 2020-03-27 01:53-0500\n"
+"PO-Revision-Date: 2020-03-25 17:17+0000\n"
+"Last-Translator: Shinya Okano <tokibito@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -218,6 +218,13 @@ msgid ""
 "and after successful authentication, the application is supposed to maintain "
 "the authenticated session itself."
 msgstr ""
+"``RemoteUserMiddleware`` 認証ミドルウェアは、 HTTP リクエストヘッダーの "
+"``REMOTE_USER`` が認証されたリクエストに存在していることを仮定しています。こ"
+"れが ``htpasswd``、または同様のメカニズムを備えた Basic 認証なら、妥当で実用"
+"的かもしれませんが、ネゴシエート(GSSAPI/ケルベロス)や他の資源を利用した認証メ"
+"ソッドでは、フロントエンド HTTP サーバの認証では、通常、ひとつもしくはいくつ"
+"かのログイン URL のみ設置します。そして、認証が成功した後、アプリケーションは"
+"認証されたセッションそれ自体を維持しようとします。"
 
 msgid ""
 ":class:`~django.contrib.auth.middleware.PersistentRemoteUserMiddleware` "
@@ -292,7 +299,7 @@ msgstr ""
 "FileSystemStorage で Django が使うものです)。"
 
 msgid ""
-"By default, the following methods raise `NotImplementedError` and will "
+"By default, the following methods raise ``NotImplementedError`` and will "
 "typically have to be overridden:"
 msgstr ""
 "デフォルトにおいて、以下に示すメソッドは `NotImplementedError` を発生させま"
@@ -324,11 +331,11 @@ msgstr ""
 
 msgid ""
 "By way of example, if listing the contents of certain storage backends turns "
-"out to be expensive, you might decide not to implement `Storage.listdir`."
+"out to be expensive, you might decide not to implement ``Storage.listdir()``."
 msgstr ""
 "特定のストレージバックエンドにおける内容一覧の取得には相当な手間がかかる、と"
-"いうことがわかったとします。その場合は `Storage.listdir` の実装をしなくても構"
-"いません。"
+"いうことがわかったとします。その場合は `Storage.listdir()` の実装をしなくても"
+"構いません。"
 
 msgid ""
 "Another example would be a backend that only handles writing to files. In "
@@ -3760,13 +3767,6 @@ msgstr ""
 "キャッシュサーバーは認証に弱点を持っています。あなたのアプリケーションからの"
 "コネクションだけを受け入れるようにしてください。"
 
-msgid ""
-"If you're using Memcached, consider using :ref:`cached sessions <cached-"
-"sessions-backend>` to improve performance."
-msgstr ""
-"もしあなたがMemcachedを使うなら、より性能を向上させるために :ref:`cached "
-"sessions` を使うことも検討してください。"
-
 msgid ":setting:`DATABASES`"
 msgstr ":setting:`DATABASES`"
 
@@ -3905,6 +3905,19 @@ msgid ""
 msgstr ""
 ":setting:`DEBUG = False <DEBUG>` をセットすることで、開発向けの複数の機能が無"
 "効化されます。加えて、以下の設定をチューンすることもできます。"
+
+msgid "Sessions"
+msgstr "セッション"
+
+msgid ""
+"Consider using :ref:`cached sessions <cached-sessions-backend>` to improve "
+"performance."
+msgstr ""
+
+msgid ""
+"If using database-backed sessions, regularly :ref:`clear old sessions "
+"<clearing-the-session-store>` to avoid storing unnecessary data."
+msgstr ""
 
 msgid ":setting:`CONN_MAX_AGE`"
 msgstr ":setting:`CONN_MAX_AGE`"
@@ -6645,6 +6658,29 @@ msgstr ""
 "に）何もしないか、新しいアプリケーションからデータの一部またはすべてを削除す"
 "ることができます。 それに応じて :mod:`~django.db.migrations.operations."
 "RunPython` 操作の2番目の引数を調整します。"
+
+msgid "Changing a ``ManyToManyField`` to use a ``through`` model"
+msgstr ""
+
+msgid ""
+"If you change a :class:`~django.db.models.ManyToManyField` to use a "
+"``through`` model, the default migration will delete the existing table and "
+"create a new one, losing the existing relations. To avoid this, you can use :"
+"class:`.SeparateDatabaseAndState` to rename the existing table to the new "
+"table name whilst telling the migration autodetector that the new model has "
+"been created. You can check the existing table name through :djadmin:"
+"`sqlmigrate` or :djadmin:`dbshell`. You can check the new table name with "
+"the through model's ``_meta.db_table`` property. Your new ``through`` model "
+"should use the same names for the ``ForeignKey``\\s as Django did. Also if "
+"it needs any extra fields, they should be added in operations after :class:`."
+"SeparateDatabaseAndState`."
+msgstr ""
+
+msgid ""
+"For example, if we had a ``Book`` model with a ``ManyToManyField`` linking "
+"to ``Author``, we could add a through model ``AuthorBook`` with a new field "
+"``is_primary``, like so::"
+msgstr ""
 
 msgid "Changing an unmanaged model to managed"
 msgstr "未管理状態のモデルを管理状態に変更する"

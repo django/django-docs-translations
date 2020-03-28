@@ -27,9 +27,9 @@
 # Pawllo2 <pawllothesecond@gmail.com>, 2017-2018
 # Riktio Taniguchi <rikiriki1238@gmail.com>, 2015
 # Satoshi Tsuyama <tsuyama@nike.eonet.ne.jp>, 2014
-# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2017,2019
+# Shuuji TAKAHASHI <shuuji3@gmail.com>, 2017,2019
 # Suguru Yamamoto <sgryjp@gmail.com>, 2017
-# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016,2018
+# Shuuji TAKAHASHI <shuuji3@gmail.com>, 2016,2018
 # Takayuki Hirai, 2015
 # Takuya Arita <takuya.arita@gmail.com>, 2015
 # Takuya N <takninnovationresearch@gmail.com>, 2019-2020
@@ -41,13 +41,14 @@
 # Pawllo2 <pawllothesecond@gmail.com>, 2017
 # 吉村 潤平 <jumpyoshim@gmail.com>, 2018
 # 田渕輝生 <twinoze@gmail.com>, 2018
+# hatashoki <syouki100241@gmail.com>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-20 09:50-0600\n"
-"PO-Revision-Date: 2020-02-11 13:19+0000\n"
-"Last-Translator: Takuya N <takninnovationresearch@gmail.com>\n"
+"POT-Creation-Date: 2020-03-27 01:53-0500\n"
+"PO-Revision-Date: 2020-03-24 08:30+0000\n"
+"Last-Translator: Transifex Bot <>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -961,6 +962,9 @@ msgid ""
 "possibilities; this guide will guide you to a minimal installation that'll "
 "work while you walk through the introduction."
 msgstr ""
+"Django を使う前に、インストールする必要があります。 Django にはできることすべ"
+"てを網羅した :doc:`コンプリートインストールガイド </topics/install>` がありま"
+"す。ここでは、Django の導入部分での最低限のインストールについて説明します。"
 
 msgid "Install Python"
 msgstr "Python をインストールする"
@@ -998,12 +1002,16 @@ msgid ""
 "database, consult the :ref:`database installation information <database-"
 "installation>`."
 msgstr ""
+"このステップは、PostgreSQL、MariaDB、MySQL、Oracle のような \"大きな\" データ"
+"ベースエンジンを使いたい場合のみ必要です。これらのデータベースをインストール"
+"するには、 :ref:`データベースのインストール方法<database-installation>`を参照"
+"してください。"
 
 msgid "Install Django"
 msgstr "Django をインストールする"
 
 msgid "You've got three options to install Django:"
-msgstr ""
+msgstr "Django をインストールするには、3つの選択肢があります:"
 
 msgid ""
 ":ref:`Install an official release <installing-official-release>`. This is "
@@ -2182,14 +2190,10 @@ msgstr ""
 
 msgid ""
 "Your apps can live anywhere on your :ref:`Python path <tut-searchpath>`. In "
-"this tutorial, we'll create our poll app right next to your :file:`manage."
-"py` file so that it can be imported as its own top-level module, rather than "
-"a submodule of ``mysite``."
+"this tutorial, we'll create our poll app in the same directory as your :file:"
+"`manage.py` file so that it can be imported as its own top-level module, "
+"rather than a submodule of ``mysite``."
 msgstr ""
-"アプリケーションは :ref:`Python path <tut-searchpath>` のどこにでも置けます。"
-"このチュートリアルでは投票アプリケーションを :file:`manage.py` のすぐ隣に作り"
-"ます。なので、 ``mysite`` のサブモジュールとしてでなく、トップレベルのモ"
-"ジュールとしてインポートできます。"
 
 msgid ""
 "To create your app, make sure you're in the same directory as :file:`manage."

@@ -4,8 +4,9 @@
 #
 # Translators:
 # amcorreia <mutley.sandro@gmail.com>, 2016
-# Carlos E C Leite - Cadu <caduado@gmail.com>, 2016-2017
-# Carlos E C Leite - Cadu <caduado@gmail.com>, 2016,2019
+# Carlos C. Leite <caduado@gmail.com>, 2020
+# Carlos C. Leite <caduado@gmail.com>, 2016-2017
+# Carlos C. Leite <caduado@gmail.com>, 2016,2019
 # Claudio Rogerio Carvalho Filho <excriptbrasil@gmail.com>, 2017
 # Edson Heneman <ehenemann@gmail.com>, 2016
 # Filipe Cifali Stangler <cifali.filipe@gmail.com>, 2019
@@ -23,9 +24,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-06 09:49-0600\n"
-"PO-Revision-Date: 2019-12-04 00:49+0000\n"
-"Last-Translator: Ramiro Morales\n"
+"POT-Creation-Date: 2020-03-27 01:53-0500\n"
+"PO-Revision-Date: 2020-03-28 12:15+0000\n"
+"Last-Translator: Carlos C. Leite <caduado@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -207,15 +208,9 @@ msgid ""
 "Make sure the feature actually requires changes in Django's core. If your "
 "idea can be developed as an independent application or module — for "
 "instance, you want to support another database engine — we'll probably "
-"suggest that you to develop it independently. Then, if your project gathers "
+"suggest that you develop it independently. Then, if your project gathers "
 "sufficient community support, we may consider it for inclusion in Django."
 msgstr ""
-"Certifique-se de que a sua funcionalidade requer mudanças no núcleo do "
-"Django. Se a sua ideia pode ser desenvolvida como um módulo ou uma aplicação "
-"independente — como por exemplo, você deseja suporte a um novo banco de "
-"dados — nós provavelmente vamos  sugerir que você desenvolva isso de forma "
-"independente. Só então, se o seu projeto tiver suporte suficiente da "
-"comunidade, nós podemos considerá-lo para inclusão dentro do Django. "
 
 msgid ""
 "First request the feature on the |django-developers| list, not in the ticket "
@@ -590,7 +585,7 @@ msgstr ""
 "comentário nele com a mensagem completa do commit."
 
 msgid "For the curious, we're using a `Trac plugin`_ for this."
-msgstr "Para os curiosos, nós estamos utilizando um plugin do Track para isso."
+msgstr "Para os curiosos, nós estamos utilizando um `Trac plugin`_ para isso."
 
 msgid ""
 "Note that the Trac integration doesn't know anything about pull requests. So "
@@ -960,7 +955,7 @@ msgstr ""
 "de código:"
 
 msgid "Create a diff against the current Git master branch."
-msgstr "Criar um diff na atual branch master do Git."
+msgstr "Crie um diff na atual branch master do Git."
 
 msgid ""
 "Open a ticket in Django's ticket system, set its ``Component`` field to "
@@ -986,6 +981,13 @@ msgstr ""
 ">`_. As traduções irão aparecer em ``https://docs.djangoproject.com/"
 "<language_code>/`` quando ao menos os arquivos dentro de ``docs/intro/*`` "
 "forem totalmente traduzidos para a sua linguagem."
+
+msgid ""
+"Once translations are published, updated versions from Transifex will be "
+"irregularly ported to the `django/django-docs-translations <https://github."
+"com/django/django-docs-translations>`_ repository and to the documentation "
+"website. Only translations for the latest stable Django release are updated."
+msgstr ""
 
 msgid "Advice for new contributors"
 msgstr "Conselho aos novos voluntários"
@@ -1255,7 +1257,7 @@ msgstr ""
 "olhos, veja a questão 1, acima."
 
 msgid "Triaging tickets"
-msgstr "Triangulando tickets"
+msgstr "Triagem de tickets"
 
 msgid ""
 "Django uses Trac_ for managing the work on the code base. Trac is a "
@@ -1351,7 +1353,7 @@ msgid "Since a picture is worth a thousand words, let's start there:"
 msgstr "Já que uma imagem vale mais que mil palavras, vamos começar aqui:"
 
 msgid "We've got two roles in this diagram:"
-msgstr "Nós temos dois perfis neste diagrama:"
+msgstr "Nós temos dois papéis neste diagrama:"
 
 msgid ""
 "Committers: people with commit access who are responsible for making the "
@@ -1505,7 +1507,7 @@ msgstr ""
 "de um comentário no ticket explicando o que ele precisa para melhorar."
 
 msgid "Ready For Checkin"
-msgstr "Ready For Checkin"
+msgstr "Pronto para Checkin"
 
 msgid ""
 "The ticket was reviewed by any member of the community other than the person "
@@ -1522,7 +1524,7 @@ msgstr ""
 "fazer?\""
 
 msgid "Someday/Maybe"
-msgstr "Someday/Maybe"
+msgstr "Algum Dia/Talvez"
 
 msgid ""
 "This stage isn't shown on the diagram. It's used sparingly to keep track of "
@@ -1603,7 +1605,7 @@ msgstr ""
 "código não atende nossos padrões."
 
 msgid "Easy pickings"
-msgstr "Easy Pickings"
+msgstr "Escolhas Fáceis"
 
 msgid "Tickets that would require small, easy, patches."
 msgstr "Tickets que podem precisar de patches pequenos e simples."
@@ -1697,11 +1699,11 @@ msgid ""
 "You may add your username or email address to this field to be notified when "
 "new contributions are made to the ticket."
 msgstr ""
-"Você pode adicionar o seu username ou endereço de email neste campo para ser "
-"notificado quando novas contribuições forem feitas ao ticket."
+"Você pode adicionar o seu nome de usuário ou endereço de email neste campo "
+"para ser notificado quando novas contribuições forem feitas ao ticket."
 
 msgid "Keywords"
-msgstr "Keywords"
+msgstr "Palavras-chave"
 
 msgid ""
 "With this field you may label a ticket with multiple keywords. This can be "
@@ -2022,7 +2024,7 @@ msgid ""
 "Next, we mark the current point in history as being \"bad\" since the test "
 "fails::"
 msgstr ""
-"Em seguida, marque o ponto atual no histórico como sendo \"ruim\" já que o "
+"Em seguida, marcamos o ponto atual no histórico como sendo \"ruim\" já que o "
 "teste falhou::"
 
 msgid ""
@@ -2177,6 +2179,13 @@ msgid ""
 "so you can check the exception or warning message. Use :meth:`~unittest."
 "TestCase.assertRaisesRegex` and :meth:`~unittest.TestCase.assertWarnsRegex` "
 "only if you need regular expression matching."
+msgstr ""
+
+msgid ""
+"Use :meth:`assertIs(…, True/False)<unittest.TestCase.assertIs>` for testing "
+"boolean values, rather than :meth:`~unittest.TestCase.assertTrue` and :meth:"
+"`~unittest.TestCase.assertFalse`, so you can check the actual boolean value, "
+"not the truthiness of the expression."
 msgstr ""
 
 msgid ""
@@ -2629,7 +2638,7 @@ msgstr ""
 "linha de comando."
 
 msgid "Testing from a web browser"
-msgstr "Testando de um browser"
+msgstr "Testando a partir de um navegador web"
 
 msgid ""
 "To run the tests from a web browser, open up ``js_tests/tests.html`` in your "
@@ -2656,7 +2665,7 @@ msgstr ""
 "Acesse o endereço http://localhost:8000/js_tests/tests.html no seu browser."
 
 msgid "Testing from the command line"
-msgstr "Testando da linha de comando"
+msgstr "Testando a partir da linha de comando"
 
 msgid ""
 "To run the tests from the command line, you need to have `Node.js`_ "
@@ -2980,9 +2989,8 @@ msgstr ""
 msgid "Deprecating a feature"
 msgstr "Depreciando uma funcionalidade"
 
-msgid "There are a couple reasons that code in Django might be deprecated:"
+msgid "There are a couple of reasons that code in Django might be deprecated:"
 msgstr ""
-"Existem algumas razões para que um código no Django posso estar depreciado:"
 
 msgid ""
 "If a feature has been improved or modified in a backwards-incompatible way, "
@@ -3687,7 +3695,7 @@ msgstr ""
 "os resultados (código de testes ou código externo incluídos no Django)."
 
 msgid "Contrib apps"
-msgstr "Contrib apps"
+msgstr "Aplicações Contrib"
 
 msgid ""
 "Tests for contrib apps can be found in the ``tests/`` directory, typically "
@@ -4363,7 +4371,7 @@ msgstr ""
 "`orientações para committers <handling-pull-requests>`."
 
 msgid "Summary"
-msgstr "Resumo"
+msgstr "Sumário"
 
 msgid "Work on GitHub if you can."
 msgstr "Trabalhe no GitHub se você puder."
@@ -4377,7 +4385,7 @@ msgid "When you have something ready, make a pull request."
 msgstr "Quando você tiver algo pronto, faça um pull request."
 
 msgid "Make your pull requests as good as you can."
-msgstr "Faça os melhores pull requests que você puder fazer."
+msgstr "Faça os pull requests tão bons quanto puder."
 
 msgid ""
 "When doing fixes to your work, use ``git rebase -i`` to squash the commits."
@@ -4721,7 +4729,7 @@ msgid "**view** -- it's not capitalized."
 msgstr "**view** -- não tem maiúsculas."
 
 msgid "Guidelines for reStructuredText files"
-msgstr "Orientações gerais para arquivos do tipo reStructuredText"
+msgstr "Orientações gerais para arquivos  reStructuredText"
 
 msgid ""
 "These guidelines regulate the format of our reST (reStructuredText) "
@@ -4753,7 +4761,7 @@ msgstr ""
 "Então::"
 
 msgid "Isn't nearly as helpful as::"
-msgstr "Não é nem de perto melhor do que::"
+msgstr "Não ajuda tanto quanto::"
 
 msgid ""
 "This is because Sphinx will generate proper links for the latter, which "
@@ -4831,13 +4839,13 @@ msgstr ""
 "filter(bar__exact=qualquercoisa)``)::"
 
 msgid "To link, use ``:lookup:`exact```."
-msgstr "Para redirecionar, utilize ``:lookup:`exact```."
+msgstr "Para link, utilize ``:lookup:`exact```."
 
 msgid "``django-admin`` commands::"
 msgstr "Comandos do ``django-admin``::"
 
 msgid "To link, use ``:djadmin:`migrate```."
-msgstr "Para redirecionar, utilize ``:djadmin:`migrate```."
+msgstr "Para linkar, utilize ``:djadmin:`migrate```."
 
 msgid "``django-admin`` command-line options::"
 msgstr "Opções de linha de comando do ``django-admin``::"
@@ -5039,7 +5047,7 @@ msgid "That's basically how everything fits together."
 msgstr "Isso é basicamente como tudo se encaixa."
 
 msgid "Spelling check"
-msgstr "Verificador ortográfico"
+msgstr "Verificação ortográfica"
 
 msgid ""
 "Before you commit your docs, it's a good idea to run the spelling checker. "
@@ -5222,7 +5230,7 @@ msgid ""
 msgstr ""
 
 msgid "3.0"
-msgstr ""
+msgstr "3.0"
 
 msgid ""
 "See the :ref:`Django 2.0 release notes<deprecated-features-2.0>` for more "
@@ -6353,11 +6361,9 @@ msgstr ""
 "suportado."
 
 msgid ""
-"The `cache_choices` option to :class:`~django.forms.ModelChoiceField` and :"
+"The ``cache_choices`` option to :class:`~django.forms.ModelChoiceField` and :"
 "class:`~django.forms.ModelMultipleChoiceField` will be removed."
 msgstr ""
-"A opção `cache_choices` para :class:`~django.forms.ModelChoiceField` e :"
-"class:`~django.forms.ModelMultipleChoiceField` será removido."
 
 msgid ""
 "The default value of the :attr:`RedirectView.permanent <django.views.generic."
@@ -6919,7 +6925,7 @@ msgid ""
 "The ``django.core.servers.basehttp.AdminMediaHandler`` will be removed.  In "
 "its place use ``django.contrib.staticfiles.handlers.StaticFilesHandler``."
 msgstr ""
-"O``django.core.servers.basehttp.AdminMediaHandler`` será removido. Em seu "
+"O ``django.core.servers.basehttp.AdminMediaHandler`` será removido. Em seu "
 "lugar use ``django.contrib.staticfiles.handlers.StaticFilesHandler``."
 
 msgid ""
@@ -8039,7 +8045,7 @@ msgid ""
 msgstr ""
 
 msgid "Upload the checksum file(s)::"
-msgstr "Atualize o arquivo (ou arquivos) de checksum::"
+msgstr "Atualize o(s) arquivo(s)  de checksum::"
 
 msgid ""
 "Test that the release packages install correctly using ``easy_install`` and "
@@ -8508,7 +8514,7 @@ msgid "Core team"
 msgstr "Core team"
 
 msgid "Role"
-msgstr "Perfil"
+msgstr "Papel"
 
 msgid ""
 "The core team is the group of trusted volunteers who manage the Django "
@@ -9048,6 +9054,9 @@ msgstr ""
 msgid "Z.0: Drop deprecation shims added in Y.0 and Y.1."
 msgstr "Z.0: Remove os calços de compatibilidade adicionados em Y.0 e Y.1."
 
+msgid "See also the :ref:`deprecating-a-feature` guide."
+msgstr ""
+
 msgid "Supported versions"
 msgstr "Versões suportadas"
 
@@ -9082,7 +9091,7 @@ msgid "Security issues."
 msgstr "Problemas de segurança."
 
 msgid "Data loss bugs."
-msgstr "Bugs envolvendo perda de dados"
+msgstr "Bugs de perda de dados"
 
 msgid "Crashing bugs."
 msgstr "Bugs que ocasionem em um crash da aplicação"
@@ -9090,8 +9099,10 @@ msgstr "Bugs que ocasionem em um crash da aplicação"
 msgid "Major functionality bugs in new features of the latest stable release."
 msgstr ""
 
-msgid "Regressions from older versions of Django."
-msgstr "Regressões de versões antigas do Django."
+msgid ""
+"Regressions from older versions of Django introduced in the current release "
+"series."
+msgstr ""
 
 msgid ""
 "The rule of thumb is that fixes will be backported to the last feature "
@@ -9442,7 +9453,7 @@ msgstr ""
 "necessário. Os níveis de severidade são:"
 
 msgid "**High**:"
-msgstr "**Grave**:"
+msgstr "**Alta**:"
 
 msgid "Remote code execution"
 msgstr "Execução de código remoto"
@@ -9454,16 +9465,16 @@ msgid "**Moderate**:"
 msgstr "**Moderada**:"
 
 msgid "Cross site scripting (XSS)"
-msgstr "Proteção contra Cross Site Scripting (XSS)"
+msgstr "Cross Site Scripting (XSS)"
 
 msgid "Cross site request forgery (CSRF)"
-msgstr "Proteção contra Cross site request forgery (CSRF)"
+msgstr "Cross site request forgery (CSRF)"
 
 msgid "Denial-of-service attacks"
 msgstr "Ataques negação de serviço"
 
 msgid "Broken authentication"
-msgstr "Quebra na autenticação de usuário"
+msgstr "Quebra na autenticação"
 
 msgid "**Low**:"
 msgstr "**Baixa**:"
@@ -9689,7 +9700,7 @@ msgstr ""
 msgid ""
 "The email address you would like to have added to our notification list."
 msgstr ""
-"O endereço de email que você gostaria de fosse adicionado em nossa lista de "
+"O endereço de email que você gostaria de ter adicionado em nossa lista de "
 "notificação."
 
 msgid ""

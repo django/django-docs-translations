@@ -6,11 +6,14 @@
 # Dogify <595572594@qq.com>, 2018
 # Fnanshan <634635262@qq.com>, 2019
 # Aris Chow <arischow@gmail.com>, 2018
+# 杰 <chinalinzhijie@gmail.com>, 2020
+# ChY Ma <Marsopera@163.com>, 2020
 # Dogify <595572594@qq.com>, 2019
 # flypopo <flypopo.reg@qq.com>, 2018
 # cxgreat2014 <fwy1998@gmail.com>, 2018
 # Hongjie Tian <tianhongjie07@gmail.com>, 2017
 # JINGMING DAI <d664216@gmail.com>, 2018
+# Junkai Shao <skaifun.dev@gmail.com>, 2020
 # Kevin Sze <leiarix@gmail.com>, 2014
 # Kevin Zhang <kevinzh64@gmail.com>, 2018
 # kkkkhu <tracis@wodiga.com>, 2017
@@ -19,6 +22,7 @@
 # qiang wu <wuqiangroy@live.com>, 2018
 # Ray Wang <pivstone@gmail.com>, 2017
 # wades Wei <skyblue_mr@outlook.com>, 2017
+# wolf ice <warwolf7677@163.com>, 2020
 # XeRn <hfutxc.xern@gmail.com>, 2017
 # Xiang Yu <bupt.aswmtjdsj@gmail.com>, 2014
 # yhliyr <lokidri@outlook.com>, 2018
@@ -32,6 +36,7 @@
 # 吴彬 <xiake21x@qq.com>, 2016-2017
 # Yang,Zhou <bnm_965321@sina.com>, 2018
 # 摸象 虾子 <86447840@qq.com>, 2019
+# 旸珂 邵 <1052303323@qq.com>, 2020
 # 春雷 董 <pipiccll@gmail.com>, 2018
 # Dogify <595572594@qq.com>, 2019
 # Ronald White <tkliuxing@me.com>, 2013
@@ -39,9 +44,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-24 06:49-0600\n"
-"PO-Revision-Date: 2020-01-18 00:53+0000\n"
-"Last-Translator: Ramiro Morales\n"
+"POT-Creation-Date: 2020-03-27 01:53-0500\n"
+"PO-Revision-Date: 2020-03-27 10:31+0000\n"
+"Last-Translator: Transifex Bot <>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -65,6 +70,8 @@ msgid ""
 "This registry is called :attr:`~django.apps.apps` and it's available in :mod:"
 "`django.apps`::"
 msgstr ""
+"此注册表称为:attr:应用`~django.apps.apps` ，并且它可用于:mod:`django."
+"apps`::。"
 
 msgid "Projects and applications"
 msgstr "项目和应用"
@@ -78,6 +85,12 @@ msgid ""
 "``wsgi.py``. The project package is often extended to include things like "
 "fixtures, CSS, and templates which aren't tied to a particular application."
 msgstr ""
+"术语 **project（项目）** 指的是一个 Django web 应用，该项目的Python包主要包含"
+"配置模块，但通常也包含其他内容。例如，当你在命令行执行 ``django-admin "
+"startproject mysite`` 命令时，你会得到一个名为 ``mysite``  的项目目录，其中包"
+"含一个同样名为 ``mysite`` 的Python包，Python包内包括 ``settings.py``、 "
+"``urls.py``、 ``asgi.py`` 和 ``wsgi.py``等文件。项目的Python包通常也会扩展从"
+"而包含一些其他内容，比如fixture、CSS，以及与特定应用绑定的模板等。"
 
 msgid ""
 "A **project's root directory** (the one that contains ``manage.py``) is "
@@ -114,6 +127,10 @@ msgid ""
 "for introspection. That's why the application registry maintains metadata in "
 "an :class:`~django.apps.AppConfig` instance for each installed application."
 msgstr ""
+"了解Django应用程序是一组与框架的各个部分进行交互的代码，这一点很重要。没有诸"
+"如“应用程序”对象之类的东西。但是，在某些Django需要与已安装的应用程序进行交互"
+"的地方，主要用于配置和内省。这就是为什么应用程序注册表在每个安装的应用程序的:"
+"class:`~django.apps.AppConfig`实例中维护元数据的原因。"
 
 msgid ""
 "There's no restriction that a project package can't also be considered an "
@@ -137,6 +154,8 @@ msgid ""
 "When :setting:`INSTALLED_APPS` contains the dotted path to an application "
 "module, Django checks for a ``default_app_config`` variable in that module."
 msgstr ""
+"当 :setting:`INSTALLED_APPS` 包含当前路径到一个应用程序模块的路径时，Django "
+"会检查该模块下的 ``default_app_config`` 变量。"
 
 msgid ""
 "If it's defined, it's the dotted path to the :class:`~django.apps.AppConfig` "
@@ -194,6 +213,11 @@ msgid ""
 "best to avoid using ``default_app_config`` and instead specify the app "
 "config class in :setting:`INSTALLED_APPS` as described next."
 msgstr ""
+"当 :setting:`INSTALLED_APPS` 包含 ``'rock_n_roll'`` 时会使用 "
+"``RockNRollConfig``。这允许你充分利用 :class:`~django.apps.AppConfig` 的功能"
+"特性，无需使你的用户去更新他们的 :setting:`INSTALLED_APPS` 配置。除此之外，最"
+"好避免使用 ``default_app_config``，而是使用后续介绍的在 :setting:"
+"`INSTALLED_APPS` 中指定应用配置类。"
 
 msgid ""
 "Of course, you can also tell your users to put ``'rock_n_roll.apps."
@@ -433,6 +457,8 @@ msgid ""
 "packages\" and may be spread across multiple directories at different "
 "locations on ``sys.path`` (see :pep:`420`)."
 msgstr ""
+"没有__init__.py文件的Python包被称为“命名空间包”，并且可能分布在sys.path上不同"
+"位置的多个目录中（见：pep:'420'）"
 
 msgid ""
 "Django applications require a single base filesystem path where Django "
@@ -1111,8 +1137,7 @@ msgstr ""
 
 msgid ""
 "**fields.E310**: No subset of the fields ``<field1>``, ``<field2>``, ... on "
-"model ``<model>`` is unique. Add ``unique=True`` on any of those fields or "
-"add at least a subset of them to a unique_together constraint."
+"model ``<model>`` is unique."
 msgstr ""
 
 msgid ""
@@ -2495,6 +2520,12 @@ msgstr ""
 
 msgid "Constructs the target URL for redirection."
 msgstr "构建用于重定向的目标URL。"
+
+msgid ""
+"The ``args`` and ``kwargs`` arguments are positional and/or keyword "
+"arguments :ref:`captured from the URL pattern <how-django-processes-a-"
+"request>`, respectively."
+msgstr ""
 
 msgid ""
 "The default implementation uses :attr:`url` as a starting string and "
@@ -5060,7 +5091,7 @@ msgid ""
 "that requests to ``/admin/doc/`` don't get handled by the latter entry."
 msgstr ""
 
-msgid "Install the docutils Python module (http://docutils.sf.net/)."
+msgid "Install the docutils Python module (https://docutils.sourceforge.io/)."
 msgstr ""
 
 msgid ""
@@ -7214,8 +7245,8 @@ msgstr ""
 
 msgid ""
 "This controls the number of extra forms the formset will display in addition "
-"to the initial forms. See the :doc:`formsets documentation </topics/forms/"
-"formsets>` for more information."
+"to the initial forms. Defaults to 3. See the :doc:`formsets documentation </"
+"topics/forms/formsets>` for more information."
 msgstr ""
 
 msgid ""
@@ -7582,7 +7613,7 @@ msgid "``change_list_results.html``"
 msgstr ""
 
 msgid "``date_hierarchy.html``"
-msgstr ""
+msgstr "``date_hierarchy.html``"
 
 msgid "``delete_confirmation.html``"
 msgstr ""
@@ -9985,9 +10016,9 @@ msgstr ""
 msgid ""
 "Thus, geometry parameters may be passed in using the ``GEOSGeometry`` "
 "object, WKT (Well Known Text [#fnwkt]_), HEXEWKB (PostGIS specific -- a WKB "
-"geometry in hexadecimal [#fnewkb]_), and GeoJSON [#fngeojson]_. Essentially, "
-"if the input is not a ``GEOSGeometry`` object, the geometry field will "
-"attempt to create a ``GEOSGeometry`` instance from the input."
+"geometry in hexadecimal [#fnewkb]_), and GeoJSON (see :rfc:`7946`). "
+"Essentially, if the input is not a ``GEOSGeometry`` object, the geometry "
+"field will attempt to create a ``GEOSGeometry`` instance from the input."
 msgstr ""
 
 msgid ""
@@ -10475,12 +10506,6 @@ msgid ""
 msgstr ""
 
 msgid ""
-"*See* Howard Butler, Martin Daly, Allan Doyle, Tim Schaub, & Christopher "
-"Schmidt, `The GeoJSON Format Specification <http://geojson.org/geojson-spec."
-"html>`_, Revision 1.0 (June 16, 2008)."
-msgstr ""
-
-msgid ""
 "*See* `PostGIS documentation <https://postgis.net/docs/ST_DistanceSphere."
 "html>`_ on ``ST_DistanceSphere``."
 msgstr ""
@@ -10802,9 +10827,9 @@ msgstr ""
 
 msgid ""
 "Accepts a single geographic field or expression and returns a `GeoJSON "
-"<http://geojson.org/>`_ representation of the geometry. Note that the result "
-"is not a complete GeoJSON structure but only the ``geometry`` key content of "
-"a GeoJSON structure. See also :doc:`/ref/contrib/gis/serializers`."
+"<https://geojson.org/>`_ representation of the geometry. Note that the "
+"result is not a complete GeoJSON structure but only the ``geometry`` key "
+"content of a GeoJSON structure. See also :doc:`/ref/contrib/gis/serializers`."
 msgstr ""
 
 msgid "Keyword Argument"
@@ -15070,7 +15095,7 @@ msgstr ""
 msgid ""
 "The datum shifting files are needed for converting data to and from certain "
 "projections. For example, the PROJ.4 string for the `Google projection "
-"(900913 or 3857) <http://spatialreference.org/ref/sr-org/6864/prj/>`_ "
+"(900913 or 3857) <https://spatialreference.org/ref/sr-org/6864/prj/>`_ "
 "requires the ``null`` grid file only included in the extra datum shifting "
 "files. It is easier to install the shifting files now, then to have debug a "
 "problem caused by their absence later."
@@ -18521,7 +18546,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"When nesting ``ArrayField``, whether you use the `size` parameter or not, "
+"When nesting ``ArrayField``, whether you use the ``size`` parameter or not, "
 "PostgreSQL requires that the arrays are rectangular::"
 msgstr ""
 
@@ -22662,7 +22687,7 @@ msgstr ""
 msgid ""
 "The default value is ``0``, preserving the historical behavior of closing "
 "the database connection at the end of each request. To enable persistent "
-"connections, set :setting:`CONN_MAX_AGE` to a positive number of seconds. "
+"connections, set :setting:`CONN_MAX_AGE` to a positive integer of seconds. "
 "For unlimited persistent connections, set it to ``None``."
 msgstr ""
 
@@ -26102,7 +26127,7 @@ msgstr ""
 msgid ""
 "If you are trying to call code that is synchronous-only from an asynchronous "
 "thread, then create a synchronous thread and call it in that. You can "
-"accomplish this is with ``asgiref.sync.sync_to_async``."
+"accomplish this is with :func:`asgiref.sync.sync_to_async`."
 msgstr ""
 
 msgid "URL Resolver exceptions"
@@ -27402,7 +27427,7 @@ msgid ""
 msgstr ""
 
 msgid "or::"
-msgstr ""
+msgstr "或者："
 
 msgid "Notes on field ordering"
 msgstr ""
@@ -27924,7 +27949,7 @@ msgid ""
 msgstr ""
 
 msgid "``localize``"
-msgstr ""
+msgstr "``localize``"
 
 msgid ""
 "The ``localize`` argument enables the localization of form data input, as "
@@ -31281,8 +31306,7 @@ msgstr ""
 
 msgid ""
 "Allows running of arbitrary SQL on the database - useful for more advanced "
-"features of database backends that Django doesn't support directly, like "
-"partial indexes."
+"features of database backends that Django doesn't support directly."
 msgstr ""
 
 msgid ""
@@ -31303,8 +31327,14 @@ msgid ""
 msgstr ""
 
 msgid ""
-"The ``reverse_sql`` queries are executed when the migration is unapplied, so "
-"you can reverse the changes done in the forwards queries::"
+"The ``reverse_sql`` queries are executed when the migration is unapplied. "
+"They should undo what is done by the ``sql`` queries. For example, to undo "
+"the above insertion with a deletion::"
+msgstr ""
+
+msgid ""
+"If ``reverse_sql`` is ``None`` (the default), the ``RunSQL`` operation is "
+"irreversible."
 msgstr ""
 
 msgid ""
@@ -31351,7 +31381,8 @@ msgstr ""
 msgid ""
 "The ``reverse_code`` argument is called when unapplying migrations. This "
 "callable should undo what is done in the ``code`` callable so that the "
-"migration is reversible."
+"migration is reversible. If ``reverse_code`` is ``None`` (the default), the "
+"``RunPython`` operation is irreversible."
 msgstr ""
 
 msgid ""
@@ -31372,18 +31403,6 @@ msgid ""
 "This is generally the operation you would use to create :ref:`data "
 "migrations <data-migrations>`, run custom data updates and alterations, and "
 "anything else you need access to an ORM and/or Python code for."
-msgstr ""
-
-msgid ""
-"If you're upgrading from South, this is basically the South pattern as an "
-"operation - one or two methods for forwards and backwards, with an ORM and "
-"schema operations available. Most of the time, you should be able to "
-"translate the ``orm.Model`` or ``orm[\"appname\", \"Model\"]`` references "
-"from South directly into ``apps.get_model(\"appname\", \"Model\")`` "
-"references here and leave most of the rest of the code unchanged for data "
-"migrations. However, ``apps`` will only have references to models in the "
-"current app unless migrations in other apps are added to the migration's "
-"dependencies."
 msgstr ""
 
 msgid ""
@@ -31441,15 +31460,30 @@ msgid "``SeparateDatabaseAndState``"
 msgstr ""
 
 msgid ""
-"A highly specialized operation that let you mix and match the database "
+"A highly specialized operation that lets you mix and match the database "
 "(schema-changing) and state (autodetector-powering) aspects of operations."
 msgstr ""
 
 msgid ""
-"It accepts two lists of operations, and when asked to apply state will use "
-"the state list, and when asked to apply changes to the database will use the "
-"database list. Do not use this operation unless you're very sure you know "
-"what you're doing."
+"It accepts two lists of operations. When asked to apply state, it will use "
+"the ``state_operations`` list (this is a generalized version of :class:"
+"`RunSQL`'s ``state_operations`` argument). When asked to apply changes to "
+"the database, it will use the ``database_operations`` list."
+msgstr ""
+
+msgid ""
+"If the actual state of the database and Django's view of the state get out "
+"of sync, this can break the migration framework, even leading to data loss. "
+"It's worth exercising caution and checking your database and state "
+"operations carefully. You can use :djadmin:`sqlmigrate` and :djadmin:"
+"`dbshell` to check your database operations. You can use :djadmin:"
+"`makemigrations`, especially with :option:`--dry-run<makemigrations --dry-"
+"run>`, to check your state operations."
+msgstr ""
+
+msgid ""
+"For an example using ``SeparateDatabaseAndState``, see :ref:`changing-a-"
+"manytomanyfield-to-use-a-through-model`."
 msgstr ""
 
 msgid "Writing your own"
@@ -33024,7 +33058,10 @@ msgid ""
 "of expressions, ``TypeError`` will be raised. Defaults to ``None``."
 msgstr ""
 
-msgid "Generates the SQL for the database function."
+msgid ""
+"Generates the SQL fragment for the database function. Returns a tuple "
+"``(sql, params)``, where ``sql`` is the SQL string, and ``params`` is the "
+"list or tuple of query parameters."
 msgstr ""
 
 msgid ""
@@ -33651,6 +33688,9 @@ msgstr ""
 msgid ""
 "A hook allowing the expression to coerce ``value`` into a more appropriate "
 "type."
+msgstr ""
+
+msgid "``expression`` is the same as ``self``."
 msgstr ""
 
 msgid ""
@@ -36984,10 +37024,11 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Responsible for producing the query string and parameters for the "
-"expression. The ``compiler`` is an ``SQLCompiler`` object, which has a "
-"``compile()`` method that can be used to compile other expressions. The "
-"``connection`` is the connection used to execute the query."
+"Generates the SQL fragment for the expression. Returns a tuple ``(sql, "
+"params)``, where ``sql`` is the SQL string, and ``params`` is the list or "
+"tuple of query parameters. The ``compiler`` is an ``SQLCompiler`` object, "
+"which has a ``compile()`` method that can be used to compile other "
+"expressions. The ``connection`` is the connection used to execute the query."
 msgstr ""
 
 msgid ""
@@ -38179,8 +38220,8 @@ msgstr ""
 msgid ""
 "...wouldn't work because the query would be ordered by ``blog__name`` thus "
 "mismatching the ``DISTINCT ON`` expression. You'd have to explicitly order "
-"by the relation `_id` field (``blog_id`` in this case) or the referenced one "
-"(``blog__pk``) to make sure both expressions match."
+"by the relation ``_id`` field (``blog_id`` in this case) or the referenced "
+"one (``blog__pk``) to make sure both expressions match."
 msgstr ""
 
 msgid "``values()``"
@@ -40903,8 +40944,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-"``add()`` also accepts the field the relation points to as an argument. The "
-"above example can be rewritten as ``b.entry_set.add(234)``."
+"For many-to-many relationships ``add()`` accepts either model instances or "
+"field values, normally primary keys, as the ``*objs`` argument."
 msgstr ""
 
 msgid ""
@@ -40952,9 +40993,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Similarly to :meth:`add()`, ``remove()`` also accepts the field the relation "
-"points to as an argument. The above example can be rewritten as ``b."
-"entry_set.remove(234)``."
+"For many-to-many relationships ``remove()`` accepts either model instances "
+"or field values, normally primary keys, as the ``*objs`` argument."
 msgstr ""
 
 msgid ""
@@ -41015,9 +41055,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Similarly to :meth:`add()`, ``set()`` also accepts the field the relation "
-"points to as an argument. The above example can be rewritten as ``e."
-"related_set.set([obj1.pk, obj2.pk, obj3.pk])``."
+"For many-to-many relationships ``set()`` accepts a list of either model "
+"instances or field values, normally primary keys, as the ``objs`` argument."
 msgstr ""
 
 msgid ""
@@ -42021,9 +42060,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"This method is called at the end of the request directly by the WSGI server, "
-"or when the WSGI server closes the file-like object, if `wsgi.file_wrapper`_ "
-"is used for the request."
+"This method is called at the end of the request directly by the WSGI server."
 msgstr ""
 
 msgid "This method makes an :class:`HttpResponse` instance a file-like object."
@@ -42478,7 +42515,7 @@ msgid ""
 "If the database has the ``supports_combined_alters``, Django will try and do "
 "as many of these in a single database call as possible; otherwise, it will "
 "issue a separate ALTER statement for each change, but will not issue ALTERs "
-"where no change is required (as South often did)."
+"where no change is required."
 msgstr ""
 
 msgid "All attributes should be considered read-only unless stated otherwise."
@@ -43110,9 +43147,9 @@ msgid "Default: ``0``"
 msgstr ""
 
 msgid ""
-"The lifetime of a database connection, in seconds. Use ``0`` to close "
-"database connections at the end of each request — Django's historical "
-"behavior — and ``None`` for unlimited persistent connections."
+"The lifetime of a database connection, as an integer of seconds. Use ``0`` "
+"to close database connections at the end of each request — Django's "
+"historical behavior — and ``None`` for unlimited persistent connections."
 msgstr ""
 
 msgid ""
@@ -48403,74 +48440,79 @@ msgid ""
 msgstr ""
 
 msgid "The for loop sets a number of variables available within the loop:"
-msgstr ""
+msgstr "for循环设置了一组可以在循环体内直接使用的变量："
 
 msgid "Variable"
-msgstr ""
+msgstr "变量名"
 
 msgid "``forloop.counter``"
-msgstr ""
+msgstr "``forloop.counter``"
 
 msgid "The current iteration of the loop (1-indexed)"
-msgstr ""
+msgstr "循环计数器，表示当前循环的索引（从``1``开始）。"
 
 msgid "``forloop.counter0``"
-msgstr ""
+msgstr "``forloop.counter0``"
 
 msgid "The current iteration of the loop (0-indexed)"
-msgstr ""
+msgstr "循环计数器，表示当前循环的索引（从``0``开始）。"
 
 msgid "``forloop.revcounter``"
-msgstr ""
+msgstr "``forloop.revcounter``"
 
 msgid "The number of iterations from the end of the loop (1-indexed)"
-msgstr ""
+msgstr "反向循环计数器（以最后一次循环为``1``，反向计数）。"
 
 msgid "``forloop.revcounter0``"
-msgstr ""
+msgstr "``forloop.revcounter0``"
 
 msgid "The number of iterations from the end of the loop (0-indexed)"
-msgstr ""
+msgstr "反向循环计数器（以最后一次循环为``0``，反向计数）。"
 
 msgid "``forloop.first``"
-msgstr ""
+msgstr "``forloop.first``"
 
 msgid "True if this is the first time through the loop"
-msgstr ""
+msgstr "当前循环为首个循环时，该变量为True"
 
 msgid "``forloop.last``"
-msgstr ""
+msgstr "``forloop.last``"
 
 msgid "True if this is the last time through the loop"
-msgstr ""
+msgstr "当前循环为最后一个循环时，该变量为True"
 
 msgid "``forloop.parentloop``"
-msgstr ""
+msgstr "``forloop.parentloop``"
 
 msgid "For nested loops, this is the loop surrounding the current one"
-msgstr ""
+msgstr "在嵌套循环中，指向当前循环的上级循环"
 
 msgid "``for`` ... ``empty``"
-msgstr ""
+msgstr "``for`` ... ``empty``"
 
 msgid ""
 "The ``for`` tag can take an optional ``{% empty %}`` clause whose text is "
 "displayed if the given array is empty or could not be found::"
 msgstr ""
+"当传递到 ``for`` 标签中的数组不存在或为空时，可以使用 ``{% empty %}`` 标签来"
+"指定输出的内容::"
 
 msgid ""
 "The above is equivalent to -- but shorter, cleaner, and possibly faster than "
 "-- the following::"
 msgstr ""
+"上面的代码与下面的代码是等同的，但上面的代码更简短，更清晰，也可能更快。"
 
 msgid "``if``"
-msgstr ""
+msgstr "``if``"
 
 msgid ""
 "The ``{% if %}`` tag evaluates a variable, and if that variable is \"true"
 "\" (i.e. exists, is not empty, and is not a false boolean value) the "
 "contents of the block are output::"
 msgstr ""
+"``{% if %}`` 标签会判断给定的变量，当变量为True时（比如存在、非空、非布尔值"
+"False），就会输出块内的内容::"
 
 msgid ""
 "In the above, if ``athlete_list`` is not empty, the number of athletes will "
@@ -48484,9 +48526,13 @@ msgid ""
 "clauses, as well as an ``{% else %}`` clause that will be displayed if all "
 "previous conditions fail. These clauses are optional."
 msgstr ""
+"正如你所看到的，``if`` 标签可能带有一个或多个``{% elif %}``分支，以及一个"
+"``{% else %}``分支。当``{% else %}``之前的所有分支条件都不满足时，``{% else "
+"%}``分支的内容会被显示出来。\n"
+"所有的分支都是可选的。"
 
 msgid "Boolean operators"
-msgstr ""
+msgstr "布尔操作"
 
 msgid ""
 ":ttag:`if` tags may use ``and``, ``or`` or ``not`` to test a number of "
