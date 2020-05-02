@@ -11,10 +11,11 @@
 # huanqun yang <15810163905@163.com>, 2018
 # Ronald White <tkliuxing@me.com>, 2014
 # qiang wu <wuqiangroy@live.com>, 2018
-# 汪心禾 <wang__xin_he@163.com>, 2018
+# 汪心禾 <wangxinhe06@gmail.com>, 2018
+# woodenrobot <woodenrobot1993@gmail.com>, 2020
 # Xiang Yu <bupt.aswmtjdsj@gmail.com>, 2014
 # Zhengyang Wang <sufforest@gmail.com>, 2018
-# zwithz1998, 2018
+# zz, 2018
 # z l <aikuuer@gmail.com>, 2018
 # 曾毅 <1494136313@qq.com>, 2018
 # Dogify <595572594@qq.com>, 2019
@@ -22,9 +23,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-21 02:19-0500\n"
-"PO-Revision-Date: 2019-05-05 08:30+0000\n"
-"Last-Translator: Dogify <595572594@qq.com>\n"
+"POT-Creation-Date: 2020-04-01 14:05-0500\n"
+"PO-Revision-Date: 2020-04-01 03:22+0000\n"
+"Last-Translator: woodenrobot <woodenrobot1993@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -37,17 +38,33 @@ msgid "API stability"
 msgstr "API 的稳定性"
 
 msgid ""
-"Django promises API stability and forwards-compatibility since version 1.0. "
-"In a nutshell, this means that code you develop against a version of Django "
-"will continue to work with future releases. You may need to make minor "
-"changes when upgrading the version of Django your project uses: see the "
-"\"Backwards incompatible changes\" section of the :doc:`release note </"
-"releases/index>` for the version or versions to which you are upgrading."
+"Django is committed to API stability and forwards-compatibility. In a "
+"nutshell, this means that code you develop against a version of Django will "
+"continue to work with future releases. You may need to make minor changes "
+"when upgrading the version of Django your project uses: see the \"Backwards "
+"incompatible changes\" section of the :doc:`release note </releases/index>` "
+"for the version or versions to which you are upgrading."
 msgstr ""
-"从 1.0 版本开始，Django 保证 API 的稳定性和向前兼容。简而言之，这意味着你现在"
-"写的代码在将来的版本中依旧可以使用。如果你给你的项目升级了 Django 版本，你可"
-"能需要更改项目中的小细节，这些可以在每个版本或者你所升级的版本发行说明中的 "
-"“向后不兼容改动” 小节中查看 :doc:`发布说明</releases/index>`。"
+"Django 致力于 API 的稳定性和向前兼容性。简而言之，这意味着你在一个 Django 版"
+"本开发的代码可以继续在未来的版本中使用。在升级你的项目使用的 Django 版本时，"
+"你可能需要做一些小的更改: 了解你要升级的一个或多个版本请参阅 :doc:`release "
+"note` 中的“向后不兼容更改”部分。"
+
+msgid ""
+"At the same time as making API stability a very high priority, Django is "
+"also committed to continual improvement, along with aiming for \"one way to "
+"do it\" (eventually) in the APIs we provide. This means that when we "
+"discover clearly superior ways to do things, we will deprecate and "
+"eventually remove the old ways. Our aim is to provide a modern, dependable "
+"web framework of the highest quality that encourages best practices in all "
+"projects that use it. By using incremental improvements, we try to avoid "
+"both stagnation and large breaking upgrades."
+msgstr ""
+"在将 API 的稳定性作为一个非常重要的优先级的同时，Django 还致力于持续的改进，"
+"并致力于在我们提供的 API 中实现“一种方法”(最终)。这意味着，当我们发现明显更好"
+"的实现方式时，我们会弃用旧的方式，并最终将其移除。我们的目标是提供一个现代"
+"的、可靠的、高质量的 web 框架，帮助所有使用它的项目的使用最佳实践。通过使用渐"
+"进式的改进，我们试图避免停滞和大规模破坏性升级。"
 
 msgid "What \"stable\" means"
 msgstr "什么是“稳定性”？"
@@ -87,11 +104,11 @@ msgstr ""
 "`official-releases`。"
 
 msgid ""
-"We'll only break backwards compatibility of these APIs if a bug or security "
-"hole makes it completely unavoidable."
+"We'll only break backwards compatibility of these APIs without a deprecation "
+"process if a bug or security hole makes it completely unavoidable."
 msgstr ""
-"我们只有在某些 API 中的一个 bug 或者 安全问题导致问题完全不能避免的时候，我们"
-"才会移除对这些 API 的向后兼容。"
+"如果一个 bug 或安全漏洞完全不可避免，我们才会直接打破这些 API 的向后兼容性而"
+"不走弃用过程。"
 
 msgid "Stable APIs"
 msgstr "稳定的 API"

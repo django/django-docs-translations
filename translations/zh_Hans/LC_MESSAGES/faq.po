@@ -8,11 +8,13 @@
 # Bai HuanCheng <xiqingongzi@gmail.com>, 2018
 # Bai HuanCheng <xiqingongzi@gmail.com>, 2018
 # CabbSir <cabbsir@gmail.com>, 2018
-# 杰 <chinalinzhijie@gmail.com>, 2018,2020
+# FSSlc <fsslc235@gmail.com>, 2020
+# blacklin <chinalinzhijie@gmail.com>, 2018,2020
 # Dogify <595572594@qq.com>, 2018-2019
 # Floyd Li <floyd.li@outlook.com>, 2017
 # Fossen <fossen@fossen.cn>, 2018
 # Frost Ming <mianghong@gmail.com>, 2019
+# FSSlc <fsslc235@gmail.com>, 2020
 # Gao Liang <gaoliangim@gmail.com>, 2018
 # Hao Jin (金浩) <jinhao7773@gmail.com>, 2018
 # David <huangtao0202@gmail.com>, 2017
@@ -42,9 +44,10 @@
 # Zhengyang Wang <sufforest@gmail.com>, 2018
 # Zhibo Zhang <805960083@qq.com>, 2019
 # zhimiao li <untildied@gmail.com>, 2018
-# zwithz1998, 2018
+# zz, 2018
 # 吴彬 <xiake21x@qq.com>, 2016-2017
 # Dogify <595572594@qq.com>, 2018
+# blacklin <chinalinzhijie@gmail.com>, 2020
 # ercJuL <geofvt@gmail.com>, 2017
 # 陈寅 <296120962@qq.com>, 2018
 # Dogify <595572594@qq.com>, 2019
@@ -52,9 +55,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-27 01:53-0500\n"
-"PO-Revision-Date: 2020-03-26 16:11+0000\n"
-"Last-Translator: Transifex Bot <>\n"
+"POT-Creation-Date: 2020-04-01 14:05-0500\n"
+"PO-Revision-Date: 2020-04-05 09:30+0000\n"
+"Last-Translator: FSSlc <fsslc235@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -817,39 +820,45 @@ msgstr "我该如何做 X？Y为什么不工作？我可以去哪里寻求帮助
 msgid ""
 "First, please check if your question is answered on the :doc:`FAQ <faq/"
 "index>`. Also, search for answers using your favorite search engine, and in "
-"`the forum`."
+"`the forum`_."
 msgstr ""
+"首先, 请确认你的问题是否在 :doc:`FAQ <faq/index>` 中被回答了。另外，可以使用"
+"你最爱的搜索引擎，或者在 `论坛` 中寻找答案。"
 
 msgid ""
 "If you can't find an answer, please take a few minutes to formulate your "
 "question well. Explaining the problems you are facing clearly will help "
-"others help you. See the StackOverflow guide on `asking good questions`."
+"others help you. See the StackOverflow guide on `asking good questions`_."
 msgstr ""
+"如果你没有找到答案，请花几分钟时间来将你的问题组织好，清晰地阐述你正面临的问"
+"题能让别人更好地帮助你。可以看看 StackOverflow 指南中 `提问的艺术`。"
 
 msgid "Then, please post it in one of the following channels:"
-msgstr ""
+msgstr "然后，从下面这些渠道中选一个提交你的问题"
 
 msgid ""
 "The Django Forum section `\"Using Django\"`_. This is for web-based "
 "discussions."
-msgstr ""
+msgstr "Django 论坛中的 `\"Using Django\"`_ 板块与基于 web 的讨论有关。"
 
 msgid "The |django-users| mailing list. This is for email-based discussions."
-msgstr ""
+msgstr "|django-users| 邮件列表用于与基于邮件的讨论有关。"
 
 msgid ""
 "The `#django IRC channel`_ on the Freenode IRC network. This is for chat-"
 "based discussions."
-msgstr ""
+msgstr "位于 Freenode IRC 的 `#django IRC 频道`_ 与基于聊天相关的讨论有关。"
 
 msgid ""
 "In all these channels please abide by the `Django Code of Conduct`_. In "
 "summary, being friendly and patient, considerate, respectful, and careful in "
 "your choice of words."
 msgstr ""
+"在这些所有的频道中遵守 `Django行为准则`_。总结起来就是在你的表达中使用那些友"
+"好、耐心、周到、尊敬和细心的词语。"
 
-msgid "Why hasn't my message appeared on `django-users`?"
-msgstr "为什么我的信息没有出现在 `django-users` 上面？"
+msgid "Why hasn't my message appeared on *django-users*?"
+msgstr "为什么我的信息没有出现在 *django-users* 上面呢？"
 
 msgid ""
 "|django-users| has a lot of subscribers. This is good for the community, as "
@@ -874,7 +883,7 @@ msgstr ""
 "感到抱歉。"
 
 msgid "Nobody answered my question! What should I do?"
-msgstr ""
+msgstr "没有人回答我的问题！我应该怎么办呢？"
 
 msgid ""
 "Try making your question more specific, or provide a better example of your "
@@ -887,11 +896,16 @@ msgid ""
 "knows the answer, it may be because nobody can understand the question, or "
 "it may be that everybody that can help is busy."
 msgstr ""
+"与大多数开源软件一样，`Django-users` 频道中的人员大部分都是志愿者。如果没有人"
+"回答你的问题，可能因为是没有人能够理解这个问题，或者因为可以帮助你的人正在忙"
+"别的事情。"
 
 msgid ""
 "You can also try asking on a different channel. But please don't post your "
 "question in all three channels in quick succession."
 msgstr ""
+"你还可以尝试在别的邮件列表中提问，但请不要将你的问题接连发布在全部邮件列表"
+"中。"
 
 msgid ""
 "You might notice we have a second mailing list, called |django-developers|. "
@@ -900,6 +914,9 @@ msgid ""
 "question there is considered impolite, and you will likely be directed to "
 "ask on |django-users|."
 msgstr ""
+"也许你注意到了我们还有第二个邮箱列表 |django-developers|。这个列表用于针对 "
+"Django 自身发展的讨论。请不要向这个邮件列表咨询支持问题，你更应该直接在 |"
+"django-users| 中进行询问。"
 
 msgid "I think I've found a bug! What should I do?"
 msgstr "我认为我找到了个 bug！我应该做什么呢？"
@@ -932,6 +949,10 @@ msgid ""
 "outstanding, we would like to minimize any damage that could be inflicted "
 "through public knowledge of that defect."
 msgstr ""
+"由于人们对安全问题有一种与生俱来的敏感，如果你认为你找到了安全问题，*请*不要"
+"在论坛、IRC 或者上述公共的邮件列表中发布有关信息。Django 有一个 :ref:`安全问"
+"题的处理政策 <reporting-security-issues>`；当重大缺陷发现时，我们会尽可能的降"
+"低人们对缺陷的认知所带来的任何损失。"
 
 msgid "Django FAQ"
 msgstr "Django FAQ"
@@ -1233,8 +1254,8 @@ msgstr "本页包含了开发Django应用过程中一些常见错误和问题的
 msgid "Problems running ``django-admin``"
 msgstr "运行 ``django-admin`` 时遇到的问题"
 
-msgid "\"command not found: `django-admin`\""
-msgstr "“未找到 `django-admin` 命令”"
+msgid "``command not found: django-admin``"
+msgstr "``命令无法找到 : django-admin``"
 
 msgid ""
 ":doc:`django-admin </ref/django-admin>` should be on your system path if you "
