@@ -10,6 +10,7 @@
 # CabbSir <cabbsir@gmail.com>, 2018
 # Cell, 2018
 # FSSlc <fsslc235@gmail.com>, 2020
+# Claude Paroz <claude@2xlibre.net>, 2020
 # David <huangtao0202@gmail.com>, 2018
 # Dogify <595572594@qq.com>, 2018-2019
 # FPlust Lu <fplustlu@gmail.com>, 2018
@@ -42,6 +43,7 @@
 # VinCiLord <lxfyok@gmail.com>, 2018
 # ZheJiao <jiaozhe1987@163.com>, 2019
 # zz, 2018
+# boltyu <lightingyu@gmail.com>, 2020
 # 吴彬 <xiake21x@qq.com>, 2016
 # 奇泽 吴 <wuqize5109@163.com>, 2018
 # 尔茂 (￣︶￣)↗ 涨 <973657283@qq.com>, 2018
@@ -55,9 +57,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 14:05-0500\n"
-"PO-Revision-Date: 2020-04-05 04:48+0000\n"
-"Last-Translator: FSSlc <fsslc235@gmail.com>\n"
+"POT-Creation-Date: 2020-05-20 03:16-0500\n"
+"PO-Revision-Date: 2020-05-21 12:33+0000\n"
+"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -225,6 +227,12 @@ msgid ""
 "and after successful authentication, the application is supposed to maintain "
 "the authenticated session itself."
 msgstr ""
+"``RemoteUserMiddleware`` 这个认证中间件 ，它假设HTTP请求的头部 "
+"``REMOTE_USER`` 在所有认证请求中都存在。这个假设在当通过 `htpasswd`` 或者相似"
+"的认证机制来做Basic HTTP的认证时才是可行的，但是使用Negotiate (GSSAPI/"
+"Kerberos) 或者其它资源密集型的认证方法时就说不过去了，前端HTTP server的认证通"
+"常用在仅仅一个或不太多的登录URLs，而且在认证成功后，应用还要自己去维护这个"
+"session。"
 
 msgid ""
 ":class:`~django.contrib.auth.middleware.PersistentRemoteUserMiddleware` "
@@ -397,7 +405,7 @@ msgid ""
 "parameters. By default, an underscore plus a random 7 character alphanumeric "
 "string is appended to the filename before the extension."
 msgstr ""
-"将会在 `file_root`` 和 ``file_ext`` 这两个参数的基础上返回另一个文件名。默认"
+"将会在 ``file_root`` 和 ``file_ext`` 这两个参数的基础上返回另一个文件名。默认"
 "情况下，在执行前一个下划线再加上 7 个由字母和数字组成的字符串将将会追加到原来"
 "的文件名后。"
 
@@ -604,6 +612,8 @@ msgid ""
 "further lookups afterwards. So ``Experiment.objects."
 "filter(change__abs__lt=27)`` will generate the following SQL:"
 msgstr ""
+"使用 ``Transform`` 代替 ``Lookup``  意味着我们可以在后面联锁更多的 lookups，"
+"所以 ``Experiment.objects.filter(change__abs__lt=27)`` 将会生成下面的 SQL："
 
 msgid ""
 "Note that in case there is no other lookup specified, Django interprets "
@@ -617,6 +627,8 @@ msgid ""
 "clauses. For example ``Experiment.objects.order_by('change__abs')`` "
 "generates:"
 msgstr ""
+"这也允许把结果用在 ``ORDER BY`` 和 ``DISTINCT ON`` 子句中。例如 ``Experiment."
+"objects.order_by('change__abs')`` 生成:"
 
 msgid ""
 "And on databases that support distinct on fields (such as PostgreSQL), "
@@ -5343,8 +5355,9 @@ msgid ""
 "``managed = False`` in the model's ``Meta`` class tells Django not to manage "
 "each table's creation, modification, and deletion::"
 msgstr ""
-"默认情况下， :djadmin:`inspectdb` 创建未托管的模型。也就是说，模型的 `Meta`` "
-"类中的 ``managed = False`` 告诉 Django 不要管理这些表的创建，修改和删除::"
+"默认情况下， :djadmin:`inspectdb` 创建未托管的模型。也就是说，模型的 "
+"``Meta`` 类中的 ``managed = False`` 告诉 Django 不要管理这些表的创建，修改和"
+"删除::"
 
 msgid ""
 "If you do want to allow Django to manage the table's lifecycle, you'll need "
@@ -6826,9 +6839,9 @@ msgid ""
 "to ``Author``, we could add a through model ``AuthorBook`` with a new field "
 "``is_primary``, like so::"
 msgstr ""
-"例如，假如你有一个 `Book`` 模型，它通过 ``ManyToManyField``  链接 ``Author`` "
-"模型，我们可以通过像下面这样添加一个带有新字段 ``is_primary`` 的中间模型 "
-"``AuthorBook`` ::"
+"例如，假如你有一个 ``Book`` 模型，它通过 ``ManyToManyField``  链接 "
+"``Author`` 模型，我们可以通过像下面这样添加一个带有新字段 ``is_primary`` 的中"
+"间模型 ``AuthorBook`` ::"
 
 msgid "Changing an unmanaged model to managed"
 msgstr "将非托管模型变为托管的"

@@ -5,6 +5,7 @@
 # Translators:
 # Asai Takuya <takuya.waseda.1119@gmail.com>, 2016
 # Eiichi Sugiyama <barcarunrunbiscabarca@gmail.com>, 2018
+# Hiroyuki Imai <hiroyuki.wx@gmail.com>, 2020
 # Kashun YOSHIDA, 2019
 # Kashun YOSHIDA, 2018
 # Kinyonez Jackson <masashima21st@gmail.com>, 2017
@@ -38,9 +39,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 14:05-0500\n"
-"PO-Revision-Date: 2020-04-23 09:54+0000\n"
-"Last-Translator: Uehara Ken <green95251@gmail.com>\n"
+"POT-Creation-Date: 2020-05-20 03:16-0500\n"
+"PO-Revision-Date: 2020-05-07 06:12+0000\n"
+"Last-Translator: Hiroyuki Imai <hiroyuki.wx@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -2800,6 +2801,8 @@ msgid ""
 "If the argument was a template variable, our function is passed the current "
 "value of the variable, not the variable itself."
 msgstr ""
+"もし引数がテンプレート変数だった場合、テンプレート中でタグが呼ばれた時点の値"
+"が渡されます。テンプレート変数そのものが渡されるわけではありません。"
 
 msgid ""
 "Unlike other tag utilities, ``simple_tag`` passes its output through :func:"
@@ -2820,6 +2823,8 @@ msgid ""
 "If your template tag needs to access the current context, you can use the "
 "``takes_context`` argument when registering your tag::"
 msgstr ""
+"テンプレートタグの中からコンテキストにアクセスしたい場合、タグを登録する際に"
+"``takes_context``引数を使うことでできるようになります。"
 
 msgid "Note that the first argument *must* be called ``context``."
 msgstr ""
@@ -2828,6 +2833,8 @@ msgid ""
 "For more information on how the ``takes_context`` option works, see the "
 "section on :ref:`inclusion tags<howto-custom-template-tags-inclusion-tags>`."
 msgstr ""
+"``takes_context``オプションがどのように動くかについて、詳しくは :ref:"
+"`inclusion tags`を参照してください。"
 
 msgid "If you need to rename your tag, you can provide a custom name for it::"
 msgstr ""
@@ -2843,6 +2850,9 @@ msgid ""
 "are set using the equal sign (\"``=``\") and must be provided after the "
 "positional arguments. For example:"
 msgstr ""
+"このようにすることで、テンプレートからはスペースで区切られた変数をいくつでも"
+"テンプレートタグに渡すことができます。Pythonの文法と同じように、キーワード引"
+"数の値は等号（\"``=``\"）を用いて位置引数の後に記述します。たとえば："
 
 msgid ""
 "It's possible to store the tag results in a template variable rather than "
@@ -2850,6 +2860,9 @@ msgid ""
 "by the variable name. Doing so enables you to output the content yourself "
 "where you see fit:"
 msgstr ""
+"タグの処理結果を直接出力することのほかに、テンプレート変数に格納することも可"
+"能です。これは``as``に続けて変数名を書くことで実現可能です。これによって、タ"
+"グの処理結果を好きなように出力することができるようになります。"
 
 msgid "Inclusion tags"
 msgstr ""

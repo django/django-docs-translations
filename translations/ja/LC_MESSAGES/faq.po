@@ -4,14 +4,15 @@
 #
 # Translators:
 # Asai Takuya <takuya.waseda.1119@gmail.com>, 2016
+# Claude Paroz <claude@2xlibre.net>, 2020
 # xiu1 <d84ea@hotmail.co.jp>, 2016-2017
 # Eiji WARASHINA <Eiji.Warashina@gmail.com>, 2016
 # Fuuki Shigenaka <shigenakafuuki@gmail.com>, 2018
 # Kohei Tamura <ktamura.biz.80@gmail.com>, 2018
 # sutefu7, 2019
 # osamunmun <osamu.takayasu@gmail.com>, 2016
-# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016-2017
-# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016-2018,2020
+# Shuuji TAKAHASHI <shuuji3@gmail.com>, 2016-2017
+# Shuuji TAKAHASHI <shuuji3@gmail.com>, 2016-2018,2020
 # Takashi Sugawara <aimaimokomoko@gmail.com>, 2017
 # Tatsuhiko Kono <kono@takenoko-tech.co.jp>, 2016
 # Takuya N <takninnovationresearch@gmail.com>, 2018
@@ -24,9 +25,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-24 06:49-0600\n"
-"PO-Revision-Date: 2020-01-18 12:17+0000\n"
-"Last-Translator: TAKAHASHI Shuuji <shuuji3@gmail.com>\n"
+"POT-Creation-Date: 2020-05-20 03:16-0500\n"
+"PO-Revision-Date: 2020-05-21 12:35+0000\n"
+"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -96,7 +97,7 @@ msgstr ""
 ":class:`~django.contrib.admin.ModelAdmin` クラスが用意しているカスタマイズ用"
 "のフックを利用すれば、オブジェクトを保存するときに、リクエストから取り出した"
 "情報に基づいてフィールドの値を変更できます。リクエストから現在のユーザを取り"
-"出して、 meth:`~django.contrib.admin.ModelAdmin.save_model` フックをカスタマ"
+"出して、 :meth:`~django.contrib.admin.ModelAdmin.save_model` フックをカスタマ"
 "イズすることで、オブジェクトを編集したユーザをオブジェクトに反映させることが"
 "できます。 :ref:`ModelAdmin メソッドのドキュメント<model-admin-methods>` にサ"
 "ンプルがあるので参考にしてください。"
@@ -890,26 +891,41 @@ msgstr ""
 "こで得られますか？"
 
 msgid ""
-"If this FAQ doesn't contain an answer to your question, you might want to "
-"try the |django-users| mailing list. Feel free to ask any question related "
-"to installing, using, or debugging Django."
+"First, please check if your question is answered on the :doc:`FAQ <faq/"
+"index>`. Also, search for answers using your favorite search engine, and in "
+"`the forum`_."
 msgstr ""
-"あなたの質問への回答がこの FAQ の中に見つからなければ、 |django-users| メーリ"
-"ングリストを使ってみてください。 Django のインストール、使い方、デバッグの仕"
-"方について自由に質問してください。"
 
 msgid ""
-"If you prefer IRC, the `#django IRC channel`_ on the Freenode IRC network is "
-"an active community of helpful individuals who may be able to solve your "
-"problem."
+"If you can't find an answer, please take a few minutes to formulate your "
+"question well. Explaining the problems you are facing clearly will help "
+"others help you. See the StackOverflow guide on `asking good questions`_."
 msgstr ""
-"IRC のほうがよければ、 Freenode IRC ネットワーク上の `#django IRC チャンネル"
-"`_ は、あなたの問題を解決できることができる親切な人たちの集まるアクティブなコ"
-"ミュニティです。"
 
-msgid "Why hasn't my message appeared on `django-users`?"
+msgid "Then, please post it in one of the following channels:"
 msgstr ""
-"私のメッセージが `django-users` に表示されないようです。なぜでしょうか？"
+
+msgid ""
+"The Django Forum section `\"Using Django\"`_. This is for web-based "
+"discussions."
+msgstr ""
+
+msgid "The |django-users| mailing list. This is for email-based discussions."
+msgstr ""
+
+msgid ""
+"The `#django IRC channel`_ on the Freenode IRC network. This is for chat-"
+"based discussions."
+msgstr ""
+
+msgid ""
+"In all these channels please abide by the `Django Code of Conduct`_. In "
+"summary, being friendly and patient, considerate, respectful, and careful in "
+"your choice of words."
+msgstr ""
+
+msgid "Why hasn't my message appeared on *django-users*?"
+msgstr ""
 
 msgid ""
 "|django-users| has a lot of subscribers. This is good for the community, as "
@@ -934,9 +950,8 @@ msgstr ""
 "には少し時間がかかるかもしれません。この方式によりご不便をおかけすることをご"
 "容赦ください。"
 
-msgid "Nobody on `django-users` answered my question! What should I do?"
+msgid "Nobody answered my question! What should I do?"
 msgstr ""
-"`django-users` に質問をしても誰も答えてくれません！どうすればいいでしょうか？"
 
 msgid ""
 "Try making your question more specific, or provide a better example of your "
@@ -946,30 +961,24 @@ msgstr ""
 "い。"
 
 msgid ""
-"As with most open-source mailing lists, the folks on |django-users| are "
+"As with most open-source projects, the folks on these channels are "
 "volunteers. If nobody has answered your question, it may be because nobody "
 "knows the answer, it may be because nobody can understand the question, or "
-"it may be that everybody that can help is busy. One thing you might try is "
-"to ask the question on IRC -- visit the `#django IRC channel`_ on the "
-"Freenode IRC network."
+"it may be that everybody that can help is busy."
 msgstr ""
-"多くのオープンソースのメーリングリストがそうであるように、 |django-users| の"
-"人々はボランティアです。もし誰もあなたの質問に答えなかった場合、それは誰も答"
-"えを知らなかった、誰も質問の意味を理解できなかった、もしくは、助けることので"
-"きる人が皆忙しかった可能性があります。IRCで質問をしてみても良いでしょう。 -- "
-"Freenode IRC network の `#django IRC channel`_ へ移動"
 
 msgid ""
-"You might notice we have a second mailing list, called |django-developers| "
-"-- but please don't email support questions to this mailing list. This list "
-"is for discussion of the development of Django itself. Asking a tech support "
-"question there is considered quite impolite."
+"You can also try asking on a different channel. But please don't post your "
+"question in all three channels in quick succession."
 msgstr ""
-"あなたは2つ目のメーリングリスト |django-developers| の存在に気付いたかもしれ"
-"ない -- しかし、サポートを求める質問をこのメーリングリストへ送らないでくださ"
-"い。このリストは Django 自体の開発について議論するためのものです。このリスト"
-"で技術的なサポートを求める質問をする行為は、極めて侮辱的な行為と見なされま"
-"す。"
+
+msgid ""
+"You might notice we have a second mailing list, called |django-developers|. "
+"This list is for discussion of the development of Django itself. Please "
+"don't email support questions to this mailing list. Asking a tech support "
+"question there is considered impolite, and you will likely be directed to "
+"ask on |django-users|."
+msgstr ""
 
 msgid "I think I've found a bug! What should I do?"
 msgstr "バグを発見したみたいです！何をするべきですか？"
@@ -997,17 +1006,12 @@ msgstr ""
 
 msgid ""
 "Due to the sensitive nature of security issues, we ask that if you think you "
-"have found a security problem, *please* don't send a message to one of the "
-"public mailing lists. Django has a :ref:`policy for handling security issues "
-"<reporting-security-issues>`; while a defect is outstanding, we would like "
-"to minimize any damage that could be inflicted through public knowledge of "
-"that defect."
+"have found a security problem, *please* don't post a message on the forum, "
+"IRC, or one of the public mailing lists. Django has a :ref:`policy for "
+"handling security issues <reporting-security-issues>`; while a defect is "
+"outstanding, we would like to minimize any damage that could be inflicted "
+"through public knowledge of that defect."
 msgstr ""
-"セキュリティイシューの特性上、セキュリティ上の不具合を見つけたと思ったら、い"
-"かなる公開メーリングリストへ送信することは *やめるようお願いします*。 Django "
-"プロジェクトは :ref:`セキュリティイシューの処理ポリシー <reporting-security-"
-"issues>` を持っているので、不具合が人目についていたとしても、その不具合が一般"
-"に広く知れ渡ることによる被害を最小化したいと考えています。"
 
 msgid "Django FAQ"
 msgstr "Django FAQ よくある質問"
@@ -1331,8 +1335,8 @@ msgstr ""
 msgid "Problems running ``django-admin``"
 msgstr "``django-admin`` 実行時の問題"
 
-msgid "\"command not found: `django-admin`\""
-msgstr "\"command not found: `django-admin`\""
+msgid "``command not found: django-admin``"
+msgstr ""
 
 msgid ""
 ":doc:`django-admin </ref/django-admin>` should be on your system path if you "
