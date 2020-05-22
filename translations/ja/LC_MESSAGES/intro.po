@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the Django package.
 #
 # Translators:
+# Claude Paroz <claude@2xlibre.net>, 2020
 # xiu1 <d84ea@hotmail.co.jp>, 2015-2017
 # Eiji WARASHINA <Eiji.Warashina@gmail.com>, 2016
 # Fuuki Shigenaka <shigenakafuuki@gmail.com>, 2018
@@ -47,9 +48,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-20 03:16-0500\n"
-"PO-Revision-Date: 2020-05-14 12:46+0000\n"
-"Last-Translator: Hiroyuki Imai <hiroyuki.wx@gmail.com>\n"
+"POT-Creation-Date: 2020-05-21 14:17-0500\n"
+"PO-Revision-Date: 2020-05-22 07:30+0000\n"
+"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -3481,8 +3482,8 @@ msgstr ""
 "誰かがWebサイトの 「/polls/34/」 をリクエストすると、 Django は :setting:"
 "`ROOT_URLCONF` に指定されている Python モジュール ``mysite.urls`` をロードし"
 "ます。そのモジュール内の ``urlpatterns`` という変数を探し、順番にパターンを検"
-"査していきます。 ```polls/``` にマッチした箇所を見つけた後、一致した文字列 "
-"(``\"polls/\"``) を取り除き、残りの文字列である \"34/\" を次の処理のために "
+"査していきます。 ``polls/`` にマッチした箇所を見つけた後、一致した文字列 (``"
+"\"polls/\"``) を取り除き、残りの文字列である \"34/\" を次の処理のために "
 "『polls.urls』 の URLconf に渡します。これは ``'<int：question_id>/'`` に一致"
 "し、結果として下記のように ``detail()`` が呼び出されます。"
 

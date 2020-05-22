@@ -4,6 +4,7 @@
 #
 # Translators:
 # Bagus Aji Santoso <baguzzzaji@gmail.com>, 2015
+# Claude Paroz <claude@2xlibre.net>, 2020
 # Fery Setiawan <gembelweb@gmail.com>, 2015-2020
 # Ichlasul Affan <ichlaffterlalu@gmail.com>, 2020
 # oon arfiandwi <oon.arfiandwi@gmail.com>, 2016
@@ -11,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 14:05-0500\n"
-"PO-Revision-Date: 2020-04-12 05:51+0000\n"
-"Last-Translator: Ichlasul Affan <ichlaffterlalu@gmail.com>\n"
+"POT-Creation-Date: 2020-05-21 14:17-0500\n"
+"PO-Revision-Date: 2020-05-21 21:18+0000\n"
+"Last-Translator: Mariusz Felisiak <felisiak.mariusz@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/django/django-docs/"
 "language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -795,7 +796,7 @@ msgid ""
 "`bilateral = True <django.db.models.Transform.bilateral>` to indicate that "
 "this transformation should apply to both ``lhs`` and ``rhs``::"
 msgstr ""
-"Kami menentukan sebuab perubahan `UpperCase`` yang menggunakan fungsi SQL "
+"Kami menentukan sebuab perubahan ``UpperCase`` yang menggunakan fungsi SQL "
 "``UPPER()`` untuk merubah nilai sebelum dibandingkan. Kami menentukan :attr:"
 "`bilateral = True <django.db.models.Transform.bilateral>` untuk "
 "mengindikasikan bahwa perubahan ini harus berlaku pada kedua ``lhs`` and "
@@ -5156,7 +5157,7 @@ msgid ""
 "that contain non-ASCII characters, make sure Apache is configured to accept "
 "non-ASCII file names::"
 msgstr ""
-"Jika anda mendapatkan sebuah `UnicodeEncodeError`` ketika mengunggah berkas-"
+"Jika anda mendapatkan sebuah ``UnicodeEncodeError`` ketika mengunggah berkas-"
 "berkas dengan nama berkas yang mengandung karakter bukan ASCII, pastikan "
 "Apache dikonfigurasi untuk menerima nama-nama berkas bukan ASCII::"
 
@@ -7439,7 +7440,7 @@ msgid ""
 "possible to the router. This is especially important for reusable and third-"
 "party apps."
 msgstr ""
-"Jika `operasi `RunPython`` atau ``RunSQL`` anda hanya berpengaruh pada satu "
+"Jika operasi ``RunPython`` atau ``RunSQL`` anda hanya berpengaruh pada satu "
 "model, adalah   latihan bagus untuk melewatkan ``model_name`` sebagai sebuah "
 "bayangan untuk membuatnya se transparan mungkin ke router. Ini khususnya "
 "penting untuk aplikasi digunakan kembali dan pihak ketiga."

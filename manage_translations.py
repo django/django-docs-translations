@@ -53,7 +53,10 @@ def to_language(locale):
 
 def _tx_resource_for_name(name):
     """ Return the Transifex resource name """
-    return f"django-docs.{name}"
+    return {
+        'ref': 'django-docs.reference',
+        'glossary': 'django-docs.glossary-1'
+    }.get(name, f"django-docs.{name}")
 
 
 def fetch(resources=(), languages=None):
