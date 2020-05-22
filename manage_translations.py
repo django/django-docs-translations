@@ -51,7 +51,12 @@ def to_language(locale):
         return locale.lower()
 
 
-def fetch(resources=None, languages=None):
+def _tx_resource_for_name(name):
+    """ Return the Transifex resource name """
+    return f"django-docs.{name}"
+
+
+def fetch(resources=(), languages=None):
     """
     Fetch translations from Transifex, remove source lines.
     """
@@ -62,14 +67,18 @@ def fetch(resources=None, languages=None):
         languages = ACTIVE_LANGUAGES
     for lang in languages:
         tx_lang = TX_LANG_MAP.get(lang, lang)
-        call('tx pull -l %(lang)s --minimum-perc=5' % {'lang': tx_lang}, shell=True)
-        lang_dir = 'translations/%(lang)s/LC_MESSAGES/' % {'lang': lang}
+        call(
+            f'tx pull -l {tx_lang} --minimum-perc=5 ' +
+            ' '.join(f'-r {_tx_resource_for_name(res)}' for res in resources),
+            shell=True
+        )
+        lang_dir = f'translations/{lang}/LC_MESSAGES/'
         for po_file in os.listdir(lang_dir):
             if not po_file.endswith(".po"):
                 continue
             po_path = os.path.join(lang_dir, po_file)
             print(po_path)
-            call('msgcat --no-location -o %s %s' % (po_path, po_path), shell=True)
+            call(f'msgcat --no-location -o {po_path} {po_path}', shell=True)
 
 
 def robots_txt(*args):
@@ -114,7 +123,10 @@ if __name__ == "__main__":
 
     parser = ArgumentParser()
     parser.add_argument('cmd', nargs=1, choices=RUNABLE_SCRIPTS)
-    parser.add_argument("-r", "--resources", action='append', help="limit operation to the specified resources")
+    parser.add_argument(
+        "-r", "--resources", action='append', choices=ALL_RESOURCES, default=[],
+        help="limit operation to the specified resources"
+    )
     parser.add_argument("-l", "--languages", action='append', help="limit operation to the specified languages")
     options = parser.parse_args()
 
