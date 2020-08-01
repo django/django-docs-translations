@@ -7,7 +7,7 @@
 # Laville Augustin <augustin.laville@gustavi.net>, 2014,2016
 # CHABERT Loic <chabert.loic.74@gmail.com>, 2013
 # Christophe CHAUVET <christophe.chauvet@gmail.com>, 2013
-# Claude Paroz <claude@2xlibre.net>, 2015-2019
+# Claude Paroz <claude@2xlibre.net>, 2015-2020
 # Jérôme Hugon <jerome@theatreinterface.ch>, 2015
 # mlorant <maxime.lorant@gmail.com>, 2014-2015
 # Sébastien Fievet <_@sebastien-fievet.fr>, 2014
@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-21 04:16-0500\n"
-"PO-Revision-Date: 2020-05-20 11:27+0000\n"
+"POT-Creation-Date: 2020-07-31 05:41-0500\n"
+"PO-Revision-Date: 2020-07-20 11:18+0000\n"
 "Last-Translator: Transifex Bot <>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/"
 "fr/)\n"
@@ -29489,14 +29489,10 @@ msgid "``sqlparse`` is required dependency"
 msgstr "``sqlparse`` devient une dépendance obligatoire"
 
 msgid ""
-"To simplify a few parts of Django's database handling, `sqlparse <https://"
-"pypi.org/project/sqlparse/>`_ is now a required dependency. It's "
+"To simplify a few parts of Django's database handling, `sqlparse 0.2.2+ "
+"<https://pypi.org/project/sqlparse/>`_ is now a required dependency. It's "
 "automatically installed along with Django."
 msgstr ""
-"Pour simplifier quelques parties de la gestion des bases de données de "
-"Django, `sqlparse <https://pypi.org/project/sqlparse/>`_ est dorénavant une "
-"dépendance obligatoire. Cette bibliothèque est automatiquement installée en "
-"même temps que Django. "
 
 msgid "``cached_property`` aliases"
 msgstr "Alias de ``cached_property``"
@@ -29759,6 +29755,16 @@ msgid ""
 "or :meth:`.cache.get` now raises :exc:`ValueError`."
 msgstr ""
 
+msgid ""
+"Plural equations for some languages are changed, because the latest versions "
+"from Transifex are incorporated."
+msgstr ""
+
+msgid ""
+"The ability to handle ``.po`` files containing different plural equations "
+"for the same language was added in Django 2.2.12."
+msgstr ""
+
 msgid "Features deprecated in 2.2"
 msgstr "Fonctionnalités rendues obsolètes dans Django 2.2"
 
@@ -30016,13 +30022,74 @@ msgstr ""
 msgid "Django 2.2.13 release notes"
 msgstr ""
 
-msgid "*Expected June 1, 2020*"
+msgid "*June 3, 2020*"
 msgstr ""
 
-msgid "Django 2.2.13 fixes a bug in 2.2.12."
+msgid "Django 2.2.13 fixes two security issues and a regression in 2.2.12."
 msgstr ""
 
-msgid "..."
+msgid "CVE-2020-13254: Potential data leakage via malformed memcached keys"
+msgstr ""
+
+msgid ""
+"In cases where a memcached backend does not perform key validation, passing "
+"malformed cache keys could result in a key collision, and potential data "
+"leakage. In order to avoid this vulnerability, key validation is added to "
+"the memcached cache backends."
+msgstr ""
+
+msgid "CVE-2020-13596: Possible XSS via admin ``ForeignKeyRawIdWidget``"
+msgstr ""
+
+msgid ""
+"Query parameters for the admin ``ForeignKeyRawIdWidget`` were not properly "
+"URL encoded, posing an XSS attack vector. ``ForeignKeyRawIdWidget`` now "
+"ensures query parameters are correctly URL encoded."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 2.2.12 that affected translation loading for "
+"apps providing translations for territorial language variants as well as a "
+"generic language, where the project has different plural equations for the "
+"language (:ticket:`31570`)."
+msgstr ""
+
+msgid ""
+"Tracking a jQuery security release, upgraded the version of jQuery used by "
+"the admin from 3.3.1 to 3.5.1."
+msgstr ""
+
+msgid "Django 2.2.14 release notes"
+msgstr ""
+
+msgid "*July 1, 2020*"
+msgstr ""
+
+msgid "Django 2.2.14 fixes a bug in 2.2.13."
+msgstr ""
+
+msgid ""
+"Fixed messages of ``InvalidCacheKey`` exceptions and ``CacheKeyWarning`` "
+"warnings raised by cache key validation (:ticket:`31654`)."
+msgstr ""
+
+msgid "Django 2.2.15 release notes"
+msgstr ""
+
+msgid "*Expected August 3, 2020*"
+msgstr ""
+
+msgid "Django 2.2.15 fixes two bugs in 2.2.14."
+msgstr ""
+
+msgid ""
+"Allowed setting the ``SameSite`` cookie flag in :meth:`.HttpResponse."
+"delete_cookie` (:ticket:`31790`)."
+msgstr ""
+
+msgid ""
+"Fixed crash when sending emails to addresses with display names longer than "
+"75 chars on Python 3.6.11+, 3.7.8+, and 3.8.4+ (:ticket:`31784`)."
 msgstr ""
 
 msgid "Django 2.2.2 release notes"
@@ -31255,9 +31322,6 @@ msgstr ""
 "``alias=None`` a été ajouté à la signature de :meth:`.Expression."
 "get_group_by_cols`."
 
-msgid "Support for ``sqlparse`` < 0.2.2 is removed."
-msgstr "La prise en charge de ``sqlparse`` < 0.2.2 a été supprimée."
-
 msgid ""
 "``RegexPattern``, used by :func:`~django.urls.re_path`, no longer returns "
 "keyword arguments with ``None`` values to be passed to the view for the "
@@ -31587,7 +31651,7 @@ msgstr ""
 msgid "Django 3.0.7 release notes"
 msgstr ""
 
-msgid "Django 3.0.7 fixes several bugs in 3.0.6."
+msgid "Django 3.0.7 fixes two security issues and several bugs in 3.0.6."
 msgstr ""
 
 msgid ""
@@ -31615,6 +31679,50 @@ msgstr ""
 msgid ""
 "Fixed a regression in Django 3.0 where all resolved ``Subquery()`` "
 "expressions were considered equal (:ticket:`31607`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0.5 that affected translation loading for "
+"apps providing translations for territorial language variants as well as a "
+"generic language, where the project has different plural equations for the "
+"language (:ticket:`31570`)."
+msgstr ""
+
+msgid ""
+"Tracking a jQuery security release, upgraded the version of jQuery used by "
+"the admin from 3.4.1 to 3.5.1."
+msgstr ""
+
+msgid "Django 3.0.8 release notes"
+msgstr ""
+
+msgid "Django 3.0.8 fixes several bugs in 3.0.7."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0.7 that caused a queryset crash when "
+"grouping by a many-to-one relationship (:ticket:`31660`)."
+msgstr ""
+
+msgid ""
+"Reallowed, following a regression in Django 3.0, non-expressions having a "
+"``filterable`` attribute to be used as the right-hand side in queryset "
+"filters (:ticket:`31664`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0.2 that caused a migration crash on "
+"PostgreSQL when adding a foreign key to a model with a namespaced "
+"``db_table`` (:ticket:`31735`)."
+msgstr ""
+
+msgid "Added compatibility for ``cx_Oracle`` 8 (:ticket:`31751`)."
+msgstr ""
+
+msgid "Django 3.0.9 release notes"
+msgstr ""
+
+msgid "Django 3.0.9 fixes several bugs in 3.0.8."
 msgstr ""
 
 msgid "Release notes"
@@ -33030,7 +33138,7 @@ msgid ""
 "description <https://www.djangoproject.com/weblog/2019/feb/11/security-"
 "releases/>`__"
 msgstr ""
-"Épuisement de mémoire dans `django.utils.numberformat.format()``. "
+"Épuisement de mémoire dans ``django.utils.numberformat.format()``. "
 "`Description complète <https://www.djangoproject.com/weblog/2019/feb/11/"
 "security-releases/>`__"
 
@@ -33247,4 +33355,32 @@ msgstr ""
 
 msgid ""
 "Django 1.11 :commit:`(patch) <02d97f3c9a88adc890047996e5606180bd1c6166>`"
+msgstr ""
+
+msgid "June 3, 2020 - :cve:`2020-13254`"
+msgstr ""
+
+msgid ""
+"Potential data leakage via malformed memcached keys. `Full description "
+"<https://www.djangoproject.com/weblog/2020/jun/03/security-releases/>`__"
+msgstr ""
+
+msgid "Django 3.0 :commit:`(patch) <84b2da5552e100ae3294f564f6c862fef8d0e693>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <07e59caa02831c4569bbebb9eb773bdd9cb4b206>`"
+msgstr ""
+
+msgid "June 3, 2020 - :cve:`2020-13596`"
+msgstr ""
+
+msgid ""
+"Possible XSS via admin ``ForeignKeyRawIdWidget``. `Full description <https://"
+"www.djangoproject.com/weblog/2020/jun/03/security-releases/>`__"
+msgstr ""
+
+msgid "Django 3.0 :commit:`(patch) <1f2dd37f6fcefdd10ed44cb233b2e62b520afb38>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <6d61860b22875f358fac83d903dc629897934815>`"
 msgstr ""

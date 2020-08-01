@@ -3,11 +3,12 @@
 # This file is distributed under the same license as the Django package.
 #
 # Translators:
+# Aline Balogh <linecrist@hotmail.com>, 2019
 # André Filipe de Assunção e Brito <decko@birosca.mobi>, 2016
 # andrewsmedina <andrewsmedina@gmail.com>, 2016
 # beatorizu <betrizaf@gmail.com>, 2016
-# Carlos Leite <caduado@gmail.com>, 2016
-# Carlos Leite <caduado@gmail.com>, 2016,2019
+# Carlos C. Leite <caduado@gmail.com>, 2016
+# Carlos C. Leite <caduado@gmail.com>, 2016,2019
 # Carlos Schneider <carlosaschjr@gmail.com>, 2016
 # Filipe Cifali Stangler <cifali.filipe@gmail.com>, 2016
 # Claudio Rogerio Carvalho Filho <excriptbrasil@gmail.com>, 2017
@@ -24,9 +25,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-09 05:19-0500\n"
-"PO-Revision-Date: 2019-08-09 00:35+0000\n"
-"Last-Translator: Ramiro Morales\n"
+"POT-Creation-Date: 2020-07-31 05:41-0500\n"
+"PO-Revision-Date: 2020-07-20 11:18+0000\n"
+"Last-Translator: Transifex Bot <>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -138,12 +139,18 @@ msgid ""
 "namespace they were defined in. (Previously everything was magically "
 "transferred to the ``django.models.*`` namespace.)"
 msgstr ""
+"Modelos, funções e constantes definidas pelo usuário agora aparecem no "
+"namespace onde foi definido o módulo. (Previamente tudo era magicamente "
+"transferido para o namespace  ``django.models.*``.)"
 
 msgid ""
 "Some optional applications, such as the FlatPage, Sites and Redirects apps, "
 "have been decoupled and moved into ``django.contrib``. If you don't want to "
 "use these applications, you no longer have to install their database tables."
 msgstr ""
+"Algumas aplicações opcionais, como FlatPage, Sites e Redirect apps, tem sido "
+"desacopladas e movidas para o ``django.contrib``. Se você não quer mais usar "
+"estas aplicações, você não terá mais que instalar seu banco de dados."
 
 msgid "Django now has support for managing database transactions."
 msgstr ""
@@ -250,9 +257,10 @@ msgstr ""
 
 msgid ""
 "Finally, for those who prefer the more immediate feedback offered by IRC, "
-"there's a `#django` channel on irc.freenode.net that is regularly populated "
-"by Django users and developers from around the world. Friendly people are "
-"usually available at any hour of the day -- to help, or just to chat."
+"there's a ``#django`` channel on irc.freenode.net that is regularly "
+"populated by Django users and developers from around the world. Friendly "
+"people are usually available at any hour of the day -- to help, or just to "
+"chat."
 msgstr ""
 
 msgid "Thanks for using Django!"
@@ -1074,7 +1082,7 @@ msgstr ""
 msgid ""
 "Practically, this means you'll need to rewrite all of your ``class Admin`` "
 "declarations. You've already seen in `models`_ above how to replace your "
-"``class Admin`` with a ``admin.site.register()`` call in an ``admin.py`` "
+"``class Admin`` with an ``admin.site.register()`` call in an ``admin.py`` "
 "file. Below are some more details on how to rewrite that ``Admin`` "
 "declaration into the new syntax."
 msgstr ""
@@ -5006,9 +5014,10 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Django 1.11 is designated as a :term:`long-term support release`. It will "
-"receive security updates for at least three years after its release. Support "
-"for the previous LTS, Django 1.8, will end in April 2018."
+"Django 1.11 is designated as a :term:`long-term support release <Long-term "
+"support release>`. It will receive security updates for at least three years "
+"after its release. Support for the previous LTS, Django 1.8, will end in "
+"April 2018."
 msgstr ""
 
 msgid ""
@@ -5221,8 +5230,8 @@ msgid "PostGIS migrations can now change field dimensions."
 msgstr ""
 
 msgid ""
-"Added the ability to pass the `size`, `shape`, and `offset` parameter when "
-"creating :class:`~django.contrib.gis.gdal.GDALRaster` objects."
+"Added the ability to pass the ``size``, ``shape``, and ``offset`` parameters "
+"when creating :class:`~django.contrib.gis.gdal.GDALRaster` objects."
 msgstr ""
 
 msgid ""
@@ -5540,8 +5549,8 @@ msgstr ""
 
 msgid ""
 "``contrib.gis.maps`` is removed as it interfaces with a retired version of "
-"the Google Maps API and seems to be unmaintained. If you're using it, `let "
-"us know <https://code.djangoproject.com/ticket/14284>`_."
+"the Google Maps API and seems to be unmaintained. If you're using it, :"
+"ticket:`let us know <14284>`."
 msgstr ""
 
 msgid "The ``GEOSGeometry`` equality operator now also compares SRID."
@@ -5799,7 +5808,7 @@ msgstr ""
 
 msgid ""
 "The change to make :meth:`.QuerySet.iterator()` use server-side cursors on "
-"PostgreSQL prevents running Django with `pgBouncer` in transaction pooling "
+"PostgreSQL prevents running Django with PgBouncer in transaction pooling "
 "mode. To reallow that, use the :setting:`DISABLE_SERVER_SIDE_CURSORS "
 "<DATABASE-DISABLE_SERVER_SIDE_CURSORS>` setting (added in Django 1.11.1) in :"
 "setting:`DATABASES`."
@@ -6105,7 +6114,7 @@ msgstr ""
 
 msgid ""
 "The change in Django 1.11 to make :meth:`.QuerySet.iterator()` use server-"
-"side cursors on PostgreSQL prevents running Django with `pgBouncer` in "
+"side cursors on PostgreSQL prevents running Django with PgBouncer in "
 "transaction pooling mode. To reallow that, use the :setting:"
 "`DISABLE_SERVER_SIDE_CURSORS <DATABASE-DISABLE_SERVER_SIDE_CURSORS>` setting "
 "in :setting:`DATABASES`."
@@ -6772,6 +6781,123 @@ msgstr ""
 msgid ""
 "``uri_to_iri()`` now avoids recursion when re-percent-encoding invalid UTF-8 "
 "octet sequences."
+msgstr ""
+
+msgid "Django 1.11.24 release notes"
+msgstr ""
+
+msgid "*September 2, 2019*"
+msgstr ""
+
+msgid "Django 1.11.24 fixes a regression in 1.11.23."
+msgstr ""
+
+msgid ""
+"Fixed crash of ``KeyTransform()`` for :class:`~django.contrib.postgres."
+"fields.JSONField` and :class:`~django.contrib.postgres.fields.HStoreField` "
+"when using on expressions with params (:ticket:`30672`)."
+msgstr ""
+
+msgid "Django 1.11.25 release notes"
+msgstr ""
+
+msgid "*October 1, 2019*"
+msgstr ""
+
+msgid "Django 1.11.25 fixes a regression in 1.11.23."
+msgstr ""
+
+msgid ""
+"Fixed a crash when filtering with a ``Subquery()`` annotation of a queryset "
+"containing :class:`~django.contrib.postgres.fields.JSONField` or :class:"
+"`~django.contrib.postgres.fields.HStoreField` (:ticket:`30769`)."
+msgstr ""
+
+msgid "Django 1.11.26 release notes"
+msgstr ""
+
+msgid "*November 4, 2019*"
+msgstr ""
+
+msgid "Django 1.11.26 fixes a regression in 1.11.25."
+msgstr ""
+
+msgid ""
+"Fixed a crash when using a ``contains``, ``contained_by``, ``has_key``, "
+"``has_keys``, or ``has_any_keys`` lookup on :class:`~django.contrib.postgres."
+"fields.JSONField`, if the right or left hand side of an expression is a key "
+"transform (:ticket:`30826`)."
+msgstr ""
+
+msgid "Django 1.11.27 release notes"
+msgstr ""
+
+msgid "*December 18, 2019*"
+msgstr ""
+
+msgid "Django 1.11.27 fixes a security issue and a data loss bug in 1.11.26."
+msgstr ""
+
+msgid "CVE-2019-19844: Potential account hijack via password reset form"
+msgstr ""
+
+msgid ""
+"By submitting a suitably crafted email address making use of Unicode "
+"characters, that compared equal to an existing user email when lower-cased "
+"for comparison, an attacker could be sent a password reset token for the "
+"matched account."
+msgstr ""
+
+msgid ""
+"In order to avoid this vulnerability, password reset requests now compare "
+"the submitted email using the stricter, recommended algorithm for case-"
+"insensitive comparison of two identifiers from `Unicode Technical Report 36, "
+"section 2.11.2(B)(2)`__. Upon a match, the email containing the reset token "
+"will be sent to the email address on record rather than the submitted "
+"address."
+msgstr ""
+
+msgid ""
+"Fixed a data loss possibility in :class:`~django.contrib.postgres.forms."
+"SplitArrayField`. When using with ``ArrayField(BooleanField())``, all values "
+"after the first ``True`` value were marked as checked instead of preserving "
+"passed values (:ticket:`31073`)."
+msgstr ""
+
+msgid "Django 1.11.28 release notes"
+msgstr ""
+
+msgid "*February 3, 2020*"
+msgstr ""
+
+msgid "Django 1.11.28 fixes a security issue in 1.11.27."
+msgstr ""
+
+msgid "CVE-2020-7471: Potential SQL injection via ``StringAgg(delimiter)``"
+msgstr ""
+
+msgid ""
+":class:`~django.contrib.postgres.aggregates.StringAgg` aggregation function "
+"was subject to SQL injection, using a suitably crafted ``delimiter``."
+msgstr ""
+
+msgid "Django 1.11.29 release notes"
+msgstr ""
+
+msgid "*March 4, 2020*"
+msgstr ""
+
+msgid "Django 1.11.29 fixes a security issue in 1.11.28."
+msgstr ""
+
+msgid ""
+"CVE-2020-9402: Potential SQL injection via ``tolerance`` parameter in GIS "
+"functions and aggregates on Oracle"
+msgstr ""
+
+msgid ""
+"GIS functions and aggregates on Oracle were subject to SQL injection, using "
+"a suitably crafted ``tolerance``."
 msgstr ""
 
 msgid "Django 1.11.3 release notes"
@@ -7992,61 +8118,61 @@ msgstr ""
 msgid "New Setting"
 msgstr ""
 
-msgid "`DATABASE_ENGINE`"
+msgid "``DATABASE_ENGINE``"
 msgstr ""
 
 msgid ":setting:`ENGINE <DATABASE-ENGINE>`"
 msgstr ":setting:`ENGINE <DATABASE-ENGINE>`"
 
-msgid "`DATABASE_HOST`"
+msgid "``DATABASE_HOST``"
 msgstr ""
 
 msgid ":setting:`HOST`"
 msgstr ":setting:`HOST`"
 
-msgid "`DATABASE_NAME`"
+msgid "``DATABASE_NAME``"
 msgstr ""
 
 msgid ":setting:`NAME`"
 msgstr ":setting:`NAME`"
 
-msgid "`DATABASE_OPTIONS`"
+msgid "``DATABASE_OPTIONS``"
 msgstr ""
 
 msgid ":setting:`OPTIONS`"
 msgstr ""
 
-msgid "`DATABASE_PASSWORD`"
+msgid "``DATABASE_PASSWORD``"
 msgstr ""
 
 msgid ":setting:`PASSWORD`"
 msgstr ":setting:`PASSWORD`"
 
-msgid "`DATABASE_PORT`"
+msgid "``DATABASE_PORT``"
 msgstr ""
 
 msgid ":setting:`PORT`"
 msgstr ":setting:`PORT`"
 
-msgid "`DATABASE_USER`"
+msgid "``DATABASE_USER``"
 msgstr ""
 
 msgid ":setting:`USER`"
 msgstr ":setting:`USER`"
 
-msgid "`TEST_DATABASE_CHARSET`"
+msgid "``TEST_DATABASE_CHARSET``"
 msgstr ""
 
 msgid ":setting:`TEST_CHARSET`"
 msgstr ""
 
-msgid "`TEST_DATABASE_COLLATION`"
+msgid "``TEST_DATABASE_COLLATION``"
 msgstr ""
 
 msgid ":setting:`TEST_COLLATION`"
 msgstr ""
 
-msgid "`TEST_DATABASE_NAME`"
+msgid "``TEST_DATABASE_NAME``"
 msgstr ""
 
 msgid ":setting:`TEST_NAME`"
@@ -8372,8 +8498,9 @@ msgstr ""
 
 msgid ""
 "Django 1.2.1 was released almost immediately after 1.2.0 to correct two "
-"small bugs: one was in the documentation packaging script, the other was a "
-"bug_ that affected datetime form field widgets when localization was enabled."
+"small bugs: one was in the documentation packaging script, the other was a :"
+"ticket:`bug <13560>` that affected datetime form field widgets when "
+"localization was enabled."
 msgstr ""
 
 msgid "Django 1.2.2 release notes"
@@ -8473,9 +8600,9 @@ msgstr ""
 msgid ""
 "Most users -- even users with multiple-database configurations -- need not "
 "be concerned about the data loss bug, or the manual configuration of :"
-"setting:`TEST_DEPENDENCIES`. See the `original problem report`_ "
-"documentation on :ref:`controlling the creation order of test databases "
-"<topics-testing-creation-dependencies>` for details."
+"setting:`TEST_DEPENDENCIES`. See the :ticket:`original problem report "
+"<14415>` documentation on :ref:`controlling the creation order of test "
+"databases <topics-testing-creation-dependencies>` for details."
 msgstr ""
 
 msgid ""
@@ -10321,8 +10448,8 @@ msgstr ""
 msgid ""
 "Django can now look for a language prefix in the URLpattern when using the "
 "new :func:`~django.conf.urls.i18n.i18n_patterns` helper function. It's also "
-"now possible to define translatable URL patterns using :func:`~django.utils."
-"translation.ugettext_lazy`. See :ref:`url-internationalization` for more "
+"now possible to define translatable URL patterns using ``django.utils."
+"translation.ugettext_lazy()``. See :ref:`url-internationalization` for more "
 "information about the language prefix and how to internationalize URL "
 "patterns."
 msgstr ""
@@ -10635,7 +10762,7 @@ msgstr ""
 
 msgid ""
 "The admin login page will add a password reset link if you include a URL "
-"with the name `'admin_password_reset'` in your urls.py, so plugging in the "
+"with the name ``'admin_password_reset'`` in your urls.py, so plugging in the "
 "built-in password reset mechanism and making it available is now much "
 "easier. For details, see :ref:`auth_password_reset`."
 msgstr ""
@@ -10682,8 +10809,8 @@ msgstr ""
 
 msgid ""
 "In Django 1.4, starting Django with an empty :setting:`SECRET_KEY` will "
-"raise a `DeprecationWarning`. In Django 1.5, it will raise an exception and "
-"Django will refuse to start. This is slightly accelerated from the usual "
+"raise a ``DeprecationWarning``. In Django 1.5, it will raise an exception "
+"and Django will refuse to start. This is slightly accelerated from the usual "
 "deprecation path due to the severity of the consequences of running Django "
 "with no :setting:`SECRET_KEY`."
 msgstr ""
@@ -10718,7 +10845,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"If your ``ADMIN_MEDIA_PREFIX`` is set to an specific domain (e.g. ``http://"
+"If your ``ADMIN_MEDIA_PREFIX`` is set to a specific domain (e.g. ``http://"
 "media.example.com/admin/``), make sure to also set your :setting:"
 "`STATIC_URL` setting to the correct URL -- for example, ``http://media."
 "example.com/``."
@@ -10829,7 +10956,7 @@ msgid "Time period: Defined by :setting:`PASSWORD_RESET_TIMEOUT_DAYS`."
 msgstr ""
 
 msgid ""
-"Form-related hashes: these have a are much shorter lifetime and are relevant "
+"Form-related hashes: these have a much shorter lifetime and are relevant "
 "only for the short window where a user might fill in a form generated by the "
 "pre-upgrade Django instance and try to submit it to the upgraded Django "
 "instance:"
@@ -11007,7 +11134,7 @@ msgid ""
 "Check their documentation for details."
 msgstr ""
 
-msgid "`COMMENTS_BANNED_USERS_GROUP` setting"
+msgid "``COMMENTS_BANNED_USERS_GROUP`` setting"
 msgstr ""
 
 msgid ""
@@ -11027,7 +11154,7 @@ msgid ""
 "``my_comments_app/managers.py``) and add it your custom comment app model::"
 msgstr ""
 
-msgid "`IGNORABLE_404_STARTS` and `IGNORABLE_404_ENDS` settings"
+msgid "``IGNORABLE_404_STARTS`` and ``IGNORABLE_404_ENDS`` settings"
 msgstr ""
 
 msgid ""
@@ -11398,7 +11525,7 @@ msgid ""
 "information."
 msgstr ""
 
-msgid "Wildcard expansion of application names in `INSTALLED_APPS`"
+msgid "Wildcard expansion of application names in ``INSTALLED_APPS``"
 msgstr ""
 
 msgid ""
@@ -11686,8 +11813,8 @@ msgid ""
 "login()``, ``django.contrib.comments``, and :doc:`i18n </topics/i18n/"
 "index>`) to redirect the user to an \"on success\" URL. The security checks "
 "for these redirects (namely ``django.utils.http.is_safe_url()``) did not "
-"correctly validate some malformed URLs, such as `http:\\\\\\\\\\"
-"\\djangoproject.com`, which are accepted by some browsers with more liberal "
+"correctly validate some malformed URLs, such as ``http:\\\\\\\\\\"
+"\\djangoproject.com``, which are accepted by some browsers with more liberal "
 "URL parsing."
 msgstr ""
 
@@ -11849,7 +11976,7 @@ msgstr ""
 msgid ""
 "When HTTP headers are placed into the WSGI environ, they are normalized by "
 "converting to uppercase, converting all dashes to underscores, and "
-"prepending `HTTP_`. For instance, a header ``X-Auth-User`` would become "
+"prepending ``HTTP_``. For instance, a header ``X-Auth-User`` would become "
 "``HTTP_X_AUTH_USER`` in the WSGI environ (and thus also in Django's "
 "``request.META`` dictionary)."
 msgstr ""
@@ -12986,7 +13113,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-"More information on these incompatibilities is available in `ticket #18023`_."
+"More information on these incompatibilities is available in :ticket:`ticket "
+"#18023 <18023#comment:10>`."
 msgstr ""
 
 msgid ""
@@ -13129,7 +13257,7 @@ msgid ""
 "very fragile, and must now be changed to be able to run independently."
 msgstr ""
 
-msgid "`cleaned_data` dictionary kept for invalid forms"
+msgid "``cleaned_data`` dictionary kept for invalid forms"
 msgstr ""
 
 msgid ""
@@ -13339,8 +13467,8 @@ msgstr ""
 
 msgid ""
 "The ``django.utils.encoding.StrAndUnicode`` mix-in has been deprecated. "
-"Define a ``__str__`` method and apply the :func:`~django.utils.encoding."
-"python_2_unicode_compatible` decorator instead."
+"Define a ``__str__`` method and apply the ``django.utils.encoding."
+"python_2_unicode_compatible`` decorator instead."
 msgstr ""
 
 msgid "``django.utils.itercompat.product``"
@@ -13390,7 +13518,8 @@ msgid ""
 "The biggest fix is for a memory leak introduced in Django 1.5. Under certain "
 "circumstances, repeated iteration over querysets could leak memory - "
 "sometimes quite a bit of it. If you'd like more information, the details are "
-"in `our ticket tracker`__ (and in `a related issue`__ in Python itself)."
+"in :ticket:`our ticket tracker <19895>` (and in `a related issue`__ in "
+"Python itself)."
 msgstr ""
 
 msgid ""
@@ -14540,7 +14669,7 @@ msgstr ""
 
 msgid ""
 "To achieve preserving and restoring list view filters, admin views now pass "
-"around the `_changelist_filters` GET parameter. It's important that you "
+"around the ``_changelist_filters`` GET parameter. It's important that you "
 "account for that change if you have custom admin templates or if your tests "
 "rely on the previous URLs. If you want to revert to the original behavior "
 "you can set the :attr:`~django.contrib.admin.ModelAdmin.preserve_filters` "
@@ -14772,7 +14901,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-":class:`~django.views.generic.base.RedirectView` now has a `pattern_name` "
+":class:`~django.views.generic.base.RedirectView` now has a ``pattern_name`` "
 "attribute which allows it to choose the target by reversing the URL."
 msgstr ""
 
@@ -16191,7 +16320,7 @@ msgstr ""
 msgid ""
 "The ``\"django.contrib.sessions.backends.cached_db\"`` session backend now "
 "respects :setting:`SESSION_CACHE_ALIAS`. In previous versions, it always "
-"used the `default` cache."
+"used the ``default`` cache."
 msgstr ""
 
 msgid ":mod:`django.contrib.sitemaps`"
@@ -17012,9 +17141,9 @@ msgstr ""
 
 msgid ""
 "Also if you directly assigned the return value of ``update_error_dict()`` to "
-"``Form._errors`` you may inadvertently add `list` instances where "
+"``Form._errors`` you may inadvertently add ``list`` instances where "
 "``ErrorList`` instances are expected. This is a problem because unlike a "
-"simple `list`, an ``ErrorList`` knows how to handle instances of "
+"simple ``list``, an ``ErrorList`` knows how to handle instances of "
 "``ValidationError``."
 msgstr ""
 
@@ -17956,7 +18085,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Avoided masking some `ImportError` exceptions during application loading (:"
+"Avoided masking some ``ImportError`` exceptions during application loading (:"
 "ticket:`22920`)."
 msgstr ""
 
@@ -18385,7 +18514,7 @@ msgstr ""
 
 msgid ""
 "Added quoting to field indexes in the SQL generated by migrations to prevent "
-"a crash when the index name requires it (:ticket:`#24015`)."
+"a crash when the index name requires it (:ticket:`24015`)."
 msgstr ""
 
 msgid ""
@@ -18667,9 +18796,9 @@ msgstr ""
 
 msgid ""
 "Django 1.8 has been designated as Django's second :term:`long-term support "
-"release`. It will receive security updates for at least three years after "
-"its release. Support for the previous LTS, Django 1.4, will end 6 months "
-"from the release date of Django 1.8."
+"release <Long-term support release>`. It will receive security updates for "
+"at least three years after its release. Support for the previous LTS, Django "
+"1.4, will end 6 months from the release date of Django 1.8."
 msgstr ""
 
 msgid ""
@@ -19565,13 +19694,13 @@ msgid "Custom test management command arguments through test runner"
 msgstr ""
 
 msgid ""
-"The method to add custom arguments to the `test` management command through "
-"the test runner has changed. Previously, you could provide an `option_list` "
-"class variable on the test runner to add more arguments (à la :py:mod:"
-"`optparse`). Now to implement the same behavior, you have to create an "
-"``add_arguments(cls, parser)`` class method on the test runner and call "
-"``parser.add_argument`` to add any custom arguments, as parser is now an :py:"
-"class:`argparse.ArgumentParser` instance."
+"The method to add custom arguments to the ``test`` management command "
+"through the test runner has changed. Previously, you could provide an "
+"``option_list`` class variable on the test runner to add more arguments (à "
+"la :py:mod:`optparse`). Now to implement the same behavior, you have to "
+"create an ``add_arguments(cls, parser)`` class method on the test runner and "
+"call ``parser.add_argument`` to add any custom arguments, as parser is now "
+"an :py:class:`argparse.ArgumentParser` instance."
 msgstr ""
 
 msgid ""
@@ -20944,7 +21073,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Fixed `AttributeError: function 'GDALAllRegister' not found` error when "
+"Fixed ``AttributeError: function 'GDALAllRegister' not found`` error when "
 "initializing ``contrib.gis`` on Windows."
 msgstr ""
 
@@ -21445,7 +21574,7 @@ msgid ""
 "ticket:`25059`)."
 msgstr ""
 
-msgid "Improved `pyinotify` ``runserver`` polling (:ticket:`23882`)."
+msgid "Improved ``pyinotify`` ``runserver`` polling (:ticket:`23882`)."
 msgstr ""
 
 msgid "Django 1.8.4 release notes"
@@ -21639,7 +21768,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Fixed a typo in the name of the `strictly_above` PostGIS lookup (:ticket:"
+"Fixed a typo in the name of the ``strictly_above`` PostGIS lookup (:ticket:"
 "`25592`)."
 msgstr ""
 
@@ -23146,9 +23275,9 @@ msgstr ""
 msgid ""
 "It's safe to ignore these errors (Django will still install just fine), but "
 "you can avoid them by upgrading setuptools to a more recent version. If "
-"you're using pip, you can upgrade pip using ``pip install -U pip`` which "
-"will also upgrade setuptools. This is resolved in later versions of Django "
-"as described in the :doc:`/releases/1.9.2`."
+"you're using pip, you can upgrade pip using ``python -m pip install -U pip`` "
+"which will also upgrade setuptools. This is resolved in later versions of "
+"Django as described in the :doc:`/releases/1.9.2`."
 msgstr ""
 
 msgid ""
@@ -23237,9 +23366,9 @@ msgstr ""
 
 msgid ""
 "Template text that is translated and uses two or more consecutive percent "
-"signs, e.g. ``\"%%\"``, may have a new `msgid` after ``makemessages`` is run "
-"(most likely the translation will be marked fuzzy). The new ``msgid`` will "
-"be marked ``\"#, python-format\"``."
+"signs, e.g. ``\"%%\"``, may have a new ``msgid`` after ``makemessages`` is "
+"run (most likely the translation will be marked fuzzy). The new ``msgid`` "
+"will be marked ``\"#, python-format\"``."
 msgstr ""
 
 msgid ""
@@ -23413,13 +23542,13 @@ msgid ""
 msgstr ""
 
 msgid "mysite/urls.py"
-msgstr ""
+msgstr "mysite/urls.py"
 
 msgid "to:"
 msgstr ""
 
 msgid "polls/urls.py"
-msgstr ""
+msgstr "polls/urls.py"
 
 msgid ""
 "This change also means that the old way of including an ``AdminSite`` "
@@ -23713,7 +23842,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"The `cache_choices` option to :class:`~django.forms.ModelChoiceField` and :"
+"The ``cache_choices`` option to :class:`~django.forms.ModelChoiceField` and :"
 "class:`~django.forms.ModelMultipleChoiceField` is removed."
 msgstr ""
 
@@ -25410,8 +25539,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Fixed admin autocomplete widget's translations for `zh-hans` and `zh-hant` "
-"languages (:ticket:`29213`)."
+"Fixed admin autocomplete widget's translations for ``zh-hans`` and ``zh-"
+"hant`` languages (:ticket:`29213`)."
 msgstr ""
 
 msgid ""
@@ -25791,7 +25920,7 @@ msgstr ""
 
 msgid ""
 "``DatabaseOperations.distinct_sql()`` now requires an additional ``params`` "
-"argument and returns a tuple of SQL and parameters instead of a SQL string."
+"argument and returns a tuple of SQL and parameters instead of an SQL string."
 msgstr ""
 
 msgid ""
@@ -26173,6 +26302,89 @@ msgstr ""
 msgid "Django 2.1.11 fixes security issues in 2.1.10."
 msgstr ""
 
+msgid "Django 2.1.12 release notes"
+msgstr ""
+
+msgid "Django 2.1.12 fixes a regression in 2.1.11."
+msgstr ""
+
+msgid "Django 2.1.13 release notes"
+msgstr ""
+
+msgid "Django 2.1.13 fixes a regression in 2.1.11."
+msgstr ""
+
+msgid "Django 2.1.14 release notes"
+msgstr ""
+
+msgid "Django 2.1.14 fixes a regression in 2.1.13."
+msgstr ""
+
+msgid "Django 2.1.15 release notes"
+msgstr ""
+
+msgid "*December 2, 2019*"
+msgstr ""
+
+msgid "Django 2.1.15 fixes a security issue and a data loss bug in 2.1.14."
+msgstr ""
+
+msgid "CVE-2019-19118: Privilege escalation in the Django admin."
+msgstr ""
+
+msgid ""
+"Since Django 2.1, a Django model admin displaying a parent model with "
+"related model inlines, where the user has view-only permissions to a parent "
+"model but edit permissions to the inline model, would display a read-only "
+"view of the parent model but editable forms for the inline."
+msgstr ""
+
+msgid ""
+"Submitting these forms would not allow direct edits to the parent model, but "
+"would trigger the parent model's ``save()`` method, and cause pre and post-"
+"save signal handlers to be invoked. This is a privilege escalation as a user "
+"who lacks permission to edit a model should not be able to trigger its save-"
+"related signals."
+msgstr ""
+
+msgid ""
+"To resolve this issue, the permission handling code of the Django admin "
+"interface has been changed. Now, if a user has only the \"view\" permission "
+"for a parent model, the entire displayed form will not be editable, even if "
+"the user has permission to edit models included in inlines."
+msgstr ""
+
+msgid ""
+"This is a backwards-incompatible change, and the Django security team is "
+"aware that some users of Django were depending on the ability to allow "
+"editing of inlines in the admin form of an otherwise view-only parent model."
+msgstr ""
+
+msgid ""
+"Given the complexity of the Django admin, and in-particular the permissions "
+"related checks, it is the view of the Django security team that this change "
+"was necessary: that it is not currently feasible to maintain the existing "
+"behavior whilst escaping the potential privilege escalation in a way that "
+"would avoid a recurrence of similar issues in the future, and that would be "
+"compatible with Django's *safe by default* philosophy."
+msgstr ""
+
+msgid ""
+"For the time being, developers whose applications are affected by this "
+"change should replace the use of inlines in read-only parents with custom "
+"forms and views that explicitly implement the desired functionality. In the "
+"longer term, adding a documented, supported, and properly-tested mechanism "
+"for partially-editable multi-model forms to the admin interface may occur in "
+"Django itself."
+msgstr ""
+
+msgid ""
+"Fixed a data loss possibility in the :meth:`~django.db.models.query.QuerySet."
+"select_for_update()`. When using ``'self'`` in the ``of`` argument with :ref:"
+"`multi-table inheritance <multi-table-inheritance>`, a parent model was "
+"locked instead of the queryset's model (:ticket:`30953`)."
+msgstr ""
+
 msgid "Django 2.1.2 release notes"
 msgstr ""
 
@@ -26388,14 +26600,15 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Django 2.2 is designated as a :term:`long-term support release`. It will "
-"receive security updates for at least three years after its release. Support "
-"for the previous LTS, Django 1.11, will end in April 2020."
+"Django 2.2 is designated as a :term:`long-term support release <Long-term "
+"support release>`. It will receive security updates for at least three years "
+"after its release. Support for the previous LTS, Django 1.11, will end in "
+"April 2020."
 msgstr ""
 
 msgid ""
-"Django 2.2 supports Python 3.5, 3.6, and 3.7. We **highly recommend** and "
-"only officially support the latest release of each series."
+"Django 2.2 supports Python 3.5, 3.6, 3.7, and 3.8 (as of 2.2.8). We **highly "
+"recommend** and only officially support the latest release of each series."
 msgstr ""
 
 msgid "What's new in Django 2.2"
@@ -26737,8 +26950,8 @@ msgid "``sqlparse`` is required dependency"
 msgstr ""
 
 msgid ""
-"To simplify a few parts of Django's database handling, `sqlparse <https://"
-"pypi.org/project/sqlparse/>`_ is now a required dependency. It's "
+"To simplify a few parts of Django's database handling, `sqlparse 0.2.2+ "
+"<https://pypi.org/project/sqlparse/>`_ is now a required dependency. It's "
 "automatically installed along with Django."
 msgstr ""
 
@@ -26888,7 +27101,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-":djadmin:`runserver` no longer supports `pyinotify` (replaced by Watchman)."
+":djadmin:`runserver` no longer supports ``pyinotify`` (replaced by Watchman)."
 msgstr ""
 
 msgid ""
@@ -26904,6 +27117,21 @@ msgid ""
 "failing with errors like ``no such table: <app_label>_<model>``. This was "
 "observed with several third-party apps that had models in tests without "
 "migrations. You must add migrations for such models."
+msgstr ""
+
+msgid ""
+"Providing an integer in the ``key`` argument of the :meth:`.cache.delete` "
+"or :meth:`.cache.get` now raises :exc:`ValueError`."
+msgstr ""
+
+msgid ""
+"Plural equations for some languages are changed, because the latest versions "
+"from Transifex are incorporated."
+msgstr ""
+
+msgid ""
+"The ability to handle ``.po`` files containing different plural equations "
+"for the same language was added in Django 2.2.12."
 msgstr ""
 
 msgid "Features deprecated in 2.2"
@@ -27074,6 +27302,112 @@ msgid ""
 "with ``condition`` contains ``|`` (``OR``) operator (:ticket:`30412`)."
 msgstr ""
 
+msgid "Django 2.2.10 release notes"
+msgstr ""
+
+msgid "Django 2.2.10 fixes a security issue in 2.2.9."
+msgstr ""
+
+msgid "Django 2.2.11 release notes"
+msgstr ""
+
+msgid "Django 2.2.11 fixes a security issue and a data loss bug in 2.2.10."
+msgstr ""
+
+msgid ""
+"Fixed a data loss possibility in the :meth:`~django.db.models.query.QuerySet."
+"select_for_update`. When using related fields or parent link fields with :"
+"ref:`multi-table-inheritance` in the ``of`` argument, the corresponding "
+"models were not locked (:ticket:`31246`)."
+msgstr ""
+
+msgid "Django 2.2.12 release notes"
+msgstr ""
+
+msgid "*April 1, 2020*"
+msgstr ""
+
+msgid "Django 2.2.12 fixes a bug in 2.2.11."
+msgstr ""
+
+msgid ""
+"Added the ability to handle ``.po`` files containing different plural "
+"equations for the same language (:ticket:`30439`)."
+msgstr ""
+
+msgid "Django 2.2.13 release notes"
+msgstr ""
+
+msgid "*June 3, 2020*"
+msgstr ""
+
+msgid "Django 2.2.13 fixes two security issues and a regression in 2.2.12."
+msgstr ""
+
+msgid "CVE-2020-13254: Potential data leakage via malformed memcached keys"
+msgstr ""
+
+msgid ""
+"In cases where a memcached backend does not perform key validation, passing "
+"malformed cache keys could result in a key collision, and potential data "
+"leakage. In order to avoid this vulnerability, key validation is added to "
+"the memcached cache backends."
+msgstr ""
+
+msgid "CVE-2020-13596: Possible XSS via admin ``ForeignKeyRawIdWidget``"
+msgstr ""
+
+msgid ""
+"Query parameters for the admin ``ForeignKeyRawIdWidget`` were not properly "
+"URL encoded, posing an XSS attack vector. ``ForeignKeyRawIdWidget`` now "
+"ensures query parameters are correctly URL encoded."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 2.2.12 that affected translation loading for "
+"apps providing translations for territorial language variants as well as a "
+"generic language, where the project has different plural equations for the "
+"language (:ticket:`31570`)."
+msgstr ""
+
+msgid ""
+"Tracking a jQuery security release, upgraded the version of jQuery used by "
+"the admin from 3.3.1 to 3.5.1."
+msgstr ""
+
+msgid "Django 2.2.14 release notes"
+msgstr ""
+
+msgid "*July 1, 2020*"
+msgstr ""
+
+msgid "Django 2.2.14 fixes a bug in 2.2.13."
+msgstr ""
+
+msgid ""
+"Fixed messages of ``InvalidCacheKey`` exceptions and ``CacheKeyWarning`` "
+"warnings raised by cache key validation (:ticket:`31654`)."
+msgstr ""
+
+msgid "Django 2.2.15 release notes"
+msgstr ""
+
+msgid "*Expected August 3, 2020*"
+msgstr ""
+
+msgid "Django 2.2.15 fixes two bugs in 2.2.14."
+msgstr ""
+
+msgid ""
+"Allowed setting the ``SameSite`` cookie flag in :meth:`.HttpResponse."
+"delete_cookie` (:ticket:`31790`)."
+msgstr ""
+
+msgid ""
+"Fixed crash when sending emails to addresses with display names longer than "
+"75 chars on Python 3.6.11+, 3.7.8+, and 3.8.4+ (:ticket:`31784`)."
+msgstr ""
+
 msgid "Django 2.2.2 release notes"
 msgstr ""
 
@@ -27170,9 +27504,6 @@ msgstr ""
 msgid "Django 2.2.5 release notes"
 msgstr ""
 
-msgid "*Expected September 2, 2019*"
-msgstr ""
-
 msgid "Django 2.2.5 fixes several bugs in 2.2.4."
 msgstr ""
 
@@ -27180,6 +27511,1150 @@ msgid ""
 "Relaxed the system check added in Django 2.2 for models to reallow use of "
 "the same ``db_table`` by multiple models when database routers are installed "
 "(:ticket:`30673`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 2.2 where :attr:`ModelAdmin.list_filter <django."
+"contrib.admin.ModelAdmin.list_filter>` choices to foreign objects don't "
+"respect a model's ``Meta.ordering`` (:ticket:`30449`)."
+msgstr ""
+
+msgid "Django 2.2.6 release notes"
+msgstr ""
+
+msgid "Django 2.2.6 fixes several bugs in 2.2.5."
+msgstr ""
+
+msgid ""
+"Fixed migrations crash on SQLite when altering a model containing partial "
+"indexes (:ticket:`30754`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 2.2.4 that caused a crash when filtering with a "
+"``Subquery()`` annotation of a queryset containing :class:`~django.contrib."
+"postgres.fields.JSONField` or :class:`~django.contrib.postgres.fields."
+"HStoreField` (:ticket:`30769`)."
+msgstr ""
+
+msgid "Django 2.2.7 release notes"
+msgstr ""
+
+msgid "Django 2.2.7 fixes several bugs in 2.2.6."
+msgstr ""
+
+msgid ""
+"Prevented :option:`migrate --plan` from showing that ``RunPython`` "
+"operations are irreversible when ``reverse_code`` callables don't have "
+"docstrings or when showing a forward migration plan (:ticket:`30870`)."
+msgstr ""
+
+msgid ""
+"Fixed migrations crash on PostgreSQL when adding an :class:`~django.db."
+"models.Index` with fields ordering and :attr:`~.Index.opclasses` (:ticket:"
+"`30903`)."
+msgstr ""
+
+msgid ""
+"Restored the ability to override :meth:`~django.db.models.Model."
+"get_FOO_display` (:ticket:`30931`)."
+msgstr ""
+
+msgid "Django 2.2.8 release notes"
+msgstr ""
+
+msgid ""
+"Django 2.2.8 fixes a security issue, several bugs in 2.2.7, and adds "
+"compatibility with Python 3.8."
+msgstr ""
+
+msgid ""
+"Fixed a data loss possibility in the admin changelist view when a custom :"
+"ref:`formset's prefix <formset-prefix>` contains regular expression special "
+"characters, e.g. ``'$'`` (:ticket:`31031`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 2.2.1 that caused a crash when migrating "
+"permissions for proxy models with a multiple database setup if the "
+"``default`` entry was empty (:ticket:`31021`)."
+msgstr ""
+
+msgid "Django 2.2.9 release notes"
+msgstr ""
+
+msgid "Django 2.2.9 fixes a security issue and a data loss bug in 2.2.8."
+msgstr ""
+
+msgid "Django 3.0 release notes"
+msgstr ""
+
+msgid "Welcome to Django 3.0!"
+msgstr ""
+
+msgid ""
+"These release notes cover the :ref:`new features <whats-new-3.0>`, as well "
+"as some :ref:`backwards incompatible changes <backwards-incompatible-3.0>` "
+"you'll want to be aware of when upgrading from Django 2.2 or earlier. We've :"
+"ref:`dropped some features<removed-features-3.0>` that have reached the end "
+"of their deprecation cycle, and we've :ref:`begun the deprecation process "
+"for some features <deprecated-features-3.0>`."
+msgstr ""
+
+msgid ""
+"Django 3.0 supports Python 3.6, 3.7, and 3.8. We **highly recommend** and "
+"only officially support the latest release of each series."
+msgstr ""
+
+msgid "The Django 2.2.x series is the last to support Python 3.5."
+msgstr ""
+
+msgid ""
+"Following the release of Django 3.0, we suggest that third-party app authors "
+"drop support for all versions of Django prior to 2.2. At that time, you "
+"should be able to run your package's tests using ``python -Wd`` so that "
+"deprecation warnings appear. After making the deprecation warning fixes, "
+"your app should be compatible with Django 3.0."
+msgstr ""
+
+msgid "What's new in Django 3.0"
+msgstr ""
+
+msgid "MariaDB support"
+msgstr ""
+
+msgid ""
+"Django now officially supports `MariaDB <https://mariadb.org/>`_ 10.1 and "
+"higher. See :ref:`MariaDB notes <mariadb-notes>` for more details."
+msgstr ""
+
+msgid "ASGI support"
+msgstr ""
+
+msgid ""
+"Django 3.0 begins our journey to making Django fully async-capable by "
+"providing support for running as an `ASGI <https://asgi.readthedocs.io/>`_ "
+"application."
+msgstr ""
+
+msgid ""
+"This is in addition to our existing WSGI support. Django intends to support "
+"both for the foreseeable future. Async features will only be available to "
+"applications that run under ASGI, however."
+msgstr ""
+
+msgid ""
+"At this stage async support only applies to the outer ASGI application. "
+"Internally everything remains synchronous. Asynchronous middleware, views, "
+"etc. are not yet supported. You can, however, use ASGI middleware around "
+"Django's application, allowing you to combine Django with other ASGI "
+"frameworks."
+msgstr ""
+
+msgid ""
+"There is no need to switch your applications over unless you want to start "
+"experimenting with asynchronous code, but we have :doc:`documentation on "
+"deploying with ASGI </howto/deployment/asgi/index>` if you want to learn "
+"more."
+msgstr ""
+
+msgid ""
+"Note that as a side-effect of this change, Django is now aware of "
+"asynchronous event loops and will block you calling code marked as \"async "
+"unsafe\" - such as ORM operations - from an asynchronous context. If you "
+"were using Django from async code before, this may trigger if you were doing "
+"it incorrectly. If you see a ``SynchronousOnlyOperation`` error, then "
+"closely examine your code and move any database operations to be in a "
+"synchronous child thread."
+msgstr ""
+
+msgid "Exclusion constraints on PostgreSQL"
+msgstr ""
+
+msgid ""
+"The new :class:`~django.contrib.postgres.constraints.ExclusionConstraint` "
+"class enable adding exclusion constraints on PostgreSQL. Constraints are "
+"added to models using the :attr:`Meta.constraints <django.db.models.Options."
+"constraints>` option."
+msgstr ""
+
+msgid "Filter expressions"
+msgstr ""
+
+msgid ""
+"Expressions that output :class:`~django.db.models.BooleanField` may now be "
+"used directly in ``QuerySet`` filters, without having to first annotate and "
+"then filter against the annotation."
+msgstr ""
+
+msgid "Enumerations for model field choices"
+msgstr ""
+
+msgid ""
+"Custom enumeration types ``TextChoices``, ``IntegerChoices``, and "
+"``Choices`` are now available as a way to define :attr:`.Field.choices`. "
+"``TextChoices`` and ``IntegerChoices`` types are provided for text and "
+"integer fields. The ``Choices`` class allows defining a compatible "
+"enumeration for other concrete data types. These custom enumeration types "
+"support human-readable labels that can be translated and accessed via a "
+"property on the enumeration or its members. See :ref:`Enumeration types "
+"<field-choices-enum-types>` for more details and examples."
+msgstr ""
+
+msgid ""
+"Added support for the ``admin_order_field`` attribute on properties in :attr:"
+"`.ModelAdmin.list_display`."
+msgstr ""
+
+msgid ""
+"The new :meth:`ModelAdmin.get_inlines() <django.contrib.admin.ModelAdmin."
+"get_inlines>` method allows specifying the inlines based on the request or "
+"model instance."
+msgstr ""
+
+msgid "Select2 library is upgraded from version 4.0.3 to 4.0.7."
+msgstr ""
+
+msgid "jQuery is upgraded from version 3.3.1 to 3.4.1."
+msgstr ""
+
+msgid ""
+"The new ``reset_url_token`` attribute in :class:`~django.contrib.auth.views."
+"PasswordResetConfirmView` allows specifying a token parameter displayed as a "
+"component of password reset URLs."
+msgstr ""
+
+msgid ""
+"Added :class:`~django.contrib.auth.backends.BaseBackend` class to ease "
+"customization of authentication backends."
+msgstr ""
+
+msgid ""
+"Added :meth:`~django.contrib.auth.models.User.get_user_permissions()` method "
+"to mirror the existing :meth:`~django.contrib.auth.models.User."
+"get_group_permissions()` method."
+msgstr ""
+
+msgid ""
+"Added HTML ``autocomplete`` attribute to widgets of username, email, and "
+"password fields in :mod:`django.contrib.auth.forms` for better interaction "
+"with browser password managers."
+msgstr ""
+
+msgid ""
+":djadmin:`createsuperuser` now falls back to environment variables for "
+"password and required fields, when a corresponding command line argument "
+"isn't provided in non-interactive mode."
+msgstr ""
+
+msgid ""
+":attr:`~django.contrib.auth.models.CustomUser.REQUIRED_FIELDS` now supports :"
+"class:`~django.db.models.ManyToManyField`\\s."
+msgstr ""
+
+msgid ""
+"The new :meth:`.UserManager.with_perm` method returns users that have the "
+"specified permission."
+msgstr ""
+
+msgid ""
+"The default iteration count for the PBKDF2 password hasher is increased from "
+"150,000 to 180,000."
+msgstr ""
+
+msgid ""
+"Allowed MySQL spatial lookup functions to operate on real geometries. "
+"Previous support was limited to bounding boxes."
+msgstr ""
+
+msgid ""
+"Added the :class:`~django.contrib.gis.db.models.functions.GeometryDistance` "
+"function, supported on PostGIS."
+msgstr ""
+
+msgid ""
+"Added support for the ``furlong`` unit in :class:`~django.contrib.gis."
+"measure.Distance`."
+msgstr ""
+
+msgid "The :setting:`GEOIP_PATH` setting now supports :class:`pathlib.Path`."
+msgstr ""
+
+msgid ""
+"The :class:`~django.contrib.gis.geoip2.GeoIP2` class now accepts :class:"
+"`pathlib.Path` ``path``."
+msgstr ""
+
+msgid ""
+"The new :class:`~django.contrib.postgres.fields.RangeOperators` helps to "
+"avoid typos in SQL operators that can be used together with :class:`~django."
+"contrib.postgres.fields.RangeField`."
+msgstr ""
+
+msgid ""
+"The new :class:`~django.contrib.postgres.fields.RangeBoundary` expression "
+"represents the range boundaries."
+msgstr ""
+
+msgid ""
+"The new :class:`~django.contrib.postgres.operations.AddIndexConcurrently` "
+"and :class:`~django.contrib.postgres.operations.RemoveIndexConcurrently` "
+"classes allow creating and dropping indexes ``CONCURRENTLY`` on PostgreSQL."
+msgstr ""
+
+msgid ""
+"The new :meth:`~django.contrib.sessions.backends.base.SessionBase."
+"get_session_cookie_age()` method allows dynamically specifying the session "
+"cookie age."
+msgstr ""
+
+msgid ""
+"Added the ``language`` class attribute to the :class:`django.contrib."
+"syndication.views.Feed` to customize a feed language. The default value is :"
+"func:`~django.utils.translation.get_language()` instead of :setting:"
+"`LANGUAGE_CODE`."
+msgstr ""
+
+msgid ""
+":func:`~django.utils.cache.add_never_cache_headers` and :func:`~django.views."
+"decorators.cache.never_cache` now add the ``private`` directive to ``Cache-"
+"Control`` headers."
+msgstr ""
+
+msgid ""
+"The new :meth:`.Storage.get_alternative_name` method allows customizing the "
+"algorithm for generating filenames if a file with the uploaded name already "
+"exists."
+msgstr ""
+
+msgid ""
+"Formsets may control the widget used when ordering forms via :attr:`~django."
+"forms.formsets.BaseFormSet.can_order` by setting the :attr:`~django.forms."
+"formsets.BaseFormSet.ordering_widget` attribute or overriding :attr:`~django."
+"forms.formsets.BaseFormSet.get_ordering_widget()`."
+msgstr ""
+
+msgid ""
+"Added the :setting:`LANGUAGE_COOKIE_HTTPONLY`, :setting:"
+"`LANGUAGE_COOKIE_SAMESITE`, and :setting:`LANGUAGE_COOKIE_SECURE` settings "
+"to set the ``HttpOnly``, ``SameSite``, and ``Secure`` flags on language "
+"cookies. The default values of these settings preserve the previous behavior."
+msgstr ""
+
+msgid "Added support and translations for the Uzbek language."
+msgstr ""
+
+msgid ""
+"The new ``reporter_class`` parameter of :class:`~django.utils.log."
+"AdminEmailHandler` allows providing an ``django.views.debug."
+"ExceptionReporter`` subclass to customize the traceback text sent to site :"
+"setting:`ADMINS` when :setting:`DEBUG` is ``False``."
+msgstr ""
+
+msgid ""
+"The new :option:`compilemessages --ignore` option allows ignoring specific "
+"directories when searching for ``.po`` files to compile."
+msgstr ""
+
+msgid ""
+":option:`showmigrations --list` now shows the applied datetimes when ``--"
+"verbosity`` is 2 and above."
+msgstr ""
+
+msgid ""
+"On PostgreSQL, :djadmin:`dbshell` now supports client-side TLS certificates."
+msgstr ""
+
+msgid ""
+":djadmin:`inspectdb` now introspects :class:`~django.db.models."
+"OneToOneField` when a foreign key has a unique or primary key constraint."
+msgstr ""
+
+msgid ""
+"The new :option:`--skip-checks` option skips running system checks prior to "
+"running the command."
+msgstr ""
+
+msgid ""
+"The :option:`startapp --template` and :option:`startproject --template` "
+"options now support templates stored in XZ archives (``.tar.xz``, ``.txz``) "
+"and LZMA archives (``.tar.lzma``, ``.tlz``)."
+msgstr ""
+
+msgid ""
+"Added hash database functions :class:`~django.db.models.functions.MD5`, :"
+"class:`~django.db.models.functions.SHA1`, :class:`~django.db.models."
+"functions.SHA224`, :class:`~django.db.models.functions.SHA256`, :class:"
+"`~django.db.models.functions.SHA384`, and :class:`~django.db.models."
+"functions.SHA512`."
+msgstr ""
+
+msgid "Added the :class:`~django.db.models.functions.Sign` database function."
+msgstr ""
+
+msgid ""
+"The new ``is_dst``  parameter of the :class:`~django.db.models.functions."
+"Trunc` database functions determines the treatment of nonexistent and "
+"ambiguous datetimes."
+msgstr ""
+
+msgid ""
+"``connection.queries`` now shows ``COPY … TO`` statements on PostgreSQL."
+msgstr ""
+
+msgid ""
+":class:`~django.db.models.FilePathField` now accepts a callable for ``path``."
+msgstr ""
+
+msgid ""
+"Allowed symmetrical intermediate table for self-referential :class:`~django."
+"db.models.ManyToManyField`."
+msgstr ""
+
+msgid ""
+"The ``name`` attributes of :class:`~django.db.models.CheckConstraint`, :"
+"class:`~django.db.models.UniqueConstraint`, and :class:`~django.db.models."
+"Index` now support app label and class interpolation using the "
+"``'%(app_label)s'`` and ``'%(class)s'`` placeholders."
+msgstr ""
+
+msgid ""
+"The new :attr:`.Field.descriptor_class` attribute allows model fields to "
+"customize the get and set behavior by overriding their :py:ref:`descriptors "
+"<descriptors>`."
+msgstr ""
+
+msgid ""
+":class:`~django.db.models.Avg` and :class:`~django.db.models.Sum` now "
+"support the ``distinct`` argument."
+msgstr ""
+
+msgid ""
+"Added :class:`~django.db.models.SmallAutoField` which acts much like an :"
+"class:`~django.db.models.AutoField` except that it only allows values under "
+"a certain (database-dependent) limit. Values from ``1`` to ``32767`` are "
+"safe in all databases supported by Django."
+msgstr ""
+
+msgid ""
+":class:`~django.db.models.AutoField`, :class:`~django.db.models."
+"BigAutoField`, and :class:`~django.db.models.SmallAutoField` now inherit "
+"from ``IntegerField``, ``BigIntegerField`` and ``SmallIntegerField`` "
+"respectively. System checks and validators are now also properly inherited."
+msgstr ""
+
+msgid ":attr:`.FileField.upload_to` now supports :class:`pathlib.Path`."
+msgstr ""
+
+msgid ""
+":class:`~django.db.models.CheckConstraint` is now supported on MySQL 8.0.16+."
+msgstr ""
+
+msgid ""
+"The new ``allows_group_by_selected_pks_on_model()`` method of ``django.db."
+"backends.base.BaseDatabaseFeatures`` allows optimization of ``GROUP BY`` "
+"clauses to require only the selected models' primary keys. By default, it's "
+"supported only for managed models on PostgreSQL."
+msgstr ""
+
+msgid ""
+"To enable the ``GROUP BY`` primary key-only optimization for unmanaged "
+"models, you have to subclass the PostgreSQL database engine, overriding the "
+"features class ``allows_group_by_selected_pks_on_model()`` method as you "
+"require. See :ref:`Subclassing the built-in database backends <subclassing-"
+"database-backends>` for an example."
+msgstr ""
+
+msgid ""
+"Allowed :class:`~django.http.HttpResponse` to be initialized with :class:"
+"`memoryview` content."
+msgstr ""
+
+msgid ""
+"For use in, for example, Django templates, :attr:`.HttpRequest.headers` now "
+"allows lookups using underscores (e.g. ``user_agent``) in place of hyphens."
+msgstr ""
+
+msgid "Security"
+msgstr "Segurança"
+
+msgid ""
+":setting:`X_FRAME_OPTIONS` now defaults to ``'DENY'``. In older versions, "
+"the :setting:`X_FRAME_OPTIONS` setting defaults to ``'SAMEORIGIN'``. If your "
+"site uses frames of itself, you will need to explicitly set "
+"``X_FRAME_OPTIONS = 'SAMEORIGIN'`` for them to continue working."
+msgstr ""
+
+msgid ""
+":setting:`SECURE_CONTENT_TYPE_NOSNIFF` now defaults to ``True``. With this "
+"enabled, :class:`~django.middleware.security.SecurityMiddleware` sets the :"
+"ref:`x-content-type-options` header on all responses that do not already "
+"have it."
+msgstr ""
+
+msgid ""
+":class:`~django.middleware.security.SecurityMiddleware` can now send the :"
+"ref:`Referrer-Policy <referrer-policy>` header."
+msgstr ""
+
+msgid ""
+"The new test :class:`~django.test.Client` argument "
+"``raise_request_exception`` allows controlling whether or not exceptions "
+"raised during the request should also be raised in the test. The value "
+"defaults to ``True`` for backwards compatibility. If it is ``False`` and an "
+"exception occurs, the test client will return a 500 response with the "
+"attribute :attr:`~django.test.Response.exc_info`, a tuple providing "
+"information of the exception that occurred."
+msgstr ""
+
+msgid ""
+"Tests and test cases to run can be selected by test name pattern using the "
+"new :option:`test -k` option."
+msgstr ""
+
+msgid ""
+"HTML comparison, as used by :meth:`~django.test.SimpleTestCase."
+"assertHTMLEqual`, now treats text, character references, and entity "
+"references that refer to the same character as equivalent."
+msgstr ""
+
+msgid ""
+"Django test runner now supports headless mode for selenium tests on "
+"supported browsers. Add the ``--headless`` option to enable this mode."
+msgstr ""
+
+msgid ""
+"Django test runner now supports ``--start-at`` and ``--start-after`` options "
+"to run tests starting from a specific top-level module."
+msgstr ""
+
+msgid ""
+"Django test runner now supports a ``--pdb`` option to spawn a debugger at "
+"each error or failure."
+msgstr ""
+
+msgid "Backwards incompatible changes in 3.0"
+msgstr ""
+
+msgid "``Model.save()`` when providing a default for the primary key"
+msgstr ""
+
+msgid ""
+":meth:`.Model.save` no longer attempts to find a row when saving a new "
+"``Model`` instance and a default value for the primary key is provided, and "
+"always performs a single ``INSERT`` query. In older Django versions, ``Model."
+"save()`` performed either an ``INSERT`` or an ``UPDATE`` based on whether or "
+"not the row exists."
+msgstr ""
+
+msgid ""
+"This makes calling ``Model.save()`` while providing a default primary key "
+"value equivalent to passing :ref:`force_insert=True <ref-models-force-"
+"insert>` to model's ``save()``. Attempts to use a new ``Model`` instance to "
+"update an existing row will result in an ``IntegrityError``."
+msgstr ""
+
+msgid ""
+"In order to update an existing model for a specific primary key value, use "
+"the :meth:`~django.db.models.query.QuerySet.update_or_create` method or "
+"``QuerySet.filter(pk=…).update(…)`` instead. For example::"
+msgstr ""
+
+msgid ""
+"The second argument of ``DatabaseIntrospection.get_geometry_type()`` is now "
+"the row description instead of the column name."
+msgstr ""
+
+msgid "``DatabaseIntrospection.get_field_type()`` may no longer return tuples."
+msgstr ""
+
+msgid ""
+"If the database can create foreign keys in the same SQL statement that adds "
+"a field, add ``SchemaEditor.sql_create_column_inline_fk`` with the "
+"appropriate SQL; otherwise, set ``DatabaseFeatures.can_create_inline_fk = "
+"False``."
+msgstr ""
+
+msgid ""
+"``DatabaseFeatures.can_return_id_from_insert`` and "
+"``can_return_ids_from_bulk_insert`` are renamed to "
+"``can_return_columns_from_insert`` and ``can_return_rows_from_bulk_insert``."
+msgstr ""
+
+msgid ""
+"Database functions now handle :class:`datetime.timezone` formats when "
+"created using :class:`datetime.timedelta` instances (e.g. "
+"``timezone(timedelta(hours=5))``, which would output ``'UTC+05:00'``). Third-"
+"party backends should handle this format when preparing :class:`~django.db."
+"models.DateTimeField` in ``datetime_cast_date_sql()``, "
+"``datetime_extract_sql()``, etc."
+msgstr ""
+
+msgid ""
+"Entries for ``AutoField``, ``BigAutoField``, and ``SmallAutoField`` are "
+"added to  ``DatabaseOperations.integer_field_ranges`` to support the integer "
+"range validators on these field types. Third-party backends may need to "
+"customize the default entries."
+msgstr ""
+
+msgid ""
+"``DatabaseOperations.fetch_returned_insert_id()`` is replaced by "
+"``fetch_returned_insert_columns()`` which returns a list of values returned "
+"by the ``INSERT … RETURNING`` statement, instead of a single value."
+msgstr ""
+
+msgid ""
+"``DatabaseOperations.return_insert_id()`` is replaced by "
+"``return_insert_columns()`` that accepts a ``fields`` argument, which is an "
+"iterable of fields to be returned after insert. Usually this is only the "
+"auto-generated primary key."
+msgstr ""
+
+msgid ""
+"Admin's model history change messages now prefers more readable field labels "
+"instead of field names."
+msgstr ""
+
+msgid "Support for PostGIS 2.1 is removed."
+msgstr ""
+
+msgid "Support for SpatiaLite 4.1 and 4.2 is removed."
+msgstr ""
+
+msgid "Support for GDAL 1.11 and GEOS 3.4 is removed."
+msgstr ""
+
+msgid "Dropped support for PostgreSQL 9.4"
+msgstr ""
+
+msgid ""
+"Upstream support for PostgreSQL 9.4 ends in December 2019. Django 3.0 "
+"supports PostgreSQL 9.5 and higher."
+msgstr ""
+
+msgid "Dropped support for Oracle 12.1"
+msgstr ""
+
+msgid ""
+"Upstream support for Oracle 12.1 ends in July 2021. Django 2.2 will be "
+"supported until April 2022. Django 3.0 officially supports Oracle 12.2 and "
+"18c."
+msgstr ""
+
+msgid "Removed private Python 2 compatibility APIs"
+msgstr ""
+
+msgid ""
+"While Python 2 support was removed in Django 2.0, some private APIs weren't "
+"removed from Django so that third party apps could continue using them until "
+"the Python 2 end-of-life."
+msgstr ""
+
+msgid ""
+"Since we expect apps to drop Python 2 compatibility when adding support for "
+"Django 3.0, we're removing these APIs at this time."
+msgstr ""
+
+msgid ""
+"``django.test.utils.str_prefix()`` - Strings don't have 'u' prefixes in "
+"Python 3."
+msgstr ""
+
+msgid ""
+"``django.test.utils.patch_logger()`` - Use :meth:`unittest.TestCase."
+"assertLogs` instead."
+msgstr ""
+
+msgid ""
+"``django.utils.lru_cache.lru_cache()`` - Alias of :func:`functools."
+"lru_cache`."
+msgstr ""
+
+msgid ""
+"``django.utils.decorators.available_attrs()`` - This function returns "
+"``functools.WRAPPER_ASSIGNMENTS``."
+msgstr ""
+
+msgid ""
+"``django.utils.decorators.ContextDecorator`` - Alias of :class:`contextlib."
+"ContextDecorator`."
+msgstr ""
+
+msgid "``django.utils._os.abspathu()`` - Alias of :func:`os.path.abspath`."
+msgstr ""
+
+msgid ""
+"``django.utils._os.upath()`` and ``npath()`` - These functions do nothing on "
+"Python 3."
+msgstr ""
+
+msgid ""
+"``django.utils.six`` - Remove usage of this vendored library or switch to "
+"`six <https://pypi.org/project/six/>`_."
+msgstr ""
+
+msgid ""
+"``django.utils.encoding.python_2_unicode_compatible()`` - Alias of ``six."
+"python_2_unicode_compatible()``."
+msgstr ""
+
+msgid ""
+"``django.utils.functional.curry()`` - Use :func:`functools.partial` or :"
+"class:`functools.partialmethod`. See :commit:`5b1c389603a353625ae1603`."
+msgstr ""
+
+msgid "``django.utils.safestring.SafeBytes`` - Unused since Django 2.0."
+msgstr ""
+
+msgid "New default value for the ``FILE_UPLOAD_PERMISSIONS`` setting"
+msgstr ""
+
+msgid ""
+"In older versions, the :setting:`FILE_UPLOAD_PERMISSIONS` setting defaults "
+"to ``None``. With the default :setting:`FILE_UPLOAD_HANDLERS`, this results "
+"in uploaded files having different permissions depending on their size and "
+"which upload handler is used."
+msgstr ""
+
+msgid ""
+"``FILE_UPLOAD_PERMISSION`` now defaults to ``0o644`` to avoid this "
+"inconsistency."
+msgstr ""
+
+msgid "New default values for security settings"
+msgstr ""
+
+msgid ""
+"To make Django projects more secure by default, some security settings now "
+"have more secure default values:"
+msgstr ""
+
+msgid ":setting:`X_FRAME_OPTIONS` now defaults to ``'DENY'``."
+msgstr ""
+
+msgid ":setting:`SECURE_CONTENT_TYPE_NOSNIFF` now defaults to ``True``."
+msgstr ""
+
+msgid ""
+"See the *What's New* :ref:`Security section <whats-new-security-3.0>` above "
+"for more details on these changes."
+msgstr ""
+
+msgid ""
+"``ContentType.__str__()`` now includes the model's ``app_label`` to "
+"disambiguate models with the same name in different apps."
+msgstr ""
+
+msgid ""
+"Because accessing the language in the session rather than in the cookie is "
+"deprecated, ``LocaleMiddleware`` no longer looks for the user's language in "
+"the session and :func:`django.contrib.auth.logout` no longer preserves the "
+"session's language after logout."
+msgstr ""
+
+msgid ""
+":func:`django.utils.html.escape` now uses :func:`html.escape` to escape "
+"HTML. This converts ``'`` to ``&#x27;`` instead of the previous equivalent "
+"decimal code ``&#39;``."
+msgstr ""
+
+msgid ""
+"The ``django-admin test -k`` option now works as the :option:`unittest -"
+"k<unittest.-k>` option rather than as a shortcut for ``--keepdb``."
+msgstr ""
+
+msgid "Support for ``pywatchman`` < 1.2.0 is removed."
+msgstr ""
+
+msgid ""
+":func:`~django.utils.http.urlencode` now encodes iterable values as they are "
+"when ``doseq=False``, rather than iterating them, bringing it into line with "
+"the standard library :func:`urllib.parse.urlencode` function."
+msgstr ""
+
+msgid ""
+"``intword`` template filter now translates ``1.0`` as a singular phrase and "
+"all other numeric values as plural. This may be incorrect for some languages."
+msgstr ""
+
+msgid ""
+"Assigning a value to a model's :class:`~django.db.models.ForeignKey` or :"
+"class:`~django.db.models.OneToOneField` ``'_id'`` attribute now unsets the "
+"corresponding field. Accessing the field afterwards will result in a query."
+msgstr ""
+
+msgid ""
+":func:`~django.utils.cache.patch_vary_headers` now handles an asterisk "
+"``'*'`` according to :rfc:`7231#section-7.1.4`, i.e. if a list of header "
+"field names contains an asterisk, then the ``Vary`` header will consist of a "
+"single asterisk ``'*'``."
+msgstr ""
+
+msgid ""
+"On MySQL 8.0.16+, ``PositiveIntegerField`` and ``PositiveSmallIntegerField`` "
+"now include a check constraint to prevent negative values in the database."
+msgstr ""
+
+msgid ""
+"``alias=None`` is added to the signature of :meth:`.Expression."
+"get_group_by_cols`."
+msgstr ""
+
+msgid ""
+"``RegexPattern``, used by :func:`~django.urls.re_path`, no longer returns "
+"keyword arguments with ``None`` values to be passed to the view for the "
+"optional named groups that are missing."
+msgstr ""
+
+msgid "Features deprecated in 3.0"
+msgstr ""
+
+msgid "``django.utils.encoding.force_text()`` and ``smart_text()``"
+msgstr ""
+
+msgid ""
+"The ``smart_text()`` and ``force_text()`` aliases (since Django 2.0) of "
+"``smart_str()`` and ``force_str()`` are deprecated. Ignore this deprecation "
+"if your code supports Python 2 as the behavior of ``smart_str()`` and "
+"``force_str()`` is different there."
+msgstr ""
+
+msgid ""
+"``django.utils.http.urlquote()``, ``urlquote_plus()``, ``urlunquote()``, and "
+"``urlunquote_plus()`` are deprecated in favor of the functions that they're "
+"aliases for: :func:`urllib.parse.quote`, :func:`~urllib.parse.quote_plus`, :"
+"func:`~urllib.parse.unquote`, and :func:`~urllib.parse.unquote_plus`."
+msgstr ""
+
+msgid ""
+"``django.utils.translation.ugettext()``, ``ugettext_lazy()``, "
+"``ugettext_noop()``, ``ungettext()``, and ``ungettext_lazy()`` are "
+"deprecated in favor of the functions that they're aliases for: :func:`django."
+"utils.translation.gettext`, :func:`~django.utils.translation.gettext_lazy`, :"
+"func:`~django.utils.translation.gettext_noop`, :func:`~django.utils."
+"translation.ngettext`, and :func:`~django.utils.translation.ngettext_lazy`."
+msgstr ""
+
+msgid ""
+"To limit creation of sessions and hence favor some caching strategies, :func:"
+"`django.views.i18n.set_language` will stop setting the user's language in "
+"the session in Django 4.0. Since Django 2.1, the language is always stored "
+"in the :setting:`LANGUAGE_COOKIE_NAME` cookie."
+msgstr ""
+
+msgid ""
+"``django.utils.text.unescape_entities()`` is deprecated in favor of :func:"
+"`html.unescape`. Note that unlike ``unescape_entities()``, ``html."
+"unescape()`` evaluates lazy strings immediately."
+msgstr ""
+
+msgid ""
+"To avoid possible confusion as to effective scope, the private internal "
+"utility ``is_safe_url()`` is renamed to "
+"``url_has_allowed_host_and_scheme()``. That a URL has an allowed host and "
+"scheme doesn't in general imply that it's \"safe\". It may still be quoted "
+"incorrectly, for example. Ensure to also use :func:`~django.utils.encoding."
+"iri_to_uri` on the path component of untrusted URLs."
+msgstr ""
+
+msgid "Features removed in 3.0"
+msgstr ""
+
+msgid ""
+"These features have reached the end of their deprecation cycle and are "
+"removed in Django 3.0."
+msgstr ""
+
+msgid ""
+"See :ref:`deprecated-features-2.0` for details on these changes, including "
+"how to remove usage of these features."
+msgstr ""
+
+msgid "The ``django.db.backends.postgresql_psycopg2`` module is removed."
+msgstr ""
+
+msgid "``django.shortcuts.render_to_response()`` is removed."
+msgstr ""
+
+msgid "The ``DEFAULT_CONTENT_TYPE`` setting is removed."
+msgstr ""
+
+msgid "``HttpRequest.xreadlines()`` is removed."
+msgstr ""
+
+msgid ""
+"Support for the ``context`` argument of ``Field.from_db_value()`` and "
+"``Expression.convert_value()`` is removed."
+msgstr ""
+
+msgid ""
+"The ``field_name`` keyword argument of ``QuerySet.earliest()`` and "
+"``latest()`` is removed."
+msgstr ""
+
+msgid ""
+"See :ref:`deprecated-features-2.1` for details on these changes, including "
+"how to remove usage of these features."
+msgstr ""
+
+msgid "The ``ForceRHR`` GIS function is removed."
+msgstr ""
+
+msgid "``django.utils.http.cookie_date()`` is removed."
+msgstr ""
+
+msgid ""
+"The ``staticfiles`` and ``admin_static`` template tag libraries are removed."
+msgstr ""
+
+msgid ""
+"``django.contrib.staticfiles.templatetags.staticfiles.static()`` is removed."
+msgstr ""
+
+msgid "Django 3.0.1 release notes"
+msgstr ""
+
+msgid "Django 3.0.1 fixes a security issue and several bugs in 3.0."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 by restoring the ability to use Django "
+"inside Jupyter and other environments that force an async context, by adding "
+"an option to disable :ref:`async-safety` mechanism with "
+"``DJANGO_ALLOW_ASYNC_UNSAFE`` environment variable (:ticket:`31056`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 where ``RegexPattern``, used by :func:"
+"`~django.urls.re_path`, returned positional arguments to be passed to the "
+"view when all optional named groups were missing (:ticket:`31061`)."
+msgstr ""
+
+msgid ""
+"Reallowed, following a regression in Django 3.0, :class:`~django.db.models."
+"expressions.Window` expressions to be used in conditions outside of queryset "
+"filters, e.g. in :class:`~django.db.models.expressions.When` conditions (:"
+"ticket:`31060`)."
+msgstr ""
+
+msgid "Django 3.0.2 release notes"
+msgstr ""
+
+msgid "*January 2, 2020*"
+msgstr ""
+
+msgid "Django 3.0.2 fixes several bugs in 3.0.1."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 that didn't include columns referenced by a "
+"``Subquery()`` in the ``GROUP BY`` clause (:ticket:`31094`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 where ``QuerySet.exists()`` crashed if a "
+"queryset contained an aggregation over a ``Subquery()`` (:ticket:`31109`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 that caused a migration crash on PostgreSQL "
+"10+ when adding a foreign key and changing data in the same migration (:"
+"ticket:`31106`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 where loading fixtures crashed for models "
+"defining a :attr:`~django.db.models.Field.default` for the primary key (:"
+"ticket:`31071`)."
+msgstr ""
+
+msgid "Django 3.0.3 release notes"
+msgstr ""
+
+msgid "Django 3.0.3 fixes a security issue and several bugs in 3.0.2."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 that caused a crash when subtracting "
+"``DateField``, ``DateTimeField``, or ``TimeField`` from a ``Subquery()`` "
+"annotation (:ticket:`31133`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 where ``QuerySet.values()`` and "
+"``values_list()`` crashed if a queryset contained an aggregation and "
+"``Exists()`` annotation (:ticket:`31136`)."
+msgstr ""
+
+msgid ""
+"Relaxed the system check added in Django 3.0 to reallow use of a sublanguage "
+"in the :setting:`LANGUAGE_CODE` setting, when a base language is available "
+"in Django but the sublanguage is not (:ticket:`31141`)."
+msgstr ""
+
+msgid ""
+"Added support for using enumeration types ``TextChoices``, "
+"``IntegerChoices``, and ``Choices`` in templates (:ticket:`31154`)."
+msgstr ""
+
+msgid ""
+"Fixed a system check to ensure the ``max_length`` attribute fits the longest "
+"choice, when a named group contains only non-string values (:ticket:`31155`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 2.2 that caused a crash of :class:`~django."
+"contrib.postgres.aggregates.ArrayAgg` and :class:`~django.contrib.postgres."
+"aggregates.StringAgg` with ``filter`` argument when used in a ``Subquery`` (:"
+"ticket:`31097`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 2.2.7 that caused :meth:`~django.db.models."
+"Model.get_FOO_display` to work incorrectly when overriding inherited choices "
+"(:ticket:`31124`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 that caused a crash of ``QuerySet."
+"prefetch_related()`` for ``GenericForeignKey`` with a custom ``ContentType`` "
+"foreign key (:ticket:`31190`)."
+msgstr ""
+
+msgid "Django 3.0.4 release notes"
+msgstr ""
+
+msgid "Django 3.0.4 fixes a security issue and several bugs in 3.0.3."
+msgstr ""
+
+msgid ""
+"Fixed a data loss possibility when using caching from async code (:ticket:"
+"`31253`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 that caused a file response using a "
+"temporary file to be closed incorrectly (:ticket:`31240`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 that caused misplacing parameters in logged "
+"SQL queries on Oracle (:ticket:`31271`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0.3 that caused misplacing parameters of SQL "
+"queries when subtracting ``DateField`` or ``DateTimeField`` expressions on "
+"MySQL (:ticket:`31312`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 that didn't include subqueries spanning "
+"multivalued relations in the ``GROUP BY`` clause (:ticket:`31150`)."
+msgstr ""
+
+msgid "Django 3.0.5 release notes"
+msgstr ""
+
+msgid "Django 3.0.5 fixes several bugs in 3.0.4."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 where ``QuerySet.values()`` and "
+"``values_list()`` crashed if a queryset contained an aggregation and "
+"``Subquery()`` annotation that collides with a field name (:ticket:`31377`)."
+msgstr ""
+
+msgid "Django 3.0.6 release notes"
+msgstr ""
+
+msgid "*May 4, 2020*"
+msgstr ""
+
+msgid "Django 3.0.6 fixes a bug in 3.0.5."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 that caused a crash when filtering a "
+"``Subquery()`` annotation of a queryset containing a single related field "
+"against a ``SimpleLazyObject`` (:ticket:`31420`)."
+msgstr ""
+
+msgid "Django 3.0.7 release notes"
+msgstr ""
+
+msgid "Django 3.0.7 fixes two security issues and several bugs in 3.0.6."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 by restoring the ability to use field "
+"lookups in ``Meta.ordering`` (:ticket:`31538`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 where ``QuerySet.values()`` and "
+"``values_list()`` crashed if a queryset contained an aggregation and a "
+"subquery annotation (:ticket:`31566`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 where aggregates used wrong annotations "
+"when a queryset has multiple subqueries annotations (:ticket:`31568`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 where ``QuerySet.values()`` and "
+"``values_list()`` crashed if a queryset contained an aggregation and an "
+"``Exists()`` annotation on Oracle (:ticket:`31584`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0 where all resolved ``Subquery()`` "
+"expressions were considered equal (:ticket:`31607`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0.5 that affected translation loading for "
+"apps providing translations for territorial language variants as well as a "
+"generic language, where the project has different plural equations for the "
+"language (:ticket:`31570`)."
+msgstr ""
+
+msgid ""
+"Tracking a jQuery security release, upgraded the version of jQuery used by "
+"the admin from 3.4.1 to 3.5.1."
+msgstr ""
+
+msgid "Django 3.0.8 release notes"
+msgstr ""
+
+msgid "Django 3.0.8 fixes several bugs in 3.0.7."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0.7 that caused a queryset crash when "
+"grouping by a many-to-one relationship (:ticket:`31660`)."
+msgstr ""
+
+msgid ""
+"Reallowed, following a regression in Django 3.0, non-expressions having a "
+"``filterable`` attribute to be used as the right-hand side in queryset "
+"filters (:ticket:`31664`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0.2 that caused a migration crash on "
+"PostgreSQL when adding a foreign key to a model with a namespaced "
+"``db_table`` (:ticket:`31735`)."
+msgstr ""
+
+msgid "Added compatibility for ``cx_Oracle`` 8 (:ticket:`31751`)."
+msgstr ""
+
+msgid "Django 3.0.9 release notes"
+msgstr ""
+
+msgid "Django 3.0.9 fixes several bugs in 3.0.8."
 msgstr ""
 
 msgid "Release notes"
@@ -27206,6 +28681,9 @@ msgid ""
 "Below are release notes through Django |version| and its patch releases. "
 "Newer versions of the documentation contain the release notes for any later "
 "releases."
+msgstr ""
+
+msgid "3.0 release"
 msgstr ""
 
 msgid "2.2 release"
@@ -28610,4 +30088,104 @@ msgstr ""
 
 msgid ""
 "Django 1.11 :commit:`(patch) <869b34e9b3be3a4cfcb3a145f218ffd3f5e3fd79>`"
+msgstr ""
+
+msgid "December 2, 2019 - :cve:`2019-19118`"
+msgstr ""
+
+msgid ""
+"Privilege escalation in the Django admin. `Full description <https://www."
+"djangoproject.com/weblog/2019/dec/02/security-releases/>`__"
+msgstr ""
+
+msgid "Django 3.0 :commit:`(patch) <092cd66cf3c3e175acce698d6ca2012068d878fa>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <36f580a17f0b3cb087deadf3b65eea024f479c21>`"
+msgstr ""
+
+msgid "Django 2.1 :commit:`(patch) <103ebe2b5ff1b2614b85a52c239f471904d26244>`"
+msgstr ""
+
+msgid "December 18, 2019 - :cve:`2019-19844`"
+msgstr ""
+
+msgid ""
+"Potential account hijack via password reset form. `Full description <https://"
+"www.djangoproject.com/weblog/2019/dec/18/security-releases/>`__"
+msgstr ""
+
+msgid "Django 3.0 :commit:`(patch) <302a4ff1e8b1c798aab97673909c7a3dfda42c26>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <4d334bea06cac63dc1272abcec545b85136cca0e>`"
+msgstr ""
+
+msgid ""
+"Django 1.11 :commit:`(patch) <f4cff43bf921fcea6a29b726eb66767f67753fa2>`"
+msgstr ""
+
+msgid "February 3, 2020 - :cve:`2020-7471`"
+msgstr ""
+
+msgid ""
+"Potential SQL injection via ``StringAgg(delimiter)``. `Full description "
+"<https://www.djangoproject.com/weblog/2020/feb/03/security-releases/>`__"
+msgstr ""
+
+msgid "Django 3.0 :commit:`(patch) <505826b469b16ab36693360da9e11fd13213421b>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <c67a368c16e4680b324b4f385398d638db4d8147>`"
+msgstr ""
+
+msgid ""
+"Django 1.11 :commit:`(patch) <001b0634cd309e372edb6d7d95d083d02b8e37bd>`"
+msgstr ""
+
+msgid "March 4, 2020 - :cve:`2020-9402`"
+msgstr ""
+
+msgid ""
+"Potential SQL injection via ``tolerance`` parameter in GIS functions and "
+"aggregates on Oracle. `Full description <https://www.djangoproject.com/"
+"weblog/2020/mar/04/security-releases/>`__"
+msgstr ""
+
+msgid "Django 3.0 :commit:`(patch) <26a5cf834526e291db00385dd33d319b8271fc4c>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <fe886a3b58a93cfbe8864b485f93cb6d426cd1f2>`"
+msgstr ""
+
+msgid ""
+"Django 1.11 :commit:`(patch) <02d97f3c9a88adc890047996e5606180bd1c6166>`"
+msgstr ""
+
+msgid "June 3, 2020 - :cve:`2020-13254`"
+msgstr ""
+
+msgid ""
+"Potential data leakage via malformed memcached keys. `Full description "
+"<https://www.djangoproject.com/weblog/2020/jun/03/security-releases/>`__"
+msgstr ""
+
+msgid "Django 3.0 :commit:`(patch) <84b2da5552e100ae3294f564f6c862fef8d0e693>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <07e59caa02831c4569bbebb9eb773bdd9cb4b206>`"
+msgstr ""
+
+msgid "June 3, 2020 - :cve:`2020-13596`"
+msgstr ""
+
+msgid ""
+"Possible XSS via admin ``ForeignKeyRawIdWidget``. `Full description <https://"
+"www.djangoproject.com/weblog/2020/jun/03/security-releases/>`__"
+msgstr ""
+
+msgid "Django 3.0 :commit:`(patch) <1f2dd37f6fcefdd10ed44cb233b2e62b520afb38>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <6d61860b22875f358fac83d903dc629897934815>`"
 msgstr ""
