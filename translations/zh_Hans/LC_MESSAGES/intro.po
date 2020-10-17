@@ -16,7 +16,7 @@
 # Fulong Sun <sunfulong@neusoft.edu.cn>, 2016
 # Hao Jin (金浩) <jinhao7773@gmail.com>, 2018
 # Help Learn <26922dd@sina.com>, 2020
-# Chown Hobby, 2016
+# Hobby, 2016
 # Hourann Lin <tdkgn@outlook.com>, 2018
 # Junkai Shao <skaifun.dev@gmail.com>, 2018
 # Kevin Lee <rootkitcn@live.com>, 2017
@@ -24,6 +24,7 @@
 # Lu Linfeng <xmmilk@gmail.com>, 2019
 # Monkey Monkey <kuro16@yeah.net>, 2020
 # nico zhang <nicozhangw@gmail.com>, 2019
+# Veoco <one@nomox.cn>, 2020
 # Ralph Wen <ralph.wen@gmail.com>, 2013
 # spaceoi <zhangzhaoyu@gmail.com>, 2016
 # Suntravel Chris <chrisfromcn@gmail.com>, 2019
@@ -46,9 +47,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 04:40-0500\n"
-"PO-Revision-Date: 2020-09-11 04:42+0000\n"
-"Last-Translator: 嘉琪 方 <370358679@qq.com>\n"
+"POT-Creation-Date: 2020-10-15 04:41-0500\n"
+"PO-Revision-Date: 2020-10-15 12:40+0000\n"
+"Last-Translator: Veoco <one@nomox.cn>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -194,7 +195,7 @@ msgstr "对于 Windows 用户"
 
 msgid ""
 "See :ref:`install_python_windows` on Windows docs for additional guidance."
-msgstr ""
+msgstr "参见 :ref:`install_python_windows` 于 Windows 的文档以获得其它指导。"
 
 msgid "Code of Conduct"
 msgstr "代码规范"
@@ -352,6 +353,11 @@ msgid ""
 "Django's test suite before, it's a good idea to run it once beforehand to "
 "get familiar with its output."
 msgstr ""
+"在为 Django 做出贡献时，非常重要的一点是，你所做的代码更改不要将错误引入 "
+"Django 的其他区域。进行更改后，检查 Django 仍然正常工作的一种方法是运行 "
+"Django 的测试套件。如果所有测试仍然通过，那么你可以合理地确定所做的更改有效并"
+"且没有破坏 Django 的其他部分。如果你以前从未运行过 Django 的测试套件，则最好"
+"事先运行一次以熟悉其输出。"
 
 msgid ""
 "Before running the test suite, install its dependencies by ``cd``-ing into "
@@ -1635,6 +1641,8 @@ msgid ""
 "tools that run as that user, so using a virtual environment is a more robust "
 "solution (see below)."
 msgstr ""
+"请注意，按用户安装仍然会影响以该用户身份运行的系统工具的行为，因此使用虚拟环"
+"境是更可靠的解决方案（请参见下文）。"
 
 msgid ""
 "To install the package, use pip (you already :ref:`installed it <installing-"
@@ -1702,6 +1710,9 @@ msgid ""
 "Python environments, each with its own copy of the libraries and package "
 "namespace."
 msgstr ""
+"通常，只有在维护多个 Django 项目时才会出现这些情况。当这样做时，最好的解决方"
+"法是使用 :doc:`venv <python:tutorial/venv>`。使用此工具，你可以维护多个隔离"
+"的 Python 环境，每个环境都有其自己的库和包命名空间的副本。"
 
 msgid "Writing your first Django app, part 1"
 msgstr "编写你的第一个 Django 应用，第 1 部分"
@@ -2276,6 +2287,9 @@ msgid ""
 "default value, ``BASE_DIR / 'db.sqlite3'``, will store the file in your "
 "project directory."
 msgstr ""
+":setting:`NAME` -- 数据库的名称。如果你使用 SQLite，数据库将是你电脑上的一个"
+"文件，在这种情况下，:setting:`NAME` 应该是此文件完整的绝对路径，包括文件名。"
+"默认值 ``BASE_DIR / 'db.sqlite3'`` 将把数据库文件储存在项目的根目录。"
 
 msgid ""
 "If you are not using SQLite as your database, additional settings such as :"
@@ -2764,6 +2778,9 @@ msgid ""
 "py` sets the :envvar:`DJANGO_SETTINGS_MODULE` environment variable, which "
 "gives Django the Python import path to your :file:`mysite/settings.py` file."
 msgstr ""
+"我们使用这个命令而不是简单的使用“python”是因为 :file:`manage.py` 会设置 :"
+"envvar:`DJANGO_SETTINGS_MODULE` 环境变量，这个变量会让 Django 根据 :file:"
+"`mysite/settings.py` 文件来设置 Python 包的导入路径。"
 
 msgid ""
 "Once you're in the shell, explore the :doc:`database API </topics/db/"
@@ -2897,6 +2914,9 @@ msgid ""
 "if you set :setting:`LANGUAGE_CODE`, the login screen will be displayed in "
 "the given language (if Django has appropriate translations)."
 msgstr ""
+"因为 :doc:`翻译 </topics/i18n/translation>` 功能默认是开启的，如果你设置了 :"
+"setting:`LANGUAGE_CODE`，登录界面将显示你设置的语言（如果 Django 有相应的翻"
+"译）。"
 
 msgid "Enter the admin site"
 msgstr "进入管理站点页面"
@@ -3115,6 +3135,9 @@ msgid ""
 "You will be pleased to know that Django allows us much more elegant *URL "
 "patterns* than that."
 msgstr ""
+"在你上网的过程中，很可能看见过像这样美丽的 URL：``ME2/Sites/dirmod.htm?"
+"sid=&type=gen&mod=Core+Pages&gid=A6CD4967199A42D9B65B1B``。别担心，Django 里"
+"的  *URL patterns* 要比这优雅的多！"
 
 msgid ""
 "A URL pattern is the general form of a URL - for example: ``/newsarchive/"
@@ -4590,6 +4613,8 @@ msgid ""
 "``pub_date`` is in the past can be displayed, and that one with a "
 "``pub_date`` in the future is not:"
 msgstr ""
+"然后，我们应该增加一些测试来检验 ``pub_date`` 在过去的 ``Question`` 能够被显"
+"示出来，而 ``pub_date`` 在未来的则不可以："
 
 msgid "Ideas for more tests"
 msgstr "更多的测试思路"
@@ -4921,6 +4946,10 @@ msgid ""
 "template tag to generate its URLs) without having to modify a bunch of paths "
 "in your static files as well."
 msgstr ""
+"``{% static %}`` 模板标签在静态文件（例如样式表）中是不可用的，因为它们不是"
+"由 Django 生成的。你应该始终使用 **相对路径** 在你的静态文件之间相互引用，因"
+"为这样你可以更改 :setting:`STATIC_URL`（由 :ttag:`static` 模板标签使用来生成 "
+"URL），而无需修改大量的静态文件。"
 
 msgid ""
 "These are the **basics**. For more details on settings and other bits "
@@ -5492,6 +5521,8 @@ msgid ""
 "-- so finding what you need can sometimes be tricky. A good place to start "
 "is the :ref:`genindex`. We also recommend using the builtin search feature."
 msgstr ""
+"Django 有 *许多* 文档——差不多由 450,000  字（英文单词）——所以查找你需要的文档"
+"可能需要点技巧。有一个好的起点 :ref:`genindex`。我们还建议使用内置搜索功能。"
 
 msgid "Or you can just browse around!"
 msgstr "或者你可以只是四处看看！"
@@ -5739,6 +5770,9 @@ msgid ""
 "release <Feature release>`. For that reason, it's worth pointing out our "
 "policy to highlight recent changes and additions to Django."
 msgstr ""
+"我们 Git 仓库主分支中的纯文本文档包含“最新最好”的修改和扩展。这些更改包括针对"
+"Django下一个 :term:`功能发行版 <Feature release>` 的新功能的文档。因此，有必"
+"要指出我们的政策，以突出显示 Django 的最新更改和新增功能。"
 
 msgid "We follow this policy:"
 msgstr "我们遵循以下原则："
