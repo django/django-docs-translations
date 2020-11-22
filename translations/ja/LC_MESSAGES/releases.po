@@ -7,8 +7,8 @@
 # Ikemoto Hideki <ikemo333@gmail.com>, 2020
 # Pawllo2 <pawllothesecond@gmail.com>, 2017
 # Shoya Shiraki <12c1055@gmail.com>, 2020
-# Shuuji TAKAHASHI <shuuji3@gmail.com>, 2016-2017,2019
-# Shuuji TAKAHASHI <shuuji3@gmail.com>, 2018-2020
+# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016-2017,2019
+# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2018-2020
 # Takuya N <takninnovationresearch@gmail.com>, 2019-2020
 # Tatsuya Matoba <mtb.toya0403@gmail.com>, 2019
 # Takuya N <takninnovationresearch@gmail.com>, 2018
@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 04:40-0500\n"
-"PO-Revision-Date: 2020-09-10 11:15+0000\n"
+"POT-Creation-Date: 2020-11-19 15:41-0600\n"
+"PO-Revision-Date: 2020-11-19 23:16+0000\n"
 "Last-Translator: Transifex Bot <>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
@@ -5459,12 +5459,11 @@ msgstr ""
 "ました。"
 
 msgid ""
-"The new :attr:`CharField.empty_value <django.forms.CharField.empty_value>` "
-"attribute allows specifying the Python value to use to represent \"empty\"."
+"The new ``empty_value`` attribute on :class:`~django.forms.CharField`, :"
+"class:`~django.forms.EmailField`, :class:`~django.forms.RegexField`, :class:"
+"`~django.forms.SlugField`, and :class:`~django.forms.URLField` allows "
+"specifying the Python value to use to represent \"empty\"."
 msgstr ""
-"新たな :attr:`CharField.empty_value <django.forms.CharField.empty_value>` 属"
-"性によって Python の値を指定して \"空 (empty)\" を表現できるようになりまし"
-"た。"
 
 msgid ""
 "The new :meth:`Form.get_initial_for_field() <django.forms.Form."
@@ -13992,7 +13991,7 @@ msgid ""
 "`signed cookie session backend<cookie-session-backend>` and :setting:"
 "`SECRET_KEY` is known by an attacker (there isn't an inherent vulnerability "
 "in Django that would cause it to leak), the attacker could insert a string "
-"into his session which, when unpickled, executes arbitrary code on the "
+"into their session which, when unpickled, executes arbitrary code on the "
 "server. The technique for doing so is simple and easily available on the "
 "internet. Although the cookie session storage signs the cookie-stored data "
 "to prevent tampering, a :setting:`SECRET_KEY` leak immediately escalates to "
@@ -15073,7 +15072,7 @@ msgid ""
 "`signed cookie session backend<cookie-session-backend>` and :setting:"
 "`SECRET_KEY` is known by an attacker (there isn't an inherent vulnerability "
 "in Django that would cause it to leak), the attacker could insert a string "
-"into his session which, when unpickled, executes arbitrary code on the "
+"into their session which, when unpickled, executes arbitrary code on the "
 "server. The technique for doing so is simple and easily available on the "
 "internet. Although the cookie session storage signs the cookie-stored data "
 "to prevent tampering, a :setting:`SECRET_KEY` leak immediately escalates to "
@@ -27371,8 +27370,9 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Django 2.2 supports Python 3.5, 3.6, 3.7, and 3.8 (as of 2.2.8). We **highly "
-"recommend** and only officially support the latest release of each series."
+"Django 2.2 supports Python 3.5, 3.6, 3.7, 3.8 (as of 2.2.8), and 3.9 (as of "
+"2.2.17). We **highly recommend** and only officially support the latest "
+"release of each series."
 msgstr ""
 
 msgid "What's new in Django 2.2"
@@ -28223,6 +28223,15 @@ msgid ""
 "copying model instances with a cached fields value (:ticket:`31863`)."
 msgstr ""
 
+msgid "Django 2.2.17 release notes"
+msgstr ""
+
+msgid "*November 2, 2020*"
+msgstr ""
+
+msgid "Django 2.2.17 adds compatibility with Python 3.9."
+msgstr ""
+
 msgid "Django 2.2.2 release notes"
 msgstr "Django 2.2.2 リリースノート"
 
@@ -28423,12 +28432,10 @@ msgstr ""
 "す。"
 
 msgid ""
-"Django 3.0 supports Python 3.6, 3.7, and 3.8. We **highly recommend** and "
-"only officially support the latest release of each series."
+"Django 3.0 supports Python 3.6, 3.7, 3.8, and 3.9 (as of 3.0.11). We "
+"**highly recommend** and only officially support the latest release of each "
+"series."
 msgstr ""
-"Django 3.0 の動作には Python 3.6、3.7、および 3.8 をサポートします。各バー"
-"ジョン系列の最終リリースの Python を使用することを **強く推奨** します。公式"
-"には最終リリースしかサポートしません。"
 
 msgid "The Django 2.2.x series is the last to support Python 3.5."
 msgstr ""
@@ -29302,6 +29309,19 @@ msgid ""
 "Django 3.0.10 fixes two security issues and two data loss bugs in 3.0.9."
 msgstr ""
 
+msgid "Django 3.0.11 release notes"
+msgstr ""
+
+msgid ""
+"Django 3.0.11 fixes a regression in 3.0.7 and adds compatibility with Python "
+"3.9."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0.7 that didn't use ``Subquery()`` aliases in "
+"the ``GROUP BY`` clause (:ticket:`32152`)."
+msgstr ""
+
 msgid "Django 3.0.2 release notes"
 msgstr "Django 3.0.2 リリースノート"
 
@@ -29570,8 +29590,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Django 3.1 supports Python 3.6, 3.7, and 3.8. We **highly recommend** and "
-"only officially support the latest release of each series."
+"Django 3.1 supports Python 3.6, 3.7, 3.8, and 3.9 (as of 3.1.3). We **highly "
+"recommend** and only officially support the latest release of each series."
 msgstr ""
 
 msgid "What's new in Django 3.1"
@@ -30416,6 +30436,16 @@ msgid ""
 "html.spec.whatwg.org/multipage/scripting.html#the-script-element>`_."
 msgstr ""
 
+msgid ""
+":class:`~django.forms.ModelChoiceIterator`, used by :class:`~django.forms."
+"ModelChoiceField` and :class:`~django.forms.ModelMultipleChoiceField`, now "
+"yields 2-tuple choices containing :class:`~django.forms."
+"ModelChoiceIteratorValue` instances as the first ``value`` element in each "
+"choice. In most cases this proxies transparently, but if you need the "
+"``field`` value itself, use the :attr:`.ModelChoiceIteratorValue.value` "
+"attribute instead."
+msgstr ""
+
 msgid "Features deprecated in 3.1"
 msgstr ""
 
@@ -30669,7 +30699,7 @@ msgstr ""
 msgid "Django 3.1.2 release notes"
 msgstr ""
 
-msgid "*Expected October 1, 2020*"
+msgid "*October 1, 2020*"
 msgstr ""
 
 msgid "Django 3.1.2 fixes several bugs in 3.1.1."
@@ -30678,6 +30708,146 @@ msgstr ""
 msgid ""
 "Fixed a bug in Django 3.1 where ``FileField`` instances with a callable "
 "storage were not correctly deconstructed (:ticket:`31941`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 where the :attr:`.QuerySet.ordered` "
+"attribute returned incorrectly ``True`` for ``GROUP BY`` queries (e.g. ``."
+"annotate().values()``) on models with ``Meta.ordering``. A model's ``Meta."
+"ordering`` doesn't affect such queries (:ticket:`31990`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 where a queryset would crash if it "
+"contained an aggregation and a ``Q`` object annotation (:ticket:`32007`)."
+msgstr ""
+
+msgid ""
+"Fixed a bug in Django 3.1 where a test database was not synced during "
+"creation when using the :setting:`MIGRATE <TEST_MIGRATE>` test database "
+"setting (:ticket:`32012`)."
+msgstr ""
+
+msgid ""
+"Fixed a ``django.contrib.admin.EmptyFieldListFilter`` crash when using on a "
+"``GenericRelation`` (:ticket:`32038`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1.1 where the admin changelist filter sidebar "
+"would not scroll for a long list of available filters (:ticket:`31986`)."
+msgstr ""
+
+msgid "Django 3.1.3 release notes"
+msgstr ""
+
+msgid ""
+"Django 3.1.3 fixes several bugs in 3.1.2 and adds compatibility with Python "
+"3.9."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1.2 that caused the incorrect height of the "
+"admin changelist search bar (:ticket:`32072`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1.2 that caused the incorrect width of the "
+"admin changelist search bar on a filtered page (:ticket:`32091`)."
+msgstr ""
+
+msgid ""
+"Fixed displaying Unicode characters in :class:`forms.JSONField <django.forms."
+"JSONField>` and read-only :class:`models.JSONField <django.db.models."
+"JSONField>` values in the admin (:ticket:`32080`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 that caused a crash of :class:`~django."
+"contrib.postgres.aggregates.ArrayAgg` and :class:`~django.contrib.postgres."
+"aggregates.StringAgg` with ``ordering`` on key transforms for :class:"
+"`~django.db.models.JSONField` (:ticket:`32096`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 that caused a crash of ``__in`` lookup when "
+"using key transforms for :class:`~django.db.models.JSONField` in the lookup "
+"value (:ticket:`32096`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 that caused a crash of :class:`~django.db."
+"models.ExpressionWrapper` with key transforms for :class:`~django.db.models."
+"JSONField` (:ticket:`32096`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 that caused a migrations crash on "
+"PostgreSQL when adding an :class:`~django.contrib.postgres.constraints."
+"ExclusionConstraint` with key transforms for :class:`~django.db.models."
+"JSONField` in ``expressions`` (:ticket:`32096`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 where :exc:`ProtectedError."
+"protected_objects <django.db.models.ProtectedError>` and :exc:"
+"`RestrictedError.restricted_objects <django.db.models.RestrictedError>` "
+"attributes returned iterators instead of :py:class:`set` of objects (:ticket:"
+"`32107`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1.2 that caused incorrect form input layout "
+"on small screens in the admin change form view (:ticket:`32069`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 that invalidated pre-Django 3.1 password "
+"reset tokens (:ticket:`32130`)."
+msgstr ""
+
+msgid "Added support for ``asgiref`` 3.3 (:ticket:`32128`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 that caused incorrect textarea layout on "
+"medium-sized screens in the admin change form view with the sidebar open (:"
+"ticket:`32127`)."
+msgstr ""
+
+msgid "Django 3.1.4 release notes"
+msgstr ""
+
+msgid "*Expected December 1, 2020*"
+msgstr ""
+
+msgid "Django 3.1.4 fixes several bugs in 3.1.3."
+msgstr ""
+
+msgid ""
+"Fixed setting the ``Content-Length`` HTTP header in ``AsyncRequestFactory`` "
+"(:ticket:`32162`)."
+msgstr ""
+
+msgid ""
+"Fixed passing extra HTTP headers to ``AsyncRequestFactory`` request methods "
+"(:ticket:`32159`)."
+msgstr ""
+
+msgid ""
+"Fixed crash of key transforms for :class:`~django.db.models.JSONField` on "
+"PostgreSQL when using on a ``Subquery()`` annotation (:ticket:`32182`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 that caused a crash of auto-reloader for "
+"certain invocations of ``runserver`` on Windows with Python 3.7 and below (:"
+"ticket:`32202`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 that caused the incorrect grouping by a "
+"``Q`` object annotation (:ticket:`32200`)."
 msgstr ""
 
 msgid "Release notes"
