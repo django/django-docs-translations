@@ -34,6 +34,7 @@
 # ryan rain <holidaylover2010@gmail.com>, 2018
 # tianlong zhou <tlongzou@gmail.com>, 2019
 # Todd Kasaki <2524737581@qq.com>, 2020
+# Veoco <one@nomox.cn>, 2020
 # Vincent Chan, 2018
 # Vincent <Intelligent.vincent@gmail.com>, 2019
 # Wehao Guo <kinggreenhall@gmail.com>, 2019
@@ -60,9 +61,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-19 15:41-0600\n"
-"PO-Revision-Date: 2020-11-12 01:08+0000\n"
-"Last-Translator: Todd Kasaki <2524737581@qq.com>\n"
+"POT-Creation-Date: 2020-12-01 00:41-0600\n"
+"PO-Revision-Date: 2020-11-30 13:12+0000\n"
+"Last-Translator: Veoco <one@nomox.cn>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -5659,10 +5660,10 @@ msgid ""
 "you change one of the rows created by a fixture and then run :djadmin:"
 "`loaddata` again, you'll wipe out any changes you've made."
 msgstr ""
-"你只需调用 :djadmin:`manage.py loaddata ` ```` 来加载数据， ```` 是你刚创建的"
-"固定内容的文件名。每次你运行 :djadmin:`loaddata`，数据都会从固定内容读出，重"
-"新装入数据库。这意味着若你修改了某个固定内容创建的行，随后再次运行 :djadmin:"
-"`loaddata` ，你会丢掉所有的修改。"
+"你只需调用 :djadmin:`manage.py loaddata <loaddata>` ``<fixturename>`` 来加载"
+"数据， ``<fixturename>`` 是你刚创建的固定内容的文件名。每次你运行 :djadmin:"
+"`loaddata`，数据都会从固定内容读出，重新装入数据库。这意味着若你修改了某个固"
+"定内容创建的行，随后再次运行 :djadmin:`loaddata` ，你会丢掉所有的修改。"
 
 msgid "Where Django finds fixture files"
 msgstr "Django 从哪里寻找固定内容文件"

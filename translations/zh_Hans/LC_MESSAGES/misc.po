@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Django package.
 #
 # Translators:
-# Bai HuanCheng <xiqingongzi@gmail.com>, 2018
+# HuanCheng Bai白宦成 <xiqingongzi@gmail.com>, 2018
 # bing zhou <1996944@qq.com>, 2018
 # Wonderay <wonder.zhimin@gmail.com>, 2018
 # Fossen <fossen@fossen.cn>, 2018
@@ -11,6 +11,7 @@
 # huanqun yang <15810163905@163.com>, 2018
 # Ronald White <tkliuxing@me.com>, 2014
 # qiang wu <wuqiangroy@live.com>, 2018
+# Veoco <one@nomox.cn>, 2020
 # 汪心禾 <wangxinhe06@gmail.com>, 2018
 # woodenrobot <woodenrobot1993@gmail.com>, 2020
 # Xiang Yu <bupt.aswmtjdsj@gmail.com>, 2014
@@ -23,9 +24,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 14:05-0500\n"
-"PO-Revision-Date: 2020-04-01 03:22+0000\n"
-"Last-Translator: woodenrobot <woodenrobot1993@gmail.com>\n"
+"POT-Creation-Date: 2020-12-31 07:43-0600\n"
+"PO-Revision-Date: 2020-11-30 05:43+0000\n"
+"Last-Translator: Veoco <one@nomox.cn>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -47,8 +48,8 @@ msgid ""
 msgstr ""
 "Django 致力于 API 的稳定性和向前兼容性。简而言之，这意味着你在一个 Django 版"
 "本开发的代码可以继续在未来的版本中使用。在升级你的项目使用的 Django 版本时，"
-"你可能需要做一些小的更改: 了解你要升级的一个或多个版本请参阅 :doc:`release "
-"note` 中的“向后不兼容更改”部分。"
+"你可能需要做一些小的更改: 了解你要升级的一个或多个版本请参阅 :doc:`发行版注"
+"解 </releases/index>` 中的“向后不兼容更改”部分。"
 
 msgid ""
 "At the same time as making API stability a very high priority, Django is "
@@ -61,13 +62,13 @@ msgid ""
 "both stagnation and large breaking upgrades."
 msgstr ""
 "在将 API 的稳定性作为一个非常重要的优先级的同时，Django 还致力于持续的改进，"
-"并致力于在我们提供的 API 中实现“一种方法”(最终)。这意味着，当我们发现明显更好"
-"的实现方式时，我们会弃用旧的方式，并最终将其移除。我们的目标是提供一个现代"
+"并致力于在我们提供的 API 中实现“一种方法”（最终）。这意味着，当我们发现明显更"
+"好的实现方式时，我们会弃用旧的方式，并最终将其移除。我们的目标是提供一个现代"
 "的、可靠的、高质量的 web 框架，帮助所有使用它的项目的使用最佳实践。通过使用渐"
 "进式的改进，我们试图避免停滞和大规模破坏性升级。"
 
 msgid "What \"stable\" means"
-msgstr "什么是“稳定性”？"
+msgstr "什么是“稳定”？"
 
 msgid "In this context, stable means:"
 msgstr "在此处，稳定意味着："
@@ -118,7 +119,7 @@ msgid ""
 "anything in the :doc:`internals area </internals/index>` is considered "
 "stable."
 msgstr ""
-"一般来说，文档中的一切都确定是稳定的，除开 :doc:`internals area </internals/"
+"一般来说，文档中的一切都确定是稳定的，除开 :doc:`内部区域 </internals/"
 "index>`。"
 
 msgid "Exceptions"
@@ -637,8 +638,8 @@ msgid ""
 "<installing-development-version>` from our Git repository."
 msgstr ""
 "通常，这些包基于 Django 的最新稳定版本，因此如果您想使用 Django 的开发版本，"
-"则需要从我们的 Git 库中安装 :ref:`installing the development version "
-"<installing-development-version>`。"
+"则需要从我们的 Git 库中安装 :ref:`安装开发版本 <installing-development-"
+"version>`。"
 
 msgid ""
 "If you're using Linux or a Unix installation, such as OpenSolaris, check "
@@ -648,8 +649,8 @@ msgid ""
 "Party Distributions`_ to help you out."
 msgstr ""
 "如果您正在使用 Linux 或 Unix 的安装版，比如 OpenSolaris，请与您的经销商联系，"
-"看看他们是否已经打包了Django。如果您使用的是Linux发行版，并且不知道如何弄清一"
-"个包是否可用，那么现在是学习的好时机。Django Wiki 包含一个“第三方发行版”列"
+"看看他们是否已经打包了 Django。如果您使用的是Linux发行版，并且不知道如何弄清"
+"一个包是否可用，那么现在是学习的好时机。Django Wiki 包含一个“第三方发行版”列"
 "表，以帮助您解决问题。"
 
 msgid "For distributors"
