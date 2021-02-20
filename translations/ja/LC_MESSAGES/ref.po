@@ -9,7 +9,8 @@
 # Claude Paroz <claude@2xlibre.net>, 2020
 # Eiji WARASHINA <Eiji.Warashina@gmail.com>, 2016
 # Hiroyuki Imai <hiroyuki.wx@gmail.com>, 2020
-# Ikemoto Hideki <ikemo333@gmail.com>, 2020
+# IjIj <ijijsamurai@gmail.com>, 2021
+# Ikemoto Hideki <ikemo333@gmail.com>, 2020-2021
 # JUN OKAZAKI <okazakijun54392@gmail.com>, 2017
 # Kashun YOSHIDA, 2018
 # BanjinS <banjin-s@qbooks.jp>, 2016
@@ -33,14 +34,16 @@
 # Yuki Yokoyama <peketamin@gmail.com>, 2020
 # Yuuki Ebihara <yuuki.ebihara813@gmail.com>, 2016
 # Pawllo2 <pawllothesecond@gmail.com>, 2017
+# yz4230 <yuzupon1480@gmail.com>, 2021
+# yz4230 <yuzupon1480@gmail.com>, 2021
 # 森田寛樹 <moritahiroki87@gmail.com>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-19 15:41-0600\n"
-"PO-Revision-Date: 2020-11-17 10:23+0000\n"
-"Last-Translator: Transifex Bot <>\n"
+"POT-Creation-Date: 2020-12-01 00:41-0600\n"
+"PO-Revision-Date: 2021-02-04 13:32+0000\n"
+"Last-Translator: Ikemoto Hideki <ikemo333@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -416,11 +419,17 @@ msgid ""
 "Thus, namespace packages may only be Django applications if one of the "
 "following is true:"
 msgstr ""
+"Djangoアプリケーションは(設定に応じて)、Djangoがテンプレートや静的アセットを"
+"探す単一のベースファイスシステムパスを必要とします。したがって、名前空間パッ"
+"ケージは以下のいずれかが真である場合にのみ、Django アプリケーションになること"
+"ができます。"
 
 msgid ""
 "The namespace package actually has only a single location (i.e. is not "
 "spread across more than one directory.)"
 msgstr ""
+"名前空間パッケージは実際には単一の場所にしか存在しません(つまり、複数のディレ"
+"クトリに分散していないということです)。"
 
 msgid ""
 "The :class:`~django.apps.AppConfig` class used to configure the application "
@@ -441,6 +450,8 @@ msgid ""
 "The application registry provides the following public API. Methods that "
 "aren't listed below are considered private and may change without notice."
 msgstr ""
+"アプリケーションレジストリは、以下の公開APIを提供しています。以下に記載されて"
+"いないメソッドは非公開とみなされ、予告なく変更される可能性があります。"
 
 msgid ""
 "Boolean attribute that is set to ``True`` after the registry is fully "
@@ -1597,7 +1608,7 @@ msgid "Translation"
 msgstr "翻訳"
 
 msgid "The following checks are performed on your translation configuration:"
-msgstr ""
+msgstr "以下のチェックが翻訳の設定に対して実行されます:"
 
 msgid ""
 "**translation.E001**: You have provided an invalid value for the :setting:"
@@ -3865,6 +3876,8 @@ msgid ""
 "The :func:`~time.strftime` format to use when parsing the month. By default, "
 "this is ``'%b'``."
 msgstr ""
+":func:`~time.strftime` フォーマットは月をパースするときに使われます。デフォル"
+"トでは``'%b'``です。"
 
 msgid ""
 "**Optional** The value for the month, as a string. By default, set to "
@@ -3962,7 +3975,7 @@ msgid ""
 msgstr ""
 
 msgid "``WeekMixin``"
-msgstr ""
+msgstr "``WeekMixin``"
 
 msgid ""
 "A mixin that can be used to retrieve and provide parsing information for a "
@@ -3997,10 +4010,10 @@ msgid "The value of the ``week`` argument captured in the URL pattern"
 msgstr ""
 
 msgid "The value of the ``week`` ``GET`` query argument."
-msgstr ""
+msgstr "``week`` ``GET``クエリ引数の値。"
 
 msgid "Raises a 404 if no valid week specification can be found."
-msgstr ""
+msgstr "有効な週の指定が見つからない場合、404を発生させます。"
 
 msgid ""
 "Returns a date object containing the first day of the week after the date "
@@ -4008,6 +4021,10 @@ msgid ""
 "http.Http404` exception, depending on the values of :attr:`~BaseDateListView."
 "allow_empty` and :attr:`~DateMixin.allow_future`."
 msgstr ""
+"指定した日付の、次の週の初日のdateオブジェクトを返します。またこの関数は、:"
+"attr:`~BaseDateListView.allow_empty`と:attr:`~DateMixin.allow_future`の値に"
+"よっては、``None``を返すか、:class:`~django.http.Http404`例外を発生させること"
+"があります。"
 
 msgid ""
 "Returns a date object containing the first day of the week before the date "
@@ -4015,12 +4032,16 @@ msgid ""
 "http.Http404` exception, depending on the values of :attr:`~BaseDateListView."
 "allow_empty` and :attr:`~DateMixin.allow_future`."
 msgstr ""
+"指定した日付の、前の週の初日のdateオブジェクトを返します。またこの関数は、:"
+"attr:`~BaseDateListView.allow_empty`と:attr:`~DateMixin.allow_future`の値に"
+"よっては、``None``を返すか、:class:`~django.http.Http404`例外を発生させること"
+"があります。"
 
 msgid "``DateMixin``"
-msgstr ""
+msgstr "``DateMixin``"
 
 msgid "A mixin class providing common behavior for all date-based views."
-msgstr ""
+msgstr "すべてのデータベースのビューに共通の動作を提供する mixin クラス。"
 
 msgid ""
 "The name of the ``DateField`` or ``DateTimeField`` in the ``QuerySet``’s "
@@ -4062,7 +4083,7 @@ msgid ""
 msgstr ""
 
 msgid "``BaseDateListView``"
-msgstr ""
+msgstr "``BaseDateListView``"
 
 msgid ""
 "A base class that provides common behavior for all date-based views. There "
@@ -4134,31 +4155,33 @@ msgid ""
 msgstr ""
 
 msgid "Editing mixins"
-msgstr ""
+msgstr "mixinを編集する"
 
 msgid "The following mixins are used to construct Django's editing views:"
-msgstr ""
+msgstr "以下のmixinは、Djangoの編集ビューを構築するのに使用されます。"
 
 msgid ""
 "Examples of how these are combined into editing views can be found at the "
 "documentation on :doc:`/ref/class-based-views/generic-editing`."
 msgstr ""
+"これらの編集ビューへの結合され方の例は、:doc:`/ref/class-based-views/generic-"
+"editing`を参照してください。"
 
 msgid "``FormMixin``"
-msgstr ""
+msgstr "``FormMixin``"
 
 msgid ""
 "A mixin class that provides facilities for creating and displaying forms."
-msgstr ""
+msgstr "フォームを作成したり表示したりする機能を提供するmixinクラス。"
 
 msgid "A dictionary containing initial data for the form."
-msgstr ""
+msgstr "フォームの初期化データのディクショナリ。"
 
 msgid "The form class to instantiate."
-msgstr ""
+msgstr "インスタンス化するフォームクラス。"
 
 msgid "The URL to redirect to when the form is successfully processed."
-msgstr ""
+msgstr "フォームが正常に処理されたときにリダイレクトするURL。"
 
 msgid "The :attr:`~django.forms.Form.prefix` for the generated form."
 msgstr ""
@@ -4178,7 +4201,7 @@ msgid ""
 msgstr ""
 
 msgid "Build the keyword arguments required to instantiate the form."
-msgstr ""
+msgstr "フォームのインスタンス化に必要なキーワード引数を構築します。"
 
 msgid ""
 "The ``initial`` argument is set to :meth:`.get_initial`. If the request is a "
@@ -4209,7 +4232,7 @@ msgid ""
 msgstr ""
 
 msgid "``ModelFormMixin``"
-msgstr ""
+msgstr "``ModelFormMixin``"
 
 msgid ""
 "A form mixin that works on ``ModelForms``, rather than a standalone form."
@@ -4281,7 +4304,7 @@ msgid ""
 msgstr ""
 
 msgid "``ProcessFormView``"
-msgstr ""
+msgstr "``ProcessFormView``"
 
 msgid "A mixin that provides basic HTTP GET and POST workflow."
 msgstr ""
@@ -5272,8 +5295,8 @@ msgstr ""
 
 msgid ""
 "To provide an intermediary page, return an :class:`~django.http."
-"HttpResponse` (or subclass) from your action. For example, you might write a "
-"export function that uses Django's :doc:`serialization functions </topics/"
+"HttpResponse` (or subclass) from your action. For example, you might write "
+"an export function that uses Django's :doc:`serialization functions </topics/"
 "serialization>` to dump some selected objects as JSON::"
 msgstr ""
 
@@ -34339,6 +34362,8 @@ msgid ""
 "A highly specialized operation that lets you mix and match the database "
 "(schema-changing) and state (autodetector-powering) aspects of operations."
 msgstr ""
+"データベース(スキーマ変更)と状態(自動検出機能)という2つの側面を混在させてマッ"
+"チさせることができる、高度に専門化された操作です。"
 
 msgid ""
 "It accepts two lists of operations. When asked to apply state, it will use "
@@ -34346,6 +34371,10 @@ msgid ""
 "`RunSQL`'s ``state_operations`` argument). When asked to apply changes to "
 "the database, it will use the ``database_operations`` list."
 msgstr ""
+"これは2つの操作のリストを受け入れます。状態への適用を求められたときは、 "
+"``state_operations`` リストを使用します(これは :class:`RunSQL` の "
+"``state_operations`` 引数の一般化されたバージョンです)。データベースへの変更"
+"の適用を求められたときは、 ``database_operations`` リストを使用します。"
 
 msgid ""
 "If the actual state of the database and Django's view of the state get out "
@@ -34356,6 +34385,12 @@ msgid ""
 "`makemigrations`, especially with :option:`--dry-run<makemigrations --dry-"
 "run>`, to check your state operations."
 msgstr ""
+"データベースの実際の状態と Django の状態のビューが同期しなくなると、マイグ"
+"レーションフレームワークが壊れてしまい、データが失われることさえあります。"
+"じっくりと、データベースと状態の操作を慎重にチェックすべきです。データベース"
+"の操作をチェックするために、 :djadmin:`sqlmigrate` と :djadmin:`dbshell` を使"
+"うことができます。状態の操作をチェックするために :djadmin:`makemigrations` 、"
+"特に :option:`--dry-run<makemigrations --dry-run>` を使うことができます。"
 
 msgid ""
 "For an example using ``SeparateDatabaseAndState``, see :ref:`changing-a-"
@@ -41189,6 +41224,10 @@ msgid ""
 "`database query </topics/db/queries>` guides, so you'll probably want to "
 "read and understand those documents before reading this one."
 msgstr ""
+"このドキュメントでは、``QuerySet`` API の詳細を説明しています。:doc:`モデル "
+"</topics/db/models>` と :doc:`データベースクエリ </topics/db/queries>` ガイド"
+"にある説明を前提としていますので、このドキュメントを読む前にこの 2 つを読んで"
+"おいた方がよいでしょう。"
 
 msgid "When ``QuerySet``\\s are evaluated"
 msgstr ""
@@ -41198,15 +41237,21 @@ msgid ""
 "generally passed around without actually hitting the database. No database "
 "activity actually occurs until you do something to evaluate the queryset."
 msgstr ""
+"内部的に、``QuerySet``は実際にデータベースにアクセスすることなく、構築、フィ"
+"ルタ、スライス、そして基本的に他に渡されます。あなたがクエリセットを評価する"
+"ために何かしない限り、実際のデータベースへのアクセスは発生しません。"
 
 msgid "You can evaluate a ``QuerySet`` in the following ways:"
-msgstr ""
+msgstr "あなたは次のような方法で``QuerySet``を評価することができます:"
 
 msgid ""
 "**Iteration.** A ``QuerySet`` is iterable, and it executes its database "
 "query the first time you iterate over it. For example, this will print the "
 "headline of all entries in the database::"
 msgstr ""
+"**イテレーション。** ``QuerySet``はイテラブルで、初めてイテレートした時にデー"
+"タベースのクエリを実行します。たとえば、これはデータベースにある全エントリの"
+"ヘッドラインを出力するプログラムです::"
 
 msgid ""
 "Note: Don't use this if all you want to do is determine if at least one "
@@ -49959,19 +50004,28 @@ msgid ""
 "djadmin:`collectstatic` or :djadmin:`findstatic` management command or use "
 "the static file serving view."
 msgstr ""
+"この設定は ``FileSystemFinder`` のファインダーが有効になっている場合に "
+"staticfiles アプリが通過する追加の場所を定義します。例えば、 :djadmin:"
+"`collectstatic` や :djadmin:`findstatic` 管理コマンドを使用している場合や、 "
+"静的ファイル提供ビューを使用している場合などです。"
 
 msgid ""
 "This should be set to a list of strings that contain full paths to your "
 "additional files directory(ies) e.g.::"
 msgstr ""
+"これは、追加のファイルディレクトリへのフルパスを含む文字列のリストに設定する"
+"必要があります。例::"
 
 msgid ""
 "Note that these paths should use Unix-style forward slashes, even on Windows "
 "(e.g. ``\"C:/Users/user/mysite/extra_static_content\"``)."
 msgstr ""
+"これらのパスは、WindowsでもUnixスタイルのスラッシュを使用する必要があることに"
+"注意してください（例： `` \"C：/ Users / user / mysite / extra_static_content"
+"\" ``）。"
 
 msgid "Prefixes (optional)"
-msgstr ""
+msgstr "プレフィックス(オプション)"
 
 msgid ""
 "In case you want to refer to files in one of the locations with an "

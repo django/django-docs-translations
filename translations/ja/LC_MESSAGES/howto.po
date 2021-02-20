@@ -35,14 +35,15 @@
 # Yoshihiro Furudate <aheadlink.changat@gmail.com>, 2016
 # Yuuki Ebihara <yuuki.ebihara813@gmail.com>, 2019
 # Pawllo2 <pawllothesecond@gmail.com>, 2017
+# yz4230 <yuzupon1480@gmail.com>, 2021
 # 堀田 圭佑 <keisuke.h.611@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-01 00:41-0600\n"
-"PO-Revision-Date: 2020-12-10 08:19+0000\n"
-"Last-Translator: Shirai <taole33@hotmail.com>\n"
+"PO-Revision-Date: 2021-01-11 04:53+0000\n"
+"Last-Translator: yz4230 <yuzupon1480@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -2166,7 +2167,7 @@ msgid ""
 msgstr ""
 
 msgid "Preprocessing values before saving"
-msgstr ""
+msgstr "保存する前に前もって値を加工する場合"
 
 msgid ""
 "If you want to preprocess the value just before saving, you can use :meth:"
@@ -2182,6 +2183,10 @@ msgid ""
 "changes to the value so that code holding references to the model will "
 "always see the correct value."
 msgstr ""
+"もしこのメソッドをオーバーライドするならば、最後にその属性の値を返す必要があ"
+"ります。さらに、もしその値になんらかの変更を加えたならば、そのモデルへの参照"
+"を含んでいるコードが常に正しい値を指すように、モデルの属性を更新しなくてはな"
+"りません。"
 
 msgid "Specifying the form field for a model field"
 msgstr ""
@@ -2248,7 +2253,7 @@ msgid ""
 msgstr ""
 
 msgid "Converting field data for serialization"
-msgstr ""
+msgstr "シリアライズするためにフィールドデータを変換する場合"
 
 msgid ""
 "To customize how the values are serialized by a serializer, you can "
@@ -2316,6 +2321,8 @@ msgid ""
 "In addition to the above details, there are a few guidelines which can "
 "greatly improve the efficiency and readability of the field's code."
 msgstr ""
+"上記の詳細に加えて、フィールドのコードの効率と読みやすさを劇的に改善するいく"
+"つかのガイドラインがあります。"
 
 msgid ""
 "The source for Django's own ``ImageField`` (in ``django/db/models/fields/"
@@ -2333,7 +2340,7 @@ msgid ""
 msgstr ""
 
 msgid "Custom template backend"
-msgstr ""
+msgstr "テンプレートのバックエンドをカスタマイズする"
 
 msgid "Custom backends"
 msgstr "カスタムのバックエンド"
@@ -2388,6 +2395,8 @@ msgid ""
 "If an error happens during template parsing or rendering, Django can display "
 "the line the error happened on. For example:"
 msgstr ""
+"もしテンプレートをパースもしくはレンダリングしてる最中にエラーが発生したら、"
+"Djangoはエラーが発生した行を表示することができます。たとえば:"
 
 msgid ""
 "Custom engines can populate this information by setting a ``template_debug`` "

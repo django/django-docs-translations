@@ -12,8 +12,8 @@
 # Kohei Tamura <ktamura.biz.80@gmail.com>, 2018
 # sutefu7, 2019
 # osamunmun <osamu.takayasu@gmail.com>, 2016
-# Shuuji TAKAHASHI <shuuji3@gmail.com>, 2016-2017
-# Shuuji TAKAHASHI <shuuji3@gmail.com>, 2016-2018,2020
+# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016-2017
+# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016-2018,2020
 # Takashi Sugawara <aimaimokomoko@gmail.com>, 2017
 # Tatsuhiko Kono <kono@takenoko-tech.co.jp>, 2016
 # Takuya N <takninnovationresearch@gmail.com>, 2018
@@ -22,13 +22,14 @@
 # Yuma.M, 2016
 # Yusuke Miyazaki <miyazaki.dev@gmail.com>, 2016
 # Yuuki Ebihara <yuuki.ebihara813@gmail.com>, 2016
+# yz4230 <yuzupon1480@gmail.com>, 2021
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 04:40-0500\n"
-"PO-Revision-Date: 2020-08-31 13:27+0000\n"
-"Last-Translator: Ikemoto Hideki <ikemo333@gmail.com>\n"
+"POT-Creation-Date: 2021-02-19 03:37-0600\n"
+"PO-Revision-Date: 2021-01-11 04:40+0000\n"
+"Last-Translator: yz4230 <yuzupon1480@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -244,17 +245,25 @@ msgid ""
 "modern, web standards compliant browsers. On desktop this means Chrome, "
 "Edge, Firefox, Opera, Safari, and others."
 msgstr ""
+"adminは、今日のウェブ標準に準拠した最新バージョンのブラウザで完璧に機能しま"
+"す。デスクトップでいうと、Chrome, Edge, Firefox, Opera, Safariなどです。"
 
 msgid ""
 "On mobile and tablet devices, the admin provides a responsive experience for "
 "web standards compliant browsers. This includes the major browsers on both "
 "Android and iOS."
 msgstr ""
+"モバイルやタブレット端末上でも、adminはウェブ標準に準拠したブラウザにレスポン"
+"シブな体験を提供します。これには、AndroidとiOSにおける主なブラウザも含まれて"
+"います。"
 
 msgid ""
 "Depending on feature support, there *may* be minor stylistic differences "
 "between browsers. These are considered acceptable variations in rendering."
 msgstr ""
+"将来の変更によりますが、*もしかしたら*ブラウザ間で多少の見た目の違いがあるか"
+"もしれません。これらはレンダリングにおける許容範囲内の違いであると考えられて"
+"います。"
 
 msgid "FAQ: Contributing code"
 msgstr "FAQ: コードへの貢献"
@@ -697,6 +706,9 @@ msgid ""
 "of how things are named, Django gets stuff done in a way that's most logical "
 "to us."
 msgstr ""
+"結局のところ、それは物事を成し遂げることに尽きるのです。そして、どのように名"
+"前が付けられようとも、Djangoは我々にとって最も論理的な方法で物事を成し遂げま"
+"す。"
 
 msgid "<Framework X> does <feature Y> -- why doesn't Django?"
 msgstr ""
@@ -795,6 +807,11 @@ msgid ""
 "mean it's not just as appropriate for building \"non-CMS-y\" apps (whatever "
 "that means!)."
 msgstr ""
+"そう、Django の自動管理サイトは素晴らしいし、時間の節約にもなりますが、管理サ"
+"イトは Django のフレームワークの一つのモジュールです。さらに、Django は \"CMS"
+"的\" なアプリを構築するための特別な便利さを持っていますが、それは \"CMS的でな"
+"い\" アプリを構築するのに適していないという意味ではありません（それがどういう"
+"意味であれ！）。"
 
 msgid "How can I download the Django documentation to read it offline?"
 msgstr ""
@@ -954,7 +971,7 @@ msgstr ""
 "容赦ください。"
 
 msgid "Nobody answered my question! What should I do?"
-msgstr ""
+msgstr "誰も私の質問に答えてくれません！どうしたらいいですか？"
 
 msgid ""
 "Try making your question more specific, or provide a better example of your "
@@ -974,6 +991,8 @@ msgid ""
 "You can also try asking on a different channel. But please don't post your "
 "question in all three channels in quick succession."
 msgstr ""
+"違うチャンネルで質問してみることもできます。でも、3つのチャンネル全てで短時間"
+"に連続して質問を投稿するのは控えてください。"
 
 msgid ""
 "You might notice we have a second mailing list, called |django-developers|. "
@@ -1115,14 +1134,20 @@ msgstr "3.5、3.6、3.7"
 msgid "2.2"
 msgstr "2.2"
 
-msgid "3.5, 3.6, 3.7, 3.8 (added in 2.2.8)"
-msgstr "3.5、3.6、3.7、3.8 (2.2.8 で追加)"
-
-msgid "3.0, 3.1"
+msgid "3.5, 3.6, 3.7, 3.8 (added in 2.2.8), 3.9 (added in 2.2.17)"
 msgstr ""
 
-msgid "3.6, 3.7, 3.8"
-msgstr "3.6、3.7、3.8"
+msgid "3.0"
+msgstr "3.0"
+
+msgid "3.6, 3.7, 3.8, 3.9 (added in 3.0.11)"
+msgstr ""
+
+msgid "3.1"
+msgstr ""
+
+msgid "3.6, 3.7, 3.8, 3.9 (added in 3.1.3)"
+msgstr ""
 
 msgid ""
 "For each version of Python, only the latest micro release (A.B.C) is "
@@ -1427,7 +1452,7 @@ msgstr ""
 "settings`` はうまくいきますか)。"
 
 msgid "The module doesn't contain syntax errors."
-msgstr ""
+msgstr "モジュールに構文エラーはありません。"
 
 msgid "I can't stand your template language. Do I have to use it?"
 msgstr "テンプレート言語を好きになれません。どうしても使わないとだめですか？"

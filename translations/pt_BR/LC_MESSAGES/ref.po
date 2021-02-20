@@ -25,6 +25,7 @@
 # Marx Souza <karlmarx12crvg@gmail.com>, 2016
 # Otávio Reis <otaviocha@gmail.com>, 2018
 # Rafael Ribeiro <pereiraribeirorafael@gmail.com>, 2016
+# Rafael Fontenelle <rffontenelle@gmail.com>, 2021
 # Raphael Mendonça, 2016-2017
 # Ricardo Dantas <licensed@brasnet.org>, 2018
 # Rodrigo <rprior@infranology.com.br>, 2015
@@ -39,8 +40,8 @@ msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-01 00:41-0600\n"
-"PO-Revision-Date: 2020-12-08 19:30+0000\n"
-"Last-Translator: Claudio Rogerio Carvalho Filho <excriptbrasil@gmail.com>\n"
+"PO-Revision-Date: 2021-01-16 14:28+0000\n"
+"Last-Translator: Rafael Fontenelle <rffontenelle@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -53822,22 +53823,39 @@ msgid ""
 "and converts the value to an ``int``. See :ref:`how-django-processes-a-"
 "request` for more details."
 msgstr ""
+"O argumento ``route`` deve ser uma string ou :func:`~django.utils."
+"translation.gettext_lazy()` (veja :ref:`translating-urlpatterns`) que contém "
+"um padrão de URL. A string pode conter colchetes angulares (como "
+"``<username>`` acima) para capturar parte da URL e enviá-la como um "
+"argumento nomeado para a view. Os colchetes angulares podem incluir uma "
+"especificação do conversor (como a parte ``int`` de ``2``) que limita os "
+"caracteres correspondidos e também podem alterar o tipo da variável passada "
+"para a view. Por exemplo, ``<int:section>`` corresponde a uma string de "
+"dígitos decimais e converte o valor em um ``int``. Veja :ref:`how-django-"
+"process-a-request` para mais detalhes."
 
 msgid ""
 "The ``view`` argument is a view function or the result of :meth:`~django."
 "views.generic.base.View.as_view` for class-based views. It can also be an :"
 "func:`django.urls.include`."
 msgstr ""
+"O argumento ``view`` é uma função de view ou o resultado de :meth:`~django."
+"views.generic.base.View.as_view` para views baseadas em classe. Também pode "
+"ser um :func:`django.urls.include`."
 
 msgid ""
 "The ``kwargs`` argument allows you to pass additional arguments to the view "
 "function or method. See :ref:`views-extra-options` for an example."
 msgstr ""
+"O argumento ``kwargs`` permite que você passe argumentos adicionais ao "
+"método ou função view. Veja :ref:`views-extra-options` para um exemplo."
 
 msgid ""
 "See :ref:`Naming URL patterns <naming-url-patterns>` for why the ``name`` "
 "argument is useful."
 msgstr ""
+"Veja :ref:`Padrões de nomenclatura de URL <naming-url-patterns>` para o "
+"motivo do argumento ``name`` ser útil."
 
 msgid "``re_path()``"
 msgstr ""
