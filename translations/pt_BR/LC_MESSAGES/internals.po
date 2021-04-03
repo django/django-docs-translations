@@ -4,7 +4,8 @@
 #
 # Translators:
 # amcorreia <mutley.sandro@gmail.com>, 2016
-# Carlos C. Leite <caduado@gmail.com>, 2020
+# Soadwidwa <antilopebeige@gmail.com>, 2021
+# Carlos C. Leite <caduado@gmail.com>, 2020-2021
 # Carlos C. Leite <caduado@gmail.com>, 2016-2017
 # Carlos C. Leite <caduado@gmail.com>, 2016,2019
 # Claude Paroz <claude@2xlibre.net>, 2020
@@ -25,9 +26,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-21 03:41-0500\n"
-"PO-Revision-Date: 2020-08-04 19:31+0000\n"
-"Last-Translator: Transifex Bot <>\n"
+"POT-Creation-Date: 2020-12-01 00:41-0600\n"
+"PO-Revision-Date: 2021-02-23 00:32+0000\n"
+"Last-Translator: Soadwidwa <antilopebeige@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -368,6 +369,8 @@ msgid ""
 "Since Django is hosted on GitHub, patches are provided in the form of pull "
 "requests."
 msgstr ""
+"Como o Django é hospeado no GitbHub, os patches são provisionados na forma "
+"de pull requests."
 
 msgid ""
 "When committing a pull request, make sure each individual commit matches the "
@@ -607,7 +610,7 @@ msgstr ""
 "automaticamente postar um comentário na página do respectivo ticket."
 
 msgid "Write commit messages for backports using this pattern:"
-msgstr ""
+msgstr "Escreva mensagens de commit para backports usando esse formato:"
 
 msgid "For example:"
 msgstr "Por exemplo:"
@@ -919,6 +922,14 @@ msgid ""
 "candidate and the feature release) to take the opportunity to complete and "
 "fix the translations for your language!"
 msgstr ""
+"Traduções vindas do Transifex somente são integradas no repositório do "
+"Django quando houver uma nova :term:`feature release <Feature release>`. "
+"Tentamos atualizar em um segundo momento em um dos seguintes casos :term:"
+"`patch release <Patch release>`\\s, mas isso depende do disponibilidade do "
+"gestor da tradução. Portanto não perca o período em que congelamos os texto "
+"(entre o \"release candidate\" e a publicação de fato das funcionalidades) "
+"para aproveitar a oportunidade de completar e arrumar a tradução para sua "
+"língua."
 
 msgid "Formats"
 msgstr "Formatos"
@@ -2138,6 +2149,29 @@ msgid ""
 "Use single quotes for strings, or a double quote if the string contains a "
 "single quote. Don't waste time doing unrelated refactoring of existing code "
 "to conform to this style."
+msgstr ""
+
+msgid ""
+"String variable interpolation may use :py:ref:`%-formatting <old-string-"
+"formatting>`, :py:ref:`f-strings <f-strings>`, or :py:meth:`str.format` as "
+"appropriate, with the goal of maximizing code readability."
+msgstr ""
+
+msgid ""
+"Final judgments of readability are left to the Merger's discretion. As a "
+"guide, f-strings should use only plain variable and property access, with "
+"prior local variable assignment for more complex cases::"
+msgstr ""
+
+msgid ""
+"f-strings should not be used for any string that may require translation, "
+"including error and logging messages. In general ``format()`` is more "
+"verbose, so the other formatting methods are preferred."
+msgstr ""
+
+msgid ""
+"Don't waste time doing unrelated refactoring of existing code to adjust the "
+"formatting method."
 msgstr ""
 
 msgid ""
@@ -4124,13 +4158,8 @@ msgid ""
 "who will deal with your pull request has only two options: merge it or close "
 "it. For this reason, it isn't useful to make a pull request until the code "
 "is ready for merging -- or sufficiently close that a committer will finish "
-"it himself."
+"it themselves."
 msgstr ""
-"Pull Requests no GitHub só possuem dois estados: aberto e fechado. O "
-"committer que for lidar com o seu pull request só tem duas opções: fazer "
-"merge dele ou fechá-lo. Por esta razão, não é útil fazer um pull request "
-"enquanto o código não estiver pronto para o merging -- ou suficientemente "
-"concluído a ponto de o próprio committer finalizá-lo ele mesmo. "
 
 msgid "Rebasing branches"
 msgstr "Fazendo rebase de branches"
@@ -5219,11 +5248,6 @@ msgid ""
 msgstr ""
 
 msgid "The ``list`` message for ``ModelMultipleChoiceField`` will be removed."
-msgstr ""
-
-msgid ""
-"``django.views.generic.TemplateView`` will no longer pass URL kwargs "
-"directly to the ``context``."
 msgstr ""
 
 msgid ""

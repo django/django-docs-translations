@@ -8,6 +8,7 @@
 # Laville Augustin <augustin.laville@gustavi.net>, 2014,2016
 # Christophe CHAUVET <christophe.chauvet@gmail.com>, 2013
 # Claude Paroz <claude@2xlibre.net>, 2013-2021
+# kernju <julien.kern.93@gmail.com>, 2021
 # Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014-2015
 # mlorant <maxime.lorant@gmail.com>, 2014
 # mlorant <maxime.lorant@gmail.com>, 2014
@@ -19,8 +20,8 @@ msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-01 00:41-0600\n"
-"PO-Revision-Date: 2021-02-19 17:41+0000\n"
-"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
+"PO-Revision-Date: 2021-04-02 13:39+0000\n"
+"Last-Translator: kernju <julien.kern.93@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/"
 "fr/)\n"
 "MIME-Version: 1.0\n"
@@ -49046,7 +49047,7 @@ msgid ""
 "(lazy) string, the ``label`` is :ref:`automatically generated <field-choices-"
 "enum-auto-label>` from the member name."
 msgstr ""
-"Les valeurs des membres Enum sont des tuples de paramètres à utilisier lors "
+"Les valeurs des membres Enum sont des tuples de paramètres à utiliser lors "
 "de la construction du type de données concret. Django prend en charge "
 "l'ajout d'une chaîne supplémentaire à la fin du tuple pour servir de nom "
 "humainement lisible, dit ``label``. Ce ``label`` peut être une chaîne "
@@ -49055,7 +49056,7 @@ msgstr ""
 "exemple de sous-classe de choix <field-choices-enum-subclassing>` utilisant "
 "un type de données plus complexe. Si la valeur fournie n'est pas un tuple ou "
 "que le dernier élément n'est pas une chaîne (possiblement différée), la "
-"partie ``label`` est ref:`automatiquement générée <field-choices-enum-auto-"
+"partie ``label`` est :ref:`automatiquement générée <field-choices-enum-auto-"
 "label>` à partir du nom du membre."
 
 msgid ""

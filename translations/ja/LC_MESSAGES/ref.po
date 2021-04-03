@@ -16,6 +16,7 @@
 # BanjinS <banjin-s@qbooks.jp>, 2016
 # Kosuke Yamashima <Renet.pc@gmail.com>, 2017
 # Makoto Mori <makomori@sfc.wide.ad.jp>, 2016
+# Masashi SHIBATA <contact@c-bata.link>, 2021
 # Masashi SHIBATA <contact@c-bata.link>, 2016
 # matsuand, 2018
 # Mitsuhiro Sorakubo <msorakubo@msn.com>, 2017
@@ -24,6 +25,7 @@
 # ohkawa <ookawa.m@gmail.com>, 2016
 # Pawllo2 <pawllothesecond@gmail.com>, 2017-2019
 # salexkidd <salexkidd@gmail.com>, 2015
+# Shimamura Shunsuke <chun.jb.37@gmail.com>, 2021
 # TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016-2017
 # TAKAHASHI Shuuji <shuuji3@gmail.com>, 2017-2019
 # Takashi Iwamoto, 2018
@@ -42,8 +44,8 @@ msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-01 00:41-0600\n"
-"PO-Revision-Date: 2021-02-04 13:32+0000\n"
-"Last-Translator: Ikemoto Hideki <ikemo333@gmail.com>\n"
+"PO-Revision-Date: 2021-04-02 02:36+0000\n"
+"Last-Translator: Shimamura Shunsuke <chun.jb.37@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -31745,7 +31747,7 @@ msgid ""
 "address\". This method can return a completely different dictionary if it "
 "wishes, which will be used as the ``cleaned_data``."
 msgstr ""
-"フォームのサブクラスの ``crean()`` メソッドは、複数のフォームフィールドにまた"
+"フォームのサブクラスの ``clean()`` メソッドは、複数のフォームフィールドにまた"
 "がるバリデーションにも使用できます。この場所には、たとえば「フィールド ``A`` "
 "が入力されたときフィールド ``B`` は有効なメールアドレスのはず」といったチェッ"
 "クを記述できます。このメソッドは、必要な場合はまったく違うディクショナリを返"
@@ -32039,7 +32041,7 @@ msgid ""
 msgstr ""
 "この段階でのエラーを通知するには 2 つの方法があります。おそらく最も一般的な方"
 "法は、フォームのトップでエラーを表示する方法です。このようなエラーを生成する"
-"には、``crean()`` メソッドで ``ValidationError`` を発生させてください。例え"
+"には、``clean()`` メソッドで ``ValidationError`` を発生させてください。例え"
 "ば::"
 
 msgid ""
@@ -45488,7 +45490,7 @@ msgid ""
 "to ``str``. If ``encoding`` is not set, it defaults to :setting:"
 "`DEFAULT_CHARSET`."
 msgstr ""
-"キーとバリュー療法をセットするための文字列は、``encoding`` から ``str`` に変"
+"キーとバリューの両方を設定するための文字列は、``encoding`` から ``str`` に変"
 "換されます。``encoding`` がセットされていない場合、:setting:"
 "`DEFAULT_CHARSET` がデフォルトとなります。"
 
