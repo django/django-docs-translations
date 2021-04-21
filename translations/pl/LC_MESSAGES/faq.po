@@ -6,9 +6,9 @@
 # Adrian Antończyk <linkedin@antonczyk.it>, 2015
 # Doman <domanoid@gmail.com>, 2017
 # Jarek Kowalewski <jaroslaw.kowalewski@students.waw.pl>, 2016
-# m_aciek <maciej.olko@gmail.com>, 2016-2020
+# m_aciek <maciej.olko@gmail.com>, 2016-2021
 # m_aciek <maciej.olko@gmail.com>, 2015
-# Mariusz Felisiak <felisiak.mariusz@gmail.com>, 2020
+# Mariusz Felisiak <felisiak.mariusz@gmail.com>, 2020-2021
 # Michał Krzysztofiak <michal0803@gmail.com>, 2019
 # Stefan Ocetkiewicz <stefan.ocetkiewicz@gmail.com>, 2020
 # Tomasz Kajtoch <tomekkaj@tomekkaj.pl>, 2016
@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-19 15:41-0600\n"
-"PO-Revision-Date: 2020-11-15 10:46+0000\n"
+"POT-Creation-Date: 2021-04-21 03:49-0500\n"
+"PO-Revision-Date: 2021-04-20 17:35+0000\n"
 "Last-Translator: m_aciek <maciej.olko@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/django/django-docs/language/"
 "pl/)\n"
@@ -432,7 +432,7 @@ msgstr ""
 "nad tymi, które są przypadkami brzegowymi."
 
 msgid ""
-"Another reason that bugs might be ignored for while is if the bug is a "
+"Another reason that a bug might be ignored for a while is if the bug is a "
 "symptom of a larger problem. While we can spend time writing, testing and "
 "applying lots of little patches, sometimes the right solution is to rebuild. "
 "If a rebuild or refactor of a particular component has been proposed or is "
@@ -441,7 +441,7 @@ msgid ""
 "concentrating on the rebuild, we can close all the little bugs at once, and "
 "hopefully prevent other little bugs from appearing in the future."
 msgstr ""
-"Innym powodem, dla którego błędy mogą być przez chwilę ignorowane, może być "
+"Innym powodem, dla którego błąd może być przez chwilę ignorowany, może być "
 "sytuacja, w której błąd jest symptomem większego problemu. Mimo że możemy "
 "poświęcić czas pisaniu, testowaniu i aplikowaniu wielu małych łat, czasem "
 "dobrym rozwiązaniem jest przebudować funkcjonalność. Jeśli została "
@@ -472,6 +472,16 @@ msgstr ""
 "użytkownika. To nie znaczy, że myślimy, iż twój problem jest nieważny – "
 "myślimy tylko, że w dostępnym ograniczonym czasie, zawsze przychylimy się do "
 "uczynienia szczęśliwymi 10 osób, ponad uczynienie szczęśliwą tylko jednej."
+
+msgid ""
+"I'm sure my ticket is absolutely 100% perfect, can I mark it as \"Ready For "
+"Checkin\" myself?"
+msgstr ""
+
+msgid ""
+"Sorry, no. It's always better to get another set of eyes on a ticket. If "
+"you're having trouble getting that second set of eyes, see questions above."
+msgstr ""
 
 msgid "FAQ: General"
 msgstr "Często zadawane pytania: Ogólne"
@@ -703,6 +713,8 @@ msgid ""
 "of how things are named, Django gets stuff done in a way that's most logical "
 "to us."
 msgstr ""
+"W końcu chodzi o wykonywanie swojej roboty. I, niezależnie jak to nazwiemy, "
+"Django wykonuje robotę w sposób, który jest dla nas najlogiczniejszy."
 
 msgid "<Framework X> does <feature Y> -- why doesn't Django?"
 msgstr "<Framework X> posiada <funkcję Y> – dlaczego Django nie?"
@@ -803,6 +815,11 @@ msgid ""
 "mean it's not just as appropriate for building \"non-CMS-y\" apps (whatever "
 "that means!)."
 msgstr ""
+"Tak, automatyczny panel administracyjny Django jest fantastyczny i pozwala "
+"oszczędzić czas – ale panel jest jednym modułem frameworka Django. Co "
+"więcej, pomimo że Django ma udogodnienia do budowania „CMS-owych” aplikacji, "
+"nie znaczy to, że jest mniej odpowiednie do budowania „nie-CMS-owych” "
+"aplikacji (cokolwiek to znaczy!)."
 
 msgid "How can I download the Django documentation to read it offline?"
 msgstr "Jak mogę pobrać dokumentację Django, aby czytać ją offline?"
@@ -999,6 +1016,11 @@ msgid ""
 "question there is considered impolite, and you will likely be directed to "
 "ask on |django-users|."
 msgstr ""
+"Jak mogłeś już zauważyć, posiadamy drugą listę mailingową zwaną |django-"
+"developers|. Ta lista służy dyskusjom na temat rozwijania samego Django. "
+"Prosimy, nie wysyłaj na nią wiadomości dotyczących wsparcia. Zadanie pytania "
+"dotyczącego wsparcia technicznego jest tu uważane za bardzo niegrzeczne i "
+"najprawdopodobniej będziesz skierowany by pytać na |django-users|."
 
 msgid "I think I've found a bug! What should I do?"
 msgstr "Chyba znalazłem błąd! Co powinienem zrobić?"
@@ -1032,6 +1054,13 @@ msgid ""
 "outstanding, we would like to minimize any damage that could be inflicted "
 "through public knowledge of that defect."
 msgstr ""
+"W związku z wrażliwą naturą problemów bezpieczeństwa, gdy myślisz, że "
+"znalazłeś problem z bezpieczeństwem, *prosimy*, abyś nie publikował "
+"wiadomości na forum, IRC ani żadnej z publicznych list mailingowych. Django "
+"ma :ref:`politykę obsługi problemów bezpieczeństwa <reporting-security-"
+"issues>`; podczas gdy defekt jest niepospolity, chcielibyśmy zminimalizować "
+"wszystkie szkody, które mógłaby spowodować publicznie dostępna wiedza na "
+"temat defektu."
 
 msgid "Django FAQ"
 msgstr "Często zadawane pytania odnośnie Django"
@@ -1112,41 +1141,29 @@ msgstr "Wersja Django"
 msgid "Python versions"
 msgstr "Wersje Pythona"
 
-msgid "1.11"
-msgstr "1.11"
-
-msgid "2.7, 3.4, 3.5, 3.6, 3.7 (added in 1.11.17)"
-msgstr "2.7, 3.4, 3.5, 3.6, 3.7 (dodana w 1.11.17)"
-
-msgid "2.0"
-msgstr "2.0"
-
-msgid "3.4, 3.5, 3.6, 3.7"
-msgstr "3.4, 3.5, 3.6, 3.7"
-
-msgid "2.1"
-msgstr "2.1"
-
-msgid "3.5, 3.6, 3.7"
-msgstr "3.5, 3.6, 3.7"
-
 msgid "2.2"
 msgstr "2.2"
 
 msgid "3.5, 3.6, 3.7, 3.8 (added in 2.2.8), 3.9 (added in 2.2.17)"
-msgstr ""
+msgstr "3.5, 3.6, 3.7, 3.8 (dodana w 2.2.8), 3.9 (dodana w 2.2.17)"
 
 msgid "3.0"
 msgstr "3.0"
 
 msgid "3.6, 3.7, 3.8, 3.9 (added in 3.0.11)"
-msgstr ""
+msgstr "3.6, 3.7, 3.8, 3.9 (dodana w 3.0.11)"
 
 msgid "3.1"
-msgstr ""
+msgstr " 3.1"
 
 msgid "3.6, 3.7, 3.8, 3.9 (added in 3.1.3)"
-msgstr ""
+msgstr "3.6, 3.7, 3.8, 3.9 (dodana w 3.1.3)"
+
+msgid "3.2"
+msgstr "3.2"
+
+msgid "3.6, 3.7, 3.8, 3.9"
+msgstr "3.6, 3.7, 3.8, 3.9"
 
 msgid ""
 "For each version of Python, only the latest micro release (A.B.C) is "
@@ -1176,13 +1193,6 @@ msgid "What Python version should I use with Django?"
 msgstr "Jakiej wersji Pythona powinienem używać z Django?"
 
 msgid ""
-"Python 3 is recommended. Django 1.11 is the last version to support Python "
-"2.7. Support for Python 2.7 and Django 1.11 ends in 2020."
-msgstr ""
-"Rekomendowany jest Python 3. Django 1.11 jest ostatnią wersją, która wspiera "
-"Pythona 2.7. Wsparcie Pythona 2.7 i Django 1.11 kończy się w 2020 roku."
-
-msgid ""
 "Since newer versions of Python are often faster, have more features, and are "
 "better supported, the latest version of Python 3 is recommended."
 msgstr ""
@@ -1195,6 +1205,9 @@ msgid ""
 "releases. Third-party applications for use with Django are free to set their "
 "own version requirements."
 msgstr ""
+"Nic nie tracisz w Django używając starszego wydania, ale nie masz korzyści z "
+"poprawek i optymalizacji w nowszych wydaniach Pythona. Zewnętrzne aplikacje "
+"do użytku z Django są wolne, aby ustalać własne wymagania co do wersji."
 
 msgid "Should I use the stable version or development version?"
 msgstr "Powinienem użyć wersji stabilnej czy rozwojowej?"
@@ -1365,7 +1378,7 @@ msgid "Problems running ``django-admin``"
 msgstr "Problemy z uruchomieniem ``django-admin``"
 
 msgid "``command not found: django-admin``"
-msgstr ""
+msgstr "``command not found: django-admin``"
 
 msgid ""
 ":doc:`django-admin </ref/django-admin>` should be on your system path if you "
@@ -1373,6 +1386,10 @@ msgid ""
 "virtual environment activated and you can try running the equivalent command "
 "``python -m django``."
 msgstr ""
+":doc:`django-admin </ref/django-admin>` powinno być na twojej ścieżce "
+"systemowej, jeśli zainstalowałeś Django ``pip``-em. Jeśli nie ma go na "
+"twojej ścieżce, upewnij się, że aktywowałeś swoje wirtualne środowisko. "
+"Możesz też spróbować ekwiwalentnej komendy ``python -m django``."
 
 msgid "macOS permissions"
 msgstr "Uprawnienia MacOS"
@@ -1440,6 +1457,7 @@ msgstr "Często zadawane pytania: Używanie Django"
 
 msgid "Why do I get an error about importing :envvar:`DJANGO_SETTINGS_MODULE`?"
 msgstr ""
+"Dlaczego otrzymuję błąd dotyczący importu :envvar:`DJANGO_SETTINGS_MODULE`?"
 
 msgid "Make sure that:"
 msgstr "Upewnij się, że:"
@@ -1448,6 +1466,8 @@ msgid ""
 "The environment variable :envvar:`DJANGO_SETTINGS_MODULE` is set to a fully-"
 "qualified Python module (i.e. \"mysite.settings\")."
 msgstr ""
+"Zmienna środowiskowa :envvar:`DJANGO_SETTINGS_MODULE` jest ustawiona na w "
+"pełni kwalifikowany moduł Pythona (np. „mysite.settings”)."
 
 msgid ""
 "Said module is on ``sys.path`` (``import mysite.settings`` should work)."

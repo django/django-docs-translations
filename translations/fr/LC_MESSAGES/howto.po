@@ -5,9 +5,9 @@
 # Translators:
 # Adrien Brunet <abrunet@centrale-marseille.fr>, 2017
 # Amirouche <amirouche.boubekki@gmail.com>, 2013
-# annoa <annoa.b@gmail.com>, 2013-2014
+# Bruno Brouard <annoa.b@gmail.com>, 2013-2014
 # Anthony SKORSKI <skorski.anthony@gmail.com>, 2020
-# Claude Paroz <claude@2xlibre.net>, 2013-2020
+# Claude Paroz <claude@2xlibre.net>, 2013-2021
 # Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014-2015
 # Sébastien Fievet <_@sebastien-fievet.fr>, 2014
 # Sylvain GROS-DESORMEAUX <sylvain.grodes@gmail.com>, 2013
@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-21 03:41-0500\n"
-"PO-Revision-Date: 2020-08-14 18:21+0000\n"
+"POT-Creation-Date: 2021-04-21 03:49-0500\n"
+"PO-Revision-Date: 2021-04-10 12:53+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/"
 "fr/)\n"
@@ -1261,12 +1261,23 @@ msgstr ""
 "valeur par défaut est ``False``."
 
 msgid ""
-"A boolean; if ``True``, the entire Django project will be checked for "
-"potential problems prior to executing the command. Default value is ``True``."
+"A list or tuple of tags, e.g. ``[Tags.staticfiles, Tags.models]``. System "
+"checks registered in the chosen tags will be checked for errors prior to "
+"executing the command. The value ``'__all__'`` can be used to specify that "
+"all system checks should be performed. Default value is ``'__all__'``."
 msgstr ""
-"Valeur booléenne ; si ``True``, le projet Django entier est contrôlé à la "
-"recherche de problèmes potentiels avant l'exécution de la commande. La "
-"valeur par défaut est ``True``."
+"Une liste ou un tuple d'étiquettes, par ex. ``[Tags.staticfiles, Tags."
+"models]``. Les contrôles système inscrits avec les étiquettes indiquées "
+"seront exécutés avant d'exécuter la commande. La valeur ``'__all__'`` peut "
+"être utilisée pour indiquer que tous les contrôles système doivent être "
+"appliqués. La valeur par défaut est ``'__all__'``."
+
+msgid ""
+"In older versions, the ``requires_system_checks`` attribute expects a "
+"boolean value instead of a list or tuple of tags."
+msgstr ""
+"Dans les anciennes versions, l'attribut ``requires_system_checks`` attendait "
+"une valeur booléenne au lieu d'une liste ou un tuple d'étiquettes."
 
 msgid ""
 "An instance attribute that helps create colored output when writing to "
@@ -6469,6 +6480,26 @@ msgstr ""
 "Votre classe de rapporteur personnalisée doit hériter de :class:`django."
 "views.debug.ExceptionReporter`."
 
+msgid ""
+"Property that returns a :class:`pathlib.Path` representing the absolute "
+"filesystem path to a template for rendering the HTML representation of the "
+"exception. Defaults to the Django provided template."
+msgstr ""
+"Propriété qui renvoie un chemin :class:`pathlib.Path` représentant le chemin "
+"de système de fichiers absolu vers un gabarit pour le rendu de la "
+"représentation HTML de l'exception. Par défaut, c'est le gabarit fourni par "
+"Django qui est utilisé."
+
+msgid ""
+"Property that returns a :class:`pathlib.Path` representing the absolute "
+"filesystem path to a template for rendering the plain-text representation of "
+"the exception. Defaults to the Django provided template."
+msgstr ""
+"Propriété qui renvoie un chemin :class:`pathlib.Path` représentant le chemin "
+"de système de fichiers absolu vers un gabarit pour le rendu de la "
+"représentation en texte pur de l'exception. Par défaut, c'est le gabarit "
+"fourni par Django qui est utilisé."
+
 msgid "Return a dictionary containing traceback information."
 msgstr "Renvoie un dictionnaire contenant les informations de trace d'erreur."
 
@@ -7725,11 +7756,11 @@ msgstr ""
 
 msgid ""
 "For example, if your :setting:`MEDIA_URL` is defined as ``/media/``, you can "
-"do this by adding the following snippet to your urls.py::"
+"do this by adding the following snippet to your :setting:`ROOT_URLCONF`::"
 msgstr ""
 "Par exemple, si le réglage :setting:`MEDIA_URL` est défini comme ``/media/"
 "``, vous pouvez configurer ce service en ajoutant le bout de code suivant "
-"dans votre fichier ``urls.py``::"
+"dans votre réglage :setting:`ROOT_URLCONF`::"
 
 msgid ""
 "This helper function works only in debug mode and only if the given prefix "
@@ -8229,6 +8260,28 @@ msgstr ""
 "Consultez :ref:`database-installation` pour plus d'informations sur "
 "l'installation de bases de données avec Django."
 
+msgid "Colored terminal output"
+msgstr "Sortie de terminal colorée"
+
+msgid ""
+"A quality-of-life feature is to output colored (rather than monochrome) "
+"output on the terminal. This should work both on CMD and PowerShell. If for "
+"some reason this needs to be disabled, set the environmental variable :"
+"envvar:`DJANGO_COLORS` to ``nocolor``."
+msgstr ""
+"Une fonctionnalité très appréciable est de produire du contenu coloré dans "
+"le terminal. Cela devrait fonctionner aussi bien avec CMD que PowerShell. Si "
+"pour une raison quelconque ceci doit être désactivé, définissez la variable "
+"d'environnement :envvar:`DJANGO_COLORS` à ``nocolor``."
+
+msgid "To enable this, colorama_ must be installed::"
+msgstr "Pour activer cela, colorama_ doit être installé ::"
+
+msgid "See :ref:`syntax-coloring` for more information on color settings."
+msgstr ""
+"Voir :ref:`syntax-coloring` pour plus d'informations sur les réglages de "
+"couleur."
+
 msgid "Common pitfalls"
 msgstr "Problèmes fréquents"
 
@@ -8594,7 +8647,7 @@ msgid ""
 "``through`` model, the default migration will delete the existing table and "
 "create a new one, losing the existing relations. To avoid this, you can use :"
 "class:`.SeparateDatabaseAndState` to rename the existing table to the new "
-"table name whilst telling the migration autodetector that the new model has "
+"table name while telling the migration autodetector that the new model has "
 "been created. You can check the existing table name through :djadmin:"
 "`sqlmigrate` or :djadmin:`dbshell`. You can check the new table name with "
 "the through model's ``_meta.db_table`` property. Your new ``through`` model "

@@ -7,7 +7,7 @@
 # Laville Augustin <augustin.laville@gustavi.net>, 2014,2016
 # CHABERT Loic <chabert.loic.74@gmail.com>, 2013
 # Christophe CHAUVET <christophe.chauvet@gmail.com>, 2013
-# Claude Paroz <claude@2xlibre.net>, 2015-2020
+# Claude Paroz <claude@2xlibre.net>, 2015-2021
 # Jérôme Hugon <jerome@theatreinterface.ch>, 2015
 # mlorant <maxime.lorant@gmail.com>, 2014-2015
 # Sébastien Fievet <_@sebastien-fievet.fr>, 2014
@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 04:40-0500\n"
-"PO-Revision-Date: 2020-09-10 11:15+0000\n"
+"POT-Creation-Date: 2021-04-21 03:49-0500\n"
+"PO-Revision-Date: 2021-04-21 11:28+0000\n"
 "Last-Translator: Transifex Bot <>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/"
 "fr/)\n"
@@ -2812,20 +2812,12 @@ msgstr "Intergiciels nouveau style"
 msgid ""
 ":doc:`A new style of middleware is introduced </topics/http/middleware>` to "
 "solve the lack of strict request/response layering of the old-style of "
-"middleware described in `DEP 0005 <https://github.com/django/deps/blob/"
-"master/final/0005-improved-middleware.rst>`_. You'll need to :ref:`adapt "
-"old, custom middleware <upgrading-middleware>` and switch from the "
+"middleware described in `DEP 0005 <https://github.com/django/deps/blob/main/"
+"final/0005-improved-middleware.rst>`_. You'll need to :ref:`adapt old, "
+"custom middleware <upgrading-middleware>` and switch from the "
 "``MIDDLEWARE_CLASSES`` setting to the new :setting:`MIDDLEWARE` setting to "
 "take advantage of the improvements."
 msgstr ""
-":doc:`Un nouveau style d'intergiciel a été introduit </topics/http/"
-"middleware>` pour résoudre le manque d'empilement strict des requêtes/"
-"réponses des intergiciels ancienne génération, selon la description `DEP "
-"0005 <https://github.com/django/deps/blob/master/final/0005-improved-"
-"middleware.rst>`_. Il est nécessaire :ref:`d'adapter les anciens "
-"intergiciels personnalisés <upgrading-middleware>` et de passer du réglage "
-"``MIDDLEWARE_CLASSES`` au nouveau réglage :setting:`MIDDLEWARE` pour "
-"profiter des améliorations."
 
 msgid "Official support for Unicode usernames"
 msgstr "Prise en charge officielle des noms d'utilisateurs Unicode"
@@ -5763,12 +5755,11 @@ msgstr ""
 "``writable()`` et ``seekable()``."
 
 msgid ""
-"The new :attr:`CharField.empty_value <django.forms.CharField.empty_value>` "
-"attribute allows specifying the Python value to use to represent \"empty\"."
+"The new ``empty_value`` attribute on :class:`~django.forms.CharField`, :"
+"class:`~django.forms.EmailField`, :class:`~django.forms.RegexField`, :class:"
+"`~django.forms.SlugField`, and :class:`~django.forms.URLField` allows "
+"specifying the Python value to use to represent \"empty\"."
 msgstr ""
-"Le nouvel attribut :attr:`CharField.empty_value <django.forms.CharField."
-"empty_value>` permet de définir la valeur Python à utiliser pour représenter "
-"une valeur « vide »."
 
 msgid ""
 "The new :meth:`Form.get_initial_for_field() <django.forms.Form."
@@ -10555,13 +10546,16 @@ msgid "Django 1.3.2 release notes"
 msgstr "Notes de publication de Django 1.3.2"
 
 msgid "*July 30, 2012*"
-msgstr ""
+msgstr "*30 juillet 2012*"
 
 msgid ""
 "This is the second security release in the Django 1.3 series, fixing several "
 "security issues in Django 1.3. Django 1.3.2 is a recommended upgrade for all "
 "users of Django 1.3."
 msgstr ""
+"Il s'agit de la deuxième publication de sécurité dans la série Django 1.3, "
+"corrigeant plusieurs problèmes de sécurité dans Django 1.3. Django 1.3.2 est "
+"une mise à niveau recommandée pour tous les utilisateurs de Django 1.3."
 
 msgid "Django 1.3.3 release notes"
 msgstr "Notes de publication de Django 1.3.3"
@@ -14329,8 +14323,8 @@ msgid ""
 "The biggest fix is for a memory leak introduced in Django 1.5. Under certain "
 "circumstances, repeated iteration over querysets could leak memory - "
 "sometimes quite a bit of it. If you'd like more information, the details are "
-"in :ticket:`our ticket tracker <19895>` (and in `a related issue`__ in "
-"Python itself)."
+"in :ticket:`our ticket tracker <19895>` (and in :bpo:`a related issue "
+"<17468>` in Python itself)."
 msgstr ""
 
 msgid ""
@@ -14468,7 +14462,7 @@ msgid ""
 "`signed cookie session backend<cookie-session-backend>` and :setting:"
 "`SECRET_KEY` is known by an attacker (there isn't an inherent vulnerability "
 "in Django that would cause it to leak), the attacker could insert a string "
-"into his session which, when unpickled, executes arbitrary code on the "
+"into their session which, when unpickled, executes arbitrary code on the "
 "server. The technique for doing so is simple and easily available on the "
 "internet. Although the cookie session storage signs the cookie-stored data "
 "to prevent tampering, a :setting:`SECRET_KEY` leak immediately escalates to "
@@ -14791,7 +14785,7 @@ msgid ""
 "The :meth:`~django.test.TransactionTestCase.assertQuerysetEqual` now checks "
 "for undefined order and raises :exc:`ValueError` if undefined order is "
 "spotted. The order is seen as undefined if the given ``QuerySet`` isn't "
-"ordered and there are more than one ordered values to compare against."
+"ordered and there is more than one ordered value to compare against."
 msgstr ""
 
 msgid ""
@@ -15552,7 +15546,7 @@ msgid ""
 "`signed cookie session backend<cookie-session-backend>` and :setting:"
 "`SECRET_KEY` is known by an attacker (there isn't an inherent vulnerability "
 "in Django that would cause it to leak), the attacker could insert a string "
-"into his session which, when unpickled, executes arbitrary code on the "
+"into their session which, when unpickled, executes arbitrary code on the "
 "server. The technique for doing so is simple and easily available on the "
 "internet. Although the cookie session storage signs the cookie-stored data "
 "to prevent tampering, a :setting:`SECRET_KEY` leak immediately escalates to "
@@ -16225,10 +16219,9 @@ msgid ""
 "iteratively. The problem is that the size of the input it's processing can "
 "increase on each iteration which results in an infinite loop in "
 "``strip_tags()``. This issue only affects versions of Python that haven't "
-"received  `a bugfix in HTMLParser <https://bugs.python.org/issue20288>`_; "
-"namely Python < 2.7.7 and 3.3.5. Some operating system vendors have also "
-"backported the fix for the Python bug into their packages of earlier "
-"versions."
+"received :bpo:`a bugfix in HTMLParser <20288>`; namely Python < 2.7.7 and "
+"3.3.5. Some operating system vendors have also backported the fix for the "
+"Python bug into their packages of earlier versions."
 msgstr ""
 
 msgid ""
@@ -16805,11 +16798,9 @@ msgstr ""
 "éléments :"
 
 msgid ""
-"``name``: The field's attribute name on its parent model, or None if it is "
-"not part of a model"
+"``name``: The field's attribute name on its parent model, or ``None`` if it "
+"is not part of a model"
 msgstr ""
-"``name`` : Le nom d'attribut du champ sur son modèle parent, ou None s'il ne "
-"fait pas partie d'un modèle"
 
 msgid ""
 "``path``: A dotted, Python path to the class of this field, including the "
@@ -23783,7 +23774,7 @@ msgstr ""
 msgid ""
 "The new :meth:`GDALRaster.warp() <django.contrib.gis.gdal.GDALRaster.warp>` "
 "method allows warping a raster by specifying target raster properties such "
-"as origin, width, height, or pixel size (amongst others)."
+"as origin, width, height, or pixel size (among others)."
 msgstr ""
 "La nouvelle méthode :meth:`GDALRaster.warp() <django.contrib.gis.gdal."
 "GDALRaster.warp>` permet de déformer une structure matricielle en indiquant "
@@ -28715,7 +28706,7 @@ msgid ""
 "Given the complexity of the Django admin, and in-particular the permissions "
 "related checks, it is the view of the Django security team that this change "
 "was necessary: that it is not currently feasible to maintain the existing "
-"behavior whilst escaping the potential privilege escalation in a way that "
+"behavior while escaping the potential privilege escalation in a way that "
 "would avoid a recurrence of similar issues in the future, and that would be "
 "compatible with Django's *safe by default* philosophy."
 msgstr ""
@@ -28976,8 +28967,9 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Django 2.2 supports Python 3.5, 3.6, 3.7, and 3.8 (as of 2.2.8). We **highly "
-"recommend** and only officially support the latest release of each series."
+"Django 2.2 supports Python 3.5, 3.6, 3.7, 3.8 (as of 2.2.8), and 3.9 (as of "
+"2.2.17). We **highly recommend** and only officially support the latest "
+"release of each series."
 msgstr ""
 
 msgid "What's new in Django 2.2"
@@ -30076,7 +30068,7 @@ msgid "Django 2.2.16 release notes"
 msgstr ""
 
 msgid "*September 1, 2020*"
-msgstr ""
+msgstr "*1er septembre 2020*"
 
 msgid ""
 "Django 2.2.16 fixes two security issues and two data loss bugs in 2.2.15."
@@ -30086,6 +30078,8 @@ msgid ""
 "CVE-2020-24583: Incorrect permissions on intermediate-level directories on "
 "Python 3.7+"
 msgstr ""
+"CVE-2020-24583 : permissions incorrectes sur les répertoires de niveau "
+"intermédiaire avec Python 3.7+"
 
 msgid ""
 "On Python 3.7+, :setting:`FILE_UPLOAD_DIRECTORY_PERMISSIONS` mode was not "
@@ -30093,11 +30087,18 @@ msgid ""
 "uploading files and to intermediate-level collected static directories when "
 "using the :djadmin:`collectstatic` management command."
 msgstr ""
+"Avec Python 3.7+, le mode :setting:`FILE_UPLOAD_DIRECTORY_PERMISSIONS` "
+"n'était pas appliqué aux répertoires de niveau intermédiaire créés dans le "
+"processus de téléversement de fichiers et pour les répertoires de niveau "
+"intermédiaire des fichiers statiques collectés lors de l'utilisation de la "
+"commande d'administration :djadmin:`collectstatic`."
 
 msgid ""
 "You should review and manually fix permissions on existing intermediate-"
 "level directories."
 msgstr ""
+"Vous devriez examiner et corriger manuellement les permissions sur les "
+"répertoires de niveau intermédaire existants."
 
 msgid ""
 "CVE-2020-24584: Permission escalation in intermediate-level directories of "
@@ -30128,6 +30129,55 @@ msgstr ""
 "Une possibilité de perte de données a été corrigée, à la suite d'une "
 "régression dans Django 2.0, lors de la copie d'instances de modèles avec une "
 "valeur de champ mise en cache (:ticket:`31863`)."
+
+msgid "Django 2.2.17 release notes"
+msgstr ""
+
+msgid "*November 2, 2020*"
+msgstr ""
+
+msgid "Django 2.2.17 adds compatibility with Python 3.9."
+msgstr ""
+
+msgid "Django 2.2.18 release notes"
+msgstr ""
+
+msgid "*February 1, 2021*"
+msgstr ""
+
+msgid "Django 2.2.18 fixes a security issue with severity \"low\" in 2.2.17."
+msgstr ""
+
+msgid "CVE-2021-3281: Potential directory-traversal via ``archive.extract()``"
+msgstr ""
+
+msgid ""
+"The ``django.utils.archive.extract()`` function, used by :option:`startapp --"
+"template` and :option:`startproject --template`, allowed directory-traversal "
+"via an archive with absolute paths or relative paths with dot segments."
+msgstr ""
+
+msgid "Django 2.2.19 release notes"
+msgstr ""
+
+msgid "*February 19, 2021*"
+msgstr ""
+
+msgid "Django 2.2.19 fixes a security issue in 2.2.18."
+msgstr ""
+
+msgid ""
+"CVE-2021-23336: Web cache poisoning via ``django.utils.http."
+"limited_parse_qsl()``"
+msgstr ""
+
+msgid ""
+"Django contains a copy of :func:`urllib.parse.parse_qsl` which was added to "
+"backport some security fixes. A further security fix has been issued "
+"recently such that ``parse_qsl()`` no longer allows using ``;`` as a query "
+"parameter separator by default. Django now includes this fix. See :bpo:"
+"`42967` for further details."
+msgstr ""
 
 msgid "Django 2.2.2 release notes"
 msgstr "Notes de publication de Django 2.2.2"
@@ -30171,6 +30221,26 @@ msgid ""
 "Fixed a regression in Django 2.2.1 where auto-reloader unnecessarily reloads "
 "translation files multiple times when using ``StatReloader`` (:ticket:"
 "`30523`)."
+msgstr ""
+
+msgid "Django 2.2.20 release notes"
+msgstr ""
+
+msgid "*April 6, 2021*"
+msgstr "*6 avril 2021*"
+
+msgid "Django 2.2.20 fixes a security issue with severity \"low\" in 2.2.19."
+msgstr ""
+
+msgid "CVE-2021-28658: Potential directory-traversal via uploaded files"
+msgstr ""
+
+msgid ""
+"``MultiPartParser`` allowed directory-traversal via uploaded files with "
+"suitably crafted file names."
+msgstr ""
+
+msgid "Built-in upload handlers were not affected by this vulnerability."
 msgstr ""
 
 msgid "Django 2.2.3 release notes"
@@ -30331,12 +30401,10 @@ msgstr ""
 "features-3.0>`."
 
 msgid ""
-"Django 3.0 supports Python 3.6, 3.7, and 3.8. We **highly recommend** and "
-"only officially support the latest release of each series."
+"Django 3.0 supports Python 3.6, 3.7, 3.8, and 3.9 (as of 3.0.11). We "
+"**highly recommend** and only officially support the latest release of each "
+"series."
 msgstr ""
-"Django 3.0 requiert Python 3.6, 3.7 ou 3.8. Nous **recommandons vivement** "
-"et nous ne prenons officiellement en charge que la dernière publication de "
-"chaque série."
 
 msgid "The Django 2.2.x series is the last to support Python 3.5."
 msgstr "La série Django 2.2.x est la dernière à prendre en charge Python 3.5."
@@ -31547,6 +31615,37 @@ msgid ""
 "Django 3.0.10 fixes two security issues and two data loss bugs in 3.0.9."
 msgstr ""
 
+msgid "Django 3.0.11 release notes"
+msgstr ""
+
+msgid ""
+"Django 3.0.11 fixes a regression in 3.0.7 and adds compatibility with Python "
+"3.9."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.0.7 that didn't use ``Subquery()`` aliases in "
+"the ``GROUP BY`` clause (:ticket:`32152`)."
+msgstr ""
+
+msgid "Django 3.0.12 release notes"
+msgstr ""
+
+msgid "Django 3.0.12 fixes a security issue with severity \"low\" in 3.0.11."
+msgstr ""
+
+msgid "Django 3.0.13 release notes"
+msgstr ""
+
+msgid "Django 3.0.13 fixes a security issue in 3.0.12."
+msgstr ""
+
+msgid "Django 3.0.14 release notes"
+msgstr ""
+
+msgid "Django 3.0.14 fixes a security issue with severity \"low\" in 3.0.13."
+msgstr ""
+
 msgid "Django 3.0.2 release notes"
 msgstr ""
 
@@ -31794,12 +31893,12 @@ msgstr ""
 "features-3.1>`."
 
 msgid ""
-"Django 3.1 supports Python 3.6, 3.7, and 3.8. We **highly recommend** and "
-"only officially support the latest release of each series."
+"Django 3.1 supports Python 3.6, 3.7, 3.8, and 3.9 (as of 3.1.3). We **highly "
+"recommend** and only officially support the latest release of each series."
 msgstr ""
-"Django 3.1 requiert Python 3.6, 3.7 ou 3.8. Nous **recommandons vivement** "
-"et nous ne prenons officiellement en charge que la dernière publication de "
-"chaque série."
+"Django 3.1 requiert Python 3.6, 3.7, 3.8 ou 3.9 (dès 3.1.3). Nous "
+"**recommandons vivement** et nous ne prenons officiellement en charge que la "
+"dernière publication de chaque série."
 
 msgid "What's new in Django 3.1"
 msgstr "Quoi de neuf dans Django 3.1"
@@ -31992,6 +32091,13 @@ msgstr ""
 "pouvoir définir les possibilités de rôles CSS et ARIA. Cela nécessite la "
 "présence de ``'django.template.context_processors.request'`` dans l'option "
 "``'context_processors'`` de :setting:`OPTIONS <TEMPLATES-OPTIONS> `."
+
+msgid ""
+"Initially empty ``extra`` inlines can now be removed, in the same way as "
+"dynamically created ones."
+msgstr ""
+"Les formulaires en ligne ``extra`` initialement vides peuvent dorénavant "
+"être supprimés, de la même façon que pour ceux créés dynamiquement."
 
 msgid "``XRegExp`` is upgraded from version 2.0.0 to 3.2.0."
 msgstr "``XRegExp`` a été mis à jour de la version 2.0.0 à 3.2.0."
@@ -33085,6 +33191,23 @@ msgstr ""
 "WHATWG <https://html.spec.whatwg.org/multipage/scripting.html#the-script-"
 "element>`_."
 
+msgid ""
+":class:`~django.forms.ModelChoiceIterator`, used by :class:`~django.forms."
+"ModelChoiceField` and :class:`~django.forms.ModelMultipleChoiceField`, now "
+"yields 2-tuple choices containing :class:`~django.forms."
+"ModelChoiceIteratorValue` instances as the first ``value`` element in each "
+"choice. In most cases this proxies transparently, but if you need the "
+"``field`` value itself, use the :attr:`.ModelChoiceIteratorValue.value` "
+"attribute instead."
+msgstr ""
+":class:`~django.forms.ModelChoiceIterator`, utilisée par :class:`~django."
+"forms.ModelChoiceField` et :class:`~django.forms.ModelMultipleChoiceField` "
+"produisent dorénavant des choix à 2 tuples contenant des instances de :class:"
+"`~django.forms.ModelChoiceIteratorValue` comme premier élément ``value`` "
+"dans chaque choix. Dans la plupart des cas, le changement se fait de manière "
+"transparente, mais si vous avez besoin de la valeur du champ lui-même, "
+"utilisez plutôt l'attribut :attr:`.ModelChoiceIteratorValue.value`."
+
 msgid "Features deprecated in 3.1"
 msgstr "Fonctionnalités rendues obsolètes dans Django 3.1"
 
@@ -33436,7 +33559,7 @@ msgstr ""
 msgid "Django 3.1.2 release notes"
 msgstr ""
 
-msgid "*Expected October 1, 2020*"
+msgid "*October 1, 2020*"
 msgstr ""
 
 msgid "Django 3.1.2 fixes several bugs in 3.1.1."
@@ -33445,6 +33568,1730 @@ msgstr ""
 msgid ""
 "Fixed a bug in Django 3.1 where ``FileField`` instances with a callable "
 "storage were not correctly deconstructed (:ticket:`31941`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 where the :attr:`.QuerySet.ordered` "
+"attribute returned incorrectly ``True`` for ``GROUP BY`` queries (e.g. ``."
+"annotate().values()``) on models with ``Meta.ordering``. A model's ``Meta."
+"ordering`` doesn't affect such queries (:ticket:`31990`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 where a queryset would crash if it "
+"contained an aggregation and a ``Q`` object annotation (:ticket:`32007`)."
+msgstr ""
+
+msgid ""
+"Fixed a bug in Django 3.1 where a test database was not synced during "
+"creation when using the :setting:`MIGRATE <TEST_MIGRATE>` test database "
+"setting (:ticket:`32012`)."
+msgstr ""
+
+msgid ""
+"Fixed a ``django.contrib.admin.EmptyFieldListFilter`` crash when using on a "
+"``GenericRelation`` (:ticket:`32038`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1.1 where the admin changelist filter sidebar "
+"would not scroll for a long list of available filters (:ticket:`31986`)."
+msgstr ""
+
+msgid "Django 3.1.3 release notes"
+msgstr ""
+
+msgid ""
+"Django 3.1.3 fixes several bugs in 3.1.2 and adds compatibility with Python "
+"3.9."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1.2 that caused the incorrect height of the "
+"admin changelist search bar (:ticket:`32072`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1.2 that caused the incorrect width of the "
+"admin changelist search bar on a filtered page (:ticket:`32091`)."
+msgstr ""
+
+msgid ""
+"Fixed displaying Unicode characters in :class:`forms.JSONField <django.forms."
+"JSONField>` and read-only :class:`models.JSONField <django.db.models."
+"JSONField>` values in the admin (:ticket:`32080`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 that caused a crash of :class:`~django."
+"contrib.postgres.aggregates.ArrayAgg` and :class:`~django.contrib.postgres."
+"aggregates.StringAgg` with ``ordering`` on key transforms for :class:"
+"`~django.db.models.JSONField` (:ticket:`32096`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 that caused a crash of ``__in`` lookup when "
+"using key transforms for :class:`~django.db.models.JSONField` in the lookup "
+"value (:ticket:`32096`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 that caused a crash of :class:`~django.db."
+"models.ExpressionWrapper` with key transforms for :class:`~django.db.models."
+"JSONField` (:ticket:`32096`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 that caused a migrations crash on "
+"PostgreSQL when adding an :class:`~django.contrib.postgres.constraints."
+"ExclusionConstraint` with key transforms for :class:`~django.db.models."
+"JSONField` in ``expressions`` (:ticket:`32096`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 where :exc:`ProtectedError."
+"protected_objects <django.db.models.ProtectedError>` and :exc:"
+"`RestrictedError.restricted_objects <django.db.models.RestrictedError>` "
+"attributes returned iterators instead of :py:class:`set` of objects (:ticket:"
+"`32107`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1.2 that caused incorrect form input layout "
+"on small screens in the admin change form view (:ticket:`32069`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 that invalidated pre-Django 3.1 password "
+"reset tokens (:ticket:`32130`)."
+msgstr ""
+
+msgid "Added support for ``asgiref`` 3.3 (:ticket:`32128`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 that caused incorrect textarea layout on "
+"medium-sized screens in the admin change form view with the sidebar open (:"
+"ticket:`32127`)."
+msgstr ""
+
+msgid "Django 3.1.4 release notes"
+msgstr ""
+
+msgid "*December 1, 2020*"
+msgstr ""
+
+msgid "Django 3.1.4 fixes several bugs in 3.1.3."
+msgstr ""
+
+msgid ""
+"Fixed setting the ``Content-Length`` HTTP header in ``AsyncRequestFactory`` "
+"(:ticket:`32162`)."
+msgstr ""
+
+msgid ""
+"Fixed passing extra HTTP headers to ``AsyncRequestFactory`` request methods "
+"(:ticket:`32159`)."
+msgstr ""
+
+msgid ""
+"Fixed crash of key transforms for :class:`~django.db.models.JSONField` on "
+"PostgreSQL when using on a ``Subquery()`` annotation (:ticket:`32182`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 that caused a crash of auto-reloader for "
+"certain invocations of ``runserver`` on Windows with Python 3.7 and below (:"
+"ticket:`32202`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 that caused the incorrect grouping by a "
+"``Q`` object annotation (:ticket:`32200`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 that caused suppressing connection errors "
+"when :class:`~django.db.models.JSONField` is used on SQLite (:ticket:"
+"`32224`)."
+msgstr ""
+
+msgid ""
+"Fixed a crash on SQLite, when ``QuerySet.values()/values_list()`` contained "
+"key transforms for :class:`~django.db.models.JSONField` returning non-string "
+"primitive values (:ticket:`32203`)."
+msgstr ""
+
+msgid "Django 3.1.5 release notes"
+msgstr ""
+
+msgid "*January 4, 2021*"
+msgstr ""
+
+msgid "Django 3.1.5 fixes several bugs in 3.1.4."
+msgstr ""
+
+msgid ""
+"Fixed ``__isnull=True`` lookup on key transforms for :class:`~django.db."
+"models.JSONField` with Oracle and SQLite (:ticket:`32252`)."
+msgstr ""
+
+msgid ""
+"Fixed a bug in Django 3.1 that caused a crash when processing middlewares in "
+"an async context with a middleware that raises a ``MiddlewareNotUsed`` "
+"exception (:ticket:`32299`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 that caused the incorrect prefixing of "
+"``STATIC_URL`` and ``MEDIA_URL`` settings, by the server-provided value of "
+"``SCRIPT_NAME`` (or ``/`` if not set), when set to a URL specifying the "
+"protocol but without a top-level domain, e.g. ``http://myhost/`` (:ticket:"
+"`32304`)."
+msgstr ""
+
+msgid "Django 3.1.6 release notes"
+msgstr ""
+
+msgid ""
+"Django 3.1.6 fixes a security issue with severity \"low\" and a bug in 3.1.5."
+msgstr ""
+
+msgid ""
+"Fixed an admin layout issue in Django 3.1 where changelist filter controls "
+"would become squashed (:ticket:`32391`)."
+msgstr ""
+
+msgid "Django 3.1.7 release notes"
+msgstr ""
+
+msgid "Django 3.1.7 fixes a security issue and a bug in 3.1.6."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.1 that caused ``RuntimeError`` instead of "
+"connection errors when using only the ``'postgres'`` database (:ticket:"
+"`32403`)."
+msgstr ""
+
+msgid "Django 3.1.8 release notes"
+msgstr ""
+
+msgid ""
+"Django 3.1.8 fixes a security issue with severity \"low\" and a bug in 3.1.7."
+msgstr ""
+
+msgid ""
+"Fixed a bug in Django 3.1 where the output was hidden on a test error or "
+"failure when using :option:`test --pdb` with the :option:`--buffer <test --"
+"buffer>` option (:ticket:`32560`)."
+msgstr ""
+
+msgid "Django 3.2 release notes"
+msgstr "Notes de publication de Django 3.2"
+
+msgid "Welcome to Django 3.2!"
+msgstr "Bienvenue dans Django 3.2 !"
+
+msgid ""
+"These release notes cover the :ref:`new features <whats-new-3.2>`, as well "
+"as some :ref:`backwards incompatible changes <backwards-incompatible-3.2>` "
+"you'll want to be aware of when upgrading from Django 3.1 or earlier. We've :"
+"ref:`begun the deprecation process for some features <deprecated-"
+"features-3.2>`."
+msgstr ""
+"Ces notes de publications couvrent les :ref:`nouvelles fonctionnalités "
+"<whats-new-3.2>`, ainsi que certaines :ref:`modifications non "
+"rétrocompatibles <backwards-incompatible-3.2>` dont il faut être au courant "
+"lors la mise à jour depuis Django 3.1 ou des versions plus anciennes. Nous "
+"avons commencé :ref:`le processus d'obsolescence de certaines "
+"fonctionnalités <deprecated-features-3.2>`."
+
+msgid ""
+"Django 3.2 is designated as a :term:`long-term support release <Long-term "
+"support release>`. It will receive security updates for at least three years "
+"after its release. Support for the previous LTS, Django 2.2, will end in "
+"April 2022."
+msgstr ""
+"Django 3.2 a été désigné comme une :term:`version prise en charge à long "
+"terme <Long-term support release>` (LTS). Elle recevra des mises à jour de "
+"sécurité pour au moins 3 ans après sa publication initiale. La prise en "
+"charge de la version LTS précédente, Django 2.2, se terminera en avril 2022."
+
+msgid ""
+"Django 3.2 supports Python 3.6, 3.7, 3.8, and 3.9. We **highly recommend** "
+"and only officially support the latest release of each series."
+msgstr ""
+"Django 3.2 requiert Python 3.6, 3.7, 3.8 ou 3.9. Nous **recommandons "
+"vivement** et nous ne prenons officiellement en charge que la dernière "
+"publication de chaque série."
+
+msgid "What's new in Django 3.2"
+msgstr "Quoi de neuf dans Django 3.2"
+
+msgid "Automatic :class:`~django.apps.AppConfig` discovery"
+msgstr "Découverte automatique des classes :class:`~django.apps.AppConfig`"
+
+msgid ""
+"Most pluggable applications define an :class:`~django.apps.AppConfig` "
+"subclass in an ``apps.py`` submodule. Many define a ``default_app_config`` "
+"variable pointing to this class in their ``__init__.py``."
+msgstr ""
+"La plupart des applications réutilisables définissent une sous-classe de :"
+"class:`~django.apps.AppConfig` dans un sous-module ``apps.py``. Elles "
+"définissent souvent une variable ``default_app_config`` pointant vers cette "
+"classe dans leur fichier ``__init__.py``."
+
+msgid ""
+"When the ``apps.py`` submodule exists and defines a single :class:`~django."
+"apps.AppConfig` subclass, Django now uses that configuration automatically, "
+"so you can remove ``default_app_config``."
+msgstr ""
+"Lorsque le sous-module ``apps.py`` existe et définit une seule sous-classe :"
+"class:`~django.apps.AppConfig`, Django utilise dorénavant automatiquement "
+"cette configuration, il est donc possible de supprimer "
+"``default_app_config``."
+
+msgid ""
+"``default_app_config`` made it possible to declare only the application's "
+"path in :setting:`INSTALLED_APPS` (e.g. ``'django.contrib.admin'``) rather "
+"than the app config's path (e.g. ``'django.contrib.admin.apps."
+"AdminConfig'``). It was introduced for backwards-compatibility with the "
+"former style, with the intent to switch the ecosystem to the latter, but the "
+"switch didn't happen."
+msgstr ""
+"``default_app_config`` rendait possible la déclaration simple du chemin "
+"d'application dans :setting:`INSTALLED_APPS` (par ex. ``'django.contrib."
+"admin'``) au lieu du chemin complet vers la classe de configuration (par ex. "
+"``'django.contrib.admin.apps.AdminConfig'``). Cette variable avait été "
+"introduite par souci de rétrocompatibilité avec l'ancien style, dans "
+"l'intention de basculer l'écosystème dans la syntaxe plus longue, mais ceci "
+"ne s'est jamais produit."
+
+msgid ""
+"With automatic ``AppConfig`` discovery, ``default_app_config`` is no longer "
+"needed. As a consequence, it's deprecated."
+msgstr ""
+"Avec la découverte automatique des classes ``AppConfig``, "
+"``default_app_config`` n'a plus de raison d'être. Par conséquent, elle a été "
+"rendue obsolète."
+
+msgid "See :ref:`configuring-applications-ref` for full details."
+msgstr ""
+"Lisez :ref:`configuring-applications-ref` pour des informations plus "
+"complètes."
+
+msgid "Customizing type of auto-created primary keys"
+msgstr "Personnalisation du type des clés primaires auto-générées"
+
+msgid ""
+"When defining a model, if no field in a model is defined with :attr:"
+"`primary_key=True <django.db.models.Field.primary_key>` an implicit primary "
+"key is added. The type of this implicit primary key can now be controlled "
+"via the :setting:`DEFAULT_AUTO_FIELD` setting and :attr:`AppConfig."
+"default_auto_field <django.apps.AppConfig.default_auto_field>` attribute. No "
+"more needing to override primary keys in all models."
+msgstr ""
+"Lors de la définition d'un modèle, si aucun champ du modèle ne définit :attr:"
+"`primary_key=True <django.db.models.Field.primary_key>`, une clé primaire "
+"implicite est créée. Le type de cette clé primaire implicite peut dorénavant "
+"être contrôlée par le réglage :setting:`DEFAULT_AUTO_FIELD` et l'attribut :"
+"attr:`AppConfig.default_auto_field <django.apps.AppConfig."
+"default_auto_field>`. Plus besoin de surcharger les clés primaires dans tous "
+"les modèles."
+
+msgid ""
+"Maintaining the historical behavior, the default value for :setting:"
+"`DEFAULT_AUTO_FIELD` is :class:`~django.db.models.AutoField`. Starting with "
+"3.2 new projects are generated with :setting:`DEFAULT_AUTO_FIELD` set to :"
+"class:`~django.db.models.BigAutoField`. Also, new apps are generated with :"
+"attr:`AppConfig.default_auto_field <django.apps.AppConfig."
+"default_auto_field>` set to :class:`~django.db.models.BigAutoField`. In a "
+"future Django release the default value of :setting:`DEFAULT_AUTO_FIELD` "
+"will be changed to :class:`~django.db.models.BigAutoField`."
+msgstr ""
+"Afin de conserver le comportement historique, la valeur par défaut de :"
+"setting:`DEFAULT_AUTO_FIELD` est :class:`~django.db.models.AutoField`. À "
+"partir de la version 3.2, les nouveaux projets sont générés avec :setting:"
+"`DEFAULT_AUTO_FIELD` définie à :class:`~django.db.models.BigAutoField`. De "
+"même, les nouvelles applications sont générées avec :attr:`AppConfig."
+"default_auto_field <django.apps.AppConfig.default_auto_field>` définie à :"
+"class:`~django.db.models.BigAutoField`. Dans une future version de Django, "
+"la valeur par défaut de :setting:`DEFAULT_AUTO_FIELD` sera modifiée en :"
+"class:`~django.db.models.BigAutoField`."
+
+msgid ""
+"To avoid unwanted migrations in the future, either explicitly set :setting:"
+"`DEFAULT_AUTO_FIELD` to :class:`~django.db.models.AutoField`::"
+msgstr ""
+"Pour éviter des migrations non souhaitées dans le futur, définissez "
+"explicitement :setting:`DEFAULT_AUTO_FIELD` à :class:`~django.db.models."
+"AutoField`::"
+
+msgid "or configure it on a per-app basis::"
+msgstr "ou configurez ce réglage par application::"
+
+msgid "or on a per-model basis::"
+msgstr "ou même encore par modèle::"
+
+msgid ""
+"In anticipation of the changing default, a system check will provide a "
+"warning if you do not have an explicit setting for :setting:"
+"`DEFAULT_AUTO_FIELD`."
+msgstr ""
+"Par anticipation du changement de valeur par défaut, un contrôle système "
+"produit un avertissement si vous ne définissez pas explicitement  :setting:"
+"`DEFAULT_AUTO_FIELD` dans votre projet."
+
+msgid "Functional indexes"
+msgstr "Index fonctionnels"
+
+msgid ""
+"The new :attr:`*expressions <django.db.models.Index.expressions>` positional "
+"argument of :class:`Index() <django.db.models.Index>` enables creating "
+"functional indexes on expressions and database functions. For example::"
+msgstr ""
+"Le nouveau paramètre positionnel :attr:`*expressions <django.db.models.Index."
+"expressions>` de :class:`Index() <django.db.models.Index>` permet de créer "
+"des index fonctionnels sur la base d'expressions et de fonctions de base de "
+"données. Par exemple ::"
+
+msgid ""
+"Functional indexes are added to models using the :attr:`Meta.indexes <django."
+"db.models.Options.indexes>` option."
+msgstr ""
+"Les index fonctionnels peuvent être ajoutés aux modèles en utilisant "
+"l'option :attr:`Meta.indexes <django.db.models.Options.indexes>`."
+
+msgid "``pymemcache`` support"
+msgstr "Prise en charge de ``pymemcache``"
+
+msgid ""
+"The new ``django.core.cache.backends.memcached.PyMemcacheCache`` cache "
+"backend allows using the pymemcache_ library for memcached. ``pymemcache`` "
+"3.4.0 or higher is required. For more details, see the :doc:`documentation "
+"on caching in Django </topics/cache>`."
+msgstr ""
+"Le nouveau moteur de cache ``django.core.cache.backends.memcached."
+"PyMemcacheCache`` permet d'exploiter la bibliothèque pymemcache_ pour "
+"memcached. ``pymemcache`` 3.4.0 ou plus récent est requis. Pour plus de "
+"détails, consultez la :doc:`documentation sur le cache dans Django </topics/"
+"cache>`."
+
+msgid "New decorators for the admin site"
+msgstr "Nouveaux décorateurs pour le site d'administration"
+
+msgid ""
+"The new :func:`~django.contrib.admin.display` decorator allows for easily "
+"adding options to custom display functions that can be used with :attr:"
+"`~django.contrib.admin.ModelAdmin.list_display` or :attr:`~django.contrib."
+"admin.ModelAdmin.readonly_fields`."
+msgstr ""
+"Le nouveau décorateur :func:`~django.contrib.admin.display` permet d'ajouter "
+"facilement des options à des fonctions d'affichage personnalisées pouvant "
+"être utilisée dans :attr:`~django.contrib.admin.ModelAdmin.list_display` ou :"
+"attr:`~django.contrib.admin.ModelAdmin.readonly_fields`."
+
+msgid ""
+"Likewise, the new :func:`~django.contrib.admin.action` decorator allows for "
+"easily adding options to action functions that can be used with :attr:"
+"`~django.contrib.admin.ModelAdmin.actions`."
+msgstr ""
+"De façon similaire, le nouveau décorateur :func:`~django.contrib.admin."
+"action` permet d'ajouter facilement des options à des fonctions d'action "
+"pouvant être utilisée dans :attr:`~django.contrib.admin.ModelAdmin.actions`."
+
+msgid ""
+"Using the ``@display`` decorator has the advantage that it is now possible "
+"to use the ``@property`` decorator when needing to specify attributes on the "
+"custom method. Prior to this it was necessary to use the ``property()`` "
+"function instead after assigning the required attributes to the method."
+msgstr ""
+"L'utilisation du décorateur ``@display`` a l'avantage de rendre possible la "
+"syntaxe de décoration ``@property`` lorsqu'il est nécessaire d'indiquer des "
+"attributs à une méthode personnalisée. Avant cela, il était nécessaire "
+"d'utiliser la fonction ``property()`` après la définition des attributs "
+"nécessaires à la méthode."
+
+msgid ""
+"Using decorators has the advantage that these options are more discoverable "
+"as they can be suggested by completion utilities in code editors. They are "
+"merely a convenience and still set the same attributes on the functions "
+"under the hood."
+msgstr ""
+"L'utilisation de décorateurs a l'avantage de rendre ces options plus "
+"accessibles car elles peuvent être suggérées par des utilitaires de "
+"complétion dans des éditeurs de code. Ces décorateurs sont de simples "
+"commodités et définissent en réalité les mêmes attributs sur les fonctions, "
+"sous le capot. "
+
+msgid ""
+":attr:`.ModelAdmin.search_fields` now allows searching against quoted "
+"phrases with spaces."
+msgstr ""
+":attr:`.ModelAdmin.search_fields` autorise désormais la recherche de phrases "
+"contenant des espaces, entre guillemets."
+
+msgid ""
+"Read-only related fields are now rendered as navigable links if target "
+"models are registered in the admin."
+msgstr ""
+"Les champs liés en lecture seule sont maintenant affichés comme des liens "
+"navigables si les modèles cibles sont inscrits dans le site d'administration."
+
+msgid ""
+"The admin now supports theming, and includes a dark theme that is enabled "
+"according to browser settings. See :ref:`admin-theming` for more details."
+msgstr ""
+"Le site d'administration peut maintenant être thématisé, et il contient un "
+"thème sombre activé en fonction des réglages du navigateur. Voir :ref:`admin-"
+"theming` pour plus de détails."
+
+msgid ""
+":attr:`.ModelAdmin.autocomplete_fields` now respects :attr:`ForeignKey."
+"to_field <django.db.models.ForeignKey.to_field>` and :attr:`ForeignKey."
+"limit_choices_to <django.db.models.ForeignKey.limit_choices_to>` when "
+"searching a related model."
+msgstr ""
+":attr:`.ModelAdmin.autocomplete_fields` respecte dorénavant attr:`ForeignKey."
+"to_field <django.db.models.ForeignKey.to_field>` et :attr:`ForeignKey."
+"limit_choices_to <django.db.models.ForeignKey.limit_choices_to>` lors de la "
+"recherche d'un modèle lié."
+
+msgid ""
+"The admin now installs a final catch-all view that redirects unauthenticated "
+"users to the login page, regardless of whether the URL is otherwise valid. "
+"This protects against a potential model enumeration privacy issue."
+msgstr ""
+"Le site d'administration installe doérnavant une vue finale « attrape-tout » "
+"qui redirige les utilisateurs non authentifiés vers la page de connexion, "
+"que l'URL soit valide ou non. Ceci protège contre une potentielle faille de "
+"confidentialité par découverte de modèle."
+
+msgid ""
+"Although not recommended, you may set the new :attr:`.AdminSite."
+"final_catch_all_view` to ``False`` to disable the catch-all view."
+msgstr ""
+"Même si ce n'est pas recommandé, il est possible de définir le  nouvel "
+"attribut :attr:`.AdminSite.final_catch_all_view` à ``False`` pour désactiver "
+"cette vue « attrape-tout »."
+
+msgid ""
+"The default iteration count for the PBKDF2 password hasher is increased from "
+"216,000 to 260,000."
+msgstr ""
+"Le nombre d'itération par défaut du hacheur de mot de passe PBKDF2 a été "
+"augmenté de 216'000 à 260'000."
+
+msgid ""
+"The default variant for the Argon2 password hasher is changed to Argon2id. "
+"``memory_cost`` and ``parallelism`` are increased to 102,400 and 8 "
+"respectively to match the ``argon2-cffi`` defaults."
+msgstr ""
+"La variante par défaut du hacheur de mots de passe Argon2 a été changée en "
+"Argon2id. ``memory_cost`` et ``parallelism`` ont été respectivement "
+"augmentées à 102'400 et 8 pour correspondre aux valeurs par défaut de "
+"``argon2-cffi``."
+
+msgid ""
+"Increasing the ``memory_cost`` pushes the required memory from 512 KB to 100 "
+"MB. This is still rather conservative but can lead to problems in memory "
+"constrained environments. If this is the case, the existing hasher can be "
+"subclassed to override the defaults."
+msgstr ""
+"L'augmentation de la valeur ``memory_cost`` fait augmenter la mémoire "
+"nécessaire de 512 Ko à 100 Mo. C'est toujours plutôt conservateur, mais peut "
+"amener à des problèmes de mémoire dans des environnements restreints. Dans "
+"ce genre de cas, il est possible de créer une sous-classe du hacheur "
+"existant pour surcharger les valeurs par défaut."
+
+msgid ""
+"The default salt entropy for the Argon2, MD5, PBKDF2, SHA-1 password hashers "
+"is increased from 71 to 128 bits."
+msgstr ""
+"L'entropie par défaut du sel des hacheurs de mots de passe Argon2, MD5, "
+"PBKDF2 et SHA-1 a été augmentée de 71 à 128 bits."
+
+msgid ""
+"The new ``absolute_max`` argument for :func:`~django.contrib.contenttypes."
+"forms.generic_inlineformset_factory` allows customizing the maximum number "
+"of forms that can be instantiated when supplying ``POST`` data. See :ref:"
+"`formsets-absolute-max` for more details."
+msgstr ""
+"Le nouveau paramètre ``absolute_max`` de :func:`~django.contrib.contenttypes."
+"forms.generic_inlineformset_factory` permet de personnaliser le nombre "
+"maximum de formulaires pouvant être instanciés lors de la soumission de "
+"données ``POST``. Consultez :ref:`formsets-absolute-max` pour plus de "
+"détails."
+
+msgid ""
+"The new ``can_delete_extra`` argument for :func:`~django.contrib."
+"contenttypes.forms.generic_inlineformset_factory` allows removal of the "
+"option to delete extra forms. See :attr:`~.BaseFormSet.can_delete_extra` for "
+"more information."
+msgstr ""
+"Le nouveau paramètre ``can_delete_extra`` de :func:`~django.contrib."
+"contenttypes.forms.generic_inlineformset_factory` permet de supprimer la "
+"possibilité de supprimer les formulaires supplémentaires. Voir :attr:`~."
+"BaseFormSet.can_delete_extra` pour plus d'informations."
+
+msgid ""
+"The :meth:`.GDALRaster.transform` method now supports :class:`~django."
+"contrib.gis.gdal.SpatialReference`."
+msgstr ""
+"La méthode :meth:`.GDALRaster.transform` prend dorénavant en charge :class:"
+"`~django.contrib.gis.gdal.SpatialReference`."
+
+msgid ""
+"The :class:`~django.contrib.gis.gdal.DataSource` class now supports :class:"
+"`pathlib.Path`."
+msgstr ""
+"La classe :class:`~django.contrib.gis.gdal.DataSource` prend dorénavant en "
+"charge :class:`pathlib.Path`."
+
+msgid ""
+"The :class:`~django.contrib.gis.utils.LayerMapping` class now supports :"
+"class:`pathlib.Path`."
+msgstr ""
+"La classe :class:`~django.contrib.gis.utils.LayerMapping` prend dorénavant "
+"en charge :class:`pathlib.Path`."
+
+msgid ""
+"The new :attr:`.ExclusionConstraint.include` attribute allows creating "
+"covering exclusion constraints on PostgreSQL 12+."
+msgstr ""
+"Le nouvel attribut :attr:`.ExclusionConstraint.include` permet de créer des "
+"contraintes d'exclusion de couverture avec PostgreSQL 12+."
+
+msgid ""
+"The new :attr:`.ExclusionConstraint.opclasses` attribute allows setting "
+"PostgreSQL operator classes."
+msgstr ""
+"Le nouvel attribut :attr:`.ExclusionConstraint.opclasses` permet de définir "
+"les classes d'opérateurs PostgreSQL."
+
+msgid ""
+"The new :attr:`.JSONBAgg.ordering` attribute determines the ordering of the "
+"aggregated elements."
+msgstr ""
+"Le nouvel attribut :attr:`.JSONBAgg.ordering` détermine l'ordre des éléments "
+"agrégés."
+
+msgid ""
+"The new :attr:`.JSONBAgg.distinct` attribute determines if aggregated values "
+"will be distinct."
+msgstr ""
+"Le nouvel attribut :attr:`.JSONBAgg.distinct` détermine si les valeurs "
+"agrégées seront distinctes."
+
+msgid ""
+"The :class:`~django.contrib.postgres.operations.CreateExtension` operation "
+"now checks that the extension already exists in the database and skips the "
+"migration if so."
+msgstr ""
+"L'opération :class:`~django.contrib.postgres.operations.CreateExtension` "
+"contrôle dorénavant si l'extension existe déjà dans la base de données et "
+"saute la migration le cas échéant."
+
+msgid ""
+"The new :class:`~django.contrib.postgres.operations.CreateCollation` and :"
+"class:`~django.contrib.postgres.operations.RemoveCollation` operations allow "
+"creating and dropping collations on PostgreSQL. See :ref:`manage-postgresql-"
+"collations` for more details."
+msgstr ""
+"Les nouvelles opérations :class:`~django.contrib.postgres.operations."
+"CreateCollation` et :class:`~django.contrib.postgres.operations."
+"RemoveCollation` permettent de créer et de supprimer des collations avec "
+"PostgreSQL. Voir :ref:`manage-postgresql-collations` pour plus de détails."
+
+msgid ""
+"Lookups for :class:`~django.contrib.postgres.fields.ArrayField` now allow "
+"(non-nested) arrays containing expressions as right-hand sides."
+msgstr ""
+"Les requêtes sur les champs :class:`~django.contrib.postgres.fields."
+"ArrayField` permettent dorénavant des tableaux (non imbriqués) contenant des "
+"expressions dans les parties droites des requêtes."
+
+msgid ""
+"The new :class:`OpClass() <django.contrib.postgres.indexes.OpClass>` "
+"expression allows creating functional indexes on expressions with a custom "
+"operator class. See :ref:`new_functional_indexes` for more details."
+msgstr ""
+"La nouvelle expression :class:`OpClass() <django.contrib.postgres.indexes."
+"OpClass>` permet de créer des index fonctionnels sur les expressions avec "
+"une classe d'opérateur personnalisée. Voir :ref:`new_functional_indexes` "
+"pour plus de détails."
+
+msgid ""
+"The new :class:`~django.contrib.sitemaps.Sitemap` attributes :attr:`~django."
+"contrib.sitemaps.Sitemap.alternates`, :attr:`~django.contrib.sitemaps."
+"Sitemap.languages` and :attr:`~django.contrib.sitemaps.Sitemap.x_default` "
+"allow generating sitemap *alternates* to localized versions of your pages."
+msgstr ""
+"Les nouveaux attributs :attr:`~django.contrib.sitemaps.Sitemap.alternates`, :"
+"attr:`~django.contrib.sitemaps.Sitemap.languages` et :attr:`~django.contrib."
+"sitemaps.Sitemap.x_default` de  :class:`~django.contrib.sitemaps.Sitemap` "
+"permettent de générer des versions (*alternates*) des plans de sites vers "
+"des versions traduites de vos pages."
+
+msgid ""
+"The new ``item_comments`` hook allows specifying a comments URL per feed "
+"item."
+msgstr ""
+"Le nouveau point d'entrée ``item_comments`` permet d'indiquer une URL de "
+"commentaires par élément de flux."
+
+msgid ""
+"Third-party database backends can now skip or mark as expected failures "
+"tests in Django's test suite using the new ``DatabaseFeatures."
+"django_test_skips`` and ``django_test_expected_failures`` attributes."
+msgstr ""
+"Les moteurs de base de données de tierce partie peuvent maintenant sauter "
+"des tests ou les marquer comme échecs attendus dans la suite de tests de "
+"Django en utilisant les nouveaux attributs `DatabaseFeatures."
+"django_test_skips`` et ``django_test_expected_failures``."
+
+msgid "Decorators"
+msgstr "Décorateurs"
+
+msgid ""
+"The new :func:`~django.views.decorators.common.no_append_slash` decorator "
+"allows individual views to be excluded from :setting:`APPEND_SLASH` URL "
+"normalization."
+msgstr ""
+"Le nouveau décorateur :func:`~django.views.decorators.common."
+"no_append_slash` permet à des vues individuelles d'être exclues de la "
+"normalisation des URL par :setting:`APPEND_SLASH`."
+
+msgid ""
+"Custom :class:`~django.views.debug.ExceptionReporter` subclasses can now "
+"define the :attr:`~django.views.debug.ExceptionReporter.html_template_path` "
+"and :attr:`~django.views.debug.ExceptionReporter.text_template_path` "
+"properties to override the templates used to render exception reports."
+msgstr ""
+"Les sous-classes personnalisées de :class:`~django.views.debug."
+"ExceptionReporter` peuvent maintenant définir les propriétés :attr:`~django."
+"views.debug.ExceptionReporter.html_template_path` et :attr:`~django.views."
+"debug.ExceptionReporter.text_template_path` pour surcharger les gabarits "
+"utilisés pour produire les rapports d'exceptions."
+
+msgid ""
+"The new :meth:`FileUploadHandler.upload_interrupted() <django.core.files."
+"uploadhandler.FileUploadHandler.upload_interrupted>` callback allows "
+"handling interrupted uploads."
+msgstr ""
+"La nouvelle fonction de rappel :meth:`FileUploadHandler.upload_interrupted() "
+"<django.core.files.uploadhandler.FileUploadHandler.upload_interrupted>` "
+"permet de traiter les téléversements interrompus."
+
+msgid ""
+"The new ``absolute_max`` argument for :func:`.formset_factory`, :func:`."
+"inlineformset_factory`, and :func:`.modelformset_factory` allows customizing "
+"the maximum number of forms that can be instantiated when supplying ``POST`` "
+"data. See :ref:`formsets-absolute-max` for more details."
+msgstr ""
+"Le nouveau paramètre ``absolute_max`` de :func:`.formset_factory`, :func:`."
+"inlineformset_factory` et :func:`.modelformset_factory` permet de "
+"personnaliser le nombre maximum de formulaires pouvant être instanciés lors "
+"de la soumission de données ``POST``. Voir :ref:`formsets-absolute-max` pour "
+"plus de détails."
+
+msgid ""
+"The new ``can_delete_extra`` argument for :func:`.formset_factory`, :func:`."
+"inlineformset_factory`, and :func:`.modelformset_factory` allows removal of "
+"the option to delete extra forms. See :attr:`~.BaseFormSet.can_delete_extra` "
+"for more information."
+msgstr ""
+"Le nouveau paramètre ``can_delete_extra`` de :func:`.formset_factory`, :func:"
+"`.inlineformset_factory` et :func:`.modelformset_factory` permet d'enlever "
+"la possibilité de supprimer les formulaires supplémentaires. Voir :attr:`~."
+"BaseFormSet.can_delete_extra` pour plus d'informations."
+
+msgid ""
+":class:`~django.forms.formsets.BaseFormSet` now reports a user facing error, "
+"rather than raising an exception, when the management form is missing or has "
+"been tampered with. To customize this error message, pass the "
+"``error_messages`` argument with the key ``'missing_management_form'`` when "
+"instantiating the formset."
+msgstr ""
+"Lorsqu'un formulaire de gestion est manquant ou a été manipulé, :class:"
+"`~django.forms.formsets.BaseFormSet` signale dorénavant une erreur à "
+"l'utilisateur plutôt que de produire une exception. Pour personnaliser le "
+"message d'erreur, passez le paramètre ``error_messages`` avec la clé "
+"``'missing_management_form'`` lors de l'instanciation du jeu de formulaires."
+
+msgid ""
+"The ``week_format`` attributes of :class:`~django.views.generic.dates."
+"WeekMixin` and :class:`~django.views.generic.dates.WeekArchiveView` now "
+"support the ``'%V'`` ISO 8601 week format."
+msgstr ""
+"Les attributs ``week_format`` de class:`~django.views.generic.dates."
+"WeekMixin` et :class:`~django.views.generic.dates.WeekArchiveView` prennent "
+"désormais en charge le format de semaine ISO 8601 ``'%V'``."
+
+msgid ""
+":djadmin:`loaddata` now supports fixtures stored in XZ archives (``.xz``) "
+"and LZMA archives (``.lzma``)."
+msgstr ""
+":djadmin:`loaddata` prend désormais en charge les instantanés stockés dans "
+"des archives XZ (``.xz``) et LZMA (``.lzma``)."
+
+msgid ""
+":djadmin:`dumpdata` now can compress data in the ``bz2``, ``gz``, ``lzma``, "
+"or ``xz`` formats."
+msgstr ""
+":djadmin:`dumpdata` sait désormais comprimer les données dans les formats "
+"``bz2``, ``gz``, ``lzma`` ou ``xz``."
+
+msgid ""
+":djadmin:`makemigrations` can now be called without an active database "
+"connection. In that case, check for a consistent migration history is "
+"skipped."
+msgstr ""
+":djadmin:`makemigrations` peut désormais être appelée sans connexion active "
+"de base de données. Dans ce cas, le contrôle de cohérence de l'historique "
+"des migrations est omis."
+
+msgid ""
+":attr:`.BaseCommand.requires_system_checks` now supports specifying a list "
+"of tags. System checks registered in the chosen tags will be checked for "
+"errors prior to executing the command. In previous versions, either all or "
+"none of the system checks were performed."
+msgstr ""
+":attr:`.BaseCommand.requires_system_checks` peut dorénavant accepter une "
+"liste d'étiquettes. Les contrôles système inscrits avec les étiquettes "
+"choisies seront appliqués avant d'exécuter la commande. Dans les versions "
+"précédentes, soit tous les contrôles systèmes étaient appliqués, soit aucun."
+
+msgid ""
+"Support for colored terminal output on Windows is updated. Various modern "
+"terminal environments are automatically detected, and the options for "
+"enabling support in other cases are improved. See :ref:`syntax-coloring` for "
+"more details."
+msgstr ""
+"La prise en charge des contenus de terminal colorés sous Windows a été mise "
+"à jour. Différents environnements de terminal modernes sont automatiquement "
+"détectés, et les options pour activer la prise en charge dans d'autre cas "
+"ont été améliorées. Voir :ref:`syntax-coloring` pour plus de détails."
+
+msgid ""
+"The new ``Operation.migration_name_fragment`` property allows providing a "
+"filename fragment that will be used to name a migration containing only that "
+"operation."
+msgstr ""
+"La nouvelle propriété ``Operation.migration_name_fragment`` permet de "
+"fournir un fragment de nom de fichier qui sera utilisé pour nommer une "
+"migration contenant uniquement cette opération."
+
+msgid ""
+"Migrations now support serialization of pure and concrete path objects from :"
+"mod:`pathlib`, and :class:`os.PathLike` instances."
+msgstr ""
+"Les migrations prennent désormais en charge la sérialisation des objets "
+"chemins purs et concrets des instances :mod:`pathlib` et :class:`os."
+"PathLike`."
+
+msgid ""
+"The new ``no_key`` parameter for :meth:`.QuerySet.select_for_update()`, "
+"supported on PostgreSQL, allows acquiring weaker locks that don't block the "
+"creation of rows that reference locked rows through a foreign key."
+msgstr ""
+"Le nouveau paramètre ``no_key`` de :meth:`.QuerySet.select_for_update()`, "
+"pris en charge par PostgreSQL, permet d'acquérir des verrous plus faibles "
+"qui ne bloquent pas la création de lignes référençant des lignes "
+"verrouillées au travers d'une clé étrangère."
+
+msgid ""
+":class:`When() <django.db.models.expressions.When>` expression now allows "
+"using the ``condition`` argument with ``lookups``."
+msgstr ""
+"L'expression :class:`When() <django.db.models.expressions.When>` autorise "
+"dorénavant l'utilisation du paramètre ``condition`` avec ``lookups``."
+
+msgid ""
+"The new :attr:`.Index.include` and :attr:`.UniqueConstraint.include` "
+"attributes allow creating covering indexes and covering unique constraints "
+"on PostgreSQL 11+."
+msgstr ""
+"Les nouveaux attributs :attr:`.Index.include` et :attr:`.UniqueConstraint."
+"include` permettent de créer des index de couverture et des contraintes de "
+"couverture uniques avec PostgreSQL 11+."
+
+msgid ""
+"The new :attr:`.UniqueConstraint.opclasses` attribute allows setting "
+"PostgreSQL operator classes."
+msgstr ""
+"Le nouvel attribut :attr:`.UniqueConstraint.opclasses` permet de définir des "
+"classes d'opérateur PostgreSQL."
+
+msgid ""
+"The :meth:`.QuerySet.update` method now respects the ``order_by()`` clause "
+"on MySQL and MariaDB."
+msgstr ""
+"La méthode :meth:`.QuerySet.update` respecte dorénavant la clause "
+"``order_by()`` avec MySQL et MariaDB."
+
+msgid ""
+":class:`FilteredRelation() <django.db.models.FilteredRelation>` now supports "
+"nested relations."
+msgstr ""
+":class:`FilteredRelation() <django.db.models.FilteredRelation>` prend "
+"désormais en charge les relations imbriquées."
+
+msgid ""
+"The ``of`` argument of :meth:`.QuerySet.select_for_update()` is now allowed "
+"on MySQL 8.0.1+."
+msgstr ""
+"Le paramètre ``of`` de :meth:`.QuerySet.select_for_update()` est désormais "
+"autorisé avec MySQL 8.0.1+."
+
+msgid ""
+":class:`Value() <django.db.models.Value>` expression now automatically "
+"resolves its ``output_field`` to the appropriate :class:`Field <django.db."
+"models.Field>` subclass based on the type of its provided ``value`` for :py:"
+"class:`bool`, :py:class:`bytes`, :py:class:`float`, :py:class:`int`, :py:"
+"class:`str`, :py:class:`datetime.date`, :py:class:`datetime.datetime`, :py:"
+"class:`datetime.time`, :py:class:`datetime.timedelta`, :py:class:`decimal."
+"Decimal`, and :py:class:`uuid.UUID` instances. As a consequence, resolving "
+"an ``output_field`` for database functions and combined expressions may now "
+"crash with mixed types when using ``Value()``. You will need to explicitly "
+"set the ``output_field`` in such cases."
+msgstr ""
+"L'expression :class:`Value() <django.db.models.Value>` résout désormais "
+"automatiquement sa valeur ``output_field`` à la sous-classe appropriée de :"
+"class:`Field <django.db.models.Field>`, en fonction du type de la valeur "
+"``value`` fournie, pour les types :py:class:`bool`, :py:class:`bytes`, :py:"
+"class:`float`, :py:class:`int`, :py:class:`str`, :py:class:`datetime.date`, :"
+"py:class:`datetime.datetime`, :py:class:`datetime.time`, :py:class:`datetime."
+"timedelta`, :py:class:`decimal.Decimal` et :py:class:`uuid.UUID`. Par "
+"conséquent, la résolution de ``output_field`` pour les fonctions de base de "
+"données et les expressions combinatoires peuvent désormais planter avec des "
+"types mélangés lors de l'utilisation de ``Value()``. Dans de tels cas, il "
+"sera nécessaire de définir explicitement le type de champ ``output_field``."
+
+msgid ""
+"The new :meth:`.QuerySet.alias` method allows creating reusable aliases for "
+"expressions that don't need to be selected but are used for filtering, "
+"ordering, or as a part of complex expressions."
+msgstr ""
+"La nouvelle méthode :meth:`.QuerySet.alias` permet de créer des alias "
+"réutilisables pour des expressions qui n'ont pas besoin d'être sélectionnées "
+"mais qui sont utiles pour le filtrage, le tri ou comme faisant partie "
+"d'expressions complexes."
+
+msgid ""
+"The new :class:`~django.db.models.functions.Collate` function allows "
+"filtering and ordering by specified database collations."
+msgstr ""
+"La nouvelle fonction :class:`~django.db.models.functions.Collate` permet de "
+"filtrer et de trier en respectant les collations de base de données "
+"indiquées."
+
+msgid ""
+"The ``field_name`` argument of :meth:`.QuerySet.in_bulk()` now accepts "
+"distinct fields if there's only one field specified in :meth:`.QuerySet."
+"distinct`."
+msgstr ""
+"Le paramètre ``field_name`` de :meth:`.QuerySet.in_bulk()` accepte "
+"dorénavant les champs distincts s'il n'existe qu'un seul champ indiqué dans :"
+"meth:`.QuerySet.distinct`."
+
+msgid ""
+"The new ``tzinfo`` parameter of the :class:`~django.db.models.functions."
+"TruncDate` and :class:`~django.db.models.functions.TruncTime` database "
+"functions allows truncating datetimes in a specific timezone."
+msgstr ""
+"Le nouveau paramètre ``tzinfo`` des fonctions de base de données :class:"
+"`~django.db.models.functions.TruncDate` et :class:`~django.db.models."
+"functions.TruncTime` permettent de tronquer les dates/heures dans un fuseau "
+"horaire déterminé."
+
+msgid ""
+"The new ``db_collation`` argument for :attr:`CharField <django.db.models."
+"CharField.db_collation>` and :attr:`TextField <django.db.models.TextField."
+"db_collation>` allows setting a database collation for the field."
+msgstr ""
+"Le nouveau paramètre ``db_collation`` de :attr:`CharField <django.db.models."
+"CharField.db_collation>` et:attr:`TextField <django.db.models.TextField."
+"db_collation>` permet de définir une collation de base de données pour le "
+"champ."
+
+msgid ""
+"Added the :class:`~django.db.models.functions.Random` database function."
+msgstr ""
+"La fonction de base de données :class:`~django.db.models.functions.Random` a "
+"été ajoutée."
+
+msgid ""
+":ref:`aggregation-functions`, :class:`F() <django.db.models.F>`, :class:"
+"`OuterRef() <django.db.models.OuterRef>`, and other expressions now allow "
+"using transforms. See :ref:`using-transforms-in-expressions` for details."
+msgstr ""
+"Les :ref:`aggregation-functions`, :class:`F() <django.db.models.F>`, :class:"
+"`OuterRef() <django.db.models.OuterRef>` et d'autres expressions autorisent "
+"désormais l'utilisation de transformations. Voir :ref:`using-transforms-in-"
+"expressions` pour plus de détails."
+
+msgid ""
+"The new ``durable`` argument for :func:`~django.db.transaction.atomic` "
+"guarantees that changes made in the atomic block will be committed if the "
+"block exits without errors. A nested atomic block marked as durable will "
+"raise a ``RuntimeError``."
+msgstr ""
+"Le nouveau paramètre ``durable`` de :func:`~django.db.transaction.atomic` "
+"garantit que les modifications effectuées dans le bloc atomique seront "
+"validées si le bloc se termine sans erreur. Un bloc atomique imbriqué marqué "
+"comme durable produira une exception ``RuntimeError``."
+
+msgid ""
+"Added the :class:`~django.db.models.functions.JSONObject` database function."
+msgstr ""
+"La fonction de base de données :class:`~django.db.models.functions."
+"JSONObject` a été ajoutée."
+
+msgid ""
+"The new :meth:`django.core.paginator.Paginator.get_elided_page_range` method "
+"allows generating a page range with some of the values elided. If there are "
+"a large number of pages, this can be helpful for generating a reasonable "
+"number of page links in a template."
+msgstr ""
+"La nouvelle méthode :meth:`django.core.paginator.Paginator."
+"get_elided_page_range` permet de générer un intervalle de pages avec "
+"certaines valeurs éludées. Lorsqu'il y a beaucoup de pages, ceci peut "
+"s'avérer utile pour générer un nombre raisonnable de liens vers des pages "
+"dans un gabarit."
+
+msgid ""
+"Response headers are now stored in :attr:`.HttpResponse.headers`. This can "
+"be used instead of the original dict-like interface of ``HttpResponse`` "
+"objects. Both interfaces will continue to be supported. See :ref:`setting-"
+"header-fields` for details."
+msgstr ""
+"Les en-têtes de réponses sont désormais stockées dans :attr:`.HttpResponse."
+"headers`. Ceci peut remplacer l'accès traditionnel par interface de style "
+"dictionnaire des objets ``HttpResponse``. Les deux interfaces continueront a "
+"être prises en charge. Voir :ref:`setting-header-fields` pour plus de "
+"détails."
+
+msgid ""
+"The new ``headers`` parameter of :class:`~django.http.HttpResponse`, :class:"
+"`~django.template.response.SimpleTemplateResponse`, and :class:`~django."
+"template.response.TemplateResponse` allows setting response :attr:`~django."
+"http.HttpResponse.headers` on instantiation."
+msgstr ""
+"Le nouveau paramètre ``headers`` de class:`~django.http.HttpResponse`, :"
+"class:`~django.template.response.SimpleTemplateResponse` et :class:`~django."
+"template.response.TemplateResponse` permet de définir les en-têtes de "
+"réponse :attr:`~django.http.HttpResponse.headers` lors de l'instanciation."
+
+msgid ""
+"The :setting:`SECRET_KEY` setting is now checked for a valid value upon "
+"first access, rather than when settings are first loaded. This enables "
+"running management commands that do not rely on the ``SECRET_KEY`` without "
+"needing to provide a value. As a consequence of this, calling :func:`~django."
+"conf.settings.configure` without providing a valid ``SECRET_KEY``, and then "
+"going on to access ``settings.SECRET_KEY`` will now raise an :exc:`~django."
+"core.exceptions.ImproperlyConfigured` exception."
+msgstr ""
+"Le contenu du réglage :setting:`SECRET_KEY` est dorénavant vérifié lors de "
+"son premier accès, plutôt qu'au moment du chargement des réglages. Ceci "
+"permet aux commandes d'administration qui ne dépendent pas de ``SECRET_KEY`` "
+"de s'exécuter sans qu'une valeur soit définie. Par suite de ce changement, "
+"l'appel à :func:`~django.conf.settings.configure` sans fournir de "
+"``SECRET_KEY`` valable, puis poursuivre en accédant plus tard à ``settings."
+"SECRET_KEY`` produira une exception :exc:`~django.core.exceptions."
+"ImproperlyConfigured`."
+
+msgid ""
+"The new ``Signer.sign_object()`` and ``Signer.unsign_object()`` methods "
+"allow signing complex data structures. See :ref:`signing-complex-data` for "
+"more details."
+msgstr ""
+"Les nouvelles méthodes ``Signer.sign_object()`` et ``Signer."
+"unsign_object()`` permettent de signer des structures complexes. Voir :ref:"
+"`signing-complex-data` pour plus de détails."
+
+msgid ""
+"Also, :func:`signing.dumps() <django.core.signing.dumps>` and :func:`~django."
+"core.signing.loads` become shortcuts for :meth:`.TimestampSigner."
+"sign_object` and :meth:`~.TimestampSigner.unsign_object`."
+msgstr ""
+"De plus, :func:`signing.dumps() <django.core.signing.dumps>` et :func:"
+"`~django.core.signing.loads` deviennent des raccourcis de :meth:`."
+"TimestampSigner.sign_object` et :meth:`~.TimestampSigner.unsign_object`."
+
+msgid ""
+"The new :ref:`JSONL <serialization-formats-jsonl>` serializer allows using "
+"the JSON Lines format with :djadmin:`dumpdata` and :djadmin:`loaddata`. This "
+"can be useful for populating large databases because data is loaded line by "
+"line into memory, rather than being loaded all at once."
+msgstr ""
+"Le nouveau sérialiseur :ref:`JSONL <serialization-formats-jsonl>` permet "
+"d'utiliser le format de lignes JSON avec :djadmin:`dumpdata` et :djadmin:"
+"`loaddata`. Cela peut être utile pour remplir de grosses bases de données, "
+"car les données sont chargées ligne par ligne en mémoire plutôt que d'être "
+"chargées d'un coup en entier."
+
+msgid ""
+":meth:`Signal.send_robust() <django.dispatch.Signal.send_robust>` now logs "
+"exceptions."
+msgstr ""
+":meth:`Signal.send_robust() <django.dispatch.Signal.send_robust>` journalise "
+"dorénavant les exceptions."
+
+msgid ""
+":tfilter:`floatformat` template filter now allows using the ``g`` suffix to "
+"force grouping by the :setting:`THOUSAND_SEPARATOR` for the active locale."
+msgstr ""
+"Le filtre de gabarit :tfilter:`floatformat` permet dorénavant d'utiliser le "
+"suffixe ``g`` pour forcer le groupement par :setting:`THOUSAND_SEPARATOR` "
+"pour la locale active."
+
+msgid ""
+"Templates cached with :ref:`Cached template loaders<template-loaders>` are "
+"now correctly reloaded in development."
+msgstr ""
+"Les gabarits mis en cache avec les :ref:`chargeurs de gabarits en cache "
+"<template-loaders>` sont dorénavant rechargés correctement en mode "
+"développement."
+
+msgid ""
+"Objects assigned to class attributes in :meth:`.TestCase.setUpTestData` are "
+"now isolated for each test method. Such objects are now required to support "
+"creating deep copies with :py:func:`copy.deepcopy`. Assigning objects which "
+"don't support ``deepcopy()`` is deprecated and will be removed in Django 4.1."
+msgstr ""
+"Les objets attribués à des attributs de classe dans :meth:`.TestCase."
+"setUpTestData` sont maintenant isolés pour chaque méthode de test. De tels "
+"objets doivent maintenant être capables de prendre en charge la copie "
+"profonde par :py:func:`copy.deepcopy`. L'attribution d'objets qui ne "
+"prennent pas en charge ``deepcopy()`` est obsolète et sera supprimée dans "
+"Django 4.1."
+
+msgid ""
+":class:`~django.test.runner.DiscoverRunner` now enables :py:mod:"
+"`faulthandler` by default. This can be disabled by using the :option:`test --"
+"no-faulthandler` option."
+msgstr ""
+":class:`~django.test.runner.DiscoverRunner` active dorénavant :py:mod:"
+"`faulthandler` par défaut. Ceci peut être désactivé en utilisant l'option :"
+"option:`test --no-faulthandler`."
+
+msgid ""
+":class:`~django.test.runner.DiscoverRunner` and the :djadmin:`test` "
+"management command can now track timings, including database setup and total "
+"run time. This can be enabled by using the :option:`test --timing` option."
+msgstr ""
+":class:`~django.test.runner.DiscoverRunner` et la commande d'administration :"
+"djadmin:`test` peut dorénavant mesurer des temps d'exécution, y compris la "
+"mise en place de la base de données et le temps total d'exécution. Ceci peut "
+"être activé en utilisant l'option :option:`test --timing`."
+
+msgid ""
+":class:`~django.test.Client` now preserves the request query string when "
+"following 307 and 308 redirects."
+msgstr ""
+":class:`~django.test.Client` préserve dorénavant la chaîne de requête "
+"lorsqu'il suit des redirections 307 et 308."
+
+msgid ""
+"The new :meth:`.TestCase.captureOnCommitCallbacks` method captures callback "
+"functions passed to :func:`transaction.on_commit() <django.db.transaction."
+"on_commit>` in a list. This allows you to test such callbacks without using "
+"the slower :class:`.TransactionTestCase`."
+msgstr ""
+"La nouvelle méthode :meth:`.TestCase.captureOnCommitCallbacks` capture dans "
+"une liste les fonctions de rappel transmises à :func:`transaction."
+"on_commit() <django.db.transaction.on_commit>` . Cela permet de tester de "
+"telles fonctions de rappel sans devoir utiliser la classe :class:`."
+"TransactionTestCase` plus lente."
+
+msgid ""
+":meth:`.TransactionTestCase.assertQuerysetEqual` now supports direct "
+"comparison against another queryset rather than being restricted to "
+"comparison against a list of string representations of objects when using "
+"the default value for the ``transform`` argument."
+msgstr ""
+":meth:`.TransactionTestCase.assertQuerysetEqual` prend dorénavant en charge "
+"la comparison directe avec d'autres jeux de requête au lieu d'être limitée à "
+"la comparaison avec une liste de représentations textuelles d'objets lors de "
+"l'utilisation de la valeur par défaut de l'argument ``transform``."
+
+msgid ""
+"The new ``depth`` parameter of ``django.utils.timesince.timesince()`` and "
+"``django.utils.timesince.timeuntil()`` functions allows specifying the "
+"number of adjacent time units to return."
+msgstr ""
+"Le nouveau paramètre ``depth`` des fonctions ``django.utils.timesince."
+"timesince()`` et ``django.utils.timesince.timeuntil()`` permet d'indiquer le "
+"nombre d'unités de temps adjacentes à renvoyer."
+
+msgid ""
+"Built-in validators now include the provided value in the ``params`` "
+"argument of a raised :exc:`~django.core.exceptions.ValidationError`. This "
+"allows custom error messages to use the ``%(value)s`` placeholder."
+msgstr ""
+"Les validateurs intégrés incluent dorénavant la valeur fournie dans "
+"l'argument ``params`` d'une erreur :exc:`~django.core.exceptions."
+"ValidationError`. Cela permet à des messages d'erreur personnalisés "
+"d'utiliser le substituant ``%(value)s``."
+
+msgid ""
+"The :class:`.ValidationError` equality operator now ignores ``messages`` and "
+"``params`` ordering."
+msgstr ""
+"L'opérateur d'égalité de :class:`.ValidationError` ignore dorénavant l'ordre "
+"dans ``messages`` et ``params``."
+
+msgid "Backwards incompatible changes in 3.2"
+msgstr "Changements incompatibles avec les anciennes versions dans Django 3.2"
+
+msgid ""
+"The new ``DatabaseFeatures.introspected_field_types`` property replaces "
+"these features:"
+msgstr ""
+"La nouvelle propriété ``DatabaseFeatures.introspected_field_types`` remplace "
+"ces capacités :"
+
+msgid "``can_introspect_autofield``"
+msgstr "``can_introspect_autofield``"
+
+msgid "``can_introspect_big_integer_field``"
+msgstr "``can_introspect_big_integer_field``"
+
+msgid "``can_introspect_binary_field``"
+msgstr "``can_introspect_binary_field``"
+
+msgid "``can_introspect_decimal_field``"
+msgstr "``can_introspect_decimal_field``"
+
+msgid "``can_introspect_duration_field``"
+msgstr "``can_introspect_duration_field``"
+
+msgid "``can_introspect_ip_address_field``"
+msgstr "``can_introspect_ip_address_field``"
+
+msgid "``can_introspect_positive_integer_field``"
+msgstr "``can_introspect_positive_integer_field``"
+
+msgid "``can_introspect_small_integer_field``"
+msgstr "``can_introspect_small_integer_field``"
+
+msgid "``can_introspect_time_field``"
+msgstr "``can_introspect_time_field``"
+
+msgid "``introspected_big_auto_field_type``"
+msgstr "``introspected_big_auto_field_type``"
+
+msgid "``introspected_small_auto_field_type``"
+msgstr "``introspected_small_auto_field_type``"
+
+msgid "``introspected_boolean_field_type``"
+msgstr "``introspected_boolean_field_type``"
+
+msgid ""
+"To enable support for covering indexes (:attr:`.Index.include`) and covering "
+"unique constraints (:attr:`.UniqueConstraint.include`), set "
+"``DatabaseFeatures.supports_covering_indexes`` to ``True``."
+msgstr ""
+"Pour activer la prise en charge des index de couverture (:attr:`.Index."
+"include`) et les contraintes de couverture uniques (:attr:`.UniqueConstraint."
+"include`), définissez ``DatabaseFeatures.supports_covering_indexes`` à "
+"``True``."
+
+msgid ""
+"Third-party database backends must implement support for column database "
+"collations on ``CharField``\\s and ``TextField``\\s or set "
+"``DatabaseFeatures.supports_collation_on_charfield`` and ``DatabaseFeatures."
+"supports_collation_on_textfield`` to ``False``. If non-deterministic "
+"collations are not supported, set ``supports_non_deterministic_collations`` "
+"to ``False``."
+msgstr ""
+"Les moteurs de base de données externes doivent implémenter la prise en "
+"charge des collations de colonnes de base de données pour ``CharField`` et "
+"``TextField`` ou définir ``DatabaseFeatures."
+"supports_collation_on_charfield`` et ``DatabaseFeatures."
+"supports_collation_on_textfield`` à ``False``. Si les collations non "
+"déterministes ne sont pas prises en charge, définissez "
+"``supports_non_deterministic_collations`` à ``False``."
+
+msgid ""
+"``DatabaseOperations.random_function_sql()`` is removed in favor of the new :"
+"class:`~django.db.models.functions.Random` database function."
+msgstr ""
+"``DatabaseOperations.random_function_sql()`` a été supprimée en faveur de la "
+"nouvelle fonction de base de données :class:`~django.db.models.functions."
+"Random`."
+
+msgid ""
+"``DatabaseOperations.date_trunc_sql()`` and ``DatabaseOperations."
+"time_trunc_sql()`` now take the optional ``tzname`` argument in order to "
+"truncate in a specific timezone."
+msgstr ""
+"``DatabaseOperations.date_trunc_sql()`` et ``DatabaseOperations."
+"time_trunc_sql()`` acceptent dorénavant le paramètre facultatif ``tzname`` "
+"afin de tronquer dans un fuseau horaire bien précis."
+
+msgid ""
+"``DatabaseClient.runshell()`` now gets arguments and an optional dictionary "
+"with environment variables to the underlying command-line client from "
+"``DatabaseClient.settings_to_cmd_args_env()`` method. Third-party database "
+"backends must implement ``DatabaseClient.settings_to_cmd_args_env()`` or "
+"override ``DatabaseClient.runshell()``."
+msgstr ""
+"``DatabaseClient.runshell()`` obtient dorénavant les arguments et un "
+"dictionnaire facultatif de variables d'environnement pour le client en ligne "
+"de commande sous-jacent à partir de la méthode ``DatabaseClient."
+"settings_to_cmd_args_env()``. Les moteurs de bases de données tiers doivent "
+"implémenter ``DatabaseClient.settings_to_cmd_args_env()`` ou surcharger "
+"``DatabaseClient.runshell()``."
+
+msgid ""
+"Third-party database backends must implement support for functional indexes "
+"(:attr:`.Index.expressions`) or set ``DatabaseFeatures."
+"supports_expression_indexes`` to ``False``. If ``COLLATE`` is not a part of "
+"the ``CREATE INDEX`` statement, set ``DatabaseFeatures."
+"collate_as_index_expression`` to ``True``."
+msgstr ""
+"Les moteurs de bases de données tiers doivent implémenter la prise en charge "
+"des index fonctionnels (:attr:`.Index.expressions`) ou définir "
+"``DatabaseFeatures.supports_expression_indexes`` à ``False``. Si ``COLLATE`` "
+"ne fait pas partie de l'instruction ``CREATE INDEX``, définissez "
+"``DatabaseFeatures.collate_as_index_expression`` à ``True``."
+
+msgid ""
+"Pagination links in the admin are now 1-indexed instead of 0-indexed, i.e. "
+"the query string for the first page is ``?p=1`` instead of ``?p=0``."
+msgstr ""
+"Les liens de pagination dans le site d'administration sont dorénavant "
+"indicées à partir de 1 au lieu de 0, c'est-à-dire que la chaîne de requête "
+"de la première page est ``?p=1`` au lieu de ``?p=0``."
+
+msgid ""
+"The new admin catch-all view will break URL patterns routed after the admin "
+"URLs and matching the admin URL prefix. You can either adjust your URL "
+"ordering or, if necessary, set :attr:`AdminSite.final_catch_all_view <django."
+"contrib.admin.AdminSite.final_catch_all_view>` to ``False``, disabling the "
+"catch-all view. See :ref:`whats-new-3.2` for more details."
+msgstr ""
+"La nouvelle vue « attrape-tout » du site d'administration casse les motifs "
+"d'URL routés après les URL d'administration et dont le préfixe correspond à "
+"celui de l'administration. Vous pouvez alors soit ajuster l'ordre de vos URL "
+"ou si nécessaire définir :attr:`AdminSite.final_catch_all_view <django."
+"contrib.admin.AdminSite.final_catch_all_view>` à ``False``, désactivant "
+"ainsi la vue « attrape-tout ». Voir :ref:`whats-new-3.2` pour plus de "
+"détails."
+
+msgid ""
+"Minified JavaScript files are no longer included with the admin. If you "
+"require these files to be minified, consider using a third party app or "
+"external build tool. The minified vendored JavaScript files packaged with "
+"the admin (e.g. :ref:`jquery.min.js <contrib-admin-jquery>`) are still "
+"included."
+msgstr ""
+"Les fichiers JavaScript minifiés ne sont plus inclus avec le site "
+"d'administration. Si vous devez avoir accès à ces fichiers minifiés, "
+"considérez l'utilisation d'une application tierce ou d'un outil de "
+"construction externe. Il reste cependant dans le site d'administration la "
+"version minifiée des bibliothèques JavaScript externes (par ex. :ref:`jquery."
+"min.js <contrib-admin-jquery>`)."
+
+msgid ""
+":attr:`.ModelAdmin.prepopulated_fields` no longer strips English stop words, "
+"such as ``'a'`` or ``'an'``."
+msgstr ""
+":attr:`.ModelAdmin.prepopulated_fields` n'exclut plus les mots vides anglais "
+"tels que ``'a'`` ou ``'an'``."
+
+msgid "Support for PostGIS 2.2 is removed."
+msgstr "La prise en charge de PostGIS 2.2 a été supprimée."
+
+msgid ""
+"The Oracle backend now clones polygons (and geometry collections containing "
+"polygons) before reorienting them and saving them to the database. They are "
+"no longer mutated in place. You might notice this if you use the polygons "
+"after a model is saved."
+msgstr ""
+"Le moteur Oracle clone dorénavant les polygones (et les collections "
+"géométriques contenant des polygones) avant de les réorienter et de les "
+"enregistrer en base de données. Ils ne sont plus modifiés eux-mêmes. Cela "
+"peut se remarquer quand on utilise des polygones après l'enregistrement d'un "
+"modèle."
+
+msgid "Dropped support for PostgreSQL 9.5"
+msgstr "Abandon de la prise en charge de PostgreSQL 9.5"
+
+msgid ""
+"Upstream support for PostgreSQL 9.5 ends in February 2021. Django 3.2 "
+"supports PostgreSQL 9.6 and higher."
+msgstr ""
+"La prise en charge amont de PostgreSQL 9.5 se termine en février 2021. "
+"Django 3.2 prend en charge PostgreSQL 9.6 et plus récent."
+
+msgid "Dropped support for MySQL 5.6"
+msgstr "Abandon de la prise en charge de MySQL 5.6"
+
+msgid ""
+"The end of upstream support for MySQL 5.6 is April 2021. Django 3.2 supports "
+"MySQL 5.7 and higher."
+msgstr ""
+"La fin de la prise en charge amont de MySQL 5.6 est en avril 2021. Django "
+"3.2 prend en charge MySQL 5.7 et plus récent."
+
+msgid ""
+"Django now supports non-``pytz`` time zones, such as Python 3.9+'s :mod:"
+"`zoneinfo` module and its backport."
+msgstr ""
+"Django prend dorénavant en charge les fuseaux horaires non-``pytz``, tels "
+"que ceux du module :mod:`zoneinfo` de Python 3.9+ et ses rétroportages."
+
+msgid ""
+"The undocumented ``SpatiaLiteOperations.proj4_version()`` method is renamed "
+"to ``proj_version()``."
+msgstr ""
+"La méthode non documentée ``SpatiaLiteOperations.proj4_version()`` a été "
+"renommée en ``proj_version()``."
+
+msgid ""
+":func:`~django.utils.text.slugify` now removes leading and trailing dashes "
+"and underscores."
+msgstr ""
+":func:`~django.utils.text.slugify` supprime dorénavant les tirets et "
+"soulignements en début et fin de texte."
+
+msgid ""
+"The :tfilter:`intcomma` and :tfilter:`intword` template filters no longer "
+"depend on the :setting:`USE_L10N` setting."
+msgstr ""
+"Les filtres de gabarit :tfilter:`intcomma` et :tfilter:`intword` ne "
+"dépendent plus du réglage :setting:`USE_L10N`."
+
+msgid "Support for ``argon2-cffi`` < 19.1.0 is removed."
+msgstr "La prise en charge de ``argon2-cffi`` < 19.1.0 a été abandonnée."
+
+msgid ""
+"The cache keys no longer includes the language when internationalization is "
+"disabled (``USE_I18N = False``) and localization is enabled (``USE_L10N = "
+"True``). After upgrading to Django 3.2 in such configurations, the first "
+"request to any previously cached value will be a cache miss."
+msgstr ""
+"Les clés de cache ne contiennent plus la langue lorsque "
+"l'internationalisation est désactivée (``USE_I18N = False``) et que la "
+"régionalisation est activée (``USE_L10N = True``). Après la mise à jour vers "
+"Django 3.2 dans une configuration telle que celle-ci, la première requête "
+"vers une valeur précédemment en cache produira un défaut de cache."
+
+msgid ""
+"``ForeignKey.validate()`` now uses :attr:`~django.db.models.Model."
+"_base_manager` rather than :attr:`~django.db.models.Model._default_manager` "
+"to check that related instances exist."
+msgstr ""
+"``ForeignKey.validate()`` utilise dorénavant :attr:`~django.db.models.Model."
+"_base_manager` au lieu de :attr:`~django.db.models.Model._default_manager` "
+"pour vérifier si des instances liées existent."
+
+msgid ""
+"When an application defines an :class:`~django.apps.AppConfig` subclass in "
+"an ``apps.py`` submodule, Django now uses this configuration automatically, "
+"even if it isn't enabled with ``default_app_config``. Set ``default = "
+"False`` in the :class:`~django.apps.AppConfig` subclass if you need to "
+"prevent this behavior. See :ref:`whats-new-3.2` for more details."
+msgstr ""
+"Lorsqu'une application définit une sous-classe de :class:`~django.apps."
+"AppConfig` dans un sous-module ``apps.py``, Django utilise désormais "
+"automatiquement cette configuration, même si elle n'est pas activée avec "
+"``default_app_config``. Définisez ``default = False`` dans la sous-classe "
+"de :class:`~django.apps.AppConfig` si vous voulez empêcher ce comportement. "
+"Voir :ref:`whats-new-3.2` pour plus de détails."
+
+msgid "Instantiating an abstract model now raises ``TypeError``."
+msgstr ""
+"L'instanciation d'un modèle abstrait produit dorénavant une erreur "
+"``TypeError``."
+
+msgid ""
+"Keyword arguments to :func:`~django.test.utils.setup_databases` are now "
+"keyword-only."
+msgstr ""
+"Les arguments nommés de :func:`~django.test.utils.setup_databases` sont "
+"dorénavant exclusivement des arguments nommés."
+
+msgid ""
+"The undocumented ``django.utils.http.limited_parse_qsl()`` function is "
+"removed. Please use :func:`urllib.parse.parse_qsl` instead."
+msgstr ""
+"La fonction non documentée ``django.utils.http.limited_parse_qsl()`` a été "
+"supprimée. Utilisez :func:`urllib.parse.parse_qsl` à la place."
+
+msgid ""
+"``django.test.utils.TestContextDecorator`` now uses :py:meth:`~unittest."
+"TestCase.addCleanup` so that cleanups registered in the :py:meth:`~unittest."
+"TestCase.setUp` method are called before ``TestContextDecorator.disable()``."
+msgstr ""
+"``django.test.utils.TestContextDecorator`` utilise dorénavant :py:meth:"
+"`~unittest.TestCase.addCleanup` afin que les nettoyages inscrits dans la "
+"méthode :py:meth:`~unittest.TestCase.setUp` soient appelés avant "
+"``TestContextDecorator.disable()``."
+
+msgid ""
+"``SessionMiddleware`` now raises a :exc:`~django.contrib.sessions.exceptions."
+"SessionInterrupted` exception instead of :exc:`~django.core.exceptions."
+"SuspiciousOperation` when a session is destroyed in a concurrent request."
+msgstr ""
+"``SessionMiddleware`` produit dorénavant l'exception exc:`~django.contrib."
+"sessions.exceptions.SessionInterrupted` au lieu de :exc:`~django.core."
+"exceptions.SuspiciousOperation` lorsqu'une session est détruite dans une "
+"requête concurrente."
+
+msgid ""
+"The :class:`django.db.models.Field` equality operator now correctly "
+"distinguishes inherited field instances across models. Additionally, the "
+"ordering of such fields is now defined."
+msgstr ""
+"L'opérateur d'égalité de :class:`django.db.models.Field` distingue "
+"dorénavant correctement les instances de champ héritées entre modèles. De "
+"plus, l'ordre de tels champs est dorénavant défini."
+
+msgid ""
+"The undocumented ``django.core.files.locks.lock()`` function now returns "
+"``False`` if the file cannot be locked, instead of raising :exc:"
+"`BlockingIOError`."
+msgstr ""
+"La fonction non documentée ``django.core.files.locks.lock()`` renvoie "
+"dorénavant ``False`` si le fichier ne peut être verrouillé, au lieu de "
+"produire l'exception :exc:`BlockingIOError`."
+
+msgid ""
+"The password reset mechanism now invalidates tokens when the user email is "
+"changed."
+msgstr ""
+"Le mécanisme de réinitialisation de mot de passe invalide dorénavant les "
+"jetons lorsque l'adresse de courriel d'un utilisateur change."
+
+msgid ""
+":djadmin:`makemessages` command no longer processes invalid locales "
+"specified using :option:`makemessages --locale` option, when they contain "
+"hyphens (``'-'``)."
+msgstr ""
+"La commande :djadmin:`makemessages` ne traite plus les locales non valables "
+"indiquées par l'option :option:`makemessages --locale`, notamment "
+"lorsqu'elles contiennent des tirets (``'-'``)."
+
+msgid ""
+"The ``django.contrib.auth.forms.ReadOnlyPasswordHashField`` form field is "
+"now :attr:`~django.forms.Field.disabled` by default. Therefore "
+"``UserChangeForm.clean_password()`` is no longer required to return the "
+"initial value."
+msgstr ""
+"Le champ de formulaire ``django.contrib.auth.forms."
+"ReadOnlyPasswordHashField`` est dorénavant désactivé par défaut. Par "
+"conséquent, ``UserChangeForm.clean_password()`` n'est plus nécessaire pour "
+"renvoyer la valeur initiale."
+
+msgid ""
+"The ``cache.get_many()``, ``get_or_set()``, ``has_key()``, ``incr()``, "
+"``decr()``, ``incr_version()``, and ``decr_version()`` cache operations now "
+"correctly handle ``None`` stored in the cache, in the same way as any other "
+"value, instead of behaving as though the key didn't exist."
+msgstr ""
+"Les opérations de cache ``cache.get_many()``, ``get_or_set()``, "
+"``has_key()``, ``incr()``, ``decr()``, ``incr_version()`` et "
+"``decr_version()`` gèrent maintenant correctement les valeurs ``None`` "
+"stockées dans le cache, comme pour toute autre valeur, au lieu de faire "
+"comme si la clé n'existait pas dans le cache."
+
+msgid ""
+"Due to a ``python-memcached`` limitation, the previous behavior is kept for "
+"the deprecated ``MemcachedCache`` backend."
+msgstr ""
+"En raison d'une limitation de ``python-memcached``, le comportement "
+"précédent a été conservé pour le moteur obsolète ``MemcachedCache``."
+
+msgid ""
+"The minimum supported version of SQLite is increased from 3.8.3 to 3.9.0."
+msgstr ""
+"La version minimum de SQLite prise en charge est passée de 3.8.3 à 3.9.0."
+
+msgid ""
+":class:`~django.contrib.messages.storage.cookie.CookieStorage` now stores "
+"messages in the :rfc:`6265` compliant format. Support for cookies that use "
+"the old format remains until Django 4.1."
+msgstr ""
+":class:`~django.contrib.messages.storage.cookie.CookieStorage` stocke "
+"dorénavant ses messages dans le format compatible :rfc:`6265`. La prise en "
+"charge des cookies utilisant l'ancien format est conservée jusqu'à Django "
+"4.1."
+
+msgid ""
+"The minimum supported version of ``asgiref`` is increased from 3.2.10 to "
+"3.3.2."
+msgstr ""
+"La version minimum de ``asgiref`` prise en charge est passée de 3.2.10 à "
+"3.3.2."
+
+msgid "Features deprecated in 3.2"
+msgstr "Fonctionnalités rendues obsolètes dans Django 3.2"
+
+msgid ""
+"Assigning objects which don't support creating deep copies with :py:func:"
+"`copy.deepcopy` to class attributes in :meth:`.TestCase.setUpTestData` is "
+"deprecated."
+msgstr ""
+"L'attribution d'objets ne prenant pas en charge la création de copies "
+"profondes avec :py:func:`copy.deepcopy` à des attributs de classe de :meth:`."
+"TestCase.setUpTestData` est obsolète."
+
+msgid ""
+"Using a boolean value in :attr:`.BaseCommand.requires_system_checks` is "
+"deprecated. Use ``'__all__'`` instead of ``True``, and ``[]`` (an empty "
+"list) instead of ``False``."
+msgstr ""
+"L'utilisation d'une valeur booléenne dans attr:`.BaseCommand."
+"requires_system_checks` est osbolète. Utilisez ``'__all__'`` au lieu de "
+"``True``, et ``[]`` (une liste vide) au lieu de ``False``."
+
+msgid ""
+"The ``whitelist`` argument and ``domain_whitelist`` attribute of :class:"
+"`~django.core.validators.EmailValidator` are deprecated. Use ``allowlist`` "
+"instead of ``whitelist``, and ``domain_allowlist`` instead of "
+"``domain_whitelist``. You may need to rename ``whitelist`` in existing "
+"migrations."
+msgstr ""
+"L'argument ``whitelist`` et l'attribut ``domain_whitelist`` de :class:"
+"`~django.core.validators.EmailValidator` sont obsolètes. Utilisez "
+"``allowlist`` au lieu de ``whitelist`` et ``domain_allowlist`` au lieu de "
+"``domain_whitelist``. Il se peut que vous deviez renommer ``whitelist`` dans "
+"des migrations existantes."
+
+msgid ""
+"The ``default_app_config`` application configuration variable is deprecated, "
+"due to the now automatic ``AppConfig`` discovery. See :ref:`whats-new-3.2` "
+"for more details."
+msgstr ""
+"La variable de configuration d'application ``default_app_config`` est "
+"osbolète, en raison de l'ajout de la découverte automatique des classes "
+"``AppConfig``. Consultez :ref:`whats-new-3.2` pour plus de détails."
+
+msgid ""
+"Automatically calling ``repr()`` on a queryset in ``TransactionTestCase."
+"assertQuerysetEqual()``, when compared to string values, is deprecated. If "
+"you need the previous behavior, explicitly set ``transform`` to ``repr``."
+msgstr ""
+"L'appel automatique à ``repr()`` sur un jeu de requête dans "
+"``TransactionTestCase.assertQuerysetEqual()`` lors de la comparaison avec "
+"des chaînes est obsolète. SI vous avez besoin du comportement précédent, "
+"définissez explicitement ``transform`` à ``repr``."
+
+msgid ""
+"The ``django.core.cache.backends.memcached.MemcachedCache`` backend is "
+"deprecated as ``python-memcached`` has some problems and seems to be "
+"unmaintained. Use ``django.core.cache.backends.memcached.PyMemcacheCache`` "
+"or ``django.core.cache.backends.memcached.PyLibMCCache`` instead."
+msgstr ""
+"Le moteur ``django.core.cache.backends.memcached.MemcachedCache`` est "
+"obsolète car ``python-memcached`` présente quelques problèmes et ne semble "
+"actuellement plus maintenu. Utilisez plutôt ``django.core.cache.backends."
+"memcached.PyMemcacheCache`` ou ``django.core.cache.backends.memcached."
+"PyLibMCCache``."
+
+msgid ""
+"The format of messages used by ``django.contrib.messages.storage.cookie."
+"CookieStorage`` is different from the format generated by older versions of "
+"Django. Support for the old format remains until Django 4.1."
+msgstr ""
+"Le format des messages utilisé par ``django.contrib.messages.storage.cookie."
+"CookieStorage`` est différent du format généré par les anciennes versions de "
+"Django. La prise en charge de l'ancien format demeure jusqu'à Django 4.1."
+
+msgid "Django 3.2.1 release notes"
+msgstr "Notes de publication de Django 3.2.1"
+
+msgid "*Expected May 4, 2021*"
+msgstr ""
+
+msgid "Django 3.2.1 fixes several bugs in 3.2."
+msgstr "Django 3.2.1 corrige plusieurs bogues de la version 3.2."
+
+msgid "Corrected detection of GDAL 3.2 on Windows (:ticket:`32544`)."
+msgstr "Détection de GDAL 3.2 corrigée sous Windows (:ticket:`32544`)."
+
+msgid ""
+"Fixed a bug in Django 3.2 where subclasses of ``BigAutoField`` and "
+"``SmallAutoField`` were not allowed for the :setting:`DEFAULT_AUTO_FIELD` "
+"setting (:ticket:`32620`)."
+msgstr ""
+"Correction d'un bogue de Django 3.2 où les sous-classes de ``BigAutoField`` "
+"et ``SmallAutoField`` n'étaient pas admises dans le réglage :setting:"
+"`DEFAULT_AUTO_FIELD` (:ticket:`32620`)."
+
+msgid ""
+"Fixed a regression in Django 3.2 that caused a crash of ``QuerySet.values()/"
+"values_list()`` after ``QuerySet.union()``, ``intersection()``, and "
+"``difference()`` when it was ordered by an unannotated field (:ticket:"
+"`32627`)."
+msgstr ""
+"Correction d'une régression dans Django 3.2 produisant un plantage de "
+"``QuerySet.values()/values_list()`` après ``QuerySet.union()``, "
+"``intersection()`` et ``difference()`` lorsque le tri se faisait sur un "
+"champ non annoté (:ticket:`32627`)."
+
+msgid ""
+"Restored, following a regression in Django 3.2, displaying an exception "
+"message on the technical 404 debug page (:ticket:`32637`)."
+msgstr ""
+"Suite à une régressions dans Django 3.2, l'affichage du message d'exception "
+"a été restauré sur la page de débogage technique 404 (:ticket:`32637`)."
+
+msgid ""
+"Fixed a bug in Django 3.2 where a system check would crash on a reverse one-"
+"to-one relationships in ``CheckConstraint.check`` or ``UniqueConstraint."
+"condition`` (:ticket:`32635`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.2 that caused a crash of :attr:`.ModelAdmin."
+"search_fields` when searching against phrases with unbalanced quotes (:"
+"ticket:`32649`)."
+msgstr ""
+
+msgid ""
+"Fixed a bug in Django 3.2 where variable lookup errors were logged rendering "
+"the sitemap template if alternates were not defined (:ticket:`32648`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.2 that caused a crash when combining ``Q()`` "
+"objects which contains boolean expressions (:ticket:`32548`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.2 that caused a crash of ``QuerySet."
+"update()`` on a queryset ordered by inherited or joined fields on MySQL and "
+"MariaDB (:ticket:`32645`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.2 that caused a crash when decoding a cookie "
+"value, used by ``django.contrib.messages.storage.cookie.CookieStorage``, in "
+"the pre-Django 3.2 format (:ticket:`32643`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.2 that stopped the shift-key modifier "
+"selecting multiple rows in the admin changelist (:ticket:`32647`)."
+msgstr ""
+
+msgid ""
+"Fixed a bug in Django 3.2 where a system check would crash on the :setting:"
+"`STATICFILES_DIRS` setting with a list of 2-tuples of ``(prefix, path)`` (:"
+"ticket:`32665`)."
+msgstr ""
+
+msgid ""
+"Fixed a long standing bug involving queryset bitwise combination when used "
+"with subqueries that began manifesting in Django 3.2, due to a separate fix "
+"using ``Exists`` to ``exclude()`` multi-valued relationships (:ticket:"
+"`32650`)."
 msgstr ""
 
 msgid "Release notes"
@@ -33485,8 +35332,11 @@ msgstr ""
 "que les publications correctives. Les nouvelles versions de la documentation "
 "contiennent les notes de publication de toute publication antérieure."
 
+msgid "3.2 release"
+msgstr "Version 3.2"
+
 msgid "3.1 release"
-msgstr ""
+msgstr "Version 3.1"
 
 msgid "3.0 release"
 msgstr "Version 3.0"
@@ -33621,1239 +35471,359 @@ msgstr ""
 "correctifs ou de publication de code, seules la description, l'annonce et le "
 "code CVE sont visibles."
 
-msgid "Issues prior to Django's security process"
-msgstr "Problèmes précédant le processus de sécurité de Django"
-
-msgid ""
-"Some security issues were handled before Django had a formalized security "
-"process in use. For these, new releases may not have been issued at the time "
-"and CVEs may not have been assigned."
-msgstr ""
-"Certains problèmes de sécurité ont été gérés avant que Django possède un "
-"processus de sécurité formel. Pour ceux-ci, il se peut qu'il n'y ait pas eu "
-"de nouvelles publications de Django et qu'aucun code CVE n'ait été demandé."
-
-msgid "August 16, 2006 - :cve:`2007-0404`"
-msgstr ""
-
-msgid ""
-"Filename validation issue in translation framework. `Full description "
-"<https://www.djangoproject.com/weblog/2006/aug/16/compilemessages/>`__"
-msgstr ""
-
-msgid "Versions affected"
-msgstr "Versions affectées"
-
-msgid "Django 0.90 :commit:`(patch) <518d406e53>`"
-msgstr ""
-
-msgid "Django 0.91 :commit:`(patch) <518d406e53>`"
-msgstr ""
-
-msgid "Django 0.95 :commit:`(patch) <a132d411c6>` (released January 21 2007)"
-msgstr ""
-
-msgid "January 21, 2007 - :cve:`2007-0405`"
-msgstr ""
-
-msgid ""
-"Apparent \"caching\" of authenticated user. `Full description <https://www."
-"djangoproject.com/weblog/2007/jan/21/0951/>`__"
-msgstr ""
-
-msgid "Django 0.95 :commit:`(patch) <e89f0a6558>`"
-msgstr ""
-
 msgid "Issues under Django's security process"
 msgstr "Issues relevant du processus de sécurité de Django"
 
 msgid ""
-"All other security issues have been handled under versions of Django's "
-"security process. These are listed below."
+"All security issues have been handled under versions of Django's security "
+"process. These are listed below."
 msgstr ""
-"Toutes les autres issues ont été traités dans le cadre du processus de "
+"Tous les problèmes de sécurité ont été traités dans le cadre du processus de "
 "sécurité de Django. Elles sont listées ci-dessous."
 
-msgid "October 26, 2007 - :cve:`2007-5712`"
+msgid "April 6, 2021 - :cve:`2021-28658`"
+msgstr "6 avril 2021 - :cve:`2021-28658`"
+
+msgid ""
+"Potential directory-traversal via uploaded files. `Full description <https://"
+"www.djangoproject.com/weblog/2021/apr/06/security-releases/>`__"
+msgstr ""
+"Traversée de répertoires potentielle au moyen de fichiers téléversés. "
+"`Description complète <https://www.djangoproject.com/weblog/2021/apr/06/"
+"security-releases/>`__"
+
+msgid "Versions affected"
+msgstr "Versions affectées"
+
+msgid "Django 3.2 :commit:`(patch) <2820fd1be5dfccbf1216c3845fad8580502473e1>`"
+msgstr ""
+"Django 3.2 :commit:`(correctif) <2820fd1be5dfccbf1216c3845fad8580502473e1>`"
+
+msgid "Django 3.1 :commit:`(patch) <cca0d98118cccf9ae0c6dcf2d6c57fc50469fbf0>`"
+msgstr ""
+"Django 3.1 :commit:`(correctif) <cca0d98118cccf9ae0c6dcf2d6c57fc50469fbf0>`"
+
+msgid "Django 3.0 :commit:`(patch) <e7fba62248f604c76da4f23dcf1db4a57b0808ea>`"
+msgstr ""
+"Django 3.0 :commit:`(correctif) <e7fba62248f604c76da4f23dcf1db4a57b0808ea>`"
+
+msgid "Django 2.2 :commit:`(patch) <4036d62bda0e9e9f6172943794b744a454ca49c2>`"
+msgstr ""
+"Django 2.2 :commit:`(correctif) <4036d62bda0e9e9f6172943794b744a454ca49c2>`"
+
+msgid "February 19, 2021 - :cve:`2021-23336`"
+msgstr "19 février 2021 - :cve:`2021-23336`"
+
+msgid ""
+"Web cache poisoning via ``django.utils.http.limited_parse_qsl()``. `Full "
+"description <https://www.djangoproject.com/weblog/2021/feb/19/security-"
+"releases/>`__"
+msgstr ""
+"Empoisonnement de cache Web via ``django.utils.http.limited_parse_qsl()``. "
+"`Description complète <https://www.djangoproject.com/weblog/2021/feb/19/"
+"security-releases/>`__"
+
+msgid "Django 3.2 :commit:`(patch) <be8237c7cce24b06aabde0b97afce98ddabbe3b6>`"
+msgstr ""
+"Django 3.2 :commit:`(correctif) <be8237c7cce24b06aabde0b97afce98ddabbe3b6>`"
+
+msgid "Django 3.1 :commit:`(patch) <8f6d431b08cbb418d9144b976e7b972546607851>`"
+msgstr ""
+"Django 3.1 :commit:`(correctif) <8f6d431b08cbb418d9144b976e7b972546607851>`"
+
+msgid "Django 3.0 :commit:`(patch) <326a926beef869d3341bc9ef737887f0449b6b71>`"
+msgstr ""
+"Django 3.0 :commit:`(correctif) <326a926beef869d3341bc9ef737887f0449b6b71>`"
+
+msgid "Django 2.2 :commit:`(patch) <fd6b6afd5959b638c62dbf4839ccff97e7f7dfda>`"
+msgstr ""
+"Django 2.2 :commit:`(correctif) <fd6b6afd5959b638c62dbf4839ccff97e7f7dfda>`"
+
+msgid "February 1, 2021 - :cve:`2021-3281`"
+msgstr "1er février 2021 - :cve:`2021-3281`"
+
+msgid ""
+"Potential directory-traversal via ``archive.extract()``. `Full description "
+"<https://www.djangoproject.com/weblog/2021/feb/01/security-releases/>`__"
+msgstr ""
+"Traversée de répertoires potentielle au moyen de ``archive.extract()``. "
+"`Description complète <https://www.djangoproject.com/weblog/2021/feb/01/"
+"security-releases/>`__"
+
+msgid "Django 3.1 :commit:`(patch) <02e6592835b4559909aa3aaaf67988fef435f624>`"
+msgstr ""
+"Django 3.1 :commit:`(correctif) <02e6592835b4559909aa3aaaf67988fef435f624>`"
+
+msgid "Django 3.0 :commit:`(patch) <52e409ed17287e9aabda847b6afe58be2fa9f86a>`"
+msgstr ""
+"Django 3.0 :commit:`(correctif) <52e409ed17287e9aabda847b6afe58be2fa9f86a>`"
+
+msgid "Django 2.2 :commit:`(patch) <21e7622dec1f8612c85c2fc37fe8efbfd3311e37>`"
+msgstr ""
+"Django 2.2 :commit:`(correctif) <21e7622dec1f8612c85c2fc37fe8efbfd3311e37>`"
+
+msgid "September 1, 2020 - :cve:`2020-24584`"
 msgstr ""
 
 msgid ""
-"Denial-of-service via arbitrarily-large ``Accept-Language`` header. `Full "
-"description <https://www.djangoproject.com/weblog/2007/oct/26/security-fix/"
-">`__"
+"Permission escalation in intermediate-level directories of the file system "
+"cache on Python 3.7+. `Full description <https://www.djangoproject.com/"
+"weblog/2020/sep/01/security-releases/>`__"
+msgstr ""
+
+msgid "Django 3.1 :commit:`(patch) <2b099caa5923afa8cfb5f1e8c0d56b6e0e81915b>`"
+msgstr ""
+
+msgid "Django 3.0 :commit:`(patch) <cdb367c92a0ba72ddc0cbd13ff42b0e6df709554>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <a3aebfdc8153dc230686b6d2454ccd32ed4c9e6f>`"
+msgstr ""
+
+msgid "September 1, 2020 - :cve:`2020-24583`"
 msgstr ""
 
 msgid ""
-"Django 0.91 :commit:`(patch) <8bc36e726c9e8c75c681d3ad232df8e882aaac81>`"
-msgstr ""
-
-msgid ""
-"Django 0.95 :commit:`(patch) <412ed22502e11c50dbfee854627594f0e7e2c234>`"
-msgstr ""
-
-msgid ""
-"Django 0.96 :commit:`(patch) <7dd2dd08a79e388732ce00e2b5514f15bd6d0f6f>`"
-msgstr ""
-
-msgid "May 14, 2008 - :cve:`2008-2302`"
-msgstr ""
-
-msgid ""
-"XSS via admin login redirect. `Full description <https://www.djangoproject."
-"com/weblog/2008/may/14/security/>`__"
-msgstr ""
-
-msgid "Django 0.91 :commit:`(patch) <50ce7fb57d>`"
-msgstr ""
-
-msgid "Django 0.95 :commit:`(patch) <50ce7fb57d>`"
-msgstr ""
-
-msgid "Django 0.96 :commit:`(patch) <7791e5c050>`"
-msgstr ""
-
-msgid "September 2, 2008 - :cve:`2008-3909`"
-msgstr ""
-
-msgid ""
-"CSRF via preservation of POST data during admin login. `Full description "
-"<https://www.djangoproject.com/weblog/2008/sep/02/security/>`__"
-msgstr ""
-
-msgid ""
-"Django 0.91 :commit:`(patch) <44debfeaa4473bd28872c735dd3d9afde6886752>`"
-msgstr ""
-
-msgid ""
-"Django 0.95 :commit:`(patch) <aee48854a164382c655acb9f18b3c06c3d238e81>`"
-msgstr ""
-
-msgid ""
-"Django 0.96 :commit:`(patch) <7e0972bded362bc4b851c109df2c8a6548481a8e>`"
-msgstr ""
-
-msgid "July 28, 2009 - :cve:`2009-2659`"
-msgstr ""
-
-msgid ""
-"Directory-traversal in development server media handler. `Full description "
-"<https://www.djangoproject.com/weblog/2009/jul/28/security/>`__"
-msgstr ""
-
-msgid "Django 0.96 :commit:`(patch) <da85d76fd6>`"
-msgstr ""
-
-msgid "Django 1.0 :commit:`(patch) <df7f917b7f>`"
-msgstr ""
-
-msgid "October 9, 2009 - :cve:`2009-3965`"
-msgstr ""
-
-msgid ""
-"Denial-of-service via pathological regular expression performance. `Full "
-"description <https://www.djangoproject.com/weblog/2009/oct/09/security/>`__"
-msgstr ""
-
-msgid "Django 1.0 :commit:`(patch) <594a28a904>`"
-msgstr ""
-
-msgid "Django 1.1 :commit:`(patch) <e3e992e18b>`"
-msgstr ""
-
-msgid "September 8, 2010 - :cve:`2010-3082`"
-msgstr ""
-
-msgid ""
-"XSS via trusting unsafe cookie value. `Full description <https://www."
-"djangoproject.com/weblog/2010/sep/08/security-release/>`__"
-msgstr ""
-
-msgid "Django 1.2 :commit:`(patch) <7f84657b6b>`"
-msgstr ""
-
-msgid "December 22, 2010 - :cve:`2010-4534`"
-msgstr ""
-
-msgid ""
-"Information leakage in administrative interface. `Full description <https://"
-"www.djangoproject.com/weblog/2010/dec/22/security/>`__"
-msgstr ""
-
-msgid "Django 1.1 :commit:`(patch) <17084839fd>`"
-msgstr ""
-
-msgid "Django 1.2 :commit:`(patch) <85207a245b>`"
-msgstr ""
-
-msgid "December 22, 2010 - :cve:`2010-4535`"
-msgstr ""
-
-msgid ""
-"Denial-of-service in password-reset mechanism. `Full description <https://"
-"www.djangoproject.com/weblog/2010/dec/22/security/>`__"
-msgstr ""
-
-msgid "Django 1.1 :commit:`(patch) <7f8dd9cbac>`"
-msgstr ""
-
-msgid "Django 1.2 :commit:`(patch) <d5d8942a16>`"
-msgstr ""
-
-msgid "February 8, 2011 - :cve:`2011-0696`"
-msgstr ""
-
-msgid ""
-"CSRF via forged HTTP headers. `Full description <https://www.djangoproject."
-"com/weblog/2011/feb/08/security/>`__"
-msgstr ""
-
-msgid "Django 1.1 :commit:`(patch) <408c5c873c>`"
-msgstr ""
-
-msgid "Django 1.2 :commit:`(patch) <818e70344e>`"
-msgstr ""
-
-msgid "February 8, 2011 - :cve:`2011-0697`"
-msgstr ""
-
-msgid ""
-"XSS via unsanitized names of uploaded files. `Full description <https://www."
-"djangoproject.com/weblog/2011/feb/08/security/>`__"
-msgstr ""
-
-msgid "Django 1.1 :commit:`(patch) <1966786d2d>`"
-msgstr ""
-
-msgid "Django 1.2 :commit:`(patch) <1f814a9547>`"
-msgstr ""
-
-msgid "February 8, 2011 - :cve:`2011-0698`"
-msgstr ""
-
-msgid ""
-"Directory-traversal on Windows via incorrect path-separator handling. `Full "
-"description <https://www.djangoproject.com/weblog/2011/feb/08/security/>`__"
-msgstr ""
-
-msgid "Django 1.1 :commit:`(patch) <570a32a047>`"
-msgstr ""
-
-msgid "Django 1.2 :commit:`(patch) <194566480b>`"
-msgstr ""
-
-msgid "September 9, 2011 - :cve:`2011-4136`"
-msgstr ""
-
-msgid ""
-"Session manipulation when using memory-cache-backed session. `Full "
-"description <https://www.djangoproject.com/weblog/2011/sep/09/security-"
-"releases-issued/>`__"
-msgstr ""
-
-msgid "Django 1.2 :commit:`(patch) <ac7c3a110f>`"
-msgstr ""
-
-msgid "Django 1.3 :commit:`(patch) <fbe2eead2f>`"
-msgstr ""
-
-msgid "September 9, 2011 - :cve:`2011-4137`"
-msgstr ""
-
-msgid ""
-"Denial-of-service via ``URLField.verify_exists``. `Full description <https://"
-"www.djangoproject.com/weblog/2011/sep/09/security-releases-issued/>`__"
-msgstr ""
-
-msgid "Django 1.2 :commit:`(patch) <7268f8af86>`"
-msgstr ""
-
-msgid "Django 1.3 :commit:`(patch) <1a76dbefdf>`"
-msgstr ""
-
-msgid "September 9, 2011 - :cve:`2011-4138`"
-msgstr ""
-
-msgid ""
-"Information leakage/arbitrary request issuance via ``URLField."
-"verify_exists``. `Full description <https://www.djangoproject.com/"
-"weblog/2011/sep/09/security-releases-issued/>`__"
-msgstr ""
-
-msgid "Django 1.2: :commit:`(patch) <7268f8af86>`"
-msgstr ""
-
-msgid "Django 1.3: :commit:`(patch) <1a76dbefdf>`"
-msgstr ""
-
-msgid "September 9, 2011 - :cve:`2011-4139`"
-msgstr ""
-
-msgid ""
-"``Host`` header cache poisoning. `Full description <https://www."
-"djangoproject.com/weblog/2011/sep/09/security-releases-issued/>`__"
-msgstr ""
-
-msgid "Django 1.2 :commit:`(patch) <c613af4d64>`"
-msgstr ""
-
-msgid "Django 1.3 :commit:`(patch) <2f7fadc38e>`"
-msgstr ""
-
-msgid "September 9, 2011 - :cve:`2011-4140`"
-msgstr ""
-
-msgid ""
-"Potential CSRF via ``Host`` header. `Full description <https://www."
-"djangoproject.com/weblog/2011/sep/09/security-releases-issued/>`__"
-msgstr ""
-
-msgid "This notification was an advisory only, so no patches were issued."
-msgstr ""
-
-msgid "Django 1.2"
-msgstr "Django 1.2"
-
-msgid "Django 1.3"
-msgstr "Django 1.3"
-
-msgid "July 30, 2012 - :cve:`2012-3442`"
-msgstr ""
-
-msgid ""
-"XSS via failure to validate redirect scheme. `Full description <https://www."
-"djangoproject.com/weblog/2012/jul/30/security-releases-issued/>`__"
-msgstr ""
-
-msgid ""
-"Django 1.3: :commit:`(patch) <4dea4883e6c50d75f215a6b9bcbd95273f57c72d>`"
-msgstr ""
-
-msgid ""
-"Django 1.4: :commit:`(patch) <e34685034b60be1112160e76091e5aee60149fa1>`"
-msgstr ""
-
-msgid "July 30, 2012 - :cve:`2012-3443`"
-msgstr ""
-
-msgid ""
-"Denial-of-service via compressed image files. `Full description <https://www."
-"djangoproject.com/weblog/2012/jul/30/security-releases-issued/>`__"
-msgstr ""
-
-msgid ""
-"Django 1.3: :commit:`(patch) <b2eb4787a0fff9c9993b78be5c698e85108f3446>`"
-msgstr ""
-
-msgid ""
-"Django 1.4: :commit:`(patch) <c14f325c4eef628bc7bfd8873c3a72aeb0219141>`"
-msgstr ""
-
-msgid "July 30, 2012 - :cve:`2012-3444`"
-msgstr ""
-
-msgid ""
-"Denial-of-service via large image files. `Full description <https://www."
-"djangoproject.com/weblog/2012/jul/30/security-releases-issued/>`__"
-msgstr ""
-
-msgid "Django 1.3 :commit:`(patch) <9ca0ff6268eeff92d0d0ac2c315d4b6a8e229155>`"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <da33d67181b53fe6cc737ac1220153814a1509f6>`"
-msgstr ""
-
-msgid "October 17, 2012 - :cve:`2012-4520`"
-msgstr ""
-
-msgid ""
-"``Host`` header poisoning. `Full description <https://www.djangoproject.com/"
-"weblog/2012/oct/17/security/>`__"
-msgstr ""
-
-msgid "Django 1.3 :commit:`(patch) <b45c377f8f488955e0c7069cad3f3dd21910b071>`"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <92d3430f12171f16f566c9050c40feefb830a4a3>`"
-msgstr ""
-
-msgid "December 10, 2012 - No CVE 1"
-msgstr "10 décembre 2012 - Pas de CVE 1"
-
-msgid ""
-"Additional hardening of ``Host`` header handling. `Full description <https://"
-"www.djangoproject.com/weblog/2012/dec/10/security/>`__"
-msgstr ""
-
-msgid "Django 1.3 :commit:`(patch) <2da4ace0bc1bc1d79bf43b368cb857f6f0cd6b1b>`"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <319627c184e71ae267d6b7f000e293168c7b6e09>`"
-msgstr ""
-
-msgid "December 10, 2012 - No CVE 2"
-msgstr "10 Décembre 2012 - Pas de CVE 2"
-
-msgid ""
-"Additional hardening of redirect validation. `Full description <https://www."
-"djangoproject.com/weblog/2012/dec/10/security/>`__"
-msgstr ""
-
-msgid ""
-"Django 1.3: :commit:`(patch) <1515eb46daa0897ba5ad5f0a2db8969255f1b343>`"
-msgstr ""
-
-msgid ""
-"Django 1.4: :commit:`(patch) <b2ae0a63aeec741f1e51bac9a95a27fd635f9652>`"
-msgstr ""
-
-msgid "February 19, 2013 - No CVE"
-msgstr "19 février 2013 - Pas de CVE"
-
-msgid ""
-"Additional hardening of ``Host`` header handling. `Full description <https://"
-"www.djangoproject.com/weblog/2013/feb/19/security/>`__"
-msgstr ""
-
-msgid "Django 1.3 :commit:`(patch) <27cd872e6e36a81d0bb6f5b8765a1705fecfc253>`"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <9936fdb11d0bbf0bd242f259bfb97bbf849d16f8>`"
-msgstr ""
-
-msgid "February 19, 2013 - :cve:`2013-1664` / :cve:`2013-1665`"
-msgstr ""
-
-msgid ""
-"Entity-based attacks against Python XML libraries. `Full description "
-"<https://www.djangoproject.com/weblog/2013/feb/19/security/>`__"
-msgstr ""
-
-msgid "Django 1.3 :commit:`(patch) <d19a27066b2247102e65412aa66917aff0091112>`"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <1c60d07ba23e0350351c278ad28d0bd5aa410b40>`"
-msgstr ""
-
-msgid "February 19, 2013 - :cve:`2013-0305`"
-msgstr ""
-
-msgid ""
-"Information leakage via admin history log. `Full description <https://www."
-"djangoproject.com/weblog/2013/feb/19/security/>`__"
-msgstr ""
-
-msgid "Django 1.3 :commit:`(patch) <d3a45e10c8ac8268899999129daa27652ec0da35>`"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <0e7861aec73702f7933ce2a93056f7983939f0d6>`"
-msgstr ""
-
-msgid "February 19, 2013 - :cve:`2013-0306`"
-msgstr ""
-
-msgid ""
-"Denial-of-service via formset ``max_num`` bypass. `Full description <https://"
-"www.djangoproject.com/weblog/2013/feb/19/security/>`__"
-msgstr ""
-
-msgid "Django 1.3 :commit:`(patch) <d7094bbce8cb838f3b40f504f198c098ff1cf727>`"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <0cc350a896f70ace18280410eb616a9197d862b0>`"
-msgstr ""
-
-msgid "August 13, 2013 - :cve:`2013-4249`"
-msgstr ""
-
-msgid ""
-"XSS via admin trusting ``URLField`` values. `Full description <https://www."
-"djangoproject.com/weblog/2013/aug/13/security-releases-issued/>`__"
-msgstr ""
-
-msgid "Django 1.5 :commit:`(patch) <90363e388c61874add3f3557ee654a996ec75d78>`"
-msgstr ""
-
-msgid "August 13, 2013 - :cve:`2013-6044`"
-msgstr ""
-
-msgid ""
-"Possible XSS via unvalidated URL redirect schemes. `Full description "
-"<https://www.djangoproject.com/weblog/2013/aug/13/security-releases-issued/"
-">`__"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <ec67af0bd609c412b76eaa4cc89968a2a8e5ad6a>`"
-msgstr ""
-
-msgid "Django 1.5 :commit:`(patch) <1a274ccd6bc1afbdac80344c9b6e5810c1162b5f>`"
-msgstr ""
-
-msgid "September 10, 2013 - :cve:`2013-4315`"
-msgstr ""
-
-msgid ""
-"Directory-traversal via ``ssi`` template tag. `Full description <https://www."
-"djangoproject.com/weblog/2013/sep/10/security-releases-issued/>`__"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <87d2750b39f6f2d54b7047225521a44dcd37e896>`"
-msgstr ""
-
-msgid "Django 1.5 :commit:`(patch) <988b61c550d798f9a66d17ee0511fb7a9a7f33ca>`"
-msgstr ""
-
-msgid "September 14, 2013 - :cve:`2013-1443`"
-msgstr ""
-
-msgid ""
-"Denial-of-service via large passwords. `Full description <https://www."
-"djangoproject.com/weblog/2013/sep/15/security/>`__"
-msgstr ""
-
-msgid ""
-"Django 1.4 :commit:`(patch <3f3d887a6844ec2db743fee64c9e53e04d39a368>` and :"
-"commit:`Python compatibility fix) <6903d1690a92aa040adfb0c8eb37cf62e4206714>`"
-msgstr ""
-
-msgid "Django 1.5 :commit:`(patch) <22b74fa09d7ccbc8c52270d648a0da7f3f0fa2bc>`"
-msgstr ""
-
-msgid "April 21, 2014 - :cve:`2014-0472`"
-msgstr ""
-
-msgid ""
-"Unexpected code execution using ``reverse()``. `Full description <https://"
-"www.djangoproject.com/weblog/2014/apr/21/security/>`__"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <c1a8c420fe4b27fb2caf5e46d23b5712fc0ac535>`"
-msgstr ""
-
-msgid "Django 1.5 :commit:`(patch) <2a5bcb69f42b84464b24b5c835dca6467b6aa7f1>`"
-msgstr ""
-
-msgid "Django 1.6 :commit:`(patch) <4352a50871e239ebcdf64eee6f0b88e714015c1b>`"
-msgstr ""
-
-msgid "Django 1.7 :commit:`(patch) <546740544d7f69254a67b06a3fc7fa0c43512958>`"
-msgstr ""
-
-msgid "April 21, 2014 - :cve:`2014-0473`"
-msgstr ""
-
-msgid ""
-"Caching of anonymous pages could reveal CSRF token. `Full description "
-"<https://www.djangoproject.com/weblog/2014/apr/21/security/>`__"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <1170f285ddd6a94a65f911a27788ba49ca08c0b0>`"
-msgstr ""
-
-msgid "Django 1.5 :commit:`(patch) <6872f42757d7ef6a97e0b6ec5db4d2615d8a2bd8>`"
-msgstr ""
-
-msgid "Django 1.6 :commit:`(patch) <d63e20942f3024f24cb8cd85a49461ba8a9b6736>`"
-msgstr ""
-
-msgid "Django 1.7 :commit:`(patch) <380545bf85cbf17fc698d136815b7691f8d023ca>`"
-msgstr ""
-
-msgid "April 21, 2014 - :cve:`2014-0474`"
-msgstr ""
-
-msgid ""
-"MySQL typecasting causes unexpected query results. `Full description "
-"<https://www.djangoproject.com/weblog/2014/apr/21/security/>`__"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <aa80f498de6d687e613860933ac58433ab71ea4b>`"
-msgstr ""
-
-msgid "Django 1.5 :commit:`(patch) <985434fb1d6bf2335bf96c6ebf91c3674f1f399f>`"
-msgstr ""
-
-msgid "Django 1.6 :commit:`(patch) <5f0829a27e85d89ad8c433f5c6a7a7d17c9e9292>`"
-msgstr ""
-
-msgid "Django 1.7 :commit:`(patch) <34526c2f56b863c2103655a0893ac801667e86ea>`"
-msgstr ""
-
-msgid "May 18, 2014 - :cve:`2014-1418`"
-msgstr ""
-
-msgid ""
-"Caches may be allowed to store and serve private data. `Full description "
-"<https://www.djangoproject.com/weblog/2014/may/14/security-releases-issued/"
-">`__"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <28e23306aa53bbbb8fb87db85f99d970b051026c>`"
-msgstr ""
-
-msgid "Django 1.5 :commit:`(patch) <4001ec8698f577b973c5a540801d8a0bbea1205b>`"
-msgstr ""
-
-msgid "Django 1.6 :commit:`(patch) <1abcf3a808b35abae5d425ed4d44cb6e886dc769>`"
-msgstr ""
-
-msgid "Django 1.7 :commit:`(patch) <7fef18ba9e5a8b47bc24b5bb259c8bf3d3879f2a>`"
-msgstr ""
-
-msgid "May 18, 2014 - :cve:`2014-3730`"
-msgstr ""
-
-msgid ""
-"Malformed URLs from user input incorrectly validated. `Full description "
-"<https://www.djangoproject.com/weblog/2014/may/14/security-releases-issued/"
-">`__"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <7feb54bbae3f637ab3c4dd4831d4385964f574df>`"
-msgstr ""
-
-msgid "Django 1.5 :commit:`(patch) <ad32c218850ad40972dcef57beb460f8c979dd6d>`"
-msgstr ""
-
-msgid "Django 1.6 :commit:`(patch) <601107524523bca02376a0ddc1a06c6fdb8f22f3>`"
-msgstr ""
-
-msgid "Django 1.7 :commit:`(patch) <e7b0cace455c2da24492660636bfd48c45a19cdf>`"
-msgstr ""
-
-msgid "August 20, 2014 - :cve:`2014-0480`"
-msgstr ""
-
-msgid ""
-"``reverse()`` can generate URLs pointing to other hosts. `Full description "
-"<https://www.djangoproject.com/weblog/2014/aug/20/security/>`__"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <c2fe73133b62a1d9e8f7a6b43966570b14618d7e>`"
-msgstr ""
-
-msgid "Django 1.5 :commit:`(patch) <45ac9d4fb087d21902469fc22643f5201d41a0cd>`"
-msgstr ""
-
-msgid "Django 1.6 :commit:`(patch) <da051da8df5e69944745072611351d4cfc6435d5>`"
-msgstr ""
-
-msgid "Django 1.7 :commit:`(patch) <bf650a2ee78c6d1f4544a875dcc777cf27fe93e9>`"
-msgstr ""
-
-msgid "August 20, 2014 - :cve:`2014-0481`"
-msgstr ""
-
-msgid ""
-"File upload denial of service. `Full description <https://www.djangoproject."
-"com/weblog/2014/aug/20/security/>`__"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <30042d475bf084c6723c6217a21598d9247a9c41>`"
-msgstr ""
-
-msgid "Django 1.5 :commit:`(patch) <26cd48e166ac4d84317c8ee6d63ac52a87e8da99>`"
-msgstr ""
-
-msgid "Django 1.6 :commit:`(patch) <dd0c3f4ee1a30c1a1e6055061c6ba6e58c6b54d1>`"
-msgstr ""
-
-msgid "Django 1.7 :commit:`(patch) <3123f8452cf49071be9110e277eea60ba0032216>`"
-msgstr ""
-
-msgid "August 20, 2014 - :cve:`2014-0482`"
-msgstr ""
-
-msgid ""
-"``RemoteUserMiddleware`` session hijacking. `Full description <https://www."
-"djangoproject.com/weblog/2014/aug/20/security/>`__"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <c9e3b9949cd55f090591fbdc4a114fcb8368b6d9>`"
-msgstr ""
-
-msgid "Django 1.5 :commit:`(patch) <dd68f319b365f6cb38c5a6c106faf4f6142d7d88>`"
-msgstr ""
-
-msgid "Django 1.6 :commit:`(patch) <0268b855f9eab3377f2821164ef3e66037789e09>`"
-msgstr ""
-
-msgid "Django 1.7 :commit:`(patch) <1a45d059c70385fcd6f4a3955f3b4e4cc96d0150>`"
-msgstr ""
-
-msgid "August 20, 2014 - :cve:`2014-0483`"
-msgstr ""
-
-msgid ""
-"Data leakage via querystring manipulation in admin. `Full description "
-"<https://www.djangoproject.com/weblog/2014/aug/20/security/>`__"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <027bd348642007617518379f8b02546abacaa6e0>`"
-msgstr ""
-
-msgid "Django 1.5 :commit:`(patch) <2a446c896e7c814661fb9c4f212b071b2a7fa446>`"
-msgstr ""
-
-msgid "Django 1.6 :commit:`(patch) <f7c494f2506250b8cb5923714360a3642ed63e0f>`"
-msgstr ""
-
-msgid "Django 1.7 :commit:`(patch) <2b31342cdf14fc20e07c43d258f1e7334ad664a6>`"
-msgstr ""
-
-msgid "January 13, 2015 - :cve:`2015-0219`"
-msgstr ""
-
-msgid ""
-"WSGI header spoofing via underscore/dash conflation. `Full description "
-"<https://www.djangoproject.com/weblog/2015/jan/13/security/>`__"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <4f6fffc1dc429f1ad428ecf8e6620739e8837450>`"
-msgstr ""
-
-msgid "Django 1.6 :commit:`(patch) <d7597b31d5c03106eeba4be14a33b32a5e25f4ee>`"
-msgstr ""
-
-msgid "Django 1.7 :commit:`(patch) <41b4bc73ee0da7b2e09f4af47fc1fd21144c710f>`"
-msgstr ""
-
-msgid "January 13, 2015 - :cve:`2015-0220`"
-msgstr ""
-
-msgid ""
-"Mitigated possible XSS attack via user-supplied redirect URLs. `Full "
-"description <https://www.djangoproject.com/weblog/2015/jan/13/security/>`__"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <4c241f1b710da6419d9dca160e80b23b82db7758>`"
-msgstr ""
-
-msgid "Django 1.6 :commit:`(patch) <72e0b033662faa11bb7f516f18a132728aa0ae28>`"
-msgstr ""
-
-msgid "Django 1.7 :commit:`(patch) <de67dedc771ad2edec15c1d00c083a1a084e1e89>`"
-msgstr ""
-
-msgid "January 13, 2015 - :cve:`2015-0221`"
-msgstr ""
-
-msgid ""
-"Denial-of-service attack against ``django.views.static.serve()``. `Full "
-"description <https://www.djangoproject.com/weblog/2015/jan/13/security/>`__"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <d020da6646c5142bc092247d218a3d1ce3e993f7>`"
-msgstr ""
-
-msgid "Django 1.6 :commit:`(patch) <553779c4055e8742cc832ed525b9ee34b174934f>`"
-msgstr ""
-
-msgid "Django 1.7 :commit:`(patch) <818e59a3f0fbadf6c447754d202d88df025f8f2a>`"
-msgstr ""
-
-msgid "January 13, 2015 - :cve:`2015-0222`"
-msgstr ""
-
-msgid ""
-"Database denial-of-service with ``ModelMultipleChoiceField``. `Full "
-"description <https://www.djangoproject.com/weblog/2015/jan/13/security/>`__"
-msgstr ""
-
-msgid "Django 1.6 :commit:`(patch) <d7a06ee7e571b6dad07c0f5b519b1db02e2a476c>`"
-msgstr ""
-
-msgid "Django 1.7 :commit:`(patch) <bcfb47780ce7caecb409a9e9c1c314266e41d392>`"
-msgstr ""
-
-msgid "March 9, 2015 - :cve:`2015-2241`"
-msgstr ""
-
-msgid ""
-"XSS attack via properties in ``ModelAdmin.readonly_fields``. `Full "
-"description <https://www.djangoproject.com/weblog/2015/mar/09/security-"
+"Incorrect permissions on intermediate-level directories on Python 3.7+. "
+"`Full description <https://www.djangoproject.com/weblog/2020/sep/01/security-"
 "releases/>`__"
 msgstr ""
 
-msgid "Django 1.7 :commit:`(patch) <d16e4e1d6f95e6f46bff53cc4fd0ab398b8e5059>`"
+msgid "Django 3.1 :commit:`(patch) <934430d22aa5d90c2ba33495ff69a6a1d997d584>`"
 msgstr ""
 
-msgid "Django 1.8 :commit:`(patch) <2654e1b93923bac55f12b4e66c5e39b16695ace5>`"
+msgid "Django 3.0 :commit:`(patch) <08892bffd275c79ee1f8f67639eb170aaaf1181e>`"
 msgstr ""
 
-msgid "March 18, 2015 - :cve:`2015-2316`"
-msgstr "18 mars 2015 - :cve:`2015-2316`"
+msgid "Django 2.2 :commit:`(patch) <375657a71c889c588f723469bd868bd1d40c369f>`"
+msgstr ""
+
+msgid "June 3, 2020 - :cve:`2020-13596`"
+msgstr ""
 
 msgid ""
-"Denial-of-service possibility with ``strip_tags()``. `Full description "
-"<https://www.djangoproject.com/weblog/2015/mar/18/security-releases/>`__"
-msgstr ""
-"Possibilité de déni de service avec ``strip_tags()``. `Description complète "
-"<https://www.djangoproject.com/weblog/2015/mar/18/security-releases/>`__"
-
-msgid "Django 1.6 :commit:`(patch) <b6b3cb9899214a23ebb0f4ebf0e0b300b0ee524f>`"
+"Possible XSS via admin ``ForeignKeyRawIdWidget``. `Full description <https://"
+"www.djangoproject.com/weblog/2020/jun/03/security-releases/>`__"
 msgstr ""
 
-msgid "Django 1.7 :commit:`(patch) <e63363f8e075fa8d66326ad6a1cc3391cc95cd97>`"
+msgid "Django 3.0 :commit:`(patch) <1f2dd37f6fcefdd10ed44cb233b2e62b520afb38>`"
 msgstr ""
 
-msgid "Django 1.8 :commit:`(patch) <5447709a571cd5d95971f1d5d21d4a7edcf85bbd>`"
+msgid "Django 2.2 :commit:`(patch) <6d61860b22875f358fac83d903dc629897934815>`"
 msgstr ""
 
-msgid "March 18, 2015 - :cve:`2015-2317`"
-msgstr "18 mars 2015 - :cve:`2015-2317`"
+msgid "June 3, 2020 - :cve:`2020-13254`"
+msgstr ""
 
 msgid ""
-"Mitigated possible XSS attack via user-supplied redirect URLs. `Full "
-"description <https://www.djangoproject.com/weblog/2015/mar/18/security-"
+"Potential data leakage via malformed memcached keys. `Full description "
+"<https://www.djangoproject.com/weblog/2020/jun/03/security-releases/>`__"
+msgstr ""
+
+msgid "Django 3.0 :commit:`(patch) <84b2da5552e100ae3294f564f6c862fef8d0e693>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <07e59caa02831c4569bbebb9eb773bdd9cb4b206>`"
+msgstr ""
+
+msgid "March 4, 2020 - :cve:`2020-9402`"
+msgstr ""
+
+msgid ""
+"Potential SQL injection via ``tolerance`` parameter in GIS functions and "
+"aggregates on Oracle. `Full description <https://www.djangoproject.com/"
+"weblog/2020/mar/04/security-releases/>`__"
+msgstr ""
+
+msgid "Django 3.0 :commit:`(patch) <26a5cf834526e291db00385dd33d319b8271fc4c>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <fe886a3b58a93cfbe8864b485f93cb6d426cd1f2>`"
+msgstr ""
+
+msgid ""
+"Django 1.11 :commit:`(patch) <02d97f3c9a88adc890047996e5606180bd1c6166>`"
+msgstr ""
+
+msgid "February 3, 2020 - :cve:`2020-7471`"
+msgstr ""
+
+msgid ""
+"Potential SQL injection via ``StringAgg(delimiter)``. `Full description "
+"<https://www.djangoproject.com/weblog/2020/feb/03/security-releases/>`__"
+msgstr ""
+
+msgid "Django 3.0 :commit:`(patch) <505826b469b16ab36693360da9e11fd13213421b>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <c67a368c16e4680b324b4f385398d638db4d8147>`"
+msgstr ""
+
+msgid ""
+"Django 1.11 :commit:`(patch) <001b0634cd309e372edb6d7d95d083d02b8e37bd>`"
+msgstr ""
+
+msgid "December 18, 2019 - :cve:`2019-19844`"
+msgstr ""
+
+msgid ""
+"Potential account hijack via password reset form. `Full description <https://"
+"www.djangoproject.com/weblog/2019/dec/18/security-releases/>`__"
+msgstr ""
+
+msgid "Django 3.0 :commit:`(patch) <302a4ff1e8b1c798aab97673909c7a3dfda42c26>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <4d334bea06cac63dc1272abcec545b85136cca0e>`"
+msgstr ""
+
+msgid ""
+"Django 1.11 :commit:`(patch) <f4cff43bf921fcea6a29b726eb66767f67753fa2>`"
+msgstr ""
+
+msgid "December 2, 2019 - :cve:`2019-19118`"
+msgstr ""
+
+msgid ""
+"Privilege escalation in the Django admin. `Full description <https://www."
+"djangoproject.com/weblog/2019/dec/02/security-releases/>`__"
+msgstr ""
+
+msgid "Django 3.0 :commit:`(patch) <092cd66cf3c3e175acce698d6ca2012068d878fa>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <36f580a17f0b3cb087deadf3b65eea024f479c21>`"
+msgstr ""
+
+msgid "Django 2.1 :commit:`(patch) <103ebe2b5ff1b2614b85a52c239f471904d26244>`"
+msgstr ""
+
+msgid "August 1, 2019 - :cve:`2019-14235`"
+msgstr ""
+
+msgid ""
+"Potential memory exhaustion in ``django.utils.encoding.uri_to_iri()``. `Full "
+"description <https://www.djangoproject.com/weblog/2019/aug/01/security-"
 "releases/>`__"
 msgstr ""
-"Attaque XSS atténuée possible via des URL de redirection fournis par "
-"l'utilisateur. `Description complète <https://www.djangoproject.com/"
-"weblog/2015/mar/18/security-releases/>`__"
 
-msgid "Django 1.4 :commit:`(patch) <2342693b31f740a422abf7267c53b4e7bc487c1b>`"
+msgid "Django 2.2 :commit:`(patch) <cf694e6852b0da7799f8b53f1fb2f7d20cf17534>`"
 msgstr ""
 
-msgid "Django 1.6 :commit:`(patch) <5510f070711540aaa8d3707776cd77494e688ef9>`"
+msgid "Django 2.1 :commit:`(patch) <5d50a2e5fa36ad23ab532fc54cf4073de84b3306>`"
 msgstr ""
-
-msgid "Django 1.7 :commit:`(patch) <2a4113dbd532ce952308992633d802dc169a75f1>`"
-msgstr ""
-
-msgid "Django 1.8 :commit:`(patch) <770427c2896a078925abfca2317486b284d22f04>`"
-msgstr ""
-
-msgid "May 20, 2015 - :cve:`2015-3982`"
-msgstr "20 mai 2015 - :cve:`2015-3982`"
 
 msgid ""
-"Fixed session flushing in the cached_db backend. `Full description <https://"
-"www.djangoproject.com/weblog/2015/may/20/security-release/>`__"
+"Django 1.11 :commit:`(patch) <869b34e9b3be3a4cfcb3a145f218ffd3f5e3fd79>`"
 msgstr ""
 
-msgid "Django 1.8 :commit:`(patch) <31cb25adecba930bdeee4556709f5a1c42d88fd6>`"
+msgid "August 1, 2019 - :cve:`2019-14234`"
 msgstr ""
-
-msgid "July 8, 2015 - :cve:`2015-5143`"
-msgstr "8 juillet 2015 - :cve:`2015-5143`"
 
 msgid ""
-"Denial-of-service possibility by filling session store. `Full description "
-"<https://www.djangoproject.com/weblog/2015/jul/08/security-releases/>`__"
+"SQL injection possibility in key and index lookups for ``JSONField``/"
+"``HStoreField``. `Full description <https://www.djangoproject.com/"
+"weblog/2019/aug/01/security-releases/>`__"
 msgstr ""
 
-msgid "Django 1.8 :commit:`(patch) <66d12d1ababa8f062857ee5eb43276493720bf16>`"
+msgid "Django 2.2 :commit:`(patch) <4f5b58f5cd3c57fee9972ab074f8dc6895d8f387>`"
 msgstr ""
 
-msgid "Django 1.7 :commit:`(patch) <1828f4341ec53a8684112d24031b767eba557663>`"
+msgid "Django 2.1 :commit:`(patch) <f74b3ae3628c26e1b4f8db3d13a91d52a833a975>`"
 msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <2e47f3e401c29bc2ba5ab794d483cb0820855fb9>`"
-msgstr ""
-
-msgid "July 8, 2015 - :cve:`2015-5144`"
-msgstr "8 juillet 2015 - :cve:`2015-5144`"
 
 msgid ""
-"Header injection possibility since validators accept newlines in input. "
-"`Full description <https://www.djangoproject.com/weblog/2015/jul/08/security-"
-"releases/>`__"
-msgstr ""
-"Possibilité d'injection dans les en-têtes depuis que les validateurs "
-"acceptent des retours à ligne en entrée. `Description complète <https://www."
-"djangoproject.com/weblog/2015/jul/08/security-releases/>`__"
-
-msgid "Django 1.8 :commit:`(patch) <574dd5e0b0fbb877ae5827b1603d298edc9bb2a0>`"
+"Django 1.11 :commit:`(patch) <ed682a24fca774818542757651bfba576c3fc3ef>`"
 msgstr ""
 
-msgid "Django 1.7 :commit:`(patch) <ae49b4d994656bc037513dcd064cb9ce5bb85649>`"
+msgid "August 1, 2019 - :cve:`2019-14233`"
 msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <1ba1cdce7d58e6740fe51955d945b56ae51d072a>`"
-msgstr ""
-
-msgid "July 8, 2015 - :cve:`2015-5145`"
-msgstr "8 juillet 2015 - :cve:`2015-5145`"
 
 msgid ""
-"Denial-of-service possibility in URL validation. `Full description <https://"
-"www.djangoproject.com/weblog/2015/jul/08/security-releases/>`__"
+"Denial-of-service possibility in ``strip_tags()``. `Full description "
+"<https://www.djangoproject.com/weblog/2019/aug/01/security-releases/>`__"
 msgstr ""
 
-msgid "Django 1.8 :commit:`(patch) <8f9a4d3a2bc42f14bb437defd30c7315adbff22c>`"
+msgid "Django 2.2 :commit:`(patch) <e34f3c0e9ee5fc9022428fe91640638bafd4cda7>`"
 msgstr ""
 
-msgid "August 18, 2015 - :cve:`2015-5963` / :cve:`2015-5964`"
-msgstr "18 août 2015 - :cve:`2015-5963` / :cve:`2015-5964`"
+msgid "Django 2.1 :commit:`(patch) <5ff8e791148bd451180124d76a55cb2b2b9556eb>`"
+msgstr ""
 
 msgid ""
-"Denial-of-service possibility in ``logout()`` view by filling session store. "
-"`Full description <https://www.djangoproject.com/weblog/2015/aug/18/security-"
+"Django 1.11 :commit:`(patch) <52479acce792ad80bb0f915f20b835f919993c72>`"
+msgstr ""
+
+msgid "August 1, 2019 - :cve:`2019-14232`"
+msgstr ""
+
+msgid ""
+"Denial-of-service possibility in ``django.utils.text.Truncator``. `Full "
+"description <https://www.djangoproject.com/weblog/2019/aug/01/security-"
 "releases/>`__"
 msgstr ""
 
-msgid "Django 1.8 :commit:`(patch) <2eb86b01d7b59be06076f6179a454d0fd0afaff6>`"
+msgid "Django 2.2 :commit:`(patch) <c3289717c6f21a8cf23daff1c78c0c014b94041f>`"
 msgstr ""
 
-msgid "Django 1.7 :commit:`(patch) <2f5485346ee6f84b4e52068c04e043092daf55f7>`"
-msgstr ""
-
-msgid "Django 1.4 :commit:`(patch) <575f59f9bc7c59a5e41a081d1f5f55fc859c5012>`"
-msgstr ""
-
-msgid "November 24, 2015 - :cve:`2015-8213`"
-msgstr "24 novembre 2015 - :cve:`2015-8213`"
-
-msgid ""
-"Settings leak possibility in ``date`` template filter. `Full description "
-"<https://www.djangoproject.com/weblog/2015/nov/24/security-releases-issued/"
-">`__"
-msgstr ""
-
-msgid "Django 1.8 :commit:`(patch) <9f83fc2f66f5a0bac7c291aec55df66050bb6991>`"
-msgstr ""
-
-msgid "Django 1.7 :commit:`(patch) <8a01c6b53169ee079cb21ac5919fdafcc8c5e172>`"
-msgstr ""
-
-msgid "February 1, 2016 - :cve:`2016-2048`"
-msgstr "1 février 2016 - :cve:`2016-2048`"
-
-msgid ""
-"User with \"change\" but not \"add\" permission can create objects for "
-"``ModelAdmin``’s with ``save_as=True``. `Full description <https://www."
-"djangoproject.com/weblog/2016/feb/01/releases-192-and-189/>`__"
-msgstr ""
-
-msgid "Django 1.9 :commit:`(patch) <adbca5e4db42542575734b8e5d26961c8ada7265>`"
-msgstr ""
-
-msgid "March 1, 2016 - :cve:`2016-2512`"
-msgstr "1 mars 2016 - :cve:`2016-2512`"
-
-msgid ""
-"Malicious redirect and possible XSS attack via user-supplied redirect URLs "
-"containing basic auth. `Full description <https://www.djangoproject.com/"
-"weblog/2016/mar/01/security-releases/>`__"
-msgstr ""
-"Redirection malicieuse et attaque XSS possible via des URL de redirection "
-"fournis par l'utilisateur et contenant de l'authentification basique. "
-"`Description complète <https://www.djangoproject.com/weblog/2016/mar/01/"
-"security-releases/>`__"
-
-msgid "Django 1.9 :commit:`(patch) <fc6d147a63f89795dbcdecb0559256470fff4380>`"
-msgstr ""
-
-msgid "Django 1.8 :commit:`(patch) <382ab137312961ad62feb8109d70a5a581fe8350>`"
-msgstr ""
-
-msgid "March 1, 2016 - :cve:`2016-2513`"
+msgid "Django 2.1 :commit:`(patch) <c23723a1551340cc7d3126f04fcfd178fa224193>`"
 msgstr ""
 
 msgid ""
-"User enumeration through timing difference on password hasher work factor "
-"upgrade. `Full description <https://www.djangoproject.com/weblog/2016/mar/01/"
-"security-releases/>`__"
+"Django 1.11 :commit:`(patch) <42a66e969023c00536256469f0e8b8a099ef109d>`"
 msgstr ""
 
-msgid "Django 1.9 :commit:`(patch) <af7d09b0c5c6ab68e629fd9baf736f9dd203b18e>`"
+msgid "July 1, 2019 - :cve:`2019-12781`"
 msgstr ""
-
-msgid "Django 1.8 :commit:`(patch) <f4e6e02f7713a6924d16540be279909ff4091eb6>`"
-msgstr ""
-
-msgid "July 18, 2016 - :cve:`2016-6186`"
-msgstr "18 juillet 2016 - :cve:`2016-6186`"
 
 msgid ""
-"XSS in admin's add/change related popup. `Full description <https://www."
-"djangoproject.com/weblog/2016/jul/18/security-releases/>`__"
-msgstr ""
-"XSS dans les fenêtres d'ajout/modification d'éléments liés. `Description "
-"complète <https://www.djangoproject.com/weblog/2016/jul/18/security-releases/"
-">`__"
-
-msgid "Django 1.9 :commit:`(patch) <d03bf6fe4e9bf5b07de62c1a271c4b41a7d3d158>`"
-msgstr ""
-"Django 1.9 :commit:`(correctif) <d03bf6fe4e9bf5b07de62c1a271c4b41a7d3d158>`"
-
-msgid "Django 1.8 :commit:`(patch) <f68e5a99164867ab0e071a936470958ed867479d>`"
-msgstr ""
-"Django 1.8 :commit:`(correctif) <f68e5a99164867ab0e071a936470958ed867479d>`"
-
-msgid "September 26, 2016 - :cve:`2016-7401`"
-msgstr "26 septembre 2016 - :cve:`2016-7401`"
-
-msgid ""
-"CSRF protection bypass on a site with Google Analytics. `Full description "
-"<https://www.djangoproject.com/weblog/2016/sep/26/security-releases/>`__"
-msgstr ""
-"Contournement de protection CSRF pour un site avec Google Analytics. "
-"`Description complète <https://www.djangoproject.com/weblog/2016/sep/26/"
-"security-releases/>`__"
-
-msgid "Django 1.9 :commit:`(patch) <d1bc980db1c0fffd6d60677e62f70beadb9fe64a>`"
-msgstr ""
-"Django 1.9 :commit:`(correctif) <d1bc980db1c0fffd6d60677e62f70beadb9fe64a>`"
-
-msgid "Django 1.8 :commit:`(patch) <6118ab7d0676f0d622278e5be215f14fb5410b6a>`"
-msgstr ""
-"Django 1.8 :commit:`(correctif) <6118ab7d0676f0d622278e5be215f14fb5410b6a>`"
-
-msgid "November 1, 2016 - :cve:`2016-9013`"
-msgstr "1er novembre 2016 - :cve:`2016-9013`"
-
-msgid ""
-"User with hardcoded password created when running tests on Oracle. `Full "
-"description <https://www.djangoproject.com/weblog/2016/nov/01/security-"
+"Incorrect HTTP detection with reverse-proxy connecting via HTTPS. `Full "
+"description <https://www.djangoproject.com/weblog/2019/jul/01/security-"
 "releases/>`__"
 msgstr ""
-"Utilisateur avec mot de passe créé en dur lors du lancement des tests avec "
-"Oracle. `Description complète <https://www.djangoproject.com/weblog/2016/"
-"nov/01/security-releases/>`__"
+
+msgid "Django 2.2 :commit:`(patch) <77706a3e4766da5d5fb75c4db22a0a59a28e6cd6>`"
+msgstr ""
+
+msgid "Django 2.1 :commit:`(patch) <1e40f427bb8d0fb37cc9f830096a97c36c97af6f>`"
+msgstr ""
 
 msgid ""
-"Django 1.10 :commit:`(patch) <34e10720d81b8d407aa14d763b6a7fe8f13b4f2e>`"
+"Django 1.11 :commit:`(patch) <32124fc41e75074141b05f10fc55a4f01ff7f050>`"
 msgstr ""
-"Django 1.10 :commit:`(correctif) <34e10720d81b8d407aa14d763b6a7fe8f13b4f2e>`"
 
-msgid "Django 1.9 :commit:`(patch) <4844d86c7728c1a5a3bbce4ad336a8d32304072b>`"
+msgid "June 3, 2019 - :cve:`2019-12308`"
 msgstr ""
-"Django 1.9 :commit:`(correctif) <4844d86c7728c1a5a3bbce4ad336a8d32304072b>`"
-
-msgid "Django 1.8 :commit:`(patch) <70f99952965a430daf69eeb9947079aae535d2d0>`"
-msgstr ""
-"Django 1.8 :commit:`(correctif) <70f99952965a430daf69eeb9947079aae535d2d0>`"
-
-msgid "November 1, 2016 - :cve:`2016-9014`"
-msgstr "1er novembre 2016 - :cve:`2016-9014`"
 
 msgid ""
-"DNS rebinding vulnerability when ``DEBUG=True``. `Full description <https://"
-"www.djangoproject.com/weblog/2016/nov/01/security-releases/>`__"
-msgstr ""
-"Vulnérabilité de re-liaison DNS avec ``DEBUG=True``. `Description complète "
-"<https://www.djangoproject.com/weblog/2016/nov/01/security-releases/>`__"
-
-msgid ""
-"Django 1.10 :commit:`(patch) <884e113838e5a72b4b0ec9e5e87aa480f6aa4472>`"
-msgstr ""
-"Django 1.10 :commit:`(correctif) <884e113838e5a72b4b0ec9e5e87aa480f6aa4472>`"
-
-msgid "Django 1.9 :commit:`(patch) <45acd6d836895a4c36575f48b3fb36a3dae98d19>`"
-msgstr ""
-"Django 1.9 :commit:`(correctif) <45acd6d836895a4c36575f48b3fb36a3dae98d19>`"
-
-msgid "Django 1.8 :commit:`(patch) <c401ae9a7dfb1a94a8a61927ed541d6f93089587>`"
-msgstr ""
-"Django 1.8 :commit:`(correctif) <c401ae9a7dfb1a94a8a61927ed541d6f93089587>`"
-
-msgid "April 4, 2017 - :cve:`2017-7233`"
-msgstr "4 avril 2017 - :cve:`2017-7233`"
-
-msgid ""
-"Open redirect and possible XSS attack via user-supplied numeric redirect "
-"URLs. `Full description <https://www.djangoproject.com/weblog/2017/apr/04/"
-"security-releases/>`__"
-msgstr ""
-"Redirection ouverte et attaque XSS possible par des URL de redirection "
-"numériques fournis par des utilisateurs. `Description complète <https://www."
-"djangoproject.com/weblog/2017/apr/04/security-releases/>`__"
-
-msgid ""
-"Django 1.10 :commit:`(patch) <f824655bc2c50b19d2f202d7640785caabc82787>`"
-msgstr ""
-"Django 1.10 :commit:`(correctif) <f824655bc2c50b19d2f202d7640785caabc82787>`"
-
-msgid "Django 1.9 :commit:`(patch) <254326cb3682389f55f886804d2c43f7b9f23e4f>`"
-msgstr ""
-"Django 1.9 :commit:`(correctif) <254326cb3682389f55f886804d2c43f7b9f23e4f>`"
-
-msgid "Django 1.8 :commit:`(patch) <8339277518c7d8ec280070a780915304654e3b66>`"
-msgstr ""
-"Django 1.8 :commit:`(correctif) <8339277518c7d8ec280070a780915304654e3b66>`"
-
-msgid "April 4, 2017 - :cve:`2017-7234`"
-msgstr "4 avril 2017 - :cve:`2017-7234`"
-
-msgid ""
-"Open redirect vulnerability in ``django.views.static.serve()``. `Full "
-"description <https://www.djangoproject.com/weblog/2017/apr/04/security-"
+"XSS via \"Current URL\" link generated by ``AdminURLFieldWidget``. `Full "
+"description <https://www.djangoproject.com/weblog/2019/jun/03/security-"
 "releases/>`__"
 msgstr ""
-"Vulnérabilité de redirection ouverte dans ``django.views.static.serve()``. "
-"`Description complète <https://www.djangoproject.com/weblog/2017/apr/04/"
-"security-releases/>`__"
+
+msgid "Django 2.2 :commit:`(patch) <afddabf8428ddc89a332f7a78d0d21eaf2b5a673>`"
+msgstr ""
+
+msgid "Django 2.1 :commit:`(patch) <09186a13d975de6d049f8b3e05484f66b01ece62>`"
+msgstr ""
 
 msgid ""
-"Django 1.10 :commit:`(patch) <2a9f6ef71b8e23fd267ee2be1be26dde8ab67037>`"
+"Django 1.11 :commit:`(patch) <c238701859a52d584f349cce15d56c8e8137c52b>`"
 msgstr ""
-"Django 1.10 :commit:`(correctif) <2a9f6ef71b8e23fd267ee2be1be26dde8ab67037>`"
 
-msgid "Django 1.9 :commit:`(patch) <5f1ffb07afc1e59729ce2b283124116d6c0659e4>`"
+msgid "June 3, 2019 - :cve:`2019-11358`"
 msgstr ""
-"Django 1.9 :commit:`(correctif) <5f1ffb07afc1e59729ce2b283124116d6c0659e4>`"
-
-msgid "Django 1.8 :commit:`(patch) <4a6b945dffe8d10e7cec107d93e6efaebfbded29>`"
-msgstr ""
-"Django 1.8 :commit:`(correctif) <4a6b945dffe8d10e7cec107d93e6efaebfbded29>`"
-
-msgid "September 5, 2017 - :cve:`2017-12794`"
-msgstr "5 septembre 2017 - :cve:`2017-12794`"
 
 msgid ""
-"Possible XSS in traceback section of technical 500 debug page. `Full "
-"description <https://www.djangoproject.com/weblog/2017/sep/05/security-"
-"releases/>`__"
+"Prototype pollution in bundled jQuery. `Full description <https://www."
+"djangoproject.com/weblog/2019/jun/03/security-releases/>`__"
 msgstr ""
-"Attaque XSS possible dans la section « traceback » de la page de débogage "
-"technique 500. `Description complète <https://www.djangoproject.com/"
-"weblog/2017/sep/05/security-releases/>`__"
 
-msgid ""
-"Django 1.11 :commit:`(patch) <e35a0c56086924f331e9422daa266e907a4784cc>`"
+msgid "Django 2.2 :commit:`(patch) <baaf187a4e354bf3976c51e2c83a0d2f8ee6e6ad>`"
 msgstr ""
-"Django 1.11 :commit:`(correctif) <e35a0c56086924f331e9422daa266e907a4784cc>`"
 
-msgid ""
-"Django 1.10 :commit:`(patch) <58e08e80e362db79eb0fd775dc81faad90dca47a>`"
+msgid "Django 2.1 :commit:`(patch) <95649bc08547a878cebfa1d019edec8cb1b80829>`"
 msgstr ""
-"Django 1.10 :commit:`(correctif) <58e08e80e362db79eb0fd775dc81faad90dca47a>`"
-
-msgid "February 1, 2018 - :cve:`2018-6188`"
-msgstr "1er février 2018 - :cve:`2018-6188`"
-
-msgid ""
-"Information leakage in ``AuthenticationForm``. `Full description <https://"
-"www.djangoproject.com/weblog/2018/feb/01/security-releases/>`__"
-msgstr ""
-"Fuite d'informations dans le formulaire ``AuthenticationForm``. `Description "
-"complète <https://www.djangoproject.com/weblog/2018/feb/01/security-releases/"
-">`__"
-
-msgid "Django 2.0 :commit:`(patch) <c37bb28677295f6edda61d8ac461014ef0d3aeb2>`"
-msgstr ""
-"Django 2.0 :commit:`(correctif) <c37bb28677295f6edda61d8ac461014ef0d3aeb2>`"
-
-msgid ""
-"Django 1.11 :commit:`(patch) <57b95fedad5e0b83fc9c81466b7d1751c6427aae>`"
-msgstr ""
-"Django 1.11 :commit:`(correctif) <57b95fedad5e0b83fc9c81466b7d1751c6427aae>`"
-
-msgid "March 6, 2018 - :cve:`2018-7536`"
-msgstr "6 mars 2018 - :cve:`2018-7536`"
-
-msgid ""
-"Denial-of-service possibility in ``urlize`` and ``urlizetrunc`` template "
-"filters. `Full description <https://www.djangoproject.com/weblog/2018/mar/06/"
-"security-releases/>`__"
-msgstr ""
-"Possibilité de déni de service dans les filtres de gabarit ``urlize`` et "
-"``urlizetrunc``. `Description complète <https://www.djangoproject.com/"
-"weblog/2018/mar/06/security-releases/>`__"
-
-msgid "Django 2.0 :commit:`(patch) <e157315da3ae7005fa0683ffc9751dbeca7306c8>`"
-msgstr ""
-"Django 2.0 :commit:`(correctif) <e157315da3ae7005fa0683ffc9751dbeca7306c8>`"
-
-msgid ""
-"Django 1.11 :commit:`(patch) <abf89d729f210c692a50e0ad3f75fb6bec6fae16>`"
-msgstr ""
-"Django 1.11 :commit:`(correctif) <abf89d729f210c692a50e0ad3f75fb6bec6fae16>`"
-
-msgid ""
-"Django 1.8  :commit:`(patch) <1ca63a66ef3163149ad822701273e8a1844192c2>`"
-msgstr ""
-"Django 1.8  :commit:`(correctif) <1ca63a66ef3163149ad822701273e8a1844192c2>`"
-
-msgid "March 6, 2018 - :cve:`2018-7537`"
-msgstr "6 mars 2018 - :cve:`2018-7537`"
-
-msgid ""
-"Denial-of-service possibility in ``truncatechars_html`` and "
-"``truncatewords_html`` template filters. `Full description <https://www."
-"djangoproject.com/weblog/2018/mar/06/security-releases/>`__"
-msgstr ""
-"Possibilité de déni de service dans les filtres de gabarit "
-"``truncatechars_html`` et ``truncatewords_html``. `Description complète "
-"<https://www.djangoproject.com/weblog/2018/mar/06/security-releases/>`__"
-
-msgid "Django 2.0 :commit:`(patch) <94c5da1d17a6b0d378866c66b605102c19f7988c>`"
-msgstr ""
-"Django 2.0 :commit:`(correctif) <94c5da1d17a6b0d378866c66b605102c19f7988c>`"
-
-msgid ""
-"Django 1.11 :commit:`(patch) <a91436360b79a6ff995c3e5018bcc666dfaf1539>`"
-msgstr ""
-"Django 1.11 :commit:`(correctif) <a91436360b79a6ff995c3e5018bcc666dfaf1539>`"
-
-msgid ""
-"Django 1.8  :commit:`(patch) <d17974a287a6ea2e361daff88fcc004cbd6835fa>`"
-msgstr ""
-"Django 1.8  :commit:`(correctif) <d17974a287a6ea2e361daff88fcc004cbd6835fa>`"
-
-msgid "August 1, 2018 - :cve:`2018-14574`"
-msgstr "1er août 2018 - :cve:`2018-14574`"
-
-msgid ""
-"Open redirect possibility in ``CommonMiddleware``. `Full description "
-"<https://www.djangoproject.com/weblog/2018/aug/01/security-releases/>`__"
-msgstr ""
-"Possibilité de redirection ouverte dans ``CommonMiddleware``. `Description "
-"complète <https://www.djangoproject.com/weblog/2018/aug/01/security-releases/"
-">`__"
-
-msgid "Django 2.1 :commit:`(patch) <c4e5ff7fdb5fce447675e90291fd33fddd052b3c>`"
-msgstr ""
-"Django 2.1 :commit:`(correctif) <c4e5ff7fdb5fce447675e90291fd33fddd052b3c>`"
-
-msgid "Django 2.0 :commit:`(patch) <6fffc3c6d420e44f4029d5643f38d00a39b08525>`"
-msgstr ""
-"Django 2.0 :commit:`(correctif) <6fffc3c6d420e44f4029d5643f38d00a39b08525>`"
-
-msgid ""
-"Django 1.11 :commit:`(patch) <d6eaee092709aad477a9894598496c6deec532ff>`"
-msgstr ""
-"Django 1.11 :commit:`(correctif) <d6eaee092709aad477a9894598496c6deec532ff>`"
-
-msgid "October 1, 2018 - :cve:`2018-16984`"
-msgstr "1er octobre 2018 - :cve:`2018-16984`"
-
-msgid ""
-"Password hash disclosure to \"view only\" admin users. `Full description "
-"<https://www.djangoproject.com/weblog/2018/oct/01/security-release/>`__"
-msgstr ""
-"Révélation de l'empreinte de mots de passe pour les utilisateurs du site "
-"d'administration en « lecture seule ». `Description complète <https://www."
-"djangoproject.com/weblog/2018/oct/01/security-release/>`__"
-
-msgid "Django 2.1 :commit:`(patch) <c4bd5b597e0aa2432e4c867b86650f18af117851>`"
-msgstr ""
-"Django 2.1 :commit:`(correctif) <c4bd5b597e0aa2432e4c867b86650f18af117851>`"
-
-msgid "January 4, 2019 - :cve:`2019-3498`"
-msgstr "4 janvier 2019 - :cve:`2019-3498`"
-
-msgid ""
-"Content spoofing possibility in the default 404 page. `Full description "
-"<https://www.djangoproject.com/weblog/2019/jan/04/security-releases/>`__"
-msgstr ""
-"Possibilité de mystification de contenu dans la page 404 par défaut. "
-"`Description complète <https://www.djangoproject.com/weblog/2019/jan/04/"
-"security-releases/>`__"
-
-msgid "Django 2.1 :commit:`(patch) <64d2396e83aedba3fcc84ca40f23fbd22f0b9b5b>`"
-msgstr ""
-"Django 2.1 :commit:`(correctif) <64d2396e83aedba3fcc84ca40f23fbd22f0b9b5b>`"
-
-msgid "Django 2.0 :commit:`(patch) <9f4ed7c94c62e21644ef5115e393ac426b886f2e>`"
-msgstr ""
-"Django 2.0 :commit:`(correctif) <9f4ed7c94c62e21644ef5115e393ac426b886f2e>`"
-
-msgid ""
-"Django 1.11 :commit:`(patch) <1cd00fcf52d089ef0fe03beabd05d59df8ea052a>`"
-msgstr ""
-"Django 1.11 :commit:`(correctif) <1cd00fcf52d089ef0fe03beabd05d59df8ea052a>`"
 
 msgid "February 11, 2019 - :cve:`2019-6975`"
 msgstr "11 février 2019 - :cve:`2019-6975`"
@@ -34883,265 +35853,1226 @@ msgid ""
 msgstr ""
 "Django 1.11 :commit:`(correctif) <0bbb560183fabf0533289700845dafa94951f227>`"
 
-msgid "June 3, 2019 - :cve:`2019-11358`"
+msgid "January 4, 2019 - :cve:`2019-3498`"
+msgstr "4 janvier 2019 - :cve:`2019-3498`"
+
+msgid ""
+"Content spoofing possibility in the default 404 page. `Full description "
+"<https://www.djangoproject.com/weblog/2019/jan/04/security-releases/>`__"
+msgstr ""
+"Possibilité de mystification de contenu dans la page 404 par défaut. "
+"`Description complète <https://www.djangoproject.com/weblog/2019/jan/04/"
+"security-releases/>`__"
+
+msgid "Django 2.1 :commit:`(patch) <64d2396e83aedba3fcc84ca40f23fbd22f0b9b5b>`"
+msgstr ""
+"Django 2.1 :commit:`(correctif) <64d2396e83aedba3fcc84ca40f23fbd22f0b9b5b>`"
+
+msgid "Django 2.0 :commit:`(patch) <9f4ed7c94c62e21644ef5115e393ac426b886f2e>`"
+msgstr ""
+"Django 2.0 :commit:`(correctif) <9f4ed7c94c62e21644ef5115e393ac426b886f2e>`"
+
+msgid ""
+"Django 1.11 :commit:`(patch) <1cd00fcf52d089ef0fe03beabd05d59df8ea052a>`"
+msgstr ""
+"Django 1.11 :commit:`(correctif) <1cd00fcf52d089ef0fe03beabd05d59df8ea052a>`"
+
+msgid "October 1, 2018 - :cve:`2018-16984`"
+msgstr "1er octobre 2018 - :cve:`2018-16984`"
+
+msgid ""
+"Password hash disclosure to \"view only\" admin users. `Full description "
+"<https://www.djangoproject.com/weblog/2018/oct/01/security-release/>`__"
+msgstr ""
+"Révélation de l'empreinte de mots de passe pour les utilisateurs du site "
+"d'administration en « lecture seule ». `Description complète <https://www."
+"djangoproject.com/weblog/2018/oct/01/security-release/>`__"
+
+msgid "Django 2.1 :commit:`(patch) <c4bd5b597e0aa2432e4c867b86650f18af117851>`"
+msgstr ""
+"Django 2.1 :commit:`(correctif) <c4bd5b597e0aa2432e4c867b86650f18af117851>`"
+
+msgid "August 1, 2018 - :cve:`2018-14574`"
+msgstr "1er août 2018 - :cve:`2018-14574`"
+
+msgid ""
+"Open redirect possibility in ``CommonMiddleware``. `Full description "
+"<https://www.djangoproject.com/weblog/2018/aug/01/security-releases/>`__"
+msgstr ""
+"Possibilité de redirection ouverte dans ``CommonMiddleware``. `Description "
+"complète <https://www.djangoproject.com/weblog/2018/aug/01/security-releases/"
+">`__"
+
+msgid "Django 2.1 :commit:`(patch) <c4e5ff7fdb5fce447675e90291fd33fddd052b3c>`"
+msgstr ""
+"Django 2.1 :commit:`(correctif) <c4e5ff7fdb5fce447675e90291fd33fddd052b3c>`"
+
+msgid "Django 2.0 :commit:`(patch) <6fffc3c6d420e44f4029d5643f38d00a39b08525>`"
+msgstr ""
+"Django 2.0 :commit:`(correctif) <6fffc3c6d420e44f4029d5643f38d00a39b08525>`"
+
+msgid ""
+"Django 1.11 :commit:`(patch) <d6eaee092709aad477a9894598496c6deec532ff>`"
+msgstr ""
+"Django 1.11 :commit:`(correctif) <d6eaee092709aad477a9894598496c6deec532ff>`"
+
+msgid "March 6, 2018 - :cve:`2018-7537`"
+msgstr "6 mars 2018 - :cve:`2018-7537`"
+
+msgid ""
+"Denial-of-service possibility in ``truncatechars_html`` and "
+"``truncatewords_html`` template filters. `Full description <https://www."
+"djangoproject.com/weblog/2018/mar/06/security-releases/>`__"
+msgstr ""
+"Possibilité de déni de service dans les filtres de gabarit "
+"``truncatechars_html`` et ``truncatewords_html``. `Description complète "
+"<https://www.djangoproject.com/weblog/2018/mar/06/security-releases/>`__"
+
+msgid "Django 2.0 :commit:`(patch) <94c5da1d17a6b0d378866c66b605102c19f7988c>`"
+msgstr ""
+"Django 2.0 :commit:`(correctif) <94c5da1d17a6b0d378866c66b605102c19f7988c>`"
+
+msgid ""
+"Django 1.11 :commit:`(patch) <a91436360b79a6ff995c3e5018bcc666dfaf1539>`"
+msgstr ""
+"Django 1.11 :commit:`(correctif) <a91436360b79a6ff995c3e5018bcc666dfaf1539>`"
+
+msgid ""
+"Django 1.8  :commit:`(patch) <d17974a287a6ea2e361daff88fcc004cbd6835fa>`"
+msgstr ""
+"Django 1.8  :commit:`(correctif) <d17974a287a6ea2e361daff88fcc004cbd6835fa>`"
+
+msgid "March 6, 2018 - :cve:`2018-7536`"
+msgstr "6 mars 2018 - :cve:`2018-7536`"
+
+msgid ""
+"Denial-of-service possibility in ``urlize`` and ``urlizetrunc`` template "
+"filters. `Full description <https://www.djangoproject.com/weblog/2018/mar/06/"
+"security-releases/>`__"
+msgstr ""
+"Possibilité de déni de service dans les filtres de gabarit ``urlize`` et "
+"``urlizetrunc``. `Description complète <https://www.djangoproject.com/"
+"weblog/2018/mar/06/security-releases/>`__"
+
+msgid "Django 2.0 :commit:`(patch) <e157315da3ae7005fa0683ffc9751dbeca7306c8>`"
+msgstr ""
+"Django 2.0 :commit:`(correctif) <e157315da3ae7005fa0683ffc9751dbeca7306c8>`"
+
+msgid ""
+"Django 1.11 :commit:`(patch) <abf89d729f210c692a50e0ad3f75fb6bec6fae16>`"
+msgstr ""
+"Django 1.11 :commit:`(correctif) <abf89d729f210c692a50e0ad3f75fb6bec6fae16>`"
+
+msgid ""
+"Django 1.8  :commit:`(patch) <1ca63a66ef3163149ad822701273e8a1844192c2>`"
+msgstr ""
+"Django 1.8  :commit:`(correctif) <1ca63a66ef3163149ad822701273e8a1844192c2>`"
+
+msgid "February 1, 2018 - :cve:`2018-6188`"
+msgstr "1er février 2018 - :cve:`2018-6188`"
+
+msgid ""
+"Information leakage in ``AuthenticationForm``. `Full description <https://"
+"www.djangoproject.com/weblog/2018/feb/01/security-releases/>`__"
+msgstr ""
+"Fuite d'informations dans le formulaire ``AuthenticationForm``. `Description "
+"complète <https://www.djangoproject.com/weblog/2018/feb/01/security-releases/"
+">`__"
+
+msgid "Django 2.0 :commit:`(patch) <c37bb28677295f6edda61d8ac461014ef0d3aeb2>`"
+msgstr ""
+"Django 2.0 :commit:`(correctif) <c37bb28677295f6edda61d8ac461014ef0d3aeb2>`"
+
+msgid ""
+"Django 1.11 :commit:`(patch) <57b95fedad5e0b83fc9c81466b7d1751c6427aae>`"
+msgstr ""
+"Django 1.11 :commit:`(correctif) <57b95fedad5e0b83fc9c81466b7d1751c6427aae>`"
+
+msgid "September 5, 2017 - :cve:`2017-12794`"
+msgstr "5 septembre 2017 - :cve:`2017-12794`"
+
+msgid ""
+"Possible XSS in traceback section of technical 500 debug page. `Full "
+"description <https://www.djangoproject.com/weblog/2017/sep/05/security-"
+"releases/>`__"
+msgstr ""
+"Attaque XSS possible dans la section « traceback » de la page de débogage "
+"technique 500. `Description complète <https://www.djangoproject.com/"
+"weblog/2017/sep/05/security-releases/>`__"
+
+msgid ""
+"Django 1.11 :commit:`(patch) <e35a0c56086924f331e9422daa266e907a4784cc>`"
+msgstr ""
+"Django 1.11 :commit:`(correctif) <e35a0c56086924f331e9422daa266e907a4784cc>`"
+
+msgid ""
+"Django 1.10 :commit:`(patch) <58e08e80e362db79eb0fd775dc81faad90dca47a>`"
+msgstr ""
+"Django 1.10 :commit:`(correctif) <58e08e80e362db79eb0fd775dc81faad90dca47a>`"
+
+msgid "April 4, 2017 - :cve:`2017-7234`"
+msgstr "4 avril 2017 - :cve:`2017-7234`"
+
+msgid ""
+"Open redirect vulnerability in ``django.views.static.serve()``. `Full "
+"description <https://www.djangoproject.com/weblog/2017/apr/04/security-"
+"releases/>`__"
+msgstr ""
+"Vulnérabilité de redirection ouverte dans ``django.views.static.serve()``. "
+"`Description complète <https://www.djangoproject.com/weblog/2017/apr/04/"
+"security-releases/>`__"
+
+msgid ""
+"Django 1.10 :commit:`(patch) <2a9f6ef71b8e23fd267ee2be1be26dde8ab67037>`"
+msgstr ""
+"Django 1.10 :commit:`(correctif) <2a9f6ef71b8e23fd267ee2be1be26dde8ab67037>`"
+
+msgid "Django 1.9 :commit:`(patch) <5f1ffb07afc1e59729ce2b283124116d6c0659e4>`"
+msgstr ""
+"Django 1.9 :commit:`(correctif) <5f1ffb07afc1e59729ce2b283124116d6c0659e4>`"
+
+msgid "Django 1.8 :commit:`(patch) <4a6b945dffe8d10e7cec107d93e6efaebfbded29>`"
+msgstr ""
+"Django 1.8 :commit:`(correctif) <4a6b945dffe8d10e7cec107d93e6efaebfbded29>`"
+
+msgid "April 4, 2017 - :cve:`2017-7233`"
+msgstr "4 avril 2017 - :cve:`2017-7233`"
+
+msgid ""
+"Open redirect and possible XSS attack via user-supplied numeric redirect "
+"URLs. `Full description <https://www.djangoproject.com/weblog/2017/apr/04/"
+"security-releases/>`__"
+msgstr ""
+"Redirection ouverte et attaque XSS possible par des URL de redirection "
+"numériques fournis par des utilisateurs. `Description complète <https://www."
+"djangoproject.com/weblog/2017/apr/04/security-releases/>`__"
+
+msgid ""
+"Django 1.10 :commit:`(patch) <f824655bc2c50b19d2f202d7640785caabc82787>`"
+msgstr ""
+"Django 1.10 :commit:`(correctif) <f824655bc2c50b19d2f202d7640785caabc82787>`"
+
+msgid "Django 1.9 :commit:`(patch) <254326cb3682389f55f886804d2c43f7b9f23e4f>`"
+msgstr ""
+"Django 1.9 :commit:`(correctif) <254326cb3682389f55f886804d2c43f7b9f23e4f>`"
+
+msgid "Django 1.8 :commit:`(patch) <8339277518c7d8ec280070a780915304654e3b66>`"
+msgstr ""
+"Django 1.8 :commit:`(correctif) <8339277518c7d8ec280070a780915304654e3b66>`"
+
+msgid "November 1, 2016 - :cve:`2016-9014`"
+msgstr "1er novembre 2016 - :cve:`2016-9014`"
+
+msgid ""
+"DNS rebinding vulnerability when ``DEBUG=True``. `Full description <https://"
+"www.djangoproject.com/weblog/2016/nov/01/security-releases/>`__"
+msgstr ""
+"Vulnérabilité de re-liaison DNS avec ``DEBUG=True``. `Description complète "
+"<https://www.djangoproject.com/weblog/2016/nov/01/security-releases/>`__"
+
+msgid ""
+"Django 1.10 :commit:`(patch) <884e113838e5a72b4b0ec9e5e87aa480f6aa4472>`"
+msgstr ""
+"Django 1.10 :commit:`(correctif) <884e113838e5a72b4b0ec9e5e87aa480f6aa4472>`"
+
+msgid "Django 1.9 :commit:`(patch) <45acd6d836895a4c36575f48b3fb36a3dae98d19>`"
+msgstr ""
+"Django 1.9 :commit:`(correctif) <45acd6d836895a4c36575f48b3fb36a3dae98d19>`"
+
+msgid "Django 1.8 :commit:`(patch) <c401ae9a7dfb1a94a8a61927ed541d6f93089587>`"
+msgstr ""
+"Django 1.8 :commit:`(correctif) <c401ae9a7dfb1a94a8a61927ed541d6f93089587>`"
+
+msgid "November 1, 2016 - :cve:`2016-9013`"
+msgstr "1er novembre 2016 - :cve:`2016-9013`"
+
+msgid ""
+"User with hardcoded password created when running tests on Oracle. `Full "
+"description <https://www.djangoproject.com/weblog/2016/nov/01/security-"
+"releases/>`__"
+msgstr ""
+"Utilisateur avec mot de passe créé en dur lors du lancement des tests avec "
+"Oracle. `Description complète <https://www.djangoproject.com/weblog/2016/"
+"nov/01/security-releases/>`__"
+
+msgid ""
+"Django 1.10 :commit:`(patch) <34e10720d81b8d407aa14d763b6a7fe8f13b4f2e>`"
+msgstr ""
+"Django 1.10 :commit:`(correctif) <34e10720d81b8d407aa14d763b6a7fe8f13b4f2e>`"
+
+msgid "Django 1.9 :commit:`(patch) <4844d86c7728c1a5a3bbce4ad336a8d32304072b>`"
+msgstr ""
+"Django 1.9 :commit:`(correctif) <4844d86c7728c1a5a3bbce4ad336a8d32304072b>`"
+
+msgid "Django 1.8 :commit:`(patch) <70f99952965a430daf69eeb9947079aae535d2d0>`"
+msgstr ""
+"Django 1.8 :commit:`(correctif) <70f99952965a430daf69eeb9947079aae535d2d0>`"
+
+msgid "September 26, 2016 - :cve:`2016-7401`"
+msgstr "26 septembre 2016 - :cve:`2016-7401`"
+
+msgid ""
+"CSRF protection bypass on a site with Google Analytics. `Full description "
+"<https://www.djangoproject.com/weblog/2016/sep/26/security-releases/>`__"
+msgstr ""
+"Contournement de protection CSRF pour un site avec Google Analytics. "
+"`Description complète <https://www.djangoproject.com/weblog/2016/sep/26/"
+"security-releases/>`__"
+
+msgid "Django 1.9 :commit:`(patch) <d1bc980db1c0fffd6d60677e62f70beadb9fe64a>`"
+msgstr ""
+"Django 1.9 :commit:`(correctif) <d1bc980db1c0fffd6d60677e62f70beadb9fe64a>`"
+
+msgid "Django 1.8 :commit:`(patch) <6118ab7d0676f0d622278e5be215f14fb5410b6a>`"
+msgstr ""
+"Django 1.8 :commit:`(correctif) <6118ab7d0676f0d622278e5be215f14fb5410b6a>`"
+
+msgid "July 18, 2016 - :cve:`2016-6186`"
+msgstr "18 juillet 2016 - :cve:`2016-6186`"
+
+msgid ""
+"XSS in admin's add/change related popup. `Full description <https://www."
+"djangoproject.com/weblog/2016/jul/18/security-releases/>`__"
+msgstr ""
+"XSS dans les fenêtres d'ajout/modification d'éléments liés. `Description "
+"complète <https://www.djangoproject.com/weblog/2016/jul/18/security-releases/"
+">`__"
+
+msgid "Django 1.9 :commit:`(patch) <d03bf6fe4e9bf5b07de62c1a271c4b41a7d3d158>`"
+msgstr ""
+"Django 1.9 :commit:`(correctif) <d03bf6fe4e9bf5b07de62c1a271c4b41a7d3d158>`"
+
+msgid "Django 1.8 :commit:`(patch) <f68e5a99164867ab0e071a936470958ed867479d>`"
+msgstr ""
+"Django 1.8 :commit:`(correctif) <f68e5a99164867ab0e071a936470958ed867479d>`"
+
+msgid "March 1, 2016 - :cve:`2016-2513`"
 msgstr ""
 
 msgid ""
-"Prototype pollution in bundled jQuery. `Full description <https://www."
-"djangoproject.com/weblog/2019/jun/03/security-releases/>`__"
+"User enumeration through timing difference on password hasher work factor "
+"upgrade. `Full description <https://www.djangoproject.com/weblog/2016/mar/01/"
+"security-releases/>`__"
 msgstr ""
 
-msgid "Django 2.2 :commit:`(patch) <baaf187a4e354bf3976c51e2c83a0d2f8ee6e6ad>`"
+msgid "Django 1.9 :commit:`(patch) <af7d09b0c5c6ab68e629fd9baf736f9dd203b18e>`"
 msgstr ""
 
-msgid "Django 2.1 :commit:`(patch) <95649bc08547a878cebfa1d019edec8cb1b80829>`"
+msgid "Django 1.8 :commit:`(patch) <f4e6e02f7713a6924d16540be279909ff4091eb6>`"
 msgstr ""
+"Django 1.8 :commit:`(correctif) <f4e6e02f7713a6924d16540be279909ff4091eb6>`"
 
-msgid "June 3, 2019 - :cve:`2019-12308`"
-msgstr ""
+msgid "March 1, 2016 - :cve:`2016-2512`"
+msgstr "1 mars 2016 - :cve:`2016-2512`"
 
 msgid ""
-"XSS via \"Current URL\" link generated by ``AdminURLFieldWidget``. `Full "
-"description <https://www.djangoproject.com/weblog/2019/jun/03/security-"
+"Malicious redirect and possible XSS attack via user-supplied redirect URLs "
+"containing basic auth. `Full description <https://www.djangoproject.com/"
+"weblog/2016/mar/01/security-releases/>`__"
+msgstr ""
+"Redirection malicieuse et attaque XSS possible via des URL de redirection "
+"fournis par l'utilisateur et contenant de l'authentification basique. "
+"`Description complète <https://www.djangoproject.com/weblog/2016/mar/01/"
+"security-releases/>`__"
+
+msgid "Django 1.9 :commit:`(patch) <fc6d147a63f89795dbcdecb0559256470fff4380>`"
+msgstr ""
+"Django 1.9 :commit:`(correctif) <fc6d147a63f89795dbcdecb0559256470fff4380>`"
+
+msgid "Django 1.8 :commit:`(patch) <382ab137312961ad62feb8109d70a5a581fe8350>`"
+msgstr ""
+"Django 1.8 :commit:`(correctif) <382ab137312961ad62feb8109d70a5a581fe8350>`"
+
+msgid "February 1, 2016 - :cve:`2016-2048`"
+msgstr "1 février 2016 - :cve:`2016-2048`"
+
+msgid ""
+"User with \"change\" but not \"add\" permission can create objects for "
+"``ModelAdmin``’s with ``save_as=True``. `Full description <https://www."
+"djangoproject.com/weblog/2016/feb/01/releases-192-and-189/>`__"
+msgstr ""
+
+msgid "Django 1.9 :commit:`(patch) <adbca5e4db42542575734b8e5d26961c8ada7265>`"
+msgstr ""
+
+msgid "November 24, 2015 - :cve:`2015-8213`"
+msgstr "24 novembre 2015 - :cve:`2015-8213`"
+
+msgid ""
+"Settings leak possibility in ``date`` template filter. `Full description "
+"<https://www.djangoproject.com/weblog/2015/nov/24/security-releases-issued/"
+">`__"
+msgstr ""
+
+msgid "Django 1.8 :commit:`(patch) <9f83fc2f66f5a0bac7c291aec55df66050bb6991>`"
+msgstr ""
+
+msgid "Django 1.7 :commit:`(patch) <8a01c6b53169ee079cb21ac5919fdafcc8c5e172>`"
+msgstr ""
+
+msgid "August 18, 2015 - :cve:`2015-5963` / :cve:`2015-5964`"
+msgstr "18 août 2015 - :cve:`2015-5963` / :cve:`2015-5964`"
+
+msgid ""
+"Denial-of-service possibility in ``logout()`` view by filling session store. "
+"`Full description <https://www.djangoproject.com/weblog/2015/aug/18/security-"
 "releases/>`__"
 msgstr ""
 
-msgid "Django 2.2 :commit:`(patch) <afddabf8428ddc89a332f7a78d0d21eaf2b5a673>`"
+msgid "Django 1.8 :commit:`(patch) <2eb86b01d7b59be06076f6179a454d0fd0afaff6>`"
 msgstr ""
 
-msgid "Django 2.1 :commit:`(patch) <09186a13d975de6d049f8b3e05484f66b01ece62>`"
+msgid "Django 1.7 :commit:`(patch) <2f5485346ee6f84b4e52068c04e043092daf55f7>`"
+msgstr ""
+
+msgid "Django 1.4 :commit:`(patch) <575f59f9bc7c59a5e41a081d1f5f55fc859c5012>`"
+msgstr ""
+
+msgid "July 8, 2015 - :cve:`2015-5145`"
+msgstr "8 juillet 2015 - :cve:`2015-5145`"
+
+msgid ""
+"Denial-of-service possibility in URL validation. `Full description <https://"
+"www.djangoproject.com/weblog/2015/jul/08/security-releases/>`__"
+msgstr ""
+
+msgid "Django 1.8 :commit:`(patch) <8f9a4d3a2bc42f14bb437defd30c7315adbff22c>`"
+msgstr ""
+
+msgid "July 8, 2015 - :cve:`2015-5144`"
+msgstr "8 juillet 2015 - :cve:`2015-5144`"
+
+msgid ""
+"Header injection possibility since validators accept newlines in input. "
+"`Full description <https://www.djangoproject.com/weblog/2015/jul/08/security-"
+"releases/>`__"
+msgstr ""
+"Possibilité d'injection dans les en-têtes depuis que les validateurs "
+"acceptent des retours à ligne en entrée. `Description complète <https://www."
+"djangoproject.com/weblog/2015/jul/08/security-releases/>`__"
+
+msgid "Django 1.8 :commit:`(patch) <574dd5e0b0fbb877ae5827b1603d298edc9bb2a0>`"
+msgstr ""
+
+msgid "Django 1.7 :commit:`(patch) <ae49b4d994656bc037513dcd064cb9ce5bb85649>`"
+msgstr ""
+
+msgid "Django 1.4 :commit:`(patch) <1ba1cdce7d58e6740fe51955d945b56ae51d072a>`"
+msgstr ""
+
+msgid "July 8, 2015 - :cve:`2015-5143`"
+msgstr "8 juillet 2015 - :cve:`2015-5143`"
+
+msgid ""
+"Denial-of-service possibility by filling session store. `Full description "
+"<https://www.djangoproject.com/weblog/2015/jul/08/security-releases/>`__"
+msgstr ""
+
+msgid "Django 1.8 :commit:`(patch) <66d12d1ababa8f062857ee5eb43276493720bf16>`"
+msgstr ""
+
+msgid "Django 1.7 :commit:`(patch) <1828f4341ec53a8684112d24031b767eba557663>`"
+msgstr ""
+
+msgid "Django 1.4 :commit:`(patch) <2e47f3e401c29bc2ba5ab794d483cb0820855fb9>`"
+msgstr ""
+
+msgid "May 20, 2015 - :cve:`2015-3982`"
+msgstr "20 mai 2015 - :cve:`2015-3982`"
+
+msgid ""
+"Fixed session flushing in the cached_db backend. `Full description <https://"
+"www.djangoproject.com/weblog/2015/may/20/security-release/>`__"
+msgstr ""
+
+msgid "Django 1.8 :commit:`(patch) <31cb25adecba930bdeee4556709f5a1c42d88fd6>`"
+msgstr ""
+
+msgid "March 18, 2015 - :cve:`2015-2317`"
+msgstr "18 mars 2015 - :cve:`2015-2317`"
+
+msgid ""
+"Mitigated possible XSS attack via user-supplied redirect URLs. `Full "
+"description <https://www.djangoproject.com/weblog/2015/mar/18/security-"
+"releases/>`__"
+msgstr ""
+"Attaque XSS atténuée possible via des URL de redirection fournis par "
+"l'utilisateur. `Description complète <https://www.djangoproject.com/"
+"weblog/2015/mar/18/security-releases/>`__"
+
+msgid "Django 1.4 :commit:`(patch) <2342693b31f740a422abf7267c53b4e7bc487c1b>`"
+msgstr ""
+
+msgid "Django 1.6 :commit:`(patch) <5510f070711540aaa8d3707776cd77494e688ef9>`"
+msgstr ""
+
+msgid "Django 1.7 :commit:`(patch) <2a4113dbd532ce952308992633d802dc169a75f1>`"
+msgstr ""
+
+msgid "Django 1.8 :commit:`(patch) <770427c2896a078925abfca2317486b284d22f04>`"
+msgstr ""
+
+msgid "March 18, 2015 - :cve:`2015-2316`"
+msgstr "18 mars 2015 - :cve:`2015-2316`"
+
+msgid ""
+"Denial-of-service possibility with ``strip_tags()``. `Full description "
+"<https://www.djangoproject.com/weblog/2015/mar/18/security-releases/>`__"
+msgstr ""
+"Possibilité de déni de service avec ``strip_tags()``. `Description complète "
+"<https://www.djangoproject.com/weblog/2015/mar/18/security-releases/>`__"
+
+msgid "Django 1.6 :commit:`(patch) <b6b3cb9899214a23ebb0f4ebf0e0b300b0ee524f>`"
+msgstr ""
+
+msgid "Django 1.7 :commit:`(patch) <e63363f8e075fa8d66326ad6a1cc3391cc95cd97>`"
+msgstr ""
+
+msgid "Django 1.8 :commit:`(patch) <5447709a571cd5d95971f1d5d21d4a7edcf85bbd>`"
+msgstr ""
+
+msgid "March 9, 2015 - :cve:`2015-2241`"
 msgstr ""
 
 msgid ""
-"Django 1.11 :commit:`(patch) <c238701859a52d584f349cce15d56c8e8137c52b>`"
-msgstr ""
-
-msgid "July 1, 2019 - :cve:`2019-12781`"
-msgstr ""
-
-msgid ""
-"Incorrect HTTP detection with reverse-proxy connecting via HTTPS. `Full "
-"description <https://www.djangoproject.com/weblog/2019/jul/01/security-"
+"XSS attack via properties in ``ModelAdmin.readonly_fields``. `Full "
+"description <https://www.djangoproject.com/weblog/2015/mar/09/security-"
 "releases/>`__"
 msgstr ""
 
-msgid "Django 2.2 :commit:`(patch) <77706a3e4766da5d5fb75c4db22a0a59a28e6cd6>`"
+msgid "Django 1.7 :commit:`(patch) <d16e4e1d6f95e6f46bff53cc4fd0ab398b8e5059>`"
 msgstr ""
 
-msgid "Django 2.1 :commit:`(patch) <1e40f427bb8d0fb37cc9f830096a97c36c97af6f>`"
+msgid "Django 1.8 :commit:`(patch) <2654e1b93923bac55f12b4e66c5e39b16695ace5>`"
 msgstr ""
 
-msgid ""
-"Django 1.11 :commit:`(patch) <32124fc41e75074141b05f10fc55a4f01ff7f050>`"
-msgstr ""
-
-msgid "August 1, 2019 - :cve:`2019-14232`"
+msgid "January 13, 2015 - :cve:`2015-0222`"
 msgstr ""
 
 msgid ""
-"Denial-of-service possibility in ``django.utils.text.Truncator``. `Full "
-"description <https://www.djangoproject.com/weblog/2019/aug/01/security-"
-"releases/>`__"
+"Database denial-of-service with ``ModelMultipleChoiceField``. `Full "
+"description <https://www.djangoproject.com/weblog/2015/jan/13/security/>`__"
 msgstr ""
 
-msgid "Django 2.2 :commit:`(patch) <c3289717c6f21a8cf23daff1c78c0c014b94041f>`"
+msgid "Django 1.6 :commit:`(patch) <d7a06ee7e571b6dad07c0f5b519b1db02e2a476c>`"
 msgstr ""
 
-msgid "Django 2.1 :commit:`(patch) <c23723a1551340cc7d3126f04fcfd178fa224193>`"
+msgid "Django 1.7 :commit:`(patch) <bcfb47780ce7caecb409a9e9c1c314266e41d392>`"
 msgstr ""
 
-msgid ""
-"Django 1.11 :commit:`(patch) <42a66e969023c00536256469f0e8b8a099ef109d>`"
-msgstr ""
-
-msgid "August 1, 2019 - :cve:`2019-14233`"
+msgid "January 13, 2015 - :cve:`2015-0221`"
 msgstr ""
 
 msgid ""
-"Denial-of-service possibility in ``strip_tags()``. `Full description "
-"<https://www.djangoproject.com/weblog/2019/aug/01/security-releases/>`__"
+"Denial-of-service attack against ``django.views.static.serve()``. `Full "
+"description <https://www.djangoproject.com/weblog/2015/jan/13/security/>`__"
 msgstr ""
 
-msgid "Django 2.2 :commit:`(patch) <e34f3c0e9ee5fc9022428fe91640638bafd4cda7>`"
+msgid "Django 1.4 :commit:`(patch) <d020da6646c5142bc092247d218a3d1ce3e993f7>`"
 msgstr ""
 
-msgid "Django 2.1 :commit:`(patch) <5ff8e791148bd451180124d76a55cb2b2b9556eb>`"
+msgid "Django 1.6 :commit:`(patch) <553779c4055e8742cc832ed525b9ee34b174934f>`"
 msgstr ""
 
-msgid ""
-"Django 1.11 :commit:`(patch) <52479acce792ad80bb0f915f20b835f919993c72>`"
+msgid "Django 1.7 :commit:`(patch) <818e59a3f0fbadf6c447754d202d88df025f8f2a>`"
 msgstr ""
 
-msgid "August 1, 2019 - :cve:`2019-14234`"
-msgstr ""
-
-msgid ""
-"SQL injection possibility in key and index lookups for ``JSONField``/"
-"``HStoreField``. `Full description <https://www.djangoproject.com/"
-"weblog/2019/aug/01/security-releases/>`__"
-msgstr ""
-
-msgid "Django 2.2 :commit:`(patch) <4f5b58f5cd3c57fee9972ab074f8dc6895d8f387>`"
-msgstr ""
-
-msgid "Django 2.1 :commit:`(patch) <f74b3ae3628c26e1b4f8db3d13a91d52a833a975>`"
+msgid "January 13, 2015 - :cve:`2015-0220`"
 msgstr ""
 
 msgid ""
-"Django 1.11 :commit:`(patch) <ed682a24fca774818542757651bfba576c3fc3ef>`"
+"Mitigated possible XSS attack via user-supplied redirect URLs. `Full "
+"description <https://www.djangoproject.com/weblog/2015/jan/13/security/>`__"
 msgstr ""
 
-msgid "August 1, 2019 - :cve:`2019-14235`"
+msgid "Django 1.4 :commit:`(patch) <4c241f1b710da6419d9dca160e80b23b82db7758>`"
 msgstr ""
 
-msgid ""
-"Potential memory exhaustion in ``django.utils.encoding.uri_to_iri()``. `Full "
-"description <https://www.djangoproject.com/weblog/2019/aug/01/security-"
-"releases/>`__"
+msgid "Django 1.6 :commit:`(patch) <72e0b033662faa11bb7f516f18a132728aa0ae28>`"
 msgstr ""
 
-msgid "Django 2.2 :commit:`(patch) <cf694e6852b0da7799f8b53f1fb2f7d20cf17534>`"
+msgid "Django 1.7 :commit:`(patch) <de67dedc771ad2edec15c1d00c083a1a084e1e89>`"
 msgstr ""
 
-msgid "Django 2.1 :commit:`(patch) <5d50a2e5fa36ad23ab532fc54cf4073de84b3306>`"
-msgstr ""
-
-msgid ""
-"Django 1.11 :commit:`(patch) <869b34e9b3be3a4cfcb3a145f218ffd3f5e3fd79>`"
-msgstr ""
-
-msgid "December 2, 2019 - :cve:`2019-19118`"
+msgid "January 13, 2015 - :cve:`2015-0219`"
 msgstr ""
 
 msgid ""
-"Privilege escalation in the Django admin. `Full description <https://www."
-"djangoproject.com/weblog/2019/dec/02/security-releases/>`__"
+"WSGI header spoofing via underscore/dash conflation. `Full description "
+"<https://www.djangoproject.com/weblog/2015/jan/13/security/>`__"
 msgstr ""
 
-msgid "Django 3.0 :commit:`(patch) <092cd66cf3c3e175acce698d6ca2012068d878fa>`"
+msgid "Django 1.4 :commit:`(patch) <4f6fffc1dc429f1ad428ecf8e6620739e8837450>`"
 msgstr ""
 
-msgid "Django 2.2 :commit:`(patch) <36f580a17f0b3cb087deadf3b65eea024f479c21>`"
+msgid "Django 1.6 :commit:`(patch) <d7597b31d5c03106eeba4be14a33b32a5e25f4ee>`"
 msgstr ""
 
-msgid "Django 2.1 :commit:`(patch) <103ebe2b5ff1b2614b85a52c239f471904d26244>`"
+msgid "Django 1.7 :commit:`(patch) <41b4bc73ee0da7b2e09f4af47fc1fd21144c710f>`"
 msgstr ""
 
-msgid "December 18, 2019 - :cve:`2019-19844`"
-msgstr ""
-
-msgid ""
-"Potential account hijack via password reset form. `Full description <https://"
-"www.djangoproject.com/weblog/2019/dec/18/security-releases/>`__"
-msgstr ""
-
-msgid "Django 3.0 :commit:`(patch) <302a4ff1e8b1c798aab97673909c7a3dfda42c26>`"
-msgstr ""
-
-msgid "Django 2.2 :commit:`(patch) <4d334bea06cac63dc1272abcec545b85136cca0e>`"
+msgid "August 20, 2014 - :cve:`2014-0483`"
 msgstr ""
 
 msgid ""
-"Django 1.11 :commit:`(patch) <f4cff43bf921fcea6a29b726eb66767f67753fa2>`"
+"Data leakage via querystring manipulation in admin. `Full description "
+"<https://www.djangoproject.com/weblog/2014/aug/20/security/>`__"
 msgstr ""
 
-msgid "February 3, 2020 - :cve:`2020-7471`"
+msgid "Django 1.4 :commit:`(patch) <027bd348642007617518379f8b02546abacaa6e0>`"
 msgstr ""
 
-msgid ""
-"Potential SQL injection via ``StringAgg(delimiter)``. `Full description "
-"<https://www.djangoproject.com/weblog/2020/feb/03/security-releases/>`__"
+msgid "Django 1.5 :commit:`(patch) <2a446c896e7c814661fb9c4f212b071b2a7fa446>`"
 msgstr ""
 
-msgid "Django 3.0 :commit:`(patch) <505826b469b16ab36693360da9e11fd13213421b>`"
+msgid "Django 1.6 :commit:`(patch) <f7c494f2506250b8cb5923714360a3642ed63e0f>`"
 msgstr ""
 
-msgid "Django 2.2 :commit:`(patch) <c67a368c16e4680b324b4f385398d638db4d8147>`"
+msgid "Django 1.7 :commit:`(patch) <2b31342cdf14fc20e07c43d258f1e7334ad664a6>`"
 msgstr ""
 
-msgid ""
-"Django 1.11 :commit:`(patch) <001b0634cd309e372edb6d7d95d083d02b8e37bd>`"
-msgstr ""
-
-msgid "March 4, 2020 - :cve:`2020-9402`"
+msgid "August 20, 2014 - :cve:`2014-0482`"
 msgstr ""
 
 msgid ""
-"Potential SQL injection via ``tolerance`` parameter in GIS functions and "
-"aggregates on Oracle. `Full description <https://www.djangoproject.com/"
-"weblog/2020/mar/04/security-releases/>`__"
+"``RemoteUserMiddleware`` session hijacking. `Full description <https://www."
+"djangoproject.com/weblog/2014/aug/20/security/>`__"
 msgstr ""
 
-msgid "Django 3.0 :commit:`(patch) <26a5cf834526e291db00385dd33d319b8271fc4c>`"
+msgid "Django 1.4 :commit:`(patch) <c9e3b9949cd55f090591fbdc4a114fcb8368b6d9>`"
 msgstr ""
 
-msgid "Django 2.2 :commit:`(patch) <fe886a3b58a93cfbe8864b485f93cb6d426cd1f2>`"
+msgid "Django 1.5 :commit:`(patch) <dd68f319b365f6cb38c5a6c106faf4f6142d7d88>`"
 msgstr ""
 
-msgid ""
-"Django 1.11 :commit:`(patch) <02d97f3c9a88adc890047996e5606180bd1c6166>`"
+msgid "Django 1.6 :commit:`(patch) <0268b855f9eab3377f2821164ef3e66037789e09>`"
 msgstr ""
 
-msgid "June 3, 2020 - :cve:`2020-13254`"
+msgid "Django 1.7 :commit:`(patch) <1a45d059c70385fcd6f4a3955f3b4e4cc96d0150>`"
 msgstr ""
 
-msgid ""
-"Potential data leakage via malformed memcached keys. `Full description "
-"<https://www.djangoproject.com/weblog/2020/jun/03/security-releases/>`__"
-msgstr ""
-
-msgid "Django 3.0 :commit:`(patch) <84b2da5552e100ae3294f564f6c862fef8d0e693>`"
-msgstr ""
-
-msgid "Django 2.2 :commit:`(patch) <07e59caa02831c4569bbebb9eb773bdd9cb4b206>`"
-msgstr ""
-
-msgid "June 3, 2020 - :cve:`2020-13596`"
+msgid "August 20, 2014 - :cve:`2014-0481`"
 msgstr ""
 
 msgid ""
-"Possible XSS via admin ``ForeignKeyRawIdWidget``. `Full description <https://"
-"www.djangoproject.com/weblog/2020/jun/03/security-releases/>`__"
+"File upload denial of service. `Full description <https://www.djangoproject."
+"com/weblog/2014/aug/20/security/>`__"
 msgstr ""
 
-msgid "Django 3.0 :commit:`(patch) <1f2dd37f6fcefdd10ed44cb233b2e62b520afb38>`"
+msgid "Django 1.4 :commit:`(patch) <30042d475bf084c6723c6217a21598d9247a9c41>`"
 msgstr ""
 
-msgid "Django 2.2 :commit:`(patch) <6d61860b22875f358fac83d903dc629897934815>`"
+msgid "Django 1.5 :commit:`(patch) <26cd48e166ac4d84317c8ee6d63ac52a87e8da99>`"
 msgstr ""
 
-msgid "September 1, 2020 - :cve:`2020-24583`"
+msgid "Django 1.6 :commit:`(patch) <dd0c3f4ee1a30c1a1e6055061c6ba6e58c6b54d1>`"
 msgstr ""
 
-msgid ""
-"Incorrect permissions on intermediate-level directories on Python 3.7+. "
-"`Full description <https://www.djangoproject.com/weblog/2020/sep/01/security-"
-"releases/>`__"
+msgid "Django 1.7 :commit:`(patch) <3123f8452cf49071be9110e277eea60ba0032216>`"
 msgstr ""
 
-msgid "Django 3.1 :commit:`(patch) <934430d22aa5d90c2ba33495ff69a6a1d997d584>`"
-msgstr ""
-
-msgid "Django 3.0 :commit:`(patch) <08892bffd275c79ee1f8f67639eb170aaaf1181e>`"
-msgstr ""
-
-msgid "Django 2.2 :commit:`(patch) <375657a71c889c588f723469bd868bd1d40c369f>`"
-msgstr ""
-
-msgid "September 1, 2020 - :cve:`2020-24584`"
+msgid "August 20, 2014 - :cve:`2014-0480`"
 msgstr ""
 
 msgid ""
-"Permission escalation in intermediate-level directories of the file system "
-"cache on Python 3.7+. `Full description <https://www.djangoproject.com/"
-"weblog/2020/sep/01/security-releases/>`__"
+"``reverse()`` can generate URLs pointing to other hosts. `Full description "
+"<https://www.djangoproject.com/weblog/2014/aug/20/security/>`__"
 msgstr ""
 
-msgid "Django 3.1 :commit:`(patch) <2b099caa5923afa8cfb5f1e8c0d56b6e0e81915b>`"
+msgid "Django 1.4 :commit:`(patch) <c2fe73133b62a1d9e8f7a6b43966570b14618d7e>`"
 msgstr ""
 
-msgid "Django 3.0 :commit:`(patch) <cdb367c92a0ba72ddc0cbd13ff42b0e6df709554>`"
+msgid "Django 1.5 :commit:`(patch) <45ac9d4fb087d21902469fc22643f5201d41a0cd>`"
 msgstr ""
 
-msgid "Django 2.2 :commit:`(patch) <a3aebfdc8153dc230686b6d2454ccd32ed4c9e6f>`"
+msgid "Django 1.6 :commit:`(patch) <da051da8df5e69944745072611351d4cfc6435d5>`"
+msgstr ""
+
+msgid "Django 1.7 :commit:`(patch) <bf650a2ee78c6d1f4544a875dcc777cf27fe93e9>`"
+msgstr ""
+
+msgid "May 18, 2014 - :cve:`2014-3730`"
+msgstr ""
+
+msgid ""
+"Malformed URLs from user input incorrectly validated. `Full description "
+"<https://www.djangoproject.com/weblog/2014/may/14/security-releases-issued/"
+">`__"
+msgstr ""
+
+msgid "Django 1.4 :commit:`(patch) <7feb54bbae3f637ab3c4dd4831d4385964f574df>`"
+msgstr ""
+
+msgid "Django 1.5 :commit:`(patch) <ad32c218850ad40972dcef57beb460f8c979dd6d>`"
+msgstr ""
+
+msgid "Django 1.6 :commit:`(patch) <601107524523bca02376a0ddc1a06c6fdb8f22f3>`"
+msgstr ""
+
+msgid "Django 1.7 :commit:`(patch) <e7b0cace455c2da24492660636bfd48c45a19cdf>`"
+msgstr ""
+
+msgid "May 18, 2014 - :cve:`2014-1418`"
+msgstr ""
+
+msgid ""
+"Caches may be allowed to store and serve private data. `Full description "
+"<https://www.djangoproject.com/weblog/2014/may/14/security-releases-issued/"
+">`__"
+msgstr ""
+
+msgid "Django 1.4 :commit:`(patch) <28e23306aa53bbbb8fb87db85f99d970b051026c>`"
+msgstr ""
+
+msgid "Django 1.5 :commit:`(patch) <4001ec8698f577b973c5a540801d8a0bbea1205b>`"
+msgstr ""
+
+msgid "Django 1.6 :commit:`(patch) <1abcf3a808b35abae5d425ed4d44cb6e886dc769>`"
+msgstr ""
+
+msgid "Django 1.7 :commit:`(patch) <7fef18ba9e5a8b47bc24b5bb259c8bf3d3879f2a>`"
+msgstr ""
+
+msgid "April 21, 2014 - :cve:`2014-0474`"
+msgstr ""
+
+msgid ""
+"MySQL typecasting causes unexpected query results. `Full description "
+"<https://www.djangoproject.com/weblog/2014/apr/21/security/>`__"
+msgstr ""
+
+msgid "Django 1.4 :commit:`(patch) <aa80f498de6d687e613860933ac58433ab71ea4b>`"
+msgstr ""
+
+msgid "Django 1.5 :commit:`(patch) <985434fb1d6bf2335bf96c6ebf91c3674f1f399f>`"
+msgstr ""
+
+msgid "Django 1.6 :commit:`(patch) <5f0829a27e85d89ad8c433f5c6a7a7d17c9e9292>`"
+msgstr ""
+
+msgid "Django 1.7 :commit:`(patch) <34526c2f56b863c2103655a0893ac801667e86ea>`"
+msgstr ""
+
+msgid "April 21, 2014 - :cve:`2014-0473`"
+msgstr ""
+
+msgid ""
+"Caching of anonymous pages could reveal CSRF token. `Full description "
+"<https://www.djangoproject.com/weblog/2014/apr/21/security/>`__"
+msgstr ""
+
+msgid "Django 1.4 :commit:`(patch) <1170f285ddd6a94a65f911a27788ba49ca08c0b0>`"
+msgstr ""
+
+msgid "Django 1.5 :commit:`(patch) <6872f42757d7ef6a97e0b6ec5db4d2615d8a2bd8>`"
+msgstr ""
+
+msgid "Django 1.6 :commit:`(patch) <d63e20942f3024f24cb8cd85a49461ba8a9b6736>`"
+msgstr ""
+
+msgid "Django 1.7 :commit:`(patch) <380545bf85cbf17fc698d136815b7691f8d023ca>`"
+msgstr ""
+
+msgid "April 21, 2014 - :cve:`2014-0472`"
+msgstr ""
+
+msgid ""
+"Unexpected code execution using ``reverse()``. `Full description <https://"
+"www.djangoproject.com/weblog/2014/apr/21/security/>`__"
+msgstr ""
+
+msgid "Django 1.4 :commit:`(patch) <c1a8c420fe4b27fb2caf5e46d23b5712fc0ac535>`"
+msgstr ""
+
+msgid "Django 1.5 :commit:`(patch) <2a5bcb69f42b84464b24b5c835dca6467b6aa7f1>`"
+msgstr ""
+
+msgid "Django 1.6 :commit:`(patch) <4352a50871e239ebcdf64eee6f0b88e714015c1b>`"
+msgstr ""
+
+msgid "Django 1.7 :commit:`(patch) <546740544d7f69254a67b06a3fc7fa0c43512958>`"
+msgstr ""
+
+msgid "September 14, 2013 - :cve:`2013-1443`"
+msgstr ""
+
+msgid ""
+"Denial-of-service via large passwords. `Full description <https://www."
+"djangoproject.com/weblog/2013/sep/15/security/>`__"
+msgstr ""
+
+msgid ""
+"Django 1.4 :commit:`(patch <3f3d887a6844ec2db743fee64c9e53e04d39a368>` and :"
+"commit:`Python compatibility fix) <6903d1690a92aa040adfb0c8eb37cf62e4206714>`"
+msgstr ""
+
+msgid "Django 1.5 :commit:`(patch) <22b74fa09d7ccbc8c52270d648a0da7f3f0fa2bc>`"
+msgstr ""
+
+msgid "September 10, 2013 - :cve:`2013-4315`"
+msgstr ""
+
+msgid ""
+"Directory-traversal via ``ssi`` template tag. `Full description <https://www."
+"djangoproject.com/weblog/2013/sep/10/security-releases-issued/>`__"
+msgstr ""
+
+msgid "Django 1.4 :commit:`(patch) <87d2750b39f6f2d54b7047225521a44dcd37e896>`"
+msgstr ""
+
+msgid "Django 1.5 :commit:`(patch) <988b61c550d798f9a66d17ee0511fb7a9a7f33ca>`"
+msgstr ""
+
+msgid "August 13, 2013 - :cve:`2013-6044`"
+msgstr ""
+
+msgid ""
+"Possible XSS via unvalidated URL redirect schemes. `Full description "
+"<https://www.djangoproject.com/weblog/2013/aug/13/security-releases-issued/"
+">`__"
+msgstr ""
+
+msgid "Django 1.4 :commit:`(patch) <ec67af0bd609c412b76eaa4cc89968a2a8e5ad6a>`"
+msgstr ""
+
+msgid "Django 1.5 :commit:`(patch) <1a274ccd6bc1afbdac80344c9b6e5810c1162b5f>`"
+msgstr ""
+
+msgid "August 13, 2013 - :cve:`2013-4249`"
+msgstr ""
+
+msgid ""
+"XSS via admin trusting ``URLField`` values. `Full description <https://www."
+"djangoproject.com/weblog/2013/aug/13/security-releases-issued/>`__"
+msgstr ""
+
+msgid "Django 1.5 :commit:`(patch) <90363e388c61874add3f3557ee654a996ec75d78>`"
+msgstr ""
+
+msgid "February 19, 2013 - :cve:`2013-0306`"
+msgstr ""
+
+msgid ""
+"Denial-of-service via formset ``max_num`` bypass. `Full description <https://"
+"www.djangoproject.com/weblog/2013/feb/19/security/>`__"
+msgstr ""
+
+msgid "Django 1.3 :commit:`(patch) <d7094bbce8cb838f3b40f504f198c098ff1cf727>`"
+msgstr ""
+
+msgid "Django 1.4 :commit:`(patch) <0cc350a896f70ace18280410eb616a9197d862b0>`"
+msgstr ""
+
+msgid "February 19, 2013 - :cve:`2013-0305`"
+msgstr ""
+
+msgid ""
+"Information leakage via admin history log. `Full description <https://www."
+"djangoproject.com/weblog/2013/feb/19/security/>`__"
+msgstr ""
+
+msgid "Django 1.3 :commit:`(patch) <d3a45e10c8ac8268899999129daa27652ec0da35>`"
+msgstr ""
+
+msgid "Django 1.4 :commit:`(patch) <0e7861aec73702f7933ce2a93056f7983939f0d6>`"
+msgstr ""
+
+msgid "February 19, 2013 - :cve:`2013-1664` / :cve:`2013-1665`"
+msgstr ""
+
+msgid ""
+"Entity-based attacks against Python XML libraries. `Full description "
+"<https://www.djangoproject.com/weblog/2013/feb/19/security/>`__"
+msgstr ""
+
+msgid "Django 1.3 :commit:`(patch) <d19a27066b2247102e65412aa66917aff0091112>`"
+msgstr ""
+
+msgid "Django 1.4 :commit:`(patch) <1c60d07ba23e0350351c278ad28d0bd5aa410b40>`"
+msgstr ""
+
+msgid "February 19, 2013 - No CVE"
+msgstr "19 février 2013 - Pas de CVE"
+
+msgid ""
+"Additional hardening of ``Host`` header handling. `Full description <https://"
+"www.djangoproject.com/weblog/2013/feb/19/security/>`__"
+msgstr ""
+
+msgid "Django 1.3 :commit:`(patch) <27cd872e6e36a81d0bb6f5b8765a1705fecfc253>`"
+msgstr ""
+
+msgid "Django 1.4 :commit:`(patch) <9936fdb11d0bbf0bd242f259bfb97bbf849d16f8>`"
+msgstr ""
+
+msgid "December 10, 2012 - No CVE 2"
+msgstr "10 Décembre 2012 - Pas de CVE 2"
+
+msgid ""
+"Additional hardening of redirect validation. `Full description <https://www."
+"djangoproject.com/weblog/2012/dec/10/security/>`__"
+msgstr ""
+
+msgid ""
+"Django 1.3: :commit:`(patch) <1515eb46daa0897ba5ad5f0a2db8969255f1b343>`"
+msgstr ""
+
+msgid ""
+"Django 1.4: :commit:`(patch) <b2ae0a63aeec741f1e51bac9a95a27fd635f9652>`"
+msgstr ""
+
+msgid "December 10, 2012 - No CVE 1"
+msgstr "10 décembre 2012 - Pas de CVE 1"
+
+msgid ""
+"Additional hardening of ``Host`` header handling. `Full description <https://"
+"www.djangoproject.com/weblog/2012/dec/10/security/>`__"
+msgstr ""
+
+msgid "Django 1.3 :commit:`(patch) <2da4ace0bc1bc1d79bf43b368cb857f6f0cd6b1b>`"
+msgstr ""
+
+msgid "Django 1.4 :commit:`(patch) <319627c184e71ae267d6b7f000e293168c7b6e09>`"
+msgstr ""
+
+msgid "October 17, 2012 - :cve:`2012-4520`"
+msgstr ""
+
+msgid ""
+"``Host`` header poisoning. `Full description <https://www.djangoproject.com/"
+"weblog/2012/oct/17/security/>`__"
+msgstr ""
+
+msgid "Django 1.3 :commit:`(patch) <b45c377f8f488955e0c7069cad3f3dd21910b071>`"
+msgstr ""
+
+msgid "Django 1.4 :commit:`(patch) <92d3430f12171f16f566c9050c40feefb830a4a3>`"
+msgstr ""
+
+msgid "July 30, 2012 - :cve:`2012-3444`"
+msgstr ""
+
+msgid ""
+"Denial-of-service via large image files. `Full description <https://www."
+"djangoproject.com/weblog/2012/jul/30/security-releases-issued/>`__"
+msgstr ""
+
+msgid "Django 1.3 :commit:`(patch) <9ca0ff6268eeff92d0d0ac2c315d4b6a8e229155>`"
+msgstr ""
+
+msgid "Django 1.4 :commit:`(patch) <da33d67181b53fe6cc737ac1220153814a1509f6>`"
+msgstr ""
+
+msgid "July 30, 2012 - :cve:`2012-3443`"
+msgstr ""
+
+msgid ""
+"Denial-of-service via compressed image files. `Full description <https://www."
+"djangoproject.com/weblog/2012/jul/30/security-releases-issued/>`__"
+msgstr ""
+
+msgid ""
+"Django 1.3: :commit:`(patch) <b2eb4787a0fff9c9993b78be5c698e85108f3446>`"
+msgstr ""
+
+msgid ""
+"Django 1.4: :commit:`(patch) <c14f325c4eef628bc7bfd8873c3a72aeb0219141>`"
+msgstr ""
+
+msgid "July 30, 2012 - :cve:`2012-3442`"
+msgstr ""
+
+msgid ""
+"XSS via failure to validate redirect scheme. `Full description <https://www."
+"djangoproject.com/weblog/2012/jul/30/security-releases-issued/>`__"
+msgstr ""
+
+msgid ""
+"Django 1.3: :commit:`(patch) <4dea4883e6c50d75f215a6b9bcbd95273f57c72d>`"
+msgstr ""
+
+msgid ""
+"Django 1.4: :commit:`(patch) <e34685034b60be1112160e76091e5aee60149fa1>`"
+msgstr ""
+
+msgid "September 9, 2011 - :cve:`2011-4140`"
+msgstr ""
+
+msgid ""
+"Potential CSRF via ``Host`` header. `Full description <https://www."
+"djangoproject.com/weblog/2011/sep/09/security-releases-issued/>`__"
+msgstr ""
+
+msgid "This notification was an advisory only, so no patches were issued."
+msgstr ""
+
+msgid "Django 1.2"
+msgstr "Django 1.2"
+
+msgid "Django 1.3"
+msgstr "Django 1.3"
+
+msgid "September 9, 2011 - :cve:`2011-4139`"
+msgstr ""
+
+msgid ""
+"``Host`` header cache poisoning. `Full description <https://www."
+"djangoproject.com/weblog/2011/sep/09/security-releases-issued/>`__"
+msgstr ""
+
+msgid "Django 1.2 :commit:`(patch) <c613af4d64>`"
+msgstr ""
+
+msgid "Django 1.3 :commit:`(patch) <2f7fadc38e>`"
+msgstr ""
+
+msgid "September 9, 2011 - :cve:`2011-4138`"
+msgstr ""
+
+msgid ""
+"Information leakage/arbitrary request issuance via ``URLField."
+"verify_exists``. `Full description <https://www.djangoproject.com/"
+"weblog/2011/sep/09/security-releases-issued/>`__"
+msgstr ""
+
+msgid "Django 1.2: :commit:`(patch) <7268f8af86>`"
+msgstr ""
+
+msgid "Django 1.3: :commit:`(patch) <1a76dbefdf>`"
+msgstr ""
+
+msgid "September 9, 2011 - :cve:`2011-4137`"
+msgstr ""
+
+msgid ""
+"Denial-of-service via ``URLField.verify_exists``. `Full description <https://"
+"www.djangoproject.com/weblog/2011/sep/09/security-releases-issued/>`__"
+msgstr ""
+
+msgid "Django 1.2 :commit:`(patch) <7268f8af86>`"
+msgstr ""
+
+msgid "Django 1.3 :commit:`(patch) <1a76dbefdf>`"
+msgstr ""
+
+msgid "September 9, 2011 - :cve:`2011-4136`"
+msgstr ""
+
+msgid ""
+"Session manipulation when using memory-cache-backed session. `Full "
+"description <https://www.djangoproject.com/weblog/2011/sep/09/security-"
+"releases-issued/>`__"
+msgstr ""
+
+msgid "Django 1.2 :commit:`(patch) <ac7c3a110f>`"
+msgstr ""
+
+msgid "Django 1.3 :commit:`(patch) <fbe2eead2f>`"
+msgstr ""
+
+msgid "February 8, 2011 - :cve:`2011-0698`"
+msgstr ""
+
+msgid ""
+"Directory-traversal on Windows via incorrect path-separator handling. `Full "
+"description <https://www.djangoproject.com/weblog/2011/feb/08/security/>`__"
+msgstr ""
+
+msgid "Django 1.1 :commit:`(patch) <570a32a047>`"
+msgstr ""
+
+msgid "Django 1.2 :commit:`(patch) <194566480b>`"
+msgstr ""
+
+msgid "February 8, 2011 - :cve:`2011-0697`"
+msgstr ""
+
+msgid ""
+"XSS via unsanitized names of uploaded files. `Full description <https://www."
+"djangoproject.com/weblog/2011/feb/08/security/>`__"
+msgstr ""
+
+msgid "Django 1.1 :commit:`(patch) <1966786d2d>`"
+msgstr ""
+
+msgid "Django 1.2 :commit:`(patch) <1f814a9547>`"
+msgstr ""
+
+msgid "February 8, 2011 - :cve:`2011-0696`"
+msgstr ""
+
+msgid ""
+"CSRF via forged HTTP headers. `Full description <https://www.djangoproject."
+"com/weblog/2011/feb/08/security/>`__"
+msgstr ""
+
+msgid "Django 1.1 :commit:`(patch) <408c5c873c>`"
+msgstr ""
+
+msgid "Django 1.2 :commit:`(patch) <818e70344e>`"
+msgstr ""
+
+msgid "December 22, 2010 - :cve:`2010-4535`"
+msgstr ""
+
+msgid ""
+"Denial-of-service in password-reset mechanism. `Full description <https://"
+"www.djangoproject.com/weblog/2010/dec/22/security/>`__"
+msgstr ""
+
+msgid "Django 1.1 :commit:`(patch) <7f8dd9cbac>`"
+msgstr ""
+
+msgid "Django 1.2 :commit:`(patch) <d5d8942a16>`"
+msgstr ""
+
+msgid "December 22, 2010 - :cve:`2010-4534`"
+msgstr ""
+
+msgid ""
+"Information leakage in administrative interface. `Full description <https://"
+"www.djangoproject.com/weblog/2010/dec/22/security/>`__"
+msgstr ""
+
+msgid "Django 1.1 :commit:`(patch) <17084839fd>`"
+msgstr ""
+
+msgid "Django 1.2 :commit:`(patch) <85207a245b>`"
+msgstr ""
+
+msgid "September 8, 2010 - :cve:`2010-3082`"
+msgstr ""
+
+msgid ""
+"XSS via trusting unsafe cookie value. `Full description <https://www."
+"djangoproject.com/weblog/2010/sep/08/security-release/>`__"
+msgstr ""
+
+msgid "Django 1.2 :commit:`(patch) <7f84657b6b>`"
+msgstr ""
+
+msgid "October 9, 2009 - :cve:`2009-3965`"
+msgstr ""
+
+msgid ""
+"Denial-of-service via pathological regular expression performance. `Full "
+"description <https://www.djangoproject.com/weblog/2009/oct/09/security/>`__"
+msgstr ""
+
+msgid "Django 1.0 :commit:`(patch) <594a28a904>`"
+msgstr ""
+
+msgid "Django 1.1 :commit:`(patch) <e3e992e18b>`"
+msgstr ""
+
+msgid "July 28, 2009 - :cve:`2009-2659`"
+msgstr ""
+
+msgid ""
+"Directory-traversal in development server media handler. `Full description "
+"<https://www.djangoproject.com/weblog/2009/jul/28/security/>`__"
+msgstr ""
+
+msgid "Django 0.96 :commit:`(patch) <da85d76fd6>`"
+msgstr ""
+
+msgid "Django 1.0 :commit:`(patch) <df7f917b7f>`"
+msgstr ""
+
+msgid "September 2, 2008 - :cve:`2008-3909`"
+msgstr ""
+
+msgid ""
+"CSRF via preservation of POST data during admin login. `Full description "
+"<https://www.djangoproject.com/weblog/2008/sep/02/security/>`__"
+msgstr ""
+
+msgid ""
+"Django 0.91 :commit:`(patch) <44debfeaa4473bd28872c735dd3d9afde6886752>`"
+msgstr ""
+
+msgid ""
+"Django 0.95 :commit:`(patch) <aee48854a164382c655acb9f18b3c06c3d238e81>`"
+msgstr ""
+
+msgid ""
+"Django 0.96 :commit:`(patch) <7e0972bded362bc4b851c109df2c8a6548481a8e>`"
+msgstr ""
+
+msgid "May 14, 2008 - :cve:`2008-2302`"
+msgstr ""
+
+msgid ""
+"XSS via admin login redirect. `Full description <https://www.djangoproject."
+"com/weblog/2008/may/14/security/>`__"
+msgstr ""
+
+msgid "Django 0.91 :commit:`(patch) <50ce7fb57d>`"
+msgstr ""
+
+msgid "Django 0.95 :commit:`(patch) <50ce7fb57d>`"
+msgstr ""
+
+msgid "Django 0.96 :commit:`(patch) <7791e5c050>`"
+msgstr ""
+
+msgid "October 26, 2007 - :cve:`2007-5712`"
+msgstr ""
+
+msgid ""
+"Denial-of-service via arbitrarily-large ``Accept-Language`` header. `Full "
+"description <https://www.djangoproject.com/weblog/2007/oct/26/security-fix/"
+">`__"
+msgstr ""
+
+msgid ""
+"Django 0.91 :commit:`(patch) <8bc36e726c9e8c75c681d3ad232df8e882aaac81>`"
+msgstr ""
+
+msgid ""
+"Django 0.95 :commit:`(patch) <412ed22502e11c50dbfee854627594f0e7e2c234>`"
+msgstr ""
+
+msgid ""
+"Django 0.96 :commit:`(patch) <7dd2dd08a79e388732ce00e2b5514f15bd6d0f6f>`"
+msgstr ""
+
+msgid "Issues prior to Django's security process"
+msgstr "Problèmes précédant le processus de sécurité de Django"
+
+msgid ""
+"Some security issues were handled before Django had a formalized security "
+"process in use. For these, new releases may not have been issued at the time "
+"and CVEs may not have been assigned."
+msgstr ""
+"Certains problèmes de sécurité ont été gérés avant que Django possède un "
+"processus de sécurité formel. Pour ceux-ci, il se peut qu'il n'y ait pas eu "
+"de nouvelles publications de Django et qu'aucun code CVE n'ait été demandé."
+
+msgid "January 21, 2007 - :cve:`2007-0405`"
+msgstr ""
+
+msgid ""
+"Apparent \"caching\" of authenticated user. `Full description <https://www."
+"djangoproject.com/weblog/2007/jan/21/0951/>`__"
+msgstr ""
+
+msgid "Django 0.95 :commit:`(patch) <e89f0a6558>`"
+msgstr ""
+
+msgid "August 16, 2006 - :cve:`2007-0404`"
+msgstr ""
+
+msgid ""
+"Filename validation issue in translation framework. `Full description "
+"<https://www.djangoproject.com/weblog/2006/aug/16/compilemessages/>`__"
+msgstr ""
+
+msgid "Django 0.90 :commit:`(patch) <518d406e53>`"
+msgstr ""
+
+msgid "Django 0.91 :commit:`(patch) <518d406e53>`"
+msgstr ""
+
+msgid "Django 0.95 :commit:`(patch) <a132d411c6>` (released January 21 2007)"
 msgstr ""
