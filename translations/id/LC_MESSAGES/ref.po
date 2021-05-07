@@ -4,15 +4,15 @@
 #
 # Translators:
 # Claude Paroz <claude@2xlibre.net>, 2020
-# Fery Setiawan <gembelweb@gmail.com>, 2015-2020
+# Fery Setiawan <gembelweb@gmail.com>, 2015-2021
 # phyxkal miutwo <haikalvidya@gmail.com>, 2018
 # Sutrisno Efendi <kangfend@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-21 03:49-0500\n"
-"PO-Revision-Date: 2021-04-15 07:30+0000\n"
+"POT-Creation-Date: 2021-05-06 14:49-0500\n"
+"PO-Revision-Date: 2021-04-29 16:30+0000\n"
 "Last-Translator: Transifex Bot <>\n"
 "Language-Team: Indonesian (http://www.transifex.com/django/django-docs/"
 "language/id/)\n"
@@ -110,6 +110,8 @@ msgid ""
 "To configure an application, create an ``apps.py`` module inside the "
 "application, then define a subclass of :class:`AppConfig` there."
 msgstr ""
+"Untuk mengkonfigurasikan sebuah aplikasi, buat sebuah modul ``apps.py`` di "
+"dalam aplikasi, kemudian tentukan sub kelas dari :class:`AppConfig` disana."
 
 msgid ""
 "When :setting:`INSTALLED_APPS` contains the dotted path to an application "
@@ -934,7 +936,7 @@ msgstr ""
 "``signals``: Memeriksa pada pernyataan sinyal dan penangan pendaftaran."
 
 msgid "``sites``: Checks :mod:`django.contrib.sites` configuration."
-msgstr ""
+msgstr "``sites``: Memeriksa konfigurasi :mod:`django.contrib.sites`."
 
 msgid ""
 "``staticfiles``: Checks :mod:`django.contrib.staticfiles` configuration."
@@ -954,7 +956,7 @@ msgid "Some checks may be registered with multiple tags."
 msgstr "Beberapa pemeriksaan mungkin didaftarkan dengan banyak etiket."
 
 msgid "The ``async_support`` tag was added."
-msgstr ""
+msgstr "Etiket ``async_support`` telah ditambahkan."
 
 msgid ""
 "The ``database`` checks are now run only for database aliases specified "
@@ -962,7 +964,7 @@ msgid ""
 msgstr ""
 
 msgid "The ``sites`` tag was added."
-msgstr ""
+msgstr "Etiket ``sites`` telah ditambahkan."
 
 msgid "Core system checks"
 msgstr "Memeriksa sistem inti"
@@ -972,6 +974,7 @@ msgstr "Dukungan asinkronus"
 
 msgid "The following checks verify your setup for :doc:`/topics/async`:"
 msgstr ""
+"Pemeriksanaan berikut mengecek setelan anda untuk :doc:`/topics/async`:"
 
 msgid ""
 "**async.E001**: You should not set the :envvar:`DJANGO_ALLOW_ASYNC_UNSAFE` "
@@ -1032,11 +1035,12 @@ msgid "Database"
 msgstr "Basisdata"
 
 msgid "MySQL and MariaDB"
-msgstr ""
+msgstr "MySQL dan MariaDB"
 
 msgid ""
 "If you're using MySQL or MariaDB, the following checks will be performed:"
 msgstr ""
+"Jika anda menggunakan MySQL atau MariaDB, pemeriksaan berikut akan dilakukan:"
 
 msgid ""
 "**mysql.E001**: MySQL/MariaDB does not allow unique ``CharField``\\s to have "
@@ -1195,7 +1199,7 @@ msgid ""
 msgstr ""
 
 msgid "**fields.E180**: ``<database>`` does not support ``JSONField``\\s."
-msgstr ""
+msgstr "**fields.E180**: ``<database>`` tidak mendukung ``JSONField``\\s."
 
 msgid ""
 "**fields.E190**: ``<database>`` does not support a database collation on "
@@ -25435,13 +25439,8 @@ msgstr ""
 msgid "Querying using the bounds"
 msgstr "Meminta menggunakan batasan"
 
-msgid ""
-"There are three transforms available for use in queries. You can extract the "
-"lower or upper bound, or query based on emptiness."
+msgid "Range fields support several extra lookups."
 msgstr ""
-"Ada tiga perubahan tersedia untuk digunakan dalam permintaan. Anda dapat "
-"mengeluarkan batasan terendah dan tertinggi, atau meminta berdasarkan "
-"kekosongan."
 
 msgid "``startswith``"
 msgstr "``startswith``"
@@ -34699,7 +34698,7 @@ msgid ""
 msgstr ""
 
 msgid "``BadRequest``"
-msgstr ""
+msgstr "``BadRequest``"
 
 msgid ""
 "The :exc:`BadRequest` exception is raised when the request cannot be "
@@ -34709,7 +34708,7 @@ msgid ""
 msgstr ""
 
 msgid "``RequestAborted``"
-msgstr ""
+msgstr "``RequestAborted``"
 
 msgid ""
 "The :exc:`RequestAborted` exception is raised when a HTTP body being read in "
@@ -34726,7 +34725,7 @@ msgid ""
 msgstr ""
 
 msgid "``SynchronousOnlyOperation``"
-msgstr ""
+msgstr "``SynchronousOnlyOperation``"
 
 msgid ""
 "The :exc:`SynchronousOnlyOperation` exception is raised when code that is "
@@ -34826,11 +34825,11 @@ msgstr ""
 ":exc:`UnreadablePostError` dimunculkan ketika pengguna membatalkan unggahan."
 
 msgid "Sessions Exceptions"
-msgstr ""
+msgstr "Eksepsi Sesi"
 
 msgid ""
 "Sessions exceptions are defined in ``django.contrib.sessions.exceptions``."
-msgstr ""
+msgstr "Eksepsi sesi ditentukan dalam ``django.contrib.sessions.exceptions``."
 
 msgid "``SessionInterrupted``"
 msgstr ""
@@ -47256,6 +47255,8 @@ msgid ""
 "Support for :class:`~django.contrib.postgres.fields.ArrayField` and :class:"
 "`~django.contrib.postgres.fields.RangeField` was added."
 msgstr ""
+"Dukungan untuk :class:`~django.contrib.postgres.fields.ArrayField` dan :"
+"class:`~django.contrib.postgres.fields.RangeField` telah ditambahkan."
 
 msgid ""
 "For every :class:`~django.db.models.DateField` and :class:`~django.db.models."
@@ -47297,7 +47298,7 @@ msgid "Other attributes"
 msgstr "Atribut-atribut lain"
 
 msgid "``_state``"
-msgstr ""
+msgstr "``_state``"
 
 msgid ""
 "The ``_state`` attribute refers to a ``ModelState`` object that tracks the "
@@ -47318,7 +47319,7 @@ msgid ""
 msgstr ""
 
 msgid "Lookup API reference"
-msgstr ""
+msgstr "Acuan Pencarian API"
 
 msgid ""
 "This document has the API references of lookups, the Django API for building "
@@ -55322,14 +55323,52 @@ msgstr ""
 "setting:`USE_THOUSAND_SEPARATOR`."
 
 msgid "``DEFAULT_AUTO_FIELD``"
-msgstr ""
+msgstr "``DEFAULT_AUTO_FIELD``"
 
 msgid "Default: ``'``:class:`django.db.models.AutoField`\\ ``'``"
-msgstr ""
+msgstr "Awalan: ``'``:class:`django.db.models.AutoField`\\ ``'``"
 
 msgid ""
 "Default primary key field type to use for models that don't have a field "
 "with :attr:`primary_key=True <django.db.models.Field.primary_key>`."
+msgstr ""
+
+msgid "Migrating auto-created through tables"
+msgstr ""
+
+msgid ""
+"The value of ``DEFAULT_AUTO_FIELD`` will be respected when creating new auto-"
+"created through tables for many-to-many relationships."
+msgstr ""
+
+msgid ""
+"Unfortunately, the primary keys of existing auto-created through tables "
+"cannot currently be updated by the migrations framework."
+msgstr ""
+
+msgid ""
+"This means that if you switch the value of ``DEFAULT_AUTO_FIELD`` and then "
+"generate migrations, the primary keys of the related models will be updated, "
+"as will the foreign keys from the through table, but the primary key of the "
+"auto-created through table will not be migrated."
+msgstr ""
+
+msgid ""
+"In order to address this, you should add a :class:`~django.db.migrations."
+"operations.RunSQL` operation to your migrations to perform the required "
+"``ALTER TABLE`` step. You can check the existing table name through "
+"``sqlmigrate``, ``dbshell``, or with the field’s ``remote_field.through."
+"_meta.db_table`` property."
+msgstr ""
+
+msgid ""
+"Explicitly defined through models are already handled by the migrations "
+"system."
+msgstr ""
+
+msgid ""
+"Allowing automatic migrations for the primary key of existing auto-created "
+"through tables :ticket:`may be implemented at a later date <32674>`."
 msgstr ""
 
 msgid "``DEFAULT_CHARSET``"
@@ -55344,10 +55383,10 @@ msgid ""
 msgstr ""
 
 msgid "``DEFAULT_EXCEPTION_REPORTER``"
-msgstr ""
+msgstr "``DEFAULT_EXCEPTION_REPORTER``"
 
 msgid "Default: ``'``:class:`django.views.debug.ExceptionReporter`\\ ``'``"
-msgstr ""
+msgstr "Awalan: ``'``:class:`django.views.debug.ExceptionReporter`\\ ``'``"
 
 msgid ""
 "Default exception reporter class to be used if none has been assigned to "
@@ -55398,10 +55437,10 @@ msgid ""
 msgstr ""
 
 msgid "``DEFAULT_HASHING_ALGORITHM``"
-msgstr ""
+msgstr "``DEFAULT_HASHING_ALGORITHM``"
 
 msgid "Default: ``'sha256'``"
-msgstr ""
+msgstr "Awalan: ``'sha256'``"
 
 msgid ""
 "Default hashing algorithm to use for encoding cookies, password reset tokens "
@@ -55652,7 +55691,7 @@ msgid "``FILE_UPLOAD_PERMISSIONS``"
 msgstr "``FILE_UPLOAD_PERMISSIONS``"
 
 msgid "Default: ``0o644``"
-msgstr ""
+msgstr "Awalan: ``0o644``"
 
 msgid ""
 "The numeric mode (i.e. ``0o644``) to set newly uploaded files to. For more "
@@ -56019,7 +56058,7 @@ msgid ""
 msgstr ""
 
 msgid "``LANGUAGE_COOKIE_HTTPONLY``"
-msgstr ""
+msgstr "``LANGUAGE_COOKIE_HTTPONLY``"
 
 msgid ""
 "Whether to use ``HttpOnly`` flag on the language cookie. If this is set to "
@@ -56067,7 +56106,7 @@ msgid ""
 msgstr ""
 
 msgid "``LANGUAGE_COOKIE_SAMESITE``"
-msgstr ""
+msgstr "``LANGUAGE_COOKIE_SAMESITE``"
 
 msgid ""
 "The value of the `SameSite`_ flag on the language cookie. This flag prevents "
@@ -56075,10 +56114,10 @@ msgid ""
 msgstr ""
 
 msgid "Setting ``LANGUAGE_COOKIE_SAMESITE = 'None'`` was allowed."
-msgstr ""
+msgstr "Menyetel ``LANGUAGE_COOKIE_SAMESITE = 'None'`` diizinkan."
 
 msgid "``LANGUAGE_COOKIE_SECURE``"
-msgstr ""
+msgstr "``LANGUAGE_COOKIE_SECURE``"
 
 msgid ""
 "Whether to use a secure cookie for the language cookie. If this is set to "
@@ -56677,10 +56716,10 @@ msgid ""
 msgstr ""
 
 msgid "``SECURE_REFERRER_POLICY``"
-msgstr ""
+msgstr "``SECURE_REFERRER_POLICY``"
 
 msgid "Default: ``'same-origin'``"
-msgstr ""
+msgstr "Awalan: ``'same-origin'``"
 
 msgid ""
 "If configured, the :class:`~django.middleware.security.SecurityMiddleware` "
@@ -56689,7 +56728,7 @@ msgid ""
 msgstr ""
 
 msgid "In older versions, the default value is ``None``."
-msgstr ""
+msgstr "Di versi terlama, nilai awalan adalah ``None``."
 
 msgid "``SECURE_SSL_HOST``"
 msgstr "``SECURE_SSL_HOST``"
@@ -57188,7 +57227,7 @@ msgid "``X_FRAME_OPTIONS``"
 msgstr "``X_FRAME_OPTIONS``"
 
 msgid "Default: ``'DENY'``"
-msgstr ""
+msgstr "Awalan: ``'DENY'``"
 
 msgid ""
 "The default value for the X-Frame-Options header used by :class:`~django."
@@ -57280,13 +57319,13 @@ msgstr ""
 "dibangun."
 
 msgid "``PASSWORD_RESET_TIMEOUT``"
-msgstr ""
+msgstr "``PASSWORD_RESET_TIMEOUT``"
 
 msgid "Default: ``259200`` (3 days, in seconds)"
-msgstr ""
+msgstr "Awalan: ``259200`` (3 hari, dalam detik)"
 
 msgid "The number of seconds a password reset link is valid for."
-msgstr ""
+msgstr "Jumlah detik dari tautan setel kembali sandi yang sah."
 
 msgid ""
 "Used by the :class:`~django.contrib.auth.views.PasswordResetConfirmView`."

@@ -9,12 +9,13 @@
 # Bruce de Sá <contato@publidex.com.br>, 2019
 # Bruno Barbosa <bsbruno1@gmail.com>, 2016
 # cacarrara <caiocarrara@gmail.com>, 2016
-# Carlos C. Leite <caduado@gmail.com>, 2020
-# Carlos C. Leite <caduado@gmail.com>, 2016-2017
-# Carlos C. Leite <caduado@gmail.com>, 2016
+# Carlos Leite <caduado@gmail.com>, 2020
+# Carlos Leite <caduado@gmail.com>, 2016-2017
+# Carlos Leite <caduado@gmail.com>, 2016
 # Claudio Rogerio Carvalho Filho <excriptbrasil@gmail.com>, 2017,2020
 # Danilo Favato <dfavato@gmail.com>, 2017
 # Diego Ponci <dgo.ponciano@gmail.com>, 2016
+# Felipe Pena <felipensp@gmail.com>, 2021
 # Hugo Tácito <hugotacito@gmail.com>, 2016
 # Igor Cavalcante <igorcavlim@gmail.com>, 2017
 # João Daher Neto <joao.daher.neto@gmail.com>, 2016
@@ -39,8 +40,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-21 03:49-0500\n"
-"PO-Revision-Date: 2021-04-15 07:30+0000\n"
+"POT-Creation-Date: 2021-05-06 14:49-0500\n"
+"PO-Revision-Date: 2021-04-29 16:30+0000\n"
 "Last-Translator: Transifex Bot <>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
@@ -172,6 +173,8 @@ msgid ""
 "If no :class:`AppConfig` subclass is found, the base :class:`AppConfig` "
 "class will be used."
 msgstr ""
+"Se a subclasse :class:`AppConfig` não for encontrada, a classe base :class:"
+"`AppConfig` será usada."
 
 msgid ""
 "Alternatively, :setting:`INSTALLED_APPS` may contain the dotted path to a "
@@ -337,7 +340,7 @@ msgid ""
 msgstr ""
 
 msgid "By default, this attribute isn't set."
-msgstr ""
+msgstr "Por padrão, este atributo não é definido."
 
 msgid ""
 "The implicit primary key type to add to models within this app. You can use "
@@ -346,7 +349,7 @@ msgid ""
 msgstr ""
 
 msgid "By default, this is the value of :setting:`DEFAULT_AUTO_FIELD`."
-msgstr ""
+msgstr "Por padrão, este é o valor de :setting:`DEFAULT_AUTO_FIELD`."
 
 msgid "Read-only attributes"
 msgstr "Atributos somente leitura"
@@ -360,6 +363,8 @@ msgid ""
 "Module containing the models, e.g. ``<module 'django.contrib.admin.models' "
 "from 'django/contrib/admin/models.py'>``."
 msgstr ""
+"Módulo contendo os models, e.g. ``<module 'django.contrib.admin.models' from "
+"'django/contrib/admin/models.py'>``."
 
 msgid ""
 "It may be ``None`` if the application doesn't contain a ``models`` module. "
@@ -1062,7 +1067,7 @@ msgid "Database"
 msgstr "Banco de dados"
 
 msgid "MySQL and MariaDB"
-msgstr ""
+msgstr "MySQL e MariaDB"
 
 msgid ""
 "If you're using MySQL or MariaDB, the following checks will be performed:"
@@ -20219,9 +20224,7 @@ msgstr ""
 msgid "Querying using the bounds"
 msgstr ""
 
-msgid ""
-"There are three transforms available for use in queries. You can extract the "
-"lower or upper bound, or query based on emptiness."
+msgid "Range fields support several extra lookups."
 msgstr ""
 
 msgid "``startswith``"
@@ -45983,6 +45986,44 @@ msgstr ""
 msgid ""
 "Default primary key field type to use for models that don't have a field "
 "with :attr:`primary_key=True <django.db.models.Field.primary_key>`."
+msgstr ""
+
+msgid "Migrating auto-created through tables"
+msgstr ""
+
+msgid ""
+"The value of ``DEFAULT_AUTO_FIELD`` will be respected when creating new auto-"
+"created through tables for many-to-many relationships."
+msgstr ""
+
+msgid ""
+"Unfortunately, the primary keys of existing auto-created through tables "
+"cannot currently be updated by the migrations framework."
+msgstr ""
+
+msgid ""
+"This means that if you switch the value of ``DEFAULT_AUTO_FIELD`` and then "
+"generate migrations, the primary keys of the related models will be updated, "
+"as will the foreign keys from the through table, but the primary key of the "
+"auto-created through table will not be migrated."
+msgstr ""
+
+msgid ""
+"In order to address this, you should add a :class:`~django.db.migrations."
+"operations.RunSQL` operation to your migrations to perform the required "
+"``ALTER TABLE`` step. You can check the existing table name through "
+"``sqlmigrate``, ``dbshell``, or with the field’s ``remote_field.through."
+"_meta.db_table`` property."
+msgstr ""
+
+msgid ""
+"Explicitly defined through models are already handled by the migrations "
+"system."
+msgstr ""
+
+msgid ""
+"Allowing automatic migrations for the primary key of existing auto-created "
+"through tables :ticket:`may be implemented at a later date <32674>`."
 msgstr ""
 
 msgid "``DEFAULT_CHARSET``"
