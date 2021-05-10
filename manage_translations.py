@@ -18,7 +18,7 @@ from argparse import ArgumentParser
 from subprocess import PIPE, Popen, call, check_output
 
 # intro and index ressources must be fully translated for these languages
-ACTIVE_LANGUAGES = ['el', 'es', 'fr', 'id', 'ja', 'ko', 'pl', 'pt_BR', 'zh_Hans']
+ACTIVE_LANGUAGES = ['el', 'es', 'fr', 'id', 'it', 'ja', 'ko', 'pl', 'pt_BR', 'zh_Hans']
 TX_LANG_MAP = {
     'zh_Hans': 'zh_CN',
     'zh_Hant': 'zh_TW',

@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+#
+# Translators:
+# Luciano De Falco Alfano, 2015
+# palmux <palmux@gmail.com>, 2014
+# Paolo Melchiorre <paolo@melchiorre.org>, 2021
+# Saverio <saverio.brancaccio@gmail.com>, 2014
+# Tania Monti <tania.monti@gmx.it>, 2013-2014
+msgid ""
+msgstr ""
+"Project-Id-Version: django-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-06 14:49-0500\n"
+"PO-Revision-Date: 2021-05-10 08:56+0000\n"
+"Last-Translator: Paolo Melchiorre <paolo@melchiorre.org>\n"
+"Language-Team: Italian (http://www.transifex.com/django/django-docs/language/"
+"it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Glossary"
+msgstr "Glossario"
+
+msgid "concrete model"
+msgstr "modello reale"
+
+msgid ""
+"A non-abstract (:attr:`abstract=False <django.db.models.Options.abstract>`) "
+"model."
+msgstr ""
+"Un modello non astratto (:attr:`abstract=False <django.db.models.Options."
+"abstract>`)."
+
+msgid "field"
+msgstr "campo"
+
+msgid ""
+"An attribute on a :term:`model`; a given field usually maps directly to a "
+"single database column."
+msgstr ""
+"Un attributo di un a :term:`model`; un determinato campo di solito viene "
+"associato direttamente ad una singola colonna del database."
+
+msgid "See :doc:`/topics/db/models`."
+msgstr "Vedi :doc:`/topics/db/models`."
+
+msgid "generic view"
+msgstr "vista generica"
+
+msgid ""
+"A higher-order :term:`view` function that provides an abstract/generic "
+"implementation of a common idiom or pattern found in view development."
+msgstr ""
+"Una funzione di :term:`view` di ordine superiore che fornisce "
+"un'implementazione astratta/generica di un idioma o schema diffuso nello "
+"sviluppo vista."
+
+msgid "See :doc:`/topics/class-based-views/index`."
+msgstr "Vedi :doc:`/topics/class-based-views/index`."
+
+msgid "model"
+msgstr "modello"
+
+msgid "Models store your application's data."
+msgstr "I modelli memorizzano i dati della tua applicazione."
+
+msgid "MTV"
+msgstr "MTV"
+
+msgid ""
+"\"Model-template-view\"; a software pattern, similar in style to MVC, but a "
+"better description of the way Django does things."
+msgstr ""
+"\"Model-template-view\"; un modello software, simile a MVC, che descrive "
+"però in modo migliore il funzionamento di Django."
+
+msgid "See :ref:`the FAQ entry <faq-mtv>`."
+msgstr "Vedi :ref:`voce FAQ <faq-mtv>`."
+
+msgid "MVC"
+msgstr "MVC"
+
+msgid ""
+"`Model-view-controller`__; a software pattern. Django :ref:`follows MVC to "
+"some extent <faq-mtv>`."
+msgstr ""
+"`Model-view-controller`__; un modello software. Django :ref:`segue in "
+"qualche misura MVC <faq-mtv>`."
+
+msgid "project"
+msgstr "progetto"
+
+msgid ""
+"A Python package -- i.e. a directory of code -- that contains all the "
+"settings for an instance of Django. This would include database "
+"configuration, Django-specific options and application-specific settings."
+msgstr ""
+"Un pacchetto Python, ovvero una directory del codice, che contiene tutte le "
+"impostazioni relative ad un'istanza Django. Questo include la configurazione "
+"del database, le opzioni specifiche di Django e le impostazioni relative "
+"all'applicazione."
+
+msgid "property"
+msgstr "proprietà"
+
+msgid ""
+"Also known as \"managed attributes\", and a feature of Python since version "
+"2.2. This is a neat way to implement attributes whose usage resembles "
+"attribute access, but whose implementation uses method calls."
+msgstr ""
+"Anche conosciuta con il nome di \"attributi gestiti\", e una funzionalità di "
+"Python integrata a partire dalla versione 2.2. È un buon modo per "
+"implementare attributi, che assomiglia nel suo uso all'accesso attributi, ma "
+"la quale implementazione si serve di invocazioni di un metodo."
+
+msgid "See :class:`property`."
+msgstr "Vedi :classe:'proprietà'."
+
+msgid "queryset"
+msgstr "queryset"
+
+msgid ""
+"An object representing some set of rows to be fetched from the database."
+msgstr ""
+"Un oggetto che rappressenta un insieme di linee da estrarre dal database."
+
+msgid "See :doc:`/topics/db/queries`."
+msgstr "Vedi :doc:`/topics/db/queries`."
+
+msgid "slug"
+msgstr "slug"
+
+msgid ""
+"A short label for something, containing only letters, numbers, underscores "
+"or hyphens. They're generally used in URLs. For example, in a typical blog "
+"entry URL:"
+msgstr ""
+"Una breve etichetta che identifica un oggetto e che contiene solo caratteri "
+"alfanumerici, trattini bassi o trattini d'unione. Sono \n"
+"generalmente utilizzate negli URLs. Per esempio in un tipico URL di un "
+"articolo di blog:"
+
+msgid "the last bit (``spring``) is the slug."
+msgstr "l'ultimo elemento (``spring``) è lo slug."
+
+msgid "template"
+msgstr "template"
+
+msgid ""
+"A chunk of text that acts as formatting for representing data. A template "
+"helps to abstract the presentation of data from the data itself."
+msgstr ""
+"Un pezzo di testo che agisce da base di formattazione per rappresentare i "
+"dati. Un modello aiuta a estrapolare i dati dalla loro rappresentazione."
+
+msgid "See :doc:`/topics/templates`."
+msgstr "Vedi :doc:`/topics/templates`."
+
+msgid "view"
+msgstr "vista"
+
+msgid "A function responsible for rendering a page."
+msgstr "Una funzione responsabile del rendering di una pagina."
