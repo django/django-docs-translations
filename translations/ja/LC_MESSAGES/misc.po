@@ -4,8 +4,8 @@
 #
 # Translators:
 # Kashun YOSHIDA, 2017
-# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2017,2019
-# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2017
+# Shuuji TAKAHASHI <shuuji3@gmail.com>, 2017,2019
+# Shuuji TAKAHASHI <shuuji3@gmail.com>, 2017
 # Takuya N <takninnovationresearch@gmail.com>, 2019
 # Takuya N <takninnovationresearch@gmail.com>, 2018
 # tomo, 2021
@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-06 14:49-0500\n"
-"PO-Revision-Date: 2021-05-04 12:12+0000\n"
+"POT-Creation-Date: 2021-06-22 16:19-0500\n"
+"PO-Revision-Date: 2021-05-23 14:41+0000\n"
 "Last-Translator: tomo\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
@@ -348,27 +348,35 @@ msgid ""
 "an optional performance booster for the common case of selecting \"every "
 "related object.\""
 msgstr ""
+"これは ``select_related()`` ``QuerySet`` メソッドが存在していることの理由でも"
+"あります。このメソッドは、「関係する全てのオブジェクト」を選択というよくある"
+"ケースでの効率上昇オプションです。"
 
 msgid "Terse, powerful syntax"
-msgstr ""
+msgstr "無愛想で、強力な構文"
 
 msgid ""
 "The database API should allow rich, expressive statements in as little "
 "syntax as possible. It should not rely on importing other modules or helper "
 "objects."
 msgstr ""
+"データベース API はできる限り小さい構文で、豊かで表現力のあるステートメントを"
+"書けるべきです。そして、それは他のモジュールや補助オブジェクトのインポートに"
+"頼るべきではありません。"
 
 msgid ""
 "Joins should be performed automatically, behind the scenes, when necessary."
-msgstr ""
+msgstr "結合処理は、必要なときに、舞台裏で自動的に行われるべきです。"
 
 msgid ""
 "Every object should be able to access every related object, systemwide. This "
 "access should work both ways."
 msgstr ""
+"全てのオブジェクトはシステム全域の全ての関係するオブジェクトにアクセスできる"
+"べきです。このアクセスは両方向にできるべきです。"
 
 msgid "Option to drop into raw SQL easily, when needed"
-msgstr ""
+msgstr "必要なときに簡単に選べる生QPLという選択肢"
 
 msgid ""
 "The database API should realize it's a shortcut but not necessarily an end-"
