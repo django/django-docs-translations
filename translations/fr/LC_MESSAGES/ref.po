@@ -23952,7 +23952,7 @@ msgstr ""
 "type de champ plus général dans les modèles : un champ ``MultiPolygonField`` "
 "de GeoDjango acceptera un objet ``Polygon``, mais un champ ``PolygonField`` "
 "n'acceptera pas un objet géométrique de type ``MultiPolygon``. C'est "
-"pourquoi le modèle ``WorldBorder`` défini ci-dessus utilise un champ "
+"pourquoi le modèle ``WorldBorder`` défini ci-dessus utilise un champ ``MultiPolygonField``."
 
 msgid ""
 "The :class:`~django.contrib.gis.gdal.Layer` may also have a spatial "
