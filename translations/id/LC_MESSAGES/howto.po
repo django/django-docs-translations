@@ -5,15 +5,15 @@
 # Translators:
 # Bagus Aji Santoso <baguzzzaji@gmail.com>, 2015
 # Claude Paroz <claude@2xlibre.net>, 2020
-# Fery Setiawan <gembelweb@gmail.com>, 2015-2020
+# Fery Setiawan <gembelweb@gmail.com>, 2015-2021
 # Ichlasul Affan <ichlaffterlalu@gmail.com>, 2020
 # oon arfiandwi <oon.arfiandwi@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-21 03:49-0500\n"
-"PO-Revision-Date: 2021-04-10 11:16+0000\n"
+"POT-Creation-Date: 2021-09-01 04:17-0500\n"
+"PO-Revision-Date: 2021-08-24 17:16+0000\n"
 "Last-Translator: Transifex Bot <>\n"
 "Language-Team: Indonesian (http://www.transifex.com/django/django-docs/"
 "language/id/)\n"
@@ -1212,9 +1212,10 @@ msgstr ""
 
 msgid ""
 "A list or tuple of tags, e.g. ``[Tags.staticfiles, Tags.models]``. System "
-"checks registered in the chosen tags will be checked for errors prior to "
-"executing the command. The value ``'__all__'`` can be used to specify that "
-"all system checks should be performed. Default value is ``'__all__'``."
+"checks :ref:`registered in the chosen tags <registering-labeling-checks>` "
+"will be checked for errors prior to executing the command. The value "
+"``'__all__'`` can be used to specify that all system checks should be "
+"performed. Default value is ``'__all__'``."
 msgstr ""
 
 msgid ""
@@ -1444,7 +1445,7 @@ msgstr ""
 "pengecualian ketika dibutuhkan."
 
 msgid "The ``returncode`` argument was added."
-msgstr ""
+msgstr "Argumen ``returncode`` telah ditambahkan."
 
 msgid "Writing custom model fields"
 msgstr "Menulis bidang model penyesuaian"
@@ -2042,7 +2043,8 @@ msgid ""
 "differences in database column types. For example, the date/time column type "
 "in PostgreSQL is called ``timestamp``, while the same column in MySQL is "
 "called ``datetime``. You can handle this in a :meth:`~Field.db_type` method "
-"by checking the ``connection.settings_dict['ENGINE']`` attribute."
+"by checking the ``connection.vendor`` attribute. Current built-in vendor "
+"names are: ``sqlite``, ``postgresql``, ``mysql``, and ``oracle``."
 msgstr ""
 
 msgid "For example::"
@@ -2505,7 +2507,7 @@ msgid "Custom template backend"
 msgstr ""
 
 msgid "Custom backends"
-msgstr ""
+msgstr "Backend penyesuaian"
 
 msgid ""
 "Here's how to implement a custom template backend in order to use another "
@@ -2560,10 +2562,10 @@ msgid ""
 msgstr ""
 
 msgid "``'name'``: The name of the template in which the exception occurred."
-msgstr ""
+msgstr "``'name'``: Nama dari cetakan dimana pengecualian muncul."
 
 msgid "``'message'``: The exception message."
-msgstr ""
+msgstr "``'message'``: Pesan pengecualian."
 
 msgid ""
 "``'source_lines'``: The lines before, after, and including the line the "
@@ -2572,35 +2574,40 @@ msgid ""
 msgstr ""
 
 msgid "``'line'``: The line number on which the exception occurred."
-msgstr ""
+msgstr "``'line'``: Baris angka dimana pengecualian muncul."
 
 msgid ""
 "``'before'``: The content on the error line before the token that raised the "
 "error."
 msgstr ""
+"``'before'``: Isi pada baris kesalahan sebelum token yang memunculkan "
+"kesalahan."
 
 msgid "``'during'``: The token that raised the error."
-msgstr ""
+msgstr "``'during'``: Token yang memunculkan kesalahan."
 
 msgid ""
 "``'after'``: The content on the error line after the token that raised the "
 "error."
 msgstr ""
+"``'after'``: Isi pada baris kesalahan setelah token yang memunculkan "
+"kesalahan."
 
 msgid "``'total'``: The number of lines in ``source_lines``."
-msgstr ""
+msgstr "``'total'``: Jumlah baris dalam ``source_lines``."
 
 msgid "``'top'``: The line number where ``source_lines`` starts."
-msgstr ""
+msgstr "``'top'``: Baris angka dimana ``source_lines`` mulai."
 
 msgid "``'bottom'``: The line number where ``source_lines`` ends."
-msgstr ""
+msgstr "``'bottom'``: Baris angka dimana ``source_lines`` berakhir."
 
 msgid "Given the above template error, ``template_debug`` would look like::"
 msgstr ""
+"Diberikan cetakan kesalahan diatas, ``template_debug`` akan berupa seperti::"
 
 msgid "Origin API and 3rd-party integration"
-msgstr ""
+msgstr "API asli dan penggabungan pihak-ketiga"
 
 msgid ""
 "Django templates have an :class:`~django.template.base.Origin` object "
@@ -2616,7 +2623,7 @@ msgid ""
 msgstr ""
 
 msgid "``'name'``: The full path to the template."
-msgstr ""
+msgstr "``'name'``: Jalur penih pada cetakan."
 
 msgid ""
 "``'template_name'``: The relative path to the template as passed into the "
@@ -6725,12 +6732,14 @@ msgid ""
 "For example, you can use this technique to add a custom logo to the ``admin/"
 "base_site.html`` template:"
 msgstr ""
+"Sebagai contoh, anda dapat menggunakan teknik ini untuk menambahkan logo "
+"penyesuaian pada cetakan ``admin/base_site.html``:"
 
 msgid "templates/admin/base_site.html"
-msgstr ""
+msgstr "templates/admin/base_site.html"
 
 msgid "Key points to note:"
-msgstr ""
+msgstr "Titik kunci pada catatan:"
 
 msgid ""
 "The example creates a file at ``templates/admin/base_site.html`` that uses "
@@ -7474,10 +7483,11 @@ msgid ""
 msgstr ""
 
 msgid ""
-"To install Python on your machine go to https://python.org/downloads/. The "
-"website should offer you a download button for the latest Python version. "
-"Download the executable installer and run it. Check the boxes next to "
-"\"Install launcher for all users (recommended)\" then click \"Install Now\"."
+"To install Python on your machine go to https://www.python.org/downloads/. "
+"The website should offer you a download button for the latest Python "
+"version. Download the executable installer and run it. Check the boxes next "
+"to \"Install launcher for all users (recommended)\" then click \"Install Now"
+"\"."
 msgstr ""
 
 msgid ""
@@ -7501,7 +7511,7 @@ msgid ""
 msgstr ""
 
 msgid "Setting up a virtual environment"
-msgstr ""
+msgstr "Menyetel lingkungan maya"
 
 msgid ""
 "It is best practice to provide a dedicated environment for each Django "
@@ -7563,20 +7573,23 @@ msgstr ""
 "dengan Django."
 
 msgid "Colored terminal output"
+msgstr "Keluaran terminal bewarna"
+
+msgid ""
+"A quality-of-life feature adds colored (rather than monochrome) output to "
+"the terminal. In modern terminals this should work for both CMD and "
+"PowerShell. If for some reason this needs to be disabled, set the "
+"environmental variable :envvar:`DJANGO_COLORS` to ``nocolor``."
 msgstr ""
 
 msgid ""
-"A quality-of-life feature is to output colored (rather than monochrome) "
-"output on the terminal. This should work both on CMD and PowerShell. If for "
-"some reason this needs to be disabled, set the environmental variable :"
-"envvar:`DJANGO_COLORS` to ``nocolor``."
-msgstr ""
-
-msgid "To enable this, colorama_ must be installed::"
+"On older Windows versions, or legacy terminals, colorama_ must be installed "
+"to enable syntax coloring::"
 msgstr ""
 
 msgid "See :ref:`syntax-coloring` for more information on color settings."
 msgstr ""
+"Lihat :ref:`syntax-coloring` untuk informasi lebih pada pengaturan warna."
 
 msgid "Common pitfalls"
 msgstr "Kesalahan umum"
@@ -7603,6 +7616,16 @@ msgstr ""
 "Jika Anda terhubung ke internet menggunakan proksi, mungkin akan muncul "
 "masalah ketika menjalankan ``py -m pip install Django``. Atur variabel "
 "environment untuk konfigurasi proksi dalam terminal sebagai berikut::"
+
+msgid ""
+"In general, Django assumes that ``UTF-8`` encoding is used for I/O. This may "
+"cause problems if your system is set to use a different encoding. Recent "
+"versions of Python allow setting the :envvar:`PYTHONUTF8` environment "
+"variable in order to force a ``UTF-8`` encoding. Windows 10 also provides a "
+"system-wide setting by checking ``Use Unicode UTF-8 for worldwide language "
+"support`` in :menuselection:`Language --> Administrative Language Settings --"
+"> Change system locale` in system settings."
+msgstr ""
 
 msgid "Writing database migrations"
 msgstr "Menulis perpindahan basisdata"

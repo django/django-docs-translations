@@ -4,6 +4,7 @@
 #
 # Translators:
 # DoJun Lee <leedoe0709@ssu.ac.kr>, 2017
+# Gyeongjun Paik <paikend@gmail.com>, 2021
 # Hwang, Geon Gu <under_09@naver.com>, 2017
 # Hyungsuk Yoon <youhanmir@gmail.com>, 2016
 # Jaeyoung Heo <jay.jaeyoung@gmail.com>, 2017
@@ -14,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-10 04:40-0500\n"
-"PO-Revision-Date: 2020-09-03 10:43+0000\n"
-"Last-Translator: Yong Choi <sk8er.choi@gmail.com>\n"
+"POT-Creation-Date: 2021-09-01 04:17-0500\n"
+"PO-Revision-Date: 2021-08-24 14:59+0000\n"
+"Last-Translator: Gyeongjun Paik <paikend@gmail.com>\n"
 "Language-Team: Korean (http://www.transifex.com/django/django-docs/language/"
 "ko/)\n"
 "MIME-Version: 1.0\n"
@@ -53,6 +54,13 @@ msgid ""
 "projects that use it. By using incremental improvements, we try to avoid "
 "both stagnation and large breaking upgrades."
 msgstr ""
+"API 안정성을 매우 높은 우선순위로 만드는 동시에 Django는 우리가 제공하는 API"
+"에서 (결과적으로) \"한 가지 방법\"을 목표로 하는 것과 함께 지속적인 개선에도 "
+"전념하고 있습니다. 이것은 우리가 일을 하는 데 있어 분명히 더 나은 방법을 발견"
+"할 때 이전 방법을 더 이상 사용하지 않고 결국 제거할 것임을 의미합니다. 우리"
+"의 목표는 그것을 사용하는 모든 프로젝트에서 모범 사례를 장려하는 최고 품질의 "
+"현대적이고 신뢰할 수 있는 웹 프레임워크를 제공하는 것입니다. 점진적 개선을 이"
+"용해 정체 및 대규모 중단 업그레이드를 모두 방지하려고 합니다."
 
 msgid "What \"stable\" means"
 msgstr "\"안정적인 것\"의 의미"
@@ -540,15 +548,15 @@ msgid ""
 "The template system, out of the box, should forbid the inclusion of "
 "malicious code -- such as commands that delete database records."
 msgstr ""
-"템플릿 시스템은 데이테베이스의 레코드를 삭제하는 명령과 같은 악의적 코드를 포"
+"템플릿 시스템은 데이터베이스의 레코드를 삭제하는 명령과 같은 악의적 코드를 포"
 "함할 수 없게 되어 있어야 합니다."
 
 msgid ""
 "This is another reason the template system doesn't allow arbitrary Python "
 "code."
 msgstr ""
-"이것은 템플릿 시스템이 임의의 Python 코드를 실행할 수 없는 또다른 이유이기도 "
-"합니다."
+"이것은 템플릿 시스템이 임의의 Python 코드를 실행할 수 없는 또 다른 이유이기"
+"도 합니다."
 
 msgid "Extensibility"
 msgstr "확장성"

@@ -26,9 +26,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 16:19-0500\n"
-"PO-Revision-Date: 2021-06-24 00:54+0000\n"
-"Last-Translator: Veoco <one@nomox.cn>\n"
+"POT-Creation-Date: 2021-09-01 04:17-0500\n"
+"PO-Revision-Date: 2021-09-01 11:24+0000\n"
+"Last-Translator: Transifex Bot <>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -30494,6 +30494,43 @@ msgstr "Django 3.1.12 版本发行说明"
 msgid "Django 3.1.12 fixes two security issues in 3.1.11."
 msgstr "Django 3.1.12 修复了 3.1.11 中的两个安全问题。"
 
+msgid "Django 3.1.13 release notes"
+msgstr "Django 3.1.13 版本发行说明"
+
+msgid "*July 1, 2021*"
+msgstr "*2021 年 7 月 1 日*"
+
+msgid "Django 3.1.13 fixes a security issue with severity \"high\" in 3.1.12."
+msgstr "Django 3.1.13 修复了 3.1.12 中严重程度为 “高” 的安全问题。"
+
+msgid ""
+"CVE-2021-35042: Potential SQL injection via unsanitized ``QuerySet."
+"order_by()`` input"
+msgstr ""
+"CVE-2021-35042：通过未检验的 ``QuerySet.order_by()`` 输入进行潜在的 SQL 注入"
+
+msgid ""
+"Unsanitized user input passed to ``QuerySet.order_by()`` could bypass "
+"intended column reference validation in path marked for deprecation "
+"resulting in a potential SQL injection even if a deprecation warning is "
+"emitted."
+msgstr ""
+"传递给 ``QuerySet.order_by()`` 的未经检验的用户输入可能会绕过标记为废弃的路径"
+"中的预期列引用验证，导致潜在的 SQL 注入，即使已发出废弃警告。"
+
+msgid ""
+"As a mitigation the strict column reference validation was restored for the "
+"duration of the deprecation period. This regression appeared in 3.1 as a "
+"side effect of fixing :ticket:`31426`."
+msgstr ""
+"作为一种缓解措施，严格的列引用验证在废弃期间被恢复了。这个缺陷出现在 3.1 中，"
+"是修复 :ticket:`31426` 的副作用。"
+
+msgid ""
+"The issue is not present in the main branch as the deprecated path has been "
+"removed."
+msgstr "这个问题不存在于主分支中，因为废弃的路径已经被删除。"
+
 msgid "Django 3.1.2 release notes"
 msgstr "Django 3.1.2 版本发行说明"
 
@@ -32311,18 +32348,22 @@ msgstr ""
 "行操作时的精度损失（:ticket:`32793`）。"
 
 msgid "Django 3.2.5 release notes"
-msgstr ""
+msgstr "Django 3.2.5 版本发行说明"
 
-msgid "*Expected July 1, 2021*"
+msgid ""
+"Django 3.2.5 fixes a security issue with severity \"high\" and several bugs "
+"in 3.2.4. Also, the latest string translations from Transifex are "
+"incorporated."
 msgstr ""
-
-msgid "Django 3.2.5 fixes several bugs in 3.2.4."
-msgstr ""
+"Django 3.2.5 修复了一个严重程度为 “高” 的安全问题和 3.2.4 中的几个漏洞。此"
+"外，还加入了 Transifex 的最新字符串翻译。"
 
 msgid ""
 "Fixed a regression in Django 3.2 that caused a crash of ``QuerySet."
 "values_list(…, named=True)`` after ``prefetch_related()`` (:ticket:`32812`)."
 msgstr ""
+"修正了 Django 3.2 中的一个缺陷，该缺陷导致 ``QuerySet.values_list(..., "
+"named=True)`` 在 ``prefetch_related()`` 之后崩溃（:ticket:`32812`）。"
 
 msgid ""
 "Fixed a bug in Django 3.2 that caused a migration crash on MySQL 8.0.13+ "
@@ -32348,6 +32389,58 @@ msgid ""
 msgstr ""
 "修正了 Django 3.2 中的一个漏洞，即系统检查会在模型上出现无效的 ``app_label`` "
 "时崩溃（:ticket:`32863`）。"
+
+msgid "Django 3.2.6 release notes"
+msgstr "Django 3.2.6 版本发行说明"
+
+msgid "*August 2, 2021*"
+msgstr ""
+
+msgid "Django 3.2.6 fixes several bugs in 3.2.5."
+msgstr "Django 3.2.6 修复了 3.2.5 中的几个漏洞。"
+
+msgid ""
+"Fixed a regression in Django 3.2 that caused a crash validating ``\"NaN\"`` "
+"input with a ``forms.DecimalField`` when additional constraints, e.g. "
+"``max_value``, were specified (:ticket:`32949`)."
+msgstr ""
+"修正了 Django 3.2 中的一个缺陷，当指定了额外的约束条件，如 ``max_value`` 时，"
+"在验证输入 ``\"NaN\"`` 的 ``forms.DecimalField`` 时，会出现崩溃（:ticket:"
+"`32949`）。"
+
+msgid ""
+"Fixed a bug in Django 3.2 where a system check would crash on a model with a "
+"reverse many-to-many relation inherited from a parent class (:ticket:"
+"`32947`)."
+msgstr ""
+"修正了 Django 3.2 中的一个漏洞，即系统检查会在一个具有从父类继承的反向多对多"
+"关系的模型上崩溃（:ticket:`32947`）。"
+
+msgid "Django 3.2.7 release notes"
+msgstr ""
+
+msgid "*September 1, 2021*"
+msgstr ""
+
+msgid "Django 3.2.7 fixes a bug in 3.2.6."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.2 that caused the incorrect offset extraction "
+"from fixed offset timezones (:ticket:`32992`)."
+msgstr ""
+
+msgid "Django 3.2.8 release notes"
+msgstr ""
+
+msgid "*Expected October 5, 2021*"
+msgstr ""
+
+msgid "Django 3.2.8 fixes several bugs in 3.2.7."
+msgstr ""
+
+msgid "..."
+msgstr ""
 
 msgid "Release notes"
 msgstr "发行说明"
@@ -32515,43 +32608,73 @@ msgid ""
 msgstr ""
 "所有的安全问题都已经在 Django 的安全进程的版本下处理。这些版本列举如下。"
 
-msgid "June 2, 2021 - :cve:`2021-33203`"
+msgid "July 1, 2021 - :cve:`2021-35042`"
+msgstr "2021 年 7 月 1 日 - :cve:`2021-35042`"
+
+msgid ""
+"Potential SQL injection via unsanitized ``QuerySet.order_by()`` input. `Full "
+"description <https://www.djangoproject.com/weblog/2021/jul/01/security-"
+"releases/>`__"
 msgstr ""
+"潜在的 SQL 注入，通过未检验的 ``QuerySet.order_by()`` 输入。`完整描述 "
+"<https://www.djangoproject.com/weblog/2021/jul/01/security-releases/>`__"
+
+msgid "Versions affected"
+msgstr "受影响的版本"
+
+msgid "Django 3.2 :commit:`(patch) <a34a5f724c5d5adb2109374ba3989ebb7b11f81f>`"
+msgstr ""
+"Django 3.2 :commit:`（补丁） <a34a5f724c5d5adb2109374ba3989ebb7b11f81f>`"
+
+msgid "Django 3.1 :commit:`(patch) <0bd57a879a0d54920bb9038a732645fb917040e9>`"
+msgstr ""
+"Django 3.1 :commit:`（补丁） <0bd57a879a0d54920bb9038a732645fb917040e9>`"
+
+msgid "June 2, 2021 - :cve:`2021-33203`"
+msgstr "2021 年 6 月 2 日 - :cve:`2021-33203`"
 
 msgid ""
 "Potential directory traversal via ``admindocs``. `Full description <https://"
 "www.djangoproject.com/weblog/2021/jun/02/security-releases/>`__"
 msgstr ""
-
-msgid "Versions affected"
-msgstr "受影响的版本"
+"可能通过 ``admindocs`` 进行目录遍历。`完整描述 <https://www.djangoproject."
+"com/weblog/2021/jun/02/security-releases/>`__"
 
 msgid "Django 3.2 :commit:`(patch) <dfaba12cda060b8b292ae1d271b44bf810b1c5b9>`"
 msgstr ""
+"Django 3.2 :commit:`（补丁） <dfaba12cda060b8b292ae1d271b44bf810b1c5b9>`"
 
 msgid "Django 3.1 :commit:`(patch) <20c67a0693c4ede2b09af02574823485e82e4c8f>`"
 msgstr ""
+"Django 3.1 :commit:`（补丁） <20c67a0693c4ede2b09af02574823485e82e4c8f>`"
 
 msgid "Django 2.2 :commit:`(patch) <053cc9534d174dc89daba36724ed2dcb36755b90>`"
 msgstr ""
+"Django 2.2 :commit:`（补丁） <053cc9534d174dc89daba36724ed2dcb36755b90>`"
 
 msgid "June 2, 2021 - :cve:`2021-33571`"
-msgstr ""
+msgstr "2021 年 6 月 2 日 - :cve:`2021-33571`"
 
 msgid ""
 "Possible indeterminate SSRF, RFI, and LFI attacks since validators accepted "
 "leading zeros in IPv4 addresses. `Full description <https://www."
 "djangoproject.com/weblog/2021/jun/02/security-releases/>`__"
 msgstr ""
+"由于验证器接受 IPv4 地址中的前导零，因此可能出现不确定的 SSRF、RFI 和 LFI 攻"
+"击。`完整描述 <https://www.djangoproject.com/weblog/2021/jun/02/security-"
+"releases/>`__"
 
 msgid "Django 3.2 :commit:`(patch) <9f75e2e562fa0c0482f3dde6fc7399a9070b4a3d>`"
 msgstr ""
+"Django 3.2 :commit:`（补丁） <9f75e2e562fa0c0482f3dde6fc7399a9070b4a3d>`"
 
 msgid "Django 3.1 :commit:`(patch) <203d4ab9ebcd72fc4d6eb7398e66ed9e474e118e>`"
 msgstr ""
+"Django 3.1 :commit:`（补丁） <203d4ab9ebcd72fc4d6eb7398e66ed9e474e118e>`"
 
 msgid "Django 2.2 :commit:`(patch) <f27c38ab5d90f68c9dd60cabef248a570c0be8fc>`"
 msgstr ""
+"Django 2.2 :commit:`（补丁） <f27c38ab5d90f68c9dd60cabef248a570c0be8fc>`"
 
 msgid "May 6, 2021 - :cve:`2021-32052`"
 msgstr ""

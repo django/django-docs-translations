@@ -3,17 +3,18 @@
 # This file is distributed under the same license as the Django package.
 #
 # Translators:
-# Ernesto Avilés Vázquez <whippiii@gmail.com>, 2015
+# e4db27214f7e7544f2022c647b585925_bb0e321, 2015
 # Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2016
 # Samuel David Ramirez Mantione <venezuelapoliglota@hotmail.com>, 2016
+# Uriel Medina <urimeba511@gmail.com>, 2021
 # Yoel Acevedo, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-31 10:29-0500\n"
-"PO-Revision-Date: 2017-02-14 16:13+0000\n"
-"Last-Translator: Yoel Acevedo\n"
+"POT-Creation-Date: 2021-09-01 04:17-0500\n"
+"PO-Revision-Date: 2021-08-11 22:01+0000\n"
+"Last-Translator: Uriel Medina <urimeba511@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/django/django-docs/language/"
 "es/)\n"
 "MIME-Version: 1.0\n"
@@ -26,12 +27,23 @@ msgid "API stability"
 msgstr "Estabilidad de la API"
 
 msgid ""
-"Django promises API stability and forwards-compatibility since version 1.0. "
-"In a nutshell, this means that code you develop against a version of Django "
-"will continue to work with future releases. You may need to make minor "
-"changes when upgrading the version of Django your project uses: see the "
-"\"Backwards incompatible changes\" section of the :doc:`release note </"
-"releases/index>` for the version or versions to which you are upgrading."
+"Django is committed to API stability and forwards-compatibility. In a "
+"nutshell, this means that code you develop against a version of Django will "
+"continue to work with future releases. You may need to make minor changes "
+"when upgrading the version of Django your project uses: see the \"Backwards "
+"incompatible changes\" section of the :doc:`release note </releases/index>` "
+"for the version or versions to which you are upgrading."
+msgstr ""
+
+msgid ""
+"At the same time as making API stability a very high priority, Django is "
+"also committed to continual improvement, along with aiming for \"one way to "
+"do it\" (eventually) in the APIs we provide. This means that when we "
+"discover clearly superior ways to do things, we will deprecate and "
+"eventually remove the old ways. Our aim is to provide a modern, dependable "
+"web framework of the highest quality that encourages best practices in all "
+"projects that use it. By using incremental improvements, we try to avoid "
+"both stagnation and large breaking upgrades."
 msgstr ""
 
 msgid "What \"stable\" means"
@@ -67,8 +79,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-"We'll only break backwards compatibility of these APIs if a bug or security "
-"hole makes it completely unavoidable."
+"We'll only break backwards compatibility of these APIs without a deprecation "
+"process if a bug or security hole makes it completely unavoidable."
 msgstr ""
 
 msgid "Stable APIs"
@@ -173,7 +185,7 @@ msgid ""
 "Every distinct concept and/or piece of data should live in one, and only "
 "one, place. Redundancy is bad. Normalization is good."
 msgstr ""
-"Cada concepto distinto y / o dato debe ubicarse en un y sólo un lugar. La "
+"Cada concepto distinto y/o dato debe ubicarse en un y sólo un lugar. La "
 "redundancia es mala. La normalización es buena."
 
 msgid ""
