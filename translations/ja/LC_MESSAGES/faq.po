@@ -8,12 +8,13 @@
 # xiu1 <d84ea@hotmail.co.jp>, 2016-2017
 # Eiji WARASHINA <Eiji.Warashina@gmail.com>, 2016
 # Fuuki Shigenaka <shigenakafuuki@gmail.com>, 2018
-# Ikemoto Hideki <ikemo333@gmail.com>, 2020
+# Ikemoto Hideki <ikemo333@gmail.com>, 2020-2021
 # Kohei Tamura <ktamura.biz.80@gmail.com>, 2018
 # sutefu7, 2019
 # osamunmun <osamu.takayasu@gmail.com>, 2016
-# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016-2017
-# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016-2018,2020
+# Shuuji TAKAHASHI <shuuji3@gmail.com>, 2021
+# Shuuji TAKAHASHI <shuuji3@gmail.com>, 2016-2017
+# Shuuji TAKAHASHI <shuuji3@gmail.com>, 2016-2018,2020
 # Takashi Sugawara <aimaimokomoko@gmail.com>, 2017
 # Tatsuhiko Kono <kono@takenoko-tech.co.jp>, 2016
 # Takuya N <takninnovationresearch@gmail.com>, 2018
@@ -28,9 +29,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-06 14:49-0500\n"
-"PO-Revision-Date: 2021-05-04 09:03+0000\n"
-"Last-Translator: tomo\n"
+"POT-Creation-Date: 2021-11-23 01:46-0600\n"
+"PO-Revision-Date: 2021-11-14 05:15+0000\n"
+"Last-Translator: Shuuji TAKAHASHI <shuuji3@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -262,9 +263,9 @@ msgid ""
 "Depending on feature support, there *may* be minor stylistic differences "
 "between browsers. These are considered acceptable variations in rendering."
 msgstr ""
-"将来の変更によりますが、*もしかしたら*ブラウザ間で多少の見た目の違いがあるか"
-"もしれません。これらはレンダリングにおける許容範囲内の違いであると考えられて"
-"います。"
+"将来の変更によりますが、 *もしかしたら* ブラウザ間で多少の見た目の違いがある"
+"かもしれません。これらはレンダリングにおける許容範囲内の違いであると考えられ"
+"ています。"
 
 msgid "FAQ: Contributing code"
 msgstr "FAQ: コードへの貢献"
@@ -672,9 +673,9 @@ msgid ""
 msgstr ""
 "Django の MVC の解釈では、「ビュー」はユーザに表示するデータを記述します。つ"
 "まり、ビューにはデータの *見せ方* を書く必要はなく、表示したいデータの *選び"
-"方* を書くものだと考えます。*ユーザが見るのはどのデータなのか*を書くのであっ"
-"て、*ユーザに対するデータの表示の仕方*を書くわけではないということです。この"
-"二つは明らかに違います。"
+"方* を書くものだと考えます。 *ユーザが見るのはどのデータなのか* を書くので"
+"あって、*ユーザに対するデータの表示の仕方* を書くわけではないということです。"
+"この二つは明らかに違います。"
 
 msgid ""
 "So, in our case, a \"view\" is the Python callback function for a particular "
@@ -889,9 +890,8 @@ msgstr ""
 "出版社の都市表記が必要なら、「カンザス州ローレンス」 (Lawrence, Kansas) を"
 "使ってください。"
 
-msgid "If you need a web address, use https://djangoproject.com."
+msgid "If you need a web address, use https://www.djangoproject.com/."
 msgstr ""
-"Web アドレスが必要ならば、 https://djangoproject.com を使ってください。"
 
 msgid "If you need a name, just use \"Django\", without any tagline."
 msgstr "名称が必要なら、何も加えずただ \"Django\" を使ってください。"
@@ -944,9 +944,9 @@ msgid "The |django-users| mailing list. This is for email-based discussions."
 msgstr ""
 
 msgid ""
-"The `#django IRC channel`_ on the Freenode IRC network. This is for chat-"
-"based discussions. If you're new to IRC, see the `Freenode documentation`_ "
-"for different ways to connect."
+"The `#django IRC channel`_ on the Libera.Chat IRC network. This is for chat-"
+"based discussions. If you're new to IRC, see the `Libera.Chat "
+"documentation`_ for different ways to connect."
 msgstr ""
 
 msgid ""
@@ -1111,9 +1111,9 @@ msgid ""
 "`Supported Databases </ref/databases>` for more information."
 msgstr ""
 "デフォルトでは、Django は Python のインストールに含まれている `SQLite`_ を実"
-"行します。本番環境では PostgreSQL_ をおすすめしていますが、MariaDB_、MySQL_、"
-"`SQLite`_,、Oracle_ に対する公式サポートも提供しています。詳しくは、:doc:`サ"
-"ポートするデータベース </ref/databases>`を参照してください。"
+"行します。本番環境では PostgreSQL_ をおすすめしていますが、 MariaDB_ 、 "
+"MySQL_ 、 `SQLite`_ 、 Oracle_ に対する公式サポートも提供しています。詳しく"
+"は、 :doc:`サポートするデータベース </ref/databases>` を参照してください。"
 
 msgid "What Python version can I use with Django?"
 msgstr "どのバージョンの Python で Django が使えますか?"
@@ -1145,7 +1145,7 @@ msgstr ""
 msgid "3.2"
 msgstr ""
 
-msgid "3.6, 3.7, 3.8, 3.9"
+msgid "3.6, 3.7, 3.8, 3.9, 3.10 (added in 3.2.9)"
 msgstr ""
 
 msgid ""
