@@ -18,7 +18,7 @@
 # Help Learn <26922dd@sina.com>, 2020
 # Chown Hobby, 2016
 # Hourann Lin <tdkgn@outlook.com>, 2018
-# Junkai Shao <skaifun.dev@gmail.com>, 2018
+# df2dc1c92e792f7ae8417c51df43db8f_594d92a <0f49be28017426edb1db1a2ab6e67088_717605>, 2018
 # Kevin Lee <rootkitcn@live.com>, 2017
 # Kevin Sze <leiarix@gmail.com>, 2014
 # Lu Linfeng <xmmilk@gmail.com>, 2019
@@ -28,10 +28,12 @@
 # Ralph Wen <ralph.wen@gmail.com>, 2013
 # spaceoi <zhangzhaoyu@gmail.com>, 2016
 # Suntravel Chris <chrisfromcn@gmail.com>, 2019
+# Todd Kasaki <2524737581@qq.com>, 2021
 # Tuzi.Li <lzjwh1996@foxmail.com>, 2016
 # Veoco <one@nomox.cn>, 2020-2021
 # Vincent <Intelligent.vincent@gmail.com>, 2018
 # 汪心禾 <wangxinhe06@gmail.com>, 2018
+# Xin Qi <georgechii@outlook.com>, 2021
 # xin.wang <asimplelife@live.com>, 2018
 # xinyu liu <happy_lucky52@163.com>, 2017
 # yang quan <youngquan@qq.com>, 2020
@@ -48,9 +50,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-01 04:17-0500\n"
-"PO-Revision-Date: 2021-08-26 11:18+0000\n"
-"Last-Translator: Transifex Bot <>\n"
+"POT-Creation-Date: 2021-11-23 01:46-0600\n"
+"PO-Revision-Date: 2021-11-16 03:06+0000\n"
+"Last-Translator: Xin Qi <georgechii@outlook.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -531,12 +533,12 @@ msgstr "为工单 #99999 写测试"
 
 msgid ""
 "In order to resolve this ticket, we'll add a ``make_toast()`` function to "
-"the top-level ``django`` module. First we are going to write a test that "
+"the ``django.shortcuts`` module. First we are going to write a test that "
 "tries to use the function and check that its output looks correct."
 msgstr ""
-"为了解决这次的工单问题，我们将在最上层的 ``django`` 模块中添加一个函数 "
-"``make_toast()``。首先我们来写一个测试用例，用于测试该函数，并且验证一下它的"
-"输出项是否正确。"
+"为了解决这个问题工单，我们将在 ``django.shortcuts`` 模块中添加一个 "
+"``make_toast()`` 函数。 首先，我们将编写一个测试，尝试使用该函数并检查其输出"
+"是否正确。"
 
 msgid ""
 "Navigate to Django's ``tests/shortcuts/`` folder and create a new file "
@@ -1571,13 +1573,13 @@ msgid ""
 "Only Python modules and packages are included in the package by default. To "
 "include additional files, we'll need to create a ``MANIFEST.in`` file. The "
 "setuptools docs referred to in the previous step discuss this file in more "
-"details. To include the templates, the ``README.rst`` and our ``LICENSE`` "
+"detail. To include the templates, the ``README.rst`` and our ``LICENSE`` "
 "file, create a file ``django-polls/MANIFEST.in`` with the following contents:"
 msgstr ""
-"默认包中只包含 Python 模块和包。为了包含额外文件，我们需要创建一个名为 "
-"``MANIFEST.in`` 的文件。上一步中关于 setuptools 的文档详细介绍了这个文件。为"
-"了包含模板、``README.rst`` 和我们的 ``LICENSE`` 文件，创建文件 ``django-"
-"polls/MANIFEST.in`` 包含以下内容："
+"默认情况下，包中仅包含 Python 模块和包。 要包含其他文件，我们需要创建一个 "
+"``MANIFEST.in`` 文件。 上一步中提到的 setuptools 文档更详细地讨论了这个文"
+"件。 要包含模板、``README.rst`` 和我们的 ``LICENSE`` 文件，创建一个文件 "
+"``django-polls/MANIFEST.in`` ，其内容如下： "
 
 msgid "django-polls/MANIFEST.in"
 msgstr "django-polls/MANIFEST.in"
@@ -2438,6 +2440,9 @@ msgid ""
 "Django follows the :ref:`DRY Principle <dry>`. The goal is to define your "
 "data model in one place and automatically derive things from it."
 msgstr ""
+"一个模型就是单个定义你的数据的信息源。模型中包含了不可缺少的数据区域和你存储"
+"数据的行为。Django 遵循 :ref:`DRY 原则 <dry>`。目的就是定义你的数据模型要在一"
+"位置上，而且自动从该位置推导一些事情。"
 
 msgid ""
 "This includes the migrations - unlike in Ruby On Rails, for example, "
@@ -3211,6 +3216,10 @@ msgid ""
 "converter that determines what patterns should match this part of the URL "
 "path. The colon (``:``) separates the converter and pattern name."
 msgstr ""
+"问题 ``question_id=34`` 来自 ``<int:question_id>``。使用尖括号 \"获得\" 网址"
+"部分后发送给视图函数作为一个关键字参数。字符串的 ``question_id`` 部分定义了要"
+"使用的名字，用来识别相匹配的模式，而 ``int`` 部分是一种转换形式，用来确定应该"
+"匹配网址路径的什么模式。冒号 (``:``) 用来分隔转换形式和模式名。"
 
 msgid "Write views that actually do something"
 msgstr "写一个真正有用的视图"
