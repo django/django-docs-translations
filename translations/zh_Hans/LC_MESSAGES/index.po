@@ -14,7 +14,7 @@
 # mr.liusg <mr-liusg@users.noreply.github.com>, 2018
 # Veoco <one@nomox.cn>, 2020
 # Ronald White <tkliuxing@me.com>, 2014-2015
-# pylemon <leeway1985@gmail.com>, 2013,2015
+# Lemon Li <leeway1985@gmail.com>, 2013,2015
 # Veoco <one@nomox.cn>, 2020-2021
 # woodenrobot <woodenrobot1993@gmail.com>, 2020
 # ZheJiao <jiaozhe1987@163.com>, 2019
@@ -24,8 +24,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-22 03:40-0500\n"
-"PO-Revision-Date: 2021-03-18 03:37+0000\n"
+"POT-Creation-Date: 2022-01-08 09:05-0600\n"
+"PO-Revision-Date: 2021-12-27 06:07+0000\n"
 "Last-Translator: Veoco <one@nomox.cn>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
@@ -110,12 +110,12 @@ msgstr "Django 有丰富的文档。一份高度概述的文档会告诉你在�
 
 msgid ""
 ":doc:`Tutorials </intro/index>` take you by the hand through a series of "
-"steps to create a Web application. Start here if you're new to Django or Web "
+"steps to create a web application. Start here if you're new to Django or web "
 "application development. Also look at the \":ref:`index-first-steps`\"."
 msgstr ""
-":doc:`教程 </intro/index>` 通过手把手地方式教你一步步的创建一个 Web 应用程"
-"序。如果你初学 Django 或 Web 应用程序，请从这里开始。也请看看下面的“ :ref:"
-"`index-first-steps` ”。"
+":doc:`教程 </intro/index>` 通过一系列的步骤来带领你创建一个网页应用程序。如果"
+"你是 Django 或网页应用开发的新手，可以从这里开始。也可以看一下 “ :ref:`index-"
+"first-steps` ”。"
 
 msgid ""
 ":doc:`Topic guides </topics/index>` discuss key topics and concepts at a "
@@ -146,10 +146,10 @@ msgstr "模型层"
 
 msgid ""
 "Django provides an abstraction layer (the \"models\") for structuring and "
-"manipulating the data of your Web application. Learn more about it below:"
+"manipulating the data of your web application. Learn more about it below:"
 msgstr ""
-"Django 提供了一个抽象的模型（“models”）层，为了构建和操纵你的 Web 应用的数"
-"据。阅读下面内容了解更多："
+"Django 提供了一个抽象的模型（“models”）层，用于结构化和操作你的网页应用程序的"
+"数据。阅读下面内容了解更多："
 
 msgid ""
 "**Models:** :doc:`Introduction to models <topics/db/models>` | :doc:`Field "
@@ -409,10 +409,10 @@ msgid "Security"
 msgstr "安全"
 
 msgid ""
-"Security is a topic of paramount importance in the development of Web "
+"Security is a topic of paramount importance in the development of web "
 "applications and Django provides multiple protection tools and mechanisms:"
 msgstr ""
-"在 Web 应用的发展中，安全是最重要主题，Django 提供了多种保护手段和机制。"
+"安全是网络应用程序开发中最重要的一个话题，Django 提供了多种保护工具和机制。"
 
 msgid ":doc:`Security overview <topics/security>`"
 msgstr ":doc:`安全概览<topics/security>`"
@@ -446,11 +446,11 @@ msgstr ""
 msgid ""
 ":doc:`Overview <topics/i18n/index>` | :doc:`Internationalization <topics/"
 "i18n/translation>` | :ref:`Localization <how-to-create-language-files>` | :"
-"doc:`Localized Web UI formatting and form input <topics/i18n/formatting>`"
+"doc:`Localized web UI formatting and form input <topics/i18n/formatting>`"
 msgstr ""
-":doc:`概览<topics/i18n/index>` | :doc:`国际化<topics/i18n/translation>` | :"
-"ref:`本地化<how-to-create-language-files>` | :doc:`给 Web 界面及表单输入进行"
-"本地化<topics/i18n/formatting>`"
+":doc:`概览 <topics/i18n/index>` | :doc:`国际化 <topics/i18n/translation>` | :"
+"ref:`本地化 <how-to-create-language-files>` | :doc:`本地化的网页用户界面格式"
+"和表单输入 <topics/i18n/formatting>`"
 
 msgid ":doc:`Time zones </topics/i18n/timezones>`"
 msgstr ":doc:`时区 </topics/i18n/timezones>`"
@@ -473,19 +473,19 @@ msgstr "地理框架"
 
 msgid ""
 ":doc:`GeoDjango <ref/contrib/gis/index>` intends to be a world-class "
-"geographic Web framework. Its goal is to make it as easy as possible to "
-"build GIS Web applications and harness the power of spatially enabled data."
+"geographic web framework. Its goal is to make it as easy as possible to "
+"build GIS web applications and harness the power of spatially enabled data."
 msgstr ""
-":doc:`GeoDjango <ref/contrib/gis/index>` 想要成为一个世界级的地理 Web 框架。"
-"尽可能简化构建 GIS Web 应用程序的流程，和利用空间化数据的能力是它的目标。"
+":doc:`GeoDjango <ref/contrib/gis/index>` 旨在成为一个世界级的地理网络框架。它"
+"的目标是使建立 GIS 网页应用尽可能容易，并利用空间数据的力量。"
 
-msgid "Common Web application tools"
-msgstr "常用的 Web 应用程序工具"
+msgid "Common web application tools"
+msgstr "常见的网络应用工具"
 
 msgid ""
-"Django offers multiple tools commonly needed in the development of Web "
+"Django offers multiple tools commonly needed in the development of web "
 "applications:"
-msgstr "Django 提供了多种开发 Web 应用程序所需的常用工具:"
+msgstr "Django 提供了网络应用程序开发中普遍需要的多种工具："
 
 msgid ""
 "**Authentication:** :doc:`Overview <topics/auth/index>` | :doc:`Using the "
