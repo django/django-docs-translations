@@ -7,7 +7,7 @@
 # Amirouche <amirouche.boubekki@gmail.com>, 2013
 # Bruno Brouard <annoa.b@gmail.com>, 2013-2014
 # Anthony SKORSKI <skorski.anthony@gmail.com>, 2020
-# Claude Paroz <claude@2xlibre.net>, 2013-2021
+# Claude Paroz <claude@2xlibre.net>, 2013-2022
 # Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014-2015
 # Sébastien Fievet <_@sebastien-fievet.fr>, 2014
 # Sylvain GROS-DESORMEAUX <sylvain.grodes@gmail.com>, 2013
@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-07 11:06-0600\n"
-"PO-Revision-Date: 2021-12-29 08:39+0000\n"
+"POT-Creation-Date: 2022-02-21 01:06-0600\n"
+"PO-Revision-Date: 2022-02-08 12:49+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/"
 "fr/)\n"
@@ -8229,6 +8229,16 @@ msgstr ""
 "De plus, cette fonction utilitaire ne s'occupe que du dossier réel :setting:"
 "`STATIC_ROOT`; elle n'effectue aucune découverte de fichiers statiques comme "
 "le fait :mod:`django.contrib.staticfiles`."
+
+msgid ""
+"Finally, static files are served via a wrapper at the WSGI application "
+"layer. As a consequence, static files requests do not pass through the "
+"normal :doc:`middleware chain </topics/http/middleware>`."
+msgstr ""
+"Pour terminer, les fichiers statiques sont servis par un adaptateur au "
+"niveau de la couche applicative WSGI. En conséquence, les requêtes de "
+"fichiers statiques ne passent pas par la :doc:`chaîne d’intergiciels </"
+"topics/http/middleware>` normale. "
 
 msgid "Serving files uploaded by a user during development"
 msgstr ""

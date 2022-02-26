@@ -29,6 +29,7 @@
 # Woo-Jing, Seok <woojing.seok@gmail.com>, 2016-2017
 # seungho, kim <raccoonyy@gmail.com>, 2016
 # Subin Choi <os1742@gmail.com>, 2016
+# Woohyun Lee <krta22@gmail.com>, 2022
 # 이한샘 <wooruang@gmail.com>, 2019
 # Yeonsu Bak <yeonsubak@gmail.com>, 2015
 # Yong Choi <sk8er.choi@gmail.com>, 2015,2019-2020
@@ -36,9 +37,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-07 11:06-0600\n"
-"PO-Revision-Date: 2021-12-28 01:36+0000\n"
-"Last-Translator: bukim0329\n"
+"POT-Creation-Date: 2022-02-21 01:06-0600\n"
+"PO-Revision-Date: 2022-02-10 06:06+0000\n"
+"Last-Translator: Woohyun Lee <krta22@gmail.com>\n"
 "Language-Team: Korean (http://www.transifex.com/django/django-docs/language/"
 "ko/)\n"
 "MIME-Version: 1.0\n"
@@ -364,11 +365,9 @@ msgstr ""
 "위해 미리 한 번 실행해보는 것이 좋습니다."
 
 msgid ""
-"Before running the test suite, install its dependencies by ``cd``-ing into "
-"the Django ``tests/`` directory and then running:"
+"Before running the test suite, enter the Django ``tests/`` directory using "
+"the ``cd tests`` command, and install test dependencies by running:"
 msgstr ""
-"테스트 스위트를 실행하기 전에 Django의 ``tests/`` 디렉터리에 ``cd``\\ 하여 의"
-"존성이 있는 패키지들을 설치한 뒤 다음 명령을 실행합니다."
 
 msgid ""
 "If you encounter an error during the installation, your system might be "
@@ -2036,7 +2035,7 @@ msgid ""
 ":file:`mysite/asgi.py`: An entry-point for ASGI-compatible web servers to "
 "serve your project. See :doc:`/howto/deployment/asgi/index` for more details."
 msgstr ""
-":file:`mysite/wsgi.py`: 현재 프로젝트를 서비스하기 위한 \bASGI-호환 웹 서버"
+":file:`mysite/asgi.py`: 현재 프로젝트를 서비스하기 위한 \bASGI-호환 웹 서버"
 "의 진입점입니다. 자세한 내용은 :doc:`/howto/deployment/asgi/index` 를 참조하"
 "십시오."
 
