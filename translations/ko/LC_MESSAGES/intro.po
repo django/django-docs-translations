@@ -7,6 +7,7 @@
 # bukim0329, 2021
 # Churow Park <churow@naver.com>, 2019
 # Claude Paroz <claude@2xlibre.net>, 2020
+# decyma <soos3121@gmail.com>, 2022
 # BakSulgi <dhwjdgh9@naver.com>, 2017
 # DONGHO JEONG <nearermg@gmail.com>, 2020
 # Eunmin Kim <telepopsound@gmail.com>, 2019
@@ -26,10 +27,11 @@
 # Pelly Ryu <hermement@gmail.com>, 2016
 # Seacbyul Lee <femizkim@gmail.com>, 2017
 # Seho Noh <iam@sehonoh.kr>, 2017
+# decyma <soos3121@gmail.com>, 2022
 # Woo-Jing, Seok <woojing.seok@gmail.com>, 2016-2017
-# seungho, kim <raccoonyy@gmail.com>, 2016
+# seungho, kim <raccoonyy@gmail.com>, 2016,2022
 # Subin Choi <os1742@gmail.com>, 2016
-# Woohyun Lee <krta22@gmail.com>, 2022
+# 이우현 <krta22@gmail.com>, 2022
 # 이한샘 <wooruang@gmail.com>, 2019
 # Yeonsu Bak <yeonsubak@gmail.com>, 2015
 # Yong Choi <sk8er.choi@gmail.com>, 2015,2019-2020
@@ -37,9 +39,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-21 01:06-0600\n"
-"PO-Revision-Date: 2022-02-10 06:06+0000\n"
-"Last-Translator: Woohyun Lee <krta22@gmail.com>\n"
+"POT-Creation-Date: 2022-07-27 03:41-0500\n"
+"PO-Revision-Date: 2022-04-02 20:00+0000\n"
+"Last-Translator: seungho, kim <raccoonyy@gmail.com>\n"
 "Language-Team: Korean (http://www.transifex.com/django/django-docs/language/"
 "ko/)\n"
 "MIME-Version: 1.0\n"
@@ -69,9 +71,8 @@ msgid ""
 "through the entire process, so you can learn by example."
 msgstr ""
 "장고에 기여하는 것이야말로 여러분의 문제를 해결하는 최선의 방법입니다. 처음에"
-"는 부담스러워 보일지도 모르지만, 문서들과 커뮤니티를 이용하면 어렵지 않은 길"
-"이 될것입니다. 우리는 전체 프로세스를 살펴볼 것이므로, 여러분은 예를 통해 배"
-"울 수 있습니다."
+"는 부담스러울 수도 있지만 문서, 도구 및 커뮤니티를 이용하면 쉽게 이용할 수 있"
+"습니다. 모든 과정을 안내해 드릴 테니 예제를 통해 배우세요."
 
 msgid "Who's this tutorial for?"
 msgstr "이 튜토리얼은 누구를 위한 것인가요?"
@@ -368,6 +369,8 @@ msgid ""
 "Before running the test suite, enter the Django ``tests/`` directory using "
 "the ``cd tests`` command, and install test dependencies by running:"
 msgstr ""
+"test suite를 실행하기 전, ``cd tests`` 명령어를 사용하여 Django의 ``tests/`` "
+"디렉토리에 들어갑니다. 그리고 다음을 실행하여 테스트 종속성을 설치하세요:"
 
 msgid ""
 "If you encounter an error during the installation, your system might be "
@@ -1099,8 +1102,8 @@ msgstr ""
 "법을 제공해줍니다 -- 이는 지금까지 수년간 데이터베이스 스키마 문제들을 해결하"
 "는데에 많은 도움을 주어왔습니다. 아래의 간단한 예제를 보시죠."
 
-msgid "mysite/news/models.py"
-msgstr "mysite/news/models.py"
+msgid "``mysite/news/models.py``"
+msgstr ""
 
 msgid "Install it"
 msgstr "설치하기"
@@ -1138,9 +1141,7 @@ msgstr ""
 
 msgid ""
 "A dynamic admin interface: it's not just scaffolding -- it's the whole house"
-msgstr ""
-"동적인 관리자 인터페이스: 단순한 뼈대 세우기가 아닙니다 -- 이것은 완성된 집입"
-"니다"
+msgstr "동적인 관리자 인터페이스: 단순한 스캐폴딩이 아닙니다. 완성된 집입니다."
 
 msgid ""
 "Once your models are defined, Django can automatically create a "
@@ -1149,14 +1150,14 @@ msgid ""
 "delete objects. The only step required is to register your model in the "
 "admin site:"
 msgstr ""
-"모델이 정의되면 Django는 전문적이고 바로 사용할 수 있는 doc:`administrative "
-"interface </ref/contrib/admin/index>`를 자동으로 만들 수 있습니다. doc:"
-"`administrative interface 1`는 인증된 사용자가 객체를 추가, 변경 및 삭제할 "
-"수 있는 웹 사이트입니다. admin site:에서 모델 객체를 등록하는 건 정말 쉽습니"
-"다."
+"일단 모델이 정의되면 Django는 전문적이고 바로 사용할 수 있는 :doc:"
+"`administrative interface </ref/contrib/admin/index>`를 자동으로 만들 수 있습"
+"니다. 관리자 인터페이스는 인증된 사용자가 객체를 추가, 변경 및 삭제할 수 있"
+"는 웹 사이트입니다. 필요한 것은 관리자 페이지에 당신의 모델을 등록하는 것 뿐"
+"입니다."
 
-msgid "mysite/news/admin.py"
-msgstr "mysite/news/admin.py"
+msgid "``mysite/news/admin.py``"
+msgstr ""
 
 msgid ""
 "The philosophy here is that your site is edited by a staff, or a client, or "
@@ -1206,8 +1207,8 @@ msgstr ""
 "아래의 코드는 위의 ``Reporter``/``Article``  예제에 대해서 URLconf를 어떻게 "
 "쓰는지 보여줍니다:"
 
-msgid "mysite/news/urls.py"
-msgstr "mysite/news/urls.py"
+msgid "``mysite/news/urls.py``"
+msgstr ""
 
 msgid ""
 "The code above maps URL paths to Python callback functions (\"views\"). The "
@@ -1265,8 +1266,8 @@ msgstr ""
 "을 가져온 데이타로 렌더링합니다. 아래는 위에서 만든 ``year_archive``\\에 대"
 "한 예제 뷰입니다."
 
-msgid "mysite/news/views.py"
-msgstr "mysite/news/views.py"
+msgid "``mysite/news/views.py``"
+msgstr ""
 
 msgid ""
 "This example uses Django's :doc:`template system </topics/templates>`, which "
@@ -1301,8 +1302,8 @@ msgstr ""
 "``news/year_archive.html`` 템플릿을 발견했다고 합시다.  아마도 이런 모양일 것"
 "입니다:"
 
-msgid "mysite/news/templates/news/year_archive.html"
-msgstr "mysite/news/templates/news/year_archive.html"
+msgid "``mysite/news/templates/news/year_archive.html``"
+msgstr ""
 
 msgid ""
 "Variables are surrounded by double-curly braces. ``{{ article.headline }}`` "
@@ -1360,8 +1361,8 @@ msgstr ""
 "“base.html” 템플릿은 :doc:`정적 파일 </howto/static-files/index>`\\ 의 사용"
 "을 포함하여, 다음과 같이 보일 것입니다."
 
-msgid "mysite/templates/base.html"
-msgstr "mysite/templates/base.html"
+msgid "``mysite/templates/base.html``"
+msgstr ""
 
 msgid ""
 "Simplistically, it defines the look-and-feel of the site (with the site's "
@@ -1637,8 +1638,8 @@ msgstr "``django-polls`` 디렉토리의 ``polls`` 디렉토리로 이동하세�
 msgid "Create a file ``django-polls/README.rst`` with the following contents:"
 msgstr "다음과 같은 내용으로 ``django-polls/README.rst``\\ 를 생성합니다:"
 
-msgid "django-polls/README.rst"
-msgstr "django-polls/README.rst"
+msgid "``django-polls/README.rst``"
+msgstr ""
 
 msgid ""
 "Create a ``django-polls/LICENSE`` file. Choosing a license is beyond the "
@@ -1659,25 +1660,25 @@ msgid ""
 "Next we'll create ``pyproject.toml``, ``setup.cfg``, and ``setup.py`` files "
 "which detail how to build and install the app. A full explanation of these "
 "files is beyond the scope of this tutorial, but the `setuptools "
-"documentation <https://setuptools.readthedocs.io/en/latest/>`_ has a good "
+"documentation <https://setuptools.pypa.io/en/latest/>`_ has a good "
 "explanation. Create the ``django-polls/pyproject.toml``, ``django-polls/"
 "setup.cfg``, and ``django-polls/setup.py`` files with the following contents:"
 msgstr ""
 "이제 앱을 빌드하고 설치하는 방법을 자세히 설명하는 ``pyproject.toml``, "
-"``setup.cfg``, and ``setup.py`` 파일들을 만들 것입니다. 이 파일들에 대한 전체"
-"적인 설명은 이 튜토리얼의 범위에서 벗어나지만, `setuptools documentation "
-"<https://setuptools.readthedocs.io/en/latest/>`_ 에 잘 설명되어 있습니다. 다"
-"음 내용을 참고하여 ``django-polls/pyproject.toml``, ``django-polls/setup."
-"cfg``, and ``django-polls/setup.py`` 파일들을 만드세요."
+"``setup.cfg``, ``setup.py`` 파일을 만들 것입니다. 이 파일에 대한 상세 설명은 "
+"해당 튜토리얼의 범위에서 벗어나지만, `setuptools documentation <https://"
+"setuptools.readthedocs.io/en/latest/>`_ 에 잘 설명되어 있습니다. 다음 내용을 "
+"참고하여 ``django-polls/pyproject.toml``, ``django-polls/setup.cfg``, "
+"``django-polls/setup.py`` 파일을 만드세요."
 
-msgid "django-polls/pyproject.toml"
-msgstr "django-polls/pyproject.toml"
+msgid "``django-polls/pyproject.toml``"
+msgstr ""
 
-msgid "django-polls/setup.cfg"
-msgstr "django-polls/setup.cfg"
+msgid "``django-polls/setup.cfg``"
+msgstr ""
 
-msgid "django-polls/setup.py"
-msgstr "django-polls/setup.py"
+msgid "``django-polls/setup.py``"
+msgstr ""
 
 msgid ""
 "Only Python modules and packages are included in the package by default. To "
@@ -1692,8 +1693,8 @@ msgstr ""
 "rst`` , 우리의 ``LICENSE`` 파일을 포함 시키려면, 다음 내용으로 ``django-"
 "polls/MANIFEST.in`` 파일을 만들어야 합니다."
 
-msgid "django-polls/MANIFEST.in"
-msgstr "django-polls/MANIFEST.in"
+msgid "``django-polls/MANIFEST.in``"
+msgstr ""
 
 msgid ""
 "It's optional, but recommended, to include detailed documentation with your "
@@ -2210,8 +2211,8 @@ msgstr ""
 "첫 번째 뷰를 작성해봅시다. \"polls/view.py\"를 열어 다음과 같은 파이썬 코드"
 "를 입력합니다"
 
-msgid "polls/views.py"
-msgstr "polls/views.py"
+msgid "``polls/views.py``"
+msgstr ""
 
 msgid ""
 "This is the simplest view possible in Django. To call the view, we need to "
@@ -2230,8 +2231,8 @@ msgstr ""
 msgid "In the ``polls/urls.py`` file include the following code:"
 msgstr "\"polls/urls.py\" 파일에는 다음과 같은 코드가 포함되어 있습니다."
 
-msgid "polls/urls.py"
-msgstr "polls/urls.py"
+msgid "``polls/urls.py``"
+msgstr ""
 
 msgid ""
 "The next step is to point the root URLconf at the ``polls.urls`` module. In "
@@ -2243,8 +2244,8 @@ msgstr ""
 "``urlpatterns`` 리스트에 :func:`~django.urls.include` 함수를 다음과 같이 추가"
 "합니다."
 
-msgid "mysite/urls.py"
-msgstr "mysite/urls.py"
+msgid "``mysite/urls.py``"
+msgstr ""
 
 msgid ""
 "The :func:`~django.urls.include` function allows referencing other URLconfs. "
@@ -2635,8 +2636,8 @@ msgstr ""
 "이러한 개념은 Python 클래스로 표현됩니다. file:`polls/models.py` 파일을 다음"
 "과 같이 수정하십시오."
 
-msgid "polls/models.py"
-msgstr "polls/models.py"
+msgid "``polls/models.py``"
+msgstr ""
 
 msgid ""
 "Here, each model is represented by a class that subclasses :class:`django.db."
@@ -2770,8 +2771,8 @@ msgstr ""
 "`mysite/settings.py` 파일을 편집하여 :setting:`INSTALLED_APPS` 설정에 추가하"
 "면 됩니다. 이는 다음과 같이 보일 것입니다."
 
-msgid "mysite/settings.py"
-msgstr "mysite/settings.py"
+msgid "``mysite/settings.py``"
+msgstr ""
 
 msgid ""
 "Now Django knows to include the ``polls`` app. Let's run another command:"
@@ -3124,6 +3125,9 @@ msgstr ""
 "이제 웹 브라우저를 열고 로컬 도메인의 \"/admin/\"으로 이동합니다(예: "
 "http://127.0.0.1:8000/admin/). 그러면 관리자의 로그인 화면이 나타날 것입니다."
 
+msgid "Django admin login screen"
+msgstr ""
+
 msgid ""
 "Since :doc:`translation </topics/i18n/translation>` is turned on by default, "
 "if you set :setting:`LANGUAGE_CODE`, the login screen will be displayed in "
@@ -3142,6 +3146,9 @@ msgid ""
 msgstr ""
 "앞서 생성한 슈퍼유저(superuser) 계정으로 로그인해봅시다. 다음과 같은 Django "
 "관리 인덱스 페이지가 보일 것입니다."
+
+msgid "Django admin index page"
+msgstr ""
 
 msgid ""
 "You should see a few types of editable content: groups and users. They are "
@@ -3168,8 +3175,8 @@ msgstr ""
 "고 알려주는 것입니다. 이렇게 하려면 :file:`polls/admin.py` 파일을 열어 다음"
 "과 같이 편집하십시오."
 
-msgid "polls/admin.py"
-msgstr "polls/admin.py"
+msgid "``polls/admin.py``"
+msgstr ""
 
 msgid "Explore the free admin functionality"
 msgstr "자유로운 관리 기능을 탐색하기"
@@ -3181,6 +3188,9 @@ msgstr ""
 "이제, ``Question`` 을 등록시켰으니 Django 는 이를 알아채고 관리 인덱스 페이지"
 "에 이를 표시할 것입니다:"
 
+msgid "Django admin index page, now with polls displayed"
+msgstr ""
+
 msgid ""
 "Click \"Questions\". Now you're at the \"change list\" page for questions. "
 "This page displays all the questions in the database and lets you choose one "
@@ -3191,8 +3201,14 @@ msgstr ""
 "선택하여 변경할 수 있습니다. 이전에 등록했던 \"What's up?\" 질문이 있을 것입"
 "니다."
 
+msgid "Polls change list page"
+msgstr ""
+
 msgid "Click the \"What's up?\" question to edit it:"
 msgstr "\"What's up?\" 질문을 클릭하여 수정합니다."
+
+msgid "Editing form for question object"
+msgstr ""
 
 msgid "Things to note here:"
 msgstr "여기서 알아둘 것들:"
@@ -3270,6 +3286,9 @@ msgstr ""
 "editing\") 을 누르십시요. 그런 후, 우측 상단의 \"히스토리\"(\"History\") 버튼"
 "을 누르십시요. Django 관리사이트를 통해 누가(username) 언제(timestamp) 무엇"
 "을 바꾸었는지 목록을 확인할 수 있습니다."
+
+msgid "History page for question object"
+msgstr ""
 
 msgid ""
 "When you're comfortable with the models API and have familiarized yourself "
@@ -3561,8 +3580,8 @@ msgstr ""
 msgid "Put the following code in that template:"
 msgstr "템플릿에 다음과 같은 코드를 입력합니다."
 
-msgid "polls/templates/polls/index.html"
-msgstr "polls/templates/polls/index.html"
+msgid "``polls/templates/polls/index.html``"
+msgstr ""
 
 msgid ""
 "To make the tutorial shorter, all template examples use incomplete HTML. In "
@@ -3656,8 +3675,8 @@ msgstr ""
 "조금 후에 ``polls/detail.html`` 템플릿에 무엇을 넣을 수 있는지 논의하겠지만, "
 "일단 위의 예제를 동작시키기 위해 아래의 내용이 들어있는 파일을 작성하세요."
 
-msgid "polls/templates/polls/detail.html"
-msgstr "polls/templates/polls/detail.html"
+msgid "``polls/templates/polls/detail.html``"
+msgstr ""
 
 msgid "will get you started for now."
 msgstr "이제 시작해도 됩니다."
@@ -4047,8 +4066,8 @@ msgstr ""
 msgid "Now, create a ``polls/results.html`` template:"
 msgstr "이제, ``polls/results.html`` 템플릿을 만듭니다."
 
-msgid "polls/templates/polls/results.html"
-msgstr "polls/templates/polls/results.html"
+msgid "``polls/templates/polls/results.html``"
+msgstr ""
 
 msgid ""
 "Now, go to ``/polls/1/`` in your browser and vote in the question. You "
@@ -4555,8 +4574,8 @@ msgid ""
 "Put the following in the ``tests.py`` file in the ``polls`` application:"
 msgstr "``polls`` 어플리케이션의 ``tests.py`` 파일에 다음을 입력하십시오:"
 
-msgid "polls/tests.py"
-msgstr "polls/tests.py"
+msgid "``polls/tests.py``"
+msgstr ""
 
 msgid ""
 "Here we have created a :class:`django.test.TestCase` subclass with a method "
@@ -5215,8 +5234,8 @@ msgid ""
 msgstr ""
 "그 스타일 시트(``polls/static/polls/style.css``)에 다음 코드를 넣으세요."
 
-msgid "polls/static/polls/style.css"
-msgstr "polls/static/polls/style.css"
+msgid "``polls/static/polls/style.css``"
+msgstr ""
 
 msgid ""
 "Next, add the following at the top of ``polls/templates/polls/index.html``:"
@@ -5354,6 +5373,9 @@ msgid ""
 msgstr ""
 "여기서 특별한 변경 사항은 \"발행일\"이 \"설문\" 필드 앞에 오게 만듭니다."
 
+msgid "Fields have been reordered"
+msgstr ""
+
 msgid ""
 "This isn't impressive with only two fields, but for admin forms with dozens "
 "of fields, choosing an intuitive order is an important usability detail."
@@ -5373,6 +5395,9 @@ msgid ""
 msgstr ""
 ":attr:`~django.contrib.admin.ModelAdmin.fieldsets`\\의 각 튜플의 첫 번째 요소"
 "는 fieldset의 제목입니다. 우리의 폼이 다음과 같이 변했네요."
+
+msgid "Form has fieldsets now"
+msgstr ""
 
 msgid "Adding related objects"
 msgstr "관련된 객체 추가"
@@ -5401,6 +5426,9 @@ msgid ""
 msgstr ""
 "이제 \"Choices\"\\는 Django 관리자가 사용할 수 있는 옵션입니다. \"Add choice"
 "\" 폼은 다음과 같습니다."
+
+msgid "Choice admin page"
+msgstr ""
 
 msgid ""
 "In that form, the \"Question\" field is a select box containing every "
@@ -5453,6 +5481,9 @@ msgstr ""
 msgid "Load the \"Add question\" page to see how that looks:"
 msgstr "모양을 보려면 \"Add question\" 페이지를 로드하십시오."
 
+msgid "Add question page now has choices on it"
+msgstr ""
+
 msgid ""
 "It works like this: There are three slots for related Choices -- as "
 "specified by ``extra`` -- and each time you come back to the \"Change\" page "
@@ -5472,6 +5503,9 @@ msgstr ""
 "운 슬롯이 추가됩니다. 추가된 슬롯을 제거하려면 추가된 슬롯의 오른쪽 상단에 있"
 "는 X를 누르면 됩니다. 이 이미지에는 추가된 슬롯이 표시됩니다."
 
+msgid "Additional slot added dynamically"
+msgstr ""
+
 msgid ""
 "One small problem, though. It takes a lot of screen space to display all the "
 "fields for entering related ``Choice`` objects. For that reason, Django "
@@ -5489,6 +5523,9 @@ msgid ""
 msgstr ""
 "``StackedInline`` 대신에 ``TabularInline``\\ 을 사용하면, 관련된 객체는 좀 "
 "더 조밀하고 테이블 기반 형식으로 표시됩니다:"
+
+msgid "Add question page now has more compact choices"
+msgstr ""
 
 msgid ""
 "Note that there is an extra \"Delete?\" column that allows removing rows "
@@ -5533,6 +5570,9 @@ msgstr ""
 
 msgid "Now the question change list page looks like this:"
 msgstr "이제 질문 변경 목록 페이지는 다음과 같습니다."
+
+msgid "Polls change list page, updated"
+msgstr ""
 
 msgid ""
 "You can click on the column headers to sort by those values -- except in the "
@@ -6193,13 +6233,13 @@ msgstr ""
 
 msgid ""
 "Documentation fixes and improvements may be backported to the last release "
-"branch, at the discretion of the committer, however, once a version of "
-"Django is :ref:`no longer supported<supported-versions-policy>`, that "
-"version of the docs won't get any further updates."
+"branch, at the discretion of the merger, however, once a version of Django "
+"is :ref:`no longer supported<supported-versions-policy>`, that version of "
+"the docs won't get any further updates."
 msgstr ""
-"문서 정정 및 개선은 커미터의 재량에 따라 최신 릴리스 브랜치에 백포트될 수 있"
-"습니다. 그러나, Django 버전이 :ref:`더 이상 지원되지 않는 <supported-"
-"versions-policy>` 경우, 해당 버전 문서는 갱신되지 않습니다."
+"문서 수정 및 개선은 커미터의 재량에 따라 최신 릴리스 브랜치에 백포트될 수 있"
+"습니다. 그러나, Django 버전이 :ref:`더 이상 지원되지 않는 경우 <supported-"
+"versions-policy>`, 해당 버전 문서는 갱신되지 않습니다."
 
 msgid ""
 "The `main documentation web page`_ includes links to documentation for "

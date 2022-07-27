@@ -26,9 +26,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-01 04:17-0500\n"
-"PO-Revision-Date: 2021-08-13 16:19+0000\n"
-"Last-Translator: Transifex Bot <>\n"
+"POT-Creation-Date: 2022-07-27 03:41-0500\n"
+"PO-Revision-Date: 2022-04-02 19:59+0000\n"
+"Last-Translator: Soadwidwa <antilopebeige@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -768,7 +768,7 @@ msgstr ""
 
 msgid ""
 "This contributing guide contains everything you need to know to help build "
-"the Django Web framework. Browse the following sections to find out how:"
+"the Django web framework. Browse the following sections to find out how:"
 msgstr ""
 
 msgid "Join the Django community ❤️"
@@ -1355,12 +1355,15 @@ msgstr ""
 msgid "Since a picture is worth a thousand words, let's start there:"
 msgstr "Já que uma imagem vale mais que mil palavras, vamos começar aqui:"
 
+msgid "Django's ticket triage workflow"
+msgstr ""
+
 msgid "We've got two roles in this diagram:"
 msgstr "Nós temos dois papéis neste diagrama:"
 
 msgid ""
-"Committers: people with commit access who are responsible for making the "
-"final decision to merge a patch."
+"Mergers: people with commit access who are responsible for making the final "
+"decision to merge a patch."
 msgstr ""
 
 msgid ""
@@ -1410,7 +1413,9 @@ msgid ""
 "Daisy reviews the pull request and marks the ticket as \"Ready for checkin\"."
 msgstr ""
 
-msgid "Jacob, a committer, reviews the pull request and merges it."
+msgid ""
+"Jacob, a :ref:`merger <mergers-team>`, reviews the pull request and merges "
+"it."
 msgstr ""
 
 msgid ""
@@ -1515,8 +1520,8 @@ msgstr "Pronto para Checkin"
 msgid ""
 "The ticket was reviewed by any member of the community other than the person "
 "who supplied the patch and found to meet all the requirements for a commit-"
-"ready patch. A committer now needs to give the patch a final review prior to "
-"being committed."
+"ready patch. A :ref:`merger <mergers-team>` now needs to give the patch a "
+"final review prior to being committed."
 msgstr ""
 
 msgid ""
@@ -2135,39 +2140,10 @@ msgstr ""
 msgid ""
 "An exception to :pep:`8` is our rules on line lengths. Don't limit lines of "
 "code to 79 characters if it means the code looks significantly uglier or is "
-"harder to read. We allow up to 119 characters as this is the width of GitHub "
-"code review; anything longer requires horizontal scrolling which makes "
-"review more difficult. This check is included when you run ``flake8``. "
-"Documentation, comments, and docstrings should be wrapped at 79 characters, "
-"even though :pep:`8` suggests 72."
-msgstr ""
-"Uma exceção a :pep:`8` são nossas regras sobre o comprimento das linhas. Não "
-"limite linhas de código para 79 caracteres se isso significar deixar o "
-"código mais feio ou mais difícil de ler. Nós permitimos até 119 caracteres "
-"já que esse é o limite do revisor de código do GitHub; qualquer coisa mais "
-"longa que isso requer rolagem horizontal o que faz a revisão mais difícil. "
-"Essa verificação está incluída quando você roda o  ``flake8``. Documentação, "
-"comentários, e docstrings devem estar envolvidas em até 79 caracteres, mesmo "
-"que a :pep:`8` sugira somente 72."
-
-msgid "Use four spaces for indentation."
-msgstr "Utilize quatro espaços para identação."
-
-msgid "Use four space hanging indentation rather than vertical alignment::"
-msgstr ""
-
-msgid "Instead of::"
-msgstr "Ao invés de::"
-
-msgid ""
-"This makes better use of space and avoids having to realign strings if the "
-"length of the first line changes."
-msgstr ""
-
-msgid ""
-"Use single quotes for strings, or a double quote if the string contains a "
-"single quote. Don't waste time doing unrelated refactoring of existing code "
-"to conform to this style."
+"harder to read. We allow up to 88 characters as this is the line length used "
+"by ``black``. This check is included when you run ``flake8``. Documentation, "
+"comments, and docstrings should be wrapped at 79 characters, even though :"
+"pep:`8` suggests 72."
 msgstr ""
 
 msgid ""
@@ -2240,6 +2216,9 @@ msgid ""
 "the ticket number at the end of a sentence like this::"
 msgstr ""
 
+msgid "All Python code in Django was reformatted with `black`_."
+msgstr ""
+
 msgid "Imports"
 msgstr "Imports"
 
@@ -2303,8 +2282,8 @@ msgid "For example (comments are for explanatory purposes only):"
 msgstr ""
 "Por exemplo (os comentários existem somente para propósitos de explicação):"
 
-msgid "django/contrib/admin/example.py"
-msgstr "django/contrib/admin/example.py"
+msgid "``django/contrib/admin/example.py``"
+msgstr ""
 
 msgid "Use convenience imports whenever available. For example, do this::"
 msgstr ""
@@ -3104,10 +3083,10 @@ msgid ""
 "checkin\". If you've left comments for improvement on the pull request, "
 "please tick the appropriate flags on the Trac ticket based on the results of "
 "your review: \"Patch needs improvement\", \"Needs documentation\", and/or "
-"\"Needs tests\". As time and interest permits, committers do final reviews "
-"of \"Ready for checkin\" tickets and will either commit the patch or bump it "
+"\"Needs tests\". As time and interest permits, mergers do final reviews of "
+"\"Ready for checkin\" tickets and will either commit the patch or bump it "
 "back to \"Accepted\" if further works need to be done. If you're looking to "
-"become a committer, doing thorough reviews of patches is a great way to earn "
+"become a merger, doing thorough reviews of patches is a great way to earn "
 "trust."
 msgstr ""
 
@@ -3184,9 +3163,9 @@ msgstr "Todo código muda"
 
 msgid ""
 "Does the :doc:`coding style </internals/contributing/writing-code/coding-"
-"style>` conform to our guidelines? Are there any ``flake8`` errors? You can "
-"install the :ref:`pre-commit <coding-style-pre-commit>` hooks to "
-"automatically catch these errors."
+"style>` conform to our guidelines? Are there any  ``black``, ``flake8``, or "
+"``isort`` errors? You can install the :ref:`pre-commit <coding-style-pre-"
+"commit>` hooks to automatically catch these errors."
 msgstr ""
 
 msgid ""
@@ -3557,10 +3536,13 @@ msgstr ""
 "Se você quiser rodar toda a suíte de testes, você precisará instalar algumas "
 "dependências:"
 
+msgid "aiosmtpd_"
+msgstr ""
+
 msgid "argon2-cffi_ 19.1.0+"
 msgstr ""
 
-msgid "asgiref_ 3.3.2+ (required)"
+msgid "asgiref_ 3.4.1+ (required)"
 msgstr ""
 
 msgid "bcrypt_"
@@ -3591,6 +3573,9 @@ msgid "pytz_ (required)"
 msgstr ""
 
 msgid "pywatchman_"
+msgstr ""
+
+msgid "redis_"
 msgstr ""
 
 msgid "setuptools_"
@@ -3896,7 +3881,7 @@ msgstr ""
 "instalados, você deve passar a definição dos ``app_label`` alvo como "
 "argumentos:"
 
-msgid "tests/app_label/tests.py"
+msgid "``tests/app_label/tests.py``"
 msgstr ""
 
 msgid "The decorator can also be applied to classes::"
@@ -3923,8 +3908,8 @@ msgstr "Trabalhando com Git e GitHub"
 
 msgid ""
 "This section explains how the community can contribute code to Django via "
-"pull requests. If you're interested in how committers handle them, see :doc:"
-"`../committing-code`."
+"pull requests. If you're interested in how :ref:`mergers <mergers-team>` "
+"handle them, see :doc:`../committing-code`."
 msgstr ""
 
 msgid ""
@@ -4151,11 +4136,11 @@ msgstr ""
 "tests pass under SQLite and MySQL\"."
 
 msgid ""
-"Pull requests at GitHub have only two states: open and closed. The committer "
+"Pull requests at GitHub have only two states: open and closed. The merger "
 "who will deal with your pull request has only two options: merge it or close "
 "it. For this reason, it isn't useful to make a pull request until the code "
-"is ready for merging -- or sufficiently close that a committer will finish "
-"it themselves."
+"is ready for merging -- or sufficiently close that a merger will finish it "
+"themselves."
 msgstr ""
 
 msgid "Rebasing branches"
@@ -4653,6 +4638,11 @@ msgstr ""
 msgid "**email** -- no hyphen."
 msgstr "**email** -- sem hífen."
 
+msgid ""
+"**HTTP** -- the expected pronunciation is \"Aitch Tee Tee Pee\" and "
+"therefore should be preceded by \"an\" and not \"a\"."
+msgstr ""
+
 msgid "**MySQL**, **PostgreSQL**, **SQLite**"
 msgstr "**MySQL**, **PostgreSQL**, **SQLite**"
 
@@ -5079,6 +5069,32 @@ msgstr ""
 "correta - adicione ela em ``docs/spelling_wordlist`` (por favor mantenha a "
 "lista em ordem alfabética)."
 
+msgid "Link check"
+msgstr ""
+
+msgid ""
+"Links in documentation can become broken or changed such that they are no "
+"longer the canonical link. Sphinx provides a builder that can check whether "
+"the links in the documentation are working. From the ``docs`` directory, run "
+"``make linkcheck``. Output is printed to the terminal, but can also be found "
+"in ``_build/linkcheck/output.txt`` and ``_build/linkcheck/output.json``."
+msgstr ""
+
+msgid ""
+"Entries that have a status of \"working\" are fine, those that are "
+"\"unchecked\" or \"ignored\" have been skipped because they either cannot be "
+"checked or have matched ignore rules in the configuration."
+msgstr ""
+
+msgid ""
+"Entries that have a status of \"broken\" need to be fixed. Those that have a "
+"status of \"redirected\" may need to be updated to point to the canonical "
+"location, e.g. the scheme has changed ``http://`` → ``https://``. In certain "
+"cases, we do not want to update a \"redirected\" link, e.g. a rewrite to "
+"always point to the latest or stable version of documentation, e.g. ``/en/"
+"stable/`` → ``/en/3.2/``."
+msgstr ""
+
 msgid "Translating documentation"
 msgstr "Traduzindo a documentação"
 
@@ -5131,6 +5147,102 @@ msgstr ""
 "depreciação, conforme :ref:`política de depreciação <internal-release-"
 "deprecation-policy>`. Mais detalhes sobre cada item geralmente podem ser "
 "encontrados nas notas da release de duas versões anteriores."
+
+msgid "5.0"
+msgstr ""
+
+msgid ""
+"See the :ref:`Django 4.0 release notes <deprecated-features-4.0>` for more "
+"details on these changes."
+msgstr ""
+
+msgid "The ``SERIALIZE`` test setting will be removed."
+msgstr ""
+
+msgid "The undocumented ``django.utils.baseconv`` module will be removed."
+msgstr ""
+
+msgid "The undocumented ``django.utils.datetime_safe`` module will be removed."
+msgstr ""
+
+msgid ""
+"The default value of the ``USE_TZ`` setting will change from ``False`` to "
+"``True``."
+msgstr ""
+
+msgid ""
+"The default sitemap protocol for sitemaps built outside the context of a "
+"request will change from ``'http'`` to ``'https'``."
+msgstr ""
+
+msgid ""
+"The ``extra_tests`` argument for ``DiscoverRunner.build_suite()`` and "
+"``DiscoverRunner.run_tests()`` will be removed."
+msgstr ""
+
+msgid ""
+"The ``django.contrib.postgres.aggregates.ArrayAgg``, ``JSONBAgg``, and "
+"``StringAgg`` aggregates will return ``None`` when there are no rows instead "
+"of ``[]``, ``[]``, and ``''`` respectively."
+msgstr ""
+
+msgid "The ``USE_L10N`` setting will be removed."
+msgstr ""
+
+msgid "The ``USE_DEPRECATED_PYTZ`` transitional setting will be removed."
+msgstr ""
+
+msgid "Support for ``pytz`` timezones will be removed."
+msgstr ""
+
+msgid "The ``is_dst`` argument will be removed from:"
+msgstr ""
+
+msgid "``QuerySet.datetimes()``"
+msgstr ""
+
+msgid "``django.utils.timezone.make_aware()``"
+msgstr ""
+
+msgid "``django.db.models.functions.Trunc()``"
+msgstr ""
+
+msgid "``django.db.models.functions.TruncSecond()``"
+msgstr ""
+
+msgid "``django.db.models.functions.TruncMinute()``"
+msgstr ""
+
+msgid "``django.db.models.functions.TruncHour()``"
+msgstr ""
+
+msgid "``django.db.models.functions.TruncDay()``"
+msgstr ""
+
+msgid "``django.db.models.functions.TruncWeek()``"
+msgstr ""
+
+msgid "``django.db.models.functions.TruncMonth()``"
+msgstr ""
+
+msgid "``django.db.models.functions.TruncQuarter()``"
+msgstr ""
+
+msgid "``django.db.models.functions.TruncYear()``"
+msgstr ""
+
+msgid ""
+"The ``django.contrib.gis.admin.GeoModelAdmin`` and ``OSMGeoAdmin`` classes "
+"will be removed."
+msgstr ""
+
+msgid "The undocumented ``BaseForm._html_output()`` method will be removed."
+msgstr ""
+
+msgid ""
+"The ability to return a ``str``, rather than a ``SafeString``, when "
+"rendering an ``ErrorDict`` and ``ErrorList`` will be removed."
+msgstr ""
 
 msgid "4.1"
 msgstr ""
@@ -6816,9 +6928,9 @@ msgid ""
 "The version of ``django.contrib.auth.views.password_reset_confirm()`` that "
 "supports base36 encoded user IDs (``django.contrib.auth.views."
 "password_reset_confirm_uidb36``) will be removed. If your site has been "
-"running Django 1.6 for more than :setting:`PASSWORD_RESET_TIMEOUT_DAYS`, "
-"this change will have no effect. If not, then any password reset links "
-"generated before you upgrade to Django 1.7 won't work after the upgrade."
+"running Django 1.6 for more than ``PASSWORD_RESET_TIMEOUT_DAYS``, this "
+"change will have no effect. If not, then any password reset links generated "
+"before you upgrade to Django 1.7 won't work after the upgrade."
 msgstr ""
 
 msgid "The ``django.utils.encoding.StrAndUnicode`` mix-in will be removed."
@@ -7872,7 +7984,7 @@ msgid "Access to Django's record on PyPI. Create a file with your credentials:"
 msgstr ""
 "Acesso ao registro do Django no PyPI. Criar um arquivo com suas credenciais:"
 
-msgid "~/.pypirc"
+msgid "``~/.pypirc``"
 msgstr ""
 
 msgid "Access to the ``djangoproject.com`` server to upload files."

@@ -23,13 +23,14 @@
 # 吴彬 <xiake21x@qq.com>, 2016
 # 得鑫 李 <lidexin911@126.com>, 2018
 # Dogify <595572594@qq.com>, 2018
+# 龙虎义, 2022
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-07 11:06-0600\n"
-"PO-Revision-Date: 2022-01-07 17:23+0000\n"
-"Last-Translator: Transifex Bot <>\n"
+"POT-Creation-Date: 2022-07-27 03:41-0500\n"
+"PO-Revision-Date: 2022-04-02 20:02+0000\n"
+"Last-Translator: 龙虎义\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -165,9 +166,9 @@ msgstr ""
 "框架要求配置数据库，而不管你是否真的使用它。"
 
 msgid ""
-"It's now more explicit and natural to override save() and delete() methods "
-"on models, rather than needing to hook into the pre_save() and post_save() "
-"method hooks."
+"It's now more explicit and natural to override ``save()`` and ``delete()`` "
+"methods on models, rather than needing to hook into the ``pre_save()`` and "
+"``post_save()`` method hooks."
 msgstr ""
 "现在，在模型上覆盖 save() 和 delete() 方法更加明确和自然，而不需要挂载 "
 "pre_save() 和 post_save() 方法的钩子。"
@@ -618,6 +619,8 @@ msgid ""
 "development to date: a web framework that a group of perfectionists can "
 "truly be proud of."
 msgstr ""
+"我们期待这一刻已经三年多了，现在它终于来了。Django 1.0是Django开发过程中最大"
+"的一个里程碑:这是一个让一群完美主义者感到自豪的Web框架。"
 
 msgid ""
 "Django 1.0 represents over three years of community development as an Open "
@@ -1285,7 +1288,7 @@ msgid "``f.content_type``"
 msgstr "``f.content_type``"
 
 msgid "Work with file fields using the new API"
-msgstr ""
+msgstr "文件字段使用新API处理"
 
 msgid ""
 "The internal implementation of :class:`django.db.models.FileField` have "
@@ -1294,6 +1297,9 @@ msgid ""
 "changed. You will need to make the following changes, assuming your model's :"
 "class:`~django.db.models.FileField` is called ``myfile``:"
 msgstr ""
+"class:`django.db.models.FileField` 的内部实现已更改。一个明显的结果是您访问特"
+"殊属性(URL, filename, image size, 等等)的方式发生了变化。您需要进行以下更改，"
+"假设您的模型: class:`~django.db.models.FileField` 调用``myfile``:"
 
 msgid "``myfile.get_content_filename()``"
 msgstr "``myfile.get_content_filename()``"
@@ -1336,56 +1342,69 @@ msgid ""
 "`~django.db.models.ImageField` fields. More details can be found in the :doc:"
 "`model API </ref/models/fields>` documentation."
 msgstr ""
+"请注意``width``和``height``属性仅对: class:`~django.db.models.ImageField` 字"
+"段有意义。更多详细信息可以在: doc:`model API</ref/models/fields>` "
+"documentation 文档中找到。"
 
 msgid "Use ``Paginator`` instead of ``ObjectPaginator``"
-msgstr ""
+msgstr "使用 ``Paginator`` 而不是 ``ObjectPaginator``"
 
 msgid ""
 "The ``ObjectPaginator`` in 0.96 has been removed and replaced with an "
 "improved version, :class:`django.core.paginator.Paginator`."
 msgstr ""
+"0.96版本中的``ObjectPaginator`` 已被删除，并替换为一个改进版本: class:"
+"`django.core.paginator.Paginator`。"
 
 msgid "Templates"
 msgstr "模板"
 
 msgid "Learn to love autoescaping"
-msgstr ""
+msgstr "学会爱上自动转义"
 
 msgid ""
 "By default, the template system now automatically HTML-escapes the output of "
 "every variable. To learn more, see :ref:`automatic-html-escaping`."
 msgstr ""
+"默认情况下，模板系统现在会自动对每个变量的输出进行HTML转义。要了解更多信息，"
+"请参阅 :ref:`automatic-html-escaping`。"
 
 msgid ""
 "To disable auto-escaping for an individual variable, use the :tfilter:`safe` "
 "filter:"
-msgstr ""
+msgstr "要禁用单个变量的自动转义，请使用:tfilter:`safe` filter:"
 
 msgid ""
 "To disable auto-escaping for an entire template, wrap the template (or just "
 "a particular section of the template) in the :ttag:`autoescape` tag:"
 msgstr ""
+"要禁用整个模板的自动转义，请将模板（或模板的特定部分）包装在:ttag:"
+"`autoescape` tag:"
 
 msgid "Less-common changes"
-msgstr ""
+msgstr "不常见的变化"
 
 msgid ""
 "The following changes are smaller, more localized changes. They should only "
 "affect more advanced users, but it's probably worth reading through the list "
 "and checking your code for these things."
 msgstr ""
+"以下更改是较小的、更本地化的更改。它们应该只影响更高级的用户，但是通读列表并"
+"检查代码中的这些东西可能是值得的。"
 
 msgid "Signals"
 msgstr "信号"
 
 msgid "Add ``**kwargs`` to any registered signal handlers."
-msgstr ""
+msgstr "将``**kwargs``添加到任何注册的信号处理程序中。"
 
 msgid ""
 "Connect, disconnect, and send signals via methods on the :class:`~django."
 "dispatch.Signal` object instead of through module methods in ``django."
 "dispatch.dispatcher``."
 msgstr ""
+"通过:class:`~django.dispatch.Signal`对象上的方法连接、断开连接和发送信号，而"
+"不是通过``django.dispatch.dispatcher``中的模块方法。"
 
 msgid ""
 "Remove any use of the ``Anonymous`` and ``Any`` sender options; they no "
@@ -9885,7 +9904,7 @@ msgid ""
 "Django 1.3.3 and Django 1.4.1 -- specifically, ``django.http.HttpRequest."
 "get_host()`` -- was incorrectly handling username/password information in "
 "the header. Thus, for example, the following Host header would be accepted "
-"by Django when running on \"validsite.com\"::"
+"by Django when running on ``validsite.com``::"
 msgstr ""
 
 msgid ""
@@ -10289,7 +10308,7 @@ msgstr ""
 
 msgid ""
 "Anything imported as a top-level module can be placed adjacent to the new "
-"``manage.py``. For instance, to decouple \"myapp\" from the project module "
+"``manage.py``. For instance, to decouple ``myapp`` from the project module "
 "and import it as just ``myapp``, place it outside the ``mysite/`` directory::"
 msgstr ""
 
@@ -11354,7 +11373,7 @@ msgstr ""
 msgid ""
 "Session cookies now include the ``httponly`` attribute by default to help "
 "reduce the impact of potential XSS attacks. As a consequence of this change, "
-"session cookie data, including sessionid, is no longer accessible from "
+"session cookie data, including ``sessionid``, is no longer accessible from "
 "JavaScript in many browsers. For strict backwards compatibility, use "
 "``SESSION_COOKIE_HTTPONLY = False`` in your settings file."
 msgstr ""
@@ -13166,13 +13185,13 @@ msgid ""
 msgstr ""
 
 msgid ""
-"A system version of ``simplejson``, if one was available (ie. ``import "
+"A system version of ``simplejson``, if one was available (i.e. ``import "
 "simplejson`` works), if it was more recent than Django's built-in copy or it "
 "had the C speedups, or"
 msgstr ""
 
 msgid ""
-"The :mod:`json` module from the standard library, if it was available (ie. "
+"The :mod:`json` module from the standard library, if it was available (i.e. "
 "Python 2.6 or greater), or"
 msgstr ""
 
@@ -17042,13 +17061,13 @@ msgid ""
 "removed in Django 1.9."
 msgstr ""
 
-msgid "deconstruct() and serializability"
+msgid "``deconstruct()`` and serializability"
 msgstr ""
 
 msgid ""
 "Django now requires all Field classes and all of their constructor arguments "
 "to be serializable. If you modify the constructor signature in your custom "
-"Field in any way, you'll need to implement a deconstruct() method; we've "
+"Field in any way, you'll need to implement a ``deconstruct()`` method; we've "
 "expanded the custom field documentation with :ref:`instructions on "
 "implementing this method <custom-field-deconstruct-method>`."
 msgstr ""
@@ -23631,14 +23650,14 @@ msgid ""
 "from:"
 msgstr ""
 
-msgid "mysite/urls.py"
-msgstr "mysite/urls.py"
+msgid "``mysite/urls.py``"
+msgstr ""
 
 msgid "to:"
 msgstr ""
 
-msgid "polls/urls.py"
-msgstr "polls/urls.py"
+msgid "``polls/urls.py``"
+msgstr ""
 
 msgid ""
 "This change also means that the old way of including an ``AdminSite`` "
@@ -23646,8 +23665,8 @@ msgid ""
 "``django.conf.urls.url()``:"
 msgstr ""
 
-msgid "urls.py"
-msgstr "urls.py"
+msgid "``urls.py``"
+msgstr ""
 
 msgid "URL application namespace required if setting an instance namespace"
 msgstr ""
@@ -24677,7 +24696,7 @@ msgstr ""
 
 msgid ""
 "On Oracle, ``AutoField`` and ``BigAutoField`` are now created as `identity "
-"columns <https://docs.oracle.com/en/database/oracle/oracle-database/18/"
+"columns <https://docs.oracle.com/en/database/oracle/oracle-database/21/"
 "drdaa/ intro-to-tools-and-products-supporting-migraiton.html#GUID-14E4817B-"
 "F3BC-4D99 -B471-A0ACDC303CC9>`__."
 msgstr ""
@@ -27914,6 +27933,72 @@ msgstr ""
 msgid ""
 "``Storage.save()`` allowed directory-traversal if directly passed suitably "
 "crafted file names."
+msgstr ""
+
+msgid "Django 2.2.27 release notes"
+msgstr ""
+
+msgid "*February 1, 2022*"
+msgstr ""
+
+msgid ""
+"Django 2.2.27 fixes two security issues with severity \"medium\" in 2.2.26."
+msgstr ""
+
+msgid "CVE-2022-22818: Possible XSS via ``{% debug %}`` template tag"
+msgstr ""
+
+msgid ""
+"The ``{% debug %}`` template tag didn't properly encode the current context, "
+"posing an XSS attack vector."
+msgstr ""
+
+msgid ""
+"In order to avoid this vulnerability, ``{% debug %}`` no longer outputs "
+"information when the ``DEBUG`` setting is ``False``, and it ensures all "
+"context variables are correctly escaped when the ``DEBUG`` setting is "
+"``True``."
+msgstr ""
+
+msgid "CVE-2022-23833: Denial-of-service possibility in file uploads"
+msgstr ""
+
+msgid ""
+"Passing certain inputs to multipart forms could result in an infinite loop "
+"when parsing files."
+msgstr ""
+
+msgid "Django 2.2.28 release notes"
+msgstr ""
+
+msgid "*April 11, 2022*"
+msgstr ""
+
+msgid ""
+"Django 2.2.28 fixes two security issues with severity \"high\" in 2.2.27."
+msgstr ""
+
+msgid ""
+"CVE-2022-28346: Potential SQL injection in ``QuerySet.annotate()``, "
+"``aggregate()``, and ``extra()``"
+msgstr ""
+
+msgid ""
+":meth:`.QuerySet.annotate`, :meth:`~.QuerySet.aggregate`, and :meth:`~."
+"QuerySet.extra` methods were subject to SQL injection in column aliases, "
+"using a suitably crafted dictionary, with dictionary expansion, as the "
+"``**kwargs`` passed to these methods."
+msgstr ""
+
+msgid ""
+"CVE-2022-28347: Potential SQL injection via ``QuerySet.explain(**options)`` "
+"on PostgreSQL"
+msgstr ""
+
+msgid ""
+":meth:`.QuerySet.explain` method was subject to SQL injection in option "
+"names, using a suitably crafted dictionary, with dictionary expansion, as "
+"the ``**options`` argument."
 msgstr ""
 
 msgid "Django 2.2.3 release notes"
@@ -32486,6 +32571,64 @@ msgid ""
 "security issues with severity \"low\" in 3.2.10."
 msgstr ""
 
+msgid "Django 3.2.12 release notes"
+msgstr ""
+
+msgid ""
+"Django 3.2.12 fixes two security issues with severity \"medium\" in 3.2.11."
+msgstr ""
+
+msgid "Django 3.2.13 release notes"
+msgstr ""
+
+msgid ""
+"Django 3.2.13 fixes two security issues with severity \"high\" in 3.2.12 and "
+"a regression in 3.2.4."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.2.4 that caused the auto-reloader to no "
+"longer detect changes when the ``DIRS`` option of the ``TEMPLATES`` setting "
+"contained an empty string (:ticket:`33628`)."
+msgstr ""
+
+msgid "Django 3.2.14 release notes"
+msgstr ""
+
+msgid "*July 4, 2022*"
+msgstr ""
+
+msgid "Django 3.2.14 fixes a security issue with severity \"high\" in 3.2.13."
+msgstr ""
+
+msgid ""
+"CVE-2022-34265: Potential SQL injection via ``Trunc(kind)`` and "
+"``Extract(lookup_name)`` arguments"
+msgstr ""
+
+msgid ""
+":class:`Trunc() <django.db.models.functions.Trunc>` and :class:`Extract() "
+"<django.db.models.functions.Extract>` database functions were subject to SQL "
+"injection if untrusted data was used as a ``kind``/``lookup_name`` value."
+msgstr ""
+
+msgid ""
+"Applications that constrain the lookup name and kind choice to a known safe "
+"list are unaffected."
+msgstr ""
+
+msgid "Django 3.2.15 release notes"
+msgstr ""
+
+msgid "*August 3, 2022*"
+msgstr ""
+
+msgid "Django 3.2.15 fixes a security issue with severity \"high\" in 3.2.14."
+msgstr ""
+
+msgid "..."
+msgstr ""
+
 msgid "Django 3.2.2 release notes"
 msgstr "Django 3.2.2 版本发行说明"
 
@@ -33249,6 +33392,17 @@ msgid ""
 "``form_valid()``, or a shared helper method, if required."
 msgstr ""
 
+msgid "Table and column naming scheme changes on Oracle"
+msgstr ""
+
+msgid ""
+"Django 4.0 inadvertently changed the table and column naming scheme on "
+"Oracle. This causes errors for models and fields with names longer than 30 "
+"characters. Unfortunately, renaming some Oracle tables and columns is "
+"required. Use the upgrade script in :ticket:`33789 <33789#comment:15>` to "
+"generate ``RENAME`` statements to change naming scheme."
+msgstr ""
+
 msgid "Support for ``cx_Oracle`` < 7.0 is removed."
 msgstr ""
 
@@ -33706,10 +33860,10 @@ msgstr ""
 msgid "Django 4.0.2 release notes"
 msgstr ""
 
-msgid "*Expected February 1, 2022*"
-msgstr ""
-
-msgid "Django 4.0.2 fixes several bugs in 4.0.1."
+msgid ""
+"Django 4.0.2 fixes two security issues with severity \"medium\" and several "
+"bugs in 4.0.1. Also, the latest string translations from Transifex are "
+"incorporated, with a special mention for Bulgarian (fully translated)."
 msgstr ""
 
 msgid ""
@@ -33720,6 +33874,118 @@ msgstr ""
 msgid ""
 "Fixed a regression in Django 4.0 where ``help_text`` was HTML-escaped in "
 "automatically-generated forms (:ticket:`33419`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 4.0 that caused displaying an incorrect name "
+"for class-based views on the technical 404 debug page (:ticket:`33425`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 4.0 that caused an incorrect ``repr`` of "
+"``ResolverMatch`` for class-based views (:ticket:`33426`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 4.0 that caused a crash of ``makemigrations`` "
+"on models without ``Meta.order_with_respect_to`` but with a field named "
+"``_order`` (:ticket:`33449`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 4.0 that caused incorrect :attr:`.ModelAdmin."
+"radio_fields` layout in the admin (:ticket:`33407`)."
+msgstr ""
+
+msgid ""
+"Fixed a duplicate operation regression in Django 4.0 that caused a migration "
+"crash when altering a primary key type for a concrete parent model "
+"referenced by a foreign key (:ticket:`33462`)."
+msgstr ""
+
+msgid ""
+"Fixed a bug in Django 4.0 that caused a crash of ``QuerySet.aggregate()`` "
+"after ``annotate()`` on an aggregate function with a :ref:`default "
+"<aggregate-default>` (:ticket:`33468`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 4.0 that caused a crash of ``makemigrations`` "
+"when renaming a field of a renamed model (:ticket:`33480`)."
+msgstr ""
+
+msgid "Django 4.0.3 release notes"
+msgstr ""
+
+msgid "*March 1, 2022*"
+msgstr ""
+
+msgid ""
+"Django 4.0.3 fixes several bugs in 4.0.2. Also, all Python code in Django is "
+"reformatted with `black`_."
+msgstr ""
+
+msgid ""
+"Prevented, following a regression in Django 4.0.1, :djadmin:`makemigrations` "
+"from generating infinite migrations for a model with ``ManyToManyField`` to "
+"a lowercased swappable model such as ``'auth.user'`` (:ticket:`33515`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 4.0 that caused a crash when rendering invalid "
+"inlines with :attr:`~django.contrib.admin.ModelAdmin.readonly_fields` in the "
+"admin (:ticket:`33547`)."
+msgstr ""
+
+msgid "Django 4.0.4 release notes"
+msgstr ""
+
+msgid ""
+"Django 4.0.4 fixes two security issues with severity \"high\" and two bugs "
+"in 4.0.3."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 4.0 that caused ignoring multiple "
+"``FilteredRelation()`` relationships to the same field (:ticket:`33598`)."
+msgstr ""
+
+msgid "Django 4.0.5 release notes"
+msgstr ""
+
+msgid "*June 1, 2022*"
+msgstr ""
+
+msgid "Django 4.0.5 fixes several bugs in 4.0.4."
+msgstr ""
+
+msgid ""
+"Fixed a bug in Django 4.0 where not all :setting:`OPTIONS <CACHES-OPTIONS>` "
+"were passed to a Redis client (:ticket:`33681`)."
+msgstr ""
+
+msgid ""
+"Fixed a bug in Django 4.0 that caused a crash of ``QuerySet.filter()`` on "
+"``IsNull()`` expressions (:ticket:`33705`)."
+msgstr ""
+
+msgid ""
+"Fixed a bug in Django 4.0 where a hidden quick filter toolbar in the admin's "
+"navigation sidebar was focusable (:ticket:`33725`)."
+msgstr ""
+
+msgid "Django 4.0.6 release notes"
+msgstr ""
+
+msgid "Django 4.0.6 fixes a security issue with severity \"high\" in 4.0.5."
+msgstr ""
+
+msgid "Django 4.0.7 release notes"
+msgstr ""
+
+msgid ""
+"Django 4.0.7 fixes a security issue with severity \"high\" and several bugs "
+"in 4.0.6."
 msgstr ""
 
 msgid "Release notes"
@@ -33891,6 +34157,94 @@ msgid ""
 msgstr ""
 "所有的安全问题都已经在 Django 的安全进程的版本下处理。这些版本列举如下。"
 
+msgid "July 4, 2022 - :cve:`2022-34265`"
+msgstr ""
+
+msgid ""
+"Potential SQL injection via ``Trunc(kind)`` and ``Extract(lookup_name)`` "
+"arguments. `Full description <https://www.djangoproject.com/weblog/2022/"
+"jul/04/security-releases/>`__"
+msgstr ""
+
+msgid "Django 4.0 :commit:`(patch) <0dc9c016fadb71a067e5a42be30164e3f96c0492>`"
+msgstr ""
+
+msgid "Django 3.2 :commit:`(patch) <a9010fe5555e6086a9d9ae50069579400ef0685e>`"
+msgstr ""
+
+msgid "April 11, 2022 - :cve:`2022-28346`"
+msgstr ""
+
+msgid ""
+"Potential SQL injection in ``QuerySet.annotate()``, ``aggregate()``, and "
+"``extra()``. `Full description <https://www.djangoproject.com/weblog/2022/"
+"apr/11/security-releases/>`__"
+msgstr ""
+
+msgid "Django 4.0 :commit:`(patch) <800828887a0509ad1162d6d407e94d8de7eafc60>`"
+msgstr ""
+
+msgid "Django 3.2 :commit:`(patch) <2044dac5c6968441be6f534c4139bcf48c5c7e48>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <2c09e68ec911919360d5f8502cefc312f9e03c5d>`"
+msgstr ""
+
+msgid "April 11, 2022 - :cve:`2022-28347`"
+msgstr ""
+
+msgid ""
+"Potential SQL injection via ``QuerySet.explain(**options)`` on PostgreSQL. "
+"`Full description <https://www.djangoproject.com/weblog/2022/apr/11/security-"
+"releases/>`__"
+msgstr ""
+
+msgid "Django 4.0 :commit:`(patch) <00b0fc50e1738c7174c495464a5ef069408a4402>`"
+msgstr ""
+
+msgid "Django 3.2 :commit:`(patch) <9e19accb6e0a00ba77d5a95a91675bf18877c72d>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <29a6c98b4c13af82064f993f0acc6e8fafa4d3f5>`"
+msgstr ""
+
+msgid "February 1, 2022 - :cve:`2022-22818`"
+msgstr ""
+
+msgid ""
+"Possible XSS via ``{% debug %}`` template tag. `Full description <https://"
+"www.djangoproject.com/weblog/2022/feb/01/security-releases/>`__"
+msgstr ""
+
+msgid "Versions affected"
+msgstr "受影响的版本"
+
+msgid "Django 4.0 :commit:`(patch) <01422046065d2b51f8f613409cad2c81b39487e5>`"
+msgstr ""
+
+msgid "Django 3.2 :commit:`(patch) <1a1e8278c46418bde24c86a65443b0674bae65e2>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <c27a7eb9f40b64990398978152e62b6ff839c2e6>`"
+msgstr ""
+
+msgid "February 1, 2022 - :cve:`2022-23833`"
+msgstr ""
+
+msgid ""
+"Denial-of-service possibility in file uploads. `Full description <https://"
+"www.djangoproject.com/weblog/2022/feb/01/security-releases/>`__"
+msgstr ""
+
+msgid "Django 4.0 :commit:`(patch) <f9c7d48fdd6f198a6494a9202f90242f176e4fc9>`"
+msgstr ""
+
+msgid "Django 3.2 :commit:`(patch) <d16133568ef9c9b42cb7a08bdf9ff3feec2e5468>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <c477b761804984c932704554ad35f78a2e230c6a>`"
+msgstr ""
+
 msgid "January 4, 2022 - :cve:`2021-45452`"
 msgstr ""
 
@@ -33898,9 +34252,6 @@ msgid ""
 "Potential directory-traversal via ``Storage.save()``. `Full description "
 "<https://www.djangoproject.com/weblog/2022/jan/04/security-releases/>`__"
 msgstr ""
-
-msgid "Versions affected"
-msgstr "受影响的版本"
 
 msgid "Django 4.0 :commit:`(patch) <e1592e0f26302e79856cc7f2218ae848ae19b0f6>`"
 msgstr ""
@@ -35691,6 +36042,8 @@ msgid ""
 "Information leakage in administrative interface. `Full description <https://"
 "www.djangoproject.com/weblog/2010/dec/22/security/>`__"
 msgstr ""
+"界面管理中的信息泄漏`完整描述<https://www.djangoproject.com/weblog/2010/"
+"dec/22/security/>`__"
 
 msgid "Django 1.1 :commit:`(patch) <17084839fd7e267da5729f2a27753322b9d415a0>`"
 msgstr ""
@@ -35701,12 +36054,14 @@ msgstr ""
 "Django 1.2 :commit:`（补丁） <85207a245bf09fdebe486b4c7bbcb65300f2a693>`"
 
 msgid "September 8, 2010 - :cve:`2010-3082`"
-msgstr ""
+msgstr "2010年9月8日 - :cve:`2010-3082`"
 
 msgid ""
 "XSS via trusting unsafe cookie value. `Full description <https://www."
 "djangoproject.com/weblog/2010/sep/08/security-release/>`__"
 msgstr ""
+"XSS通过信任不安全的cookie值。完整描述<https://www.djangoproject.com/"
+"weblog/2010/sep/08/security-release/>`__"
 
 msgid "Django 1.2 :commit:`(patch) <7f84657b6b2243cc787bdb9f296710c8d13ad0bd>`"
 msgstr ""

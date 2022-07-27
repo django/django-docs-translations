@@ -5,7 +5,7 @@
 # Translators:
 # Adrien Brunet <abrunet@centrale-marseille.fr>, 2017
 # Christophe CHAUVET <christophe.chauvet@gmail.com>, 2013
-# Claude Paroz <claude@2xlibre.net>, 2013-2021
+# Claude Paroz <claude@2xlibre.net>, 2013-2022
 # Jean-Baptiste Mora, 2014
 # Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014
 # Mathieu Dupuy <deronnax@gmail.com>, 2014
@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-17 05:02-0600\n"
-"PO-Revision-Date: 2021-12-07 12:26+0000\n"
+"POT-Creation-Date: 2022-05-03 09:29-0500\n"
+"PO-Revision-Date: 2022-06-02 19:51+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: French (http://www.transifex.com/django/django-docs/language/"
 "fr/)\n"
@@ -145,19 +145,19 @@ msgstr ""
 
 msgid ""
 "Django won't bother displaying the filter for a ``ManyToManyField`` if there "
-"are fewer than two related objects."
+"are no related objects."
 msgstr ""
 "Django ne se fatigue pas à afficher le résultat d'un filtre "
-"``ManyToManyField`` s'il ne contient pas plus d'un élément lié."
+"``ManyToManyField`` s'il ne contient aucun élément lié."
 
 msgid ""
 "For example, if your :attr:`~django.contrib.admin.ModelAdmin.list_filter` "
-"includes :doc:`sites </ref/contrib/sites>`, and there's only one site in "
-"your database, it won't display a \"Site\" filter. In that case, filtering "
-"by site would be meaningless."
+"includes :doc:`sites </ref/contrib/sites>`, and there are no sites in your "
+"database, it won't display a \"Site\" filter. In that case, filtering by "
+"site would be meaningless."
 msgstr ""
 "Par exemple, si votre :attr:`~django.contrib.admin.ModelAdmin.list_filter` "
-"inclut :doc:`sites </ref/contrib/sites>` et qu'il n'y a qu'un seul site dans "
+"inclut :doc:`sites </ref/contrib/sites>` et qu'il n'y a aucun site dans "
 "votre base de données, il n'affichera par le filtre « Site ». Dans ce cas, "
 "le filtrage par site est inutile."
 
@@ -1546,10 +1546,10 @@ msgstr "Assurez-vous que :"
 
 msgid ""
 "The environment variable :envvar:`DJANGO_SETTINGS_MODULE` is set to a fully-"
-"qualified Python module (i.e. \"mysite.settings\")."
+"qualified Python module (i.e. ``mysite.settings``)."
 msgstr ""
 "La variable d'environnement :envvar:`DJANGO_SETTINGS_MODULE`  est définie "
-"sur un module Python complètement qualifié (par ex. \"mysite.settings\")."
+"sur un module Python complètement qualifié (par ex. ``mysite.settings``)."
 
 msgid ""
 "Said module is on ``sys.path`` (``import mysite.settings`` should work)."

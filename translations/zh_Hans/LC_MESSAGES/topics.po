@@ -29,6 +29,7 @@
 # HuanCheng Bai白宦成 <xiqingongzi@gmail.com>, 2019
 # Jahoo Yang <jahoo@pku.edu.cn>, 2021
 # ausaki <www.ljm969087551@qq.com>, 2018
+# Jiawei Xu <contactxjw@gmail.com>, 2022
 # JINGMING DAI <d664216@gmail.com>, 2018
 # jinwen wu <toono@qq.com>, 2018
 # df2dc1c92e792f7ae8417c51df43db8f_594d92a <0f49be28017426edb1db1a2ab6e67088_717605>, 2018
@@ -65,6 +66,7 @@
 # XingFive <haoxingwu@hotmail.com>, 2018
 # XingFive <haoxingwu@hotmail.com>, 2018
 # Xin Qi <georgechii@outlook.com>, 2021
+# xiaqi516, 2022
 # xy zhou <kevinzhou412183845@outlook.com>, 2021
 # dykai <yingkaidang@gmail.com>, 2019
 # yhliyr <lokidri@outlook.com>, 2018
@@ -82,6 +84,7 @@
 # 文隆 胡 <xcluas@gmail.com>, 2018
 # 景隆 王 <Arsenal591@126.com>, 2018
 # blacklin <chinalinzhijie@gmail.com>, 2020
+# 汪心禾 <wangxinhe06@gmail.com>, 2022
 # 郝逸先(Henry) <haoyixian1994@hotmail.com>, 2019
 # 阿西 <davidxu5945@qq.com>, 2018
 # Dogify <595572594@qq.com>, 2019
@@ -90,9 +93,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-21 01:06-0600\n"
-"PO-Revision-Date: 2022-02-12 21:16+0000\n"
-"Last-Translator: Transifex Bot <>\n"
+"POT-Creation-Date: 2022-07-27 03:41-0500\n"
+"PO-Revision-Date: 2022-04-02 20:02+0000\n"
+"Last-Translator: Jiawei Xu <contactxjw@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -496,6 +499,18 @@ msgstr ""
 "Django 同步代码都在同一个线程中运行，从而完全兼容异步模式。注意，同步代码始终"
 "要与调用它的异步代码保持在不同线程中，所以你应该避免传递原始数据库句柄"
 "(handles)或者其他 thread-sensitive 引用。"
+
+msgid ""
+"In practice this restriction means that you should not pass features of the "
+"database ``connection`` object when calling ``sync_to_async()``. Doing so "
+"will trigger the thread safety checks:"
+msgstr ""
+
+msgid ""
+"Rather, you should encapsulate all database access within a helper function "
+"that can be called with ``sync_to_async()`` without relying on the "
+"connection object in the calling code."
+msgstr ""
 
 msgid "Customizing authentication in Django"
 msgstr "Django 中的自定义验证"
@@ -4348,14 +4363,14 @@ msgstr ""
 msgid "First, we'll add the custom hasher:"
 msgstr "首先，我们添加一个自定义的哈希："
 
-msgid "accounts/hashers.py"
-msgstr "accounts/hashers.py"
+msgid "``accounts/hashers.py``"
+msgstr ""
 
 msgid "The data migration might look something like:"
 msgstr "数据迁移可能类似于这样："
 
-msgid "accounts/migrations/0002_migrate_sha1_passwords.py"
-msgstr "accounts/migrations/0002_migrate_sha1_passwords.py"
+msgid "``accounts/migrations/0002_migrate_sha1_passwords.py``"
+msgstr ""
 
 msgid ""
 "Be aware that this migration will take on the order of several minutes for "
@@ -4365,8 +4380,8 @@ msgstr "注意，迁移将对上千名用户花费大约数十分钟，这取决
 msgid "Finally, we'll add a :setting:`PASSWORD_HASHERS` setting:"
 msgstr "最后，我们在 :setting:`PASSWORD_HASHERS` 中添加配置："
 
-msgid "mysite/settings.py"
-msgstr "mysite/settings.py"
+msgid "``mysite/settings.py``"
+msgstr ""
 
 msgid "Include any other hashers that your site uses in this list."
 msgstr "包含你的站点使用的此列表中的其他算法。"
@@ -5021,7 +5036,7 @@ msgid ""
 "Set :setting:`LOCATION <CACHES-LOCATION>` to the URL pointing to your Redis "
 "instance, using the appropriate scheme. See the ``redis-py`` docs for "
 "`details on the available schemes <https://redis-py.readthedocs.io/en/stable/"
-"#redis.ConnectionPool.from_url>`_."
+"connections.html#redis.connection.ConnectionPool.from_url>`_."
 msgstr ""
 
 msgid "For example, if Redis is running on localhost (127.0.0.1) port 6379::"
@@ -7166,14 +7181,14 @@ msgstr "基础表单"
 msgid "Given a contact form:"
 msgstr "提供联系表单："
 
-msgid "forms.py"
-msgstr "forms.py"
+msgid "``forms.py``"
+msgstr ""
 
 msgid "The view can be constructed using a ``FormView``:"
 msgstr "可以使用 ``FormView`` 构建视图："
 
-msgid "views.py"
-msgstr "views.py"
+msgid "``views.py``"
+msgstr ""
 
 msgid "Notes:"
 msgstr "注意："
@@ -7271,8 +7286,8 @@ msgstr ""
 "首先我们需要添加 :meth:`~django.db.models.Model.get_absolute_url()` 到 "
 "``Author`` 类："
 
-msgid "models.py"
-msgstr "models.py"
+msgid "``models.py``"
+msgstr ""
 
 msgid ""
 "Then we can use :class:`CreateView` and friends to do the actual work. "
@@ -7314,8 +7329,8 @@ msgstr ""
 msgid "Finally, we hook these new views into the URLconf:"
 msgstr "最后将这些新视图挂钩到URLconf中："
 
-msgid "urls.py"
-msgstr "urls.py"
+msgid "``urls.py``"
+msgstr ""
 
 msgid ""
 "These views inherit :class:`~django.views.generic.detail."
@@ -9770,8 +9785,8 @@ msgid "Querying in the opposite direction::"
 msgstr "反向查询："
 
 msgid ""
-"Counting in the opposite direction works in conjunction with distinct()::"
-msgstr "反向查询的计数与 distinct() ："
+"Counting in the opposite direction works in conjunction with ``distinct()``::"
+msgstr ""
 
 msgid "Queries can go round in circles::"
 msgstr "可以循环查询："
@@ -10831,7 +10846,7 @@ msgid ""
 "verbose_name`. Django will automatically capitalize the first letter where "
 "it needs to."
 msgstr ""
-"惯例是不将 :attr:`~Field.verbose_name` 的首字母大写，必要时 Djanog 会自动把首"
+"惯例是不将 :attr:`~Field.verbose_name` 的首字母大写，必要时 Django 会自动把首"
 "字母转换为大写。"
 
 msgid "Relationships"
@@ -11913,7 +11928,7 @@ msgid ""
 "regularly order by the ``last_name`` attribute when you use the proxy::"
 msgstr ""
 "你也可以用代理模型定义模型的另一种不同的默认排序方法。你也许不期望总对 "
-"“Persion” 进行排序，但是在使用代理时，总是依据 “last_name” 属性进行排序："
+"“Person” 进行排序，但是在使用代理时，总是依据 “last_name” 属性进行排序："
 
 msgid ""
 "Now normal ``Person`` queries will be unordered and ``OrderedPerson`` "
@@ -12210,8 +12225,8 @@ msgid ""
 "``models`` directory:"
 msgstr "比如，若你在 ``models`` 目录下有 ``organic.py`` 和 ``synthetic.py``："
 
-msgid "myapp/models/__init__.py"
-msgstr "myapp/models/__init__.py"
+msgid "``myapp/models/__init__.py``"
+msgstr ""
 
 msgid ""
 "Explicitly importing each model rather than using ``from .models import *`` "
@@ -14813,6 +14828,14 @@ msgid ""
 msgstr ""
 "在 PostgreSQL 上，如果只使用一个键或索引，那么会使用 SQL 运算符 ``->`` 。如果"
 "使用多个操作符，则会使用 ``#>`` 运算符。"
+
+msgid "SQLite users"
+msgstr "SQLite 用户"
+
+msgid ""
+"On SQLite, ``\"true\"``, ``\"false\"``, and ``\"null\"`` string values will "
+"always be interpreted as ``True``, ``False``, and JSON ``null`` respectively."
+msgstr ""
 
 msgid "Containment and key lookups"
 msgstr "包含与键查找"
@@ -23068,9 +23091,9 @@ msgid ""
 "to let session data be expunged from time to time, the ``cache`` backend is "
 "for you."
 msgstr ""
-"这两中会话存储会非常快，但简单缓存会更快，因为它忽略了持久化。在大部分情况"
-"下，``cached_db`` 后端将足够快，但如果你需要最后一点的性能，并且愿意不时地删"
-"除会话数据，那么 ``cache`` 后端适合你。"
+"这两种会话存储都会非常快，但简单的缓存会更快，因为它忽视了持久化。在大部分情"
+"况下，``cached_db`` 后端已经足够快了，但如果你需要最后的一点性能，并且愿意时"
+"不时删除会话数据，那么 ``cache`` 后端更适合你。"
 
 msgid ""
 "If you use the ``cached_db`` session backend, you also need to follow the "
@@ -23192,7 +23215,7 @@ msgstr "**性能**"
 
 msgid ""
 "Finally, the size of a cookie can have an impact on the speed of your site."
-msgstr ""
+msgstr "最后，cookie 的大小可能会对您网站的速度造成影响。"
 
 msgid "Using sessions in views"
 msgstr "在视图中使用会话"
@@ -23348,6 +23371,20 @@ msgstr ""
 "``expiry`` ：会话的过期信息，如一个 :class:`~datetime.datetime` 对象，整数"
 "（秒）或 ``None``。默认为通过 :meth:`set_expiry` 存储在会话中的值，或 "
 "``None`` 。"
+
+msgid ""
+"This method is used by session backends to determine the session expiry age "
+"in seconds when saving the session. It is not really intended for usage "
+"outside of that context."
+msgstr ""
+
+msgid ""
+"In particular, while it is **possible** to determine the remaining lifetime "
+"of a session **just when** you have the correct ``modification`` value "
+"**and** the ``expiry`` is set as a ``datetime`` object, where you do have "
+"the ``modification`` value, it is more straight-forward to calculate the "
+"expiry by-hand::"
+msgstr ""
 
 msgid ""
 "Returns the date this session will expire. For sessions with no custom "
@@ -37642,6 +37679,9 @@ msgid ""
 msgstr ""
 "一般的 Python 单元测试类都会扩展一个基类 :class:`unittest.TestCase`。Django "
 "提供了这个基类的一些扩展。"
+
+msgid "Hierarchy of Django unit testing classes (TestCase subclasses)"
+msgstr ""
 
 msgid "Hierarchy of Django unit testing classes"
 msgstr "Django 单元测试类的层次结构"

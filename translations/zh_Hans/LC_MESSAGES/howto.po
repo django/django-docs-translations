@@ -33,12 +33,13 @@
 # raingolee <raingolee@gmail.com>, 2018
 # ryan rain <holidaylover2010@gmail.com>, 2018
 # tianlong zhou <tlongzou@gmail.com>, 2019
-# Todd Kasaki <2524737581@qq.com>, 2020-2021
+# Todd Kasaki <2524737581@qq.com>, 2020-2022
 # Veoco <one@nomox.cn>, 2020-2022
 # Vincent Chan, 2018
 # Vincent <Intelligent.vincent@gmail.com>, 2019
 # Wehao Guo <kinggreenhall@gmail.com>, 2019
 # Wei Liu <2407802064@qq.com>, 2020
+# Wu Xiangfeng, 2022
 # Xiang Yu <bupt.aswmtjdsj@gmail.com>, 2013
 # xin.wang <asimplelife@live.com>, 2018
 # enginewang <engine74396@gmail.com>, 2018
@@ -62,9 +63,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-21 01:06-0600\n"
-"PO-Revision-Date: 2022-01-27 20:15+0000\n"
-"Last-Translator: Transifex Bot <>\n"
+"POT-Creation-Date: 2022-07-27 03:41-0500\n"
+"PO-Revision-Date: 2022-04-02 19:58+0000\n"
+"Last-Translator: Todd Kasaki <2524737581@qq.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -74,7 +75,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "How to authenticate using ``REMOTE_USER``"
-msgstr ""
+msgstr "使用 ``REMOTE_USER`` 进行身份验证"
 
 msgid ""
 "This document describes how to make use of external authentication sources "
@@ -84,6 +85,10 @@ msgid ""
 "Windows Authentication or Apache and `mod_authnz_ldap`_, `CAS`_, `Cosign`_, "
 "`WebAuth`_, `mod_auth_sspi`_, etc."
 msgstr ""
+"本文档描述如何在 Django 应用中使用外部身份验证资源（在 web 服务器上设置 "
+"``REMOTE_USER`` 环境变量的地方）。这种类型的身份验证方法一般用在使用了单点登"
+"录方案的内部网站上，比如 IIS 和 Windows 一体化验证或者 Apache 和 "
+"`mod_authnz_ldap`_, `CAS`_, `Cosign`_, `WebAuth`_, `mod_auth_sspi`_ 等等。"
 
 msgid ""
 "When the web server takes care of authentication it typically sets the "
@@ -94,6 +99,12 @@ msgid ""
 "``PersistentRemoteUserMiddleware``, and :class:`~django.contrib.auth."
 "backends.RemoteUserBackend` classes found in :mod:`django.contrib.auth`."
 msgstr ""
+"当 Web 服务器负责鉴权时，通常会设置 ``REMOTE_USER`` 环境变量，这是为了在底层"
+"应用中使用。在 Django 中， ``REMOTE_USER`` 是作为 :attr:`request.META "
+"<django.http.HttpRequest.META>` 的参数来使用的。如果想在 Django 中使用 "
+"``REMOTE_USER``, 可以通过配置 ``RemoteUserMiddleware`` 中间件， "
+"``PersistentRemoteUserMiddleware`` 中间件，或者继承在 :mod:`django.contrib."
+"auth` 中的 :class:`~django.contrib.auth.backends.RemoteUserBackend` 来实现。"
 
 msgid "Configuration"
 msgstr "配置"
@@ -242,7 +253,7 @@ msgstr ""
 "RemoteUserMiddleware`。"
 
 msgid "How to write a custom storage class"
-msgstr ""
+msgstr "如何编写一个自定义的文件存储类"
 
 msgid ""
 "If you need to provide custom file storage -- a common example is storing "
@@ -432,7 +443,7 @@ msgstr ""
 "来得到另一个替代的名称。"
 
 msgid "How to write custom lookups"
-msgstr ""
+msgstr "如何编写自定义的查询器"
 
 msgid ""
 "Django offers a wide variety of :ref:`built-in lookups <field-lookups>` for "
@@ -608,6 +619,8 @@ msgid ""
 "further lookups afterward. So ``Experiment.objects."
 "filter(change__abs__lt=27)`` will generate the following SQL:"
 msgstr ""
+"使用 ``Transform`` 代替 ``Lookup`` 意味着我们可以在后面联锁更多的查询，所以 "
+"``Experiment.objects.filter(change__abs__lt=27)`` 将会生成下面的 SQL："
 
 msgid ""
 "Note that in case there is no other lookup specified, Django interprets "
@@ -876,7 +889,7 @@ msgstr ""
 "get_lookup('exact')``。"
 
 msgid "How to create custom ``django-admin`` commands"
-msgstr ""
+msgstr "编写自定义 ``django-admin`` 命令"
 
 msgid ""
 "Applications can register their own actions with ``manage.py``. For example, "
@@ -1344,7 +1357,7 @@ msgstr ""
 "获异常取决于你。"
 
 msgid "How to create custom model fields"
-msgstr ""
+msgstr "编写自定义模型字段"
 
 msgid "Introduction"
 msgstr "介绍"
@@ -2315,7 +2328,7 @@ msgstr ""
 "数据，以减少后续调用再次检索文件的次数。"
 
 msgid "How to implement a custom template backend"
-msgstr ""
+msgstr "如何编写一个自定义的模板后端"
 
 msgid "Custom backends"
 msgstr "自定义后端"
@@ -2465,7 +2478,7 @@ msgstr ""
 "e.g. ``django.template.loaders.filesystem.Loader``."
 
 msgid "How to create custom template tags and filters"
-msgstr ""
+msgstr "如何编写自定义的模板标签和过滤器"
 
 msgid ""
 "Django's template language comes with a wide variety of :doc:`built-in tags "
@@ -5106,7 +5119,7 @@ msgid ""
 "documentation for the default contents you should put in this file and what "
 "else you can add to it."
 msgstr ""
-"假设你有个叫做 ``mysite`` 的顶级项目包，期中包含一个模板 :file:`mysite/wsgi."
+"假设你有个叫做 ``mysite`` 的顶级项目包，其中包含一个模板 :file:`mysite/wsgi."
 "py`，模块包含一个 WSGI ``application`` 对象。如果你使用的是较新的 Django，这"
 "就是你运行 ``django-admin startproject mysite`` （使用你的项目名替换 "
 "``mysite``）后得到的目录结构。若该文件不存在，你需要创建它。参考文档 :doc:`/"
@@ -5632,7 +5645,7 @@ msgstr ""
 "者编写了本快速指南文档。"
 
 msgid "How to provide initial data for models"
-msgstr ""
+msgstr "如何为模型提供初始数据"
 
 msgid ""
 "It's sometimes useful to pre-populate your database with hard-coded data "
@@ -5853,7 +5866,7 @@ msgstr ""
 "接编辑模型文件。"
 
 msgid "How to configure and use logging"
-msgstr ""
+msgstr "如何配置和使用日志"
 
 msgid ":ref:`Django logging reference <logging-ref>`"
 msgstr ""
@@ -6135,6 +6148,9 @@ msgid ""
 "that would be excessive and unhelpful if you had to deal with it in "
 "production."
 msgstr ""
+"当日志包含尽可能多的信息，而不是您不需要的信息时，日志是最有用的——需要多少取"
+"决于您正在做的事情。在调试时，您需要一定程度的信息，如果您不得不在生产环境中"
+"处理这些信息，那么这些信息将是多余的，而且毫无用处。"
 
 msgid ""
 "You can configure logging to provide you with the level of detail you need, "
@@ -6565,8 +6581,8 @@ msgstr ""
 "举个例子，你可以使用这项技术在 ``admin/base_site.html`` 管理员模板中添加自定"
 "义的Logo："
 
-msgid "templates/admin/base_site.html"
-msgstr "templates/admin/base_site.html"
+msgid "``templates/admin/base_site.html``"
+msgstr ""
 
 msgid "Key points to note:"
 msgstr "关键注意点："

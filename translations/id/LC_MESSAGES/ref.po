@@ -4,16 +4,16 @@
 #
 # Translators:
 # Claude Paroz <claude@2xlibre.net>, 2020
-# Fery Setiawan <gembelweb@gmail.com>, 2015-2021
+# Fery Setiawan <gembelweb@gmail.com>, 2015-2022
 # phyxkal miutwo <haikalvidya@gmail.com>, 2018
 # Sutrisno Efendi <kangfend@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-07 11:06-0600\n"
-"PO-Revision-Date: 2022-01-04 13:25+0000\n"
-"Last-Translator: Transifex Bot <>\n"
+"POT-Creation-Date: 2022-07-27 03:41-0500\n"
+"PO-Revision-Date: 2022-04-02 20:01+0000\n"
+"Last-Translator: Fery Setiawan <gembelweb@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/django/django-docs/"
 "language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -1028,7 +1028,7 @@ msgid "The ``sites`` tag was added."
 msgstr "Etiket ``sites`` telah ditambahkan."
 
 msgid "The ``files`` tag was added."
-msgstr ""
+msgstr "Etiket ``files`` telah ditambahkan."
 
 msgid "Core system checks"
 msgstr "Memeriksa sistem inti"
@@ -7753,8 +7753,8 @@ msgstr ""
 
 msgid ""
 "There are four types of values that can be used in ``list_display``. All but "
-"the simplest may use the  :func:`~django.contrib.admin.display` decorator is "
-"used to customize how the field is presented:"
+"the simplest may use the  :func:`~django.contrib.admin.display` decorator, "
+"which is used to customize how the field is presented:"
 msgstr ""
 
 msgid "The name of a model field. For example::"
@@ -9610,7 +9610,7 @@ msgid ""
 "formset. For example, to pass ``request`` to formset forms::"
 msgstr ""
 
-msgid "You can also used it to set ``initial`` for formset forms."
+msgid "You can also use it to set ``initial`` for formset forms."
 msgstr ""
 
 msgid ""
@@ -10934,11 +10934,11 @@ msgid ""
 "subclass."
 msgstr ""
 
-msgid "myapp/admin.py"
-msgstr "myapp/admin.py"
+msgid "``myapp/admin.py``"
+msgstr ""
 
-msgid "myproject/urls.py"
-msgstr "myproject/urls.py"
+msgid "``myproject/urls.py``"
+msgstr ""
 
 msgid ""
 "Note that you may not want autodiscovery of ``admin`` modules when using "
@@ -10968,14 +10968,14 @@ msgstr ""
 "pada jalur impor bertitik dari salah satu subkelas ``AdminSite`` atau "
 "callable yang mengembalikan sebuah instance situs."
 
-msgid "myproject/admin.py"
-msgstr "myproject/admin.py"
+msgid "``myproject/admin.py``"
+msgstr ""
 
-msgid "myproject/apps.py"
-msgstr "myproject/apps.py"
+msgid "``myproject/apps.py``"
+msgstr ""
 
-msgid "myproject/settings.py"
-msgstr "myproject/settings.py"
+msgid "``myproject/settings.py``"
+msgstr ""
 
 msgid "Multiple admin sites in the same URLconf"
 msgstr "Banyak situs admin di URLconf yang sama"
@@ -11420,8 +11420,8 @@ msgstr ""
 "Dalam cetakan ``change_form.html`` penyesuaian anda, perpanjang blok "
 "``admin_change_form_document_ready`` dan tambah kode pendengar kejadian:"
 
-msgid "app/static/app/formset_handlers.js"
-msgstr "app/static/app/formset_handlers.js"
+msgid "``app/static/app/formset_handlers.js``"
+msgstr ""
 
 msgid "Two points to keep in mind:"
 msgstr "Dua poin untuk diingat:"
@@ -11451,8 +11451,8 @@ msgid ""
 "jQuery`` namespace, listen to the event triggered from there. For example:"
 msgstr ""
 
-msgid "app/static/app/unregistered_handlers.js"
-msgstr "app/static/app/unregistered_handlers.js"
+msgid "``app/static/app/unregistered_handlers.js``"
+msgstr ""
 
 msgid "``django.contrib.auth``"
 msgstr "``django.contrib.auth``"
@@ -12829,6 +12829,14 @@ msgstr ""
 "diatas. Jika bidang-bidang ini bernama \"content_type\" dan \"object_id\", "
 "anda dapat mengabaikan ini --yaitu nama-nama bidang awalan :class:`~django."
 "contrib.contenttypes.fields.GenericForeignKey` akan mencari."
+
+msgid ""
+"Unlike for the :class:`~django.db.models.ForeignKey`, a database index is "
+"*not* automatically created on the :class:`~django.contrib.contenttypes."
+"fields.GenericForeignKey`, so it's recommended that you use :attr:`Meta."
+"indexes <django.db.models.Options.indexes>` to add your own multiple column "
+"index. This behavior :ticket:`may change <23435>` in the future."
+msgstr ""
 
 msgid ""
 "If ``False``, the field will be able to reference proxy models. Default is "
@@ -30721,6 +30729,11 @@ msgid ""
 "added."
 msgstr ""
 
+msgid ""
+"Using a service name for testing purposes is not supported. This :ticket:"
+"`may be implemented later <33685>`."
+msgstr ""
+
 msgid "Optimizing PostgreSQL's configuration"
 msgstr "Mengoptimalkan konfigurasi PostgreSQL"
 
@@ -32009,7 +32022,7 @@ msgid ""
 "``allows_group_by_selected_pks_on_model``:"
 msgstr ""
 
-msgid "mysite/mydbengine/base.py"
+msgid "``mysite/mydbengine/base.py``"
 msgstr ""
 
 msgid ""
@@ -32043,6 +32056,9 @@ msgstr ""
 
 msgid "`Microsoft SQL Server`_"
 msgstr "`Microsoft SQL Server`_"
+
+msgid "`TiDB`_"
+msgstr ""
 
 msgid ""
 "The Django versions and ORM features supported by these unofficial backends "
@@ -36184,7 +36200,7 @@ msgid "Return context for form rendering in a template."
 msgstr ""
 
 msgid "The available context is:"
-msgstr ""
+msgstr "Konteks yang tersedia adalah:"
 
 msgid "``form``: The bound form."
 msgstr ""
@@ -36452,10 +36468,10 @@ msgid "``template_name``: Value returned by :attr:`.template_name`"
 msgstr ""
 
 msgid "``context``: Value returned by :meth:`.get_context`"
-msgstr ""
+msgstr "``context``: NIlai dikembalikan dengan :meth:`.get_context`"
 
 msgid "``renderer``: Value returned by :attr:`.renderer`"
-msgstr ""
+msgstr "``renderer``: Nilai dikembalikan dengan :attr:`.renderer`"
 
 msgid ""
 "Renders the error list using the template defined by :attr:`."
@@ -38081,6 +38097,12 @@ msgstr "akan menghasilkan:"
 
 msgid "and::"
 msgstr "dan::"
+
+msgid ""
+"When using the :class:`~django.forms.RadioSelect` widget, this optional "
+"boolean argument determines whether an empty choice is created. By default, "
+"``blank`` is ``False``, in which case no empty choice is created."
+msgstr ""
 
 msgid "``ModelChoiceField`` also has the attribute:"
 msgstr ""
@@ -39983,7 +40005,7 @@ msgid "Logging"
 msgstr "Pencatatan"
 
 msgid ":ref:`logging-how-to`"
-msgstr ""
+msgstr ":ref:`logging-how-to`"
 
 msgid ":ref:`Django logging overview <logging-explanation>`"
 msgstr ""
@@ -40699,10 +40721,11 @@ msgstr ""
 
 msgid ""
 "When your site is served via HTTPS, :ref:`Django's CSRF protection system "
-"<using-csrf>` requires the ``Referer`` header to be present, so completely "
-"disabling the ``Referer`` header will interfere with CSRF protection. To "
-"gain most of the benefits of disabling ``Referer`` headers while also "
-"keeping CSRF protection, consider enabling only same-origin referrers."
+"<how-csrf-works>` requires the ``Referer`` header to be present, so "
+"completely disabling the ``Referer`` header will interfere with CSRF "
+"protection. To gain most of the benefits of disabling ``Referer`` headers "
+"while also keeping CSRF protection, consider enabling only same-origin "
+"referrers."
 msgstr ""
 
 msgid ""
@@ -45700,7 +45723,7 @@ msgid ""
 msgstr ""
 
 msgid "PostgreSQL users"
-msgstr ""
+msgstr "Pengguna PostgreSQL"
 
 msgid ""
 "PostgreSQL has two native JSON based data types: ``json`` and ``jsonb``. The "
@@ -45721,7 +45744,7 @@ msgstr ""
 "``jsonb`` field. ``JSONField`` menggunakan ``jsonb``."
 
 msgid "Oracle users"
-msgstr ""
+msgstr "Pengguna Oracle"
 
 msgid ""
 "Oracle Database does not support storing JSON scalar values. Only JSON "
@@ -49543,6 +49566,17 @@ msgid ""
 "in which case all possible combinations will be returned."
 msgstr ""
 
+msgid "Special values for ``JSONField`` on SQLite"
+msgstr ""
+
+msgid ""
+"Due to the way the ``JSON_EXTRACT`` and ``JSON_TYPE`` SQL functions are "
+"implemented on SQLite, and lack of the ``BOOLEAN`` data type, ``values()`` "
+"will return ``True``, ``False``, and ``None`` instead of ``\"true\"``, ``"
+"\"false\"``, and ``\"null\"`` strings for :class:`~django.db.models."
+"JSONField` key transforms."
+msgstr ""
+
 msgid "``values_list()``"
 msgstr "``values_list()``"
 
@@ -49611,6 +49645,14 @@ msgstr ""
 msgid ""
 "Similarly, when querying a reverse foreign key, ``None`` appears for entries "
 "not having any author::"
+msgstr ""
+
+msgid ""
+"Due to the way the ``JSON_EXTRACT`` and ``JSON_TYPE`` SQL functions are "
+"implemented on SQLite, and lack of the ``BOOLEAN`` data type, "
+"``values_list()`` will return ``True``, ``False``, and ``None`` instead of ``"
+"\"true\"``, ``\"false\"``, and ``\"null\"`` strings for :class:`~django.db."
+"models.JSONField` key transforms."
 msgstr ""
 
 msgid "``dates()``"
@@ -50598,8 +50640,8 @@ msgstr ""
 
 msgid ""
 "Even if you think you are in the advanced use-case situation, **only use "
-"defer() when you cannot, at queryset load time, determine if you will need "
-"the extra fields or not**. If you are frequently loading and using a "
+"``defer()`` when you cannot, at queryset load time, determine if you will "
+"need the extra fields or not**. If you are frequently loading and using a "
 "particular subset of your data, the best choice you can make is to normalize "
 "your models and put the non-loaded data into a separate model (and database "
 "table). If the columns *must* stay in the one table for some reason, create "
@@ -50609,19 +50651,6 @@ msgid ""
 "``defer()``. This makes your code more explicit to the reader, is slightly "
 "faster and consumes a little less memory in the Python process."
 msgstr ""
-"Bahkan jika anda berpikir anda dalam keandaan kasus-penggunaan tingkat "
-"lanjut, **hanya menggunakan defer() ketika anda tidak dapat, pada waktu muat "
-"queryset, tentukan jika anda butuh bidang-bidang tambahan atau tidak**. Jika "
-"anda sering memuat dan menggunakan subset tertentu dari data anda, pilihan "
-"terbaik anda dapat buat adalah menormalkan model anda dan menaruh data bukan-"
-"dimuat kedalam model terpisah (dan tabel basisdata). Jika kolom *harus* "
-"tinggal dalam satu tabel untuk beberapa alasan, buat sebuah model dengan "
-"``Meta.managed = False`` (lihat dokumentasi the :attr:`managed attribute "
-"<django.db.models.Options.managed>`) mengandung hanya bidang anda secara "
-"biasa butuhkan untuk memuat dan menggunakan yang dimana anda mungkin "
-"sebaliknya memanggil ``defer()``. Ini membuat kode anda lebih jelas ke "
-"pembaca, adalah cukup cepat dan memakan sedikit memori dalam pengolahan "
-"Python."
 
 msgid ""
 "For example, both of these models use the same underlying database table::"
@@ -58759,7 +58788,7 @@ msgid ":setting:`LANGUAGE_COOKIE_DOMAIN`"
 msgstr ":setting:`LANGUAGE_COOKIE_DOMAIN`"
 
 msgid ":setting:`LANGUAGE_COOKIE_HTTPONLY`"
-msgstr ""
+msgstr ":setting:`LANGUAGE_COOKIE_HTTPONLY`"
 
 msgid ":setting:`LANGUAGE_COOKIE_NAME`"
 msgstr ":setting:`LANGUAGE_COOKIE_NAME`"
@@ -58768,10 +58797,10 @@ msgid ":setting:`LANGUAGE_COOKIE_PATH`"
 msgstr ":setting:`LANGUAGE_COOKIE_PATH`"
 
 msgid ":setting:`LANGUAGE_COOKIE_SAMESITE`"
-msgstr ""
+msgstr ":setting:`LANGUAGE_COOKIE_SAMESITE`"
 
 msgid ":setting:`LANGUAGE_COOKIE_SECURE`"
-msgstr ""
+msgstr ":setting:`LANGUAGE_COOKIE_SECURE`"
 
 msgid ":setting:`LANGUAGES`"
 msgstr ":setting:`LANGUAGES`"
@@ -61221,7 +61250,13 @@ msgstr ""
 
 msgid ""
 "Outputs a whole load of debugging information, including the current context "
-"and imported modules."
+"and imported modules. ``{% debug %}`` outputs nothing when the :setting:"
+"`DEBUG` setting is ``False``."
+msgstr ""
+
+msgid ""
+"In older versions, debugging information was displayed when the :setting:"
+"`DEBUG` setting was ``False``."
 msgstr ""
 
 msgid "``extends``"
@@ -64585,11 +64620,11 @@ msgid ""
 "like all block tags. For example:"
 msgstr ""
 
-msgid "base.html"
-msgstr "base.html"
+msgid "``base.html``"
+msgstr ""
 
-msgid "child.html"
-msgstr "child.html"
+msgid "``child.html``"
+msgstr ""
 
 msgid ""
 "Because auto-escaping is turned off in the base template, it will also be "
@@ -64662,11 +64697,11 @@ msgid ""
 "You can also access methods you've explicitly defined on your own models:"
 msgstr ""
 
-msgid "models.py"
-msgstr "models.py"
+msgid "``models.py``"
+msgstr ""
 
-msgid "template.html"
-msgstr "template.html"
+msgid "``template.html``"
+msgstr ""
 
 msgid ""
 "Because Django intentionally limits the amount of logic processing available "
@@ -65619,7 +65654,7 @@ msgid "``Cache-Control``"
 msgstr "``Cache-Control``"
 
 msgid "Each header is only added if it isn't already set."
-msgstr ""
+msgstr "Setiap kepala hanya ditambahkan jika belum disetel."
 
 msgid ""
 "``cache_timeout`` is in seconds. The :setting:`CACHE_MIDDLEWARE_SECONDS` "
@@ -65907,7 +65942,7 @@ msgid "``SyndicationFeed``"
 msgstr "``SyndicationFeed``"
 
 msgid ""
-"Base class for all syndication feeds. Subclasses should provide write()."
+"Base class for all syndication feeds. Subclasses should provide ``write()``."
 msgstr ""
 
 msgid ""
