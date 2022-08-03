@@ -6,14 +6,14 @@
 # 0d21a39e384d88c2313b89b5042c04cb, 2018
 # Mattia Procopio <promat85@gmail.com>, 2015
 # Paolo Melchiorre <paolo@melchiorre.org>, 2021
-# 0d21a39e384d88c2313b89b5042c04cb, 2018
+# 0d21a39e384d88c2313b89b5042c04cb, 2018, 2022
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-07 11:06-0600\n"
-"PO-Revision-Date: 2022-01-07 17:23+0000\n"
-"Last-Translator: Transifex Bot <>\n"
+"POT-Creation-Date: 2022-08-03 02:10-0500\n"
+"PO-Revision-Date: 2022-04-02 20:02+0000\n"
+"Last-Translator: 0d21a39e384d88c2313b89b5042c04cb\n"
 "Language-Team: Italian (http://www.transifex.com/django/django-docs/language/"
 "it/)\n"
 "MIME-Version: 1.0\n"
@@ -125,9 +125,9 @@ msgid ""
 msgstr ""
 
 msgid ""
-"It's now more explicit and natural to override save() and delete() methods "
-"on models, rather than needing to hook into the pre_save() and post_save() "
-"method hooks."
+"It's now more explicit and natural to override ``save()`` and ``delete()`` "
+"methods on models, rather than needing to hook into the ``pre_save()`` and "
+"``post_save()`` method hooks."
 msgstr ""
 
 msgid ""
@@ -716,8 +716,8 @@ msgid ""
 "from ``django.newforms`` (now located simply at ``django.forms``), the "
 "``form_for_model`` and ``form_for_instance`` helper functions (which have "
 "been replaced by ``ModelForm``) and a number of deprecated features which "
-"were replaced by the dispatcher, file-uploading and file-storage "
-"refactorings introduced in the Django 1.0 alpha releases."
+"were replaced by the dispatcher, file-uploading and file-storage refactoring "
+"introduced in the Django 1.0 alpha releases."
 msgstr ""
 
 msgid "Known issues"
@@ -4370,7 +4370,7 @@ msgid "*September 1, 2016*"
 msgstr "*1 Settembre 2016*"
 
 msgid "Django 1.10.1 fixes several bugs in 1.10."
-msgstr ""
+msgstr "Django 1.10.1 risolve alcuni bug in 1.10."
 
 msgid "Bugfixes"
 msgstr "Correzioni di bug"
@@ -4504,7 +4504,7 @@ msgid "*October 1, 2016*"
 msgstr "*1 Ottobre 2016*"
 
 msgid "Django 1.10.2 fixes several bugs in 1.10.1."
-msgstr ""
+msgstr "Django 1.10.2 risolve alcuni bug in 1.10.1."
 
 msgid ""
 "Fixed a crash in MySQL database validation where ``SELECT @@sql_mode`` "
@@ -4547,6 +4547,7 @@ msgstr "*1 Novembre 2016*"
 
 msgid "Django 1.10.3 fixes two security issues and several bugs in 1.10.2."
 msgstr ""
+"Django 1.10.3 risolve due problemi di sicurezza e alcuni bug in 1.10.2."
 
 msgid "User with hardcoded password created when running tests on Oracle"
 msgstr ""
@@ -4639,7 +4640,7 @@ msgid "*December 1, 2016*"
 msgstr "*1 Dicembre 2016*"
 
 msgid "Django 1.10.4 fixes several bugs in 1.10.3."
-msgstr ""
+msgstr "Django 1.10.4 risolve alcuni bug in 1.10.3."
 
 msgid ""
 "Quoted the Oracle test user's password in queries to fix the \"ORA-00922: "
@@ -4682,7 +4683,7 @@ msgid "*January 4, 2017*"
 msgstr "*4 Gennaio 2017*"
 
 msgid "Django 1.10.5 fixes several bugs in 1.10.4."
-msgstr ""
+msgstr "Django 1.10.5 risolve alcuni bug in 1.10.4."
 
 msgid ""
 "Fixed a crash in the debug view if ``request.user`` can't be retrieved, such "
@@ -4711,7 +4712,7 @@ msgid "*March 1, 2017*"
 msgstr "*1 Marzo 2017*"
 
 msgid "Django 1.10.6 fixes several bugs in 1.10.5."
-msgstr ""
+msgstr "Django 1.10.6 risolve alcuni bug in 1.10.5."
 
 msgid ""
 "Fixed ``ClearableFileInput``’s \"Clear\" checkbox on model form fields where "
@@ -4745,7 +4746,7 @@ msgid "*April 4, 2017*"
 msgstr "*4 Aprile 2017*"
 
 msgid "Django 1.10.7 fixes two security issues and a bug in 1.10.6."
-msgstr ""
+msgstr "Django 1.10.7 risolve due problemi di sicurezza e un bug in 1.10.6."
 
 msgid ""
 "CVE-2017-7233: Open redirect and possible XSS attack via user-supplied "
@@ -4798,7 +4799,7 @@ msgid "*September 5, 2017*"
 msgstr "*5 Settembre 2017*"
 
 msgid "Django 1.10.8 fixes a security issue in 1.10.7."
-msgstr ""
+msgstr "Django 1.10.8 risolve un problema di sicurezza in 1.10.7."
 
 msgid ""
 "CVE-2017-12794: Possible XSS in traceback section of technical 500 debug page"
@@ -6092,6 +6093,7 @@ msgstr "*1 Febbraio 2018*"
 
 msgid "Django 1.11.10 fixes a security issue and several bugs in 1.11.9."
 msgstr ""
+"Django 1.11.10 risolve un problema di sicurezza e alcuni bug in 1.11.9."
 
 msgid "CVE-2018-6188: Information leakage in ``AuthenticationForm``"
 msgstr ""
@@ -6139,7 +6141,7 @@ msgid "*March 6, 2018*"
 msgstr "*6 Marzo 2018*"
 
 msgid "Django 1.11.11 fixes two security issues in 1.11.10."
-msgstr ""
+msgstr "Django 1.11.11 risolve due problemi di sicurezza in 1.11.10."
 
 msgid ""
 "CVE-2018-7536: Denial-of-service possibility in ``urlize`` and "
@@ -6182,7 +6184,7 @@ msgid "*April 2, 2018*"
 msgstr "*2 Aprile 2018*"
 
 msgid "Django 1.11.12 fixes two bugs in 1.11.11."
-msgstr "Django 1.11.12 sistema due bug presenti nella versione 1.11.11."
+msgstr "Django 1.11.12 risolve due bug in 1.11.11."
 
 msgid ""
 "Fixed a regression in Django 1.11.8 where combining two annotated "
@@ -6203,7 +6205,7 @@ msgid "*May 1, 2018*"
 msgstr "*1 Maggio 2018*"
 
 msgid "Django 1.11.13 fixes several bugs in 1.11.12."
-msgstr "Django 1.11.13 risolve alcuni bug presenti nella versione 1.11.12."
+msgstr "Django 1.11.13 risolve alcuni bug in 1.11.12."
 
 msgid ""
 "Fixed a regression in Django 1.11.8 where altering a field with a unique "
@@ -6230,7 +6232,7 @@ msgid "*July 2, 2018*"
 msgstr "*2 Luglio 2018*"
 
 msgid "Django 1.11.14 fixes several bugs in 1.11.13."
-msgstr "Django 1.11.14 elimina diversi bug della versione 1.11.13."
+msgstr "Django 1.11.14 risolve alcuni bug in 1.11.13."
 
 msgid ""
 "Fixed ``WKBWriter.write()`` and ``write_hex()`` for empty polygons on GEOS "
@@ -6254,7 +6256,7 @@ msgid "*August 1, 2018*"
 msgstr "*1 Agosto 2018*"
 
 msgid "Django 1.11.15 fixes a security issue in 1.11.14."
-msgstr "Django 1.11.15 sistema un problema di sicurezza presente in 1.11.14."
+msgstr "Django 1.11.15 risolve un problema di sicurezza in 1.11.14."
 
 msgid "CVE-2018-14574: Open redirect possibility in ``CommonMiddleware``"
 msgstr ""
@@ -6315,7 +6317,7 @@ msgid "*January 4, 2019*"
 msgstr "*4 Gennaio 2019*"
 
 msgid "Django 1.11.18 fixes a security issue in 1.11.17."
-msgstr ""
+msgstr "Django 1.11.18 risolve un problema di sicurezza in 1.11.17."
 
 msgid "CVE-2019-3498: Content spoofing possibility in the default 404 page"
 msgstr ""
@@ -6339,7 +6341,7 @@ msgid "*February 11, 2019*"
 msgstr "*11 Febbraio 2019*"
 
 msgid "Django 1.11.19 fixes a security issue in 1.11.18."
-msgstr ""
+msgstr "Django 1.11.19 risolve un problema di sicurezza in 1.11.18."
 
 msgid ""
 "CVE-2019-6975: Memory exhaustion in ``django.utils.numberformat.format()``"
@@ -6470,7 +6472,7 @@ msgid "*June 3, 2019*"
 msgstr "*3 Giugno 2019*"
 
 msgid "Django 1.11.21 fixes a security issue in 1.11.20."
-msgstr ""
+msgstr "Django 1.11.21 risolve un problema di sicurezza in 1.11.20."
 
 msgid "CVE-2019-12308: AdminURLFieldWidget XSS"
 msgstr ""
@@ -6497,7 +6499,7 @@ msgid "*July 1, 2019*"
 msgstr "*1 Luglio 2019*"
 
 msgid "Django 1.11.22 fixes a security issue in 1.11.21."
-msgstr ""
+msgstr "Django 1.11.22 risolve un problema di sicurezza in 1.11.21."
 
 msgid ""
 "CVE-2019-12781: Incorrect HTTP detection with reverse-proxy connecting via "
@@ -6533,7 +6535,7 @@ msgid "*August 1, 2019*"
 msgstr "*1 Agosto 2019*"
 
 msgid "Django 1.11.23 fixes security issues in 1.11.22."
-msgstr ""
+msgstr "Django 1.11.23 risolve alcuni problemi di sicurezza in 1.11.22."
 
 msgid ""
 "CVE-2019-14232: Denial-of-service possibility in ``django.utils.text."
@@ -6695,7 +6697,7 @@ msgid "*February 3, 2020*"
 msgstr "*3 Febbraio 2020*"
 
 msgid "Django 1.11.28 fixes a security issue in 1.11.27."
-msgstr ""
+msgstr "Django 1.11.28 risolve un problema di sicurezza in 1.11.27."
 
 msgid "CVE-2020-7471: Potential SQL injection via ``StringAgg(delimiter)``"
 msgstr ""
@@ -6712,7 +6714,7 @@ msgid "*March 4, 2020*"
 msgstr "*4 Marzo 2020*"
 
 msgid "Django 1.11.29 fixes a security issue in 1.11.28."
-msgstr ""
+msgstr "Django 1.11.29 risolve un problema di sicurezza in 1.11.28."
 
 msgid ""
 "CVE-2020-9402: Potential SQL injection via ``tolerance`` parameter in GIS "
@@ -6731,7 +6733,7 @@ msgid "*July 1, 2017*"
 msgstr "*1 Luglio 2017*"
 
 msgid "Django 1.11.3 fixes several bugs in 1.11.2."
-msgstr ""
+msgstr "Django 1.11.3 risolve alcuni bug in 1.11.2."
 
 msgid ""
 "Removed an incorrect deprecation warning about a missing ``renderer`` "
@@ -6822,7 +6824,7 @@ msgid "*August 1, 2017*"
 msgstr "*1 Agosto 2017*"
 
 msgid "Django 1.11.4 fixes several bugs in 1.11.3."
-msgstr ""
+msgstr "Django 1.11.4 risolve alcuni bug in 1.11.3."
 
 msgid ""
 "Fixed a regression in 1.11.3 on Python 2 where non-ASCII ``format`` values "
@@ -6874,7 +6876,7 @@ msgid "Django 1.11.5 release notes"
 msgstr "Note di rilascio di Django 1.11.5"
 
 msgid "Django 1.11.5 fixes a security issue and several bugs in 1.11.4."
-msgstr ""
+msgstr "Django 1.11.5 risolve un problema di sicurezza e alcuni bug in 1.11.4."
 
 msgid ""
 "Fixed GEOS version parsing if the version has a commit hash at the end (new "
@@ -6943,7 +6945,7 @@ msgid "*October 5, 2017*"
 msgstr "*5 Ottobre 2017*"
 
 msgid "Django 1.11.6 fixes several bugs in 1.11.5."
-msgstr ""
+msgstr "Django 1.11.6 risolve alcuni bug in 1.11.5."
 
 msgid ""
 "Made the ``CharField`` form field convert whitespace-only values to the "
@@ -6968,7 +6970,7 @@ msgid "*November 1, 2017*"
 msgstr "*1 Novembre 2017*"
 
 msgid "Django 1.11.7 fixes several bugs in 1.11.6."
-msgstr ""
+msgstr "Django 1.11.7 risolve alcuni bug in 1.11.6."
 
 msgid ""
 "Prevented ``cache.get_or_set()`` from caching ``None`` if the ``default`` "
@@ -6995,7 +6997,7 @@ msgid "*December 2, 2017*"
 msgstr "*2 Dicembre 2017*"
 
 msgid "Django 1.11.8 fixes several bugs in 1.11.7."
-msgstr ""
+msgstr "Django 1.11.8 risolve alcuni bug in 1.11.7."
 
 msgid ""
 "Reallowed, following a regression in Django 1.10, ``AuthenticationForm`` to "
@@ -7046,7 +7048,7 @@ msgid "*January 1, 2018*"
 msgstr "*1 Gennaio 2018*"
 
 msgid "Django 1.11.9 fixes several bugs in 1.11.8."
-msgstr ""
+msgstr "Django 1.11.9 risolve alcuni bug in 1.11.8."
 
 msgid ""
 "Fixed a regression in Django 1.11 that added newlines between "
@@ -9629,7 +9631,7 @@ msgid ""
 "Django 1.3.3 and Django 1.4.1 -- specifically, ``django.http.HttpRequest."
 "get_host()`` -- was incorrectly handling username/password information in "
 "the header. Thus, for example, the following Host header would be accepted "
-"by Django when running on \"validsite.com\"::"
+"by Django when running on ``validsite.com``::"
 msgstr ""
 
 msgid ""
@@ -10033,7 +10035,7 @@ msgstr ""
 
 msgid ""
 "Anything imported as a top-level module can be placed adjacent to the new "
-"``manage.py``. For instance, to decouple \"myapp\" from the project module "
+"``manage.py``. For instance, to decouple ``myapp`` from the project module "
 "and import it as just ``myapp``, place it outside the ``mysite/`` directory::"
 msgstr ""
 
@@ -11098,7 +11100,7 @@ msgstr ""
 msgid ""
 "Session cookies now include the ``httponly`` attribute by default to help "
 "reduce the impact of potential XSS attacks. As a consequence of this change, "
-"session cookie data, including sessionid, is no longer accessible from "
+"session cookie data, including ``sessionid``, is no longer accessible from "
 "JavaScript in many browsers. For strict backwards compatibility, use "
 "``SESSION_COOKIE_HTTPONLY = False`` in your settings file."
 msgstr ""
@@ -11602,7 +11604,7 @@ msgid "*May 14, 2014*"
 msgstr "*14 Maggio 2014*"
 
 msgid "Django 1.4.13 fixes two security issues in 1.4.12."
-msgstr ""
+msgstr "Django 1.4.13 risolve due problemi di sicurezza in 1.4.12."
 
 msgid "Caches may incorrectly be allowed to store and serve private data"
 msgstr ""
@@ -11663,7 +11665,7 @@ msgid "*August 20, 2014*"
 msgstr "*20 Agosto 2014*"
 
 msgid "Django 1.4.14 fixes several security issues in 1.4.13."
-msgstr ""
+msgstr "Django 1.4.14 risolve alcuni problemi di sicurezza in 1.4.13."
 
 msgid "``reverse()`` could generate URLs pointing to other hosts"
 msgstr ""
@@ -11943,7 +11945,7 @@ msgid "*March 18, 2015*"
 msgstr "*18 Marzo 2015*"
 
 msgid "Django 1.4.20 fixes one security issue in 1.4.19."
-msgstr ""
+msgstr "Django 1.4.20 risolve un problema di sicurezza in 1.4.19."
 
 msgid ""
 "Django relies on user input in some cases (e.g. ``django.contrib.auth.views."
@@ -11972,7 +11974,7 @@ msgid "*July 8, 2015*"
 msgstr "*8 Luglio 2015*"
 
 msgid "Django 1.4.21 fixes several security issues in 1.4.20."
-msgstr ""
+msgstr "Django 1.4.21 risolve alcuni problemi di sicurezza in 1.4.20."
 
 msgid "Denial-of-service possibility by filling session store"
 msgstr ""
@@ -12038,7 +12040,7 @@ msgid "*August 18, 2015*"
 msgstr "*18 Agosto 2015*"
 
 msgid "Django 1.4.22 fixes a security issue in 1.4.21."
-msgstr ""
+msgstr "Django 1.4.22 risolve un problema di sicurezza in 1.4.21."
 
 msgid ""
 "It also fixes support with pip 7+ by disabling wheel support. Older versions "
@@ -12910,13 +12912,13 @@ msgid ""
 msgstr ""
 
 msgid ""
-"A system version of ``simplejson``, if one was available (ie. ``import "
+"A system version of ``simplejson``, if one was available (i.e. ``import "
 "simplejson`` works), if it was more recent than Django's built-in copy or it "
 "had the C speedups, or"
 msgstr ""
 
 msgid ""
-"The :mod:`json` module from the standard library, if it was available (ie. "
+"The :mod:`json` module from the standard library, if it was available (i.e. "
 "Python 2.6 or greater), or"
 msgstr ""
 
@@ -13601,13 +13603,13 @@ msgid "Django 1.5.8 release notes"
 msgstr "Note di rilascio di Django 1.5.8"
 
 msgid "Django 1.5.8 fixes two security issues in 1.5.8."
-msgstr ""
+msgstr "Django 1.5.8 risolve due problemi di sicurezza in 1.5.8."
 
 msgid "Django 1.5.9 release notes"
 msgstr "Note di rilascio di Django 1.5.9"
 
 msgid "Django 1.5.9 fixes several security issues in 1.5.8."
-msgstr ""
+msgstr "Django 1.5.9 risolve alcuni problemi di sicurezza in 1.5.8."
 
 msgid "Django 1.6 release notes"
 msgstr "Note di rilascio di Django 1.6"
@@ -15197,7 +15199,7 @@ msgid "Django 1.6.10 release notes"
 msgstr "Note di rilascio di Django 1.6.10"
 
 msgid "Django 1.6.10 fixes several security issues in 1.6.9."
-msgstr ""
+msgstr "Django 1.6.10 risolve alcuni problemi di sicurezza in 1.6.9."
 
 msgid "Database denial-of-service with ``ModelMultipleChoiceField``"
 msgstr ""
@@ -15215,7 +15217,7 @@ msgid "Django 1.6.11 release notes"
 msgstr "Note di rilascio di Django 1.6.11"
 
 msgid "Django 1.6.11 fixes two security issues in 1.6.10."
-msgstr ""
+msgstr "Django 1.6.11 risolve due problemi di sicurezza in 1.6.10."
 
 msgid "Denial-of-service possibility with ``strip_tags()``"
 msgstr ""
@@ -15413,7 +15415,7 @@ msgid "Django 1.6.4 release notes"
 msgstr "Note di rilascio di Django 1.6.4"
 
 msgid "Django 1.6.4 fixes several bugs in 1.6.3."
-msgstr ""
+msgstr "Django 1.6.4 risolve alcuni bug in 1.6.3."
 
 msgid ""
 "Added backwards compatibility support for the :mod:`django.contrib.messages` "
@@ -15430,7 +15432,7 @@ msgid "Django 1.6.5 release notes"
 msgstr "Note di rilascio di Django 1.6.5"
 
 msgid "Django 1.6.5 fixes two security issues and several bugs in 1.6.4."
-msgstr ""
+msgstr "Django 1.6.5 risolve due problemi di sicurezza e alcuni bug in 1.6.4."
 
 msgid ""
 "Issue: Caches may incorrectly be allowed to store and serve private data"
@@ -16786,13 +16788,13 @@ msgid ""
 "removed in Django 1.9."
 msgstr ""
 
-msgid "deconstruct() and serializability"
+msgid "``deconstruct()`` and serializability"
 msgstr ""
 
 msgid ""
 "Django now requires all Field classes and all of their constructor arguments "
 "to be serializable. If you modify the constructor signature in your custom "
-"Field in any way, you'll need to implement a deconstruct() method; we've "
+"Field in any way, you'll need to implement a ``deconstruct()`` method; we've "
 "expanded the custom field documentation with :ref:`instructions on "
 "implementing this method <custom-field-deconstruct-method>`."
 msgstr ""
@@ -17873,7 +17875,7 @@ msgid "Django 1.7.1 release notes"
 msgstr "Note di rilascio di Django 1.7.1"
 
 msgid "Django 1.7.1 fixes several bugs in 1.7."
-msgstr ""
+msgstr "Django 1.7.1 risolve alcuni bug in 1.7."
 
 msgid ""
 "Added a more helpful error message if you try to migrate an app without "
@@ -18077,7 +18079,7 @@ msgid "Django 1.7.10 release notes"
 msgstr "Note di rilascio di Django 1.7.10"
 
 msgid "Django 1.7.10 fixes a security issue in 1.7.9."
-msgstr ""
+msgstr "Django 1.7.10 risolve un problema di sicurezza in 1.7.9."
 
 msgid "Django 1.7.11 release notes"
 msgstr "Note di rilascio di Django 1.7.11"
@@ -18114,7 +18116,7 @@ msgid "Django 1.7.2 release notes"
 msgstr "Note di rilascio di Django 1.7.2"
 
 msgid "Django 1.7.2 fixes several bugs in 1.7.1."
-msgstr ""
+msgstr "Django 1.7.2 risolve alcuni bug in 1.7.1."
 
 msgid ""
 "Fixed migration's renaming of auto-created many-to-many tables when "
@@ -18441,7 +18443,7 @@ msgid "Django 1.7.4 release notes"
 msgstr "Note di rilascio di Django 1.7.4"
 
 msgid "Django 1.7.4 fixes several bugs in 1.7.3."
-msgstr ""
+msgstr "Django 1.7.4 risolve alcuni bug in 1.7.3."
 
 msgid ""
 "Fixed a migration crash when unapplying ``contrib.contenttypes``’s or "
@@ -18476,7 +18478,7 @@ msgid "*February 25, 2015*"
 msgstr "*25 Febbraio 2015*"
 
 msgid "Django 1.7.5 fixes several bugs in 1.7.4."
-msgstr ""
+msgstr "Django 1.7.5 risolve alcuni bug in 1.7.4."
 
 msgid ""
 "Reverted a fix that prevented a migration crash when unapplying ``contrib."
@@ -18511,7 +18513,7 @@ msgid "*March 9, 2015*"
 msgstr "*9 Marzo 2015*"
 
 msgid "Django 1.7.6 fixes a security issue and several bugs in 1.7.5."
-msgstr ""
+msgstr "Django 1.7.6 risolve un problema di sicurezza e alcuni bug in 1.7.5."
 
 msgid ""
 "Mitigated an XSS attack via properties in ``ModelAdmin.readonly_fields``"
@@ -20927,7 +20929,7 @@ msgid "*March 1, 2016*"
 msgstr "*1 Marzo 2016*"
 
 msgid "Django 1.8.10 fixes two security issues and several bugs in 1.8.9."
-msgstr ""
+msgstr "Django 1.8.10 risolve due problemi di sicurezza e alcuni bug in 1.8.9."
 
 msgid ""
 "CVE-2016-2512: Malicious redirect and possible XSS attack via user-supplied "
@@ -21048,7 +21050,7 @@ msgid "*April 1, 2016*"
 msgstr "*1 Aprile 2016*"
 
 msgid "Django 1.8.12 fixes several bugs in 1.8.11."
-msgstr ""
+msgstr "Django 1.8.12 risolve alcuni bug in 1.8.11."
 
 msgid ""
 "Made ``MultiPartParser`` ignore filenames that normalize to an empty string "
@@ -21073,7 +21075,7 @@ msgid "*May 2, 2016*"
 msgstr "*2 Maggio 2016*"
 
 msgid "Django 1.8.13 fixes several bugs in 1.8.12."
-msgstr ""
+msgstr "Django 1.8.13 risolve alcuni bug in 1.8.12."
 
 msgid ""
 "Fixed ``TimeField`` microseconds round-tripping on MySQL and SQLite (:ticket:"
@@ -21092,7 +21094,7 @@ msgid "*July 18, 2016*"
 msgstr "*18 Luglio 2016*"
 
 msgid "Django 1.8.14 fixes a security issue and a bug in 1.8.13."
-msgstr ""
+msgstr "Django 1.8.14 risolve un problema di sicurezza e un bug in 1.8.13."
 
 msgid "XSS in admin's add/change related popup"
 msgstr ""
@@ -21122,7 +21124,7 @@ msgid "*September 26, 2016*"
 msgstr "*26 Settembre 2016*"
 
 msgid "Django 1.8.15 fixes a security issue in 1.8.14."
-msgstr ""
+msgstr "Django 1.8.15 risolve un problema di sicurezza in 1.8.14."
 
 msgid "CSRF protection bypass on a site with Google Analytics"
 msgstr ""
@@ -21144,7 +21146,7 @@ msgid "Django 1.8.16 release notes"
 msgstr "Note di rilascio di Django 1.8.16"
 
 msgid "Django 1.8.16 fixes two security issues in 1.8.15."
-msgstr ""
+msgstr "Django 1.8.16 risolve due problemi di sicurezza in 1.8.15."
 
 msgid "Django 1.8.17 release notes"
 msgstr "Note di rilascio di Django 1.8.17"
@@ -21156,13 +21158,13 @@ msgid "Django 1.8.18 release notes"
 msgstr "Note di rilascio di Django 1.8.18"
 
 msgid "Django 1.8.18 fixes two security issues in 1.8.17."
-msgstr ""
+msgstr "Django 1.8.18 risolve due problemi di sicurezza in 1.8.17."
 
 msgid "Django 1.8.19 release notes"
 msgstr "Note di rilascio di Django 1.8.19"
 
 msgid "Django 1.8.19 fixes two security issues in 1.18.18."
-msgstr ""
+msgstr "Django 1.8.19 risolve due problemi di sicurezza in 1.18.18."
 
 msgid ""
 "The ``django.utils.html.urlize()`` function was extremely slow to evaluate "
@@ -21183,7 +21185,7 @@ msgid "*May 20, 2015*"
 msgstr "*20 Maggio 2015*"
 
 msgid "Django 1.8.2 fixes a security issue and several bugs in 1.8.1."
-msgstr ""
+msgstr "Django 1.8.2 risolve un problema di sicurezza e alcuni bug in 1.8.1."
 
 msgid "Fixed session flushing in the ``cached_db`` backend"
 msgstr ""
@@ -21413,7 +21415,7 @@ msgid "Django 1.8.4 release notes"
 msgstr "Note di rilascio di Django 1.8.4"
 
 msgid "Django 1.8.4 fixes a security issue and several bugs in 1.8.3."
-msgstr ""
+msgstr "Django 1.8.4 risolve un problema di sicurezza e alcuni bug in 1.8.3."
 
 msgid ""
 "Added the ability to serialize values from the newly added :class:`~django."
@@ -21464,7 +21466,7 @@ msgid "*October 3, 2015*"
 msgstr "*3 Ottobre 2015*"
 
 msgid "Django 1.8.5 fixes several bugs in 1.8.4."
-msgstr ""
+msgstr "Django 1.8.5 risolve alcuni bug in 1.8.4."
 
 msgid "Made the development server's autoreload more robust (:ticket:`24704`)."
 msgstr ""
@@ -21629,7 +21631,7 @@ msgid "Django 1.8.7 release notes"
 msgstr "Note di rilascio di Django 1.8.7"
 
 msgid "Django 1.8.7 fixes a security issue and several bugs in 1.8.6."
-msgstr ""
+msgstr "Django 1.8.7 risolve un problema di sicurezza e alcuni bug in 1.8.6."
 
 msgid ""
 "Additionally, Django's vendored version of six, ``django.utils.six``, has "
@@ -21701,7 +21703,7 @@ msgid "*January 2, 2016*"
 msgstr "*2 Gennaio 2016*"
 
 msgid "Django 1.8.8 fixes several bugs in 1.8.7."
-msgstr ""
+msgstr "Django 1.8.8 risolve alcuni bug in 1.8.7."
 
 msgid ""
 "Python 3.2 users, please be advised that we've decided to drop support for "
@@ -21785,7 +21787,7 @@ msgid "*February 1, 2016*"
 msgstr "*1 Febbraio 2016*"
 
 msgid "Django 1.8.9 fixes several bugs in 1.8.8."
-msgstr ""
+msgstr "Django 1.8.9 risolve alcuni bug in 1.8.8."
 
 msgid ""
 "Fixed a regression that caused the \"user-tools\" items to display on the "
@@ -23373,14 +23375,14 @@ msgid ""
 "from:"
 msgstr ""
 
-msgid "mysite/urls.py"
-msgstr "mysite/urls.py"
+msgid "``mysite/urls.py``"
+msgstr "``mysite/urls.py``"
 
 msgid "to:"
 msgstr ""
 
-msgid "polls/urls.py"
-msgstr "polls/urls.py"
+msgid "``polls/urls.py``"
+msgstr "``polls/urls.py``"
 
 msgid ""
 "This change also means that the old way of including an ``AdminSite`` "
@@ -23388,7 +23390,7 @@ msgid ""
 "``django.conf.urls.url()``:"
 msgstr ""
 
-msgid "urls.py"
+msgid "``urls.py``"
 msgstr ""
 
 msgid "URL application namespace required if setting an instance namespace"
@@ -23695,7 +23697,7 @@ msgid "Django 1.9.1 release notes"
 msgstr "Note di rilascio di Django 1.9.1"
 
 msgid "Django 1.9.1 fixes several bugs in 1.9."
-msgstr ""
+msgstr "Django 1.9.1 risolve alcuni bug in 1.9."
 
 msgid ""
 "Fixed ``BaseCache.get_or_set()`` with the ``DummyCache`` backend (:ticket:"
@@ -23783,13 +23785,13 @@ msgid "Django 1.9.10 release notes"
 msgstr "Note di rilascio di Django 1.9.10"
 
 msgid "Django 1.9.10 fixes a security issue in 1.9.9."
-msgstr ""
+msgstr "Django 1.9.10 risolve un problema di sicurezza in 1.9.9."
 
 msgid "Django 1.9.11 release notes"
 msgstr "Note di rilascio di Django 1.9.11"
 
 msgid "Django 1.9.11 fixes two security issues in 1.9.10."
-msgstr ""
+msgstr "Django 1.9.11 risolve due problemi di sicurezza in 1.9.10."
 
 msgid "Django 1.9.12 release notes"
 msgstr "Note di rilascio di Django 1.9.12"
@@ -23920,7 +23922,7 @@ msgid "Django 1.9.3 release notes"
 msgstr "Note di rilascio di Django 1.9.3"
 
 msgid "Django 1.9.3 fixes two security issues and several bugs in 1.9.2."
-msgstr ""
+msgstr "Django 1.9.3 risolve due problemi di sicurezza e alcuni bug in 1.9.2."
 
 msgid ""
 "Skipped URL checks (new in 1.9) if the ``ROOT_URLCONF`` setting isn't "
@@ -23977,7 +23979,7 @@ msgid "Django 1.9.5 release notes"
 msgstr "Note di rilascio di Django 1.9.5"
 
 msgid "Django 1.9.5 fixes several bugs in 1.9.4."
-msgstr ""
+msgstr "Django 1.9.5 risolve alcuni bug in 1.9.4."
 
 msgid ""
 "Fixed a race condition in ``BaseCache.get_or_set()`` (:ticket:`26332`). It "
@@ -24031,7 +24033,7 @@ msgid "Django 1.9.6 release notes"
 msgstr "Note di rilascio di Django 1.9.6"
 
 msgid "Django 1.9.6 fixes several bugs in 1.9.5."
-msgstr ""
+msgstr "Django 1.9.6 risolve alcuni bug in 1.9.5."
 
 msgid ""
 "Added support for relative path redirects to the test client and to "
@@ -24066,7 +24068,7 @@ msgid "*June 4, 2016*"
 msgstr "*4 Giugno 2016*"
 
 msgid "Django 1.9.7 fixes several bugs in 1.9.6."
-msgstr ""
+msgstr "Django 1.9.7 risolve alcuni bug in 1.9.6."
 
 msgid ""
 "Removed the need for the ``request`` context processor on the admin login "
@@ -24107,7 +24109,7 @@ msgid "Django 1.9.8 release notes"
 msgstr "Note di rilascio di Django 1.9.8"
 
 msgid "Django 1.9.8 fixes a security issue and several bugs in 1.9.7."
-msgstr ""
+msgstr "Django 1.9.8 risolve un problema di sicurezza e alcuni bug in 1.9.7."
 
 msgid ""
 "Fixed ``makemessages`` crash on Python 2 with non-ASCII file names (:ticket:"
@@ -24118,7 +24120,7 @@ msgid "Django 1.9.9 release notes"
 msgstr "Note di rilascio di Django 1.9.9"
 
 msgid "Django 1.9.9 fixes several bugs in 1.9.8."
-msgstr ""
+msgstr "Django 1.9.9 risolve alcuni bug in 1.9.8."
 
 msgid ""
 "Fixed invalid HTML in template postmortem on the debug page (:ticket:"
@@ -24392,7 +24394,7 @@ msgstr ""
 
 msgid ""
 "On Oracle, ``AutoField`` and ``BigAutoField`` are now created as `identity "
-"columns <https://docs.oracle.com/en/database/oracle/oracle-database/18/"
+"columns <https://docs.oracle.com/en/database/oracle/oracle-database/21/"
 "drdaa/ intro-to-tools-and-products-supporting-migraiton.html#GUID-14E4817B-"
 "F3BC-4D99 -B471-A0ACDC303CC9>`__."
 msgstr ""
@@ -25178,7 +25180,7 @@ msgid "Django 2.0.1 release notes"
 msgstr "Note di rilascio di Django 2.0.1"
 
 msgid "Django 2.0.1 fixes several bugs in 2.0."
-msgstr ""
+msgstr "Django 2.0.1 risolve alcuni bug in 2.0."
 
 msgid ""
 "Reallowed filtering a queryset with ``GeometryField=None`` (:ticket:`28896`)."
@@ -25221,7 +25223,7 @@ msgid "Django 2.0.10 release notes"
 msgstr "Note di rilascio di Django 2.0.10"
 
 msgid "Django 2.0.10 fixes a security issue and several bugs in 2.0.9."
-msgstr ""
+msgstr "Django 2.0.10 risolve un problema di sicurezza e alcuni bug in 2.0.9."
 
 msgid ""
 "Prevented repetitive calls to ``geos_version_tuple()`` in the ``WKBWriter`` "
@@ -25244,7 +25246,7 @@ msgid "Django 2.0.11 release notes"
 msgstr "Note di rilascio di Django 2.0.11"
 
 msgid "Django 2.0.11 fixes a security issue in 2.0.10."
-msgstr ""
+msgstr "Django 2.0.11 risolve un problema di sicurezza in 2.0.10."
 
 msgid "Django 2.0.12 release notes"
 msgstr "Note di rilascio di Django 2.0.12"
@@ -25273,7 +25275,7 @@ msgid "Django 2.0.2 release notes"
 msgstr "Note di rilascio di Django 2.0.2"
 
 msgid "Django 2.0.2 fixes a security issue and several bugs in 2.0.1."
-msgstr ""
+msgstr "Django 2.0.2 risolve un problema di sicurezza e alcuni bug in 2.0.1."
 
 msgid ""
 "Fixed hidden content at the bottom of the \"The install worked successfully!"
@@ -25342,7 +25344,7 @@ msgid "Django 2.0.4 release notes"
 msgstr "Note di rilascio di Django 2.0.4"
 
 msgid "Django 2.0.4 fixes several bugs in 2.0.3."
-msgstr ""
+msgstr "Django 2.0.4 risolve alcuni bug in 2.0.3."
 
 msgid ""
 "Fixed a crash when filtering with an ``Exists()`` annotation of a queryset "
@@ -25374,7 +25376,7 @@ msgid "Django 2.0.5 release notes"
 msgstr "Note di rilascio di Django 2.0.5"
 
 msgid "Django 2.0.5 fixes several bugs in 2.0.4."
-msgstr ""
+msgstr "Django 2.0.5 risolve alcuni bug in 2.0.4."
 
 msgid ""
 "Corrected the import paths that ``inspectdb`` generates for ``django.contrib."
@@ -25395,7 +25397,7 @@ msgid "*June 1, 2018*"
 msgstr "*1 Giugno 2018*"
 
 msgid "Django 2.0.6 fixes several bugs in 2.0.5."
-msgstr ""
+msgstr "Django 2.0.6 risolve alcuni bug in 2.0.5."
 
 msgid ""
 "Fixed a regression that broke custom template filters that use decorators (:"
@@ -25416,7 +25418,7 @@ msgid "Django 2.0.7 release notes"
 msgstr "Note di rilascio di Django 2.0.7"
 
 msgid "Django 2.0.7 fixes several bugs in 2.0.6."
-msgstr ""
+msgstr "Django 2.0.7 risolve alcuni bug in 2.0.6."
 
 msgid ""
 "Fixed admin changelist crash when using a query expression without ``asc()`` "
@@ -25441,7 +25443,7 @@ msgid "Django 2.0.8 release notes"
 msgstr "Note di rilascio di Django 2.0.8"
 
 msgid "Django 2.0.8 fixes a security issue and several bugs in 2.0.7."
-msgstr ""
+msgstr "Django 2.0.8 risolve un problema di sicurezza e alcuni bug in 2.0.7."
 
 msgid ""
 "Fixed a regression in Django 2.0.7 that broke the ``regex`` lookup on "
@@ -26039,7 +26041,7 @@ msgid "*August 31, 2018*"
 msgstr "*31 Agosto 2018*"
 
 msgid "Django 2.1.1 fixes several bugs in 2.1."
-msgstr ""
+msgstr "Django 2.1.1 risolve alcuni bug in 2.1."
 
 msgid ""
 "Fixed a regression where ``QueryDict.urlencode()`` crashed if the dictionary "
@@ -26105,13 +26107,13 @@ msgid "Django 2.1.10 release notes"
 msgstr "Note di rilascio di Django 2.1.10"
 
 msgid "Django 2.1.10 fixes a security issue in 2.1.9."
-msgstr ""
+msgstr "Django 2.1.10 risolve un problema di sicurezza in 2.1.9."
 
 msgid "Django 2.1.11 release notes"
 msgstr "Note di rilascio di Django 2.1.11"
 
 msgid "Django 2.1.11 fixes security issues in 2.1.10."
-msgstr ""
+msgstr "Django 2.1.11 risolve alcuni problemi di sicurezza in 2.1.10."
 
 msgid "Django 2.1.12 release notes"
 msgstr "Note di rilascio di Django 2.1.12"
@@ -26256,7 +26258,7 @@ msgid "*November 1, 2018*"
 msgstr "*1 Novembre 2018*"
 
 msgid "Django 2.1.3 fixes several bugs in 2.1.2."
-msgstr ""
+msgstr "Django 2.1.3 risolve alcuni bug in 2.1.2."
 
 msgid ""
 "Fixed a regression in Django 2.0 where combining ``Q`` objects with ``__in`` "
@@ -26288,7 +26290,7 @@ msgid "Django 2.1.4 release notes"
 msgstr "Note di rilascio di Django 2.1.4"
 
 msgid "Django 2.1.4 fixes several bugs in 2.1.3."
-msgstr ""
+msgstr "Django 2.1.4 risolve alcuni bug in 2.1.3."
 
 msgid ""
 "Corrected the default password list that ``CommonPasswordValidator`` uses by "
@@ -26322,7 +26324,7 @@ msgid "Django 2.1.5 release notes"
 msgstr "Note di rilascio di Django 2.1.5"
 
 msgid "Django 2.1.5 fixes a security issue and several bugs in 2.1.4."
-msgstr ""
+msgstr "Django 2.1.5 risolve un problema di sicurezza e alcuni bug in 2.1.4."
 
 msgid "Fixed compatibility with mysqlclient 1.3.14 (:ticket:`30013`)."
 msgstr ""
@@ -26343,7 +26345,7 @@ msgid "Django 2.1.6 release notes"
 msgstr "Note di rilascio di Django 2.1.6"
 
 msgid "Django 2.1.6 fixes a security issue and a bug in 2.1.5."
-msgstr ""
+msgstr "Django 2.1.6 risolve un problema di sicurezza e un bug in 2.1.5."
 
 msgid ""
 "Made the ``obj`` argument of ``InlineModelAdmin.has_add_permission()`` "
@@ -26367,7 +26369,7 @@ msgid "*April 1, 2019*"
 msgstr "*1 Aprile 2019*"
 
 msgid "Django 2.1.8 fixes a bug in 2.1.7."
-msgstr ""
+msgstr "Django 2.1.8 risolve un bug in 2.1.7."
 
 msgid ""
 "Prevented admin inlines for a ``ManyToManyField``\\'s implicit through model "
@@ -26379,7 +26381,7 @@ msgid "Django 2.1.9 release notes"
 msgstr "Note di rilascio di Django 2.1.9"
 
 msgid "Django 2.1.9 fixes security issues in 2.1.8."
-msgstr ""
+msgstr "Django 2.1.9 risolve alcuni problemi di sicurezza in 2.1.8."
 
 msgid "Patched bundled jQuery for CVE-2019-11358: Prototype pollution"
 msgstr ""
@@ -27011,7 +27013,7 @@ msgid "*May 1, 2019*"
 msgstr "*1 Maggio 2019*"
 
 msgid "Django 2.2.1 fixes several bugs in 2.2."
-msgstr ""
+msgstr "Django 2.2.1 risolve alcuni bug in 2.2."
 
 msgid ""
 "Fixed a regression in Django 2.1 that caused the incorrect quoting of "
@@ -27118,7 +27120,7 @@ msgid "Django 2.2.10 release notes"
 msgstr "Note di rilascio di Django 2.2.10"
 
 msgid "Django 2.2.10 fixes a security issue in 2.2.9."
-msgstr ""
+msgstr "Django 2.2.10 risolve un problema di sicurezza in 2.2.9."
 
 msgid "Django 2.2.11 release notes"
 msgstr "Note di rilascio di Django 2.2.11"
@@ -27140,7 +27142,7 @@ msgid "*April 1, 2020*"
 msgstr "*1 Aprile 2020*"
 
 msgid "Django 2.2.12 fixes a bug in 2.2.11."
-msgstr ""
+msgstr "Django 2.2.12 risolve un bug in 2.2.11."
 
 msgid ""
 "Added the ability to handle ``.po`` files containing different plural "
@@ -27194,7 +27196,7 @@ msgid "*July 1, 2020*"
 msgstr "*1 Luglio 2020*"
 
 msgid "Django 2.2.14 fixes a bug in 2.2.13."
-msgstr ""
+msgstr "Django 2.2.14 risolve un bug in 2.2.13."
 
 msgid ""
 "Fixed messages of ``InvalidCacheKey`` exceptions and ``CacheKeyWarning`` "
@@ -27208,7 +27210,7 @@ msgid "*August 3, 2020*"
 msgstr "*3 Agosto 2020*"
 
 msgid "Django 2.2.15 fixes two bugs in 2.2.14."
-msgstr ""
+msgstr "Django 2.2.15 risolve due bug in 2.2.14."
 
 msgid ""
 "Allowed setting the ``SameSite`` cookie flag in :meth:`.HttpResponse."
@@ -27304,7 +27306,7 @@ msgid "*February 19, 2021*"
 msgstr "*19 Febbraio 2021*"
 
 msgid "Django 2.2.19 fixes a security issue in 2.2.18."
-msgstr ""
+msgstr "Django 2.2.19 risolve un problema di sicurezza in 2.2.18."
 
 msgid ""
 "CVE-2021-23336: Web cache poisoning via ``django.utils.http."
@@ -27324,6 +27326,7 @@ msgstr "Note di rilascio di Django 2.2.2"
 
 msgid "Django 2.2.2 fixes security issues and several bugs in 2.2.1."
 msgstr ""
+"Django 2.2.2 risolve alcuni problemi di sicurezza e alcuni bug in 2.2.1."
 
 msgid ""
 "Fixed a regression in Django 2.2 that stopped Show/Hide toggles working on "
@@ -27390,7 +27393,7 @@ msgid "*May 4, 2021*"
 msgstr "*4 Maggio 2021*"
 
 msgid "Django 2.2.21 fixes a security issue in 2.2.20."
-msgstr ""
+msgstr "Django 2.2.21 risolve un problema di sicurezza in 2.2.20."
 
 msgid "CVE-2021-31542: Potential directory-traversal via uploaded files"
 msgstr ""
@@ -27412,7 +27415,7 @@ msgid "*May 6, 2021*"
 msgstr "*6 Maggio 2021*"
 
 msgid "Django 2.2.22 fixes a security issue in 2.2.21."
-msgstr ""
+msgstr "Django 2.2.22 risolve un problema di sicurezza in 2.2.21."
 
 msgid ""
 "CVE-2021-32052: Header injection possibility since ``URLValidator`` accepted "
@@ -27459,7 +27462,7 @@ msgid "*June 2, 2021*"
 msgstr "*2 Giugno 2021*"
 
 msgid "Django 2.2.24 fixes two security issues in 2.2.23."
-msgstr ""
+msgstr "Django 2.2.24 risolve due problemi di sicurezza in 2.2.23."
 
 msgid "CVE-2021-33203: Potential directory traversal via ``admindocs``"
 msgstr ""
@@ -27497,10 +27500,10 @@ msgid ""
 msgstr ""
 
 msgid "Django 2.2.25 release notes"
-msgstr ""
+msgstr "Note di rilascio di Django 2.2.25"
 
 msgid "*December 7, 2021*"
-msgstr ""
+msgstr "*7 Dicembre 2021*"
 
 msgid "Django 2.2.25 fixes a security issue with severity \"low\" in 2.2.24."
 msgstr ""
@@ -27516,10 +27519,10 @@ msgid ""
 msgstr ""
 
 msgid "Django 2.2.26 release notes"
-msgstr ""
+msgstr "Note di rilascio di Django 2.2.26"
 
 msgid "*January 4, 2022*"
-msgstr ""
+msgstr "*4 Gennaio 2022*"
 
 msgid ""
 "Django 2.2.26 fixes one security issue with severity \"medium\" and two "
@@ -27583,6 +27586,72 @@ msgid ""
 "crafted file names."
 msgstr ""
 
+msgid "Django 2.2.27 release notes"
+msgstr "Note di rilascio di Django 2.2.27"
+
+msgid "*February 1, 2022*"
+msgstr "*1 Febbraio 2022*"
+
+msgid ""
+"Django 2.2.27 fixes two security issues with severity \"medium\" in 2.2.26."
+msgstr ""
+
+msgid "CVE-2022-22818: Possible XSS via ``{% debug %}`` template tag"
+msgstr ""
+
+msgid ""
+"The ``{% debug %}`` template tag didn't properly encode the current context, "
+"posing an XSS attack vector."
+msgstr ""
+
+msgid ""
+"In order to avoid this vulnerability, ``{% debug %}`` no longer outputs "
+"information when the ``DEBUG`` setting is ``False``, and it ensures all "
+"context variables are correctly escaped when the ``DEBUG`` setting is "
+"``True``."
+msgstr ""
+
+msgid "CVE-2022-23833: Denial-of-service possibility in file uploads"
+msgstr ""
+
+msgid ""
+"Passing certain inputs to multipart forms could result in an infinite loop "
+"when parsing files."
+msgstr ""
+
+msgid "Django 2.2.28 release notes"
+msgstr "Note di rilascio di Django 2.2.28"
+
+msgid "*April 11, 2022*"
+msgstr "*11 Aprile 2022*"
+
+msgid ""
+"Django 2.2.28 fixes two security issues with severity \"high\" in 2.2.27."
+msgstr ""
+
+msgid ""
+"CVE-2022-28346: Potential SQL injection in ``QuerySet.annotate()``, "
+"``aggregate()``, and ``extra()``"
+msgstr ""
+
+msgid ""
+":meth:`.QuerySet.annotate`, :meth:`~.QuerySet.aggregate`, and :meth:`~."
+"QuerySet.extra` methods were subject to SQL injection in column aliases, "
+"using a suitably crafted dictionary, with dictionary expansion, as the "
+"``**kwargs`` passed to these methods."
+msgstr ""
+
+msgid ""
+"CVE-2022-28347: Potential SQL injection via ``QuerySet.explain(**options)`` "
+"on PostgreSQL"
+msgstr ""
+
+msgid ""
+":meth:`.QuerySet.explain` method was subject to SQL injection in option "
+"names, using a suitably crafted dictionary, with dictionary expansion, as "
+"the ``**options`` argument."
+msgstr ""
+
 msgid "Django 2.2.3 release notes"
 msgstr "Note di rilascio di Django 2.2.3"
 
@@ -27607,6 +27676,7 @@ msgstr "Note di rilascio di Django 2.2.4"
 
 msgid "Django 2.2.4 fixes security issues and several bugs in 2.2.3."
 msgstr ""
+"Django 2.2.4 risolve alcuni problemi di sicurezza e alcuni bug in 2.2.3."
 
 msgid ""
 "Fixed a regression in Django 2.2 when ordering a ``QuerySet.union()``, "
@@ -27636,7 +27706,7 @@ msgid "Django 2.2.5 release notes"
 msgstr "Note di rilascio di Django 2.2.5"
 
 msgid "Django 2.2.5 fixes several bugs in 2.2.4."
-msgstr ""
+msgstr "Django 2.2.5 risolve alcuni bug in 2.2.4."
 
 msgid ""
 "Relaxed the system check added in Django 2.2 for models to reallow use of "
@@ -27654,7 +27724,7 @@ msgid "Django 2.2.6 release notes"
 msgstr "Note di rilascio di Django 2.2.6"
 
 msgid "Django 2.2.6 fixes several bugs in 2.2.5."
-msgstr ""
+msgstr "Django 2.2.6 risolve alcuni bug in 2.2.5."
 
 msgid ""
 "Fixed migrations crash on SQLite when altering a model containing partial "
@@ -27672,7 +27742,7 @@ msgid "Django 2.2.7 release notes"
 msgstr "Note di rilascio di Django 2.2.7"
 
 msgid "Django 2.2.7 fixes several bugs in 2.2.6."
-msgstr ""
+msgstr "Django 2.2.7 risolve alcuni bug in 2.2.6."
 
 msgid ""
 "Prevented :option:`migrate --plan` from showing that ``RunPython`` "
@@ -28548,7 +28618,7 @@ msgid "Django 3.0.1 release notes"
 msgstr "Note di rilascio di Django 3.0.1"
 
 msgid "Django 3.0.1 fixes a security issue and several bugs in 3.0."
-msgstr ""
+msgstr "Django 3.0.1 risolve un problema di sicurezza e alcuni bug in 3.0."
 
 msgid ""
 "Fixed a regression in Django 3.0 by restoring the ability to use Django "
@@ -28600,7 +28670,7 @@ msgid "Django 3.0.13 release notes"
 msgstr "Note di rilascio di Django 3.0.13"
 
 msgid "Django 3.0.13 fixes a security issue in 3.0.12."
-msgstr ""
+msgstr "Django 3.0.13 risolve un problema di sicurezza in 3.0.12."
 
 msgid "Django 3.0.14 release notes"
 msgstr "Note di rilascio di Django 3.0.14"
@@ -28615,7 +28685,7 @@ msgid "*January 2, 2020*"
 msgstr "*2 Gennaio 2020*"
 
 msgid "Django 3.0.2 fixes several bugs in 3.0.1."
-msgstr ""
+msgstr "Django 3.0.2 risolve alcuni bug in 3.0.1."
 
 msgid ""
 "Fixed a regression in Django 3.0 that didn't include columns referenced by a "
@@ -28643,7 +28713,7 @@ msgid "Django 3.0.3 release notes"
 msgstr "Note di rilascio di Django 3.0.3"
 
 msgid "Django 3.0.3 fixes a security issue and several bugs in 3.0.2."
-msgstr ""
+msgstr "Django 3.0.3 risolve un problema di sicurezza e alcuni bug in 3.0.2."
 
 msgid ""
 "Fixed a regression in Django 3.0 that caused a crash when subtracting "
@@ -28696,7 +28766,7 @@ msgid "Django 3.0.4 release notes"
 msgstr "Note di rilascio di Django 3.0.4"
 
 msgid "Django 3.0.4 fixes a security issue and several bugs in 3.0.3."
-msgstr ""
+msgstr "Django 3.0.4 risolve un problema di sicurezza e alcuni bug in 3.0.3."
 
 msgid ""
 "Fixed a data loss possibility when using caching from async code (:ticket:"
@@ -28728,7 +28798,7 @@ msgid "Django 3.0.5 release notes"
 msgstr "Note di rilascio di Django 3.0.5"
 
 msgid "Django 3.0.5 fixes several bugs in 3.0.4."
-msgstr ""
+msgstr "Django 3.0.5 risolve alcuni bug in 3.0.4."
 
 msgid ""
 "Fixed a regression in Django 3.0 where ``QuerySet.values()`` and "
@@ -28743,7 +28813,7 @@ msgid "*May 4, 2020*"
 msgstr "*4 Maggio 2020*"
 
 msgid "Django 3.0.6 fixes a bug in 3.0.5."
-msgstr ""
+msgstr "Django 3.0.6 risolve un bug in 3.0.5."
 
 msgid ""
 "Fixed a regression in Django 3.0 that caused a crash when filtering a "
@@ -28755,7 +28825,7 @@ msgid "Django 3.0.7 release notes"
 msgstr "Note di rilascio di Django 3.0.7"
 
 msgid "Django 3.0.7 fixes two security issues and several bugs in 3.0.6."
-msgstr ""
+msgstr "Django 3.0.7 risolve due problemi di sicurezza e alcuni bug in 3.0.6."
 
 msgid ""
 "Fixed a regression in Django 3.0 by restoring the ability to use field "
@@ -28800,7 +28870,7 @@ msgid "Django 3.0.8 release notes"
 msgstr "Note di rilascio di Django 3.0.8"
 
 msgid "Django 3.0.8 fixes several bugs in 3.0.7."
-msgstr ""
+msgstr "Django 3.0.8 risolve alcuni bug in 3.0.7."
 
 msgid ""
 "Fixed a regression in Django 3.0.7 that caused a queryset crash when "
@@ -28826,7 +28896,7 @@ msgid "Django 3.0.9 release notes"
 msgstr "Note di rilascio di Django 3.0.9"
 
 msgid "Django 3.0.9 fixes several bugs in 3.0.8."
-msgstr ""
+msgstr "Django 3.0.9 risolve alcuni bug in 3.0.8."
 
 msgid "Django 3.1 release notes"
 msgstr "Note di rilascio di Django 3.1"
@@ -29877,7 +29947,7 @@ msgid "Django 3.1.1 release notes"
 msgstr "Note di rilascio di Django 3.1.1"
 
 msgid "Django 3.1.1 fixes two security issues and several bugs in 3.1."
-msgstr ""
+msgstr "Django 3.1.1 risolve due problemi di sicurezza e alcuni bug in 3.1."
 
 msgid ""
 "Fixed wrapping of translated action labels in the admin's navigation sidebar "
@@ -29961,7 +30031,7 @@ msgid "Django 3.1.10 release notes"
 msgstr "Note di rilascio di Django 3.1.10"
 
 msgid "Django 3.1.10 fixes a security issue in 3.1.9."
-msgstr ""
+msgstr "Django 3.1.10 risolve un problema di sicurezza in 3.1.9."
 
 msgid "Django 3.1.11 release notes"
 msgstr "Note di rilascio di Django 3.1.11"
@@ -29979,7 +30049,7 @@ msgid "Django 3.1.12 release notes"
 msgstr "Note di rilascio di Django 3.1.12"
 
 msgid "Django 3.1.12 fixes two security issues in 3.1.11."
-msgstr ""
+msgstr "Django 3.1.12 risolve due problemi di sicurezza in 3.1.11."
 
 msgid "Django 3.1.13 release notes"
 msgstr "Note di rilascio di Django 3.1.13"
@@ -30014,7 +30084,7 @@ msgid ""
 msgstr ""
 
 msgid "Django 3.1.14 release notes"
-msgstr ""
+msgstr "Note di rilascio di Django 3.1.14"
 
 msgid "Django 3.1.14 fixes a security issue with severity \"low\" in 3.1.13."
 msgstr ""
@@ -30026,7 +30096,7 @@ msgid "*October 1, 2020*"
 msgstr "*1 Ottobre 2020*"
 
 msgid "Django 3.1.2 fixes several bugs in 3.1.1."
-msgstr ""
+msgstr "Django 3.1.2 risolve alcuni bug in 3.1.1."
 
 msgid ""
 "Fixed a bug in Django 3.1 where ``FileField`` instances with a callable "
@@ -30145,7 +30215,7 @@ msgid "*December 1, 2020*"
 msgstr "*1 Dicembre 2020*"
 
 msgid "Django 3.1.4 fixes several bugs in 3.1.3."
-msgstr ""
+msgstr "Django 3.1.4 risolve alcuni bug in 3.1.3."
 
 msgid ""
 "Fixed setting the ``Content-Length`` HTTP header in ``AsyncRequestFactory`` "
@@ -30192,7 +30262,7 @@ msgid "*January 4, 2021*"
 msgstr "*4 Gennaio 2021*"
 
 msgid "Django 3.1.5 fixes several bugs in 3.1.4."
-msgstr ""
+msgstr "Django 3.1.5 risolve alcuni bug in 3.1.4."
 
 msgid ""
 "Fixed ``__isnull=True`` lookup on key transforms for :class:`~django.db."
@@ -30229,7 +30299,7 @@ msgid "Django 3.1.7 release notes"
 msgstr "Note di rilascio di Django 3.1.7"
 
 msgid "Django 3.1.7 fixes a security issue and a bug in 3.1.6."
-msgstr ""
+msgstr "Django 3.1.7 risolve un problema di sicurezza e un bug in 3.1.6."
 
 msgid ""
 "Fixed a regression in Django 3.1 that caused ``RuntimeError`` instead of "
@@ -30254,7 +30324,7 @@ msgid "Django 3.1.9 release notes"
 msgstr "Note di rilascio di Django 3.1.9"
 
 msgid "Django 3.1.9 fixes a security issue in 3.1.8."
-msgstr ""
+msgstr "Django 3.1.9 risolve un problema di sicurezza in 3.1.8."
 
 msgid "Django 3.2 release notes"
 msgstr "Note di rilascio di Django 3.2"
@@ -31193,7 +31263,7 @@ msgid "Django 3.2.1 release notes"
 msgstr "Note di rilascio di Django 3.2.1"
 
 msgid "Django 3.2.1 fixes a security issue and several bugs in 3.2."
-msgstr ""
+msgstr "Django 3.2.1 risolve un problema di sicurezza e alcuni bug in 3.2."
 
 msgid "Corrected detection of GDAL 3.2 on Windows (:ticket:`32544`)."
 msgstr ""
@@ -31307,18 +31377,76 @@ msgid ""
 msgstr ""
 
 msgid "Django 3.2.11 release notes"
-msgstr ""
+msgstr "Note di rilascio di Django 3.2.11"
 
 msgid ""
 "Django 3.2.11 fixes one security issue with severity \"medium\" and two "
 "security issues with severity \"low\" in 3.2.10."
 msgstr ""
 
+msgid "Django 3.2.12 release notes"
+msgstr "Note di rilascio di Django 3.2.12"
+
+msgid ""
+"Django 3.2.12 fixes two security issues with severity \"medium\" in 3.2.11."
+msgstr ""
+
+msgid "Django 3.2.13 release notes"
+msgstr "Note di rilascio di Django 3.2.13"
+
+msgid ""
+"Django 3.2.13 fixes two security issues with severity \"high\" in 3.2.12 and "
+"a regression in 3.2.4."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 3.2.4 that caused the auto-reloader to no "
+"longer detect changes when the ``DIRS`` option of the ``TEMPLATES`` setting "
+"contained an empty string (:ticket:`33628`)."
+msgstr ""
+
+msgid "Django 3.2.14 release notes"
+msgstr "Note di rilascio di Django 3.2.14"
+
+msgid "*July 4, 2022*"
+msgstr "*4 Luglio 2022*"
+
+msgid "Django 3.2.14 fixes a security issue with severity \"high\" in 3.2.13."
+msgstr ""
+
+msgid ""
+"CVE-2022-34265: Potential SQL injection via ``Trunc(kind)`` and "
+"``Extract(lookup_name)`` arguments"
+msgstr ""
+
+msgid ""
+":class:`Trunc() <django.db.models.functions.Trunc>` and :class:`Extract() "
+"<django.db.models.functions.Extract>` database functions were subject to SQL "
+"injection if untrusted data was used as a ``kind``/``lookup_name`` value."
+msgstr ""
+
+msgid ""
+"Applications that constrain the lookup name and kind choice to a known safe "
+"list are unaffected."
+msgstr ""
+
+msgid "Django 3.2.15 release notes"
+msgstr "Note di rilascio di Django 3.2.15"
+
+msgid "*August 3, 2022*"
+msgstr "*3 Agosto 2022*"
+
+msgid "Django 3.2.15 fixes a security issue with severity \"high\" in 3.2.14."
+msgstr ""
+
+msgid "..."
+msgstr ""
+
 msgid "Django 3.2.2 release notes"
 msgstr "Note di rilascio di Django 3.2.2"
 
 msgid "Django 3.2.2 fixes a security issue and a bug in 3.2.1."
-msgstr ""
+msgstr "Django 3.2.2 risolve un problema di sicurezza e un bug in 3.2.1."
 
 msgid ""
 "Prevented, following a regression in Django 3.2.1, :djadmin:`makemigrations` "
@@ -31330,7 +31458,7 @@ msgid "Django 3.2.3 release notes"
 msgstr "Note di rilascio di Django 3.2.3"
 
 msgid "Django 3.2.3 fixes several bugs in 3.2.2."
-msgstr ""
+msgstr "Django 3.2.3 risolve alcuni bug in 3.2.2."
 
 msgid "Prepared for ``mysqlclient`` > 2.0.3 support (:ticket:`32732`)."
 msgstr ""
@@ -31350,7 +31478,7 @@ msgid "Django 3.2.4 release notes"
 msgstr "Note di rilascio di Django 3.2.4"
 
 msgid "Django 3.2.4 fixes two security issues and several bugs in 3.2.3."
-msgstr ""
+msgstr "Django 3.2.4 risolve due problemi di sicurezza e alcuni bug in 3.2.3."
 
 msgid ""
 "Fixed a bug in Django 3.2 where a final catch-all view in the admin didn't "
@@ -31427,7 +31555,7 @@ msgid "*August 2, 2021*"
 msgstr "*2 Agosto 2021*"
 
 msgid "Django 3.2.6 fixes several bugs in 3.2.5."
-msgstr ""
+msgstr "Django 3.2.6 risolve alcuni bug in 3.2.5."
 
 msgid ""
 "Fixed a regression in Django 3.2 that caused a crash validating ``\"NaN\"`` "
@@ -31448,7 +31576,7 @@ msgid "*September 1, 2021*"
 msgstr "*1 Settembre 2021*"
 
 msgid "Django 3.2.7 fixes a bug in 3.2.6."
-msgstr ""
+msgstr "Django 3.2.7 risolve un bug in 3.2.6."
 
 msgid ""
 "Fixed a regression in Django 3.2 that caused the incorrect offset extraction "
@@ -31462,7 +31590,7 @@ msgid "*October 5, 2021*"
 msgstr "*5 Ottobre 2021*"
 
 msgid "Django 3.2.8 fixes two bugs in 3.2.7."
-msgstr ""
+msgstr "Django 3.2.8 risolve due bug in 3.2.7."
 
 msgid ""
 "Fixed a bug in Django 3.2 that caused incorrect links on read-only fields in "
@@ -31496,7 +31624,7 @@ msgstr ""
 "`33194`)."
 
 msgid "Django 4.0 release notes"
-msgstr ""
+msgstr "Note di rilascio di Django 4.0"
 
 msgid "Welcome to Django 4.0!"
 msgstr ""
@@ -32040,6 +32168,17 @@ msgid ""
 "``form_valid()``, or a shared helper method, if required."
 msgstr ""
 
+msgid "Table and column naming scheme changes on Oracle"
+msgstr ""
+
+msgid ""
+"Django 4.0 inadvertently changed the table and column naming scheme on "
+"Oracle. This causes errors for models and fields with names longer than 30 "
+"characters. Unfortunately, renaming some Oracle tables and columns is "
+"required. Use the upgrade script in :ticket:`33789 <33789#comment:15>` to "
+"generate ``RENAME`` statements to change naming scheme."
+msgstr ""
+
 msgid "Support for ``cx_Oracle`` < 7.0 is removed."
 msgstr ""
 
@@ -32458,7 +32597,7 @@ msgid "The ``DEFAULT_HASHING_ALGORITHM`` transitional setting is removed."
 msgstr ""
 
 msgid "Django 4.0.1 release notes"
-msgstr ""
+msgstr "Note di rilascio di Django 4.0.1"
 
 msgid ""
 "Django 4.0.1 fixes one security issue with severity \"medium\", two security "
@@ -32495,12 +32634,12 @@ msgid ""
 msgstr ""
 
 msgid "Django 4.0.2 release notes"
-msgstr ""
+msgstr "Note di rilascio di Django 4.0.2"
 
-msgid "*Expected February 1, 2022*"
-msgstr ""
-
-msgid "Django 4.0.2 fixes several bugs in 4.0.1."
+msgid ""
+"Django 4.0.2 fixes two security issues with severity \"medium\" and several "
+"bugs in 4.0.1. Also, the latest string translations from Transifex are "
+"incorporated, with a special mention for Bulgarian (fully translated)."
 msgstr ""
 
 msgid ""
@@ -32511,6 +32650,116 @@ msgstr ""
 msgid ""
 "Fixed a regression in Django 4.0 where ``help_text`` was HTML-escaped in "
 "automatically-generated forms (:ticket:`33419`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 4.0 that caused displaying an incorrect name "
+"for class-based views on the technical 404 debug page (:ticket:`33425`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 4.0 that caused an incorrect ``repr`` of "
+"``ResolverMatch`` for class-based views (:ticket:`33426`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 4.0 that caused a crash of ``makemigrations`` "
+"on models without ``Meta.order_with_respect_to`` but with a field named "
+"``_order`` (:ticket:`33449`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 4.0 that caused incorrect :attr:`.ModelAdmin."
+"radio_fields` layout in the admin (:ticket:`33407`)."
+msgstr ""
+
+msgid ""
+"Fixed a duplicate operation regression in Django 4.0 that caused a migration "
+"crash when altering a primary key type for a concrete parent model "
+"referenced by a foreign key (:ticket:`33462`)."
+msgstr ""
+
+msgid ""
+"Fixed a bug in Django 4.0 that caused a crash of ``QuerySet.aggregate()`` "
+"after ``annotate()`` on an aggregate function with a :ref:`default "
+"<aggregate-default>` (:ticket:`33468`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 4.0 that caused a crash of ``makemigrations`` "
+"when renaming a field of a renamed model (:ticket:`33480`)."
+msgstr ""
+
+msgid "Django 4.0.3 release notes"
+msgstr "Note di rilascio di Django 4.0.3"
+
+msgid "*March 1, 2022*"
+msgstr "*1 Marzo 2022*"
+
+msgid ""
+"Django 4.0.3 fixes several bugs in 4.0.2. Also, all Python code in Django is "
+"reformatted with `black`_."
+msgstr ""
+
+msgid ""
+"Prevented, following a regression in Django 4.0.1, :djadmin:`makemigrations` "
+"from generating infinite migrations for a model with ``ManyToManyField`` to "
+"a lowercased swappable model such as ``'auth.user'`` (:ticket:`33515`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 4.0 that caused a crash when rendering invalid "
+"inlines with :attr:`~django.contrib.admin.ModelAdmin.readonly_fields` in the "
+"admin (:ticket:`33547`)."
+msgstr ""
+
+msgid "Django 4.0.4 release notes"
+msgstr "Note di rilascio di Django 4.0.4"
+
+msgid ""
+"Django 4.0.4 fixes two security issues with severity \"high\" and two bugs "
+"in 4.0.3."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 4.0 that caused ignoring multiple "
+"``FilteredRelation()`` relationships to the same field (:ticket:`33598`)."
+msgstr ""
+
+msgid "Django 4.0.5 release notes"
+msgstr "Note di rilascio di Django 4.0.5"
+
+msgid "*June 1, 2022*"
+msgstr "*1 Giugno 2022*"
+
+msgid "Django 4.0.5 fixes several bugs in 4.0.4."
+msgstr "Django 4.0.5 risolve alcuni bug in 4.0.4."
+
+msgid ""
+"Fixed a bug in Django 4.0 where not all :setting:`OPTIONS <CACHES-OPTIONS>` "
+"were passed to a Redis client (:ticket:`33681`)."
+msgstr ""
+
+msgid ""
+"Fixed a bug in Django 4.0 that caused a crash of ``QuerySet.filter()`` on "
+"``IsNull()`` expressions (:ticket:`33705`)."
+msgstr ""
+
+msgid ""
+"Fixed a bug in Django 4.0 where a hidden quick filter toolbar in the admin's "
+"navigation sidebar was focusable (:ticket:`33725`)."
+msgstr ""
+
+msgid "Django 4.0.6 release notes"
+msgstr "Note di rilascio di Django 4.0.6"
+
+msgid "Django 4.0.6 fixes a security issue with severity \"high\" in 4.0.5."
+msgstr ""
+
+msgid "Django 4.0.7 release notes"
+msgstr "Note di rilascio di Django 4.0.7"
+
+msgid "Django 4.0.7 fixes a security issue with severity \"high\" in 4.0.6."
 msgstr ""
 
 msgid "Release notes"
@@ -32659,15 +32908,100 @@ msgid ""
 "process. These are listed below."
 msgstr ""
 
+msgid "July 4, 2022 - :cve:`2022-34265`"
+msgstr ""
+
+msgid ""
+"Potential SQL injection via ``Trunc(kind)`` and ``Extract(lookup_name)`` "
+"arguments. `Full description <https://www.djangoproject.com/weblog/2022/"
+"jul/04/security-releases/>`__"
+msgstr ""
+
+msgid "Django 4.0 :commit:`(patch) <0dc9c016fadb71a067e5a42be30164e3f96c0492>`"
+msgstr ""
+
+msgid "Django 3.2 :commit:`(patch) <a9010fe5555e6086a9d9ae50069579400ef0685e>`"
+msgstr ""
+
+msgid "April 11, 2022 - :cve:`2022-28346`"
+msgstr ""
+
+msgid ""
+"Potential SQL injection in ``QuerySet.annotate()``, ``aggregate()``, and "
+"``extra()``. `Full description <https://www.djangoproject.com/weblog/2022/"
+"apr/11/security-releases/>`__"
+msgstr ""
+
+msgid "Django 4.0 :commit:`(patch) <800828887a0509ad1162d6d407e94d8de7eafc60>`"
+msgstr ""
+
+msgid "Django 3.2 :commit:`(patch) <2044dac5c6968441be6f534c4139bcf48c5c7e48>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <2c09e68ec911919360d5f8502cefc312f9e03c5d>`"
+msgstr ""
+
+msgid "April 11, 2022 - :cve:`2022-28347`"
+msgstr ""
+
+msgid ""
+"Potential SQL injection via ``QuerySet.explain(**options)`` on PostgreSQL. "
+"`Full description <https://www.djangoproject.com/weblog/2022/apr/11/security-"
+"releases/>`__"
+msgstr ""
+
+msgid "Django 4.0 :commit:`(patch) <00b0fc50e1738c7174c495464a5ef069408a4402>`"
+msgstr ""
+
+msgid "Django 3.2 :commit:`(patch) <9e19accb6e0a00ba77d5a95a91675bf18877c72d>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <29a6c98b4c13af82064f993f0acc6e8fafa4d3f5>`"
+msgstr ""
+
+msgid "February 1, 2022 - :cve:`2022-22818`"
+msgstr ""
+
+msgid ""
+"Possible XSS via ``{% debug %}`` template tag. `Full description <https://"
+"www.djangoproject.com/weblog/2022/feb/01/security-releases/>`__"
+msgstr ""
+
+msgid "Versions affected"
+msgstr ""
+
+msgid "Django 4.0 :commit:`(patch) <01422046065d2b51f8f613409cad2c81b39487e5>`"
+msgstr ""
+
+msgid "Django 3.2 :commit:`(patch) <1a1e8278c46418bde24c86a65443b0674bae65e2>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <c27a7eb9f40b64990398978152e62b6ff839c2e6>`"
+msgstr ""
+
+msgid "February 1, 2022 - :cve:`2022-23833`"
+msgstr ""
+
+msgid ""
+"Denial-of-service possibility in file uploads. `Full description <https://"
+"www.djangoproject.com/weblog/2022/feb/01/security-releases/>`__"
+msgstr ""
+
+msgid "Django 4.0 :commit:`(patch) <f9c7d48fdd6f198a6494a9202f90242f176e4fc9>`"
+msgstr ""
+
+msgid "Django 3.2 :commit:`(patch) <d16133568ef9c9b42cb7a08bdf9ff3feec2e5468>`"
+msgstr ""
+
+msgid "Django 2.2 :commit:`(patch) <c477b761804984c932704554ad35f78a2e230c6a>`"
+msgstr ""
+
 msgid "January 4, 2022 - :cve:`2021-45452`"
 msgstr ""
 
 msgid ""
 "Potential directory-traversal via ``Storage.save()``. `Full description "
 "<https://www.djangoproject.com/weblog/2022/jan/04/security-releases/>`__"
-msgstr ""
-
-msgid "Versions affected"
 msgstr ""
 
 msgid "Django 4.0 :commit:`(patch) <e1592e0f26302e79856cc7f2218ae848ae19b0f6>`"

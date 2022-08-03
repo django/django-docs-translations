@@ -10,12 +10,14 @@
 # Hyungsuk Yoon <youhanmir@gmail.com>, 2016
 # Jay Oh <theanswer.jay@gmail.com>, 2020
 # Jubeen Lee <ljb7977@gmail.com>, 2020
+# 정환 윤, 2022
 # JunoJunho <wnsgh611@gmail.com>, 2015
 # Kyoung Up, Jung <perhapsspy@gmail.com>, 2016
 # Kyoung Up, Jung <perhapsspy@gmail.com>, 2016
+# decyma <soos3121@gmail.com>, 2022
 # Woo-Jing, Seok <woojing.seok@gmail.com>, 2016-2017
 # Subin Choi <os1742@gmail.com>, 2016
-# Taehwan Kim <maxtortime@ajou.ac.kr>, 2018
+# Kim Taehwan <maxtortime@ajou.ac.kr>, 2018
 # WooSuck Ko <ryanko7@ajou.ac.kr>, 2020
 # Yeonsu Bak <yeonsubak@gmail.com>, 2015
 # Yong Choi <sk8er.choi@gmail.com>, 2013,2019
@@ -23,9 +25,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-31 07:43-0600\n"
-"PO-Revision-Date: 2020-12-20 12:48+0000\n"
-"Last-Translator: WooSuck Ko <ryanko7@ajou.ac.kr>\n"
+"POT-Creation-Date: 2022-07-27 03:41-0500\n"
+"PO-Revision-Date: 2022-04-02 19:59+0000\n"
+"Last-Translator: 정환 윤\n"
 "Language-Team: Korean (http://www.transifex.com/django/django-docs/language/"
 "ko/)\n"
 "MIME-Version: 1.0\n"
@@ -114,12 +116,12 @@ msgstr ""
 
 msgid ""
 ":doc:`Tutorials </intro/index>` take you by the hand through a series of "
-"steps to create a Web application. Start here if you're new to Django or Web "
+"steps to create a web application. Start here if you're new to Django or web "
 "application development. Also look at the \":ref:`index-first-steps`\"."
 msgstr ""
-":doc:`튜토리얼 </intro/index>`\\ 은 단계별로 친절하게 웹 애플리케이션을 제작"
-"을 도와줍니다. 처음 Django를 접하거나 웹 개발에 입문 단계라면 여기서 시작하세"
-"요. 또한 하단의 \":ref:`index-first-steps`\"을 읽어보세요."
+":doc:`자습서 </intro/index>`는 웹 애플리케이션을 만드는 모든 과정을 자세히 설"
+"명합니다. Django 또는 웹 애플리케이션 개발이 처음이라면 여기에서 시작하세요. "
+"또한 \":ref:`index-first-steps`\"도 살펴보세요."
 
 msgid ""
 ":doc:`Topic guides </topics/index>` discuss key topics and concepts at a "
@@ -151,10 +153,10 @@ msgstr "모델 계층"
 
 msgid ""
 "Django provides an abstraction layer (the \"models\") for structuring and "
-"manipulating the data of your Web application. Learn more about it below:"
+"manipulating the data of your web application. Learn more about it below:"
 msgstr ""
-"Django는 웹 애플리케이션의 데이터를 구조화하고 조작하기 위한 추상적인 계층"
-"(\"모델\")을 제공합니다. 더 알아보세요."
+"Django는 웹 애플리케이션의 데이터를 구조화하고 조작하기 위한 추상적 계층(모"
+"델)을 제공합니다. 아래에서 자세히 알아보세요."
 
 msgid ""
 "**Models:** :doc:`Introduction to models <topics/db/models>` | :doc:`Field "
@@ -236,10 +238,9 @@ msgid ""
 "`Decorators <topics/http/decorators>` | :doc:`Asynchronous Support <topics/"
 "async>`"
 msgstr ""
-"**기본 사항:**:doc:입니다.URL confs <항목/http/urls> | :doc:보기 함수 | :"
-"doc : \"보기 함수 |/http/views | :doc:'바로 가기' | :doc: \"toptics/http/"
-"shortcuts | :doc:\"Decorators\" | :doc: \"Decorators | topics/http/"
-"decorators | :doc:비동기식 지원 <주제/비동기>입니다."
+"**기본 사항:**:doc:`URL 구성 <topics/http/urls>`  :doc:`View 함수 <topics/"
+"http/views>` | :doc:`Shortcuts 패키지<topics/http/shortcuts>` | :doc:`데코레"
+"이터 <topics/http/decorators>` | :doc:`비동기 지원 <topics/async>`"
 
 msgid ""
 "**Reference:** :doc:`Built-in Views <ref/views>` | :doc:`Request/response "
@@ -422,11 +423,11 @@ msgid "Security"
 msgstr "보안"
 
 msgid ""
-"Security is a topic of paramount importance in the development of Web "
+"Security is a topic of paramount importance in the development of web "
 "applications and Django provides multiple protection tools and mechanisms:"
 msgstr ""
-"보안은 웹 애플리케이션 개발에서 다른 무엇보다 중요한 문제이며 Django는 다양"
-"한 보안도구와 방법들을 제공합니다."
+"보안은 웹 애플리케이션 개발에서 가장 중요한 주제이며 Django는 여러 보호 도구"
+"와 메커니즘을 제공합니다."
 
 msgid ":doc:`Security overview <topics/security>`"
 msgstr ":doc:`보안 개요 <topics/security>`"
@@ -460,11 +461,8 @@ msgstr ""
 msgid ""
 ":doc:`Overview <topics/i18n/index>` | :doc:`Internationalization <topics/"
 "i18n/translation>` | :ref:`Localization <how-to-create-language-files>` | :"
-"doc:`Localized Web UI formatting and form input <topics/i18n/formatting>`"
+"doc:`Localized web UI formatting and form input <topics/i18n/formatting>`"
 msgstr ""
-":doc:`개요 <topics/i18n/index>` | :doc:`국제화 <topics/i18n/translation>` | :"
-"ref:`지역화 <how-to-create-language-files>` | :doc:`지역화 된 웹 UI 형식과 "
-"폼 입력 <topics/i18n/formatting>`"
 
 msgid ":doc:`Time zones </topics/i18n/timezones>`"
 msgstr ":doc:`표준 시간대 </topics/i18n/timezones>`"
@@ -487,21 +485,19 @@ msgstr "지리 프레임워크"
 
 msgid ""
 ":doc:`GeoDjango <ref/contrib/gis/index>` intends to be a world-class "
-"geographic Web framework. Its goal is to make it as easy as possible to "
-"build GIS Web applications and harness the power of spatially enabled data."
+"geographic web framework. Its goal is to make it as easy as possible to "
+"build GIS web applications and harness the power of spatially enabled data."
 msgstr ""
-":doc:`GeoDjango <ref/contrib/gis/index>`\\는 세계적 수준의 지리 웹 프레임워크"
-"가 되려고 합니다. 가능한 GIS 웹 애플리케이션을 쉽게 만들고, 공간 데이터의 성"
-"능을 충분히 활용하는 것이 목표입니다."
 
-msgid "Common Web application tools"
+msgid "Common web application tools"
 msgstr "일반적인 웹 애플리케이션 도구"
 
 msgid ""
-"Django offers multiple tools commonly needed in the development of Web "
+"Django offers multiple tools commonly needed in the development of web "
 "applications:"
 msgstr ""
-"Django는 웹 애플리케이션 개발에 공통적으로 요구되는 다양한 도구를 제공합니다."
+"Django는 웹 애플리케이션들의 개발에 보편적으로 필요한 여러가지 기능들을 제공"
+"합니다."
 
 msgid ""
 "**Authentication:** :doc:`Overview <topics/auth/index>` | :doc:`Using the "

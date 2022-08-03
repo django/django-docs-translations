@@ -31,19 +31,20 @@
 # Suntravel Chris <chrisfromcn@gmail.com>, 2019
 # Todd Kasaki <2524737581@qq.com>, 2021
 # Tuzi.Li <lzjwh1996@foxmail.com>, 2016
-# Veoco <one@nomox.cn>, 2020-2021
+# Veoco <one@nomox.cn>, 2020-2022
 # Vincent <Intelligent.vincent@gmail.com>, 2018
 # 汪心禾 <wangxinhe06@gmail.com>, 2018
 # Xin Qi <georgechii@outlook.com>, 2021
 # xin.wang <asimplelife@live.com>, 2018
 # xinyu liu <happy_lucky52@163.com>, 2017
 # yang quan <youngquan@qq.com>, 2020
+# Youxi Luo, 2022
 # spaceoi <zhangzhaoyu@gmail.com>, 2016
 # ZheJiao <jiaozhe1987@163.com>, 2019
 # BAKEZQ <zhongquan789@126.com>, 2018
 # 冬冬 李 <lsongzhi@163.com>, 2018
 # 吴彬 <xiake21x@qq.com>, 2016
-# fangjiaqi77 <370358679@qq.com>, 2020
+# Fangjiaqi77 <370358679@qq.com>, 2020
 # Dogify <595572594@qq.com>, 2018
 # 翔 付 <fuxiang2000@live.cn>, 2018
 # Dogify <595572594@qq.com>, 2019
@@ -51,9 +52,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-21 01:06-0600\n"
-"PO-Revision-Date: 2022-01-21 06:46+0000\n"
-"Last-Translator: Lu <lu2github@gmail.com>\n"
+"POT-Creation-Date: 2022-08-03 02:10-0500\n"
+"PO-Revision-Date: 2022-04-02 20:00+0000\n"
+"Last-Translator: Youxi Luo\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -1045,8 +1046,8 @@ msgstr ""
 "你可以使用强大的 :doc:`数据-模型语句</topics/db/models>` 来描述你的数据模型，"
 "这解决了数年以来在数据库模式中的难题。以下是一个简明的例子："
 
-msgid "mysite/news/models.py"
-msgstr "mysite/news/models.py"
+msgid "``mysite/news/models.py``"
+msgstr ""
 
 msgid "Install it"
 msgstr "应用数据模型"
@@ -1093,8 +1094,8 @@ msgstr ""
 "contrib/admin/index>`  ——一个允许认证用户添加、更改和删除对象的 Web 站点。你"
 "只需在管理站点上注册你的模型即可："
 
-msgid "mysite/news/admin.py"
-msgstr "mysite/news/admin.py"
+msgid "``mysite/news/admin.py``"
+msgstr ""
 
 msgid ""
 "The philosophy here is that your site is edited by a staff, or a client, or "
@@ -1140,8 +1141,8 @@ msgid ""
 "example above:"
 msgstr "下面这个 URLconf 适用于前面 ``Reporter``/``Article``  的例子："
 
-msgid "mysite/news/urls.py"
-msgstr "mysite/news/urls.py"
+msgid "``mysite/news/urls.py``"
+msgstr ""
 
 msgid ""
 "The code above maps URL paths to Python callback functions (\"views\"). The "
@@ -1193,8 +1194,8 @@ msgstr ""
 "通常来说，一个视图的工作就是：从参数获取数据，装载一个模板，然后将根据获取的"
 "数据对模板进行渲染。下面是一个 ``year_archive`` 的视图样例："
 
-msgid "mysite/news/views.py"
-msgstr "mysite/news/views.py"
+msgid "``mysite/news/views.py``"
+msgstr ""
 
 msgid ""
 "This example uses Django's :doc:`template system </topics/templates>`, which "
@@ -1227,8 +1228,8 @@ msgstr ""
 "让我们假设 ``news/year_archive.html`` 模板已经找到。它看起来可能是下面这个样"
 "子："
 
-msgid "mysite/news/templates/news/year_archive.html"
-msgstr "mysite/news/templates/news/year_archive.html"
+msgid "``mysite/news/templates/news/year_archive.html``"
+msgstr ""
 
 msgid ""
 "Variables are surrounded by double-curly braces. ``{{ article.headline }}`` "
@@ -1281,8 +1282,8 @@ msgstr ""
 "下面是 base.html 可能的样子，它使用了 :doc:`静态文件 </howto/static-files/"
 "index>` ："
 
-msgid "mysite/templates/base.html"
-msgstr "mysite/templates/base.html"
+msgid "``mysite/templates/base.html``"
+msgstr ""
 
 msgid ""
 "Simplistically, it defines the look-and-feel of the site (with the site's "
@@ -1536,8 +1537,8 @@ msgstr "将 ``polls`` 目录移入 ``django-polls`` 目录。"
 msgid "Create a file ``django-polls/README.rst`` with the following contents:"
 msgstr "创建一个名为 ``django-polls/README.rst`` 的文件，包含以下内容："
 
-msgid "django-polls/README.rst"
-msgstr "django-polls/README.rst"
+msgid "``django-polls/README.rst``"
+msgstr ""
 
 msgid ""
 "Create a ``django-polls/LICENSE`` file. Choosing a license is beyond the "
@@ -1556,24 +1557,24 @@ msgid ""
 "Next we'll create ``pyproject.toml``, ``setup.cfg``, and ``setup.py`` files "
 "which detail how to build and install the app. A full explanation of these "
 "files is beyond the scope of this tutorial, but the `setuptools "
-"documentation <https://setuptools.readthedocs.io/en/latest/>`_ has a good "
+"documentation <https://setuptools.pypa.io/en/latest/>`_ has a good "
 "explanation. Create the ``django-polls/pyproject.toml``, ``django-polls/"
 "setup.cfg``, and ``django-polls/setup.py`` files with the following contents:"
 msgstr ""
 "接下来我们将创建 ``pyproject.toml``、``setup.cfg`` 和 ``setup.py`` 文件，详细"
 "说明如何构建和安装该应用程序。对这些文件的全面解释超出了本教程的范围，但 "
-"`setuptools 文档 <https://setuptools.readthedocs.io/en/latest/>`_ 有很好的解"
-"释。创建 ``django-polls/pyproject.toml``、``django-polls/setup.cfg`` 和 "
-"``django-polls/setup.py`` 文件，内容如下："
+"`setuptools 文档 <https://setuptools.pypa.io/en/latest/>`_ 有很好的解释。创"
+"建 ``django-polls/pyproject.toml``、``django-polls/setup.cfg`` 和 ``django-"
+"polls/setup.py`` 文件，内容如下："
 
-msgid "django-polls/pyproject.toml"
-msgstr "django-polls/pyproject.toml"
+msgid "``django-polls/pyproject.toml``"
+msgstr ""
 
-msgid "django-polls/setup.cfg"
-msgstr "django-polls/setup.cfg"
+msgid "``django-polls/setup.cfg``"
+msgstr ""
 
-msgid "django-polls/setup.py"
-msgstr "django-polls/setup.py"
+msgid "``django-polls/setup.py``"
+msgstr ""
 
 msgid ""
 "Only Python modules and packages are included in the package by default. To "
@@ -1587,8 +1588,8 @@ msgstr ""
 "件。 要包含模板、``README.rst`` 和我们的 ``LICENSE`` 文件，创建一个文件 "
 "``django-polls/MANIFEST.in`` ，其内容如下： "
 
-msgid "django-polls/MANIFEST.in"
-msgstr "django-polls/MANIFEST.in"
+msgid "``django-polls/MANIFEST.in``"
+msgstr ""
 
 msgid ""
 "It's optional, but recommended, to include detailed documentation with your "
@@ -1612,8 +1613,8 @@ msgid ""
 "``django-polls``). This creates a directory called ``dist`` and builds your "
 "new package, ``django-polls-0.1.tar.gz``."
 msgstr ""
-"试着构建你自己的应用包通过 ``ptyhon setup.py sdist`` （在 ``django-polls``目"
-"录内）。这将创建一个名为 ``dist`` 的目录并构建你自己的应用包， ``django-"
+"试着用 ``python setup.py sdist`` 构建你的应用包（在 ``django-polls`` 目录运"
+"行）。这将创建一个名为 ``dist`` 的目录，并构建你的新应用包，``django-"
 "polls-0.1.tar.gz``。"
 
 msgid ""
@@ -2070,8 +2071,8 @@ msgstr ""
 "让我们开始编写第一个视图吧。打开 ``polls/views.py``，把下面这些 Python 代码输"
 "入进去："
 
-msgid "polls/views.py"
-msgstr "polls/views.py"
+msgid "``polls/views.py``"
+msgstr ""
 
 msgid ""
 "This is the simplest view possible in Django. To call the view, we need to "
@@ -2090,8 +2091,8 @@ msgstr ""
 msgid "In the ``polls/urls.py`` file include the following code:"
 msgstr "在 ``polls/urls.py`` 中，输入如下代码："
 
-msgid "polls/urls.py"
-msgstr "polls/urls.py"
+msgid "``polls/urls.py``"
+msgstr "``polls/urls.py``"
 
 msgid ""
 "The next step is to point the root URLconf at the ``polls.urls`` module. In "
@@ -2102,8 +2103,8 @@ msgstr ""
 "urls.py`` 文件的 ``urlpatterns`` 列表里插入一个 :func:`~django.conf.urls."
 "include`， 如下："
 
-msgid "mysite/urls.py"
-msgstr "mysite/urls.py"
+msgid "``mysite/urls.py``"
+msgstr ""
 
 msgid ""
 "The :func:`~django.urls.include` function allows referencing other URLconfs. "
@@ -2474,8 +2475,8 @@ msgstr ""
 "这些概念可以通过一个 Python 类来描述。按照下面的例子来编辑 :file:`polls/"
 "models.py` 文件："
 
-msgid "polls/models.py"
-msgstr "polls/models.py"
+msgid "``polls/models.py``"
+msgstr ""
 
 msgid ""
 "Here, each model is represented by a class that subclasses :class:`django.db."
@@ -2595,8 +2596,8 @@ msgstr ""
 "点式路径是 ``'polls.apps.PollsConfig'``。在文件 :file:`mysite/settings.py` "
 "中 :setting:`INSTALLED_APPS` 子项添加点式路径后，它看起来像这样："
 
-msgid "mysite/settings.py"
-msgstr "mysite/settings.py"
+msgid "``mysite/settings.py``"
+msgstr "``mysite/settings.py``"
 
 msgid ""
 "Now Django knows to include the ``polls`` app. Let's run another command:"
@@ -2918,6 +2919,9 @@ msgstr ""
 "现在，打开浏览器，转到你本地域名的 “/admin/” 目录， -- 比如 "
 "http://127.0.0.1:8000/admin/ 。你应该会看见管理员登录界面："
 
+msgid "Django admin login screen"
+msgstr "Django 管理员登录界面"
+
 msgid ""
 "Since :doc:`translation </topics/i18n/translation>` is turned on by default, "
 "if you set :setting:`LANGUAGE_CODE`, the login screen will be displayed in "
@@ -2936,6 +2940,9 @@ msgid ""
 msgstr ""
 "现在，试着使用你在上一步中创建的超级用户来登录。然后你将会看到 Django 管理页"
 "面的索引页："
+
+msgid "Django admin index page"
+msgstr ""
 
 msgid ""
 "You should see a few types of editable content: groups and users. They are "
@@ -2959,8 +2966,8 @@ msgstr ""
 "只需要再做一件事：我们得告诉管理，问题 ``Question`` 对象需要一个后台接口。打"
 "开 :file:`polls/admin.py` 文件，把它编辑成下面这样："
 
-msgid "polls/admin.py"
-msgstr "polls/admin.py"
+msgid "``polls/admin.py``"
+msgstr ""
 
 msgid "Explore the free admin functionality"
 msgstr "体验便捷的管理功能"
@@ -2972,6 +2979,9 @@ msgstr ""
 "现在我们向管理页面注册了问题 ``Question`` 类。Django 知道它应该被显示在索引页"
 "里："
 
+msgid "Django admin index page, now with polls displayed"
+msgstr ""
+
 msgid ""
 "Click \"Questions\". Now you're at the \"change list\" page for questions. "
 "This page displays all the questions in the database and lets you choose one "
@@ -2981,8 +2991,14 @@ msgstr ""
 "\" 。这个界面会显示所有数据库里的问题 Question 对象，你可以选择一个来修改。这"
 "里现在有我们在上一部分中创建的 “What's up?” 问题。"
 
+msgid "Polls change list page"
+msgstr ""
+
 msgid "Click the \"What's up?\" question to edit it:"
 msgstr "点击 “What's up?” 来编辑这个问题（Question）对象："
+
+msgid "Editing form for question object"
+msgstr ""
 
 msgid "Things to note here:"
 msgstr "注意事项："
@@ -3055,6 +3071,9 @@ msgstr ""
 "后点击 “保存并继续编辑(Save and add another)”按钮。然后点击右上角的 “历史"
 "(History)”按钮。你会看到一个列出了所有通过 Django 管理页面对当前对象进行的改"
 "变的页面，其中列出了时间戳和进行修改操作的用户名："
+
+msgid "History page for question object"
+msgstr ""
 
 msgid ""
 "When you're comfortable with the models API and have familiarized yourself "
@@ -3331,8 +3350,8 @@ msgstr ""
 msgid "Put the following code in that template:"
 msgstr "将下面的代码输入到刚刚创建的模板文件中："
 
-msgid "polls/templates/polls/index.html"
-msgstr "polls/templates/polls/index.html"
+msgid "``polls/templates/polls/index.html``"
+msgstr ""
 
 msgid ""
 "To make the tutorial shorter, all template examples use incomplete HTML. In "
@@ -3423,8 +3442,8 @@ msgstr ""
 "我们稍后再讨论你需要在 ``polls/detail.html``  里输入什么，但是如果你想试试上"
 "面这段代码是否正常工作的话，你可以暂时把下面这段输进去："
 
-msgid "polls/templates/polls/detail.html"
-msgstr "polls/templates/polls/detail.html"
+msgid "``polls/templates/polls/detail.html``"
+msgstr ""
 
 msgid "will get you started for now."
 msgstr "这样你就能测试了。"
@@ -3792,8 +3811,8 @@ msgstr ""
 msgid "Now, create a ``polls/results.html`` template:"
 msgstr "现在，创建一个 ``polls/results.html``  模板："
 
-msgid "polls/templates/polls/results.html"
-msgstr "polls/templates/polls/results.html"
+msgid "``polls/templates/polls/results.html``"
+msgstr ""
 
 msgid ""
 "Now, go to ``/polls/1/`` in your browser and vote in the question. You "
@@ -4269,8 +4288,8 @@ msgid ""
 "Put the following in the ``tests.py`` file in the ``polls`` application:"
 msgstr "将下面的代码写入 ``polls`` 应用里的 ``tests.py`` 文件内："
 
-msgid "polls/tests.py"
-msgstr "polls/tests.py"
+msgid "``polls/tests.py``"
+msgstr ""
 
 msgid ""
 "Here we have created a :class:`django.test.TestCase` subclass with a method "
@@ -4897,8 +4916,8 @@ msgid ""
 "Put the following code in that stylesheet (``polls/static/polls/style.css``):"
 msgstr "将以下代码放入样式表(``polls/static/polls/style.css``)："
 
-msgid "polls/static/polls/style.css"
-msgstr "polls/static/polls/style.css"
+msgid "``polls/static/polls/style.css``"
+msgstr ""
 
 msgid ""
 "Next, add the following at the top of ``polls/templates/polls/index.html``:"
@@ -5026,6 +5045,9 @@ msgid ""
 "\"Question\" field:"
 msgstr "以上修改使得 \"Publication date\" 字段显示在 \"Question\" 字段之前："
 
+msgid "Fields have been reordered"
+msgstr ""
+
 msgid ""
 "This isn't impressive with only two fields, but for admin forms with dozens "
 "of fields, choosing an intuitive order is an important usability detail."
@@ -5044,6 +5066,9 @@ msgid ""
 msgstr ""
 ":attr:`~django.contrib.admin.ModelAdmin.fieldsets` 元组中的第一个元素是字段集"
 "的标题。以下是我们的表单现在的样子："
+
+msgid "Form has fieldsets now"
+msgstr ""
 
 msgid "Adding related objects"
 msgstr "添加关联的对象"
@@ -5071,6 +5096,9 @@ msgid ""
 msgstr ""
 "现在 \"Choices\" 在 Django 后台页中是一个可用的选项了。“添加选项”的表单看起来"
 "像这样："
+
+msgid "Choice admin page"
+msgstr ""
 
 msgid ""
 "In that form, the \"Question\" field is a select box containing every "
@@ -5120,6 +5148,9 @@ msgstr ""
 msgid "Load the \"Add question\" page to see how that looks:"
 msgstr "加载“添加投票”页面来看看它长啥样："
 
+msgid "Add question page now has choices on it"
+msgstr ""
+
 msgid ""
 "It works like this: There are three slots for related Choices -- as "
 "specified by ``extra`` -- and each time you come back to the \"Change\" page "
@@ -5138,6 +5169,9 @@ msgstr ""
 "会被添加。如果你想移除已有的插槽，可以点击插槽右上角的X。以下图片展示了一个已"
 "添加的插槽："
 
+msgid "Additional slot added dynamically"
+msgstr ""
+
 msgid ""
 "One small problem, though. It takes a lot of screen space to display all the "
 "fields for entering related ``Choice`` objects. For that reason, Django "
@@ -5154,6 +5188,9 @@ msgid ""
 msgstr ""
 "通过 ``TabularInline`` （替代 ``StackedInline`` ），关联对象以一种表格式的方"
 "式展示，显得更加紧凑："
+
+msgid "Add question page now has more compact choices"
+msgstr ""
 
 msgid ""
 "Note that there is an extra \"Delete?\" column that allows removing rows "
@@ -5198,6 +5235,9 @@ msgstr ""
 
 msgid "Now the question change list page looks like this:"
 msgstr "现在修改投票的列表页看起来像这样："
+
+msgid "Polls change list page, updated"
+msgstr ""
 
 msgid ""
 "You can click on the column headers to sort by those values -- except in the "
@@ -5810,13 +5850,10 @@ msgstr ""
 
 msgid ""
 "Documentation fixes and improvements may be backported to the last release "
-"branch, at the discretion of the committer, however, once a version of "
-"Django is :ref:`no longer supported<supported-versions-policy>`, that "
-"version of the docs won't get any further updates."
+"branch, at the discretion of the merger, however, once a version of Django "
+"is :ref:`no longer supported<supported-versions-policy>`, that version of "
+"the docs won't get any further updates."
 msgstr ""
-"文档的修复和提升可能只会提交到最新的一个发布版本，这取决于提交者，然而，一旦"
-"一个 Django 的版本处于 :ref:`不在维护列表 <supported-versions-policy>` 中，这"
-"个版本对应的文档将不再更新。"
 
 msgid ""
 "The `main documentation web page`_ includes links to documentation for "

@@ -33,16 +33,18 @@
 # raingolee <raingolee@gmail.com>, 2018
 # ryan rain <holidaylover2010@gmail.com>, 2018
 # tianlong zhou <tlongzou@gmail.com>, 2019
-# Todd Kasaki <2524737581@qq.com>, 2020-2021
+# Todd Kasaki <2524737581@qq.com>, 2020-2022
 # Veoco <one@nomox.cn>, 2020-2022
 # Vincent Chan, 2018
 # Vincent <Intelligent.vincent@gmail.com>, 2019
 # Wehao Guo <kinggreenhall@gmail.com>, 2019
 # Wei Liu <2407802064@qq.com>, 2020
+# Wu Xiangfeng, 2022
 # Xiang Yu <bupt.aswmtjdsj@gmail.com>, 2013
 # xin.wang <asimplelife@live.com>, 2018
 # enginewang <engine74396@gmail.com>, 2018
 # ykh <614457662@qq.com>, 2018
+# Youxi Luo, 2022
 # myl7 <myl.ustc@gmail.com>, 2019
 # VinCiLord <lxfyok@gmail.com>, 2018
 # ZheJiao <jiaozhe1987@163.com>, 2019
@@ -62,9 +64,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-21 01:06-0600\n"
-"PO-Revision-Date: 2022-01-27 20:15+0000\n"
-"Last-Translator: Transifex Bot <>\n"
+"POT-Creation-Date: 2022-08-03 02:10-0500\n"
+"PO-Revision-Date: 2022-04-02 19:58+0000\n"
+"Last-Translator: Youxi Luo\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -74,7 +76,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "How to authenticate using ``REMOTE_USER``"
-msgstr ""
+msgstr "使用 ``REMOTE_USER`` 进行身份验证"
 
 msgid ""
 "This document describes how to make use of external authentication sources "
@@ -84,6 +86,10 @@ msgid ""
 "Windows Authentication or Apache and `mod_authnz_ldap`_, `CAS`_, `Cosign`_, "
 "`WebAuth`_, `mod_auth_sspi`_, etc."
 msgstr ""
+"本文档描述如何在 Django 应用中使用外部身份验证资源（在 web 服务器上设置 "
+"``REMOTE_USER`` 环境变量的地方）。这种类型的身份验证方法一般用在使用了单点登"
+"录方案的内部网站上，比如 IIS 和 Windows 一体化验证或者 Apache 和 "
+"`mod_authnz_ldap`_, `CAS`_, `Cosign`_, `WebAuth`_, `mod_auth_sspi`_ 等等。"
 
 msgid ""
 "When the web server takes care of authentication it typically sets the "
@@ -94,6 +100,12 @@ msgid ""
 "``PersistentRemoteUserMiddleware``, and :class:`~django.contrib.auth."
 "backends.RemoteUserBackend` classes found in :mod:`django.contrib.auth`."
 msgstr ""
+"当 Web 服务器负责鉴权时，通常会设置 ``REMOTE_USER`` 环境变量，这是为了在底层"
+"应用中使用。在 Django 中， ``REMOTE_USER`` 是作为 :attr:`request.META "
+"<django.http.HttpRequest.META>` 的参数来使用的。如果想在 Django 中使用 "
+"``REMOTE_USER``, 可以通过配置 ``RemoteUserMiddleware`` 中间件， "
+"``PersistentRemoteUserMiddleware`` 中间件，或者继承在 :mod:`django.contrib."
+"auth` 中的 :class:`~django.contrib.auth.backends.RemoteUserBackend` 来实现。"
 
 msgid "Configuration"
 msgstr "配置"
@@ -242,7 +254,7 @@ msgstr ""
 "RemoteUserMiddleware`。"
 
 msgid "How to write a custom storage class"
-msgstr ""
+msgstr "如何编写一个自定义的文件存储类"
 
 msgid ""
 "If you need to provide custom file storage -- a common example is storing "
@@ -432,7 +444,7 @@ msgstr ""
 "来得到另一个替代的名称。"
 
 msgid "How to write custom lookups"
-msgstr ""
+msgstr "如何编写自定义的查询器"
 
 msgid ""
 "Django offers a wide variety of :ref:`built-in lookups <field-lookups>` for "
@@ -608,6 +620,8 @@ msgid ""
 "further lookups afterward. So ``Experiment.objects."
 "filter(change__abs__lt=27)`` will generate the following SQL:"
 msgstr ""
+"使用 ``Transform`` 代替 ``Lookup`` 意味着我们可以在后面联锁更多的查询，所以 "
+"``Experiment.objects.filter(change__abs__lt=27)`` 将会生成下面的 SQL："
 
 msgid ""
 "Note that in case there is no other lookup specified, Django interprets "
@@ -876,7 +890,7 @@ msgstr ""
 "get_lookup('exact')``。"
 
 msgid "How to create custom ``django-admin`` commands"
-msgstr ""
+msgstr "编写自定义 ``django-admin`` 命令"
 
 msgid ""
 "Applications can register their own actions with ``manage.py``. For example, "
@@ -1221,11 +1235,8 @@ msgstr ""
 msgid ""
 "Tries to execute this command, performing system checks if needed (as "
 "controlled by the :attr:`requires_system_checks` attribute). If the command "
-"raises a :exc:`CommandError`, it's intercepted and printed to stderr."
+"raises a :exc:`CommandError`, it's intercepted and printed to ``stderr``."
 msgstr ""
-"试着执行此命令，如果需要的话，进行系统检查（由 :attr:"
-"`requires_system_checks` 控制）。若命令抛出 :exc:`CommandError`，这会导致命令"
-"中断，并将错误输出至 stderr。"
 
 msgid "Calling a management command in your code"
 msgstr "在你的代码中调用管理命令"
@@ -1250,10 +1261,9 @@ msgstr ""
 msgid ""
 "Uses the system check framework to inspect the entire Django project for "
 "potential problems. Serious problems are raised as a :exc:`CommandError`; "
-"warnings are output to stderr; minor notifications are output to stdout."
+"warnings are output to ``stderr``; minor notifications are output to "
+"``stdout``."
 msgstr ""
-"利用系统检查框架校验 Django 项目是否存在隐含的问题。严重的问题会抛出 :exc:"
-"`CommandError`；警告会输出至 stderr；次要通知输出至 stdout。"
 
 msgid ""
 "If ``app_configs`` and ``tags`` are both ``None``, all system checks are "
@@ -1324,17 +1334,13 @@ msgstr "异常类说明在运行管理命令时出错了。"
 msgid ""
 "If this exception is raised during the execution of a management command "
 "from a command line console, it will be caught and turned into a nicely-"
-"printed error message to the appropriate output stream (i.e., stderr); as a "
-"result, raising this exception (with a sensible description of the error) is "
-"the preferred way to indicate that something has gone wrong in the execution "
-"of a command. It accepts the optional ``returncode`` argument to customize "
-"the exit status for the management command to exit with, using :func:`sys."
-"exit`."
+"printed error message to the appropriate output stream (i.e., ``stderr``); "
+"as a result, raising this exception (with a sensible description of the "
+"error) is the preferred way to indicate that something has gone wrong in the "
+"execution of a command. It accepts the optional ``returncode`` argument to "
+"customize the exit status for the management command to exit with, using :"
+"func:`sys.exit`."
 msgstr ""
-"在命令行控制台里执行管理命令的过程中，如果抛出了这个异常，该异常将会被捕获并"
-"以便于阅读的样子打印到对应的输出流（i.e., stderr）；因此，抛出这个异常（对错"
-"误的适当描述）是说明命令执行出错了的首选方式。它接收可选参数 ``returncode`` "
-"来使用 :func:`sys.exit` 自定义退出管理命令所用的退出状态。"
 
 msgid ""
 "If a management command is called from code through :func:`~django.core."
@@ -1344,7 +1350,7 @@ msgstr ""
 "获异常取决于你。"
 
 msgid "How to create custom model fields"
-msgstr ""
+msgstr "编写自定义模型字段"
 
 msgid "Introduction"
 msgstr "介绍"
@@ -2315,7 +2321,7 @@ msgstr ""
 "数据，以减少后续调用再次检索文件的次数。"
 
 msgid "How to implement a custom template backend"
-msgstr ""
+msgstr "如何编写一个自定义的模板后端"
 
 msgid "Custom backends"
 msgstr "自定义后端"
@@ -2465,7 +2471,7 @@ msgstr ""
 "e.g. ``django.template.loaders.filesystem.Loader``."
 
 msgid "How to create custom template tags and filters"
-msgstr ""
+msgstr "如何编写自定义的模板标签和过滤器"
 
 msgid ""
 "Django's template language comes with a wide variety of :doc:`built-in tags "
@@ -4362,11 +4368,11 @@ msgstr ":setting:`TEMPLATES`"
 
 msgid ""
 "Enabling the cached template loader often improves performance drastically, "
-"as it avoids compiling each template every time it needs to be rendered. See "
-"the :ref:`template loaders docs <template-loaders>` for more information."
+"as it avoids compiling each template every time it needs to be rendered. "
+"When :setting:`DEBUG = False <DEBUG>`, the cached template loader is enabled "
+"automatically. See :class:`django.template.loaders.cached.Loader` for more "
+"information."
 msgstr ""
-"启用缓存的模板加载器通常会极大地提升性能，因为它避免了每次渲染模板时都编译它"
-"们。参考 :ref:`模板加载器文档 <template-loaders>` 获取更多信息。"
 
 msgid "Error reporting"
 msgstr "发送错误"
@@ -5106,7 +5112,7 @@ msgid ""
 "documentation for the default contents you should put in this file and what "
 "else you can add to it."
 msgstr ""
-"假设你有个叫做 ``mysite`` 的顶级项目包，期中包含一个模板 :file:`mysite/wsgi."
+"假设你有个叫做 ``mysite`` 的顶级项目包，其中包含一个模板 :file:`mysite/wsgi."
 "py`，模块包含一个 WSGI ``application`` 对象。如果你使用的是较新的 Django，这"
 "就是你运行 ``django-admin startproject mysite`` （使用你的项目名替换 "
 "``mysite``）后得到的目录结构。若该文件不存在，你需要创建它。参考文档 :doc:`/"
@@ -5632,7 +5638,7 @@ msgstr ""
 "者编写了本快速指南文档。"
 
 msgid "How to provide initial data for models"
-msgstr ""
+msgstr "如何为模型提供初始数据"
 
 msgid ""
 "It's sometimes useful to pre-populate your database with hard-coded data "
@@ -5853,13 +5859,13 @@ msgstr ""
 "接编辑模型文件。"
 
 msgid "How to configure and use logging"
-msgstr ""
+msgstr "如何配置和使用日志"
 
 msgid ":ref:`Django logging reference <logging-ref>`"
 msgstr ""
 
 msgid ":ref:`Django logging overview <logging-explanation>`"
-msgstr ""
+msgstr ":ref:`Django 日志概览 <logging-explanation>`"
 
 msgid ""
 "Django provides a working :ref:`default logging configuration <default-"
@@ -5918,7 +5924,7 @@ msgid ""
 msgstr ""
 
 msgid "Customize logging configuration"
-msgstr ""
+msgstr "自定义日志配置"
 
 msgid ""
 "Although Django's logging configuration works out of the box, you can "
@@ -5928,7 +5934,7 @@ msgid ""
 msgstr ""
 
 msgid "You can configure:"
-msgstr ""
+msgstr "你可以配置："
 
 msgid "logger mappings, to determine which records are sent to which handlers"
 msgstr ""
@@ -5966,16 +5972,16 @@ msgid ""
 msgstr ""
 
 msgid "Basic logging configuration"
-msgstr ""
+msgstr "基础日志配置"
 
 msgid "When configuring logging, it makes sense to"
 msgstr ""
 
 msgid "Create a ``LOGGING`` dictionary"
-msgstr ""
+msgstr "创建一个 ``LOGGING`` 目录"
 
 msgid "In your ``settings.py``::"
-msgstr ""
+msgstr "在你的 ``settings.py``:: 中"
 
 msgid ""
 "It nearly always makes sense to retain and extend the default logging "
@@ -6135,6 +6141,9 @@ msgid ""
 "that would be excessive and unhelpful if you had to deal with it in "
 "production."
 msgstr ""
+"当日志包含尽可能多的信息，而不是您不需要的信息时，日志是最有用的——需要多少取"
+"决于您正在做的事情。在调试时，您需要一定程度的信息，如果您不得不在生产环境中"
+"处理这些信息，那么这些信息将是多余的，而且毫无用处。"
 
 msgid ""
 "You can configure logging to provide you with the level of detail you need, "
@@ -6565,8 +6574,8 @@ msgstr ""
 "举个例子，你可以使用这项技术在 ``admin/base_site.html`` 管理员模板中添加自定"
 "义的Logo："
 
-msgid "templates/admin/base_site.html"
-msgstr "templates/admin/base_site.html"
+msgid "``templates/admin/base_site.html``"
+msgstr ""
 
 msgid "Key points to note:"
 msgstr "关键注意点："
@@ -7162,10 +7171,8 @@ msgstr ""
 msgid ""
 "If you're not using the Django test runner, you may need to also ensure that "
 "any console output is not captured which would hide deprecation warnings. "
-"For example, if you use `pytest <https://pytest.org/>`__:"
+"For example, if you use `pytest <https://docs.pytest.org/>`__:"
 msgstr ""
-"假如你没有使用 Django 的 test runner，你可能还需要确认没有终端输出被截胡，这"
-"可能会隐藏过期警告。例如，若你使用 `pytest <https://pytest.org/>`__:"
 
 msgid ""
 "Resolve any deprecation warnings with your current version of Django before "
@@ -7468,8 +7475,8 @@ msgstr ""
 "你也能提供会以 ``**hints`` 传递给数据库路由器的 :meth:`allow_migrate()` 方法"
 "的提示："
 
-msgid "myapp/dbrouters.py"
-msgstr "myapp/dbrouters.py"
+msgid "``myapp/dbrouters.py``"
+msgstr ""
 
 msgid "Then, to leverage this in your migrations, do the following::"
 msgstr "然后，要将其在迁移中生效，像下面这样做::"
@@ -7536,16 +7543,16 @@ msgstr ""
 "移，将 ``AddField`` 改为 ``AlterField``，添加 ``uuid`` 和 ``models`` 的导入。"
 "例子："
 
-msgid "0006_remove_uuid_null.py"
-msgstr "0006_remove_uuid_null.py"
+msgid "``0006_remove_uuid_null.py``"
+msgstr ""
 
 msgid ""
 "Edit the first migration file. The generated migration class should look "
 "similar to this:"
 msgstr "编辑第一个迁移文件。生成的迁移类应该看起来像这样："
 
-msgid "0004_add_uuid_field.py"
-msgstr "0004_add_uuid_field.py"
+msgid "``0004_add_uuid_field.py``"
+msgstr ""
 
 msgid ""
 "Change ``unique=True`` to ``null=True`` -- this will create the intermediary "
@@ -7565,8 +7572,8 @@ msgstr ""
 "RunPython` 或 :class:`~django.db.migrations.operations.RunSQL` 操作，为每个已"
 "存在的行创建一个唯一值（本例中 UUID）。同时添加 ``uuid`` 的导入。例子："
 
-msgid "0005_populate_uuid_values.py"
-msgstr "0005_populate_uuid_values.py"
+msgid "``0005_populate_uuid_values.py``"
+msgstr ""
 
 msgid ""
 "Now you can apply the migrations as usual with the :djadmin:`migrate` "
@@ -7696,8 +7703,8 @@ msgstr ""
 msgid "Here's a sample migration:"
 msgstr "这是一个迁移示例："
 
-msgid "myapp/migrations/0124_move_old_app_to_new_app.py"
-msgstr "myapp/migrations/0124_move_old_app_to_new_app.py"
+msgid "``myapp/migrations/0124_move_old_app_to_new_app.py``"
+msgstr ""
 
 msgid ""
 "Also consider what you want to happen when the migration is unapplied. You "

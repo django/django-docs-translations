@@ -29,6 +29,7 @@
 # HuanCheng Bai白宦成 <xiqingongzi@gmail.com>, 2019
 # Jahoo Yang <jahoo@pku.edu.cn>, 2021
 # ausaki <www.ljm969087551@qq.com>, 2018
+# Jiawei Xu <contactxjw@gmail.com>, 2022
 # JINGMING DAI <d664216@gmail.com>, 2018
 # jinwen wu <toono@qq.com>, 2018
 # df2dc1c92e792f7ae8417c51df43db8f_594d92a <0f49be28017426edb1db1a2ab6e67088_717605>, 2018
@@ -65,9 +66,11 @@
 # XingFive <haoxingwu@hotmail.com>, 2018
 # XingFive <haoxingwu@hotmail.com>, 2018
 # Xin Qi <georgechii@outlook.com>, 2021
+# xiaqi516, 2022
 # xy zhou <kevinzhou412183845@outlook.com>, 2021
 # dykai <yingkaidang@gmail.com>, 2019
 # yhliyr <lokidri@outlook.com>, 2018
+# Youxi Luo, 2022
 # Zhengyang Wang <sufforest@gmail.com>, 2018
 # Zhibo Zhang <805960083@qq.com>, 2019
 # BAKEZQ <zhongquan789@126.com>, 2018
@@ -82,6 +85,7 @@
 # 文隆 胡 <xcluas@gmail.com>, 2018
 # 景隆 王 <Arsenal591@126.com>, 2018
 # blacklin <chinalinzhijie@gmail.com>, 2020
+# 汪心禾 <wangxinhe06@gmail.com>, 2022
 # 郝逸先(Henry) <haoyixian1994@hotmail.com>, 2019
 # 阿西 <davidxu5945@qq.com>, 2018
 # Dogify <595572594@qq.com>, 2019
@@ -90,9 +94,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-21 01:06-0600\n"
-"PO-Revision-Date: 2022-02-12 21:16+0000\n"
-"Last-Translator: Transifex Bot <>\n"
+"POT-Creation-Date: 2022-07-27 03:41-0500\n"
+"PO-Revision-Date: 2022-04-02 20:02+0000\n"
+"Last-Translator: Youxi Luo\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -496,6 +500,18 @@ msgstr ""
 "Django 同步代码都在同一个线程中运行，从而完全兼容异步模式。注意，同步代码始终"
 "要与调用它的异步代码保持在不同线程中，所以你应该避免传递原始数据库句柄"
 "(handles)或者其他 thread-sensitive 引用。"
+
+msgid ""
+"In practice this restriction means that you should not pass features of the "
+"database ``connection`` object when calling ``sync_to_async()``. Doing so "
+"will trigger the thread safety checks:"
+msgstr ""
+
+msgid ""
+"Rather, you should encapsulate all database access within a helper function "
+"that can be called with ``sync_to_async()`` without relying on the "
+"connection object in the calling code."
+msgstr ""
 
 msgid "Customizing authentication in Django"
 msgstr "Django 中的自定义验证"
@@ -2228,7 +2244,7 @@ msgstr ""
 "理模型不会继承其子类的具体模型权限。"
 
 msgid "Authentication in web requests"
-msgstr ""
+msgstr "Web 请求的认证"
 
 msgid ""
 "Django uses :doc:`sessions </topics/http/sessions>` and middleware to hook "
@@ -3181,7 +3197,7 @@ msgstr ""
 msgid ""
 "The URL to redirect to after a successful password change. Defaults to "
 "``'password_change_done'``."
-msgstr ""
+msgstr "密码修改成功后跳转的 URL 。默认是 ``'password_change_done'`` 。"
 
 msgid ""
 "A custom \"change password\" form which must accept a ``user`` keyword "
@@ -3217,7 +3233,7 @@ msgid "This view will send an email if the following conditions are met:"
 msgstr ""
 
 msgid "The email address provided exists in the system."
-msgstr ""
+msgstr "提供的电子邮件地址存在于系统中。"
 
 msgid "The requested user is active (``User.is_active`` is ``True``)."
 msgstr ""
@@ -3288,6 +3304,7 @@ msgid ""
 "A valid email address. By default Django uses the :setting:"
 "`DEFAULT_FROM_EMAIL`."
 msgstr ""
+"一个合法的邮件地址。默认情况下，Django 使用 :setting:`DEFAULT_FROM_EMAIL` 。"
 
 msgid ""
 "The full name of a template to use for generating a :mimetype:`text/html` "
@@ -3368,6 +3385,8 @@ msgid ""
 "The full name of a template to use. Defaults to :file:`registration/"
 "password_reset_done.html` if not supplied."
 msgstr ""
+"被使用模板的全称。如果没有提供，则默认是 :file:`registration/"
+"password_reset_done.html`"
 
 msgid "**URL name:** ``password_reset_confirm``"
 msgstr "**URL name:** ``password_reset_confirm``"
@@ -3388,38 +3407,47 @@ msgid ""
 "The full name of a template to display the confirm password view. Default "
 "value is :file:`registration/password_reset_confirm.html`."
 msgstr ""
+"用于显示确认密码视图的模板全称。默认值是 :file:`registration/"
+"password_reset_confirm.html` 。"
 
 msgid ""
 "Instance of the class to check the password. This will default to "
 "``default_token_generator``, it's an instance of ``django.contrib.auth."
 "tokens.PasswordResetTokenGenerator``."
 msgstr ""
+"检查密码的类实例。默认是 ``default_token_generator``，它是 ``django.contrib."
+"auth.tokens.PasswordResetTokenGenerator`` 的实例。"
 
 msgid ""
 "A boolean indicating if the user should be automatically authenticated after "
 "a successful password reset. Defaults to ``False``."
 msgstr ""
+"布尔值，用来标示用户成功重置密码后是否会被自动验证。默认是 ``False`` 。"
 
 msgid ""
 "A dotted path to the authentication backend to use when authenticating a "
 "user if ``post_reset_login`` is ``True``. Required only if you have "
 "multiple :setting:`AUTHENTICATION_BACKENDS` configured. Defaults to ``None``."
 msgstr ""
+"验证后端的路径，用于当 ``post_reset_login`` 是 ``True`` 时验证用户使用。当拥"
+"有多个 :setting:`AUTHENTICATION_BACKENDS` 设置时才会用到。默认为 ``None`` 。"
 
 msgid ""
 "Form that will be used to set the password. Defaults to :class:`~django."
 "contrib.auth.forms.SetPasswordForm`."
 msgstr ""
+"用来设置密码的表单。默认是 :class:`~django.contrib.auth.forms."
+"SetPasswordForm` 。"
 
 msgid ""
 "URL to redirect after the password reset done. Defaults to "
 "``'password_reset_complete'``."
-msgstr ""
+msgstr "重置密码完成后跳转的 URL 。默认是 ``'password_reset_complete'`` 。"
 
 msgid ""
 "Token parameter displayed as a component of password reset URLs. Defaults to "
 "``'set-password'``."
-msgstr ""
+msgstr "Token 参数为密码重置链接的组成部分。默认是 ``'set-password'`` 。"
 
 msgid ""
 "``form``: The form (see ``form_class`` above) for setting the new user's "
@@ -3445,6 +3473,8 @@ msgid ""
 "The full name of a template to display the view. Defaults to :file:"
 "`registration/password_reset_complete.html`."
 msgstr ""
+"显示视图的模板全称。默认是 :file:`registration/password_reset_complete."
+"html` 。"
 
 msgid "Helper functions"
 msgstr "辅助函数"
@@ -4090,7 +4120,7 @@ msgid ""
 msgstr "现在 Django 将使用 Bcrypt 作为默认存储算法。"
 
 msgid "Using ``scrypt`` with Django"
-msgstr ""
+msgstr "在 Django 中使用 ``scrypt``"
 
 msgid ""
 "scrypt_ is similar to PBKDF2 and bcrypt in utilizing a set number of "
@@ -4103,7 +4133,7 @@ msgid ""
 msgstr ""
 
 msgid "To use scrypt_ as your default storage algorithm, do the following:"
-msgstr ""
+msgstr "使用 scrypt_ 作为你的默认存储算法，需要以下步骤："
 
 msgid ""
 "Modify :setting:`PASSWORD_HASHERS` to list ``ScryptPasswordHasher`` first. "
@@ -4111,7 +4141,7 @@ msgid ""
 msgstr ""
 
 msgid "``scrypt`` requires OpenSSL 1.1+."
-msgstr ""
+msgstr "``scrypt`` 需要 OpenSSL 1.1及更高版本。"
 
 msgid "Increasing the salt entropy"
 msgstr "增加盐的熵值"
@@ -4241,16 +4271,16 @@ msgstr ""
 "的值。换算公式是``memory_cost == 2 ** memory_cost_commandline`` 。"
 
 msgid "``scrypt``"
-msgstr ""
+msgstr "``scrypt``"
 
 msgid "scrypt_ has four attributes that can be customized:"
-msgstr ""
+msgstr "scrypt_ 有四个可以自定义的属性："
 
 msgid "``work_factor`` controls the number of iterations within the hash."
-msgstr ""
+msgstr "``work_factor`` 控制哈希的次数。"
 
 msgid "``block_size``"
-msgstr ""
+msgstr "``block_size``"
 
 msgid "``parallelism`` controls how many threads will run in parallel."
 msgstr ""
@@ -4270,7 +4300,7 @@ msgid "Estimating memory usage"
 msgstr ""
 
 msgid "The minimum memory requirement of scrypt_ is::"
-msgstr ""
+msgstr "scrypt_的最低内存需求是::"
 
 msgid ""
 "so you may need to tweak ``maxmem`` when changing the ``work_factor`` or "
@@ -4348,14 +4378,14 @@ msgstr ""
 msgid "First, we'll add the custom hasher:"
 msgstr "首先，我们添加一个自定义的哈希："
 
-msgid "accounts/hashers.py"
-msgstr "accounts/hashers.py"
+msgid "``accounts/hashers.py``"
+msgstr "``accounts/hashers.py``"
 
 msgid "The data migration might look something like:"
 msgstr "数据迁移可能类似于这样："
 
-msgid "accounts/migrations/0002_migrate_sha1_passwords.py"
-msgstr "accounts/migrations/0002_migrate_sha1_passwords.py"
+msgid "``accounts/migrations/0002_migrate_sha1_passwords.py``"
+msgstr "``accounts/migrations/0002_migrate_sha1_passwords.py``"
 
 msgid ""
 "Be aware that this migration will take on the order of several minutes for "
@@ -4365,8 +4395,8 @@ msgstr "注意，迁移将对上千名用户花费大约数十分钟，这取决
 msgid "Finally, we'll add a :setting:`PASSWORD_HASHERS` setting:"
 msgstr "最后，我们在 :setting:`PASSWORD_HASHERS` 中添加配置："
 
-msgid "mysite/settings.py"
-msgstr "mysite/settings.py"
+msgid "``mysite/settings.py``"
+msgstr "``mysite/settings.py``"
 
 msgid "Include any other hashers that your site uses in this list."
 msgstr "包含你的站点使用的此列表中的其他算法。"
@@ -5021,7 +5051,7 @@ msgid ""
 "Set :setting:`LOCATION <CACHES-LOCATION>` to the URL pointing to your Redis "
 "instance, using the appropriate scheme. See the ``redis-py`` docs for "
 "`details on the available schemes <https://redis-py.readthedocs.io/en/stable/"
-"#redis.ConnectionPool.from_url>`_."
+"connections.html#redis.connection.ConnectionPool.from_url>`_."
 msgstr ""
 
 msgid "For example, if Redis is running on localhost (127.0.0.1) port 6379::"
@@ -7166,14 +7196,14 @@ msgstr "基础表单"
 msgid "Given a contact form:"
 msgstr "提供联系表单："
 
-msgid "forms.py"
-msgstr "forms.py"
+msgid "``forms.py``"
+msgstr ""
 
 msgid "The view can be constructed using a ``FormView``:"
 msgstr "可以使用 ``FormView`` 构建视图："
 
-msgid "views.py"
-msgstr "views.py"
+msgid "``views.py``"
+msgstr ""
 
 msgid "Notes:"
 msgstr "注意："
@@ -7271,8 +7301,8 @@ msgstr ""
 "首先我们需要添加 :meth:`~django.db.models.Model.get_absolute_url()` 到 "
 "``Author`` 类："
 
-msgid "models.py"
-msgstr "models.py"
+msgid "``models.py``"
+msgstr ""
 
 msgid ""
 "Then we can use :class:`CreateView` and friends to do the actual work. "
@@ -7314,8 +7344,8 @@ msgstr ""
 msgid "Finally, we hook these new views into the URLconf:"
 msgstr "最后将这些新视图挂钩到URLconf中："
 
-msgid "urls.py"
-msgstr "urls.py"
+msgid "``urls.py``"
+msgstr ""
 
 msgid ""
 "These views inherit :class:`~django.views.generic.detail."
@@ -9770,8 +9800,8 @@ msgid "Querying in the opposite direction::"
 msgstr "反向查询："
 
 msgid ""
-"Counting in the opposite direction works in conjunction with distinct()::"
-msgstr "反向查询的计数与 distinct() ："
+"Counting in the opposite direction works in conjunction with ``distinct()``::"
+msgstr ""
 
 msgid "Queries can go round in circles::"
 msgstr "可以循环查询："
@@ -10831,7 +10861,7 @@ msgid ""
 "verbose_name`. Django will automatically capitalize the first letter where "
 "it needs to."
 msgstr ""
-"惯例是不将 :attr:`~Field.verbose_name` 的首字母大写，必要时 Djanog 会自动把首"
+"惯例是不将 :attr:`~Field.verbose_name` 的首字母大写，必要时 Django 会自动把首"
 "字母转换为大写。"
 
 msgid "Relationships"
@@ -11913,7 +11943,7 @@ msgid ""
 "regularly order by the ``last_name`` attribute when you use the proxy::"
 msgstr ""
 "你也可以用代理模型定义模型的另一种不同的默认排序方法。你也许不期望总对 "
-"“Persion” 进行排序，但是在使用代理时，总是依据 “last_name” 属性进行排序："
+"“Person” 进行排序，但是在使用代理时，总是依据 “last_name” 属性进行排序："
 
 msgid ""
 "Now normal ``Person`` queries will be unordered and ``OrderedPerson`` "
@@ -12210,8 +12240,8 @@ msgid ""
 "``models`` directory:"
 msgstr "比如，若你在 ``models`` 目录下有 ``organic.py`` 和 ``synthetic.py``："
 
-msgid "myapp/models/__init__.py"
-msgstr "myapp/models/__init__.py"
+msgid "``myapp/models/__init__.py``"
+msgstr ""
 
 msgid ""
 "Explicitly importing each model rather than using ``from .models import *`` "
@@ -14814,6 +14844,14 @@ msgstr ""
 "在 PostgreSQL 上，如果只使用一个键或索引，那么会使用 SQL 运算符 ``->`` 。如果"
 "使用多个操作符，则会使用 ``#>`` 运算符。"
 
+msgid "SQLite users"
+msgstr "SQLite 用户"
+
+msgid ""
+"On SQLite, ``\"true\"``, ``\"false\"``, and ``\"null\"`` string values will "
+"always be interpreted as ``True``, ``False``, and JSON ``null`` respectively."
+msgstr ""
+
 msgid "Containment and key lookups"
 msgstr "包含与键查找"
 
@@ -15951,12 +15989,9 @@ msgstr ""
 msgid ""
 "From outward appearances, this looks like the query has retrieved both the "
 "first name and last name. However, this example actually issued 3 queries. "
-"Only the first names were retrieved by the raw() query -- the last names "
+"Only the first names were retrieved by the ``raw()`` query -- the last names "
 "were both retrieved on demand when they were printed."
 msgstr ""
-"表面上，看起来该查询同时检出了 first name 和 last name。然而，这个例子实际上"
-"执行了三次查询。只有 first names 是由 raw() 查询检出的 —— last names 是在它们"
-"被打印时按需检出。"
 
 msgid ""
 "There is only one field that you can't leave out - the primary key field. "
@@ -17071,9 +17106,9 @@ msgstr ""
 "``DELETE`` and ``REPLACE`` 之前的任何语句之前提交）这个 Bug 有两个后果："
 
 msgid ""
-"The low level APIs for savepoints are only usable inside a transaction ie. "
+"The low level APIs for savepoints are only usable inside a transaction i.e. "
 "inside an :func:`atomic` block."
-msgstr "保存点的底层API只能在事务中可用，即在 :func:`atomic` 块中。"
+msgstr ""
 
 msgid "It's impossible to use :func:`atomic` when autocommit is turned off."
 msgstr "当关闭自动提交时，不能使用 :func:`atomic` 。"
@@ -18012,11 +18047,9 @@ msgstr ""
 msgid ""
 "The easiest way to configure email for local development is to use the :ref:"
 "`console <topic-email-console-backend>` email backend. This backend "
-"redirects all email to stdout, allowing you to inspect the content of mail."
+"redirects all email to ``stdout``, allowing you to inspect the content of "
+"mail."
 msgstr ""
-"出于开发的目的，最简单的配置邮件的方式是使用 :ref:`终端 <topic-email-console-"
-"backend>` 邮件后端。这个后端将所有的邮件重定向至标准输出，允许你观察邮件的内"
-"容。"
 
 msgid ""
 "The :ref:`file <topic-email-file-backend>` email backend can also be useful "
@@ -20854,8 +20887,8 @@ msgstr ""
 "型上的所有日期字段都将转换为实际的日期对象。验证失败可能会使底层模型实例处于"
 "不一致状态，因此不推荐对其重用。"
 
-msgid "Overriding the clean() method"
-msgstr "覆盖clean()方法 "
+msgid "Overriding the ``clean()`` method"
+msgstr ""
 
 msgid ""
 "You can override the ``clean()`` method on a model form to provide "
@@ -23068,9 +23101,9 @@ msgid ""
 "to let session data be expunged from time to time, the ``cache`` backend is "
 "for you."
 msgstr ""
-"这两中会话存储会非常快，但简单缓存会更快，因为它忽略了持久化。在大部分情况"
-"下，``cached_db`` 后端将足够快，但如果你需要最后一点的性能，并且愿意不时地删"
-"除会话数据，那么 ``cache`` 后端适合你。"
+"这两种会话存储都会非常快，但简单的缓存会更快，因为它忽视了持久化。在大部分情"
+"况下，``cached_db`` 后端已经足够快了，但如果你需要最后的一点性能，并且愿意时"
+"不时删除会话数据，那么 ``cache`` 后端更适合你。"
 
 msgid ""
 "If you use the ``cached_db`` session backend, you also need to follow the "
@@ -23192,7 +23225,7 @@ msgstr "**性能**"
 
 msgid ""
 "Finally, the size of a cookie can have an impact on the speed of your site."
-msgstr ""
+msgstr "最后，cookie 的大小可能会对您网站的速度造成影响。"
 
 msgid "Using sessions in views"
 msgstr "在视图中使用会话"
@@ -23274,11 +23307,9 @@ msgid "Deletes the test cookie. Use this to clean up after yourself."
 msgstr "删除测试cookie。使用完测试cookie后用它来删除。"
 
 msgid ""
-"Returns the age of session cookies, in seconds. Defaults to :setting:"
-"`SESSION_COOKIE_AGE`."
+"Returns the value of the setting :setting:`SESSION_COOKIE_AGE`. This can be "
+"overridden in a custom session backend."
 msgstr ""
-"返回 session cookies的失效时间，以秒为单位。默认 :setting:"
-"`SESSION_COOKIE_AGE` 。"
 
 msgid ""
 "Sets the expiration time for the session. You can pass a number of different "
@@ -23350,6 +23381,20 @@ msgstr ""
 "``None`` 。"
 
 msgid ""
+"This method is used by session backends to determine the session expiry age "
+"in seconds when saving the session. It is not really intended for usage "
+"outside of that context."
+msgstr ""
+
+msgid ""
+"In particular, while it is **possible** to determine the remaining lifetime "
+"of a session **just when** you have the correct ``modification`` value "
+"**and** the ``expiry`` is set as a ``datetime`` object, where you do have "
+"the ``modification`` value, it is more straight-forward to calculate the "
+"expiry by-hand::"
+msgstr ""
+
+msgid ""
 "Returns the date this session will expire. For sessions with no custom "
 "expiration (or those set to expire at browser close), this will equal the "
 "date :setting:`SESSION_COOKIE_AGE` seconds from now."
@@ -23358,8 +23403,9 @@ msgstr ""
 "的会话)，这将等于从现在开始的SESSION_COOKIE_AGE秒的日期。"
 
 msgid ""
-"This function accepts the same keyword arguments as :meth:`get_expiry_age`."
-msgstr "这个函数接受与 :meth:`get_expiry_age` 相同的参数。"
+"This function accepts the same keyword arguments as :meth:`get_expiry_age`, "
+"and similar notes on usage apply."
+msgstr ""
 
 msgid ""
 "Returns either ``True`` or ``False``, depending on whether the user's "
@@ -25310,8 +25356,8 @@ msgstr ""
 "例：分别被称为 ``'author-polls'`` 和 ``'publisher-polls'`` 。假设我们已经增强"
 "了这个应用程序，以便会在创建和显示 polls 时考虑实例命名空间"
 
-msgid "polls/urls.py"
-msgstr "polls/urls.py"
+msgid "``polls/urls.py``"
+msgstr "``polls/urls.py``"
 
 msgid "Using this setup, the following lookups are possible:"
 msgstr "使用这步后，可以进行以下查找："
@@ -29716,7 +29762,7 @@ msgid ""
 msgstr ""
 
 msgid "what information is collected"
-msgstr ""
+msgstr "会收集什么信息"
 
 msgid "where it will subsequently be stored"
 msgstr ""
@@ -29725,7 +29771,7 @@ msgid "how it will be transferred"
 msgstr ""
 
 msgid "who might have access to it."
-msgstr ""
+msgstr "谁可能访问它"
 
 msgid ""
 "To help control the collection of sensitive information, you can explicitly "
@@ -29735,7 +29781,7 @@ msgid ""
 msgstr ""
 
 msgid "``AdminEmailHandler``"
-msgstr ""
+msgstr "``AdminEmailHandler``"
 
 msgid ""
 "The built-in :class:`~django.utils.log.AdminEmailHandler` deserves a mention "
@@ -29824,8 +29870,8 @@ msgid ""
 "messages to the console:"
 msgstr "首先，这里有一个小配置，可以让你把所有的日志信息输出到控制台。"
 
-msgid "settings.py"
-msgstr "settings.py"
+msgid "``settings.py``"
+msgstr "``settings.py``"
 
 msgid ""
 "This configures the parent ``root`` logger to send messages with the "
@@ -31958,7 +32004,7 @@ msgstr ""
 msgid ""
 "Jinja2_ can offer performance improvements, particularly when it comes to "
 "speed."
-msgstr ""
+msgstr "Jinja2_ 可以提高性能，特别是在速度方面。"
 
 msgid ""
 "Alternative template systems vary in the extent to which they share Django's "
@@ -32763,7 +32809,7 @@ msgid "``jsonl``"
 msgstr "``jsonl``"
 
 msgid "Serializes to and from JSONL_."
-msgstr ""
+msgstr "序列化和反序列化为 JSONL_。"
 
 msgid "``yaml``"
 msgstr "``yaml``"
@@ -33445,6 +33491,9 @@ msgid ""
 "change its file permissions so that only you and your web server's user can "
 "read it. This is especially important in a shared-hosting environment."
 msgstr ""
+"由于配置文件包含敏感信息, 比如数据库密码, 所以应该限制对配置文件的访问. 比如"
+"更改文件权限, 从而只能令你和你的Web服务器能读取配置文件. 这在共享主机的环境中"
+"非常重要!"
 
 msgid "Available settings"
 msgstr "可用的配置项"
@@ -33630,6 +33679,9 @@ msgid ""
 "standalone. When invoked by your web server, or through :doc:`django-admin </"
 "ref/django-admin>`, Django will handle this for you."
 msgstr ""
+"注意，仅在你的代码是真的独立的情况下调用 ``django.setup()``。当被你的 Web 服"
+"务器调用时，或通过 :doc:`django-admin </ref/django-admin>` 调用，Django 会帮"
+"你处理这些。"
 
 msgid "``django.setup()`` may only be called once."
 msgstr "``django.setup()`` 只需调用一次。"
@@ -34103,7 +34155,7 @@ msgid ""
 msgstr ""
 
 msgid "See :ref:`signing-complex-data` for more details."
-msgstr ""
+msgstr "详见:ref:`signing-complex-data`"
 
 msgid ""
 "If the signature or value have been altered in any way, a ``django.core."
@@ -34133,7 +34185,7 @@ msgstr ""
 "为 ``'sha256'``。"
 
 msgid "The ``sign_object()`` and ``unsign_object()`` methods were added."
-msgstr ""
+msgstr "``sign_object()`` 和``unsign_object()`` 方法被添加了。"
 
 msgid "Using the ``salt`` argument"
 msgstr "使用 ``salt`` 参数"
@@ -35246,8 +35298,8 @@ msgstr ""
 "你可以直接测试 ``get_context_data()`` 方法，首先实例化视图，然后向 "
 "``setup()`` 传递一个 ``request``，然后再进行测试代码。"
 
-msgid "tests.py"
-msgstr "tests.py"
+msgid "``tests.py``"
+msgstr "``tests.py``"
 
 msgid "Tests and multiple host names"
 msgstr "测试与多主机名"
@@ -35549,8 +35601,8 @@ msgstr "常见的做法是在应用代码旁边有一个 *tests* 目录，结构
 msgid "Let's take a look inside a couple of those files:"
 msgstr "让我们看一下其中的两个文件："
 
-msgid "runtests.py"
-msgstr "runtests.py"
+msgid "``runtests.py``"
+msgstr "``runtests.py``"
 
 msgid ""
 "This is the script that you invoke to run the test suite. It sets up the "
@@ -35566,8 +35618,8 @@ msgstr ""
 "为了清楚起见，这个例子只包含了使用 Django 测试运行器所需的最基本的内容。你可"
 "能会要添加命令行选项来控制详细程度，传递要运行的特定测试标签等。"
 
-msgid "tests/test_settings.py"
-msgstr "tests/test_settings.py"
+msgid "``tests/test_settings.py``"
+msgstr "``tests/test_settings.py``"
 
 msgid ""
 "This file contains the :doc:`Django settings </topics/settings>` required to "
@@ -35836,7 +35888,7 @@ msgid "The ``enable_faulthandler`` and ``timing`` arguments were added."
 msgstr "增加了 ``enable_faulthandler`` 和 ``timing`` 参数。"
 
 msgid "The ``logger`` and ``shuffle`` arguments were added."
-msgstr ""
+msgstr "增加了 ``logger`` 和 ``shuffle`` 参数。"
 
 msgid "Attributes"
 msgstr "属性"
@@ -36101,9 +36153,9 @@ msgstr ""
 "意，则调用 ``sys.exit``。"
 
 msgid ""
-"If autoclobber is ``True``, the database will be destroyed without "
+"If ``autoclobber`` is ``True``, the database will be destroyed without "
 "consulting the user."
-msgstr "如果 autoclobber 为 ``True``，数据库将在不与用户协商的情况下被销毁。"
+msgstr ""
 
 msgid ""
 "``serialize`` determines if Django serializes the database into an in-memory "
@@ -37642,6 +37694,9 @@ msgid ""
 msgstr ""
 "一般的 Python 单元测试类都会扩展一个基类 :class:`unittest.TestCase`。Django "
 "提供了这个基类的一些扩展。"
+
+msgid "Hierarchy of Django unit testing classes (TestCase subclasses)"
+msgstr ""
 
 msgid "Hierarchy of Django unit testing classes"
 msgstr "Django 单元测试类的层次结构"

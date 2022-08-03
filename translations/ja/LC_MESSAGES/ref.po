@@ -8,6 +8,7 @@
 # BanjinS <banjin-s@qbooks.jp>, 2016
 # Claude Paroz <claude@2xlibre.net>, 2020
 # Eiji WARASHINA <Eiji.Warashina@gmail.com>, 2016
+# eitaro, 2022
 # Hiroyuki Imai <hiroyuki.wx@gmail.com>, 2020
 # IjIj <ijijsamurai@gmail.com>, 2021
 # Ikemoto Hideki <ikemo333@gmail.com>, 2020-2021
@@ -16,6 +17,7 @@
 # BanjinS <banjin-s@qbooks.jp>, 2016
 # Kosuke Yamashima <Renet.pc@gmail.com>, 2017
 # Makoto Mori <makomori@sfc.wide.ad.jp>, 2016
+# Mariusz Felisiak <felisiak.mariusz@gmail.com>, 2022
 # Masashi SHIBATA <contact@c-bata.link>, 2021
 # Masashi SHIBATA <contact@c-bata.link>, 2016
 # matsuand, 2018
@@ -45,9 +47,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-21 01:06-0600\n"
-"PO-Revision-Date: 2022-02-01 10:25+0000\n"
-"Last-Translator: Transifex Bot <>\n"
+"POT-Creation-Date: 2022-08-03 02:10-0500\n"
+"PO-Revision-Date: 2022-04-02 20:01+0000\n"
+"Last-Translator: Mariusz Felisiak <felisiak.mariusz@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -3657,8 +3659,7 @@ msgstr "**例 myapp/article_list.html**:"
 
 msgid ""
 "If you're using pagination, you can adapt the :ref:`example template from "
-"the pagination docs <using-paginator-in-view>`. Change instances of "
-"``contacts`` in that example template to ``page_obj``."
+"the pagination docs <paginating-a-list-view>`."
 msgstr ""
 
 msgid ""
@@ -9363,10 +9364,10 @@ msgid ""
 "subclass."
 msgstr ""
 
-msgid "myapp/admin.py"
+msgid "``myapp/admin.py``"
 msgstr ""
 
-msgid "myproject/urls.py"
+msgid "``myproject/urls.py``"
 msgstr ""
 
 msgid ""
@@ -9387,13 +9388,13 @@ msgid ""
 "that returns a site instance."
 msgstr ""
 
-msgid "myproject/admin.py"
+msgid "``myproject/admin.py``"
 msgstr ""
 
-msgid "myproject/apps.py"
+msgid "``myproject/apps.py``"
 msgstr ""
 
-msgid "myproject/settings.py"
+msgid "``myproject/settings.py``"
 msgstr ""
 
 msgid "Multiple admin sites in the same URLconf"
@@ -9753,7 +9754,7 @@ msgid ""
 "``admin_change_form_document_ready`` block and add the event listener code:"
 msgstr ""
 
-msgid "app/static/app/formset_handlers.js"
+msgid "``app/static/app/formset_handlers.js``"
 msgstr ""
 
 msgid "Two points to keep in mind:"
@@ -9778,7 +9779,7 @@ msgid ""
 "jQuery`` namespace, listen to the event triggered from there. For example:"
 msgstr ""
 
-msgid "app/static/app/unregistered_handlers.js"
+msgid "``app/static/app/unregistered_handlers.js``"
 msgstr ""
 
 msgid "``django.contrib.auth``"
@@ -10867,6 +10868,14 @@ msgid ""
 "If these fields are named \"content_type\" and \"object_id\", you can omit "
 "this -- those are the default field names :class:`~django.contrib."
 "contenttypes.fields.GenericForeignKey` will look for."
+msgstr ""
+
+msgid ""
+"Unlike for the :class:`~django.db.models.ForeignKey`, a database index is "
+"*not* automatically created on the :class:`~django.contrib.contenttypes."
+"fields.GenericForeignKey`, so it's recommended that you use :attr:`Meta."
+"indexes <django.db.models.Options.indexes>` to add your own multiple column "
+"index. This behavior :ticket:`may change <23435>` in the future."
 msgstr ""
 
 msgid ""
@@ -12606,7 +12615,7 @@ msgstr ""
 msgid ""
 "*Availability*: `PostGIS <https://postgis.net/docs/ST_MinimumBoundingCircle."
 "html>`__, `Oracle <https://docs.oracle.com/en/database/oracle/oracle-"
-"database/18/spatl/ SDO_GEOM-reference.html#GUID-82A61626-BB64-4793-B53D-"
+"database/21/spatl/ SDO_GEOM-reference.html#GUID-82A61626-BB64-4793-B53D-"
 "A0DBEC91831A>`_"
 msgstr ""
 
@@ -12697,8 +12706,8 @@ msgstr ""
 msgid ""
 "*Availability*: MariaDB, `MySQL <https://dev.mysql.com/doc/refman/en/gis-"
 "general-property-functions.html#function_st-envelope>`__, `Oracle <https://"
-"docs.oracle.com/en/database/oracle/oracle-database/18/spatl/ SDO_GEOM-"
-"reference.html#GUID-646638D0-2C5F-490A-AF63-DE9B7A4C97C1__CHDJCEIH>`__, "
+"docs.oracle.com/en/database/oracle/oracle-database/21/spatl/ spatial-"
+"operators-reference.html#GUID-ACED800F-3435-44AA-9606-D40934A23ED0>`__, "
 "`PostGIS <https://postgis.net/docs/ST_Envelope.html>`__, SpatiaLite"
 msgstr ""
 
@@ -15981,7 +15990,7 @@ msgid "Every point of the other geometry is a point of this geometry."
 msgstr ""
 
 msgid ""
-"The DE-9IM Intersection Matrix for the two geometries is ``T*****FF*``, "
+"The `DE-9IM`_ Intersection Matrix for the two geometries is ``T*****FF*``, "
 "``*T****FF*``, ``***T**FF*``, or ``****T*FF*``."
 msgstr ""
 
@@ -17312,10 +17321,10 @@ msgstr ""
 
 msgid ""
 "On Debian/Ubuntu, you are advised to install the following packages: "
-"postgresql-x.x, postgresql-x.x-postgis, postgresql-server-dev-x.x, python-"
-"psycopg2 (x.x matching the PostgreSQL version you want to install). "
-"Alternately, you can `build from source`_. Consult the platform-specific "
-"instructions if you are on :ref:`macos` or :ref:`windows`."
+"``postgresql-x.x``, ``postgresql-x.x-postgis``, ``postgresql-server-dev-x."
+"x``, and ``python-psycopg2`` (x.x matching the PostgreSQL version you want "
+"to install). Alternately, you can `build from source`_. Consult the platform-"
+"specific instructions if you are on :ref:`macos` or :ref:`windows`."
 msgstr ""
 
 msgid "Post-installation"
@@ -24958,18 +24967,23 @@ msgid ""
 "`OPTIONS` part of your database configuration in :setting:`DATABASES`:"
 msgstr ""
 
-msgid "settings.py"
-msgstr "settings.py"
-
-msgid ".pg_service.conf"
+msgid "``settings.py``"
 msgstr ""
 
-msgid ".my_pgpass"
+msgid "``.pg_service.conf``"
+msgstr ""
+
+msgid "``.my_pgpass``"
 msgstr ""
 
 msgid ""
 "Support for connecting by a service name, and specifying a password file was "
 "added."
+msgstr ""
+
+msgid ""
+"Using a service name for testing purposes is not supported. This :ticket:"
+"`may be implemented later <33685>`."
 msgstr ""
 
 msgid "Optimizing PostgreSQL's configuration"
@@ -25952,7 +25966,7 @@ msgid ""
 "``allows_group_by_selected_pks_on_model``:"
 msgstr ""
 
-msgid "mysite/mydbengine/base.py"
+msgid "``mysite/mydbengine/base.py``"
 msgstr ""
 
 msgid ""
@@ -25984,6 +25998,9 @@ msgstr ""
 
 msgid "`Microsoft SQL Server`_"
 msgstr "`Microsoft SQL Server`_"
+
+msgid "`TiDB`_"
+msgstr ""
 
 msgid ""
 "The Django versions and ORM features supported by these unofficial backends "
@@ -30280,7 +30297,7 @@ msgid ""
 "adding and deleting forms from a formset."
 msgstr ""
 ":doc:`Formsets </topics/forms/formsets>` は、フォームセットにフォームを追加ま"
-"たは削除したときのブラウザの\b誤検証を避けるため、 "
+"たは削除したときのブラウザの誤検証を避けるため、 "
 "``use_required_attribute=False`` としてフォームをインスタンス化します。"
 
 msgid "Configuring the rendering of a form's widgets"
@@ -32002,7 +32019,7 @@ msgid ""
 "when the form is rendered."
 msgstr ""
 
-msgid "``ModelChoiceField`` also takes two optional arguments:"
+msgid "``ModelChoiceField`` also takes several optional arguments:"
 msgstr ""
 
 msgid ""
@@ -32014,9 +32031,10 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Note that if a ``ModelChoiceField`` is required and has a default initial "
-"value, no empty choice is created (regardless of the value of "
-"``empty_label``)."
+"Note that no empty choice is created (regardless of the value of "
+"``empty_label``) if a ``ModelChoiceField`` is required and has a default "
+"initial value, or a ``widget`` is set to :class:`~django.forms.RadioSelect` "
+"and the :attr:`~ModelChoiceField.blank` argument is ``False``."
 msgstr ""
 
 msgid ""
@@ -32031,6 +32049,12 @@ msgid "would yield:"
 msgstr ""
 
 msgid "and::"
+msgstr ""
+
+msgid ""
+"When using the :class:`~django.forms.RadioSelect` widget, this optional "
+"boolean argument determines whether an empty choice is created. By default, "
+"``blank`` is ``False``, in which case no empty choice is created."
 msgstr ""
 
 msgid "``ModelChoiceField`` also has the attribute:"
@@ -34742,10 +34766,11 @@ msgstr ""
 
 msgid ""
 "When your site is served via HTTPS, :ref:`Django's CSRF protection system "
-"<using-csrf>` requires the ``Referer`` header to be present, so completely "
-"disabling the ``Referer`` header will interfere with CSRF protection. To "
-"gain most of the benefits of disabling ``Referer`` headers while also "
-"keeping CSRF protection, consider enabling only same-origin referrers."
+"<how-csrf-works>` requires the ``Referer`` header to be present, so "
+"completely disabling the ``Referer`` header will interfere with CSRF "
+"protection. To gain most of the benefits of disabling ``Referer`` headers "
+"while also keeping CSRF protection, consider enabling only same-origin "
+"referrers."
 msgstr ""
 
 msgid ""
@@ -37475,7 +37500,7 @@ msgid ""
 "the SQL as needed. For example:"
 msgstr ""
 
-msgid "django/db/models/functions.py"
+msgid "``django/db/models/functions.py``"
 msgstr ""
 
 msgid ""
@@ -39942,10 +39967,10 @@ msgid ""
 "are not relative to the abstract model's ``app_label``:"
 msgstr ""
 
-msgid "products/models.py"
+msgid "``products/models.py``"
 msgstr ""
 
-msgid "production/models.py"
+msgid "``production/models.py``"
 msgstr ""
 
 msgid ""
@@ -43525,6 +43550,17 @@ msgid ""
 "in which case all possible combinations will be returned."
 msgstr ""
 
+msgid "Special values for ``JSONField`` on SQLite"
+msgstr ""
+
+msgid ""
+"Due to the way the ``JSON_EXTRACT`` and ``JSON_TYPE`` SQL functions are "
+"implemented on SQLite, and lack of the ``BOOLEAN`` data type, ``values()`` "
+"will return ``True``, ``False``, and ``None`` instead of ``\"true\"``, ``"
+"\"false\"``, and ``\"null\"`` strings for :class:`~django.db.models."
+"JSONField` key transforms."
+msgstr ""
+
 msgid "``values_list()``"
 msgstr ""
 
@@ -43589,6 +43625,14 @@ msgstr ""
 msgid ""
 "Similarly, when querying a reverse foreign key, ``None`` appears for entries "
 "not having any author::"
+msgstr ""
+
+msgid ""
+"Due to the way the ``JSON_EXTRACT`` and ``JSON_TYPE`` SQL functions are "
+"implemented on SQLite, and lack of the ``BOOLEAN`` data type, "
+"``values_list()`` will return ``True``, ``False``, and ``None`` instead of ``"
+"\"true\"``, ``\"false\"``, and ``\"null\"`` strings for :class:`~django.db."
+"models.JSONField` key transforms."
 msgstr ""
 
 msgid "``dates()``"
@@ -44505,8 +44549,8 @@ msgstr ""
 
 msgid ""
 "Even if you think you are in the advanced use-case situation, **only use "
-"defer() when you cannot, at queryset load time, determine if you will need "
-"the extra fields or not**. If you are frequently loading and using a "
+"``defer()`` when you cannot, at queryset load time, determine if you will "
+"need the extra fields or not**. If you are frequently loading and using a "
 "particular subset of your data, the best choice you can make is to normalize "
 "your models and put the non-loaded data into a separate model (and database "
 "table). If the columns *must* stay in the one table for some reason, create "
@@ -50411,6 +50455,10 @@ msgid ""
 "this can have serious security implications, there is a validation check to "
 "prevent it."
 msgstr ""
+"MEDIA_ROOT と STATIC_ROOT は異なる値である必要があります。STATIC_ROOT が導入"
+"される前は、静的ファイルを提供するために MEDIA_ROOT に依存したりフォールバッ"
+"クしたりすることが一般的でしたが、これは重大なセキュリティ上の影響を与える可"
+"能性があるので、これを防ぐための検証チェックが行われています。"
 
 msgid "``MEDIA_URL``"
 msgstr ""
@@ -58269,10 +58317,10 @@ msgstr ""
 "継承している他のテンプレートや、 :ttag:`include` で取り込んだテンプレートでも"
 "有効です。例えば:"
 
-msgid "base.html"
+msgid "``base.html``"
 msgstr ""
 
-msgid "child.html"
+msgid "``child.html``"
 msgstr ""
 
 msgid ""
@@ -58378,10 +58426,10 @@ msgid ""
 "You can also access methods you've explicitly defined on your own models:"
 msgstr ""
 
-msgid "models.py"
-msgstr "models.py"
+msgid "``models.py``"
+msgstr ""
 
-msgid "template.html"
+msgid "``template.html``"
 msgstr ""
 
 msgid ""
@@ -59605,7 +59653,7 @@ msgid "``SyndicationFeed``"
 msgstr ""
 
 msgid ""
-"Base class for all syndication feeds. Subclasses should provide write()."
+"Base class for all syndication feeds. Subclasses should provide ``write()``."
 msgstr ""
 
 msgid ""

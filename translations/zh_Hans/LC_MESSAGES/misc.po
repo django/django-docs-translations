@@ -10,7 +10,9 @@
 # Haotian Wang <twistoy.wang@gmail.com>, 2018
 # huanqun yang <15810163905@163.com>, 2018
 # Ronald White <tkliuxing@me.com>, 2014
+# peiji liu, 2022
 # qiang wu <wuqiangroy@live.com>, 2018
+# Todd Kasaki <2524737581@qq.com>, 2022
 # Veoco <one@nomox.cn>, 2020
 # 汪心禾 <wangxinhe06@gmail.com>, 2018
 # woodenrobot <woodenrobot1993@gmail.com>, 2020
@@ -24,9 +26,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-31 07:43-0600\n"
-"PO-Revision-Date: 2020-11-30 05:43+0000\n"
-"Last-Translator: Veoco <one@nomox.cn>\n"
+"POT-Creation-Date: 2022-07-27 03:41-0500\n"
+"PO-Revision-Date: 2022-04-02 20:00+0000\n"
+"Last-Translator: Todd Kasaki <2524737581@qq.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -190,12 +192,12 @@ msgstr ""
 "的代码，除非它们确实需要。"
 
 msgid ""
-"For example, the template system knows nothing about Web requests, the "
+"For example, the template system knows nothing about web requests, the "
 "database layer knows nothing about data display and the view system doesn't "
 "care which template system a programmer uses."
 msgstr ""
-"例如，模板系统不需要知道用户的 Web 请求，数据库层不需要了解如果显示数据，而视"
-"图并不关心程序员所使用的模板系统。"
+"例如，模板系统不需要知道用户的 Web 请求，数据库层不需要了解视图层，而视图层并"
+"不关心程序员所使用的模板系统。"
 
 msgid ""
 "Although Django comes with a full stack for convenience, the pieces of the "
@@ -219,9 +221,9 @@ msgid "Quick development"
 msgstr "快速开发"
 
 msgid ""
-"The point of a Web framework in the 21st century is to make the tedious "
-"aspects of Web development fast. Django should allow for incredibly quick "
-"Web development."
+"The point of a web framework in the 21st century is to make the tedious "
+"aspects of web development fast. Django should allow for incredibly quick "
+"web development."
 msgstr ""
 "在 21 世纪，Web 框架的核心一点是让 Web 开发中枯燥的事情处理得更加快速，"
 "Django 可以做到快速的 Web 开发。"
@@ -401,7 +403,7 @@ msgid ""
 msgstr ""
 "框架可以做到让开发者简单（或更加简单）地设计出漂亮的，而不是难看的 URL。"
 
-msgid "File extensions in Web-page URLs should be avoided."
+msgid "File extensions in web-page URLs should be avoided."
 msgstr "在 URL 中应避免出现文件后缀名。"
 
 msgid "Vignette-style commas in URLs deserve severe punishment."
@@ -412,7 +414,7 @@ msgstr "定义URL"
 
 msgid ""
 "Technically, ``foo.com/bar`` and ``foo.com/bar/`` are two different URLs, "
-"and search-engine robots (and some Web traffic-analyzing tools) would treat "
+"and search-engine robots (and some web traffic-analyzing tools) would treat "
 "them as separate pages. Django should make an effort to \"normalize\" URLs "
 "so that search-engine robots don't get confused."
 msgstr ""
