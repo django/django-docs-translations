@@ -1,48 +1,59 @@
 [main]
-host = https://www.transifex.com
-lang_map = zh_CN:zh_Hans, zh_TW:zh_Hant
+host     = https://www.transifex.com
+lang_map = zh_CN: zh_Hans, zh_TW: zh_Hant
 
-[django-docs.contents]
+[o:django:p:django-docs:r:contents]
 file_filter = translations/<lang>/LC_MESSAGES/contents.po
+source_file = translations/en/LC_MESSAGES/contents.po
 source_lang = en
 
-[django-docs.faq]
+[o:django:p:django-docs:r:faq]
 file_filter = translations/<lang>/LC_MESSAGES/faq.po
+source_file = translations/en/LC_MESSAGES/faq.po
 source_lang = en
 
-[django-docs.glossary-1]
+[o:django:p:django-docs:r:glossary-1]
 file_filter = translations/<lang>/LC_MESSAGES/glossary.po
+source_file = translations/en/LC_MESSAGES/glossary.po
 source_lang = en
 
-[django-docs.howto]
+[o:django:p:django-docs:r:howto]
 file_filter = translations/<lang>/LC_MESSAGES/howto.po
+source_file = translations/en/LC_MESSAGES/howto.po
 source_lang = en
 
-[django-docs.index]
+[o:django:p:django-docs:r:index]
 file_filter = translations/<lang>/LC_MESSAGES/index.po
+source_file = translations/en/LC_MESSAGES/index.po
 source_lang = en
 
-[django-docs.internals]
+[o:django:p:django-docs:r:internals]
 file_filter = translations/<lang>/LC_MESSAGES/internals.po
+source_file = translations/en/LC_MESSAGES/internals.po
 source_lang = en
 
-[django-docs.intro]
+[o:django:p:django-docs:r:intro]
 file_filter = translations/<lang>/LC_MESSAGES/intro.po
+source_file = translations/en/LC_MESSAGES/intro.po
 source_lang = en
 
-[django-docs.misc]
+[o:django:p:django-docs:r:misc]
 file_filter = translations/<lang>/LC_MESSAGES/misc.po
+source_file = translations/en/LC_MESSAGES/misc.po
 source_lang = en
 
-[django-docs.reference]
+[o:django:p:django-docs:r:reference]
 file_filter = translations/<lang>/LC_MESSAGES/ref.po
+source_file = translations/en/LC_MESSAGES/ref.po
 source_lang = en
 
-[django-docs.releases]
+[o:django:p:django-docs:r:releases]
 file_filter = translations/<lang>/LC_MESSAGES/releases.po
+source_file = translations/en/LC_MESSAGES/releases.po
 source_lang = en
 
-[django-docs.topics]
+[o:django:p:django-docs:r:topics]
 file_filter = translations/<lang>/LC_MESSAGES/topics.po
+source_file = translations/en/LC_MESSAGES/topics.po
 source_lang = en
 

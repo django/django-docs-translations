@@ -64,7 +64,10 @@ def fetch(resources=(), languages=None):
     Fetch translations from Transifex, remove source lines.
     """
     if call("tx --version", shell=True) != 0:
-        sys.stderr.write("The Transifex client app is required (pip install transifex-client).\n")
+        sys.stderr.write(
+            "The Transifex client app is required. To install it, run:\n "
+            "curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash\n"
+        )
         exit(1)
     if languages is None:
         languages = ACTIVE_LANGUAGES
