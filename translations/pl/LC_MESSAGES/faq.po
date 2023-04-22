@@ -9,7 +9,7 @@
 # Darek505, 2022
 # Jarek Kowalewski <jaroslaw.kowalewski@students.waw.pl>, 2016
 # Maciej Olko <maciej.olko@gmail.com>, 2016-2021
-# Maciej Olko <maciej.olko@gmail.com>, 2022
+# Maciej Olko <maciej.olko@gmail.com>, 2022-2023
 # Maciej Olko <maciej.olko@gmail.com>, 2015
 # Mariusz Felisiak <felisiak.mariusz@gmail.com>, 2020-2021
 # Michał Krzysztofiak <michal0803@gmail.com>, 2019
@@ -19,10 +19,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-27 03:41-0500\n"
-"PO-Revision-Date: 2022-04-02 19:51+0000\n"
-"Last-Translator: Maciej Olko <maciej.olko@gmail.com>\n"
-"Language-Team: Polish (http://www.transifex.com/django/django-docs/language/"
+"POT-Creation-Date: 2023-04-21 13:42-0500\n"
+"PO-Revision-Date: 2013-04-02 19:51+0000\n"
+"Last-Translator: Maciej Olko <maciej.olko@gmail.com>, 2022-2023\n"
+"Language-Team: Polish (http://app.transifex.com/django/django-docs/language/"
 "pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -390,9 +390,9 @@ msgstr ""
 
 msgid ""
 "Another way to get traction is to pull several related tickets together. "
-"When the someone sits down to review a bug in an area they haven't touched "
-"for a while, it can take a few minutes to remember all the fine details of "
-"how that area of code works. If you collect several minor bug fixes together "
+"When someone sits down to review a bug in an area they haven't touched for a "
+"while, it can take a few minutes to remember all the fine details of how "
+"that area of code works. If you collect several minor bug fixes together "
 "into a similarly themed group, you make an attractive target, as the cost of "
 "coming up to speed on an area of code can be spread over multiple tickets."
 msgstr ""
@@ -406,7 +406,7 @@ msgstr ""
 
 msgid ""
 "Please refrain from emailing anyone personally or repeatedly raising the "
-"same issue over and over. This sort of behavior will not gain you any "
+"same issue over and over again. This sort of behavior will not gain you any "
 "additional attention -- certainly not the attention that you need in order "
 "to get your issue addressed."
 msgstr ""
@@ -878,8 +878,8 @@ msgstr ""
 "cytowań mogą różnić się ogromnie między publikacjami, oraz standardy "
 "cytowania oprogramowania wciąż są przedmiotem pewnej debaty."
 
-msgid "For example, `APA style`_,  would dictate something like::"
-msgstr "Na przykład `styl APA`_, narzuciłby coś takiego::"
+msgid "For example, `APA style`_,  would dictate something like:"
+msgstr "Na przykład `styl APA`_, narzuciłby coś takiego:"
 
 msgid ""
 "However, the only true guide is what your publisher will accept, so get a "
@@ -1158,24 +1158,6 @@ msgstr "Wersja Django"
 msgid "Python versions"
 msgstr "Wersje Pythona"
 
-msgid "2.2"
-msgstr "2.2"
-
-msgid "3.5, 3.6, 3.7, 3.8 (added in 2.2.8), 3.9 (added in 2.2.17)"
-msgstr "3.5, 3.6, 3.7, 3.8 (dodana w 2.2.8), 3.9 (dodana w 2.2.17)"
-
-msgid "3.0"
-msgstr "3.0"
-
-msgid "3.6, 3.7, 3.8, 3.9 (added in 3.0.11)"
-msgstr "3.6, 3.7, 3.8, 3.9 (dodana w 3.0.11)"
-
-msgid "3.1"
-msgstr " 3.1"
-
-msgid "3.6, 3.7, 3.8, 3.9 (added in 3.1.3)"
-msgstr "3.6, 3.7, 3.8, 3.9 (dodana w 3.1.3)"
-
 msgid "3.2"
 msgstr "3.2"
 
@@ -1187,6 +1169,18 @@ msgstr "4.0"
 
 msgid "3.8, 3.9, 3.10"
 msgstr "3.8, 3.9, 3.10"
+
+msgid "4.1"
+msgstr "4.1"
+
+msgid "3.8, 3.9, 3.10, 3.11 (added in 4.1.3)"
+msgstr "3.8, 3.9, 3.10, 3.11 (dodana w 4.1.3)"
+
+msgid "4.2"
+msgstr "4.2"
+
+msgid "3.8, 3.9, 3.10, 3.11"
+msgstr "3.8, 3.9, 3.10, 3.11"
 
 msgid ""
 "For each version of Python, only the latest micro release (A.B.C) is "
@@ -1259,19 +1253,25 @@ msgstr "Jak mogę zobaczyć surowe zapytania SQL uruchamiane przez Django?"
 
 msgid ""
 "Make sure your Django :setting:`DEBUG` setting is set to ``True``. Then do "
-"this::"
+"this:"
 msgstr ""
 "Upewnij się, że Twoje ustawienie Django :setting:`DEBUG` jest ustawione na "
-"``True``. Następnie zrób to::"
+"``True``. Następnie zrób to:"
 
 msgid ""
 "``connection.queries`` is only available if :setting:`DEBUG` is ``True``. "
 "It's a list of dictionaries in order of query execution. Each dictionary has "
-"the following::"
+"the following:"
 msgstr ""
 "``connection.queries`` jest dostępne tylko jeśli :setting:`DEBUG` jest "
 "ustawione na ``True``. Jest to lista słowników w kolejności wykonania "
-"zapytania. Każdy słownik zawiera::"
+"zapytania. Każdy słownik zawiera:"
+
+msgid "``sql`` - The raw SQL statement"
+msgstr "``sql`` – surowe zapytanie SQL"
+
+msgid "``time`` - How long the statement took to execute, in seconds."
+msgstr "``time`` – ile czasu trwało wykonanie polecenia, w sekundach."
 
 msgid ""
 "``connection.queries`` includes all SQL statements -- INSERTs, UPDATES, "
@@ -1284,10 +1284,10 @@ msgstr ""
 
 msgid ""
 "If you are using :doc:`multiple databases</topics/db/multi-db>`, you can use "
-"the same interface on each member of the ``connections`` dictionary::"
+"the same interface on each member of the ``connections`` dictionary:"
 msgstr ""
 "Jeśli używasz :doc:`wielu baz danych</topics/db/multi-db>`, możesz użyć tego "
-"samego interfejsu na każdym elemencie słownika ``connections``::"
+"samego interfejsu na każdym elemencie słownika ``connections``:"
 
 msgid ""
 "If you need to clear the query list manually at any point in your functions, "
@@ -1296,8 +1296,8 @@ msgstr ""
 "Jeśli potrzebujesz wyczyścić ręcznie listę kwerend w dowolnym momencie w "
 "swoich funkcjach, wywołaj ``reset_queries()``, w ten sposób::"
 
-msgid "Can I use Django with a pre-existing database?"
-msgstr "Czy mogę użyć Django z istniejącą bazą danych?"
+msgid "Can I use Django with a preexisting database?"
+msgstr "Czy mogę użyć Django z istniejącą bazą danych?"
 
 msgid ""
 "Yes. See :doc:`Integrating with a legacy database </howto/legacy-databases>`."
@@ -1382,10 +1382,10 @@ msgstr ""
 
 msgid ""
 "For example, if you're using MySQL and want your tables to use the MyISAM "
-"table type, use the following SQL::"
+"table type, use the following SQL:"
 msgstr ""
 "Na przykład, jeśli korzystasz z MySQL-a i chcesz skorzystać z tabel typu "
-"MyISAM, użyj następującego zapytania SQL::"
+"MyISAM, użyj następującego zapytania SQL:"
 
 msgid "Troubleshooting"
 msgstr "Rozwiązywanie problemów"
@@ -1442,11 +1442,11 @@ msgstr "Otrzymuję ``UnicodeDecodeError``. Co robię źle?"
 msgid ""
 "This class of errors happen when a bytestring containing non-ASCII sequences "
 "is transformed into a Unicode string and the specified encoding is "
-"incorrect. The output generally looks like this::"
+"incorrect. The output generally looks like this:"
 msgstr ""
 "Ta klasa błędów występuje, gdy ciąg bitów zawierający sekwencje spoza ASCII "
 "jest przekształcany w ciąg znaków Unicode i wskazane kodowanie jest "
-"niepoprawne. Wyjście zazwyczaj wygląda w ten sposób::"
+"niepoprawne. Wyjście zazwyczaj wygląda w ten sposób:"
 
 msgid ""
 "The resolution mostly depends on the context, however here are two common "

@@ -6,8 +6,8 @@
 # Dogify <595572594@qq.com>, 2018
 # Albert Lei, 2022
 # asdf asdf <328134421@qq.com>, 2018
-# HuanCheng Bai白宦成 <xiqingongzi@gmail.com>, 2018
-# HuanCheng Bai白宦成 <xiqingongzi@gmail.com>, 2018
+# HuanCheng Bai白宦成（Bestony） <xiqingongzi@gmail.com>, 2018
+# HuanCheng Bai白宦成（Bestony） <xiqingongzi@gmail.com>, 2018
 # CabbSir <cabbsir@gmail.com>, 2018
 # FSSlc <fsslc235@gmail.com>, 2020
 # blacklin <chinalinzhijie@gmail.com>, 2018,2020
@@ -28,6 +28,7 @@
 # kenny ren <renyabo2005@gmail.com>, 2017
 # Kevin Sze <leiarix@gmail.com>, 2014
 # kkkkhu <tracis@wodiga.com>, 2017
+# leafcoder zhang <leafcoder@gmail.com>, 2022
 # Lee J <johnleemx@gmail.com>, 2018
 # Leo Luo <leoluo22@gmail.com>, 2018
 # li xiushan <lixiushan@aliyun.com>, 2020
@@ -38,9 +39,11 @@
 # mr.liusg <mr-liusg@users.noreply.github.com>, 2018
 # Veoco <one@nomox.cn>, 2020
 # PACI <emkqson@outlook.com>, 2018
+# 刘培基（奶牛）, 2022
 # qiang wu <wuqiangroy@live.com>, 2018
 # radish sx <radishxtop@gmail.com>, 2017-2018
 # Ray Wang <pivstone@gmail.com>, 2017
+# Jason Ren, 2022
 # Veoco <one@nomox.cn>, 2020-2021
 # Vincent <Intelligent.vincent@gmail.com>, 2018
 # William ZHOU <wzzyj8@gmail.com>, 2018
@@ -48,11 +51,13 @@
 # Frost Ming <mianghong@gmail.com>, 2017
 # Xin Qi <georgechii@outlook.com>, 2021
 # zyqzyq <497533265@qq.com>, 2018
+# 育霖 杨 <yylteam@hotmail.com>, 2022
 # Zhengyang Wang <sufforest@gmail.com>, 2018
 # Zhibo Zhang <805960083@qq.com>, 2019
 # zhimiao li <untildied@gmail.com>, 2018
 # zz, 2018
-# 吴彬 <xiake21x@qq.com>, 2016-2017
+# 刘培基（奶牛）, 2022
+# 锟斤拷 <xiake21x@qq.com>, 2016-2017
 # 志强 曾 <749970817@qq.com>, 2020
 # Dogify <595572594@qq.com>, 2018
 # blacklin <chinalinzhijie@gmail.com>, 2020
@@ -63,10 +68,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-21 01:06-0600\n"
-"PO-Revision-Date: 2022-01-21 09:34+0000\n"
-"Last-Translator: Lu <lu2github@gmail.com>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/django/django-docs/"
+"POT-Creation-Date: 2023-04-21 13:42-0500\n"
+"PO-Revision-Date: 2013-04-02 19:51+0000\n"
+"Last-Translator: 刘培基（奶牛）, 2022\n"
+"Language-Team: Chinese (China) (http://app.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -174,20 +179,18 @@ msgstr "我的“list_filter”包含一个 ManyToManyField (多对多字段)，
 
 msgid ""
 "Django won't bother displaying the filter for a ``ManyToManyField`` if there "
-"are fewer than two related objects."
-msgstr ""
-"如果相关联对象少于 2 个，Django 则不会显示 ``ManyToManyField(多对多字段)`` 的"
-"过滤器"
+"are no related objects."
+msgstr "如果没有相关联的对象，Django 不会显示 ``ManyToManyField`` 过滤器。"
 
 msgid ""
 "For example, if your :attr:`~django.contrib.admin.ModelAdmin.list_filter` "
-"includes :doc:`sites </ref/contrib/sites>`, and there's only one site in "
-"your database, it won't display a \"Site\" filter. In that case, filtering "
-"by site would be meaningless."
+"includes :doc:`sites </ref/contrib/sites>`, and there are no sites in your "
+"database, it won't display a \"Site\" filter. In that case, filtering by "
+"site would be meaningless."
 msgstr ""
 "例如，如果您的 :attr:`~django.contrib.admin.ModelAdmin.list_filter` 包含 :"
-"doc:`sites 1`，并且你的数据库中只有一个站点，则不会显示“站点”过滤器。在这种情"
-"况下，按网站过滤将毫无意义。"
+"doc:`sites </ref/contrib/sites>`，并且你的数据库中没有站点，则不会显示“站"
+"点”过滤器。在这种情况下，按网站过滤将毫无意义。"
 
 msgid "Some objects aren't appearing in the admin."
 msgstr "有些对象没有在管理中出现。"
@@ -385,26 +388,19 @@ msgstr ""
 
 msgid ""
 "Another way to get traction is to pull several related tickets together. "
-"When the someone sits down to review a bug in an area they haven't touched "
-"for a while, it can take a few minutes to remember all the fine details of "
-"how that area of code works. If you collect several minor bug fixes together "
+"When someone sits down to review a bug in an area they haven't touched for a "
+"while, it can take a few minutes to remember all the fine details of how "
+"that area of code works. If you collect several minor bug fixes together "
 "into a similarly themed group, you make an attractive target, as the cost of "
 "coming up to speed on an area of code can be spread over multiple tickets."
 msgstr ""
-"另一种方法获得关注的方法是将几个相关的工单放在一起。当某人坐下来审阅一个他们"
-"已经有一段时间没有接触的区域中的bug时，可能需要几分钟的时间来想起该区域代码如"
-"何工作的所有细节。如果您将几个小错误的修复集中到一个类似主题的组中，那么您将"
-"成为一个有吸引力的目标，因为在一个区域的代码上提速工作的成本可以被用到多个工"
-"单上。"
 
 msgid ""
 "Please refrain from emailing anyone personally or repeatedly raising the "
-"same issue over and over. This sort of behavior will not gain you any "
+"same issue over and over again. This sort of behavior will not gain you any "
 "additional attention -- certainly not the attention that you need in order "
 "to get your issue addressed."
 msgstr ""
-"请不要通过电子邮件向任何人发邮件或反复提出同样的问题。 这种行为不会让你有任何"
-"额外的关注——当然也不会给你带来解决问题所需的关注。"
 
 msgid "But I've reminded you several times and you keep ignoring my patch!"
 msgstr "但是我已经提醒你好几遍了，你依然继续忽略我的补丁！"
@@ -710,6 +706,8 @@ msgid ""
 "When Django was originally written, Adrian and Simon spent quite a bit of "
 "time exploring the various Python web frameworks available."
 msgstr ""
+"当 Django 最初设计时，Adrian 和 Simon 花了很多时间去研究各种各样已经存在的 "
+"Python Web 框架。"
 
 msgid "In our opinion, none of them were completely up to snuff."
 msgstr "在我们看来，没有一个能完全达到所需的标准。"
@@ -752,6 +750,8 @@ msgid ""
 "itself. It's a web framework; it's a programming tool that lets you build "
 "websites."
 msgstr ""
+"Django 不是一个 CMS 或任何意义上的“一站式解决方案”。它是一个 Web 框架；它是一"
+"个让你建立网站的编程工具。"
 
 msgid ""
 "For example, it doesn't make much sense to compare Django to something like "
@@ -779,6 +779,8 @@ msgid ""
 "tarball release. These docs are in reST (reStructuredText) format, and each "
 "text file corresponds to a web page on the official Django site."
 msgstr ""
+"Django 文档可以在每个 Django 版本压缩包的 \"docs\" 目录中找到。这些文档采用 "
+"reST（reStructuredText）格式，每个文本文件都对应官方 Django 网站上的页面。"
 
 msgid ""
 "Because the documentation is :source:`stored in revision control <docs>`, "
@@ -807,8 +809,8 @@ msgstr ""
 "出于两个原因，很难提供正式的引文格式：出版物之间的引文格式可能会有很大差异，"
 "软件的引用标准仍然是一些争议的问题。"
 
-msgid "For example, `APA style`_,  would dictate something like::"
-msgstr "例如，`APA style`_，命令类似::"
+msgid "For example, `APA style`_,  would dictate something like:"
+msgstr ""
 
 msgid ""
 "However, the only true guide is what your publisher will accept, so get a "
@@ -1058,24 +1060,6 @@ msgstr "Django 版本"
 msgid "Python versions"
 msgstr "Python 版本"
 
-msgid "2.2"
-msgstr "2.2"
-
-msgid "3.5, 3.6, 3.7, 3.8 (added in 2.2.8), 3.9 (added in 2.2.17)"
-msgstr "3.5，3.6，3.7，3.8（2.2.8 添加），3.9（2.2.17 添加）"
-
-msgid "3.0"
-msgstr "3.0"
-
-msgid "3.6, 3.7, 3.8, 3.9 (added in 3.0.11)"
-msgstr "3.6，3.7，3.8，3.9 （3.0.11 添加）"
-
-msgid "3.1"
-msgstr "3.1"
-
-msgid "3.6, 3.7, 3.8, 3.9 (added in 3.1.3)"
-msgstr "3.6，3.7，3.8，3.9（3.1.3 添加）"
-
 msgid "3.2"
 msgstr "3.2"
 
@@ -1087,6 +1071,18 @@ msgstr "4.0"
 
 msgid "3.8, 3.9, 3.10"
 msgstr "3.8，3.9，3.10"
+
+msgid "4.1"
+msgstr "4.1"
+
+msgid "3.8, 3.9, 3.10, 3.11 (added in 4.1.3)"
+msgstr "3.8，3.9，3.10，3.11（4.1.3 添加）"
+
+msgid "4.2"
+msgstr ""
+
+msgid "3.8, 3.9, 3.10, 3.11"
+msgstr ""
 
 msgid ""
 "For each version of Python, only the latest micro release (A.B.C) is "
@@ -1151,16 +1147,20 @@ msgstr "我该如何在Django运行的过程中看到SQL查询？"
 
 msgid ""
 "Make sure your Django :setting:`DEBUG` setting is set to ``True``. Then do "
-"this::"
-msgstr "首先确保你的 Django :setting:`DEBUG` 选项为 ``True``。然后，这样做："
+"this:"
+msgstr ""
 
 msgid ""
 "``connection.queries`` is only available if :setting:`DEBUG` is ``True``. "
 "It's a list of dictionaries in order of query execution. Each dictionary has "
-"the following::"
+"the following:"
 msgstr ""
-"``connection.queries`` 只有在 :setting:`DEBUG` 为 ``True``时才可用. 它是按顺"
-"序执行的字典列表，每个字典包括::"
+
+msgid "``sql`` - The raw SQL statement"
+msgstr ""
+
+msgid "``time`` - How long the statement took to execute, in seconds."
+msgstr ""
 
 msgid ""
 "``connection.queries`` includes all SQL statements -- INSERTs, UPDATES, "
@@ -1172,10 +1172,8 @@ msgstr ""
 
 msgid ""
 "If you are using :doc:`multiple databases</topics/db/multi-db>`, you can use "
-"the same interface on each member of the ``connections`` dictionary::"
+"the same interface on each member of the ``connections`` dictionary:"
 msgstr ""
-"如果你在使用 :doc:`multiple databases1`，你可以对 ``connections`` 字典的每个"
-"成员使用相同的接口::"
 
 msgid ""
 "If you need to clear the query list manually at any point in your functions, "
@@ -1184,8 +1182,8 @@ msgstr ""
 "如果需要在函数中的任何位置手动清除查询列表，只需要调用 ``reset_queries()``，"
 "像这样："
 
-msgid "Can I use Django with a pre-existing database?"
-msgstr "我可以让 Django 用一个之前已经存在的数据库吗？"
+msgid "Can I use Django with a preexisting database?"
+msgstr "我可以让 Django 使用一个已经存在的数据库吗？"
 
 msgid ""
 "Yes. See :doc:`Integrating with a legacy database </howto/legacy-databases>`."
@@ -1263,10 +1261,8 @@ msgstr ""
 
 msgid ""
 "For example, if you're using MySQL and want your tables to use the MyISAM "
-"table type, use the following SQL::"
+"table type, use the following SQL:"
 msgstr ""
-"例如，如果你使用 MySQL 并且你想让你的数据表使用 MyISAM 表类型，使用如下 SQL "
-"语句："
 
 msgid "Troubleshooting"
 msgstr "错误调试"
@@ -1318,10 +1314,8 @@ msgstr "我遇到了错误信息 ``UnicodeDecodeError``。 我哪里做错了？
 msgid ""
 "This class of errors happen when a bytestring containing non-ASCII sequences "
 "is transformed into a Unicode string and the specified encoding is "
-"incorrect. The output generally looks like this::"
+"incorrect. The output generally looks like this:"
 msgstr ""
-"当包含非ASCII序列的字符串被转换为Unicode字符串，并且指定的编码不正确时，会发"
-"生此类错误。 输出一般看起来像这样::"
 
 msgid ""
 "The resolution mostly depends on the context, however here are two common "
@@ -1358,10 +1352,10 @@ msgstr "保证："
 
 msgid ""
 "The environment variable :envvar:`DJANGO_SETTINGS_MODULE` is set to a fully-"
-"qualified Python module (i.e. \"mysite.settings\")."
+"qualified Python module (i.e. ``mysite.settings``)."
 msgstr ""
-"环境变量 :envvar:`DJANGO_SETTINGS_MODULE` 被设置成一个完全合格的 Python 模块"
-"（即 \"mysite.settings\"）。"
+"环境变量 :envvar:`DJANGO_SETTINGS_MODULE` 设置为完全限定的 Python 模块（即 "
+"``mysite.settings`` ）。"
 
 msgid ""
 "Said module is on ``sys.path`` (``import mysite.settings`` should work)."
