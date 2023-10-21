@@ -19,7 +19,7 @@
 # Help Learn <26922dd@sina.com>, 2020
 # Chown Hobby, 2016
 # Hourann Lin <tdkgn@outlook.com>, 2018
-# Howard Qiu, 2023
+# funcy39, 2023
 # df2dc1c92e792f7ae8417c51df43db8f_594d92a <0f49be28017426edb1db1a2ab6e67088_717605>, 2018
 # Kevin Lee <rootkitcn@live.com>, 2017
 # Kevin Sze <leiarix@gmail.com>, 2014
@@ -29,11 +29,12 @@
 # nico zhang <nicozhangw@gmail.com>, 2019
 # Veoco <one@nomox.cn>, 2020
 # Ralph Wen <ralph.wen@gmail.com>, 2013
+# Shun Yao, 2023
 # spaceoi <zhangzhaoyu@gmail.com>, 2016
 # Suntravel Chris <chrisfromcn@gmail.com>, 2019
 # Todd Kasaki <2524737581@qq.com>, 2021
 # Tuzi.Li <lzjwh1996@foxmail.com>, 2016
-# Veoco <one@nomox.cn>, 2020-2022
+# Veoco <one@nomox.cn>, 2020-2023
 # Vincent <Intelligent.vincent@gmail.com>, 2018
 # 汪心禾 <wangxinhe06@gmail.com>, 2018
 # Xin Qi <georgechii@outlook.com>, 2021
@@ -55,9 +56,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-04 12:41-0500\n"
+"POT-Creation-Date: 2023-10-21 03:45-0500\n"
 "PO-Revision-Date: 2013-04-02 20:00+0000\n"
-"Last-Translator: Howard Qiu, 2023\n"
+"Last-Translator: Shun Yao, 2023\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -138,6 +139,9 @@ msgid ""
 "on the `Django Forum`_, |django-developers|, or drop by `#django-dev on irc."
 "libera.chat`__ to chat with other Django users who might be able to help."
 msgstr ""
+"如果你在通过这个教程时遇到困难，请到 `Django Forum`_ 、|django-developers| 或"
+"者在 `#django-dev on irc.libera.chat`__ 频道下发布信息，与其他 Django 用户交"
+"流，他们可能能够提供帮助。"
 
 msgid "What does this tutorial cover?"
 msgstr "这个指南涵盖哪些内容？"
@@ -340,13 +344,14 @@ msgid ""
 "cloned local copy of Django in editable mode <intro-contributing-install-"
 "local-copy>`, and create a new Django project outside of your local copy of "
 "Django. You will immediately see any changes you make to Django in your new "
-"project, which is of great help when writing your first patch."
+"project, which is of great help when writing your first patch, especially if "
+"testing any changes to the UI."
 msgstr ""
-"这对你测试本地 Django 项目发生了那些变化很有帮助。首先，你需要创建一个新的虚"
-"拟环境， :ref:`在可编辑模式下安装之前克隆的 Django 本地副本 <intro-"
-"contributing-install-local-copy>`, 接着在你本地 Django 副本之外创建一个新的 "
-"Django 项目。 在你的新项目中，一旦你改动任何文件，你都会立刻看到相关信息，这"
-"对你编写第一个补丁是很有帮助的。"
+
+msgid ""
+"You can follow the :doc:`tutorial</intro/tutorial01>` for help in creating a "
+"Django project."
+msgstr ""
 
 msgid "Running Django's test suite for the first time"
 msgstr "首先运行 Django 的测试套件"
@@ -453,10 +458,10 @@ msgstr ""
 msgid ""
 "For this tutorial and the ticket we're working on, testing against SQLite is "
 "sufficient, however, it's possible (and sometimes necessary) to :ref:`run "
-"the tests using a different database <running-unit-tests-settings>`."
+"the tests using a different database <running-unit-tests-settings>`. When "
+"making UI changes, you will need to :ref:`run the Selenium tests <running-"
+"selenium-tests>`."
 msgstr ""
-"在本教程以及处理工单所用分支中，测试使用数据库 SQLite 即可，然而在某些情况下"
-"需要（有时需要） ，参考 :ref:`run the tests using a different database `。"
 
 msgid "Working on a feature"
 msgstr "尝试搞定一项新功能"
@@ -1574,14 +1579,11 @@ msgstr "``django-polls/setup.py``"
 msgid ""
 "Only Python modules and packages are included in the package by default. To "
 "include additional files, we'll need to create a ``MANIFEST.in`` file. The "
-"setuptools docs referred to in the previous step discuss this file in more "
-"detail. To include the templates, the ``README.rst`` and our ``LICENSE`` "
-"file, create a file ``django-polls/MANIFEST.in`` with the following contents:"
+"``setuptools`` docs referred to in the previous step discuss this file in "
+"more detail. To include the templates, the ``README.rst`` and our "
+"``LICENSE`` file, create a file ``django-polls/MANIFEST.in`` with the "
+"following contents:"
 msgstr ""
-"默认情况下，包中仅包含 Python 模块和包。 要包含其他文件，我们需要创建一个 "
-"``MANIFEST.in`` 文件。 上一步中提到的 setuptools 文档更详细地讨论了这个文"
-"件。 要包含模板、``README.rst`` 和我们的 ``LICENSE`` 文件，创建一个文件 "
-"``django-polls/MANIFEST.in`` ，其内容如下： "
 
 msgid "``django-polls/MANIFEST.in``"
 msgstr "``django-polls/MANIFEST.in``"
@@ -3853,9 +3855,12 @@ msgstr ""
 
 msgid ""
 "Generic views abstract common patterns to the point where you don't even "
-"need to write Python code to write an app."
+"need to write Python code to write an app. For example, the :class:`~django."
+"views.generic.list.ListView` and :class:`~django.views.generic.detail."
+"DetailView` generic views abstract the concepts of \"display a list of "
+"objects\" and \"display a detail page for a particular type of object\" "
+"respectively."
 msgstr ""
-"通用视图将常见的模式抽象化，可以使你在编写应用时甚至不需要编写Python代码。"
 
 msgid ""
 "Let's convert our poll app to use the generic views system, so we can delete "
@@ -3902,10 +3907,12 @@ msgstr "首先，打开 ``polls/urls.py`` 这个 URLconf 并将它修改成："
 
 msgid ""
 "Note that the name of the matched pattern in the path strings of the second "
-"and third patterns has changed from ``<question_id>`` to ``<pk>``."
+"and third patterns has changed from ``<question_id>`` to ``<pk>``. This is "
+"necessary because we'll use the :class:`~django.views.generic.detail."
+"DetailView` generic view to replace our ``detail()`` and ``results()`` "
+"views, and it expects the primary key value captured from the URL to be "
+"called ``\"pk\"``."
 msgstr ""
-"注意，第二个和第三个匹配准则中，路径字符串中匹配模式的名称已经由 "
-"``<question_id>`` 改为 ``<pk>``。"
 
 msgid "Amend views"
 msgstr "改良视图"
@@ -3919,27 +3926,12 @@ msgstr ""
 "Django 的通用视图代替。打开 ``polls/views.py`` 文件，并将它修改成："
 
 msgid ""
-"We're using two generic views here: :class:`~django.views.generic.list."
-"ListView` and :class:`~django.views.generic.detail.DetailView`. "
-"Respectively, those two views abstract the concepts of \"display a list of "
-"objects\" and \"display a detail page for a particular type of object.\""
-msgstr ""
-"我们在这里使用两个通用视图： :class:`~django.views.generic.list.ListView` "
-"和 :class:`~django.views.generic.detail.DetailView` 。这两个视图分别抽象“显示"
-"一个对象列表”和“显示一个特定类型对象的详细信息页面”这两种概念。"
-
-msgid ""
 "Each generic view needs to know what model it will be acting upon. This is "
-"provided using the ``model`` attribute."
-msgstr "每个通用视图需要知道它将作用于哪个模型。 这由 ``model`` 属性提供。"
-
-msgid ""
-"The :class:`~django.views.generic.detail.DetailView` generic view expects "
-"the primary key value captured from the URL to be called ``\"pk\"``, so "
-"we've changed ``question_id`` to ``pk`` for the generic views."
+"provided using either the ``model`` attribute (in this example, ``model = "
+"Question`` for  ``DetailView`` and ``ResultsView``) or by defining the :meth:"
+"`~django.views.generic.list.MultipleObjectMixin.get_queryset` method (as "
+"shown in ``IndexView``)."
 msgstr ""
-":class:`~django.views.generic.detail.DetailView`  期望从 URL 中捕获名为   "
-"``\"pk\"`` 的主键值，所以我们为通用视图把 ``question_id`` 改成 ``pk`` 。"
 
 msgid ""
 "By default, the :class:`~django.views.generic.detail.DetailView` generic "
@@ -4264,7 +4256,7 @@ msgid ""
 "file whose name begins with ``test``."
 msgstr ""
 "按照惯例，Django 应用的测试应该写在应用的 ``tests.py`` 文件里。测试系统会自动"
-"的在所有以 ``tests`` 开头的文件里寻找并执行测试代码。"
+"的在所有文件里寻找并执行以 ``test`` 开头的测试函数。"
 
 msgid ""
 "Put the following in the ``tests.py`` file in the ``polls`` application:"

@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the Django package.
 #
 # Translators:
+# funcy39, 2023
 # Arthur Wu <dandelionstill@gmail.com>, 2018
 # HuanCheng Bai白宦成（Bestony） <xiqingongzi@gmail.com>, 2018
 # belitex, 2018
@@ -56,6 +57,7 @@
 # boltyu <lightingyu@gmail.com>, 2020
 # 锟斤拷 <xiake21x@qq.com>, 2016
 # 奇泽 吴 <wuqize5109@163.com>, 2018
+# 小黑, 2023
 # 尔茂 (￣︶￣)↗ 涨 <973657283@qq.com>, 2018
 # 得鑫 李 <lidexin911@126.com>, 2018
 # Yang Zeyu (扩散性百万甜面包) <Himself6565@gmail.com>, 2018
@@ -68,9 +70,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-04 12:41-0500\n"
+"POT-Creation-Date: 2023-10-21 03:45-0500\n"
 "PO-Revision-Date: 2013-04-02 19:58+0000\n"
-"Last-Translator: Tylor Caesar <caesartylor@gmail.com>, 2023\n"
+"Last-Translator: Veoco <one@nomox.cn>, 2020-2023\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -523,11 +525,17 @@ msgid ""
 "``csrf_protect`` decorator so that they no longer rejects requests. In every "
 "other respect (e.g. sending cookies etc.), they behave the same."
 msgstr ""
+"``CsrfViewMiddleware``通常会对测试视图函数造成很大的阻碍，因为每个POST请求都"
+"需要发送CSRF令牌。因此，Django用于测试的HTTP客户端已经修改了，为请求设置了一"
+"个标志，放松了中间件和` ' csrf_protect ' `装饰器，使它们不再拒绝请求。在其他"
+"方面(例如发送cookie等)，它们的行为是相同的。"
 
 msgid ""
 "If, for some reason, you *want* the test client to perform CSRF checks, you "
 "can create an instance of the test client that enforces CSRF checks:"
 msgstr ""
+"如果出于某种原因，你* *希望* *测试客户端执行CSRF检查，你可以创建一个强制执行"
+"CSRF检查的测试客户端实例:"
 
 msgid "Edge cases"
 msgstr "边缘案例"
@@ -557,7 +565,7 @@ msgstr ""
 
 msgid ""
 "Setting the token when ``CsrfViewMiddleware.process_view()`` is not used"
-msgstr ""
+msgstr "当`CsrfViewMiddleware.process_view()``不被使用时设置令牌"
 
 msgid ""
 "There are cases when ``CsrfViewMiddleware.process_view`` may not have run "
@@ -636,6 +644,10 @@ msgid ""
 "that want the same guarantees also use the ``csrf_protect`` decorator on "
 "their views."
 msgstr ""
+"因为开发人员可以关闭 ``CsrfViewMiddleware``，所以 contrib 应用程序中的所有相"
+"关视图都使用 ``csrf_protect`` 装饰器来确保这些应用程序针对 CSRF 的安全性。 建"
+"议需要相同保证的其他可重用应用程序的开发人员也在其视图上使用 "
+"``csrf_protect`` 装饰器。"
 
 msgid "How to write a custom storage class"
 msgstr "如何编写一个自定义的文件存储类"
@@ -765,12 +777,10 @@ msgstr ""
 "``get_available_name()``，并且 ``content`` 将会成为 ``File`` 对象自身。"
 
 msgid ""
-"Should return the actual name of name of the file saved (usually the "
-"``name`` passed in, but if the storage needs to change the file name return "
-"the new name instead)."
+"Should return the actual name of the file saved (usually the ``name`` passed "
+"in, but if the storage needs to change the file name return the new name "
+"instead)."
 msgstr ""
-"应该返回保存的文件名的实际名称（通常是传入“name”，但如果内存需要改变文件名，"
-"则返回新名称）。"
 
 msgid ""
 "Returns a filename suitable for use with the underlying storage system. The "
@@ -6355,7 +6365,7 @@ msgid ""
 msgstr "要从代码中发送日志消息，你需要在代码中添加日志调用。"
 
 msgid "Don't be tempted to use logging calls in ``settings.py``."
-msgstr ""
+msgstr "不要在 ``settings.py`` 中使用日志调用。"
 
 msgid ""
 "The way that Django logging is configured as part of the ``setup()`` "
@@ -6510,7 +6520,7 @@ msgstr ""
 msgid ""
 "It will forward messages of levels ``DEBUG`` and higher to the handler named "
 "``file``."
-msgstr ""
+msgstr "它将级别为 ``DEBUG`` 及更高的消息发送给名为 ``file`` 的处理程序。"
 
 msgid ""
 "Note that a logger can forward messages to multiple handlers, so the "
@@ -7252,7 +7262,7 @@ msgstr ""
 "门 <https://djangopackages.org/grids/g/storage-backends/>`_ 是个不错的起点。"
 
 msgid "The :setting:`STORAGES` setting was added."
-msgstr ""
+msgstr ":setting:`STORAGES` 配置已添加。"
 
 msgid "Learn more"
 msgstr "了解更多"
@@ -7493,7 +7503,7 @@ msgstr ""
 "将 :setting:`STATIC_ROOT` 配置成你喜欢的目录，在这个目录提供服务，例如::"
 
 msgid "Run the :djadmin:`collectstatic` management command:"
-msgstr ""
+msgstr "运行 :djadmin:`collectstatic` 管理命令："
 
 msgid ""
 "This will copy all files from your static folders into the :setting:"
@@ -7942,7 +7952,7 @@ msgstr ""
 "的提示："
 
 msgid "``myapp/dbrouters.py``"
-msgstr ""
+msgstr "``myapp/dbrouters.py``"
 
 msgid "Then, to leverage this in your migrations, do the following::"
 msgstr "然后，要将其在迁移中生效，像下面这样做::"
@@ -8010,7 +8020,7 @@ msgstr ""
 "例子："
 
 msgid "``0006_remove_uuid_null.py``"
-msgstr ""
+msgstr "``0006_remove_uuid_null.py``"
 
 msgid ""
 "Edit the first migration file. The generated migration class should look "
@@ -8018,7 +8028,7 @@ msgid ""
 msgstr "编辑第一个迁移文件。生成的迁移类应该看起来像这样："
 
 msgid "``0004_add_uuid_field.py``"
-msgstr ""
+msgstr "``0004_add_uuid_field.py``"
 
 msgid ""
 "Change ``unique=True`` to ``null=True`` -- this will create the intermediary "
@@ -8039,7 +8049,7 @@ msgstr ""
 "存在的行创建一个唯一值（本例中 UUID）。同时添加 ``uuid`` 的导入。例子："
 
 msgid "``0005_populate_uuid_values.py``"
-msgstr ""
+msgstr "``0005_populate_uuid_values.py``"
 
 msgid ""
 "Now you can apply the migrations as usual with the :djadmin:`migrate` "
@@ -8170,7 +8180,7 @@ msgid "Here's a sample migration:"
 msgstr "这是一个迁移示例："
 
 msgid "``myapp/migrations/0124_move_old_app_to_new_app.py``"
-msgstr ""
+msgstr "``myapp/migrations/0124_move_old_app_to_new_app.py``"
 
 msgid ""
 "Also consider what you want to happen when the migration is unapplied. You "
