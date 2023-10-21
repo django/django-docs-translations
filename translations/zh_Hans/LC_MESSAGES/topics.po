@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the Django package.
 #
 # Translators:
+# funcy39, 2023
 # Aris Chow <arischow@gmail.com>, 2018
 # Arthur Wu <dandelionstill@gmail.com>, 2018
 # b1c58ea15303be9e49500f6966759e5d, 2018
@@ -96,9 +97,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-04 12:41-0500\n"
+"POT-Creation-Date: 2023-10-21 03:45-0500\n"
 "PO-Revision-Date: 2013-04-02 20:02+0000\n"
-"Last-Translator: Tylor Caesar <caesartylor@gmail.com>, 2023\n"
+"Last-Translator: funcy39, 2023\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -9496,6 +9497,41 @@ msgid ""
 "For example, if you wanted to calculate the average number of authors per "
 "book you first annotate the set of books with the author count, then "
 "aggregate that author count, referencing the annotation field:"
+msgstr ""
+
+msgid "Aggregating on empty querysets or groups"
+msgstr ""
+
+msgid ""
+"When an aggregation is applied to an empty queryset or grouping, the result "
+"defaults to its :ref:`default <aggregate-default>` parameter, typically "
+"``None``. This behavior occurs because aggregate functions return ``NULL`` "
+"when the executed query returns no rows."
+msgstr ""
+
+msgid ""
+"You can specify a return value by providing the :ref:`default <aggregate-"
+"default>` argument for most aggregations. However, since :class:`~django.db."
+"models.Count` does not support the :ref:`default <aggregate-default>` "
+"argument, it will always return ``0`` for empty querysets or groups."
+msgstr ""
+
+msgid ""
+"For example, assuming that no book contains *web* in its name, calculating "
+"the total price for this book set would return ``None`` since there are no "
+"matching rows to compute the :class:`~django.db.models.Sum` aggregation on:"
+msgstr ""
+
+msgid ""
+"However, the :ref:`default <aggregate-default>` argument can be set when "
+"calling :class:`~django.db.models.Sum` to return a different default value "
+"if no books can be found:"
+msgstr ""
+
+msgid ""
+"Under the hood, the :ref:`default <aggregate-default>` argument is "
+"implemented by wrapping the aggregate function with :class:`~django.db."
+"models.functions.Coalesce`."
 msgstr ""
 
 msgid "Examples of model relationship API usage"
@@ -25478,6 +25514,12 @@ msgid ""
 "convention is to put views in a file called ``views.py``, placed in your "
 "project or application directory."
 msgstr ""
+"视图函数（或简称视图）是一种接受 Web 请求并返回 Web 响应的 Python 函数。 该响"
+"应可以是网页的 HTML 内容、重定向、404 错误、XML 文档、图像……或者任何东西。 视"
+"图本身包含返回该响应所需的任意逻辑。 该代码可以存在于您想要的任何地方，只要它"
+"位于您的 Python 路径上即可。 没有其他要求——可以说没有“魔法”。 为了将代码放置"
+"在某个地方，惯例是将视图放置在名为 ``views.py`` 的文件中，该文件放置在项目或"
+"应用程序目录中。"
 
 msgid "A simple view"
 msgstr "一个简单的视图"
@@ -25632,6 +25674,9 @@ msgid ""
 "handlers as seen below in your URLconf (setting them anywhere else will have "
 "no effect)."
 msgstr ""
+"Django 中的默认报错视图应该能够满足大多数 Web 应用程序的需求，但如果您需要任"
+"何自定义行为，也可以轻松覆盖。 在 URLconf 中指定处理程序，如下所示（在其他任"
+"何地方设置它们将不起作用）。"
 
 msgid ""
 "The :func:`~django.views.defaults.page_not_found` view is overridden by :"
@@ -38871,9 +38916,8 @@ msgstr ""
 
 msgid ""
 "``AsyncClient`` has the same methods and signatures as the synchronous "
-"(normal) test client, with two exceptions:"
+"(normal) test client, with the following exceptions:"
 msgstr ""
-"``AsyncClient`` 具有与同步（普通）测试客户端相同的方法和签名，但有两个例外："
 
 msgid ""
 "In the initialization, arbitrary keyword arguments in ``defaults`` are added "
