@@ -9,7 +9,7 @@
 # matsuand, 2018
 # TAKAHASHI Shuuji <shuuji3@gmail.com>, 2017,2019
 # Taichi Taniguchi, 2022-2023
-# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016
+# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016,2023
 # Takashi Sugawara <aimaimokomoko@gmail.com>, 2018
 # ta kawano, 2023
 # Takuya N <takninnovationresearch@gmail.com>, 2020
@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-21 03:45-0500\n"
+"POT-Creation-Date: 2023-11-30 05:02-0600\n"
 "PO-Revision-Date: 2013-04-02 19:59+0000\n"
-"Last-Translator: Taichi Taniguchi, 2022-2023\n"
+"Last-Translator: TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016,2023\n"
 "Language-Team: Japanese (http://app.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -634,36 +634,49 @@ msgid "See :doc:`writing-documentation` for more."
 msgstr ""
 
 msgid "**Localizing Django** 🗺️"
-msgstr ""
+msgstr "**Django のローカライズ** 🗺️"
 
 msgid ""
 "Django is translated into over 100 languages - There's even some translation "
 "for Klingon?! The i18n team is always looking for translators to help "
 "maintain and increase language reach."
 msgstr ""
+"Django は100以上の言語に翻訳されています。クリンゴン語 (訳注: 『スタート・"
+"レック』に登場する宇宙人の言語) の翻訳すらあります！ i18n チームは常に言語サ"
+"ポートのメンテナンスと拡大を助けてくれる翻訳者を求めています。"
 
 msgid "See :doc:`localizing` to help translate Django."
-msgstr ""
+msgstr "Django の翻訳を助けるには :doc:`localizing` を参照してください。"
 
 msgid ""
 "If you think working *with* Django is fun, wait until you start working *on* "
 "it. Really, **ANYONE** can do something to help make Django better and "
 "greater!"
 msgstr ""
+"Django を *使用して* 作業するのが楽しいと思うなら、Django *自体* の作業を楽し"
+"みましょう。本当に、**誰でも** Django をよりよくする助けになる何かができま"
+"す。"
 
 msgid ""
 "This contributing guide contains everything you need to know to help build "
 "the Django web framework. Browse the following sections to find out how:"
 msgstr ""
+"コントリビューションガイドには、Django ウェブフレームワークを開発するのを助け"
+"るために知る必要があることのすべてが書かれています。以下のセクションを読んで"
+"開発方法を確認してください。"
 
 msgid "Join the Django community ❤️"
-msgstr ""
+msgstr "Django コミュニティに参加する ❤️"
 
 msgid ""
 "We're passionate about helping Django users make the jump to contributing "
 "members of the community. There are several other ways you can help the "
 "Django community and others to maintain a great ecosystem to work in:"
 msgstr ""
+"私たちは、Django ユーザーがコミュニティのコントリビューションメンバーに飛び込"
+"む手助けすることに情熱を持っています。他にも以下のようなさまざまな方法で "
+"Django コミュニティや他の人たちを助け、素晴らしいエコシステムをサポートできま"
+"す。"
 
 msgid ""
 "Join the `Django forum`_. This forum is a place for discussing the Django "
@@ -717,7 +730,7 @@ msgstr ""
 "一つになります、ご支援お願いします！"
 
 msgid "We're looking forward to working with you. Welcome aboard! ⛵️"
-msgstr ""
+msgstr "あなたと一緒に活動できるのを楽しみにしています。ようこそ！⛵️"
 
 msgid "Localizing Django"
 msgstr "Django のローカライズ"
@@ -752,9 +765,12 @@ msgid ""
 "out with translating or adding a language that isn't yet translated, here's "
 "what to do:"
 msgstr ""
+"不正確な翻訳や特定の翻訳について議論したいときは、`Django プロジェクトのペー"
+"ジ`_ に行ってください。翻訳を助けたりまだ未翻訳の言語を追加したい場合は、以下"
+"のことを行ってください。"
 
 msgid "Introduce yourself on the `Django internationalization forum`_."
-msgstr ""
+msgstr "`Django 国際化フォーラム`_ で自己紹介する。"
 
 msgid "Make sure you read the notes about :ref:`specialties-of-django-i18n`."
 msgstr ":ref:`specialties-of-django-i18n` に関するノートを読んで確認する。"
@@ -799,6 +815,12 @@ msgid ""
 "candidate and the feature release) to take the opportunity to complete and "
 "fix the translations for your language!"
 msgstr ""
+"Transifex からの翻訳が Django リポジトリに取り入れられるのは、新しい :term:`"
+"フィーチャーリリース <Feature release>` のタイミングのみです。将来の :term:`"
+"パッチリリース <Patch release>` の1つで2回目に更新を試みますが、これは翻訳マ"
+"ネージャーが作業可能かどうかによります。そのため、あなたの言語の翻訳を完了・"
+"修正するためには、文字列フリーズの期間 (リリース候補とフィーチャーリリースの"
+"間の期間) を逃さないようにしてください！"
 
 msgid "Formats"
 msgstr "フォーマット"
@@ -808,20 +830,28 @@ msgid ""
 "the date, time and numbers formatting particularities of your locale. See :"
 "doc:`/topics/i18n/formatting` for details."
 msgstr ""
+"``conf/locale/<locale>/formats.py`` ファイルもレビューできます。このファイル"
+"は日付、時刻、数値に関するロケール特有のフォーマットについて記述しています。"
+"詳細については :doc:`/topics/i18n/formatting` を参照してください。"
 
 msgid ""
 "The format files aren't managed by the use of Transifex. To change them, you "
 "must :doc:`create a patch<writing-code/submitting-patches>` against the "
 "Django source tree, as for any code change:"
 msgstr ""
+"フォーマットファイルは Transifex の使用によって管理されていません。変更するに"
+"は、すべてのコード変更と同様に、以下の方法で Django のソースツリーに対して :"
+"doc:`パッチを作成する <writing-code/submitting-patches>` 必要があります。"
 
 msgid "Create a diff against the current Git main branch."
-msgstr ""
+msgstr "現在の Git の main ブランチに対して diff を作成する。"
 
 msgid ""
 "Open a ticket in Django's ticket system, set its ``Component`` field to "
 "``Translations``, and attach the patch to it."
 msgstr ""
+"Django のチケットシステムでチケットを開き、``Component`` フィールドを "
+"``Translations`` に設定し、patch を添付する。"
 
 msgid "Documentation"
 msgstr "ドキュメント"
@@ -843,25 +873,32 @@ msgid ""
 msgstr ""
 
 msgid "Advice for new contributors"
-msgstr ""
+msgstr "新しいコントリビューターへのアドバイス"
 
 msgid ""
 "New contributor and not sure what to do? Want to help but just don't know "
 "how to get started? This is the section for you."
 msgstr ""
+"新しいコントリビューターで、何をするべきかわかりませんか？ 助けたいと思ってい"
+"るのにどこから手を付ければいいのかわかりませんか？ このセクションはあなたのた"
+"めにあります。"
 
 msgid "Get up and running!"
-msgstr ""
+msgstr "立ち上げる！"
 
 msgid ""
 "If you are new to contributing to Django, the :doc:`/intro/contributing` "
 "tutorial will give you an introduction to the tools and the workflow."
 msgstr ""
+"Django へのコントリビューションが初めての場合、:doc:`/intro/contributing` "
+"チュートリアルがツールとワークフローへの導入の助けとなるでしょう。"
 
 msgid ""
 "This page contains more general advice on ways you can contribute to Django, "
 "and how to approach that."
 msgstr ""
+"このページでは、Django へのコントリビューション方法とそのためのアプローチにつ"
+"いて、より一般的なアドバイスをします。"
 
 msgid ""
 "If you are looking for a reference on the details of making code "
@@ -875,10 +912,10 @@ msgid "First steps"
 msgstr "最初のステップ"
 
 msgid "Start with these steps to discover Django's development process."
-msgstr ""
+msgstr "Django の開発プロセスを知るには、以下のステップから始めてください。"
 
 msgid "**Triage tickets**"
-msgstr ""
+msgstr "**チケットをトリアージする**"
 
 msgid ""
 "If an `unreviewed ticket`_ reports a bug, try and reproduce it. If you can "
@@ -893,6 +930,8 @@ msgid ""
 "**Look for tickets that are accepted and review patches to build familiarity "
 "with the codebase and the process**"
 msgstr ""
+"**アクセプトされたチケットを探してパッチをレビューすることで、コードベースと"
+"プロセスに慣れる**"
 
 msgid ""
 "Mark the appropriate flags if a patch needs docs or tests. Look through the "
@@ -904,7 +943,7 @@ msgid ""
 msgstr ""
 
 msgid "**Keep old patches up to date**"
-msgstr ""
+msgstr "**古いパッチを最新の状態に保つ**"
 
 msgid ""
 "Oftentimes the codebase will change between a patch being submitted and the "
@@ -914,7 +953,7 @@ msgid ""
 msgstr ""
 
 msgid "**Write some documentation**"
-msgstr ""
+msgstr "**ドキュメントを書く**"
 
 msgid ""
 "Django's documentation is great but it can always be improved. Did you find "
@@ -930,7 +969,7 @@ msgid ""
 msgstr ""
 
 msgid "**Sign the Contributor License Agreement**"
-msgstr ""
+msgstr "**Contributor License Agreement に署名する**"
 
 msgid ""
 "The code that you write belongs to you or your employer. If your "
@@ -940,7 +979,7 @@ msgid ""
 msgstr ""
 
 msgid "Guidelines"
-msgstr ""
+msgstr "ガイドライン"
 
 msgid ""
 "As a newcomer on a large project, it's easy to experience frustration. "
@@ -950,7 +989,7 @@ msgstr ""
 msgid ""
 "**Pick a subject area that you care about, that you are familiar with, or "
 "that you want to learn about**"
-msgstr ""
+msgstr "**興味がある、馴染みがある、学んでみたい主題エリアを選ぶ**"
 
 msgid ""
 "You don't already have to be an expert on the area you want to work on; you "
@@ -958,7 +997,7 @@ msgid ""
 msgstr ""
 
 msgid "**Analyze tickets' context and history**"
-msgstr ""
+msgstr "**チケットの文脈と歴史を分析する**"
 
 msgid ""
 "Trac isn't an absolute; the context is just as important as the words. When "
@@ -982,6 +1021,7 @@ msgid ""
 "**If you're going to engage in a big task, make sure that your idea has "
 "support first**"
 msgstr ""
+"**大きなタスクに取り組む場合、初めに自分のアイデアが支持されるかを確認する**"
 
 msgid ""
 "This means getting someone else to confirm that a bug is real before you fix "
@@ -990,7 +1030,7 @@ msgid ""
 msgstr ""
 
 msgid "**Be bold! Leave feedback!**"
-msgstr ""
+msgstr "**勇気を出して！ フィードバックを残そう！**"
 
 msgid ""
 "Sometimes it can be scary to put your opinion out to the world and say "
@@ -1001,7 +1041,7 @@ msgid ""
 msgstr ""
 
 msgid "**Err on the side of caution when marking things Ready For Check-in**"
-msgstr ""
+msgstr " **Ready For Check-in** マークを付けるときは注意が必要**"
 
 msgid ""
 "If you're really not certain if a ticket is ready, don't mark it as such. "
@@ -1011,7 +1051,7 @@ msgid ""
 msgstr ""
 
 msgid "**Wait for feedback, and respond to feedback that you receive**"
-msgstr ""
+msgstr "**フィードバックを待ち、受け取ったフィードバックに返事を書く**"
 
 msgid ""
 "Focus on one or two tickets, see them through from start to finish, and "
@@ -1020,7 +1060,7 @@ msgid ""
 msgstr ""
 
 msgid "**Be rigorous**"
-msgstr ""
+msgstr "**厳格になる**"
 
 msgid ""
 "When we say \":pep:`8`, and must have docs and tests\", we mean it. If a "
@@ -1032,7 +1072,7 @@ msgid ""
 msgstr ""
 
 msgid "**Be patient**"
-msgstr ""
+msgstr "**忍耐強く**"
 
 msgid ""
 "It's not always easy for your ticket or your patch to be reviewed quickly. "
@@ -1057,7 +1097,7 @@ msgid ""
 msgstr ""
 
 msgid "Triaging tickets"
-msgstr ""
+msgstr "チケットをトリアージする"
 
 msgid ""
 "Django uses Trac_ for managing the work on the code base. Trac is a "
@@ -1099,7 +1139,7 @@ msgid ""
 msgstr ""
 
 msgid "Triage workflow"
-msgstr ""
+msgstr "トリアージのワークフロー"
 
 msgid ""
 "Unfortunately, not all bug reports and feature requests in the ticket "
@@ -1124,7 +1164,7 @@ msgid "Since a picture is worth a thousand words, let's start there:"
 msgstr ""
 
 msgid "Django's ticket triage workflow"
-msgstr ""
+msgstr "Django のチケット トリアージのワークフロー"
 
 msgid "We've got two roles in this diagram:"
 msgstr ""
@@ -1186,7 +1226,7 @@ msgid ""
 msgstr ""
 
 msgid "Triage stages"
-msgstr ""
+msgstr "トリアージのステージ"
 
 msgid ""
 "Below we describe in more detail the various stages that a ticket may flow "
@@ -1194,7 +1234,7 @@ msgid ""
 msgstr ""
 
 msgid "Unreviewed"
-msgstr ""
+msgstr "Unreviewed (未レビュー)"
 
 msgid ""
 "The ticket has not been reviewed by anyone who felt qualified to make a "
@@ -1203,7 +1243,7 @@ msgid ""
 msgstr ""
 
 msgid "Accepted"
-msgstr ""
+msgstr "Accepted (アクセプト)"
 
 msgid ""
 "The big gray area! The absolute meaning of \"accepted\" is that the issue "
@@ -1248,7 +1288,7 @@ msgid ""
 msgstr ""
 
 msgid "Ready For Checkin"
-msgstr ""
+msgstr "Ready For Checkin"
 
 msgid ""
 "The ticket was reviewed by any member of the community other than the person "
@@ -1264,7 +1304,7 @@ msgid ""
 msgstr ""
 
 msgid "Someday/Maybe"
-msgstr ""
+msgstr "Someday/Maybe"
 
 msgid ""
 "This stage isn't shown on the diagram. It's used sparingly to keep track of "
@@ -1279,14 +1319,14 @@ msgid ""
 msgstr ""
 
 msgid "Other triage attributes"
-msgstr ""
+msgstr "その他のトリアージ属性"
 
 msgid ""
 "A number of flags, appearing as checkboxes in Trac, can be set on a ticket:"
 msgstr ""
 
 msgid "Has patch"
-msgstr ""
+msgstr "Has patch (パッチあり)"
 
 msgid ""
 "This means the ticket has an associated :doc:`patch<writing-code/submitting-"
@@ -1299,7 +1339,7 @@ msgid ""
 msgstr ""
 
 msgid "Needs documentation"
-msgstr ""
+msgstr "Needs documentation (ドキュメンテーションが必要)"
 
 msgid ""
 "This flag is used for tickets with patches that need associated "
@@ -1308,7 +1348,7 @@ msgid ""
 msgstr ""
 
 msgid "Needs tests"
-msgstr ""
+msgstr "Needs tests (テストが必要)"
 
 msgid ""
 "This flags the patch as needing associated unit tests. Again, this is a "
@@ -1316,7 +1356,7 @@ msgid ""
 msgstr ""
 
 msgid "Patch needs improvement"
-msgstr ""
+msgstr "Patch needs improvement (パッチの改善が必要)"
 
 msgid ""
 "This flag means that although the ticket *has* a patch, it's not quite ready "
@@ -1325,31 +1365,31 @@ msgid ""
 msgstr ""
 
 msgid "Easy pickings"
-msgstr ""
+msgstr "Easy pickings (簡単に取り組める)"
 
 msgid "Tickets that would require small, easy, patches."
 msgstr ""
 
 msgid "Type"
-msgstr "型"
+msgstr "Type (タイプ)"
 
 msgid "Tickets should be categorized by *type* between:"
-msgstr ""
+msgstr "チケットは以下のいずれかの *タイプ* に分類する必要があります。"
 
 msgid "New Feature"
-msgstr ""
+msgstr "New Feature (新しい機能)"
 
 msgid "For adding something new."
-msgstr ""
+msgstr "何か新しいものを追加するためのチケット。"
 
 msgid "Bug"
-msgstr ""
+msgstr "Bug (バグ)"
 
 msgid "For when an existing thing is broken or not behaving as expected."
-msgstr ""
+msgstr "既存のものが壊れたり期待通りに動作しないときのためのチケット。"
 
 msgid "Cleanup/optimization"
-msgstr ""
+msgstr "Cleanup/optimization (クリーンアップ/最適化)"
 
 msgid ""
 "For when nothing is broken but something could be made cleaner, better, "
@@ -1357,7 +1397,7 @@ msgid ""
 msgstr ""
 
 msgid "Component"
-msgstr ""
+msgstr "Component (コンポーネント)"
 
 msgid ""
 "Tickets should be classified into *components* indicating which area of the "
@@ -1366,7 +1406,7 @@ msgid ""
 msgstr ""
 
 msgid "Severity"
-msgstr ""
+msgstr "Severity (重要度)"
 
 msgid ""
 "The *severity* attribute is used to identify blockers, that is, issues that "
@@ -1377,7 +1417,7 @@ msgid ""
 msgstr ""
 
 msgid "Version"
-msgstr ""
+msgstr "Version (バージョン)"
 
 msgid ""
 "It is possible to use the *version* attribute to indicate in which version "
@@ -1385,7 +1425,7 @@ msgid ""
 msgstr ""
 
 msgid "UI/UX"
-msgstr ""
+msgstr "UI/UX"
 
 msgid ""
 "This flag is used for tickets that relate to User Interface and User "
@@ -1394,7 +1434,7 @@ msgid ""
 msgstr ""
 
 msgid "Cc"
-msgstr ""
+msgstr "Cc"
 
 msgid ""
 "You may add your username or email address to this field to be notified when "
@@ -1402,7 +1442,7 @@ msgid ""
 msgstr ""
 
 msgid "Keywords"
-msgstr ""
+msgstr "Keywords (キーワード)"
 
 msgid ""
 "With this field you may label a ticket with multiple keywords. This can be "

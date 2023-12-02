@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-04 12:41-0500\n"
+"POT-Creation-Date: 2023-10-21 03:45-0500\n"
 "PO-Revision-Date: 2013-04-02 20:02+0000\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>, 2015-2022\n"
 "Language-Team: French (http://app.transifex.com/django/django-docs/language/"
@@ -24720,17 +24720,10 @@ msgid ""
 "Django template loaders previously required an ``is_usable`` attribute to be "
 "defined. If a loader was configured in the template settings and this "
 "attribute was ``False``, the loader would be silently ignored. In practice, "
-"this was only used by the egg loader to detect if setuptools was installed. "
-"The ``is_usable`` attribute is now removed and the egg loader instead fails "
-"at runtime if setuptools is not installed."
+"this was only used by the egg loader to detect if ``setuptools`` was "
+"installed. The ``is_usable`` attribute is now removed and the egg loader "
+"instead fails at runtime if ``setuptools`` is not installed."
 msgstr ""
-"Les chargeurs de gabarit de Django exigeanient auparavant la présence d'un "
-"attribut ``is_usable``. Si un chargeur était configuré dans le réglage des "
-"gabarits et que cet attribut valait ``False``, le chargeur était ignoré en "
-"silence. En pratique, ce n'était utilisé que par le chargeur « egg » pour "
-"détecter si setuptools était installé. Cet attribut ``is_usable`` est "
-"maintenant supprimé et le chargeur « egg » échoue au moment de l'exécution "
-"si setuptools n'est pas installé."
 
 msgid "Related set direct assignment"
 msgstr "Attribution directe d'un ensemble d'objets liés"
@@ -25226,18 +25219,19 @@ msgid ""
 "by creating a Django application with this structure:"
 msgstr ""
 
-msgid "``SyntaxError`` when installing Django setuptools 5.5.x"
+msgid "``SyntaxError`` when installing Django ``setuptools`` 5.5.x"
 msgstr ""
 
-msgid "When installing Django 1.9 or 1.9.1 with setuptools 5.5.x, you'll see:"
+msgid ""
+"When installing Django 1.9 or 1.9.1 with ``setuptools`` 5.5.x, you'll see:"
 msgstr ""
 
 msgid ""
 "It's safe to ignore these errors (Django will still install just fine), but "
-"you can avoid them by upgrading setuptools to a more recent version. If "
+"you can avoid them by upgrading ``setuptools`` to a more recent version. If "
 "you're using pip, you can upgrade pip using ``python -m pip install -U pip`` "
-"which will also upgrade setuptools. This is resolved in later versions of "
-"Django as described in the :doc:`/releases/1.9.2`."
+"which will also upgrade ``setuptools``. This is resolved in later versions "
+"of Django as described in the :doc:`/releases/1.9.2`."
 msgstr ""
 
 msgid ""
@@ -35899,6 +35893,63 @@ msgid ""
 "labels of emails and URLs."
 msgstr ""
 
+msgid "Django 3.2.21 release notes"
+msgstr ""
+
+msgid "*September 4, 2023*"
+msgstr ""
+
+msgid ""
+"Django 3.2.21 fixes a security issue with severity \"moderate\" in 3.2.20."
+msgstr ""
+
+msgid ""
+"CVE-2023-41164: Potential denial of service vulnerability in ``django.utils."
+"encoding.uri_to_iri()``"
+msgstr ""
+
+msgid ""
+"``django.utils.encoding.uri_to_iri()`` was subject to potential denial of "
+"service attack via certain inputs with a very large number of Unicode "
+"characters."
+msgstr ""
+
+msgid "Django 3.2.22 release notes"
+msgstr ""
+
+msgid "*October 4, 2023*"
+msgstr ""
+
+msgid ""
+"Django 3.2.22 fixes a security issue with severity \"moderate\" in 3.2.21."
+msgstr ""
+
+msgid ""
+"CVE-2023-43665: Denial-of-service possibility in ``django.utils.text."
+"Truncator``"
+msgstr ""
+
+msgid ""
+"Following the fix for :cve:`2019-14232`, the regular expressions used in the "
+"implementation of ``django.utils.text.Truncator``'s ``chars()`` and "
+"``words()`` methods (with ``html=True``) were revised and improved. However, "
+"these regular expressions still exhibited linear backtracking complexity, so "
+"when given a very long, potentially malformed HTML input, the evaluation "
+"would still be slow, leading to a potential denial of service vulnerability."
+msgstr ""
+
+msgid ""
+"The ``chars()`` and ``words()`` methods are used to implement the :tfilter:"
+"`truncatechars_html` and :tfilter:`truncatewords_html` template filters, "
+"which were thus also vulnerable."
+msgstr ""
+
+msgid ""
+"The input processed by ``Truncator``, when operating in HTML mode, has been "
+"limited to the first five million characters in order to avoid potential "
+"performance and memory issues."
+msgstr ""
+
 msgid "Django 3.2.3 release notes"
 msgstr "Notes de publication de Django 3.2.3"
 
@@ -38668,6 +38719,20 @@ msgid ""
 "Django 4.1.10 fixes a security issue with severity \"moderate\" in 4.1.9."
 msgstr ""
 
+msgid "Django 4.1.11 release notes"
+msgstr ""
+
+msgid ""
+"Django 4.1.11 fixes a security issue with severity \"moderate\" in 4.1.10."
+msgstr ""
+
+msgid "Django 4.1.12 release notes"
+msgstr ""
+
+msgid ""
+"Django 4.1.12 fixes a security issue with severity \"moderate\" in 4.1.11."
+msgstr ""
+
 msgid "Django 4.1.2 release notes"
 msgstr ""
 
@@ -39718,16 +39783,76 @@ msgstr ""
 msgid "Django 4.2.5 release notes"
 msgstr ""
 
-msgid "*Expected September 4, 2023*"
-msgstr ""
-
-msgid "Django 4.2.5 fixes several bugs in 4.2.4."
+msgid ""
+"Django 4.2.5 fixes a security issue with severity \"moderate\" and several "
+"bugs in 4.2.4."
 msgstr ""
 
 msgid ""
 "Fixed a regression in Django 4.2 that caused an incorrect validation of "
 "``CheckConstraints`` on ``__isnull`` lookups against ``JSONField`` (:ticket:"
 "`34754`)."
+msgstr ""
+
+msgid ""
+"Fixed a bug in Django 4.2 where the deprecated ``DEFAULT_FILE_STORAGE`` and "
+"``STATICFILES_STORAGE`` settings were not synced with ``STORAGES`` (:ticket:"
+"`34773`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 4.2.2 that caused an unnecessary selection of a "
+"non-nullable ``ManyToManyField`` without a natural key during serialization "
+"(:ticket:`34779`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 4.2 that caused a crash of a queryset when "
+"filtering against deeply nested ``OuterRef()`` annotations (:ticket:`34803`)."
+msgstr ""
+
+msgid "Django 4.2.6 release notes"
+msgstr ""
+
+msgid ""
+"Django 4.2.6 fixes a security issue with severity \"moderate\" and several "
+"bugs in 4.2.5."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 4.2.5 where overriding the deprecated "
+"``DEFAULT_FILE_STORAGE`` and ``STATICFILES_STORAGE`` settings in tests "
+"caused the main ``STORAGES`` to mutate (:ticket:`34821`)."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 4.2 that caused unnecessary casting of string "
+"based fields (``CharField``, ``EmailField``, ``TextField``, ``CICharField``, "
+"``CIEmailField``, and ``CITextField``) used with the ``__isnull`` lookup on "
+"PostgreSQL. As a consequence, indexes using an ``__isnull`` expression or "
+"condition created before Django 4.2 wouldn't be used by the query planner, "
+"leading to a performance regression (:ticket:`34840`)."
+msgstr ""
+
+msgid ""
+"You may need to recreate such indexes created in your database with Django "
+"4.2 to 4.2.5, as they contain unnecessary ``::text`` casting. Find candidate "
+"indexes with this query:"
+msgstr ""
+
+msgid "Django 4.2.7 release notes"
+msgstr ""
+
+msgid "*Expected November 1, 2023*"
+msgstr ""
+
+msgid "Django 4.2.7 fixes several bugs in 4.2.6."
+msgstr ""
+
+msgid ""
+"Fixed a regression in Django 4.2 that caused a crash of ``QuerySet."
+"aggregate()`` with aggregates referencing expressions containing subqueries "
+"(:ticket:`34798`)."
 msgstr ""
 
 msgid "Release notes"
@@ -39925,6 +40050,42 @@ msgid ""
 msgstr ""
 "Tous les problèmes de sécurité ont été traités dans le cadre du processus de "
 "sécurité de Django. Elles sont listées ci-dessous."
+
+msgid "October 4, 2023 - :cve:`2023-43665`"
+msgstr ""
+
+msgid ""
+"Denial-of-service possibility in ``django.utils.text.Truncator``. `Full "
+"description <https://www.djangoproject.com/weblog/2023/oct/04/security-"
+"releases/>`__"
+msgstr ""
+
+msgid "Django 4.2 :commit:`(patch) <be9c27c4d18c2e6a5be8af4e53c0797440794473>`"
+msgstr ""
+
+msgid "Django 4.1 :commit:`(patch) <c7b7024742250414e426ad49fb80db943e7ba4e8>`"
+msgstr ""
+
+msgid "Django 3.2 :commit:`(patch) <ccdade1a0262537868d7ca64374de3d957ca50c5>`"
+msgstr ""
+
+msgid "September 4, 2023 - :cve:`2023-41164`"
+msgstr ""
+
+msgid ""
+"Potential denial of service vulnerability in ``django.utils.encoding."
+"uri_to_iri()``. `Full description <https://www.djangoproject.com/weblog/2023/"
+"sep/04/security-releases/>`__"
+msgstr ""
+
+msgid "Django 4.2 :commit:`(patch) <9c51b4dcfa0cefcb48231f4d71cafa80821f87b9>`"
+msgstr ""
+
+msgid "Django 4.1 :commit:`(patch) <ba00bc5ec6a7eff5e08be438f7b5b0e9574e8ff0>`"
+msgstr ""
+
+msgid "Django 3.2 :commit:`(patch) <6f030b1149bd8fa4ba90452e77cb3edc095ce54e>`"
+msgstr ""
 
 msgid "July 3, 2023 - :cve:`2023-36053`"
 msgstr ""

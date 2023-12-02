@@ -4,15 +4,17 @@
 #
 # Translators:
 # andrewsmedina <andrewsmedina@gmail.com>, 2013,2016
-# Carlos Leite <caduado@gmail.com>, 2020
-# Carlos Leite <caduado@gmail.com>, 2016-2017
-# Carlos Leite <caduado@gmail.com>, 2015-2016
+# Carlos C. Leite <caduado@gmail.com>, 2020
+# Carlos C. Leite <caduado@gmail.com>, 2016-2017
+# Carlos C. Leite <caduado@gmail.com>, 2015-2016
 # Carlos Schneider <carlosaschjr@gmail.com>, 2016
 # hoisel <danielhoisel@gmail.com>, 2014
 # Fábio C. Barrionuevo da Luz <bnafta@gmail.com>, 2014-2015
-# Filipe Cifali Stangler <cifali.filipe@gmail.com>, 2019
+# Filipe Cifali <cifali.filipe@gmail.com>, 2019
 # Gustavo de Carvalho Sales <gt.salles@gmail.com>, 2018
+# Jefeson Alves, 2023
 # João Gehlen <joaogehlen91@gmail.com>, 2016
+# Laercio Igor, 2022
 # Lucas Infante <maccinza@gmail.com>, 2014-2015
 # Marcelo Moro Brondani <mbrondani@inf.ufsm.br>, 2018,2020
 # Marco Rougeth <marco@rougeth.com>, 2015
@@ -27,16 +29,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-27 03:41-0500\n"
-"PO-Revision-Date: 2022-04-02 19:59+0000\n"
-"Last-Translator: Tomaz Marcelino Cunha Neto <tomazmcn@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) (http://www.transifex.com/django/django-"
+"POT-Creation-Date: 2023-11-30 05:02-0600\n"
+"PO-Revision-Date: 2013-04-02 19:59+0000\n"
+"Last-Translator: Jefeson Alves, 2023\n"
+"Language-Team: Portuguese (Brazil) (http://app.transifex.com/django/django-"
 "docs/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % "
+"1000000 == 0 ? 1 : 2;\n"
 
 msgid "Django documentation"
 msgstr "Documentação do Django"
@@ -63,14 +66,9 @@ msgid ""
 "Views and templates <intro/tutorial03>` | :doc:`Part 4: Forms and generic "
 "views <intro/tutorial04>` | :doc:`Part 5: Testing <intro/tutorial05>` | :doc:"
 "`Part 6: Static files <intro/tutorial06>` | :doc:`Part 7: Customizing the "
-"admin site <intro/tutorial07>`"
+"admin site <intro/tutorial07>` | :doc:`Part 8: Adding third-party packages "
+"<intro/tutorial08>`"
 msgstr ""
-"**Tutorial:** :doc:`Parte 1: Requisições e respostas <intro/tutorial01>` | :"
-"doc:`Parte 2: Modelos e o site Admin <intro/tutorial02>` | :doc:`Parte 3: "
-"Views e templates <intro/tutorial03>` | :doc:`Parte 4: Forms e views "
-"genéricas <intro/tutorial04>` | :doc:`Parte 5: Testando <intro/tutorial05>` "
-"| :doc:`Part e 6: Arquivos estáticos <intro/tutorial06>` | :doc:`Parte 7: "
-"Personalizando o site admin <intro/tutorial07>`"
 
 msgid ""
 "**Advanced Tutorials:** :doc:`How to write reusable apps <intro/reusable-"
@@ -103,8 +101,8 @@ msgid ""
 "Not found anything? See :doc:`faq/help` for information on getting support "
 "and asking questions to the community."
 msgstr ""
-"Não encontrou nada ? Veja o :doc:`faq/help` para informações sobre como "
-"obter suporte e pergunte a comunidade."
+"Não encontrou nada? Veja o :doc:`faq/help` para informações sobre como obter "
+"suporte e pergunte a comunidade."
 
 msgid "Report bugs with Django in our `ticket tracker`_."
 msgstr "Relate bugs do Django no nosso `ticket tracker`_."
@@ -213,13 +211,13 @@ msgid ""
 "database-functions>`"
 msgstr ""
 "**Avançado:** :doc:`Managers <topics/db/managers>` | :doc:`Raw SQL <topics/"
-"db/sql>` | :doc:`Transações de dados <topics/db/transactions>` | :doc:"
-"`Agregação de dados  <topics/db/aggregation>` | :doc:`Campos personalizados "
-"de modelo <howto/custom-model-fields>` | :doc:`Multiple\n"
-"os bancos de dados <topics/db/multi-db>` | :doc:`Pesquisa customizada <howto/"
-"custom-lookups>` | :doc:`Expressões de consulta <ref/models/expressions>` | :"
-"doc:`Expressões  condicionais <ref/models/conditional-expressions>` | :doc:"
-"`Funções de base de dados <ref/models/database-functions>`"
+"db/sql>` | :doc:`Transações <topics/db/transactions>` | :doc:`Agregação "
+"<topics/db/aggregation>` | :doc:`Busca <topics/db/search>` | :doc:`Campos "
+"personalizados <howto/custom-model-fields>` | :doc:`Vários bancos de dados "
+"<topics/db/multi-db>` | :doc:`Pesquisas personalizadas <howto/custom-"
+"lookups>` | :doc:`Expressões de consulta <ref/models/expressions>` | :doc:"
+"`Expressões condicionais <ref/models/conditional-expressions>` | :doc:"
+"`Funções de banco de dados <ref/models/database-functions>`"
 
 msgid ""
 "**Other:** :doc:`Supported databases <ref/databases>` | :doc:`Legacy "
@@ -624,13 +622,13 @@ msgid ""
 "doc:`The release process <internals/release-process>` | :doc:`Team "
 "organization <internals/organization>` | :doc:`The Django source code "
 "repository <internals/git>` | :doc:`Security policies <internals/security>` "
-"| :doc:`Mailing lists <internals/mailing-lists>`"
+"| :doc:`Mailing lists and Forum<internals/mailing-lists>`"
 msgstr ""
-"**Comunidade:** :doc:`Como participar <internals/contributing/index>` | :doc:"
-"`O processo de publicação <internals/release-process>` | :doc:`Organização "
-"do time <internals/organization>` | :doc:`O repositório do código fonte do "
-"Django <internals/git>` | :doc:`Políticas de segurança <internals/security>` "
-"| :doc:`Listas de e-mails <internals/mailing-lists>`"
+"**Comunidade:** :doc:`Como contribuir <internals/contributing/index>` | :doc:"
+"`O processo de release <internals/release-process>` | :doc:`Organização do "
+"projeto <internals/organization>` | :doc:`O repositório de código-fonte "
+"<internals/git>` | :doc:`Política de segurança <internals/security>` | :doc:"
+"`Listas de discussão e fórum<internals/mailing-lists>`"
 
 msgid "**Design philosophies:** :doc:`Overview <misc/design-philosophies>`"
 msgstr ""
