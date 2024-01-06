@@ -7,12 +7,12 @@
 # Hiroki KIYOHARA <hirokiky@gmail.com>, 2013-2014
 # Hiroki KIYOHARA <hirokiky@gmail.com>, 2013
 # Kashun YOSHIDA, 2017
-# Kashun YOSHIDA, 2021
+# Kashun YOSHIDA, 2021,2023
 # Masashi SHIBATA <contact@c-bata.link>, 2015-2016
 # mnamihdk, 2017
-# Shuuji TAKAHASHI <shuuji3@gmail.com>, 2016-2017,2019
-# Taichi Taniguchi, 2022
-# Shuuji TAKAHASHI <shuuji3@gmail.com>, 2016,2019
+# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016-2017,2019
+# TANIGUCHI Taichi, 2022-2023
+# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016,2019,2023
 # Takuya N <takninnovationresearch@gmail.com>, 2019-2020
 # Takuya N <takninnovationresearch@gmail.com>, 2018
 # Yusuke Miyazaki <miyazaki.dev@gmail.com>, 2015-2016
@@ -22,10 +22,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-21 01:06-0600\n"
-"PO-Revision-Date: 2022-01-27 05:33+0000\n"
-"Last-Translator: Taichi Taniguchi\n"
-"Language-Team: Japanese (http://www.transifex.com/django/django-docs/"
+"POT-Creation-Date: 2024-01-04 05:55-0600\n"
+"PO-Revision-Date: 2013-04-02 19:59+0000\n"
+"Last-Translator: TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016,2019,2023\n"
+"Language-Team: Japanese (http://app.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,14 +59,16 @@ msgid ""
 "Views and templates <intro/tutorial03>` | :doc:`Part 4: Forms and generic "
 "views <intro/tutorial04>` | :doc:`Part 5: Testing <intro/tutorial05>` | :doc:"
 "`Part 6: Static files <intro/tutorial06>` | :doc:`Part 7: Customizing the "
-"admin site <intro/tutorial07>`"
+"admin site <intro/tutorial07>` | :doc:`Part 8: Adding third-party packages "
+"<intro/tutorial08>`"
 msgstr ""
 "**チュートリアルはこちら:** :doc:`その 1: リクエストとレスポンス <intro/"
 "tutorial01>` | :doc:`その 2: モデルと管理サイト <intro/tutorial02>` | :doc:`"
 "その 3: ビューとテンプレート <intro/tutorial03>` | :doc:`その 4: フォームと汎"
 "用ビュー <intro/tutorial04>` | :doc:`その 5: テスト <intro/tutorial05>` | :"
 "doc:`その 6: 静的ファイル <intro/tutorial06>` | :doc:`その 7: 管理サイトのカ"
-"スタマイズ <intro/tutorial07>`"
+"スタマイズ <intro/tutorial07>` | :doc:`その 8: サードパーティ製のパッケージを"
+"追加する <intro/tutorial08>`"
 
 msgid ""
 "**Advanced Tutorials:** :doc:`How to write reusable apps <intro/reusable-"
@@ -92,16 +94,16 @@ msgid ""
 "Looking for specific information? Try the :ref:`genindex`, :ref:`modindex` "
 "or the :doc:`detailed table of contents <contents>`."
 msgstr ""
-"特定のトピックに関する情報を探していますか？ それなら、 :doc:`genindex` や :"
-"doc:`modindex` 、そして :doc:`ドキュメントの詳しい目次 <contents>` を見てくだ"
+"特定のトピックに関する情報を探していますか？ それなら、 :ref:`genindex` や :"
+"ref:`modindex` 、そして :doc:`ドキュメントの詳しい目次 <contents>` を見てくだ"
 "さい。"
 
 msgid ""
 "Not found anything? See :doc:`faq/help` for information on getting support "
 "and asking questions to the community."
 msgstr ""
-"何も見つかりませんか？ :doc:`faq/help` で、サポートを受けたりコミュニティに質"
-"問をしたりすることに関わる情報を確認してください。"
+"何も見つかりませんか？ サポートを受けたりコミュニティへの質問に関する情報につ"
+"いては、:doc:`faq/help`  を確認してください。"
 
 msgid "Report bugs with Django in our `ticket tracker`_."
 msgstr ""
@@ -251,7 +253,7 @@ msgid ""
 "`Decorators <topics/http/decorators>` | :doc:`Asynchronous Support <topics/"
 "async>`"
 msgstr ""
-"**基本事項:** :doc:`URLconfs <topics/http/urls>` | :doc:`View関数 <topics/"
+"**基本事項:** :doc:`URLconfs <topics/http/urls>` | :doc:`ビュー関数 <topics/"
 "http/views>` | :doc:`ショートカット <topics/http/shortcuts>` | :doc:`デコレー"
 "タ <topics/http/decorators>` | :doc:`非同期サポート <topics/async>`"
 
@@ -482,8 +484,8 @@ msgid ""
 "doc:`Localized web UI formatting and form input <topics/i18n/formatting>`"
 msgstr ""
 ":doc:`概要 <topics/i18n/index>` | :doc:`国際化 <topics/i18n/translation>` | :"
-"ref:`地域化 <how-to-create-language-files>` | :doc:`ローカライズされたWeb UI"
-"フォーマットとフォームインプット <topics/i18n/formatting>`"
+"ref:`地域化 <how-to-create-language-files>` | :doc:`ローカライズされた Web "
+"UI フォーマットとフォームインプット <topics/i18n/formatting>`"
 
 msgid ":doc:`Time zones </topics/i18n/timezones>`"
 msgstr ":doc:`タイムゾーン </topics/i18n/timezones>`"
@@ -515,13 +517,14 @@ msgstr ""
 "用することにあります。"
 
 msgid "Common web application tools"
-msgstr "一般的なWebアプリケーションツール"
+msgstr "一般的な Web アプリケーションツール"
 
 msgid ""
 "Django offers multiple tools commonly needed in the development of web "
 "applications:"
 msgstr ""
-"DjangoはWebアプリケーションの開発でよく必要とされるツール群を提供しています。"
+"Django は Web アプリケーションの開発でよく必要とされるツール群を提供していま"
+"す。"
 
 msgid ""
 "**Authentication:** :doc:`Overview <topics/auth/index>` | :doc:`Using the "
@@ -614,13 +617,13 @@ msgid ""
 "doc:`The release process <internals/release-process>` | :doc:`Team "
 "organization <internals/organization>` | :doc:`The Django source code "
 "repository <internals/git>` | :doc:`Security policies <internals/security>` "
-"| :doc:`Mailing lists <internals/mailing-lists>`"
+"| :doc:`Mailing lists and Forum<internals/mailing-lists>`"
 msgstr ""
 "**コミュニティ:** :doc:`参加するには <internals/contributing/index>` | :doc:`"
 "リリースプロセス <internals/release-process>` | :doc:`チーム組織 <internals/"
 "organization>` | :doc:`Djangoのソースコードリポジトリ <internals/git>` | :"
-"doc:`セキュリティポリシー <internals/security>` | :doc:`メーリングリスト "
-"<internals/mailing-lists>`"
+"doc:`セキュリティポリシー <internals/security>` | :doc:`メーリングリストと"
+"フォーラム <internals/mailing-lists>`"
 
 msgid "**Design philosophies:** :doc:`Overview <misc/design-philosophies>`"
 msgstr "**設計思想:** :doc:`概要 <misc/design-philosophies>`"
