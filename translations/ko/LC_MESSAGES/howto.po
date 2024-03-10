@@ -4,6 +4,7 @@
 #
 # Translators:
 # bgchoi <choi.byunggil@gmail.com>, 2017
+# bumsu yi, 2024
 # ByungChul Kim <bcking92@gmail.com>, 2019
 # DONGHO JEONG <nearermg@gmail.com>, 2020
 # Geonho Kim / Leo Kim <gh.leokim@gmail.com>, 2019
@@ -25,7 +26,7 @@
 # yangbeom <yangbeomsu@gmail.com>, 2016
 # Yang Chan Woo <oizys18@gmail.com>, 2019
 # Yeon Haeng Cho <ntype.joe@gmail.com>, 2019
-# Yong Choi <sk8er.choi@gmail.com>, 2019
+# Yong Choi <sk8er.choi@gmail.com>, 2019,2024
 # Jrog <jrog612@gmail.com>, 2018
 # Yongtaek Jun <guardian.yong@gmail.com>, 2019
 # Yoon Kim, 2017
@@ -34,9 +35,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-30 05:02-0600\n"
+"POT-Creation-Date: 2024-03-08 00:58-0600\n"
 "PO-Revision-Date: 2013-04-02 19:58+0000\n"
-"Last-Translator: Youngjun Lee, 2022-2023\n"
+"Last-Translator: Yong Choi <sk8er.choi@gmail.com>, 2019,2024\n"
 "Language-Team: Korean (http://app.transifex.com/django/django-docs/language/"
 "ko/)\n"
 "MIME-Version: 1.0\n"
@@ -518,6 +519,8 @@ msgid ""
 "If, for some reason, you *want* the test client to perform CSRF checks, you "
 "can create an instance of the test client that enforces CSRF checks:"
 msgstr ""
+"혹시, 테스트 클라이언트가 CSRF 확인을 실행하길 원한다면, CSRF 확인을 실행하"
+"는 객체를 생성할 수 있습니다."
 
 msgid "Edge cases"
 msgstr "경계 조건들"
@@ -839,7 +842,7 @@ msgstr ""
 "대체이름을 얻습니다."
 
 msgid "Use your custom storage engine"
-msgstr ""
+msgstr "맞춤 스토리지 엔진 사용하기"
 
 msgid ""
 "The first step to using your custom storage with Django is to tell Django "
@@ -851,7 +854,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Storages are then accessed by alias from from the :data:`django.core.files."
+"Storages are then accessed by alias from the :data:`django.core.files."
 "storage.storages` dictionary::"
 msgstr ""
 
@@ -1721,11 +1724,15 @@ msgstr ""
 
 msgid ""
 "If ``app_configs`` and ``tags`` are both ``None``, all system checks are "
-"performed. ``tags`` can be a list of check tags, like ``compatibility`` or "
-"``models``."
+"performed except deployment and database related checks. ``tags`` can be a "
+"list of check tags, like ``compatibility`` or ``models``."
 msgstr ""
-"\"app_configs\"와 \"tags\"가 둘 다 \"None\"이면 모든 시스템 점검이 이루어진"
-"다. \"'compatibility' 또는 ''models''과 같은 체크 태그의 목록이 될 수 있다."
+
+msgid ""
+"You can pass ``include_deployment_checks=True`` to also perform deployment "
+"checks, and list of database aliases in the ``databases`` to run database "
+"related checks against them."
+msgstr ""
 
 msgid "``BaseCommand`` subclasses"
 msgstr "``BaseCommand`` 하위 클래스"
@@ -4886,12 +4893,6 @@ msgstr ""
 "적절한 때에 ``SECRET_KEY_FALLBACKS``에서 오래된 비밀 키가 제거되었는지 확인하"
 "십시오."
 
-msgid ""
-"The ``SECRET_KEY_FALLBACKS`` setting was added to support rotating secret "
-"keys."
-msgstr ""
-"비밀 키 순환을 지원하기 위해 ``SECRET_KEY_FALLBACKS`` 설정이 추가되었습니다."
-
 msgid ":setting:`DEBUG`"
 msgstr ":설정:`DEBUG`"
 
@@ -6244,16 +6245,7 @@ msgstr ""
 "의 맨 위에 놓아야 한다. 이렇게 하면 다른 장식자를 통과할 때 함수 인수도 숨겨"
 "집니다."
 
-msgid ""
-"Due to the machinery needed to cross the sync/async boundary, :func:"
-"`~asgiref.sync.sync_to_async` and :func:`~asgiref.sync.async_to_sync` are "
-"**not** compatible with ``sensitive_variables()``."
-msgstr ""
-
-msgid ""
-"If using these adapters with sensitive variables, ensure to audit exception "
-"reporting, and consider implementing a :ref:`custom filter <custom-error-"
-"reports>` if necessary."
+msgid "Support for wrapping ``async`` functions was added."
 msgstr ""
 
 msgid ""
@@ -8305,17 +8297,12 @@ msgid "How to install Django on Windows"
 msgstr "윈도우즈에 Django 설치하기"
 
 msgid ""
-"This document will guide you through installing Python 3.8 and Django on "
+"This document will guide you through installing Python 3.12 and Django on "
 "Windows. It also provides instructions for setting up a virtual environment, "
 "which makes it easier to work on Python projects. This is meant as a "
 "beginner's guide for users working on Django projects and does not reflect "
 "how Django should be installed when developing patches for Django itself."
 msgstr ""
-"이 문서는 Windows에 Python 3.8 및 Django를 설치하는 과정을 안내합니다. 또한 "
-"Python 프로젝트에서 보다 쉽게 작업할 수 있도록 가상 환경 설정에 대한 지침을 "
-"제공합니다. 이것은 Django 프로젝트를 하는 사용자들을 위한 초보자 가이드로서 "
-"의미되며, Django 자체에 대한 패치를 개발할 때 Django가 어떻게 설치되어야 하는"
-"지 반영하지 않습니다."
 
 msgid ""
 "The steps in this guide have been tested with Windows 10. In other versions, "
@@ -8330,10 +8317,8 @@ msgstr "파이썬 설치"
 
 msgid ""
 "Django is a Python web framework, thus requiring Python to be installed on "
-"your machine. At the time of writing, Python 3.8 is the latest version."
+"your machine. At the time of writing, Python 3.12 is the latest version."
 msgstr ""
-"Django는 Python 웹 프레임워크이므로 Python을 컴퓨터에 설치해야 합니다. 현재 "
-"Python 3.8은 최신 버전입니다."
 
 msgid ""
 "To install Python on your machine go to https://www.python.org/downloads/. "
@@ -8445,8 +8430,8 @@ msgstr ""
 "envvar:`DJANGO_COLORS`를 ``nocolor``로 설정하십시오."
 
 msgid ""
-"On older Windows versions, or legacy terminals, :pypi:`colorama` must be "
-"installed to enable syntax coloring:"
+"On older Windows versions, or legacy terminals, :pypi:`colorama` 0.4.6+ must "
+"be installed to enable syntax coloring:"
 msgstr ""
 
 msgid "See :ref:`syntax-coloring` for more information on color settings."

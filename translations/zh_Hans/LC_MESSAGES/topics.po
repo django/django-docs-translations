@@ -12,7 +12,7 @@
 # belitex, 2018
 # belitex, 2018
 # Blg Mengde <kid.blg@gmail.com>, 2019-2020
-# 杜文昊 <i@bobdu.cc>, 2018
+# Bob Du <i@bobdu.cc>, 2018
 # Brian Wang <singeeking@gmail.com>, 2018
 # cjc7373 <niuchangcun@163.com>, 2020
 # FSSlc <fsslc235@gmail.com>, 2020
@@ -52,13 +52,14 @@
 # Robot Robert <justamanm@gmail.com>, 2021
 # Ronald White <tkliuxing@me.com>, 2019
 # Rui Deng <vipdengrui@vip.qq.com>, 2018
+# Ryoma Han <ryomahan1996@gmail.com>, 2024
 # Lucas Song <mr.songxr@gmail.com>, 2018
 # Shellbye bai <shellbye.com@gmail.com>, 2018
 # shouheng lei <zz5432@qq.com>, 2018
 # 思源曹 <seeran@outlook.com>, 2018
 # Todd Kasaki <2524737581@qq.com>, 2020
 # Tylor Caesar <caesartylor@gmail.com>, 2023
-# Veoco <one@nomox.cn>, 2020-2023
+# Veoco <one@nomox.cn>, 2020-2024
 # Vincent <Intelligent.vincent@gmail.com>, 2018
 # Liping Wang <lynn.config@gmail.com>, 2016
 # 汪心禾 <wangxinhe06@gmail.com>, 2018
@@ -84,7 +85,7 @@
 # 得鑫 李 <lidexin911@126.com>, 2018
 # 思源曹 <seeran@outlook.com>, 2018
 # 摸象 虾子 <86447840@qq.com>, 2019
-# 杜文昊 <i@bobdu.cc>, 2018
+# Bob Du <i@bobdu.cc>, 2018
 # 文隆 胡 <xcluas@gmail.com>, 2018
 # 景隆 王 <Arsenal591@126.com>, 2018
 # blacklin <chinalinzhijie@gmail.com>, 2020
@@ -97,9 +98,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-04 05:55-0600\n"
+"POT-Creation-Date: 2024-03-08 00:58-0600\n"
 "PO-Revision-Date: 2013-04-02 20:02+0000\n"
-"Last-Translator: Veoco <one@nomox.cn>, 2020-2023\n"
+"Last-Translator: Ryoma Han <ryomahan1996@gmail.com>, 2024\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -3771,11 +3772,11 @@ msgstr "``next`` ：成功登陆后跳转的 URL。"
 
 msgid ""
 "``redirect_field_name``: The name of a ``GET`` field containing the URL to "
-"redirect to after log out. Overrides ``next`` if the given ``GET`` parameter "
+"redirect to after login. Overrides ``next`` if the given ``GET`` parameter "
 "is passed."
 msgstr ""
-"``redirect_field_name`` ：注销后跳转的 URL 所包含的 ``GET`` 字段名称。如果已"
-"传递给定的 ``GET`` 参数，则覆盖 ``next`` 。"
+"``redirect_field_name`` ： ``GET`` 字段包含的登录后跳转 URL 的参数名称。如果"
+"传递给定的 ``GET`` 参数，将会覆盖 ``next`` 。"
 
 msgid "Built-in forms"
 msgstr "内置表单"
@@ -5891,8 +5892,8 @@ msgid ""
 msgstr ":setting:`CACHE_MIDDLEWARE_ALIAS` -- 用于存储的缓存别名。"
 
 msgid ""
-":setting:`CACHE_MIDDLEWARE_SECONDS` -- The number of seconds each page "
-"should be cached."
+":setting:`CACHE_MIDDLEWARE_SECONDS` -- The integer number of seconds each "
+"page should be cached."
 msgstr ":setting:`CACHE_MIDDLEWARE_SECONDS` -- 应缓存每个页面的秒数。"
 
 msgid ""
@@ -11215,10 +11216,10 @@ msgstr ""
 "些规则提供了必要的灵活性。例如，假设有此基类::"
 
 msgid ""
-"If you use this directly in a subclass, ``objects`` will be the default "
-"manager if you declare no managers in the base class::"
+"If you use this directly in a child class, ``objects`` will be the default "
+"manager if you declare no managers in the child class::"
 msgstr ""
-"如果您在子类中直接使用这一点，如果您在基类中没有声明任何管理器，那么 "
+"如果你在子类中直接使用这个，如果你在子类中没有声明任何管理器，那么 "
 "``objects`` 将是默认的管理器："
 
 msgid ""
@@ -11517,6 +11518,10 @@ msgid ""
 "instead of the standard text field and will limit choices to the choices "
 "given."
 msgstr ""
+"一个 2 值元组的 :term:`sequence`，一个 :term:`mapping`，一个 :ref:`枚举类型 "
+"<field-choices-enum-types>`，或者一个可调用对象（不接受参数并返回前述任意格式"
+"之一），用作此字段的选择项。如果提供了此参数，则默认的表单小部件将是选择框，"
+"而不是标准文本字段，并且将限制选择范围为给定的选择项。"
 
 msgid "A choices list looks like this::"
 msgstr "一个选项列表："
@@ -12882,7 +12887,7 @@ msgid ""
 "since they directly inherit its fields and managers."
 msgstr ""
 "另一方面，代理模型意在表现的和所代理的模型一样。它们总是与父模型保持一致，因"
-"为它们直接从福利继承字段和管理器。"
+"为它们直接从父类继承字段和管理器。"
 
 msgid "The general rules are:"
 msgstr "通用性规则："
@@ -13791,20 +13796,20 @@ msgstr ""
 "性。"
 
 msgid ""
-"If you're using Postgres, Oracle, or MySQL with InnoDB, this is enforced at "
-"the database integrity level -- database level key constraints prevent the "
-"creation of relations that can't be validated."
+"If you're using Postgres, SQLite, Oracle, or MySQL with InnoDB, this is "
+"enforced at the database integrity level -- database level key constraints "
+"prevent the creation of relations that can't be validated."
 msgstr ""
-"如果你正在使用 Postgres，Oracle，或支持 InnoDB 的 MySQL，这是在数据库完整性级"
-"别上强制执行的——数据库级别的键约束防止创建无法验证的关系。"
+"如果你正在使用 Postgres，SQLite，Oracle，或支持 InnoDB 的 MySQL，这是在数据库"
+"完整性级别上强制执行的——数据库级别的键约束防止创建无法验证的关系。"
 
 msgid ""
-"However, if you're using SQLite or MySQL with MyISAM tables, there is no "
-"enforced referential integrity; as a result, you may be able to 'fake' cross "
-"database foreign keys. However, this configuration is not officially "
-"supported by Django."
+"However, if you're using MySQL with MyISAM tables, there is no enforced "
+"referential integrity; as a result, you may be able to 'fake' cross database "
+"foreign keys. However, this configuration is not officially supported by "
+"Django."
 msgstr ""
-"然而，如果你正在使用 SQLite 或支持 MyISAM 表的MySQL，这就不会强制参照完整性；"
+"然而，如果你正在使用 MySQL 或支持 MyISAM 表的 MySQL，这就不会强制参照完整性；"
 "因此，你可以伪造跨数据库的外键。尽管 Django 并没有正式支持这个设置。"
 
 msgid "Behavior of contrib apps"
@@ -15078,7 +15083,7 @@ msgid ""
 "doesn't contain a double underscore -- the lookup type is assumed to be "
 "``exact``."
 msgstr ""
-"若你为提供查询类型 —— 也就说，若关键字参数未包含双下划线 —— 查询类型会被指定"
+"若你未提供查询类型 —— 也就说，若关键字参数未包含双下划线 —— 查询类型会被指定"
 "为 ``exact``。"
 
 msgid "For example, the following two statements are equivalent:"
@@ -27763,14 +27768,19 @@ msgstr ""
 msgid ""
 "As a consequence, if you're using PostgreSQL, you can switch between "
 "``USE_TZ = False`` and ``USE_TZ = True`` freely. The database connection's "
-"time zone will be set to :setting:`TIME_ZONE` or ``UTC`` respectively, so "
-"that Django obtains correct datetimes in all cases. You don't need to "
-"perform any data conversions."
+"time zone will be set to :setting:`DATABASE-TIME_ZONE` or ``UTC`` "
+"respectively, so that Django obtains correct datetimes in all cases. You "
+"don't need to perform any data conversions."
 msgstr ""
-"因此，如果你正在使用 PostgreSQL，你可以在 ``USE_TZ = False`` 和  ``USE_TZ = "
-"True`` 之间自由选择，数据库连接的时区将分别设置为 :setting:`TIME_ZONE` 或 "
-"``UTC`` ，以便 Django 在所有情况下将得到正确的日期。你不需要执行任何数据转"
-"换。"
+
+msgid "Time zone settings"
+msgstr ""
+
+msgid ""
+"The :setting:`time zone <DATABASE-TIME_ZONE>` configured for the connection "
+"in the :setting:`DATABASES` setting is distinct from the general :setting:"
+"`TIME_ZONE` setting."
+msgstr ""
 
 msgid "Other databases"
 msgstr "其他数据库"
@@ -31542,12 +31552,17 @@ msgid ""
 "interruptions. In situations where locks are still necessary, the duration "
 "of these operations will be proportionate to the number of rows involved."
 msgstr ""
+"MySQL 8.0 引入了对 `DDL 操作`_ 的重大性能增强，使其更高效，并减少了对完整表重"
+"建的需求。然而，它不能保证完全没有锁定或中断。在仍然需要锁定的情况下，这些操"
+"作的持续时间将与涉及的行数成比例。"
 
 msgid ""
 "Finally, MySQL has a relatively small limit on the combined size of all "
 "columns an index covers. This means that indexes that are possible on other "
 "backends will fail to be created under MySQL."
 msgstr ""
+"最后，MySQL 对索引覆盖的所有列的组合大小有相对较小的限制。这意味着在 MySQL 下"
+"可能在其他后端上创建的索引将无法创建。"
 
 msgid "SQLite"
 msgstr "SQLite"
@@ -34751,10 +34766,10 @@ msgstr ""
 msgid ""
 "The value of :envvar:`DJANGO_SETTINGS_MODULE` should be in Python path "
 "syntax, e.g. ``mysite.settings``. Note that the settings module should be on "
-"the Python `import search path`_."
+"the Python :py:data:`sys.path`."
 msgstr ""
 ":envvar:`DJANGO_SETTINGS_MODULE` 的值是一个符合 Python 语法的路径，例如 "
-"``mysite.settings``。要注意配置模块应位于 Python 的 `import 搜索路径`_ 中。"
+"``mysite.settings``。要注意配置模块应位于 Python 的 :py:data:`sys.path` 中。"
 
 msgid "The ``django-admin`` utility"
 msgstr "``django-admin`` 工具"

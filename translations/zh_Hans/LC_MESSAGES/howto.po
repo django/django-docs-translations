@@ -38,7 +38,7 @@
 # tianlong zhou <tlongzou@gmail.com>, 2019
 # Todd Kasaki <2524737581@qq.com>, 2020-2022
 # Tylor Caesar <caesartylor@gmail.com>, 2023
-# Veoco <one@nomox.cn>, 2020-2023
+# Veoco <one@nomox.cn>, 2020-2024
 # Vincent Chan, 2018
 # Vincent <Intelligent.vincent@gmail.com>, 2019
 # Wehao Guo <kinggreenhall@gmail.com>, 2019
@@ -70,9 +70,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-04 05:55-0600\n"
+"POT-Creation-Date: 2024-03-08 00:58-0600\n"
 "PO-Revision-Date: 2013-04-02 19:58+0000\n"
-"Last-Translator: Veoco <one@nomox.cn>, 2020-2023\n"
+"Last-Translator: Veoco <one@nomox.cn>, 2020-2024\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -857,10 +857,9 @@ msgstr ""
 "setting:`STORAGES` 文档中有详细描述。"
 
 msgid ""
-"Storages are then accessed by alias from from the :data:`django.core.files."
+"Storages are then accessed by alias from the :data:`django.core.files."
 "storage.storages` dictionary::"
 msgstr ""
-"然后通过别名从 :data:`django.core.files.storage.storages` 字典中访问存储："
 
 msgid "How to write custom lookups"
 msgstr "如何编写自定义的查询器"
@@ -1685,11 +1684,20 @@ msgstr ""
 
 msgid ""
 "If ``app_configs`` and ``tags`` are both ``None``, all system checks are "
-"performed. ``tags`` can be a list of check tags, like ``compatibility`` or "
-"``models``."
+"performed except deployment and database related checks. ``tags`` can be a "
+"list of check tags, like ``compatibility`` or ``models``."
 msgstr ""
-"若 ``app_configs`` 和 ``tags`` 均为 ``None``，所以的系统检查项都会被运行。"
-"``tags`` 能是一个检查标签的列表，例如 ``compatibility`` 或 ``models``。"
+"如果 ``app_configs`` 和 ``tags`` 都是 ``None``，则执行除了部署和数据库相关检"
+"查之外的所有系统检查。``tags`` 可以是一个检查标签的列表，比如 "
+"``compatibility`` 或 ``models``。"
+
+msgid ""
+"You can pass ``include_deployment_checks=True`` to also perform deployment "
+"checks, and list of database aliases in the ``databases`` to run database "
+"related checks against them."
+msgstr ""
+"你可以传递 ``include_deployment_checks=True`` 以执行部署检查，并在 "
+"``databases`` 中传递数据库别名列表以对其运行数据库相关检查。"
 
 msgid "``BaseCommand`` subclasses"
 msgstr "``BaseCommand`` 的子类"

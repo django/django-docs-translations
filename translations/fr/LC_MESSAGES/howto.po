@@ -7,7 +7,7 @@
 # Amirouche <amirouche.boubekki@gmail.com>, 2013
 # Bruno Brouard <annoa.b@gmail.com>, 2013-2014
 # Anthony SKORSKI <skorski.anthony@gmail.com>, 2020
-# Claude Paroz <claude@2xlibre.net>, 2013-2023
+# Claude Paroz <claude@2xlibre.net>, 2013-2024
 # Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014-2015
 # Sébastien Fievet <_@sebastien-fievet.fr>, 2014
 # Sylvain GROS-DESORMEAUX <sylvain.grodes@gmail.com>, 2013
@@ -16,9 +16,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-04 05:55-0600\n"
+"POT-Creation-Date: 2024-03-08 00:58-0600\n"
 "PO-Revision-Date: 2013-04-02 19:58+0000\n"
-"Last-Translator: Claude Paroz <claude@2xlibre.net>, 2013-2023\n"
+"Last-Translator: Claude Paroz <claude@2xlibre.net>, 2013-2024\n"
 "Language-Team: French (http://app.transifex.com/django/django-docs/language/"
 "fr/)\n"
 "MIME-Version: 1.0\n"
@@ -915,7 +915,7 @@ msgstr ""
 "`STORAGES`."
 
 msgid ""
-"Storages are then accessed by alias from from the :data:`django.core.files."
+"Storages are then accessed by alias from the :data:`django.core.files."
 "storage.storages` dictionary::"
 msgstr ""
 "On peut ensuite accéder aux stockages par leur alias à partir du "
@@ -1888,12 +1888,23 @@ msgstr ""
 
 msgid ""
 "If ``app_configs`` and ``tags`` are both ``None``, all system checks are "
-"performed. ``tags`` can be a list of check tags, like ``compatibility`` or "
-"``models``."
+"performed except deployment and database related checks. ``tags`` can be a "
+"list of check tags, like ``compatibility`` or ``models``."
 msgstr ""
 "Si ``app_configs`` et ``tags`` valent tous deux ``None``, tous les contrôles "
-"système sont effectués. ``tags`` peut être une liste d'étiquettes de "
-"contrôle, comme ``compatibility`` ou ``models``."
+"système sont effectués, à l'exception des contrôles liés au déploiement et à "
+"la base de données. ``tags`` peut être une liste d'étiquettes de contrôle, "
+"comme ``compatibility`` ou ``models``."
+
+msgid ""
+"You can pass ``include_deployment_checks=True`` to also perform deployment "
+"checks, and list of database aliases in the ``databases`` to run database "
+"related checks against them."
+msgstr ""
+"Vous pouvez transmettre ``include_deployment_checks=True`` pour lancer en "
+"plus les contrôles de déploiement, ainsi que fournir une liste d'alias de "
+"base de données dans le paramètre ``databases`` pour lancer les contrôles "
+"liés aux bases de données sur ces bases."
 
 msgid "``BaseCommand`` subclasses"
 msgstr "Sous-classes de ``BaseCommand``"
