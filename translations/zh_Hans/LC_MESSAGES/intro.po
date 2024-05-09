@@ -37,6 +37,7 @@
 # Veoco <one@nomox.cn>, 2020-2024
 # Vincent <Intelligent.vincent@gmail.com>, 2018
 # 汪心禾 <wangxinhe06@gmail.com>, 2018
+# weizhi ao, 2024
 # Xin Qi <georgechii@outlook.com>, 2021
 # xin.wang <asimplelife@live.com>, 2018
 # xinyu liu <happy_lucky52@163.com>, 2017
@@ -56,9 +57,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-08 00:58-0600\n"
+"POT-Creation-Date: 2024-05-07 15:06-0500\n"
 "PO-Revision-Date: 2013-04-02 20:00+0000\n"
-"Last-Translator: Veoco <one@nomox.cn>, 2020-2024\n"
+"Last-Translator: weizhi ao, 2024\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -3779,6 +3780,8 @@ msgid ""
 "``F(\"votes\") + 1`` :ref:`instructs the database <avoiding-race-conditions-"
 "using-f>` to increase the vote count by 1."
 msgstr ""
+"``F(\"votes\") + 1`` :ref:`指示数据库 <avoiding-race-conditions-using-f>` 将"
+"投票数增加 1。"
 
 msgid ""
 "After incrementing the choice count, the code returns an :class:`~django."
@@ -5243,13 +5246,13 @@ msgid ""
 "By default, Django displays the ``str()`` of each object. But sometimes it'd "
 "be more helpful if we could display individual fields. To do that, use the :"
 "attr:`~django.contrib.admin.ModelAdmin.list_display` admin option, which is "
-"a tuple of field names to display, as columns, on the change list page for "
+"a list of field names to display, as columns, on the change list page for "
 "the object:"
 msgstr ""
-"默认情况下，Django 显示每个对象的 ``str()`` 返回的值。但有时如果我们能够显示"
-"单个字段，它会更有帮助。为此，使用 :attr:`~django.contrib.admin.ModelAdmin."
-"list_display` 后台选项，它是一个包含要显示的字段名的元组，在更改列表页中以列"
-"的形式展示这个对象："
+"默认情况下，Django 显示每个对象的 ''str（）''。但有时如果我们能显示单个字段会"
+"更有帮助。为此，请使用 ：attr：'~django.contrib.admin.ModelAdmin."
+"list_display' admin 选项，该选项是要在对象的更改列表页上以列形式显示的字段名"
+"称列表："
 
 msgid ""
 "For good measure, let's also include the ``was_published_recently()`` method "

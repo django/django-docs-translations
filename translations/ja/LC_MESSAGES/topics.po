@@ -40,10 +40,10 @@
 # Shinoda Yukihiko <yuk.hik.future@gmail.com>, 2019
 # Shirai <taole33@hotmail.com>, 2020
 # Shoya Shiraki <12c1055@gmail.com>, 2020
-# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016-2017,2019,2023
+# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016-2017,2019,2023
 # Suzuki Takahiro <bur8787@gmail.com>, 2016
 # TANIGUCHI Taichi, 2022
-# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016-2018,2020,2022-2024
+# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016-2018,2020,2022-2024
 # Takashi Iwamoto, 2018
 # Takashi Sugawara <aimaimokomoko@gmail.com>, 2017
 # Takayuki Hirai, 2015
@@ -65,7 +65,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-08 00:58-0600\n"
+"POT-Creation-Date: 2024-04-15 13:34-0500\n"
 "PO-Revision-Date: 2013-04-02 20:02+0000\n"
 "Last-Translator: Akio Ogasahara <libratechwriter@gmail.com>, 2024\n"
 "Language-Team: Japanese (http://app.transifex.com/django/django-docs/"
@@ -25885,12 +25885,9 @@ msgstr "複数のファイルをアップロードする"
 
 msgid ""
 "If you want to upload multiple files using one form field, create a subclass "
-"of the field's widget and set the ``allow_multiple_selected`` attribute on "
-"it to ``True``."
+"of the field's widget and set its ``allow_multiple_selected`` class "
+"attribute to ``True``."
 msgstr ""
-"1つのフォームフィールドを使って複数のファイルをアップロードしたい場合は、"
-"フィールドのウィジェットのサブクラスを作成し、 ``allow_multiple_selected`` 属"
-"性を ``True`` に設定してください。"
 
 msgid ""
 "In order for such files to be all validated by your form (and have the value "
@@ -25911,12 +25908,9 @@ msgstr ""
 "Django は将来、適切な複数ファイルフィールドをサポートするようになる予定です。"
 
 msgid ""
-"Then override the ``post`` method of your :class:`~django.views.generic.edit."
-"FormView` subclass to handle multiple file uploads:"
+"Then override the ``form_valid()`` method of your :class:`~django.views."
+"generic.edit.FormView` subclass to handle multiple file uploads:"
 msgstr ""
-"そして、複数のファイルアップロードを扱うために、あなたの :class:`~django."
-"views.generic.edit.FormView` サブクラスの ``post`` メソッドをオーバーライドし"
-"ます:"
 
 msgid ""
 "This will allow you to handle multiple files at the form level only. Be "
@@ -30727,15 +30721,21 @@ msgid ""
 "respectively, so that Django obtains correct datetimes in all cases. You "
 "don't need to perform any data conversions."
 msgstr ""
+"結果として、PostgreSQL を使っている場合、 ``USE_TZ = False`` と ``USE_TZ = "
+"True`` を自由に切り替えることができます。データベース接続のタイムゾーンはそれ"
+"ぞれ :setting:`DATABASE-TIME_ZONE` か ``UTC`` に設定されるので、Django はどん"
+"な場合でも正しい日時を取得できます。データ変換を行う必要はありません。"
 
 msgid "Time zone settings"
-msgstr ""
+msgstr "タイムゾーンの設定"
 
 msgid ""
 "The :setting:`time zone <DATABASE-TIME_ZONE>` configured for the connection "
 "in the :setting:`DATABASES` setting is distinct from the general :setting:"
 "`TIME_ZONE` setting."
 msgstr ""
+":setting:`DATABASES` 設定で接続に設定された :setting:`タイムゾーン <DATABASE-"
+"TIME_ZONE>` は、通常の :setting:`TIME_ZONE` 設定とは異なります。"
 
 msgid "Other databases"
 msgstr "他のデータベース"
@@ -39233,11 +39233,11 @@ msgstr ""
 "``__traceback__`` 属性に存在します。"
 
 msgid ""
-"``asend()`` is similar as ``send()``, but it is coroutine that must be "
+"``asend()`` is similar to ``send()``, but it is a coroutine that must be "
 "awaited::"
 msgstr ""
-"``asend()`` は ``send()`` と似ていますが、コルーチンで await する必要がありま"
-"す。"
+"``asend()`` は ``send()`` と似ていますが、await しなければならないコルーチン"
+"です:"
 
 msgid ""
 "Whether synchronous or asynchronous, receivers will be correctly adapted to "

@@ -66,6 +66,7 @@
 # WayneCher <aaazwg@msn.cn>, 2019
 # Wei Liu <2407802064@qq.com>, 2020-2021
 # zwwhdls <zwwhdls@hotmail.com>, 2018
+# weizhi ao, 2024
 # woodenrobot <woodenrobot1993@gmail.com>, 2020
 # XingFive <haoxingwu@hotmail.com>, 2018
 # XingFive <haoxingwu@hotmail.com>, 2018
@@ -98,9 +99,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-08 00:58-0600\n"
+"POT-Creation-Date: 2024-04-15 13:34-0500\n"
 "PO-Revision-Date: 2013-04-02 20:02+0000\n"
-"Last-Translator: Ryoma Han <ryomahan1996@gmail.com>, 2024\n"
+"Last-Translator: weizhi ao, 2024\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -23424,11 +23425,11 @@ msgstr "上传多个文件"
 
 msgid ""
 "If you want to upload multiple files using one form field, create a subclass "
-"of the field's widget and set the ``allow_multiple_selected`` attribute on "
-"it to ``True``."
+"of the field's widget and set its ``allow_multiple_selected`` class "
+"attribute to ``True``."
 msgstr ""
-"如果你想要使用一个表单字段上传多个文件，可以创建字段小部件的子类，并将其上的 "
-"``allow_multiple_selected`` 属性设置为 ``True``。"
+"如果要使用一个表单字段上传多个文件，请创建该字段小组件的子类，并将"
+"其“allow_multiple_selected”类属性设置为“True”。"
 
 msgid ""
 "In order for such files to be all validated by your form (and have the value "
@@ -23447,11 +23448,11 @@ msgid ""
 msgstr "Django 有可能在未来的某个时候提供适当的多文件字段支持。"
 
 msgid ""
-"Then override the ``post`` method of your :class:`~django.views.generic.edit."
-"FormView` subclass to handle multiple file uploads:"
+"Then override the ``form_valid()`` method of your :class:`~django.views."
+"generic.edit.FormView` subclass to handle multiple file uploads:"
 msgstr ""
-"然后覆盖 :class:`~django.views.generic.edit.FormView` 子类的 ``post`` 方法来"
-"控制多个文件上传："
+"然后覆盖 ：class：'~django.views.generic.edit.FormView' 子类的 ''form_valid"
+"（）'' 方法以处理多个文件上传："
 
 msgid ""
 "This will allow you to handle multiple files at the form level only. Be "
@@ -27772,15 +27773,21 @@ msgid ""
 "respectively, so that Django obtains correct datetimes in all cases. You "
 "don't need to perform any data conversions."
 msgstr ""
+"因此，如果您使用的是 PostgreSQL，您可以自由地在 ``USE_TZ = False`` 和 "
+"``USE_TZ = True`` 之间切换。数据库连接的时区将分别设置为 :setting:`DATABASE-"
+"TIME_ZONE` 或 ``UTC``，这样 Django 在所有情况下都能获得正确的日期时间。您无需"
+"执行任何数据转换。"
 
 msgid "Time zone settings"
-msgstr ""
+msgstr "时区设置"
 
 msgid ""
 "The :setting:`time zone <DATABASE-TIME_ZONE>` configured for the connection "
 "in the :setting:`DATABASES` setting is distinct from the general :setting:"
 "`TIME_ZONE` setting."
 msgstr ""
+"在 :setting:`DATABASES` 设置中配置的连接的时区与通用的 :setting:`TIME_ZONE "
+"<DATABASE-TIME_ZONE>` 设置是不同的。"
 
 msgid "Other databases"
 msgstr "其他数据库"
@@ -35468,9 +35475,9 @@ msgstr ""
 "回溯出现在调用 ``send_robust()`` 时返回的错误中的 ``__traceback__`` 属性中。"
 
 msgid ""
-"``asend()`` is similar as ``send()``, but it is coroutine that must be "
+"``asend()`` is similar to ``send()``, but it is a coroutine that must be "
 "awaited::"
-msgstr "``asend()`` 类似于 ``send()``，但它是一个协程，必须被等待："
+msgstr "''asend（）'' 类似于 ''send（）''，但它是一个必须等待的协程："
 
 msgid ""
 "Whether synchronous or asynchronous, receivers will be correctly adapted to "

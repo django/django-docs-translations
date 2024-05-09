@@ -10,14 +10,15 @@
 # e4db27214f7e7544f2022c647b585925_bb0e321, 2014
 # Juan Manuel Vázquez, 2023
 # Rodrigo Suárez <rodrigosrz12@gmail.com>, 2020
+# Santiago Britos, 2024
 # Uriel Medina <urimeba511@gmail.com>, 2021,2023
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-04 05:55-0600\n"
+"POT-Creation-Date: 2024-04-15 13:34-0500\n"
 "PO-Revision-Date: 2013-04-02 20:02+0000\n"
-"Last-Translator: Uriel Medina <urimeba511@gmail.com>, 2021,2023\n"
+"Last-Translator: Santiago Britos, 2024\n"
 "Language-Team: Spanish (http://app.transifex.com/django/django-docs/language/"
 "es/)\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +29,7 @@ msgstr ""
 "1 : 2;\n"
 
 msgid "Asynchronous support"
-msgstr ""
+msgstr "Soporte asíncrono"
 
 msgid ""
 "Django has support for writing asynchronous (\"async\") views, along with an "
@@ -147,99 +148,107 @@ msgid ""
 msgstr ""
 
 msgid "Decorators"
-msgstr ""
+msgstr "Decoradores"
 
 msgid ""
 "The following decorators can be used with both synchronous and asynchronous "
 "view functions:"
 msgstr ""
+"Los siguientes decoradores pueden ser usados tanto con funciones de vistas "
+"síncronas, como asíncronas"
 
 msgid ":func:`~django.views.decorators.cache.cache_control`"
-msgstr ""
+msgstr ":func:`~django.views.decorators.cache.cache_control`"
 
 msgid ":func:`~django.views.decorators.cache.never_cache`"
-msgstr ""
+msgstr ":func:`~django.views.decorators.cache.never_cache`"
 
 msgid ":func:`~django.views.decorators.common.no_append_slash`"
-msgstr ""
+msgstr ":func:`~django.views.decorators.common.no_append_slash`"
 
 msgid ":func:`~django.views.decorators.csrf.csrf_exempt`"
-msgstr ""
+msgstr ":func:`~django.views.decorators.csrf.csrf_exempt`"
 
 msgid ":func:`~django.views.decorators.csrf.csrf_protect`"
-msgstr ""
+msgstr ":func:`~django.views.decorators.csrf.csrf_protect`"
 
 msgid ":func:`~django.views.decorators.csrf.ensure_csrf_cookie`"
-msgstr ""
+msgstr ":func:`~django.views.decorators.csrf.ensure_csrf_cookie`"
 
 msgid ":func:`~django.views.decorators.csrf.requires_csrf_token`"
-msgstr ""
+msgstr ":func:`~django.views.decorators.csrf.requires_csrf_token`"
 
 msgid ":func:`~django.views.decorators.debug.sensitive_variables`"
-msgstr ""
+msgstr ":func:`~django.views.decorators.debug.sensitive_variables`"
 
 msgid ":func:`~django.views.decorators.debug.sensitive_post_parameters`"
-msgstr ""
+msgstr ":func:`~django.views.decorators.debug.sensitive_post_parameters`"
 
 msgid ":func:`~django.views.decorators.gzip.gzip_page`"
-msgstr ""
+msgstr ":func:`~django.views.decorators.gzip.gzip_page`"
 
 msgid ":func:`~django.views.decorators.http.condition`"
-msgstr ""
+msgstr ":func:`~django.views.decorators.http.condition`"
 
 msgid "``conditional_page()``"
-msgstr ""
+msgstr "``conditional_page()``"
 
 msgid ":func:`~django.views.decorators.http.etag`"
-msgstr ""
+msgstr ":func:`~django.views.decorators.http.etag`"
 
 msgid ":func:`~django.views.decorators.http.last_modified`"
-msgstr ""
+msgstr ":func:`~django.views.decorators.http.last_modified`"
 
 msgid ":func:`~django.views.decorators.http.require_http_methods`"
-msgstr ""
+msgstr ":func:`~django.views.decorators.http.require_http_methods`"
 
 msgid ":func:`~django.views.decorators.http.require_GET`"
-msgstr ""
+msgstr ":func:`~django.views.decorators.http.require_GET`"
 
 msgid ":func:`~django.views.decorators.http.require_POST`"
-msgstr ""
+msgstr ":func:`~django.views.decorators.http.require_POST`"
 
 msgid ":func:`~django.views.decorators.http.require_safe`"
-msgstr ""
+msgstr ":func:`~django.views.decorators.http.require_safe`"
 
 msgid ":func:`~django.views.decorators.vary.vary_on_cookie`"
-msgstr ""
+msgstr ":func:`~django.views.decorators.vary.vary_on_cookie`"
 
 msgid ":func:`~django.views.decorators.vary.vary_on_headers`"
-msgstr ""
+msgstr ":func:`~django.views.decorators.vary.vary_on_headers`"
 
 msgid "``xframe_options_deny()``"
-msgstr ""
+msgstr "``xframe_options_deny()``"
 
 msgid "``xframe_options_sameorigin()``"
-msgstr ""
+msgstr "``xframe_options_sameorigin()``"
 
 msgid "``xframe_options_exempt()``"
-msgstr ""
+msgstr "``xframe_options_exempt()``"
 
 msgid "For example::"
 msgstr "Por ejemplo::"
 
 msgid "Queries & the ORM"
-msgstr ""
+msgstr "Consultas y ORM"
 
 msgid ""
 "With some exceptions, Django can run ORM queries asynchronously as well::"
 msgstr ""
+"Con algunas excepciones, Django también puede ejecutar consultas ORM de "
+"manera asíncrona::"
 
 msgid "Detailed notes can be found in :ref:`async-queries`, but in short:"
 msgstr ""
+"Notas detalladas se pueden encontrar en :ref:`async-queries`, pero en "
+"resumen: "
 
 msgid ""
 "All ``QuerySet`` methods that cause an SQL query to occur have an ``a``-"
 "prefixed asynchronous variant."
 msgstr ""
+"Todas los métodos de ``QuerySet`` que provocan una consulta SQL tienen una "
+"variante asíncrona con el prefijo ``a``."
 
 msgid ""
 "``async for`` is supported on all QuerySets (including the output of "
@@ -258,9 +267,10 @@ msgstr ""
 
 msgid "Asynchronous model and related manager interfaces were added."
 msgstr ""
+"Se agregaron interfaces de modelo asíncronas y de administrador relacionado."
 
 msgid "Performance"
-msgstr ""
+msgstr "Rendimiento"
 
 msgid ""
 "When running in a mode that does not match the view (e.g. an async view "
@@ -309,7 +319,7 @@ msgid ""
 msgstr ""
 
 msgid "Async safety"
-msgstr ""
+msgstr "Seguridad asíncrona"
 
 msgid ""
 "Certain key parts of Django are not able to operate safely in an async "
@@ -376,7 +386,7 @@ msgid ""
 msgstr ""
 
 msgid "Async adapter functions"
-msgstr ""
+msgstr "Funciones adaptadoras asíncronas"
 
 msgid ""
 "It is necessary to adapt the calling style when calling sync code from an "
@@ -393,7 +403,7 @@ msgid ""
 msgstr ""
 
 msgid "``async_to_sync()``"
-msgstr ""
+msgstr "``async_to_sync()``"
 
 msgid ""
 "Takes an async function and returns a sync function that wraps it. Can be "
@@ -421,7 +431,7 @@ msgid ""
 msgstr ""
 
 msgid "``sync_to_async()``"
-msgstr ""
+msgstr "``sync_to_async()``"
 
 msgid ""
 "Takes a sync function and returns an async function that wraps it. Can be "
@@ -648,7 +658,7 @@ msgid ""
 msgstr ""
 
 msgid "But it could also authenticate a token, like so::"
-msgstr ""
+msgstr "Pero también podría autenticar un token, de la siguiente manera::"
 
 msgid ""
 "Either way, ``authenticate()`` should check the credentials it gets and "
@@ -810,7 +820,7 @@ msgid ""
 msgstr ""
 
 msgid "Extending the existing ``User`` model"
-msgstr ""
+msgstr "Extendiendo el modelo de ``User`` existente"
 
 msgid ""
 "There are two ways to extend the default :class:`~django.contrib.auth.models."
@@ -861,7 +871,7 @@ msgid ""
 msgstr ""
 
 msgid "Substituting a custom ``User`` model"
-msgstr ""
+msgstr "Sustituyendo un modelo de ``User`` personalizado"
 
 msgid ""
 "Some kinds of projects may have authentication requirements for which "
@@ -882,7 +892,7 @@ msgid ""
 msgstr ""
 
 msgid "Using a custom user model when starting a project"
-msgstr ""
+msgstr "Usando un modelo de usuario personalizado al iniciar un proyecto"
 
 msgid ""
 "If you're starting a new project, it's highly recommended to set up a custom "
@@ -944,7 +954,7 @@ msgid ""
 msgstr ""
 
 msgid "Referencing the ``User`` model"
-msgstr ""
+msgstr "Haciendo referencia el modelo ``User``"
 
 msgid ""
 "If you reference :class:`~django.contrib.auth.models.User` directly (for "
@@ -989,7 +999,7 @@ msgid ""
 msgstr ""
 
 msgid "Specifying a custom user model"
-msgstr ""
+msgstr "Especificar un modelo de ``User`` personalizado"
 
 msgid ""
 "When you start your project with a custom user model, stop to consider if "
@@ -1296,13 +1306,13 @@ msgid ""
 msgstr ""
 
 msgid ":class:`~django.contrib.auth.forms.SetPasswordForm`"
-msgstr ""
+msgstr ":class:`~django.contrib.auth.forms.SetPasswordForm`"
 
 msgid ":class:`~django.contrib.auth.forms.PasswordChangeForm`"
-msgstr ""
+msgstr ":class:`~django.contrib.auth.forms.PasswordChangeForm`"
 
 msgid ":class:`~django.contrib.auth.forms.AdminPasswordChangeForm`"
-msgstr ""
+msgstr ":class:`~django.contrib.auth.forms.AdminPasswordChangeForm`"
 
 msgid ""
 "The following forms make assumptions about the user model and can be used as-"
@@ -1323,10 +1333,10 @@ msgid ""
 msgstr ""
 
 msgid ":class:`~django.contrib.auth.forms.UserCreationForm`"
-msgstr ""
+msgstr ":class:`~django.contrib.auth.forms.UserCreationForm`"
 
 msgid ":class:`~django.contrib.auth.forms.UserChangeForm`"
-msgstr ""
+msgstr ":class:`~django.contrib.auth.forms.UserChangeForm`"
 
 msgid ""
 "If your custom user model is a subclass of ``AbstractUser``, then you can "
@@ -1578,7 +1588,7 @@ msgid ""
 msgstr ""
 
 msgid "Creating users"
-msgstr ""
+msgstr "Creando usuarios"
 
 msgid ""
 "The most direct way to create users is to use the included :meth:`~django."
@@ -1736,7 +1746,7 @@ msgid ""
 msgstr ""
 
 msgid "Default permissions"
-msgstr ""
+msgstr "Permisos por defecto"
 
 msgid ""
 "When ``django.contrib.auth`` is listed in your :setting:`INSTALLED_APPS` "
@@ -1763,13 +1773,13 @@ msgid ""
 msgstr ""
 
 msgid "add: ``user.has_perm('foo.add_bar')``"
-msgstr ""
+msgstr "add: ``user.has_perm('foo.add_bar')``"
 
 msgid "change: ``user.has_perm('foo.change_bar')``"
-msgstr ""
+msgstr "Cambiar: ``user.has_perm('foo.change_bar')``"
 
 msgid "delete: ``user.has_perm('foo.delete_bar')``"
-msgstr ""
+msgstr "Eliminar: ``user.has_perm('foo.delete_bar')``"
 
 msgid "view: ``user.has_perm('foo.view_bar')``"
 msgstr ""
@@ -2122,7 +2132,7 @@ msgid ""
 msgstr ""
 
 msgid "``login_url``"
-msgstr ""
+msgstr "``login_url``"
 
 msgid ""
 "Lets you specify the URL that users who don't pass the test will be "
@@ -2131,7 +2141,7 @@ msgid ""
 msgstr ""
 
 msgid "``redirect_field_name``"
-msgstr ""
+msgstr "``redirect_field_name``"
 
 msgid ""
 "Same as for :func:`~django.contrib.auth.decorators.login_required`. Setting "
@@ -2571,7 +2581,7 @@ msgid "**URL name:** ``logout``"
 msgstr ""
 
 msgid "**Attributes:**"
-msgstr ""
+msgstr "**Attributes:**"
 
 msgid ""
 "The URL to redirect to after logout. Defaults to :setting:"
@@ -2596,7 +2606,7 @@ msgid ""
 msgstr ""
 
 msgid "**Template context:**"
-msgstr ""
+msgstr "**Template context:**"
 
 msgid "``title``: The string \"Logged out\", localized."
 msgstr ""
@@ -2608,7 +2618,7 @@ msgid "**URL name:** No default URL provided"
 msgstr ""
 
 msgid "**Optional arguments:**"
-msgstr ""
+msgstr "**Optional arguments:**"
 
 msgid ""
 "``login_url``: The URL of the login page to redirect to. Defaults to :"
@@ -2879,7 +2889,7 @@ msgid ""
 msgstr ""
 
 msgid "Helper functions"
-msgstr ""
+msgstr "Funciones de ayuda"
 
 msgid ""
 "Redirects to the login page, and then back to another URL after a successful "
@@ -2887,14 +2897,14 @@ msgid ""
 msgstr ""
 
 msgid "**Required arguments:**"
-msgstr ""
+msgstr "**Required arguments:**"
 
 msgid "``next``: The URL to redirect to after a successful login."
 msgstr ""
 
 msgid ""
 "``redirect_field_name``: The name of a ``GET`` field containing the URL to "
-"redirect to after log out. Overrides ``next`` if the given ``GET`` parameter "
+"redirect to after login. Overrides ``next`` if the given ``GET`` parameter "
 "is passed."
 msgstr ""
 
@@ -2966,7 +2976,7 @@ msgid ""
 msgstr ""
 
 msgid "Parameters"
-msgstr ""
+msgstr "Parametros"
 
 msgid "the template for the subject."
 msgstr ""
@@ -3042,7 +3052,7 @@ msgid ""
 msgstr ""
 
 msgid "Technicality"
-msgstr ""
+msgstr "Tecnicamente"
 
 msgid ""
 "Technically, these variables are only made available in the template context "
@@ -3053,7 +3063,7 @@ msgid ""
 msgstr ""
 
 msgid "Users"
-msgstr ""
+msgstr "Usuarios"
 
 msgid ""
 "When rendering a template :class:`~django.template.RequestContext`, the "
@@ -3205,7 +3215,7 @@ msgid "Object-level permissions"
 msgstr ""
 
 msgid "Installation"
-msgstr ""
+msgstr "Instalación"
 
 msgid ""
 "Authentication support is bundled as a Django contrib module in ``django."
@@ -3514,7 +3524,7 @@ msgid ""
 msgstr ""
 
 msgid "Argon2"
-msgstr ""
+msgstr "Argon2"
 
 msgid "Argon2 has the following attributes that can be customized:"
 msgstr ""
@@ -3562,7 +3572,7 @@ msgid ""
 msgstr ""
 
 msgid "``scrypt``"
-msgstr ""
+msgstr "``scrypt``"
 
 msgid "scrypt_ has the following attributes that can be customized:"
 msgstr ""
@@ -3652,13 +3662,13 @@ msgid "First, we'll add the custom hasher:"
 msgstr ""
 
 msgid "``accounts/hashers.py``"
-msgstr ""
+msgstr "``accounts/hashers.py``"
 
 msgid "The data migration might look something like:"
 msgstr ""
 
 msgid "``accounts/migrations/0002_migrate_md5_passwords.py``"
-msgstr ""
+msgstr "``accounts/migrations/0002_migrate_md5_passwords.py``"
 
 msgid ""
 "Be aware that this migration will take on the order of several minutes for "
@@ -3669,7 +3679,7 @@ msgid "Finally, we'll add a :setting:`PASSWORD_HASHERS` setting:"
 msgstr ""
 
 msgid "``mysite/settings.py``"
-msgstr ""
+msgstr "``mysite/settings.py``"
 
 msgid "Include any other hashers that your site uses in this list."
 msgstr ""
@@ -3684,22 +3694,22 @@ msgid "The corresponding algorithm names are:"
 msgstr ""
 
 msgid "``pbkdf2_sha256``"
-msgstr ""
+msgstr "``pbkdf2_sha256``"
 
 msgid "``pbkdf2_sha1``"
-msgstr ""
+msgstr "``pbkdf2_sha1``"
 
 msgid "``argon2``"
-msgstr ""
+msgstr "``argon2``"
 
 msgid "``bcrypt_sha256``"
-msgstr ""
+msgstr "``bcrypt_sha256``"
 
 msgid "``bcrypt``"
-msgstr ""
+msgstr "``bcrypt``"
 
 msgid "``md5``"
-msgstr ""
+msgstr "``md5``"
 
 msgid "Writing your own hasher"
 msgstr ""
@@ -4079,7 +4089,7 @@ msgid ""
 msgstr ""
 
 msgid "Memcached"
-msgstr ""
+msgstr "Memcached"
 
 msgid ""
 "Memcached__ is an entirely memory-based cache server, originally developed "
@@ -4557,8 +4567,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-":setting:`CACHE_MIDDLEWARE_SECONDS` -- The number of seconds each page "
-"should be cached."
+":setting:`CACHE_MIDDLEWARE_SECONDS` -- The integer number of seconds each "
+"page should be cached."
 msgstr ""
 
 msgid ""
@@ -5282,16 +5292,16 @@ msgid ""
 msgstr ""
 
 msgid "``no_transform=True``"
-msgstr ""
+msgstr "``no_transform=True``"
 
 msgid "``must_revalidate=True``"
-msgstr ""
+msgstr "``must_revalidate=True``"
 
 msgid "``stale_while_revalidate=num_seconds``"
-msgstr ""
+msgstr "``stale_while_revalidate=num_seconds``"
 
 msgid "``no_cache=True``"
-msgstr ""
+msgstr "``no_cache=True``"
 
 msgid ""
 "The full list of known directives can be found in the `IANA registry`_ (note "
@@ -5429,19 +5439,19 @@ msgid ""
 msgstr ""
 
 msgid ":class:`Debug`"
-msgstr ""
+msgstr ":class:`Debug`"
 
 msgid ":class:`Info`"
-msgstr ""
+msgstr ":class:`Info`"
 
 msgid ":class:`Warning`"
-msgstr ""
+msgstr ":class:`Warning`"
 
 msgid ":class:`Error`"
-msgstr ""
+msgstr ":class:`Error`"
 
 msgid ":class:`Critical`"
-msgstr ""
+msgstr ":class:`Critical`"
 
 msgid "Registering and labeling checks"
 msgstr ""
@@ -5918,7 +5928,7 @@ msgid "``views.py``"
 msgstr "``views.py``"
 
 msgid "Notes:"
-msgstr ""
+msgstr "Notas:"
 
 msgid ""
 "FormView inherits :class:`~django.views.generic.base.TemplateResponseMixin` "
@@ -6496,7 +6506,7 @@ msgid ""
 msgstr ""
 
 msgid ":class:`~django.views.generic.base.TemplateResponseMixin`"
-msgstr ""
+msgstr ":class:`~django.views.generic.base.TemplateResponseMixin`"
 
 msgid ""
 "Every built in view which returns a :class:`~django.template.response."
@@ -6522,7 +6532,7 @@ msgid ""
 msgstr ""
 
 msgid ":class:`~django.views.generic.base.ContextMixin`"
-msgstr ""
+msgstr ":class:`~django.views.generic.base.ContextMixin`"
 
 msgid ""
 "Every built in view which needs context data, such as for rendering a "
@@ -7127,7 +7137,7 @@ msgid ""
 msgstr ""
 
 msgid "...or::"
-msgstr ""
+msgstr "...or::"
 
 msgid "Use ``condition`` when testing both conditions"
 msgstr ""
@@ -7233,7 +7243,7 @@ msgid ""
 msgstr ""
 
 msgid "Aggregation"
-msgstr ""
+msgstr "Agregación"
 
 msgid ""
 "The topic guide on :doc:`Django's database-abstraction API </topics/db/"
@@ -7540,7 +7550,7 @@ msgid ""
 msgstr ""
 
 msgid "Given:"
-msgstr ""
+msgstr "Dado:"
 
 msgid "Publisher A has two books with ratings 4 and 5."
 msgstr ""
@@ -7588,7 +7598,7 @@ msgid ""
 msgstr ""
 
 msgid "``order_by()``"
-msgstr ""
+msgstr "``order_by()``"
 
 msgid ""
 "Annotations can be used as a basis for ordering. When you define an "
@@ -7602,7 +7612,7 @@ msgid ""
 msgstr ""
 
 msgid "``values()``"
-msgstr ""
+msgstr "``values()``"
 
 msgid ""
 "Ordinarily, annotations are generated on a per-object basis - an annotated "
@@ -8067,7 +8077,7 @@ msgid "Fixtures"
 msgstr ""
 
 msgid ":doc:`/howto/initial-data`"
-msgstr ""
+msgstr ":doc:`/howto/initial-data`"
 
 msgid "What is a fixture?"
 msgstr ""
@@ -8331,7 +8341,7 @@ msgid ""
 msgstr ""
 
 msgid "``connection.execute_wrapper()``"
-msgstr ""
+msgstr "``connection.execute_wrapper()``"
 
 msgid ""
 "Returns a context manager which, when entered, installs a wrapper around "
@@ -8348,7 +8358,7 @@ msgid ""
 msgstr ""
 
 msgid "Managers"
-msgstr ""
+msgstr "Gestores"
 
 msgid ""
 "A ``Manager`` is the interface through which database query operations are "
@@ -8600,7 +8610,7 @@ msgid ""
 msgstr ""
 
 msgid "``from_queryset()``"
-msgstr ""
+msgstr "``from_queryset()``"
 
 msgid ""
 "For advanced usage you might want both a custom ``Manager`` and a custom "
@@ -8646,8 +8656,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-"If you use this directly in a subclass, ``objects`` will be the default "
-"manager if you declare no managers in the base class::"
+"If you use this directly in a child class, ``objects`` will be the default "
+"manager if you declare no managers in the child class::"
 msgstr ""
 
 msgid ""
@@ -8849,7 +8859,7 @@ msgid ""
 msgstr ""
 
 msgid ":attr:`~Field.null`"
-msgstr ""
+msgstr ":attr:`~Field.null`"
 
 msgid ""
 "If ``True``, Django will store empty values as ``NULL`` in the database. "
@@ -8857,7 +8867,7 @@ msgid ""
 msgstr ""
 
 msgid ":attr:`~Field.blank`"
-msgstr ""
+msgstr ":attr:`~Field.blank`"
 
 msgid "If ``True``, the field is allowed to be blank. Default is ``False``."
 msgstr ""
@@ -8871,7 +8881,7 @@ msgid ""
 msgstr ""
 
 msgid ":attr:`~Field.choices`"
-msgstr ""
+msgstr ":attr:`~Field.choices`"
 
 msgid ""
 "A :term:`sequence` of 2-value tuples, a :term:`mapping`, an :ref:"
@@ -8912,7 +8922,7 @@ msgid "Support for mappings and callables was added."
 msgstr ""
 
 msgid ":attr:`~Field.default`"
-msgstr ""
+msgstr ":attr:`~Field.default`"
 
 msgid ""
 "The default value for the field. This can be a value or a callable object. "
@@ -8920,7 +8930,7 @@ msgid ""
 msgstr ""
 
 msgid ":attr:`~Field.help_text`"
-msgstr ""
+msgstr ":attr:`~Field.help_text`"
 
 msgid ""
 "Extra \"help\" text to be displayed with the form widget. It's useful for "
@@ -8928,7 +8938,7 @@ msgid ""
 msgstr ""
 
 msgid ":attr:`~Field.primary_key`"
-msgstr ""
+msgstr ":attr:`~Field.primary_key`"
 
 msgid "If ``True``, this field is the primary key for the model."
 msgstr ""
@@ -8949,7 +8959,7 @@ msgid ""
 msgstr ""
 
 msgid ":attr:`~Field.unique`"
-msgstr ""
+msgstr ":attr:`~Field.unique`"
 
 msgid "If ``True``, this field must be unique throughout the table."
 msgstr ""
@@ -9013,7 +9023,7 @@ msgid ""
 msgstr ""
 
 msgid "Relationships"
-msgstr ""
+msgstr "Relaciones"
 
 msgid ""
 "Clearly, the power of relational databases lies in relating tables to each "
@@ -9361,7 +9371,7 @@ msgid "Model attributes"
 msgstr ""
 
 msgid "``objects``"
-msgstr ""
+msgstr "``objects``"
 
 msgid ""
 "The most important attribute of a model is the :class:`~django.db.models."
@@ -9402,7 +9412,7 @@ msgid ""
 msgstr ""
 
 msgid ":meth:`~Model.__str__`"
-msgstr ""
+msgstr ":meth:`~Model.__str__`"
 
 msgid ""
 "A Python \"magic method\" that returns a string representation of any "
@@ -9417,7 +9427,7 @@ msgid ""
 msgstr ""
 
 msgid ":meth:`~Model.get_absolute_url`"
-msgstr ""
+msgstr ":meth:`~Model.get_absolute_url`"
 
 msgid ""
 "This tells Django how to calculate the URL for an object. Django uses this "
@@ -10057,7 +10067,7 @@ msgid ""
 msgstr ""
 
 msgid "``myapp/models/__init__.py``"
-msgstr ""
+msgstr "``myapp/models/__init__.py``"
 
 msgid ""
 "Explicitly importing each model rather than using ``from .models import *`` "
@@ -10279,7 +10289,7 @@ msgid ""
 msgstr ""
 
 msgid "Hints"
-msgstr ""
+msgstr "Indicaciones"
 
 msgid ""
 "The hints received by the database router can be used to decide which "
@@ -10617,16 +10627,16 @@ msgid ""
 msgstr ""
 
 msgid ""
-"If you're using Postgres, Oracle, or MySQL with InnoDB, this is enforced at "
-"the database integrity level -- database level key constraints prevent the "
-"creation of relations that can't be validated."
+"If you're using Postgres, SQLite, Oracle, or MySQL with InnoDB, this is "
+"enforced at the database integrity level -- database level key constraints "
+"prevent the creation of relations that can't be validated."
 msgstr ""
 
 msgid ""
-"However, if you're using SQLite or MySQL with MyISAM tables, there is no "
-"enforced referential integrity; as a result, you may be able to 'fake' cross "
-"database foreign keys. However, this configuration is not officially "
-"supported by Django."
+"However, if you're using MySQL with MyISAM tables, there is no enforced "
+"referential integrity; as a result, you may be able to 'fake' cross database "
+"foreign keys. However, this configuration is not officially supported by "
+"Django."
 msgstr ""
 
 msgid "Behavior of contrib apps"
@@ -10737,7 +10747,7 @@ msgid "Use standard DB optimization techniques"
 msgstr ""
 
 msgid "...including:"
-msgstr ""
+msgstr "...including:"
 
 msgid ""
 "Indexes_. This is a number one priority, *after* you have determined from "
@@ -11007,7 +11017,7 @@ msgid ""
 msgstr ""
 
 msgid "But:"
-msgstr ""
+msgstr "But:"
 
 msgid "Don't overuse ``contains()``, ``count()``, and ``exists()``"
 msgstr ""
@@ -11368,7 +11378,7 @@ msgid ""
 msgstr ""
 
 msgid "``filter(**kwargs)``"
-msgstr ""
+msgstr "``filter(**kwargs)``"
 
 msgid ""
 "Returns a new :class:`~django.db.models.query.QuerySet` containing objects "
@@ -11376,7 +11386,7 @@ msgid ""
 msgstr ""
 
 msgid "``exclude(**kwargs)``"
-msgstr ""
+msgstr "``exclude(**kwargs)``"
 
 msgid ""
 "Returns a new :class:`~django.db.models.query.QuerySet` containing objects "
@@ -11426,7 +11436,7 @@ msgid ""
 msgstr ""
 
 msgid "Example:"
-msgstr ""
+msgstr "Ejemplo:"
 
 msgid ""
 "These three ``QuerySets`` are separate. The first is a base :class:`~django."
@@ -11607,7 +11617,7 @@ msgid ""
 msgstr ""
 
 msgid ":lookup:`exact`"
-msgstr ""
+msgstr ":lookup:`exact`"
 
 msgid "An \"exact\" match. For example:"
 msgstr ""
@@ -11628,7 +11638,7 @@ msgid "This is for convenience, because ``exact`` lookups are the common case."
 msgstr ""
 
 msgid ":lookup:`iexact`"
-msgstr ""
+msgstr ":lookup:`iexact`"
 
 msgid "A case-insensitive match. So, the query:"
 msgstr ""
@@ -11639,7 +11649,7 @@ msgid ""
 msgstr ""
 
 msgid ":lookup:`contains`"
-msgstr ""
+msgstr ":lookup:`contains`"
 
 msgid "Case-sensitive containment test. For example::"
 msgstr ""
@@ -11838,7 +11848,7 @@ msgid ""
 msgstr ""
 
 msgid "Oracle"
-msgstr ""
+msgstr "Oracle"
 
 msgid "Oracle doesn't support bitwise XOR operation."
 msgstr ""
@@ -12080,7 +12090,7 @@ msgid ""
 msgstr ""
 
 msgid "Transactions"
-msgstr ""
+msgstr "Transacciones"
 
 msgid ""
 "Transactions are **not** currently supported with asynchronous queries and "
@@ -12249,7 +12259,7 @@ msgid "Containment and key lookups"
 msgstr ""
 
 msgid "``contains``"
-msgstr ""
+msgstr "``contains``"
 
 msgid ""
 "The :lookup:`contains` lookup is overridden on ``JSONField``. The returned "
@@ -12264,7 +12274,7 @@ msgid "``contains`` is not supported on Oracle and SQLite."
 msgstr ""
 
 msgid "``contained_by``"
-msgstr ""
+msgstr "``contained_by``"
 
 msgid ""
 "This is the inverse of the :lookup:`contains <jsonfield.contains>` lookup - "
@@ -12276,7 +12286,7 @@ msgid "``contained_by`` is not supported on Oracle and SQLite."
 msgstr ""
 
 msgid "``has_key``"
-msgstr ""
+msgstr "``has_key``"
 
 msgid ""
 "Returns objects where the given key is in the top-level of the data. For "
@@ -12284,7 +12294,7 @@ msgid ""
 msgstr ""
 
 msgid "``has_keys``"
-msgstr ""
+msgstr "``has_keys``"
 
 msgid ""
 "Returns objects where all of the given keys are in the top-level of the "
@@ -12292,7 +12302,7 @@ msgid ""
 msgstr ""
 
 msgid "``has_any_keys``"
-msgstr ""
+msgstr "``has_any_keys``"
 
 msgid ""
 "Returns objects where any of the given keys are in the top-level of the "
@@ -12568,7 +12578,7 @@ msgid "One-to-many relationships"
 msgstr ""
 
 msgid "Forward"
-msgstr ""
+msgstr "Reenviar"
 
 msgid ""
 "If a model has a :class:`~django.db.models.ForeignKey`, instances of that "
@@ -12669,7 +12679,7 @@ msgid "Adds the specified model objects to the related object set."
 msgstr ""
 
 msgid "``create(**kwargs)``"
-msgstr ""
+msgstr "``create(**kwargs)``"
 
 msgid ""
 "Creates a new object, saves it and puts it in the related object set. "
@@ -12683,13 +12693,13 @@ msgid "Removes the specified model objects from the related object set."
 msgstr ""
 
 msgid "``clear()``"
-msgstr ""
+msgstr "``clear()``"
 
 msgid "Removes all objects from the related object set."
 msgstr ""
 
 msgid "``set(objs)``"
-msgstr ""
+msgstr "``set(objs)``"
 
 msgid "Replace the set of related objects."
 msgstr ""
@@ -12834,7 +12844,7 @@ msgid ""
 msgstr ""
 
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 msgid ""
 "A common task for web applications is to search some data in the database "
@@ -13658,7 +13668,7 @@ msgid ""
 msgstr ""
 
 msgid "Autocommit"
-msgstr ""
+msgstr "Autocommit"
 
 msgid "Why Django uses autocommit"
 msgstr ""
@@ -14152,7 +14162,7 @@ msgid ""
 msgstr ""
 
 msgid "``send_mail()``"
-msgstr ""
+msgstr "``send_mail()``"
 
 msgid ""
 "In most cases, you can send email using ``django.core.mail.send_mail()``."
@@ -14219,7 +14229,7 @@ msgid ""
 msgstr ""
 
 msgid "``send_mass_mail()``"
-msgstr ""
+msgstr "``send_mass_mail()``"
 
 msgid ""
 "``django.core.mail.send_mass_mail()`` is intended to handle mass emailing."
@@ -14262,7 +14272,7 @@ msgid ""
 msgstr ""
 
 msgid "``mail_admins()``"
-msgstr ""
+msgstr "``mail_admins()``"
 
 msgid ""
 "``django.core.mail.mail_admins()`` is a shortcut for sending an email to the "
@@ -14289,7 +14299,7 @@ msgid ""
 msgstr ""
 
 msgid "``mail_managers()``"
-msgstr ""
+msgstr "``mail_managers()``"
 
 msgid ""
 "``django.core.mail.mail_managers()`` is just like ``mail_admins()``, except "
@@ -14825,7 +14835,7 @@ msgid ""
 msgstr ""
 
 msgid "Localflavor"
-msgstr ""
+msgstr "Localflavor"
 
 msgid ""
 "``django-localflavor`` is a collection of utilities for particular countries "
@@ -14861,7 +14871,7 @@ msgid ":pypi:`PyPI <django-contrib-comments>`"
 msgstr ""
 
 msgid "Formtools"
-msgstr ""
+msgstr "Formtools"
 
 msgid ""
 "``django-formtools`` is a collection of assorted utilities to work with "
@@ -15276,7 +15286,7 @@ msgid ""
 msgstr ""
 
 msgid "``empty_form``"
-msgstr ""
+msgstr "``empty_form``"
 
 msgid ""
 "``BaseFormSet`` provides an additional attribute ``empty_form`` which "
@@ -15285,7 +15295,7 @@ msgid ""
 msgstr ""
 
 msgid "``error_messages``"
-msgstr ""
+msgstr "``error_messages``"
 
 msgid ""
 "The ``error_messages`` argument lets you override the default messages that "
@@ -15335,7 +15345,7 @@ msgid ""
 msgstr ""
 
 msgid "``validate_max``"
-msgstr ""
+msgstr "``validate_max``"
 
 msgid ""
 "If ``validate_max=True`` is passed to :func:`~django.forms.formsets."
@@ -15365,7 +15375,7 @@ msgid ""
 msgstr ""
 
 msgid "``validate_min``"
-msgstr ""
+msgstr "``validate_min``"
 
 msgid ""
 "If ``validate_min=True`` is passed to :func:`~django.forms.formsets."
@@ -15394,7 +15404,7 @@ msgid ""
 msgstr ""
 
 msgid "``can_order``"
-msgstr ""
+msgstr "``can_order``"
 
 msgid "Default: ``False``"
 msgstr ""
@@ -15417,7 +15427,7 @@ msgid ""
 msgstr ""
 
 msgid "``ordering_widget``"
-msgstr ""
+msgstr "``ordering_widget``"
 
 msgid "Default: :class:`~django.forms.NumberInput`"
 msgstr ""
@@ -15428,7 +15438,7 @@ msgid ""
 msgstr ""
 
 msgid "``get_ordering_widget``"
-msgstr ""
+msgstr "``get_ordering_widget``"
 
 msgid ""
 "Override ``get_ordering_widget()`` if you need to provide a widget instance "
@@ -15436,7 +15446,7 @@ msgid ""
 msgstr ""
 
 msgid "``can_delete``"
-msgstr ""
+msgstr "``can_delete``"
 
 msgid ""
 "Lets you create a formset with the ability to select forms for deletion:"
@@ -15475,7 +15485,7 @@ msgid ""
 msgstr ""
 
 msgid "``deletion_widget``"
-msgstr ""
+msgstr "``deletion_widget``"
 
 msgid "Default: :class:`~django.forms.CheckboxInput`"
 msgstr ""
@@ -15486,7 +15496,7 @@ msgid ""
 msgstr ""
 
 msgid "``get_deletion_widget``"
-msgstr ""
+msgstr "``get_deletion_widget``"
 
 msgid ""
 "Override ``get_deletion_widget()`` if you need to provide a widget instance "
@@ -15494,7 +15504,7 @@ msgid ""
 msgstr ""
 
 msgid "``can_delete_extra``"
-msgstr ""
+msgstr "``can_delete_extra``"
 
 msgid "Default: ``True``"
 msgstr ""
@@ -16209,7 +16219,7 @@ msgid ""
 msgstr ""
 
 msgid "Widgets"
-msgstr ""
+msgstr "Widgets"
 
 msgid ""
 "Each form field has a corresponding :doc:`Widget class </ref/forms/widgets/"
@@ -16633,7 +16643,7 @@ msgid ""
 msgstr ""
 
 msgid "``css``"
-msgstr ""
+msgstr "``css``"
 
 msgid ""
 "A dictionary describing the CSS files required for various forms of output "
@@ -16669,7 +16679,7 @@ msgid ""
 msgstr ""
 
 msgid "``js``"
-msgstr ""
+msgstr "``js``"
 
 msgid ""
 "A tuple describing the required JavaScript files. See :ref:`the section on "
@@ -16677,7 +16687,7 @@ msgid ""
 msgstr ""
 
 msgid "``extend``"
-msgstr ""
+msgstr "``extend``"
 
 msgid "A boolean defining inheritance behavior for ``Media`` declarations."
 msgstr ""
@@ -16844,7 +16854,7 @@ msgid "Creating forms from models"
 msgstr ""
 
 msgid "``ModelForm``"
-msgstr ""
+msgstr "``ModelForm``"
 
 msgid ""
 "If you're building a database-driven app, chances are you'll have forms that "
@@ -16878,16 +16888,16 @@ msgid "Form field"
 msgstr ""
 
 msgid ":class:`AutoField`"
-msgstr ""
+msgstr ":class:`AutoField`"
 
 msgid "Not represented in the form"
 msgstr ""
 
 msgid ":class:`BigAutoField`"
-msgstr ""
+msgstr ":class:`BigAutoField`"
 
 msgid ":class:`BigIntegerField`"
-msgstr ""
+msgstr ":class:`BigIntegerField`"
 
 msgid ""
 ":class:`~django.forms.IntegerField` with ``min_value`` set to "
@@ -16895,7 +16905,7 @@ msgid ""
 msgstr ""
 
 msgid ":class:`BinaryField`"
-msgstr ""
+msgstr ":class:`BinaryField`"
 
 msgid ""
 ":class:`~django.forms.CharField`, if :attr:`~.Field.editable` is set to "
@@ -16903,7 +16913,7 @@ msgid ""
 msgstr ""
 
 msgid ":class:`BooleanField`"
-msgstr ""
+msgstr ":class:`BooleanField`"
 
 msgid ""
 ":class:`~django.forms.BooleanField`, or :class:`~django.forms."
@@ -16911,7 +16921,7 @@ msgid ""
 msgstr ""
 
 msgid ":class:`CharField`"
-msgstr ""
+msgstr ":class:`CharField`"
 
 msgid ""
 ":class:`~django.forms.CharField` with ``max_length`` set to the model "
@@ -16920,136 +16930,136 @@ msgid ""
 msgstr ""
 
 msgid ":class:`DateField`"
-msgstr ""
+msgstr ":class:`DateField`"
 
 msgid ":class:`~django.forms.DateField`"
-msgstr ""
+msgstr ":class:`~django.forms.DateField`"
 
 msgid ":class:`DateTimeField`"
-msgstr ""
+msgstr ":class:`DateTimeField`"
 
 msgid ":class:`~django.forms.DateTimeField`"
-msgstr ""
+msgstr ":class:`~django.forms.DateTimeField`"
 
 msgid ":class:`DecimalField`"
-msgstr ""
+msgstr ":class:`DecimalField`"
 
 msgid ":class:`~django.forms.DecimalField`"
-msgstr ""
+msgstr ":class:`~django.forms.DecimalField`"
 
 msgid ":class:`DurationField`"
-msgstr ""
+msgstr ":class:`DurationField`"
 
 msgid ":class:`~django.forms.DurationField`"
-msgstr ""
+msgstr ":class:`~django.forms.DurationField`"
 
 msgid ":class:`EmailField`"
-msgstr ""
+msgstr ":class:`EmailField`"
 
 msgid ":class:`~django.forms.EmailField`"
-msgstr ""
+msgstr ":class:`~django.forms.EmailField`"
 
 msgid ":class:`FileField`"
-msgstr ""
+msgstr ":class:`FileField`"
 
 msgid ":class:`~django.forms.FileField`"
-msgstr ""
+msgstr ":class:`~django.forms.FileField`"
 
 msgid ":class:`FilePathField`"
-msgstr ""
+msgstr ":class:`FilePathField`"
 
 msgid ":class:`~django.forms.FilePathField`"
-msgstr ""
+msgstr ":class:`~django.forms.FilePathField`"
 
 msgid ":class:`FloatField`"
-msgstr ""
+msgstr ":class:`FloatField`"
 
 msgid ":class:`~django.forms.FloatField`"
-msgstr ""
+msgstr ":class:`~django.forms.FloatField`"
 
 msgid ":class:`ForeignKey`"
-msgstr ""
+msgstr ":class:`ForeignKey`"
 
 msgid ":class:`~django.forms.ModelChoiceField` (see below)"
 msgstr ""
 
 msgid ":class:`ImageField`"
-msgstr ""
+msgstr ":class:`ImageField`"
 
 msgid ":class:`~django.forms.ImageField`"
-msgstr ""
+msgstr ":class:`~django.forms.ImageField`"
 
 msgid ":class:`IntegerField`"
-msgstr ""
+msgstr ":class:`IntegerField`"
 
 msgid ":class:`~django.forms.IntegerField`"
-msgstr ""
+msgstr ":class:`~django.forms.IntegerField`"
 
 msgid "``IPAddressField``"
-msgstr ""
+msgstr "``IPAddressField``"
 
 msgid ":class:`GenericIPAddressField`"
-msgstr ""
+msgstr ":class:`GenericIPAddressField`"
 
 msgid ":class:`~django.forms.GenericIPAddressField`"
-msgstr ""
+msgstr ":class:`~django.forms.GenericIPAddressField`"
 
 msgid ":class:`JSONField`"
-msgstr ""
+msgstr ":class:`JSONField`"
 
 msgid ":class:`~django.forms.JSONField`"
-msgstr ""
+msgstr ":class:`~django.forms.JSONField`"
 
 msgid ":class:`ManyToManyField`"
-msgstr ""
+msgstr ":class:`ManyToManyField`"
 
 msgid ":class:`~django.forms.ModelMultipleChoiceField` (see below)"
 msgstr ""
 
 msgid ":class:`PositiveBigIntegerField`"
-msgstr ""
+msgstr ":class:`PositiveBigIntegerField`"
 
 msgid ":class:`PositiveIntegerField`"
-msgstr ""
+msgstr ":class:`PositiveIntegerField`"
 
 msgid ":class:`PositiveSmallIntegerField`"
-msgstr ""
+msgstr ":class:`PositiveSmallIntegerField`"
 
 msgid ":class:`SlugField`"
-msgstr ""
+msgstr ":class:`SlugField`"
 
 msgid ":class:`~django.forms.SlugField`"
-msgstr ""
+msgstr ":class:`~django.forms.SlugField`"
 
 msgid ":class:`SmallAutoField`"
-msgstr ""
+msgstr ":class:`SmallAutoField`"
 
 msgid ":class:`SmallIntegerField`"
-msgstr ""
+msgstr ":class:`SmallIntegerField`"
 
 msgid ":class:`TextField`"
-msgstr ""
+msgstr ":class:`TextField`"
 
 msgid ":class:`~django.forms.CharField` with ``widget=forms.Textarea``"
 msgstr ""
 
 msgid ":class:`TimeField`"
-msgstr ""
+msgstr ":class:`TimeField`"
 
 msgid ":class:`~django.forms.TimeField`"
-msgstr ""
+msgstr ":class:`~django.forms.TimeField`"
 
 msgid ":class:`URLField`"
-msgstr ""
+msgstr ":class:`URLField`"
 
 msgid ":class:`~django.forms.URLField`"
-msgstr ""
+msgstr ":class:`~django.forms.URLField`"
 
 msgid ":class:`UUIDField`"
-msgstr ""
+msgstr ":class:`UUIDField`"
 
 msgid ":class:`~django.forms.UUIDField`"
-msgstr ""
+msgstr ":class:`~django.forms.UUIDField`"
 
 msgid ""
 "As you might expect, the ``ForeignKey`` and ``ManyToManyField`` model field "
@@ -17415,7 +17425,7 @@ msgid ""
 msgstr ""
 
 msgid "or::"
-msgstr ""
+msgstr "or::"
 
 msgid ""
 "Finally, if you want complete control over of a field -- including its type, "
@@ -18030,7 +18040,7 @@ msgid "See :ref:`using vary headers <using-vary-headers>`."
 msgstr ""
 
 msgid "Caching"
-msgstr ""
+msgstr "Caché"
 
 msgid ""
 "The decorators in :mod:`django.views.decorators.cache` control server and "
@@ -18056,7 +18066,7 @@ msgid "Each header is only added if it isn't already set."
 msgstr ""
 
 msgid "Common"
-msgstr ""
+msgstr "Comunes"
 
 msgid ""
 "The decorators in :mod:`django.views.decorators.common` allow per-view "
@@ -18162,8 +18172,8 @@ msgstr ""
 
 msgid ""
 "If you want to upload multiple files using one form field, create a subclass "
-"of the field's widget and set the ``allow_multiple_selected`` attribute on "
-"it to ``True``."
+"of the field's widget and set its ``allow_multiple_selected`` class "
+"attribute to ``True``."
 msgstr ""
 
 msgid ""
@@ -18181,8 +18191,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Then override the ``post`` method of your :class:`~django.views.generic.edit."
-"FormView` subclass to handle multiple file uploads:"
+"Then override the ``form_valid()`` method of your :class:`~django.views."
+"generic.edit.FormView` subclass to handle multiple file uploads:"
 msgstr ""
 
 msgid ""
@@ -18332,7 +18342,7 @@ msgid "Information on handling HTTP requests in Django:"
 msgstr ""
 
 msgid "Middleware"
-msgstr ""
+msgstr "Middleware"
 
 msgid ""
 "Middleware is a framework of hooks into Django's request/response "
@@ -18396,7 +18406,7 @@ msgid "Middleware can live anywhere on your Python path."
 msgstr ""
 
 msgid "``__init__(get_response)``"
-msgstr ""
+msgstr "``__init__(get_response)``"
 
 msgid ""
 "Middleware factories must accept a ``get_response`` argument. You can also "
@@ -18490,7 +18500,7 @@ msgid ""
 msgstr ""
 
 msgid "``process_view()``"
-msgstr ""
+msgstr "``process_view()``"
 
 msgid ""
 "``request`` is an :class:`~django.http.HttpRequest` object. ``view_func`` is "
@@ -18532,7 +18542,7 @@ msgid ""
 msgstr ""
 
 msgid "``process_exception()``"
-msgstr ""
+msgstr "``process_exception()``"
 
 msgid ""
 "``request`` is an :class:`~django.http.HttpRequest` object. ``exception`` is "
@@ -18556,7 +18566,7 @@ msgid ""
 msgstr ""
 
 msgid "``process_template_response()``"
-msgstr ""
+msgstr "``process_template_response()``"
 
 msgid ""
 "``request`` is an :class:`~django.http.HttpRequest` object. ``response`` is "
@@ -18978,7 +18988,7 @@ msgid ""
 msgstr ""
 
 msgid "**Performance**"
-msgstr ""
+msgstr "**Performance**"
 
 msgid ""
 "Finally, the size of a cookie can have an impact on the speed of your site."
@@ -19426,7 +19436,7 @@ msgid ""
 msgstr ""
 
 msgid "Settings"
-msgstr ""
+msgstr "Configuraciones"
 
 msgid ""
 "A few :ref:`Django settings <settings-sessions>` give you control over "
@@ -19434,43 +19444,43 @@ msgid ""
 msgstr ""
 
 msgid ":setting:`SESSION_CACHE_ALIAS`"
-msgstr ""
+msgstr ":setting:`SESSION_CACHE_ALIAS`"
 
 msgid ":setting:`SESSION_COOKIE_AGE`"
-msgstr ""
+msgstr ":setting:`SESSION_COOKIE_AGE`"
 
 msgid ":setting:`SESSION_COOKIE_DOMAIN`"
-msgstr ""
+msgstr ":setting:`SESSION_COOKIE_DOMAIN`"
 
 msgid ":setting:`SESSION_COOKIE_HTTPONLY`"
-msgstr ""
+msgstr ":setting:`SESSION_COOKIE_HTTPONLY`"
 
 msgid ":setting:`SESSION_COOKIE_NAME`"
-msgstr ""
+msgstr ":setting:`SESSION_COOKIE_NAME`"
 
 msgid ":setting:`SESSION_COOKIE_PATH`"
-msgstr ""
+msgstr ":setting:`SESSION_COOKIE_PATH`"
 
 msgid ":setting:`SESSION_COOKIE_SAMESITE`"
-msgstr ""
+msgstr ":setting:`SESSION_COOKIE_SAMESITE`"
 
 msgid ":setting:`SESSION_COOKIE_SECURE`"
-msgstr ""
+msgstr ":setting:`SESSION_COOKIE_SECURE`"
 
 msgid ":setting:`SESSION_ENGINE`"
-msgstr ""
+msgstr ":setting:`SESSION_ENGINE`"
 
 msgid ":setting:`SESSION_EXPIRE_AT_BROWSER_CLOSE`"
-msgstr ""
+msgstr ":setting:`SESSION_EXPIRE_AT_BROWSER_CLOSE`"
 
 msgid ":setting:`SESSION_FILE_PATH`"
-msgstr ""
+msgstr ":setting:`SESSION_FILE_PATH`"
 
 msgid ":setting:`SESSION_SAVE_EVERY_REQUEST`"
 msgstr ""
 
 msgid ":setting:`SESSION_SERIALIZER`"
-msgstr ""
+msgstr ":setting:`SESSION_SERIALIZER`"
 
 msgid "Session security"
 msgstr ""
@@ -19529,22 +19539,22 @@ msgid ""
 msgstr ""
 
 msgid "``exists()``"
-msgstr ""
+msgstr "``exists()``"
 
 msgid "``create()``"
-msgstr ""
+msgstr "``create()``"
 
 msgid "``save()``"
-msgstr ""
+msgstr "``save()``"
 
 msgid "``delete()``"
-msgstr ""
+msgstr "``delete()``"
 
 msgid "``load()``"
-msgstr ""
+msgstr "``load()``"
 
 msgid ":meth:`~backends.base.SessionBase.clear_expired`"
-msgstr ""
+msgstr ":meth:`~backends.base.SessionBase.clear_expired`"
 
 msgid ""
 "In order to build a custom session engine or to customize an existing one, "
@@ -19648,7 +19658,7 @@ msgid "A prefix added to a session key to build a cache key string."
 msgstr ""
 
 msgid "Example"
-msgstr ""
+msgstr "Ejemplos"
 
 msgid ""
 "The example below shows a custom database-backed session engine that "
@@ -19684,7 +19694,7 @@ msgid ""
 msgstr ""
 
 msgid "``render()``"
-msgstr ""
+msgstr "``render()``"
 
 msgid ""
 "Combines a given template with a given context dictionary and returns an :"
@@ -19702,13 +19712,13 @@ msgid "Required arguments"
 msgstr ""
 
 msgid "``request``"
-msgstr ""
+msgstr "``request``"
 
 msgid "The request object used to generate this response."
 msgstr ""
 
 msgid "``template_name``"
-msgstr ""
+msgstr "``template_name``"
 
 msgid ""
 "The full name of a template to use or sequence of template names. If a "
@@ -19721,7 +19731,7 @@ msgid "Optional arguments"
 msgstr ""
 
 msgid "``context``"
-msgstr ""
+msgstr "``context``"
 
 msgid ""
 "A dictionary of values to add to the template context. By default, this is "
@@ -19730,20 +19740,20 @@ msgid ""
 msgstr ""
 
 msgid "``content_type``"
-msgstr ""
+msgstr "``content_type``"
 
 msgid ""
 "The MIME type to use for the resulting document. Defaults to ``'text/html'``."
 msgstr ""
 
 msgid "``status``"
-msgstr ""
+msgstr "``status``"
 
 msgid "The status code for the response. Defaults to ``200``."
 msgstr ""
 
 msgid "``using``"
-msgstr ""
+msgstr "``using``"
 
 msgid ""
 "The :setting:`NAME <TEMPLATES-NAME>` of a template engine to use for loading "
@@ -19759,7 +19769,7 @@ msgid "This example is equivalent to::"
 msgstr ""
 
 msgid "``redirect()``"
-msgstr ""
+msgstr "``redirect()``"
 
 msgid ""
 "Returns an :class:`~django.http.HttpResponseRedirect` to the appropriate URL "
@@ -19816,7 +19826,7 @@ msgid ""
 msgstr ""
 
 msgid "``get_object_or_404()``"
-msgstr ""
+msgstr "``get_object_or_404()``"
 
 msgid "*Asynchronous version*: ``aget_object_or_404()``"
 msgstr ""
@@ -19831,7 +19841,7 @@ msgid "Arguments"
 msgstr "Argumentos"
 
 msgid "``klass``"
-msgstr ""
+msgstr "``klass``"
 
 msgid ""
 "A :class:`~django.db.models.Model` class, a :class:`~django.db.models."
@@ -19840,13 +19850,13 @@ msgid ""
 msgstr ""
 
 msgid "``*args``"
-msgstr ""
+msgstr "``*args``"
 
 msgid ":class:`Q objects <django.db.models.Q>`."
 msgstr ""
 
 msgid "``**kwargs``"
-msgstr ""
+msgstr "``**kwargs``"
 
 msgid ""
 "Lookup parameters, which should be in the format accepted by ``get()`` and "
@@ -19892,7 +19902,7 @@ msgid "``aget_object_or_404()`` function was added."
 msgstr ""
 
 msgid "``get_list_or_404()``"
-msgstr ""
+msgstr "``get_list_or_404()``"
 
 msgid "*Asynchronous version*: ``aget_list_or_404()``"
 msgstr ""
@@ -21026,7 +21036,7 @@ msgid "Template tags"
 msgstr "Etiquetas de plantilla"
 
 msgid "``localize``"
-msgstr ""
+msgstr "``localize``"
 
 msgid ""
 "Enables or disables localization of template variables in the contained "
@@ -21054,7 +21064,7 @@ msgid ""
 msgstr ""
 
 msgid "``unlocalize``"
-msgstr ""
+msgstr "``unlocalize``"
 
 msgid "Forces a single value to be printed without localization."
 msgstr ""
@@ -21161,7 +21171,7 @@ msgid ""
 msgstr ""
 
 msgid "Definitions"
-msgstr ""
+msgstr "Definiciones"
 
 msgid ""
 "The words \"internationalization\" and \"localization\" often cause "
@@ -21169,13 +21179,13 @@ msgid ""
 msgstr ""
 
 msgid "internationalization"
-msgstr ""
+msgstr "Internacionalización"
 
 msgid "Preparing the software for localization. Usually done by developers."
 msgstr ""
 
 msgid "localization"
-msgstr ""
+msgstr "Localización"
 
 msgid ""
 "Writing the translations and local formats. Usually done by translators."
@@ -21287,7 +21297,7 @@ msgid ""
 msgstr ""
 
 msgid "Concepts"
-msgstr ""
+msgstr "Conceptos"
 
 msgid "Naive and aware datetime objects"
 msgstr ""
@@ -21471,7 +21481,7 @@ msgid ""
 msgstr ""
 
 msgid "``localtime``"
-msgstr ""
+msgstr "``localtime``"
 
 msgid ""
 "Enables or disables conversion of aware datetime objects to the current time "
@@ -21493,7 +21503,7 @@ msgid ""
 msgstr ""
 
 msgid "``timezone``"
-msgstr ""
+msgstr "``timezone``"
 
 msgid ""
 "Sets or unsets the current time zone in the contained block. When the "
@@ -21501,7 +21511,7 @@ msgid ""
 msgstr ""
 
 msgid "``get_current_timezone``"
-msgstr ""
+msgstr "``get_current_timezone``"
 
 msgid ""
 "You can get the name of the current time zone using the "
@@ -21524,7 +21534,7 @@ msgid "Forces conversion of a single value to the current time zone."
 msgstr ""
 
 msgid "``utc``"
-msgstr ""
+msgstr "``utc``"
 
 msgid "Forces conversion of a single value to UTC."
 msgstr ""
@@ -21549,7 +21559,7 @@ msgid "Database"
 msgstr "Base de Datos"
 
 msgid "PostgreSQL"
-msgstr ""
+msgstr "PostgreSQL"
 
 msgid ""
 "The PostgreSQL backend stores datetimes as ``timestamp with time zone``. In "
@@ -21560,9 +21570,18 @@ msgstr ""
 msgid ""
 "As a consequence, if you're using PostgreSQL, you can switch between "
 "``USE_TZ = False`` and ``USE_TZ = True`` freely. The database connection's "
-"time zone will be set to :setting:`TIME_ZONE` or ``UTC`` respectively, so "
-"that Django obtains correct datetimes in all cases. You don't need to "
-"perform any data conversions."
+"time zone will be set to :setting:`DATABASE-TIME_ZONE` or ``UTC`` "
+"respectively, so that Django obtains correct datetimes in all cases. You "
+"don't need to perform any data conversions."
+msgstr ""
+
+msgid "Time zone settings"
+msgstr ""
+
+msgid ""
+"The :setting:`time zone <DATABASE-TIME_ZONE>` configured for the connection "
+"in the :setting:`DATABASES` setting is distinct from the general :setting:"
+"`TIME_ZONE` setting."
 msgstr ""
 
 msgid "Other databases"
@@ -21877,7 +21896,7 @@ msgid ""
 msgstr ""
 
 msgid "Translation"
-msgstr ""
+msgstr "Traducción"
 
 msgid ""
 "In order to make a Django project translatable, you have to add a minimal "
@@ -21958,10 +21977,10 @@ msgid ""
 msgstr ""
 
 msgid ":func:`~django.utils.translation.gettext`"
-msgstr ""
+msgstr ":func:`~django.utils.translation.gettext`"
 
 msgid ":func:`~django.utils.translation.gettext_lazy`"
-msgstr ""
+msgstr ":func:`~django.utils.translation.gettext_lazy`"
 
 msgid ""
 "In this example, the text ``\"Welcome to my site.\"`` is marked as a "
@@ -22056,7 +22075,7 @@ msgid ""
 msgstr ""
 
 msgid "Pluralization"
-msgstr ""
+msgstr "Pluralización"
 
 msgid ""
 "Use the function :func:`django.utils.translation.ngettext()` to specify "
@@ -22530,7 +22549,7 @@ msgid "These tags also require a ``{% load i18n %}``."
 msgstr ""
 
 msgid "``get_available_languages``"
-msgstr ""
+msgstr "``get_available_languages``"
 
 msgid ""
 "``{% get_available_languages as LANGUAGES %}`` returns a list of tuples in "
@@ -22539,7 +22558,7 @@ msgid ""
 msgstr ""
 
 msgid "``get_current_language``"
-msgstr ""
+msgstr "``get_current_language``"
 
 msgid ""
 "``{% get_current_language as LANGUAGE_CODE %}`` returns the current user's "
@@ -22548,7 +22567,7 @@ msgid ""
 msgstr ""
 
 msgid "``get_current_language_bidi``"
-msgstr ""
+msgstr "``get_current_language_bidi``"
 
 msgid ""
 "``{% get_current_language_bidi as LANGUAGE_BIDI %}`` returns the current "
@@ -22567,7 +22586,7 @@ msgid ""
 msgstr ""
 
 msgid "``get_language_info``"
-msgstr ""
+msgstr "``get_language_info``"
 
 msgid ""
 "You can also retrieve information about any of the available languages using "
@@ -22579,7 +22598,7 @@ msgid "You can then access the information:"
 msgstr ""
 
 msgid "``get_language_info_list``"
-msgstr ""
+msgstr "``get_language_info_list``"
 
 msgid ""
 "You can also use the ``{% get_language_info_list %}`` template tag to "
@@ -22654,7 +22673,7 @@ msgid ""
 msgstr ""
 
 msgid "**Attributes**"
-msgstr ""
+msgstr "**Attributes**"
 
 msgid ""
 "Translation domain containing strings to add in the view output. Defaults to "
@@ -22711,28 +22730,28 @@ msgid ""
 msgstr ""
 
 msgid "``gettext``"
-msgstr ""
+msgstr "``gettext``"
 
 msgid "``ngettext``"
-msgstr ""
+msgstr "``ngettext``"
 
 msgid "``interpolate``"
-msgstr ""
+msgstr "``interpolate``"
 
 msgid "``get_format``"
-msgstr ""
+msgstr "``get_format``"
 
 msgid "``gettext_noop``"
-msgstr ""
+msgstr "``gettext_noop``"
 
 msgid "``pgettext``"
-msgstr ""
+msgstr "``pgettext``"
 
 msgid "``npgettext``"
-msgstr ""
+msgstr "``npgettext``"
 
 msgid "``pluralidx``"
-msgstr ""
+msgstr "``pluralidx``"
 
 msgid ""
 "The ``gettext`` function behaves similarly to the standard ``gettext`` "
@@ -22779,46 +22798,46 @@ msgid "It has access to the following settings:"
 msgstr ""
 
 msgid ":setting:`DATE_FORMAT`"
-msgstr ""
+msgstr ":setting:`DATE_FORMAT`"
 
 msgid ":setting:`DATE_INPUT_FORMATS`"
-msgstr ""
+msgstr ":setting:`DATE_INPUT_FORMATS`"
 
 msgid ":setting:`DATETIME_FORMAT`"
-msgstr ""
+msgstr ":setting:`DATETIME_FORMAT`"
 
 msgid ":setting:`DATETIME_INPUT_FORMATS`"
-msgstr ""
+msgstr ":setting:`DATETIME_INPUT_FORMATS`"
 
 msgid ":setting:`DECIMAL_SEPARATOR`"
-msgstr ""
+msgstr ":setting:`DECIMAL_SEPARATOR`"
 
 msgid ":setting:`FIRST_DAY_OF_WEEK`"
-msgstr ""
+msgstr ":setting:`FIRST_DAY_OF_WEEK`"
 
 msgid ":setting:`MONTH_DAY_FORMAT`"
-msgstr ""
+msgstr ":setting:`MONTH_DAY_FORMAT`"
 
 msgid ":setting:`NUMBER_GROUPING`"
-msgstr ""
+msgstr ":setting:`NUMBER_GROUPING`"
 
 msgid ":setting:`SHORT_DATE_FORMAT`"
-msgstr ""
+msgstr ":setting:`SHORT_DATE_FORMAT`"
 
 msgid ":setting:`SHORT_DATETIME_FORMAT`"
-msgstr ""
+msgstr ":setting:`SHORT_DATETIME_FORMAT`"
 
 msgid ":setting:`THOUSAND_SEPARATOR`"
-msgstr ""
+msgstr ":setting:`THOUSAND_SEPARATOR`"
 
 msgid ":setting:`TIME_FORMAT`"
-msgstr ""
+msgstr ":setting:`TIME_FORMAT`"
 
 msgid ":setting:`TIME_INPUT_FORMATS`"
-msgstr ""
+msgstr ":setting:`TIME_INPUT_FORMATS`"
 
 msgid ":setting:`YEAR_MONTH_FORMAT`"
-msgstr ""
+msgstr ":setting:`YEAR_MONTH_FORMAT`"
 
 msgid ""
 "This is useful for maintaining formatting consistency with the Python-"
@@ -23463,25 +23482,25 @@ msgid "A number of settings can be used to adjust language cookie options:"
 msgstr ""
 
 msgid ":setting:`LANGUAGE_COOKIE_NAME`"
-msgstr ""
+msgstr ":setting:`LANGUAGE_COOKIE_NAME`"
 
 msgid ":setting:`LANGUAGE_COOKIE_AGE`"
-msgstr ""
+msgstr ":setting:`LANGUAGE_COOKIE_AGE`"
 
 msgid ":setting:`LANGUAGE_COOKIE_DOMAIN`"
-msgstr ""
+msgstr ":setting:`LANGUAGE_COOKIE_DOMAIN`"
 
 msgid ":setting:`LANGUAGE_COOKIE_HTTPONLY`"
-msgstr ""
+msgstr ":setting:`LANGUAGE_COOKIE_HTTPONLY`"
 
 msgid ":setting:`LANGUAGE_COOKIE_PATH`"
 msgstr ""
 
 msgid ":setting:`LANGUAGE_COOKIE_SAMESITE`"
-msgstr ""
+msgstr ":setting:`LANGUAGE_COOKIE_SAMESITE`"
 
 msgid ":setting:`LANGUAGE_COOKIE_SECURE`"
-msgstr ""
+msgstr ":setting:`LANGUAGE_COOKIE_SECURE`"
 
 msgid "Implementation notes"
 msgstr ""
@@ -23633,7 +23652,7 @@ msgid ""
 msgstr ""
 
 msgid "Here's a sample settings file::"
-msgstr ""
+msgstr "Aquí hay un archivo de configuración de muestra::"
 
 msgid ""
 "Once ``LocaleMiddleware`` determines the user's preference, it makes this "
@@ -23712,11 +23731,12 @@ msgid ""
 msgstr ""
 
 msgid "``$APPPATH/locale/<language>/LC_MESSAGES/django.(po|mo)``"
-msgstr ""
+msgstr "``$APPPATH/locale/<language>/LC_MESSAGES/django.(po|mo)``"
 
 msgid ""
 "``$PYTHONPATH/django/conf/locale/<language>/LC_MESSAGES/django.(po|mo)``"
 msgstr ""
+"``$PYTHONPATH/django/conf/locale/<language>/LC_MESSAGES/django.(po|mo)``"
 
 msgid ""
 "To create message files, you use the :djadmin:`django-admin makemessages "
@@ -24620,7 +24640,7 @@ msgstr ""
 "*después* de cualquier configuración de la que dependa."
 
 msgid "Migrations"
-msgstr ""
+msgstr "Migraciones"
 
 msgid ""
 "Migrations are Django's way of propagating changes you make to your models "
@@ -24735,7 +24755,7 @@ msgid ""
 msgstr ""
 
 msgid "SQLite"
-msgstr ""
+msgstr "SQLite"
 
 msgid ""
 "SQLite has very little built-in schema alteration support, and so Django "
@@ -24764,7 +24784,7 @@ msgid ""
 msgstr ""
 
 msgid "Workflow"
-msgstr ""
+msgstr "Flujo de trabajo"
 
 msgid ""
 "Django can create migrations for you. Make changes to your models - say, add "
@@ -24842,7 +24862,7 @@ msgid ""
 msgstr ""
 
 msgid "Dependencies"
-msgstr ""
+msgstr "Dependencias"
 
 msgid ""
 "While migrations are per-app, the tables and relationships implied by your "
@@ -25498,7 +25518,7 @@ msgid "Arbitrary class instances (e.g. ``MyClass(4.3, 5.7)``)"
 msgstr ""
 
 msgid "Lambdas"
-msgstr ""
+msgstr "Lambdas"
 
 msgid "Custom serializers"
 msgstr ""
@@ -25613,7 +25633,7 @@ msgid ""
 msgstr ""
 
 msgid "Pagination"
-msgstr ""
+msgstr "Paginación"
 
 msgid ""
 "Django provides high-level and low-level ways to help you manage paginated "
@@ -25882,7 +25902,7 @@ msgid ""
 msgstr ""
 
 msgid ":class:`~django.utils.functional.cached_property`"
-msgstr ""
+msgstr ":class:`~django.utils.functional.cached_property`"
 
 msgid ""
 "It's common to have to call a class instance's method more than once. If "
@@ -25966,7 +25986,7 @@ msgid ""
 msgstr ""
 
 msgid "Databases"
-msgstr ""
+msgstr "Bases de datos"
 
 msgid "Database optimization"
 msgstr ""
@@ -26001,7 +26021,7 @@ msgid ""
 msgstr ""
 
 msgid ":class:`~django.middleware.http.ConditionalGetMiddleware`"
-msgstr ""
+msgstr ":class:`~django.middleware.http.ConditionalGetMiddleware`"
 
 msgid ""
 "Adds support for modern browsers to conditionally GET responses based on the "
@@ -26010,7 +26030,7 @@ msgid ""
 msgstr ""
 
 msgid ":class:`~django.middleware.gzip.GZipMiddleware`"
-msgstr ""
+msgstr ":class:`~django.middleware.gzip.GZipMiddleware`"
 
 msgid ""
 "Compresses responses for all modern browsers, saving bandwidth and transfer "
@@ -26040,6 +26060,7 @@ msgstr ""
 
 msgid ":class:`~django.contrib.staticfiles.storage.ManifestStaticFilesStorage`"
 msgstr ""
+":class:`~django.contrib.staticfiles.storage.ManifestStaticFilesStorage`"
 
 msgid ""
 "By taking advantage of web browsers' caching abilities, you can eliminate "
@@ -26055,7 +26076,7 @@ msgid ""
 msgstr ""
 
 msgid "\"Minification\""
-msgstr ""
+msgstr "\"Minification\""
 
 msgid ""
 "Several third-party Django tools and packages provide the ability to "
@@ -26368,7 +26389,7 @@ msgid ""
 msgstr ""
 
 msgid "SSL/HTTPS"
-msgstr ""
+msgstr "SSL/HTTPS"
 
 msgid ""
 "It is always better for security to deploy your site behind HTTPS. Without "
@@ -26754,31 +26775,31 @@ msgid ""
 msgstr ""
 
 msgid "Identifier"
-msgstr ""
+msgstr "Identificador"
 
 msgid "Information"
-msgstr ""
+msgstr "Información"
 
 msgid "``xml``"
-msgstr ""
+msgstr "``xml``"
 
 msgid "Serializes to and from a simple XML dialect."
 msgstr ""
 
 msgid "``json``"
-msgstr ""
+msgstr "``json``"
 
 msgid "Serializes to and from JSON_."
 msgstr ""
 
 msgid "``jsonl``"
-msgstr ""
+msgstr "``jsonl``"
 
 msgid "Serializes to and from JSONL_."
 msgstr ""
 
 msgid "``yaml``"
-msgstr ""
+msgstr "``yaml``"
 
 msgid ""
 "Serializes to YAML (YAML Ain't a Markup Language). This serializer is only "
@@ -26786,7 +26807,7 @@ msgid ""
 msgstr ""
 
 msgid "XML"
-msgstr ""
+msgstr "XML"
 
 msgid "The basic XML serialization format looks like this:"
 msgstr ""
@@ -26839,7 +26860,7 @@ msgid ""
 msgstr ""
 
 msgid "JSON"
-msgstr ""
+msgstr "JSON"
 
 msgid ""
 "When staying with the same example data as before it would be serialized as "
@@ -26878,7 +26899,7 @@ msgid ""
 msgstr ""
 
 msgid "``DjangoJSONEncoder``"
-msgstr ""
+msgstr "``DjangoJSONEncoder``"
 
 msgid ""
 "The JSON serializer uses ``DjangoJSONEncoder`` for encoding. A subclass of :"
@@ -26886,7 +26907,7 @@ msgid ""
 msgstr ""
 
 msgid ":class:`~datetime.datetime`"
-msgstr ""
+msgstr ":class:`~datetime.datetime`"
 
 msgid ""
 "A string of the form ``YYYY-MM-DDTHH:mm:ss.sssZ`` or ``YYYY-MM-DDTHH:mm:ss."
@@ -26894,19 +26915,19 @@ msgid ""
 msgstr ""
 
 msgid ":class:`~datetime.date`"
-msgstr ""
+msgstr ":class:`~datetime.date`"
 
 msgid "A string of the form ``YYYY-MM-DD`` as defined in `ECMA-262`_."
 msgstr ""
 
 msgid ":class:`~datetime.time`"
-msgstr ""
+msgstr ":class:`~datetime.time`"
 
 msgid "A string of the form ``HH:MM:ss.sss`` as defined in `ECMA-262`_."
 msgstr ""
 
 msgid ":class:`~datetime.timedelta`"
-msgstr ""
+msgstr ":class:`~datetime.timedelta`"
 
 msgid ""
 "A string representing a duration as defined in ISO-8601. For example, "
@@ -26923,7 +26944,7 @@ msgid "A string representation of the object."
 msgstr ""
 
 msgid "JSONL"
-msgstr ""
+msgstr "JSONL"
 
 msgid ""
 "*JSONL* stands for *JSON Lines*. With this format, objects are separated by "
@@ -26937,7 +26958,7 @@ msgid ""
 msgstr ""
 
 msgid "YAML"
-msgstr ""
+msgstr "YAML"
 
 msgid ""
 "YAML serialization looks quite similar to JSON. The object list is "
@@ -27216,7 +27237,7 @@ msgstr ""
 msgid ""
 "The value of :envvar:`DJANGO_SETTINGS_MODULE` should be in Python path "
 "syntax, e.g. ``mysite.settings``. Note that the settings module should be on "
-"the Python `import search path`_."
+"the Python :py:data:`sys.path`."
 msgstr ""
 
 msgid "The ``django-admin`` utility"
@@ -27786,7 +27807,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"``asend()`` is similar as ``send()``, but it is coroutine that must be "
+"``asend()`` is similar to ``send()``, but it is a coroutine that must be "
 "awaited::"
 msgstr ""
 
@@ -29105,7 +29126,7 @@ msgid "The following is a unit test using the request factory::"
 msgstr ""
 
 msgid "AsyncRequestFactory"
-msgstr ""
+msgstr "AsyncRequestFactory"
 
 msgid ""
 "``RequestFactory`` creates WSGI-like requests. If you want to create ASGI-"
@@ -29387,7 +29408,7 @@ msgid ""
 msgstr ""
 
 msgid "``tests/test_settings.py``"
-msgstr ""
+msgstr "``tests/test_settings.py``"
 
 msgid ""
 "This file contains the :doc:`Django settings </topics/settings>` required to "
@@ -29743,7 +29764,7 @@ msgid "Testing utilities"
 msgstr ""
 
 msgid "``django.test.utils``"
-msgstr ""
+msgstr "``django.test.utils``"
 
 msgid ""
 "To assist in the creation of your own test runner, Django provides a number "
@@ -29797,7 +29818,7 @@ msgid ""
 msgstr ""
 
 msgid "``django.db.connection.creation``"
-msgstr ""
+msgstr "``django.db.connection.creation``"
 
 msgid ""
 "The creation module of the database backend also provides some utilities "
@@ -31046,7 +31067,7 @@ msgid "The following is a unit test using the test client::"
 msgstr ""
 
 msgid ":class:`django.test.RequestFactory`"
-msgstr ""
+msgstr ":class:`django.test.RequestFactory`"
 
 msgid "Provided test case classes"
 msgstr ""
@@ -31071,7 +31092,7 @@ msgid ""
 msgstr ""
 
 msgid "``SimpleTestCase``"
-msgstr ""
+msgstr "``SimpleTestCase``"
 
 msgid "A subclass of :class:`unittest.TestCase` that adds this functionality:"
 msgstr ""
@@ -31167,7 +31188,7 @@ msgid ""
 msgstr ""
 
 msgid "``TransactionTestCase``"
-msgstr ""
+msgstr "``TransactionTestCase``"
 
 msgid ""
 "``TransactionTestCase`` inherits from :class:`~django.test.SimpleTestCase` "
@@ -31237,7 +31258,7 @@ msgid ""
 msgstr ""
 
 msgid "``TestCase``"
-msgstr ""
+msgstr "``TestCase``"
 
 msgid ""
 "This is the most common class to use for writing tests in Django. It "
@@ -31299,7 +31320,7 @@ msgid ""
 msgstr ""
 
 msgid "``LiveServerTestCase``"
-msgstr ""
+msgstr "``LiveServerTestCase``"
 
 msgid ""
 "``LiveServerTestCase`` does basically the same as :class:`~django.test."
@@ -31651,13 +31672,13 @@ msgid "Databases timezone"
 msgstr ""
 
 msgid "TEMPLATES"
-msgstr ""
+msgstr "PLANTILLAS"
 
 msgid "Template engines"
 msgstr ""
 
 msgid "SERIALIZATION_MODULES"
-msgstr ""
+msgstr "SERIALIZATION_MODULES"
 
 msgid "Serializers cache"
 msgstr ""
@@ -31734,7 +31755,7 @@ msgid ""
 msgstr ""
 
 msgid "Assertions"
-msgstr ""
+msgstr "Afirmaciones"
 
 msgid ""
 "As Python's normal :class:`unittest.TestCase` class implements assertion "
