@@ -9,16 +9,17 @@
 # e4db27214f7e7544f2022c647b585925_bb0e321, 2015
 # e4db27214f7e7544f2022c647b585925_bb0e321, 2014
 # Juan Manuel Vázquez, 2023
+# Noa Ve, 2024
 # Rodrigo Suárez <rodrigosrz12@gmail.com>, 2020
 # Santiago Britos, 2024
-# Uriel Medina <urimeba511@gmail.com>, 2021,2023
+# Uriel Medina <urimeba511@gmail.com>, 2021,2023-2024
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-15 13:34-0500\n"
 "PO-Revision-Date: 2013-04-02 20:02+0000\n"
-"Last-Translator: Santiago Britos, 2024\n"
+"Last-Translator: Uriel Medina <urimeba511@gmail.com>, 2021,2023-2024\n"
 "Language-Team: Spanish (http://app.transifex.com/django/django-docs/language/"
 "es/)\n"
 "MIME-Version: 1.0\n"
@@ -155,7 +156,7 @@ msgid ""
 "view functions:"
 msgstr ""
 "Los siguientes decoradores pueden ser usados tanto con funciones de vistas "
-"síncronas, como asíncronas"
+"síncronas, como asíncronas:"
 
 msgid ":func:`~django.views.decorators.cache.cache_control`"
 msgstr ":func:`~django.views.decorators.cache.cache_control`"
@@ -241,7 +242,7 @@ msgstr ""
 msgid "Detailed notes can be found in :ref:`async-queries`, but in short:"
 msgstr ""
 "Notas detalladas se pueden encontrar en :ref:`async-queries`, pero en "
-"resumen: "
+"resumen:"
 
 msgid ""
 "All ``QuerySet`` methods that cause an SQL query to occur have an ``a``-"
@@ -267,7 +268,8 @@ msgstr ""
 
 msgid "Asynchronous model and related manager interfaces were added."
 msgstr ""
-"Se agregaron interfaces de modelo asíncronas y de administrador relacionado."
+"Se agregaron el modelo asincrónico y las interfaces de administrador "
+"relacionadas."
 
 msgid "Performance"
 msgstr "Rendimiento"
@@ -1776,10 +1778,10 @@ msgid "add: ``user.has_perm('foo.add_bar')``"
 msgstr "add: ``user.has_perm('foo.add_bar')``"
 
 msgid "change: ``user.has_perm('foo.change_bar')``"
-msgstr "Cambiar: ``user.has_perm('foo.change_bar')``"
+msgstr "cambiar: ``user.has_perm('foo.change_bar')``"
 
 msgid "delete: ``user.has_perm('foo.delete_bar')``"
-msgstr "Eliminar: ``user.has_perm('foo.delete_bar')``"
+msgstr "eliminar: ``user.has_perm('foo.delete_bar')``"
 
 msgid "view: ``user.has_perm('foo.view_bar')``"
 msgstr ""
@@ -2581,7 +2583,7 @@ msgid "**URL name:** ``logout``"
 msgstr ""
 
 msgid "**Attributes:**"
-msgstr "**Attributes:**"
+msgstr "**Atributos:**"
 
 msgid ""
 "The URL to redirect to after logout. Defaults to :setting:"
@@ -2606,7 +2608,7 @@ msgid ""
 msgstr ""
 
 msgid "**Template context:**"
-msgstr "**Template context:**"
+msgstr "**Contexto de la plantilla:**"
 
 msgid "``title``: The string \"Logged out\", localized."
 msgstr ""
@@ -2618,7 +2620,7 @@ msgid "**URL name:** No default URL provided"
 msgstr ""
 
 msgid "**Optional arguments:**"
-msgstr "**Optional arguments:**"
+msgstr "**Argumentos opcionales:**"
 
 msgid ""
 "``login_url``: The URL of the login page to redirect to. Defaults to :"
@@ -2889,7 +2891,7 @@ msgid ""
 msgstr ""
 
 msgid "Helper functions"
-msgstr "Funciones de ayuda"
+msgstr "Funciones auxiliares"
 
 msgid ""
 "Redirects to the login page, and then back to another URL after a successful "
@@ -2897,7 +2899,7 @@ msgid ""
 msgstr ""
 
 msgid "**Required arguments:**"
-msgstr "**Required arguments:**"
+msgstr "**Argumentos requeridos:**"
 
 msgid "``next``: The URL to redirect to after a successful login."
 msgstr ""
@@ -3052,7 +3054,7 @@ msgid ""
 msgstr ""
 
 msgid "Technicality"
-msgstr "Tecnicamente"
+msgstr "Tecnicismo"
 
 msgid ""
 "Technically, these variables are only made available in the template context "
@@ -7137,7 +7139,7 @@ msgid ""
 msgstr ""
 
 msgid "...or::"
-msgstr "...or::"
+msgstr "...o::"
 
 msgid "Use ``condition`` when testing both conditions"
 msgstr ""
@@ -10747,7 +10749,7 @@ msgid "Use standard DB optimization techniques"
 msgstr ""
 
 msgid "...including:"
-msgstr "...including:"
+msgstr "...incluyendo:"
 
 msgid ""
 "Indexes_. This is a number one priority, *after* you have determined from "
@@ -11017,7 +11019,7 @@ msgid ""
 msgstr ""
 
 msgid "But:"
-msgstr "But:"
+msgstr "Pero:"
 
 msgid "Don't overuse ``contains()``, ``count()``, and ``exists()``"
 msgstr ""
@@ -12578,7 +12580,7 @@ msgid "One-to-many relationships"
 msgstr ""
 
 msgid "Forward"
-msgstr "Reenviar"
+msgstr "Directo"
 
 msgid ""
 "If a model has a :class:`~django.db.models.ForeignKey`, instances of that "
@@ -17425,7 +17427,7 @@ msgid ""
 msgstr ""
 
 msgid "or::"
-msgstr "or::"
+msgstr "o::"
 
 msgid ""
 "Finally, if you want complete control over of a field -- including its type, "
@@ -18066,7 +18068,7 @@ msgid "Each header is only added if it isn't already set."
 msgstr ""
 
 msgid "Common"
-msgstr "Comunes"
+msgstr "Común"
 
 msgid ""
 "The decorators in :mod:`django.views.decorators.common` allow per-view "
@@ -18988,7 +18990,7 @@ msgid ""
 msgstr ""
 
 msgid "**Performance**"
-msgstr "**Performance**"
+msgstr "**Rendimiento**"
 
 msgid ""
 "Finally, the size of a cookie can have an impact on the speed of your site."
@@ -19658,7 +19660,7 @@ msgid "A prefix added to a session key to build a cache key string."
 msgstr ""
 
 msgid "Example"
-msgstr "Ejemplos"
+msgstr "Ejemplo"
 
 msgid ""
 "The example below shows a custom database-backed session engine that "
@@ -21185,7 +21187,7 @@ msgid "Preparing the software for localization. Usually done by developers."
 msgstr ""
 
 msgid "localization"
-msgstr "Localización"
+msgstr "localización"
 
 msgid ""
 "Writing the translations and local formats. Usually done by translators."
@@ -22673,7 +22675,7 @@ msgid ""
 msgstr ""
 
 msgid "**Attributes**"
-msgstr "**Attributes**"
+msgstr "**Atributos**"
 
 msgid ""
 "Translation domain containing strings to add in the view output. Defaults to "
@@ -28174,17 +28176,21 @@ msgstr ""
 "diccionario que asigna llaves a valores."
 
 msgid "Variables are surrounded by ``{{`` and ``}}`` like this:"
-msgstr ""
+msgstr "Las variables están rodeadas por ``{{`` y ``}}`` así:"
 
 msgid ""
 "With a context of ``{'first_name': 'John', 'last_name': 'Doe'}``, this "
 "template renders to:"
 msgstr ""
+"Con un contexto de ``{'first_name': 'John', 'last_name': 'Doe'}``, esta "
+"plantilla se renderiza como:"
 
 msgid ""
 "Dictionary lookup, attribute lookup and list-index lookups are implemented "
 "with a dot notation:"
 msgstr ""
+"La búsqueda de diccionario, la búsqueda de atributos y las búsquedas de "
+"índice de lista se implementan con una notación de punto:"
 
 msgid ""
 "If a variable resolves to a callable, the template system will call it with "
@@ -28242,6 +28248,8 @@ msgid ""
 "With a context of ``{'django': 'the web framework for perfectionists with "
 "deadlines'}``, this template renders to:"
 msgstr ""
+"Con un contexto de ``{'django': 'the web framework for perfectionists with "
+"deadlines'}``, esta plantilla se renderiza como:"
 
 msgid "Some filters take an argument:"
 msgstr ""
@@ -28457,7 +28465,7 @@ msgstr ""
 msgid ""
 ":setting:`OPTIONS <TEMPLATES-OPTIONS>` contains backend-specific settings."
 msgstr ""
-":settings:`OPTIONS <TEMPLATES-OPTIONS>` contiene configuraciones específicas "
+":setting:`OPTIONS <TEMPLATES-OPTIONS>` contiene configuraciones específicas "
 "de back-end."
 
 msgid ""
