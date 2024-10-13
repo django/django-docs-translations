@@ -4,6 +4,7 @@
 #
 # Translators:
 # albertoalcolea <albertoalcolea@gmail.com>, 2014
+# Carlos Romero, 2024
 # Carlton Gibson <carlton.gibson@gmail.com>, 2018
 # Cristian Vargas <cristianvargasvalencia@gmail.com>, 2016
 # e4db27214f7e7544f2022c647b585925_bb0e321, 2015
@@ -26,9 +27,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-31 06:06-0500\n"
+"POT-Creation-Date: 2024-10-11 10:19-0500\n"
 "PO-Revision-Date: 2013-04-02 19:58+0000\n"
-"Last-Translator: Jord Andres, 2024\n"
+"Last-Translator: Uriel Medina <urimeba511@gmail.com>, 2021,2023-2024\n"
 "Language-Team: Spanish (http://app.transifex.com/django/django-docs/language/"
 "es/)\n"
 "MIME-Version: 1.0\n"
@@ -247,7 +248,7 @@ msgid ""
 "assume that CSRF attacks have been dealt with."
 msgstr ""
 "El middleware CSRF está activado de forma predeterminada en la "
-"configuración :setting:`MIDDLEWARE`. Si anula esa configuración, recuerde "
+"configuración :setting:`MIDDLEWARE`. Si redefine esa configuración, recuerde "
 "que ``'django.middleware.csrf.CsrfViewMiddleware'`` debe aparecer antes de "
 "cualquier middleware de vista que asuma que se han tratado los ataques CSRF."
 
@@ -735,7 +736,7 @@ msgid ""
 "typically have to be overridden:"
 msgstr ""
 "Por defecto, los siguientes métodos generan ``NotImplementedError`` y "
-"normalmente tienen que ser anulados:"
+"normalmente tienen que ser redefinidos:"
 
 msgid ":meth:`Storage.delete`"
 msgstr ":meth:`Storage.delete`"
@@ -838,7 +839,7 @@ msgstr ""
 "almacenamiento subyacente. El argumento ``name`` pasado a este método es el "
 "nombre de archivo original enviado al servidor o, si ``upload_to`` es "
 "invocable, el nombre de archivo devuelto por ese método después de eliminar "
-"cualquier información de ruta. Anule esto para personalizar cómo se "
+"cualquier información de ruta. Redefina esto para personalizar cómo se "
 "convierten los caracteres no estándar en nombres de archivos seguros."
 
 msgid ""
@@ -2459,8 +2460,8 @@ msgid ""
 "Django templates have an :class:`~django.template.base.Origin` object "
 "available through the ``template.origin`` attribute. This enables debug "
 "information to be displayed in the :ref:`template postmortem <template-"
-"postmortem>`, as well as in 3rd-party libraries, like the `Django Debug "
-"Toolbar`_."
+"postmortem>`, as well as in 3rd-party libraries, like the :pypi:`Django "
+"Debug Toolbar <django-debug-toolbar>`."
 msgstr ""
 
 msgid ""
@@ -3864,6 +3865,16 @@ msgid ""
 "described in the option's documentation."
 msgstr ""
 
+msgid "Switch away from ``manage.py runserver``"
+msgstr ""
+
+msgid ""
+"The :djadmin:`runserver` command is not designed for a production setting. "
+"Be sure to switch to a production-ready WSGI or ASGI server. For a few "
+"common options, see :doc:`WSGI servers </howto/deployment/wsgi/index>` or :"
+"doc:`ASGI servers </howto/deployment/asgi/index>`."
+msgstr ""
+
 msgid "Critical settings"
 msgstr ""
 
@@ -4174,7 +4185,8 @@ msgstr ""
 msgid ""
 "Django, being a web framework, needs a web server in order to operate. And "
 "since most web servers don't natively speak Python, we need an interface to "
-"make that communication happen."
+"make that communication happen. The :djadmin:`runserver` command starts a "
+"lightweight development server, which is not suitable for production."
 msgstr ""
 
 msgid "Django currently supports two interfaces: WSGI and ASGI."
@@ -4990,9 +5002,6 @@ msgid ""
 "META`` values considered as sensitive. By default equivalent to::"
 msgstr ""
 
-msgid "``HTTP_COOKIE`` was added."
-msgstr ""
-
 msgid ""
 "Returns ``True`` to activate the filtering in :meth:`get_post_parameters` "
 "and :meth:`get_traceback_frame_variables`. By default the filter is active "
@@ -5154,7 +5163,7 @@ msgstr ""
 
 msgid ""
 "By default, Django looks for fixtures in the ``fixtures`` directory inside "
-"each app for, so the command ``loaddata sample`` will find the file ``my_app/"
+"each app, so the command ``loaddata sample`` will find the file ``my_app/"
 "fixtures/sample.json``. This works with relative paths as well, so "
 "``loaddata my_app/sample`` will find the file ``my_app/fixtures/my_app/"
 "sample.json``."
@@ -5166,7 +5175,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"To completely prevent default search form happening, use an absolute path to "
+"To completely prevent default search from happening, use an absolute path to "
 "specify the location of your fixture file, e.g. ``loaddata /path/to/sample``."
 msgstr ""
 
@@ -6083,9 +6092,6 @@ msgid ""
 "storage-backends/>`_."
 msgstr ""
 
-msgid "The :setting:`STORAGES` setting was added."
-msgstr ""
-
 msgid "Learn more"
 msgstr ""
 
@@ -6464,7 +6470,7 @@ msgid "How to install Django on Windows"
 msgstr ""
 
 msgid ""
-"This document will guide you through installing Python 3.12 and Django on "
+"This document will guide you through installing Python 3.13 and Django on "
 "Windows. It also provides instructions for setting up a virtual environment, "
 "which makes it easier to work on Python projects. This is meant as a "
 "beginner's guide for users working on Django projects and does not reflect "
@@ -6482,7 +6488,7 @@ msgstr "Instale Python"
 
 msgid ""
 "Django is a Python web framework, thus requiring Python to be installed on "
-"your machine. At the time of writing, Python 3.12 is the latest version."
+"your machine. At the time of writing, Python 3.13 is the latest version."
 msgstr ""
 
 msgid ""
@@ -6496,6 +6502,19 @@ msgstr ""
 msgid ""
 "After installation, open the command prompt and check that the Python "
 "version matches the version you installed by executing:"
+msgstr ""
+
+msgid "``py`` is not recognized or found"
+msgstr ""
+
+msgid ""
+"Depending on how you've installed Python (such as via the Microsoft Store), "
+"``py`` may not be available in the command prompt."
+msgstr ""
+
+msgid ""
+"You will then need to use ``python`` instead of ``py`` when entering "
+"commands."
 msgstr ""
 
 msgid "For more details, see :doc:`python:using/windows` documentation."

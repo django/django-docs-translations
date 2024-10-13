@@ -16,12 +16,14 @@
 # Jrog <jrog612@gmail.com>, 2022
 # 전세옥 <jso4967@gmail.com>, 2019
 # Manuel, HAN, 2022
+# 이용길, 2024
 # Seho Noh <iam@sehonoh.kr>, 2018
 # 이동현, 2022
 # Peace Kim, 2019
 # SeongSoo Cho <ppiyakk2@printf.kr>, 2019
 # silee9019 <silee9019@gmail.com>, 2015
 # Song M. Kim <songmink@hawaii.edu>, 2018
+# Wibaek Park, 2024
 # WooSuck Ko <ryanko7@ajou.ac.kr>, 2020
 # yangbeom <yangbeomsu@gmail.com>, 2016
 # Yang Chan Woo <oizys18@gmail.com>, 2019
@@ -35,9 +37,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-08 00:58-0600\n"
+"POT-Creation-Date: 2024-10-11 10:19-0500\n"
 "PO-Revision-Date: 2013-04-02 19:58+0000\n"
-"Last-Translator: Yong Choi <sk8er.choi@gmail.com>, 2019,2024\n"
+"Last-Translator: 이용길, 2024\n"
 "Language-Team: Korean (http://app.transifex.com/django/django-docs/language/"
 "ko/)\n"
 "MIME-Version: 1.0\n"
@@ -769,6 +771,11 @@ msgid ""
 "specific to the backend storage system. The :exc:`FileNotFoundError` "
 "exception should be raised when a file doesn't exist."
 msgstr ""
+"``Storage.open()``에 의해 호출되며, 스토리지 클래스가 파일을 열때 사용하는 실"
+"제 매커니즘입니다. 이 함수는 반드시 ``File`` 객체를 반환해야하지만, 대부분의 "
+"경우, 백엔드 스토리지 시스템에 특화된 로직을 구현한 서브클래스를 반환하는 것"
+"이 좋습니다. 파일이 존재하지 않을 경우 :exc:`FileNotFoundError` 예외를 발생시"
+"켜야 합니다."
 
 msgid ""
 "Called by ``Storage.save()``. The ``name`` will already have gone through "
@@ -784,6 +791,9 @@ msgid ""
 "in, but if the storage needs to change the file name return the new name "
 "instead)."
 msgstr ""
+"스토리지에 저장된 파일의 실제 이름을 반환해야 합니다. (일반적으로 파일의 "
+"``name``을 반환하지만, 스토리지가 파일명을 변경할 필요가 있는 경우 변경된 새 "
+"이름을 반환해야 합니다.)"
 
 msgid ""
 "Returns a filename suitable for use with the underlying storage system. The "
@@ -852,11 +862,19 @@ msgid ""
 "settings for that specific storage backend. The settings in the inner "
 "dictionaries are described fully in the :setting:`STORAGES` documentation."
 msgstr ""
+"여러분만의 스토리지를 장고와 함께 사용하기 위한 첫번째 단계는 장고에게 여러분"
+"이 사용할 파일 스토리지 백엔드를 알려주는 것입니다. :setting:`STORAGES`를 통"
+"해 알려줄 수 있습니다. 이 설정은 여러분이 사용할 스토리지의 설정값을 딕셔너"
+"리 형태로 장고의 스토리지 별칭에 매핑해주며, 이 스토리지 별칭은 장고 내에서 "
+"스토리지를 참조하기 위한 방법으로 사용됩니다. 딕셔너리의 상세한 설정값은 :"
+"setting:`STORAGES` 문서에 모두 안내되어 있습니다."
 
 msgid ""
 "Storages are then accessed by alias from the :data:`django.core.files."
 "storage.storages` dictionary::"
 msgstr ""
+"스토리지들은 :data:`django.core.files.storage.storages` 딕셔너리에서 별칭으"
+"로 접근할 수 있습니다."
 
 msgid "How to write custom lookups"
 msgstr "사용자 정의 lookup을 작성하는 방법"
@@ -1352,6 +1370,9 @@ msgid ""
 "Django will register a ``manage.py`` command for each Python module in that "
 "directory whose name doesn't begin with an underscore. For example:"
 msgstr ""
+"이를 위해선 ``management/commands`` 디렉토리를 애플리케이션에 추가합니다. 장"
+"고는 이 디렉토리 내의 파이썬 모듈 중 언더스코어로 시작하지 않는 모듈들을 "
+"``manage.py``에 커맨드로 등록합니다. 예를 들면:"
 
 msgid ""
 "In this example, the ``closepoll`` command will be made available to any "
@@ -2988,12 +3009,9 @@ msgid ""
 "Django templates have an :class:`~django.template.base.Origin` object "
 "available through the ``template.origin`` attribute. This enables debug "
 "information to be displayed in the :ref:`template postmortem <template-"
-"postmortem>`, as well as in 3rd-party libraries, like the `Django Debug "
-"Toolbar`_."
+"postmortem>`, as well as in 3rd-party libraries, like the :pypi:`Django "
+"Debug Toolbar <django-debug-toolbar>`."
 msgstr ""
-"Django 템플릿의 :class:'~django.base.오리진 객체는 \"template.origin\" 속성"
-"을 통해 사용할 수 있다. 디버그 정보를 ef:'템플릿 사후에'는 물론, 제3자 도서관"
-"에서도 '장고 디버그 툴바'와 같은 디버그 정보를 표시할 수 있다."
 
 msgid ""
 "Custom engines can provide their own ``template.origin`` information by "
@@ -4852,6 +4870,16 @@ msgstr ""
 "deploy' 옵션을 선택하십시오. 옵션 설명서에 설명된 대로 프로덕션 설정 파일에 "
 "대해 실행하십시오."
 
+msgid "Switch away from ``manage.py runserver``"
+msgstr ""
+
+msgid ""
+"The :djadmin:`runserver` command is not designed for a production setting. "
+"Be sure to switch to a production-ready WSGI or ASGI server. For a few "
+"common options, see :doc:`WSGI servers </howto/deployment/wsgi/index>` or :"
+"doc:`ASGI servers </howto/deployment/asgi/index>`."
+msgstr ""
+
 msgid "Critical settings"
 msgstr "중요 설정"
 
@@ -5244,11 +5272,9 @@ msgstr ""
 msgid ""
 "Django, being a web framework, needs a web server in order to operate. And "
 "since most web servers don't natively speak Python, we need an interface to "
-"make that communication happen."
+"make that communication happen. The :djadmin:`runserver` command starts a "
+"lightweight development server, which is not suitable for production."
 msgstr ""
-"웹 프레임워크인 Django는 작동하기 위해 웹 서버가 필요합니다. 그리고 대부분의 "
-"웹 서버는 기본적으로 Python을 사용하지 않기 때문에, 우리는 그러한 커뮤니케이"
-"션이 이루어지도록 인터페이스가 필요합니다."
 
 msgid "Django currently supports two interfaces: WSGI and ASGI."
 msgstr "Django는 현재 WSGI와 ASGI의 두 가지 인터페이스를 지원합니다."
@@ -6349,9 +6375,6 @@ msgstr ""
 "설정 및 ``요청\"을 일치시키는 데 사용되는 컴파일된 정규식 개체입니다.META의 "
 "가치는 민감한 것으로 간주되고 있습니다. 기본적으로 다음과 같습니다."
 
-msgid "``HTTP_COOKIE`` was added."
-msgstr ""
-
 msgid ""
 "Returns ``True`` to activate the filtering in :meth:`get_post_parameters` "
 "and :meth:`get_traceback_frame_variables`. By default the filter is active "
@@ -6566,7 +6589,7 @@ msgstr ""
 
 msgid ""
 "By default, Django looks for fixtures in the ``fixtures`` directory inside "
-"each app for, so the command ``loaddata sample`` will find the file ``my_app/"
+"each app, so the command ``loaddata sample`` will find the file ``my_app/"
 "fixtures/sample.json``. This works with relative paths as well, so "
 "``loaddata my_app/sample`` will find the file ``my_app/fixtures/my_app/"
 "sample.json``."
@@ -6578,7 +6601,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"To completely prevent default search form happening, use an absolute path to "
+"To completely prevent default search from happening, use an absolute path to "
 "specify the location of your fixture file, e.g. ``loaddata /path/to/sample``."
 msgstr ""
 
@@ -6800,7 +6823,7 @@ msgid ""
 msgstr ""
 "위의 예에서 사용된 ``WARNING`` 수준은 여러 :ref:`로깅 심각도 수준들 <topic-"
 "logging-parts-loggers>`중 하나입니다: ``DEBUG``, ``INFO``, ``WARNING``, "
-"``ERROR``, ` '중요'. 따라서 다른 예는 다음과 같습니다::"
+"``ERROR``, ``CRITICAL``. 따라서 다른 예는 다음과 같습니다::"
 
 msgid ""
 "Records with a level lower than ``WARNING`` will not appear in the console "
@@ -7779,9 +7802,6 @@ msgstr ""
 "storage'를 참조하십시오. 많은 공통 파일 스토리지 API에 대한 스토리지 백엔드"
 "를 제공하는 타사 앱이 있습니다. 좋은 출발점이 바로 djangopackages.org입니다."
 
-msgid "The :setting:`STORAGES` setting was added."
-msgstr ""
-
 msgid "Learn more"
 msgstr "추가사항"
 
@@ -8297,11 +8317,11 @@ msgid "How to install Django on Windows"
 msgstr "윈도우즈에 Django 설치하기"
 
 msgid ""
-"This document will guide you through installing Python 3.12 and Django on "
+"This document will guide you through installing Python 3.13 and Django on "
 "Windows. It also provides instructions for setting up a virtual environment, "
 "which makes it easier to work on Python projects. This is meant as a "
 "beginner's guide for users working on Django projects and does not reflect "
-"how Django should be installed when developing patches for Django itself."
+"how Django should be installed when developing changes for Django itself."
 msgstr ""
 
 msgid ""
@@ -8317,7 +8337,7 @@ msgstr "파이썬 설치"
 
 msgid ""
 "Django is a Python web framework, thus requiring Python to be installed on "
-"your machine. At the time of writing, Python 3.12 is the latest version."
+"your machine. At the time of writing, Python 3.13 is the latest version."
 msgstr ""
 
 msgid ""
@@ -8335,6 +8355,19 @@ msgstr ""
 msgid ""
 "After installation, open the command prompt and check that the Python "
 "version matches the version you installed by executing:"
+msgstr ""
+
+msgid "``py`` is not recognized or found"
+msgstr ""
+
+msgid ""
+"Depending on how you've installed Python (such as via the Microsoft Store), "
+"``py`` may not be available in the command prompt."
+msgstr ""
+
+msgid ""
+"You will then need to use ``python`` instead of ``py`` when entering "
+"commands."
 msgstr ""
 
 msgid "For more details, see :doc:`python:using/windows` documentation."
