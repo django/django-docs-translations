@@ -36,10 +36,11 @@
 # Lucas H. Xu <xuh@bu.edu>, 2016
 # Lu <lu2github@gmail.com>, 2022
 # Manjusakka Lee <me@manjusaka.me>, 2018
+# BingbingHaidian <michael18811380328@163.com>, 2024
 # mr.liusg <mr-liusg@users.noreply.github.com>, 2018
 # Veoco <one@nomox.cn>, 2020
 # PACI <emkqson@outlook.com>, 2018
-# 刘培基（奶牛）, 2022
+# L., 2022
 # qiang wu <wuqiangroy@live.com>, 2018
 # radish sx <radishxtop@gmail.com>, 2017-2018
 # Ray Wang <pivstone@gmail.com>, 2017
@@ -56,7 +57,7 @@
 # Zhibo Zhang <805960083@qq.com>, 2019
 # zhimiao li <untildied@gmail.com>, 2018
 # zz, 2018
-# 刘培基（奶牛）, 2022
+# L., 2022
 # 锟斤拷 <xiake21x@qq.com>, 2016-2017
 # 志强 曾 <749970817@qq.com>, 2020
 # Dogify <595572594@qq.com>, 2018
@@ -68,9 +69,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-31 06:06-0500\n"
+"POT-Creation-Date: 2024-12-11 14:17-0600\n"
 "PO-Revision-Date: 2013-04-02 19:51+0000\n"
-"Last-Translator: Veoco <one@nomox.cn>, 2020-2021,2023-2024\n"
+"Last-Translator: BingbingHaidian <michael18811380328@163.com>, 2024\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -395,11 +396,11 @@ msgstr ""
 "的关注。"
 
 msgid ""
-"Gentle IRC reminders can also work -- again, strategically timed if "
-"possible. During a bug sprint would be a very good time, for example."
+"Gentle reminders in the ``#contributing-getting-started`` channel in the "
+"`Django Discord server`_ can work."
 msgstr ""
-"温和的 IRC 提醒也可以发挥作用——还是如此：如果可能的话，选取一个合适的时间。 "
-"例如，在修复 bug 的冲刺期间就是一个不错的时机。"
+"在 `Django Discord 服务器`_ 的 ``#contributing-getting-started`` 频道中可以发"
+"布温和的提醒。"
 
 msgid ""
 "Another way to get traction is to pull several related tickets together. "
@@ -639,10 +640,9 @@ msgid "Which sites use Django?"
 msgstr "哪些站点使用 Django?"
 
 msgid ""
-"`DjangoSites.org`_ features a constantly growing list of Django-powered "
+"`BuiltWithDjango.com`_ features a constantly growing list of Django-powered "
 "sites."
-msgstr ""
-"`DjangoSites.org` 的特色是提供一个不断增长的使用 Django 搭建的网站的列表。"
+msgstr "`BuiltWithDjango.com`_ 上展示了一个不断增长的使用 Django 的网站列表。"
 
 msgid ""
 "Django appears to be a MVC framework, but you call the Controller the "
@@ -897,6 +897,9 @@ msgstr "Django 论坛中的 `\"Using Django\"`_ 板块与基于 web 的讨论有
 msgid "The |django-users| mailing list. This is for email-based discussions."
 msgstr "|django-users| 邮件列表用于与基于邮件的讨论有关。"
 
+msgid "The `Django Discord server`_ for chat-based discussions."
+msgstr "用于聊天讨论的 `Django Discord 服务器`_。"
+
 msgid ""
 "The `#django IRC channel`_ on the Libera.Chat IRC network. This is for chat-"
 "based discussions. If you're new to IRC, see the `Libera.Chat "
@@ -1001,15 +1004,15 @@ msgstr ""
 msgid ""
 "Due to the sensitive nature of security issues, we ask that if you think you "
 "have found a security problem, *please* don't post a message on the forum, "
-"IRC, or one of the public mailing lists. Django has a :ref:`policy for "
-"handling security issues <reporting-security-issues>`; while a defect is "
-"outstanding, we would like to minimize any damage that could be inflicted "
-"through public knowledge of that defect."
+"the Discord server, IRC, or one of the public mailing lists. Django has a :"
+"ref:`policy for handling security issues <reporting-security-issues>`; while "
+"a defect is outstanding, we would like to minimize any damage that could be "
+"inflicted through public knowledge of that defect."
 msgstr ""
-"由于人们对安全问题有一种与生俱来的敏感，如果你认为你找到了安全问题，*请* 不要"
-"在论坛、IRC 或者上述公共的邮件列表中发布有关信息。Django 有一个 :ref:`安全问"
-"题的处理政策 <reporting-security-issues>` ；当重大缺陷发现时，我们会尽可能的"
-"降低人们对缺陷的认知所带来的任何损失。"
+"由于安全问题的敏感性，我们要求如果您认为自己找到了一个安全问题，请不要在论"
+"坛、Discord 服务器、IRC 或公共邮件列表中发布消息。Django 有一个 :ref:`处理安"
+"全问题的政策 <reporting-security-issues>`；在缺陷未解决期间，我们希望尽量减少"
+"通过公开缺陷知识可能造成的损害。"
 
 msgid "Django FAQ"
 msgstr "Django FAQ"
@@ -1114,6 +1117,12 @@ msgstr "5.0"
 
 msgid "3.10, 3.11, 3.12"
 msgstr "3.10、3.11、3.12"
+
+msgid "5.1"
+msgstr "5.1"
+
+msgid "3.10, 3.11, 3.12, 3.13 (added in 5.1.3)"
+msgstr "3.10，3.11，3.12，3.13（在 5.1.3 中添加）"
 
 msgid ""
 "For each version of Python, only the latest micro release (A.B.C) is "
