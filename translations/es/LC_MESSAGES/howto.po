@@ -19,7 +19,7 @@
 # Salomon Herrera, 2023
 # Santiago Britos, 2024
 # Sergio Flores <vitavitae1@gmail.com>, 2016
-# Uriel Medina <urimeba511@gmail.com>, 2021,2023-2024
+# Uriel Medina <urimeba511@gmail.com>, 2021,2023-2025
 # Yoto, 2023
 # Yoto, 2023
 # José Luis <alagunajs@gmail.com>, 2016
@@ -27,9 +27,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-11 10:19-0500\n"
+"POT-Creation-Date: 2025-02-14 09:32-0600\n"
 "PO-Revision-Date: 2013-04-02 19:58+0000\n"
-"Last-Translator: Uriel Medina <urimeba511@gmail.com>, 2021,2023-2024\n"
+"Last-Translator: Uriel Medina <urimeba511@gmail.com>, 2021,2023-2025\n"
 "Language-Team: Spanish (http://app.transifex.com/django/django-docs/language/"
 "es/)\n"
 "MIME-Version: 1.0\n"
@@ -47,15 +47,9 @@ msgid ""
 "(where the web server sets the ``REMOTE_USER`` environment variable) in your "
 "Django applications.  This type of authentication solution is typically seen "
 "on intranet sites, with single sign-on solutions such as IIS and Integrated "
-"Windows Authentication or Apache and `mod_authnz_ldap`_, `CAS`_, `Cosign`_, "
-"`WebAuth`_, `mod_auth_sspi`_, etc."
+"Windows Authentication or Apache and `mod_authnz_ldap`_, `CAS`_, `WebAuth`_, "
+"`mod_auth_sspi`_, etc."
 msgstr ""
-"Este documento describe cómo hacer uso de fuentes de autenticación externas "
-"(donde el servidor web establece la variable de entorno ``REMOTE_USER``) en "
-"sus aplicaciones Django. Este tipo de solución de autenticación se suele ver "
-"en sitios de intranet, con soluciones de inicio de sesión único como IIS y "
-"autenticación integrada de Windows o Apache y `mod_authnz_ldap`_, `CAS`_, "
-"`Cosign`_, `WebAuth`_, `mod_auth_sspi`_, etc."
 
 msgid ""
 "When the web server takes care of authentication it typically sets the "
@@ -790,8 +784,8 @@ msgid ""
 "You'll also usually want to use hooks specifically designed for custom "
 "storage objects. These are:"
 msgstr ""
-"Por lo general, también querrás utilizar hooks diseñados específicamente "
-"para objetos de almacenamiento personalizado. Estos son:"
+"Por lo general, también querrá utilizar hooks diseñados específicamente para "
+"objetos de almacenamiento personalizado. Estos son:"
 
 msgid "**Required**."
 msgstr "**Requerido**"
@@ -3657,9 +3651,9 @@ msgid "Running Django in Hypercorn"
 msgstr ""
 
 msgid ""
-"When Hypercorn is installed, a ``hypercorn`` command is available which runs "
-"ASGI applications. Hypercorn needs to be called with the location of a "
-"module containing an ASGI application object, followed by what the "
+"When :pypi:`Hypercorn` is installed, a ``hypercorn`` command is available "
+"which runs ASGI applications. Hypercorn needs to be called with the location "
+"of a module containing an ASGI application object, followed by what the "
 "application is called (separated by a colon)."
 msgstr ""
 
@@ -5084,14 +5078,25 @@ msgid ""
 "only report/log errors if :setting:`DEBUG` is ``False``."
 msgstr ""
 
-msgid "\"How-to\" guides"
+msgid "How-to guides"
 msgstr ""
 
-msgid ""
-"Here you'll find short answers to \"How do I....?\" types of questions. "
-"These how-to guides don't cover topics in depth -- you'll find that material "
-"in the :doc:`/topics/index` and the :doc:`/ref/index`. However, these guides "
-"will help you quickly accomplish common tasks."
+msgid "Practical guides covering common tasks and problems."
+msgstr ""
+
+msgid "Models, data and databases"
+msgstr ""
+
+msgid "Templates and output"
+msgstr ""
+
+msgid "Project configuration and management"
+msgstr ""
+
+msgid "Installing, deploying and upgrading"
+msgstr ""
+
+msgid "Other guides"
 msgstr ""
 
 msgid ""
@@ -5978,8 +5983,8 @@ msgid ""
 "steps: run the :djadmin:`collectstatic` command when static files change, "
 "then arrange for the collected static files directory (:setting:"
 "`STATIC_ROOT`) to be moved to the static file server and served. Depending "
-"the ``staticfiles`` :setting:`STORAGES` alias, files may need to be moved to "
-"a new location manually or the :func:`post_process <django.contrib."
+"on the ``staticfiles`` :setting:`STORAGES` alias, files may need to be moved "
+"to a new location manually or the :func:`post_process <django.contrib."
 "staticfiles.storage.StaticFilesStorage.post_process>` method of the "
 "``Storage`` class might take care of that."
 msgstr ""
