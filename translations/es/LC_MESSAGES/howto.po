@@ -15,6 +15,7 @@
 # Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2016
 # Luigy, 2016
 # Mauricio Collazos <ma0@contraslash.com>, 2017
+# ramiro20010202, 2025
 # Rodrigo Suárez <rodrigosrz12@gmail.com>, 2020
 # Salomon Herrera, 2023
 # Santiago Britos, 2024
@@ -27,9 +28,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-14 09:32-0600\n"
+"POT-Creation-Date: 2025-03-28 04:15-0500\n"
 "PO-Revision-Date: 2013-04-02 19:58+0000\n"
-"Last-Translator: Uriel Medina <urimeba511@gmail.com>, 2021,2023-2025\n"
+"Last-Translator: ramiro20010202, 2025\n"
 "Language-Team: Spanish (http://app.transifex.com/django/django-docs/language/"
 "es/)\n"
 "MIME-Version: 1.0\n"
@@ -50,6 +51,12 @@ msgid ""
 "Windows Authentication or Apache and `mod_authnz_ldap`_, `CAS`_, `WebAuth`_, "
 "`mod_auth_sspi`_, etc."
 msgstr ""
+"Este documento describe cómo hacer uso de fuentes de autenticación externas "
+"(donde el servidor web establece la variable de entorno ``REMOTE_USER``) en "
+"sus aplicaciones Django. Este tipo de solución de autenticación se suele ver "
+"en sitios de intranet, con soluciones de inicio de sesión único como IIS y "
+"autenticación integrada de Windows o Apache y `mod_authnz_ldap`_, `CAS`_, "
+"`Cosign`_, `WebAuth`_, `mod_auth_sspi`_, etc."
 
 msgid ""
 "When the web server takes care of authentication it typically sets the "
@@ -147,12 +154,16 @@ msgstr ""
 msgid ""
 "If your authentication mechanism uses a custom HTTP header and not "
 "``REMOTE_USER``, you can subclass ``RemoteUserMiddleware`` and set the "
-"``header`` attribute to the desired ``request.META`` key.  For example::"
+"``header`` attribute to the desired ``request.META`` key.  For example:"
 msgstr ""
-"Si su mecanismo de autenticación usa una cabecera HTTP personalizada y no "
-"``REMOTE_USER``, puede crear una clase hija de ``RemoteUserMiddleware`` y "
-"configurar el atributo ``header`` con la llave de ``request.META`` deseada. "
-"Por ejemplo::"
+
+msgid "``mysite/middleware.py``"
+msgstr "``mysite/middleware.py``"
+
+msgid ""
+"This custom middleware is then used in the :setting:`MIDDLEWARE` setting "
+"instead of :class:`django.contrib.auth.middleware.RemoteUserMiddleware`::"
+msgstr ""
 
 msgid ""
 "Be very careful if using a ``RemoteUserMiddleware`` subclass with a custom "
@@ -809,8 +820,8 @@ msgid ""
 "``get_valid_name()`` and ``get_available_name()``, and the ``content`` will "
 "be a ``File`` object itself."
 msgstr ""
-"Llamado por ``Storage.save()``. el ``name`` ya habrá pasado por "
-"``get_valid_name()`` y ``get_available_name()``, y el ``content`` será un "
+"Llamado por ``Storage.save()``. El ``name`` ya habrá pasado por "
+"``get_valid_name()`` y ``get_available_name()``, y el `content`` será un "
 "objeto ``File`` por sí mismo."
 
 msgid ""

@@ -7,7 +7,7 @@
 # Amirouche <amirouche.boubekki@gmail.com>, 2013
 # Bruno Brouard <annoa.b@gmail.com>, 2013-2014
 # Anthony SKORSKI <skorski.anthony@gmail.com>, 2020
-# Claude Paroz <claude@2xlibre.net>, 2013-2024
+# Claude Paroz <claude@2xlibre.net>, 2013-2025
 # Marie-Cécile Gohier <mariececile.gohier@gmail.com>, 2014-2015
 # Sébastien Fievet <_@sebastien-fievet.fr>, 2014
 # Sylvain GROS-DESORMEAUX <sylvain.grodes@gmail.com>, 2013
@@ -16,9 +16,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 14:17-0600\n"
+"POT-Creation-Date: 2025-03-28 04:15-0500\n"
 "PO-Revision-Date: 2013-04-02 19:58+0000\n"
-"Last-Translator: Claude Paroz <claude@2xlibre.net>, 2013-2024\n"
+"Last-Translator: Claude Paroz <claude@2xlibre.net>, 2013-2025\n"
 "Language-Team: French (http://app.transifex.com/django/django-docs/language/"
 "fr/)\n"
 "MIME-Version: 1.0\n"
@@ -146,12 +146,23 @@ msgstr ""
 msgid ""
 "If your authentication mechanism uses a custom HTTP header and not "
 "``REMOTE_USER``, you can subclass ``RemoteUserMiddleware`` and set the "
-"``header`` attribute to the desired ``request.META`` key.  For example::"
+"``header`` attribute to the desired ``request.META`` key.  For example:"
 msgstr ""
 "Si votre mécanisme d'authentification utilise un en-tête HTTP personnalisé à "
 "la place de ``REMOTE_USER``, vous pouvez créer une sous-classe de "
 "``RemoteUserMiddleware`` et définir l'attribut ``header`` à la clé de "
-"``request.META`` désirée. Par exemple ::"
+"``request.META`` désirée. Par exemple :"
+
+msgid "``mysite/middleware.py``"
+msgstr "``monsite/middleware.py``"
+
+msgid ""
+"This custom middleware is then used in the :setting:`MIDDLEWARE` setting "
+"instead of :class:`django.contrib.auth.middleware.RemoteUserMiddleware`::"
+msgstr ""
+"Cet intergiciel personnalisé est alors utilisé dans le réglage :setting:"
+"`MIDDLEWARE` à la place de :class:`django.contrib.auth.middleware."
+"RemoteUserMiddleware`::"
 
 msgid ""
 "Be very careful if using a ``RemoteUserMiddleware`` subclass with a custom "
