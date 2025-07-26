@@ -9,6 +9,7 @@
 # Aris Chow <arischow@gmail.com>, 2018
 # blacklin <chinalinzhijie@gmail.com>, 2020
 # ChY Ma <Marsopera@163.com>, 2020
+# Clan Ever, 2025
 # CoMo <yi04188@gmail.com>, 2021
 # Dogify <595572594@qq.com>, 2019
 # flypopo <flypopo.reg@qq.com>, 2018
@@ -26,6 +27,7 @@
 # kkkkhu <tracis@wodiga.com>, 2017
 # leafcoder zhang <leafcoder@gmail.com>, 2021-2022
 # Liping Wang <lynn.config@gmail.com>, 2016
+# Michael An <michael18811380328@163.com>, 2025
 # Veoco <one@nomox.cn>, 2020
 # Ronald White <tkliuxing@me.com>, 2013
 # qiang wu <wuqiangroy@live.com>, 2018
@@ -63,9 +65,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:15-0500\n"
+"POT-Creation-Date: 2025-07-25 07:15-0500\n"
 "PO-Revision-Date: 2013-04-02 20:01+0000\n"
-"Last-Translator: Veoco <one@nomox.cn>, 2020-2025\n"
+"Last-Translator: Michael An <michael18811380328@163.com>, 2025\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -12483,7 +12485,7 @@ msgid ""
 msgstr ""
 ":meth:`~django.contrib.contenttypes.models.ContentType."
 "get_object_for_this_type` 和 :meth:`~django.contrib.contenttypes.models."
-"ContentType.model.model_model_class` 共同实现了两个极其重要的用例："
+"ContentType.model_class` 共同实现了两个极其重要的用例："
 
 msgid ""
 "Using these methods, you can write high-level generic code that performs "
@@ -24207,16 +24209,9 @@ msgid ""
 "db.models.CharField`. Most field types are permitted, with the exception of "
 "those handling relational data (:class:`~django.db.models.ForeignKey`, :"
 "class:`~django.db.models.OneToOneField` and :class:`~django.db.models."
-"ManyToManyField`) and file fields ( :class:`~django.db.models.FileField` "
-"and :class:`~django.db.models.ImageField`)."
+"ManyToManyField`) and file fields (:class:`~django.db.models.FileField` and :"
+"class:`~django.db.models.ImageField`)."
 msgstr ""
-"指定数组的底层数据类型和行为。它应该是 :class:`~django.db.models.Field` 子类"
-"的实例。例如，它可以是一个 :class:`~django.db.models.IntegerField` 或一个 :"
-"class:`~django.db.models.CharField`。大多数字段类型都是允许的，但不包括处理关"
-"系数据的字段（:class:`~django.db.models.ForeignKey`、:class:`~django.db."
-"models.OneToOneField` 和 :class:`~django.db.models.ManyToManyField`）以及文件"
-"字段（:class:`~django.db.models.FileField` 和 :class:`~django.db.models."
-"ImageField`）。"
 
 msgid ""
 "It is possible to nest array fields - you can specify an instance of "
@@ -38584,13 +38579,9 @@ msgid ""
 "Use one of the :ref:`built-in template form renderers <built-in-template-"
 "form-renderers>` or implement your own. Custom renderers must implement a "
 "``render(template_name, context, request=None)`` method. It should return a "
-"rendered templates (as a string) or raise :exc:`~django.template."
+"rendered template (as a string) or raise :exc:`~django.template."
 "TemplateDoesNotExist`."
 msgstr ""
-"使用 :ref:`内置模板表单渲染器 <built-in-template-form-renderers>` 或实现你自"
-"己的模板表单渲染器。自定义渲染器必须实现一个 ``render(template_name, "
-"context, request=None)`` 方法。它应该返回一个已渲染的模板（作为一个字符串）或"
-"引发 :exc:`~django.template.TemplateDoesNotExist`。"
 
 msgid "The base class for the built-in form renderers."
 msgstr "用于内置表单渲染器的基类。"
@@ -47614,11 +47605,10 @@ msgstr ""
 "长度。"
 
 msgid ""
-"An integer. Values from ``-2147483648`` to ``2147483647`` are safe in all "
+"An integer. Values are only allowed between certain (database-dependent) "
+"points. Values from ``-2147483648`` to ``2147483647`` are compatible in all "
 "databases supported by Django."
 msgstr ""
-"一个整数。从 ``-2147483648`` 到 ``2147483647`` 的值在 Django 支持的所有数据库"
-"中都是安全的。"
 
 msgid ""
 "It uses :class:`~django.core.validators.MinValueValidator` and :class:"
@@ -47734,34 +47724,27 @@ msgstr "``PositiveBigIntegerField``"
 msgid ""
 "Like a :class:`PositiveIntegerField`, but only allows values under a certain "
 "(database-dependent) point. Values from ``0`` to ``9223372036854775807`` are "
-"safe in all databases supported by Django."
+"compatible in all databases supported by Django."
 msgstr ""
-"就像一个 :class:`PositiveIntegerField`，但只允许在某一特定点下的值（依赖于数"
-"据库）。``0`` 到 ``9223372036854775807`` 的值在 Django 支持的所有数据库中都是"
-"安全的。"
 
 msgid "``PositiveIntegerField``"
 msgstr "``PositiveIntegerField``"
 
 msgid ""
 "Like an :class:`IntegerField`, but must be either positive or zero (``0``). "
-"Values from ``0`` to ``2147483647`` are safe in all databases supported by "
+"Values are only allowed under a certain (database-dependent) point. Values "
+"from ``0`` to ``2147483647`` are compatible in all databases supported by "
 "Django. The value ``0`` is accepted for backward compatibility reasons."
 msgstr ""
-"就像 :class:`IntegerField` 一样，但必须是正值或零（ ``0`` ）。从 ``0`` 到 "
-"``2147483647`` 的值在 Django 支持的所有数据库中都是安全的。出于向后兼容的原"
-"因，接受 ``0`` 的值。"
 
 msgid "``PositiveSmallIntegerField``"
 msgstr "``PositiveSmallIntegerField``"
 
 msgid ""
 "Like a :class:`PositiveIntegerField`, but only allows values under a certain "
-"(database-dependent) point. Values from ``0`` to ``32767`` are safe in all "
-"databases supported by Django."
+"(database-dependent) point. Values from ``0`` to ``32767`` are compatible in "
+"all databases supported by Django."
 msgstr ""
-"就像一个 :class:`PositiveIntegerField`，但只允许在某一特定（数据库依赖的）点"
-"下取值。``0`` 到 ``32767`` 的值在 Django 支持的所有数据库中都是安全的。"
 
 msgid ""
 ":term:`Slug <slug>` is a newspaper term. A slug is a short label for "
@@ -47811,22 +47794,18 @@ msgstr "``SmallAutoField``"
 
 msgid ""
 "Like an :class:`AutoField`, but only allows values under a certain (database-"
-"dependent) limit. Values from ``1`` to ``32767`` are safe in all databases "
-"supported by Django."
+"dependent) limit. Values from ``1`` to ``32767`` are compatible in all "
+"databases supported by Django."
 msgstr ""
-"就像一个 :class:`AutoField`，但只允许值在一定（依赖于数据库）的限制下。``1`` "
-"到 ``32767`` 的值在 Django 支持的所有数据库中都是安全的。"
 
 msgid "``SmallIntegerField``"
 msgstr "``SmallIntegerField``"
 
 msgid ""
 "Like an :class:`IntegerField`, but only allows values under a certain "
-"(database-dependent) point. Values from ``-32768`` to ``32767`` are safe in "
-"all databases supported by Django."
+"(database-dependent) point. Values from ``-32768`` to ``32767`` are "
+"compatible in all databases supported by Django."
 msgstr ""
-"就像一个 :class:`IntegerField`，但只允许在某一特定（依赖于数据库的）点下取"
-"值。从 ``-32768`` 到 ``32767`` 的值在 Django 支持的所有数据库中都是安全的。"
 
 msgid "``TextField``"
 msgstr "``TextField``"
@@ -57199,6 +57178,18 @@ msgstr ""
 msgid ""
 "Assuming the client sends an ``Accept`` header of ``text/html,application/"
 "json;q=0.8``:"
+msgstr ""
+
+msgid ""
+"If the mime type includes parameters, these are also considered when "
+"determining the preferred media type. For example, with an ``Accept`` header "
+"of ``text/vcard;version=3.0,text/html;q=0.5``, the return value of ``request."
+"get_preferred_type()`` depends on the available media types:"
+msgstr ""
+
+msgid ""
+"(For further details on how content negotiation is performed, see :rfc:"
+"`9110#section-12.5.1`.)"
 msgstr ""
 
 msgid ""
@@ -70787,7 +70778,7 @@ msgstr ""
 "会产生不理想的结果。"
 
 msgid "Reversing class-based views by view object"
-msgstr ""
+msgstr "按视图对象反转基于类的视图"
 
 msgid ""
 "The view object can also be the result of calling :meth:`~django.views."
@@ -70800,7 +70791,7 @@ msgstr "``news/views.py``"
 
 msgid ""
 "However, remember that namespaced views cannot be reversed by view object."
-msgstr ""
+msgstr "但是，请记住，命名空间视图不能按视图对象反转。"
 
 msgid "``reverse_lazy()``"
 msgstr "``reverse_lazy()``"
@@ -71679,13 +71670,13 @@ msgstr ""
 "archives/2004/05/28/howto-atom-id"
 
 msgid "``Stylesheet``"
-msgstr ""
+msgstr "``样式表``"
 
 msgid "Represents an RSS stylesheet."
-msgstr ""
+msgstr "表示 RSS 样式表。"
 
 msgid "Required argument. The URL where the stylesheet is located."
-msgstr ""
+msgstr "必需的参数。样式表所在的 URL 。"
 
 msgid ""
 "An optional string containing the MIME type of the stylesheet. If not "
@@ -72040,10 +72031,10 @@ msgid ""
 msgstr ""
 
 msgid "For example, tuples can be used for positional arguments::"
-msgstr ""
+msgstr "例如，元组可用于位置参数："
 
 msgid "Or dictionaries can be used for keyword arguments::"
-msgstr ""
+msgstr "或者字典可用于关键字参数："
 
 msgid "Support for mappings in ``args_generator`` was added."
 msgstr ""
@@ -72067,12 +72058,9 @@ msgstr ""
 
 msgid ""
 "Absolutely NO guarantee is provided about the resulting string being HTML "
-"safe. So NEVER mark safe the result of a ``strip_tag`` call without escaping "
-"it first, for example with :func:`~django.utils.html.escape`."
+"safe. So NEVER mark safe the result of a ``strip_tags`` call without "
+"escaping it first, for example with :func:`~django.utils.html.escape`."
 msgstr ""
-"绝对不能保证结果的字符串是 HTML 安全的。所以千万不要在没有转义的情况下将 "
-"``strip_tag`` 调用的结果标记为安全，例如使用 :func:`~django.utils.html."
-"escape`。"
 
 msgid ""
 "If ``value`` is ``\"<b>Joel</b> <button>is</button> a <span>slug</span>\"`` "

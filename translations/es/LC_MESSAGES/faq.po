@@ -20,6 +20,7 @@
 # e4db27214f7e7544f2022c647b585925_bb0e321, 2014
 # Espartaco Palma <esparta@gmail.com>, 2014
 # Ezequiel Pochiero <epochiero@gmail.com>, 2015
+# Gustavo Adolfo Huarcaya Delgado <diavolo@gahd.net>, 2025
 # Gustavo Jimenez <tavo_x99@hotmail.com>, 2020
 # Jord Andres, 2024
 # LECbg, 2017
@@ -40,9 +41,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:15-0500\n"
+"POT-Creation-Date: 2025-07-25 07:15-0500\n"
 "PO-Revision-Date: 2013-04-02 19:51+0000\n"
-"Last-Translator: Alberto MH, 2025\n"
+"Last-Translator: Uriel Medina <urimeba511@gmail.com>, 2021-2025\n"
 "Language-Team: Spanish (http://app.transifex.com/django/django-docs/language/"
 "es/)\n"
 "MIME-Version: 1.0\n"
@@ -963,6 +964,25 @@ msgstr ""
 "Si necesita una fecha de publicación, use el año de lanzamiento de la "
 "versión que está consultando (por ejemplo, 2013 para v1.5)"
 
+msgid "Where can I find more Django resources?"
+msgstr "¿Dónde puedo encontrar más recursos sobre Django?"
+
+msgid ""
+"The Steering Council maintains a collection of Django third-party packages, "
+"organizations and resources at https://www.djangoproject.com/community/"
+"ecosystem/."
+msgstr ""
+
+msgid ""
+"That page will be updated to contain links to various Django content such as "
+"podcasts, videos, conferences, blogs, books, and learning resources. It also "
+"features popular, robust, community-maintained packages."
+msgstr ""
+"Esa página se actualizará para incluir enlaces a diversos contenidos sobre "
+"Django, como podcasts, vídeos, conferencias, blogs, libros y recursos de "
+"aprendizaje. También presenta paquetes populares, robustos y mantenidos por "
+"la comunidad."
+
 msgid "FAQ: Getting Help"
 msgstr "FAQ: Obteniendo ayuda"
 
@@ -1187,13 +1207,21 @@ msgstr "3.10, 3.11, 3.12, 3.13"
 
 msgid ""
 "For each version of Python, only the latest micro release (A.B.C) is "
-"officially supported. You can find the latest micro version for each series "
-"on the `Python download page <https://www.python.org/downloads/>`_."
+"officially supported. Python versions that have reached end-of-life are no "
+"longer maintained by the Python project and therefore should not be used "
+"with Django."
 msgstr ""
-"Para cada versión de Python, sólo la última micro-version (A.B.C) es "
-"oficialmente soportada. Puede encontrar la última micro-versión de cada "
-"serie en la `Página de descarga de Python <https://www.python.org/downloads/"
-">`."
+"Para cada versión de Python, solo el último micro lanzamiento (A.B.C) es "
+"oficialmente compatible. Las versiones de Python que han alcanzado el fin de "
+"su vida útil ya no son mantenidas por el proyecto Python y por lo tanto no "
+"deben usarse con Django."
+
+msgid ""
+"You can find the latest supported micro version for each series on the "
+"`Python download page <https://www.python.org/downloads/>`_."
+msgstr ""
+"Puede encontrar la última micro-versión compatible para cada serie en  la "
+"`página de descarga de Python <https://www.python.org/downloads/>`_."
 
 msgid ""
 "We will support a Python version up to and including the first Django LTS "

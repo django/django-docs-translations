@@ -13,6 +13,7 @@
 # Jord Andres, 2024
 # LECbg, 2017,2019
 # Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2016
+# jlariza, 2025
 # Luigy, 2016
 # Mauricio Collazos <ma0@contraslash.com>, 2017
 # ramiro20010202, 2025
@@ -28,9 +29,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-28 04:15-0500\n"
+"POT-Creation-Date: 2025-07-25 07:15-0500\n"
 "PO-Revision-Date: 2013-04-02 19:58+0000\n"
-"Last-Translator: ramiro20010202, 2025\n"
+"Last-Translator: jlariza, 2025\n"
 "Language-Team: Spanish (http://app.transifex.com/django/django-docs/language/"
 "es/)\n"
 "MIME-Version: 1.0\n"
@@ -156,6 +157,10 @@ msgid ""
 "``REMOTE_USER``, you can subclass ``RemoteUserMiddleware`` and set the "
 "``header`` attribute to the desired ``request.META`` key.  For example:"
 msgstr ""
+"Si su mecanismo de autenticación usa una cabecera HTTP personalizada y "
+"``REMOTE_USER`` es ``False``, puede extender la clase "
+"``RemoteUserMiddleware`` y asignar el atributo ``header`` a la llave "
+"``request.META` deseada. Por ejemplo:"
 
 msgid "``mysite/middleware.py``"
 msgstr "``mysite/middleware.py``"
@@ -164,6 +169,9 @@ msgid ""
 "This custom middleware is then used in the :setting:`MIDDLEWARE` setting "
 "instead of :class:`django.contrib.auth.middleware.RemoteUserMiddleware`::"
 msgstr ""
+"Este middleware personalizado luego se usa en el parámetro :setting:"
+"`MIDDLEWARE` de la configuración en vez de :class:`django.contrib.auth."
+"middleware.RemoteUserMiddleware`::"
 
 msgid ""
 "Be very careful if using a ``RemoteUserMiddleware`` subclass with a custom "
@@ -905,6 +913,14 @@ msgid ""
 "settings for that specific storage backend. The settings in the inner "
 "dictionaries are described fully in the :setting:`STORAGES` documentation."
 msgstr ""
+"El primer paso para usar un almacenamiento personalizado es indicarle a "
+"Django el backend de almacenamientos de archivo que se usará. Esto se hace a "
+"través del parámetro :setting:`STORAGES` de la configuración. Este parámetro "
+"mapea los aliases del almacenamiento, que es una forma de relacionar un "
+"almacenamiento específico dentro de Django a un diccionario de "
+"configuraciones para el backend de almacenamiento específico. Los parámetros "
+"para dicho diccionario están descritos en su totalidad en la documentación :"
+"setting:`STORAGES` "
 
 msgid ""
 "Storages are then accessed by alias from the :data:`django.core.files."
@@ -1364,7 +1380,7 @@ msgid ""
 msgstr ""
 
 msgid "Overriding commands"
-msgstr ""
+msgstr "Sobreescribiendo comandos"
 
 msgid ""
 "Django registers the built-in commands and then searches for commands in :"
@@ -1548,6 +1564,17 @@ msgid ""
 "related checks against them."
 msgstr ""
 
+msgid ""
+"Supplies kwargs for the call to :meth:`check`, including transforming the "
+"value of :attr:`requires_system_checks` to the ``tag`` kwarg."
+msgstr ""
+
+msgid ""
+"Override this method to change the values supplied to :meth:`check`. For "
+"example, to opt into database related checks you can override "
+"``get_check_kwargs()`` as follows::"
+msgstr ""
+
 msgid "``BaseCommand`` subclasses"
 msgstr ""
 
@@ -1643,7 +1670,7 @@ msgid ""
 msgstr ""
 
 msgid "Our example object"
-msgstr ""
+msgstr "Nuestro objeto de ejemplo"
 
 msgid ""
 "Creating custom fields requires a bit of attention to detail. To make things "
@@ -2237,6 +2264,11 @@ msgid ""
 msgstr ""
 
 msgid ""
+"If you wish to exclude the field from the :class:`~django.forms.ModelForm`, "
+"you can override the :meth:`~Field.formfield` method to return ``None``."
+msgstr ""
+
+msgid ""
 "Continuing our ongoing example, we can write the :meth:`~Field.formfield` "
 "method as::"
 msgstr ""
@@ -2358,6 +2390,60 @@ msgid ""
 "isn't always necessary. Once a file is retrieved to obtain some data about "
 "its content, cache as much of that data as possible to reduce the number of "
 "times the file must be retrieved on subsequent calls for that information."
+msgstr ""
+
+msgid "How to customize the ``shell`` command"
+msgstr ""
+
+msgid ""
+"The Django :djadmin:`shell` is an interactive Python environment that "
+"provides access to models and settings, making it useful for testing code, "
+"experimenting with queries, and interacting with application data."
+msgstr ""
+
+msgid ""
+"Customizing the :djadmin:`shell` command allows adding extra functionality "
+"or pre-loading specific modules. To do this, create a new management command "
+"that subclasses ``django.core.management.commands.shell.Command`` and "
+"overrides the existing ``shell`` management command. For more details, refer "
+"to the guide on :ref:`overriding commands <overriding-commands>`."
+msgstr ""
+
+msgid "Customize automatic imports"
+msgstr ""
+
+msgid ""
+"To customize the automatic import behavior of the :djadmin:`shell` "
+"management command, override the ``get_auto_imports()`` method. This method "
+"should return a sequence of import paths for objects or modules available in "
+"the application. For example:"
+msgstr ""
+
+msgid "``polls/management/commands/shell.py``"
+msgstr ""
+
+msgid ""
+"The customization above adds :func:`~django.urls.resolve` and :func:`~django."
+"urls.reverse` to the default namespace, which already includes all models "
+"from the apps listed in :setting:`INSTALLED_APPS`. These objects will be "
+"available in the ``shell`` without requiring a manual import."
+msgstr ""
+
+msgid ""
+"Running this customized ``shell`` command with ``verbosity=2`` would show:"
+msgstr ""
+
+msgid ""
+"If an overridden ``shell`` command includes paths that cannot be imported, "
+"these errors are shown when ``verbosity`` is set to ``1`` or higher. "
+"Duplicate imports are automatically handled."
+msgstr ""
+
+msgid ""
+"Note that automatic imports can be disabled for a specific ``shell`` session "
+"using the :option:`--no-imports <shell --no-imports>` flag. To permanently "
+"disable automatic imports, override ``get_auto_imports()`` to return "
+"``None``::"
 msgstr ""
 
 msgid "How to implement a custom template backend"
@@ -2972,6 +3058,121 @@ msgid ""
 "directly outputting it. This is done by using the ``as`` argument followed "
 "by the variable name. Doing so enables you to output the content yourself "
 "where you see fit:"
+msgstr ""
+
+msgid "Simple block tags"
+msgstr ""
+
+msgid ""
+"When a section of rendered template needs to be passed into a custom tag, "
+"Django provides the ``simple_block_tag`` helper function to accomplish this. "
+"Similar to :meth:`~django.template.Library.simple_tag()`, this function "
+"accepts a custom tag function, but with the additional ``content`` argument, "
+"which contains the rendered content as defined inside the tag. This allows "
+"dynamic template sections to be easily incorporated into custom tags."
+msgstr ""
+
+msgid ""
+"For example, a custom block tag which creates a chart could look like this::"
+msgstr ""
+
+msgid ""
+"The ``content`` argument contains everything in between the ``{% chart %}`` "
+"and ``{% endchart %}`` tags:"
+msgstr ""
+
+msgid ""
+"If there are other template tags or variables inside the ``content`` block, "
+"they will be rendered before being passed to the tag function. In the "
+"example above, ``request.user`` will be resolved by the time "
+"``render_chart`` is called."
+msgstr ""
+
+msgid ""
+"Block tags are closed with ``end{name}`` (for example, ``endchart``). This "
+"can be customized with the ``end_name`` parameter::"
+msgstr ""
+
+msgid "Which would require a template definition like this:"
+msgstr ""
+
+msgid "A few things to note about ``simple_block_tag``:"
+msgstr ""
+
+msgid ""
+"The first argument must be called ``content``, and it will contain the "
+"contents of the template tag as a rendered string."
+msgstr ""
+
+msgid ""
+"Variables passed to the tag are not included in the rendering context of the "
+"content, as would be when using the ``{% with %}`` tag."
+msgstr ""
+
+msgid ""
+"Just like :ref:`simple_tag<howto-custom-template-tags-simple-tags>`, "
+"``simple_block_tag``:"
+msgstr ""
+
+msgid "Validates the quantity and quality of the arguments."
+msgstr ""
+
+msgid "Strips quotes from arguments if necessary."
+msgstr ""
+
+msgid "Escapes the output accordingly."
+msgstr ""
+
+msgid ""
+"Supports passing ``takes_context=True`` at registration time to access "
+"context. Note that in this case, the first argument to the custom function "
+"*must* be called ``context``, and ``content`` must follow."
+msgstr ""
+
+msgid ""
+"Supports renaming the tag by passing the ``name`` argument when registering."
+msgstr ""
+
+msgid "Supports accepting any number of positional or keyword arguments."
+msgstr ""
+
+msgid ""
+"Supports storing the result in a template variable using the ``as`` variant."
+msgstr ""
+
+msgid "Content Escaping"
+msgstr ""
+
+msgid ""
+"``simple_block_tag`` behaves similarly to ``simple_tag`` regarding auto-"
+"escaping. For details on escaping and safety, refer to ``simple_tag``. "
+"Because the ``content`` argument has already been rendered by Django, it is "
+"already escaped."
+msgstr ""
+
+msgid "A complete example"
+msgstr ""
+
+msgid ""
+"Consider a custom template tag that generates a message box that supports "
+"multiple message levels and content beyond a simple phrase. This could be "
+"implemented using a ``simple_block_tag`` as follows:"
+msgstr ""
+
+msgid "``testapp/templatetags/testapptags.py``"
+msgstr ""
+
+msgid ""
+"When combined with a minimal view and corresponding template, as shown here:"
+msgstr ""
+
+msgid "``testapp/views.py``"
+msgstr ""
+
+msgid "``testapp/templates/test.html``"
+msgstr ""
+
+msgid "The following HTML is produced as the rendered output:"
 msgstr ""
 
 msgid "Inclusion tags"
@@ -4936,9 +5137,6 @@ msgid ""
 "as it gets passed through the other decorators::"
 msgstr ""
 
-msgid "Support for wrapping ``async`` functions was added."
-msgstr ""
-
 msgid ""
 "If one of your views receives an :class:`~django.http.HttpRequest` object "
 "with :attr:`POST parameters<django.http.HttpRequest.POST>` susceptible to "
@@ -5005,6 +5203,9 @@ msgstr ""
 msgid ""
 "A compiled regular expression object used to match settings and ``request."
 "META`` values considered as sensitive. By default equivalent to::"
+msgstr ""
+
+msgid "The term ``AUTH`` was added."
 msgstr ""
 
 msgid ""

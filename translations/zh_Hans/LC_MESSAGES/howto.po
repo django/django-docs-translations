@@ -29,7 +29,7 @@
 # shengzhulst <lishiting1996@outlook.com>, 2018
 # li xiushan <lixiushan@aliyun.com>, 2020
 # MattGook <matthewpangwm@gmail.com>, 2019
-# BingbingHaidian <michael18811380328@163.com>, 2024
+# Michael An <michael18811380328@163.com>, 2024-2025
 # mrgaolei <gaolei@liheran.com>, 2018
 # myl7 <myl.ustc@gmail.com>, 2020
 # radish sx <radishxtop@gmail.com>, 2017
@@ -71,9 +71,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-11 14:17-0600\n"
+"POT-Creation-Date: 2025-07-25 07:15-0500\n"
 "PO-Revision-Date: 2013-04-02 19:58+0000\n"
-"Last-Translator: BingbingHaidian <michael18811380328@163.com>, 2024\n"
+"Last-Translator: Michael An <michael18811380328@163.com>, 2024-2025\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -188,11 +188,16 @@ msgstr ""
 msgid ""
 "If your authentication mechanism uses a custom HTTP header and not "
 "``REMOTE_USER``, you can subclass ``RemoteUserMiddleware`` and set the "
-"``header`` attribute to the desired ``request.META`` key.  For example::"
+"``header`` attribute to the desired ``request.META`` key.  For example:"
 msgstr ""
-"如果你的验证机制使用一个自定义的 HTTP header 而不是 ``REMOTE_USER``，你可以构"
-"建一个 ``RemoteUserMiddleWare`` 的子类然后把 ``header`` 属性设成你希望的 "
-"``request.META`` 键值。例如::"
+
+msgid "``mysite/middleware.py``"
+msgstr ""
+
+msgid ""
+"This custom middleware is then used in the :setting:`MIDDLEWARE` setting "
+"instead of :class:`django.contrib.auth.middleware.RemoteUserMiddleware`::"
+msgstr ""
 
 msgid ""
 "Be very careful if using a ``RemoteUserMiddleware`` subclass with a custom "
@@ -1701,6 +1706,17 @@ msgstr ""
 "你可以传递 ``include_deployment_checks=True`` 以执行部署检查，并在 "
 "``databases`` 中传递数据库别名列表以对其运行数据库相关检查。"
 
+msgid ""
+"Supplies kwargs for the call to :meth:`check`, including transforming the "
+"value of :attr:`requires_system_checks` to the ``tag`` kwarg."
+msgstr ""
+
+msgid ""
+"Override this method to change the values supplied to :meth:`check`. For "
+"example, to opt into database related checks you can override "
+"``get_check_kwargs()`` as follows::"
+msgstr ""
+
 msgid "``BaseCommand`` subclasses"
 msgstr "``BaseCommand`` 的子类"
 
@@ -2598,6 +2614,11 @@ msgstr ""
 "料 </topics/forms/index>` 获取相关信息。"
 
 msgid ""
+"If you wish to exclude the field from the :class:`~django.forms.ModelForm`, "
+"you can override the :meth:`~Field.formfield` method to return ``None``."
+msgstr ""
+
+msgid ""
 "Continuing our ongoing example, we can write the :meth:`~Field.formfield` "
 "method as::"
 msgstr "承接上面的例子，我们能这样编写 :meth:`~Field.formfield` 方法::"
@@ -2760,6 +2781,60 @@ msgstr ""
 "尽可能的缓存文件属性。因为文件可能保存在远端存储系统中，检出它们会消耗额外的"
 "时间，甚至是钱，且不总是必要的。一旦检出某个文件，获取其内容，尽可能缓存所有"
 "数据，以减少后续调用再次检索文件的次数。"
+
+msgid "How to customize the ``shell`` command"
+msgstr ""
+
+msgid ""
+"The Django :djadmin:`shell` is an interactive Python environment that "
+"provides access to models and settings, making it useful for testing code, "
+"experimenting with queries, and interacting with application data."
+msgstr ""
+
+msgid ""
+"Customizing the :djadmin:`shell` command allows adding extra functionality "
+"or pre-loading specific modules. To do this, create a new management command "
+"that subclasses ``django.core.management.commands.shell.Command`` and "
+"overrides the existing ``shell`` management command. For more details, refer "
+"to the guide on :ref:`overriding commands <overriding-commands>`."
+msgstr ""
+
+msgid "Customize automatic imports"
+msgstr ""
+
+msgid ""
+"To customize the automatic import behavior of the :djadmin:`shell` "
+"management command, override the ``get_auto_imports()`` method. This method "
+"should return a sequence of import paths for objects or modules available in "
+"the application. For example:"
+msgstr ""
+
+msgid "``polls/management/commands/shell.py``"
+msgstr ""
+
+msgid ""
+"The customization above adds :func:`~django.urls.resolve` and :func:`~django."
+"urls.reverse` to the default namespace, which already includes all models "
+"from the apps listed in :setting:`INSTALLED_APPS`. These objects will be "
+"available in the ``shell`` without requiring a manual import."
+msgstr ""
+
+msgid ""
+"Running this customized ``shell`` command with ``verbosity=2`` would show:"
+msgstr ""
+
+msgid ""
+"If an overridden ``shell`` command includes paths that cannot be imported, "
+"these errors are shown when ``verbosity`` is set to ``1`` or higher. "
+"Duplicate imports are automatically handled."
+msgstr ""
+
+msgid ""
+"Note that automatic imports can be disabled for a specific ``shell`` session "
+"using the :option:`--no-imports <shell --no-imports>` flag. To permanently "
+"disable automatic imports, override ``get_auto_imports()`` to return "
+"``None``::"
+msgstr ""
 
 msgid "How to implement a custom template backend"
 msgstr "如何编写一个自定义的模板后端"
@@ -3527,6 +3602,121 @@ msgid ""
 msgstr ""
 "将标签结果存入一个模板变量而不是直接将其输出是可能的。这能通过使用 ``as`` 参"
 "数，后跟变量名实现。这样做能让你在期望的位置输出内容："
+
+msgid "Simple block tags"
+msgstr ""
+
+msgid ""
+"When a section of rendered template needs to be passed into a custom tag, "
+"Django provides the ``simple_block_tag`` helper function to accomplish this. "
+"Similar to :meth:`~django.template.Library.simple_tag()`, this function "
+"accepts a custom tag function, but with the additional ``content`` argument, "
+"which contains the rendered content as defined inside the tag. This allows "
+"dynamic template sections to be easily incorporated into custom tags."
+msgstr ""
+
+msgid ""
+"For example, a custom block tag which creates a chart could look like this::"
+msgstr ""
+
+msgid ""
+"The ``content`` argument contains everything in between the ``{% chart %}`` "
+"and ``{% endchart %}`` tags:"
+msgstr ""
+
+msgid ""
+"If there are other template tags or variables inside the ``content`` block, "
+"they will be rendered before being passed to the tag function. In the "
+"example above, ``request.user`` will be resolved by the time "
+"``render_chart`` is called."
+msgstr ""
+
+msgid ""
+"Block tags are closed with ``end{name}`` (for example, ``endchart``). This "
+"can be customized with the ``end_name`` parameter::"
+msgstr ""
+
+msgid "Which would require a template definition like this:"
+msgstr "这需要一个这样的模板定义："
+
+msgid "A few things to note about ``simple_block_tag``:"
+msgstr ""
+
+msgid ""
+"The first argument must be called ``content``, and it will contain the "
+"contents of the template tag as a rendered string."
+msgstr ""
+
+msgid ""
+"Variables passed to the tag are not included in the rendering context of the "
+"content, as would be when using the ``{% with %}`` tag."
+msgstr ""
+
+msgid ""
+"Just like :ref:`simple_tag<howto-custom-template-tags-simple-tags>`, "
+"``simple_block_tag``:"
+msgstr ""
+
+msgid "Validates the quantity and quality of the arguments."
+msgstr ""
+
+msgid "Strips quotes from arguments if necessary."
+msgstr "必要时从参数中删除引用。"
+
+msgid "Escapes the output accordingly."
+msgstr "相应地退出输出。"
+
+msgid ""
+"Supports passing ``takes_context=True`` at registration time to access "
+"context. Note that in this case, the first argument to the custom function "
+"*must* be called ``context``, and ``content`` must follow."
+msgstr ""
+
+msgid ""
+"Supports renaming the tag by passing the ``name`` argument when registering."
+msgstr ""
+
+msgid "Supports accepting any number of positional or keyword arguments."
+msgstr ""
+
+msgid ""
+"Supports storing the result in a template variable using the ``as`` variant."
+msgstr ""
+
+msgid "Content Escaping"
+msgstr ""
+
+msgid ""
+"``simple_block_tag`` behaves similarly to ``simple_tag`` regarding auto-"
+"escaping. For details on escaping and safety, refer to ``simple_tag``. "
+"Because the ``content`` argument has already been rendered by Django, it is "
+"already escaped."
+msgstr ""
+
+msgid "A complete example"
+msgstr "一个复杂的案例"
+
+msgid ""
+"Consider a custom template tag that generates a message box that supports "
+"multiple message levels and content beyond a simple phrase. This could be "
+"implemented using a ``simple_block_tag`` as follows:"
+msgstr ""
+
+msgid "``testapp/templatetags/testapptags.py``"
+msgstr ""
+
+msgid ""
+"When combined with a minimal view and corresponding template, as shown here:"
+msgstr ""
+
+msgid "``testapp/views.py``"
+msgstr ""
+
+msgid "``testapp/templates/test.html``"
+msgstr ""
+
+msgid "The following HTML is produced as the rendered output:"
+msgstr ""
 
 msgid "Inclusion tags"
 msgstr "包含标签"
@@ -5977,9 +6167,6 @@ msgstr ""
 "几个装饰器，确保将 ``@sensitive_variables`` 置于最上面。这样，它就也能隐藏函"
 "数参数了，因为它穿过其它装饰器::"
 
-msgid "Support for wrapping ``async`` functions was added."
-msgstr "已添加对包装 ``async`` 函数的支持。"
-
 msgid ""
 "If one of your views receives an :class:`~django.http.HttpRequest` object "
 "with :attr:`POST parameters<django.http.HttpRequest.POST>` susceptible to "
@@ -6075,6 +6262,9 @@ msgid ""
 msgstr ""
 "一个编译了的用于匹配配置和 ``request.META`` 值的不忽略大写的正则表达式对象。"
 "默认相当于 ::"
+
+msgid "The term ``AUTH`` was added."
+msgstr ""
 
 msgid ""
 "Returns ``True`` to activate the filtering in :meth:`get_post_parameters` "
