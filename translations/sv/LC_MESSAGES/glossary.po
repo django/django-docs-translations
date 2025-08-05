@@ -1,0 +1,161 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+#
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: django-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-05 07:15-0500\n"
+"PO-Revision-Date: 2013-04-02 19:51+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Swedish (http://app.transifex.com/django/django-docs/language/"
+"sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Glossary"
+msgstr "Ordlista"
+
+msgid "concrete model"
+msgstr "konkret modell"
+
+msgid ""
+"A non-abstract (:attr:`abstract=False <django.db.models.Options.abstract>`) "
+"model."
+msgstr ""
+"En icke-abstrakt (:attr:`abstract=False <django.db.models.Options."
+"abstract>`) modell."
+
+msgid "field"
+msgstr "fält"
+
+msgid ""
+"An attribute on a :term:`model`; a given field usually maps directly to a "
+"single database column."
+msgstr ""
+"Ett attribut på en :term:`modell`; ett givet fält mappas vanligtvis direkt "
+"till en enda databaskolumn."
+
+msgid "See :doc:`/topics/db/models`."
+msgstr "Se :doc:`/topics/db/models`."
+
+msgid "generic view"
+msgstr "generisk vy"
+
+msgid ""
+"A higher-order :term:`view` function that provides an abstract/generic "
+"implementation of a common idiom or pattern found in view development."
+msgstr ""
+"En :term:`view`-funktion av högre ordning som ger en abstrakt/generisk "
+"implementering av ett vanligt idiom eller mönster som finns i vyutveckling."
+
+msgid "See :doc:`/topics/class-based-views/index`."
+msgstr "Se :doc:`/topics/class-based-views/index`."
+
+msgid "model"
+msgstr "modell"
+
+msgid "Models store your application's data."
+msgstr "Modeller lagrar din applikations data."
+
+msgid "MTV"
+msgstr "MTV"
+
+msgid ""
+"\"Model-template-view\"; a software pattern, similar in style to MVC, but a "
+"better description of the way Django does things."
+msgstr ""
+"\"Model-template-view\"; ett mjukvarumönster, liknande MVC, men en bättre "
+"beskrivning av hur Django gör saker."
+
+msgid "See :ref:`the FAQ entry <faq-mtv>`."
+msgstr "Se :ref:` FAQ-artikeln <faq-mtv>`."
+
+msgid "MVC"
+msgstr "MVC"
+
+msgid ""
+"`Model-view-controller`__; a software pattern. Django :ref:`follows MVC to "
+"some extent <faq-mtv>`."
+msgstr ""
+"`Model-view-controller`__; ett mjukvarumönster. Django :ref:`följer MVC i "
+"viss utsträckning <faq-mtv>`."
+
+msgid "project"
+msgstr "projekt"
+
+msgid ""
+"A Python package -- i.e. a directory of code -- that contains all the "
+"settings for an instance of Django. This would include database "
+"configuration, Django-specific options and application-specific settings."
+msgstr ""
+"Ett Python-paket - dvs. en katalog med kod - som innehåller alla "
+"inställningar för en instans av Django. Detta inkluderar "
+"databaskonfiguration, Django-specifika alternativ och applikationsspecifika "
+"inställningar."
+
+msgid "property"
+msgstr "fastighet"
+
+msgid ""
+"Also known as \"managed attributes\", and a feature of Python since version "
+"2.2. This is a neat way to implement attributes whose usage resembles "
+"attribute access, but whose implementation uses method calls."
+msgstr ""
+"Även känt som \"hanterade attribut\" och en funktion i Python sedan version "
+"2.2. Detta är ett snyggt sätt att implementera attribut vars användning "
+"liknar attributåtkomst, men vars implementering använder metodanrop."
+
+msgid "See :class:`property`."
+msgstr "Se :class:`property`."
+
+msgid "queryset"
+msgstr "queryset"
+
+msgid ""
+"An object representing some set of rows to be fetched from the database."
+msgstr ""
+"Ett objekt som representerar en uppsättning rader som ska hämtas från "
+"databasen."
+
+msgid "See :doc:`/topics/db/queries`."
+msgstr "Se :doc:`/topics/db/queries`."
+
+msgid "slug"
+msgstr "slugg"
+
+msgid ""
+"A short label for something, containing only letters, numbers, underscores "
+"or hyphens. They're generally used in URLs. For example, in a typical blog "
+"entry URL:"
+msgstr ""
+"En kort benämning på något som endast innehåller bokstäver, siffror, "
+"understreck eller bindestreck. De används i allmänhet i webbadresser. Till "
+"exempel i en typisk URL för ett blogginlägg:"
+
+msgid "the last bit (``spring``) is the slug."
+msgstr "den sista biten (``spring``) är sluggen."
+
+msgid "template"
+msgstr "mall"
+
+msgid ""
+"A chunk of text that acts as formatting for representing data. A template "
+"helps to abstract the presentation of data from the data itself."
+msgstr ""
+"Ett stycke text som fungerar som formatering för att representera data. En "
+"mall hjälper till att abstrahera presentationen av data från själva datan."
+
+msgid "See :doc:`/topics/templates`."
+msgstr "Se :doc:`/topics/templates`."
+
+msgid "view"
+msgstr "visa"
+
+msgid "A function responsible for rendering a page."
+msgstr "En funktion som ansvarar för rendering av en sida."
