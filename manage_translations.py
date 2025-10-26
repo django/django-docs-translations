@@ -19,7 +19,7 @@ from subprocess import PIPE, Popen, call, check_output
 
 # intro and index ressources must be fully translated for these languages
 ACTIVE_LANGUAGES = [
-    'el', 'es', 'fr', 'id', 'it', 'ja', 'ko', 'pl', 'pt_BR', 'sv', 'zh_Hans',
+    'el', 'es', 'fr', 'ga', 'id', 'it', 'ja', 'ko', 'pl', 'pt_BR', 'sv', 'zh_Hans',
 ]
 TX_LANG_MAP = {
     'zh_Hans': 'zh_CN',

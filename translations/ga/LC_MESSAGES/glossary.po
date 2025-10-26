@@ -1,0 +1,163 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Django Software Foundation and contributors
+# This file is distributed under the same license as the Django package.
+#
+# Translators:
+# Aindriú Mac Giolla Eoin, 2024
+msgid ""
+msgstr ""
+"Project-Id-Version: django-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-23 09:15-0500\n"
+"PO-Revision-Date: 2013-04-02 19:51+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin, 2024\n"
+"Language-Team: Irish (http://app.transifex.com/django/django-docs/language/"
+"ga/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ga\n"
+"Plural-Forms: nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : "
+"4);\n"
+
+msgid "Glossary"
+msgstr "Gluais"
+
+msgid "concrete model"
+msgstr "múnla coincréite"
+
+msgid ""
+"A non-abstract (:attr:`abstract=False <django.db.models.Options.abstract>`) "
+"model."
+msgstr ""
+"Múnla neamhtheibí (:attr:`abstract=Bréagach "
+"<django.db.models.Options.abstract>`)."
+
+msgid "field"
+msgstr "réimse"
+
+msgid ""
+"An attribute on a :term:`model`; a given field usually maps directly to a "
+"single database column."
+msgstr ""
+"Tréith ar :téarma:`múnla`; de ghnáth mapálann réimse ar leith go díreach "
+"chuig colún bunachar sonraí amháin."
+
+msgid "See :doc:`/topics/db/models`."
+msgstr "Féach: doc:`/topics/db/models`."
+
+msgid "generic view"
+msgstr "radharc cineálach"
+
+msgid ""
+"A higher-order :term:`view` function that provides an abstract/generic "
+"implementation of a common idiom or pattern found in view development."
+msgstr ""
+"Feidhm ardoird :téarma:`amharc` a sholáthraíonn cur i bhfeidhm teibí/"
+"cineálta ar idiom nó ar phatrún coiteann a fhaightear i bhforbairt radhairc."
+
+msgid "See :doc:`/topics/class-based-views/index`."
+msgstr "Féach :doc:`/topics/class-based-views/ index`."
+
+msgid "model"
+msgstr "múnla"
+
+msgid "Models store your application's data."
+msgstr "Stórálann samhlacha sonraí d’fheidhmchláir."
+
+msgid "MTV"
+msgstr "MTV"
+
+msgid ""
+"\"Model-template-view\"; a software pattern, similar in style to MVC, but a "
+"better description of the way Django does things."
+msgstr ""
+"\"Samhail-teimpléad-amharc\"; patrún bogearraí, cosúil le stíl MVC, ach cur "
+"síos níos fearr ar an mbealach a dhéanann Django rudaí."
+
+msgid "See :ref:`the FAQ entry <faq-mtv>`."
+msgstr "Féach :tag:`an iontráil FAQ <faq-mtv>`."
+
+msgid "MVC"
+msgstr "MVC"
+
+msgid ""
+"`Model-view-controller`__; a software pattern. Django :ref:`follows MVC to "
+"some extent <faq-mtv>`."
+msgstr ""
+"`Samhail-amharc-rialtóir`__; patrún bogearraí. Django :tag:`leanann MVC go "
+"pointe <faq-mtv>`."
+
+msgid "project"
+msgstr "tionscadal"
+
+msgid ""
+"A Python package -- i.e. a directory of code -- that contains all the "
+"settings for an instance of Django. This would include database "
+"configuration, Django-specific options and application-specific settings."
+msgstr ""
+"Pacáiste Python -- i.e. eolaire cód -- ina bhfuil na socruithe go léir le "
+"haghaidh sampla de Django. Áireofaí leis seo cumraíocht bunachar sonraí, "
+"roghanna a bhaineann go sonrach le Django agus socruithe a bhaineann go "
+"sonrach le feidhmchlár."
+
+msgid "property"
+msgstr "maoin"
+
+msgid ""
+"Also known as \"managed attributes\", and a feature of Python since version "
+"2.2. This is a neat way to implement attributes whose usage resembles "
+"attribute access, but whose implementation uses method calls."
+msgstr ""
+"Ar a dtugtar freisin \"tréithe bainistithe\", agus gné de Python ó leagan "
+"2.2. Is bealach néata é seo chun tréithe a chur i bhfeidhm a bhfuil a n-"
+"úsáid cosúil le rochtain aitreabúide, ach a úsáideann glaonna modha lena "
+"gcur chun feidhme."
+
+msgid "See :class:`property`."
+msgstr "Féach:aicme:`property`."
+
+msgid "queryset"
+msgstr "sraith ceiste"
+
+msgid ""
+"An object representing some set of rows to be fetched from the database."
+msgstr ""
+"Rud a sheasann do shraith áirithe sraitheanna le fáil ón mbunachar sonraí."
+
+msgid "See :doc:`/topics/db/queries`."
+msgstr "Féach :doc:`/topics/db/queries`."
+
+msgid "slug"
+msgstr "sluga"
+
+msgid ""
+"A short label for something, containing only letters, numbers, underscores "
+"or hyphens. They're generally used in URLs. For example, in a typical blog "
+"entry URL:"
+msgstr ""
+"Lipéad gairid do rud éigin, nach bhfuil ann ach litreacha, uimhreacha, "
+"béimeanna nó fleiscíní. Úsáidtear iad go ginearálta i URLanna. Mar shampla, "
+"i URL iontrála blag tipiciúil:"
+
+msgid "the last bit (``spring``) is the slug."
+msgstr "is é an giota deireanach (``spring``) an sluga."
+
+msgid "template"
+msgstr "teimpléad"
+
+msgid ""
+"A chunk of text that acts as formatting for representing data. A template "
+"helps to abstract the presentation of data from the data itself."
+msgstr ""
+"Sliotán téacs a fheidhmíonn mar fhormáidiú chun sonraí a léiriú. Cuidíonn "
+"teimpléad le cur i láthair sonraí a asbhaint ó na sonraí féin."
+
+msgid "See :doc:`/topics/templates`."
+msgstr "Féach :doc:`/topics/templates`."
+
+msgid "view"
+msgstr "amharc"
+
+msgid "A function responsible for rendering a page."
+msgstr "Feidhm atá freagrach as leathanach a rindreáil."
