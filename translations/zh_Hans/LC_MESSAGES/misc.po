@@ -13,7 +13,7 @@
 # 刘培基（奶牛）, 2022
 # qiang wu <wuqiangroy@live.com>, 2018
 # Todd Kasaki <2524737581@qq.com>, 2022
-# Veoco <one@nomox.cn>, 2020,2024
+# Veoco <one@nomox.cn>, 2020,2024-2025
 # 汪心禾 <wangxinhe06@gmail.com>, 2018
 # woodenrobot <woodenrobot1993@gmail.com>, 2020
 # Xiang Yu <bupt.aswmtjdsj@gmail.com>, 2014
@@ -26,9 +26,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-31 06:06-0500\n"
+"POT-Creation-Date: 2026-02-10 16:15-0600\n"
 "PO-Revision-Date: 2013-04-02 20:00+0000\n"
-"Last-Translator: Veoco <one@nomox.cn>, 2020,2024\n"
+"Last-Translator: Veoco <one@nomox.cn>, 2020,2024-2025\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/django/django-docs/"
 "language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -592,12 +592,10 @@ msgid "The core goals of Django's :doc:`cache framework </topics/cache>` are:"
 msgstr ":doc:`缓存框架 </topics/cache>` 的核心目的是："
 
 msgid ""
-"A cache should be as fast as possible.  Hence, all framework code "
-"surrounding the cache backend should be kept to the absolute minimum, "
-"especially for ``get()`` operations."
+"A cache should be as fast as possible. Hence, all framework code surrounding "
+"the cache backend should be kept to the absolute minimum, especially for "
+"``get()`` operations."
 msgstr ""
-"缓存应该尽可能快。因此，围绕缓存后端的所有框架代码都应该保持在绝对的最小值，"
-"特别是对于 ``get()`` 操作。"
 
 msgid ""
 "The cache API should provide a consistent interface across the different "
@@ -639,23 +637,19 @@ msgid ""
 "If you're using Linux or a Unix installation, such as OpenSolaris, check "
 "with your distributor to see if they already package Django. If you're using "
 "a Linux distro and don't know how to find out if a package is available, "
-"then now is a good time to learn.  The Django Wiki contains a list of `Third "
+"then now is a good time to learn. The Django Wiki contains a list of `Third "
 "Party Distributions`_ to help you out."
 msgstr ""
-"如果您正在使用 Linux 或 Unix 的安装版，比如 OpenSolaris，请与您的经销商联系，"
-"看看他们是否已经打包了 Django。如果您使用的是Linux发行版，并且不知道如何弄清"
-"一个包是否可用，那么现在是学习的好时机。Django Wiki 包含一个 `第三方发行版`_ "
-"列表，以帮助您解决问题。"
 
 msgid "For distributors"
 msgstr "对于发布者"
 
 msgid ""
 "If you'd like to package Django for distribution, we'd be happy to help out! "
-"Please join the |django-developers| mailing list and introduce yourself."
+"Please introduce yourself on the `Django Forum`_."
 msgstr ""
-"如果你希望将 Django 应用打包发布，我们非常乐意提供帮助。请订阅 |django-"
-"developers| 的邮件列表并且介绍你自己。"
+"如果你希望打包 Django 以便分发，我们很乐意提供帮助！请先在 `Django 论坛`_ 上"
+"做个自我介绍。"
 
 msgid ""
 "We also encourage all distributors to subscribe to the |django-announce| "
