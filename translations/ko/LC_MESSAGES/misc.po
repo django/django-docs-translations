@@ -3,11 +3,12 @@
 # This file is distributed under the same license as the Django package.
 #
 # Translators:
-# decyma <soos3121@gmail.com>, 2022
+# minbert <soos3121@gmail.com>, 2022
 # DoJun Lee <leedoe0709@ssu.ac.kr>, 2017
 # Gyeongjun Paik <paikend@gmail.com>, 2021
 # Hwang, Geon Gu <under_09@naver.com>, 2017
 # Hyungsuk Yoon <youhanmir@gmail.com>, 2016
+# Inah Tak, 2026
 # Jaeyoung Heo <jay.jaeyoung@gmail.com>, 2017
 # Jay Oh <theanswer.jay@gmail.com>, 2020
 # Minseok Choi <cms9597@gmail.com>, 2016
@@ -16,10 +17,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-27 03:41-0500\n"
-"PO-Revision-Date: 2022-04-02 20:00+0000\n"
-"Last-Translator: decyma <soos3121@gmail.com>\n"
-"Language-Team: Korean (http://www.transifex.com/django/django-docs/language/"
+"POT-Creation-Date: 2026-04-20 09:15-0500\n"
+"PO-Revision-Date: 2013-04-02 20:00+0000\n"
+"Last-Translator: Inah Tak, 2026\n"
+"Language-Team: Korean (http://app.transifex.com/django/django-docs/language/"
 "ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,9 +42,9 @@ msgstr ""
 "Django는 API의 안정성과 다음버젼의 호환성을 보장하고 있습니다. 요컨대, 새로 "
 "업데이트되는 Django 버전에서도 기존에 작성한 코드는 문제 없이 돌아갈 것이라"
 "는 뜻입니다. 하지만 업데이트후 프로젝트 별 소소한 변경 작업들은 해줘야 할 수 "
-"있습니다. 이에 대해서는 \"이전 버전과 호환되지 않는 변경사항\" 섹션에서 :doc:"
-"`릴리스 노트 </releases/index>` 기존 버전 혹은 업그레이드 대상 버전의 문서를 "
-"참조하시기 바랍니다."
+"있습니다. 이에 대해서는 \"이전 버전과 호환되지 않는 변경사항\" 섹션에"
+"서 :doc:`릴리스 노트 </releases/index>` 기존 버전 혹은 업그레이드 대상 버전"
+"의 문서를 참조하시기 바랍니다."
 
 msgid ""
 "At the same time as making API stability a very high priority, Django is "
@@ -532,15 +533,6 @@ msgstr ""
 "계층에 꼭 필요한 프로그래밍 기능을 제공하는 것이 목표입니다. :ref:`Django 템"
 "플릿 언어(DTL) <template-language-intro>`\\는 고급 로직을 제공하지 않습니다."
 
-msgid ""
-"The Django template system recognizes that templates are most often written "
-"by *designers*, not *programmers*, and therefore should not assume Python "
-"knowledge."
-msgstr ""
-"Django 템플릿 시스템은 템플릿이 *프로그래머*\\가 아닌 *디자이너*\\에 의해 작"
-"성되는 것을 전제로 하므로, 그들이 Python 지식을 갖고 있을 것으로 간주해서는 "
-"안 됩니다."
-
 msgid "Safety and security"
 msgstr "안전과 보안"
 
@@ -626,12 +618,13 @@ msgstr ""
 "다."
 
 msgid ""
-"A cache should be as fast as possible.  Hence, all framework code "
-"surrounding the cache backend should be kept to the absolute minimum, "
-"especially for ``get()`` operations."
+"A cache should be as fast as possible. Hence, all framework code surrounding "
+"the cache backend should be kept to the absolute minimum, especially for "
+"``get()`` operations."
 msgstr ""
-"캐시는 가능한 한 빨라야 합니다. 캐시 백엔드와 관련된 모든 프레임워크 코드, 특"
-"히 ``get()`` 연산은 군더더기 없이 최소한을 남겨야 합니다."
+"캐시는 가능한 한 빠르게 동작해야 합니다. 따라서 캐시 백엔드를 감싸는 프레임워"
+"크 코드는 최대한 단순하게 유지해야 합니다. ``get()`` 연산의 경우 더욱 그렇습"
+"니다."
 
 msgid ""
 "The cache API should provide a consistent interface across the different "
@@ -643,8 +636,8 @@ msgid ""
 "The cache API should be extensible at the application level based on the "
 "developer's needs (for example, see :ref:`cache_key_transformation`)."
 msgstr ""
-"캐시 API는 개발자의 요구에 따라 애플리케이션 수준에서 확장 가능해야 합니다(:"
-"ref:`cache_key_transformation` 참조)."
+"캐시 API는 개발자의 요구에 따라 애플리케이션 수준에서 확장 가능해야 합니다"
+"(:ref:`cache_key_transformation` 참조)."
 
 msgid "Third-party distributions of Django"
 msgstr "Django의 서드 파티 분배"
@@ -675,22 +668,23 @@ msgid ""
 "If you're using Linux or a Unix installation, such as OpenSolaris, check "
 "with your distributor to see if they already package Django. If you're using "
 "a Linux distro and don't know how to find out if a package is available, "
-"then now is a good time to learn.  The Django Wiki contains a list of `Third "
+"then now is a good time to learn. The Django Wiki contains a list of `Third "
 "Party Distributions`_ to help you out."
 msgstr ""
-"Linux 또는 Unix(예: OpenSolaris) 사용자는 Django 패키지가 이미 있는지 확인하"
-"세요. Linux 배포판을 사용하지만 패키지를 찾는 방법을 모른다면, 지금이 배울 기"
-"회입니다. Django 위키의 `Third Party Distributions`_\\가 도움이 될 것입니다."
+"Linux 또는 Unix(예: OpenSolaris) 설치 환경을 사용하는 경우, 배포판에서 Django"
+"를 패키지로 제공하고 있는지 확인해 보세요. Linux 배포판을 사용 중인데 패키지 "
+"제공 여부를 확인하는 방법을 모른다면 이번 기회에 그 방법을 배워보세요. "
+"Django 위키의 `Third Party Distributions`_ 목록을 참고하세요."
 
 msgid "For distributors"
 msgstr "배포자에게"
 
 msgid ""
 "If you'd like to package Django for distribution, we'd be happy to help out! "
-"Please join the |django-developers| mailing list and introduce yourself."
+"Please introduce yourself on the `Django Forum`_."
 msgstr ""
-"Django를 패키징하여 배포하고자 한다면 저희가 기꺼이 돕겠습니다! |django-"
-"developers| 메일링 리스트에 가입해서 자기 소개를 해주세요."
+"Django를 패키지로 배포하고 싶다면 기꺼이 도와드리겠습니다. `Django Forum`_에"
+"서 자기소개를 해주세요."
 
 msgid ""
 "We also encourage all distributors to subscribe to the |django-announce| "
