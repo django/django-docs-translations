@@ -3,12 +3,12 @@
 # This file is distributed under the same license as the Django package.
 #
 # Translators:
-# Akio Ogasahara <libratechwriter@gmail.com>, 2024-2025
+# Akio Ogasahara <libratechwriter@gmail.com>, 2024-2026
 # Ikemoto Hideki <ikemo333@gmail.com>, 2021
 # Kashun YOSHIDA, 2017
-# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2017,2019
+# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2017,2019
 # TANIGUCHI Taichi, 2023
-# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2017
+# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2017
 # Takuya N <takninnovationresearch@gmail.com>, 2019
 # Takuya N <takninnovationresearch@gmail.com>, 2018
 # tomo, 2021
@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-25 07:15-0500\n"
+"POT-Creation-Date: 2026-09-03 13:43-0500\n"
 "PO-Revision-Date: 2013-04-02 20:00+0000\n"
-"Last-Translator: Akio Ogasahara <libratechwriter@gmail.com>, 2024-2025\n"
+"Last-Translator: Akio Ogasahara <libratechwriter@gmail.com>, 2024-2026\n"
 "Language-Team: Japanese (http://app.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -40,10 +40,10 @@ msgid ""
 "incompatible changes\" section of the :doc:`release note </releases/index>` "
 "for the version or versions to which you are upgrading."
 msgstr ""
-"Django は API安定性と先方互換性に対して約束をしています。つまり、一度あるバー"
+"Django は API の安定性と前方互換性に取り組んでいます。つまり、一度あるバー"
 "ジョンの Django で開発されたコードは将来の Django リリースでも動作し続けると"
 "いうことです。利用する Django のバージョンをアップグレードする場合は、小さな"
-"変更を加えなければいけない場合もあります: アップグレード前後のバージョン"
+"変更を加えなければいけない場合もあります: アップグレード先のバージョン"
 "の :doc:`リリースノート </releases/index>` の \"後方互換性のない変更\" セク"
 "ションを見てください。"
 
@@ -248,8 +248,8 @@ msgid ""
 "Every distinct concept and/or piece of data should live in one, and only "
 "one, place. Redundancy is bad. Normalization is good."
 msgstr ""
-"多大に区別される概念やデータ構造は、ただ1箇所のみに存在するべきです。冗長性は"
-"悪であり、正規化は善です。"
+"一意な概念やデータは、ただ一つの場所に存在すべきです。冗長性は悪であり、正規"
+"化は善です。"
 
 msgid ""
 "The framework, within reason, should deduce as much as possible from as "
@@ -348,13 +348,10 @@ msgstr ""
 "``save()`` を呼び出す必要があるのはこのためです。"
 
 msgid ""
-"This is also why the ``select_related()`` ``QuerySet`` method exists. It's "
-"an optional performance booster for the common case of selecting \"every "
-"related object.\""
+"This is also why the ``FETCH_PEERS`` :doc:`fetch mode </topics/db/fetch-"
+"modes>` exists. It's an optional performance booster for the common case of "
+"selecting related objects for every peer in a ``QuerySet``."
 msgstr ""
-"これは ``select_related()`` ``QuerySet`` メソッドが存在していることの理由でも"
-"あります。このメソッドは、「関係する全てのオブジェクト」を選択というよくある"
-"ケースでの効率上昇オプションです。"
 
 msgid "Terse, powerful syntax"
 msgstr "無愛想で、強力な構文"
@@ -649,20 +646,20 @@ msgstr ""
 "にあります。"
 
 msgid ""
-"A cache should be as fast as possible.  Hence, all framework code "
-"surrounding the cache backend should be kept to the absolute minimum, "
-"especially for ``get()`` operations."
+"A cache should be as fast as possible. Hence, all framework code surrounding "
+"the cache backend should be kept to the absolute minimum, especially for "
+"``get()`` operations."
 msgstr ""
-"キャッシュは可能な限り高速でなければならない。したがって、キャッシュバックエ"
-"ンドを包んでいるフレームワークのコード (特に ``get()`` 操作) はすべて、極限ま"
-"で短くするべきである。"
+"キャッシュは可能な限り高速であるべきです。そのため、キャッシュバックエンド周"
+"辺のフレームワークのコードは、特に ``get()`` 操作では、ごく最小限に抑えるべき"
+"です。"
 
 msgid ""
 "The cache API should provide a consistent interface across the different "
 "cache backends."
 msgstr ""
-"キャッシュ API は、バックエントが違っていても一貫したインターフェイスを提供す"
-"るべきである。"
+"キャッシュ API は、キャッシュバックエンドが違っていても一貫したインターフェイ"
+"スを提供するべきである。"
 
 msgid ""
 "The cache API should be extensible at the application level based on the "
@@ -702,14 +699,9 @@ msgid ""
 "If you're using Linux or a Unix installation, such as OpenSolaris, check "
 "with your distributor to see if they already package Django. If you're using "
 "a Linux distro and don't know how to find out if a package is available, "
-"then now is a good time to learn.  The Django Wiki contains a list of `Third "
+"then now is a good time to learn. The Django Wiki contains a list of `Third "
 "Party Distributions`_ to help you out."
 msgstr ""
-"Linux や OpenSolaris のような Unixプラットフォームを使っているなら、ディスト"
-"リビュータが Django を既にパッケージ化しているかどうか確認してください。もし"
-"あなたが Linux を使っていて、パッケージが利用可能かどうかを調べる方法を知らな"
-"いのなら、今が勉強する良い機会です。 Django Wiki には `Third Party "
-"Distributions`_ のリストがあり、あなたを助けてくれるでしょう。"
 
 msgid "For distributors"
 msgstr "ディストリビュータ向け"

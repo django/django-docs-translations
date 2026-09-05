@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the Django package.
 #
 # Translators:
-# Akio Ogasahara <libratechwriter@gmail.com>, 2024-2025
+# Akio Ogasahara <libratechwriter@gmail.com>, 2024-2026
 # Asai Takuya <takuya.waseda.1119@gmail.com>, 2016
 # Claude Paroz <claude@2xlibre.net>, 2020
 # xiu1 <d84ea@hotmail.co.jp>, 2016-2017
@@ -16,10 +16,10 @@
 # sutefu7, 2019
 # osamunmun <osamu.takayasu@gmail.com>, 2016
 # Sawa, 2022
-# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2021
-# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016-2017,2023-2024
+# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2021
+# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016-2017,2023-2024
 # TANIGUCHI Taichi, 2023
-# Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>, 2016-2018,2020,2022,2024
+# TAKAHASHI Shuuji <shuuji3@gmail.com>, 2016-2018,2020,2022,2024
 # Takashi Sugawara <aimaimokomoko@gmail.com>, 2017
 # TANIGUCHI Taichi, 2025
 # Tatsuhiko Kono <kono@takenoko-tech.co.jp>, 2016
@@ -38,9 +38,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-23 09:15-0500\n"
+"POT-Creation-Date: 2026-09-03 13:43-0500\n"
 "PO-Revision-Date: 2013-04-02 19:51+0000\n"
-"Last-Translator: Akio Ogasahara <libratechwriter@gmail.com>, 2024-2025\n"
+"Last-Translator: Akio Ogasahara <libratechwriter@gmail.com>, 2024-2026\n"
 "Language-Team: Japanese (http://app.transifex.com/django/django-docs/"
 "language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -861,9 +861,9 @@ msgid ""
 "tarball release. These docs are in reST (reStructuredText) format, and each "
 "text file corresponds to a web page on the official Django site."
 msgstr ""
-"Django のドキュメントは Django tarball リリースの docs ディレクトリに ありま"
-"す。これらのドキュメントは reST (reStructuredText) 形式で書かれており、 各テ"
-"キストファイルが Django 公式サイトのページに対応しています。"
+"Django のドキュメントは Django tarball リリースの ``docs`` ディレクトリに あ"
+"ります。これらのドキュメントは reST (reStructuredText) 形式で書かれており、 "
+"各テキストファイルが Django 公式サイトのページに対応しています。"
 
 msgid ""
 "Because the documentation is :source:`stored in revision control <docs>`, "
@@ -894,8 +894,8 @@ msgstr ""
 "フォーマットは出版社によって大きく異なり、ソフトウェアの引用標準スタイルも議"
 "論が交わされているからです。"
 
-msgid "For example, `APA style`_,  would dictate something like:"
-msgstr "例えば、 `APA スタイル`_,  では次のようになるでしょう:"
+msgid "For example, `APA style`_, would dictate something like:"
+msgstr ""
 
 msgid ""
 "However, the only true guide is what your publisher will accept, so get a "
@@ -926,10 +926,8 @@ msgstr "名称が必要なら、何も加えずただ \"Django\" を使ってく
 
 msgid ""
 "If you need a publication date, use the year of release of the version "
-"you're referencing (e.g., 2013 for v1.5)"
+"you're referencing (e.g., 2013 for v1.5)."
 msgstr ""
-"出版年が必要ならば、参照するバージョンがリリースされた年を使ってください "
-"(例: バージョン 1.5 なら 2013年)。"
 
 msgid "Where can I find more Django resources?"
 msgstr "Django のリソースはどこに行けばもっと見つけることができますか？"
@@ -1043,14 +1041,10 @@ msgstr "セキュリティ上の問題を発見したようです！何をする
 
 msgid ""
 "If you think you've found a security problem with Django, please send a "
-"message to security@djangoproject.com. This is a private list only open to "
-"long-time, highly trusted Django developers, and its archives are not "
+"message to ``security@djangoproject.com``. This is a private list only open "
+"to long-time, highly trusted Django developers, and its archives are not "
 "publicly readable."
 msgstr ""
-"Djangoのセキュリティ問題を見つけたと思ったら、 security@djangoproject.com に"
-"メッセージを送ってください。これは長年にわたり信頼性の高いDjango開発者のみに"
-"公開されているプライベートなリストであり、そのアーカイブは一般公開されること"
-"はありません。"
 
 msgid ""
 "Due to the sensitive nature of security issues, we ask that if you think you "
@@ -1115,15 +1109,11 @@ msgstr ""
 "ストールしたり、データベース・サーバーを用意する必要はありません。"
 
 msgid ""
-"Django comes with its own :djadmin:`lightweight development "
-"server<runserver>`. For a production environment, Django follows the WSGI "
-"spec, :pep:`3333`, which means it can run on a variety of web servers. "
-"See :doc:`Deploying Django </howto/deployment/index>` for more information."
+"Django comes with its own lightweight development server "
+"(:djadmin:`runserver`). For a production environment, Django follows the "
+"WSGI spec, :pep:`3333`, which means it can run on a variety of web servers. "
+"See :doc:`/howto/deployment/index` for more information."
 msgstr ""
-"Django には :djadmin:`軽量な開発用サーバー <runserver>` が付属しています。本"
-"番環境に対しては、Django は WSGI の仕様である :pep:`3333` に従っているため、"
-"様々なウェブサーバーで運用環境を構築できます。詳しくは、 :doc:`Django をデプ"
-"ロイする </howto/deployment/index>` を参照してください。"
 
 msgid ""
 "Django runs `SQLite`_ by default, which is included in Python installations. "
@@ -1168,6 +1158,15 @@ msgstr "5.2"
 
 msgid "3.10, 3.11, 3.12, 3.13, 3.14 (added in 5.2.8)"
 msgstr "3.10, 3.11, 3.12, 3.13, 3.14（5.2.8 で追加）"
+
+msgid "6.0"
+msgstr "6.0"
+
+msgid "3.12, 3.13, 3.14"
+msgstr "3.12, 3.13, 3.14"
+
+msgid "6.1"
+msgstr ""
 
 msgid ""
 "For each version of Python, only the latest micro release (A.B.C) is "
@@ -1320,22 +1319,8 @@ msgstr ""
 msgid "Do Django models support multiple-column primary keys?"
 msgstr "Django のモデルは複合主キーをサポートしますか？"
 
-msgid "No. Only single-column primary keys are supported."
-msgstr "いいえ。単一の主キーのみをサポートします。"
-
-msgid ""
-"But this isn't an issue in practice, because there's nothing stopping you "
-"from adding other constraints (using the ``unique_together`` model option or "
-"creating the constraint directly in your database), and enforcing the "
-"uniqueness at that level. Single-column primary keys are needed for things "
-"such as the admin interface to work; e.g., you need a single value to "
-"specify an object to edit or delete."
+msgid "Partially. See :doc:`/topics/composite-primary-key`."
 msgstr ""
-"しかし、それは実際には問題でありません。なぜなら、(``unique_together`` モデル"
-"オプション追加やデータベースに直接制約を作るというような) 他の制約を追加する"
-"ことを妨げないし、そのレベルでユニーク性を強制しているからです。単一カラムの"
-"プライマリーキーは admin インターフェースを動かすのに必要なのです。それによ"
-"り、オブジェクトの更新や削除が容易になるからです。"
 
 msgid "Does Django support NoSQL databases?"
 msgstr "Django で NoSQL データベースは利用できますか？"

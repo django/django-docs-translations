@@ -6,7 +6,7 @@
 # albertoalcolea <albertoalcolea@gmail.com>, 2014
 # albertoalcolea <albertoalcolea@gmail.com>, 2014
 # Alberto MH, 2025
-# Alejandro Varas <alej0varas@gmail.com>, 2018
+# Alex Varas, 2018
 # Alexander Mejía <alexmejia199745@live.com>, 2021
 # Alfonso Areiza (alfareiza) <alfareiza@gmail.com>, 2023
 # Antoni Aloy <aaloy@apsl.net>, 2013
@@ -35,15 +35,15 @@
 # Salomon Herrera, 2023
 # Samuel David Ramirez Mantione <venezuelapoliglota@hotmail.com>, 2015-2017
 # Sebastián Magrí, 2013
-# Uriel Medina <urimeba511@gmail.com>, 2021-2025
+# Uriel Medina <urimeba511@gmail.com>, 2021-2026
 # Victor Centurión <centurion.victor@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: django-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-23 09:15-0500\n"
+"POT-Creation-Date: 2026-09-03 13:43-0500\n"
 "PO-Revision-Date: 2013-04-02 19:51+0000\n"
-"Last-Translator: Uriel Medina <urimeba511@gmail.com>, 2021-2025\n"
+"Last-Translator: Uriel Medina <urimeba511@gmail.com>, 2021-2026\n"
 "Language-Team: Spanish (http://app.transifex.com/django/django-docs/language/"
 "es/)\n"
 "MIME-Version: 1.0\n"
@@ -933,8 +933,8 @@ msgstr ""
 "formatos de cita pueden variar mucho entre publicaciones y los estándares "
 "para citar software son aún materia de debate."
 
-msgid "For example, `APA style`_,  would dictate something like:"
-msgstr "Por ejemplo, `APA style`_, dictaría algo como:"
+msgid "For example, `APA style`_, would dictate something like:"
+msgstr ""
 
 msgid ""
 "However, the only true guide is what your publisher will accept, so get a "
@@ -962,10 +962,8 @@ msgstr "Si necesita un nombre, sólo use \"Django\" sin ningún eslogan."
 
 msgid ""
 "If you need a publication date, use the year of release of the version "
-"you're referencing (e.g., 2013 for v1.5)"
+"you're referencing (e.g., 2013 for v1.5)."
 msgstr ""
-"Si necesita una fecha de publicación, use el año de lanzamiento de la "
-"versión que está consultando (por ejemplo, 2013 para v1.5)"
 
 msgid "Where can I find more Django resources?"
 msgstr "¿Dónde puedo encontrar más recursos sobre Django?"
@@ -1081,15 +1079,10 @@ msgstr "¡Creo que he hallado un problema de seguridad! ¿Qué debo hacer?"
 
 msgid ""
 "If you think you've found a security problem with Django, please send a "
-"message to security@djangoproject.com. This is a private list only open to "
-"long-time, highly trusted Django developers, and its archives are not "
+"message to ``security@djangoproject.com``. This is a private list only open "
+"to long-time, highly trusted Django developers, and its archives are not "
 "publicly readable."
 msgstr ""
-"Si usted piensa que ha encontrado un problema de seguridad con Django, por "
-"favor envíe un mensaje a security@djangoproject.com. Esta es una lista "
-"privada que sólo está accesible para los desarrolladores de Django altamente "
-"confiables y de conocida trayectoria, y sus archivos no pueden ser leídos "
-"por el público."
 
 msgid ""
 "Due to the sensitive nature of security issues, we ask that if you think you "
@@ -1155,16 +1148,11 @@ msgstr ""
 "datos."
 
 msgid ""
-"Django comes with its own :djadmin:`lightweight development "
-"server<runserver>`. For a production environment, Django follows the WSGI "
-"spec, :pep:`3333`, which means it can run on a variety of web servers. "
-"See :doc:`Deploying Django </howto/deployment/index>` for more information."
+"Django comes with its own lightweight development server "
+"(:djadmin:`runserver`). For a production environment, Django follows the "
+"WSGI spec, :pep:`3333`, which means it can run on a variety of web servers. "
+"See :doc:`/howto/deployment/index` for more information."
 msgstr ""
-"Django viene con su propio :djadmin:`servidor de desarrollo ligero "
-"<runserver>`. Para un entorno de producción, Django sigue la especificación "
-"WSGI, :pep:`3333`, lo que significa que puede ejecutarse en una variedad de "
-"servidores web. Consulte :doc:`Deploying Django </howto/deployment/index>` "
-"para obtener más información."
 
 msgid ""
 "Django runs `SQLite`_ by default, which is included in Python installations. "
@@ -1210,6 +1198,15 @@ msgstr "5.2"
 
 msgid "3.10, 3.11, 3.12, 3.13, 3.14 (added in 5.2.8)"
 msgstr "3.10, 3.11, 3.12, 3.13, 3.14 (agregado en 5.2.8)"
+
+msgid "6.0"
+msgstr "6.0"
+
+msgid "3.12, 3.13, 3.14"
+msgstr "3.12, 3.13, 3.14"
+
+msgid "6.1"
+msgstr ""
 
 msgid ""
 "For each version of Python, only the latest micro release (A.B.C) is "
@@ -1369,24 +1366,8 @@ msgid "Do Django models support multiple-column primary keys?"
 msgstr ""
 "¿Los modelos de Django soportan claves primarias en columnas múltiples?"
 
-msgid "No. Only single-column primary keys are supported."
-msgstr "No, sólo son soportadas claves primarias de columna única."
-
-msgid ""
-"But this isn't an issue in practice, because there's nothing stopping you "
-"from adding other constraints (using the ``unique_together`` model option or "
-"creating the constraint directly in your database), and enforcing the "
-"uniqueness at that level. Single-column primary keys are needed for things "
-"such as the admin interface to work; e.g., you need a single value to "
-"specify an object to edit or delete."
+msgid "Partially. See :doc:`/topics/composite-primary-key`."
 msgstr ""
-"Pero esto no es un problema en la práctica, porque no hay nada que le impida "
-"agregar otras restricciones (usando la opción de modelo ``unique_together`` "
-"o crear la restricción directamente en su base de datos) y hacer cumplir la "
-"singularidad en ese nivel. Las claves primarias de una sola columna son "
-"necesarias para que funcionen cosas como la interfaz de administración; por "
-"ejemplo, necesita un único valor para especificar un objeto para editar o "
-"eliminar."
 
 msgid "Does Django support NoSQL databases?"
 msgstr "¿Soporta Django bases de datos NoSQL?"
